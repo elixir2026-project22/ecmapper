@@ -28,9 +28,33 @@ found for a reaction, all of them are kept; disambiguation is left for later.
 | `bkms` | `metacyc.reaction`, `biocyc` | [BKMS-react](https://bkms.brenda-enzymes.org/download.php) `Reactions_BKMS.tar.gz` (MetaCyc 20.0) |
 
 Each resource is downloaded once, completely, and cached in `~/.cache/ecmapper`
-(`$ECMAPPER_CACHE` or `$XDG_CACHE_HOME/ecmapper` if set). Use `refresh=True` /
-`--refresh` to download again. A resource that can not be downloaded is skipped
-with a warning.
+(`$ECMAPPER_CACHE` or `$XDG_CACHE_HOME/ecmapper` if set). A resource that can
+not be downloaded is skipped with a warning.
+
+### Updating the resource data
+
+The cached files are not updated automatically. Check whether newer versions are
+available and download them with
+
+```bash
+python -m ecmapper --check-updates     # report only, the cache is not changed
+python -m ecmapper --update            # download the files that changed
+python -m ecmapper model.xml --update  # update, then map
+```
+
+or in Python with `check_updates()` / `update_sources()` (both take source names
+or instances and `cache_dir`) or `ECMapper.check_updates()` / `ECMapper.update()`,
+which also reload the updated sources. Each file is reported as `current`,
+`outdated`, `missing`, `updated`, `downloaded`, `local` (a file passed with
+`local_files`, not managed) or `error`.
+
+For every downloaded file, its ETag, Last-Modified date and SHA-256 checksum are
+stored in `<file>.meta.json`. The check sends conditional requests, so
+unchanged files are not downloaded again. KEGG sends neither ETag nor
+Last-Modified; its file (about 240 kB) is downloaded and compared by checksum.
+A cached file that does not match its stored checksum (changed or damaged) is
+also compared by content. `--refresh` (`refresh=True`, `update(force=True)`)
+downloads all files again.
 
 EC numbers are normalised: prefixes like `EC:` are removed and incomplete numbers
 are padded (`2.4.1` -> `2.4.1.-`). Preliminary (`1.1.1.n1`) and BRENDA's

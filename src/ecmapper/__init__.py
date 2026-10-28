@@ -19,7 +19,7 @@ from .mapper import (
     summary,
     to_dataframe,
 )
-from .sources import SOURCES, default_sources
+from .sources import SOURCES, FileStatus, check_updates, default_sources, update_sources
 
 __version__ = "0.1.0"
 
@@ -27,12 +27,15 @@ __all__ = [
     "SOURCES",
     "ECEvidence",
     "ECMapper",
+    "FileStatus",
     "ReactionECMapping",
     "annotate_model",
+    "check_updates",
     "default_sources",
     "is_complete",
     "map_model",
     "normalize_ec",
     "summary",
     "to_dataframe",
+    "update_sources",
 ]

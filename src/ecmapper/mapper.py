@@ -10,7 +10,7 @@ import pandas as pd
 
 from . import annotation
 from .ec import is_complete
-from .sources import ECSource, default_sources
+from .sources import ECSource, FileStatus, default_sources
 
 #: values of :attr:`ReactionECMapping.origin`
 ORIGINS = ("annotation", "notes", "resources", "none", "boundary")
@@ -135,6 +135,14 @@ class ECMapper:
         self.always_query = always_query
         self.skip_boundary = skip_boundary
         self.follow_xrefs = follow_xrefs
+
+    def check_updates(self) -> list[FileStatus]:
+        """Check whether newer versions of the resource files are available, see :meth:`ECSource.check_updates`."""
+        return [status for source in self.sources.values() for status in source.check_updates()]
+
+    def update(self, force: bool = False) -> list[FileStatus]:
+        """Download newer versions of the resource files, see :meth:`ECSource.update`."""
+        return [status for source in self.sources.values() for status in source.update(force=force)]
 
     def map_reaction(self, reaction, boundary: bool = False) -> ReactionECMapping:
         """Map one cobrapy reaction, `boundary` marks it as boundary reaction."""

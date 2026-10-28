@@ -7,7 +7,7 @@ import logging
 from pathlib import Path
 
 from .mapper import ECMapper, annotate_model, summary, to_dataframe
-from .sources import SOURCES, default_cache_dir
+from .sources import SOURCES, FileStatus, default_cache_dir
 
 
 def load_model(path: Path):
@@ -37,12 +37,19 @@ def _print_summary(stats: dict, mapper: ECMapper) -> None:
         print(f"unavailable sources (skipped): {', '.join(unavailable)}")
 
 
+def _print_file_statuses(statuses: list[FileStatus]) -> None:
+    print(f"{'source':<10} {'file':<34} {'status':<10} {'cached':<26} remote last modified")
+    for s in statuses:
+        line = f"{s.source:<10} {s.file:<34} {s.status:<10} {s.cached:<26} {s.remote_modified}"
+        print(line + (f" ({s.detail})" if s.detail else ""))
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(
         prog="ecmapper",
         description="Map the reactions of a constraint-based model to EC numbers.",
     )
-    parser.add_argument("model", type=Path, help="model file (SBML, JSON, YAML or MAT)")
+    parser.add_argument("model", type=Path, nargs="?", help="model file (SBML, JSON, YAML or MAT)")
     parser.add_argument("-o", "--output", type=Path, help="write the mapping to this TSV file")
     parser.add_argument("--long", action="store_true", help="one row per reaction, EC number and evidence")
     parser.add_argument(
@@ -56,9 +63,17 @@ def main(argv=None) -> int:
     parser.add_argument("--include-boundary", action="store_true", help="also map boundary reactions")
     parser.add_argument("--cache-dir", type=Path, default=None, help=f"download cache (default: {default_cache_dir()})")
     parser.add_argument("--refresh", action="store_true", help="download the resource files again")
+    parser.add_argument(
+        "--check-updates", action="store_true", help="check whether newer resource files are available"
+    )
+    parser.add_argument(
+        "--update", action="store_true", help="download newer resource files into the cache (before mapping)"
+    )
     parser.add_argument("--write-model", type=Path, help="write the model with the found EC numbers as SBML")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
+    if args.model is None and not (args.check_updates or args.update):
+        parser.error("a model file, --check-updates or --update is required")
 
     logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING, format="%(levelname)s: %(message)s")
     mapper = ECMapper(
@@ -70,6 +85,21 @@ def main(argv=None) -> int:
         cache_dir=args.cache_dir,
         refresh=args.refresh,
     )
+    if args.update:
+        statuses = mapper.update(force=args.refresh)
+        _print_file_statuses(statuses)
+        if any(s.status == "error" for s in statuses):
+            return 1
+    elif args.check_updates:
+        statuses = mapper.check_updates()
+        _print_file_statuses(statuses)
+        n = sum(s.update_available for s in statuses)
+        print(f"{n} file(s) can be updated with --update" if n else "all files are up to date")
+        if any(s.status == "error" for s in statuses):
+            return 1
+    if args.model is None:
+        return 0
+
     model = load_model(args.model)
     mappings = mapper.map_model(model)
     _print_summary(summary(mappings), mapper)

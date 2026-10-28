@@ -3,6 +3,7 @@ import tarfile
 from pathlib import Path
 
 import pytest
+import requests
 
 from ecmapper.sources import SOURCES
 
@@ -39,3 +40,52 @@ def no_downloads(request, monkeypatch):
         raise AssertionError("unexpected download in offline test")
 
     monkeypatch.setattr("requests.Session.get", fail)
+
+
+class FakeResponse:
+    """Minimal stand-in for a streamed requests.Response."""
+
+    def __init__(self, content=b"", headers=None, status_code=200, error=None):
+        self.content, self.headers, self.status_code, self.error = content, headers or {}, status_code, error
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        pass
+
+    def raise_for_status(self):
+        if self.error:
+            raise self.error
+
+    def iter_content(self, chunk_size):
+        yield self.content
+
+
+class FakeServer:
+    """Serves files {url: (content, headers)} and answers conditional requests like a web server."""
+
+    def __init__(self, files=None):
+        self.files = dict(files or {})
+        self.requests = []
+
+    def get(self, url, headers=None, **kwargs):
+        headers = headers or {}
+        self.requests.append((url, headers))
+        if url not in self.files:
+            return FakeResponse(status_code=404, error=requests.HTTPError(f"404 Not Found: {url}"))
+        content, response_headers = self.files[url]
+        etag, last_modified = response_headers.get("ETag"), response_headers.get("Last-Modified")
+        if etag and headers.get("If-None-Match") == etag:
+            return FakeResponse(status_code=304)
+        if not etag and last_modified and headers.get("If-Modified-Since") == last_modified:
+            return FakeResponse(status_code=304)
+        return FakeResponse(content, response_headers)
+
+
+@pytest.fixture
+def server(monkeypatch):
+    """A fake server that replaces requests.Session.get."""
+    fake = FakeServer()
+    monkeypatch.setattr("requests.Session.get", lambda session, url, **kwargs: fake.get(url, **kwargs))
+    return fake

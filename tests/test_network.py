@@ -5,7 +5,7 @@ from pathlib import Path
 import cobra
 import pytest
 
-from ecmapper import ECMapper, summary
+from ecmapper import ECMapper, check_updates, summary, update_sources
 from ecmapper.sources import SOURCES
 
 pytestmark = pytest.mark.network
@@ -46,3 +46,9 @@ def test_e_coli_core(cache_dir):
     assert stats["origin"]["resources"] >= 50
     assert "5.3.1.9" in mappings["PGI"].ec_numbers
     assert "2.7.1.11" in mappings["PFK"].ec_numbers
+
+
+def test_check_updates(cache_dir):
+    assert all(s.status in ("current", "downloaded", "updated") for s in update_sources(cache_dir=cache_dir))
+    # all servers answer either with 304 Not Modified or (KEGG) with identical content
+    assert [s.status for s in check_updates(cache_dir=cache_dir)] == ["current"] * 6

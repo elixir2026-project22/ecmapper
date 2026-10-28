@@ -3,6 +3,7 @@ import logging
 import pytest
 import requests
 
+from conftest import FakeResponse
 from ecmapper.sources import (
     BiGGrSource,
     KEGGSource,
@@ -76,24 +77,6 @@ def test_local_files(tmp_path, cache_dir):
     assert kegg.lookup("R00200") == {"2.7.1.40"}
 
 
-class FakeResponse:
-    def __init__(self, content=b"", error=None):
-        self.content, self.error = content, error
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, *args):
-        pass
-
-    def raise_for_status(self):
-        if self.error:
-            raise self.error
-
-    def iter_content(self, chunk_size):
-        yield self.content
-
-
 def test_download_and_cache(tmp_path, monkeypatch):
     calls = []
 
@@ -105,6 +88,7 @@ def test_download_and_cache(tmp_path, monkeypatch):
     assert KEGGSource(cache_dir=tmp_path).lookup("R00200") == {"2.7.1.40"}
     assert calls == [KEGGSource.files["kegg_link_ec_rn.tsv"]]
     assert (tmp_path / "kegg_link_ec_rn.tsv").exists()
+    assert (tmp_path / "kegg_link_ec_rn.tsv.meta.json").exists()
     # the second instance uses the cache
     assert KEGGSource(cache_dir=tmp_path).lookup("R00200") == {"2.7.1.40"}
     assert len(calls) == 1
