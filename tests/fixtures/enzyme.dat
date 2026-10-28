@@ -1,0 +1,184 @@
+CC   -----------------------------------------------------------------------
+CC
+CC   ENZYME nomenclature database
+CC
+CC   -----------------------------------------------------------------------
+CC   Release of 02-Sep-2026
+CC   -----------------------------------------------------------------------
+CC
+CC   Alan Bridge and Kristian Axelsen
+CC   SIB Swiss Institute of Bioinformatics
+CC   Centre Medical Universitaire (CMU)
+CC   1, rue Michel Servet
+CC   1211 Geneva 4
+CC   Switzerland
+CC
+CC   Email: enzyme@expasy.org
+CC
+CC   WWW server: https://enzyme.expasy.org/
+CC
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the SIB Swiss Institute of Bioinformatics and
+CC   distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   -----------------------------------------------------------------------
+//
+ID   1.1.1.74
+DE   Deleted entry.
+//
+ID   1.7.99.4
+DE   Transferred entry: 1.7.1.1, 1.7.1.2, 1.7.1.3, 1.7.5.1, 1.7.7.2 and
+DE   1.9.6.1.
+//
+ID   2.7.1.11
+DE   6-phosphofructokinase.
+AN   phosphofructokinase I.
+AN   phosphohexokinase.
+CA   beta-D-fructose 6-phosphate + ATP = beta-D-fructose 1,6-bisphosphate +
+CA   ADP + H(+).
+CC   -!- The enzyme from rabbit muscle displays absolute stereoselectivity for
+CC       the beta-anomer of D-fructofuranose 6-phosphate.
+CC   -!- D-tagatose 6-phosphate and sedoheptulose 7-phosphate can act as
+CC       acceptors.
+CC   -!- UTP, CTP and ITP can act as donors.
+CC   -!- Not identical with EC 2.7.1.105.
+DR   Q9M0F9, PFKA1_ARATH;  Q9HGZ1, PFKA1_ASPOR;  Q8A8R5, PFKA1_BACTN;
+DR   Q9TZL8, PFKA1_CAEEL;  O94201, PFKA1_CANAX;  Q8XNH2, PFKA1_CLOPE;
+DR   Q8FBD0, PFKA_ECOL6 ;  B1IVG3, PFKA_ECOLC ;  P0A796, PFKA_ECOLI ;
+DR   Q66GA8, PFKA_YERPS ;  B1JQU4, PFKA_YERPY ;  P06999, PFKB_ECOLI ;
+//
+ID   2.7.1.31
+DE   glycerate 3-kinase.
+CA   (R)-glycerate + ATP = (2R)-3-phosphoglycerate + ADP + H(+).
+DR   Q2KJF7, GLCTK_BOVIN;  Q08BL7, GLCTK_DANRE;  Q9VQC4, GLCTK_DROME;
+DR   Q8IVS8, GLCTK_HUMAN;  Q9BE01, GLCTK_MACFA;  Q8QZY2, GLCTK_MOUSE;
+DR   Q0VGK3, GLCTK_RAT  ;  P77364, GLXK2_ECOLI;  Q9XBL1, GLXK_BACC1 ;
+//
+ID   2.7.1.40
+DE   pyruvate kinase.
+AN   phosphoenolpyruvate kinase.
+AN   phosphoenol transphosphorylase.
+CA   pyruvate + ATP = phosphoenolpyruvate + ADP + H(+).
+CC   -!- UTP, GTP, CTP, ITP and dATP can also act as donors.
+CC   -!- Also phosphorylates hydroxylamine and fluoride in the presence of
+CC       CO2.
+DR   Q43117, KPYA_RICCO ;  Q40545, KPYA_TOBAC ;  B8BJ39, KPYC1_ORYSI;
+DR   Q2RAK2, KPYC1_ORYSJ;  B8BM17, KPYC2_ORYSI;  Q2QXR8, KPYC2_ORYSJ;
+DR   Q6FIS9, KPYK1_CANGA;  P0AD62, KPYK1_ECO57;  P0AD61, KPYK1_ECOLI;
+DR   P00549, KPYK1_YEAST;  Q6FV12, KPYK2_CANGA;  P21599, KPYK2_ECOLI;
+//
+ID   2.7.1.165
+DE   glycerate 2-kinase.
+AN   D-glycerate-2-kinase.
+CA   (R)-glycerate + ATP = (2R)-2-phosphoglycerate + ADP + H(+).
+CC   -!- A key enzyme in the nonphosphorylative Entner-Doudoroff pathway in
+CC       archaea.
+CC   -!- In Hyphomicrobium methylovorum GM2 the enzyme is involved in
+CC       formaldehyde assaimilation I (serine pathway).
+CC   -!- In Escherichia coli the enzyme is involved in
+CC       D-glucarate/D-galactarate degradation.
+DR   Q6KZ25, GCK_PICTO  ;  O58231, GCK_PYRHO  ;  Q96YZ3, GCK_SULTO  ;
+DR   Q9X1S1, GCK_THEMA  ;  P23524, GLXK1_ECOLI;
+//
+ID   2.7.9.2
+DE   pyruvate, water dikinase.
+AN   phosphoenolpyruvate synthase.
+AN   pyruvate,water dikinase.
+CA   pyruvate + ATP + H2O = phosphoenolpyruvate + AMP + phosphate + 2 H(+).
+DR   Q9YEC5, PPSA_AERPE ;  O67899, PPSA_AQUAE ;  O29548, PPSA_ARCFU ;
+DR   O83026, PPSA_DEIRA ;  P23538, PPSA_ECOLI ;  O54457, PPSA_ENTAG ;
+//
+ID   3.5.1.14
+DE   N-acyl-aliphatic-L-amino acid amidohydrolase.
+AN   acylase I.
+AN   aminoacylase 1.
+AN   aminoacylase I.
+AN   benzamidase.
+AN   dehydropeptidase II.
+AN   hippuricase.
+AN   histozyme.
+AN   N-acyl-L-amino-acid amidohydrolase.
+CA   (1) an N-acyl-L-amino acid + H2O = an L-alpha-amino acid + a carboxylate.
+CA   (2) an N-acetyl-L-cysteine-S-conjugate + H2O = an S-substituted
+CA   L-cysteine + acetate.
+CC   -!- The enzyme is found in animals and is involved in the hydrolysis of
+CC       N-acylated or N-acetylated amino acids (except L-aspartate).
+CC   -!- It acts on mercapturic acids (S-conjugates of N-acetyl-L-cysteine)
+CC       and neutral aliphatic N-acyl-alpha-amino acids.
+CC   -!- Some bacterial aminoacylases demonstrate substrate specificity of
+CC       both EC 3.5.1.14 and EC 3.5.1.114. cf. EC 3.5.1.15 and EC 3.5.1.114.
+DR   K9NBS6, AAM_RHOER  ;  Q6AYS7, ACY1A_RAT  ;  Q6PTT0, ACY1B_RAT  ;
+DR   Q55DP8, ACY1_DICDI ;  Q03154, ACY1_HUMAN ;  Q99JW2, ACY1_MOUSE ;
+//
+ID   3.5.1.16
+DE   acetylornithine deacetylase.
+AN   acetylornithinase.
+AN   N-acetylornithinase.
+CA   N(2)-acetyl-L-ornithine + H2O = L-ornithine + acetate.
+CC   -!- Also hydrolyzes N-acetylmethionine.
+DR   Q5E2E4, ARGE_ALIF1 ;  B5FBP7, ARGE_ALIFM ;  B6EMN5, ARGE_ALISL ;
+DR   Q9C5C4, ARGE_ARATH ;  B8D8K5, ARGE_BUCA5 ;  P57155, ARGE_BUCAI ;
+DR   P23908, ARGE_ECOLI ;  B7NFQ7, ARGE_ECOLU ;  B6I5H3, ARGE_ECOSE ;
+//
+ID   3.6.1.1
+DE   inorganic diphosphatase.
+AN   diphosphate phosphohydrolase.
+AN   inorganic pyrophosphatase.
+AN   pyrophosphate phosphohydrolase.
+CA   diphosphate + H2O = 2 phosphate + H(+).
+CC   -!- Specificity varies with the source and with the activating metal ion.
+CC   -!- The enzyme from some sources may be identical with EC 3.1.3.1 or
+CC       EC 3.1.3.9. cf. EC 7.1.3.1.
+DR   Q93V56, IPYR1_ARATH;  Q93Y52, IPYR1_CHLRE;  Q889M7, IPYR1_PSESM;
+DR   P21216, IPYR2_ARATH;  Q949J1, IPYR2_CHLRE;  Q9H2U2, IPYR2_HUMAN;
+DR   Q8FAG0, IPYR_ECOL6 ;  P0A7A9, IPYR_ECOLI ;  Q5B912, IPYR_EMENI ;
+//
+ID   4.2.1.52
+DE   Transferred entry: 4.3.3.7.
+//
+ID   4.3.3.7
+DE   4-hydroxy-tetrahydrodipicolinate synthase.
+AN   DHDPS.
+AN   dihydrodipicolinate synthetase.
+CA   L-aspartate 4-semialdehyde + pyruvate = (2S,4S)-4-hydroxy-2,3,4,5-
+CA   tetrahydrodipicolinate + H2O + H(+).
+CC   -!- The reaction can be divided into three consecutive steps: Schiff base
+CC       formation with pyruvate, the addition of L-aspartate-semialdehyde,
+CC       and finally transimination leading to cyclization with simultaneous
+CC       dissociation of the product.
+CC   -!- The product of the enzyme was initially thought to be (S)-2,3-
+CC       dihydrodipicolinate, and the enzyme was classified accordingly as
+CC       EC 4.2.1.52.
+CC   -!- Later studies of the enzyme from the bacterium Escherichia coli have
+CC       suggested that the actual product of the enzyme is (2S,4S)-4-hydroxy-
+CC       2,3,4,5-tetrahydrodipicolinate, and thus the enzyme has been
+CC       reclassified as 4-hydroxy-tetrahydrodipicolinate synthase.
+CC   -!- However, the identity of the product is still controversial, as more
+CC       recently it has been suggested that it may be (S)-2,3-
+CC       dihydrodipicolinate after all.
+CC   -!- Formerly EC 4.2.1.52.
+DR   Q9LZX6, DAPA1_ARATH;  Q97GI9, DAPA1_CLOAB;  Q9KC32, DAPA1_HALH5;
+DR   Q9X9W0, DAPA1_STRCO;  P24846, DAPA1_WHEAT;  Q9FVC8, DAPA2_ARATH;
+DR   P63943, DAPA_ECOL6 ;  B1IWI1, DAPA_ECOLC ;  P0A6L2, DAPA_ECOLI ;
+//
+ID   5.3.1.9
+DE   glucose-6-phosphate isomerase.
+AN   D-glucose-6-phosphate ketol-isomerase.
+AN   hexose monophosphate isomerase.
+AN   hexosephosphate isomerase.
+AN   oxoisomerase.
+AN   phosphoglucoisomerase.
+AN   phosphoglucose isomerase.
+AN   phosphohexoisomerase.
+AN   phosphohexomutase.
+AN   phosphohexose isomerase.
+AN   phosphosaccharomutase.
+CA   alpha-D-glucose 6-phosphate = beta-D-fructose 6-phosphate.
+CC   -!- The enzyme from yeast catalyzes the reversible conversion
+CC       specifically between the alpha-D-glucose 6-phosphate and beta-D-
+CC       fructofuranose 6-phosphate.
+CC   -!- The enzyme also catalyzes the anomerization of both D-hexose
+CC       6-phosphates.
+DR   Q1QZ19, G6PI1_CHRI1;  Q7P1R4, G6PI1_CHRVO;  P54234, G6PI1_CLAAR;
+DR   P54235, G6PI1_CLACO;  P54236, G6PI1_CLAFR;  P34796, G6PI1_CLALE;
+DR   P0A6T1, G6PI_ECOLI ;  B7NFW8, G6PI_ECOLU ;  B6I5N7, G6PI_ECOSE ;
+//

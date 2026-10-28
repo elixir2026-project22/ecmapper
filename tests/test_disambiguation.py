@@ -95,3 +95,66 @@ def test_select_without_bkms():
     evidence = [ECEvidence("2.7.1.165", "kegg", "R08572"), ECEvidence("2.7.1.31", "modelseed", "rxn08647")]
     m = ReactionECMapping("R", "resources", evidence, identifiers={"kegg.reaction": ["R08572"]})
     assert select(m) == (["2.7.1.165", "2.7.1.31"], "ambiguous")
+
+
+def test_metabolites(mapper):
+    from test_references import pyk
+
+    r = pyk()
+    r.annotation = {"kegg.reaction": "R00200", "biocyc": "META:PEPSYNTH-RXN"}
+    m = mapper.map_reaction(r)
+    # BKMS-react does not agree (PEPSYNTH-RXN: 2.7.1.40 and 2.7.9.2), the metabolites decide
+    assert m.ec_numbers == ["2.7.1.40", "2.7.9.2"]
+    assert (m.selection, m.selected) == ("metabolites", ["2.7.1.40"])
+    assert m.scores["2.7.1.40"] == 1.0 and m.scores["2.7.9.2"] < 0.6
+
+    m = ECMapper(mapper.sources.values(), compare_metabolites=False).map_reaction(r)
+    assert (m.selection, m.selected, m.scores) == ("ambiguous", ["2.7.1.40", "2.7.9.2"], {})
+    # a too high minimum score or margin leaves it ambiguous
+    m = ECMapper(mapper.sources.values(), min_margin=0.5).map_reaction(r)
+    assert (m.selection, m.selected) == ("ambiguous", ["2.7.1.40", "2.7.9.2"])
+
+
+def test_current_ec(mapper, sources):
+    m = mapper.map_reaction(reaction({"ec-code": ["4.2.1.52", "2.7.1.40"]}))
+    assert (m.selection, m.selected) == ("annotation", ["2.7.1.40", "4.3.3.7"])
+    # only deleted EC numbers: the model's EC numbers are kept
+    assert mapper.map_reaction(reaction({"ec-code": "1.1.1.74"})).selected == ["1.1.1.74"]
+    m = ECMapper(sources.values(), current_ec=False).map_reaction(reaction({"ec-code": "4.2.1.52"}))
+    assert m.selected == ["4.2.1.52"]
+
+    evidence = [ECEvidence("4.2.1.52", "modelseed", "rxn1"), ECEvidence("4.3.3.7", "kegg", "R1")]
+    selection = mapper.disambiguator.select(ReactionECMapping("R", "resources", evidence))
+    assert (selection.selected, selection.selection) == (["4.3.3.7"], "single")
+
+
+def test_tie_breakers(sources):
+    # acetylornithine deacetylase: KEGG R00669 is linked to 3.5.1.14 and 3.5.1.16
+    r = reaction({"kegg.reaction": "R00669"})
+    assert ECMapper(sources.values()).map_reaction(r).selection == "ambiguous"
+    m = ECMapper(sources.values(), tie_breakers=["organism"], organism="ECOLI").map_reaction(r)
+    assert (m.selection, m.selected) == ("organism", ["3.5.1.16"])
+    # without Swiss-Prot entries of the organism nothing changes
+    m = ECMapper(sources.values(), tie_breakers=["organism"], organism="NOSUCH").map_reaction(r)
+    assert (m.selection, m.selected) == ("ambiguous", ["3.5.1.14", "3.5.1.16"])
+
+    # via BiGGr, 3.5.1.16 is supported by five sources, 3.5.1.14 by three
+    r = reaction({"bigg.reaction": "ACODA"})
+    assert ECMapper(sources.values()).map_reaction(r).selection == "ambiguous"
+    m = ECMapper(sources.values(), tie_breakers=["sources"]).map_reaction(r)
+    assert (m.selection, m.selected) == ("sources", ["3.5.1.16"])
+
+    with pytest.raises(ValueError, match="unknown tie-breaker"):
+        ECMapper(sources.values(), tie_breakers=["genes"])
+    with pytest.raises(ValueError, match="requires an organism"):
+        ECMapper(sources.values(), tie_breakers=["organism"])
+
+
+def test_resources(sources):
+    mapper = ECMapper(sources.values())
+    names = [r.name for r in mapper.resources]
+    assert names == ["kegg", "modelseed", "rhea", "bkms", "biggr", "enzyme", "kegg-compounds", "biggr-metabolites"]
+    # the KEGG source of the mapper is shared with the comparison
+    assert mapper.disambiguator.comparison.kegg is sources["kegg"]
+    mapper = ECMapper(sources.values(), current_ec=False, compare_metabolites=False)
+    assert [r.name for r in mapper.resources] == ["kegg", "modelseed", "rhea", "bkms", "biggr"]

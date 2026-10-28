@@ -37,9 +37,12 @@ class BKMSSource(ECSource):
 
     def lookup_kegg(self, identifier: str) -> set[str]:
         """EC numbers of the BKMS reactions aligned with the KEGG reaction `identifier`."""
-        if self._table is None:
-            self.load()
+        self.data  # noqa: B018, loads the files
         return set(self._kegg.get(identifier, ()))
+
+    def reset(self) -> None:
+        super().reset()
+        self._kegg = {}
 
     def consensus(self, identifiers: dict[str, list[str]]) -> set[str]:
         """EC numbers of all BKMS reactions that match the KEGG or MetaCyc reactions in `identifiers`.

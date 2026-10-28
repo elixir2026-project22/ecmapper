@@ -46,9 +46,13 @@ def test_e_coli_core(cache_dir):
     assert stats["origin"]["resources"] >= 50
     assert "5.3.1.9" in mappings["PGI"].ec_numbers
     assert "2.7.1.11" in mappings["PFK"].ec_numbers
+    # selection: PFK and ACALD by their metabolites (22 reactions in 10/2026)
+    assert (mappings["PFK"].selection, mappings["PFK"].selected) == ("metabolites", ["2.7.1.11"])
+    assert (mappings["ACALD"].selection, mappings["ACALD"].selected) == ("metabolites", ["1.2.1.10"])
+    assert stats["selection"]["metabolites"] >= 15
 
 
 def test_check_updates(cache_dir):
     assert all(s.status in ("current", "downloaded", "updated") for s in update_sources(cache_dir=cache_dir))
     # all servers answer either with 304 Not Modified or (KEGG) with identical content
-    assert [s.status for s in check_updates(cache_dir=cache_dir)] == ["current"] * 6
+    assert [s.status for s in check_updates(cache_dir=cache_dir)] == ["current"] * 9

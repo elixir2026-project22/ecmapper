@@ -136,7 +136,8 @@ def test_summary(model, mapper):
     assert stats["with_ec"] == 5
     assert stats["ambiguous"] == 1
     assert stats["selection"] == {
-        "annotation": 1, "notes": 1, "single": 2, "bkms": 0, "ambiguous": 1, "none": 1, "boundary": 1
+        "annotation": 1, "notes": 1, "single": 2, "bkms": 0, "metabolites": 0, "sources": 0, "organism": 0,
+        "ambiguous": 1, "none": 1, "boundary": 1,
     }
     assert stats["reactions_per_source"]["kegg"] == 2
 

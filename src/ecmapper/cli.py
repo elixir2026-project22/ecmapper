@@ -6,6 +6,7 @@ import argparse
 import logging
 from pathlib import Path
 
+from .evaluation import evaluate, evaluation_summary
 from .mapper import ECMapper, annotate_model, summary, to_dataframe
 from .sources import SOURCES, FileStatus, default_cache_dir
 
@@ -42,9 +43,9 @@ def _print_summary(stats: dict, mapper: ECMapper) -> None:
 
 
 def _print_file_statuses(statuses: list[FileStatus]) -> None:
-    print(f"{'source':<10} {'file':<34} {'status':<10} {'cached':<26} remote last modified")
+    print(f"{'resource':<17} {'file':<34} {'status':<10} {'cached':<26} remote last modified")
     for s in statuses:
-        line = f"{s.source:<10} {s.file:<34} {s.status:<10} {s.cached:<26} {s.remote_modified}"
+        line = f"{s.source:<17} {s.file:<34} {s.status:<10} {s.cached:<26} {s.remote_modified}"
         print(line + (f" ({s.detail})" if s.detail else ""))
 
 
@@ -68,6 +69,18 @@ def main(argv=None) -> int:
     parser.add_argument(
         "--no-bkms-consensus", action="store_true", help="do not select the EC number on which BKMS-react agrees"
     )
+    parser.add_argument(
+        "--no-current-ec", action="store_true", help="do not replace transferred EC numbers (ExPASy ENZYME)"
+    )
+    parser.add_argument(
+        "--no-metabolites", action="store_true", help="do not select EC numbers by comparing metabolites"
+    )
+    parser.add_argument("--min-score", type=float, default=0.6, help="minimum score of the comparison (0.6)")
+    parser.add_argument("--min-margin", type=float, default=0.1, help="minimum margin to the next EC number (0.1)")
+    parser.add_argument(
+        "--tie-breakers", default="", help="comma separated tie-breakers: sources, organism (default: none)"
+    )
+    parser.add_argument("--organism", help="Swiss-Prot organism mnemonic for the organism tie-breaker, e.g. ECOLI")
     parser.add_argument("--cache-dir", type=Path, default=None, help=f"download cache (default: {default_cache_dir()})")
     parser.add_argument("--refresh", action="store_true", help="download the resource files again")
     parser.add_argument(
@@ -77,6 +90,14 @@ def main(argv=None) -> int:
         "--update", action="store_true", help="download newer resource files into the cache (before mapping)"
     )
     parser.add_argument("--write-model", type=Path, help="write the model with the found EC numbers as SBML")
+    parser.add_argument(
+        "--evaluate",
+        action="store_true",
+        help="remove the model's EC numbers, map it and compare (-o writes one row per reaction)",
+    )
+    parser.add_argument(
+        "--bigg-only", action="store_true", help="with --evaluate: keep only the BiGG annotations of the model"
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
     if args.model is None and not (args.check_updates or args.update):
@@ -90,6 +111,12 @@ def main(argv=None) -> int:
         skip_boundary=not args.include_boundary,
         follow_xrefs=not args.no_xrefs,
         bkms_consensus=not args.no_bkms_consensus,
+        current_ec=not args.no_current_ec,
+        compare_metabolites=not args.no_metabolites,
+        min_score=args.min_score,
+        min_margin=args.min_margin,
+        tie_breakers=[t.strip() for t in args.tie_breakers.split(",") if t.strip()],
+        organism=args.organism,
         cache_dir=args.cache_dir,
         refresh=args.refresh,
     )
@@ -109,6 +136,13 @@ def main(argv=None) -> int:
         return 0
 
     model = load_model(args.model)
+    if args.evaluate:
+        table = evaluate(model, mapper, bigg_only=args.bigg_only)
+        print(evaluation_summary(table).to_string())
+        if args.output:
+            table.to_csv(args.output, sep="\t", index=False)
+            print(f"evaluation written to {args.output}")
+        return 0
     mappings = mapper.map_model(model)
     _print_summary(summary(mappings), mapper)
 

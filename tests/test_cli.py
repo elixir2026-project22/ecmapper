@@ -31,6 +31,6 @@ def test_cli(tmp_path, cache_dir, capsys):
     assert main([str(sbml), "-o", str(out), "--long", "--sources", "kegg", "--cache-dir", str(cache_dir)]) == 0
     table = pd.read_csv(out, sep="\t", keep_default_na=False)
     assert list(table.columns) == [
-        "reaction_id", "origin", "selection", "ec", "selected", "complete", "source", "identifier", "via"
+        "reaction_id", "origin", "selection", "ec", "selected", "score", "complete", "source", "identifier", "via"
     ]
     assert set(table.source) == {"", "kegg"}

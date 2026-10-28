@@ -1,121 +1,132 @@
 # Disambiguation of EC numbers
 
-Several EC numbers are found for most reactions (e_coli_core: 39 of 53
-reactions). This document describes the selection that is implemented and a
-proposed scheme to select EC numbers by comparing metabolites.
-
-## Implemented selection
-
-`ecmapper.disambiguation.select` sets `selected` and `selection` of every mapping:
-
-1. `annotation` / `notes`: EC numbers that are already in the model are kept.
-2. `single`: only one EC number was found. Incomplete EC numbers that are
-   included in a found complete one (`2.7.1.-` and `2.7.1.165`) do not count.
-3. `bkms`: all BKMS-react reactions that match the KEGG or MetaCyc reactions of
-   the reaction (from the model or found as cross-reference, e.g. in BiGGr)
-   have the same EC number. Example: GLYCK2, ModelSEED gives 2.7.1.-,
-   2.7.1.165 and 2.7.1.31, BKMS-react aligns R08572/GKI-RXN only with 2.7.1.165.
-4. `ambiguous`: all EC numbers are kept.
-
-BKMS-react's KEGG alignments are used only for this consensus, not as an EC
-source: BKMS aligns KEGG reactions with generic BRENDA reactions (R00754,
-ethanol dehydrogenase, with the 24 EC numbers of "a primary alcohol + NAD+ = an
-aldehyde + NADH + H+"; R00771, glucose-6-phosphate isomerase, also with 5.3.1.8
-and 2.6.1.16) and would make unambiguous reactions ambiguous.
-
-| model (BiGG IDs only) | single | bkms | ambiguous |
-|---|---|---|---|
-| e_coli_core | 14 | 2 | 37 |
-| iAF1260 | 416 | 51 | 464 |
-
-For iAF1260, 16 of the 19 BKMS selections with a curated EC number in the
-model agree with it; in two of the three others (DHORD2, GLYCK2) the curated
-EC number is the one that is outdated. In 42 of the 51 cases the other
-candidates are transferred EC numbers.
+For most reactions several EC numbers are found (e_coli_core: 39 of 53
+reactions). `ecmapper.disambiguation.Disambiguator` selects the ones to use
+(`selected`) and records how (`selection`).
 
 ## Why several EC numbers are found
 
 1. **Outdated EC numbers.** Sources still list transferred EC numbers
-   (4.2.1.52 -> 4.3.3.7, 4.99.1.1 -> 4.98.1.1, ...). BRENDA uses the current ones.
+   (4.2.1.52 -> 4.3.3.7, 3.6.3.19 -> 7.5.2.1, ...). BRENDA uses the current ones.
 2. **Loose alignments.** A cross-reference points to a reaction that a resource
-   assigns to EC numbers of related or generic reactions (BKMS-react rows of
-   generic BRENDA reactions; ModelSEED: incomplete or neighbouring EC numbers).
-   Here the reactions of the EC numbers differ from the model reaction, which
-   a comparison of metabolites can detect.
+   assigns to EC numbers of related or generic reactions (BKMS-react aligns
+   KEGG R00754, ethanol + NAD+, with the 24 EC numbers of "a primary alcohol +
+   NAD+ = an aldehyde + NADH + H+"; ModelSEED lists incomplete or neighbouring
+   EC numbers). The reactions of these EC numbers differ from the model
+   reaction, which a comparison of metabolites detects.
 3. **One reaction, several enzymes.** The reaction itself is catalysed by
-   enzymes with different EC numbers, e.g. acetate kinase (2.7.2.1) and
-   propionate kinase (2.7.2.15) both catalyse ATP + acetate = ADP + acetyl
-   phosphate; KEGG links R00754 (ethanol + NAD+) to 1.1.1.1 and 1.1.1.71.
-   Metabolites can not separate these, only information about the organism or
+   enzymes with different EC numbers: acetate kinase (2.7.2.1) and propionate
+   kinase (2.7.2.15) both catalyse ATP + acetate = ADP + acetyl phosphate,
+   E. coli has both phosphoglycerate mutases (5.4.2.11 and 5.4.2.12).
+   Metabolites can not separate these, only information on the organism or
    the genes of the model can.
 
-## Proposed scheme
+## Selection
 
-**Step 0: current EC numbers.** Replace transferred EC numbers by their
-successors and drop deleted ones, using the ExPASy ENZYME file
-(`ftp.expasy.org/databases/enzyme/enzyme.dat`, 9.6 MB, 1,314 transferred and
-178 deleted entries). This runs before all selection rules, so the BKMS
-consensus and the comparison only see current EC numbers.
+0. **Current EC numbers.** Transferred EC numbers are replaced by their
+   successors, deleted ones dropped (ExPASy ENZYME, `enzyme.dat`: 1,314
+   transferred and 178 deleted entries). Incomplete EC numbers that include a
+   found complete one (`2.7.1.-` and `2.7.1.165`) are dropped.
+1. `annotation` / `notes`: EC numbers that are already in the model are kept
+   (made current; if they are all deleted, as they are).
+2. `single`: only one EC number was found.
+3. `bkms`: all BKMS-react reactions that match the KEGG or MetaCyc reactions
+   of the reaction (from the model or found as cross-reference, e.g. in BiGGr)
+   have the same EC number. BKMS-react's KEGG alignments are only used for
+   this consensus, not as an EC source, because they are too generic (R00771,
+   glucose-6-phosphate isomerase, is also aligned with 5.3.1.8 and 2.6.1.16).
+4. `metabolites`: the metabolites of the reaction are compared with the KEGG
+   reactions of each candidate EC number:
+   - KEGG reactions of an EC number: `link/ec/rn` (KEGG source), including
+     those of EC numbers transferred to it; their compounds: `link/cpd/rn`.
+   - Compounds of the model reaction: every metabolite is mapped to KEGG
+     compound IDs by its `kegg.compound` annotation and, via its
+     `bigg.metabolite` annotation or its ID without compartment, by the BiGGr
+     metabolites download (legacy BiGG IDs like `asn_L` match `asn__L`).
+     Protons and metabolites without KEGG compound are ignored.
+   - Score: weighted Jaccard index between the metabolites and the compounds of
+     a KEGG reaction; a metabolite matches if one of its KEGG compounds is in
+     the reaction; currency metabolites (ATP/ADP/AMP, NAD(P)(H), CoA, H2O,
+     phosphate, diphosphate, CO2, NH3/NH4+, O2, ...) count 0.5, all others 1.
+     Cofactors are kept because they separate e.g. NAD- and NADP-dependent
+     enzymes. The score of an EC number is that of its best KEGG reaction. The
+     sides of the reactions are not compared (KEGG REST has no bulk download
+     of equations).
+   - Decision: the EC number with the best score is selected if the score is
+     at least `min_score` (0.6) and all other EC numbers score more than
+     `min_margin` (0.1) lower. Otherwise, if the best score is at least
+     `min_score`, only the EC numbers within `min_margin` of it are kept.
+5. Tie-breakers, opt-in (`tie_breakers`, applied in the given order to the
+   remaining EC numbers, each selects if one EC number remains):
+   - `sources`: the EC numbers supported by most sources;
+   - `organism`: the EC numbers of which ENZYME lists a Swiss-Prot protein of
+     `organism` (mnemonic, e.g. `ECOLI`).
+6. `ambiguous`: the remaining EC numbers are kept.
 
-**Step 1: reference reactions per candidate EC number.** From KEGG: the KEGG
-reactions of the EC number (`link/ec/rn`, already downloaded) and the
-compounds of every KEGG reaction (`link/cpd/rn`, 52,932 links, one download).
-KEGG compound IDs do not depend on the protonation state, which makes them a
-good common namespace. Rhea (ChEBI participants) can be added later as a
-second reference.
+The scores are in `ReactionECMapping.scores` and in the output tables.
 
-**Step 2: compounds of the model reaction.** Every metabolite (compartment
-ignored, H+ dropped) is mapped to KEGG compound IDs, from its
-`kegg.compound` annotation or, via `bigg.metabolite` or the metabolite ID,
-from the BiGGr metabolites download (`bigg.bio/api/v3/download/metabolites`,
-1,827 of 2,441 universal metabolites have KEGG IDs). Legacy BiGG IDs
-(`asn_L` for `asn__L`) are matched with collapsed underscores.
-`seed.compound`, `chebi` and `metanetx.chemical` annotations can be added the
-same way via the ModelSEED and BiGGr cross-references.
+## Evaluation
 
-**Step 3: score.** For each candidate EC number and each of its reference
-reactions a weighted Jaccard index between the model's metabolites and the
-reference compounds is calculated: a metabolite matches if one of its KEGG IDs
-is a compound of the reaction; currency metabolites (ATP/ADP/AMP, NAD(P)(H),
-CoA, H2O, phosphate, diphosphate, CO2, NH3, O2, ...) count 0.5, all others 1.
-Cofactors are kept because they separate e.g. NAD- and NADP-dependent
-enzymes. The score of an EC number is that of its best reference reaction.
-(Substrate/product sides are not compared because the KEGG REST API provides
-no bulk download of equations.)
+`ecmapper.evaluate(model, mapper)` (`python -m ecmapper model.xml --evaluate`)
+removes the EC numbers of a model, maps it and compares the selected EC numbers
+with the removed ones (made current). `consistent`: all selected EC numbers
+are in the reference (or in an incomplete reference EC number), `overlap`:
+some are, `disjoint`: none is.
 
-**Step 4: decision.** The EC number with the highest score is selected
-(`selection = "metabolites"`) if its score is at least 0.6 and at least 0.1
-higher than that of the next one. If several EC numbers share the highest
-score, the reaction stays ambiguous, but only these EC numbers are kept
-(case 3 above). Below 0.6 (generic reference reactions) nothing is changed.
+### iML1515 (all cross-references of the model, `ec-code` removed)
 
-**Step 5 (optional): ties.** Possible tie-breakers, with the agreement measured on iAF1260:
-- number of sources that support the EC number: 59 ties resolved, 71 % agree with the curation;
-- Swiss-Prot entries of the model organism with the EC number (ENZYME `DR` lines): 7 resolved, 5 agree;
-- better: EC numbers of the model's genes (GPR -> UniProt), not available offline.
+1,090 reactions have EC numbers, 264 of them several, taken from BiGG's
+database links rather than curated per reaction.
 
-Given the moderate agreement, ties should stay ambiguous by default and the
-tie-breakers be opt-in.
+| selection | reactions | consistent | overlap | disjoint |
+|---|---|---|---|---|
+| single | 470 | 470 | | |
+| bkms | 10 | 7 | | 3 |
+| metabolites | 253 | 243 | | 10 |
+| ambiguous | 254 | 181 | 69 | 4 |
+| not found | 103 | | | |
 
-## Prototype results
+Of the reactions with one selected EC number and one reference EC number,
+692 of 699 agree. Without the comparison of metabolites 507 reactions stay
+ambiguous instead of 254; without current EC numbers 38 instead of 13 of the
+selected EC numbers are `disjoint`. With BiGG IDs only (reactions and
+metabolites), 862 reactions get EC numbers, 239 are selected by their
+metabolites (229 consistent), 227 stay ambiguous.
 
-A prototype of steps 0 to 5 was evaluated on iAF1260, mapped from BiGG IDs only,
-with the curated EC numbers in the model's notes (mapped to current EC
-numbers) as reference. Of the 957 reactions with a curated EC number, 649 got
-candidates:
+Most "disjoint" selections are newer or more specific EC numbers than those of
+the model: the bkms cases are GART (6.3.1.21, PurT) and the maltose ABC
+transporter (7.5.2.1, formerly 3.6.3.19); by metabolites PDH, AKGDH and GLYCL
+get the EC numbers of the whole enzyme systems (1.2.1.104, 1.2.1.105,
+1.4.1.27, since 2018) instead of those of the subunits, IG3PS gets
+imidazole-glycerol-phosphate synthase (4.3.2.10) and ACACT3r/ACACT5r the
+thiolase for longer chains (2.3.1.16 instead of 2.3.1.9).
 
-| step | reactions | agree with the curated EC |
-|---|---|---|
-| single candidate | 312 | 312 |
-| BKMS consensus | 4 | 1 (2 others: curated EC outdated) |
-| metabolite comparison | 178 | 163 (92 %) |
-| tie (same best score) | 138 | curated EC among the tied ones: 128 |
-| score below 0.6 | 17 | (unchanged) |
+### iAF1260 (BiGG IDs only, EC numbers curated in the model's notes, 2007)
 
-Several of the 15 disagreements of the comparison look like corrections of the
-2007 curation: GLYCLTDy uses NADPH and is selected as 1.1.1.79 (curated:
-NAD-dependent 1.1.1.26), LCADi as lactaldehyde dehydrogenase 1.2.1.22
-(curated: 1.2.1.21), ALAALAD as D-Ala-D-Ala dipeptidase 3.4.13.22.
-Tie-breaking by enzyme specificity (fewest KEGG reactions) or by KEGG's
-"main" reactions of an EC number was tested as well and agreed less often
-(43 % and 59 %).
+| selection | reactions | consistent | overlap | disjoint |
+|---|---|---|---|---|
+| single | 315 | 312 | | 3 |
+| bkms | 4 | 1 | | 3 |
+| metabolites | 180 | 164 | | 16 |
+| ambiguous | 155 | 2 | 143 | 10 |
+| not found | 303 | | | |
+
+The not found reactions have IDs that are not in BiGGr. Several of the
+disagreements correct the 2007 curation, e.g. GLYCLTDy uses NADPH and is
+selected as 1.1.1.79 (curated: NAD-dependent 1.1.1.26), GLYCK2 and DHORD2 by
+BKMS-react as 2.7.1.165 and 1.3.5.2.
+
+### Tie-breakers
+
+| model | tie-breakers | selected by them | consistent |
+|---|---|---|---|
+| iML1515 | organism, sources | 132 + 75 | 125 + 73 (96 %) |
+| iAF1260 | organism, sources | 83 + 42 | 66 + 33 (79 %) |
+
+Against the independently curated EC numbers of iAF1260, one in five
+tie-breaker selections disagrees, so they are not enabled by default. The
+better information for the case "one reaction, several enzymes" are the EC
+numbers of the model's genes (GPR -> UniProt), which are not used yet.
+Tie-breaking by enzyme specificity (fewest KEGG reactions) or by KEGG's "main"
+reactions of an EC number was tested as well and agreed less often (43 % and
+59 % on iAF1260).

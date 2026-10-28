@@ -12,11 +12,12 @@ FIXTURES = Path(__file__).parent / "fixtures"
 
 @pytest.fixture
 def cache_dir(tmp_path) -> Path:
-    """A download cache that holds the fixture excerpts of all bulk files."""
+    """A download cache that holds the fixture excerpts of all bulk files (EC sources and reference data)."""
     cache = tmp_path / "cache"
     cache.mkdir()
     for name in ("kegg_link_ec_rn.tsv", "Unique_ModelSEED_Reaction_ECs.txt", "rhea2ec.tsv",
-                 "rhea-directions.tsv", "biggr_reactions.json"):
+                 "rhea-directions.tsv", "biggr_reactions.json", "enzyme.dat", "kegg_link_cpd_rn.tsv",
+                 "biggr_metabolites.json"):
         shutil.copy(FIXTURES / name, cache / name)
     # the BKMS-react download is a tar.gz with a tab separated Reactions_BKMS.csv
     with tarfile.open(cache / "Reactions_BKMS.tar.gz", "w:gz") as tar:

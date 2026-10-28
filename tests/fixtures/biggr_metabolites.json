@@ -1,0 +1,2422 @@
+[
+ {
+  "bigg_id": "adp:0",
+  "name": "ADP",
+  "formula": "C10H15N5O10P2",
+  "charge": 0,
+  "universalcomponent__bigg_id": "adp",
+  "universalcomponent__name": "ADP(3-)",
+  "universalcomponent__default_component": "adp:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:16761"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "16761",
+    "source": "CHEBI:16761",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00008",
+    "source": "CHEBI:16761",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB03431",
+    "source": "CHEBI:16761",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "adp:-2",
+  "name": "ADP(2-)",
+  "formula": "C10H13N5O10P2",
+  "charge": -2,
+  "universalcomponent__bigg_id": "adp",
+  "universalcomponent__name": "ADP(3-)",
+  "universalcomponent__default_component": "adp:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:87518"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "87518",
+    "source": "CHEBI:87518",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00008",
+    "source": "seed.metabolite:cpd00008",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "G11113",
+    "source": "seed.metabolite:cpd00008",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00008",
+    "source": "seed.metabolite:cpd00008",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "ADP",
+    "source": "seed.metabolite:cpd00008",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM7",
+    "source": "seed.metabolite:cpd00008",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "adp:-3",
+  "name": "ADP(3-)",
+  "formula": "C10H12N5O10P2",
+  "charge": -3,
+  "universalcomponent__bigg_id": "adp",
+  "universalcomponent__name": "ADP(3-)",
+  "universalcomponent__default_component": "adp:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "adp_c:-3",
+   "adp_m:-3",
+   "adp_x:-3",
+   "adp_n:-3",
+   "adp_v:-3",
+   "adp_h:-3",
+   "adp_e:-3",
+   "adp_r:-3",
+   "adp_g:-3",
+   "adp_f:-3"
+  ],
+  "references": [
+   "CHEBI:456216"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "456216",
+    "source": "CHEBI:456216",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pyr:-1",
+  "name": "pyruvate",
+  "formula": "C3H3O3",
+  "charge": -1,
+  "universalcomponent__bigg_id": "pyr",
+  "universalcomponent__name": "pyruvate",
+  "universalcomponent__default_component": "pyr:-1",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "pyr_c:-1",
+   "pyr_p:-1",
+   "pyr_m:-1",
+   "pyr_x:-1",
+   "pyr_e:-1",
+   "pyr_f:-1",
+   "pyr_h:-1"
+  ],
+  "references": [
+   "CHEBI:15361"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "15361",
+    "source": "CHEBI:15361",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00022",
+    "source": "CHEBI:15361",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00020",
+    "source": "seed.metabolite:cpd00020",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00022",
+    "source": "seed.metabolite:cpd00020",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "PYRUVATE",
+    "source": "seed.metabolite:cpd00020",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM23",
+    "source": "seed.metabolite:cpd00020",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pyr:0",
+  "name": "pyruvic acid",
+  "formula": "C3H4O3",
+  "charge": 0,
+  "universalcomponent__bigg_id": "pyr",
+  "universalcomponent__name": "pyruvate",
+  "universalcomponent__default_component": "pyr:-1",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:32816"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "32816",
+    "source": "CHEBI:32816",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00022",
+    "source": "CHEBI:32816",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0000243",
+    "source": "CHEBI:32816",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "PYRUVATE",
+    "source": "CHEBI:32816",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Pyruvic_acid",
+    "source": "CHEBI:32816",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB00119",
+    "source": "CHEBI:32816",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "h2o:0",
+  "name": "water",
+  "formula": "H2O",
+  "charge": 0,
+  "universalcomponent__bigg_id": "h2o",
+  "universalcomponent__name": "water",
+  "universalcomponent__default_component": "h2o:0",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "h2o_c:0",
+   "h2o_p:0",
+   "h2o_m:0",
+   "h2o_x:0",
+   "h2o_e:0",
+   "h2o_r:0",
+   "h2o_n:0",
+   "h2o_v:0",
+   "h2o_g:0",
+   "h2o_u:0",
+   "h2o_l:0",
+   "h2o_h:0",
+   "h2o_s:0",
+   "h2o_cx:0",
+   "h2o_f:0"
+  ],
+  "references": [
+   "CHEBI:15377"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "15377",
+    "source": "CHEBI:15377",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00001",
+    "source": "CHEBI:15377",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Water",
+    "source": "CHEBI:15377",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "WATER",
+    "source": "CHEBI:15377",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.drug",
+    "identifier": "D00001",
+    "source": "CHEBI:15377",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0002111",
+    "source": "CHEBI:15377",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd15275",
+    "source": "seed.metabolite:cpd15275",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00001",
+    "source": "seed.metabolite:cpd00001",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C01328",
+    "source": "seed.metabolite:cpd00001",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00001",
+    "source": "seed.metabolite:cpd00001",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "WATER",
+    "source": "seed.metabolite:cpd00001",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "OH",
+    "source": "seed.metabolite:cpd00001",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "OXONIUM",
+    "source": "seed.metabolite:cpd00001",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM2",
+    "source": "seed.metabolite:cpd00001",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "h2o:1",
+  "name": "oxonium",
+  "formula": "H3O",
+  "charge": 1,
+  "universalcomponent__bigg_id": "h2o",
+  "universalcomponent__name": "water",
+  "universalcomponent__default_component": "h2o:0",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:29412"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "29412",
+    "source": "CHEBI:29412",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "h2o:-1",
+  "name": "hydroxide",
+  "formula": "HO",
+  "charge": -1,
+  "universalcomponent__bigg_id": "h2o",
+  "universalcomponent__name": "water",
+  "universalcomponent__default_component": "h2o:0",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:16234"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "16234",
+    "source": "CHEBI:16234",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C01328",
+    "source": "CHEBI:16234",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "amp:-2",
+  "name": "adenosine 5'-monophosphate(2-)",
+  "formula": "C10H12N5O7P",
+  "charge": -2,
+  "universalcomponent__bigg_id": "amp",
+  "universalcomponent__name": "adenosine 5'-monophosphate(2-)",
+  "universalcomponent__default_component": "amp:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "amp_c:-2",
+   "amp_e:-2",
+   "amp_p:-2",
+   "amp_m:-2",
+   "amp_n:-2",
+   "amp_x:-2",
+   "amp_r:-2",
+   "amp_l:-2",
+   "amp_g:-2",
+   "amp_h:-2"
+  ],
+  "references": [
+   "CHEBI:456215"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "456215",
+    "source": "CHEBI:456215",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "AMP",
+    "source": "CHEBI:456215",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0000045",
+    "source": "CHEBI:456215",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00018",
+    "source": "seed.metabolite:cpd00018",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00020",
+    "source": "seed.metabolite:cpd00018",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "AMP",
+    "source": "seed.metabolite:cpd00018",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM14",
+    "source": "seed.metabolite:cpd00018",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "amp:0",
+  "name": "adenosine 5'-monophosphate",
+  "formula": "C10H14N5O7P",
+  "charge": 0,
+  "universalcomponent__bigg_id": "amp",
+  "universalcomponent__name": "adenosine 5'-monophosphate(2-)",
+  "universalcomponent__default_component": "amp:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:16027"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "16027",
+    "source": "CHEBI:16027",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00020",
+    "source": "CHEBI:16027",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB00131",
+    "source": "CHEBI:16027",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.drug",
+    "identifier": "D02769",
+    "source": "CHEBI:16027",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0000045",
+    "source": "CHEBI:16027",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "AMP",
+    "source": "CHEBI:16027",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Adenylic_acid",
+    "source": "CHEBI:16027",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "amp:1",
+  "name": "adenosine 5'-monophosphate(1+)",
+  "formula": "C10H15N5O7P",
+  "charge": 1,
+  "universalcomponent__bigg_id": "amp",
+  "universalcomponent__name": "adenosine 5'-monophosphate(2-)",
+  "universalcomponent__default_component": "amp:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:40721"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "40721",
+    "source": "CHEBI:40721",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "f6p:-2",
+  "name": "beta-D-fructofuranose 6-phosphate(2-)",
+  "formula": "C6H11O9P",
+  "charge": -2,
+  "universalcomponent__bigg_id": "f6p",
+  "universalcomponent__name": "beta-D-fructofuranose 6-phosphate(2-)",
+  "universalcomponent__default_component": "f6p:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "f6p_c:-2",
+   "f6p_e:-2",
+   "f6p_x:-2",
+   "f6p_p:-2",
+   "f6p_h:-2"
+  ],
+  "references": [
+   "CHEBI:57634"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "57634",
+    "source": "CHEBI:57634",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00072",
+    "source": "seed.metabolite:cpd00072",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00085",
+    "source": "seed.metabolite:cpd00072",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "CPD-18719",
+    "source": "seed.metabolite:cpd00072",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM155029",
+    "source": "seed.metabolite:cpd00072",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM162235",
+    "source": "seed.metabolite:cpd00072",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd19035",
+    "source": "seed.metabolite:cpd19035",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C05345",
+    "source": "seed.metabolite:cpd19035",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "FRUCTOSE-6P",
+    "source": "seed.metabolite:cpd19035",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM89621",
+    "source": "seed.metabolite:cpd19035",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "f6p:0",
+  "name": "beta-D-fructofuranose 6-phosphate",
+  "formula": "C6H13O9P",
+  "charge": 0,
+  "universalcomponent__bigg_id": "f6p",
+  "universalcomponent__name": "beta-D-fructofuranose 6-phosphate(2-)",
+  "universalcomponent__default_component": "f6p:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:16084"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "16084",
+    "source": "CHEBI:16084",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C05345",
+    "source": "CHEBI:16084",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Fructose_6-phosphate",
+    "source": "CHEBI:16084",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "g6p:0",
+  "name": "D-glucopyranose 6-phosphate",
+  "formula": "C6H13O9P",
+  "charge": 0,
+  "universalcomponent__bigg_id": "g6p",
+  "universalcomponent__name": "D-glucopyranose 6-phosphate(2-)",
+  "universalcomponent__default_component": "g6p:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:4170"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "4170",
+    "source": "CHEBI:4170",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00092",
+    "source": "CHEBI:4170",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB03581",
+    "source": "CHEBI:4170",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Glucose_6-phosphate",
+    "source": "CHEBI:4170",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "D-glucose-6-phosphate",
+    "source": "CHEBI:4170",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0001401",
+    "source": "CHEBI:4170",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "g6p:-2",
+  "name": "D-glucopyranose 6-phosphate(2-)",
+  "formula": "C6H11O9P",
+  "charge": -2,
+  "universalcomponent__bigg_id": "g6p",
+  "universalcomponent__name": "D-glucopyranose 6-phosphate(2-)",
+  "universalcomponent__default_component": "g6p:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "g6p_c:-2",
+   "g6p_p:-2",
+   "g6p_e:-2",
+   "g6p_r:-2",
+   "g6p_h:-2"
+  ],
+  "references": [
+   "CHEBI:61548"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "61548",
+    "source": "CHEBI:61548",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "D-glucopyranose-6-phosphate",
+    "source": "CHEBI:61548",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00079",
+    "source": "seed.metabolite:cpd00079",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00092",
+    "source": "seed.metabolite:cpd00079",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "D-glucopyranose-6-phosphate",
+    "source": "seed.metabolite:cpd00079",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "Glucose-6-phosphate",
+    "source": "seed.metabolite:cpd00079",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "D-glucose-6-phosphate",
+    "source": "seed.metabolite:cpd00079",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM160",
+    "source": "seed.metabolite:cpd00079",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM149016",
+    "source": "seed.metabolite:cpd00079",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd26836",
+    "source": "seed.metabolite:cpd26836",
+    "source_type": "modelseed",
+    "source_obsolete": true,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00092",
+    "source": "seed.metabolite:cpd26836",
+    "source_type": "modelseed",
+    "source_obsolete": true,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "D-glucopyranose-6-phosphate",
+    "source": "seed.metabolite:cpd26836",
+    "source_type": "modelseed",
+    "source_obsolete": true,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "Glucose-6-phosphate",
+    "source": "seed.metabolite:cpd26836",
+    "source_type": "modelseed",
+    "source_obsolete": true,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "D-glucose-6-phosphate",
+    "source": "seed.metabolite:cpd26836",
+    "source_type": "modelseed",
+    "source_obsolete": true,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM160",
+    "source": "seed.metabolite:cpd26836",
+    "source_type": "modelseed",
+    "source_obsolete": true,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM149016",
+    "source": "seed.metabolite:cpd26836",
+    "source_type": "modelseed",
+    "source_obsolete": true,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "glyc__R:0",
+  "name": "D-glyceric acid",
+  "formula": "C3H6O4",
+  "charge": 0,
+  "universalcomponent__bigg_id": "glyc__R",
+  "universalcomponent__name": "D-glycerate",
+  "universalcomponent__default_component": "glyc__R:-1",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:32398"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "32398",
+    "source": "CHEBI:32398",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00258",
+    "source": "CHEBI:32398",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0000139",
+    "source": "CHEBI:32398",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "GLYCERATE",
+    "source": "CHEBI:32398",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "glyc__R:-1",
+  "name": "D-glycerate",
+  "formula": "C3H5O4",
+  "charge": -1,
+  "universalcomponent__bigg_id": "glyc__R",
+  "universalcomponent__name": "D-glycerate",
+  "universalcomponent__default_component": "glyc__R:-1",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "glyc__R_p:-1",
+   "glyc__R_c:-1",
+   "glyc__R_e:-1",
+   "glyc__R_h:-1",
+   "glyc__R_m:-1"
+  ],
+  "references": [
+   "CHEBI:16659"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "16659",
+    "source": "CHEBI:16659",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00258",
+    "source": "CHEBI:16659",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0000139",
+    "source": "CHEBI:16659",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "GLYCERATE",
+    "source": "CHEBI:16659",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00223",
+    "source": "seed.metabolite:cpd00223",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00258",
+    "source": "seed.metabolite:cpd00223",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "GLYCERATE",
+    "source": "seed.metabolite:cpd00223",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM40615",
+    "source": "seed.metabolite:cpd00223",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM189",
+    "source": "seed.metabolite:cpd00223",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "h:1",
+  "name": "hydron",
+  "formula": "H",
+  "charge": 1,
+  "universalcomponent__bigg_id": "h",
+  "universalcomponent__name": "hydron",
+  "universalcomponent__default_component": "h:1",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "h_p:1",
+   "h_c:1",
+   "h_e:1",
+   "h_x:1",
+   "h_m:1",
+   "h_v:1",
+   "h_r:1",
+   "h_n:1",
+   "h_g:1",
+   "h_l:1",
+   "h_h:1",
+   "h_s:1",
+   "h_u:1",
+   "h_f:1",
+   "h_cx:1"
+  ],
+  "references": [
+   "CHEBI:15378"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "15378",
+    "source": "CHEBI:15378",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00080",
+    "source": "CHEBI:15378",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00067",
+    "source": "seed.metabolite:cpd00067",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00080",
+    "source": "seed.metabolite:cpd00067",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "PROTON",
+    "source": "seed.metabolite:cpd00067",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM1",
+    "source": "seed.metabolite:cpd00067",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "atp:-4",
+  "name": "ATP(4-)",
+  "formula": "C10H12N5O13P3",
+  "charge": -4,
+  "universalcomponent__bigg_id": "atp",
+  "universalcomponent__name": "ATP(4-)",
+  "universalcomponent__default_component": "atp:-4",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "atp_c:-4",
+   "atp_m:-4",
+   "atp_x:-4",
+   "atp_n:-4",
+   "atp_v:-4",
+   "atp_r:-4",
+   "atp_e:-4",
+   "atp_h:-4",
+   "atp_g:-4",
+   "atp_f:-4"
+  ],
+  "references": [
+   "CHEBI:30616"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "30616",
+    "source": "CHEBI:30616",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "atp:0",
+  "name": "ATP",
+  "formula": "C10H16N5O13P3",
+  "charge": 0,
+  "universalcomponent__bigg_id": "atp",
+  "universalcomponent__name": "ATP(4-)",
+  "universalcomponent__default_component": "atp:-4",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:15422"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "15422",
+    "source": "CHEBI:15422",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00002",
+    "source": "CHEBI:15422",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB00171",
+    "source": "CHEBI:15422",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Adenosine_triphosphate",
+    "source": "CHEBI:15422",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0000538",
+    "source": "CHEBI:15422",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.drug",
+    "identifier": "D08646",
+    "source": "CHEBI:15422",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "atp:-3",
+  "name": "ATP(3-)",
+  "formula": "C10H13N5O13P3",
+  "charge": -3,
+  "universalcomponent__bigg_id": "atp",
+  "universalcomponent__name": "ATP(4-)",
+  "universalcomponent__default_component": "atp:-4",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:57299"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "57299",
+    "source": "CHEBI:57299",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00002",
+    "source": "seed.metabolite:cpd00002",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00002",
+    "source": "seed.metabolite:cpd00002",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "ATP",
+    "source": "seed.metabolite:cpd00002",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM3",
+    "source": "seed.metabolite:cpd00002",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pep:-1",
+  "name": "phosphoenolpyruvate",
+  "formula": "C3H4O6P",
+  "charge": -1,
+  "universalcomponent__bigg_id": "pep",
+  "universalcomponent__name": "phosphonatoenolpyruvate",
+  "universalcomponent__default_component": "pep:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:18021"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "18021",
+    "source": "CHEBI:18021",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00074",
+    "source": "CHEBI:18021",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pep:-3",
+  "name": "phosphonatoenolpyruvate",
+  "formula": "C3H2O6P",
+  "charge": -3,
+  "universalcomponent__bigg_id": "pep",
+  "universalcomponent__name": "phosphonatoenolpyruvate",
+  "universalcomponent__default_component": "pep:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "pep_c:-3",
+   "pep_e:-3",
+   "pep_p:-3",
+   "pep_m:-3",
+   "pep_h:-3",
+   "pep_x:-3",
+   "pep_f:-3"
+  ],
+  "references": [
+   "CHEBI:58702"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "58702",
+    "source": "CHEBI:58702",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00061",
+    "source": "seed.metabolite:cpd00061",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00074",
+    "source": "seed.metabolite:cpd00061",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "PHOSPHO-ENOL-PYRUVATE",
+    "source": "seed.metabolite:cpd00061",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM73",
+    "source": "seed.metabolite:cpd00061",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pep:0",
+  "name": "phosphoenolpyruvic acid",
+  "formula": "C3H5O6P",
+  "charge": 0,
+  "universalcomponent__bigg_id": "pep",
+  "universalcomponent__name": "phosphonatoenolpyruvate",
+  "universalcomponent__default_component": "pep:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:44897"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "44897",
+    "source": "CHEBI:44897",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00074",
+    "source": "CHEBI:44897",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB01819",
+    "source": "CHEBI:44897",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0000263",
+    "source": "CHEBI:44897",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Phosphoenolpyruvic_acid",
+    "source": "CHEBI:44897",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "2pg:-3",
+  "name": "2-phosphonato-D-glycerate(3-)",
+  "formula": "C3H4O7P",
+  "charge": -3,
+  "universalcomponent__bigg_id": "2pg",
+  "universalcomponent__name": "2-phosphonato-D-glycerate(3-)",
+  "universalcomponent__default_component": "2pg:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "2pg_c:-3",
+   "2pg_p:-3",
+   "2pg_m:-3",
+   "2pg_e:-3",
+   "2pg_h:-3",
+   "2pg_f:-3"
+  ],
+  "references": [
+   "CHEBI:58289"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "58289",
+    "source": "CHEBI:58289",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "2-PG",
+    "source": "CHEBI:58289",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00482",
+    "source": "seed.metabolite:cpd00482",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00631",
+    "source": "seed.metabolite:cpd00482",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "2-PG",
+    "source": "seed.metabolite:cpd00482",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM275",
+    "source": "seed.metabolite:cpd00482",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "2pg:0",
+  "name": "2-phospho-D-glyceric acid",
+  "formula": "C3H7O7P",
+  "charge": 0,
+  "universalcomponent__bigg_id": "2pg",
+  "universalcomponent__name": "2-phosphonato-D-glycerate(3-)",
+  "universalcomponent__default_component": "2pg:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:17835"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "17835",
+    "source": "CHEBI:17835",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00631",
+    "source": "CHEBI:17835",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB03465",
+    "source": "CHEBI:17835",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "2-PG",
+    "source": "CHEBI:17835",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0003391",
+    "source": "CHEBI:17835",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "3pg:-3",
+  "name": "3-phosphonato-D-glycerate(3-)",
+  "formula": "C3H4O7P",
+  "charge": -3,
+  "universalcomponent__bigg_id": "3pg",
+  "universalcomponent__name": "3-phosphonato-D-glycerate(3-)",
+  "universalcomponent__default_component": "3pg:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "3pg_c:-3",
+   "3pg_h:-3",
+   "3pg_m:-3",
+   "3pg_e:-3",
+   "3pg_p:-3",
+   "3pg_x:-3",
+   "3pg_f:-3",
+   "3pg_cx:-3"
+  ],
+  "references": [
+   "CHEBI:58272"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "58272",
+    "source": "CHEBI:58272",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "G3P",
+    "source": "CHEBI:58272",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00169",
+    "source": "seed.metabolite:cpd00169",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00197",
+    "source": "seed.metabolite:cpd00169",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "G3P",
+    "source": "seed.metabolite:cpd00169",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM126",
+    "source": "seed.metabolite:cpd00169",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM162261",
+    "source": "seed.metabolite:cpd00169",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "3pg:0",
+  "name": "3-phospho-D-glyceric acid",
+  "formula": "C3H7O7P",
+  "charge": 0,
+  "universalcomponent__bigg_id": "3pg",
+  "universalcomponent__name": "3-phosphonato-D-glycerate(3-)",
+  "universalcomponent__default_component": "3pg:-3",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:17794"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "17794",
+    "source": "CHEBI:17794",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00197",
+    "source": "CHEBI:17794",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "G3P",
+    "source": "CHEBI:17794",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "3-Phosphoglyceric_acid",
+    "source": "CHEBI:17794",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pi:-2",
+  "name": "hydrogenphosphate",
+  "formula": "HO4P",
+  "charge": -2,
+  "universalcomponent__bigg_id": "pi",
+  "universalcomponent__name": "hydrogenphosphate",
+  "universalcomponent__default_component": "pi:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [
+   "pi_c:-2",
+   "pi_p:-2",
+   "pi_e:-2",
+   "pi_m:-2",
+   "pi_x:-2",
+   "pi_g:-2",
+   "pi_v:-2",
+   "pi_l:-2",
+   "pi_r:-2",
+   "pi_n:-2",
+   "pi_h:-2",
+   "pi_f:-2"
+  ],
+  "references": [
+   "CHEBI:43474"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "43474",
+    "source": "CHEBI:43474",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "seed.compound",
+    "identifier": "cpd00009",
+    "source": "seed.metabolite:cpd00009",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00009",
+    "source": "seed.metabolite:cpd00009",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "Pi",
+    "source": "seed.metabolite:cpd00009",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "CPD-16459",
+    "source": "seed.metabolite:cpd00009",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metacyc.compound",
+    "identifier": "CPD-20124",
+    "source": "seed.metabolite:cpd00009",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   },
+   {
+    "namespace": "metanetx.chemical",
+    "identifier": "MNXM9",
+    "source": "seed.metabolite:cpd00009",
+    "source_type": "modelseed",
+    "source_obsolete": false,
+    "match": [
+     "bigg_id",
+     "inchikey"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pi:-1",
+  "name": "dihydrogenphosphate",
+  "formula": "H2O4P",
+  "charge": -1,
+  "universalcomponent__bigg_id": "pi",
+  "universalcomponent__name": "hydrogenphosphate",
+  "universalcomponent__default_component": "pi:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:39745"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "39745",
+    "source": "CHEBI:39745",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "drugbank",
+    "identifier": "DB02831",
+    "source": "CHEBI:39745",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pi:-3",
+  "name": "phosphate(3-)",
+  "formula": "O4P",
+  "charge": -3,
+  "universalcomponent__bigg_id": "pi",
+  "universalcomponent__name": "hydrogenphosphate",
+  "universalcomponent__default_component": "pi:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:18367"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "18367",
+    "source": "CHEBI:18367",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00009",
+    "source": "CHEBI:18367",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Phosphate",
+    "source": "CHEBI:18367",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ },
+ {
+  "bigg_id": "pi:0",
+  "name": "phosphoric acid",
+  "formula": "H3O4P",
+  "charge": 0,
+  "universalcomponent__bigg_id": "pi",
+  "universalcomponent__name": "hydrogenphosphate",
+  "universalcomponent__default_component": "pi:-2",
+  "universalcomponent__old_bigg_ids": [],
+  "compartmentalized_components": [],
+  "references": [
+   "CHEBI:26078"
+  ],
+  "cross_references": [
+   {
+    "namespace": "CHEBI",
+    "identifier": "26078",
+    "source": "CHEBI:26078",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "wikipedia.en",
+    "identifier": "Phosphoric_Acid",
+    "source": "CHEBI:26078",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.compound",
+    "identifier": "C00009",
+    "source": "CHEBI:26078",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "kegg.drug",
+    "identifier": "D05467",
+    "source": "CHEBI:26078",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   },
+   {
+    "namespace": "hmdb",
+    "identifier": "HMDB0002142",
+    "source": "CHEBI:26078",
+    "source_type": "chebi_reference",
+    "source_obsolete": false,
+    "match": [
+     "reference"
+    ]
+   }
+  ]
+ }
+]

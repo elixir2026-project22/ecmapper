@@ -78,15 +78,14 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-class ECSource(ABC):
-    """A resource with a bulk table that maps identifiers of one namespace to EC numbers.
+class CachedResource(ABC):
+    """Bulk files that are downloaded on first use, cached in `cache_dir` and parsed.
 
-    The bulk files are downloaded on first use and cached in `cache_dir`. If a
-    download fails, the source logs a warning and behaves as if it was empty.
-    Next to every downloaded file, its ETag, Last-Modified date and SHA-256
-    checksum are stored (``<file>.meta.json``); :meth:`check_updates` uses them
-    to find out whether a newer version is available without downloading it
-    again and :meth:`update` downloads only the files that changed.
+    If a download fails, the resource logs a warning and behaves as if it was
+    empty. Next to every downloaded file, its ETag, Last-Modified date and
+    SHA-256 checksum are stored (``<file>.meta.json``); :meth:`check_updates`
+    uses them to find out whether a newer version is available without
+    downloading it again and :meth:`update` downloads only the files that changed.
 
     Parameters
     ----------
@@ -100,10 +99,8 @@ class ECSource(ABC):
         Session used for the downloads.
     """
 
-    #: short name of the resource, used in the evidence of a mapping
+    #: short name of the resource
     name: ClassVar[str]
-    #: canonical annotation namespace of the identifiers this source resolves
-    namespace: ClassVar[str]
     #: bulk files {file name in cache: URL}
     files: ClassVar[dict[str, str]]
 
@@ -119,28 +116,27 @@ class ECSource(ABC):
         self.local_files = {k: Path(v) for k, v in (local_files or {}).items()}
         self.session = session
         self.error: Exception | None = None
-        self._table: dict[str, set[str]] | None = None
-        self._xrefs: dict[str, dict[str, set[str]]] = {}
+        self._data = None
 
     def __repr__(self) -> str:
-        return f"<{type(self).__name__} {self.name}: {self.namespace}>"
+        return f"<{type(self).__name__} {self.name}>"
 
     @property
-    def table(self) -> dict[str, set[str]]:
-        """The mapping identifier -> EC numbers, loaded on first access."""
-        if self._table is None:
+    def data(self):
+        """The parsed bulk files, loaded on first access."""
+        if self._data is None:
             self.load()
-        return self._table
+        return self._data
 
     @property
     def loaded(self) -> bool:
         """True once the bulk files were loaded (or loading failed)."""
-        return self._table is not None
+        return self._data is not None
 
     @property
     def available(self) -> bool:
         """False if the bulk files could not be loaded."""
-        if self._table is None:
+        if self._data is None:
             self.load()
         return self.error is None
 
@@ -148,36 +144,24 @@ class ECSource(ABC):
         """Download (if needed) and parse the bulk files."""
         try:
             paths = {name: self._fetch(name, url) for name, url in self.files.items()}
-            table = self._parse(paths)
+            data = self._parse(paths)
         except (OSError, ValueError, requests.RequestException) as e:
             LOGGER.warning("%s is not available and will be skipped: %s", self.name, e)
+            self.reset()
             self.error = e
-            self._table, self._xrefs = {}, {}
+            self._data = self._empty()
             return
         self.refresh = False
-        self._table = {k: v for k, v in table.items() if v}
-        LOGGER.info("%s: loaded EC numbers for %d identifiers", self.name, len(self._table))
-
-    def lookup(self, identifier: str) -> set[str]:
-        """EC numbers for `identifier` (empty if unknown)."""
-        return set(self.table.get(identifier, ()))
-
-    def xrefs(self, identifier: str) -> dict[str, set[str]]:
-        """Cross-references of `identifier` to other namespaces, if the resource provides them."""
-        if self._table is None:
-            self.load()
-        return {ns: set(ids) for ns, ids in self._xrefs.get(identifier, {}).items()}
+        self._data = data
+        LOGGER.info("%s: loaded %d entries", self.name, len(data))
 
     @abstractmethod
-    def _parse(self, paths: dict[str, Path]) -> dict[str, set[str]]:
-        """Parse the bulk files into {identifier: {EC numbers}}."""
+    def _parse(self, paths: dict[str, Path]):
+        """Parse the bulk files {file name: path}."""
 
-    @staticmethod
-    def _add(table: dict[str, set[str]], identifier: str, raw_ec: str) -> None:
-        """Add `raw_ec` to `table` if it is a valid EC number."""
-        ec = normalize_ec(raw_ec)
-        if ec is not None:
-            table.setdefault(identifier, set()).add(ec)
+    def _empty(self):
+        """The data of a resource that could not be loaded."""
+        return {}
 
     def check_updates(self) -> list[FileStatus]:
         """Check for every bulk file whether a newer version is available, without updating the cache.
@@ -193,7 +177,7 @@ class ECSource(ABC):
         """Download the bulk files for which a newer version is available (or that are missing).
 
         With `force` all files are downloaded again. If a file changed, the
-        source is reloaded on its next use.
+        resource is reloaded on its next use.
         """
         statuses = [self._sync(name, url, download=True, force=force) for name, url in self.files.items()]
         # the files were just synchronised, a pending refresh would download them again
@@ -203,8 +187,8 @@ class ECSource(ABC):
         return statuses
 
     def reset(self) -> None:
-        """Forget the loaded table, it is loaded again on the next use."""
-        self._table, self._xrefs, self.error = None, {}, None
+        """Forget the loaded data, it is loaded again on the next use."""
+        self._data, self.error = None, None
 
     def _meta_path(self, name: str) -> Path:
         return self.cache_dir / f"{name}.meta.json"
@@ -343,3 +327,46 @@ class ECSource(ABC):
         if last_modified and meta.get("last_modified"):
             return last_modified != meta["last_modified"]
         return None
+
+
+class ECSource(CachedResource):
+    """A resource with a bulk table that maps identifiers of one namespace to EC numbers."""
+
+    #: canonical annotation namespace of the identifiers this source resolves
+    namespace: ClassVar[str]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._xrefs: dict[str, dict[str, set[str]]] = {}
+
+    def __repr__(self) -> str:
+        return f"<{type(self).__name__} {self.name}: {self.namespace}>"
+
+    @property
+    def table(self) -> dict[str, set[str]]:
+        """The mapping identifier -> EC numbers, loaded on first access."""
+        return self.data
+
+    def lookup(self, identifier: str) -> set[str]:
+        """EC numbers for `identifier` (empty if unknown)."""
+        return set(self.table.get(identifier, ()))
+
+    def xrefs(self, identifier: str) -> dict[str, set[str]]:
+        """Cross-references of `identifier` to other namespaces, if the resource provides them."""
+        self.data  # noqa: B018, loads the files
+        return {ns: set(ids) for ns, ids in self._xrefs.get(identifier, {}).items()}
+
+    def reset(self) -> None:
+        super().reset()
+        self._xrefs = {}
+
+    @abstractmethod
+    def _parse(self, paths: dict[str, Path]) -> dict[str, set[str]]:
+        """Parse the bulk files into {identifier: {EC numbers}}."""
+
+    @staticmethod
+    def _add(table: dict[str, set[str]], identifier: str, raw_ec: str) -> None:
+        """Add `raw_ec` to `table` if it is a valid EC number."""
+        ec = normalize_ec(raw_ec)
+        if ec is not None:
+            table.setdefault(identifier, set()).add(ec)

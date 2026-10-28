@@ -9,8 +9,10 @@ Example
 >>> to_dataframe(mappings)
 """
 
-from .disambiguation import SELECTIONS
+from .disambiguation import SELECTIONS, TIE_BREAKERS, Disambiguator
 from .ec import is_complete, normalize_ec
+from .evaluation import evaluate, evaluation_summary
+from .metabolites import MetaboliteComparison
 from .mapper import (
     ECEvidence,
     ECMapper,
@@ -20,13 +22,17 @@ from .mapper import (
     summary,
     to_dataframe,
 )
-from .sources import SOURCES, FileStatus, check_updates, default_sources, update_sources
+from .sources import RESOURCES, SOURCES, FileStatus, check_updates, default_sources, update_sources
 
 __version__ = "0.1.0"
 
 __all__ = [
+    "RESOURCES",
     "SELECTIONS",
     "SOURCES",
+    "TIE_BREAKERS",
+    "Disambiguator",
+    "MetaboliteComparison",
     "ECEvidence",
     "ECMapper",
     "FileStatus",
@@ -34,6 +40,8 @@ __all__ = [
     "annotate_model",
     "check_updates",
     "default_sources",
+    "evaluate",
+    "evaluation_summary",
     "is_complete",
     "map_model",
     "normalize_ec",

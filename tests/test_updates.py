@@ -128,7 +128,7 @@ def model_file(tmp_path):
 
 def test_mapper_update(tmp_path, server, model_file):
     server.files[SEED_URL] = (SEED_V1, {"ETag": '"v1"'})
-    mapper = ECMapper(["modelseed"], cache_dir=tmp_path / "cache")
+    mapper = ECMapper(["modelseed"], cache_dir=tmp_path / "cache", current_ec=False, compare_metabolites=False)
     model = cobra.io.read_sbml_model(str(model_file))
     assert mapper.map_model(model)["R1"].origin == "none"
     server.files[SEED_URL] = (SEED_V2, {"ETag": '"v2"'})
@@ -140,24 +140,24 @@ def test_mapper_update(tmp_path, server, model_file):
 def test_cli(tmp_path, server, model_file, capsys):
     cache = tmp_path / "cache"
     server.files[SEED_URL] = (SEED_V1, {"ETag": '"v1"', "Last-Modified": "Mon, 01 Sep 2025 10:00:00 GMT"})
-    assert main(["--check-updates", "--sources", "modelseed", "--cache-dir", str(cache)]) == 0
+    assert main(["--check-updates", "--sources", "modelseed", "--no-current-ec", "--no-metabolites", "--cache-dir", str(cache)]) == 0
     out = capsys.readouterr().out
     assert "missing" in out and "1 file(s) can be updated" in out
 
-    assert main(["--update", "--sources", "modelseed", "--cache-dir", str(cache)]) == 0
+    assert main(["--update", "--sources", "modelseed", "--no-current-ec", "--no-metabolites", "--cache-dir", str(cache)]) == 0
     assert "downloaded" in capsys.readouterr().out
 
-    assert main(["--check-updates", "--sources", "modelseed", "--cache-dir", str(cache)]) == 0
+    assert main(["--check-updates", "--sources", "modelseed", "--no-current-ec", "--no-metabolites", "--cache-dir", str(cache)]) == 0
     assert "all files are up to date" in capsys.readouterr().out
 
     # update before mapping
     server.files[SEED_URL] = (SEED_V2, {"ETag": '"v2"'})
     out_file = tmp_path / "out.tsv"
-    args = [str(model_file), "--update", "--sources", "modelseed", "--cache-dir", str(cache), "-o", str(out_file)]
+    args = [str(model_file), "--update", "--sources", "modelseed", "--no-current-ec", "--no-metabolites", "--cache-dir", str(cache), "-o", str(out_file)]
     assert main(args) == 0
     assert "updated" in capsys.readouterr().out
     assert "3.5.1.54" in out_file.read_text()
 
     # a failed check is reported with exit code 1
     del server.files[SEED_URL]
-    assert main(["--check-updates", "--sources", "modelseed", "--cache-dir", str(cache)]) == 1
+    assert main(["--check-updates", "--sources", "modelseed", "--no-current-ec", "--no-metabolites", "--cache-dir", str(cache)]) == 1

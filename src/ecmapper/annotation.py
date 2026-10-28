@@ -77,12 +77,17 @@ def annotated_ecs(reaction) -> list[str]:
     return _unique(ec for ec in ecs if ec)
 
 
+def is_ec_notes_key(key: str) -> bool:
+    """Whether a key of COBRA style notes holds EC numbers (``EC Number``, ``PROTEIN_CLASS``)."""
+    return bool(_NOTES_EC_KEY.fullmatch(key.strip()))
+
+
 def notes_ecs(reaction) -> list[str]:
     """EC numbers in COBRA style notes (``EC Number``, ``PROTEIN_CLASS``) of `reaction`."""
     ecs = (
         normalize_ec(token)
         for key, value in (reaction.notes or {}).items()
-        if _NOTES_EC_KEY.fullmatch(key.strip())
+        if is_ec_notes_key(key)
         for token in _NOTES_SPLIT.split(str(value))
         if token
     )
