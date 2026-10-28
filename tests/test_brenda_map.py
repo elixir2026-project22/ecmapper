@@ -12,6 +12,7 @@ from ecmapper.brenda_map import (
     map_matches_to_dataframe,
     map_summary,
     name_key,
+    name_keys,
     node_coverage,
 )
 from test_references import pyk
@@ -69,6 +70,30 @@ def test_name_key():
     assert name_key("all-trans-retinol") == name_key("retinol")
     assert name_key("NAD+") != name_key("NADH")
     assert name_key("H+[side 1]") == "h+"
+    # alpha-/beta- of anomers are ignored, others are part of the name
+    assert name_key("alpha-D-glucose 6-phosphate") == name_key("D-Glucose 6-phosphate")
+    assert name_key("beta-alanine") != name_key("L-alanine")
+    assert name_key("beta-carotene") != name_key("alpha-carotene")
+    assert name_key("alpha-ketoglutarate") == "alphaketoglutarate"
+    assert name_key("UDP-alpha-N-acetyl-D-glucosamine") == name_key("UDP-N-acetyl-alpha-D-glucosamine")
+
+
+def test_name_keys():
+    assert name_keys("alpha-D-Glucose") == {"glucose", "alphadglucose"}
+    assert name_keys("L-Alanine") == {"alanine", "lalanine"}
+    assert name_keys("beta-Alanine") == {"betaalanine"}
+    assert name_keys("Pyruvate") == {"pyruvate"}
+
+
+def test_score_one_to_one():
+    g6p, g6p_alpha, inositol_p = frozenset({"a", "b"}), frozenset({"a", "c"}), frozenset({"d"})
+    # an anomerase: both anomers match the one glucose 6-phosphate of the node, but only one can
+    assert MapMatcher.score([g6p, g6p_alpha], [g6p, inositol_p]) == pytest.approx(1 / 3)
+    # ... and a reaction with only glucose 6-phosphate matches only one anomer of an anomerase node
+    assert MapMatcher.score([g6p], [g6p, g6p_alpha]) == 0.5
+    assert MapMatcher.score([g6p, g6p_alpha], [g6p_alpha, g6p]) == 1.0
+    # a maximum matching: {x, y} first takes {y}, which {y} needs, and moves to {x}
+    assert MapMatcher.score([frozenset("xy"), frozenset("y")], [frozenset("y"), frozenset("x")]) == 1.0
 
 
 def test_expand_names(matcher):

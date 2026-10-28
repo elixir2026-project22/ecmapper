@@ -178,12 +178,21 @@ For each reaction, candidate nodes are found
 
 Each candidate is scored by comparing the metabolites of the reaction with the
 main metabolites and cofactors of the node (weighted Jaccard index, cofactors
-count half, protons are ignored). Map metabolites are identified only by
-names, so metabolites are compared by KEGG compound IDs and by normalised
-names: case, punctuation, stereo descriptors (D-/L-, (S)-, alpha-),
-bis-/di-phosphate and membrane sides ("H+[side 1]") are ignored, "NAD(P)H"
-stands for NADH and NADPH, generic quinones/quinols match ubiquinones and
-menaquinones. Map metabolites get KEGG IDs from the names of KEGG compounds
+count half, protons are ignored); each metabolite matches at most one
+metabolite of the other side. Map metabolites are identified only by names,
+so metabolites are compared by KEGG compound IDs and by normalised names:
+
+- case, punctuation, bis-/di-phosphate and membrane sides ("H+[side 1]") are
+  ignored;
+- stereo descriptors (D-/L-, (S)-, cis-, and alpha-/beta- of anomers like
+  alpha-D-glucose) are ignored, so stereoisomers match each other. They still
+  count as different metabolites, so a racemase or an anomerase does not match
+  a node with only one of its two forms;
+- alpha-/beta- that are part of the name are kept (beta-alanine, beta-carotene);
+- "NAD(P)H" stands for NADH and NADPH;
+- generic quinones/quinols match ubiquinones and menaquinones.
+
+Map metabolites get KEGG IDs from the names of KEGG compounds
 and BiGG metabolites; if a node's BRENDA reaction is aligned with a KEGG
 reaction and exactly one metabolite and one compound remain unmatched, they
 are taken to be the same (for all nodes with this BRENDA ligand).

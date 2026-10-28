@@ -33,7 +33,11 @@ MAP_STATUSES = ("on map", "related", "not on map", "boundary")
 #: modes of the search in the vicinity of found nodes, see :meth:`MapMatcher.search_vicinity`
 VICINITY_MODES = ("neighbours", "propagate")
 
-_STEREO = re.compile(r"(?<![a-z0-9])(?:all-trans|\((?:[0-9]*[rsez][,0-9rsez]*)\)|dl|[dl]|alpha|beta|cis|trans)-")
+_STEREO = re.compile(r"(?<![a-z0-9])(?:all-trans|\((?:[0-9]*[rsez][,0-9rsez]*)\)|dl|[dl]|cis|trans)-")
+# anomeric descriptors: alpha-/beta- in front of D-/L-, possibly with an N-, O- or S-substituent in
+# between (alpha-D-glucose, UDP-alpha-N-acetyl-D-glucosamine); elsewhere they denote positions
+# (beta-alanine, alpha-ketoglutarate) or different compounds (beta-carotene)
+_ANOMER = re.compile(r"(?<![a-z0-9])(?:alpha|beta)-(?=(?:[nos]-[a-z]+-)?(?:dl|[dl])-)")
 _PROTON_NAMES = {"h+", "h", "proton", "protons", "hydron", "hydrogenion"}
 # compartments in names of map metabolites, e.g. "H+[side 1]"
 _SIDE = re.compile(r"\s*\[(?:side \d+|in|out|inside|outside)\]$")
@@ -51,20 +55,37 @@ GROUPS = {
 CURRENCY_KEYS = CURRENCY | {f"group:{g}" for g in GROUPS}
 
 
+def _normalize(name: str, stereo: bool = False) -> str:
+    n = _SIDE.sub("", name.lower())
+    if not stereo:
+        n = _STEREO.sub("", _ANOMER.sub("", n))
+    n = n.replace("bisphosph", "diphosph").replace("ic acid", "ate")
+    return re.sub(r"[^a-z0-9+]", "", n)
+
+
 def name_key(name: str) -> str:
     """Key for comparing metabolite names.
 
-    Case, punctuation and stereo descriptors (``D-``, ``(S)-``, ``alpha-``,
-    ...) are ignored and ``bisphosph...``/``diphosph...`` as well as ``... acid``/``...ate``
-    are treated alike, so that e.g. "fructose-1,6-bisphosphate" and
-    "D-Fructose 1,6-diphosphate" get the same key. D- and L-forms of a
-    compound therefore get the same key, too. Sides of membranes ("H+[side 1]")
-    are removed.
+    Case, punctuation and stereo descriptors (``D-``, ``(S)-``, ``cis-``, and
+    ``alpha-``/``beta-`` of anomers like "alpha-D-glucose") are ignored and
+    ``bisphosph...``/``diphosph...`` as well as ``... acid``/``...ate`` are
+    treated alike, so that e.g. "fructose-1,6-bisphosphate" and "D-Fructose
+    1,6-diphosphate" get the same key. D- and L-forms of a compound therefore
+    get the same key, too. ``alpha-``/``beta-`` that denote positions or
+    different compounds (beta-alanine, beta-carotene) are kept. Sides of
+    membranes ("H+[side 1]") are removed.
     """
-    n = _SIDE.sub("", name.lower())
-    n = _STEREO.sub("", n)
-    n = n.replace("bisphosph", "diphosph").replace("ic acid", "ate")
-    return re.sub(r"[^a-z0-9+]", "", n)
+    return _normalize(name)
+
+
+def name_keys(name: str) -> set[str]:
+    """The :func:`name_key` of a name and a key that keeps its stereo descriptors.
+
+    "L-alanine" gives "alanine" and "lalanine": stereoisomers match each
+    other, but stay different metabolites, e.g. the substrate and the product
+    of a racemase or an anomerase.
+    """
+    return {_normalize(name), _normalize(name, stereo=True)}
 
 
 _EITHER = re.compile(r"\(([a-z])\)", re.IGNORECASE)
@@ -360,16 +381,18 @@ class MapMatcher:
         index: dict[str, set[str]] = {}
         for compound, names in self.names.data.items():
             for name in names:
-                index.setdefault(name_key(name), set()).add(compound)
+                for key in name_keys(name):
+                    index.setdefault(key, set()).add(compound)
         bigg = self.comparison.bigg_metabolites
         for xrefs in (bigg.data.values() if bigg is not None else ()):
             for name in xrefs.get("name", ()):
-                index.setdefault(name_key(name), set()).update(xrefs.get("kegg.compound", ()))
+                for key in name_keys(name):
+                    index.setdefault(key, set()).update(xrefs.get("kegg.compound", ()))
         return index
 
     def ligand_keys(self, names: Iterable[str]) -> frozenset[str]:
         """Keys (KEGG compound IDs and ``name:`` keys) of a map metabolite; empty for protons."""
-        keys = {name_key(n) for n in expand_names(names)} - _PROTON_NAMES - {""}
+        keys = set().union(set(), *map(name_keys, expand_names(names))) - _PROTON_NAMES - {""}
         if not keys:
             return frozenset()
         compounds = set().union(*(self._index["names"].get(k, set()) for k in keys))
@@ -385,7 +408,7 @@ class MapMatcher:
                 names |= bigg.xrefs(bigg_id).get("name", set())
         for compound in compounds:
             names.update(self.names.names(compound))
-        keys = {name_key(n) for n in names}
+        keys = set().union(set(), *map(name_keys, names))
         if not compounds and (keys & _PROTON_NAMES or PROTON in annotation.annotation_values(metabolite.annotation, "kegg.compound")):
             return frozenset()
         return _keys(compounds, keys)
@@ -410,18 +433,31 @@ class MapMatcher:
 
     @staticmethod
     def score(left: list[frozenset[str]], right: list[frozenset[str]], currency_weight: float = 0.5) -> float:
-        """Weighted Jaccard index of two lists of metabolites (sets of keys); currency metabolites count less."""
-        matched_right, weight_matched, weight_union = set(), 0.0, 0.0
-        for keys in left:
-            weight = currency_weight if keys & CURRENCY_KEYS else 1.0
-            weight_union += weight
-            hits = [i for i, other in enumerate(right) if keys & other]
-            if hits:
-                weight_matched += weight
-                matched_right.update(hits)
-        for i, other in enumerate(right):
-            if i not in matched_right:
-                weight_union += currency_weight if other & CURRENCY_KEYS else 1.0
+        """Weighted Jaccard index of two lists of metabolites (sets of keys); currency metabolites count less.
+
+        Metabolites with a common key match, each with at most one metabolite
+        of the other list (a maximum matching, preferring metabolites that are
+        not currency metabolites): an anomerase (alpha- and beta-form) does not
+        match a node with only one of them twice.
+        """
+        weights = [currency_weight if keys & CURRENCY_KEYS else 1.0 for keys in left]
+        partner: dict[int, int] = {}  # index in right -> index in left
+
+        def augment(i: int, visited: set[int]) -> bool:
+            for j, other in enumerate(right):
+                if j not in visited and left[i] & other:
+                    visited.add(j)
+                    if j not in partner or augment(partner[j], visited):
+                        partner[j] = i
+                        return True
+            return False
+
+        for i in sorted(range(len(left)), key=lambda i: -weights[i]):
+            augment(i, set())
+        weight_matched = sum(weights[i] for i in partner.values())
+        weight_union = sum(weights) + sum(
+            currency_weight if other & CURRENCY_KEYS else 1.0 for j, other in enumerate(right) if j not in partner
+        )
         return weight_matched / weight_union if weight_union else 0.0
 
     # --- index ------------------------------------------------------------------------------
