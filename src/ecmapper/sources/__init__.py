@@ -8,7 +8,7 @@ from .base import FILE_STATUSES, CachedResource, ECSource, FileStatus, default_c
 from .biggr import BiGGrMetabolites, BiGGrSource
 from .bkms import BKMSSource
 from .enzyme import EnzymeEntry, EnzymeNomenclature
-from .kegg import KEGGReactionCompounds, KEGGSource
+from .kegg import KEGGCompoundNames, KEGGReactionCompounds, KEGGSource
 from .rhea import RheaSource
 from .seed import ModelSEEDSource
 
@@ -19,7 +19,7 @@ SOURCES: dict[str, type[ECSource]] = {
 
 #: reference data used to select EC numbers, by name
 REFERENCES: dict[str, type[CachedResource]] = {
-    cls.name: cls for cls in (EnzymeNomenclature, KEGGReactionCompounds, BiGGrMetabolites)
+    cls.name: cls for cls in (EnzymeNomenclature, KEGGReactionCompounds, BiGGrMetabolites, KEGGCompoundNames)
 }
 
 #: all resources with cached files, by name
@@ -78,6 +78,7 @@ __all__ = [
     "EnzymeEntry",
     "EnzymeNomenclature",
     "FileStatus",
+    "KEGGCompoundNames",
     "KEGGReactionCompounds",
     "KEGGSource",
     "ModelSEEDSource",

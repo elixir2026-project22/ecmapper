@@ -69,7 +69,8 @@ class BiGGrMetabolites(CachedResource):
     The download is a JSON list with one entry per (charge variant of a)
     metabolite with ``cross_references`` (KEGG, ModelSEED, MetaCyc, MetaNetX,
     ChEBI, ...) and ``references`` (ChEBI). They are indexed by universal
-    metabolite ID and its superseded IDs, compared by :func:`bigg_key`.
+    metabolite ID and its superseded IDs, compared by :func:`bigg_key`. The
+    names of the metabolite are kept as pseudo-namespace ``name``.
     """
 
     name = "biggr-metabolites"
@@ -85,6 +86,7 @@ class BiGGrMetabolites(CachedResource):
             ids = [entry["universalcomponent__bigg_id"], *(entry.get("universalcomponent__old_bigg_ids") or [])]
             found = [(x["namespace"].lower(), str(x["identifier"])) for x in entry.get("cross_references") or []]
             found += [("chebi", r.split(":", 1)[1]) for r in entry.get("references") or [] if r.upper().startswith("CHEBI:")]
+            found += [("name", n) for n in (entry.get("name"), entry.get("universalcomponent__name")) if n]
             for bigg_id in ids:
                 target = xrefs.setdefault(bigg_key(bigg_id), {})
                 for namespace, identifier in found:

@@ -6,6 +6,7 @@ import argparse
 import logging
 from pathlib import Path
 
+from .brenda_map import BrendaMap, MapMatcher, highlight_svg, map_matches_to_dataframe, map_summary, node_coverage
 from .evaluation import evaluate, evaluation_summary
 from .mapper import ECMapper, annotate_model, summary, to_dataframe
 from .sources import SOURCES, FileStatus, default_cache_dir
@@ -47,6 +48,16 @@ def _print_file_statuses(statuses: list[FileStatus]) -> None:
     for s in statuses:
         line = f"{s.source:<17} {s.file:<34} {s.status:<10} {s.cached:<26} {s.remote_modified}"
         print(line + (f" ({s.detail})" if s.detail else ""))
+
+
+def _print_map_summary(stats: dict) -> None:
+    print(f"reactions: {stats['reactions']}")
+    for status, n in stats["status"].items():
+        print(f"  {status:<11} {n}")
+    print(
+        f"map nodes with model reactions: {stats['nodes_with_model_reactions']} of {stats['nodes']}, "
+        f"in {stats['subsystems_with_model_reactions']} subsystems"
+    )
 
 
 def main(argv=None) -> int:
@@ -98,10 +109,28 @@ def main(argv=None) -> int:
     parser.add_argument(
         "--bigg-only", action="store_true", help="with --evaluate: keep only the BiGG annotations of the model"
     )
+    group = parser.add_argument_group("BRENDA map", "find the reactions of the model on a BRENDA pathway map")
+    group.add_argument("--brenda-map", type=Path, help="reactions of the map (JSON), -o writes the matches")
+    group.add_argument("--node-table", type=Path, help="write one row per map node with its model reactions")
+    group.add_argument("--svg", type=Path, help="the map as SVG, with --svg-out")
+    group.add_argument("--svg-out", type=Path, help="write the map SVG with the model's reactions highlighted")
+    group.add_argument("--all-candidates", action="store_true", help="list all candidate nodes of each reaction")
+    group.add_argument("--min-map-score", type=float, default=0.6, help="minimum score of a node match (0.6)")
+    group.add_argument(
+        "--min-map-score-unlinked",
+        type=float,
+        default=0.8,
+        help="minimum score of nodes found only by metabolites (0.8)",
+    )
+    group.add_argument(
+        "--max-map-gap", type=float, default=0.1, help="maximum distance to the best score of a reaction (0.1)"
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
     if args.model is None and not (args.check_updates or args.update):
         parser.error("a model file, --check-updates or --update is required")
+    if bool(args.svg) != bool(args.svg_out):
+        parser.error("--svg and --svg-out are used together")
 
     logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING, format="%(levelname)s: %(message)s")
     mapper = ECMapper(
@@ -120,13 +149,29 @@ def main(argv=None) -> int:
         cache_dir=args.cache_dir,
         refresh=args.refresh,
     )
+    matcher = None
+    if args.brenda_map:
+        matcher = MapMatcher(
+            BrendaMap.from_json(args.brenda_map),
+            mapper,
+            min_score=args.min_map_score,
+            min_score_unlinked=args.min_map_score_unlinked,
+            max_gap=args.max_map_gap,
+            cache_dir=args.cache_dir,
+            refresh=args.refresh,
+        )
     if args.update:
-        statuses = mapper.update(force=args.refresh)
+        if matcher is not None:
+            statuses = [s for r in matcher.resources for s in r.update(force=args.refresh)]
+            matcher.reset()
+        else:
+            statuses = mapper.update(force=args.refresh)
         _print_file_statuses(statuses)
         if any(s.status == "error" for s in statuses):
             return 1
     elif args.check_updates:
-        statuses = mapper.check_updates()
+        resources = matcher.resources if matcher is not None else mapper.resources
+        statuses = [s for r in resources for s in r.check_updates()]
         _print_file_statuses(statuses)
         n = sum(s.update_available for s in statuses)
         print(f"{n} file(s) can be updated with --update" if n else "all files are up to date")
@@ -136,6 +181,21 @@ def main(argv=None) -> int:
         return 0
 
     model = load_model(args.model)
+    if matcher is not None:
+        matches = matcher.match_model(model, skip_boundary=not args.include_boundary)
+        _print_map_summary(map_summary(matcher.map, matches))
+        if args.output:
+            map_matches_to_dataframe(matches, all_candidates=args.all_candidates).to_csv(
+                args.output, sep="\t", index=False
+            )
+            print(f"matches written to {args.output}")
+        if args.node_table:
+            node_coverage(matcher.map, matches).to_csv(args.node_table, sep="\t", index=False)
+            print(f"map nodes written to {args.node_table}")
+        if args.svg:
+            n = highlight_svg(args.svg, args.svg_out, matches)
+            print(f"{n} map nodes highlighted in {args.svg_out}")
+        return 0
     if args.evaluate:
         table = evaluate(model, mapper, bigg_only=args.bigg_only)
         print(evaluation_summary(table).to_string())

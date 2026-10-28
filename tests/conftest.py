@@ -17,7 +17,7 @@ def cache_dir(tmp_path) -> Path:
     cache.mkdir()
     for name in ("kegg_link_ec_rn.tsv", "Unique_ModelSEED_Reaction_ECs.txt", "rhea2ec.tsv",
                  "rhea-directions.tsv", "biggr_reactions.json", "enzyme.dat", "kegg_link_cpd_rn.tsv",
-                 "biggr_metabolites.json"):
+                 "biggr_metabolites.json", "kegg_list_compound.tsv"):
         shutil.copy(FIXTURES / name, cache / name)
     # the BKMS-react download is a tar.gz with a tab separated Reactions_BKMS.csv
     with tarfile.open(cache / "Reactions_BKMS.tar.gz", "w:gz") as tar:

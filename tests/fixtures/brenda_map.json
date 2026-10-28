@@ -1,0 +1,253 @@
+{
+ "source": "test",
+ "notes": {},
+ "counts": {
+  "reactions": 5
+ },
+ "subsystems": [],
+ "reactions": [
+  {
+   "node_id": "node1",
+   "subsystem": "glycolysis",
+   "ec_label": "2.7.1.40",
+   "ec_numbers": [
+    "2.7.1.40"
+   ],
+   "enzyme_name": "pyruvate kinase",
+   "brenda_reaction_ids": [],
+   "layout": {
+    "x": 100,
+    "y": 200,
+    "width": 60,
+    "height": 30
+   },
+   "main_metabolites": [
+    {
+     "display_name": "PEP",
+     "brenda_name": "phosphoenolpyruvate",
+     "brenda_ligand_id": 1,
+     "node_class": "nodeHM"
+    },
+    {
+     "display_name": "pyruvate",
+     "brenda_name": "pyruvate",
+     "brenda_ligand_id": 2,
+     "node_class": "nodeHM"
+    }
+   ],
+   "cofactors": {
+    "consumed": [
+     {
+      "display_name": "ADP",
+      "brenda_name": "ADP",
+      "brenda_ligand_id": 3,
+      "node_class": "nodeCM"
+     }
+    ],
+    "produced": [
+     {
+      "display_name": "ATP",
+      "brenda_name": "ATP",
+      "brenda_ligand_id": 4,
+      "node_class": "nodeCM"
+     }
+    ],
+    "undirected": []
+   }
+  },
+  {
+   "node_id": "node2",
+   "subsystem": "gluconeogenesis",
+   "ec_label": "2.7.9.2",
+   "ec_numbers": [
+    "2.7.9.2"
+   ],
+   "enzyme_name": "pyruvate, water dikinase",
+   "brenda_reaction_ids": [
+    "BR48097"
+   ],
+   "layout": {
+    "x": 300,
+    "y": 200,
+    "width": 60,
+    "height": 30
+   },
+   "main_metabolites": [
+    {
+     "display_name": "pyruvate",
+     "brenda_name": "pyruvate",
+     "brenda_ligand_id": 2,
+     "node_class": "nodeHM"
+    },
+    {
+     "display_name": "PEP",
+     "brenda_name": "phosphoenolpyruvate",
+     "brenda_ligand_id": 1,
+     "node_class": "nodeHM"
+    }
+   ],
+   "cofactors": {
+    "consumed": [
+     {
+      "display_name": "ATP",
+      "brenda_name": "ATP",
+      "brenda_ligand_id": 4,
+      "node_class": "nodeCM"
+     },
+     {
+      "display_name": "H2O",
+      "brenda_name": "H2O",
+      "brenda_ligand_id": 5,
+      "node_class": "nodeCM"
+     }
+    ],
+    "produced": [
+     {
+      "display_name": "AMP",
+      "brenda_name": "AMP",
+      "brenda_ligand_id": 6,
+      "node_class": "nodeCM"
+     },
+     {
+      "display_name": "Pi",
+      "brenda_name": "phosphate",
+      "brenda_ligand_id": 7,
+      "node_class": "nodeCM"
+     }
+    ],
+    "undirected": []
+   }
+  },
+  {
+   "node_id": "node3",
+   "subsystem": "citric-acid-cycle",
+   "ec_label": "1.3.5.1",
+   "ec_numbers": [
+    "1.3.5.1"
+   ],
+   "enzyme_name": "succinate dehydrogenase",
+   "brenda_reaction_ids": [],
+   "layout": {
+    "x": 500,
+    "y": 200,
+    "width": 60,
+    "height": 30
+   },
+   "main_metabolites": [
+    {
+     "display_name": "succinate",
+     "brenda_name": "succinate",
+     "brenda_ligand_id": 8,
+     "node_class": "nodeHM"
+    },
+    {
+     "display_name": "fumarate",
+     "brenda_name": "fumarate",
+     "brenda_ligand_id": 9,
+     "node_class": "nodeHM"
+    }
+   ],
+   "cofactors": {
+    "consumed": [
+     {
+      "display_name": "a quinone",
+      "brenda_name": "a quinone",
+      "brenda_ligand_id": 10,
+      "node_class": "nodeCM"
+     }
+    ],
+    "produced": [
+     {
+      "display_name": "a quinol",
+      "brenda_name": "a quinol",
+      "brenda_ligand_id": 11,
+      "node_class": "nodeCM"
+     }
+    ],
+    "undirected": []
+   }
+  },
+  {
+   "node_id": "node4",
+   "subsystem": "glycolysis",
+   "ec_label": "5.3.1.9",
+   "ec_numbers": [
+    "5.3.1.9"
+   ],
+   "enzyme_name": "glucose-6-phosphate isomerase",
+   "brenda_reaction_ids": [
+    "BR240"
+   ],
+   "layout": {
+    "x": 100,
+    "y": 400,
+    "width": 60,
+    "height": 30
+   },
+   "main_metabolites": [
+    {
+     "display_name": "Glc 6-P",
+     "brenda_name": "D-glucose 6-phosphate",
+     "brenda_ligand_id": 12,
+     "node_class": "nodeHM"
+    },
+    {
+     "display_name": "Fru 6-P",
+     "brenda_name": "fructose-6P",
+     "brenda_ligand_id": 13,
+     "node_class": "nodeHM"
+    }
+   ],
+   "cofactors": {
+    "consumed": [],
+    "produced": [],
+    "undirected": []
+   }
+  },
+  {
+   "node_id": "node5",
+   "subsystem": "arginine-metabolism",
+   "ec_label": "?.?.?.?",
+   "ec_numbers": [
+    "?.?.?.?"
+   ],
+   "enzyme_name": "arginine decarboxylation",
+   "brenda_reaction_ids": [],
+   "layout": {
+    "x": 300,
+    "y": 400,
+    "width": 60,
+    "height": 30
+   },
+   "main_metabolites": [
+    {
+     "display_name": "L-arginine",
+     "brenda_name": "L-arginine",
+     "brenda_ligand_id": 14,
+     "node_class": "nodeHM"
+    },
+    {
+     "display_name": "agmatine",
+     "brenda_name": "agmatine",
+     "brenda_ligand_id": 15,
+     "node_class": "nodeHM"
+    }
+   ],
+   "cofactors": {
+    "consumed": [],
+    "produced": [
+     {
+      "display_name": "CO2",
+      "brenda_name": "CO2",
+      "brenda_ligand_id": 16,
+      "node_class": "nodeCM"
+     }
+    ],
+    "undirected": []
+   }
+  }
+ ],
+ "metabolite_nodes": [],
+ "metabolite_links": [],
+ "unassigned_links": []
+}

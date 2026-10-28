@@ -50,3 +50,23 @@ class KEGGReactionCompounds(CachedResource):
     def compounds(self, reaction: str) -> frozenset[str]:
         """KEGG compound IDs of the KEGG reaction `reaction`."""
         return self.data.get(reaction, frozenset())
+
+
+class KEGGCompoundNames(CachedResource):
+    """Names of KEGG compounds from ``rest.kegg.jp/list/compound`` (``C00001<TAB>H2O; Water``)."""
+
+    name = "kegg-compound-names"
+    files = {"kegg_list_compound.tsv": "https://rest.kegg.jp/list/compound"}
+
+    def _parse(self, paths: dict[str, Path]) -> dict[str, tuple[str, ...]]:
+        names = {}
+        with open(paths["kegg_list_compound.tsv"], encoding="utf-8") as f:
+            for line in f:
+                fields = line.rstrip("\n").split("\t")
+                if len(fields) == 2:
+                    names[fields[0].removeprefix("cpd:")] = tuple(n.strip() for n in fields[1].split(";") if n.strip())
+        return names
+
+    def names(self, compound: str) -> tuple[str, ...]:
+        """Names of the KEGG compound `compound`."""
+        return self.data.get(compound, ())

@@ -116,16 +116,21 @@ class MetaboliteComparison:
             for v in annotation_values(metabolite.annotation, "kegg.compound")
         }
         if self.bigg_metabolites is not None:
-            bigg_ids = set(annotation_values(metabolite.annotation, "bigg.metabolite"))
-            suffix = f"_{metabolite.compartment}" if metabolite.compartment else None
-            if suffix and metabolite.id.endswith(suffix):
-                bigg_ids.add(metabolite.id[: -len(suffix)])
-            else:
-                # compartments with other IDs than the suffixes of the metabolites (Cytosol, glc__D_c)
-                bigg_ids.add(_COMPARTMENT_SUFFIX.sub("", metabolite.id))
-            for bigg_id in bigg_ids:
+            for bigg_id in self.bigg_ids(metabolite):
                 compounds |= self.bigg_metabolites.xrefs(bigg_id).get("kegg.compound", set())
         return {c for c in compounds if _KEGG_COMPOUND.fullmatch(c) and c != PROTON}
+
+    @staticmethod
+    def bigg_ids(metabolite) -> set[str]:
+        """Possible universal BiGG IDs of a cobrapy metabolite: annotation and ID without compartment."""
+        bigg_ids = set(annotation_values(metabolite.annotation, "bigg.metabolite"))
+        suffix = f"_{metabolite.compartment}" if metabolite.compartment else None
+        if suffix and metabolite.id.endswith(suffix):
+            bigg_ids.add(metabolite.id[: -len(suffix)])
+        else:
+            # compartments with other IDs than the suffixes of the metabolites (Cytosol, glc__D_c)
+            bigg_ids.add(_COMPARTMENT_SUFFIX.sub("", metabolite.id))
+        return bigg_ids
 
     def reaction_compounds(self, reaction) -> list[frozenset[str]]:
         """KEGG compounds of the metabolites of a cobrapy reaction, one set per metabolite (without duplicates)."""

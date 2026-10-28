@@ -34,6 +34,12 @@ class BKMSSource(ECSource):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._kegg: dict[str, set[str]] = {}
+        self._brenda: dict[str, dict[str, set[str]]] = {}
+
+    def brenda_reaction(self, identifier: str) -> dict[str, set[str]]:
+        """KEGG and MetaCyc reactions aligned with the BRENDA reaction `identifier` (e.g. ``BR344``)."""
+        self.data  # noqa: B018, loads the files
+        return {ns: set(ids) for ns, ids in self._brenda.get(identifier, {}).items()}
 
     def lookup_kegg(self, identifier: str) -> set[str]:
         """EC numbers of the BKMS reactions aligned with the KEGG reaction `identifier`."""
@@ -42,7 +48,7 @@ class BKMSSource(ECSource):
 
     def reset(self) -> None:
         super().reset()
-        self._kegg = {}
+        self._kegg, self._brenda = {}, {}
 
     def consensus(self, identifiers: dict[str, list[str]]) -> set[str]:
         """EC numbers of all BKMS reactions that match the KEGG or MetaCyc reactions in `identifiers`.
@@ -60,6 +66,7 @@ class BKMSSource(ECSource):
     def _parse(self, paths: dict[str, Path]) -> dict[str, set[str]]:
         table: dict[str, set[str]] = {}
         kegg: dict[str, set[str]] = {}
+        brenda: dict[str, dict[str, set[str]]] = {}
         with tarfile.open(paths["Reactions_BKMS.tar.gz"], "r:gz") as tar:
             member = next((m for m in tar.getmembers() if m.isfile() and m.name.endswith((".csv", ".tsv"))), None)
             if member is None:
@@ -74,5 +81,10 @@ class BKMSSource(ECSource):
             for reaction in (row.get("Reaction_ID_KEGG") or "").split(","):
                 if reaction.strip():
                     self._add(kegg, reaction.strip(), ec)
-        self._kegg = kegg
+            for reaction in (row.get("Reaction_ID_BRENDA") or "").split(","):
+                if reaction.strip():
+                    aligned = brenda.setdefault(reaction.strip(), {"kegg.reaction": set(), "metacyc.reaction": set()})
+                    for namespace, column in (("kegg.reaction", "Reaction_ID_KEGG"), ("metacyc.reaction", "Reaction_ID_MetaCyc")):
+                        aligned[namespace] |= {i.strip() for i in (row.get(column) or "").split(",") if i.strip()}
+        self._kegg, self._brenda = kegg, brenda
         return table
