@@ -52,6 +52,8 @@ def test_xrefs_biggr():
     # models from bigg.bio
     r = reaction({"biggr": "PGI", "rhea": "RHEA:11816", "sbo": "SBO:0000176"})
     assert xrefs(r) == {"bigg.reaction": ["PGI"], "rhea": ["11816"]}
+    # model specific IDs of reactions that are not in the universal namespace
+    assert xrefs(reaction({"biggr": "__STM_v1_0__EX_glc__D_e"})) == {"bigg.reaction": ["EX_glc__D_e"]}
 
 
 def test_normalize_xref():

@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
-from .annotation import annotation_values
+from .annotation import annotation_values, strip_model_prefix
 from .sources import BiGGrMetabolites, EnzymeNomenclature, KEGGReactionCompounds, KEGGSource
 
 PROTON = "C00080"
@@ -125,11 +125,14 @@ class MetaboliteComparison:
         """Possible universal BiGG IDs of a cobrapy metabolite: annotation and ID without compartment.
 
         Models from bigg.bio annotate compartmentalised metabolites with charge
-        (``biggr: g6p_c:-2``), which gives ``g6p``.
+        (``biggr: g6p_c:-2``), which gives ``g6p``, and give metabolites that
+        are not in the universal namespace model specific IDs
+        (``__iYL1228__g6p_c``), which give the original ID.
         """
         bigg_ids = set(annotation_values(metabolite.annotation, "bigg.metabolite"))
         suffix = f"_{metabolite.compartment}" if metabolite.compartment else None
-        for identifier in [metabolite.id, *(v.split(":")[0] for v in annotation_values(metabolite.annotation, "biggr"))]:
+        identifiers = [metabolite.id, *(v.split(":")[0] for v in annotation_values(metabolite.annotation, "biggr"))]
+        for identifier in map(strip_model_prefix, identifiers):
             if suffix and identifier.endswith(suffix):
                 bigg_ids.add(identifier[: -len(suffix)])
             else:

@@ -74,6 +74,9 @@ def test_metabolite_compounds(comparison):
     m = Metabolite("M1", compartment="c")
     m.annotation = {"biggr": "pyr_c:-1"}
     assert comparison.bigg_ids(m) == {"M1", "pyr"}
+    m = Metabolite("__iYL1228__pyr_c", compartment="c")
+    m.annotation = {"biggr": "__iYL1228__pyr_c:0"}
+    assert comparison.bigg_ids(m) == {"pyr"}
     assert comparison.metabolite_compounds(m) == {"C00022"}
 
 

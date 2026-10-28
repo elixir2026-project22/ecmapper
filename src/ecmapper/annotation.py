@@ -32,6 +32,10 @@ _ID_PATTERNS = {
     "metacyc.reaction": re.compile(r"[^\s:]+"),
 }
 
+# bigg.bio gives reactions and metabolites that are not in its universal namespace model specific
+# IDs, e.g. __iYL1228__PGI or __iYL1228__g6p_c
+_MODEL_PREFIX = re.compile(r"^__.+?__(?=.)")
+
 # COBRA Toolbox style notes, e.g. <p>EC Number: 1.1.1.1</p>
 _NOTES_EC_KEY = re.compile(r"ec[\s_-]?numbers?|protein[\s_]class", re.IGNORECASE)
 _NOTES_SPLIT = re.compile(r"[\s,;|]+")
@@ -51,8 +55,13 @@ def _unique(values: Iterable[str]) -> list[str]:
     return list(dict.fromkeys(values))
 
 
+def strip_model_prefix(identifier: str) -> str:
+    """The original ID of a model specific BiGG ID of bigg.bio: ``__iYL1228__PGI`` gives ``PGI``."""
+    return _MODEL_PREFIX.sub("", identifier)
+
+
 def normalize_xref(namespace: str, raw: str) -> str | None:
-    """Strip prefixes like ``RHEA:``, ``rn:`` or ``META:`` and validate the identifier."""
+    """Strip prefixes like ``RHEA:``, ``rn:``, ``META:`` or ``__iYL1228__`` and validate the identifier."""
     value = raw.strip()
     if namespace == "kegg.reaction":
         value = re.sub(r"^(kegg\.reaction|rn):", "", value, flags=re.IGNORECASE)
@@ -63,6 +72,8 @@ def normalize_xref(namespace: str, raw: str) -> str | None:
         value = value.rsplit(":", 1)[-1]
     elif value.lower().startswith(namespace + ":"):
         value = value[len(namespace) + 1 :]
+    if namespace == "bigg.reaction":
+        value = strip_model_prefix(value)
     pattern = _ID_PATTERNS.get(namespace)
     if pattern is None or not pattern.fullmatch(value):
         return None
