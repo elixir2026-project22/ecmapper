@@ -26,13 +26,15 @@
      "display_name": "PEP",
      "brenda_name": "phosphoenolpyruvate",
      "brenda_ligand_id": 1,
-     "node_class": "nodeHM"
+     "node_class": "nodeHM",
+     "node_id": "node90"
     },
     {
      "display_name": "pyruvate",
      "brenda_name": "pyruvate",
      "brenda_ligand_id": 2,
-     "node_class": "nodeHM"
+     "node_class": "nodeHM",
+     "node_id": "node91"
     }
    ],
    "cofactors": {
@@ -77,13 +79,15 @@
      "display_name": "pyruvate",
      "brenda_name": "pyruvate",
      "brenda_ligand_id": 2,
-     "node_class": "nodeHM"
+     "node_class": "nodeHM",
+     "node_id": "node92"
     },
     {
      "display_name": "PEP",
      "brenda_name": "phosphoenolpyruvate",
      "brenda_ligand_id": 1,
-     "node_class": "nodeHM"
+     "node_class": "nodeHM",
+     "node_id": "node93"
     }
    ],
    "cofactors": {
@@ -248,6 +252,14 @@
   }
  ],
  "metabolite_nodes": [],
- "metabolite_links": [],
+ "metabolite_links": [
+  {
+   "start_node_id": "node91",
+   "end_node_id": "node92",
+   "start_name": "pyruvate",
+   "end_name": "pyruvate",
+   "inter_pathway_class": true
+  }
+ ],
  "unassigned_links": []
 }

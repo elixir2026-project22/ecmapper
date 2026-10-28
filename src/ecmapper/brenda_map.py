@@ -30,6 +30,9 @@ from .sources import (
 #: values of :attr:`ReactionMapMatch.status`
 MAP_STATUSES = ("on map", "related", "not on map", "boundary")
 
+#: modes of the search in the vicinity of found nodes, see :meth:`MapMatcher.search_vicinity`
+VICINITY_MODES = ("neighbours", "propagate")
+
 _STEREO = re.compile(r"(?<![a-z0-9])(?:all-trans|\((?:[0-9]*[rsez][,0-9rsez]*)\)|dl|[dl]|alpha|beta|cis|trans)-")
 _PROTON_NAMES = {"h+", "h", "proton", "protons", "hydron", "hydrogenion"}
 # compartments in names of map metabolites, e.g. "H+[side 1]"
@@ -93,6 +96,7 @@ class MapMetabolite:
     names: tuple[str, ...]
     ligand_id: int | None = None
     role: str = "main"  # main, consumed or produced
+    node_id: str | None = None  # the drawn metabolite node, may be shared with other enzyme nodes
 
 
 @dataclass
@@ -111,13 +115,63 @@ class MapNode:
 
 
 class BrendaMap:
-    """The enzyme nodes of a BRENDA pathway map."""
+    """The enzyme nodes of a BRENDA pathway map.
 
-    def __init__(self, nodes: Iterable[MapNode]):
+    `links` are pairs of drawn metabolite nodes connected by a line, e.g. the
+    same metabolite in two subsystems.
+    """
+
+    def __init__(self, nodes: Iterable[MapNode], links: Iterable[tuple[str, str]] = ()):
         self.nodes = {n.node_id: n for n in nodes}
+        self.links = list(links)
+        self._places: dict[str, list[tuple[str, MapMetabolite]]] | None = None
+        self._neighbours: dict[str, list[tuple[str, str]]] = {}
 
     def __len__(self) -> int:
         return len(self.nodes)
+
+    def _build_places(self) -> None:
+        drawn: dict[str, list[tuple[str, MapMetabolite]]] = {}
+        for node in self.nodes.values():
+            for m in node.metabolites:
+                if m.role == "main" and m.node_id:
+                    drawn.setdefault(m.node_id, []).append((node.node_id, m))
+        parent: dict[str, str] = {}
+
+        def root(x: str) -> str:
+            while parent.get(x, x) != x:
+                parent[x] = parent.get(parent[x], parent[x])
+                x = parent[x]
+            return x
+
+        for a, b in self.links:
+            if a in drawn and b in drawn and root(a) != root(b):
+                parent[root(a)] = root(b)
+        places: dict[str, list[tuple[str, MapMetabolite]]] = {}
+        for node_id in sorted(drawn):
+            places.setdefault(root(node_id), []).extend(drawn[node_id])
+        neighbours: dict[str, list[tuple[str, str]]] = {}
+        for place, items in places.items():
+            enzymes = list(dict.fromkeys(e for e, _ in items))
+            for a in enzymes:
+                neighbours.setdefault(a, []).extend((b, place) for b in enzymes if b != a)
+        self._places, self._neighbours = places, neighbours
+
+    def neighbours(self, node_id: str) -> list[tuple[str, str]]:
+        """The enzyme nodes next to a node, as (enzyme node, place) for each main metabolite they share.
+
+        A place is a drawn main metabolite node together with the metabolite
+        nodes linked to it; it is identified by one of their IDs.
+        """
+        if self._places is None:
+            self._build_places()
+        return self._neighbours.get(node_id, [])
+
+    def place_metabolites(self, place: str) -> list[MapMetabolite]:
+        """The metabolites of the enzyme nodes drawn at a place."""
+        if self._places is None:
+            self._build_places()
+        return [m for _, m in self._places.get(place, [])]
 
     @classmethod
     def from_json(cls, path: str | os.PathLike) -> BrendaMap:
@@ -131,6 +185,7 @@ class BrendaMap:
                     tuple(dict.fromkeys(n for n in (m.get("brenda_name"), m.get("display_name")) if n)),
                     m.get("brenda_ligand_id"),
                     role,
+                    m.get("node_id"),
                 )
                 for role, items in (
                     ("main", r.get("main_metabolites", [])),
@@ -154,7 +209,12 @@ class BrendaMap:
                     layout.get("y"),
                 )
             )
-        return cls(nodes)
+        links = [
+            (link["start_node_id"], link["end_node_id"])
+            for link in data.get("metabolite_links", []) + data.get("unassigned_links", [])
+            if link.get("start_node_id") and link.get("end_node_id")
+        ]
+        return cls(nodes, links)
 
 
 @dataclass
@@ -163,15 +223,19 @@ class NodeMatch:
 
     `via` lists how the node was found: ``reaction-id`` (a BRENDA reaction of
     the node is aligned in BKMS-react with a KEGG or MetaCyc reaction of the
-    model reaction), ``ec`` (common EC number) and ``metabolites`` (at least two
-    common main metabolites). `score` compares the metabolites of the model
-    reaction with those of the node (main metabolites and cofactors).
+    model reaction), ``ec`` (common EC number), ``metabolites`` (at least two
+    common main metabolites) and ``vicinity`` (accepted because it is next to a
+    node of a model reaction, see :meth:`MapMatcher.search_vicinity`; that
+    match is `vicinity_of`, as (reaction ID, node ID)). `score` compares the
+    metabolites of the model reaction with those of the node (main metabolites
+    and cofactors).
     """
 
     node: MapNode
     score: float
     via: tuple[str, ...]
     accepted: bool
+    vicinity_of: tuple[str, str] | None = None
 
 
 @dataclass
@@ -217,12 +281,20 @@ class MapMatcher:
     of variants of it with other cofactors (e.g. ADP- instead of
     ATP-dependent phosphofructokinase).
 
+    Optionally, the nodes next to found nodes are searched with lower
+    thresholds (`vicinity`, see :meth:`search_vicinity`).
+
     Parameters
     ----------
     brenda_map : BrendaMap
     mapper : ECMapper, optional
         For the EC numbers and identifiers of the reactions; default: ``ECMapper()``.
     min_score, min_score_unlinked, max_gap : float
+    vicinity : str, optional
+        ``neighbours`` or ``propagate`` (:data:`VICINITY_MODES`) to search the
+        vicinity of the found nodes in :meth:`match_model`; default: no search.
+    min_score_vicinity, min_score_vicinity_unlinked : float
+        Thresholds for nodes in the vicinity, with and without common reaction ID or EC number.
     cache_dir, refresh :
         For the resources that are created (default: like the mapper's sources).
     """
@@ -234,9 +306,14 @@ class MapMatcher:
         min_score: float = 0.6,
         min_score_unlinked: float = 0.8,
         max_gap: float = 0.1,
+        vicinity: str | None = None,
+        min_score_vicinity: float = 0.4,
+        min_score_vicinity_unlinked: float = 0.6,
         cache_dir=None,
         refresh: bool = False,
     ):
+        if vicinity is not None and vicinity not in VICINITY_MODES:
+            raise ValueError(f"unknown vicinity mode {vicinity!r}, use one of {', '.join(VICINITY_MODES)}")
         self.map = brenda_map
         self.mapper = mapper or ECMapper(cache_dir=cache_dir, refresh=refresh)
         if cache_dir is None and self.mapper.sources:
@@ -259,6 +336,9 @@ class MapMatcher:
         self.min_score = min_score
         self.min_score_unlinked = min_score_unlinked
         self.max_gap = max_gap
+        self.vicinity = vicinity
+        self.min_score_vicinity = min_score_vicinity
+        self.min_score_vicinity_unlinked = min_score_vicinity_unlinked
         self._index = None
 
     @property
@@ -357,8 +437,9 @@ class MapMatcher:
         }
         inferred = self._infer_compounds(aligned_kegg)
         by_ec, by_partial_ec, by_xref, by_main = {}, {}, {}, {}
-        node_keys = {}
+        node_keys, node_ecs = {}, {}
         for node in self.map.nodes.values():
+            node_ecs[node.node_id] = set()
             for raw in node.ec_numbers:
                 ec = normalize_ec(raw)
                 if ec is None:
@@ -366,6 +447,7 @@ class MapMatcher:
                 for current in (enzyme.current(ec) if enzyme is not None else {ec}) or {ec}:
                     target = by_ec if is_complete(current) else by_partial_ec
                     target.setdefault(current, set()).add(node.node_id)
+                    node_ecs[node.node_id].add(current)
             for br in node.brenda_reaction_ids:
                 for namespace, ids in self.bkms.brenda_reaction(br).items():
                     for identifier in ids:
@@ -382,7 +464,14 @@ class MapMatcher:
                         by_main.setdefault(key, set()).add(node.node_id)
             node_keys[node.node_id] = keys
         self._index.update(
-            by_ec=by_ec, by_partial_ec=by_partial_ec, by_xref=by_xref, by_main=by_main, keys=node_keys, inferred=inferred
+            by_ec=by_ec,
+            by_partial_ec=by_partial_ec,
+            by_xref=by_xref,
+            by_main=by_main,
+            keys=node_keys,
+            ecs=node_ecs,
+            inferred=inferred,
+            places={},
         )
 
     def _infer_compounds(self, aligned_kegg: dict[str, set[str]]) -> dict[int, str]:
@@ -414,6 +503,33 @@ class MapMatcher:
         if self._index is None:
             self._build()
         return self._index["keys"][node_id]
+
+    def place_keys(self, place: str) -> frozenset[str]:
+        """Keys of the main metabolite drawn at a place of the map (see :meth:`BrendaMap.neighbours`)."""
+        if self._index is None:
+            self._build()
+        cache = self._index["places"]
+        if place not in cache:
+            metabolites = self.map.place_metabolites(place)
+            keys = self.ligand_keys([n for m in metabolites for n in m.names])
+            inferred = {self._index["inferred"].get(m.ligand_id) for m in metabolites} - {None}
+            cache[place] = keys | inferred if keys else keys
+        return cache[place]
+
+    def compatible_ecs(self, reaction_ecs: Iterable[str], node_id: str) -> bool:
+        """Whether the EC numbers of a reaction do not contradict those of a node.
+
+        They contradict if the reaction has complete EC numbers, the node EC
+        numbers, and no pair of them has the same first three levels (``-`` in
+        an EC number of the node agrees with all).
+        """
+        if self._index is None:
+            self._build()
+        complete = [ec.split(".")[:3] for ec in reaction_ecs if is_complete(ec)]
+        node = [ec.split(".")[:3] for ec in self._index["ecs"][node_id]]
+        if not complete or not node:
+            return True
+        return any(all(b == "-" or a == b for a, b in zip(r, n)) for r in complete for n in node)
 
     # --- matching ---------------------------------------------------------------------------
 
@@ -467,7 +583,7 @@ class MapMatcher:
         for c in candidates:
             if c.accepted and c.score < best - self.max_gap:
                 c.accepted = False
-        candidates.sort(key=lambda c: (-c.accepted, -c.score, -len(c.via), c.node.node_id))
+        candidates.sort(key=_candidate_order)
         if any(c.accepted for c in candidates):
             status = "on map"
         elif any(set(c.via) & {"reaction-id", "ec"} for c in candidates):
@@ -477,15 +593,152 @@ class MapMatcher:
         return ReactionMapMatch(reaction.id, reaction.name, status, candidates)
 
     def match_model(self, model, reactions: Iterable | None = None, skip_boundary: bool = True) -> dict[str, ReactionMapMatch]:
-        """Find the map nodes of the reactions of a cobrapy model (default: all) as {reaction ID: match}."""
+        """Find the map nodes of the reactions of a cobrapy model (default: all) as {reaction ID: match}.
+
+        If :attr:`vicinity` is set, the vicinity of the found nodes is searched afterwards.
+        """
         boundary = {r.id for r in model.boundary} if skip_boundary else set()
-        reactions = model.reactions if reactions is None else reactions
-        result = {}
-        for reaction in reactions:
-            if isinstance(reaction, str):
-                reaction = model.reactions.get_by_id(reaction)
-            result[reaction.id] = self.match_reaction(reaction, reaction.id in boundary)
+        reactions = [
+            model.reactions.get_by_id(r) if isinstance(r, str) else r
+            for r in (model.reactions if reactions is None else reactions)
+        ]
+        result = {r.id: self.match_reaction(r, r.id in boundary) for r in reactions}
+        if self.vicinity:
+            self.search_vicinity(reactions, result, self.vicinity)
         return result
+
+    # --- vicinity ---------------------------------------------------------------------------
+
+    def search_vicinity(
+        self, reactions: Iterable, matches: dict[str, ReactionMapMatch], mode: str = "neighbours"
+    ) -> list[tuple[str, str]]:
+        """Accept further nodes for model reactions next to the nodes already found.
+
+        Two enzyme nodes of the map are neighbours if they share a drawn main
+        metabolite (or metabolite nodes connected by a link) that is not a
+        currency metabolite. For a node N' next to node N of model reaction R,
+        the candidates are the model reactions R' that have this metabolite,
+        too, if R also has it: the connection on the map is then also one in the
+        model. Transporters are no candidates. A candidate (R', N') is accepted
+        if
+
+        - its score is at least `min_score_vicinity` if R' and N' have a common
+          reaction ID or EC number, otherwise at least
+          `min_score_vicinity_unlinked`, and their EC numbers do not
+          contradict each other (:meth:`compatible_ecs`), and
+        - its score is at most `max_gap` lower than that of the best candidate
+          or model reaction of N', and than that of the best node of R'.
+
+        Modes:
+
+        ``neighbours``
+            Starting from all found nodes, the neighbours without model
+            reactions are searched once.
+        ``propagate``
+            Starting from the unambiguous matches (reactions with only one
+            accepted node, which has a common reaction ID or EC number), all
+            neighbours are searched. The accepted nodes and the found nodes
+            that were reached are the starting points of the next round, until
+            nothing new is found. Found nodes that are not reached stay.
+
+        `matches` (from :meth:`match_reaction` for `reactions`) are changed in
+        place: accepted nodes get ``vicinity`` in `via` and the match they
+        are next to as `vicinity_of`, reactions with accepted nodes are ``on
+        map``. Returns the new matches as (reaction ID, node ID).
+        """
+        if mode not in VICINITY_MODES:
+            raise ValueError(f"unknown vicinity mode {mode!r}, use one of {', '.join(VICINITY_MODES)}")
+        if self._index is None:
+            self._build()
+        reactions = {r.id: r for r in reactions if r.id in matches and matches[r.id].status != "boundary"}
+        keys = {rid: self.reaction_keys(r) for rid, r in reactions.items()}
+        by_key: dict[str, set[str]] = {}
+        for rid, reaction in reactions.items():
+            if self.is_transport(reaction):
+                continue
+            for k in keys[rid]:
+                if not k & CURRENCY_KEYS:
+                    for key in k:
+                        by_key.setdefault(key, set()).add(rid)
+
+        accepted = {(rid, c.node.node_id) for rid in reactions for c in matches[rid].nodes}
+        if mode == "propagate":
+            n_nodes = Counter(rid for rid, _ in accepted)
+            anchors = {
+                (rid, c.node.node_id)
+                for rid in reactions
+                for c in matches[rid].nodes
+                if n_nodes[rid] == 1 and set(c.via) & {"reaction-id", "ec"}
+            }
+        else:
+            anchors = set(accepted)
+        identified = {node_id for _, node_id in accepted}
+        ecs: dict[str, set[str]] = {}
+        frontier, new = set(anchors), []
+        while frontier:
+            candidates: dict[tuple[str, str], tuple[str, str]] = {}
+            for rid, node_id in sorted(frontier):
+                for other, place in self.map.neighbours(node_id):
+                    if mode == "neighbours" and other in identified:
+                        continue
+                    shared = self.place_keys(place)
+                    if not shared or shared & CURRENCY_KEYS or not any(shared & k for k in keys[rid]):
+                        continue
+                    for rid2 in sorted(set().union(*(by_key.get(key, set()) for key in shared))):
+                        candidates.setdefault((rid2, other), (rid, node_id))
+            reached = {pair for pair in candidates if pair in accepted}
+            chosen = self._select_vicinity([p for p in candidates if p not in accepted], matches, reactions, keys, ecs)
+            for (rid, node_id), score in chosen.items():
+                match = matches[rid]
+                candidate = next((c for c in match.candidates if c.node.node_id == node_id), None)
+                if candidate is None:
+                    candidate = NodeMatch(self.map.nodes[node_id], score, (), False)
+                    match.candidates.append(candidate)
+                candidate.accepted = True
+                candidate.via += ("vicinity",)
+                candidate.vicinity_of = candidates[(rid, node_id)]
+                match.status = "on map"
+                match.candidates.sort(key=_candidate_order)
+                new.append((rid, node_id))
+            accepted |= chosen.keys()
+            if mode == "neighbours":
+                break
+            frontier = (reached | chosen.keys()) - anchors
+            anchors |= frontier
+        return new
+
+    def _select_vicinity(self, pairs, matches, reactions, keys, ecs) -> dict[tuple[str, str], float]:
+        """The accepted candidates (reaction ID, node ID) of the vicinity with their scores."""
+        eligible = {}
+        for rid, node_id in pairs:
+            existing = next((c for c in matches[rid].candidates if c.node.node_id == node_id), None)
+            if existing is not None:
+                score, linked = existing.score, bool(set(existing.via) & {"reaction-id", "ec"})
+            else:
+                score, linked = self.score(keys[rid], self.node_keys(node_id)), False
+            if linked:
+                ok = score >= self.min_score_vicinity
+            else:
+                if rid not in ecs:
+                    ecs[rid] = self.reaction_ecs(reactions[rid])
+                ok = score >= self.min_score_vicinity_unlinked and self.compatible_ecs(ecs[rid], node_id)
+            if ok:
+                eligible[(rid, node_id)] = score
+        best_node: dict[str, float] = {}
+        best_reaction: dict[str, float] = {}
+        accepted = [(rid, c.node.node_id, c.score) for rid in reactions for c in matches[rid].nodes]
+        for rid, node_id, score in accepted + [(r, n, s) for (r, n), s in eligible.items()]:
+            best_node[node_id] = max(best_node.get(node_id, 0.0), score)
+            best_reaction[rid] = max(best_reaction.get(rid, 0.0), score)
+        return {
+            (rid, node_id): score
+            for (rid, node_id), score in eligible.items()
+            if score >= best_node[node_id] - self.max_gap and score >= best_reaction[rid] - self.max_gap
+        }
+
+
+def _candidate_order(c: NodeMatch):
+    return (-c.accepted, -c.score, -len(c.via), c.node.node_id)
 
 
 # --- output ---------------------------------------------------------------------------------
@@ -507,7 +760,8 @@ def map_matches_to_dataframe(matches: dict[str, ReactionMapMatch], all_candidate
 
     Reactions on the map get one row per accepted node, related reactions one
     row for their best candidate node, others one row without node. With
-    `all_candidates`, all candidate nodes are listed.
+    `all_candidates`, all candidate nodes are listed. For nodes found in the
+    vicinity of another match, `vicinity_of` is that match ("reaction@node").
     """
     rows = []
     for m in matches.values():
@@ -526,11 +780,12 @@ def map_matches_to_dataframe(matches: dict[str, ReactionMapMatch], all_candidate
                     **_node_columns(c.node if c else None),
                     "score": round(c.score, 3) if c else None,
                     "via": ";".join(c.via) if c else "",
+                    "vicinity_of": "@".join(c.vicinity_of) if c and c.vicinity_of else "",
                     "accepted": c.accepted if c else False,
                 }
             )
     columns = ["reaction_id", "reaction_name", "status", "node_id", "subsystem", "ec_label", "enzyme_name",
-               "score", "via", "accepted", "x", "y"]
+               "score", "via", "vicinity_of", "accepted", "x", "y"]
     return pd.DataFrame(rows, columns=columns)
 
 
@@ -548,11 +803,24 @@ def node_coverage(brenda_map: BrendaMap, matches: dict[str, ReactionMapMatch]) -
     return pd.DataFrame(rows, columns=columns)
 
 
+def _only_vicinity(matches: dict[str, ReactionMapMatch]) -> tuple[set[str], set[str]]:
+    """Reactions and nodes that are on the map only by matches in the vicinity of others."""
+    regular_nodes = {c.node.node_id for m in matches.values() for c in m.nodes if "vicinity" not in c.via}
+    reactions = {m.reaction_id for m in matches.values() if m.nodes and all("vicinity" in c.via for c in m.nodes)}
+    nodes = {c.node.node_id for m in matches.values() for c in m.nodes} - regular_nodes
+    return reactions, nodes
+
+
 def map_summary(brenda_map: BrendaMap, matches: dict[str, ReactionMapMatch]) -> dict:
-    """Reactions per status, and covered nodes and subsystems of the map."""
+    """Reactions per status, and covered nodes and subsystems of the map.
+
+    `vicinity_reactions` and `vicinity_nodes` count the reactions and nodes
+    that are on the map only by matches found in the vicinity of others.
+    """
     statuses = Counter(m.status for m in matches.values())
     nodes = {c.node.node_id for m in matches.values() for c in m.nodes}
     subsystems = Counter(brenda_map.nodes[n].subsystem for n in nodes)
+    vicinity_reactions, vicinity_nodes = _only_vicinity(matches)
     return {
         "reactions": len(matches),
         "status": {s: statuses.get(s, 0) for s in MAP_STATUSES},
@@ -560,6 +828,8 @@ def map_summary(brenda_map: BrendaMap, matches: dict[str, ReactionMapMatch]) -> 
         "nodes_with_model_reactions": len(nodes),
         "subsystems_with_model_reactions": len(subsystems),
         "nodes_per_subsystem": dict(subsystems.most_common()),
+        "vicinity_reactions": len(vicinity_reactions),
+        "vicinity_nodes": len(vicinity_nodes),
     }
 
 
@@ -567,6 +837,7 @@ _KEGG_ID = re.compile(r"C\d{5}")
 
 _SVG_STYLE = """
 g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
 g.nodeEN.ecm-related rect{fill:rgb(255, 225, 110);stroke:rgb(190, 160, 40);}
 """
 
@@ -579,7 +850,8 @@ def highlight_svg(
     """Write a copy of the map SVG in which the nodes of model reactions are highlighted.
 
     Nodes with accepted model reactions get the class ``ecm-on-map`` (green),
-    with `related` the best candidate nodes of related reactions
+    or ``ecm-vicinity`` (cyan) if all were found in the vicinity of other
+    matches, with `related` the best candidate nodes of related reactions
     ``ecm-related`` (yellow). The IDs of the model reactions are added to the
     tooltip (``title``) of the nodes. Returns the number of highlighted nodes.
     """
@@ -592,13 +864,16 @@ def highlight_svg(
             best = [c for c in m.candidates if set(c.via) & {"reaction-id", "ec"}][:1]
             for c in best:
                 near.setdefault(c.node.node_id, []).append(m.reaction_id)
+    vicinity = _only_vicinity(matches)[1]
     text = Path(svg).read_text(encoding="utf-8")
     highlighted = 0
 
     def replace(match: re.Match) -> str:
         nonlocal highlighted
         node_id, classes, attributes, content = match.groups()
-        if node_id in on_map:
+        if node_id in vicinity:
+            css, label, ids = "ecm-vicinity", "model (vicinity)", on_map[node_id]
+        elif node_id in on_map:
             css, label, ids = "ecm-on-map", "model", on_map[node_id]
         elif node_id in near:
             css, label, ids = "ecm-related", "related model reactions", near[node_id]

@@ -197,17 +197,90 @@ variants with other cofactors. A reaction is `on map` if a node is accepted,
 matches (e.g. other chain lengths or cofactors), `not on map` otherwise.
 
 Outputs: the matches table (`reaction_id, reaction_name, status, node_id,
-subsystem, ec_label, enzyme_name, score, via, accepted, x, y`; `--all-candidates`
-lists all candidates), the node table (one row per map node with its model
-reactions) and a copy of the SVG in which nodes with model reactions are green
-and the best nodes of related reactions yellow; the model reactions are added
-to the tooltips of the nodes.
+subsystem, ec_label, enzyme_name, score, via, vicinity_of, accepted, x, y`;
+`--all-candidates` lists all candidates), the node table (one row per map node
+with its model reactions) and a copy of the SVG in which nodes with model
+reactions are green (cyan if found only in the vicinity of other nodes, see
+below) and the best nodes of related reactions yellow; the model reactions are
+added to the tooltips of the nodes.
 
 With iML1515, 676 of 2,375 reactions (without boundary reactions) are on the
 map, on 776 of its 2,848 enzyme nodes in 116 subsystems; 499 are related and
 1,200 not on the map, 788 of them transporters, which the map does not show.
 All enzymatic reactions of e_coli_core except the cytochrome bd oxidase are
 found.
+
+### Searching the vicinity of found nodes
+
+Optionally, the nodes next to found nodes are searched with lower thresholds:
+
+```bash
+python -m ecmapper model.xml --brenda-map BRENDA_map_reactions.json --map-vicinity propagate -o matches.tsv
+```
+
+```python
+matcher = MapMatcher(brenda_map, ECMapper(), vicinity="propagate")
+matches = matcher.match_model(model)
+# or afterwards: matcher.search_vicinity(model.reactions, matches, "neighbours")
+```
+
+Two enzyme nodes are neighbours if they share a drawn main metabolite;
+metabolite nodes connected by a line (e.g. the same metabolite in two
+subsystems) count as one, currency metabolites (ATP, NAD, CO2, ...) do not
+connect. For a node next to a node of model reaction R, the candidates are the
+model reactions (except transporters) that have the shared metabolite, if R
+has it, too: the connection on the map then also exists in the model. A
+candidate is accepted if
+
+- its score is at least 0.4 (`--min-map-score-vicinity`) if it has a common
+  reaction ID or EC number with the node, otherwise at least 0.6
+  (`--min-map-score-vicinity-unlinked`), and then only if the EC numbers do not
+  contradict each other: if the reaction has complete EC numbers and the node
+  has EC numbers, one pair must agree in the first three levels (this rejects
+  e.g. phosphatases on kinase nodes with the same main metabolites);
+- its score is at most 0.1 (`--max-map-gap`) lower than that of the best
+  candidate of the node and that of the best node of the reaction.
+
+There are two modes:
+
+- `neighbours`: the nodes without model reactions next to all found nodes are
+  searched once.
+- `propagate`: starting only from unambiguous matches (reactions with a single
+  accepted node that has a common reaction ID or EC number), all neighbours
+  are searched, and the search continues from the newly accepted nodes and the
+  found nodes it reaches, until nothing new is found. It finds chains of nodes
+  and does not spread errors from reactions found on several nodes (e.g. on
+  nodes of D- and L-enzymes, whose metabolite names are the same). Found nodes
+  that are not reached are kept.
+
+Nodes accepted this way have `vicinity` in `via`, and the match next to which
+they were found in `vicinity_of` (`reaction@node`).
+
+With iML1515, both modes add 47 node matches, 45 of them the same. `neighbours`
+puts 39 more reactions on the map, on 43 more nodes; `propagate` puts 41 more
+reactions on the map, on 42 more nodes. It starts from 544 of the 846 regular
+matches. 34 or 36 of the new reactions were `related` before. Examples are:
+
+- the molybdenum cofactor synthase, and, only with `propagate`, the
+  molybdopterin cytidylyltransferase next to it;
+- biotin synthase and carnitine-CoA ligase;
+- steps of fatty acid synthesis, whose acyl-ACP names partly differ between
+  the map and the model;
+- pyruvate oxidase, drawn with cytochrome b1 instead of ubiquinone, and
+  riboflavin synthase, drawn with an additional metabolite.
+
+Checked by hand, 6 of the 47 matches of `neighbours` are doubtful or wrong.
+Three are acyl-CoA dehydrogenases on acyl-CoA oxidase nodes; the resources
+assign both EC numbers to them. The others are:
+
+- the uroporphyrinogen methyltransferase on the node of the next methylation
+  step;
+- an acetate-CoA ligase on a propionate-CoA ligase node;
+- a homocysteine methyltransferase on the betaine-homocysteine
+  methyltransferase node.
+
+`propagate` also accepts the D-lactaldehyde dehydrogenase on a methylglyoxal
+reductase node that produces L-lactaldehyde. e_coli_core gets no new matches.
 
 ## Limitations
 
@@ -227,7 +300,10 @@ found.
 - BRENDA map metabolites are matched by name; names that are neither KEGG nor
   BiGG names (and can not be inferred from an aligned KEGG reaction) only
   match identical model metabolite names. Generic metabolites of the map
-  ("an aldehyde") match no specific metabolite of the model.
+  ("an aldehyde") match no specific metabolite of the model. Synonyms are not
+  recognised ("Crotonyl-ACP" on the map, "But-2-enoyl-[acyl-carrier protein]"
+  in iML1515), so such nodes are not found even in the vicinity search, which
+  needs the shared metabolite in both the map and the model.
 
 ## Tests
 

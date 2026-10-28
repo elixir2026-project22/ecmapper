@@ -6,6 +6,8 @@ from ecmapper import ECMapper
 from ecmapper.brenda_map import (
     BrendaMap,
     MapMatcher,
+    MapMetabolite,
+    MapNode,
     highlight_svg,
     map_matches_to_dataframe,
     map_summary,
@@ -84,6 +86,11 @@ def test_read_map(brenda_map):
     assert [(m.names, m.role) for m in node.metabolites][2:4] == [(("ATP",), "consumed"), (("H2O",), "consumed")]
     assert brenda_map.nodes["node1"].metabolites[0].names == ("phosphoenolpyruvate", "PEP")
     assert (brenda_map.nodes["node1"].x, brenda_map.nodes["node1"].y) == (100, 200)
+    # the two pyruvate nodes are linked, the PEP nodes not
+    assert brenda_map.links == [("node91", "node92")]
+    assert brenda_map.neighbours("node1") == [("node2", "node92")]
+    assert [m.names for m in brenda_map.place_metabolites("node92")] == [("pyruvate",), ("pyruvate",)]
+    assert brenda_map.neighbours("node3") == []
 
 
 def test_match_model(matcher, model):
@@ -146,7 +153,7 @@ def test_outputs(matcher, model, brenda_map, tmp_path):
     table = map_matches_to_dataframe(matches)
     assert list(table.columns) == [
         "reaction_id", "reaction_name", "status", "node_id", "subsystem", "ec_label", "enzyme_name",
-        "score", "via", "accepted", "x", "y",
+        "score", "via", "vicinity_of", "accepted", "x", "y",
     ]
     assert table[table.reaction_id == "PYK"].node_id.tolist() == ["node1"]
     assert table[table.reaction_id == "NOTHING"].node_id.tolist() == [""]
@@ -200,3 +207,158 @@ def test_cli(model, cache_dir, tmp_path, capsys):
     assert set(table[table.status == "on map"].reaction_id) == {"PYK", "PPS", "SUCDi", "PGI", "ARGDC"}
     assert pd.read_csv(nodes, sep="\t", keep_default_na=False).model_reactions.tolist()[0] == "PYK"
     assert "ecm-on-map" in svg.read_text()
+
+    assert main(args + ["--map-vicinity", "propagate", "--min-map-score-vicinity", "0.5"]) == 0
+    assert "only found in the vicinity of other nodes: 0 reactions, 0 nodes" in capsys.readouterr().out
+
+
+# --- vicinity -------------------------------------------------------------------------------
+
+
+def drawn(name, place=None, role="main"):
+    return MapMetabolite((name,), None, role, place)
+
+
+def glycolysis_map(second_pgi=False):
+    """PGI - PFK - FBA - TPI, connected by drawn metabolites (places node21 ... node25)."""
+    nodes = [
+        MapNode("node11", "glycolysis", "5.3.1.9", ["5.3.1.9"], "glucose-6-phosphate isomerase", [],
+                [drawn("glucose 6-phosphate", "node21"), drawn("fructose 6-phosphate", "node22")]),
+        # Mg2+ is not in the model: 3 / 4
+        MapNode("node12", "glycolysis", "2.7.1.11", ["2.7.1.11"], "6-phosphofructokinase", [],
+                [drawn("fructose 6-phosphate", "node22"), drawn("fructose 1,6-bisphosphate", "node23"),
+                 drawn("ATP", role="consumed"), drawn("ADP", role="produced"), drawn("Mg2+", role="consumed")]),
+        # GAP is not recognised: 2 / 4
+        MapNode("node13", "glycolysis", "4.1.2.13", ["4.1.2.13"], "fructose-bisphosphate aldolase", [],
+                [drawn("fructose 1,6-bisphosphate", "node23"), drawn("dihydroxyacetone phosphate", "node24"),
+                 drawn("GAP", "node25")]),
+        MapNode("node14", "glycolysis", "5.3.1.1", ["5.3.1.1"], "triose-phosphate isomerase", [],
+                [drawn("dihydroxyacetone phosphate", "node24"), drawn("GAP", "node25")]),
+    ]
+    links = []
+    if second_pgi:
+        nodes.append(MapNode("node15", "gluconeogenesis", "5.3.1.9", ["5.3.1.9"], "glucose-6-phosphate isomerase",
+                             [], [drawn("glucose 6-phosphate", "node26"), drawn("fructose 6-phosphate", "node27")]))
+        links.append(("node27", "node22"))
+    return BrendaMap(nodes, links)
+
+
+@pytest.fixture
+def glycolysis():
+    model = Model("glycolysis")
+    g6p, f6p = met("g6p_c", "D-Glucose 6-phosphate"), met("f6p_c", "D-Fructose 6-phosphate")
+    fdp, dhap = met("fdp_c", "D-Fructose 1,6-bisphosphate"), met("dhap_c", "Dihydroxyacetone phosphate")
+    g3p, atp = met("g3p_c", "Glyceraldehyde 3-phosphate"), met("atp_c", "ATP")
+    adp, h = met("adp_c", "ADP"), met("h_c", "H+")
+    reactions = []
+    for rid, ec, stoichiometry in [
+        ("PGI", "5.3.1.9", {g6p: -1, f6p: 1}),
+        ("PFK", None, {f6p: -1, atp: -1, fdp: 1, adp: 1, h: 1}),
+        ("PFKX", "3.1.3.11", {f6p: -1, atp: -1, fdp: 1, adp: 1, h: 1}),  # contradicting EC number
+        ("FBA", "4.1.2.13", {fdp: -1, dhap: 1, g3p: 1}),
+        ("TPI", None, {dhap: -1, g3p: 1}),
+    ]:
+        r = Reaction(rid)
+        r.add_metabolites(stoichiometry)
+        r.annotation = {"ec-code": ec} if ec else {}
+        reactions.append(r)
+    model.add_reactions(reactions)
+    return model
+
+
+def statuses(matches):
+    return {rid: (m.status, [c.node.node_id for c in m.nodes]) for rid, m in matches.items()}
+
+
+def test_neighbours(sources):
+    brenda_map = glycolysis_map(second_pgi=True)
+    assert sorted(brenda_map.neighbours("node12")) == [("node11", "node22"), ("node13", "node23"), ("node15", "node22")]
+    assert sorted(brenda_map.neighbours("node15")) == [("node11", "node22"), ("node12", "node22")]
+
+
+def test_compatible_ecs(sources):
+    matcher = MapMatcher(glycolysis_map(), ECMapper(sources.values()))
+    assert matcher.compatible_ecs({"2.7.1.1"}, "node12")
+    assert not matcher.compatible_ecs({"3.1.3.11", "2.7.4.-"}, "node12")
+    assert matcher.compatible_ecs({"2.7.-.-"}, "node12")  # only incomplete EC numbers
+    assert matcher.compatible_ecs(set(), "node12")
+
+
+def test_no_vicinity(sources, glycolysis):
+    matches = MapMatcher(glycolysis_map(), ECMapper(sources.values())).match_model(glycolysis)
+    assert statuses(matches) == {
+        "PGI": ("on map", ["node11"]),
+        "PFK": ("not on map", []),  # 0.75, found only by metabolites
+        "PFKX": ("not on map", []),
+        "FBA": ("related", []),  # 0.5
+        "TPI": ("not on map", []),
+    }
+
+
+def test_vicinity_neighbours(sources, glycolysis):
+    matcher = MapMatcher(glycolysis_map(), ECMapper(sources.values()), vicinity="neighbours")
+    matches = matcher.match_model(glycolysis)
+    # only the neighbours of the node of PGI; PFKX has an EC number of another enzyme class
+    assert statuses(matches) == {
+        "PGI": ("on map", ["node11"]),
+        "PFK": ("on map", ["node12"]),
+        "PFKX": ("not on map", []),
+        "FBA": ("related", []),
+        "TPI": ("not on map", []),
+    }
+    pfk = matches["PFK"].nodes[0]
+    assert (pfk.score, pfk.via, pfk.vicinity_of) == (0.75, ("metabolites", "vicinity"), ("PGI", "node11"))
+
+    matcher.min_score_vicinity_unlinked = 0.8
+    assert matcher.match_model(glycolysis)["PFK"].status == "not on map"
+
+
+def test_vicinity_propagate(sources, glycolysis):
+    matcher = MapMatcher(glycolysis_map(), ECMapper(sources.values()))
+    matches = matcher.match_model(glycolysis)
+    new = matcher.search_vicinity(glycolysis.reactions, matches, "propagate")
+    assert new == [("PFK", "node12"), ("FBA", "node13")]
+    fba = matches["FBA"]
+    assert fba.status == "on map"
+    assert (fba.nodes[0].score, fba.nodes[0].via, fba.nodes[0].vicinity_of) == (
+        0.5, ("ec", "metabolites", "vicinity"), ("PFK", "node12")
+    )
+    # TPI matches only 1 of 3 metabolites
+    assert matches["TPI"].status == "not on map"
+
+    matcher.min_score_vicinity = 0.6
+    assert matcher.search_vicinity(glycolysis.reactions, matcher.match_model(glycolysis), "propagate") == [
+        ("PFK", "node12")
+    ]
+    with pytest.raises(ValueError):
+        matcher.search_vicinity(glycolysis.reactions, matches, "everywhere")
+
+
+def test_vicinity_unambiguous(sources, glycolysis):
+    # PGI is on two nodes; propagation does not start from it, the search of all neighbours does
+    matcher = MapMatcher(glycolysis_map(second_pgi=True), ECMapper(sources.values()))
+    matches = matcher.match_model(glycolysis)
+    assert [c.node.node_id for c in matches["PGI"].nodes] == ["node11", "node15"]
+    assert matcher.search_vicinity(glycolysis.reactions, matches, "propagate") == []
+    assert matcher.search_vicinity(glycolysis.reactions, matches, "neighbours") == [("PFK", "node12")]
+
+
+def test_vicinity_outputs(sources, glycolysis, tmp_path):
+    brenda_map = glycolysis_map()
+    matches = MapMatcher(brenda_map, ECMapper(sources.values()), vicinity="propagate").match_model(glycolysis)
+    table = map_matches_to_dataframe(matches).set_index("reaction_id")
+    assert table.loc["FBA", "vicinity_of"] == "PFK@node12"
+    assert table.loc["PGI", "vicinity_of"] == ""
+    summary = map_summary(brenda_map, matches)
+    assert (summary["vicinity_reactions"], summary["vicinity_nodes"]) == (2, 2)
+
+    svg = tmp_path / "in.svg"
+    svg.write_text(
+        "<svg><style></style>"
+        + "".join(f'<g id="node{i}" class="node nodeEN"><rect/><title>n{i}</title></g>' for i in range(11, 15))
+        + "</svg>"
+    )
+    assert highlight_svg(svg, tmp_path / "out.svg", matches) == 3
+    out = (tmp_path / "out.svg").read_text()
+    assert 'class="node nodeEN ecm-on-map"><rect/><title>n11 | model: PGI</title>' in out
+    assert 'class="node nodeEN ecm-vicinity"><rect/><title>n13 | model (vicinity): FBA</title>' in out

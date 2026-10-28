@@ -6,7 +6,15 @@ import argparse
 import logging
 from pathlib import Path
 
-from .brenda_map import BrendaMap, MapMatcher, highlight_svg, map_matches_to_dataframe, map_summary, node_coverage
+from .brenda_map import (
+    VICINITY_MODES,
+    BrendaMap,
+    MapMatcher,
+    highlight_svg,
+    map_matches_to_dataframe,
+    map_summary,
+    node_coverage,
+)
 from .evaluation import evaluate, evaluation_summary
 from .mapper import ECMapper, annotate_model, summary, to_dataframe
 from .sources import SOURCES, FileStatus, default_cache_dir
@@ -50,7 +58,7 @@ def _print_file_statuses(statuses: list[FileStatus]) -> None:
         print(line + (f" ({s.detail})" if s.detail else ""))
 
 
-def _print_map_summary(stats: dict) -> None:
+def _print_map_summary(stats: dict, vicinity: bool = False) -> None:
     print(f"reactions: {stats['reactions']}")
     for status, n in stats["status"].items():
         print(f"  {status:<11} {n}")
@@ -58,6 +66,11 @@ def _print_map_summary(stats: dict) -> None:
         f"map nodes with model reactions: {stats['nodes_with_model_reactions']} of {stats['nodes']}, "
         f"in {stats['subsystems_with_model_reactions']} subsystems"
     )
+    if vicinity:
+        print(
+            f"only found in the vicinity of other nodes: {stats['vicinity_reactions']} reactions, "
+            f"{stats['vicinity_nodes']} nodes"
+        )
 
 
 def main(argv=None) -> int:
@@ -125,6 +138,24 @@ def main(argv=None) -> int:
     group.add_argument(
         "--max-map-gap", type=float, default=0.1, help="maximum distance to the best score of a reaction (0.1)"
     )
+    group.add_argument(
+        "--map-vicinity",
+        choices=VICINITY_MODES,
+        help="also search next to found nodes with lower thresholds: 'neighbours' of all found nodes once, or "
+        "'propagate' recursively from unambiguous matches (default: no search)",
+    )
+    group.add_argument(
+        "--min-map-score-vicinity",
+        type=float,
+        default=0.4,
+        help="minimum score of a node in the vicinity with common reaction ID or EC number (0.4)",
+    )
+    group.add_argument(
+        "--min-map-score-vicinity-unlinked",
+        type=float,
+        default=0.6,
+        help="minimum score of other nodes in the vicinity (0.6)",
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
     if args.model is None and not (args.check_updates or args.update):
@@ -157,6 +188,9 @@ def main(argv=None) -> int:
             min_score=args.min_map_score,
             min_score_unlinked=args.min_map_score_unlinked,
             max_gap=args.max_map_gap,
+            vicinity=args.map_vicinity,
+            min_score_vicinity=args.min_map_score_vicinity,
+            min_score_vicinity_unlinked=args.min_map_score_vicinity_unlinked,
             cache_dir=args.cache_dir,
             refresh=args.refresh,
         )
@@ -183,7 +217,7 @@ def main(argv=None) -> int:
     model = load_model(args.model)
     if matcher is not None:
         matches = matcher.match_model(model, skip_boundary=not args.include_boundary)
-        _print_map_summary(map_summary(matcher.map, matches))
+        _print_map_summary(map_summary(matcher.map, matches), vicinity=bool(args.map_vicinity))
         if args.output:
             map_matches_to_dataframe(matches, all_candidates=args.all_candidates).to_csv(
                 args.output, sep="\t", index=False
