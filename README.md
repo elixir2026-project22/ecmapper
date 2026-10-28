@@ -213,18 +213,22 @@ reactions are green (cyan if found only in the vicinity of other nodes, see
 below) and the best nodes of related reactions yellow; the model reactions are
 added to the tooltips of the nodes.
 
-With iML1515, 676 of 2,375 reactions (without boundary reactions) are on the
-map, on 776 of its 2,848 enzyme nodes in 116 subsystems; 499 are related and
+With iML1515, 673 of 2,375 reactions (without boundary reactions) are on the
+map, on 773 of its 2,848 enzyme nodes in 115 subsystems; 502 are related and
 1,200 not on the map, 788 of them transporters, which the map does not show.
 All enzymatic reactions of e_coli_core except the cytochrome bd oxidase are
 found.
 
-Models from [bigg.bio](https://bigg.bio/models/) can be used directly: their
-`biggr` annotations are read, and model-specific IDs (`__iYL1228__PGI`) are
-reduced to the original IDs for the lookups in BiGGr. An evaluation on eleven
-manually curated prokaryote models from bigg.bio, including the selection of
-the models, is in [BRENDA_MAP_EVALUATION.md](BRENDA_MAP_EVALUATION.md). The
-script that runs it is `scripts/evaluate_map_models.py`.
+An evaluation on eleven manually curated prokaryote models from
+[BiGG](https://bigg.ucsd.edu/models), including the selection of the models,
+is in [BRENDA_MAP_EVALUATION.md](BRENDA_MAP_EVALUATION.md). The script that
+runs it is `scripts/evaluate_map_models.py`.
+
+Use the model files of BiGG (bigg.ucsd.edu) where possible. The files of
+[bigg.bio](https://bigg.bio/models/) carry hardly any cross-references, and
+fewer reactions are found with them. They can be used, though: their `biggr`
+annotations are read, and model-specific IDs (`__iYL1228__PGI`) are reduced
+to the original IDs for the lookups in BiGGr.
 
 ### Searching the vicinity of found nodes
 
@@ -274,7 +278,7 @@ they were found in `vicinity_of` (`reaction@node`).
 
 With iML1515, both modes add 47 node matches, 45 of them the same. `neighbours`
 puts 39 more reactions on the map, on 43 more nodes; `propagate` puts 41 more
-reactions on the map, on 42 more nodes. It starts from 544 of the 846 regular
+reactions on the map, on 42 more nodes. It starts from 544 of the 840 regular
 matches. 34 or 36 of the new reactions were `related` before. Examples are:
 
 - the molybdenum cofactor synthase, and, only with `propagate`, the

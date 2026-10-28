@@ -1,8 +1,9 @@
-"""Evaluate the matching of model reactions to a BRENDA map on models from bigg.bio.
+"""Evaluate the matching of model reactions to a BRENDA map on models from BiGG.
 
 usage: python evaluate_map_models.py BRENDA_map_reactions.json OUT_DIR [--cache-dir DIR] [MODEL ...]
 
-The SBML files of the models are downloaded from bigg.bio into OUT_DIR/models.
+The SBML files of the models are downloaded from BiGG (bigg.ucsd.edu, which
+has more annotations than bigg.bio) into OUT_DIR/models.
 For each model, OUT_DIR gets the matches (MODEL_matches.tsv) and the matches
 found in the vicinity of others (MODEL_vicinity.tsv, both modes), and the
 summary tables coverage.tsv and holdout.tsv:
@@ -37,7 +38,7 @@ from ecmapper.brenda_map import VICINITY_MODES, BrendaMap, MapMatcher, map_match
 MODELS = (
     "iYO844", "iYS854", "iCN900", "iJN1463", "iCN718", "STM_v1_0", "iYL1228", "iAF987", "iIT341", "iEK1008", "iAF692",
 )
-URL = "https://bigg.bio/static/models/models/{}.biggr.sbml.gz"
+URL = "https://bigg.ucsd.edu/static/models/{}.xml.gz"
 HOLD_OUT, REPETITIONS = 0.3, 3
 
 
