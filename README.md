@@ -210,6 +210,13 @@ map, on 776 of its 2,848 enzyme nodes in 116 subsystems; 499 are related and
 All enzymatic reactions of e_coli_core except the cytochrome bd oxidase are
 found.
 
+Models from [bigg.bio](https://bigg.bio/models/) can be used directly: their
+`biggr` annotations are read, and model-specific IDs (`__iYL1228__PGI`) are
+reduced to the original IDs for the lookups in BiGGr. An evaluation on eleven
+manually curated prokaryote models from bigg.bio, including the selection of
+the models, is in [BRENDA_MAP_EVALUATION.md](BRENDA_MAP_EVALUATION.md). The
+script that runs it is `scripts/evaluate_map_models.py`.
+
 ### Searching the vicinity of found nodes
 
 Optionally, the nodes next to found nodes are searched with lower thresholds:
