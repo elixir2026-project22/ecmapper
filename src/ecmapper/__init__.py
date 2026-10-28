@@ -9,6 +9,7 @@ Example
 >>> to_dataframe(mappings)
 """
 
+from .disambiguation import SELECTIONS
 from .ec import is_complete, normalize_ec
 from .mapper import (
     ECEvidence,
@@ -24,6 +25,7 @@ from .sources import SOURCES, FileStatus, check_updates, default_sources, update
 __version__ = "0.1.0"
 
 __all__ = [
+    "SELECTIONS",
     "SOURCES",
     "ECEvidence",
     "ECMapper",

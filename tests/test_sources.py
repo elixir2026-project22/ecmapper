@@ -51,6 +51,15 @@ def test_bkms(sources):
     # SPONTANEOUS and empty EC numbers are skipped
     assert bkms.lookup("RXN-3521") == set()
     assert bkms.lookup("PRENYL-PYROPHOSPHATASE-RXN") == set()
+    # the aligned KEGG reactions are only available through lookup_kegg and consensus
+    assert bkms.lookup("R00669") == set()
+    assert bkms.lookup_kegg("R00669") == {"3.5.1.14", "3.5.1.16", "3.5.1.17", "3.5.1.B4", "2.3.1.35"}
+    assert bkms.consensus({"kegg.reaction": ["R08572"], "metacyc.reaction": ["GKI-RXN"]}) == {"2.7.1.165"}
+    assert bkms.consensus({"kegg.reaction": ["R08572"], "metacyc.reaction": ["PGLUCISOM-RXN"]}) == {
+        "2.7.1.165",
+        "5.3.1.9",
+    }
+    assert bkms.consensus({"rhea": ["16109"]}) == set()
 
 
 def test_biggr(sources):

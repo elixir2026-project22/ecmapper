@@ -14,8 +14,15 @@ For every reaction:
    (BiGGr does, e.g. `PGI` -> KEGG `R00771`, ModelSEED `rxn00558`, MetaCyc `PGLUCISOM-RXN`),
    these are looked up as well (one step, marked with `via`).
 
-Boundary reactions (exchange, demand, sink) are skipped. If several EC numbers are
-found for a reaction, all of them are kept; disambiguation is left for later.
+Boundary reactions (exchange, demand, sink) are skipped.
+
+If several EC numbers are found, the ones to use are selected (`selected`,
+`selection`): EC numbers from the model are kept (`annotation`, `notes`); a
+`single` EC number is used; if all BKMS-react reactions that match the KEGG or
+MetaCyc reactions of the reaction have the same EC number, that one is used
+(`bkms`); otherwise all are kept (`ambiguous`). See
+[DISAMBIGUATION.md](DISAMBIGUATION.md) for details and a proposed scheme to
+select EC numbers by comparing metabolites.
 
 ## Resources
 
@@ -78,17 +85,18 @@ model = cobra.io.read_sbml_model("models/bigg2-ecoli/e_coli_core.xml")
 mapper = ECMapper()                     # or ECMapper(["kegg", "rhea"]), see options below
 mappings = mapper.map_model(model)      # {reaction ID: ReactionECMapping}
 
-mappings["PGI"].ec_numbers              # ['5.3.1.9']
+mappings["PGI"].ec_numbers              # ['5.3.1.9'], all EC numbers found
+mappings["PGI"].selected                # ['5.3.1.9'], selection: 'single'
 mappings["PGI"].evidence                # [ECEvidence(ec='5.3.1.9', source='kegg', identifier='R00771', via='bigg.reaction:PGI'), ...]
-summary(mappings)                       # counts per origin and source
+summary(mappings)                       # counts per origin, selection and source
 to_dataframe(mappings)                  # one row per reaction
 to_dataframe(mappings, long=True)       # one row per reaction, EC number and evidence
 ```
 
 Options of `ECMapper`: `use_notes`, `always_query` (also query reactions that
-already have EC numbers), `skip_boundary`, `follow_xrefs`, `cache_dir`, `refresh`.
-`annotate_model(model, mappings)` writes the EC numbers found in the resources to
-`reaction.annotation["ec-code"]`.
+already have EC numbers), `skip_boundary`, `follow_xrefs`, `bkms_consensus`,
+`cache_dir`, `refresh`. `annotate_model(model, mappings)` writes the selected EC
+numbers found in the resources to `reaction.annotation["ec-code"]`.
 
 Command line:
 
@@ -102,9 +110,11 @@ see `python -m ecmapper --help` for all options.
 ### Output
 
 `origin` is `annotation` or `notes` (EC numbers from the model), `resources`
-(found in the resources), `none` or `boundary`. The wide table has the columns
-`reaction_id, origin, ec_numbers, n_ec, sources, xrefs`, the long table
-`reaction_id, origin, ec, complete, source, identifier, via`.
+(found in the resources), `none` or `boundary`; `selection` is `annotation`,
+`notes`, `single`, `bkms`, `ambiguous`, `none` or `boundary`. The wide table has
+the columns `reaction_id, origin, selection, selected, ec_numbers, n_ec, sources,
+xrefs`, the long table `reaction_id, origin, selection, ec, selected, complete,
+source, identifier, via`.
 
 ## Limitations
 
@@ -116,7 +126,8 @@ see `python -m ecmapper --help` for all options.
   resource.
 - EC numbers in CBMPy `KeyValueData` annotations are not read by cobrapy and
   therefore not used.
-- EC numbers are not yet checked against BRENDA (transferred or deleted EC numbers).
+- Transferred and deleted EC numbers are not yet replaced (see
+  [DISAMBIGUATION.md](DISAMBIGUATION.md), step 0).
 
 ## Tests
 

@@ -28,7 +28,11 @@ def _print_summary(stats: dict, mapper: ECMapper) -> None:
     print(f"reactions: {stats['reactions']}")
     for origin, n in stats["origin"].items():
         print(f"  {origin:<11} {n}")
-    print(f"with EC number: {stats['with_ec']}, of these with more than one: {stats['ambiguous']}")
+    print(f"with EC number: {stats['with_ec']}")
+    print("selection of the EC number:")
+    for selection, n in stats["selection"].items():
+        if selection not in ("none", "boundary"):
+            print(f"  {selection:<11} {n}")
     print("reactions with EC numbers per source:")
     for source, n in stats["reactions_per_source"].items():
         print(f"  {source:<11} {n}")
@@ -61,6 +65,9 @@ def main(argv=None) -> int:
     parser.add_argument("--no-notes", action="store_true", help="ignore EC numbers in reaction notes")
     parser.add_argument("--no-xrefs", action="store_true", help="do not follow cross-references between resources")
     parser.add_argument("--include-boundary", action="store_true", help="also map boundary reactions")
+    parser.add_argument(
+        "--no-bkms-consensus", action="store_true", help="do not select the EC number on which BKMS-react agrees"
+    )
     parser.add_argument("--cache-dir", type=Path, default=None, help=f"download cache (default: {default_cache_dir()})")
     parser.add_argument("--refresh", action="store_true", help="download the resource files again")
     parser.add_argument(
@@ -82,6 +89,7 @@ def main(argv=None) -> int:
         always_query=args.always_query,
         skip_boundary=not args.include_boundary,
         follow_xrefs=not args.no_xrefs,
+        bkms_consensus=not args.no_bkms_consensus,
         cache_dir=args.cache_dir,
         refresh=args.refresh,
     )

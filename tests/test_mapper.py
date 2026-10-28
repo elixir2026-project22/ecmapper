@@ -112,6 +112,10 @@ def test_dataframes(model, mapper):
     mappings = mapper.map_model(model)
     wide = to_dataframe(mappings).set_index("reaction_id")
     assert wide.loc["RESOURCES", "ec_numbers"] == "2.7.1.40;2.7.9.2"
+    assert wide.loc["RESOURCES", "selection"] == "ambiguous"
+    assert wide.loc["RESOURCES", "selected"] == "2.7.1.40;2.7.9.2"
+    assert wide.loc["BIGG_ONLY", "selection"] == "single"
+    assert wide.loc["EX_a_e", "selection"] == "boundary"
     assert wide.loc["RESOURCES", "n_ec"] == 2
     assert wide.loc["RESOURCES", "sources"] == "kegg;bkms"
     assert wide.loc["RESOURCES", "xrefs"] == "kegg.reaction:R00200;metacyc.reaction:PEPSYNTH-RXN"
@@ -121,6 +125,7 @@ def test_dataframes(model, mapper):
     assert set(rows.source) == {"kegg", "modelseed", "bkms"}
     assert set(rows.via) == {"bigg.reaction:PGI"}
     assert rows.complete.all()
+    assert rows.selected.all()
     assert len(long[long.reaction_id == "NOTHING"]) == 1
 
 
@@ -130,6 +135,9 @@ def test_summary(model, mapper):
     assert stats["origin"] == {"annotation": 1, "notes": 1, "resources": 3, "none": 1, "boundary": 1}
     assert stats["with_ec"] == 5
     assert stats["ambiguous"] == 1
+    assert stats["selection"] == {
+        "annotation": 1, "notes": 1, "single": 2, "bkms": 0, "ambiguous": 1, "none": 1, "boundary": 1
+    }
     assert stats["reactions_per_source"]["kegg"] == 2
 
 

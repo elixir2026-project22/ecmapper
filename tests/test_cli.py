@@ -24,10 +24,13 @@ def test_cli(tmp_path, cache_dir, capsys):
 
     table = pd.read_csv(out, sep="\t", keep_default_na=False).set_index("reaction_id")
     assert table.loc["PGI", "ec_numbers"] == "5.3.1.9"
+    assert table.loc["PGI", "selection"] == "single"
     assert table.loc["PYK", "ec_numbers"] == "2.7.1.40"
     assert cobra.io.read_sbml_model(str(annotated)).reactions.PGI.annotation["ec-code"] == "5.3.1.9"
 
     assert main([str(sbml), "-o", str(out), "--long", "--sources", "kegg", "--cache-dir", str(cache_dir)]) == 0
     table = pd.read_csv(out, sep="\t", keep_default_na=False)
-    assert list(table.columns) == ["reaction_id", "origin", "ec", "complete", "source", "identifier", "via"]
+    assert list(table.columns) == [
+        "reaction_id", "origin", "selection", "ec", "selected", "complete", "source", "identifier", "via"
+    ]
     assert set(table.source) == {"", "kegg"}
