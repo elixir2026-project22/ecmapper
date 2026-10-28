@@ -122,14 +122,19 @@ class MetaboliteComparison:
 
     @staticmethod
     def bigg_ids(metabolite) -> set[str]:
-        """Possible universal BiGG IDs of a cobrapy metabolite: annotation and ID without compartment."""
+        """Possible universal BiGG IDs of a cobrapy metabolite: annotation and ID without compartment.
+
+        Models from bigg.bio annotate compartmentalised metabolites with charge
+        (``biggr: g6p_c:-2``), which gives ``g6p``.
+        """
         bigg_ids = set(annotation_values(metabolite.annotation, "bigg.metabolite"))
         suffix = f"_{metabolite.compartment}" if metabolite.compartment else None
-        if suffix and metabolite.id.endswith(suffix):
-            bigg_ids.add(metabolite.id[: -len(suffix)])
-        else:
-            # compartments with other IDs than the suffixes of the metabolites (Cytosol, glc__D_c)
-            bigg_ids.add(_COMPARTMENT_SUFFIX.sub("", metabolite.id))
+        for identifier in [metabolite.id, *(v.split(":")[0] for v in annotation_values(metabolite.annotation, "biggr"))]:
+            if suffix and identifier.endswith(suffix):
+                bigg_ids.add(identifier[: -len(suffix)])
+            else:
+                # compartments with other IDs than the suffixes of the metabolites (Cytosol, glc__D_c)
+                bigg_ids.add(_COMPARTMENT_SUFFIX.sub("", identifier))
         return bigg_ids
 
     def reaction_compounds(self, reaction) -> list[frozenset[str]]:

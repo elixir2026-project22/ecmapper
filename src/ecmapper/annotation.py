@@ -13,6 +13,8 @@ EC_NAMESPACES = ("ec-code", "ec", "ec-number", "brenda")
 # annotation key -> canonical namespace of the cross-reference
 XREF_NAMESPACES = {
     "bigg.reaction": "bigg.reaction",
+    "biggr": "bigg.reaction",  # models from bigg.bio
+
     "kegg.reaction": "kegg.reaction",
     "seed.reaction": "seed.reaction",
     "seed": "seed.reaction",  # legacy identifiers.org/seed, only rxn IDs are kept

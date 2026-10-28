@@ -48,6 +48,12 @@ def test_xrefs():
     }
 
 
+def test_xrefs_biggr():
+    # models from bigg.bio
+    r = reaction({"biggr": "PGI", "rhea": "RHEA:11816", "sbo": "SBO:0000176"})
+    assert xrefs(r) == {"bigg.reaction": ["PGI"], "rhea": ["11816"]}
+
+
 def test_normalize_xref():
     assert normalize_xref("bigg.reaction", "bigg.reaction:PGI") == "PGI"
     assert normalize_xref("kegg.reaction", "kegg.reaction:R00771") == "R00771"

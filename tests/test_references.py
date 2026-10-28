@@ -70,6 +70,11 @@ def test_metabolite_compounds(comparison):
     assert comparison.metabolite_compounds(Metabolite("h_c", compartment="c")) == set()
     # compartment IDs that differ from the suffix of the metabolite ID
     assert comparison.metabolite_compounds(Metabolite("pyr_c", compartment="Cytosol")) == {"C00022"}
+    # annotation of models from bigg.bio: compartmentalised metabolite with charge
+    m = Metabolite("M1", compartment="c")
+    m.annotation = {"biggr": "pyr_c:-1"}
+    assert comparison.bigg_ids(m) == {"M1", "pyr"}
+    assert comparison.metabolite_compounds(m) == {"C00022"}
 
 
 def test_scores(comparison):
