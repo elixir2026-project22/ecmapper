@@ -24,6 +24,8 @@ SHORT_NAMES = {
     "acp": "ACP", "thf": "THF", "mlthf": "5,10-methylene-THF", "10fthf": "10-formyl-THF", "5mthf": "5-methyl-THF",
 }
 PROTONS = {"h"}
+#: distance of the model reactions of an enzyme node drawn side by side in the Escher map (map units)
+LANE = 24.0
 
 
 def text_width(text: str, font_size: float = 12.0) -> float:
@@ -203,6 +205,29 @@ class DraftMap:
             cofactor_nodes=kinds["cofactor"], edges=len(self.edges), inter_pathway_links=inter,
             model_reactions=len(reactions), **{f"enzyme_nodes_{k}": v for k, v in status.items()},
         )
+
+
+def lane_room(dm: DraftMap) -> dict[str, tuple[float, float]]:
+    """Room for the model reactions of enzyme nodes with several of them: {node ID: (extra width, extra height)}.
+
+    The Escher map draws them side by side, `LANE` apart, across the axis
+    of the reactions: next to each other if the main metabolites of the node
+    are rather above and below it than beside it, else above each other.
+    The layout keeps this room free around the node.
+    """
+    neighbours = defaultdict(list)
+    for e in dm.edges:
+        if e.kind == "main" and e.met in dm.nodes:
+            neighbours[e.enzyme].append(dm.nodes[e.met])
+    room = {}
+    for n in dm.nodes.values():
+        if n.kind != "enzyme" or len(n.reactions) < 2:
+            continue
+        mets = neighbours.get(n.id, [])
+        dx, dy = sum(abs(m.x - n.x) for m in mets), sum(abs(m.y - n.y) for m in mets)
+        extra = (len(n.reactions) - 1) * LANE
+        room[n.id] = (extra, 0.0) if dy >= dx else (0.0, extra)
+    return room
 
 
 def base_id(met_id: str, compartment: str | None) -> str:

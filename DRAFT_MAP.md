@@ -23,7 +23,7 @@ python -m ecmapper.draft_map.prepare iML1515.xml BRENDAmap/BRENDA_map_reactions.
     --subsystems iML1515.json
 # 2. build the draft map
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
-    --hub-subsystems 6 --iterations 200000 --seed 3
+    --hub-subsystems 6 --iterations 200000 --seed 2
 # or without inter-pathway links, the subsystems packed into as little space as possible
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT_PACKED \
     --pack --iterations 200000 --seeds 4
@@ -56,7 +56,6 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--min-map-reactions` | 25 | with `--split`: colour group maps with fewer model reactions are merged into the map they have most links with |
 | `--escher-scale` | 2.5 | scale of the Escher map relative to the BRENDA map |
 | `--escher-no-labels` | | no subsystem names in the Escher map |
-| `--escher-straight` | | straight segments in the Escher map, further reactions of an enzyme node below the first (default: straight reaction axes and curved branches, see [5](#5-escher-export)) |
 | `--compare-flips`, `--extra graphviz elk user-order` | | further arrangements for comparison (`map_*.svg`, `stats.json`); Graphviz needs pygraphviz, ELK needs `node` with `elkjs` on `$NODE_PATH` |
 
 Outputs in `OUT`:
@@ -170,7 +169,7 @@ reaction contains the metabolite with a common key (KEGG compound, normalised na
 The completion places added reactions between their drawn metabolites; where many reactions are added (e.g. the
 phospholipid turnover in lipid A biosynthesis), this gives long edges that cross the drawing. Step 3b lays out each
 subsystem with added reactions again with four layouts of its enzyme and main metabolite nodes (an enzyme node with
-its cofactors counts as one box, the cofactors keep their offsets):
+its cofactors counts as one box, with room for its model reactions as in step 4; the cofactors keep their offsets):
 
 | Layout | Package | Keeps the BRENDA drawing |
 |---|---|---|
@@ -197,7 +196,11 @@ the step reproducible; it takes about 25 s for iML1515.
 Alternating x/y 1D compaction solved as an LP (scipy, HiGHS): nodes whose extents overlap in the other axis keep their
 order with a minimum gap; nodes closer than 150 units in the other axis keep their order; objective
 Σ|pᵢ − s·pᵢ⁰| + 0.5·n·extent, i.e. a uniform shrink by a factor s plus individual moves that close larger holes.
-This is the idea of VPSC/PRISM overlap removal (keep the relative layout, remove space). For iML1515, free
+This is the idea of VPSC/PRISM overlap removal (keep the relative layout, remove space). The extents of the nodes
+include room for what is drawn next to them: the model reaction IDs below enzyme nodes of the BRENDA map (SVG), and
+for an enzyme node with k model reactions (k − 1) × 24 units across its reactions (`lane_room`: wider if its main
+metabolites are above and below it, else higher), where the Escher map draws the reactions side by side (section 5).
+The drawn boxes keep their size. For iML1515 (before the room for model reactions was added), free
 compaction (no order band) gave −52% area but +20% crossings of main-metabolite links inside the subsystems; full order
 preservation −29% area, +3% crossings; the band of 150 −44% area, +8% crossings.
 
@@ -233,8 +236,8 @@ Arrangement of the subsystem boxes (step 6) and compaction (step 4):
 | BioEMMA (KEGG KGML → Escher) | Puts the multimarkers on a straight reaction axis a fraction of the way to the main metabolites and the secondary metabolites next to them; straight segments (version 0.4.3 on PyPI) | code read; its multimarker placement is used in the Escher export |
 
 Layout inside the subsystems with added reactions (step 3b): the 59 subsystems of iML1515 with added reactions, each
-laid out after step 3 and condensed as in step 4; crossings of main-metabolite links / of all links, sum of the box
-areas:
+laid out after step 3 and condensed as in step 4 (measured before the room for model reactions, 1.4, was added);
+crossings of main-metabolite links / of all links, sum of the box areas:
 
 | Tool (install) | Layout | Crossings | Box area |
 |---|---|---|---|
@@ -251,7 +254,8 @@ areas:
 | networkx | Kamada–Kawai, ForceAtlas2, ARF (all nodes free) | more crossings than spring; disconnected parts drift apart | |
 
 The layouts are complementary: per subsystem the best of the four layouts in bold (with the 25% margin for `dot` and
-free `neato`, see 1.3) gives 242 crossings in this comparison, 245 in the pipeline. OGDF's Sugiyama layout (the one
+free `neato`, see 1.3) gives 242 crossings in this comparison, 245 in the pipeline then (250 with the room for model
+reactions). OGDF's Sugiyama layout (the one
 CBMViz uses through Tulip) is no better than Graphviz `dot` here and harder to install: `ogdf-python` builds two cppyy
 packages from source (7 minutes, needs a C++ compiler; 140 MB of wheels), and objects passed to OGDF must not be freed
 by Python (segmentation faults otherwise). Sugiyama layouts route long edges with bends, which the straight edges of
@@ -287,17 +291,17 @@ Step 3 added 297 of 791 candidate reactions on 273 enzyme nodes, 159 nodes of me
 linked nodes of metabolites drawn in other subsystems. 217 of them connect 2 metabolites that were already drawn,
 76 connect 3–5.
 
-Step 3b laid out the 59 subsystems with added reactions again and kept the current drawing in 7, `spring` in 15,
-`fdp` in 15, `dot` in 12 and `neato` in 10 of them. Crossings of main-metabolite links in these subsystems (after
-condensing): 1,112 → 245 (−78%), e.g.:
+Step 3b laid out the 59 subsystems with added reactions again and kept the current drawing in 7, `spring` in 13,
+`fdp` in 16, `dot` in 14 and `neato` in 9 of them. Crossings of main-metabolite links in these subsystems (after
+condensing): 1,154 → 250 (−78%), e.g.:
 
 | Subsystem | added / all enzyme nodes | without step 3b | with step 3b | layout kept |
 |---|---|---|---|---|
-| arachidonate biosynthesis | 18 / 23 | 78 | 20 | `fdp` |
-| lipid A biosynthesis | 29 / 40 | 114 | 43 | `spring` |
-| lipid metabolism | 20 / 48 | 97 | 17 | `neato` |
-| vitamin B12 metabolism | 15 / 23 | 191 | 63 | `spring` |
-| purine metabolism | 8 / 77 | 73 | 7 | `fdp` |
+| arachidonate biosynthesis | 18 / 23 | 81 | 22 | `fdp` |
+| lipid A biosynthesis | 29 / 40 | 140 | 43 | `spring` |
+| lipid metabolism | 20 / 48 | 95 | 17 | `neato` |
+| vitamin B12 metabolism | 15 / 23 | 190 | 63 | `spring` |
+| purine metabolism | 8 / 77 | 76 | 7 | `fdp` |
 
 | Without step 3b (lipid A biosynthesis, arachidonate biosynthesis) | With step 3b |
 |---|---|
@@ -308,10 +312,10 @@ Step 4 (sum over the subsystems; in parentheses without step 3b):
 
 | | before | after |
 |---|---|---|
-| drawing area | 147.0 M units² (115.1 M) | 70.7 M, −52% (64.7 M) |
-| overlapping nodes | 28 (7) | 0 |
-| crossings of main-metabolite links inside subsystems | 221 (1,029) | 245, +11% (1,112) |
-| crossings of all links (incl. cofactors) | 374 (1,466) | 482, +29% (1,727) |
+| drawing area | 145.8 M units² (115.1 M) | 71.4 M, −51% (65.2 M) |
+| overlapping nodes | 26 (7) | 0 |
+| crossings of main-metabolite links inside subsystems | 226 (1,029) | 250, +11% (1,154) |
+| crossings of all links (incl. cofactors) | 383 (1,466) | 490, +28% (1,803) |
 
 Coverage: 2,712 reactions = 337 boundary + 768 transporters + 1,607 others; the draft map shows 1,010 of the 1,607
 (63%; 713 from the map, 297 added; the same reactions as without rules A–C). By model subsystem e.g. citric acid cycle 14/14, pentose phosphate pathway 12/12,
@@ -341,10 +345,12 @@ subsystems:
 The Graphviz columns use Graphviz's default edge lengths; `--extra graphviz` sets them from the box sizes, which gives 406 / 145 / 2.32 (neato) and 950 / 701 / 2.65 (fdp) for hubs ≥ 6. Over 4 seeds (hubs ≥ 6): 148–173
 crossings without mirroring, 121–138 with left–right mirroring.
 
-Final map (98 subsystems after rules A–C, step 3b): hubs ≥ 6, no mirroring, seed 3: **162 crossings (−83% vs. 942
-in the original order), 83 link–box crossings (−68% vs. 256), area 1.71 × Σ box areas (original order: 2.69), 13,820 ×
-9,950 units**. Without step 3b, the same settings gave 153 crossings, 91 link–box crossings and 15,550 × 9,370 units;
-with all 115 subsystems (no rules A–C, no step 3b) 149 crossings, 87 link–box crossings and 15,870 × 9,350 units.
+Final map (98 subsystems after rules A–C, step 3b): hubs ≥ 6, no mirroring, seed 2: **141 crossings (−84% vs. 878
+in the original order), 79 link–box crossings (−71% vs. 272), area 1.86 × Σ box areas (original order: 2.28), 14,100 ×
+10,640 units**. Seeds 1–4 gave 141–204 crossings and 79–113 link–box crossings; seed 2 has the lowest annealing cost.
+Without step 3b, the same settings gave 192 crossings, 105 link–box crossings and 16,270 × 9,850 units. Before the room
+for model reactions (1.4) was added, seed 3 gave 162 crossings, 83 link–box crossings and 13,820 × 9,950 units; with all
+115 subsystems (no rules A–C, no step 3b) 149 crossings, 87 link–box crossings and 15,870 × 9,350 units.
 
 | Original arrangement, compacted | Draft map: glycolysis, pentose phosphate and Entner–Doudoroff pathways |
 |---|---|
@@ -352,17 +358,17 @@ with all 115 subsystems (no rules A–C, no step 3b) 149 crossings, 87 link–bo
 
 ### 3.4 Packed without inter-pathway links (`--pack`)
 
-[BRENDAmap/draft_map_iML1515/packed](BRENDAmap/draft_map_iML1515/packed): 200,000 moves, 4 seeds (area 1.223–1.233 ×
+[BRENDAmap/draft_map_iML1515/packed](BRENDAmap/draft_map_iML1515/packed): 200,000 moves, 4 seeds (area 1.218–1.234 ×
 Σ box areas, about 15 s per seed). One edge of the BRENDA map crosses subsystems for iML1515 (sarcosine oxidase in
 creatinine degradation to glycine in threonine metabolism; removed, glycine is drawn in creatinine degradation too).
 
 | | width × height (units) | area ÷ Σ box area |
 |---|---|---|
-| original order, compacted | 23,955 × 9,019 | 2.69 |
-| arranged for few crossings (hubs ≥ 6, the map of 3.3) | 13,819 × 9,946 | 1.71 |
-| **packed** | **12,644 × 7,758** | **1.22** |
+| original order, compacted | 20,269 × 9,086 | 2.28 |
+| arranged for few crossings (hubs ≥ 6, the map of 3.3) | 14,096 × 10,644 | 1.86 |
+| **packed** | **12,382 × 7,952** | **1.22** |
 
-The packed map needs 29% less area than the map arranged for few crossings and 55% less than the original order
+The packed map needs 34% less area than the map arranged for few crossings and 47% less than the original order
 (`--gap`, 80 units between the boxes, makes it smaller still). The packing does not consider which subsystems belong
 together: glycolysis, gluconeogenesis, the pentose phosphate pathway and the citric acid cycle are spread over the map.
 The map has the same subsystems, nodes and reactions as the map of 3.3, and the same set-aside map; its Escher map
@@ -401,20 +407,20 @@ they add little once the maps are small.
 
 | Map | Subsystems | Model reactions | Escher reactions | Width × height | Area ÷ Σ box area | References |
 |---|---|---|---|---|---|---|
-| Central metabolism | 10 | 83 | 91 | 3,076 × 1,929 | 1.27 | 29 |
+| Central metabolism | 10 | 83 | 91 | 3,126 × 1,859 | 1.25 | 29 |
 | Energy and C1 metabolism | 7 | 40 | 42 | 2,604 × 1,401 | 1.22 | 17 |
-| Lipids | 7 | 151 | 159 | 4,687 × 3,247 | 1.14 | 23 |
-| Amino acids | 32 | 260 | 285 | 6,489 × 4,150 | 1.18 | 55 |
-| Nucleotides and cofactors | 18 | 296 | 305 | 6,402 × 3,920 | 1.16 | 33 |
-| Carbohydrates | 15 | 173 | 193 | 4,533 × 2,916 | 1.17 | 36 |
+| Lipids | 7 | 151 | 159 | 4,652 × 3,305 | 1.17 | 23 |
+| Amino acids | 32 | 260 | 285 | 6,637 × 4,122 | 1.17 | 55 |
+| Nucleotides and cofactors | 18 | 296 | 305 | 6,287 × 3,973 | 1.16 | 33 |
+| Carbohydrates | 15 | 173 | 193 | 4,704 × 2,950 | 1.18 | 36 |
 | Fermentation and degradation | 9 | 48 | 49 | 2,745 × 1,598 | 1.29 | 14 |
-| Set aside | 6 | 38 | 45 | 2,463 × 1,438 | 1.36 | 2 |
+| Set aside | 6 | 38 | 45 | 2,531 × 1,438 | 1.36 | 2 |
 | **all maps** | **104** | **1,010** | **1,169** | | | **209** |
 
 The maps together show the same 1,010 model reactions as the single map; 63 of them are on several maps (BRENDA
 draws some steps in several subsystems). Without the set-aside map, 1,124 Escher reactions are drawn, as on the
-single map. The maps together need 9.8 × 10⁷ units², as much as the packed single map (9.8 × 10⁷) and 29% less than
-the single map arranged for few crossings (13.7 × 10⁷). Arranged with their links instead (`--split --hub-subsystems
+single map. The maps together need 9.9 × 10⁷ units², about as much as the packed single map (9.8 × 10⁷) and 34% less
+than the single map arranged for few crossings (15.0 × 10⁷). Arranged with their links instead (`--split --hub-subsystems
 6`, measured before step 3b), the maps had 10 crossings and 14 link–box crossings in total and needed 9.5 × 10⁷
 units². All eight Escher maps pass Escher's validator, and Escher 1.7.3 loads them with `iML1515.json` with no
 reactions or metabolites missing in the model.
@@ -437,7 +443,7 @@ What works
   directions of the model.
 - Rules A–C (1.1) remove 17 subsystems that only repeat reactions drawn elsewhere (6 of them set aside on their own
   map), so the main map has 59 fewer duplicate Escher reactions, without losing a reaction.
-- Step 3b removes 78% of the crossings inside the subsystems with added reactions (1,112 → 245); in 37 of the 59
+- Step 3b removes 78% of the crossings inside the subsystems with added reactions (1,154 → 250); in 36 of the 59
   subsystems the BRENDA drawing stays as it is (current drawing, `spring`, `fdp`).
 - Completion adds 297 reactions, mostly where they belong (phospholipid/LPS reactions in lipid A, CDP-diacylglycerol
   and fatty acid subsystems; cofactor reactions; nucleotide salvage in purine/pyrimidine metabolism; e.g. `PYK2 (+2)`,
@@ -452,11 +458,11 @@ Problems
   chorismate metabolism (where E4P and DHAP are drawn), not to the pentose phosphate pathway.
 - 58 periplasmic reactions are drawn like cytosolic ones (the BRENDA map has no compartments).
 - Subsystems with many added reactions stay busy where many reactions share a metabolite (palmitate and palmitoleate
-  in lipid A biosynthesis); `dot` and `neato` (22 subsystems) change the BRENDA drawing, and step 3b makes the
-  subsystem drawings 9% larger. Condensation adds 11% (main) / 29% (all) crossings inside subsystems.
+  in lipid A biosynthesis); `dot` and `neato` (23 subsystems) change the BRENDA drawing, and step 3b makes the
+  subsystem drawings 9% larger. Condensation adds 11% (main) / 28% (all) crossings inside subsystems.
 - Generic map metabolites match many model variants (via generic KEGG compounds); the grouping of variants hides
   that, the label shows `(+k)`.
-- 83 inter-pathway links still pass through other boxes (straight lines).
+- 79 inter-pathway links still pass through other boxes (straight lines).
 - Reactions on several nodes are drawn several times (BRENDA draws some steps in several subsystems); CNApy shows one
   box per reaction (the first node is used).
 - Not drawn: 597 non-transport reactions (e.g. many glycerophospholipid chain-length variants, murein biosynthesis,
@@ -478,31 +484,40 @@ The reactions are drawn as Escher's builder draws new reactions, with straight r
 
 - **Axis:** a straight line through the midmarker, along the difference of the directions from the midmarker to the
   centre of the primary products and to the centre of the primary substrates. A reaction with its substrates above
-  and its products below runs vertically; one with both above it runs horizontally and is drawn U-shaped.
+  and its products below runs vertically.
 - **Multimarkers** on the axis, 30% of the way to the centre of their metabolites (20–80 units from the midmarker).
 - **Branches:** the segments between a multimarker and its metabolites are cubic Bezier curves. The control point at
   the multimarker lies on the axis (40% of the segment length times the cosine of its angle to the axis, at least a
   quarter of that, at most 100 units), the one at the metabolite 35% of the way from it to the first. A branch leaves
   the reaction along its axis and bends towards its metabolite; a metabolite on the axis gets a straight segment.
-- **Several model reactions of an enzyme node** (e.g. the NADH dehydrogenases, PYK2–4): side by side in lanes 25
-  units apart, perpendicular to their common axis, ordered by the metabolites they do not share; their labels are
-  stacked next to the lanes (right of steep axes, below flat ones).
-- **Metabolites that are not drawn** go next to the multimarker of their side, alternately left and right of the axis
-  (outwards for lanes).
+- **Several model reactions of an enzyme node** (e.g. the NADH dehydrogenases, PYK2–4): side by side in lanes 60
+  units apart (24 in the draft map, where steps 3b and 4 keep room for them, see 1.4), perpendicular to their common
+  axis, ordered by the metabolites they do not share; their labels are stacked next to the lanes.
+- **U-shaped reactions:** where BRENDA (or the completion) puts an enzyme node beside its substrates and products
+  (seen from the node, they are less than 100° apart), the curves would make a wide loop through the node (e.g. FBP
+  beside PFK, MOX and MDH2/3 beside MDH, PYK2–4 beside PYK). Such a reaction moves towards the line between its
+  substrates and products, to 90 units from it (plus half the width of its lanes), or 80%, 60%, ... of the way there:
+  the farthest place where its footprint (lanes, multimarkers, the cofactors beside them and the labels) holds no
+  other node or label, no more lines of other reactions than where it is, and where its lines pass no more nodes. Its
+  cofactors and labels go to the side away from that line. Reactions with the largest detour move first; later ones
+  keep out of their footprints.
+- **Cofactors that are not drawn** (and those of moved reactions) go next to the multimarker of their side:
+  alternately left and right of a single reaction, in a column beside lanes and moved reactions (the outer lanes'
+  closest to their multimarkers).
 - **"→ map" labels** (Escher draws text labels at 50 px): right of, below, left of or above their node, whichever
   covers the fewest points of segments, nodes and labels.
 
-The metabolite nodes stay where they are, so the Escher map has the layout of the SVG. In Escher's builder, the
-control points can be moved like those of reactions added there. `--escher-straight` gives the previous drawing:
-straight segments, multimarkers 25 units from the midmarker towards their metabolites, further reactions of an
-enzyme node below the first.
+The metabolite nodes stay where they are in the SVG, apart from cofactors of moved reactions. In Escher's builder,
+the control points can be moved like those of reactions added there.
 
-| Straight segments (`--escher-straight`) | Straight axes, curved branches (default) |
+| Straight segments (the export before this drawing) | Straight axes, curved branches, U-shaped reactions moved |
 |---|---|
 | ![straight](BRENDAmap/draft_map_iML1515/figures/escher_straight.png) | ![curved](BRENDAmap/draft_map_iML1515/figures/escher_curved.png) |
 
 iML1515: 1,124 Escher reactions (1,010 model reactions; reactions on several nodes are drawn several times),
-6,544 nodes, 98 text labels, 4,571 curved segments; the set-aside map `set_aside.escher.json` has 45 Escher
+6,544 nodes, 98 text labels, 4,571 curved segments. 378 Escher reactions are U-shaped; 318 of them moved, and their
+summed distance from the line between their substrates and products fell from 111,700 to 62,100 units (−44%; on the
+central map of `--split` 23 of 25, 6,300 → 3,700). The set-aside map `set_aside.escher.json` has 45 Escher
 reactions (38 model reactions). `escher.validate.validate_map` (escher 1.7.3; schema and consistency of segments,
 stoichiometry, genes) passes; Escher 1.7.3 loads it with `iML1515.json` and finds all reactions and metabolites in
 the model. The same holds for the set-aside map and the maps of `--split`.

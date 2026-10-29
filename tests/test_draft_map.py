@@ -11,7 +11,7 @@ pytest.importorskip("numba")
 
 from ecmapper import ECMapper
 from ecmapper.brenda_map import BrendaMap, MapMatcher
-from ecmapper.draft_map import core, escher, fast, relayout, run, split
+from ecmapper.draft_map import core, escher, fast, layout, relayout, run, split
 from ecmapper.draft_map.core import DraftMap, Edge, MetLink, Node, Subsystem, localise_edges
 from ecmapper.draft_map.layout import Ports, SequencePair, compact_axis, count_crossings, evaluate_arrangement
 from ecmapper.draft_map.prepare import prepare
@@ -416,7 +416,7 @@ def test_curve_reactions():
         "2": escher_reaction(nodes, "R2", "m2", "s2", "p2", {"A": -1, "B": 1})})
     before = {i: (n["x"], n["y"]) for i, n in nodes.items() if n["node_type"] == "metabolite"}
     result = escher.curve_reactions(body, movable={"D"}, lane=25.0)
-    assert result == dict(curved_reactions=2, curved_segments=6)
+    assert result == dict(curved_reactions=2, moved_reactions=0, curved_segments=6)
     # metabolite nodes stay, except the movable one; D goes next to the product multimarker of R1 (below it)
     assert all((nodes[i]["x"], nodes[i]["y"]) == xy for i, xy in before.items() if i != "D")
     assert nodes["D"]["y"] > nodes["p1"]["y"] and abs(nodes["D"]["x"]) > 25
@@ -441,6 +441,56 @@ def test_curve_reactions():
                                   segments={"s": dict(from_node_id="A", to_node_id="x", b1=None, b2=None)})
     assert escher.curve_reactions(body)["curved_reactions"] == 2
     assert body["reactions"]["3"]["segments"]["s"]["b1"] is None
+
+
+def test_pull_reactions():
+    """A U-shaped reaction moves towards the line between its metabolites, into free space, its cofactor with it."""
+    def met(i, x, y, primary=True):
+        return dict(node_type="metabolite", x=x, y=y, bigg_id=i, label_x=x, label_y=y, node_is_primary=primary)
+
+    def u_shaped(blocker=None):
+        nodes = {"S": met("s", 0, 0), "P": met("p", 0, 400), "C": met("c", 450, 120, False),
+                 "m": dict(node_type="midmarker", x=400, y=200), "a": dict(node_type="multimarker", x=400, y=200),
+                 "b": dict(node_type="multimarker", x=400, y=200)}
+        if blocker:
+            nodes["X"] = met("x", *blocker)
+        body = dict(nodes=nodes, text_labels={},
+                    reactions={"1": escher_reaction(nodes, "R1", "m", "a", "b", {"S": -1, "C": -1, "P": 1})})
+        return body, escher.curve_reactions(body, lane=60.0)
+
+    body, result = u_shaped()
+    nodes = body["nodes"]
+    assert result["moved_reactions"] == 1
+    # to 90 from the line x = 0, the reaction axis parallel to it; the cofactor and the label on the far side
+    assert nodes["m"]["x"] == pytest.approx(90.0) and nodes["m"]["y"] == pytest.approx(200.0)
+    assert nodes["a"]["x"] == pytest.approx(90.0) and nodes["a"]["y"] < 200 < nodes["b"]["y"]
+    assert nodes["C"]["x"] > 90 and nodes["C"]["y"] < nodes["a"]["y"]
+    assert body["reactions"]["1"]["label_x"] > 90
+    # a node in the way: the reaction stops before it
+    body, result = u_shaped(blocker=(90, 200))
+    assert result["moved_reactions"] == 1 and body["nodes"]["m"]["x"] > 120
+    body, result = u_shaped(blocker=(400, 200))  # where the reaction is, and in each place it could go
+    for x in (90, 152, 214, 276, 338):
+        body["nodes"][f"X{x}"] = met(f"x{x}", x, 200)
+    assert escher.curve_reactions(body, lane=60.0)["moved_reactions"] == 0
+
+
+def test_lane_room():
+    """Enzyme nodes with several model reactions get room for them side by side, across their reactions."""
+    dm = DraftMap()
+    dm.subsystems["s"] = Subsystem("s", "s", "pw1", "#fff", 0, 0, 1000, 1000)
+    dm.nodes["e"] = Node("e", "enzyme", "s", 100, 100, 60, 30, "e", reactions=["R1", "R2", "R3"], status="added")
+    dm.nodes["f"] = Node("f", "enzyme", "s", 300, 100, 60, 30, "f", reactions=["R4"], status="added")
+    dm.nodes["g"] = Node("g", "enzyme", "s", 100, 300, 60, 30, "g", reactions=["R5", "R6"], status="added")
+    for i, x, y in (("a", 100, 0), ("b", 100, 200), ("c", 0, 300), ("d", 200, 300)):
+        dm.nodes[i] = Node(i, "main", "s", x, y, 60, 30, i, ligand_id=1)
+    dm.edges += [Edge("e", "a", "main", True, False), Edge("e", "b", "main", False, True),
+                 Edge("g", "c", "main", True, False), Edge("g", "d", "main", False, True)]
+    # e: metabolites above and below -> reactions next to each other; g: left and right -> above each other
+    assert core.lane_room(dm) == {"e": (2 * core.LANE, 0.0), "g": (0.0, core.LANE)}
+    # step 4 keeps the room free: e and f at least half their widths, the room and the gap apart
+    layout.condense_subsystems(dm)
+    assert dm.nodes["f"].x - dm.nodes["e"].x >= (60 + 2 * core.LANE + 60) / 2 + 22.0 - 1e-6
 
 
 def test_place_text_labels():

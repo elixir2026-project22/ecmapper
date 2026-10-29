@@ -10,7 +10,7 @@ import numpy as np
 import scipy.sparse as sp
 from scipy.optimize import linprog
 
-from .core import DraftMap
+from .core import DraftMap, lane_room
 
 # --- 1D compaction (order preserving, LP) -----------------------------------------------------------
 
@@ -100,7 +100,13 @@ PADDING = 35.0
 
 
 def condense_subsystems(dm: DraftMap, gap_x=22.0, gap_y=28.0, compactness=0.5, rounds=2, keep_order=150.0) -> None:
-    """Step 4: condense the drawing of each subsystem and fit its box (and title) around it."""
+    """Step 4: condense the drawing of each subsystem and fit its box (and title) around it.
+
+    Nodes keep room for the reaction IDs below enzyme nodes of the map (SVG)
+    and for the model reactions of an enzyme node side by side (Escher,
+    :func:`.core.lane_room`).
+    """
+    room = lane_room(dm)
     for s in dm.subsystems.values():
         members = dm.members(s.id)
         if not members:
@@ -112,8 +118,10 @@ def condense_subsystems(dm: DraftMap, gap_x=22.0, gap_y=28.0, compactness=0.5, r
         # room for the model reaction IDs below enzyme nodes of the map
         label = np.array([n.kind == "enzyme" and bool(n.reactions) and n.status != "added" for n in members])
         lw = np.array([0.54 * 9 * len(", ".join(n.reactions[:3])) + 4 for n in members])
-        we = np.where(label, np.maximum(w, lw), w)
-        he = np.where(label, h + 24, h)
+        extra_w = np.array([room.get(n.id, (0.0, 0.0))[0] for n in members])
+        extra_h = np.array([room.get(n.id, (0.0, 0.0))[1] for n in members])
+        we = np.where(label, np.maximum(w, lw), w) + extra_w
+        he = np.where(label, h + 24, h) + extra_h
         ye = np.where(label, y + 12, y)
         x, ye = compact_boxes(x, ye, we, he, gap_x, gap_y, compactness, rounds, keep_order=keep_order)
         y = np.where(label, ye - 12, ye)

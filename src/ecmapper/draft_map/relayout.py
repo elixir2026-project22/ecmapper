@@ -36,7 +36,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from .core import DraftMap
+from .core import DraftMap, lane_room
 from .layout import condense_subsystems, internal_metrics
 
 #: node status of nodes of the BRENDA map (enzyme and metabolite nodes)
@@ -66,10 +66,14 @@ def _owners(s: DraftMap) -> dict[str, str]:
 
 
 def _groups(s: DraftMap) -> tuple[dict[str, list[float]], dict[str, str]]:
-    """Boxes of the main nodes; an enzyme node with its cofactors is one box."""
+    """Boxes of the main nodes; an enzyme node with its cofactors is one box, with room for its reactions."""
     owner = _owners(s)
-    box = {i: [n.x - n.w / 2, n.y - n.h / 2, n.x + n.w / 2, n.y + n.h / 2]
-           for i, n in s.nodes.items() if n.kind != "cofactor"}
+    room = lane_room(s)
+    box = {}
+    for i, n in s.nodes.items():
+        if n.kind != "cofactor":
+            w, h = n.w + room.get(i, (0.0, 0.0))[0], n.h + room.get(i, (0.0, 0.0))[1]
+            box[i] = [n.x - w / 2, n.y - h / 2, n.x + w / 2, n.y + h / 2]
     for c, enzyme in owner.items():
         n, b = s.nodes[c], box[enzyme]
         b[0], b[1] = min(b[0], n.x - n.w / 2), min(b[1], n.y - n.h / 2)
