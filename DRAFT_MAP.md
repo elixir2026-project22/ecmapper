@@ -16,7 +16,7 @@ The results for iML1515 are in [BRENDAmap/draft_map_iML1515](BRENDAmap/draft_map
 ## Usage
 
 ```bash
-python -m pip install -e "./ecmapper[draft-map]"   # numpy, scipy, numba
+python -m pip install -e "./ecmapper[draft-map]"   # numpy, scipy, numba, networkx, pygraphviz
 cd ecmapper
 # 1. match the model to the map (BiGG's SBML files have no subsystems: take them from the JSON file)
 python -m ecmapper.draft_map.prepare iML1515.xml BRENDAmap/BRENDA_map_reactions.json iML1515_prep.pkl \
@@ -40,6 +40,8 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--keep-subsets` | | keep subsystems whose model reactions are a proper subset of another subsystem's (rule A, step 1) |
 | `--aside-coverage F` | 0.9 | set aside subsystems of which ≥ F of the model reactions are in other subsystems (rules B, C); 1: only fully covered ones, > 1: off |
 | `--aside-min-matched F` | 0 (off) | set aside subsystems in which < F of the enzyme nodes have model reactions (rule D) |
+| `--relayout` | `spring,fdp,dot,neato` | layouts tried in step 3b (see 1.3); `none`: keep the positions of step 3 |
+| `--relayout-margin` | 0.25 | step 3b: `dot` and `neato` (which change the BRENDA drawing) need at least this fraction fewer crossings |
 | `--min-anchored` | 2 | drawn main metabolites a model reaction needs to be added (step 3) |
 | `--no-completion` | | skip step 3 |
 | `--compactness` | 0.5 | weight of compactness against keeping the drawing when condensing (step 4) |
@@ -66,7 +68,7 @@ Outputs in `OUT`:
 | `set_aside.svg`, `.escher.json`, `.maps`, `.reaction_positions.json` | the subsystems set aside in step 1 (see 1.1), on a map of their own |
 | `reaction_positions.json` | positions of the enzyme nodes of each drawn model reaction |
 | `added_reactions.json` | the model reactions added in step 3, with subsystem, position and drawn metabolites |
-| `step1_subsystems.svg`, `step2_pruned.svg`, `step3_completed.svg` | the map after steps 1–3 (original arrangement) |
+| `step1_subsystems.svg`, `step2_pruned.svg`, `step3_completed.svg`, `step3b_relayout.svg` | the map after steps 1–3b (original arrangement) |
 | `map_*.svg` | the arrangements compared |
 | `stats.json` | counts after each step, hub metabolites, metrics of the arrangements, coverage of the model |
 | `draft_map.pkl` | the final `DraftMap` |
@@ -91,9 +93,10 @@ model in Escher, saves a screenshot and reports reactions and metabolites missin
 | 1 | Drop subsystems without model reactions; drop or set aside redundant ones | see 1.1 |
 | 2 | Remove enzyme nodes without model reactions | also the metabolite nodes that only they use; inter-pathway links through removed metabolite nodes are bridged |
 | 3 | Complete the network with model reactions that are not on the map | see 1.2 |
-| 4 | Condense each subsystem | order-preserving LP compaction, see 1.3; box and title fitted around the drawing |
+| 3b | Lay out the subsystems with added reactions again | networkx and Graphviz layouts, the one with the fewest crossings is kept, see 1.3 |
+| 4 | Condense each subsystem | order-preserving LP compaction, see 1.4; box and title fitted around the drawing |
 | 5 | Disconnect hub metabolites | the inter-pathway links of metabolites drawn in ≥ N subsystems are removed; their nodes stay and are marked |
-| 6 | Arrange the subsystems with few crossings of inter-pathway links | simulated annealing over sequence pairs, see 1.4 |
+| 6 | Arrange the subsystems with few crossings of inter-pathway links | simulated annealing over sequence pairs, see 1.5 |
 | 7 | Output | SVG, Escher map, CNApy box positions, reaction positions |
 
 The subsystems are arranged last, although the original idea was to arrange them right after dropping the empty
@@ -103,7 +106,7 @@ ends with 1.6× the crossings (276 vs. 173 for iML1515) and a 23% larger area, b
 arrangement was optimised.
 
 With `--pack`, the inter-pathway links are removed after step 4 and steps 5 and 6 are replaced by a packing of the
-boxes: the annealing of 1.4 without links, which leaves only the area and the aspect ratio in the cost. Before step 4,
+boxes: the annealing of 1.5 without links, which leaves only the area and the aspect ratio in the cost. Before step 4,
 the few edges of the BRENDA map from an enzyme node to a metabolite node in another subsystem are made local (they
 would cross the packed boxes): the edge is removed if the enzyme node has the metabolite in its own subsystem,
 otherwise the metabolite gets a copy next to the enzyme node.
@@ -161,7 +164,34 @@ reaction contains the metabolite with a common key (KEGG compound, normalised na
 - Variants (same drawn nodes, reaction or new metabolite IDs equal apart from digits, e.g. chain lengths
   `PLIPA2E160pp`, `PLIPA2E161pp`) share one node labelled `PLIPA2E160pp (+1)`.
 
-### 1.3 Condensing a subsystem (step 4)
+### 1.3 Layout of subsystems with added reactions (step 3b)
+
+The completion places added reactions between their drawn metabolites; where many reactions are added (e.g. the
+phospholipid turnover in lipid A biosynthesis), this gives long edges that cross the drawing. Step 3b lays out each
+subsystem with added reactions again with four layouts of its enzyme and main metabolite nodes (an enzyme node with
+its cofactors counts as one box, the cofactors keep their offsets):
+
+| Layout | Package | Keeps the BRENDA drawing |
+|---|---|---|
+| `spring`: Fruchterman–Reingold spring layout of the added nodes, the nodes of the BRENDA map fixed | networkx | yes |
+| `fdp`: the same with Graphviz `fdp`, the BRENDA nodes pinned | pygraphviz | yes |
+| `dot`: Graphviz `dot`, layered (Sugiyama) along the reaction directions | pygraphviz | no |
+| `neato`: Graphviz `neato` (stress majorisation), all nodes free, starting from the current drawing | pygraphviz | partly |
+
+Each layout (and the current drawing) is condensed as in step 4 and the one with the fewest crossings of
+main-metabolite links is kept (ties: crossings of all links, area). `dot` and `neato`, which change the BRENDA drawing,
+are only taken if they have at least 25% (`--relayout-margin`) fewer crossings than the best of the current drawing,
+`spring` and `fdp`. `--relayout` selects the layouts (`none`: skip the step); layouts whose package is missing are
+skipped.
+
+pygraphviz 2.0 and later ships Graphviz in its wheels (Linux, macOS, Windows), so `pip install pygraphviz` needs no
+system Graphviz and no compiler. Three Graphviz details matter: `neato` and `fdp` read input positions in inches
+(`inputscale=72` for points); `overlap=false` removes overlaps and then moves pinned nodes too (`overlap=true`, step 4
+removes overlaps); and `fdp` keeps state between layouts in a process, so later `fdp` layouts in a process vary between
+runs. Each Graphviz layout therefore runs in a process of its own (`graphviz_worker.py`, four at a time), which makes
+the step reproducible; it takes about 25 s for iML1515.
+
+### 1.4 Condensing a subsystem (step 4)
 
 Alternating x/y 1D compaction solved as an LP (scipy, HiGHS): nodes whose extents overlap in the other axis keep their
 order with a minimum gap; nodes closer than 150 units in the other axis keep their order; objective
@@ -170,7 +200,7 @@ This is the idea of VPSC/PRISM overlap removal (keep the relative layout, remove
 compaction (no order band) gave −52% area but +20% crossings of main-metabolite links inside the subsystems; full order
 preservation −29% area, +3% crossings; the band of 150 −44% area, +8% crossings.
 
-### 1.4 Arrangement of the subsystems (step 6)
+### 1.5 Arrangement of the subsystems (step 6)
 
 The subsystems are fixed boxes with "ports" (the linked metabolite nodes inside them). An arrangement is encoded as a
 sequence pair (Murata et al. 1995, VLSI floorplanning), which always gives an overlap-free, packed placement.
@@ -183,20 +213,47 @@ the original BRENDA arrangement.
 
 ## 2. Layout tools
 
+Arrangement of the subsystem boxes (step 6) and compaction (step 4):
+
 | Tool | Fit for this task | Tried |
 |---|---|---|
 | **Sequence-pair annealing** (here, Python and numba) | Optimises exactly the wanted objective (crossings of links between fixed drawings with fixed ports, link–box crossings, area); keeps the drawings of the subsystems | yes – used |
 | **scipy / HiGHS LP** | Order-preserving compaction (VPSC-like) of nodes and boxes | yes – used |
-| Graphviz `neato`/`fdp`/`sfdp` (+ VPSC overlap removal) | Places boxes by stress/forces on the box graph; ignores ports, no crossing objective. `prism` overlap removal needs GTS (not in Ubuntu's build) | yes – 2.3× (neato) to 5.5× (fdp) more crossings |
+| Graphviz `neato`/`fdp`/`sfdp` (+ VPSC overlap removal) | Places boxes by stress/forces on the box graph; ignores ports, no crossing objective. `prism` overlap removal needs GTS (not in Ubuntu's build nor in the pygraphviz wheels) | yes – 2.3× (neato) to 5.5× (fdp) more crossings |
 | ELK (elkjs) `layered` with `FIXED_POS` ports | Sugiyama with real crossing minimisation and fixed port positions, but forces a layered flow; large area. Its orthogonal/polyline edge routing (and libavoid in ELK) is useful for routing inter-pathway links | yes – 4.4–6× more crossings |
 | ELK `stress`, `rectpacking` | stress ignores sizes and ports; rectpacking packs boxes without edges | stress – poor |
-| OGDF (C++, `ogdf-python`) | Strongest library for crossing minimisation (planarisation, cluster planarity, orthogonal layouts); does not keep given drawings, could arrange the box graph or draw small subsystems from scratch. Needs an OGDF build | no |
-| Tulip (used by CBMViz in this repository) | Bundles OGDF layouts and graph hierarchies, scriptable in Python | no |
+| OGDF (C++, `ogdf-python`) | Strongest library for crossing minimisation (planarisation, cluster planarity, orthogonal layouts); does not keep given drawings, could arrange the box graph | not for the boxes (see below for subsystems) |
+| Tulip (used by CBMViz in this repository) | Bundles OGDF layouts and graph hierarchies, scriptable in Python; tulip-python needs Tulip binaries, which are no longer provided | no |
 | adaptagrams (libcola, libvpsc, libavoid) / WebCola | Constraint-based layout with alignment/separation constraints, VPSC overlap removal and libavoid object-avoiding connector routing: best candidate for routing inter-pathway links around boxes and for alignment constraints inside subsystems | no |
 | Cytoscape.js `fcose` / Cytoscape (yFiles layouts) | Compound nodes (subsystems) with constraints; yFiles (commercial, free in yEd) has the best grouped hierarchical/orthogonal layouts | no |
-| igraph / networkx | Graph metrics, no boxes or ports | no |
+| igraph / networkx | No boxes or ports for the arrangement | no |
 | Metabopolis (Wu et al. 2019) | Published method closest to this scheme: pathways as blocks, inter-pathway links minimised, orthogonal routing in channels ("urban map") | no implementation available |
 | Escher | Editing target (no automatic layout) | export |
+
+Layout inside the subsystems with added reactions (step 3b): the 59 subsystems of iML1515 with added reactions, each
+laid out after step 3 and condensed as in step 4; crossings of main-metabolite links / of all links, sum of the box
+areas:
+
+| Tool (install) | Layout | Crossings | Box area |
+|---|---|---|---|
+| – | current (step 3) | 1,112 / 1,717 | 63 M |
+| **networkx** (pip, pure Python) | **spring, BRENDA nodes fixed** | 396 / 732 | 61 M |
+| **Graphviz via pygraphviz** (pip, Graphviz included) | **`fdp`, BRENDA nodes pinned** | 460 / 713 | 60 M |
+| | `neato` / `neato` Kamada–Kawai, pinned | 864 / 1,692, 653 / 1,303 | 69 M |
+| | **`dot`** (Sugiyama) top-down / left-right | 471 / 734, 574 / 920 | 78 M, 74 M |
+| | **`neato`, free, starting from the current drawing** | 327 / 681 | 74 M |
+| | `sfdp`, free | 400 / 840 | 71 M |
+| OGDF via `ogdf-python[quickstart]` | Sugiyama (optimal ranking, median heuristic, optimal hierarchy layout) | 518–529 / 820–839 (two runs) | 71–72 M |
+| igraph (pip) | `layout_sugiyama` (no node sizes) | 2,065 / 2,740 | 69 M |
+| grandalf (pip, pure Python) | Sugiyama | 904 / 1,358 | 72 M |
+| networkx | Kamada–Kawai, ForceAtlas2, ARF (all nodes free) | more crossings than spring; disconnected parts drift apart | |
+
+The layouts are complementary: per subsystem the best of the four layouts in bold (with the 25% margin for `dot` and
+free `neato`, see 1.3) gives 242 crossings in this comparison, 245 in the pipeline. OGDF's Sugiyama layout (the one
+CBMViz uses through Tulip) is no better than Graphviz `dot` here and harder to install: `ogdf-python` builds two cppyy
+packages from source (7 minutes, needs a C++ compiler; 140 MB of wheels), and objects passed to OGDF must not be freed
+by Python (segmentation faults otherwise). Sugiyama layouts route long edges with bends, which the straight edges of
+the SVG and the Escher map do not show.
 
 ## 3. Results on iML1515
 
@@ -228,14 +285,31 @@ Step 3 added 297 of 791 candidate reactions on 273 enzyme nodes, 159 nodes of me
 linked nodes of metabolites drawn in other subsystems. 217 of them connect 2 metabolites that were already drawn,
 76 connect 3–5.
 
-Step 4 (sum over the subsystems):
+Step 3b laid out the 59 subsystems with added reactions again and kept the current drawing in 7, `spring` in 15,
+`fdp` in 15, `dot` in 12 and `neato` in 10 of them. Crossings of main-metabolite links in these subsystems (after
+condensing): 1,112 → 245 (−78%), e.g.:
+
+| Subsystem | added / all enzyme nodes | without step 3b | with step 3b | layout kept |
+|---|---|---|---|---|
+| arachidonate biosynthesis | 18 / 23 | 78 | 20 | `fdp` |
+| lipid A biosynthesis | 29 / 40 | 114 | 43 | `spring` |
+| lipid metabolism | 20 / 48 | 97 | 17 | `neato` |
+| vitamin B12 metabolism | 15 / 23 | 191 | 63 | `spring` |
+| purine metabolism | 8 / 77 | 73 | 7 | `fdp` |
+
+| Without step 3b (lipid A biosynthesis, arachidonate biosynthesis) | With step 3b |
+|---|---|
+| ![before](BRENDAmap/draft_map_iML1515/figures/relayout_lipid_before.png) | ![after](BRENDAmap/draft_map_iML1515/figures/relayout_lipid_after.png) |
+| ![before](BRENDAmap/draft_map_iML1515/figures/relayout_arachidonate_before.png) | ![after](BRENDAmap/draft_map_iML1515/figures/relayout_arachidonate_after.png) |
+
+Step 4 (sum over the subsystems; in parentheses without step 3b):
 
 | | before | after |
 |---|---|---|
-| drawing area | 115.1 M units² | 64.7 M (−44%) |
-| overlapping nodes | 7 (from added nodes) | 0 |
-| crossings of main-metabolite links inside subsystems | 1,029 | 1,112 (+8%) |
-| crossings of all links (incl. cofactors) | 1,466 | 1,727 (+18%) |
+| drawing area | 147.0 M units² (115.1 M) | 70.7 M, −52% (64.7 M) |
+| overlapping nodes | 28 (7) | 0 |
+| crossings of main-metabolite links inside subsystems | 221 (1,029) | 245, +11% (1,112) |
+| crossings of all links (incl. cofactors) | 374 (1,466) | 482, +29% (1,727) |
 
 Coverage: 2,712 reactions = 337 boundary + 768 transporters + 1,607 others; the draft map shows 1,010 of the 1,607
 (63%; 713 from the map, 297 added; the same reactions as without rules A–C). By model subsystem e.g. citric acid cycle 14/14, pentose phosphate pathway 12/12,
@@ -265,10 +339,10 @@ subsystems:
 The Graphviz columns use Graphviz's default edge lengths; `--extra graphviz` sets them from the box sizes, which gives 406 / 145 / 2.32 (neato) and 950 / 701 / 2.65 (fdp) for hubs ≥ 6. Over 4 seeds (hubs ≥ 6): 148–173
 crossings without mirroring, 121–138 with left–right mirroring.
 
-Final map (98 subsystems after rules A–C): hubs ≥ 6, no mirroring, seed 3: **153 crossings (−83% vs. 910 in the
-original order), 91 link–box crossings (−68% vs. 286), area 1.95 × Σ box areas (original order: 2.24), 15,550 ×
-9,370 units**. With all 115 subsystems, the same settings gave 149 crossings, 87 link–box crossings and 15,870 ×
-9,350 units.
+Final map (98 subsystems after rules A–C, step 3b): hubs ≥ 6, no mirroring, seed 3: **162 crossings (−83% vs. 942
+in the original order), 83 link–box crossings (−68% vs. 256), area 1.71 × Σ box areas (original order: 2.69), 13,820 ×
+9,950 units**. Without step 3b, the same settings gave 153 crossings, 91 link–box crossings and 15,550 × 9,370 units;
+with all 115 subsystems (no rules A–C, no step 3b) 149 crossings, 87 link–box crossings and 15,870 × 9,350 units.
 
 | Original arrangement, compacted | Draft map: glycolysis, pentose phosphate and Entner–Doudoroff pathways |
 |---|---|
@@ -276,17 +350,17 @@ original order), 91 link–box crossings (−68% vs. 286), area 1.95 × Σ box a
 
 ### 3.4 Packed without inter-pathway links (`--pack`)
 
-[BRENDAmap/draft_map_iML1515/packed](BRENDAmap/draft_map_iML1515/packed): 200,000 moves, 4 seeds (area 1.246–1.258 ×
+[BRENDAmap/draft_map_iML1515/packed](BRENDAmap/draft_map_iML1515/packed): 200,000 moves, 4 seeds (area 1.223–1.233 ×
 Σ box areas, about 15 s per seed). One edge of the BRENDA map crosses subsystems for iML1515 (sarcosine oxidase in
 creatinine degradation to glycine in threonine metabolism; removed, glycine is drawn in creatinine degradation too).
 
 | | width × height (units) | area ÷ Σ box area |
 |---|---|---|
-| original order, compacted | 18,641 × 8,990 | 2.24 |
-| arranged for few crossings (hubs ≥ 6, the map of 3.3) | 15,552 × 9,372 | 1.95 |
-| **packed** | **12,498 × 7,453** | **1.25** |
+| original order, compacted | 23,955 × 9,019 | 2.69 |
+| arranged for few crossings (hubs ≥ 6, the map of 3.3) | 13,819 × 9,946 | 1.71 |
+| **packed** | **12,644 × 7,758** | **1.22** |
 
-The packed map needs 36% less area than the map arranged for few crossings and 44% less than the original order
+The packed map needs 29% less area than the map arranged for few crossings and 55% less than the original order
 (`--gap`, 80 units between the boxes, makes it smaller still). The packing does not consider which subsystems belong
 together: glycolysis, gluconeogenesis, the pentose phosphate pathway and the citric acid cycle are spread over the map.
 The map has the same subsystems, nodes and reactions as the map of 3.3, and the same set-aside map; its Escher map
@@ -315,31 +389,31 @@ and an overview:
 - **Arrangement:** each map is arranged as in 3.3, with its own links (with `--pack`: packed without links).
 - **Overview** (`overview.svg`): one region per map, each subsystem collapsed to a small box with its number of model
   reactions; the boxes keep the relative order they have on their map (sequence pair of their centres, packed). The
-  regions are arranged with few crossings of the links between maps (annealing as in 1.4). Grey lines: links inside
+  regions are arranged with few crossings of the links between maps (annealing as in 1.5). Grey lines: links inside
   a map, purple: between maps (width by the number of links, hub links left out).
 
 [BRENDAmap/draft_map_iML1515/split](BRENDAmap/draft_map_iML1515/split): `--split --pack`, 200,000 moves, 4 seeds
-per map (about 4 minutes). "Other pathways" (7 reactions) was merged into amino acids. 117 inter-pathway links
+per map (about 5 minutes). "Other pathways" (7 reactions) was merged into amino acids. 117 inter-pathway links
 between maps became references on 209 metabolite nodes (85 metabolites); the links inside the maps are dropped, as
 they add little once the maps are small.
 
 | Map | Subsystems | Model reactions | Escher reactions | Width × height | Area ÷ Σ box area | References |
 |---|---|---|---|---|---|---|
-| Central metabolism | 10 | 83 | 91 | 3,064 × 1,884 | 1.29 | 29 |
-| Energy and C1 metabolism | 7 | 40 | 42 | 2,676 × 1,458 | 1.25 | 17 |
-| Lipids | 7 | 151 | 159 | 4,760 × 3,016 | 1.19 | 23 |
-| Amino acids | 32 | 260 | 285 | 6,202 × 3,790 | 1.21 | 55 |
-| Nucleotides and cofactors | 18 | 296 | 305 | 6,168 × 3,990 | 1.15 | 33 |
-| Carbohydrates | 15 | 173 | 193 | 4,624 × 2,867 | 1.20 | 36 |
-| Fermentation and degradation | 9 | 48 | 49 | 2,663 × 1,626 | 1.29 | 14 |
+| Central metabolism | 10 | 83 | 91 | 3,076 × 1,929 | 1.27 | 29 |
+| Energy and C1 metabolism | 7 | 40 | 42 | 2,604 × 1,401 | 1.22 | 17 |
+| Lipids | 7 | 151 | 159 | 4,687 × 3,247 | 1.14 | 23 |
+| Amino acids | 32 | 260 | 285 | 6,489 × 4,150 | 1.18 | 55 |
+| Nucleotides and cofactors | 18 | 296 | 305 | 6,402 × 3,920 | 1.16 | 33 |
+| Carbohydrates | 15 | 173 | 193 | 4,533 × 2,916 | 1.17 | 36 |
+| Fermentation and degradation | 9 | 48 | 49 | 2,745 × 1,598 | 1.29 | 14 |
 | Set aside | 6 | 38 | 45 | 2,463 × 1,438 | 1.36 | 2 |
 | **all maps** | **104** | **1,010** | **1,169** | | | **209** |
 
 The maps together show the same 1,010 model reactions as the single map; 63 of them are on several maps (BRENDA
 draws some steps in several subsystems). Without the set-aside map, 1,124 Escher reactions are drawn, as on the
-single map. The maps together need 9.3 × 10⁷ units², as much as the packed single map (9.3 × 10⁷) and 36% less than
-the single map arranged for few crossings (14.6 × 10⁷). Arranged with their links instead (`--split --hub-subsystems
-6`), the maps have 10 crossings and 14 link–box crossings in total (single map of 3.3: 153 and 91) and need 9.5 × 10⁷
+single map. The maps together need 9.8 × 10⁷ units², as much as the packed single map (9.8 × 10⁷) and 29% less than
+the single map arranged for few crossings (13.7 × 10⁷). Arranged with their links instead (`--split --hub-subsystems
+6`, measured before step 3b), the maps had 10 crossings and 14 link–box crossings in total and needed 9.5 × 10⁷
 units². All eight Escher maps pass Escher's validator, and Escher 1.7.3 loads them with `iML1515.json` with no
 reactions or metabolites missing in the model.
 
@@ -353,8 +427,7 @@ reactions or metabolites missing in the model.
 
 What works
 - The arrangement is compact and keeps linked subsystems together (glycolysis, the pentose phosphate and
-  Entner–Doudoroff pathways are next to each other, gluconeogenesis and the citric acid cycle next to each other but
-  not near them). Annealing over sequence pairs beats the
+  Entner–Doudoroff pathways are next to each other; gluconeogenesis and the citric acid cycle are not near them). Annealing over sequence pairs beats the
   general tools by far because they optimise other things (stress, layers) and cannot use the fixed port positions.
 - Disconnecting hubs is the most effective single measure (crossings 449 → 173 with the same annealing) and loses
   little: their nodes stay in every subsystem, marked.
@@ -362,6 +435,8 @@ What works
   directions of the model.
 - Rules A–C (1.1) remove 17 subsystems that only repeat reactions drawn elsewhere (6 of them set aside on their own
   map), so the main map has 59 fewer duplicate Escher reactions, without losing a reaction.
+- Step 3b removes 78% of the crossings inside the subsystems with added reactions (1,112 → 245); in 37 of the 59
+  subsystems the BRENDA drawing stays as it is (current drawing, `spring`, `fdp`).
 - Completion adds 297 reactions, mostly where they belong (phospholipid/LPS reactions in lipid A, CDP-diacylglycerol
   and fatty acid subsystems; cofactor reactions; nucleotide salvage in purine/pyrimidine metabolism; e.g. `PYK2 (+2)`,
   pyruvate kinase with other nucleotides, in glycolysis).
@@ -374,11 +449,12 @@ Problems
   `FBA3` (sedoheptulose-1,7-bisphosphate aldolase), drawn only in the set-aside "photosynthesis", is added to
   chorismate metabolism (where E4P and DHAP are drawn), not to the pentose phosphate pathway.
 - 58 periplasmic reactions are drawn like cytosolic ones (the BRENDA map has no compartments).
-- Added reactions can create long edges inside a subsystem when their drawn metabolites are far apart; condensation
-  adds 8% (main) / 18% (all) crossings inside subsystems.
+- Subsystems with many added reactions stay busy where many reactions share a metabolite (palmitate and palmitoleate
+  in lipid A biosynthesis); `dot` and `neato` (22 subsystems) change the BRENDA drawing, and step 3b makes the
+  subsystem drawings 9% larger. Condensation adds 11% (main) / 29% (all) crossings inside subsystems.
 - Generic map metabolites match many model variants (via generic KEGG compounds); the grouping of variants hides
   that, the label shows `(+k)`.
-- 91 inter-pathway links still pass through other boxes (straight lines).
+- 83 inter-pathway links still pass through other boxes (straight lines).
 - Reactions on several nodes are drawn several times (BRENDA draws some steps in several subsystems); CNApy shows one
   box per reaction (the first node is used).
 - Not drawn: 597 non-transport reactions (e.g. many glycerophospholipid chain-length variants, murein biosynthesis,
@@ -408,8 +484,8 @@ the model. The same holds for the set-aside map.
 2. Completion: compartment handling (restrict to the cytosol or add a "periplasm" subsystem), a target-subsystem score
    that also uses the model subsystem, optional new subsystems for groups of added reactions without a good BRENDA
    subsystem (e.g. murein, membrane lipids).
-3. Local refinement inside subsystems after completion (stress with constraints, e.g. WebCola) to shorten the edges of
-   added reactions.
+3. Inside subsystems: draw the bends of `dot` layouts (in the SVG; Escher segments are straight), and constraints that
+   keep added reactions near the BRENDA nodes they connect (e.g. WebCola).
 4. Weights of the annealing as options; keeping the colour groups (category regions) of the BRENDA map together.
 5. Semantic zooming in a viewer: collapse subsystems into the boxes of the overview and re-pack the maps with the
    same sequence pairs, which keeps the relative positions.

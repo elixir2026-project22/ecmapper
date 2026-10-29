@@ -43,6 +43,8 @@ from .layout import (
     to_absolute,
     to_relative,
 )
+from .relayout import METHODS as RELAYOUT_METHODS
+from .relayout import available_methods, relayout_subsystems
 from .render import write_cnapy_maps, write_reaction_positions, write_svg
 from .split import (
     ASIDE,
@@ -189,6 +191,12 @@ def main(argv=None) -> None:
                         "reactions (rule D)")
     parser.add_argument("--min-anchored", type=int, default=2)
     parser.add_argument("--no-completion", action="store_true")
+    parser.add_argument("--relayout", default=",".join(m for m in RELAYOUT_METHODS if m != "current"),
+                        help="step 3b: layouts tried for subsystems with added reactions, comma-separated from "
+                        "spring, fdp, dot, neato (default: all); 'none': keep the positions of step 3")
+    parser.add_argument("--relayout-margin", type=float, default=0.25,
+                        help="step 3b: take dot or neato (which redraw the BRENDA part) only with at least this "
+                        "fraction fewer crossings")
     parser.add_argument("--iterations", type=int, default=20000)
     parser.add_argument("--gap", type=float, default=80.0)
     parser.add_argument("--compactness", type=float, default=0.5)
@@ -215,6 +223,9 @@ def main(argv=None) -> None:
     parser.add_argument("--min-map-reactions", type=int, default=25,
                         help="with --split: merge colour group maps with fewer model reactions into another map")
     args = parser.parse_args(argv)
+    methods = [] if args.relayout == "none" else [m for m in args.relayout.split(",") if m]
+    if set(methods) - set(RELAYOUT_METHODS) - {"current"}:
+        parser.error(f"--relayout: unknown layouts {sorted(set(methods) - set(RELAYOUT_METHODS))}")
     if not args.split and (args.central is not None or args.maps):
         parser.error("--central and --maps need --split")
     if args.split and (args.compare_flips or args.extra):
@@ -269,6 +280,15 @@ def main(argv=None) -> None:
         # no edges to set-aside subsystems, which are drawn on a separate map
         localise_edges(dm, aside)
         log(dm.log[-1])
+
+    # step 3b: lay out the subsystems with added reactions again
+    if methods:
+        missing = set(methods) - set(available_methods(methods))
+        if missing:
+            log(f"step 3b: layouts {sorted(missing)} skipped (networkx or pygraphviz not installed)")
+        stats["relayout"] = relayout_subsystems(dm, methods, margin=args.relayout_margin, compactness=args.compactness)
+        log(dm.log[-1])
+        write_svg(dm, str(args.out / "step3b_relayout.svg"), md=md)
 
     # original subsystem centres (for the arrangement that keeps the original order)
     orig_centres = {k: (s.x + s.w / 2, s.y + s.h / 2) for k, s in dm.subsystems.items()}

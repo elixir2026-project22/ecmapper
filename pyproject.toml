@@ -17,8 +17,9 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest"]
-# draft maps from the BRENDA map (ecmapper.draft_map); pygraphviz only for the comparison with Graphviz
-draft-map = ["numpy", "scipy", "numba"]
+# draft maps from the BRENDA map (ecmapper.draft_map); networkx and pygraphviz (2.0 and later ship Graphviz) for the
+# layouts of step 3b
+draft-map = ["numpy", "scipy", "numba", "networkx", "pygraphviz>=2.0"]
 
 [project.scripts]
 ecmapper = "ecmapper.cli:main"

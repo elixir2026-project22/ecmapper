@@ -1,4 +1,5 @@
 import json
+import math
 import pickle
 from pathlib import Path
 
@@ -10,7 +11,7 @@ pytest.importorskip("numba")
 
 from ecmapper import ECMapper
 from ecmapper.brenda_map import BrendaMap, MapMatcher
-from ecmapper.draft_map import core, fast, run, split
+from ecmapper.draft_map import core, fast, relayout, run, split
 from ecmapper.draft_map.core import DraftMap, Edge, MetLink, Node, Subsystem, localise_edges
 from ecmapper.draft_map.layout import Ports, SequencePair, compact_axis, count_crossings, evaluate_arrangement
 from ecmapper.draft_map.prepare import prepare
@@ -149,6 +150,9 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
     # NOTHING (succinate -> pyruvate) is not on the map, but both metabolites are drawn: added in step 3
     assert set(positions) == on_map | {"NOTHING"}
     assert stats["step3_completed"]["enzyme_nodes_added"] == 1
+    # step 3b: the subsystem of the added reaction was laid out again (with what is installed)
+    assert len(stats["relayout"]) == 1 and stats["relayout"][0]["layout"] in relayout.METHODS
+    assert (out / "step3b_relayout.svg").is_file()
     assert set(json.loads((out / "draft_map.maps").read_text())) == set(positions)
     assert (out / "draft_map.svg").stat().st_size > 0
 
@@ -301,3 +305,79 @@ def test_draft_map_set_aside(sources, model, tmp_path):  # noqa: F811
     assert {r for n in side.nodes.values() for r in n.reactions} <= {r for n in main.nodes.values() for r in n.reactions}
     _, body = json.loads((out / "set_aside.escher.json").read_text())
     assert {r["bigg_id"] for r in body["reactions"].values()} == {r for n in side.nodes.values() for r in n.reactions}
+
+
+def relayout_map():
+    """A subsystem with two map enzymes and an added reaction whose edges cross them, and one without additions."""
+    dm = DraftMap()
+    for k in ("S", "T"):
+        dm.subsystems[k] = Subsystem(k, k, "pw1", "#fff", 0, 0, 1000, 600)
+    for i, x, y in (("m1", 0, 0), ("m2", 400, 0), ("m3", 0, 200), ("m4", 400, 200)):
+        dm.nodes[i] = Node(i, "main", "S", x, y, 60, 30, i)
+    for i, x, y in (("e1", 200, 0), ("e2", 200, 200)):
+        dm.nodes[i] = Node(i, "enzyme", "S", x, y, 60, 30, i, reactions=[i.upper()], status="on-map")
+    dm.nodes["a1"] = Node("a1", "enzyme", "S", 600, 100, 60, 30, "A1", reactions=["A1"], status="added")
+    dm.nodes["n1"] = Node("n1", "main", "S", -300, 100, 60, 30, "n1", status="new")
+    dm.nodes["c1"] = Node("c1", "cofactor", "S", 640, 140, 40, 20, "ATP", status="added")
+    dm.nodes["t1"] = Node("t1", "enzyme", "T", 0, 0, 60, 30, "t1", reactions=["T1"], status="on-map")
+    dm.nodes["t2"] = Node("t2", "main", "T", 100, 0, 60, 30, "t2")
+    dm.edges = [Edge("e1", "m1", "main", True, False), Edge("e1", "m2", "main", False, True),
+                Edge("e2", "m3", "main", True, False), Edge("e2", "m4", "main", False, True),
+                Edge("a1", "n1", "main", True, False), Edge("a1", "m2", "main", False, True),
+                Edge("a1", "m3", "main", False, True), Edge("a1", "c1", "cofactor", True, False),
+                Edge("t1", "t2", "main", False, True)]
+    return dm
+
+
+def test_relayout_spring_keeps_map_nodes():
+    pytest.importorskip("networkx")
+    dm = relayout_map()
+    s = relayout.subsystem_map(dm, "S")
+    relayout.spring_layout(s)
+    for i in ("m1", "m2", "m3", "m4", "e1", "e2"):
+        assert (s.nodes[i].x, s.nodes[i].y) == (dm.nodes[i].x, dm.nodes[i].y)
+    assert (s.nodes["a1"].x, s.nodes["a1"].y) != (dm.nodes["a1"].x, dm.nodes["a1"].y)
+    # the cofactor moves with its enzyme node
+    assert s.nodes["c1"].x - s.nodes["a1"].x == pytest.approx(40) and s.nodes["c1"].y - s.nodes["a1"].y == pytest.approx(40)
+
+
+def test_relayout_graphviz():
+    pytest.importorskip("pygraphviz")
+    dm = relayout_map()
+    pinned = ("m1", "m2", "m3", "m4", "e1", "e2")
+    for prog in ("fdp", "neato", "dot"):
+        s = relayout.subsystem_map(dm, "S")
+        relayout.LAYOUTS[prog](s)
+        assert all(math.isfinite(n.x) and math.isfinite(n.y) for n in s.nodes.values())
+        if prog == "fdp":
+            # pinned nodes keep their relative positions (Graphviz translates the whole drawing)
+            dx, dy = s.nodes["m1"].x - dm.nodes["m1"].x, s.nodes["m1"].y - dm.nodes["m1"].y
+            for i in pinned:
+                assert s.nodes[i].x - dm.nodes[i].x == pytest.approx(dx, abs=0.2)
+                assert s.nodes[i].y - dm.nodes[i].y == pytest.approx(dy, abs=0.2)
+        if prog == "dot":
+            # layered along the reaction directions: substrate above enzyme above product
+            assert s.nodes["m1"].y < s.nodes["e1"].y < s.nodes["m2"].y
+
+
+def test_relayout_subsystems():
+    pytest.importorskip("networkx")
+    pytest.importorskip("pygraphviz")
+    dm = relayout_map()
+    before = {i: (n.x, n.y) for i, n in dm.nodes.items()}
+    rows = relayout.relayout_subsystems(dm)
+    assert [r["subsystem"] for r in rows] == ["S"]  # T has no added reactions
+    assert {i: (n.x, n.y) for i, n in dm.nodes.items() if n.subsystem == "T"} == {"t1": before["t1"], "t2": before["t2"]}
+    row = rows[0]
+    assert set(row) >= {"current", "spring", "fdp", "dot", "neato", "layout"}
+    best_keeping = min(row[m]["crossings_main"] for m in relayout.KEEPING)
+    chosen = row[row["layout"]]["crossings_main"]
+    if row["layout"] in relayout.REDRAWING:
+        assert chosen < 0.75 * best_keeping
+    else:
+        assert chosen == best_keeping
+    assert chosen <= row["current"]["crossings_main"]
+    # no layouts: nothing changes
+    dm = relayout_map()
+    rows = relayout.relayout_subsystems(dm, methods=[])
+    assert rows[0]["layout"] == "current" and {i: (n.x, n.y) for i, n in dm.nodes.items()} == before
