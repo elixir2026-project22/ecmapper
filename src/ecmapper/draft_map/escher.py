@@ -20,7 +20,7 @@ class _Ids:
         return str(self.n)
 
 
-def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.5, subsystem_labels: bool = True,
+def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, subsystem_labels: bool = True,
               protons: bool = False, description: str = "") -> list:
     """An Escher map of the model reactions of a draft map.
 
@@ -35,13 +35,18 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.5, su
     not exported; the names of the subsystems are text labels if
     `subsystem_labels`. Metabolite nodes that continue on other maps
     (`stubs`, see :mod:`.split`) get a text label "→ map names" next to them
-    (:func:`place_text_labels`).
+    (:func:`place_text_labels`; Escher draws text labels at 50 px, so with
+    short map names, :func:`short_name`).
 
-    The reactions get straight axes and curved branches
-    (:func:`curve_reactions`): the reactions of an enzyme node side by side
-    (`LANE` apart, as the layout leaves room for them), U-shaped reactions
-    moved towards their metabolites where there is room, and the
-    metabolites that are not drawn next to the reaction axis.
+    The reactions get straight axes and main lines and curved cofactor
+    branches (:func:`curve_reactions`): the reactions of an enzyme node side
+    by side (`LANE` apart, as the layout leaves room for them), U-shaped
+    reactions moved towards their metabolites where there is room, and the
+    metabolites that are not drawn next to the reaction axis. Labels go
+    where they cover the fewest lines, nodes and other labels
+    (:func:`place_node_labels`, :func:`place_text_labels`). At `scale` 2,
+    Escher's labels (20 px for metabolites) have about the size relative to
+    the drawing that the labels of the SVG have.
     """
     new_id = _Ids()
     nodes, reactions, text_labels = {}, {}, {}
@@ -170,7 +175,8 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.5, su
         drawn = dm.nodes[drawn_id]
         if getattr(drawn, "stubs", None):
             label_id = new_id()
-            text_labels[label_id] = dict(text="→ " + ", ".join(drawn.stubs), x=drawn.x * scale,
+            text = "→ " + ", ".join(dict.fromkeys(short_name(m) for m in drawn.stubs))
+            text_labels[label_id] = dict(text=text, x=drawn.x * scale,
                                          y=(drawn.y + 34 * (len(ids) - 1)) * scale + 66)
             references[label_id] = (drawn.x * scale, drawn.y * scale, (drawn.y + 34 * (len(ids) - 1)) * scale)
     if subsystem_labels:
@@ -179,6 +185,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.5, su
                                          y=s.y * scale)
     body = dict(reactions=reactions, nodes=nodes, text_labels=text_labels)
     curve_reactions(body, movable, lane=LANE * scale)
+    place_node_labels(body)
     place_text_labels(body, references)
     xs = [n["x"] for n in nodes.values()] + [t["x"] for t in text_labels.values()]
     xs += [t["x"] + ESCHER_FONTS["text"][1] * len(t["text"]) for t in text_labels.values()]
@@ -189,6 +196,12 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.5, su
     head = dict(map_name=map_name, map_id=re.sub(r"\W+", "_", map_name), map_description=description,
                 homepage="https://escher.github.io", schema=SCHEMA)
     return [head, dict(body, canvas=canvas)]
+
+
+def short_name(map_name: str) -> str:
+    """A short map name for references: up to the first "and" or comma, without "metabolism"."""
+    name = re.split(r",| and ", map_name)[0].strip()
+    return name.removesuffix(" metabolism") or map_name
 
 
 def _unit(x: float, y: float) -> tuple[float, float] | None:
@@ -252,6 +265,16 @@ class _Points:
     def remove(self, owner: str) -> None:
         for key, item in self.owned.pop(owner, []):
             self.grid[key].remove(item)
+
+    def inside(self, box: tuple[float, float, float, float], skip=frozenset()) -> float:
+        x0, y0, x1, y1 = box
+        total = 0.0
+        for i in range(int(x0 // self.cell), int(x1 // self.cell) + 1):
+            for j in range(int(y0 // self.cell), int(y1 // self.cell) + 1):
+                for px, py, weight, owner in self.grid.get((i, j), ()):
+                    if x0 <= px <= x1 and y0 <= py <= y1 and owner not in skip:
+                        total += weight
+        return total
 
     def near(self, x: float, y: float, r: float, skip=frozenset()) -> float:
         total = 0.0
@@ -333,7 +356,8 @@ def _footprint(x: float, y: float, ux: float, uy: float, ids: list[str], lane: f
     near, outside = -(half + 20.0), half + 70.0
     n = max(1, int((outside - near) / 30))
     across = [side * (near + (outside - near) * i / n) for i in range(n + 1)]
-    points = [(x + ux * a + nx * b, y + uy * a + ny * b) for a in range(-int(reach), int(reach) + 1, 30) for b in across]
+    points = [(x + ux * a + nx * b, y + uy * a + ny * b)
+              for a in range(-int(reach), int(reach) + 1, 30) for b in across]
     for (lx, ly), text in zip(_lane_labels(x, y, ux, uy, ids, lane, side), ids):
         x0, y0, x1, y1 = _label_box("reaction", text, lx, ly)
         points += [(x0 + (x1 - x0) * i / 4, (y0 + y1) / 2) for i in range(5)]
@@ -393,7 +417,8 @@ def _pull_reactions(body: dict, parts: dict, groups: list, lane: float, movable:
             mets = [met for marker, sd in sides.items() if sd == side for _, met in markers[marker]]
             mets = [m for m in mets if nodes[m].get("node_is_primary")] or mets
             if mets:
-                centres.append((sum(nodes[m]["x"] for m in mets) / len(mets), sum(nodes[m]["y"] for m in mets) / len(mets)))
+                centres.append((sum(nodes[m]["x"] for m in mets) / len(mets),
+                                sum(nodes[m]["y"] for m in mets) / len(mets)))
         if len(centres) < 2:
             continue
         (sx, sy), (px, py) = centres
@@ -453,11 +478,11 @@ def _pull_reactions(body: dict, parts: dict, groups: list, lane: float, movable:
 def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: float = 0.3,
                     marker_distance: tuple[float, float] = (20.0, 80.0), max_lead: float = 100.0,
                     pull: bool = True) -> dict:
-    """Draw the reactions of an Escher map as Escher's builder does: a straight axis and curved branches.
+    """Draw the reactions of an Escher map: straight axes and main lines, curved cofactor branches.
 
-    Post-processing of an Escher map (its second part, `body`); similar to
-    BioEMMA (multimarkers on a straight reaction axis) and to the new
-    reactions of Escher's builder (curved branches):
+    Post-processing of an Escher map (its second part, `body`); the
+    multimarkers as in BioEMMA (on a straight reaction axis), the cofactor
+    branches as Escher's builder draws them:
 
     - The axis of a reaction runs through its midmarker from its substrates
       to its products (the primary metabolites, all metabolites of a side
@@ -466,23 +491,22 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
     - Reactions with the same midmarker position (the model reactions of an
       enzyme node) are drawn side by side in lanes `lane` apart,
       perpendicular to their common axis; their labels are stacked next to
-      the lanes.
+      the lanes, on the side where they cover fewer lines, nodes and labels.
     - With `pull`, U-shaped reactions (substrates and products on the same
       side) move towards their metabolites where there is room
       (:func:`_pull_reactions`).
     - The multimarkers are on the axis, `trunk` of the way to the centre
       of their metabolites, within `marker_distance`.
-    - The segments between a multimarker and its metabolites are cubic
-      Bezier curves (b1, b2): they leave the multimarker along the axis
-      and bend towards the metabolite; metabolites on the axis get straight
-      segments.
+    - Segments to primary metabolites are straight. Those to secondary ones
+      are cubic Bezier curves (b1, b2) that leave the multimarker along the
+      axis and bend towards the metabolite.
     - Metabolite nodes in `movable` (secondary metabolites that are not
       drawn on the source map) are put next to the multimarker of their
       side, alternately left and right of the axis.
 
     Other metabolite nodes are not moved. Reactions drawn in other ways are
-    left as they are. Returns counts of the curved, the moved (`pull`)
-    reactions and the curved segments.
+    left as they are. Returns counts of the drawn reactions, the moved ones
+    (`pull`) and the curved segments.
     """
     nodes = body["nodes"]
     parts = {rid: p for rid, r in body["reactions"].items() if (p := _reaction_parts(nodes, r))}
@@ -494,6 +518,11 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
     movable = set(movable)
     moved = _pull_reactions(body, parts, groups, lane, movable) if pull else 0
     segments = 0
+    drawn = []  # (reaction IDs, x, y, axis, label sides in order of preference)
+
+    def ids_of(rids):
+        return [body["reactions"][rid]["bigg_id"] for rid in rids]
+
     for x0, y0, rids, away in groups:
         axes = {rid: _axis(nodes, *parts[rid]) for rid in rids}
         ux, uy = axes[rids[0]]
@@ -509,7 +538,8 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
             lateral = {}
             for rid in rids:
                 own = mets[rid] - shared
-                lateral[rid] = sum((nodes[m]["x"] - x0) * nx + (nodes[m]["y"] - y0) * ny for m in own) / max(len(own), 1)
+                lateral[rid] = (sum((nodes[m]["x"] - x0) * nx + (nodes[m]["y"] - y0) * ny for m in own)
+                                / max(len(own), 1))
             rids = sorted(rids, key=lateral.get)
         far = (1 if away[0] * nx + away[1] * ny >= 0 else -1) if away else 1
         half = (k - 1) / 2 * lane
@@ -549,6 +579,8 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
                 nodes[m]["label_x"], nodes[m]["label_y"] = nodes[m]["x"] + 8, nodes[m]["y"] - 12
         for offset, rid, marker, (wx, wy), (px, py), free in markers_at:
             for sid, met in parts[rid][2][marker]:
+                if nodes[met].get("node_is_primary"):
+                    continue  # main metabolites: straight
                 vx, vy = nodes[met]["x"] - px, nodes[met]["y"] - py
                 length = math.hypot(vx, vy) or 1.0
                 lead = min(0.4 * length * max((vx * wx + vy * wy) / length, 0.25), max_lead)
@@ -558,11 +590,23 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
                 s = body["reactions"][rid]["segments"][sid]
                 s["b1"], s["b2"] = (b_marker, b_met) if s["from_node_id"] == marker else (b_met, b_marker)
                 segments += 1
-        labels = _lane_labels(x0, y0, ux, uy, [body["reactions"][rid]["bigg_id"] for rid in rids], lane,
-                              far if away else 1)
-        for rid, (lx, ly) in zip(rids, labels):
+        sides = (far, -far) if away else (1, -1)
+        drawn.append((rids, x0, y0, ux, uy, sides))
+        for rid, (lx, ly) in zip(rids, _lane_labels(x0, y0, ux, uy, ids_of(rids), lane, sides[0])):
             body["reactions"][rid]["label_x"], body["reactions"][rid]["label_y"] = lx, ly
-    return dict(curved_reactions=len(parts), moved_reactions=moved, curved_segments=segments)
+    # reaction labels: on the side of their lanes where they cover fewer lines, nodes and labels
+    points = _map_points(body, node_labels=False)
+    for rids, x0, y0, ux, uy, sides in drawn:
+        ids = ids_of(rids)
+        for rid in rids:
+            points.remove(("label", "reaction", rid))
+        options = [_lane_labels(x0, y0, ux, uy, ids, lane, side) for side in sides]
+        costs = [sum(points.inside(_grow(_label_box("reaction", text, *c), 4.0)) for text, c in zip(ids, option))
+                 for option in options]
+        for rid, text, (lx, ly) in zip(rids, ids, options[costs.index(min(costs))]):
+            body["reactions"][rid]["label_x"], body["reactions"][rid]["label_y"] = lx, ly
+            _add_box(points, ("label", "reaction", rid), _label_box("reaction", text, lx, ly), 2.0)
+    return dict(drawn_reactions=len(parts), moved_reactions=moved, curved_segments=segments)
 
 
 #: approximate label sizes in Escher (its CSS): font size, width per character
@@ -591,49 +635,97 @@ def _segment_points(nodes: dict, segment: dict, step: float = 40.0) -> list[tupl
     return points
 
 
-def place_text_labels(body: dict, anchors: dict[str, tuple[float, float, float]], cell: float = 100.0) -> None:
+#: radii of metabolite nodes in Escher (its default settings): primary, secondary
+RADIUS = {True: 20.0, False: 10.0}
+
+
+def _add_box(points: _Points, owner, box, weight: float, step: float = 12.0) -> None:
+    x0, y0, x1, y1 = box
+    nx, ny = max(1, int((x1 - x0) / step)), max(1, int((y1 - y0) / step))
+    for i in range(nx + 1):
+        for j in range(ny + 1):
+            points.add(owner, x0 + (x1 - x0) * i / nx, y0 + (y1 - y0) * j / ny, weight)
+
+
+def _grow(box, margin: float):
+    return box[0] - margin, box[1] - margin, box[2] + margin, box[3] + margin
+
+
+def _map_points(body: dict, node_labels: bool = True, cell: float = 60.0) -> _Points:
+    """The segments, metabolite nodes and labels of an Escher map as weighted points.
+
+    Owners: the reaction ID for its segments, ("node", ID) for a metabolite
+    circle, ("label", kind, ID) for a label. Segments weigh 1 per 15 units,
+    circles 3 per point, labels 2 per point.
+    """
+    nodes = body["nodes"]
+    points = _Points(cell)
+    for rid, r in body["reactions"].items():
+        for segment in r["segments"].values():
+            for x, y in _segment_points(nodes, segment, step=15.0):
+                points.add(rid, x, y)
+        if r.get("label_x") is not None:
+            box = _label_box("reaction", r["bigg_id"], r["label_x"], r["label_y"])
+            _add_box(points, ("label", "reaction", rid), box, 2.0)
+    for i, n in nodes.items():
+        if n["node_type"] != "metabolite":
+            continue
+        radius = RADIUS[bool(n.get("node_is_primary"))]
+        for a in range(8):
+            angle = a * math.pi / 4
+            points.add(("node", i), n["x"] + radius * math.cos(angle), n["y"] + radius * math.sin(angle), 3.0)
+        points.add(("node", i), n["x"], n["y"], 3.0)
+        if node_labels:
+            box = _label_box("metabolite", n["bigg_id"], n["label_x"], n["label_y"])
+            _add_box(points, ("label", "node", i), box, 2.0)
+    for i, t in body["text_labels"].items():
+        _add_box(points, ("label", "text", i), _label_box("text", t["text"], t["x"], t["y"]), 2.0)
+    return points
+
+
+def _choose(points: _Points, owner, kind: str, text: str, candidates: list, margin: float = 4.0, skip=frozenset()):
+    """The candidate position of a label that covers the fewest points (the first of equal ones).
+
+    Adds the label at that position to `points`.
+    """
+    points.remove(owner)
+    costs = [points.inside(_grow(_label_box(kind, text, *c), margin), skip) for c in candidates]
+    best = candidates[costs.index(min(costs))]
+    _add_box(points, owner, _label_box(kind, text, *best), 2.0)
+    return best
+
+
+def place_node_labels(body: dict) -> None:
+    """Put each metabolite label at one of 8 places around its node, where it covers the fewest lines, nodes and labels.
+
+    Primary metabolites first; ties: upper right (Escher's default), right,
+    lower right, above, below, upper left, left, lower left.
+    """
+    nodes = body["nodes"]
+    points = _map_points(body)
+    width = ESCHER_FONTS["metabolite"][1]
+    order = sorted((i for i, n in nodes.items() if n["node_type"] == "metabolite"),
+                   key=lambda i: not nodes[i].get("node_is_primary"))
+    for i in order:
+        n = nodes[i]
+        x, y, w = n["x"], n["y"], width * len(n["bigg_id"])
+        r = RADIUS[bool(n.get("node_is_primary"))] + 2
+        d = 0.75 * r
+        candidates = [(x + d, y - d), (x + r + 2, y + 6), (x + d, y + d + 14), (x - w / 2, y - r - 6),
+                      (x - w / 2, y + r + 18), (x - d - w, y - d), (x - r - 2 - w, y + 6), (x - d - w, y + d + 14)]
+        n["label_x"], n["label_y"] = _choose(points, ("label", "node", i), "metabolite", n["bigg_id"], candidates,
+                                             skip={("node", i)})
+
+
+def place_text_labels(body: dict, anchors: dict[str, tuple[float, float, float]]) -> None:
     """Put text labels next to their metabolite nodes where they cover the least.
 
     `anchors`: {text label ID: (x, top y, bottom y) of its metabolite nodes}.
     Each label goes right of, below, left of or above its nodes, whichever
-    position covers the fewest points of segments, nodes and labels (other
-    text labels count most); ties in this order.
+    position covers the fewest points of segments, nodes and labels; ties
+    in this order.
     """
-    nodes = body["nodes"]
-    grid = {}  # (cell x, cell y) -> [(x, y, weight)]
-
-    def add(x, y, weight):
-        grid.setdefault((int(x // cell), int(y // cell)), []).append((x, y, weight))
-
-    def add_box(box, weight, step=25.0):
-        x0, y0, x1, y1 = box
-        nx, ny = max(1, int((x1 - x0) / step)), max(1, int((y1 - y0) / step))
-        for i in range(nx + 1):
-            for j in range(ny + 1):
-                add(x0 + (x1 - x0) * i / nx, y0 + (y1 - y0) * j / ny, weight)
-
-    for r in body["reactions"].values():
-        for segment in r["segments"].values():
-            for x, y in _segment_points(nodes, segment):
-                add(x, y, 1.0)
-        if r.get("label_x") is not None:
-            add_box(_label_box("reaction", r["bigg_id"], r["label_x"], r["label_y"]), 1.0)
-    for n in nodes.values():
-        if n["node_type"] == "metabolite":
-            add(n["x"], n["y"], 4.0)
-            add_box(_label_box("metabolite", n["bigg_id"], n["label_x"], n["label_y"]), 1.0)
-    for label_id, t in body["text_labels"].items():
-        if label_id not in anchors:
-            add_box(_label_box("text", t["text"], t["x"], t["y"]), 10.0)
-
-    def cost(box):
-        x0, y0, x1, y1 = box
-        total = 0.0
-        for i in range(int(x0 // cell), int(x1 // cell) + 1):
-            for j in range(int(y0 // cell), int(y1 // cell) + 1):
-                total += sum(w for x, y, w in grid.get((i, j), ()) if x0 <= x <= x1 and y0 <= y <= y1)
-        return total
-
+    points = _map_points(body)
     for label_id, (x, top, bottom) in anchors.items():
         t = body["text_labels"][label_id]
         width = ESCHER_FONTS["text"][1] * len(t["text"])
@@ -641,9 +733,7 @@ def place_text_labels(body: dict, anchors: dict[str, tuple[float, float, float]]
                       (x - 20, bottom + 66),  # below
                       (x - 35 - width, (top + bottom) / 2 + 22),  # left
                       (x - 20, top - 50)]  # above
-        best = min(candidates, key=lambda c: cost(_label_box("text", t["text"], *c)))
-        t["x"], t["y"] = best
-        add_box(_label_box("text", t["text"], *best), 10.0)
+        t["x"], t["y"] = _choose(points, ("label", "text", label_id), "text", t["text"], candidates)
 
 
 def write_escher(dm: DraftMap, md: ModelData, path: str, map_name: str, **kwargs) -> dict:

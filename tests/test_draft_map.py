@@ -166,11 +166,12 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
         assert {m["bigg_id"] for m in reaction["metabolites"]} == set(data["reactions"][reaction["bigg_id"]]["metabolites"])
     metabolites = {n["bigg_id"] for n in body["nodes"].values() if n["node_type"] == "metabolite"}
     assert metabolites <= set(data["metabolites"])
-    # curved branches: every segment of a multimarker and a metabolite has control points
+    # curved branches to the secondary metabolites, straight segments otherwise
     for reaction in body["reactions"].values():
         for segment in reaction["segments"].values():
-            types = {body["nodes"][segment[k]]["node_type"] for k in ("from_node_id", "to_node_id")}
-            assert (segment["b1"] is not None) == ("metabolite" in types)
+            ends = [body["nodes"][segment[k]] for k in ("from_node_id", "to_node_id")]
+            secondary = any(n["node_type"] == "metabolite" and not n["node_is_primary"] for n in ends)
+            assert (segment["b1"] is not None) == secondary
 
 
 
@@ -401,7 +402,7 @@ def escher_reaction(nodes, rid, mid, sub, prod, metabolites):
 
 
 def test_curve_reactions():
-    """Straight reaction axes, curved branches, reactions at one place side by side, metabolites stay."""
+    """Straight reaction axes and main lines, curved cofactor branches, reactions at one place side by side."""
     def met(i, x, y, primary=True):
         return dict(node_type="metabolite", x=x, y=y, bigg_id=i, label_x=x, label_y=y, node_is_primary=primary)
 
@@ -416,7 +417,7 @@ def test_curve_reactions():
         "2": escher_reaction(nodes, "R2", "m2", "s2", "p2", {"A": -1, "B": 1})})
     before = {i: (n["x"], n["y"]) for i, n in nodes.items() if n["node_type"] == "metabolite"}
     result = escher.curve_reactions(body, movable={"D"}, lane=25.0)
-    assert result == dict(curved_reactions=2, moved_reactions=0, curved_segments=6)
+    assert result == dict(drawn_reactions=2, moved_reactions=0, curved_segments=2)
     # metabolite nodes stay, except the movable one; D goes next to the product multimarker of R1 (below it)
     assert all((nodes[i]["x"], nodes[i]["y"]) == xy for i, xy in before.items() if i != "D")
     assert nodes["D"]["y"] > nodes["p1"]["y"] and abs(nodes["D"]["x"]) > 25
@@ -426,11 +427,13 @@ def test_curve_reactions():
     for mid, sub, prod in (("m1", "s1", "p1"), ("m2", "s2", "p2")):
         assert nodes[sub]["x"] == pytest.approx(nodes[mid]["x"]) == pytest.approx(nodes[prod]["x"])
         assert nodes[sub]["y"] < nodes[mid]["y"] < nodes[prod]["y"]
-    # control points: leave the multimarker along the axis (b1 of a product segment, b2 of a substrate segment)
+    # main metabolites: straight; cofactors: curves that leave the multimarker along the axis (b1 of a product
+    # segment, b2 of a substrate segment)
     segments = body["reactions"]["1"]["segments"]
     assert segments["R1a"]["b1"] is None and segments["R1b"]["b2"] is None
-    to_b, from_c = segments["R1B"], segments["R1C"]
-    assert to_b["b1"]["x"] == pytest.approx(nodes["p1"]["x"]) and to_b["b1"]["y"] > nodes["p1"]["y"]
+    assert segments["R1A"]["b1"] is None and segments["R1B"]["b1"] is None
+    to_d, from_c = segments["R1D"], segments["R1C"]
+    assert to_d["b1"]["x"] == pytest.approx(nodes["p1"]["x"]) and to_d["b1"]["y"] > nodes["p1"]["y"]
     assert from_c["b2"]["x"] == pytest.approx(nodes["s1"]["x"]) and from_c["b2"]["y"] < nodes["s1"]["y"]
     # labels stacked right of the lanes
     labels = [body["reactions"][r] for r in ("1", "2")]
@@ -439,7 +442,7 @@ def test_curve_reactions():
     nodes["x"] = dict(node_type="midmarker", x=5, y=5)
     body["reactions"]["3"] = dict(bigg_id="R3", metabolites=[dict(bigg_id="a", coefficient=-1)],
                                   segments={"s": dict(from_node_id="A", to_node_id="x", b1=None, b2=None)})
-    assert escher.curve_reactions(body)["curved_reactions"] == 2
+    assert escher.curve_reactions(body)["drawn_reactions"] == 2
     assert body["reactions"]["3"]["segments"]["s"]["b1"] is None
 
 
@@ -491,6 +494,23 @@ def test_lane_room():
     # step 4 keeps the room free: e and f at least half their widths, the room and the gap apart
     layout.condense_subsystems(dm)
     assert dm.nodes["f"].x - dm.nodes["e"].x >= (60 + 2 * core.LANE + 60) / 2 + 22.0 - 1e-6
+
+
+def test_place_node_labels():
+    """A metabolite label avoids the lines at its node; short map names for references."""
+    def met(i, x, y):
+        return dict(node_type="metabolite", x=x, y=y, bigg_id=i, label_x=x + 15, label_y=y - 22, node_is_primary=True)
+
+    # lines from M to the upper right and to the right: the label goes to the lower right
+    nodes = {"M": met("m", 0, 0), "A": met("a", 400, -400), "B": met("b", 400, 0)}
+    reactions = {"1": dict(bigg_id="R1", label_x=None, segments={
+        "a": dict(from_node_id="M", to_node_id="A", b1=None, b2=None),
+        "b": dict(from_node_id="M", to_node_id="B", b1=None, b2=None)})}
+    body = dict(nodes=nodes, reactions=reactions, text_labels={})
+    escher.place_node_labels(body)
+    assert nodes["M"]["label_x"] > 0 and nodes["M"]["label_y"] > 0
+    assert escher.short_name("Nucleotides and cofactors") == "Nucleotides"
+    assert escher.short_name("Energy and C1 metabolism") == "Energy" and escher.short_name("Lipids") == "Lipids"
 
 
 def test_place_text_labels():

@@ -206,7 +206,7 @@ def main(argv=None) -> None:
                         help="remove the inter-pathway links of metabolites drawn in at least this many subsystems")
     parser.add_argument("--flips", choices=["none", "x", "xy"], default="none",
                         help="allow mirroring subsystems in the final arrangement (x: left-right, xy: also upside down)")
-    parser.add_argument("--escher-scale", type=float, default=2.5, help="scale of the Escher map")
+    parser.add_argument("--escher-scale", type=float, default=2.0, help="scale of the Escher map")
     parser.add_argument("--escher-no-labels", action="store_true", help="no subsystem names in the Escher map")
     parser.add_argument("--compare-flips", action="store_true", help="also anneal with mirroring (x and xy)")
     parser.add_argument("--extra", nargs="*", default=[], help="further arrangements: graphviz elk user-order")
