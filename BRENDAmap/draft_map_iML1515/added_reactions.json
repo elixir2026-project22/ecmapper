@@ -303,7 +303,7 @@
   "reaction": "ACOXT",
   "name": "Acetyl-CoA:oxalate CoA-transferase",
   "status": "not on map",
-  "subsystem": "ornithine-metabolism",
+  "subsystem": "acetate-fermentation",
   "model_subsystem": "Membrane Lipid Metabolism",
   "anchored": [
    "ac",
@@ -1350,6 +1350,25 @@
   "node": "added_r207"
  },
  {
+  "reaction": "FBA3",
+  "name": "Sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase",
+  "status": "on map",
+  "subsystem": "chorismate-metabolism",
+  "model_subsystem": "Pentose Phosphate Pathway",
+  "anchored": [
+   "dhap",
+   "e4p"
+  ],
+  "main_metabolites": [
+   "dhap",
+   "e4p",
+   "s17bp"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r210"
+ },
+ {
   "reaction": "FDMO",
   "name": "FMNH2-dependent monooxygenase",
   "status": "related",
@@ -1370,7 +1389,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 2,
-  "node": "added_r210"
+  "node": "added_r212"
  },
  {
   "reaction": "FDMO2",
@@ -1393,7 +1412,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r216"
+  "node": "added_r218"
  },
  {
   "reaction": "FDMO3",
@@ -1415,7 +1434,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r216"
+  "node": "added_r218"
  },
  {
   "reaction": "FDMO4",
@@ -1437,7 +1456,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r216"
+  "node": "added_r218"
  },
  {
   "reaction": "FDMO6",
@@ -1459,7 +1478,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r216"
+  "node": "added_r218"
  },
  {
   "reaction": "FE3DCITR5",
@@ -1478,7 +1497,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r221"
+  "node": "added_r223"
  },
  {
   "reaction": "FE3DCITexs",
@@ -1497,7 +1516,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r226"
+  "node": "added_r228"
  },
  {
   "reaction": "FE3HOXR2",
@@ -1519,7 +1538,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r228"
+  "node": "added_r230"
  },
  {
   "reaction": "FE3HOXR3",
@@ -1543,7 +1562,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r231"
+  "node": "added_r233"
  },
  {
   "reaction": "FECRMR2",
@@ -1565,7 +1584,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r232"
+  "node": "added_r234"
  },
  {
   "reaction": "FECRMR3",
@@ -1589,7 +1608,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r235"
+  "node": "added_r237"
  },
  {
   "reaction": "FEENTERR2",
@@ -1611,7 +1630,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r236"
+  "node": "added_r238"
  },
  {
   "reaction": "FEENTERR3",
@@ -1635,7 +1654,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r239"
+  "node": "added_r241"
  },
  {
   "reaction": "FEOXAMR2",
@@ -1657,7 +1676,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r240"
+  "node": "added_r242"
  },
  {
   "reaction": "FEOXAMR3",
@@ -1681,7 +1700,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r243"
+  "node": "added_r245"
  },
  {
   "reaction": "FLVRx",
@@ -1699,13 +1718,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r244"
+  "node": "added_r246"
  },
  {
   "reaction": "FORCT",
   "name": "Formyl-CoA Transferase",
   "status": "not on map",
-  "subsystem": "ornithine-metabolism",
+  "subsystem": "acetate-fermentation",
   "model_subsystem": "Alternate Carbon Metabolism",
   "anchored": [
    "for",
@@ -1720,7 +1739,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r247"
+  "node": "added_r249"
  },
  {
   "reaction": "FRULYSDG",
@@ -1739,7 +1758,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r250"
+  "node": "added_r252"
  },
  {
   "reaction": "G1PP",
@@ -1757,7 +1776,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r254"
+  "node": "added_r256"
  },
  {
   "reaction": "G1PPpp",
@@ -1775,13 +1794,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r257"
+  "node": "added_r259"
  },
  {
   "reaction": "G3PAT140",
   "name": "Glycerol-3-phosphate acyltransferase (C14:0)",
   "status": "related",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Glycerophospholipid Metabolism",
   "anchored": [
    "glyc3p",
@@ -1794,7 +1813,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r260"
+  "node": "added_r262"
  },
  {
   "reaction": "G3PAT160",
@@ -1813,7 +1832,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r264"
+  "node": "added_r266"
  },
  {
   "reaction": "G3PT",
@@ -1831,7 +1850,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r268"
+  "node": "added_r270"
  },
  {
   "reaction": "G6PP",
@@ -1849,7 +1868,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r271"
+  "node": "added_r273"
  },
  {
   "reaction": "GAPP",
@@ -1867,7 +1886,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r274"
+  "node": "added_r276"
  },
  {
   "reaction": "GDPMNH",
@@ -1885,7 +1904,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r278"
+  "node": "added_r280"
  },
  {
   "reaction": "GLCATr",
@@ -1904,7 +1923,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r281"
+  "node": "added_r283"
  },
  {
   "reaction": "GLCDpp",
@@ -1922,7 +1941,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r285"
+  "node": "added_r287"
  },
  {
   "reaction": "GLCS1",
@@ -1940,7 +1959,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r290"
+  "node": "added_r292"
  },
  {
   "reaction": "GLYCTO2",
@@ -1958,7 +1977,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r292"
+  "node": "added_r294"
  },
  {
   "reaction": "GLYCTO3",
@@ -1976,7 +1995,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r292"
+  "node": "added_r294"
  },
  {
   "reaction": "GLYCTO4",
@@ -1994,7 +2013,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r292"
+  "node": "added_r294"
  },
  {
   "reaction": "GNP",
@@ -2012,7 +2031,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r295"
+  "node": "added_r297"
  },
  {
   "reaction": "GPDDA3",
@@ -2031,7 +2050,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r298"
+  "node": "added_r300"
  },
  {
   "reaction": "GPDDA3pp",
@@ -2051,7 +2070,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r302"
+  "node": "added_r304"
  },
  {
   "reaction": "GPDDA4",
@@ -2070,7 +2089,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r304"
+  "node": "added_r306"
  },
  {
   "reaction": "GPDDA4pp",
@@ -2090,7 +2109,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r307"
+  "node": "added_r309"
  },
  {
   "reaction": "GSPMDA",
@@ -2108,7 +2127,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r309"
+  "node": "added_r311"
  },
  {
   "reaction": "H2SO",
@@ -2126,7 +2145,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r312"
+  "node": "added_r314"
  },
  {
   "reaction": "HEMEOS",
@@ -2145,7 +2164,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r314"
+  "node": "added_r316"
  },
  {
   "reaction": "HKNTDH",
@@ -2164,7 +2183,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r319"
+  "node": "added_r321"
  },
  {
   "reaction": "HPYRI",
@@ -2182,7 +2201,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r323"
+  "node": "added_r325"
  },
  {
   "reaction": "HPYRP",
@@ -2200,7 +2219,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r325"
+  "node": "added_r327"
  },
  {
   "reaction": "HXCT",
@@ -2222,7 +2241,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r328"
+  "node": "added_r330"
  },
  {
   "reaction": "HYPOE",
@@ -2240,7 +2259,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r330"
+  "node": "added_r332"
  },
  {
   "reaction": "ICYSDS",
@@ -2260,7 +2279,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 1,
-  "node": "added_r333"
+  "node": "added_r335"
  },
  {
   "reaction": "KAS14",
@@ -2280,7 +2299,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r337"
+  "node": "added_r339"
  },
  {
   "reaction": "LA4NTpp",
@@ -2300,7 +2319,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r340"
+  "node": "added_r342"
  },
  {
   "reaction": "LALGP",
@@ -2319,7 +2338,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r343"
+  "node": "added_r345"
  },
  {
   "reaction": "LCARSyi",
@@ -2337,13 +2356,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r346"
+  "node": "added_r348"
  },
  {
   "reaction": "LIPAHT2ex",
   "name": "Core oligosaccharide lipid A:hexadecanoate transferase (n-C16:0) (extracellular membrane)",
   "status": "not on map",
-  "subsystem": "palmitate-biosynthesis",
+  "subsystem": "arachidonate-biosynthesis",
   "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
   "anchored": [
    "colipa",
@@ -2356,7 +2375,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r349"
+  "node": "added_r351"
  },
  {
   "reaction": "LIPAHTex",
@@ -2375,7 +2394,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r353"
+  "node": "added_r355"
  },
  {
   "reaction": "LIPOS",
@@ -2400,13 +2419,13 @@
   ],
   "new_metabolites": 5,
   "linked_metabolites": 1,
-  "node": "added_r357"
+  "node": "added_r359"
  },
  {
   "reaction": "LPLIPAL1A140pp",
   "name": "Lysophospholipase L1 (2-acylglycerophosphotidate, n-C14:0) (periplasm)",
   "status": "related",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Glycerophospholipid Metabolism",
   "anchored": [
    "1tdecg3p",
@@ -2419,7 +2438,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r366"
+  "node": "added_r368"
  },
  {
   "reaction": "LPLIPAL1A160pp",
@@ -2439,7 +2458,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r369"
+  "node": "added_r371"
  },
  {
   "reaction": "LPLIPAL1A161pp",
@@ -2458,7 +2477,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r371"
+  "node": "added_r373"
  },
  {
   "reaction": "LPLIPAL1A181pp",
@@ -2477,7 +2496,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r374"
+  "node": "added_r376"
  },
  {
   "reaction": "LPLIPAL1G160pp",
@@ -2496,7 +2515,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r377"
+  "node": "added_r379"
  },
  {
   "reaction": "LPLIPAL1G161pp",
@@ -2515,7 +2534,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r381"
+  "node": "added_r383"
  },
  {
   "reaction": "LPLIPAL1G181pp",
@@ -2533,13 +2552,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r381"
+  "node": "added_r383"
  },
  {
   "reaction": "LPLIPAL2A140",
   "name": "Lysophospholipase L2 (2-acylglycerophosphotidate, n-C14:0)",
   "status": "related",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Glycerophospholipid Metabolism",
   "anchored": [
    "glyc3p",
@@ -2552,7 +2571,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r385"
+  "node": "added_r387"
  },
  {
   "reaction": "LPLIPAL2A160",
@@ -2571,7 +2590,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r388"
+  "node": "added_r390"
  },
  {
   "reaction": "LPLIPAL2A161",
@@ -2590,7 +2609,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r371"
+  "node": "added_r373"
  },
  {
   "reaction": "LPLIPAL2A181",
@@ -2609,7 +2628,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r374"
+  "node": "added_r376"
  },
  {
   "reaction": "LPLIPAL2G160",
@@ -2628,7 +2647,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r391"
+  "node": "added_r393"
  },
  {
   "reaction": "LPLIPAL2G161",
@@ -2647,7 +2666,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r394"
+  "node": "added_r396"
  },
  {
   "reaction": "LPLIPAL2G181",
@@ -2666,7 +2685,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r394"
+  "node": "added_r396"
  },
  {
   "reaction": "MALCOAMT",
@@ -2687,7 +2706,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r397"
+  "node": "added_r399"
  },
  {
   "reaction": "MALTATr",
@@ -2706,7 +2725,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r400"
+  "node": "added_r402"
  },
  {
   "reaction": "MANPGH",
@@ -2725,7 +2744,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r404"
+  "node": "added_r406"
  },
  {
   "reaction": "MECDPDH5",
@@ -2743,7 +2762,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r408"
+  "node": "added_r410"
  },
  {
   "reaction": "METNA",
@@ -2762,7 +2781,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r412"
+  "node": "added_r414"
  },
  {
   "reaction": "METOX1s",
@@ -2780,7 +2799,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r416"
+  "node": "added_r418"
  },
  {
   "reaction": "METOX2s",
@@ -2798,7 +2817,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r416"
+  "node": "added_r418"
  },
  {
   "reaction": "MLTG2",
@@ -2818,7 +2837,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r419"
+  "node": "added_r421"
  },
  {
   "reaction": "MLTG3",
@@ -2838,7 +2857,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r421"
+  "node": "added_r423"
  },
  {
   "reaction": "MLTG4",
@@ -2858,7 +2877,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r423"
+  "node": "added_r425"
  },
  {
   "reaction": "MLTG5",
@@ -2878,7 +2897,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r425"
+  "node": "added_r427"
  },
  {
   "reaction": "MLTP2",
@@ -2898,7 +2917,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r427"
+  "node": "added_r429"
  },
  {
   "reaction": "MLTP3",
@@ -2918,7 +2937,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r429"
+  "node": "added_r431"
  },
  {
   "reaction": "MN6PP",
@@ -2936,7 +2955,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r431"
+  "node": "added_r433"
  },
  {
   "reaction": "MOX",
@@ -2954,7 +2973,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r434"
+  "node": "added_r436"
  },
  {
   "reaction": "MPTS",
@@ -2976,7 +2995,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r437"
+  "node": "added_r439"
  },
  {
   "reaction": "MTRPOX",
@@ -2995,7 +3014,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r440"
+  "node": "added_r442"
  },
  {
   "reaction": "NTD1",
@@ -3013,7 +3032,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r446"
+  "node": "added_r448"
  },
  {
   "reaction": "NTD1pp",
@@ -3031,7 +3050,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r449"
+  "node": "added_r451"
  },
  {
   "reaction": "NTD3",
@@ -3049,7 +3068,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r452"
+  "node": "added_r454"
  },
  {
   "reaction": "NTD3pp",
@@ -3067,7 +3086,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r455"
+  "node": "added_r457"
  },
  {
   "reaction": "NTD5",
@@ -3085,7 +3104,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r458"
+  "node": "added_r460"
  },
  {
   "reaction": "NTD5pp",
@@ -3103,7 +3122,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r461"
+  "node": "added_r463"
  },
  {
   "reaction": "NTD6",
@@ -3121,7 +3140,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r464"
+  "node": "added_r466"
  },
  {
   "reaction": "NTD6pp",
@@ -3139,7 +3158,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r467"
+  "node": "added_r469"
  },
  {
   "reaction": "NTD8",
@@ -3157,7 +3176,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r470"
+  "node": "added_r472"
  },
  {
   "reaction": "NTD8pp",
@@ -3175,7 +3194,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r473"
+  "node": "added_r475"
  },
  {
   "reaction": "NTPP5",
@@ -3193,7 +3212,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r476"
+  "node": "added_r478"
  },
  {
   "reaction": "NTPP7",
@@ -3211,7 +3230,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r479"
+  "node": "added_r481"
  },
  {
   "reaction": "O16A4Lpp",
@@ -3231,7 +3250,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r482"
+  "node": "added_r484"
  },
  {
   "reaction": "O16AP3pp",
@@ -3251,13 +3270,13 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r485"
+  "node": "added_r487"
  },
  {
   "reaction": "O16GLCT2",
   "name": "Glucosyltransferase II (LPS O16 antigen biosynthesis)",
   "status": "not on map",
-  "subsystem": "glycogen-biosynthesis",
+  "subsystem": "degradation-of-hexoses",
   "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
   "anchored": [
    "o16aund",
@@ -3270,7 +3289,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r488"
+  "node": "added_r490"
  },
  {
   "reaction": "OCTNLL",
@@ -3288,7 +3307,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r492"
+  "node": "added_r494"
  },
  {
   "reaction": "OGMEACPS",
@@ -3307,7 +3326,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r497"
+  "node": "added_r499"
  },
  {
   "reaction": "OMBZLM",
@@ -3327,7 +3346,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r502"
+  "node": "added_r504"
  },
  {
   "reaction": "OMMBLHX3",
@@ -3345,7 +3364,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r505"
+  "node": "added_r507"
  },
  {
   "reaction": "OMMBLHXy",
@@ -3363,7 +3382,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r513"
+  "node": "added_r515"
  },
  {
   "reaction": "OMPHHXy",
@@ -3381,7 +3400,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r518"
+  "node": "added_r520"
  },
  {
   "reaction": "OPHHX3",
@@ -3399,7 +3418,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r524"
+  "node": "added_r526"
  },
  {
   "reaction": "OXAMTC",
@@ -3418,7 +3437,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r531"
+  "node": "added_r533"
  },
  {
   "reaction": "OXCOAHDH",
@@ -3436,7 +3455,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r535"
+  "node": "added_r537"
  },
  {
   "reaction": "PACOAT",
@@ -3454,13 +3473,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r539"
+  "node": "added_r541"
  },
  {
   "reaction": "PAI2T",
   "name": "3-hydroxy-2,4-pentadione 5-phosphate thiolase",
   "status": "not on map",
-  "subsystem": "lipid-metabolism",
+  "subsystem": "metabolism-of-disaccharids",
   "model_subsystem": "Methionine Metabolism",
   "anchored": [
    "accoa",
@@ -3473,7 +3492,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r542"
+  "node": "added_r544"
  },
  {
   "reaction": "PAPSR2",
@@ -3492,7 +3511,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r545"
+  "node": "added_r547"
  },
  {
   "reaction": "PDX5PO2",
@@ -3510,7 +3529,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r549"
+  "node": "added_r551"
  },
  {
   "reaction": "PDX5PS",
@@ -3530,7 +3549,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r552"
+  "node": "added_r554"
  },
  {
   "reaction": "PDXPP",
@@ -3548,7 +3567,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r559"
+  "node": "added_r561"
  },
  {
   "reaction": "PETNT161pp",
@@ -3568,7 +3587,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 1,
-  "node": "added_r562"
+  "node": "added_r564"
  },
  {
   "reaction": "PETNT181pp",
@@ -3589,13 +3608,13 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r566"
+  "node": "added_r568"
  },
  {
   "reaction": "PFK_3",
   "name": "Phosphofructokinase (s7p)",
   "status": "related",
-  "subsystem": "photosynthesis",
+  "subsystem": "pentose-phosphate-pathway",
   "model_subsystem": "Pentose Phosphate Pathway",
   "anchored": [
    "s17bp",
@@ -3606,8 +3625,8 @@
    "s7p"
   ],
   "new_metabolites": 0,
-  "linked_metabolites": 0,
-  "node": "added_r569"
+  "linked_metabolites": 1,
+  "node": "added_r571"
  },
  {
   "reaction": "PLIPA1A160pp",
@@ -3626,7 +3645,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r572"
+  "node": "added_r575"
  },
  {
   "reaction": "PLIPA1A161pp",
@@ -3645,7 +3664,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r575"
+  "node": "added_r578"
  },
  {
   "reaction": "PLIPA1A181pp",
@@ -3664,7 +3683,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r578"
+  "node": "added_r581"
  },
  {
   "reaction": "PLIPA1E161pp",
@@ -3683,7 +3702,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r581"
+  "node": "added_r584"
  },
  {
   "reaction": "PLIPA1E181pp",
@@ -3702,7 +3721,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r584"
+  "node": "added_r587"
  },
  {
   "reaction": "PLIPA1G160pp",
@@ -3721,7 +3740,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r587"
+  "node": "added_r590"
  },
  {
   "reaction": "PLIPA1G161pp",
@@ -3741,7 +3760,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r590"
+  "node": "added_r593"
  },
  {
   "reaction": "PLIPA1G181pp",
@@ -3760,7 +3779,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r590"
+  "node": "added_r593"
  },
  {
   "reaction": "PLIPA2A160pp",
@@ -3780,7 +3799,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r593"
+  "node": "added_r596"
  },
  {
   "reaction": "PLIPA2A161pp",
@@ -3800,7 +3819,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r595"
+  "node": "added_r598"
  },
  {
   "reaction": "PLIPA2A181pp",
@@ -3820,7 +3839,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r597"
+  "node": "added_r600"
  },
  {
   "reaction": "PLIPA2E161pp",
@@ -3839,7 +3858,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r581"
+  "node": "added_r584"
  },
  {
   "reaction": "PLIPA2E181pp",
@@ -3858,7 +3877,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r584"
+  "node": "added_r587"
  },
  {
   "reaction": "PLIPA2G160pp",
@@ -3878,7 +3897,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r599"
+  "node": "added_r602"
  },
  {
   "reaction": "PLIPA2G161pp",
@@ -3898,7 +3917,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r601"
+  "node": "added_r604"
  },
  {
   "reaction": "PLIPA2G181pp",
@@ -3918,7 +3937,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r601"
+  "node": "added_r604"
  },
  {
   "reaction": "POR5",
@@ -3936,7 +3955,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r603"
+  "node": "added_r606"
  },
  {
   "reaction": "PPPGO3",
@@ -3958,7 +3977,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 2,
-  "node": "added_r608"
+  "node": "added_r611"
  },
  {
   "reaction": "PTRCTA",
@@ -3980,7 +3999,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 2,
-  "node": "added_r611"
+  "node": "added_r614"
  },
  {
   "reaction": "PYDXPP",
@@ -3998,7 +4017,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r614"
+  "node": "added_r617"
  },
  {
   "reaction": "PYK2",
@@ -4016,7 +4035,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r617"
+  "node": "added_r620"
  },
  {
   "reaction": "PYK3",
@@ -4034,7 +4053,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r617"
+  "node": "added_r620"
  },
  {
   "reaction": "PYK4",
@@ -4052,7 +4071,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r617"
+  "node": "added_r620"
  },
  {
   "reaction": "PYK6",
@@ -4074,7 +4093,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 2,
-  "node": "added_r620"
+  "node": "added_r623"
  },
  {
   "reaction": "R5PP",
@@ -4092,7 +4111,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r623"
+  "node": "added_r626"
  },
  {
   "reaction": "R5PPpp",
@@ -4110,7 +4129,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r626"
+  "node": "added_r629"
  },
  {
   "reaction": "RHAT1",
@@ -4130,7 +4149,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 1,
-  "node": "added_r629"
+  "node": "added_r632"
  },
  {
   "reaction": "RU5PP",
@@ -4148,7 +4167,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r633"
+  "node": "added_r636"
  },
  {
   "reaction": "SCYSDS",
@@ -4168,7 +4187,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r636"
+  "node": "added_r639"
  },
  {
   "reaction": "SHGO",
@@ -4186,7 +4205,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r639"
+  "node": "added_r642"
  },
  {
   "reaction": "SPMDAT2",
@@ -4205,7 +4224,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r642"
+  "node": "added_r645"
  },
  {
   "reaction": "TEO2M",
@@ -4225,7 +4244,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r646"
+  "node": "added_r649"
  },
  {
   "reaction": "THRA2",
@@ -4244,7 +4263,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r649"
+  "node": "added_r652"
  },
  {
   "reaction": "THZPSN3",
@@ -4268,7 +4287,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 2,
-  "node": "added_r651"
+  "node": "added_r654"
  },
  {
   "reaction": "TPRDCOAS",
@@ -4287,7 +4306,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r661"
+  "node": "added_r664"
  },
  {
   "reaction": "TRPS1",
@@ -4309,7 +4328,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 2,
-  "node": "added_r665"
+  "node": "added_r668"
  },
  {
   "reaction": "UACGAMPpp",
@@ -4327,7 +4346,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r669"
+  "node": "added_r672"
  },
  {
   "reaction": "UDPGALPpp",
@@ -4345,7 +4364,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r672"
+  "node": "added_r675"
  },
  {
   "reaction": "UDPGPT",
@@ -4364,7 +4383,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r675"
+  "node": "added_r678"
  },
  {
   "reaction": "UDPGPpp",
@@ -4382,7 +4401,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r679"
+  "node": "added_r682"
  },
  {
   "reaction": "UDPKAAT",
@@ -4402,7 +4421,7 @@
   ],
   "new_metabolites": 2,
   "linked_metabolites": 0,
-  "node": "added_r682"
+  "node": "added_r685"
  },
  {
   "reaction": "ULA4NFT",
@@ -4423,7 +4442,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r685"
+  "node": "added_r688"
  },
  {
   "reaction": "UM3PL",
@@ -4442,7 +4461,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r688"
+  "node": "added_r691"
  },
  {
   "reaction": "UM4PCP",
@@ -4461,7 +4480,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r693"
+  "node": "added_r696"
  },
  {
   "reaction": "UM4PL",
@@ -4480,13 +4499,13 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r696"
+  "node": "added_r699"
  },
  {
   "reaction": "UPLA4FNF",
   "name": "Undecaprenyl phosphate-L-Ara4FN formylase",
   "status": "not on map",
-  "subsystem": "formaldehyde-oxidation",
+  "subsystem": "acetate-fermentation",
   "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
   "anchored": [
    "for",
@@ -4499,7 +4518,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r701"
+  "node": "added_r704"
  },
  {
   "reaction": "UPLA4FNT",
@@ -4519,7 +4538,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 2,
-  "node": "added_r705"
+  "node": "added_r708"
  },
  {
   "reaction": "WCOS",
@@ -4540,7 +4559,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r709"
+  "node": "added_r712"
  },
  {
   "reaction": "XYHDL",
@@ -4559,7 +4578,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r713"
+  "node": "added_r716"
  },
  {
   "reaction": "XYLI2",
@@ -4577,7 +4596,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r717"
+  "node": "added_r720"
  },
  {
   "reaction": "YUMPS",
@@ -4596,7 +4615,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r718"
+  "node": "added_r721"
  },
  {
   "reaction": "2AGPEAT161",
@@ -4616,7 +4635,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r722"
+  "node": "added_r725"
  },
  {
   "reaction": "2AGPEAT181",
@@ -4636,7 +4655,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r726"
+  "node": "added_r729"
  },
  {
   "reaction": "2AGPGAT160",
@@ -4656,7 +4675,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r730"
+  "node": "added_r733"
  },
  {
   "reaction": "2AGPGAT161",
@@ -4676,7 +4695,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r734"
+  "node": "added_r737"
  },
  {
   "reaction": "2AGPGAT181",
@@ -4696,7 +4715,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r734"
+  "node": "added_r737"
  },
  {
   "reaction": "4PCP",
@@ -4716,7 +4735,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r738"
+  "node": "added_r741"
  },
  {
   "reaction": "4PCPpp",
@@ -4736,7 +4755,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r740"
+  "node": "added_r743"
  },
  {
   "reaction": "5DOAN",
@@ -4755,13 +4774,13 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r742"
+  "node": "added_r745"
  },
  {
   "reaction": "AACPS1",
   "name": "Acyl-[acyl-carrier-protein] synthetase (n-C14:0)",
   "status": "related",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Cell Envelope Biosynthesis",
   "anchored": [
    "myrsACP",
@@ -4773,7 +4792,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r746"
+  "node": "added_r749"
  },
  {
   "reaction": "AADDGT",
@@ -4794,13 +4813,13 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 2,
-  "node": "added_r751"
+  "node": "added_r754"
  },
  {
   "reaction": "ACONIs",
   "name": "Aconitate isomerase (spontaneous)",
   "status": "not on map",
-  "subsystem": "methylaspartate-cycle",
+  "subsystem": "citric-acid-cycle",
   "model_subsystem": "Unassigned",
   "anchored": [
    "acon_C",
@@ -4812,13 +4831,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r755"
+  "node": "added_r758"
  },
  {
   "reaction": "AGPAT140",
   "name": "1-tetradecanoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C14:0)",
   "status": "related",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Glycerophospholipid Metabolism",
   "anchored": [
    "1tdecg3p",
@@ -4831,7 +4850,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r757"
+  "node": "added_r760"
  },
  {
   "reaction": "AGPAT160",
@@ -4851,13 +4870,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r760"
+  "node": "added_r763"
  },
  {
   "reaction": "ALDD4",
   "name": "Aldehyde dehydrogenase (butanal, NAD)",
   "status": "related",
-  "subsystem": "butanoate-fermentation",
+  "subsystem": "glutamate-and-glutamine-metabolism",
   "model_subsystem": "Alternate Carbon Metabolism",
   "anchored": [
    "btal",
@@ -4869,13 +4888,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r762"
+  "node": "added_r765"
  },
  {
   "reaction": "APG3PAT140",
   "name": "Acyl-phosphate:glycerol-3-phosphate acyltransferase (C14:0)",
   "status": "not on map",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Glycerophospholipid Metabolism",
   "anchored": [
    "1tdecg3p",
@@ -4888,7 +4907,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r767"
+  "node": "added_r770"
  },
  {
   "reaction": "APG3PAT160",
@@ -4907,7 +4926,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r770"
+  "node": "added_r773"
  },
  {
   "reaction": "APG3PAT161",
@@ -4926,7 +4945,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r773"
+  "node": "added_r776"
  },
  {
   "reaction": "APG3PAT181",
@@ -4945,7 +4964,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r776"
+  "node": "added_r779"
  },
  {
   "reaction": "APH160",
@@ -4963,7 +4982,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r779"
+  "node": "added_r782"
  },
  {
   "reaction": "APH161",
@@ -4981,7 +5000,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r782"
+  "node": "added_r785"
  },
  {
   "reaction": "APH181",
@@ -4999,7 +5018,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r785"
+  "node": "added_r788"
  },
  {
   "reaction": "ATHRDHr",
@@ -5017,7 +5036,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r788"
+  "node": "added_r791"
  },
  {
   "reaction": "CLPNS160pp",
@@ -5054,7 +5073,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r791"
+  "node": "added_r794"
  },
  {
   "reaction": "ECAP2pp",
@@ -5076,13 +5095,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r793"
+  "node": "added_r796"
  },
  {
   "reaction": "FA140ACPHi",
   "name": "Fatty-acyl-ACP hydrolase",
   "status": "related",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Cell Envelope Biosynthesis",
   "anchored": [
    "myrsACP",
@@ -5094,7 +5113,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r794"
+  "node": "added_r797"
  },
  {
   "reaction": "G3PAT161",
@@ -5113,7 +5132,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r797"
+  "node": "added_r800"
  },
  {
   "reaction": "G3PAT181",
@@ -5132,7 +5151,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r800"
+  "node": "added_r803"
  },
  {
   "reaction": "GLCTR1",
@@ -5151,7 +5170,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r803"
+  "node": "added_r806"
  },
  {
   "reaction": "LADGMDH",
@@ -5170,7 +5189,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r807"
+  "node": "added_r810"
  },
  {
   "reaction": "LIPAMPL",
@@ -5188,7 +5207,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r811"
+  "node": "added_r814"
  },
  {
   "reaction": "LPLIPAL1E161pp",
@@ -5207,7 +5226,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r814"
+  "node": "added_r817"
  },
  {
   "reaction": "LPLIPAL1E181pp",
@@ -5227,7 +5246,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r817"
+  "node": "added_r820"
  },
  {
   "reaction": "LPLIPAL2E160",
@@ -5246,7 +5265,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r819"
+  "node": "added_r822"
  },
  {
   "reaction": "LPLIPAL2E161",
@@ -5266,7 +5285,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r822"
+  "node": "added_r825"
  },
  {
   "reaction": "LPLIPAL2E181",
@@ -5286,7 +5305,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r824"
+  "node": "added_r827"
  },
  {
   "reaction": "MOAT3C",
@@ -5305,7 +5324,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r826"
+  "node": "added_r829"
  },
  {
   "reaction": "O16AP1pp",
@@ -5324,7 +5343,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r830"
+  "node": "added_r833"
  },
  {
   "reaction": "O16AP2pp",
@@ -5346,7 +5365,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r832"
+  "node": "added_r835"
  },
  {
   "reaction": "PLIPA1E160pp",
@@ -5365,7 +5384,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r833"
+  "node": "added_r836"
  },
  {
   "reaction": "PLIPA2E160pp",
@@ -5384,7 +5403,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r836"
+  "node": "added_r839"
  },
  {
   "reaction": "TDPADGAT",
@@ -5403,7 +5422,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r839"
+  "node": "added_r842"
  },
  {
   "reaction": "2AGPEAT160",
@@ -5423,7 +5442,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r843"
+  "node": "added_r846"
  },
  {
   "reaction": "3OAS181",
@@ -5442,7 +5461,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r847"
+  "node": "added_r850"
  },
  {
   "reaction": "AACPS4",
@@ -5460,7 +5479,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r851"
+  "node": "added_r854"
  },
  {
   "reaction": "AACPS5",
@@ -5478,13 +5497,13 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r856"
+  "node": "added_r859"
  },
  {
   "reaction": "ACPPAT140",
   "name": "Acyl-(acyl carrier protein):phosphate acyltransferase (C14:0)",
   "status": "not on map",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Glycerophospholipid Metabolism",
   "anchored": [
    "myrsACP",
@@ -5496,7 +5515,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r861"
+  "node": "added_r864"
  },
  {
   "reaction": "ACPPAT160",
@@ -5514,7 +5533,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r864"
+  "node": "added_r867"
  },
  {
   "reaction": "EDTXS3",
@@ -5533,13 +5552,13 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r867"
+  "node": "added_r870"
  },
  {
   "reaction": "EDTXS4",
   "name": "Endotoxin Synthesis (myristoyl transferase)",
   "status": "not on map",
-  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "subsystem": "degradation-of-sugar-alcohols",
   "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
   "anchored": [
    "kdo2lipid4p",
@@ -5552,7 +5571,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 1,
-  "node": "added_r871"
+  "node": "added_r874"
  },
  {
   "reaction": "FA161ACPHi",
@@ -5570,7 +5589,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r875"
+  "node": "added_r878"
  },
  {
   "reaction": "GALT1",
@@ -5589,7 +5608,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r878"
+  "node": "added_r881"
  },
  {
   "reaction": "GLCTR2",
@@ -5608,7 +5627,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r881"
+  "node": "added_r884"
  },
  {
   "reaction": "GLCTR3",
@@ -5627,7 +5646,7 @@
   ],
   "new_metabolites": 1,
   "linked_metabolites": 0,
-  "node": "added_r884"
+  "node": "added_r887"
  },
  {
   "reaction": "GPDDA2",
@@ -5645,7 +5664,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r298"
+  "node": "added_r300"
  },
  {
   "reaction": "GPDDA2pp",
@@ -5665,7 +5684,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r302"
+  "node": "added_r304"
  },
  {
   "reaction": "LPLIPAL1E160pp",
@@ -5685,7 +5704,7 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 0,
-  "node": "added_r887"
+  "node": "added_r890"
  },
  {
   "reaction": "ETHAAL",
@@ -5703,6 +5722,6 @@
   ],
   "new_metabolites": 0,
   "linked_metabolites": 1,
-  "node": "added_r889"
+  "node": "added_r892"
  }
 ]

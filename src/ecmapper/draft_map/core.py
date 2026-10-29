@@ -89,6 +89,7 @@ class Subsystem:
     title_h: float = 31.0
     flip_x: bool = False
     flip_y: bool = False
+    aside: str = ""  # set aside by drop_redundant_subsystems: the rule
 
 
 class DraftMap:
@@ -251,6 +252,64 @@ def drop_empty_subsystems(dm: DraftMap, md: ModelData) -> None:
         node.reactions = sorted({r for r, _ in items})
         node.status = "vicinity" if all(v for _, v in items) else "on-map"
     dm.log.append(f"step 1: {len(keep)} of {before} subsystems have model reactions")
+
+
+def drop_redundant_subsystems(dm: DraftMap, drop_subsets: bool = True, coverage: float = 0.9,
+                              min_matched: float = 0.0) -> dict:
+    """Step 1, continued: drop or set aside subsystems whose model reactions are drawn elsewhere.
+
+    Model reactions of a subsystem: those of its enzyme nodes (after step 1).
+
+    - Rule A (`drop_subsets`): a subsystem whose model reactions are a proper
+      subset of those of another subsystem is removed.
+    - Rule B/C (`coverage`): going through the remaining subsystems from the
+      smallest (fewest model reactions), a subsystem of which at least the
+      fraction `coverage` of the model reactions are in the other remaining
+      subsystems is set aside (B: all of them, C: the fraction). ``1.0``:
+      only B; above 1: off.
+    - Rule D (`min_matched`): a subsystem in which less than this fraction of
+      the enzyme nodes have model reactions is set aside.
+
+    Set-aside subsystems stay in the map with ``aside`` set to the rule; they
+    are drawn on a separate map and are not used by the completion (step 3).
+    Returns the dropped and set-aside subsystems.
+    """
+    reactions = {k: frozenset(r for n in dm.members(k) for r in n.reactions) for k in dm.subsystems}
+    dropped = []
+    if drop_subsets:
+        for k, rs in sorted(reactions.items()):
+            for other, ors in sorted(reactions.items()):
+                if other != k and rs < ors:
+                    dropped.append(dict(subsystem=k, reactions=sorted(rs), subset_of=other))
+                    break
+        gone = {d["subsystem"] for d in dropped}
+        dm.subsystems = {k: v for k, v in dm.subsystems.items() if k not in gone}
+        dm.remove_nodes({n.id for n in dm.nodes.values() if n.subsystem in gone})
+        dm.links = [l for l in dm.links if l.a in dm.nodes and l.b in dm.nodes]
+    aside = []
+    remaining = {k: reactions[k] for k in dm.subsystems}
+    if coverage <= 1.0:
+        for k in sorted(remaining, key=lambda k: (len(reactions[k]), k)):
+            others = set().union(*(rs for o, rs in remaining.items() if o != k))
+            covered = len(reactions[k] & others) / len(reactions[k])
+            if covered >= coverage:
+                del remaining[k]
+                rule = "B" if covered == 1.0 else "C"
+                dm.subsystems[k].aside = rule
+                aside.append(dict(subsystem=k, rule=rule, reactions=len(reactions[k]), covered=covered))
+    if min_matched > 0:
+        for k in sorted(remaining):
+            enzymes = [n for n in dm.members(k) if n.kind == "enzyme"]
+            matched = sum(bool(n.reactions) for n in enzymes) / len(enzymes)
+            if matched < min_matched:
+                dm.subsystems[k].aside = "D"
+                aside.append(dict(subsystem=k, rule="D", reactions=len(reactions[k]), matched=matched))
+    rules = Counter(a["rule"] for a in aside)
+    dm.log.append(
+        f"step 1: removed {len(dropped)} subsystems whose model reactions are a proper subset of another's; set "
+        f"aside {len(aside)} (rule B: {rules['B']}, C: {rules['C']}, D: {rules['D']})"
+    )
+    return dict(dropped=dropped, set_aside=aside)
 
 
 def anchor_metabolites(dm: DraftMap, md: ModelData) -> None:
@@ -420,13 +479,14 @@ class Completion:
     def anchors(self) -> dict[str, list[str]]:
         result = defaultdict(list)
         for n in self.dm.nodes.values():
-            if n.kind == "main":
+            if n.kind == "main" and not self.dm.subsystems[n.subsystem].aside:
                 for m in n.model_mets:
                     result[m].append(n.id)
         return result
 
     def candidates(self) -> list[str]:
-        on_map = {r for n in self.dm.nodes.values() for r in n.reactions}
+        # reactions drawn only in set-aside subsystems are candidates, too
+        on_map = {r for n in self.dm.nodes.values() if not self.dm.subsystems[n.subsystem].aside for r in n.reactions}
         result = []
         for rid in self.md.matches:
             r = self.md.reactions[rid]
@@ -701,7 +761,7 @@ def disconnect_hubs(dm: DraftMap, min_subsystems: int, table: list[dict] | None 
     return hubs
 
 
-def localise_edges(dm: DraftMap) -> int:
+def localise_edges(dm: DraftMap, subsystems: set[str] | None = None) -> int:
     """Draw the metabolites of edges between subsystems in the subsystem of the enzyme node.
 
     The BRENDA map has a few edges from an enzyme node to a metabolite node of
@@ -709,7 +769,8 @@ def localise_edges(dm: DraftMap) -> int:
     subsystem, the edge is removed; otherwise the metabolite gets a copy next
     to the enzyme node. Either way, the two nodes of the metabolite are linked
     by an inter-pathway link; an original that is no longer used is removed.
-    Returns the number of edges removed or moved.
+    `subsystems`: only the edges from or to these subsystems. Returns the
+    number of edges removed or moved.
     """
     local = defaultdict(dict)  # enzyme node -> {metabolite key: metabolite node in its subsystem}
     for e in dm.edges:
@@ -720,7 +781,9 @@ def localise_edges(dm: DraftMap) -> int:
     edges, links, moved = [], set(), 0
     for e in dm.edges:
         enzyme, met = dm.nodes[e.enzyme], dm.nodes[e.met]
-        if enzyme.subsystem == met.subsystem:
+        if enzyme.subsystem == met.subsystem or (
+            subsystems is not None and enzyme.subsystem not in subsystems and met.subsystem not in subsystems
+        ):
             edges.append(e)
             continue
         moved += 1

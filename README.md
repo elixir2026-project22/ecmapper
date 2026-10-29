@@ -305,7 +305,9 @@ reductase node that produces L-lactaldehyde. e_coli_core gets no new matches.
 ## Draft maps from the BRENDA map
 
 `ecmapper.draft_map` builds a draft map of a model from its matches to the
-BRENDA map: it keeps the subsystems and enzyme nodes with model reactions,
+BRENDA map: it keeps the subsystems and enzyme nodes with model reactions
+(subsystems that only repeat reactions drawn elsewhere are removed or set
+aside on a separate map),
 adds model reactions that connect drawn metabolites, condenses the
 subsystems and arranges them with few crossings of inter-pathway links
 (or, with `--pack`, packs them into as little space as possible and drops

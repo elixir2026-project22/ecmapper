@@ -9,64 +9,187 @@
   "model_reactions": 0,
   "enzyme_nodes_map": 2848
  },
+ "redundant_subsystems": {
+  "dropped": [
+   {
+    "subsystem": "CDP-diacylglycerol-biosynthesis",
+    "reactions": [
+     "G3PD2"
+    ],
+    "subset_of": "lipid-metabolism"
+   },
+   {
+    "subsystem": "S-reticuline-biosynthesis",
+    "reactions": [
+     "TYRTA"
+    ],
+    "subset_of": "tyrosine-metabolism"
+   },
+   {
+    "subsystem": "acetoin-degradation",
+    "reactions": [
+     "ACLS"
+    ],
+    "subset_of": "valine-metabolism"
+   },
+   {
+    "subsystem": "adipate-degradation",
+    "reactions": [
+     "DHACOAH",
+     "HADPCOADH3"
+    ],
+    "subset_of": "phenylacetate-degradation-aerobic"
+   },
+   {
+    "subsystem": "benzoxazinoid-glucosides-biosynthesis",
+    "reactions": [
+     "TRPS3"
+    ],
+    "subset_of": "tryptophan-metabolism"
+   },
+   {
+    "subsystem": "ceramide-biosynthesis",
+    "reactions": [
+     "FACOAL160t2pp"
+    ],
+    "subset_of": "lipid-metabolism"
+   },
+   {
+    "subsystem": "degradation-of-aromatic-nitrogen-containing-compounds",
+    "reactions": [
+     "NNAM"
+    ],
+    "subset_of": "NAD-metabolism"
+   },
+   {
+    "subsystem": "glycogen-biosynthesis",
+    "reactions": [
+     "GALUi",
+     "PGMT"
+    ],
+    "subset_of": "degradation-of-hexoses"
+   },
+   {
+    "subsystem": "ornithine-metabolism",
+    "reactions": [
+     "ACKr",
+     "PTAr"
+    ],
+    "subset_of": "acetate-fermentation"
+   },
+   {
+    "subsystem": "phenol-degradation",
+    "reactions": [
+     "HOPNTAL",
+     "OP4ENH"
+    ],
+    "subset_of": "3-phenylpropionate-degradation"
+   },
+   {
+    "subsystem": "tropane-alkaloid-biosynthesis",
+    "reactions": [
+     "ORNDC"
+    ],
+    "subset_of": "polyamine-pathway"
+   }
+  ],
+  "set_aside": [
+   {
+    "subsystem": "acetyl-CoA-biosynthesis",
+    "rule": "B",
+    "reactions": 1,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "butanoate-fermentation",
+    "rule": "B",
+    "reactions": 3,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "aerobic-toluene-degradation",
+    "rule": "B",
+    "reactions": 4,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "C4-and-CAM-carbon-fixation",
+    "rule": "B",
+    "reactions": 9,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "methylaspartate-cycle",
+    "rule": "B",
+    "reactions": 11,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "photosynthesis",
+    "rule": "C",
+    "reactions": 13,
+    "covered": 0.9230769230769231
+   }
+  ]
+ },
  "step1_subsystems": {
-  "subsystems": 115,
-  "enzyme_nodes": 1943,
-  "main_metabolite_nodes": 1876,
-  "cofactor_nodes": 4138,
-  "edges": 8347,
-  "inter_pathway_links": 161,
+  "subsystems": 104,
+  "enzyme_nodes": 1841,
+  "main_metabolite_nodes": 1759,
+  "cofactor_nodes": 3910,
+  "edges": 7908,
+  "inter_pathway_links": 151,
   "model_reactions": 714,
-  "enzyme_nodes_on-map": 773,
-  "enzyme_nodes_map": 1128,
+  "enzyme_nodes_on-map": 758,
+  "enzyme_nodes_map": 1041,
   "enzyme_nodes_vicinity": 42
  },
  "step2_pruned": {
-  "subsystems": 115,
-  "enzyme_nodes": 815,
-  "main_metabolite_nodes": 968,
-  "cofactor_nodes": 1629,
-  "edges": 3364,
-  "inter_pathway_links": 117,
+  "subsystems": 104,
+  "enzyme_nodes": 800,
+  "main_metabolite_nodes": 941,
+  "cofactor_nodes": 1603,
+  "edges": 3307,
+  "inter_pathway_links": 109,
   "model_reactions": 714,
-  "enzyme_nodes_on-map": 773,
+  "enzyme_nodes_on-map": 758,
   "enzyme_nodes_vicinity": 42
  },
  "step3_completed": {
-  "subsystems": 115,
-  "enzyme_nodes": 1087,
-  "main_metabolite_nodes": 1221,
-  "cofactor_nodes": 1995,
-  "edges": 4528,
-  "inter_pathway_links": 212,
+  "subsystems": 104,
+  "enzyme_nodes": 1073,
+  "main_metabolite_nodes": 1196,
+  "cofactor_nodes": 1969,
+  "edges": 4474,
+  "inter_pathway_links": 205,
   "model_reactions": 1010,
-  "enzyme_nodes_on-map": 773,
+  "enzyme_nodes_on-map": 758,
   "enzyme_nodes_vicinity": 42,
-  "enzyme_nodes_added": 272
+  "enzyme_nodes_added": 273
  },
  "internal_before_condensing": {
-  "crossings_main": 986,
-  "crossings_all": 1426,
+  "crossings_main": 1029,
+  "crossings_all": 1466,
   "overlapping_nodes": 7,
-  "drawing_area": 116015503.33455518
+  "drawing_area": 115119154.8599265
  },
  "internal_after_condensing": {
-  "crossings_main": 1064,
-  "crossings_all": 1657,
+  "crossings_main": 1112,
+  "crossings_all": 1727,
   "overlapping_nodes": 0,
-  "drawing_area": 64983317.85323594
+  "drawing_area": 64718544.4000377
  },
  "hubs_all": [
   {
    "key": 31,
    "name": "pyruvate",
-   "subsystems": 26,
-   "links": 8
+   "subsystems": 24,
+   "links": 7
   },
   {
    "key": 29,
    "name": "acetyl-CoA",
-   "subsystems": 20,
+   "subsystems": 19,
    "links": 9
   },
   {
@@ -112,12 +235,6 @@
    "links": 2
   },
   {
-   "key": 90,
-   "name": "acetaldehyde",
-   "subsystems": 7,
-   "links": 2
-  },
-  {
    "key": 37,
    "name": "GTP",
    "subsystems": 6,
@@ -136,10 +253,10 @@
    "links": 3
   },
   {
-   "key": 47,
-   "name": "Acetate",
+   "key": 90,
+   "name": "acetaldehyde",
    "subsystems": 6,
-   "links": 2
+   "links": 1
   },
   {
    "key": 17973,
@@ -148,14 +265,8 @@
    "links": 4
   },
   {
-   "key": 107,
-   "name": "alpha-D-glucose 1-phosphate",
-   "subsystems": 5,
-   "links": 2
-  },
-  {
-   "key": 517,
-   "name": "palmitate",
+   "key": 47,
+   "name": "Acetate",
    "subsystems": 5,
    "links": 2
   },
@@ -208,8 +319,8 @@
    "links": 2
   },
   {
-   "key": 192,
-   "name": "L-ornithine",
+   "key": 107,
+   "name": "alpha-D-glucose 1-phosphate",
    "subsystems": 4,
    "links": 2
   },
@@ -238,6 +349,12 @@
    "links": 1
   },
   {
+   "key": 517,
+   "name": "hexadecanoate",
+   "subsystems": 4,
+   "links": 1
+  },
+  {
    "key": 43607,
    "name": "6-phospho-gluconate",
    "subsystems": 3,
@@ -252,6 +369,12 @@
   {
    "key": "Fe2+ mitochondria",
    "name": "Fe2+ mitochondria",
+   "subsystems": 3,
+   "links": 2
+  },
+  {
+   "key": 192,
+   "name": "L-ornithine",
    "subsystems": 3,
    "links": 2
   },
@@ -286,14 +409,14 @@
    "links": 1
   },
   {
-   "key": 9045,
-   "name": "3-oxoadipyl-CoA",
+   "key": 194,
+   "name": "3-phosphoglycerate",
    "subsystems": 3,
    "links": 1
   },
   {
-   "key": 194,
-   "name": "3-phosphoglycerate",
+   "key": 597,
+   "name": "4-aminobutanoate",
    "subsystems": 3,
    "links": 1
   }
@@ -302,13 +425,13 @@
   {
    "key": 31,
    "name": "pyruvate",
-   "subsystems": 26,
-   "links": 8
+   "subsystems": 24,
+   "links": 7
   },
   {
    "key": 29,
    "name": "acetyl-CoA",
-   "subsystems": 20,
+   "subsystems": 19,
    "links": 9
   },
   {
@@ -354,12 +477,6 @@
    "links": 2
   },
   {
-   "key": 90,
-   "name": "acetaldehyde",
-   "subsystems": 7,
-   "links": 2
-  },
-  {
    "key": 37,
    "name": "GTP",
    "subsystems": 6,
@@ -378,19 +495,20 @@
    "links": 3
   },
   {
-   "key": 47,
-   "name": "Acetate",
+   "key": 90,
+   "name": "acetaldehyde",
    "subsystems": 6,
-   "links": 2
+   "links": 1
   }
  ],
  "log": [
   "step 1: 115 of 193 subsystems have model reactions",
-  "step 2: removed 1128 of 1943 enzyme nodes without model reactions and 3417 metabolite nodes; 0 links bridged",
-  "step 3: added 296 of 790 candidate model reactions (not on the map, no boundary reactions, transporters) on 272 new enzyme nodes, 158 nodes of metabolites not on the map, 95 linked nodes of metabolites drawn in other subsystems",
+  "step 1: removed 11 subsystems whose model reactions are a proper subset of another's; set aside 6 (rule B: 5, C: 1, D: 0)",
+  "step 2: removed 1041 of 1841 enzyme nodes without model reactions and 3125 metabolite nodes; 0 links bridged",
+  "step 3: added 297 of 791 candidate model reactions (not on the map, no boundary reactions, transporters) on 273 new enzyme nodes, 159 nodes of metabolites not on the map, 96 linked nodes of metabolites drawn in other subsystems",
   "1 edges between subsystems: metabolite drawn in the subsystem of the enzyme node",
-  "split: map 'Other pathways' (12 reactions) merged into 'Amino acids'",
-  "split: 7 maps; 120 inter-pathway links between maps replaced by references on 214 metabolite nodes"
+  "split: map 'Other pathways' (7 reactions) merged into 'Amino acids'",
+  "split: 8 maps; 117 inter-pathway links between maps replaced by references on 209 metabolite nodes"
  ],
  "maps": {
   "Central metabolism": {
@@ -399,92 +517,92 @@
      "links": 4,
      "crossings": 0,
      "box_crossings": 1,
-     "link_length": 2914.9414227570355,
-     "width": 2472.72,
-     "height": 3198.0,
-     "area_ratio": 2.0860271150903333
+     "link_length": 2944.297926721892,
+     "width": 3155.0000000000005,
+     "height": 3256.0,
+     "area_ratio": 2.3028385344576527
     },
     "original order (sequence pair packing)": {
      "links": 4,
      "crossings": 0,
      "box_crossings": 1,
-     "link_length": 3249.715125382472,
-     "width": 2417.4350000000004,
-     "height": 3198.0,
-     "area_ratio": 2.0393877830762888
+     "link_length": 3726.216717204211,
+     "width": 3345.61,
+     "height": 3256.0,
+     "area_ratio": 2.4419650172002747
     },
     "annealed": {
      "links": 4,
      "crossings": 0,
-     "box_crossings": 0,
-     "link_length": 2113.8400352262665,
-     "width": 2851.76,
-     "height": 1735.5,
-     "area_ratio": 1.3055819567263611,
-     "cost": 109.97899443725166
+     "box_crossings": 1,
+     "link_length": 3903.833845284714,
+     "width": 3063.8600000000006,
+     "height": 1883.5,
+     "area_ratio": 1.2936424839241054,
+     "cost": 110.84172761751398
     }
    },
    "anneal_seeds": [
     {
      "links": 4,
      "crossings": 0,
-     "box_crossings": 0,
-     "link_length": 2113.8400352262665,
-     "width": 2851.76,
-     "height": 1735.5,
-     "area_ratio": 1.3055819567263611,
-     "cost": 109.97899443725166
-    },
-    {
-     "links": 4,
-     "crossings": 0,
      "box_crossings": 1,
-     "link_length": 5002.937589624209,
-     "width": 2565.4500000000003,
-     "height": 1851.5,
-     "area_ratio": 1.2530079298285166,
-     "cost": 110.99316815765391
+     "link_length": 3903.833845284714,
+     "width": 3063.8600000000006,
+     "height": 1883.5,
+     "area_ratio": 1.2936424839241054,
+     "cost": 110.84172761751398
     },
     {
      "links": 4,
-     "crossings": 0,
-     "box_crossings": 0,
-     "link_length": 3567.738756472661,
-     "width": 2499.3200000000006,
-     "height": 1875.5,
-     "area_ratio": 1.2365323457800212,
-     "cost": 111.71329732918566
+     "crossings": 1,
+     "box_crossings": 3,
+     "link_length": 4725.365332558728,
+     "width": 3063.8600000000006,
+     "height": 1883.5,
+     "area_ratio": 1.2936424839241054,
+     "cost": 112.86632812539895
     },
     {
      "links": 4,
-     "crossings": 0,
+     "crossings": 1,
+     "box_crossings": 1,
+     "link_length": 6326.492843244071,
+     "width": 3270.43,
+     "height": 1730.5,
+     "area_ratio": 1.2686919665540335,
+     "cost": 114.23629965057992
+    },
+    {
+     "links": 4,
+     "crossings": 1,
      "box_crossings": 0,
-     "link_length": 3397.547472487768,
-     "width": 2499.3200000000006,
-     "height": 1875.5,
-     "area_ratio": 1.2365323457800212,
-     "cost": 111.70776891484829
+     "link_length": 5503.3139035515815,
+     "width": 3204.3,
+     "height": 1778.5,
+     "area_ratio": 1.277517234075196,
+     "cost": 112.13099679402818
     }
    ],
    "escher": {
-    "reactions": 86,
-    "nodes": 469,
-    "text_labels": 34,
-    "bigg_reactions": 78
+    "reactions": 91,
+    "nodes": 495,
+    "text_labels": 39,
+    "bigg_reactions": 83
    },
    "final": {
     "subsystems": 10,
-    "enzyme_nodes": 68,
-    "main_metabolite_nodes": 69,
-    "cofactor_nodes": 122,
-    "edges": 275,
+    "enzyme_nodes": 73,
+    "main_metabolite_nodes": 77,
+    "cofactor_nodes": 125,
+    "edges": 293,
     "inter_pathway_links": 4,
-    "model_reactions": 78,
+    "model_reactions": 83,
     "enzyme_nodes_on-map": 58,
     "enzyme_nodes_vicinity": 2,
-    "enzyme_nodes_added": 8
+    "enzyme_nodes_added": 13
    },
-   "references": 24
+   "references": 29
   },
   "Energy and C1 metabolism": {
    "arrangements": {
@@ -492,29 +610,29 @@
      "links": 1,
      "crossings": 0,
      "box_crossings": 1,
-     "link_length": 1735.3665070784045,
-     "width": 3031.8700000000003,
-     "height": 6328.0,
-     "area_ratio": 3.1948193555213122
+     "link_length": 1011.8753452756142,
+     "width": 1812.5950000000003,
+     "height": 3483.0,
+     "area_ratio": 2.0274462710459407
     },
     "original order (sequence pair packing)": {
      "links": 1,
      "crossings": 0,
      "box_crossings": 1,
-     "link_length": 1739.798451788153,
-     "width": 3041.585,
-     "height": 5889.5,
-     "area_ratio": 2.9829614752819937
+     "link_length": 1011.8753452756144,
+     "width": 1812.5950000000003,
+     "height": 2974.5,
+     "area_ratio": 1.7314495932317402
     },
     "annealed": {
      "links": 1,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 1040.7564757661132,
-     "width": 3646.975,
-     "height": 1993.5,
-     "area_ratio": 1.2106491094316487,
-     "cost": 106.097045205501
+     "link_length": 678.2075269886491,
+     "width": 2675.8700000000003,
+     "height": 1457.5,
+     "area_ratio": 1.2524738748596929,
+     "cost": 110.74166934152997
     }
    },
    "anneal_seeds": [
@@ -522,248 +640,248 @@
      "links": 1,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 1039.4140208773279,
-     "width": 3635.9500000000007,
-     "height": 2096.0,
-     "area_ratio": 1.2690491464326363,
-     "cost": 109.02655763449651
+     "link_length": 678.2075269886491,
+     "width": 2675.8700000000003,
+     "height": 1457.5,
+     "area_ratio": 1.2524738748596929,
+     "cost": 110.74166934152997
     },
     {
      "links": 1,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 1467.1014517336648,
-     "width": 3246.945,
-     "height": 2268.0,
-     "area_ratio": 1.2262732172818676,
-     "cost": 107.47508146442169
+     "link_length": 678.2075269886491,
+     "width": 2675.8700000000003,
+     "height": 1457.5,
+     "area_ratio": 1.2524738748596929,
+     "cost": 110.74166934152997
     },
     {
      "links": 1,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 1023.2842634485169,
-     "width": 3561.76,
-     "height": 2097.5,
-     "area_ratio": 1.244044405264806,
-     "cost": 106.48349286804664
+     "link_length": 678.2075269886491,
+     "width": 2675.8700000000003,
+     "height": 1457.5,
+     "area_ratio": 1.2524738748596929,
+     "cost": 110.74166934152997
     },
     {
      "links": 1,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 1040.7564757661132,
-     "width": 3646.975,
-     "height": 1993.5,
-     "area_ratio": 1.2106491094316487,
-     "cost": 106.097045205501
+     "link_length": 678.2075269886491,
+     "width": 2675.8700000000003,
+     "height": 1457.5,
+     "area_ratio": 1.2524738748596929,
+     "cost": 110.74166934152997
     }
    ],
    "escher": {
-    "reactions": 87,
-    "nodes": 529,
-    "text_labels": 34,
-    "bigg_reactions": 77
+    "reactions": 42,
+    "nodes": 264,
+    "text_labels": 24,
+    "bigg_reactions": 40
    },
    "final": {
-    "subsystems": 12,
-    "enzyme_nodes": 80,
-    "main_metabolite_nodes": 103,
-    "cofactor_nodes": 159,
-    "edges": 333,
+    "subsystems": 7,
+    "enzyme_nodes": 40,
+    "main_metabolite_nodes": 54,
+    "cofactor_nodes": 82,
+    "edges": 173,
     "inter_pathway_links": 1,
-    "model_reactions": 77,
-    "enzyme_nodes_on-map": 68,
+    "model_reactions": 40,
+    "enzyme_nodes_on-map": 31,
     "enzyme_nodes_vicinity": 1,
-    "enzyme_nodes_added": 11
+    "enzyme_nodes_added": 8
    },
-   "references": 22
+   "references": 17
   },
   "Lipids": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 10,
-     "crossings": 12,
-     "box_crossings": 6,
-     "link_length": 25057.819183809188,
-     "width": 6044.640000000001,
-     "height": 4635.0,
-     "area_ratio": 2.139229023117372
+     "links": 7,
+     "crossings": 4,
+     "box_crossings": 1,
+     "link_length": 18282.61128884377,
+     "width": 6972.205,
+     "height": 3594.0,
+     "area_ratio": 2.084114506029478
     },
     "original order (sequence pair packing)": {
-     "links": 10,
-     "crossings": 11,
+     "links": 7,
+     "crossings": 4,
      "box_crossings": 4,
-     "link_length": 49888.228502576014,
-     "width": 11321.039999999999,
-     "height": 3274.0,
-     "area_ratio": 2.830102094738881
+     "link_length": 30822.925985507758,
+     "width": 11129.805,
+     "height": 2083.5,
+     "area_ratio": 1.928654415220382
     },
     "annealed": {
-     "links": 10,
+     "links": 7,
      "crossings": 0,
-     "box_crossings": 2,
-     "link_length": 17748.09725159599,
-     "width": 5128.135,
-     "height": 3119.5,
-     "area_ratio": 1.2214664492348968,
-     "cost": 112.91117054678175
+     "box_crossings": 4,
+     "link_length": 11318.697483181995,
+     "width": 4759.799999999999,
+     "height": 3015.5,
+     "area_ratio": 1.193772013464896,
+     "cost": 112.0453686980517
     }
    },
    "anneal_seeds": [
     {
-     "links": 10,
-     "crossings": 0,
-     "box_crossings": 2,
-     "link_length": 17748.09725159599,
-     "width": 5128.135,
-     "height": 3119.5,
-     "area_ratio": 1.2214664492348968,
-     "cost": 112.91117054678175
+     "links": 7,
+     "crossings": 1,
+     "box_crossings": 4,
+     "link_length": 10811.424830643635,
+     "width": 4759.799999999999,
+     "height": 3015.5,
+     "area_ratio": 1.193772013464896,
+     "cost": 113.03762751845441
     },
     {
-     "links": 10,
-     "crossings": 3,
-     "box_crossings": 2,
-     "link_length": 19124.137885409746,
-     "width": 5196.4,
-     "height": 3119.5,
-     "area_ratio": 1.2377264359858344,
-     "cost": 117.5198438172841
-    },
-    {
-     "links": 10,
-     "crossings": 2,
+     "links": 7,
+     "crossings": 1,
      "box_crossings": 3,
-     "link_length": 16120.328133655174,
-     "width": 5128.135,
-     "height": 3119.5,
-     "area_ratio": 1.2214664492348968,
-     "cost": 115.38418304981104
+     "link_length": 10636.837571274062,
+     "width": 4759.799999999999,
+     "height": 3015.5,
+     "area_ratio": 1.193772013464896,
+     "cost": 112.5349632484146
     },
     {
-     "links": 10,
+     "links": 7,
      "crossings": 0,
-     "box_crossings": 2,
-     "link_length": 17748.09725159599,
-     "width": 5128.135,
-     "height": 3119.5,
-     "area_ratio": 1.2214664492348968,
-     "cost": 112.91117054678175
+     "box_crossings": 5,
+     "link_length": 11884.897014914524,
+     "width": 4759.799999999999,
+     "height": 3015.5,
+     "area_ratio": 1.193772013464896,
+     "cost": 112.55400912493282
+    },
+    {
+     "links": 7,
+     "crossings": 0,
+     "box_crossings": 4,
+     "link_length": 11318.697483181995,
+     "width": 4759.799999999999,
+     "height": 3015.5,
+     "area_ratio": 1.193772013464896,
+     "cost": 112.0453686980517
     }
    ],
    "escher": {
-    "reactions": 171,
-    "nodes": 997,
-    "text_labels": 31,
-    "bigg_reactions": 161
+    "reactions": 159,
+    "nodes": 924,
+    "text_labels": 30,
+    "bigg_reactions": 151
    },
    "final": {
-    "subsystems": 9,
-    "enzyme_nodes": 161,
-    "main_metabolite_nodes": 158,
-    "cofactor_nodes": 281,
-    "edges": 674,
-    "inter_pathway_links": 10,
-    "model_reactions": 161,
-    "enzyme_nodes_on-map": 61,
+    "subsystems": 7,
+    "enzyme_nodes": 149,
+    "main_metabolite_nodes": 145,
+    "cofactor_nodes": 259,
+    "edges": 621,
+    "inter_pathway_links": 7,
+    "model_reactions": 151,
+    "enzyme_nodes_on-map": 59,
     "enzyme_nodes_vicinity": 17,
-    "enzyme_nodes_added": 83
+    "enzyme_nodes_added": 73
    },
-   "references": 22
+   "references": 23
   },
   "Amino acids": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 21,
-     "crossings": 15,
-     "box_crossings": 17,
-     "link_length": 40279.6234655499,
-     "width": 7284.17,
-     "height": 7512.5,
-     "area_ratio": 2.7169103063939386
+     "links": 20,
+     "crossings": 19,
+     "box_crossings": 20,
+     "link_length": 42791.71627905305,
+     "width": 5235.040000000001,
+     "height": 8120.0,
+     "area_ratio": 2.1872304614661804
     },
     "original order (sequence pair packing)": {
-     "links": 21,
-     "crossings": 19,
-     "box_crossings": 19,
-     "link_length": 40398.14754741475,
-     "width": 7732.71,
-     "height": 6422.5,
-     "area_ratio": 2.4657360194259197
+     "links": 20,
+     "crossings": 21,
+     "box_crossings": 10,
+     "link_length": 38457.56309815901,
+     "width": 7631.425000000001,
+     "height": 6192.5,
+     "area_ratio": 2.431588986876892
     },
     "annealed": {
-     "links": 21,
-     "crossings": 3,
-     "box_crossings": 7,
-     "link_length": 30021.294244492343,
-     "width": 6315.239999999999,
-     "height": 4095.5,
-     "area_ratio": 1.2841256868394748,
-     "cost": 116.20704795591652
+     "links": 20,
+     "crossings": 1,
+     "box_crossings": 4,
+     "link_length": 27918.00692474601,
+     "width": 6049.325000000001,
+     "height": 4092.0,
+     "area_ratio": 1.273682127239476,
+     "cost": 113.86793517170793
     }
    },
    "anneal_seeds": [
     {
-     "links": 21,
-     "crossings": 3,
-     "box_crossings": 7,
-     "link_length": 30021.294244492343,
-     "width": 6315.239999999999,
-     "height": 4095.5,
-     "area_ratio": 1.2841256868394748,
-     "cost": 116.20704795591652
-    },
-    {
-     "links": 21,
+     "links": 20,
      "crossings": 2,
-     "box_crossings": 8,
-     "link_length": 34805.6849104179,
-     "width": 6310.1500000000015,
-     "height": 4159.0,
-     "area_ratio": 1.3029847918621322,
-     "cost": 117.7290041103555
+     "box_crossings": 5,
+     "link_length": 26463.192319362577,
+     "width": 6201.555,
+     "height": 3991.5,
+     "area_ratio": 1.2736650899443516,
+     "cost": 114.15602540701194
     },
     {
-     "links": 21,
-     "crossings": 5,
-     "box_crossings": 9,
-     "link_length": 30657.061160566096,
-     "width": 6476.51,
-     "height": 3906.5,
-     "area_ratio": 1.2561445325412466,
-     "cost": 116.69561932381797
+     "links": 20,
+     "crossings": 3,
+     "box_crossings": 4,
+     "link_length": 29090.651943630965,
+     "width": 6643.77,
+     "height": 3764.5,
+     "area_ratio": 1.286886967551036,
+     "cost": 117.20821849620016
     },
     {
-     "links": 21,
-     "crossings": 6,
-     "box_crossings": 7,
-     "link_length": 34235.51151839913,
-     "width": 6549.65,
-     "height": 3986.0,
-     "area_ratio": 1.2961824307806502,
-     "cost": 120.03982482935818
+     "links": 20,
+     "crossings": 4,
+     "box_crossings": 3,
+     "link_length": 29209.519176122092,
+     "width": 6407.459999999999,
+     "height": 3911.5,
+     "area_ratio": 1.2895784001826134,
+     "cost": 116.36827578464334
+    },
+    {
+     "links": 20,
+     "crossings": 1,
+     "box_crossings": 4,
+     "link_length": 27918.00692474601,
+     "width": 6049.325000000001,
+     "height": 4092.0,
+     "area_ratio": 1.273682127239476,
+     "cost": 113.86793517170793
     }
    ],
    "escher": {
-    "reactions": 294,
-    "nodes": 1747,
-    "text_labels": 94,
-    "bigg_reactions": 265
+    "reactions": 285,
+    "nodes": 1693,
+    "text_labels": 87,
+    "bigg_reactions": 260
    },
    "final": {
-    "subsystems": 38,
-    "enzyme_nodes": 272,
-    "main_metabolite_nodes": 336,
-    "cofactor_nodes": 496,
-    "edges": 1141,
-    "inter_pathway_links": 21,
-    "model_reactions": 265,
-    "enzyme_nodes_on-map": 211,
+    "subsystems": 32,
+    "enzyme_nodes": 263,
+    "main_metabolite_nodes": 318,
+    "cofactor_nodes": 487,
+    "edges": 1110,
+    "inter_pathway_links": 20,
+    "model_reactions": 260,
+    "enzyme_nodes_on-map": 202,
     "enzyme_nodes_vicinity": 7,
     "enzyme_nodes_added": 54
    },
-   "references": 56
+   "references": 55
   },
   "Nucleotides and cofactors": {
    "arrangements": {
@@ -841,7 +959,7 @@
    "escher": {
     "reactions": 305,
     "nodes": 1825,
-    "text_labels": 53,
+    "text_labels": 51,
     "bigg_reactions": 296
    },
    "final": {
@@ -856,100 +974,100 @@
     "enzyme_nodes_vicinity": 10,
     "enzyme_nodes_added": 60
    },
-   "references": 35
+   "references": 33
   },
   "Carbohydrates": {
    "arrangements": {
     "original order (compacted)": {
      "links": 15,
-     "crossings": 9,
+     "crossings": 8,
      "box_crossings": 5,
-     "link_length": 25319.022909037565,
-     "width": 5476.025000000001,
-     "height": 4483.000000000002,
-     "area_ratio": 2.4175221875699515
+     "link_length": 25307.04454733652,
+     "width": 7523.9400000000005,
+     "height": 3249.0,
+     "area_ratio": 2.2101612295277326
     },
     "original order (sequence pair packing)": {
      "links": 15,
      "crossings": 10,
-     "box_crossings": 5,
-     "link_length": 28620.973094602312,
-     "width": 6965.420000000001,
-     "height": 3125.0,
-     "area_ratio": 2.143550096946116
+     "box_crossings": 8,
+     "link_length": 32021.425821647044,
+     "width": 8380.52,
+     "height": 3008.5,
+     "area_ratio": 2.279554102011096
     },
     "annealed": {
      "links": 15,
-     "crossings": 3,
-     "box_crossings": 3,
-     "link_length": 25979.00177618104,
-     "width": 4669.745000000001,
-     "height": 2735.5,
-     "area_ratio": 1.257958148062252,
-     "cost": 113.42621828355595
+     "crossings": 5,
+     "box_crossings": 4,
+     "link_length": 22440.258876635762,
+     "width": 4657.24,
+     "height": 2916.5,
+     "area_ratio": 1.2280598164475605,
+     "cost": 114.34174438986761
     }
    },
    "anneal_seeds": [
     {
      "links": 15,
-     "crossings": 6,
-     "box_crossings": 6,
-     "link_length": 19429.619631107504,
-     "width": 4649.185,
-     "height": 2641.5,
-     "area_ratio": 1.2093826965395627,
-     "cost": 114.51767124074432
+     "crossings": 5,
+     "box_crossings": 4,
+     "link_length": 20003.0318896879,
+     "width": 4781.365,
+     "height": 2909.5,
+     "area_ratio": 1.2577640606043048,
+     "cost": 116.85086867927593
     },
     {
      "links": 15,
-     "crossings": 2,
-     "box_crossings": 2,
-     "link_length": 26300.6165965974,
-     "width": 4622.924999999999,
-     "height": 2846.5,
-     "area_ratio": 1.295878675919542,
-     "cost": 114.5203586117279
-    },
-    {
-     "links": 15,
-     "crossings": 3,
+     "crossings": 5,
      "box_crossings": 3,
-     "link_length": 25979.00177618104,
-     "width": 4669.745000000001,
-     "height": 2735.5,
-     "area_ratio": 1.257958148062252,
-     "cost": 113.42621828355595
+     "link_length": 21278.23945954142,
+     "width": 4682.889999999999,
+     "height": 2976.5,
+     "area_ratio": 1.260226955447654,
+     "cost": 116.65360664513976
     },
     {
      "links": 15,
-     "crossings": 4,
-     "box_crossings": 6,
-     "link_length": 21388.426075672854,
-     "width": 4776.195000000001,
-     "height": 2754.5,
-     "area_ratio": 1.2955707486034058,
-     "cost": 119.34283683948301
+     "crossings": 6,
+     "box_crossings": 4,
+     "link_length": 22061.267750558938,
+     "width": 4620.82,
+     "height": 2946.0,
+     "area_ratio": 1.2307808069193533,
+     "cost": 115.70053686795511
+    },
+    {
+     "links": 15,
+     "crossings": 5,
+     "box_crossings": 4,
+     "link_length": 22440.258876635762,
+     "width": 4657.24,
+     "height": 2916.5,
+     "area_ratio": 1.2280598164475605,
+     "cost": 114.34174438986761
     }
    ],
    "escher": {
-    "reactions": 185,
-    "nodes": 996,
+    "reactions": 193,
+    "nodes": 1041,
     "text_labels": 51,
-    "bigg_reactions": 163
+    "bigg_reactions": 173
    },
    "final": {
-    "subsystems": 16,
-    "enzyme_nodes": 165,
-    "main_metabolite_nodes": 189,
-    "cofactor_nodes": 206,
-    "edges": 595,
+    "subsystems": 15,
+    "enzyme_nodes": 173,
+    "main_metabolite_nodes": 195,
+    "cofactor_nodes": 219,
+    "edges": 631,
     "inter_pathway_links": 15,
-    "model_reactions": 163,
-    "enzyme_nodes_on-map": 113,
+    "model_reactions": 173,
+    "enzyme_nodes_on-map": 111,
     "enzyme_nodes_vicinity": 3,
-    "enzyme_nodes_added": 49
+    "enzyme_nodes_added": 59
    },
-   "references": 35
+   "references": 36
   },
   "Fermentation and degradation": {
    "arrangements": {
@@ -958,28 +1076,28 @@
      "crossings": 0,
      "box_crossings": 0,
      "link_length": 0.0,
-     "width": 2424.6250000000005,
-     "height": 3814.0,
-     "area_ratio": 2.4043680307077144
+     "width": 2296.875000000001,
+     "height": 3063.0,
+     "area_ratio": 2.094001873879078
     },
     "original order (sequence pair packing)": {
      "links": 0,
      "crossings": 0,
      "box_crossings": 0,
      "link_length": 0.0,
-     "width": 3794.3950000000004,
-     "height": 3261.0,
-     "area_ratio": 3.217132999631987
+     "width": 3632.5600000000004,
+     "height": 2355.0,
+     "area_ratio": 2.5462228796377024
     },
     "annealed": {
      "links": 0,
      "crossings": 0,
      "box_crossings": 0,
      "link_length": 0.0,
-     "width": 2902.27,
-     "height": 1739.0,
-     "area_ratio": 1.3122393959303882,
-     "cost": 107.90547009119655
+     "width": 2662.6,
+     "height": 1626.5,
+     "area_ratio": 1.288999365874429,
+     "cost": 108.1842656149399
     }
    },
    "anneal_seeds": [
@@ -988,68 +1106,159 @@
      "crossings": 0,
      "box_crossings": 0,
      "link_length": 0.0,
-     "width": 2902.27,
-     "height": 1739.0,
-     "area_ratio": 1.3122393959303882,
-     "cost": 107.90547009119655
-    },
-    {
-     "links": 0,
-     "crossings": 0,
-     "box_crossings": 0,
-     "link_length": 0.0,
-     "width": 3015.42,
+     "width": 2662.6,
      "height": 1626.5,
-     "area_ratio": 1.2751978032596578,
-     "cost": 108.10557655577477
+     "area_ratio": 1.288999365874429,
+     "cost": 108.1842656149399
     },
     {
      "links": 0,
      "crossings": 0,
      "box_crossings": 0,
      "link_length": 0.0,
-     "width": 2902.27,
-     "height": 1739.0,
-     "area_ratio": 1.3122393959303882,
-     "cost": 107.90547009119655
+     "width": 2727.79,
+     "height": 1597.5,
+     "area_ratio": 1.2970135349655638,
+     "cost": 109.27618793358965
     },
     {
      "links": 0,
      "crossings": 0,
      "box_crossings": 0,
      "link_length": 0.0,
-     "width": 2902.27,
-     "height": 1739.0,
-     "area_ratio": 1.3122393959303882,
-     "cost": 107.90547009119655
+     "width": 2662.6,
+     "height": 1626.5,
+     "area_ratio": 1.288999365874429,
+     "cost": 108.1842656149399
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 2727.79,
+     "height": 1597.5,
+     "area_ratio": 1.2970135349655638,
+     "cost": 109.27618793358965
     }
    ],
    "escher": {
-    "reactions": 55,
-    "nodes": 341,
-    "text_labels": 32,
-    "bigg_reactions": 54
+    "reactions": 49,
+    "nodes": 302,
+    "text_labels": 23,
+    "bigg_reactions": 48
    },
    "final": {
-    "subsystems": 12,
-    "enzyme_nodes": 53,
-    "main_metabolite_nodes": 70,
-    "cofactor_nodes": 111,
-    "edges": 223,
+    "subsystems": 9,
+    "enzyme_nodes": 47,
+    "main_metabolite_nodes": 59,
+    "cofactor_nodes": 99,
+    "edges": 199,
     "inter_pathway_links": 0,
-    "model_reactions": 54,
-    "enzyme_nodes_on-map": 44,
+    "model_reactions": 48,
+    "enzyme_nodes_on-map": 39,
     "enzyme_nodes_vicinity": 2,
-    "enzyme_nodes_added": 7
+    "enzyme_nodes_added": 6
    },
-   "references": 20
+   "references": 14
+  },
+  "Set aside": {
+   "arrangements": {
+    "original order (compacted)": {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 1536.4150000000004,
+     "height": 3560.0,
+     "area_ratio": 2.0990255303382708
+    },
+    "original order (sequence pair packing)": {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 1536.4150000000004,
+     "height": 3560.0,
+     "area_ratio": 2.0990255303382708
+    },
+    "annealed": {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 2463.01,
+     "height": 1438.5,
+     "area_ratio": 1.3596753550101455,
+     "cost": 117.73675679247472
+    }
+   },
+   "anneal_seeds": [
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 2463.01,
+     "height": 1438.5,
+     "area_ratio": 1.3596753550101455,
+     "cost": 117.73675679247472
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 2463.01,
+     "height": 1438.5,
+     "area_ratio": 1.3596753550101455,
+     "cost": 117.73675679247472
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 2463.01,
+     "height": 1438.5,
+     "area_ratio": 1.3596753550101455,
+     "cost": 117.73675679247472
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 2463.01,
+     "height": 1438.5,
+     "area_ratio": 1.3596753550101455,
+     "cost": 117.73675679247472
+    }
+   ],
+   "escher": {
+    "reactions": 45,
+    "nodes": 269,
+    "text_labels": 8,
+    "bigg_reactions": 38
+   },
+   "final": {
+    "subsystems": 6,
+    "enzyme_nodes": 40,
+    "main_metabolite_nodes": 52,
+    "cofactor_nodes": 78,
+    "edges": 160,
+    "inter_pathway_links": 0,
+    "model_reactions": 38,
+    "enzyme_nodes_on-map": 40
+   },
+   "references": 2
   }
  },
  "split": {
-  "maps": 7,
+  "maps": 8,
   "reactions": 1010,
-  "reactions_on_several_maps": 66,
-  "cross_map_metabolites": 87
+  "reactions_on_several_maps": 63,
+  "cross_map_metabolites": 85
  },
  "coverage": {
   "reactions": 2712,
@@ -1057,8 +1266,8 @@
   "transporters": 768,
   "other": 1607,
   "drawn": 1010,
-  "drawn_from_map": 714,
-  "drawn_added": 296,
+  "drawn_from_map": 713,
+  "drawn_added": 297,
   "drawn_other": 1010,
   "coverage_other": 0.6285003111387679
  }

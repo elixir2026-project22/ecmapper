@@ -9,64 +9,187 @@
   "model_reactions": 0,
   "enzyme_nodes_map": 2848
  },
+ "redundant_subsystems": {
+  "dropped": [
+   {
+    "subsystem": "CDP-diacylglycerol-biosynthesis",
+    "reactions": [
+     "G3PD2"
+    ],
+    "subset_of": "lipid-metabolism"
+   },
+   {
+    "subsystem": "S-reticuline-biosynthesis",
+    "reactions": [
+     "TYRTA"
+    ],
+    "subset_of": "tyrosine-metabolism"
+   },
+   {
+    "subsystem": "acetoin-degradation",
+    "reactions": [
+     "ACLS"
+    ],
+    "subset_of": "valine-metabolism"
+   },
+   {
+    "subsystem": "adipate-degradation",
+    "reactions": [
+     "DHACOAH",
+     "HADPCOADH3"
+    ],
+    "subset_of": "phenylacetate-degradation-aerobic"
+   },
+   {
+    "subsystem": "benzoxazinoid-glucosides-biosynthesis",
+    "reactions": [
+     "TRPS3"
+    ],
+    "subset_of": "tryptophan-metabolism"
+   },
+   {
+    "subsystem": "ceramide-biosynthesis",
+    "reactions": [
+     "FACOAL160t2pp"
+    ],
+    "subset_of": "lipid-metabolism"
+   },
+   {
+    "subsystem": "degradation-of-aromatic-nitrogen-containing-compounds",
+    "reactions": [
+     "NNAM"
+    ],
+    "subset_of": "NAD-metabolism"
+   },
+   {
+    "subsystem": "glycogen-biosynthesis",
+    "reactions": [
+     "GALUi",
+     "PGMT"
+    ],
+    "subset_of": "degradation-of-hexoses"
+   },
+   {
+    "subsystem": "ornithine-metabolism",
+    "reactions": [
+     "ACKr",
+     "PTAr"
+    ],
+    "subset_of": "acetate-fermentation"
+   },
+   {
+    "subsystem": "phenol-degradation",
+    "reactions": [
+     "HOPNTAL",
+     "OP4ENH"
+    ],
+    "subset_of": "3-phenylpropionate-degradation"
+   },
+   {
+    "subsystem": "tropane-alkaloid-biosynthesis",
+    "reactions": [
+     "ORNDC"
+    ],
+    "subset_of": "polyamine-pathway"
+   }
+  ],
+  "set_aside": [
+   {
+    "subsystem": "acetyl-CoA-biosynthesis",
+    "rule": "B",
+    "reactions": 1,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "butanoate-fermentation",
+    "rule": "B",
+    "reactions": 3,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "aerobic-toluene-degradation",
+    "rule": "B",
+    "reactions": 4,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "C4-and-CAM-carbon-fixation",
+    "rule": "B",
+    "reactions": 9,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "methylaspartate-cycle",
+    "rule": "B",
+    "reactions": 11,
+    "covered": 1.0
+   },
+   {
+    "subsystem": "photosynthesis",
+    "rule": "C",
+    "reactions": 13,
+    "covered": 0.9230769230769231
+   }
+  ]
+ },
  "step1_subsystems": {
-  "subsystems": 115,
-  "enzyme_nodes": 1943,
-  "main_metabolite_nodes": 1876,
-  "cofactor_nodes": 4138,
-  "edges": 8347,
-  "inter_pathway_links": 161,
+  "subsystems": 104,
+  "enzyme_nodes": 1841,
+  "main_metabolite_nodes": 1759,
+  "cofactor_nodes": 3910,
+  "edges": 7908,
+  "inter_pathway_links": 151,
   "model_reactions": 714,
-  "enzyme_nodes_on-map": 773,
-  "enzyme_nodes_map": 1128,
+  "enzyme_nodes_on-map": 758,
+  "enzyme_nodes_map": 1041,
   "enzyme_nodes_vicinity": 42
  },
  "step2_pruned": {
-  "subsystems": 115,
-  "enzyme_nodes": 815,
-  "main_metabolite_nodes": 968,
-  "cofactor_nodes": 1629,
-  "edges": 3364,
-  "inter_pathway_links": 117,
+  "subsystems": 104,
+  "enzyme_nodes": 800,
+  "main_metabolite_nodes": 941,
+  "cofactor_nodes": 1603,
+  "edges": 3307,
+  "inter_pathway_links": 109,
   "model_reactions": 714,
-  "enzyme_nodes_on-map": 773,
+  "enzyme_nodes_on-map": 758,
   "enzyme_nodes_vicinity": 42
  },
  "step3_completed": {
-  "subsystems": 115,
-  "enzyme_nodes": 1087,
-  "main_metabolite_nodes": 1221,
-  "cofactor_nodes": 1995,
-  "edges": 4528,
-  "inter_pathway_links": 212,
+  "subsystems": 104,
+  "enzyme_nodes": 1073,
+  "main_metabolite_nodes": 1196,
+  "cofactor_nodes": 1969,
+  "edges": 4474,
+  "inter_pathway_links": 205,
   "model_reactions": 1010,
-  "enzyme_nodes_on-map": 773,
+  "enzyme_nodes_on-map": 758,
   "enzyme_nodes_vicinity": 42,
-  "enzyme_nodes_added": 272
+  "enzyme_nodes_added": 273
  },
  "internal_before_condensing": {
-  "crossings_main": 986,
-  "crossings_all": 1426,
+  "crossings_main": 1029,
+  "crossings_all": 1466,
   "overlapping_nodes": 7,
-  "drawing_area": 116015503.33455518
+  "drawing_area": 115119154.8599265
  },
  "internal_after_condensing": {
-  "crossings_main": 1064,
-  "crossings_all": 1657,
+  "crossings_main": 1112,
+  "crossings_all": 1727,
   "overlapping_nodes": 0,
-  "drawing_area": 64983317.85323594
+  "drawing_area": 64718544.4000377
  },
  "hubs_all": [
   {
    "key": 31,
    "name": "pyruvate",
-   "subsystems": 26,
-   "links": 8
+   "subsystems": 24,
+   "links": 7
   },
   {
    "key": 29,
    "name": "acetyl-CoA",
-   "subsystems": 20,
+   "subsystems": 19,
    "links": 9
   },
   {
@@ -112,12 +235,6 @@
    "links": 2
   },
   {
-   "key": 90,
-   "name": "acetaldehyde",
-   "subsystems": 7,
-   "links": 2
-  },
-  {
    "key": 37,
    "name": "GTP",
    "subsystems": 6,
@@ -136,10 +253,10 @@
    "links": 3
   },
   {
-   "key": 47,
-   "name": "Acetate",
+   "key": 90,
+   "name": "acetaldehyde",
    "subsystems": 6,
-   "links": 2
+   "links": 1
   },
   {
    "key": 17973,
@@ -148,14 +265,8 @@
    "links": 4
   },
   {
-   "key": 107,
-   "name": "alpha-D-glucose 1-phosphate",
-   "subsystems": 5,
-   "links": 2
-  },
-  {
-   "key": 517,
-   "name": "palmitate",
+   "key": 47,
+   "name": "Acetate",
    "subsystems": 5,
    "links": 2
   },
@@ -208,8 +319,8 @@
    "links": 2
   },
   {
-   "key": 192,
-   "name": "L-ornithine",
+   "key": 107,
+   "name": "alpha-D-glucose 1-phosphate",
    "subsystems": 4,
    "links": 2
   },
@@ -238,6 +349,12 @@
    "links": 1
   },
   {
+   "key": 517,
+   "name": "hexadecanoate",
+   "subsystems": 4,
+   "links": 1
+  },
+  {
    "key": 43607,
    "name": "6-phospho-gluconate",
    "subsystems": 3,
@@ -252,6 +369,12 @@
   {
    "key": "Fe2+ mitochondria",
    "name": "Fe2+ mitochondria",
+   "subsystems": 3,
+   "links": 2
+  },
+  {
+   "key": 192,
+   "name": "L-ornithine",
    "subsystems": 3,
    "links": 2
   },
@@ -286,14 +409,14 @@
    "links": 1
   },
   {
-   "key": 9045,
-   "name": "3-oxoadipyl-CoA",
+   "key": 194,
+   "name": "3-phosphoglycerate",
    "subsystems": 3,
    "links": 1
   },
   {
-   "key": 194,
-   "name": "3-phosphoglycerate",
+   "key": 597,
+   "name": "4-aminobutanoate",
    "subsystems": 3,
    "links": 1
   }
@@ -302,13 +425,13 @@
   {
    "key": 31,
    "name": "pyruvate",
-   "subsystems": 26,
-   "links": 8
+   "subsystems": 24,
+   "links": 7
   },
   {
    "key": 29,
    "name": "acetyl-CoA",
-   "subsystems": 20,
+   "subsystems": 19,
    "links": 9
   },
   {
@@ -354,12 +477,6 @@
    "links": 2
   },
   {
-   "key": 90,
-   "name": "acetaldehyde",
-   "subsystems": 7,
-   "links": 2
-  },
-  {
    "key": 37,
    "name": "GTP",
    "subsystems": 6,
@@ -378,77 +495,80 @@
    "links": 3
   },
   {
-   "key": 47,
-   "name": "Acetate",
+   "key": 90,
+   "name": "acetaldehyde",
    "subsystems": 6,
-   "links": 2
+   "links": 1
   }
  ],
  "anneal_seeds": [
   {
-   "links": 153,
-   "crossings": 149,
-   "box_crossings": 87,
-   "link_length": 381875.5600755102,
-   "width": 15867.235,
-   "height": 9345.0,
-   "area_ratio": 1.8925252362613973,
-   "cost": 362.4766779590068
+   "links": 150,
+   "crossings": 153,
+   "box_crossings": 91,
+   "link_length": 409773.44872741454,
+   "width": 15552.41,
+   "height": 9371.5,
+   "area_ratio": 1.9493495420527076,
+   "cost": 374.3438681729967
   }
  ],
  "arrangements": {
   "original order (compacted)": {
-   "links": 153,
-   "crossings": 880,
-   "box_crossings": 236,
-   "link_length": 637143.019024191,
-   "width": 18671.370000000003,
-   "height": 11626.5,
-   "area_ratio": 2.7706795609689086
+   "links": 150,
+   "crossings": 910,
+   "box_crossings": 286,
+   "link_length": 618991.3314909391,
+   "width": 18641.050000000007,
+   "height": 8989.500000000002,
+   "area_ratio": 2.241242360006769
   },
   "original order (sequence pair packing)": {
-   "links": 153,
-   "crossings": 914,
-   "box_crossings": 317,
-   "link_length": 767943.5557474869,
-   "width": 23576.339999999997,
-   "height": 9845.0,
-   "area_ratio": 2.962464987500246
+   "links": 150,
+   "crossings": 931,
+   "box_crossings": 275,
+   "link_length": 739907.353020278,
+   "width": 24990.434999999994,
+   "height": 7497.5,
+   "area_ratio": 2.5059546323390025
   },
   "annealed": {
-   "links": 153,
-   "crossings": 149,
-   "box_crossings": 87,
-   "link_length": 381875.5600755102,
-   "width": 15867.235,
-   "height": 9345.0,
-   "area_ratio": 1.8925252362613973,
-   "cost": 362.4766779590068
+   "links": 150,
+   "crossings": 153,
+   "box_crossings": 91,
+   "link_length": 409773.44872741454,
+   "width": 15552.41,
+   "height": 9371.5,
+   "area_ratio": 1.9493495420527076,
+   "cost": 374.3438681729967
   }
  },
  "log": [
   "step 1: 115 of 193 subsystems have model reactions",
-  "step 2: removed 1128 of 1943 enzyme nodes without model reactions and 3417 metabolite nodes; 0 links bridged",
-  "step 3: added 296 of 790 candidate model reactions (not on the map, no boundary reactions, transporters) on 272 new enzyme nodes, 158 nodes of metabolites not on the map, 95 linked nodes of metabolites drawn in other subsystems",
-  "hubs: removed 59 inter-pathway links of 14 metabolites drawn in >= 6 subsystems"
+  "step 1: removed 11 subsystems whose model reactions are a proper subset of another's; set aside 6 (rule B: 5, C: 1, D: 0)",
+  "step 2: removed 1041 of 1841 enzyme nodes without model reactions and 3125 metabolite nodes; 0 links bridged",
+  "step 3: added 297 of 791 candidate model reactions (not on the map, no boundary reactions, transporters) on 273 new enzyme nodes, 159 nodes of metabolites not on the map, 96 linked nodes of metabolites drawn in other subsystems",
+  "0 edges between subsystems: metabolite drawn in the subsystem of the enzyme node",
+  "hubs: removed 55 inter-pathway links of 13 metabolites drawn in >= 6 subsystems",
+  "split: 2 maps; 0 inter-pathway links between maps replaced by references on 0 metabolite nodes"
  ],
  "escher": {
-  "reactions": 1183,
-  "nodes": 6904,
-  "text_labels": 115,
+  "reactions": 1124,
+  "nodes": 6544,
+  "text_labels": 98,
   "bigg_reactions": 1010
  },
  "final": {
-  "subsystems": 115,
-  "enzyme_nodes": 1087,
-  "main_metabolite_nodes": 1221,
-  "cofactor_nodes": 1995,
-  "edges": 4528,
-  "inter_pathway_links": 153,
+  "subsystems": 98,
+  "enzyme_nodes": 1033,
+  "main_metabolite_nodes": 1144,
+  "cofactor_nodes": 1891,
+  "edges": 4314,
+  "inter_pathway_links": 150,
   "model_reactions": 1010,
-  "enzyme_nodes_on-map": 773,
+  "enzyme_nodes_on-map": 718,
   "enzyme_nodes_vicinity": 42,
-  "enzyme_nodes_added": 272
+  "enzyme_nodes_added": 273
  },
  "coverage": {
   "reactions": 2712,
@@ -456,9 +576,37 @@
   "transporters": 768,
   "other": 1607,
   "drawn": 1010,
-  "drawn_from_map": 714,
-  "drawn_added": 296,
+  "drawn_from_map": 713,
+  "drawn_added": 297,
   "drawn_other": 1010,
   "coverage_other": 0.6285003111387679
+ },
+ "set_aside_map": {
+  "arrangement": {
+   "links": 0,
+   "crossings": 0,
+   "box_crossings": 0,
+   "link_length": 0.0,
+   "width": 2463.01,
+   "height": 1438.5,
+   "area_ratio": 1.3596753550101455,
+   "cost": 117.73675679247472
+  },
+  "escher": {
+   "reactions": 45,
+   "nodes": 269,
+   "text_labels": 6,
+   "bigg_reactions": 38
+  },
+  "final": {
+   "subsystems": 6,
+   "enzyme_nodes": 40,
+   "main_metabolite_nodes": 52,
+   "cofactor_nodes": 78,
+   "edges": 160,
+   "inter_pathway_links": 0,
+   "model_reactions": 38,
+   "enzyme_nodes_on-map": 40
+  }
  }
 }

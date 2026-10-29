@@ -18,8 +18,10 @@
    "reactions": [
     "ACALD",
     "ACKr",
+    "ACONIs",
     "ACONTa",
     "ACONTb",
+    "ACOXT",
     "ACS",
     "AKGDH",
     "ALCD2x",
@@ -37,6 +39,7 @@
     "FBP",
     "FE3DCITR5",
     "FE3DCITexs",
+    "FORCT",
     "FRD2",
     "FRD3",
     "FUM",
@@ -69,6 +72,7 @@
     "OAADC",
     "PDH",
     "PFK",
+    "PFK_3",
     "PFL",
     "PGI",
     "PGK",
@@ -93,6 +97,7 @@
     "TKT1",
     "TKT2",
     "TPI",
+    "UPLA4FNF",
     "X5PL3E"
    ]
   },
@@ -100,48 +105,29 @@
    "name": "Energy and C1 metabolism",
    "file": "energy_and_c1_metabolism.escher.json",
    "subsystems": [
-    "C4-and-CAM-carbon-fixation",
     "CO2-fixation-in-Crenarchaeota",
-    "acetyl-CoA-biosynthesis",
-    "aerobic-toluene-degradation",
     "formaldehyde-oxidation",
     "glycolate-and-glyoxylate-degradation",
     "methane-metabolism",
-    "methylaspartate-cycle",
-    "photosynthesis",
     "reductive-acetyl-coenzyme-A-pathway",
     "ubiquinone-biosynthesis",
     "urea-cycle"
    ],
    "reactions": [
-    "3OXCOAT",
     "ACACT1r",
-    "ACALD",
     "ACCOAC",
-    "ACONIs",
-    "ACONTa",
-    "ACONTb",
-    "ALATA_L",
     "AMPMS2",
     "ARGSL",
     "ARGSS",
-    "ASPTA",
     "CAT",
     "CBMKr",
     "CHRPL",
-    "CS",
     "DHGLYH",
     "DMQMT",
     "ECOAH1",
     "FALDH2",
     "FALGTHLs",
-    "FBA",
-    "FBA3",
-    "FBP",
-    "FRD2",
-    "FRD3",
     "FTHFLi",
-    "FUM",
     "GHBDHx",
     "GLXCL",
     "GLYCK",
@@ -152,12 +138,6 @@
     "GLYCTO4",
     "HACD1",
     "HBZOPT",
-    "HOPNTAL",
-    "ICDHyr",
-    "MALDDH",
-    "MDH",
-    "ME1",
-    "ME2",
     "MMM",
     "MSAR",
     "MTHFC",
@@ -168,38 +148,19 @@
     "OMMBLHX3",
     "OMMBLHXy",
     "OMPHHXy",
-    "OP4ENH",
     "OPHBDC",
     "OPHHX3",
     "OPHHXy",
     "PCNO",
-    "PDH",
-    "PFK_3",
-    "PGK",
-    "PPC",
-    "PPCK",
-    "PYK",
-    "RBP4E",
-    "RPE",
-    "RPI",
     "SFGTHi",
-    "SUCDi",
-    "SUCOAS",
-    "TKT1",
-    "TKT2",
-    "TPI",
-    "ULA4NFT",
-    "UPLA4FNF",
-    "X5PL3E"
+    "ULA4NFT"
    ]
   },
   {
    "name": "Lipids",
    "file": "lipids.escher.json",
    "subsystems": [
-    "CDP-diacylglycerol-biosynthesis",
     "arachidonate-biosynthesis",
-    "ceramide-biosynthesis",
     "isoprenoid-biosynthesis",
     "lipid-A-biosynthesis",
     "lipid-metabolism",
@@ -237,7 +198,6 @@
     "3OAS181",
     "3OAS60",
     "3OAS80",
-    "AACPS1",
     "AACPS3",
     "AACPS4",
     "AACPS5",
@@ -253,12 +213,9 @@
     "ACOAD2f",
     "ACOAD7f",
     "ACOATA",
-    "ACPPAT140",
     "ACPPAT160",
-    "AGPAT140",
     "AGPAT160",
     "ALCD19",
-    "APG3PAT140",
     "APG3PAT160",
     "APG3PAT161",
     "APG3PAT181",
@@ -283,8 +240,6 @@
     "EDTXS1",
     "EDTXS2",
     "EDTXS3",
-    "EDTXS4",
-    "FA140ACPHi",
     "FA160ACPHi",
     "FA161ACPHi",
     "FACOAE160",
@@ -295,7 +250,6 @@
     "FACOAL161t2pp",
     "FACOAL181t2pp",
     "FACOAL60t2pp",
-    "G3PAT140",
     "G3PAT160",
     "G3PAT161",
     "G3PAT181",
@@ -313,7 +267,6 @@
     "LIPAHT2ex",
     "LIPAHTex",
     "LPADSS",
-    "LPLIPAL1A140pp",
     "LPLIPAL1A160pp",
     "LPLIPAL1A161pp",
     "LPLIPAL1A181pp",
@@ -323,7 +276,6 @@
     "LPLIPAL1G160pp",
     "LPLIPAL1G161pp",
     "LPLIPAL1G181pp",
-    "LPLIPAL2A140",
     "LPLIPAL2A160",
     "LPLIPAL2A161",
     "LPLIPAL2A181",
@@ -342,7 +294,6 @@
     "MOAT2",
     "MOAT3C",
     "OGMEACPS",
-    "PAI2T",
     "PETNT161pp",
     "PETNT181pp",
     "PLIPA1A160pp",
@@ -376,13 +327,10 @@
    "file": "amino_acids.escher.json",
    "subsystems": [
     "5R-carbapenem-carboxylate-biosynthesis",
-    "S-reticuline-biosynthesis",
-    "adipate-degradation",
     "alanine-metabolism",
     "aminopropanol-phosphate-biosynthesis",
     "arginine-metabolism",
     "aspartate-and-asparagine-metabolism",
-    "benzoxazinoid-glucosides-biosynthesis",
     "carnitine-metabolism",
     "chorismate-metabolism",
     "cyanate-degradation",
@@ -398,9 +346,7 @@
     "lysine-metabolism",
     "macrolide-antibiotic-biosynthesis",
     "methionine-metabolism",
-    "ornithine-metabolism",
     "peptidoglycan-biosynthesis",
-    "phenol-degradation",
     "phenylalanine-metabolism",
     "polyamine-pathway",
     "proline-metabolism",
@@ -409,7 +355,6 @@
     "sulfate-reduction",
     "taurine-degradation",
     "threonine-metabolism",
-    "tropane-alkaloid-biosynthesis",
     "tryptophan-metabolism",
     "tyrosine-metabolism",
     "valine-metabolism"
@@ -433,7 +378,6 @@
     "ACODA",
     "ACONMT",
     "ACOTA",
-    "ACOXT",
     "ADMDC",
     "ADSK",
     "AGMT",
@@ -445,6 +389,7 @@
     "ALAR",
     "ALATA_L",
     "ALDD19xr",
+    "ALDD4",
     "AMPTASECG",
     "AMPTASEPG",
     "ANPRT",
@@ -499,7 +444,6 @@
     "DAPDC",
     "DAPE",
     "DDPA",
-    "DHACOAH",
     "DHAD1",
     "DHAD2",
     "DHBD",
@@ -513,7 +457,7 @@
     "ECAP2pp",
     "ECAP3pp",
     "ECOAH1",
-    "FORCT",
+    "FBA3",
     "G1PTT",
     "G5SADs",
     "G5SD",
@@ -542,13 +486,11 @@
     "GTHS",
     "H2SO",
     "HACD1",
-    "HADPCOADH3",
     "HCO3E",
     "HCYSMT",
     "HCYSMT2",
     "HISTD",
     "HISTP",
-    "HOPNTAL",
     "HPYRP",
     "HPYRRx",
     "HPYRRy",
@@ -599,7 +541,6 @@
     "OBTFL",
     "OMBZLM",
     "OMCDC",
-    "OP4ENH",
     "ORNDC",
     "P5CD",
     "P5CR",
@@ -622,7 +563,6 @@
     "PSP_L",
     "PSP_Lpp",
     "PTA2",
-    "PTAr",
     "PTRCTA",
     "RHCCE",
     "SADH",
@@ -1017,7 +957,6 @@
     "degradation-of-pentoses",
     "degradation-of-sugar-acids",
     "degradation-of-sugar-alcohols",
-    "glycogen-biosynthesis",
     "glycogen-metabolism",
     "ketogluconate-metabolism",
     "metabolism-of-amino-sugars-and-derivatives",
@@ -1036,10 +975,13 @@
     "5DKGR",
     "6D6SPA",
     "A5PISO",
+    "AACPS1",
     "ACM6PH",
     "ACMAMUT",
     "ACNML",
+    "ACPPAT140",
     "AGDC",
+    "AGPAT140",
     "ALKP",
     "ALTRH",
     "AMALT1",
@@ -1048,6 +990,7 @@
     "AMALT4",
     "AMANAPEr",
     "AMANK",
+    "APG3PAT140",
     "ARABDI",
     "ARAI",
     "BGLA1",
@@ -1063,9 +1006,11 @@
     "DKGLCNR2y",
     "DXYLTD",
     "EDA",
+    "EDTXS4",
     "F1PP",
     "F6PA",
     "F6PP",
+    "FA140ACPHi",
     "FCI",
     "FCLK",
     "FCLPA",
@@ -1075,6 +1020,7 @@
     "G1PP",
     "G1PPpp",
     "G1PTT",
+    "G3PAT140",
     "G3PD5",
     "G3PD6",
     "G3PD7",
@@ -1129,6 +1075,8 @@
     "LACZ",
     "LACZpp",
     "LKDRA",
+    "LPLIPAL1A140pp",
+    "LPLIPAL2A140",
     "LYXI",
     "M1PD",
     "MALTATr",
@@ -1147,6 +1095,7 @@
     "MN6PP",
     "MNNH",
     "O16GLCT2",
+    "PAI2T",
     "PFK_2",
     "PGAMT",
     "PGLYCP",
@@ -1197,11 +1146,8 @@
    "subsystems": [
     "3-phenylpropionate-degradation",
     "L-lactaldehyde-degradation",
-    "acetoin-degradation",
     "allantoin-degradation",
-    "butanoate-fermentation",
     "creatinine-degradation",
-    "degradation-of-aromatic-nitrogen-containing-compounds",
     "methylglyoxal-degradation",
     "octane-oxidation",
     "phenylacetate-degradation-aerobic",
@@ -1213,16 +1159,11 @@
     "3HPPPNH",
     "3OXCOAT",
     "ACACCT",
-    "ACACT1r",
     "ACALD",
-    "ACLS",
-    "ALDD4",
     "ALLTAMH2",
     "ALLTN",
-    "BUTCT",
     "DHACOAH",
     "DHPPD",
-    "ECOAH1",
     "FACOAE80",
     "FACOAL80t2pp",
     "FRD2",
@@ -1245,7 +1186,6 @@
     "MICITDr",
     "MMCD",
     "MMM",
-    "NNAM",
     "OP4ENH",
     "OXAMTC",
     "OXCOAHDH",
@@ -1264,6 +1204,58 @@
     "URDGLYCD",
     "URIC"
    ]
+  },
+  {
+   "name": "Set aside",
+   "file": "set_aside.escher.json",
+   "subsystems": [
+    "C4-and-CAM-carbon-fixation",
+    "acetyl-CoA-biosynthesis",
+    "aerobic-toluene-degradation",
+    "butanoate-fermentation",
+    "methylaspartate-cycle",
+    "photosynthesis"
+   ],
+   "reactions": [
+    "3OXCOAT",
+    "ACACT1r",
+    "ACALD",
+    "ACONTa",
+    "ACONTb",
+    "ALATA_L",
+    "ASPTA",
+    "BUTCT",
+    "CS",
+    "ECOAH1",
+    "FBA",
+    "FBA3",
+    "FBP",
+    "FRD2",
+    "FRD3",
+    "FUM",
+    "HOPNTAL",
+    "ICDHyr",
+    "MALDDH",
+    "MDH",
+    "ME1",
+    "ME2",
+    "MMM",
+    "OP4ENH",
+    "PDH",
+    "PGK",
+    "PPC",
+    "PPCK",
+    "PYK",
+    "RBP4E",
+    "RPE",
+    "RPI",
+    "SUCDi",
+    "SUCOAS",
+    "TKT1",
+    "TKT2",
+    "TPI",
+    "X5PL3E"
+   ]
   }
  ],
  "cross_map_metabolites": [
@@ -1276,22 +1268,8 @@
     "Amino acids",
     "Carbohydrates",
     "Central metabolism",
-    "Energy and C1 metabolism",
-    "Fermentation and degradation",
-    "Lipids"
-   ]
-  },
-  {
-   "name": "fumarate",
-   "model_metabolites": [
-    "fum"
-   ],
-   "maps": [
-    "Amino acids",
-    "Central metabolism",
-    "Energy and C1 metabolism",
-    "Fermentation and degradation",
-    "Nucleotides and cofactors"
+    "Lipids",
+    "Set aside"
    ]
   },
   {
@@ -1345,6 +1323,18 @@
    ]
   },
   {
+   "name": "fumarate",
+   "model_metabolites": [
+    "fum"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism",
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
    "name": "pyruvate",
    "model_metabolites": [
     "pyr"
@@ -1376,8 +1366,8 @@
     "glx"
    ],
    "maps": [
+    "Amino acids",
     "Energy and C1 metabolism",
-    "Fermentation and degradation",
     "Nucleotides and cofactors"
    ]
   },
@@ -1517,16 +1507,6 @@
    "maps": [
     "Amino acids",
     "Central metabolism"
-   ]
-  },
-  {
-   "name": "3-oxoadipyl-CoA",
-   "model_metabolites": [
-    "oxadpcoa"
-   ],
-   "maps": [
-    "Amino acids",
-    "Fermentation and degradation"
    ]
   },
   {
@@ -1754,6 +1734,16 @@
    ]
   },
   {
+   "name": "KDO(2)-lipid IV(A) with palmitoleoyl",
+   "model_metabolites": [
+    "kdo2lipid4p"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
    "name": "Kdo-phospho-heptosyl-phospho-heptosyl-heptosyl-kdo2-lipidA",
    "model_metabolites": [
     "kphphhlipa"
@@ -1910,13 +1900,23 @@
    ]
   },
   {
+   "name": "Sedoheptulose 1,7-bisphosphate",
+   "model_metabolites": [
+    "s17bp"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism"
+   ]
+  },
+  {
    "name": "Trans-Aconitate",
    "model_metabolites": [
     "acon_T"
    ],
    "maps": [
     "Amino acids",
-    "Energy and C1 metabolism"
+    "Central metabolism"
    ]
   },
   {
@@ -1946,7 +1946,7 @@
    ],
    "maps": [
     "Amino acids",
-    "Energy and C1 metabolism"
+    "Central metabolism"
    ]
   },
   {
@@ -1956,7 +1956,7 @@
    ],
    "maps": [
     "Amino acids",
-    "Energy and C1 metabolism"
+    "Central metabolism"
    ]
   },
   {
@@ -2000,16 +2000,6 @@
    ]
   },
   {
-   "name": "acetaldehyde",
-   "model_metabolites": [
-    "acald"
-   ],
-   "maps": [
-    "Amino acids",
-    "Central metabolism"
-   ]
-  },
-  {
    "name": "alpha-iminosuccinate",
    "model_metabolites": [
     "iasp"
@@ -2035,7 +2025,7 @@
     "for"
    ],
    "maps": [
-    "Amino acids",
+    "Central metabolism",
     "Energy and C1 metabolism"
    ]
   },
@@ -2043,16 +2033,6 @@
    "name": "glycerol",
    "model_metabolites": [
     "glyc"
-   ],
-   "maps": [
-    "Carbohydrates",
-    "Lipids"
-   ]
-  },
-  {
-   "name": "glycerone phosphate",
-   "model_metabolites": [
-    "dhap"
    ],
    "maps": [
     "Carbohydrates",
@@ -2090,23 +2070,13 @@
    ]
   },
   {
-   "name": "nicotinamide",
+   "name": "myristoyl-ACP",
    "model_metabolites": [
-    "ncam"
+    "myrsACP"
    ],
    "maps": [
-    "Fermentation and degradation",
-    "Nucleotides and cofactors"
-   ]
-  },
-  {
-   "name": "nicotinate",
-   "model_metabolites": [
-    "nac"
-   ],
-   "maps": [
-    "Fermentation and degradation",
-    "Nucleotides and cofactors"
+    "Carbohydrates",
+    "Lipids"
    ]
   },
   {

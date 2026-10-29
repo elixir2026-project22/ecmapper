@@ -14,6 +14,8 @@ from .core import DraftMap, metabolite_key, text_width
 from .layout import Ports, SequencePair, anneal_arrangement
 
 CENTRAL = "Central metabolism"
+#: map of the subsystems set aside by :func:`.core.drop_redundant_subsystems`
+ASIDE = "Set aside"
 
 #: subsystems of the BRENDA map that make up the central map by default
 DEFAULT_CENTRAL = [
@@ -55,14 +57,15 @@ def assign_maps(dm: DraftMap, central=DEFAULT_CENTRAL, explicit: dict[str, list[
                 min_reactions: int = 25) -> tuple[list[str], dict[str, str]]:
     """The map of each subsystem: map names in order and {subsystem ID: map name}.
 
-    Subsystems listed in `explicit` ({map name: [subsystem IDs]}) go to their
-    map, those in `central` to the central map, all others to the map of
-    their colour group. Colour group maps with fewer than `min_reactions`
-    model reactions are merged into the map they have most inter-pathway
-    links with (ties and no links: the largest map).
+    Set-aside subsystems go to the last map, :data:`ASIDE`. Subsystems listed
+    in `explicit` ({map name: [subsystem IDs]}) go to their map, those in
+    `central` to the central map, all others to the map of their colour
+    group. Colour group maps with fewer than `min_reactions` model reactions
+    are merged into the map they have most inter-pathway links with (ties and
+    no links: the largest map).
     """
     explicit = explicit or {}
-    assignment = {}
+    assignment = {k: ASIDE for k, s in dm.subsystems.items() if s.aside}
     for name, subsystems in explicit.items():
         for s in subsystems:
             if s in dm.subsystems:
@@ -73,7 +76,7 @@ def assign_maps(dm: DraftMap, central=DEFAULT_CENTRAL, explicit: dict[str, list[
     groups = list(dict.fromkeys(GROUP_NAMES.values()))
     for k, s in dm.subsystems.items():
         assignment.setdefault(k, GROUP_NAMES.get(s.color_group, groups[-1]))
-    fixed = set(explicit) | {CENTRAL}
+    fixed = set(explicit) | {CENTRAL, ASIDE}
     while True:
         members = defaultdict(list)
         for k, name in assignment.items():
@@ -81,7 +84,7 @@ def assign_maps(dm: DraftMap, central=DEFAULT_CENTRAL, explicit: dict[str, list[
         size = {name: len(reactions_of(dm, subs)) for name, subs in members.items()}
         small = sorted((name for name in members if name not in fixed and size[name] < min_reactions),
                        key=lambda name: (size[name], name))
-        if not small or len(members) == 1:
+        if not small or len(set(members) - {ASIDE}) == 1:
             break
         name = small[0]
         links = Counter()
@@ -89,11 +92,11 @@ def assign_maps(dm: DraftMap, central=DEFAULT_CENTRAL, explicit: dict[str, list[
             ma, mb = assignment[dm.nodes[l.a].subsystem], assignment[dm.nodes[l.b].subsystem]
             if ma != mb and name in (ma, mb):
                 links[mb if ma == name else ma] += 1
-        target = max((m for m in members if m != name), key=lambda m: (links[m], size[m], m))
+        target = max((m for m in members if m not in (name, ASIDE)), key=lambda m: (links[m], size[m], m))
         dm.log.append(f"split: map {name!r} ({size[name]} reactions) merged into {target!r}")
         for k in members[name]:
             assignment[k] = target
-    order = [name for name in [*explicit, CENTRAL, *groups] if name in assignment.values()]
+    order = [name for name in dict.fromkeys([*explicit, CENTRAL, *groups, ASIDE]) if name in assignment.values()]
     return order, assignment
 
 

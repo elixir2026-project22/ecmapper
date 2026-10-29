@@ -10,7 +10,7 @@ pytest.importorskip("numba")
 
 from ecmapper import ECMapper
 from ecmapper.brenda_map import BrendaMap, MapMatcher
-from ecmapper.draft_map import fast, run, split
+from ecmapper.draft_map import core, fast, run, split
 from ecmapper.draft_map.core import DraftMap, Edge, MetLink, Node, Subsystem, localise_edges
 from ecmapper.draft_map.layout import Ports, SequencePair, compact_axis, count_crossings, evaluate_arrangement
 from ecmapper.draft_map.prepare import prepare
@@ -136,7 +136,8 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
     on_map = {rid for rid, m in data["matches"].items() if m["status"] == "on map"}
     assert {"PYK", "PGI"} <= on_map
     out = tmp_path / "out"
-    run_draft_map(prep, out)
+    # all subsystems with model reactions (rules A-D in test_draft_map_redundant)
+    run_draft_map(prep, out, "--keep-subsets", "--aside-coverage", "2")
 
     stats = json.loads((out / "stats.json").read_text())
     nodes = {
@@ -219,9 +220,10 @@ def test_draft_map_split(sources, model, tmp_path):  # noqa: F811
     run_draft_map(prep, whole, "--pack")
     run_draft_map(prep, out, "--split", "--min-map-reactions", "0")
     index = json.loads((out / "maps.json").read_text())
-    assert index["maps"][0]["name"] == split.CENTRAL
+    assert index["maps"][0]["name"] == split.CENTRAL and index["maps"][-1]["name"] == split.ASIDE
     assert len(index["maps"]) > 1
     drawn = set(json.loads((whole / "reaction_positions.json").read_text()))
+    drawn |= set(json.loads((whole / "set_aside.reaction_positions.json").read_text()))
     assert set().union(*(m["reactions"] for m in index["maps"])) == drawn
     references = 0
     for entry in index["maps"]:
@@ -241,3 +243,54 @@ def test_draft_map_split(sources, model, tmp_path):  # noqa: F811
     assert all(f'href="{m["file"].removesuffix(".escher.json")}.svg"' in overview for m in index["maps"])
     with pytest.raises(SystemExit):
         run_draft_map(prep, out, "--central", "glycolysis")
+
+
+def test_drop_redundant_subsystems():
+    """A: proper subsets are removed; B, C: (mostly) covered subsystems and D: few matched nodes are set aside."""
+    dm = DraftMap()
+    content = {
+        "big": ["R1", "R2", "R3"],
+        "subset": ["R1", "R2"],  # A: proper subset of big
+        "equal1": ["R30"],  # equal sets: the first (by name) is set aside (B), the other stays
+        "equal2": ["R30"],
+        "mixed": ["R1", "R50", *(f"R{i}" for i in range(5, 14))],  # 10 of 11 in big and other (C)
+        "other": [*(f"R{i}" for i in range(5, 14)), "R40", "R41"],
+        "spread": ["R3", "R41", "R60"],  # 2 of 3 elsewhere: stays with coverage 0.9
+        "sparse": ["R20"],  # one of five enzyme nodes matched (D)
+    }
+    for k, rs in content.items():
+        dm.subsystems[k] = Subsystem(k, k, "pw1", "#fff", 0, 0, 100, 100)
+        for r in rs:
+            dm.nodes[f"{k}_{r}"] = Node(f"{k}_{r}", "enzyme", k, 0, 0, 60, 30, r, reactions=[r])
+    for i in range(4):
+        dm.nodes[f"sparse_{i}"] = Node(f"sparse_{i}", "enzyme", "sparse", 0, 0, 60, 30, "")
+    result = core.drop_redundant_subsystems(dm, coverage=0.9, min_matched=0.25)
+    assert [d["subsystem"] for d in result["dropped"]] == ["subset"]
+    assert "subset" not in dm.subsystems and not dm.members("subset")
+    assert {a["subsystem"]: a["rule"] for a in result["set_aside"]} == {"equal1": "B", "mixed": "C", "sparse": "D"}
+    assert {k for k, s in dm.subsystems.items() if not s.aside} == {"big", "equal2", "spread", "other"}
+    # no rules
+    dm2 = DraftMap()
+    dm2.subsystems = {k: Subsystem(k, k, "pw1", "#fff", 0, 0, 100, 100) for k in ("a", "b")}
+    dm2.nodes = {k: Node(k, "enzyme", k, 0, 0, 60, 30, "", reactions=["R1"]) for k in ("a", "b")}
+    assert core.drop_redundant_subsystems(dm2, drop_subsets=False, coverage=2.0) == dict(dropped=[], set_aside=[])
+
+
+def test_draft_map_set_aside(sources, model, tmp_path):  # noqa: F811
+    """Set-aside subsystems are drawn on a separate map, not on the draft map."""
+    _, prep = prepared(sources, model, tmp_path)
+    out = tmp_path / "out"
+    run_draft_map(prep, out, "--aside-coverage", "1.0")
+    stats = json.loads((out / "stats.json").read_text())
+    aside = {a["subsystem"] for a in stats["redundant_subsystems"]["set_aside"]}
+    assert aside
+    with open(out / "draft_map.pkl", "rb") as f:
+        main = pickle.load(f)
+    with open(out / "set_aside.pkl", "rb") as f:
+        side = pickle.load(f)
+    assert set(side.subsystems) == aside and not aside & set(main.subsystems)
+    assert not {d["subsystem"] for d in stats["redundant_subsystems"]["dropped"]} & (set(main.subsystems) | aside)
+    # every reaction of a set-aside subsystem is also on the draft map (rule B)
+    assert {r for n in side.nodes.values() for r in n.reactions} <= {r for n in main.nodes.values() for r in n.reactions}
+    _, body = json.loads((out / "set_aside.escher.json").read_text())
+    assert {r["bigg_id"] for r in body["reactions"].values()} == {r for n in side.nodes.values() for r in n.reactions}

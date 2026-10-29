@@ -24,6 +24,7 @@ from .core import (
     anchor_metabolites,
     disconnect_hubs,
     drop_empty_subsystems,
+    drop_redundant_subsystems,
     hub_table,
     localise_edges,
     prune_unassociated,
@@ -44,6 +45,7 @@ from .layout import (
 )
 from .render import write_cnapy_maps, write_reaction_positions, write_svg
 from .split import (
+    ASIDE,
     DEFAULT_CENTRAL,
     assign_maps,
     cross_map_metabolites,
@@ -177,6 +179,14 @@ def main(argv=None) -> None:
     parser.add_argument("brenda_json")
     parser.add_argument("brenda_svg")
     parser.add_argument("out", type=Path)
+    parser.add_argument("--keep-subsets", action="store_true",
+                        help="keep subsystems whose model reactions are a proper subset of another subsystem's (rule A)")
+    parser.add_argument("--aside-coverage", type=float, default=0.9,
+                        help="set aside subsystems of which at least this fraction of the model reactions are in other "
+                        "subsystems (rules B and C; 1: only fully covered ones, above 1: off)")
+    parser.add_argument("--aside-min-matched", type=float, default=0.0,
+                        help="set aside subsystems in which less than this fraction of the enzyme nodes have model "
+                        "reactions (rule D)")
     parser.add_argument("--min-anchored", type=int, default=2)
     parser.add_argument("--no-completion", action="store_true")
     parser.add_argument("--iterations", type=int, default=20000)
@@ -225,10 +235,13 @@ def main(argv=None) -> None:
 
     # step 1: subsystems with model reactions
     drop_empty_subsystems(dm, md)
+    log(dm.log[-1])
+    stats["redundant_subsystems"] = drop_redundant_subsystems(dm, not args.keep_subsets, args.aside_coverage,
+                                                              args.aside_min_matched)
+    log(dm.log[-1])
     anchor_metabolites(dm, md)
     stats["step1_subsystems"] = dm.summary()
     write_svg(dm, str(args.out / "step1_subsystems.svg"), md=md)
-    log(dm.log[-1])
 
     # step 2: enzyme nodes without model reactions (the arrangement follows after condensation, see DRAFT_MAP.md)
     prune_unassociated(dm)
@@ -247,9 +260,14 @@ def main(argv=None) -> None:
     with open(args.out / "added_reactions.json", "w") as f:
         json.dump(added, f, indent=1)
 
+    aside = {k for k, s in dm.subsystems.items() if s.aside}
     if args.pack or args.split:
         # no edges between subsystems, which would cross the packed boxes
         localise_edges(dm)
+        log(dm.log[-1])
+    elif aside:
+        # no edges to set-aside subsystems, which are drawn on a separate map
+        localise_edges(dm, aside)
         log(dm.log[-1])
 
     # original subsystem centres (for the arrangement that keeps the original order)
@@ -276,6 +294,15 @@ def main(argv=None) -> None:
             json.dump(stats, f, indent=1, default=float)
         log("done")
         return
+    aside_map = None
+    if aside:
+        # the set-aside subsystems on a separate map; links to them become references
+        main_name = f"{md.model_id} draft map"
+        whole = dm
+        (_, dm), (_, aside_map) = split_map(whole, [main_name, ASIDE],
+                                            {k: ASIDE if k in aside else main_name for k in whole.subsystems})
+        dm.log.append(whole.log[-1])
+        log(dm.log[-1])
     if args.pack:
         # without links, the annealing below only minimises the area (and the deviation from the aspect ratio)
         dm.log.append(f"pack: removed all {len(dm.links)} inter-pathway links")
@@ -333,6 +360,18 @@ def main(argv=None) -> None:
         write_svg(m, str(args.out / f"map_{fname}.svg"), md=md)
         if name == final:
             write_outputs(m, md, args.out, "draft_map", f"{md.model_id} draft map (BRENDA map)", args, stats)
+    if aside_map is not None:
+        log(f"set-aside map: {len(aside_map.subsystems)} subsystems")
+        if args.pack:
+            aside_map.links = []
+        ports, _, _, results, _ = arrange(aside_map, args, final, log)
+        m = copy.deepcopy(aside_map)
+        apply_arrangement(m, ports.names, *results[final][:4])
+        to_absolute(m)
+        s = dict(arrangement=results[final][4])
+        write_outputs(m, md, args.out, "set_aside", f"{md.model_id} set-aside subsystems (BRENDA map draft)", args, s)
+        del s["coverage"]
+        stats["set_aside_map"] = s
     with open(args.out / "stats.json", "w") as f:
         json.dump(stats, f, indent=1, default=float)
     log("done")
