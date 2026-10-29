@@ -3,7 +3,8 @@
 `ecmapper.draft_map` turns the matches of a model to the BRENDA map (see [README.md](README.md#finding-model-reactions-on-a-brenda-map))
 into a draft map of the model: the subsystems of the BRENDA map that contain model reactions, reduced to the enzyme
 nodes with model reactions, completed with model reactions that connect drawn metabolites, condensed and arranged with
-few crossings of the inter-pathway links. The subsystem boxes and names are kept. Outputs: an SVG in the style of the
+few crossings of the inter-pathway links, or (`--pack`) packed into as little space as possible without inter-pathway
+links. The subsystem boxes and names are kept. Outputs: an SVG in the style of the
 BRENDA map, an Escher map for editing, and box positions for CNApy.
 
 The results for iML1515 are in [BRENDAmap/draft_map_iML1515](BRENDAmap/draft_map_iML1515).
@@ -21,6 +22,9 @@ python -m ecmapper.draft_map.prepare iML1515.xml BRENDAmap/BRENDA_map_reactions.
 # 2. build the draft map
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
     --hub-subsystems 6 --iterations 200000 --seed 3
+# or without inter-pathway links, the subsystems packed into as little space as possible
+python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT_PACKED \
+    --pack --iterations 200000 --seeds 4
 ```
 
 `iML1515.xml` and `iML1515.json` are from [BiGG](http://bigg.ucsd.edu/models/iML1515). The first step takes about
@@ -35,6 +39,7 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--iterations`, `--seed`, `--seeds` | 20000, 1, 1 | annealing of the arrangement (step 6); with `--seeds k` the best of k runs is kept |
 | `--gap` | 80 | space between subsystem boxes |
 | `--flips {none,x,xy}` | none | allow mirroring subsystems (left–right, also upside down) |
+| `--pack` | | instead of steps 5 and 6: drop the inter-pathway links and pack the subsystems into as little space as possible (see [3.4](#34-packed-without-inter-pathway-links---pack)); not with `--hub-subsystems`, `--flips`, `--compare-flips`, `--extra` |
 | `--escher-scale` | 2.5 | scale of the Escher map relative to the BRENDA map |
 | `--escher-no-labels` | | no subsystem names in the Escher map |
 | `--compare-flips`, `--extra graphviz elk user-order` | | further arrangements for comparison (`map_*.svg`, `stats.json`); Graphviz needs pygraphviz, ELK needs `node` with `elkjs` on `$NODE_PATH` |
@@ -78,6 +83,12 @@ ones: the arrangement needs the final box sizes and the positions of the linked 
 change with pruning, completion and condensation. Arranging first and condensing afterwards (`--extra user-order`)
 ends with 1.6× the crossings (276 vs. 173 for iML1515) and a 23% larger area, because the boxes shrink after the
 arrangement was optimised.
+
+With `--pack`, the inter-pathway links are removed after step 4 and steps 5 and 6 are replaced by a packing of the
+boxes: the annealing of 1.3 without links, which leaves only the area and the aspect ratio in the cost. Before step 4,
+the few edges of the BRENDA map from an enzyme node to a metabolite node in another subsystem are made local (they
+would cross the packed boxes): the edge is removed if the enzyme node has the metabolite in its own subsystem,
+otherwise the metabolite gets a copy next to the enzyme node.
 
 Inter-pathway links considered: the BRENDA `inter-pw-link`s (same compound in two subsystems, hidden in the BRENDA
 SVG) whose both ends are main metabolites of enzyme nodes with model reactions, plus the links added in step 3.
@@ -202,11 +213,32 @@ area 1.89 × Σ box areas (original order: 2.77), 15,900 × 9,350 units**.
 |---|---|
 | ![original order](BRENDAmap/draft_map_iML1515/figures/map_original_order_compacted.png) | ![central metabolism](BRENDAmap/draft_map_iML1515/figures/draft_map_detail_central.png) |
 
+### 3.4 Packed without inter-pathway links (`--pack`)
+
+[BRENDAmap/draft_map_iML1515/packed](BRENDAmap/draft_map_iML1515/packed): 200,000 moves, 4 seeds (area 1.277–1.291 ×
+Σ box areas, about 15 s per seed). One edge of the BRENDA map crosses subsystems for iML1515 (sarcosine oxidase in
+creatinine degradation to glycine in threonine metabolism; removed, glycine is drawn in creatinine degradation too).
+
+| | width × height (units) | area ÷ Σ box area |
+|---|---|---|
+| original order, compacted | 18,671 × 11,627 | 2.77 |
+| arranged for few crossings (hubs ≥ 6, the map of 3.3) | 15,867 × 9,345 | 1.89 |
+| **packed** | **12,582 × 7,950** | **1.28** |
+
+The packed map needs 33% less area than the map arranged for few crossings and 54% less than the original order.
+7.7% of its area is empty beyond the 80 units gap between the boxes (`--gap` makes the gaps smaller). The packing
+does not consider which subsystems belong together: glycolysis, gluconeogenesis, the pentose phosphate pathway and
+the citric acid cycle are spread over the map. The map has the same subsystems, nodes and reactions as the map of
+3.3; its Escher map passes the same checks.
+
+![Packed draft map of iML1515](BRENDAmap/draft_map_iML1515/figures/draft_map_packed.png)
+
 ## 4. Evaluation
 
 What works
-- The arrangement is compact and keeps linked subsystems together (pentose phosphate pathway, glycolysis,
-  Entner–Doudoroff, gluconeogenesis and TCA cycle are next to each other). Annealing over sequence pairs beats the
+- The arrangement is compact and keeps linked subsystems together (glycolysis, gluconeogenesis and the pentose
+  phosphate pathway are next to each other, the Entner–Doudoroff pathway close by; the citric acid cycle is not near
+  them, though). Annealing over sequence pairs beats the
   general tools by far because they optimise other things (stress, layers) and cannot use the fixed port positions.
 - Disconnecting hubs is the most effective single measure (crossings 449 → 173 with the same annealing) and loses
   little: their nodes stay in every subsystem, marked.

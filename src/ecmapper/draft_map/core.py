@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import json
 import math
 import pickle
@@ -696,3 +697,52 @@ def disconnect_hubs(dm: DraftMap, min_subsystems: int) -> list[dict]:
         f">= {min_subsystems} subsystems"
     )
     return hubs
+
+
+def localise_edges(dm: DraftMap) -> int:
+    """Draw the metabolites of edges between subsystems in the subsystem of the enzyme node.
+
+    The BRENDA map has a few edges from an enzyme node to a metabolite node of
+    another subsystem. If the enzyme node has the same metabolite in its own
+    subsystem, the edge is removed; otherwise the metabolite gets a copy next
+    to the enzyme node. Either way, the two nodes of the metabolite are linked
+    by an inter-pathway link; an original that is no longer used is removed.
+    Returns the number of edges removed or moved.
+    """
+    local = defaultdict(dict)  # enzyme node -> {metabolite key: metabolite node in its subsystem}
+    for e in dm.edges:
+        enzyme, met = dm.nodes[e.enzyme], dm.nodes[e.met]
+        if enzyme.subsystem == met.subsystem:
+            local[e.enzyme].setdefault(metabolite_key(met), met.id)
+    copies: dict[tuple[str, str], str] = {}
+    edges, links, moved = [], set(), 0
+    for e in dm.edges:
+        enzyme, met = dm.nodes[e.enzyme], dm.nodes[e.met]
+        if enzyme.subsystem == met.subsystem:
+            edges.append(e)
+            continue
+        moved += 1
+        own = local[e.enzyme].get(metabolite_key(met))
+        if own is None:
+            key = (met.id, enzyme.subsystem)
+            if key not in copies:
+                node = copy.copy(met)  # with the attributes set during completion (base_label, model_met_ids)
+                node.id = f"{met.id}_in_{enzyme.subsystem}"
+                node.subsystem = enzyme.subsystem
+                node.model_mets = set(met.model_mets)
+                boxes = [n.box for n in dm.nodes.values() if n.subsystem == enzyme.subsystem]
+                node.x, node.y = place_free(enzyme.x, enzyme.y, node.w, node.h, boxes, prefer=(met.x, met.y))
+                dm.nodes[node.id] = node
+                copies[key] = node.id
+            own = copies[key]
+            e.met = own
+            edges.append(e)
+        links.add((own, met.id))
+    dm.edges = edges
+    existing = {(l.a, l.b) for l in dm.links} | {(l.b, l.a) for l in dm.links}
+    dm.links.extend(MetLink(a, b, "added") for a, b in sorted(links) if (a, b) not in existing)
+    used = {e.met for e in dm.edges}
+    dm.remove_nodes({b for _, b in links if b not in used})
+    dm.links = [l for l in dm.links if l.a in dm.nodes and l.b in dm.nodes]
+    dm.log.append(f"{moved} edges between subsystems: metabolite drawn in the subsystem of the enzyme node")
+    return moved

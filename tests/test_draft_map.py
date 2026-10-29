@@ -11,6 +11,7 @@ pytest.importorskip("numba")
 from ecmapper import ECMapper
 from ecmapper.brenda_map import BrendaMap, MapMatcher
 from ecmapper.draft_map import fast, run
+from ecmapper.draft_map.core import DraftMap, Edge, Node, localise_edges
 from ecmapper.draft_map.layout import Ports, SequencePair, compact_axis, count_crossings, evaluate_arrangement
 from ecmapper.draft_map.prepare import prepare
 from test_brenda_map import model  # noqa: F401 (fixture)
@@ -89,21 +90,53 @@ def test_metrics_kernel():
     assert length == pytest.approx(expected["link_length"])
 
 
-def test_draft_map(sources, model, tmp_path):  # noqa: F811
-    """The whole pipeline on the BRENDA map with a small model."""
+def test_localise_edges():
+    dm = DraftMap()
+    for args in [
+        ("e1", "enzyme", "A", 0, 0),
+        ("gly_a", "main", "A", 100, 0, 72),
+        ("gly_b", "main", "B", 1000, 0, 72),
+        ("ser_b", "main", "B", 1000, 100, 65),
+        ("thr_b", "main", "B", 1000, 200, 82),
+        ("e2", "enzyme", "B", 1100, 100),
+    ]:
+        dm.nodes[args[0]] = Node(*args[:5], 60, 30, args[0], ligand_id=args[5] if len(args) > 5 else None)
+    dm.edges = [Edge("e1", m, "main", False, True) for m in ("gly_a", "gly_b", "ser_b", "thr_b")]
+    dm.edges += [Edge("e2", "gly_b", "main", False, True), Edge("e2", "ser_b", "main", False, True)]
+    assert localise_edges(dm) == 3
+    by_enzyme = {(e.enzyme, e.met) for e in dm.edges}
+    # glycine is drawn in A already: the edge to B is removed; serine and threonine get copies in A
+    assert by_enzyme == {("e1", "gly_a"), ("e1", "ser_b_in_A"), ("e1", "thr_b_in_A"), ("e2", "gly_b"), ("e2", "ser_b")}
+    assert dm.nodes["ser_b_in_A"].subsystem == "A" and dm.nodes["ser_b_in_A"].ligand_id == 65
+    # threonine is not used in B any more
+    assert "thr_b" not in dm.nodes
+    assert {(l.a, l.b) for l in dm.links} == {("gly_a", "gly_b"), ("ser_b_in_A", "ser_b")}
+
+
+def prepared(sources, model, tmp_path):  # noqa: F811
     brenda_map = BrendaMap.from_json(BRENDA_MAP / "BRENDA_map_reactions.json")
     matcher = MapMatcher(brenda_map, ECMapper(sources.values()), vicinity="propagate")
     data = prepare(model, matcher, {"PGI": "Glycolysis/Gluconeogenesis"})
+    prep = tmp_path / "prep.pkl"
+    with open(prep, "wb") as f:
+        pickle.dump(data, f)
+    return data, prep
+
+
+def run_draft_map(prep, out, *options):
+    run.main([str(prep), str(BRENDA_MAP / "BRENDA_map_reactions.json"), str(BRENDA_MAP / "BRENDA_map.svg"),
+              str(out), "--iterations", "300", *options])
+
+
+def test_draft_map(sources, model, tmp_path):  # noqa: F811
+    """The whole pipeline on the BRENDA map with a small model."""
+    data, prep = prepared(sources, model, tmp_path)
     assert data["reactions"]["PGI"]["subsystem"] == "Glycolysis/Gluconeogenesis"
     assert data["reactions"]["ARGAGMt"]["transport"]
     on_map = {rid for rid, m in data["matches"].items() if m["status"] == "on map"}
     assert {"PYK", "PGI"} <= on_map
-    prep = tmp_path / "prep.pkl"
-    with open(prep, "wb") as f:
-        pickle.dump(data, f)
     out = tmp_path / "out"
-    run.main([str(prep), str(BRENDA_MAP / "BRENDA_map_reactions.json"), str(BRENDA_MAP / "BRENDA_map.svg"),
-              str(out), "--iterations", "300"])
+    run_draft_map(prep, out)
 
     stats = json.loads((out / "stats.json").read_text())
     nodes = {
@@ -128,3 +161,23 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
         assert {m["bigg_id"] for m in reaction["metabolites"]} == set(data["reactions"][reaction["bigg_id"]]["metabolites"])
     metabolites = {n["bigg_id"] for n in body["nodes"].values() if n["node_type"] == "metabolite"}
     assert metabolites <= set(data["metabolites"])
+
+
+
+def test_draft_map_packed(sources, model, tmp_path):  # noqa: F811
+    """--pack: no inter-pathway links, the boxes packed without overlaps."""
+    data, prep = prepared(sources, model, tmp_path)
+    out = tmp_path / "out"
+    run_draft_map(prep, out, "--pack")
+    stats = json.loads((out / "stats.json").read_text())
+    assert stats["step3_completed"]["inter_pathway_links"] > 0
+    assert stats["final"]["inter_pathway_links"] == 0
+    assert stats["arrangements"]["packed"]["area_ratio"] < stats["arrangements"]["original order (compacted)"]["area_ratio"]
+    assert 'class="link inter-pw-link' not in (out / "draft_map.svg").read_text()
+    with open(out / "draft_map.pkl", "rb") as f:
+        dm = pickle.load(f)
+    boxes = list(dm.subsystems.values())
+    assert no_overlaps([b.x for b in boxes], [b.y for b in boxes], [b.w for b in boxes], [b.h for b in boxes], 80.0)
+    assert all(dm.nodes[e.enzyme].subsystem == dm.nodes[e.met].subsystem for e in dm.edges)
+    with pytest.raises(SystemExit):
+        run_draft_map(prep, out, "--pack", "--hub-subsystems", "6")

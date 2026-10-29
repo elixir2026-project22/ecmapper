@@ -307,9 +307,10 @@ reductase node that produces L-lactaldehyde. e_coli_core gets no new matches.
 `ecmapper.draft_map` builds a draft map of a model from its matches to the
 BRENDA map: it keeps the subsystems and enzyme nodes with model reactions,
 adds model reactions that connect drawn metabolites, condenses the
-subsystems and arranges them with few crossings of inter-pathway links.
-It writes an SVG in the style of the BRENDA map, an Escher map and box
-positions for CNApy.
+subsystems and arranges them with few crossings of inter-pathway links
+(or, with `--pack`, packs them into as little space as possible and drops
+the inter-pathway links). It writes an SVG in the style of the BRENDA map,
+an Escher map and box positions for CNApy.
 
 ```bash
 python -m pip install -e "./ecmapper[draft-map]"

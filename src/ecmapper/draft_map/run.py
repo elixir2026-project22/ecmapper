@@ -24,6 +24,7 @@ from .core import (
     disconnect_hubs,
     drop_empty_subsystems,
     hub_table,
+    localise_edges,
     prune_unassociated,
 )
 from .escher import write_escher
@@ -78,7 +79,13 @@ def main(argv=None) -> None:
     parser.add_argument("--escher-no-labels", action="store_true", help="no subsystem names in the Escher map")
     parser.add_argument("--compare-flips", action="store_true", help="also anneal with mirroring (x and xy)")
     parser.add_argument("--extra", nargs="*", default=[], help="further arrangements: graphviz elk user-order")
+    parser.add_argument("--pack", action="store_true",
+                        help="after step 4, drop the inter-pathway links and pack the subsystems into as little space "
+                        "as possible (instead of steps 5 and 6)")
     args = parser.parse_args(argv)
+    if args.pack and (args.hub_subsystems or args.flips != "none" or args.compare_flips or args.extra):
+        parser.error("--pack arranges the subsystems without links: --hub-subsystems, --flips, --compare-flips "
+                     "and --extra do not apply")
     args.out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
 
@@ -114,6 +121,11 @@ def main(argv=None) -> None:
     with open(args.out / "added_reactions.json", "w") as f:
         json.dump(added, f, indent=1)
 
+    if args.pack:
+        # no edges between subsystems, which would cross the packed boxes
+        localise_edges(dm)
+        log(dm.log[-1])
+
     # original subsystem centres (for the arrangement that keeps the original order)
     orig_centres = {k: (s.x + s.w / 2, s.y + s.h / 2) for k, s in dm.subsystems.items()}
 
@@ -130,6 +142,12 @@ def main(argv=None) -> None:
     if args.hub_subsystems:
         stats["hubs_disconnected"] = disconnect_hubs(dm, args.hub_subsystems)
         log(dm.log[-1])
+    if args.pack:
+        # without links, the annealing below only minimises the area (and the deviation from the aspect ratio)
+        dm.log.append(f"pack: removed all {len(dm.links)} inter-pathway links")
+        dm.links = []
+        log(dm.log[-1])
+    final = "packed" if args.pack else "annealed"
 
     # step 6: arrangement
     ports = Ports.from_map(dm)
@@ -148,11 +166,11 @@ def main(argv=None) -> None:
                                  flips=False if args.flips == "none" else args.flips,
                                  log=log if args.seeds == 1 else None)
         runs.append(res)
-        log(f"annealed (seed {seed}): {res[4]}")
+        log(f"{final} (seed {seed}): {res[4]}")
     stats["anneal_seeds"] = [r[4] for r in runs]
     res = min(runs, key=lambda r: r[4]["cost"])
-    results["annealed"] = res
-    log(f"annealed: {res[4]}")
+    results[final] = res
+    log(f"{final}: {res[4]}")
     if args.compare_flips:
         for mode in ("x", "xy"):
             res = anneal_arrangement(ports, x, y, gap=args.gap, iterations=args.iterations, seed=args.seed, flips=mode)
@@ -199,7 +217,7 @@ def main(argv=None) -> None:
         to_absolute(m)
         slug = name.replace(" ", "_").replace("(", "").replace(")", "").replace(",", "")
         write_svg(m, str(args.out / f"map_{slug}.svg"), md=md)
-        if name == "annealed":
+        if name == final:
             write_svg(m, str(args.out / "draft_map.svg"), md=md)
             write_cnapy_maps(m, str(args.out / "draft_map.maps"))
             stats["escher"] = write_escher(m, md, str(args.out / "draft_map.escher.json"),
