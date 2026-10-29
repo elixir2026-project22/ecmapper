@@ -4,7 +4,8 @@
 into a draft map of the model: the subsystems of the BRENDA map that contain model reactions, reduced to the enzyme
 nodes with model reactions, completed with model reactions that connect drawn metabolites, condensed and arranged with
 few crossings of the inter-pathway links, or (`--pack`) packed into as little space as possible without inter-pathway
-links. The subsystem boxes and names are kept. Outputs: an SVG in the style of the
+links. The subsystem boxes and names are kept. With `--split`, the map is split into a central map and auxiliary
+maps, one per BRENDA colour group, with an overview of the maps. Outputs: an SVG in the style of the
 BRENDA map, an Escher map for editing, and box positions for CNApy.
 
 The results for iML1515 are in [BRENDAmap/draft_map_iML1515](BRENDAmap/draft_map_iML1515).
@@ -25,6 +26,9 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 # or without inter-pathway links, the subsystems packed into as little space as possible
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT_PACKED \
     --pack --iterations 200000 --seeds 4
+# or split into a central map and auxiliary maps
+python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT_SPLIT \
+    --split --hub-subsystems 6 --iterations 200000 --seeds 4
 ```
 
 `iML1515.xml` and `iML1515.json` are from [BiGG](http://bigg.ucsd.edu/models/iML1515). The first step takes about
@@ -40,6 +44,10 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--gap` | 80 | space between subsystem boxes |
 | `--flips {none,x,xy}` | none | allow mirroring subsystems (left–right, also upside down) |
 | `--pack` | | instead of steps 5 and 6: drop the inter-pathway links and pack the subsystems into as little space as possible (see [3.4](#34-packed-without-inter-pathway-links---pack)); not with `--hub-subsystems`, `--flips`, `--compare-flips`, `--extra` |
+| `--split` | | split into a central map and auxiliary maps, each arranged on its own (see [3.5](#35-split-into-a-central-map-and-auxiliary-maps---split)); not with `--compare-flips`, `--extra` |
+| `--central IDS` | see 3.5 | with `--split`: comma-separated BRENDA subsystem IDs of the central map |
+| `--maps FILE` | | with `--split`: JSON file `{map name: [BRENDA subsystem IDs]}` of further maps (before the central map; the other subsystems go to the map of their colour group) |
+| `--min-map-reactions` | 25 | with `--split`: colour group maps with fewer model reactions are merged into the map they have most links with |
 | `--escher-scale` | 2.5 | scale of the Escher map relative to the BRENDA map |
 | `--escher-no-labels` | | no subsystem names in the Escher map |
 | `--compare-flips`, `--extra graphviz elk user-order` | | further arrangements for comparison (`map_*.svg`, `stats.json`); Graphviz needs pygraphviz, ELK needs `node` with `elkjs` on `$NODE_PATH` |
@@ -57,6 +65,11 @@ Outputs in `OUT`:
 | `map_*.svg` | the arrangements compared |
 | `stats.json` | counts after each step, hub metabolites, metrics of the arrangements, coverage of the model |
 | `draft_map.pkl` | the final `DraftMap` |
+
+With `--split`, `OUT` has instead of the `draft_map.*` files, for each map (file prefix: the map name in lower case,
+e.g. `central_metabolism`): `<map>.svg`, `<map>.escher.json`, `<map>.maps`, `<map>.reaction_positions.json`,
+`<map>.pkl`; and `overview.svg` (the overview, see 3.5; the map names link to the SVGs), `maps.json` (the subsystems
+and model reactions of each map, the metabolites linked across maps) and `stats.json` (per map in `maps`).
 
 Enzyme nodes: green: model reaction on the map; cyan: found in the vicinity search; violet, dashed: added from the model
 (step 3). Metabolite nodes added in step 3 are dashed, hub metabolites (step 5) have a red border. Inter-pathway links
@@ -89,6 +102,9 @@ boxes: the annealing of 1.3 without links, which leaves only the area and the as
 the few edges of the BRENDA map from an enzyme node to a metabolite node in another subsystem are made local (they
 would cross the packed boxes): the edge is removed if the enzyme node has the metabolite in its own subsystem,
 otherwise the metabolite gets a copy next to the enzyme node.
+
+With `--split`, the edges are made local as for `--pack`, and after step 4 the subsystems are assigned to maps and
+steps 5 and 6 run for each map; see [3.5](#35-split-into-a-central-map-and-auxiliary-maps---split).
 
 Inter-pathway links considered: the BRENDA `inter-pw-link`s (same compound in two subsystems, hidden in the BRENDA
 SVG) whose both ends are main metabolites of enzyme nodes with model reactions, plus the links added in step 3.
@@ -233,6 +249,58 @@ the citric acid cycle are spread over the map. The map has the same subsystems, 
 
 ![Packed draft map of iML1515](BRENDAmap/draft_map_iML1515/figures/draft_map_packed.png)
 
+### 3.5 Split into a central map and auxiliary maps (`--split`)
+
+Maps for genome-scale models get large. `--split` makes a central map and auxiliary maps, each a draft map of its own,
+and an overview:
+
+- **Central map:** the subsystems of `--central`, by default glycolysis, gluconeogenesis (with the anaplerotic
+  reactions), the pentose phosphate and Entner–Doudoroff pathways, the oxidative decarboxylation of pyruvate, the
+  citric acid cycle (with the glyoxylate shunt), oxidative phosphorylation and the acetate, ethanol and lactate
+  fermentations.
+- **Auxiliary maps:** one per colour group of the BRENDA map (the colours of the subsystem boxes), named after their
+  subsystems: energy and C1 metabolism (`pw1` without the central subsystems), lipids (`pw2`), amino acids (`pw3`),
+  nucleotides and cofactors (`pw4`), carbohydrates (`pw5`), fermentation and degradation (`pw6`), other pathways
+  (`pw7`, `pw0`). Maps with fewer than `--min-map-reactions` model reactions are merged into the map they have most
+  inter-pathway links with. `--maps` defines further maps.
+- **References:** an inter-pathway link between two maps is replaced by a label "→ map names" below both ends, in
+  the SVG and as an Escher text label. The references are made from all links, those of hub metabolites included;
+  `--hub-subsystems` then removes the hub links inside the maps before arranging them.
+- **Arrangement:** each map is arranged as in 3.3, with its own links (with `--pack`: packed without links).
+- **Overview** (`overview.svg`): one region per map, each subsystem collapsed to a small box with its number of model
+  reactions; the boxes keep the relative order they have on their map (sequence pair of their centres, packed). The
+  regions are arranged with few crossings of the links between maps (annealing as in 1.3). Grey lines: links inside
+  a map, purple: between maps (width by the number of links, hub links left out).
+
+[BRENDAmap/draft_map_iML1515/split](BRENDAmap/draft_map_iML1515/split): hubs ≥ 6 subsystems, 200,000 moves, 4 seeds
+per map (about 4 minutes). "Other pathways" (12 reactions) was merged into amino acids. 120 inter-pathway links
+between maps became references on 214 metabolite nodes (87 metabolites).
+
+| Map | Subsystems | Model reactions | Escher reactions | Links | Crossings (original order) | Link–box crossings | Width × height | References |
+|---|---|---|---|---|---|---|---|---|
+| Central metabolism | 10 | 78 | 86 | 4 | 0 (0) | 0 | 2,852 × 1,736 | 24 |
+| Energy and C1 metabolism | 12 | 77 | 87 | 1 | 0 (0) | 0 | 3,647 × 1,994 | 22 |
+| Lipids | 9 | 161 | 171 | 10 | 0 (12) | 2 | 5,128 × 3,120 | 22 |
+| Amino acids | 38 | 265 | 294 | 21 | 3 (15) | 7 | 6,315 × 4,096 | 56 |
+| Nucleotides and cofactors | 18 | 296 | 305 | 16 | 4 (17) | 1 | 6,089 × 4,136 | 35 |
+| Carbohydrates | 16 | 163 | 185 | 15 | 3 (9) | 3 | 4,670 × 2,736 | 35 |
+| Fermentation and degradation | 12 | 54 | 55 | 0 | 0 (0) | 0 | 2,902 × 1,739 | 20 |
+| **all maps** | **115** | **1,010** | **1,183** | **67** | **10** | **13** | | **214** |
+
+The maps together show the same 1,010 model reactions as the single map; 66 of them are on several maps (BRENDA
+draws some steps in several subsystems, e.g. the Calvin cycle reactions of "photosynthesis" in energy and C1
+metabolism are also in glycolysis and the pentose phosphate pathway). Inside the maps there are 10 crossings and 13
+link–box crossings (single map of 3.3: 149 and 87), and the maps together need 35% less area than the single map
+(9.7 × 10⁷ vs. 14.8 × 10⁷ units², about as little as the packed map, 10.0 × 10⁷). All seven Escher maps pass
+Escher's validator, and Escher 1.7.3 loads them with `iML1515.json` with no reactions or metabolites missing in the
+model.
+
+![Overview of the maps of iML1515](BRENDAmap/draft_map_iML1515/figures/split_overview.png)
+
+| Central map | Central map in Escher |
+|---|---|
+| ![central map](BRENDAmap/draft_map_iML1515/figures/split_central_metabolism.png) | ![central map in Escher](BRENDAmap/draft_map_iML1515/figures/escher_split_central_metabolism.png) |
+
 ## 4. Evaluation
 
 What works
@@ -271,7 +339,8 @@ boxes; the subsystem names are text labels (`--escher-no-labels` drops them). Ea
 an Escher reaction with its midmarker at the node (further reactions of the node below it) and multimarkers towards
 its substrates and products. Drawn main metabolites are primary nodes, matched cofactors secondary nodes; metabolites
 that are not drawn get secondary nodes next to the reaction; protons are not drawn (they stay in the stoichiometry).
-There is one Escher node per drawn node and compartment-specific model metabolite.
+There is one Escher node per drawn node and compartment-specific model metabolite. With `--split`, metabolite nodes
+that continue on other maps get a text label "→ map names" below them.
 
 iML1515: 1,183 Escher reactions (1,010 model reactions; reactions on several nodes are drawn several times),
 6,904 nodes, 115 text labels. `escher.validate.validate_map` (escher 1.7.3; schema and consistency of segments,
@@ -290,4 +359,7 @@ the model.
 3. Local refinement inside subsystems after completion (stress with constraints, e.g. WebCola) to shorten the edges of
    added reactions.
 4. Weights of the annealing as options; keeping the colour groups (category regions) of the BRENDA map together.
-5. A command of the `ecmapper` CLI; runs on the models of [BRENDA_MAP_EVALUATION.md](BRENDA_MAP_EVALUATION.md).
+5. Split maps: leave out subsystems of auxiliary maps whose reactions are all on the central map (e.g.
+   "photosynthesis", "methylaspartate cycle"); semantic zooming in a viewer (collapse subsystems into the boxes of the
+   overview and re-pack the maps with the same sequence pairs, which keeps the relative positions).
+6. A command of the `ecmapper` CLI; runs on the models of [BRENDA_MAP_EVALUATION.md](BRENDA_MAP_EVALUATION.md).

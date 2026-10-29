@@ -679,13 +679,15 @@ def hub_table(dm: DraftMap) -> list[dict]:
     return rows
 
 
-def disconnect_hubs(dm: DraftMap, min_subsystems: int) -> list[dict]:
+def disconnect_hubs(dm: DraftMap, min_subsystems: int, table: list[dict] | None = None) -> list[dict]:
     """Remove the inter-pathway links of metabolites drawn in at least `min_subsystems` subsystems.
 
     Their nodes stay in each subsystem (like currency metabolites, they are
-    drawn where they are used) and are marked as hubs.
+    drawn where they are used) and are marked as hubs. `table`: the hub
+    table to use (default: :func:`hub_table` of `dm`), e.g. that of the whole
+    map for a part of it.
     """
-    hubs = [r for r in hub_table(dm) if r["subsystems"] >= min_subsystems]
+    hubs = [r for r in (hub_table(dm) if table is None else table) if r["subsystems"] >= min_subsystems]
     keys = {r["key"] for r in hubs}
     before = len(dm.links)
     dm.links = [l for l in dm.links if metabolite_key(dm.nodes[l.a]) not in keys]

@@ -33,7 +33,9 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.5, su
     (compartment). Metabolites of a reaction that are not drawn get secondary
     nodes next to its multimarkers; protons are not drawn unless `protons`.
     Inter-pathway links and subsystem boxes are not exported; the names of
-    the subsystems are text labels if `subsystem_labels`.
+    the subsystems are text labels if `subsystem_labels`. Metabolite nodes
+    that continue on other maps (`stubs`, see :mod:`.split`) get a text label
+    "→ map names" below them.
     """
     new_id = _Ids()
     nodes, reactions, text_labels = {}, {}, {}
@@ -154,6 +156,12 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.5, su
                 metabolites=[dict(bigg_id=m, coefficient=c) for m, c in r["metabolites"].items()],
                 segments=segments,
             )
+    for drawn_id, ids in offsets.items():
+        drawn = dm.nodes[drawn_id]
+        if getattr(drawn, "stubs", None):
+            text = "→ " + ", ".join(drawn.stubs)
+            text_labels[new_id()] = dict(text=text, x=drawn.x * scale - 4 * len(text),
+                                         y=(drawn.y + 34 * (len(ids) - 1)) * scale + 30)
     if subsystem_labels:
         for s in dm.subsystems.values():
             text_labels[new_id()] = dict(text=s.label, x=(s.x + s.w / 2 - text_width(s.label, 18) / 2) * scale,

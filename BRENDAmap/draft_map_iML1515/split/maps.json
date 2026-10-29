@@ -1,0 +1,2183 @@
+{
+ "maps": [
+  {
+   "name": "Central metabolism",
+   "file": "central_metabolism.escher.json",
+   "subsystems": [
+    "Entner-Doudoroff-pathway",
+    "acetate-fermentation",
+    "citric-acid-cycle",
+    "ethanol-fermentation",
+    "gluconeogenesis",
+    "glycolysis",
+    "lactate-fermentation",
+    "oxidative-decarboxylation-of-pyruvate",
+    "oxidative-phosphorylation",
+    "pentose-phosphate-pathway"
+   ],
+   "reactions": [
+    "ACALD",
+    "ACKr",
+    "ACONTa",
+    "ACONTb",
+    "ACS",
+    "AKGDH",
+    "ALCD2x",
+    "ALDD2y",
+    "ATPM",
+    "ATPS4rpp",
+    "CITL",
+    "CS",
+    "DDGLK",
+    "EDA",
+    "EDD",
+    "ENO",
+    "ETHAAL",
+    "FBA",
+    "FBP",
+    "FE3DCITR5",
+    "FE3DCITexs",
+    "FRD2",
+    "FRD3",
+    "FUM",
+    "G6PDH2r",
+    "G6PP",
+    "GAPD",
+    "GLYCK2",
+    "GND",
+    "HEX1",
+    "ICDHyr",
+    "ICL",
+    "LDH_D",
+    "L_LACD2",
+    "L_LACD3",
+    "MALDDH",
+    "MALS",
+    "MDH",
+    "MDH2",
+    "MDH3",
+    "ME1",
+    "ME2",
+    "MOX",
+    "NADH10",
+    "NADH16pp",
+    "NADH17pp",
+    "NADH18pp",
+    "NADH5",
+    "NADH9",
+    "NTP1",
+    "OAADC",
+    "PDH",
+    "PFK",
+    "PFL",
+    "PGI",
+    "PGK",
+    "PGL",
+    "PGM",
+    "POR5",
+    "POX",
+    "PPC",
+    "PPCK",
+    "PPS",
+    "PTAr",
+    "PYK",
+    "PYK2",
+    "PYK3",
+    "PYK4",
+    "RBP4E",
+    "RPE",
+    "RPI",
+    "SUCDi",
+    "SUCOAS",
+    "TALA",
+    "TKT1",
+    "TKT2",
+    "TPI",
+    "X5PL3E"
+   ]
+  },
+  {
+   "name": "Energy and C1 metabolism",
+   "file": "energy_and_c1_metabolism.escher.json",
+   "subsystems": [
+    "C4-and-CAM-carbon-fixation",
+    "CO2-fixation-in-Crenarchaeota",
+    "acetyl-CoA-biosynthesis",
+    "aerobic-toluene-degradation",
+    "formaldehyde-oxidation",
+    "glycolate-and-glyoxylate-degradation",
+    "methane-metabolism",
+    "methylaspartate-cycle",
+    "photosynthesis",
+    "reductive-acetyl-coenzyme-A-pathway",
+    "ubiquinone-biosynthesis",
+    "urea-cycle"
+   ],
+   "reactions": [
+    "3OXCOAT",
+    "ACACT1r",
+    "ACALD",
+    "ACCOAC",
+    "ACONIs",
+    "ACONTa",
+    "ACONTb",
+    "ALATA_L",
+    "AMPMS2",
+    "ARGSL",
+    "ARGSS",
+    "ASPTA",
+    "CAT",
+    "CBMKr",
+    "CHRPL",
+    "CS",
+    "DHGLYH",
+    "DMQMT",
+    "ECOAH1",
+    "FALDH2",
+    "FALGTHLs",
+    "FBA",
+    "FBA3",
+    "FBP",
+    "FRD2",
+    "FRD3",
+    "FTHFLi",
+    "FUM",
+    "GHBDHx",
+    "GLXCL",
+    "GLYCK",
+    "GLYCLTDx",
+    "GLYCLTDy",
+    "GLYCTO2",
+    "GLYCTO3",
+    "GLYCTO4",
+    "HACD1",
+    "HBZOPT",
+    "HOPNTAL",
+    "ICDHyr",
+    "MALDDH",
+    "MDH",
+    "ME1",
+    "ME2",
+    "MMM",
+    "MSAR",
+    "MTHFC",
+    "MTHFD",
+    "OCBT",
+    "OCTDPS",
+    "OHPHM",
+    "OMMBLHX3",
+    "OMMBLHXy",
+    "OMPHHXy",
+    "OP4ENH",
+    "OPHBDC",
+    "OPHHX3",
+    "OPHHXy",
+    "PCNO",
+    "PDH",
+    "PFK_3",
+    "PGK",
+    "PPC",
+    "PPCK",
+    "PYK",
+    "RBP4E",
+    "RPE",
+    "RPI",
+    "SFGTHi",
+    "SUCDi",
+    "SUCOAS",
+    "TKT1",
+    "TKT2",
+    "TPI",
+    "ULA4NFT",
+    "UPLA4FNF",
+    "X5PL3E"
+   ]
+  },
+  {
+   "name": "Lipids",
+   "file": "lipids.escher.json",
+   "subsystems": [
+    "CDP-diacylglycerol-biosynthesis",
+    "arachidonate-biosynthesis",
+    "ceramide-biosynthesis",
+    "isoprenoid-biosynthesis",
+    "lipid-A-biosynthesis",
+    "lipid-metabolism",
+    "mevalonate-metabolism",
+    "palmitate-biosynthesis",
+    "teichoic-acid-biosynthesis"
+   ],
+   "reactions": [
+    "2AGPEAT160",
+    "2AGPEAT161",
+    "2AGPEAT181",
+    "2AGPGAT160",
+    "2AGPGAT161",
+    "2AGPGAT181",
+    "3HAD100",
+    "3HAD120",
+    "3HAD140",
+    "3HAD160",
+    "3HAD180",
+    "3HAD60",
+    "3HAD80",
+    "3OAR100",
+    "3OAR120",
+    "3OAR121",
+    "3OAR160",
+    "3OAR180",
+    "3OAR40",
+    "3OAR60",
+    "3OAR80",
+    "3OAS100",
+    "3OAS120",
+    "3OAS121",
+    "3OAS160",
+    "3OAS180",
+    "3OAS181",
+    "3OAS60",
+    "3OAS80",
+    "AACPS1",
+    "AACPS3",
+    "AACPS4",
+    "AACPS5",
+    "ACACT1r",
+    "ACACT2r",
+    "ACACT3r",
+    "ACACT4r",
+    "ACACT8r",
+    "ACCOAC",
+    "ACGAMT",
+    "ACOAD1f",
+    "ACOAD1fr",
+    "ACOAD2f",
+    "ACOAD7f",
+    "ACOATA",
+    "ACPPAT140",
+    "ACPPAT160",
+    "AGPAT140",
+    "AGPAT160",
+    "ALCD19",
+    "APG3PAT140",
+    "APG3PAT160",
+    "APG3PAT161",
+    "APG3PAT181",
+    "APH160",
+    "APH161",
+    "APH181",
+    "CDPMEK",
+    "CTECOAI7",
+    "DMATT",
+    "DMPPS",
+    "DXPRIi",
+    "DXPS",
+    "EAR140x",
+    "EAR140y",
+    "EAR160x",
+    "EAR160y",
+    "EAR180x",
+    "EAR60x",
+    "EAR60y",
+    "ECOAH1",
+    "ECOAH2",
+    "EDTXS1",
+    "EDTXS2",
+    "EDTXS3",
+    "EDTXS4",
+    "FA140ACPHi",
+    "FA160ACPHi",
+    "FA161ACPHi",
+    "FACOAE160",
+    "FACOAE161",
+    "FACOAE181",
+    "FACOAE60",
+    "FACOAL160t2pp",
+    "FACOAL161t2pp",
+    "FACOAL181t2pp",
+    "FACOAL60t2pp",
+    "G3PAT140",
+    "G3PAT160",
+    "G3PAT161",
+    "G3PAT181",
+    "G3PD2",
+    "G3PT",
+    "GAPP",
+    "GRTT",
+    "HACD2",
+    "HEPT1",
+    "HXCT",
+    "IPDDI",
+    "IPDPS",
+    "KAS14",
+    "KAS15",
+    "LIPAHT2ex",
+    "LIPAHTex",
+    "LPADSS",
+    "LPLIPAL1A140pp",
+    "LPLIPAL1A160pp",
+    "LPLIPAL1A161pp",
+    "LPLIPAL1A181pp",
+    "LPLIPAL1E160pp",
+    "LPLIPAL1E161pp",
+    "LPLIPAL1E181pp",
+    "LPLIPAL1G160pp",
+    "LPLIPAL1G161pp",
+    "LPLIPAL1G181pp",
+    "LPLIPAL2A140",
+    "LPLIPAL2A160",
+    "LPLIPAL2A161",
+    "LPLIPAL2A181",
+    "LPLIPAL2E160",
+    "LPLIPAL2E161",
+    "LPLIPAL2E181",
+    "LPLIPAL2G160",
+    "LPLIPAL2G161",
+    "LPLIPAL2G181",
+    "MACPD",
+    "MCOATA",
+    "MECDPDH5",
+    "MECDPS",
+    "MEPCT",
+    "MOAT",
+    "MOAT2",
+    "MOAT3C",
+    "OGMEACPS",
+    "PAI2T",
+    "PETNT161pp",
+    "PETNT181pp",
+    "PLIPA1A160pp",
+    "PLIPA1A161pp",
+    "PLIPA1A181pp",
+    "PLIPA1E160pp",
+    "PLIPA1E161pp",
+    "PLIPA1E181pp",
+    "PLIPA1G160pp",
+    "PLIPA1G161pp",
+    "PLIPA1G181pp",
+    "PLIPA2A160pp",
+    "PLIPA2A161pp",
+    "PLIPA2A181pp",
+    "PLIPA2E160pp",
+    "PLIPA2E161pp",
+    "PLIPA2E181pp",
+    "PLIPA2G160pp",
+    "PLIPA2G161pp",
+    "PLIPA2G181pp",
+    "TDPADGAT",
+    "TDSK",
+    "U23GAAT",
+    "UAGAAT",
+    "UHGADA",
+    "USHD"
+   ]
+  },
+  {
+   "name": "Amino acids",
+   "file": "amino_acids.escher.json",
+   "subsystems": [
+    "5R-carbapenem-carboxylate-biosynthesis",
+    "S-reticuline-biosynthesis",
+    "adipate-degradation",
+    "alanine-metabolism",
+    "aminopropanol-phosphate-biosynthesis",
+    "arginine-metabolism",
+    "aspartate-and-asparagine-metabolism",
+    "benzoxazinoid-glucosides-biosynthesis",
+    "carnitine-metabolism",
+    "chorismate-metabolism",
+    "cyanate-degradation",
+    "cysteine-metabolism",
+    "enterobactin-biosynthesis",
+    "glutamate-and-glutamine-metabolism",
+    "glutathione-metabolism",
+    "glycine-betaine-biosynthesis",
+    "glycine-metabolism",
+    "histidine-metabolism",
+    "isoleucine-metabolism",
+    "leucine-metabolism",
+    "lysine-metabolism",
+    "macrolide-antibiotic-biosynthesis",
+    "methionine-metabolism",
+    "ornithine-metabolism",
+    "peptidoglycan-biosynthesis",
+    "phenol-degradation",
+    "phenylalanine-metabolism",
+    "polyamine-pathway",
+    "proline-metabolism",
+    "selenocysteine-biosynthesis",
+    "serine-metabolism",
+    "sulfate-reduction",
+    "taurine-degradation",
+    "threonine-metabolism",
+    "tropane-alkaloid-biosynthesis",
+    "tryptophan-metabolism",
+    "tyrosine-metabolism",
+    "valine-metabolism"
+   ],
+   "reactions": [
+    "4HTHRA",
+    "4PCP",
+    "4PCPpp",
+    "AACTOOR",
+    "ABTA",
+    "ABUTD",
+    "ACACT1r",
+    "ACALD",
+    "ACANTHAT",
+    "ACCOAL",
+    "ACGK",
+    "ACGS",
+    "ACHBS",
+    "ACKr",
+    "ACLS",
+    "ACODA",
+    "ACONMT",
+    "ACOTA",
+    "ACOXT",
+    "ADMDC",
+    "ADSK",
+    "AGMT",
+    "AGPR",
+    "AHCYSNS",
+    "AHGDx",
+    "ALAALAD",
+    "ALAALAr",
+    "ALAR",
+    "ALATA_L",
+    "ALDD19xr",
+    "AMPTASECG",
+    "AMPTASEPG",
+    "ANPRT",
+    "ANS",
+    "AOBUTDs",
+    "APCS",
+    "APPLDHr",
+    "ARGDC",
+    "ARGDCpp",
+    "ARGSL",
+    "ARHGDx",
+    "ASAD",
+    "ASNN",
+    "ASNNpp",
+    "ASNS1",
+    "ASNS2",
+    "ASP1DC",
+    "ASPK",
+    "ASPO5",
+    "ASPT",
+    "ASPTA",
+    "AST",
+    "ATHRDHr",
+    "ATPPRT",
+    "BETALDHx",
+    "BETALDHy",
+    "BUTCT",
+    "CBMD",
+    "CBPS",
+    "CFAS160E",
+    "CFAS160G",
+    "CFAS180E",
+    "CFAS180G",
+    "CHORM",
+    "CHORS",
+    "COLIPAKpp",
+    "CRNBTCT",
+    "CRNCAL2",
+    "CRNCAR",
+    "CRNCBCT",
+    "CRNCDH",
+    "CRNDCAL2",
+    "CTBTCAL2",
+    "CXSAMS",
+    "CYNTAH",
+    "CYSDDS",
+    "CYSDS",
+    "CYSS",
+    "CYSTA",
+    "CYSTL",
+    "DAAD",
+    "DAPDC",
+    "DAPE",
+    "DDPA",
+    "DHACOAH",
+    "DHAD1",
+    "DHAD2",
+    "DHBD",
+    "DHBSH",
+    "DHDPRy",
+    "DHDPS",
+    "DHQS",
+    "DHQTi",
+    "ECA4OALpp",
+    "ECAP1pp",
+    "ECAP2pp",
+    "ECAP3pp",
+    "ECOAH1",
+    "FORCT",
+    "G1PTT",
+    "G5SADs",
+    "G5SD",
+    "GGGABADr",
+    "GGGABAH",
+    "GGPTRCO",
+    "GGPTRCS",
+    "GHMT2r",
+    "GLNS",
+    "GLU5K",
+    "GLUCYS",
+    "GLUDC",
+    "GLUDy",
+    "GLUN",
+    "GLUNpp",
+    "GLUR",
+    "GLUSy",
+    "GLYAT",
+    "GLYCK",
+    "GLYCK2",
+    "GLYCL",
+    "GSPMDA",
+    "GSPMDS",
+    "GTHOr",
+    "GTHRDHpp",
+    "GTHS",
+    "H2SO",
+    "HACD1",
+    "HADPCOADH3",
+    "HCO3E",
+    "HCYSMT",
+    "HCYSMT2",
+    "HISTD",
+    "HISTP",
+    "HOPNTAL",
+    "HPYRP",
+    "HPYRRx",
+    "HPYRRy",
+    "HSDy",
+    "HSK",
+    "HSST",
+    "HSTPT",
+    "ICHORS_copy1",
+    "ICHORS_copy2",
+    "ICHORT",
+    "IG3PS",
+    "IGPDH",
+    "IGPS",
+    "ILETA",
+    "IPMD",
+    "IPPMIa",
+    "IPPMIb",
+    "IPPS",
+    "KARA1",
+    "KARA2",
+    "LA4NTpp",
+    "LADGMDH",
+    "LALDO2x",
+    "LALDO3",
+    "LALGP",
+    "LDH_D",
+    "LEUTAi",
+    "LIPOS",
+    "LYSAM",
+    "LYSDC",
+    "MALCOAMT",
+    "MCPST",
+    "MDH",
+    "METAT",
+    "METNA",
+    "METOX1s",
+    "METOX2s",
+    "METS",
+    "METSOXR1",
+    "METSOXR2",
+    "MGSA",
+    "MTAN",
+    "MTHFC",
+    "O16A4Lpp",
+    "O16AP1pp",
+    "O16AP2pp",
+    "O16AP3pp",
+    "OBTFL",
+    "OMBZLM",
+    "OMCDC",
+    "OP4ENH",
+    "ORNDC",
+    "P5CD",
+    "P5CR",
+    "PAPPT3",
+    "PAPSR",
+    "PAPSR2",
+    "PGCD",
+    "PHETA1",
+    "PPAKr",
+    "PPND",
+    "PPNDH",
+    "PRAIi",
+    "PRAMPC",
+    "PRATPP",
+    "PRMICI",
+    "PROD3",
+    "PRPPS",
+    "PSCVT",
+    "PSERT",
+    "PSP_L",
+    "PSP_Lpp",
+    "PTA2",
+    "PTAr",
+    "PTRCTA",
+    "RHCCE",
+    "SADH",
+    "SADT2",
+    "SDPDS",
+    "SDPTA",
+    "SELNPS",
+    "SERAT",
+    "SERD_D",
+    "SERD_L",
+    "SGDS",
+    "SGSAD",
+    "SHGO",
+    "SHK3Dr",
+    "SHKK",
+    "SHSL1",
+    "SOTA",
+    "SPMDAT1",
+    "SPMDAT2",
+    "SPMS",
+    "SSALx",
+    "SSALy",
+    "SULR",
+    "TAUDO",
+    "TDPAGTA",
+    "TDPGDH",
+    "TEO2M",
+    "THDPS",
+    "THRA",
+    "THRA2",
+    "THRD",
+    "THRD_L",
+    "THRS",
+    "TRPAS2",
+    "TRPS1",
+    "TRPS2",
+    "TRPS3",
+    "TYROXDApp",
+    "TYRTA",
+    "UAAGDS",
+    "UAGCVT",
+    "UAGPT3",
+    "UAMAGS",
+    "UAMAS",
+    "UAPGR",
+    "UDCPDP",
+    "UDCPDPS",
+    "UDCPDPpp",
+    "UDPGPT",
+    "UDPKAAT",
+    "UGMDDS",
+    "UM3PL",
+    "UM4PCP",
+    "UM4PL",
+    "UPLA4FNT",
+    "VALTA",
+    "VPAMTr"
+   ]
+  },
+  {
+   "name": "Nucleotides and cofactors",
+   "file": "nucleotides_and_cofactors.escher.json",
+   "subsystems": [
+    "6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis",
+    "NAD-metabolism",
+    "ascorbate-metabolism",
+    "biotin-biosynthesis",
+    "coenzyme-A-metabolism",
+    "flavin-biosynthesis",
+    "heme-metabolism",
+    "lipoate-biosynthesis",
+    "molybdenum-cofactor-biosynthesis",
+    "pantothenate-biosynthesis",
+    "ppGpp-biosynthesis",
+    "purine-metabolism",
+    "pyrimidine-metabolism",
+    "tetrahydrofolate-metabolism",
+    "vitamin-B1-metabolism",
+    "vitamin-B12-metabolism",
+    "vitamin-B6-metabolism",
+    "vitamin-K-metabolism"
+   ],
+   "reactions": [
+    "3KGK",
+    "4ABZGLUH",
+    "4HTHRK",
+    "5DOAN",
+    "AACPS9",
+    "AADDGT",
+    "ACBIPGT",
+    "ACKr",
+    "ACP1_FMN",
+    "ACP1p",
+    "ADA",
+    "ADCL",
+    "ADCS",
+    "ADD",
+    "ADK1",
+    "ADNK1",
+    "ADNUC",
+    "ADOCBIK",
+    "ADOCBLS",
+    "ADPRDP",
+    "ADPT",
+    "ADSL1r",
+    "ADSL2r",
+    "ADSS",
+    "AICART",
+    "AIRC2",
+    "AIRC3",
+    "ALATA_D2",
+    "ALATA_L2",
+    "AMAOTr",
+    "AMMQLT8",
+    "AMPN",
+    "AOXSr2",
+    "AP4AH",
+    "APRAUR",
+    "ARBTNR2",
+    "ARBTNR3",
+    "ASCBPL",
+    "ASPCT",
+    "ASPO3",
+    "ASPO4",
+    "ASPO6",
+    "ATPM",
+    "ATPS4rpp",
+    "BMOCOS",
+    "BTS5",
+    "BWCOS",
+    "CCGS",
+    "CDGS",
+    "CMPN",
+    "CPGNR2",
+    "CPGNR3",
+    "CPH4S",
+    "CPMPS",
+    "CPPPGO",
+    "CPPPGO2",
+    "CSND",
+    "CTPS2",
+    "CYTD",
+    "CYTDH",
+    "CYTDK2",
+    "CYTK1",
+    "CYTK2",
+    "DADA",
+    "DADK",
+    "DB4PS",
+    "DBTS",
+    "DCTPD",
+    "DCYTD",
+    "DGK1",
+    "DHFR",
+    "DHFS",
+    "DHMPTR",
+    "DHNAOT4",
+    "DHNCOAS",
+    "DHNCOAT",
+    "DHNPA2r",
+    "DHNPTE",
+    "DHORD2",
+    "DHORD5",
+    "DHORDfum",
+    "DHORTS",
+    "DHPPDA2",
+    "DHPS2",
+    "DHPTPE",
+    "DNMPPA",
+    "DNTPPA",
+    "DOGULNR",
+    "DPCOAK",
+    "DPR",
+    "DRPA",
+    "DTMPK",
+    "DURIK1",
+    "DURIPP",
+    "DUTPDP",
+    "DXPS",
+    "E4PD",
+    "FADRx2",
+    "FCLT",
+    "FDMO",
+    "FDMO2",
+    "FDMO3",
+    "FDMO4",
+    "FDMO6",
+    "FE3HOXR2",
+    "FE3HOXR3",
+    "FECRMR2",
+    "FECRMR3",
+    "FEENTERR2",
+    "FEENTERR3",
+    "FEOXAMR2",
+    "FEOXAMR3",
+    "FLVR",
+    "FLVRx",
+    "FMNAT",
+    "FMNRx",
+    "FMNRx2",
+    "FTHFD",
+    "G1SAT",
+    "GAL1PPpp",
+    "GARFT",
+    "GART",
+    "GDPDPK",
+    "GHMT2r",
+    "GK1",
+    "GLUPRT",
+    "GLUTRR",
+    "GLUTRS",
+    "GMPR",
+    "GMPS2",
+    "GSNK",
+    "GTPCI",
+    "GTPCII2",
+    "GTPDPDP",
+    "GTPDPK",
+    "GUACYC",
+    "GUAD",
+    "GUAPRT",
+    "HEMEOS",
+    "HETZK",
+    "HMBS",
+    "HPPK2",
+    "HXAND",
+    "HXPRT",
+    "HYPOE",
+    "ICHORS_copy1",
+    "ICHORS_copy2",
+    "ICYSDS",
+    "IMPC",
+    "IMPD",
+    "INSH",
+    "INSK",
+    "KG6PDC",
+    "LIPAMPL",
+    "LIPATPT",
+    "MOCDS",
+    "MOCOS",
+    "MOHMT",
+    "MPTAT",
+    "MPTS",
+    "MTHFD",
+    "MTHFR2",
+    "MTRPOX",
+    "NADDP",
+    "NADK",
+    "NADN",
+    "NADPPPS",
+    "NADS1",
+    "NADTRHD",
+    "NAMNPP",
+    "NDPK1",
+    "NDPK2",
+    "NDPK3",
+    "NDPK4",
+    "NDPK5",
+    "NDPK6",
+    "NDPK7",
+    "NDPK8",
+    "NMNAT",
+    "NMNDA",
+    "NMNN",
+    "NMNt7pp",
+    "NNAM",
+    "NNATr",
+    "NNDMBRT",
+    "NNDPR",
+    "NTD1",
+    "NTD10",
+    "NTD10pp",
+    "NTD11",
+    "NTD11pp",
+    "NTD1pp",
+    "NTD3",
+    "NTD3pp",
+    "NTD4",
+    "NTD4pp",
+    "NTD5",
+    "NTD5pp",
+    "NTD6",
+    "NTD6pp",
+    "NTD7",
+    "NTD7pp",
+    "NTD8",
+    "NTD8pp",
+    "NTD9",
+    "NTD9pp",
+    "NTP1",
+    "NTPP1",
+    "NTPP3",
+    "NTPP4",
+    "NTPP5",
+    "NTPP7",
+    "NTPTP1",
+    "OCTNLL",
+    "OHPBAT",
+    "OMPDC",
+    "ORPT",
+    "PANTS",
+    "PDE4",
+    "PDX5PO2",
+    "PDX5POi",
+    "PDX5PS",
+    "PDXPP",
+    "PERD",
+    "PMDPHT",
+    "PNTK",
+    "PPBNGS",
+    "PPCDC",
+    "PPGPPDP",
+    "PPM",
+    "PPM2",
+    "PPNCL2",
+    "PPPGO",
+    "PPPGO3",
+    "PRAGSr",
+    "PRAIS",
+    "PRASCSi",
+    "PRFGS",
+    "PTAr",
+    "PTPATi",
+    "PUNP1",
+    "PUNP2",
+    "PUNP3",
+    "PUNP4",
+    "PUNP5",
+    "PUNP6",
+    "PUNP7",
+    "PYAM5PO",
+    "PYDAMK",
+    "PYDXK",
+    "PYDXNK",
+    "PYDXPP",
+    "PYK6",
+    "PYNP2r",
+    "QULNS",
+    "RBFK",
+    "RBFSa",
+    "RBFSb",
+    "RHAT1",
+    "RNDR1",
+    "RNDR2",
+    "RNDR3",
+    "RNDR4",
+    "RZ5PP",
+    "SCYSDS",
+    "SEPHCHCS",
+    "SERD_D",
+    "SERD_L",
+    "SHCHCS3",
+    "SHCHD2",
+    "SHCHF",
+    "SUCBZL",
+    "SUCBZS",
+    "TDP",
+    "THD2pp",
+    "THZPSN3",
+    "TMDK1",
+    "TMDPP",
+    "TMDS",
+    "TMK",
+    "TMPK",
+    "TMPPP",
+    "TPRDCOAS",
+    "TYRL",
+    "UMPK",
+    "UPP3MT",
+    "UPP3S",
+    "UPPDC1",
+    "UPPRT",
+    "URIH",
+    "URIK2",
+    "WCOS",
+    "XAND",
+    "XPPT",
+    "XTSNH",
+    "YUMPS"
+   ]
+  },
+  {
+   "name": "Carbohydrates",
+   "file": "carbohydrates.escher.json",
+   "subsystems": [
+    "CMP-KDO-biosynthesis",
+    "UDP-GlcNAc-biosynthesis",
+    "d-mannose-degradation",
+    "d-xylose-degradation",
+    "dTDPLrhamnose-biosynthesis",
+    "degradation-of-hexoses",
+    "degradation-of-pentoses",
+    "degradation-of-sugar-acids",
+    "degradation-of-sugar-alcohols",
+    "glycogen-biosynthesis",
+    "glycogen-metabolism",
+    "ketogluconate-metabolism",
+    "metabolism-of-amino-sugars-and-derivatives",
+    "metabolism-of-disaccharids",
+    "sulfated-glycosaminoglycan-metabolism",
+    "sulfoquinovose-degradation"
+   ],
+   "reactions": [
+    "2DDARAA",
+    "2DGULRGx",
+    "2DGULRGy",
+    "2DGULRx",
+    "2DGULRy",
+    "3SLAR",
+    "5DGLCNR",
+    "5DKGR",
+    "6D6SPA",
+    "A5PISO",
+    "ACM6PH",
+    "ACMAMUT",
+    "ACNML",
+    "AGDC",
+    "ALKP",
+    "ALTRH",
+    "AMALT1",
+    "AMALT2",
+    "AMALT3",
+    "AMALT4",
+    "AMANAPEr",
+    "AMANK",
+    "ARABDI",
+    "ARAI",
+    "BGLA1",
+    "CLPNS160pp",
+    "CLPNS161pp",
+    "CLPNS181pp",
+    "DDGALK",
+    "DDGLK",
+    "DDPGALA",
+    "DHAPT",
+    "DKGLCNR1",
+    "DKGLCNR2x",
+    "DKGLCNR2y",
+    "DXYLTD",
+    "EDA",
+    "F1PP",
+    "F6PA",
+    "F6PP",
+    "FCI",
+    "FCLK",
+    "FCLPA",
+    "FRUK",
+    "FRULYSDG",
+    "G1PACT",
+    "G1PP",
+    "G1PPpp",
+    "G1PTT",
+    "G3PD5",
+    "G3PD6",
+    "G3PD7",
+    "G6PDA",
+    "GALCTD",
+    "GALCTND",
+    "GALKr",
+    "GALS3",
+    "GALT1",
+    "GALUi",
+    "GCALDD",
+    "GDPMNH",
+    "GDPMNP",
+    "GF6PTA",
+    "GLCATr",
+    "GLCDpp",
+    "GLCP",
+    "GLCRAL",
+    "GLCRD",
+    "GLCS1",
+    "GLCTR1",
+    "GLCTR2",
+    "GLCTR3",
+    "GLGC",
+    "GLTPD",
+    "GLYCDx",
+    "GLYCK2",
+    "GLYK",
+    "GMAND",
+    "GNK",
+    "GNP",
+    "GPDDA1",
+    "GPDDA1pp",
+    "GPDDA2",
+    "GPDDA2pp",
+    "GPDDA3",
+    "GPDDA3pp",
+    "GPDDA4",
+    "GPDDA4pp",
+    "GUI1",
+    "GUI2",
+    "HEX1",
+    "HEX4",
+    "HEX7",
+    "HPYRI",
+    "IDOND",
+    "IDOND2",
+    "KDOCT2",
+    "KDOPP",
+    "KDOPS",
+    "KDUI",
+    "LACZ",
+    "LACZpp",
+    "LKDRA",
+    "LYXI",
+    "M1PD",
+    "MALTATr",
+    "MAN1PT2",
+    "MAN6PI",
+    "MANAO",
+    "MANPGH",
+    "MLTG1",
+    "MLTG2",
+    "MLTG3",
+    "MLTG4",
+    "MLTG5",
+    "MLTP1",
+    "MLTP2",
+    "MLTP3",
+    "MN6PP",
+    "MNNH",
+    "O16GLCT2",
+    "PFK_2",
+    "PGAMT",
+    "PGLYCP",
+    "PGMT",
+    "PMANM",
+    "R5PP",
+    "R5PPpp",
+    "RBK",
+    "RBK_L1",
+    "RBP4E",
+    "RHMND",
+    "RMI",
+    "RMK",
+    "RMPA",
+    "RPE",
+    "RU5PP",
+    "SBTPD",
+    "TAGURr",
+    "TDPDRE",
+    "TDPDRR",
+    "TDPGDH",
+    "TGBPA",
+    "TRE6PH",
+    "TRE6PP",
+    "TRE6PS",
+    "TREH",
+    "TREHpp",
+    "TRSARr",
+    "UACGAMPpp",
+    "UACMAMO",
+    "UAG2E",
+    "UAGDP",
+    "UDPG4E",
+    "UDPGALPpp",
+    "UDPGPpp",
+    "UGLT",
+    "X5PL3E",
+    "XYHDL",
+    "XYLI1",
+    "XYLI2",
+    "XYLK",
+    "XYLK2"
+   ]
+  },
+  {
+   "name": "Fermentation and degradation",
+   "file": "fermentation_and_degradation.escher.json",
+   "subsystems": [
+    "3-phenylpropionate-degradation",
+    "L-lactaldehyde-degradation",
+    "acetoin-degradation",
+    "allantoin-degradation",
+    "butanoate-fermentation",
+    "creatinine-degradation",
+    "degradation-of-aromatic-nitrogen-containing-compounds",
+    "methylglyoxal-degradation",
+    "octane-oxidation",
+    "phenylacetate-degradation-aerobic",
+    "propanol-degradation",
+    "propionate-fermentation"
+   ],
+   "reactions": [
+    "3HBZCT",
+    "3HPPPNH",
+    "3OXCOAT",
+    "ACACCT",
+    "ACACT1r",
+    "ACALD",
+    "ACLS",
+    "ALDD4",
+    "ALLTAMH2",
+    "ALLTN",
+    "BUTCT",
+    "DHACOAH",
+    "DHPPD",
+    "ECOAH1",
+    "FACOAE80",
+    "FACOAL80t2pp",
+    "FRD2",
+    "FRD3",
+    "GLYOX",
+    "GLYOX3",
+    "HADPCOADH3",
+    "HKNDDH",
+    "HKNTDH",
+    "HOPNTAL",
+    "HPPPNDO",
+    "LCADi",
+    "LCARS",
+    "LCARSyi",
+    "LDH_D2",
+    "LGTHL",
+    "MCITD",
+    "MCITL2",
+    "MCITS",
+    "MICITDr",
+    "MMCD",
+    "MMM",
+    "NNAM",
+    "OP4ENH",
+    "OXAMTC",
+    "OXCOAHDH",
+    "OXDHCOAT",
+    "PACCOAE",
+    "PACCOAL",
+    "PACOAT",
+    "PPCSCT",
+    "PPPNDO",
+    "PTA2",
+    "REPHACCOAI",
+    "SARCOX",
+    "SUCDi",
+    "UGCIAMH",
+    "UGLYCH",
+    "URDGLYCD",
+    "URIC"
+   ]
+  }
+ ],
+ "cross_map_metabolites": [
+  {
+   "name": "acetyl-CoA",
+   "model_metabolites": [
+    "accoa"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates",
+    "Central metabolism",
+    "Energy and C1 metabolism",
+    "Fermentation and degradation",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "fumarate",
+   "model_metabolites": [
+    "fum"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism",
+    "Energy and C1 metabolism",
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "(2E,6E)-farnesyl-PP",
+   "model_metabolites": [
+    "frdp"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism",
+    "Lipids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "GAP",
+   "model_metabolites": [
+    "g3p"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates",
+    "Central metabolism",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "Ser",
+   "model_metabolites": [
+    "etha",
+    "ser__D",
+    "ser__L"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates",
+    "Central metabolism",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "carbamoyl phosphate",
+   "model_metabolites": [
+    "cbp"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism",
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "pyruvate",
+   "model_metabolites": [
+    "pyr"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism",
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "2-phospho-D-glycerate",
+   "model_metabolites": [
+    "2pg"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "CH2O",
+   "model_metabolites": [
+    "acald",
+    "btal",
+    "fald",
+    "glx"
+   ],
+   "maps": [
+    "Energy and C1 metabolism",
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "DHAP",
+   "model_metabolites": [
+    "dhap"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Central metabolism",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "Fe2+ mitochondria",
+   "model_metabolites": [
+    "fe2"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "UDP-GlcNAc",
+   "model_metabolites": [
+    "uacgam"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "acetate",
+   "model_metabolites": [
+    "ac"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "chorismate",
+   "model_metabolites": [
+    "chor"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "glycolaldehyde",
+   "model_metabolites": [
+    "gcald"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "succinate",
+   "model_metabolites": [
+    "succ"
+   ],
+   "maps": [
+    "Central metabolism",
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "succinyl-CoA",
+   "model_metabolites": [
+    "succoa"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism",
+    "Fermentation and degradation"
+   ]
+  },
+  {
+   "name": "2-Octaprenyl-3-methyl-6-methoxy- 1,4-benzoquinol",
+   "model_metabolites": [
+    "2ommbl"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "2-Octaprenyl-6-methoxy-1,4-benzoquinol",
+   "model_metabolites": [
+    "2ombzl"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "2-hydroxy-3-oxopropanoate",
+   "model_metabolites": [
+    "2h3oppan"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "2-iminoacetate",
+   "model_metabolites": [
+    "dhgly"
+   ],
+   "maps": [
+    "Energy and C1 metabolism",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "2-oxoglutarate",
+   "model_metabolites": [
+    "akg"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "3-oxoadipyl-CoA",
+   "model_metabolites": [
+    "oxadpcoa"
+   ],
+   "maps": [
+    "Amino acids",
+    "Fermentation and degradation"
+   ]
+  },
+  {
+   "name": "3-phosphoglycerate",
+   "model_metabolites": [
+    "3pg"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "4-Hydroxy-L-threonine",
+   "model_metabolites": [
+    "4hthr"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "5'-Deoxyadenosine",
+   "model_metabolites": [
+    "dad_5"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "5-P-alpha-D-Rib 1-PP",
+   "model_metabolites": [
+    "prpp"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "5-amino-1-(5-phospho-D-ribosyl)imidazole",
+   "model_metabolites": [
+    "air"
+   ],
+   "maps": [
+    "Energy and C1 metabolism",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "6-phospho-gluconate",
+   "model_metabolites": [
+    "6pgc"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "Ala",
+   "model_metabolites": [
+    "ala__D",
+    "ala__L"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "CMP-3-deoxy-D-manno-octulosonate",
+   "model_metabolites": [
+    "ckdo"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "Core oligosaccharide lipid A",
+   "model_metabolites": [
+    "colipa"
+   ],
+   "maps": [
+    "Amino acids",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "Cys",
+   "model_metabolites": [
+    "cys__D",
+    "cys__L"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "D-Ala",
+   "model_metabolites": [
+    "ala__D",
+    "ala__L"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "D-Glc 6-P",
+   "model_metabolites": [
+    "g6p"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "D-Rib 5-P",
+   "model_metabolites": [
+    "r5p"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "D-erythrose 4-phosphate",
+   "model_metabolites": [
+    "e4p"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "D-glycerate",
+   "model_metabolites": [
+    "glyc__R"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "DTDP-4-acetamido-4,6-dideoxy-D-galactose",
+   "model_metabolites": [
+    "dtdp4aaddg"
+   ],
+   "maps": [
+    "Lipids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "FBP",
+   "model_metabolites": [
+    "fdp"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "Fru 6-P",
+   "model_metabolites": [
+    "f6p",
+    "glc__D"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "Gly",
+   "model_metabolites": [
+    "gly"
+   ],
+   "maps": [
+    "Amino acids",
+    "Fermentation and degradation"
+   ]
+  },
+  {
+   "name": "Glycerophosphoglycerol",
+   "model_metabolites": [
+    "g3pg"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "HPR",
+   "model_metabolites": [
+    "hpyr"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates"
+   ]
+  },
+  {
+   "name": "Inner core oligosaccharide lipid A (E coli)",
+   "model_metabolites": [
+    "icolipa"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "Kdo-phospho-heptosyl-phospho-heptosyl-heptosyl-kdo2-lipidA",
+   "model_metabolites": [
+    "kphphhlipa"
+   ],
+   "maps": [
+    "Lipids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "L-argininosuccinate",
+   "model_metabolites": [
+    "argsuc"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "L-lactaldehyde",
+   "model_metabolites": [
+    "lald__L"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Fermentation and degradation"
+   ]
+  },
+  {
+   "name": "L-lactate",
+   "model_metabolites": [
+    "lac__D",
+    "lac__L"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "L-malate",
+   "model_metabolites": [
+    "mal__L"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "Lipoate (protein bound)",
+   "model_metabolites": [
+    "lipopb"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "Lys",
+   "model_metabolites": [
+    "lys__L"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates"
+   ]
+  },
+  {
+   "name": "Malonyl-CoA methyl ester",
+   "model_metabolites": [
+    "malcoame"
+   ],
+   "maps": [
+    "Amino acids",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-undecaprenol",
+   "model_metabolites": [
+    "unaga"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "O16 antigen undecaprenyl diphosphate",
+   "model_metabolites": [
+    "o16aund"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates"
+   ]
+  },
+  {
+   "name": "Octanoate (protein bound)",
+   "model_metabolites": [
+    "octapb"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "Orn",
+   "model_metabolites": [
+    "orn"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "Phosphatidylethanolamine (dihexadec-9enoyl, n-C16:1)",
+   "model_metabolites": [
+    "pe161",
+    "pe181"
+   ],
+   "maps": [
+    "Amino acids",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "Phosphatidylglycerol (dihexadec-9-enoyl, n-C16:1)",
+   "model_metabolites": [
+    "pg160",
+    "pg161",
+    "pg181"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates"
+   ]
+  },
+  {
+   "name": "Phosphatidylglycerol (dihexadec-9-enoyl, n-C16:1)",
+   "model_metabolites": [
+    "pg160",
+    "pg161",
+    "pg181"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "Trans-Aconitate",
+   "model_metabolites": [
+    "acon_T"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "Trp",
+   "model_metabolites": [
+    "trp__L"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "UDP-Glc",
+   "model_metabolites": [
+    "udpg"
+   ],
+   "maps": [
+    "Amino acids",
+    "Carbohydrates"
+   ]
+  },
+  {
+   "name": "Undecaprenyl phosphate-4-amino-4-deoxy-L-arabinose",
+   "model_metabolites": [
+    "uLa4n"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "Undecaprenyl phosphate-4-amino-4-formyl-L-arabinose",
+   "model_metabolites": [
+    "uLa4fn"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "Undecaprenyl-diphospho N-acetylglucosamine-N-acetylmannosaminuronate-N-acetamido-4,6-dideoxy-D-galactose",
+   "model_metabolites": [
+    "unagamuf"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "Undecaprenyl-diphospho-N-acetylglucosamine-N-acetylmannosaminuronate",
+   "model_metabolites": [
+    "unagamu"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "Uridine 5''-diphospho-{beta}-4-deoxy-4-amino-L-arabinose",
+   "model_metabolites": [
+    "udpLa4n"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "Uridine 5''-diphospho-{beta}-4-deoxy-4-formamido-L-arabinose",
+   "model_metabolites": [
+    "udpLa4fn"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "acetaldehyde",
+   "model_metabolites": [
+    "acald"
+   ],
+   "maps": [
+    "Amino acids",
+    "Central metabolism"
+   ]
+  },
+  {
+   "name": "alpha-iminosuccinate",
+   "model_metabolites": [
+    "iasp"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "dTDP-L-rhamnose",
+   "model_metabolites": [
+    "dtdprmn"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "formate",
+   "model_metabolites": [
+    "for"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "glycerol",
+   "model_metabolites": [
+    "glyc"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "glycerone phosphate",
+   "model_metabolites": [
+    "dhap"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "glycolate",
+   "model_metabolites": [
+    "glyclt"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "malonyl-CoA",
+   "model_metabolites": [
+    "malcoa"
+   ],
+   "maps": [
+    "Amino acids",
+    "Energy and C1 metabolism"
+   ]
+  },
+  {
+   "name": "methylglyoxal",
+   "model_metabolites": [
+    "mthgxl"
+   ],
+   "maps": [
+    "Amino acids",
+    "Fermentation and degradation"
+   ]
+  },
+  {
+   "name": "nicotinamide",
+   "model_metabolites": [
+    "ncam"
+   ],
+   "maps": [
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "nicotinate",
+   "model_metabolites": [
+    "nac"
+   ],
+   "maps": [
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "octanoate",
+   "model_metabolites": [
+    "octa"
+   ],
+   "maps": [
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "octanoyl-CoA",
+   "model_metabolites": [
+    "occoa"
+   ],
+   "maps": [
+    "Fermentation and degradation",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "oxaloacetate",
+   "model_metabolites": [
+    "oaa"
+   ],
+   "maps": [
+    "Central metabolism",
+    "Fermentation and degradation"
+   ]
+  },
+  {
+   "name": "phosphoenolpyruvate",
+   "model_metabolites": [
+    "pep"
+   ],
+   "maps": [
+    "Central metabolism",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "sn-glycerol 3-phosphate",
+   "model_metabolites": [
+    "glyc3p"
+   ],
+   "maps": [
+    "Carbohydrates",
+    "Lipids"
+   ]
+  },
+  {
+   "name": "sulfite",
+   "model_metabolites": [
+    "so3"
+   ],
+   "maps": [
+    "Amino acids",
+    "Nucleotides and cofactors"
+   ]
+  },
+  {
+   "name": "urate",
+   "model_metabolites": [
+    "urate"
+   ],
+   "maps": [
+    "Fermentation and degradation",
+    "Nucleotides and cofactors"
+   ]
+  }
+ ]
+}

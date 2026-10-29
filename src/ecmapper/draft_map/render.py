@@ -28,6 +28,7 @@ g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-
 g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
 g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
 text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
 a{fill:inherit;}
 """
 
@@ -145,6 +146,11 @@ def write_svg(dm: DraftMap, path: str, reaction_labels: bool = True, md=None, ma
             if getattr(n, "hub", False):
                 title += " | hub metabolite: drawn in several subsystems, links between them not drawn"
             extra = ""
+            stubs = getattr(n, "stubs", None)
+            if stubs:
+                # with --split: the metabolite continues on other maps
+                extra = f'<text class="ref" y="{n.h / 2 + 11:.1f}">→ {html.escape(", ".join(stubs))}</text>'
+                title += " | also on: " + ", ".join(stubs)
             if reaction_labels and n.kind == "enzyme" and n.reactions and n.status != "added":
                 ids = ", ".join(n.reactions[:3]) + (" ..." if len(n.reactions) > 3 else "")
                 extra = f'<text class="rxn" y="{n.h / 2 + 9:.1f}">{html.escape(ids)}</text>'

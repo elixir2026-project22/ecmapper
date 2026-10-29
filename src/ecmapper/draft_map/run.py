@@ -12,6 +12,7 @@ import copy
 import json
 import pickle
 import time
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -42,6 +43,15 @@ from .layout import (
     to_relative,
 )
 from .render import write_cnapy_maps, write_reaction_positions, write_svg
+from .split import (
+    DEFAULT_CENTRAL,
+    assign_maps,
+    cross_map_metabolites,
+    overview,
+    slug,
+    split_map,
+    write_overview_svg,
+)
 
 
 def coverage(md, dm) -> dict:
@@ -56,6 +66,109 @@ def coverage(md, dm) -> dict:
     return dict(reactions=total, boundary=boundary, transporters=transport, other=other, drawn=len(drawn),
                 drawn_from_map=len(drawn - added), drawn_added=len(added), drawn_other=drawn_other,
                 coverage_other=drawn_other / other)
+
+
+def arrange(dm, args, final, log):
+    """Step 6: the original order (compacted, and as packed sequence pair) and the annealed arrangement.
+
+    Returns the ports, the compacted original order (x, y), {name: (x, y,
+    flip_x, flip_y, evaluation)} and the evaluations of the annealing seeds.
+    """
+    ports = Ports.from_map(dm)
+    results = {}
+    x, y = arrangement_original(dm, gap=args.gap)
+    results["original order (compacted)"] = (x, y, None, None, evaluate_arrangement(ports, x, y))
+    log(f"original order: {results['original order (compacted)'][4]}")
+    sp_ = SequencePair(ports.w, ports.h, args.gap)
+    gp, gn = SequencePair.from_positions(x + ports.w / 2, y + ports.h / 2)
+    xs, ys = sp_.pack(gp, gn)
+    results["original order (sequence pair packing)"] = (xs, ys, None, None, evaluate_arrangement(ports, xs, ys))
+    log(f"original order, packed: {results['original order (sequence pair packing)'][4]}")
+    if len(ports.names) < 2:
+        results[final] = results["original order (sequence pair packing)"]
+        return ports, x, y, results, []
+    runs = []
+    for seed in range(args.seed, args.seed + args.seeds):
+        res = anneal_arrangement(ports, x, y, gap=args.gap, iterations=args.iterations, seed=seed,
+                                 flips=False if args.flips == "none" else args.flips,
+                                 log=log if args.seeds == 1 else None)
+        runs.append(res)
+        log(f"{final} (seed {seed}): {res[4]}")
+    res = min(runs, key=lambda r: r[4]["cost"])
+    results[final] = res
+    log(f"{final}: {res[4]}")
+    return ports, x, y, results, [r[4] for r in runs]
+
+
+def write_outputs(m, md, out: Path, prefix: str, title: str, args, stats: dict) -> None:
+    """Files of a final map (absolute positions): SVG, CNApy box positions, Escher map, pickle, reaction positions."""
+    write_svg(m, str(out / f"{prefix}.svg"), md=md)
+    write_cnapy_maps(m, str(out / f"{prefix}.maps"))
+    stats["escher"] = write_escher(m, md, str(out / f"{prefix}.escher.json"), title, scale=args.escher_scale,
+                                   subsystem_labels=not args.escher_no_labels,
+                                   description="Draft map from the BRENDA map, made with ecmapper.draft_map")
+    with open(out / f"{prefix}.pkl", "wb") as f:
+        pickle.dump(m, f)
+    positions = "reaction_positions.json" if prefix == "draft_map" else f"{prefix}.reaction_positions.json"
+    write_reaction_positions(m, str(out / positions))
+    stats["final"] = m.summary()
+    stats["coverage"] = coverage(md, m)
+
+
+def split_maps(dm, md, args, final, log, stats) -> None:
+    """--split: a central map and auxiliary maps, each arranged on its own, and an overview of them."""
+    explicit = None
+    if args.maps:
+        with open(args.maps, encoding="utf-8") as f:
+            explicit = json.load(f)
+    central = DEFAULT_CENTRAL if args.central is None else [s for s in args.central.split(",") if s]
+    n_log = len(dm.log)
+    order, assignment = assign_maps(dm, central, explicit, args.min_map_reactions)
+    for line in dm.log[n_log:]:
+        log(line)
+    cross = cross_map_metabolites(dm, assignment)
+    maps = split_map(dm, order, assignment)
+    log(dm.log[-1])
+    hubs = hub_table(dm)
+    if args.hub_subsystems:
+        # the links between maps (of hubs, too) are references now; inside the maps, hub links are removed
+        stats["hubs_disconnected"] = [r for r in hubs if r["subsystems"] >= args.hub_subsystems]
+    stats["log"] = dm.log
+    stats["maps"] = {}
+    arranged = []
+    index = dict(maps=[], cross_map_metabolites=cross)
+    for name, sub in maps:
+        prefix = slug(name)
+        log(f"map {name!r}: {len(sub.subsystems)} subsystems, {len(sub.links)} inter-pathway links")
+        if args.pack:
+            sub.links = []
+        elif args.hub_subsystems:
+            disconnect_hubs(sub, args.hub_subsystems, hubs)
+            log(sub.log[-1])
+        ports, _, _, results, seeds = arrange(sub, args, final, log)
+        ax, ay, fx, fy, _ = results[final]
+        m = copy.deepcopy(sub)
+        apply_arrangement(m, ports.names, ax, ay, fx, fy)
+        to_absolute(m)
+        s = dict(arrangements={k: v[4] for k, v in results.items()}, anneal_seeds=seeds)
+        write_outputs(m, md, args.out, prefix, f"{md.model_id} {name} (BRENDA map draft)", args, s)
+        del s["coverage"]
+        s["references"] = sum(1 for n in m.nodes.values() if getattr(n, "stubs", None))
+        stats["maps"][name] = s
+        arranged.append((name, m))
+        index["maps"].append(dict(name=name, file=f"{prefix}.escher.json", subsystems=list(m.subsystems),
+                                  reactions=sorted({r for n in m.nodes.values() for r in n.reactions})))
+    layout = overview(arranged, dm, assignment, gap=args.gap, seed=args.seed,
+                      hubs={r["key"] for r in stats.get("hubs_disconnected", [])})
+    write_overview_svg(layout, arranged, str(args.out / "overview.svg"),
+                       {name: f"{slug(name)}.svg" for name, _ in arranged})
+    with open(args.out / "maps.json", "w", encoding="utf-8") as f:
+        json.dump(index, f, indent=1)
+    on_maps = Counter(r for entry in index["maps"] for r in entry["reactions"])
+    stats["split"] = dict(maps=len(arranged), reactions=len(on_maps),
+                          reactions_on_several_maps=sum(1 for c in on_maps.values() if c > 1),
+                          cross_map_metabolites=len(cross))
+    stats["coverage"] = coverage(md, dm)
 
 
 def main(argv=None) -> None:
@@ -82,7 +195,20 @@ def main(argv=None) -> None:
     parser.add_argument("--pack", action="store_true",
                         help="after step 4, drop the inter-pathway links and pack the subsystems into as little space "
                         "as possible (instead of steps 5 and 6)")
+    parser.add_argument("--split", action="store_true",
+                        help="split into a central map and auxiliary maps (BRENDA colour groups), each arranged on "
+                        "its own, with an overview")
+    parser.add_argument("--central", help="with --split: comma-separated BRENDA subsystem IDs of the central map "
+                        "(default: glycolysis, gluconeogenesis, pentose phosphate and Entner-Doudoroff pathways, "
+                        "pyruvate dehydrogenase, citric acid cycle, oxidative phosphorylation, fermentations)")
+    parser.add_argument("--maps", help="with --split: JSON file {map name: [BRENDA subsystem IDs]} of further maps")
+    parser.add_argument("--min-map-reactions", type=int, default=25,
+                        help="with --split: merge colour group maps with fewer model reactions into another map")
     args = parser.parse_args(argv)
+    if not args.split and (args.central is not None or args.maps):
+        parser.error("--central and --maps need --split")
+    if args.split and (args.compare_flips or args.extra):
+        parser.error("--split: --compare-flips and --extra do not apply")
     if args.pack and (args.hub_subsystems or args.flips != "none" or args.compare_flips or args.extra):
         parser.error("--pack arranges the subsystems without links: --hub-subsystems, --flips, --compare-flips "
                      "and --extra do not apply")
@@ -121,7 +247,7 @@ def main(argv=None) -> None:
     with open(args.out / "added_reactions.json", "w") as f:
         json.dump(added, f, indent=1)
 
-    if args.pack:
+    if args.pack or args.split:
         # no edges between subsystems, which would cross the packed boxes
         localise_edges(dm)
         log(dm.log[-1])
@@ -139,38 +265,26 @@ def main(argv=None) -> None:
 
     # step 5: hub metabolites
     stats["hubs_all"] = hub_table(dm)[:40]
-    if args.hub_subsystems:
+    if args.hub_subsystems and not args.split:
         stats["hubs_disconnected"] = disconnect_hubs(dm, args.hub_subsystems)
         log(dm.log[-1])
+    final = "packed" if args.pack else "annealed"
+    if args.split:
+        # the links between the maps become references; with --pack, the links inside the maps are dropped there
+        split_maps(dm, md, args, final, log, stats)
+        with open(args.out / "stats.json", "w") as f:
+            json.dump(stats, f, indent=1, default=float)
+        log("done")
+        return
     if args.pack:
         # without links, the annealing below only minimises the area (and the deviation from the aspect ratio)
         dm.log.append(f"pack: removed all {len(dm.links)} inter-pathway links")
         dm.links = []
         log(dm.log[-1])
-    final = "packed" if args.pack else "annealed"
 
     # step 6: arrangement
-    ports = Ports.from_map(dm)
-    results = {}
-    x, y = arrangement_original(dm, gap=args.gap)
-    results["original order (compacted)"] = (x, y, None, None, evaluate_arrangement(ports, x, y))
-    log(f"original order: {results['original order (compacted)'][4]}")
+    ports, x, y, results, stats["anneal_seeds"] = arrange(dm, args, final, log)
     sp_ = SequencePair(ports.w, ports.h, args.gap)
-    gp, gn = SequencePair.from_positions(x + ports.w / 2, y + ports.h / 2)
-    xs, ys = sp_.pack(gp, gn)
-    results["original order (sequence pair packing)"] = (xs, ys, None, None, evaluate_arrangement(ports, xs, ys))
-    log(f"original order, packed: {results['original order (sequence pair packing)'][4]}")
-    runs = []
-    for seed in range(args.seed, args.seed + args.seeds):
-        res = anneal_arrangement(ports, x, y, gap=args.gap, iterations=args.iterations, seed=seed,
-                                 flips=False if args.flips == "none" else args.flips,
-                                 log=log if args.seeds == 1 else None)
-        runs.append(res)
-        log(f"{final} (seed {seed}): {res[4]}")
-    stats["anneal_seeds"] = [r[4] for r in runs]
-    res = min(runs, key=lambda r: r[4]["cost"])
-    results[final] = res
-    log(f"{final}: {res[4]}")
     if args.compare_flips:
         for mode in ("x", "xy"):
             res = anneal_arrangement(ports, x, y, gap=args.gap, iterations=args.iterations, seed=args.seed, flips=mode)
@@ -215,20 +329,10 @@ def main(argv=None) -> None:
         m = copy.deepcopy(dm)
         apply_arrangement(m, ports.names, ax, ay, fx, fy)
         to_absolute(m)
-        slug = name.replace(" ", "_").replace("(", "").replace(")", "").replace(",", "")
-        write_svg(m, str(args.out / f"map_{slug}.svg"), md=md)
+        fname = name.replace(" ", "_").replace("(", "").replace(")", "").replace(",", "")
+        write_svg(m, str(args.out / f"map_{fname}.svg"), md=md)
         if name == final:
-            write_svg(m, str(args.out / "draft_map.svg"), md=md)
-            write_cnapy_maps(m, str(args.out / "draft_map.maps"))
-            stats["escher"] = write_escher(m, md, str(args.out / "draft_map.escher.json"),
-                                           f"{md.model_id} draft map (BRENDA map)", scale=args.escher_scale,
-                                           subsystem_labels=not args.escher_no_labels,
-                                           description="Draft map from the BRENDA map, made with ecmapper.draft_map")
-            with open(args.out / "draft_map.pkl", "wb") as f:
-                pickle.dump(m, f)
-            write_reaction_positions(m, str(args.out / "reaction_positions.json"))
-            stats["final"] = m.summary()
-            stats["coverage"] = coverage(md, m)
+            write_outputs(m, md, args.out, "draft_map", f"{md.model_id} draft map (BRENDA map)", args, stats)
     with open(args.out / "stats.json", "w") as f:
         json.dump(stats, f, indent=1, default=float)
     log("done")

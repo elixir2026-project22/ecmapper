@@ -10,8 +10,8 @@ pytest.importorskip("numba")
 
 from ecmapper import ECMapper
 from ecmapper.brenda_map import BrendaMap, MapMatcher
-from ecmapper.draft_map import fast, run
-from ecmapper.draft_map.core import DraftMap, Edge, Node, localise_edges
+from ecmapper.draft_map import fast, run, split
+from ecmapper.draft_map.core import DraftMap, Edge, MetLink, Node, Subsystem, localise_edges
 from ecmapper.draft_map.layout import Ports, SequencePair, compact_axis, count_crossings, evaluate_arrangement
 from ecmapper.draft_map.prepare import prepare
 from test_brenda_map import model  # noqa: F401 (fixture)
@@ -181,3 +181,63 @@ def test_draft_map_packed(sources, model, tmp_path):  # noqa: F811
     assert all(dm.nodes[e.enzyme].subsystem == dm.nodes[e.met].subsystem for e in dm.edges)
     with pytest.raises(SystemExit):
         run_draft_map(prep, out, "--pack", "--hub-subsystems", "6")
+
+
+def test_split_map():
+    """Links between maps become references on both ends, links inside a map stay."""
+    dm = DraftMap()
+    for k, group in (("glycolysis", "pw1"), ("serine-metabolism", "pw3"), ("threonine-metabolism", "pw3"),
+                     ("lipid-metabolism", "pw2")):
+        dm.subsystems[k] = Subsystem(k, k, group, "#fff", 0, 0, 100, 100)
+    for i, s in enumerate(dm.subsystems):
+        dm.nodes[f"e{i}"] = Node(f"e{i}", "enzyme", s, 0, 0, 60, 30, f"e{i}", reactions=[f"R{i}"])
+        dm.nodes[f"m{i}"] = Node(f"m{i}", "main", s, 50, 0, 60, 30, f"m{i}", ligand_id=1)
+        dm.edges.append(Edge(f"e{i}", f"m{i}", "main", False, True))
+    dm.links = [MetLink("m0", "m1"), MetLink("m1", "m2"), MetLink("m2", "m3")]
+    dm.orig_centres = {k: (0, 0) for k in dm.subsystems}
+    order, assignment = split.assign_maps(dm, ["glycolysis"], min_reactions=0)
+    assert order == [split.CENTRAL, "Lipids", "Amino acids"]
+    assert assignment["serine-metabolism"] == assignment["threonine-metabolism"] == "Amino acids"
+    maps = dict(split.split_map(dm, order, assignment))
+    assert [(l.a, l.b) for l in maps["Amino acids"].links] == [("m1", "m2")]
+    assert maps[split.CENTRAL].nodes["m0"].stubs == ["Amino acids"]
+    assert maps["Amino acids"].nodes["m1"].stubs == [split.CENTRAL]
+    assert maps["Amino acids"].nodes["m2"].stubs == ["Lipids"]
+    assert not hasattr(maps["Amino acids"].nodes["e1"], "stubs")
+    # small colour group maps are merged into the map they have most links with
+    order, assignment = split.assign_maps(dm, ["glycolysis"], min_reactions=2)
+    assert order == [split.CENTRAL, "Amino acids"] and assignment["lipid-metabolism"] == "Amino acids"
+    # explicit maps come first
+    order, assignment = split.assign_maps(dm, ["glycolysis"], {"Serine": ["serine-metabolism"]}, min_reactions=0)
+    assert order[0] == "Serine" and assignment["serine-metabolism"] == "Serine"
+
+
+def test_draft_map_split(sources, model, tmp_path):  # noqa: F811
+    """--split: every drawn reaction is on a map, the Escher maps are complete, the overview links the maps."""
+    _, prep = prepared(sources, model, tmp_path)
+    whole, out = tmp_path / "whole", tmp_path / "out"
+    run_draft_map(prep, whole, "--pack")
+    run_draft_map(prep, out, "--split", "--min-map-reactions", "0")
+    index = json.loads((out / "maps.json").read_text())
+    assert index["maps"][0]["name"] == split.CENTRAL
+    assert len(index["maps"]) > 1
+    drawn = set(json.loads((whole / "reaction_positions.json").read_text()))
+    assert set().union(*(m["reactions"] for m in index["maps"])) == drawn
+    references = 0
+    for entry in index["maps"]:
+        prefix = entry["file"].removesuffix(".escher.json")
+        _, body = json.loads((out / entry["file"]).read_text())
+        assert {r["bigg_id"] for r in body["reactions"].values()} == set(entry["reactions"])
+        assert set(json.loads((out / f"{prefix}.maps").read_text())) == set(entry["reactions"])
+        references += sum(t["text"].startswith("→ ") for t in body["text_labels"].values())
+        with open(out / f"{prefix}.pkl", "rb") as f:
+            m = pickle.load(f)
+        boxes = list(m.subsystems.values())
+        assert no_overlaps([b.x for b in boxes], [b.y for b in boxes], [b.w for b in boxes], [b.h for b in boxes], 80.0)
+    stats = json.loads((out / "stats.json").read_text())
+    # one label per drawn node with references that is used in the Escher map
+    assert 0 < references <= sum(s["references"] for s in stats["maps"].values())
+    overview = (out / "overview.svg").read_text()
+    assert all(f'href="{m["file"].removesuffix(".escher.json")}.svg"' in overview for m in index["maps"])
+    with pytest.raises(SystemExit):
+        run_draft_map(prep, out, "--central", "glycolysis")
