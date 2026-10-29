@@ -1,0 +1,510 @@
+{
+ "no hub removal": {
+  "original order (compacted)": {
+   "links": 212,
+   "crossings": 1321,
+   "box_crossings": 313,
+   "link_length": 796228.5306319209,
+   "width": 18671.370000000003,
+   "height": 11626.5,
+   "area_ratio": 2.7706795609689086
+  },
+  "original order (sequence pair packing)": {
+   "links": 212,
+   "crossings": 1443,
+   "box_crossings": 397,
+   "link_length": 960061.6392133664,
+   "width": 23576.339999999997,
+   "height": 9845.0,
+   "area_ratio": 2.962464987500246
+  },
+  "annealed": {
+   "links": 212,
+   "crossings": 449,
+   "box_crossings": 184,
+   "link_length": 709049.3525044236,
+   "width": 17715.175000000003,
+   "height": 9719.0,
+   "area_ratio": 2.1974962814041206,
+   "cost": 747.1276887432634
+  },
+  "annealed with flips": {
+   "links": 212,
+   "crossings": 360,
+   "box_crossings": 166,
+   "link_length": 621467.9801961828,
+   "width": 17558.32,
+   "height": 9376.0,
+   "area_ratio": 2.101172355414976,
+   "cost": 640.4240044765021
+  },
+  "user order (arrange, then condense)": {
+   "links": 212,
+   "crossings": 706,
+   "box_crossings": 257,
+   "link_length": 864753.6682696,
+   "width": 26587.675000000003,
+   "height": 9237.0,
+   "area_ratio": 3.1345299577563273
+  },
+  "graphviz neato": {
+   "links": 212,
+   "crossings": 1863,
+   "box_crossings": 595,
+   "link_length": 1041521.4213149702,
+   "width": 10633.205000000002,
+   "height": 28673.0,
+   "area_ratio": 3.891333396938648
+  },
+  "graphviz fdp": {
+   "links": 212,
+   "crossings": 1625,
+   "box_crossings": 1018,
+   "link_length": 1712912.2403779742,
+   "width": 4759.800000000001,
+   "height": 44321.0,
+   "area_ratio": 2.692522710861845
+  },
+  "elk layered": {
+   "links": 212,
+   "crossings": 2084,
+   "box_crossings": 586,
+   "link_length": 1024237.9527840036,
+   "width": 13360.715000000002,
+   "height": 17917.5,
+   "area_ratio": 3.0554011168559905
+  },
+  "elk stress": {
+   "links": 212,
+   "crossings": 1827,
+   "box_crossings": 790,
+   "link_length": 2571429.162335745,
+   "width": 81893.93000000002,
+   "height": 3734.0000000000005,
+   "area_ratio": 3.9028975055112585
+  }
+ },
+ "hubs>=8": {
+  "original order (compacted)": {
+   "links": 174,
+   "crossings": 984,
+   "box_crossings": 264,
+   "link_length": 691055.5890273678,
+   "width": 18671.370000000003,
+   "height": 11626.5,
+   "area_ratio": 2.7706795609689086
+  },
+  "original order (sequence pair packing)": {
+   "links": 174,
+   "crossings": 1048,
+   "box_crossings": 345,
+   "link_length": 836215.8764649483,
+   "width": 23576.339999999997,
+   "height": 9845.0,
+   "area_ratio": 2.962464987500246
+  },
+  "annealed": {
+   "links": 174,
+   "crossings": 223,
+   "box_crossings": 117,
+   "link_length": 453118.02409597003,
+   "width": 16548.7,
+   "height": 8939.5,
+   "area_ratio": 1.888157558915493,
+   "cost": 456.25449967574286
+  },
+  "annealed with flips": {
+   "links": 174,
+   "crossings": 148,
+   "box_crossings": 90,
+   "link_length": 390101.8540833753,
+   "width": 16872.495,
+   "height": 9044.5,
+   "area_ratio": 1.9477131259043639,
+   "cost": 371.68347179602324
+  },
+  "user order (arrange, then condense)": {
+   "links": 174,
+   "crossings": 360,
+   "box_crossings": 173,
+   "link_length": 567304.6255345014,
+   "width": 23514.155000000002,
+   "height": 8552.0,
+   "area_ratio": 2.566599992541575
+  },
+  "graphviz neato": {
+   "links": 174,
+   "crossings": 908,
+   "box_crossings": 530,
+   "link_length": 829672.1551906398,
+   "width": 6851.0,
+   "height": 37044.5,
+   "area_ratio": 3.2392079131239595
+  },
+  "graphviz fdp": {
+   "links": 174,
+   "crossings": 1114,
+   "box_crossings": 779,
+   "link_length": 1342302.1174179274,
+   "width": 5374.13,
+   "height": 41450.0,
+   "area_ratio": 2.8431110449675066
+  },
+  "elk layered": {
+   "links": 174,
+   "crossings": 983,
+   "box_crossings": 282,
+   "link_length": 718749.5901477206,
+   "width": 19365.050000000003,
+   "height": 15589.0,
+   "area_ratio": 3.852991044042344
+  },
+  "elk stress": {
+   "links": 174,
+   "crossings": 1190,
+   "box_crossings": 673,
+   "link_length": 2087755.8716500949,
+   "width": 89569.80999999998,
+   "height": 3802.5,
+   "area_ratio": 4.347023575329936
+  }
+ },
+ "hubs>=6": {
+  "original order (compacted)": {
+   "links": 153,
+   "crossings": 880,
+   "box_crossings": 236,
+   "link_length": 637143.019024191,
+   "width": 18671.370000000003,
+   "height": 11626.5,
+   "area_ratio": 2.7706795609689086
+  },
+  "original order (sequence pair packing)": {
+   "links": 153,
+   "crossings": 914,
+   "box_crossings": 317,
+   "link_length": 767943.5557474869,
+   "width": 23576.339999999997,
+   "height": 9845.0,
+   "area_ratio": 2.962464987500246
+  },
+  "annealed": {
+   "links": 153,
+   "crossings": 173,
+   "box_crossings": 82,
+   "link_length": 424329.3922174282,
+   "width": 16937.510000000002,
+   "height": 9556.5,
+   "area_ratio": 2.0659012032440964,
+   "cost": 400.9061628340786
+  },
+  "annealed with flips": {
+   "links": 153,
+   "crossings": 126,
+   "box_crossings": 91,
+   "link_length": 437331.20948052226,
+   "width": 16969.399999999998,
+   "height": 9990.5,
+   "area_ratio": 2.163788612500953,
+   "cost": 365.6210983034738
+  },
+  "user order (arrange, then condense)": {
+   "links": 153,
+   "crossings": 276,
+   "box_crossings": 145,
+   "link_length": 493885.85007890983,
+   "width": 22721.885,
+   "height": 8742.0,
+   "area_ratio": 2.535223661044096
+  },
+  "graphviz neato": {
+   "links": 153,
+   "crossings": 813,
+   "box_crossings": 422,
+   "link_length": 668956.0678386188,
+   "width": 8172.570000000003,
+   "height": 29745.5,
+   "area_ratio": 3.10270897840082
+  },
+  "graphviz fdp": {
+   "links": 153,
+   "crossings": 889,
+   "box_crossings": 634,
+   "link_length": 1069165.5467988104,
+   "width": 5928.4,
+   "height": 36492.5,
+   "area_ratio": 2.761227786741796
+  },
+  "elk layered": {
+   "links": 153,
+   "crossings": 1040,
+   "box_crossings": 270,
+   "link_length": 696069.7269734766,
+   "width": 18480.44,
+   "height": 10849.5,
+   "area_ratio": 2.559075806916238
+  },
+  "elk stress": {
+   "links": 153,
+   "crossings": 806,
+   "box_crossings": 620,
+   "link_length": 1588600.6302604242,
+   "width": 83693.42499999999,
+   "height": 3254.5,
+   "area_ratio": 3.4764559964119157
+  }
+ },
+ "hubs>=5": {
+  "original order (compacted)": {
+   "links": 139,
+   "crossings": 752,
+   "box_crossings": 216,
+   "link_length": 595096.8143857704,
+   "width": 18671.370000000003,
+   "height": 11626.5,
+   "area_ratio": 2.7706795609689086
+  },
+  "original order (sequence pair packing)": {
+   "links": 139,
+   "crossings": 794,
+   "box_crossings": 300,
+   "link_length": 720589.797521501,
+   "width": 23576.339999999997,
+   "height": 9845.0,
+   "area_ratio": 2.962464987500246
+  },
+  "annealed": {
+   "links": 139,
+   "crossings": 102,
+   "box_crossings": 69,
+   "link_length": 366089.4645237175,
+   "width": 16190.874999999998,
+   "height": 9462.0,
+   "area_ratio": 1.955304426321794,
+   "cost": 311.55649325171436
+  },
+  "annealed with flips": {
+   "links": 139,
+   "crossings": 90,
+   "box_crossings": 68,
+   "link_length": 343365.1241808674,
+   "width": 15491.444999999998,
+   "height": 9494.5,
+   "area_ratio": 1.877263119418489,
+   "cost": 291.1785782356094
+  },
+  "user order (arrange, then condense)": {
+   "links": 139,
+   "crossings": 223,
+   "box_crossings": 114,
+   "link_length": 441521.7352714088,
+   "width": 22470.330000000005,
+   "height": 8198.0,
+   "area_ratio": 2.3511399681771996
+  },
+  "graphviz neato": {
+   "links": 139,
+   "crossings": 496,
+   "box_crossings": 320,
+   "link_length": 559043.1907081238,
+   "width": 9313.360000000002,
+   "height": 28175.5,
+   "area_ratio": 3.3491850359494504
+  },
+  "graphviz fdp": {
+   "links": 139,
+   "crossings": 780,
+   "box_crossings": 706,
+   "link_length": 1116059.6550143315,
+   "width": 4759.800000000001,
+   "height": 41539.5,
+   "area_ratio": 2.5235452076407485
+  },
+  "elk layered": {
+   "links": 139,
+   "crossings": 529,
+   "box_crossings": 193,
+   "link_length": 557536.6218040839,
+   "width": 20666.57,
+   "height": 12774.0,
+   "area_ratio": 3.369429974565665
+  },
+  "elk stress": {
+   "links": 139,
+   "crossings": 536,
+   "box_crossings": 322,
+   "link_length": 1329724.6912622186,
+   "width": 81798.40000000004,
+   "height": 4019.0,
+   "area_ratio": 4.195888460919244
+  }
+ },
+ "fin_hub0 (4 seeds)": [
+  {
+   "links": 212,
+   "crossings": 449,
+   "box_crossings": 184,
+   "link_length": 709049.3525044236,
+   "width": 17715.175000000003,
+   "height": 9719.0,
+   "area_ratio": 2.1974962814041206,
+   "cost": 747.1276887432634
+  },
+  {
+   "links": 212,
+   "crossings": 448,
+   "box_crossings": 174,
+   "link_length": 655428.7092385498,
+   "width": 16814.340000000004,
+   "height": 11339.0,
+   "area_ratio": 2.433412306536508,
+   "cost": 757.5969829417221
+  },
+  {
+   "links": 212,
+   "crossings": 451,
+   "box_crossings": 182,
+   "link_length": 599997.6660360195,
+   "width": 17843.79,
+   "height": 9150.0,
+   "area_ratio": 2.0838637377164595,
+   "cost": 740.258062456615
+  },
+  {
+   "links": 212,
+   "crossings": 413,
+   "box_crossings": 166,
+   "link_length": 652274.1515860861,
+   "width": 16992.265000000003,
+   "height": 10649.0,
+   "area_ratio": 2.3095172973308262,
+   "cost": 706.9168495912947
+  }
+ ],
+ "fin_hub8 (4 seeds)": [
+  {
+   "links": 174,
+   "crossings": 223,
+   "box_crossings": 117,
+   "link_length": 453118.02409597003,
+   "width": 16548.7,
+   "height": 8939.5,
+   "area_ratio": 1.888157558915493,
+   "cost": 456.25449967574286
+  },
+  {
+   "links": 174,
+   "crossings": 196,
+   "box_crossings": 108,
+   "link_length": 451674.8863642999,
+   "width": 15995.43,
+   "height": 9733.5,
+   "area_ratio": 1.9871290510516397,
+   "cost": 429.09265668752465
+  },
+  {
+   "links": 174,
+   "crossings": 235,
+   "box_crossings": 94,
+   "link_length": 472635.9897245539,
+   "width": 17912.83,
+   "height": 9225.0,
+   "area_ratio": 2.109073422446846,
+   "cost": 478.96272982543724
+  },
+  {
+   "links": 174,
+   "crossings": 202,
+   "box_crossings": 103,
+   "link_length": 476785.85586690926,
+   "width": 16624.9,
+   "height": 10325.0,
+   "area_ratio": 2.1908377814691415,
+   "cost": 450.1975240337291
+  }
+ ],
+ "fin_hub6 (4 seeds)": [
+  {
+   "links": 153,
+   "crossings": 173,
+   "box_crossings": 82,
+   "link_length": 424329.3922174282,
+   "width": 16937.510000000002,
+   "height": 9556.5,
+   "area_ratio": 2.0659012032440964,
+   "cost": 400.9061628340786
+  },
+  {
+   "links": 153,
+   "crossings": 163,
+   "box_crossings": 104,
+   "link_length": 405267.48419560725,
+   "width": 16695.71,
+   "height": 9751.5,
+   "area_ratio": 2.0779612161663175,
+   "cost": 401.327032267211
+  },
+  {
+   "links": 153,
+   "crossings": 149,
+   "box_crossings": 87,
+   "link_length": 381875.5600755102,
+   "width": 15867.235,
+   "height": 9345.0,
+   "area_ratio": 1.8925252362613973,
+   "cost": 362.4766779590068
+  },
+  {
+   "links": 153,
+   "crossings": 148,
+   "box_crossings": 97,
+   "link_length": 352503.39884487167,
+   "width": 15813.885,
+   "height": 9575.0,
+   "area_ratio": 1.932584440751358,
+   "cost": 368.6598404033004
+  }
+ ],
+ "fin_hub6x (4 seeds)": [
+  {
+   "links": 153,
+   "crossings": 126,
+   "box_crossings": 97,
+   "link_length": 406931.39092103194,
+   "width": 16337.975000000002,
+   "height": 9695.5,
+   "area_ratio": 2.0217598035870803,
+   "cost": 355.7842170691101
+  },
+  {
+   "links": 153,
+   "crossings": 138,
+   "box_crossings": 86,
+   "link_length": 372419.24563001527,
+   "width": 16067.310000000001,
+   "height": 9234.0,
+   "area_ratio": 1.8936258040846405,
+   "cost": 351.5090750457078
+  },
+  {
+   "links": 153,
+   "crossings": 135,
+   "box_crossings": 93,
+   "link_length": 370567.5185562952,
+   "width": 15480.600000000002,
+   "height": 9432.5,
+   "area_ratio": 1.8636987882417986,
+   "cost": 348.2440821328411
+  },
+  {
+   "links": 153,
+   "crossings": 121,
+   "box_crossings": 100,
+   "link_length": 389072.3431678512,
+   "width": 16004.605000000001,
+   "height": 9615.0,
+   "area_ratio": 1.964062792825993,
+   "cost": 346.79350246722834
+  }
+ ]
+}

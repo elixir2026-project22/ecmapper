@@ -1,0 +1,5708 @@
+[
+ {
+  "reaction": "2DGULRGx",
+  "name": "2-Dehydro-L-gulonate reductase to gluconate (NADH)",
+  "status": "not on map",
+  "subsystem": "ketogluconate-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "2dhguln",
+   "glcn"
+  ],
+  "main_metabolites": [
+   "2dhguln",
+   "glcn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r1"
+ },
+ {
+  "reaction": "2DGULRx",
+  "name": "2-dehydro-L-gulonate reductase (NADH)",
+  "status": "not on map",
+  "subsystem": "ketogluconate-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "2dhguln",
+   "idon__L"
+  ],
+  "main_metabolites": [
+   "2dhguln",
+   "idon__L"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r4"
+ },
+ {
+  "reaction": "3OAS180",
+  "name": "3-oxoacyl-[acyl-carrier-protein] synthase (n-C18:0)",
+  "status": "related",
+  "subsystem": "palmitate-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "malACP",
+   "palmACP"
+  ],
+  "main_metabolites": [
+   "3ooctdACP",
+   "malACP",
+   "palmACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r7"
+ },
+ {
+  "reaction": "4ABZGLUH",
+  "name": "P-aminobenzoyl-glutamate hydrolase",
+  "status": "related",
+  "subsystem": "heme-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "4abz",
+   "glu__L"
+  ],
+  "main_metabolites": [
+   "4abz",
+   "4abzglu",
+   "glu__L"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r12"
+ },
+ {
+  "reaction": "4HTHRA",
+  "name": "4-hydroxy-L-threonine aldolase",
+  "status": "not on map",
+  "subsystem": "threonine-metabolism",
+  "model_subsystem": "Glycine and Serine Metabolism",
+  "anchored": [
+   "gcald",
+   "gly"
+  ],
+  "main_metabolites": [
+   "4hthr",
+   "gcald",
+   "gly"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r16"
+ },
+ {
+  "reaction": "4HTHRK",
+  "name": "4-Hydroxy-L-threonine kinase",
+  "status": "not on map",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Glycine and Serine Metabolism",
+  "anchored": [
+   "4hthr",
+   "phthr"
+  ],
+  "main_metabolites": [
+   "4hthr",
+   "phthr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r19"
+ },
+ {
+  "reaction": "AACPS3",
+  "name": "Acyl-[acyl-carrier-protein] synthetase  (n-C16:0)",
+  "status": "related",
+  "subsystem": "palmitate-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "hdca",
+   "palmACP"
+  ],
+  "main_metabolites": [
+   "hdca",
+   "palmACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r23"
+ },
+ {
+  "reaction": "ACACT3r",
+  "name": "Acetyl-CoA C-acyltransferase (hexanoyl-CoA) (r)",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Membrane Lipid Metabolism",
+  "anchored": [
+   "accoa",
+   "hxcoa"
+  ],
+  "main_metabolites": [
+   "3oocoa",
+   "accoa",
+   "hxcoa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r28"
+ },
+ {
+  "reaction": "ACACT4r",
+  "name": "Acetyl-CoA C-acyltransferase (octanoyl-CoA) (r)",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Membrane Lipid Metabolism",
+  "anchored": [
+   "accoa",
+   "occoa"
+  ],
+  "main_metabolites": [
+   "3odcoa",
+   "accoa",
+   "occoa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r31"
+ },
+ {
+  "reaction": "ACACT8r",
+  "name": "Acetyl-CoA acyltransferase (hexadecanoyl-CoA), (r)",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Membrane Lipid Metabolism",
+  "anchored": [
+   "accoa",
+   "pmtcoa"
+  ],
+  "main_metabolites": [
+   "3ohodcoa",
+   "accoa",
+   "pmtcoa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r35"
+ },
+ {
+  "reaction": "ACANTHAT",
+  "name": "Acetyl-CoA:anthranilate acetyltransferase",
+  "status": "related",
+  "subsystem": "tryptophan-metabolism",
+  "model_subsystem": "Tyrosine, Tryptophan, and Phenylalanine Metabolism",
+  "anchored": [
+   "accoa",
+   "anth"
+  ],
+  "main_metabolites": [
+   "acanth",
+   "accoa",
+   "anth"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r38"
+ },
+ {
+  "reaction": "ACHBS",
+  "name": "2-aceto-2-hydroxybutanoate synthase",
+  "status": "related",
+  "subsystem": "valine-metabolism",
+  "model_subsystem": "Valine, Leucine, and Isoleucine Metabolism",
+  "anchored": [
+   "2obut",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "2ahbut",
+   "2obut",
+   "pyr"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r41"
+ },
+ {
+  "reaction": "ACM6PH",
+  "name": "N-acetylmuramate 6-phosphate hydrolase",
+  "status": "related",
+  "subsystem": "metabolism-of-amino-sugars-and-derivatives",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "acgam6p",
+   "lac__D"
+  ],
+  "main_metabolites": [
+   "acgam6p",
+   "acmum6p",
+   "lac__D"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r45"
+ },
+ {
+  "reaction": "ACMAMUT",
+  "name": "UDP-N-acetyl-D-mannosaminuronic acid transferase",
+  "status": "related",
+  "subsystem": "metabolism-of-amino-sugars-and-derivatives",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "uacmamu",
+   "unaga"
+  ],
+  "main_metabolites": [
+   "uacmamu",
+   "unaga",
+   "unagamu"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r49"
+ },
+ {
+  "reaction": "ACOAD1fr",
+  "name": "Acyl-CoA dehydrogenase (butanoyl-CoA)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Membrane Lipid Metabolism",
+  "anchored": [
+   "b2coa",
+   "btcoa"
+  ],
+  "main_metabolites": [
+   "b2coa",
+   "btcoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r53"
+ },
+ {
+  "reaction": "ACONMT",
+  "name": "Trans-aconitate methyltransferase",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Unassigned",
+  "anchored": [
+   "ahcys",
+   "amet"
+  ],
+  "main_metabolites": [
+   "acon_T",
+   "aconm",
+   "ahcys",
+   "amet"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r56"
+ },
+ {
+  "reaction": "ACOXT",
+  "name": "Acetyl-CoA:oxalate CoA-transferase",
+  "status": "not on map",
+  "subsystem": "ornithine-metabolism",
+  "model_subsystem": "Membrane Lipid Metabolism",
+  "anchored": [
+   "ac",
+   "accoa"
+  ],
+  "main_metabolites": [
+   "ac",
+   "accoa",
+   "oxa",
+   "oxalcoa"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r59"
+ },
+ {
+  "reaction": "ACP1_FMN",
+  "name": "Acid phosphatase (FMN)",
+  "status": "related",
+  "subsystem": "flavin-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "fmn",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "fmn",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r62"
+ },
+ {
+  "reaction": "ACP1p",
+  "name": "Acid phosphatase (FMN)",
+  "status": "related",
+  "subsystem": "flavin-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "fmn",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "fmn",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r65"
+ },
+ {
+  "reaction": "ALATA_D2",
+  "name": "D-alanine transaminase",
+  "status": "related",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ala__D",
+   "pyam5p",
+   "pydx5p",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "ala__D",
+   "pyam5p",
+   "pydx5p",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r68"
+ },
+ {
+  "reaction": "ALATA_L2",
+  "name": "Alanine transaminase",
+  "status": "not on map",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ala__L",
+   "pyam5p",
+   "pydx5p",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "ala__L",
+   "pyam5p",
+   "pydx5p",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r71"
+ },
+ {
+  "reaction": "ALKP",
+  "name": "Alkaline phosphatase",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "dha",
+   "dhap"
+  ],
+  "main_metabolites": [
+   "dha",
+   "dhap"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r73"
+ },
+ {
+  "reaction": "AMALT2",
+  "name": "Amylomaltase (maltotetraose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glc__D",
+   "malt",
+   "maltttr"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "malt",
+   "maltpt",
+   "maltttr"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r76"
+ },
+ {
+  "reaction": "AMALT3",
+  "name": "Amylomaltase (maltopentaose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glc__D",
+   "malt",
+   "maltpt"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "malt",
+   "malthx",
+   "maltpt"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r78"
+ },
+ {
+  "reaction": "AMALT4",
+  "name": "Amylomaltase (maltohexaose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glc__D",
+   "malt",
+   "malthx"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "malt",
+   "malthp",
+   "malthx"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r80"
+ },
+ {
+  "reaction": "AMPMS2",
+  "name": "4-amino-2-methyl-5-phosphomethylpyrimidine synthetase",
+  "status": "not on map",
+  "subsystem": "formaldehyde-oxidation",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "air",
+   "for"
+  ],
+  "main_metabolites": [
+   "4ampm",
+   "air",
+   "for"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r82"
+ },
+ {
+  "reaction": "AMPTASEPG",
+  "name": "Aminopeptidase (pro-gly)",
+  "status": "related",
+  "subsystem": "proline-metabolism",
+  "model_subsystem": "Arginine and Proline Metabolism",
+  "anchored": [
+   "gly",
+   "pro__L"
+  ],
+  "main_metabolites": [
+   "gly",
+   "pro__L",
+   "progly"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r88"
+ },
+ {
+  "reaction": "APCS",
+  "name": "Aminopropylcadaverine synthase",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Arginine and Proline Metabolism",
+  "anchored": [
+   "15dap",
+   "5mta",
+   "ametam"
+  ],
+  "main_metabolites": [
+   "15dap",
+   "5mta",
+   "ametam",
+   "na15dap"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r92"
+ },
+ {
+  "reaction": "ARBTNR2",
+  "name": "Aerobactin reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fmn",
+   "fmnh2"
+  ],
+  "main_metabolites": [
+   "arbtn",
+   "arbtn_fe3",
+   "fe2",
+   "fmn",
+   "fmnh2"
+  ],
+  "new_metabolites": 3,
+  "linked_metabolites": 0,
+  "node": "added_r95"
+ },
+ {
+  "reaction": "ARBTNR3",
+  "name": "Aerobactin reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "arbtn",
+   "arbtn_fe3",
+   "fe2",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "arbtn",
+   "arbtn_fe3",
+   "fe2",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r99"
+ },
+ {
+  "reaction": "ASPO3",
+  "name": "L-aspartate oxidase",
+  "status": "not on map",
+  "subsystem": "NAD-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "asp__L",
+   "iasp"
+  ],
+  "main_metabolites": [
+   "asp__L",
+   "iasp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r102"
+ },
+ {
+  "reaction": "ASPO4",
+  "name": "L-aspartate oxidase",
+  "status": "not on map",
+  "subsystem": "NAD-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "asp__L",
+   "iasp"
+  ],
+  "main_metabolites": [
+   "asp__L",
+   "iasp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r102"
+ },
+ {
+  "reaction": "ASPO5",
+  "name": "L-aspartate oxidase",
+  "status": "related",
+  "subsystem": "glutamate-and-glutamine-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "asp__L",
+   "fum",
+   "iasp",
+   "succ"
+  ],
+  "main_metabolites": [
+   "asp__L",
+   "fum",
+   "iasp",
+   "succ"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r105"
+ },
+ {
+  "reaction": "BETALDHy",
+  "name": "Betaine-aldehyde dehydrogenase",
+  "status": "related",
+  "subsystem": "glycine-betaine-biosynthesis",
+  "model_subsystem": "Unassigned",
+  "anchored": [
+   "betald",
+   "glyb"
+  ],
+  "main_metabolites": [
+   "betald",
+   "glyb"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r107"
+ },
+ {
+  "reaction": "BGLA1",
+  "name": "6-phospho-beta-glucosidase",
+  "status": "related",
+  "subsystem": "metabolism-of-disaccharids",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "g6p",
+   "glc__D"
+  ],
+  "main_metabolites": [
+   "6pgg",
+   "g6p",
+   "glc__D"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r111"
+ },
+ {
+  "reaction": "BMOCOS",
+  "name": "Bis-molybdenum cofactor synthase",
+  "status": "not on map",
+  "subsystem": "molybdenum-cofactor-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "moco",
+   "mptamp"
+  ],
+  "main_metabolites": [
+   "bmoco",
+   "cu2",
+   "moco",
+   "mptamp"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r114"
+ },
+ {
+  "reaction": "BWCOS",
+  "name": "Tungsten bispterin cofactor synthase",
+  "status": "not on map",
+  "subsystem": "molybdenum-cofactor-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "cu2",
+   "mptamp"
+  ],
+  "main_metabolites": [
+   "bwco",
+   "cu2",
+   "mptamp",
+   "wco"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r118"
+ },
+ {
+  "reaction": "CFAS160E",
+  "name": "Cyclopropane fatty acid synthase (Phosphatidylethanolamine, n-C16:0)",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "ahcys",
+   "amet"
+  ],
+  "main_metabolites": [
+   "ahcys",
+   "amet",
+   "cpe160",
+   "pe161"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r122"
+ },
+ {
+  "reaction": "CFAS160G",
+  "name": "Cyclopropane fatty acid synthase (Phosphatidylglycerol, n-C16:0)",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "ahcys",
+   "amet"
+  ],
+  "main_metabolites": [
+   "ahcys",
+   "amet",
+   "cpg160",
+   "pg161"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r125"
+ },
+ {
+  "reaction": "CFAS180E",
+  "name": "Cyclopropane fatty acid synthase (Phosphatidylethanolamine, n-C18:0)",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "ahcys",
+   "amet"
+  ],
+  "main_metabolites": [
+   "ahcys",
+   "amet",
+   "cpe180",
+   "pe181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r122"
+ },
+ {
+  "reaction": "CFAS180G",
+  "name": "Cyclopropane fatty acid synthase (Phosphatidylglycerol, n-C18:0)",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "ahcys",
+   "amet"
+  ],
+  "main_metabolites": [
+   "ahcys",
+   "amet",
+   "cpg180",
+   "pg181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r125"
+ },
+ {
+  "reaction": "CITL",
+  "name": "Citrate lyase",
+  "status": "related",
+  "subsystem": "citric-acid-cycle",
+  "model_subsystem": "Citric Acid Cycle",
+  "anchored": [
+   "ac",
+   "cit",
+   "oaa"
+  ],
+  "main_metabolites": [
+   "ac",
+   "cit",
+   "oaa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r128"
+ },
+ {
+  "reaction": "CLPNS161pp",
+  "name": "Cardiolipin synthase (periplasmic, n-C16:1)",
+  "status": "not on map",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc",
+   "pg161"
+  ],
+  "main_metabolites": [
+   "clpn161",
+   "glyc",
+   "pg161"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r130"
+ },
+ {
+  "reaction": "CLPNS181pp",
+  "name": "Cardiolipin synthase (periplasmic, n-C18:1)",
+  "status": "not on map",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc"
+  ],
+  "main_metabolites": [
+   "clpn181",
+   "glyc",
+   "pg181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r130"
+ },
+ {
+  "reaction": "CMPN",
+  "name": "CMP nucleosidase",
+  "status": "not on map",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "csn",
+   "r5p"
+  ],
+  "main_metabolites": [
+   "csn",
+   "r5p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r133"
+ },
+ {
+  "reaction": "COLIPAKpp",
+  "name": "Lipid A core kinase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "udcpdp",
+   "udcpp"
+  ],
+  "main_metabolites": [
+   "colipa",
+   "colipap",
+   "udcpdp",
+   "udcpp"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r137"
+ },
+ {
+  "reaction": "CPGNR2",
+  "name": "Coprogen(Fe(III)) reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "fmn",
+   "fmnh2"
+  ],
+  "main_metabolites": [
+   "cpgn",
+   "cpgn_un",
+   "fe2",
+   "fmn",
+   "fmnh2"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r140"
+ },
+ {
+  "reaction": "CPGNR3",
+  "name": "Coprogen(Fe(III)) reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "cpgn",
+   "cpgn_un",
+   "fe2",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "cpgn",
+   "cpgn_un",
+   "fe2",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r143"
+ },
+ {
+  "reaction": "CRNCAR",
+  "name": "Carnitine-CoA racemase",
+  "status": "not on map",
+  "subsystem": "carnitine-metabolism",
+  "model_subsystem": "Oxidative Phosphorylation",
+  "anchored": [
+   "crnDcoa",
+   "crncoa"
+  ],
+  "main_metabolites": [
+   "crnDcoa",
+   "crncoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r144"
+ },
+ {
+  "reaction": "CRNCBCT",
+  "name": "Crotonobetainyl-CoA: carnitine CoA transferase",
+  "status": "related",
+  "subsystem": "carnitine-metabolism",
+  "model_subsystem": "Oxidative Phosphorylation",
+  "anchored": [
+   "crn",
+   "crncoa",
+   "ctbtcoa"
+  ],
+  "main_metabolites": [
+   "crn",
+   "crncoa",
+   "ctbt",
+   "ctbtcoa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r145"
+ },
+ {
+  "reaction": "CTBTCAL2",
+  "name": "Crotonobetaine-CoA Ligase",
+  "status": "related",
+  "subsystem": "carnitine-metabolism",
+  "model_subsystem": "Oxidative Phosphorylation",
+  "anchored": [
+   "ctbt",
+   "ctbtcoa"
+  ],
+  "main_metabolites": [
+   "ctbt",
+   "ctbtcoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r147"
+ },
+ {
+  "reaction": "CTECOAI7",
+  "name": "3-cis-2-trans-enoyl-CoA isomerase",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Membrane Lipid Metabolism",
+  "anchored": [
+   "hdcoa",
+   "hdd2coa"
+  ],
+  "main_metabolites": [
+   "hdcoa",
+   "hdd2coa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r152"
+ },
+ {
+  "reaction": "CXSAMS",
+  "name": "Carboxy-S-adenosyl-L-methionine synthase",
+  "status": "not on map",
+  "subsystem": "phenylalanine-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "amet",
+   "phpyr",
+   "pphn"
+  ],
+  "main_metabolites": [
+   "amet",
+   "cxsam",
+   "phpyr",
+   "pphn"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r153"
+ },
+ {
+  "reaction": "CYTK2",
+  "name": "Cytidylate kinase (dCMP)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dcdp",
+   "dcmp"
+  ],
+  "main_metabolites": [
+   "dcdp",
+   "dcmp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r157"
+ },
+ {
+  "reaction": "DAAD",
+  "name": "D-Amino acid dehydrogenase",
+  "status": "not on map",
+  "subsystem": "alanine-metabolism",
+  "model_subsystem": "Alanine and Aspartate Metabolism",
+  "anchored": [
+   "ala__D",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "ala__D",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r160"
+ },
+ {
+  "reaction": "DHBSH",
+  "name": "2,3-dihydroxybenzoylserine hydrolase",
+  "status": "not on map",
+  "subsystem": "enterobactin-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "23dhb",
+   "ser__L"
+  ],
+  "main_metabolites": [
+   "23dhb",
+   "23dhbzs",
+   "ser__L"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r165"
+ },
+ {
+  "reaction": "DHGLYH",
+  "name": "Dehydroglycine Hydratase",
+  "status": "not on map",
+  "subsystem": "glycolate-and-glyoxylate-degradation",
+  "model_subsystem": "Glyoxylate Metabolism",
+  "anchored": [
+   "dhgly",
+   "glx"
+  ],
+  "main_metabolites": [
+   "dhgly",
+   "glx"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r169"
+ },
+ {
+  "reaction": "DHNPTE",
+  "name": "Dihydroneopterin epimerase",
+  "status": "not on map",
+  "subsystem": "tetrahydrofolate-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "dhmpt",
+   "dhnpt"
+  ],
+  "main_metabolites": [
+   "dhmpt",
+   "dhnpt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r173"
+ },
+ {
+  "reaction": "DKGLCNR2x",
+  "name": "2,5-diketo-D-gluconate reductase (NADH)",
+  "status": "not on map",
+  "subsystem": "ketogluconate-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "25dkglcn",
+   "5dglcn"
+  ],
+  "main_metabolites": [
+   "25dkglcn",
+   "5dglcn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r175"
+ },
+ {
+  "reaction": "EAR140y",
+  "name": "Enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C14:0)",
+  "status": "related",
+  "subsystem": "palmitate-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "myrsACP",
+   "tmrs2eACP"
+  ],
+  "main_metabolites": [
+   "myrsACP",
+   "tmrs2eACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r178"
+ },
+ {
+  "reaction": "EAR160y",
+  "name": "Enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C16:0)",
+  "status": "related",
+  "subsystem": "palmitate-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "palmACP",
+   "tpalm2eACP"
+  ],
+  "main_metabolites": [
+   "palmACP",
+   "tpalm2eACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r181"
+ },
+ {
+  "reaction": "EAR60y",
+  "name": "Enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C6:0)",
+  "status": "related",
+  "subsystem": "palmitate-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "hexACP",
+   "thex2eACP"
+  ],
+  "main_metabolites": [
+   "hexACP",
+   "thex2eACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r184"
+ },
+ {
+  "reaction": "ECA4OALpp",
+  "name": "Enterobacterial common antigen (x4) O-antigen ligase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "colipa",
+   "udcpdp"
+  ],
+  "main_metabolites": [
+   "colipa",
+   "eca4colipa",
+   "eca4und",
+   "udcpdp"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r187"
+ },
+ {
+  "reaction": "ECAP3pp",
+  "name": "Enterobacterial common antigen polymerase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "eca4und",
+   "udcpdp"
+  ],
+  "main_metabolites": [
+   "eca3und",
+   "eca4und",
+   "udcpdp",
+   "unagamuf"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r190"
+ },
+ {
+  "reaction": "F1PP",
+  "name": "D-fructose 1-phosphate phosphatase",
+  "status": "related",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "f1p",
+   "fru"
+  ],
+  "main_metabolites": [
+   "f1p",
+   "fru"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r193"
+ },
+ {
+  "reaction": "F6PA",
+  "name": "Fructose 6-phosphate aldolase",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycolysis/Gluconeogenesis",
+  "anchored": [
+   "dha",
+   "f6p",
+   "g3p"
+  ],
+  "main_metabolites": [
+   "dha",
+   "f6p",
+   "g3p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r197"
+ },
+ {
+  "reaction": "F6PP",
+  "name": "D-fructose 6-phosphate phosphatase",
+  "status": "not on map",
+  "subsystem": "metabolism-of-disaccharids",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "f6p",
+   "fru"
+  ],
+  "main_metabolites": [
+   "f6p",
+   "fru"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r198"
+ },
+ {
+  "reaction": "FACOAE161",
+  "name": "Fatty-acid-CoA thioesterase (hexadecenoate)",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "hdcea",
+   "hdcoa"
+  ],
+  "main_metabolites": [
+   "hdcea",
+   "hdcoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r201"
+ },
+ {
+  "reaction": "FACOAE181",
+  "name": "Fatty-acid-CoA thioesterase (octadecenoate)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "ocdcea",
+   "odecoa"
+  ],
+  "main_metabolites": [
+   "ocdcea",
+   "odecoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r204"
+ },
+ {
+  "reaction": "FACOAE80",
+  "name": "Fatty-acid-CoA thioesterase (octanoate)",
+  "status": "not on map",
+  "subsystem": "octane-oxidation",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "occoa",
+   "octa"
+  ],
+  "main_metabolites": [
+   "occoa",
+   "octa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r207"
+ },
+ {
+  "reaction": "FDMO",
+  "name": "FMNH2-dependent monooxygenase",
+  "status": "related",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fmn",
+   "fmnh2",
+   "gcald",
+   "so3"
+  ],
+  "main_metabolites": [
+   "fmn",
+   "fmnh2",
+   "gcald",
+   "isetac",
+   "so3"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 2,
+  "node": "added_r210"
+ },
+ {
+  "reaction": "FDMO2",
+  "name": "FMNH2-dependent monooxygenase (methanesulfonate)",
+  "status": "related",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fald",
+   "fmn",
+   "fmnh2",
+   "so3"
+  ],
+  "main_metabolites": [
+   "fald",
+   "fmn",
+   "fmnh2",
+   "mso3",
+   "so3"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r216"
+ },
+ {
+  "reaction": "FDMO3",
+  "name": "FMNH2-dependent monooxygenase (ethanesulfonate)",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fmn",
+   "fmnh2",
+   "so3"
+  ],
+  "main_metabolites": [
+   "acald",
+   "ethso3",
+   "fmn",
+   "fmnh2",
+   "so3"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r216"
+ },
+ {
+  "reaction": "FDMO4",
+  "name": "FMNH2-dependent monooxygenase (butanesulfonate)",
+  "status": "related",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fmn",
+   "fmnh2",
+   "so3"
+  ],
+  "main_metabolites": [
+   "btal",
+   "butso3",
+   "fmn",
+   "fmnh2",
+   "so3"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r216"
+ },
+ {
+  "reaction": "FDMO6",
+  "name": "FMNH2-dependent monooxygenase (sulfoacetate)",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fmn",
+   "fmnh2",
+   "so3"
+  ],
+  "main_metabolites": [
+   "fmn",
+   "fmnh2",
+   "glx",
+   "so3",
+   "sulfac"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r216"
+ },
+ {
+  "reaction": "FE3DCITR5",
+  "name": "Ferric-dicitrate reductase via nadph",
+  "status": "not on map",
+  "subsystem": "citric-acid-cycle",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "cit",
+   "fe2"
+  ],
+  "main_metabolites": [
+   "cit",
+   "fe2",
+   "fe3dcit"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r221"
+ },
+ {
+  "reaction": "FE3DCITexs",
+  "name": "Dicitrate Fe(III) binding (spontaneous)",
+  "status": "not on map",
+  "subsystem": "citric-acid-cycle",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "cit",
+   "fe3dcit"
+  ],
+  "main_metabolites": [
+   "cit",
+   "fe3",
+   "fe3dcit"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r226"
+ },
+ {
+  "reaction": "FE3HOXR2",
+  "name": "Fe(III)hydroxamate reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "fmn",
+   "fmnh2"
+  ],
+  "main_metabolites": [
+   "fe2",
+   "fe3hox",
+   "fe3hox_un",
+   "fmn",
+   "fmnh2"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r228"
+ },
+ {
+  "reaction": "FE3HOXR3",
+  "name": "Fe(III)hydroxamate reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "fe3hox",
+   "fe3hox_un",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "fe2",
+   "fe3hox",
+   "fe3hox_un",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r231"
+ },
+ {
+  "reaction": "FECRMR2",
+  "name": "Ferrichrome reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "fmn",
+   "fmnh2"
+  ],
+  "main_metabolites": [
+   "fe2",
+   "fecrm",
+   "fecrm_un",
+   "fmn",
+   "fmnh2"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r232"
+ },
+ {
+  "reaction": "FECRMR3",
+  "name": "Ferrichrome reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "fecrm",
+   "fecrm_un",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "fe2",
+   "fecrm",
+   "fecrm_un",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r235"
+ },
+ {
+  "reaction": "FEENTERR2",
+  "name": "Fe-enterobactin reduction (Fe(III)-unloading)",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "fmn",
+   "fmnh2"
+  ],
+  "main_metabolites": [
+   "enter",
+   "fe2",
+   "feenter",
+   "fmn",
+   "fmnh2"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r236"
+ },
+ {
+  "reaction": "FEENTERR3",
+  "name": "Fe-enterobactin reduction (Fe(III)-unloading)",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "enter",
+   "fe2",
+   "feenter",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "enter",
+   "fe2",
+   "feenter",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r239"
+ },
+ {
+  "reaction": "FEOXAMR2",
+  "name": "Ferroxamine reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "fmn",
+   "fmnh2"
+  ],
+  "main_metabolites": [
+   "fe2",
+   "feoxam",
+   "feoxam_un",
+   "fmn",
+   "fmnh2"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r240"
+ },
+ {
+  "reaction": "FEOXAMR3",
+  "name": "Ferroxamine reductase",
+  "status": "not on map",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "fe2",
+   "feoxam",
+   "feoxam_un",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "fe2",
+   "feoxam",
+   "feoxam_un",
+   "rbflvrd",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r243"
+ },
+ {
+  "reaction": "FLVRx",
+  "name": "Flavin reductase (NAD)",
+  "status": "related",
+  "subsystem": "flavin-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "rbflvrd",
+   "ribflv"
+  ],
+  "main_metabolites": [
+   "rbflvrd",
+   "ribflv"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r244"
+ },
+ {
+  "reaction": "FORCT",
+  "name": "Formyl-CoA Transferase",
+  "status": "not on map",
+  "subsystem": "ornithine-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "for",
+   "oxa",
+   "oxalcoa"
+  ],
+  "main_metabolites": [
+   "for",
+   "forcoa",
+   "oxa",
+   "oxalcoa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r247"
+ },
+ {
+  "reaction": "FRULYSDG",
+  "name": "Fructoselysine phosphate deglycase",
+  "status": "not on map",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "g6p",
+   "lys__L"
+  ],
+  "main_metabolites": [
+   "frulysp",
+   "g6p",
+   "lys__L"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r250"
+ },
+ {
+  "reaction": "G1PP",
+  "name": "Glucose-1-phosphatase",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Glycolysis/Gluconeogenesis",
+  "anchored": [
+   "g1p",
+   "glc__D"
+  ],
+  "main_metabolites": [
+   "g1p",
+   "glc__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r254"
+ },
+ {
+  "reaction": "G1PPpp",
+  "name": "Glucose-1-phosphatase",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Glycolysis/Gluconeogenesis",
+  "anchored": [
+   "g1p",
+   "glc__D"
+  ],
+  "main_metabolites": [
+   "g1p",
+   "glc__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r257"
+ },
+ {
+  "reaction": "G3PAT140",
+  "name": "Glycerol-3-phosphate acyltransferase (C14:0)",
+  "status": "related",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "myrsACP"
+  ],
+  "main_metabolites": [
+   "1tdecg3p",
+   "glyc3p",
+   "myrsACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r260"
+ },
+ {
+  "reaction": "G3PAT160",
+  "name": "Glycerol-3-phosphate acyltransferase (C16:0)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "palmACP"
+  ],
+  "main_metabolites": [
+   "1hdecg3p",
+   "glyc3p",
+   "palmACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r264"
+ },
+ {
+  "reaction": "G3PT",
+  "name": "Glycerol-3-phosphatase",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glyc",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "glyc",
+   "glyc3p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r268"
+ },
+ {
+  "reaction": "G6PP",
+  "name": "Glucose-6-phosphate phosphatase",
+  "status": "related",
+  "subsystem": "glycolysis",
+  "model_subsystem": "Glycolysis/Gluconeogenesis",
+  "anchored": [
+   "g6p",
+   "glc__D"
+  ],
+  "main_metabolites": [
+   "g6p",
+   "glc__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r271"
+ },
+ {
+  "reaction": "GAPP",
+  "name": "Glyceraldehyde-3-phosphate phosphatase",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "g3p",
+   "glyald"
+  ],
+  "main_metabolites": [
+   "g3p",
+   "glyald"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r274"
+ },
+ {
+  "reaction": "GDPMNH",
+  "name": "GDP-mannose mannosyl hydrolase",
+  "status": "related",
+  "subsystem": "d-mannose-degradation",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "gdpmann",
+   "man"
+  ],
+  "main_metabolites": [
+   "gdpmann",
+   "man"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r278"
+ },
+ {
+  "reaction": "GLCATr",
+  "name": "D-glucose O-acetyltransferase",
+  "status": "related",
+  "subsystem": "metabolism-of-disaccharids",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "accoa",
+   "glc__D"
+  ],
+  "main_metabolites": [
+   "accoa",
+   "acglc__D",
+   "glc__D"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r281"
+ },
+ {
+  "reaction": "GLCDpp",
+  "name": "Glucose dehydrogenase (ubiquinone-8 as acceptor) (periplasm)",
+  "status": "not on map",
+  "subsystem": "metabolism-of-disaccharids",
+  "model_subsystem": "Oxidative Phosphorylation",
+  "anchored": [
+   "glc__D",
+   "glcn"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "glcn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r285"
+ },
+ {
+  "reaction": "GLCS1",
+  "name": "Glycogen synthase (ADPGlc)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Glycolysis/Gluconeogenesis",
+  "anchored": [
+   "adpglc",
+   "glycogen"
+  ],
+  "main_metabolites": [
+   "adpglc",
+   "glycogen"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r290"
+ },
+ {
+  "reaction": "GLYCTO2",
+  "name": "Glycolate oxidase",
+  "status": "not on map",
+  "subsystem": "glycolate-and-glyoxylate-degradation",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glx",
+   "glyclt"
+  ],
+  "main_metabolites": [
+   "glx",
+   "glyclt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r292"
+ },
+ {
+  "reaction": "GLYCTO3",
+  "name": "Glycolate oxidase",
+  "status": "not on map",
+  "subsystem": "glycolate-and-glyoxylate-degradation",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glx",
+   "glyclt"
+  ],
+  "main_metabolites": [
+   "glx",
+   "glyclt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r292"
+ },
+ {
+  "reaction": "GLYCTO4",
+  "name": "Glycolate oxidase",
+  "status": "not on map",
+  "subsystem": "glycolate-and-glyoxylate-degradation",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glx",
+   "glyclt"
+  ],
+  "main_metabolites": [
+   "glx",
+   "glyclt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r292"
+ },
+ {
+  "reaction": "GNP",
+  "name": "Phosphogluconate phosphatase",
+  "status": "related",
+  "subsystem": "ketogluconate-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "6pgc",
+   "glcn"
+  ],
+  "main_metabolites": [
+   "6pgc",
+   "glcn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r295"
+ },
+ {
+  "reaction": "GPDDA3",
+  "name": "Glycerophosphodiester phosphodiesterase (Glycerophosphoserine)",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "ser__L"
+  ],
+  "main_metabolites": [
+   "g3ps",
+   "glyc3p",
+   "ser__L"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r298"
+ },
+ {
+  "reaction": "GPDDA3pp",
+  "name": "Glycerophosphodiester phosphodiesterase (Glycerophosphoserine)",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3ps",
+   "glyc3p",
+   "ser__L"
+  ],
+  "main_metabolites": [
+   "g3ps",
+   "glyc3p",
+   "ser__L"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r302"
+ },
+ {
+  "reaction": "GPDDA4",
+  "name": "Glycerophosphodiester phosphodiesterase (Glycerophosphoglycerol)",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "g3pg",
+   "glyc",
+   "glyc3p"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r304"
+ },
+ {
+  "reaction": "GPDDA4pp",
+  "name": "Glycerophosphodiester phosphodiesterase (Glycerophosphoglycerol)",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pg",
+   "glyc",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "g3pg",
+   "glyc",
+   "glyc3p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r307"
+ },
+ {
+  "reaction": "GSPMDA",
+  "name": "Glutathionylspermidine amidase",
+  "status": "related",
+  "subsystem": "glutathione-metabolism",
+  "model_subsystem": "Arginine and Proline Metabolism",
+  "anchored": [
+   "gtspmd",
+   "spmd"
+  ],
+  "main_metabolites": [
+   "gtspmd",
+   "spmd"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r309"
+ },
+ {
+  "reaction": "H2SO",
+  "name": "Hydrogen sulfide oxidation",
+  "status": "not on map",
+  "subsystem": "sulfate-reduction",
+  "model_subsystem": "Inorganic Ion Transport and Metabolism",
+  "anchored": [
+   "h2s",
+   "so4"
+  ],
+  "main_metabolites": [
+   "h2s",
+   "so4"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r312"
+ },
+ {
+  "reaction": "HEMEOS",
+  "name": "Heme O synthase",
+  "status": "not on map",
+  "subsystem": "heme-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "frdp",
+   "pheme"
+  ],
+  "main_metabolites": [
+   "frdp",
+   "hemeO",
+   "pheme"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r314"
+ },
+ {
+  "reaction": "HKNTDH",
+  "name": "2-hydroxy-6-ketononotrienedioate hydrolase",
+  "status": "related",
+  "subsystem": "3-phenylpropionate-degradation",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "fum",
+   "op4en"
+  ],
+  "main_metabolites": [
+   "fum",
+   "hkntd",
+   "op4en"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r319"
+ },
+ {
+  "reaction": "HPYRI",
+  "name": "Hydroxypyruvate isomerase",
+  "status": "not on map",
+  "subsystem": "degradation-of-sugar-acids",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "2h3oppan",
+   "hpyr"
+  ],
+  "main_metabolites": [
+   "2h3oppan",
+   "hpyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r323"
+ },
+ {
+  "reaction": "HPYRP",
+  "name": "3-phosphohydroxypyruvate phosphatase",
+  "status": "not on map",
+  "subsystem": "serine-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "3php",
+   "hpyr"
+  ],
+  "main_metabolites": [
+   "3php",
+   "hpyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r325"
+ },
+ {
+  "reaction": "HXCT",
+  "name": "Acetyl-CoA:hexanoate-CoA transferase",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "ac",
+   "accoa",
+   "hxa",
+   "hxcoa"
+  ],
+  "main_metabolites": [
+   "ac",
+   "accoa",
+   "hxa",
+   "hxcoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r328"
+ },
+ {
+  "reaction": "HYPOE",
+  "name": "Hypothetical enyme",
+  "status": "related",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "pyam5p",
+   "pydam"
+  ],
+  "main_metabolites": [
+   "pyam5p",
+   "pydam"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r330"
+ },
+ {
+  "reaction": "ICYSDS",
+  "name": "ISC Cysteine desulfuration",
+  "status": "not on map",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ala__L",
+   "cys__L"
+  ],
+  "main_metabolites": [
+   "ala__L",
+   "cys__L",
+   "iscs",
+   "iscssh"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 1,
+  "node": "added_r333"
+ },
+ {
+  "reaction": "KAS14",
+  "name": "Beta-ketoacyl-ACP synthase",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Membrane Lipid Metabolism",
+  "anchored": [
+   "acACP",
+   "actACP",
+   "malACP"
+  ],
+  "main_metabolites": [
+   "acACP",
+   "actACP",
+   "malACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r337"
+ },
+ {
+  "reaction": "LA4NTpp",
+  "name": "4-amino-4-deoxy-L-arabinotransferase (LPS lipid A modification, periplasmic face of membrane))",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "colipa",
+   "udcpp"
+  ],
+  "main_metabolites": [
+   "acolipa",
+   "colipa",
+   "uLa4n",
+   "udcpp"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r340"
+ },
+ {
+  "reaction": "LALGP",
+  "name": "L-alanyl-gamma-L-glutamate peptidase",
+  "status": "related",
+  "subsystem": "alanine-metabolism",
+  "model_subsystem": "Murein Recycling",
+  "anchored": [
+   "ala__L",
+   "glu__L"
+  ],
+  "main_metabolites": [
+   "LalaLglu",
+   "ala__L",
+   "glu__L"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r343"
+ },
+ {
+  "reaction": "LCARSyi",
+  "name": "Lacaldehyde reductase (S-propane-1,2-diol forming)",
+  "status": "related",
+  "subsystem": "L-lactaldehyde-degradation",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "12ppd__S",
+   "lald__L"
+  ],
+  "main_metabolites": [
+   "12ppd__S",
+   "lald__L"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r346"
+ },
+ {
+  "reaction": "LIPAHT2ex",
+  "name": "Core oligosaccharide lipid A:hexadecanoate transferase (n-C16:0) (extracellular membrane)",
+  "status": "not on map",
+  "subsystem": "palmitate-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "colipa",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "colipa",
+   "hacolipa",
+   "hdca"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r349"
+ },
+ {
+  "reaction": "LIPAHTex",
+  "name": "Lipid A:hexadecanoate transferase (n-C16:0) (extracellular membrane)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "hdca",
+   "lipa"
+  ],
+  "main_metabolites": [
+   "halipa",
+   "hdca",
+   "lipa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r353"
+ },
+ {
+  "reaction": "LIPOS",
+  "name": "Lipoate synthase",
+  "status": "not on map",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "amet",
+   "fe2",
+   "met__L"
+  ],
+  "main_metabolites": [
+   "2fe2s",
+   "4fe4s",
+   "amet",
+   "dad_5",
+   "fe2",
+   "lipopb",
+   "met__L",
+   "octapb"
+  ],
+  "new_metabolites": 5,
+  "linked_metabolites": 1,
+  "node": "added_r357"
+ },
+ {
+  "reaction": "LPLIPAL1A140pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphotidate, n-C14:0) (periplasm)",
+  "status": "related",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1tdecg3p",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "1tdecg3p",
+   "glyc3p",
+   "ttdca"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r366"
+ },
+ {
+  "reaction": "LPLIPAL1A160pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphotidate, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1hdecg3p",
+   "glyc3p",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "1hdecg3p",
+   "glyc3p",
+   "hdca"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r369"
+ },
+ {
+  "reaction": "LPLIPAL1A161pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphotidate, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "hdcea"
+  ],
+  "main_metabolites": [
+   "1hdec9eg3p",
+   "glyc3p",
+   "hdcea"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r371"
+ },
+ {
+  "reaction": "LPLIPAL1A181pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphotidate, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "ocdcea"
+  ],
+  "main_metabolites": [
+   "1odec11eg3p",
+   "glyc3p",
+   "ocdcea"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r374"
+ },
+ {
+  "reaction": "LPLIPAL1G160pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphoglycerol, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pg",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "1agpg160",
+   "g3pg",
+   "hdca"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r377"
+ },
+ {
+  "reaction": "LPLIPAL1G161pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphoglycerol, n-C16:1) (periplasm)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pg",
+   "hdcea"
+  ],
+  "main_metabolites": [
+   "1agpg161",
+   "g3pg",
+   "hdcea"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r381"
+ },
+ {
+  "reaction": "LPLIPAL1G181pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphoglycerol, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pg"
+  ],
+  "main_metabolites": [
+   "1agpg181",
+   "g3pg",
+   "ocdcea"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r381"
+ },
+ {
+  "reaction": "LPLIPAL2A140",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphotidate, n-C14:0)",
+  "status": "related",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "ttdca"
+  ],
+  "main_metabolites": [
+   "2tdecg3p",
+   "glyc3p",
+   "ttdca"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r385"
+ },
+ {
+  "reaction": "LPLIPAL2A160",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphotidate, n-C16:0)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "2hdecg3p",
+   "glyc3p",
+   "hdca"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r388"
+ },
+ {
+  "reaction": "LPLIPAL2A161",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphotidate, n-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "hdcea"
+  ],
+  "main_metabolites": [
+   "2hdec9eg3p",
+   "glyc3p",
+   "hdcea"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r371"
+ },
+ {
+  "reaction": "LPLIPAL2A181",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphotidate, n-C18:1)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p",
+   "ocdcea"
+  ],
+  "main_metabolites": [
+   "2odec11eg3p",
+   "glyc3p",
+   "ocdcea"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r374"
+ },
+ {
+  "reaction": "LPLIPAL2G160",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphoglycerol, n-C16:0)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pg",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "2agpg160",
+   "g3pg",
+   "hdca"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r391"
+ },
+ {
+  "reaction": "LPLIPAL2G161",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphoglycerol, n-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pg",
+   "hdcea"
+  ],
+  "main_metabolites": [
+   "2agpg161",
+   "g3pg",
+   "hdcea"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r394"
+ },
+ {
+  "reaction": "LPLIPAL2G181",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphoglycerol, n-C18:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pg",
+   "ocdcea"
+  ],
+  "main_metabolites": [
+   "2agpg181",
+   "g3pg",
+   "ocdcea"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r394"
+ },
+ {
+  "reaction": "MALCOAMT",
+  "name": "Malonyl-CoA methyltransferase",
+  "status": "not on map",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ahcys",
+   "amet",
+   "malcoa"
+  ],
+  "main_metabolites": [
+   "ahcys",
+   "amet",
+   "malcoa",
+   "malcoame"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r397"
+ },
+ {
+  "reaction": "MALTATr",
+  "name": "Maltose O-acetyltransferase",
+  "status": "related",
+  "subsystem": "metabolism-of-disaccharids",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "accoa",
+   "malt"
+  ],
+  "main_metabolites": [
+   "accoa",
+   "acmalt",
+   "malt"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r400"
+ },
+ {
+  "reaction": "MANPGH",
+  "name": "2-O-alpha-mannosyl-6-phosphate-D-glycerate hydrolase",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-acids",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glyc__R",
+   "man6p"
+  ],
+  "main_metabolites": [
+   "glyc__R",
+   "man6p",
+   "man6pglyc"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r404"
+ },
+ {
+  "reaction": "MECDPDH5",
+  "name": "2C-methyl-D-erythritol 2,4 cyclodiphosphate dehydratase",
+  "status": "not on map",
+  "subsystem": "isoprenoid-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "2mecdp",
+   "h2mb4p"
+  ],
+  "main_metabolites": [
+   "2mecdp",
+   "h2mb4p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r408"
+ },
+ {
+  "reaction": "METNA",
+  "name": "L-amino acid N-acyltransferase",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Methionine Metabolism",
+  "anchored": [
+   "accoa",
+   "met__L"
+  ],
+  "main_metabolites": [
+   "accoa",
+   "acmet",
+   "met__L"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r412"
+ },
+ {
+  "reaction": "METOX1s",
+  "name": "Methionine oxidation (spontaneous)",
+  "status": "not on map",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Methionine Metabolism",
+  "anchored": [
+   "met__L",
+   "metsox_S__L"
+  ],
+  "main_metabolites": [
+   "met__L",
+   "metsox_S__L"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r416"
+ },
+ {
+  "reaction": "METOX2s",
+  "name": "Methionine oxidation 2 (spontaneous)",
+  "status": "not on map",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Methionine Metabolism",
+  "anchored": [
+   "met__L",
+   "metsox_R__L"
+  ],
+  "main_metabolites": [
+   "met__L",
+   "metsox_R__L"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r416"
+ },
+ {
+  "reaction": "MLTG2",
+  "name": "Maltodextrin glucosidase (maltotetraose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glc__D",
+   "malttr",
+   "maltttr"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "malttr",
+   "maltttr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r419"
+ },
+ {
+  "reaction": "MLTG3",
+  "name": "Maltodextrin glucosidase (maltopentaose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glc__D",
+   "maltpt",
+   "maltttr"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "maltpt",
+   "maltttr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r421"
+ },
+ {
+  "reaction": "MLTG4",
+  "name": "Maltodextrin glucosidase (maltohexaose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glc__D",
+   "malthx",
+   "maltpt"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "malthx",
+   "maltpt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r423"
+ },
+ {
+  "reaction": "MLTG5",
+  "name": "Maltodextrin glucosidase (maltoheptaose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "glc__D",
+   "malthp",
+   "malthx"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "malthp",
+   "malthx"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r425"
+ },
+ {
+  "reaction": "MLTP2",
+  "name": "Maltodextrin phosphorylase (maltohexaose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "g1p",
+   "malthx",
+   "maltpt"
+  ],
+  "main_metabolites": [
+   "g1p",
+   "malthx",
+   "maltpt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r427"
+ },
+ {
+  "reaction": "MLTP3",
+  "name": "Maltodextrin phosphorylase (maltoheptaose)",
+  "status": "related",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "g1p",
+   "malthp",
+   "malthx"
+  ],
+  "main_metabolites": [
+   "g1p",
+   "malthp",
+   "malthx"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r429"
+ },
+ {
+  "reaction": "MN6PP",
+  "name": "Mannose 6-phosphate phosphatase",
+  "status": "not on map",
+  "subsystem": "d-mannose-degradation",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "man",
+   "man6p"
+  ],
+  "main_metabolites": [
+   "man",
+   "man6p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r431"
+ },
+ {
+  "reaction": "MOX",
+  "name": "Malate oxidase",
+  "status": "related",
+  "subsystem": "citric-acid-cycle",
+  "model_subsystem": "Citric Acid Cycle",
+  "anchored": [
+   "mal__L",
+   "oaa"
+  ],
+  "main_metabolites": [
+   "mal__L",
+   "oaa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r434"
+ },
+ {
+  "reaction": "MPTS",
+  "name": "Molybdopterin synthase",
+  "status": "not on map",
+  "subsystem": "molybdenum-cofactor-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "cpmp",
+   "cu2",
+   "mpt"
+  ],
+  "main_metabolites": [
+   "cpmp",
+   "cu2",
+   "moadcoo",
+   "moadcosh",
+   "mpt"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r437"
+ },
+ {
+  "reaction": "MTRPOX",
+  "name": "N-methyltryptophan oxidase",
+  "status": "related",
+  "subsystem": "vitamin-B12-metabolism",
+  "model_subsystem": "Glycine and Serine Metabolism",
+  "anchored": [
+   "fald",
+   "trp__L"
+  ],
+  "main_metabolites": [
+   "Nmtrp",
+   "fald",
+   "trp__L"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r440"
+ },
+ {
+  "reaction": "NTD1",
+  "name": "5'-nucleotidase (dUMP)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dump",
+   "duri"
+  ],
+  "main_metabolites": [
+   "dump",
+   "duri"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r446"
+ },
+ {
+  "reaction": "NTD1pp",
+  "name": "5'-nucleotidase (dUMP)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dump",
+   "duri"
+  ],
+  "main_metabolites": [
+   "dump",
+   "duri"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r449"
+ },
+ {
+  "reaction": "NTD3",
+  "name": "5'-nucleotidase (dCMP)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dcmp",
+   "dcyt"
+  ],
+  "main_metabolites": [
+   "dcmp",
+   "dcyt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r452"
+ },
+ {
+  "reaction": "NTD3pp",
+  "name": "5'-nucleotidase (dCMP)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dcmp",
+   "dcyt"
+  ],
+  "main_metabolites": [
+   "dcmp",
+   "dcyt"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r455"
+ },
+ {
+  "reaction": "NTD5",
+  "name": "5'-nucleotidase (dTMP)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dtmp",
+   "thymd"
+  ],
+  "main_metabolites": [
+   "dtmp",
+   "thymd"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r458"
+ },
+ {
+  "reaction": "NTD5pp",
+  "name": "5'-nucleotidase (dTMP)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dtmp",
+   "thymd"
+  ],
+  "main_metabolites": [
+   "dtmp",
+   "thymd"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r461"
+ },
+ {
+  "reaction": "NTD6",
+  "name": "5'-nucleotidase (dAMP)",
+  "status": "related",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dad_2",
+   "damp"
+  ],
+  "main_metabolites": [
+   "dad_2",
+   "damp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r464"
+ },
+ {
+  "reaction": "NTD6pp",
+  "name": "5'-nucleotidase (dAMP)",
+  "status": "related",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dad_2",
+   "damp"
+  ],
+  "main_metabolites": [
+   "dad_2",
+   "damp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r467"
+ },
+ {
+  "reaction": "NTD8",
+  "name": "5'-nucleotidase (dGMP)",
+  "status": "related",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dgmp",
+   "dgsn"
+  ],
+  "main_metabolites": [
+   "dgmp",
+   "dgsn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r470"
+ },
+ {
+  "reaction": "NTD8pp",
+  "name": "5'-nucleotidase (dGMP)",
+  "status": "related",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dgmp",
+   "dgsn"
+  ],
+  "main_metabolites": [
+   "dgmp",
+   "dgsn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r473"
+ },
+ {
+  "reaction": "NTPP5",
+  "name": "Nucleoside triphosphate pyrophosphorylase (datp)",
+  "status": "related",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "damp",
+   "datp"
+  ],
+  "main_metabolites": [
+   "damp",
+   "datp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r476"
+ },
+ {
+  "reaction": "NTPP7",
+  "name": "Nucleoside triphosphate pyrophosphorylase (dttp)",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dtmp",
+   "dttp"
+  ],
+  "main_metabolites": [
+   "dtmp",
+   "dttp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r479"
+ },
+ {
+  "reaction": "O16A4Lpp",
+  "name": "O16 anitgen (x4) ligase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "colipa",
+   "udcpdp"
+  ],
+  "main_metabolites": [
+   "colipa",
+   "o16a4colipa",
+   "o16a4und",
+   "udcpdp"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r482"
+ },
+ {
+  "reaction": "O16AP3pp",
+  "name": "O16 antigen polymerase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "o16a4und",
+   "udcpdp"
+  ],
+  "main_metabolites": [
+   "o16a3und",
+   "o16a4und",
+   "o16aund",
+   "udcpdp"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r485"
+ },
+ {
+  "reaction": "O16GLCT2",
+  "name": "Glucosyltransferase II (LPS O16 antigen biosynthesis)",
+  "status": "not on map",
+  "subsystem": "glycogen-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "o16aund",
+   "udpg"
+  ],
+  "main_metabolites": [
+   "gfgaragund",
+   "o16aund",
+   "udpg"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r488"
+ },
+ {
+  "reaction": "OCTNLL",
+  "name": "Octanoate non-lipoylated apo domain ligase",
+  "status": "not on map",
+  "subsystem": "lipoate-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "octa",
+   "octapb"
+  ],
+  "main_metabolites": [
+   "octa",
+   "octapb"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r492"
+ },
+ {
+  "reaction": "OGMEACPS",
+  "name": "3-Oxo-glutaryl-[ACP] methyl ester synthase",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "malACP",
+   "malcoame"
+  ],
+  "main_metabolites": [
+   "malACP",
+   "malcoame",
+   "ogmeACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r497"
+ },
+ {
+  "reaction": "OMBZLM",
+  "name": "2-Octaprenyl-6-methoxy-benzoquinol methylase",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ahcys",
+   "amet"
+  ],
+  "main_metabolites": [
+   "2ombzl",
+   "2ommbl",
+   "ahcys",
+   "amet"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r502"
+ },
+ {
+  "reaction": "OMMBLHX3",
+  "name": "2-Octaprenyl-3-methyl-6-methoxy-1,4-benzoquinol hydroxylase (anaerobic)",
+  "status": "not on map",
+  "subsystem": "ubiquinone-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "2omhmbl",
+   "2ommbl"
+  ],
+  "main_metabolites": [
+   "2omhmbl",
+   "2ommbl"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r505"
+ },
+ {
+  "reaction": "OMMBLHXy",
+  "name": "2-Octaprenyl-3-methyl-6-methoxy-1,4-benzoquinol hydroxylase (NADPHl)",
+  "status": "not on map",
+  "subsystem": "ubiquinone-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "2omhmbl",
+   "2ommbl"
+  ],
+  "main_metabolites": [
+   "2omhmbl",
+   "2ommbl"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r513"
+ },
+ {
+  "reaction": "OMPHHXy",
+  "name": "2-octaprenyl-6-methoxyphenol hydroxylase (NADPH)",
+  "status": "not on map",
+  "subsystem": "ubiquinone-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "2ombzl",
+   "2omph"
+  ],
+  "main_metabolites": [
+   "2ombzl",
+   "2omph"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r518"
+ },
+ {
+  "reaction": "OPHHX3",
+  "name": "2-Octaprenylphenol hydroxylase (anaerobic)",
+  "status": "not on map",
+  "subsystem": "ubiquinone-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "2ohph",
+   "2oph"
+  ],
+  "main_metabolites": [
+   "2ohph",
+   "2oph"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r524"
+ },
+ {
+  "reaction": "OXAMTC",
+  "name": "Oxamate transcarbamoylase",
+  "status": "not on map",
+  "subsystem": "allantoin-degradation",
+  "model_subsystem": "Nitrogen Metabolism",
+  "anchored": [
+   "cbp",
+   "oxur"
+  ],
+  "main_metabolites": [
+   "cbp",
+   "oxam",
+   "oxur"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r531"
+ },
+ {
+  "reaction": "OXCOAHDH",
+  "name": "Oxepin-CoA hydrolase/ 3-oxo-5,6-dehydrosuberyl-CoA semialdehyde dehydrogenase (NADP+)",
+  "status": "not on map",
+  "subsystem": "phenylacetate-degradation-aerobic",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "2oxpaccoa",
+   "3oxdhscoa"
+  ],
+  "main_metabolites": [
+   "2oxpaccoa",
+   "3oxdhscoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r535"
+ },
+ {
+  "reaction": "PACOAT",
+  "name": "Phenylacetyl-CoA thioesterase",
+  "status": "related",
+  "subsystem": "phenylacetate-degradation-aerobic",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "pac",
+   "phaccoa"
+  ],
+  "main_metabolites": [
+   "pac",
+   "phaccoa"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r539"
+ },
+ {
+  "reaction": "PAI2T",
+  "name": "3-hydroxy-2,4-pentadione 5-phosphate thiolase",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Methionine Metabolism",
+  "anchored": [
+   "accoa",
+   "dhap"
+  ],
+  "main_metabolites": [
+   "accoa",
+   "dhap",
+   "dhptdd"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r542"
+ },
+ {
+  "reaction": "PAPSR2",
+  "name": "Phosphoadenylyl-sulfate reductase (glutaredoxin)",
+  "status": "related",
+  "subsystem": "sulfate-reduction",
+  "model_subsystem": "Cysteine Metabolism",
+  "anchored": [
+   "paps",
+   "so3"
+  ],
+  "main_metabolites": [
+   "pap",
+   "paps",
+   "so3"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r545"
+ },
+ {
+  "reaction": "PDX5PO2",
+  "name": "Pyridoxine 5'-phosphate oxidase (anaerboic",
+  "status": "not on map",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "pdx5p",
+   "pydx5p"
+  ],
+  "main_metabolites": [
+   "pdx5p",
+   "pydx5p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r549"
+ },
+ {
+  "reaction": "PDX5PS",
+  "name": "Pyridoxine 5'-phosphate synthase",
+  "status": "not on map",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "dxyl5p",
+   "pdx5p",
+   "phthr"
+  ],
+  "main_metabolites": [
+   "dxyl5p",
+   "pdx5p",
+   "phthr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r552"
+ },
+ {
+  "reaction": "PDXPP",
+  "name": "Pyridoxine 5-phosphate phosphatase",
+  "status": "related",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "pdx5p",
+   "pydxn"
+  ],
+  "main_metabolites": [
+   "pdx5p",
+   "pydxn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r559"
+ },
+ {
+  "reaction": "PETNT161pp",
+  "name": "Phosphoethanolamine transferase (c-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "lipa",
+   "pe161"
+  ],
+  "main_metabolites": [
+   "12dgr161",
+   "enlipa",
+   "lipa",
+   "pe161"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 1,
+  "node": "added_r562"
+ },
+ {
+  "reaction": "PETNT181pp",
+  "name": "Phosphoethanolamine transferase (c-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "enlipa",
+   "lipa",
+   "pe181"
+  ],
+  "main_metabolites": [
+   "12dgr181",
+   "enlipa",
+   "lipa",
+   "pe181"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r566"
+ },
+ {
+  "reaction": "PFK_3",
+  "name": "Phosphofructokinase (s7p)",
+  "status": "related",
+  "subsystem": "photosynthesis",
+  "model_subsystem": "Pentose Phosphate Pathway",
+  "anchored": [
+   "s17bp",
+   "s7p"
+  ],
+  "main_metabolites": [
+   "s17bp",
+   "s7p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r569"
+ },
+ {
+  "reaction": "PLIPA1A160pp",
+  "name": "Phospholipase A1 (phosphatidate, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2hdecg3p",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "2hdecg3p",
+   "hdca",
+   "pa160"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r572"
+ },
+ {
+  "reaction": "PLIPA1A161pp",
+  "name": "Phospholipase A1 (phosphatidate, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2hdec9eg3p",
+   "hdcea"
+  ],
+  "main_metabolites": [
+   "2hdec9eg3p",
+   "hdcea",
+   "pa161"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r575"
+ },
+ {
+  "reaction": "PLIPA1A181pp",
+  "name": "Phospholipase A1 (phosphatidate, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2odec11eg3p",
+   "ocdcea"
+  ],
+  "main_metabolites": [
+   "2odec11eg3p",
+   "ocdcea",
+   "pa181"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r578"
+ },
+ {
+  "reaction": "PLIPA1E161pp",
+  "name": "Phospholipase A1 (phosphatidylethanolamine, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "hdcea",
+   "pe161"
+  ],
+  "main_metabolites": [
+   "2agpe161",
+   "hdcea",
+   "pe161"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r581"
+ },
+ {
+  "reaction": "PLIPA1E181pp",
+  "name": "Phospholipase A1 (phosphatidylethanolamine, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "ocdcea",
+   "pe181"
+  ],
+  "main_metabolites": [
+   "2agpe181",
+   "ocdcea",
+   "pe181"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r584"
+ },
+ {
+  "reaction": "PLIPA1G160pp",
+  "name": "Phospholipase A1 (phosphatidylglycerol, n-C16:0) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpg160",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "2agpg160",
+   "hdca",
+   "pg160"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r587"
+ },
+ {
+  "reaction": "PLIPA1G161pp",
+  "name": "Phospholipase A1 (phosphatidylglycerol, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpg161",
+   "hdcea",
+   "pg161"
+  ],
+  "main_metabolites": [
+   "2agpg161",
+   "hdcea",
+   "pg161"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r590"
+ },
+ {
+  "reaction": "PLIPA1G181pp",
+  "name": "Phospholipase A1 (phosphatidylglycerol, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpg181",
+   "ocdcea"
+  ],
+  "main_metabolites": [
+   "2agpg181",
+   "ocdcea",
+   "pg181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r590"
+ },
+ {
+  "reaction": "PLIPA2A160pp",
+  "name": "Phospholipase A2 (phosphatidate, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1hdecg3p",
+   "hdca",
+   "pa160"
+  ],
+  "main_metabolites": [
+   "1hdecg3p",
+   "hdca",
+   "pa160"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r593"
+ },
+ {
+  "reaction": "PLIPA2A161pp",
+  "name": "Phospholipase A2 (phosphatidate, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1hdec9eg3p",
+   "hdcea",
+   "pa161"
+  ],
+  "main_metabolites": [
+   "1hdec9eg3p",
+   "hdcea",
+   "pa161"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r595"
+ },
+ {
+  "reaction": "PLIPA2A181pp",
+  "name": "Phospholipase A2 (phosphatidate, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1odec11eg3p",
+   "ocdcea",
+   "pa181"
+  ],
+  "main_metabolites": [
+   "1odec11eg3p",
+   "ocdcea",
+   "pa181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r597"
+ },
+ {
+  "reaction": "PLIPA2E161pp",
+  "name": "Phospholipase A2 (phosphatidylethanolamine, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "hdcea",
+   "pe161"
+  ],
+  "main_metabolites": [
+   "1agpe161",
+   "hdcea",
+   "pe161"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r581"
+ },
+ {
+  "reaction": "PLIPA2E181pp",
+  "name": "Phospholipase A2 (phosphatidylethanolamine, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "ocdcea",
+   "pe181"
+  ],
+  "main_metabolites": [
+   "1agpe181",
+   "ocdcea",
+   "pe181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r584"
+ },
+ {
+  "reaction": "PLIPA2G160pp",
+  "name": "Phospholipase A2 (phosphatidylglycerol, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1agpg160",
+   "hdca",
+   "pg160"
+  ],
+  "main_metabolites": [
+   "1agpg160",
+   "hdca",
+   "pg160"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r599"
+ },
+ {
+  "reaction": "PLIPA2G161pp",
+  "name": "Phospholipase A2 (phosphatidylglycerol, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1agpg161",
+   "hdcea",
+   "pg161"
+  ],
+  "main_metabolites": [
+   "1agpg161",
+   "hdcea",
+   "pg161"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r601"
+ },
+ {
+  "reaction": "PLIPA2G181pp",
+  "name": "Phospholipase A2 (phosphatidylglycerol, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1agpg181",
+   "ocdcea",
+   "pg181"
+  ],
+  "main_metabolites": [
+   "1agpg181",
+   "ocdcea",
+   "pg181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r601"
+ },
+ {
+  "reaction": "POR5",
+  "name": "Pyruvate synthase",
+  "status": "not on map",
+  "subsystem": "ethanol-fermentation",
+  "model_subsystem": "Pyruvate Metabolism",
+  "anchored": [
+   "accoa",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "accoa",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r603"
+ },
+ {
+  "reaction": "PPPGO3",
+  "name": "Protoporphyrinogen oxidase (anaerobic)",
+  "status": "related",
+  "subsystem": "heme-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "fum",
+   "ppp9",
+   "pppg9",
+   "succ"
+  ],
+  "main_metabolites": [
+   "fum",
+   "ppp9",
+   "pppg9",
+   "succ"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r608"
+ },
+ {
+  "reaction": "PTRCTA",
+  "name": "Putrescine Transaminase",
+  "status": "related",
+  "subsystem": "glutamate-and-glutamine-metabolism",
+  "model_subsystem": "Arginine and Proline Metabolism",
+  "anchored": [
+   "4abutn",
+   "akg",
+   "glu__L",
+   "ptrc"
+  ],
+  "main_metabolites": [
+   "4abutn",
+   "akg",
+   "glu__L",
+   "ptrc"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r611"
+ },
+ {
+  "reaction": "PYDXPP",
+  "name": "Pyridoxal 5-phosphate phosphatase",
+  "status": "related",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "pydx",
+   "pydx5p"
+  ],
+  "main_metabolites": [
+   "pydx",
+   "pydx5p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r614"
+ },
+ {
+  "reaction": "PYK2",
+  "name": "Pyruvate kinase(2)",
+  "status": "related",
+  "subsystem": "glycolysis",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "pep",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "pep",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r617"
+ },
+ {
+  "reaction": "PYK3",
+  "name": "Pyruvate kinase(3)",
+  "status": "related",
+  "subsystem": "glycolysis",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "pep",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "pep",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r617"
+ },
+ {
+  "reaction": "PYK4",
+  "name": "Pyruvate kinase(4)",
+  "status": "related",
+  "subsystem": "glycolysis",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "pep",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "pep",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r617"
+ },
+ {
+  "reaction": "PYK6",
+  "name": "RE2954",
+  "status": "not on map",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Nucleotide Salvage Pathway",
+  "anchored": [
+   "dtdp",
+   "dttp",
+   "pep",
+   "pyr"
+  ],
+  "main_metabolites": [
+   "dtdp",
+   "dttp",
+   "pep",
+   "pyr"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r620"
+ },
+ {
+  "reaction": "R5PP",
+  "name": "Ribose 5-phosphate phosphatase",
+  "status": "not on map",
+  "subsystem": "degradation-of-pentoses",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "r5p",
+   "rib__D"
+  ],
+  "main_metabolites": [
+   "r5p",
+   "rib__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r623"
+ },
+ {
+  "reaction": "R5PPpp",
+  "name": "Ribose 5-phosphate phosphatase",
+  "status": "not on map",
+  "subsystem": "degradation-of-pentoses",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "r5p",
+   "rib__D"
+  ],
+  "main_metabolites": [
+   "r5p",
+   "rib__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r626"
+ },
+ {
+  "reaction": "RHAT1",
+  "name": "Rhamnosyltransferase I (LPS core biosynthesis)",
+  "status": "not on map",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "dtdp",
+   "dtdprmn"
+  ],
+  "main_metabolites": [
+   "dtdp",
+   "dtdprmn",
+   "icolipa",
+   "kphphhlipa"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 1,
+  "node": "added_r629"
+ },
+ {
+  "reaction": "RU5PP",
+  "name": "Ribulose-5-Phosphate Phosphatase",
+  "status": "not on map",
+  "subsystem": "degradation-of-pentoses",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "rbl__D",
+   "ru5p__D"
+  ],
+  "main_metabolites": [
+   "rbl__D",
+   "ru5p__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r633"
+ },
+ {
+  "reaction": "SCYSDS",
+  "name": "SUF Cysteine desulfuration",
+  "status": "not on map",
+  "subsystem": "vitamin-B6-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ala__L",
+   "cys__L"
+  ],
+  "main_metabolites": [
+   "ala__L",
+   "cys__L",
+   "sufse",
+   "sufsesh"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r636"
+ },
+ {
+  "reaction": "SHGO",
+  "name": "S-2-hydroxyglutarate oxidase",
+  "status": "related",
+  "subsystem": "glutamate-and-glutamine-metabolism",
+  "model_subsystem": "Glycine and Serine Metabolism",
+  "anchored": [
+   "S2hglut",
+   "akg"
+  ],
+  "main_metabolites": [
+   "S2hglut",
+   "akg"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r639"
+ },
+ {
+  "reaction": "SPMDAT2",
+  "name": "Spermidine acetyltransferase (N8)",
+  "status": "related",
+  "subsystem": "polyamine-pathway",
+  "model_subsystem": "Arginine and Proline Metabolism",
+  "anchored": [
+   "accoa",
+   "spmd"
+  ],
+  "main_metabolites": [
+   "accoa",
+   "n8aspmd",
+   "spmd"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r642"
+ },
+ {
+  "reaction": "TEO2M",
+  "name": "Tellurite methyltransferase",
+  "status": "related",
+  "subsystem": "methionine-metabolism",
+  "model_subsystem": "Unassigned",
+  "anchored": [
+   "ahcys",
+   "amet"
+  ],
+  "main_metabolites": [
+   "ahcys",
+   "amet",
+   "mteo2",
+   "teo2"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r646"
+ },
+ {
+  "reaction": "THRA2",
+  "name": "L-allo-Threonine Aldolase",
+  "status": "related",
+  "subsystem": "threonine-metabolism",
+  "model_subsystem": "Threonine and Lysine Metabolism",
+  "anchored": [
+   "acald",
+   "gly"
+  ],
+  "main_metabolites": [
+   "acald",
+   "athr__L",
+   "gly"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r649"
+ },
+ {
+  "reaction": "THZPSN3",
+  "name": "Thiazole phosphate synthesis",
+  "status": "not on map",
+  "subsystem": "vitamin-B1-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "4mpetz",
+   "dhgly",
+   "dxyl5p",
+   "iscs",
+   "iscssh"
+  ],
+  "main_metabolites": [
+   "4mpetz",
+   "dhgly",
+   "dxyl5p",
+   "iscs",
+   "iscssh"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r651"
+ },
+ {
+  "reaction": "TPRDCOAS",
+  "name": "Triphosphoribosyl-dephospho-CoA synthase",
+  "status": "not on map",
+  "subsystem": "coenzyme-A-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ade",
+   "dpcoa"
+  ],
+  "main_metabolites": [
+   "2tpr3dpcoa",
+   "ade",
+   "dpcoa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r661"
+ },
+ {
+  "reaction": "TRPS1",
+  "name": "Tryptophan synthase (indoleglycerol phosphate)",
+  "status": "related",
+  "subsystem": "tryptophan-metabolism",
+  "model_subsystem": "Tyrosine, Tryptophan, and Phenylalanine Metabolism",
+  "anchored": [
+   "3ig3p",
+   "g3p",
+   "ser__L",
+   "trp__L"
+  ],
+  "main_metabolites": [
+   "3ig3p",
+   "g3p",
+   "ser__L",
+   "trp__L"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r665"
+ },
+ {
+  "reaction": "UACGAMPpp",
+  "name": "UDP-N-acetyl-D-glucosamine pyrophosphohydrolase (periplasm)",
+  "status": "related",
+  "subsystem": "UDP-GlcNAc-biosynthesis",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "acgam1p",
+   "uacgam"
+  ],
+  "main_metabolites": [
+   "acgam1p",
+   "uacgam"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r669"
+ },
+ {
+  "reaction": "UDPGALPpp",
+  "name": "UDPgalactose pyrophosphohydrolase",
+  "status": "related",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "gal1p",
+   "udpgal"
+  ],
+  "main_metabolites": [
+   "gal1p",
+   "udpgal"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r672"
+ },
+ {
+  "reaction": "UDPGPT",
+  "name": "Undecaprenyl-phosphate glucose phosphotransferase",
+  "status": "related",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "udcpp",
+   "udpg"
+  ],
+  "main_metabolites": [
+   "udcpgl",
+   "udcpp",
+   "udpg"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r675"
+ },
+ {
+  "reaction": "UDPGPpp",
+  "name": "UDPglucose pyrophosphohydrolase",
+  "status": "related",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "g1p",
+   "udpg"
+  ],
+  "main_metabolites": [
+   "g1p",
+   "udpg"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r679"
+ },
+ {
+  "reaction": "UDPKAAT",
+  "name": "UDP-4''-ketopentose:UDP-4-amino-4-deoxy-L-arabinose aminotransferase",
+  "status": "related",
+  "subsystem": "glutamate-and-glutamine-metabolism",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "akg",
+   "glu__L"
+  ],
+  "main_metabolites": [
+   "akg",
+   "glu__L",
+   "udpLa4n",
+   "udpLa4o"
+  ],
+  "new_metabolites": 2,
+  "linked_metabolites": 0,
+  "node": "added_r682"
+ },
+ {
+  "reaction": "ULA4NFT",
+  "name": "UDP-L-Ara4N formyltransferase",
+  "status": "not on map",
+  "subsystem": "reductive-acetyl-coenzyme-A-pathway",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "10fthf",
+   "thf",
+   "udpLa4n"
+  ],
+  "main_metabolites": [
+   "10fthf",
+   "thf",
+   "udpLa4fn",
+   "udpLa4n"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r685"
+ },
+ {
+  "reaction": "UM3PL",
+  "name": "UDP-N-acetylmuramate:L-alanyl-gamma-D-glutamyl-meso-diaminopimelate ligase",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Murein Recycling",
+  "anchored": [
+   "uamr",
+   "ugmd"
+  ],
+  "main_metabolites": [
+   "LalaDgluMdap",
+   "uamr",
+   "ugmd"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r688"
+ },
+ {
+  "reaction": "UM4PCP",
+  "name": "UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminopimelate-D-alanine L,D-carboxypeptidase",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Murein Recycling",
+  "anchored": [
+   "ala__D",
+   "ugmd"
+  ],
+  "main_metabolites": [
+   "ala__D",
+   "ugmd",
+   "um4p"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r693"
+ },
+ {
+  "reaction": "UM4PL",
+  "name": "UDP-N-acetylmuramate:L-alanyl-gamma-D-glutamyl-meso-diaminopimelate-D-alanine ligase",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Murein Recycling",
+  "anchored": [
+   "uamr",
+   "um4p"
+  ],
+  "main_metabolites": [
+   "LalaDgluMdapDala",
+   "uamr",
+   "um4p"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r696"
+ },
+ {
+  "reaction": "UPLA4FNF",
+  "name": "Undecaprenyl phosphate-L-Ara4FN formylase",
+  "status": "not on map",
+  "subsystem": "formaldehyde-oxidation",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "for",
+   "uLa4n"
+  ],
+  "main_metabolites": [
+   "for",
+   "uLa4fn",
+   "uLa4n"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r701"
+ },
+ {
+  "reaction": "UPLA4FNT",
+  "name": "Undecaprenyl phosphate-L-Ara4FN transferase",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "uLa4fn",
+   "udcpp",
+   "udpLa4fn"
+  ],
+  "main_metabolites": [
+   "uLa4fn",
+   "udcpp",
+   "udpLa4fn"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 2,
+  "node": "added_r705"
+ },
+ {
+  "reaction": "WCOS",
+  "name": "Tungsten pterin cofactor synthase",
+  "status": "not on map",
+  "subsystem": "molybdenum-cofactor-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "cu2",
+   "mptamp",
+   "wco"
+  ],
+  "main_metabolites": [
+   "cu2",
+   "mptamp",
+   "tungs",
+   "wco"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r709"
+ },
+ {
+  "reaction": "XYHDL",
+  "name": "?-D-xyloside xylohydrolase",
+  "status": "not on map",
+  "subsystem": "glycogen-metabolism",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "glc__D",
+   "xyl__D"
+  ],
+  "main_metabolites": [
+   "glc__D",
+   "iprimv",
+   "xyl__D"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r713"
+ },
+ {
+  "reaction": "XYLI2",
+  "name": "Xylose isomerase",
+  "status": "related",
+  "subsystem": "metabolism-of-disaccharids",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "fru",
+   "glc__D"
+  ],
+  "main_metabolites": [
+   "fru",
+   "glc__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r717"
+ },
+ {
+  "reaction": "YUMPS",
+  "name": "YUMP synthetase",
+  "status": "related",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Purine and Pyrimidine Biosynthesis",
+  "anchored": [
+   "r5p",
+   "ura"
+  ],
+  "main_metabolites": [
+   "psd5p",
+   "r5p",
+   "ura"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r718"
+ },
+ {
+  "reaction": "2AGPEAT161",
+  "name": "2-acyl-glycerophospho-ethanolamine acyltransferase (n-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpe161",
+   "hdcea",
+   "pe161"
+  ],
+  "main_metabolites": [
+   "2agpe161",
+   "hdcea",
+   "pe161"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r722"
+ },
+ {
+  "reaction": "2AGPEAT181",
+  "name": "2-acyl-glycerophospho-ethanolamine acyltransferase (n-C18:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpe181",
+   "ocdcea",
+   "pe181"
+  ],
+  "main_metabolites": [
+   "2agpe181",
+   "ocdcea",
+   "pe181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r726"
+ },
+ {
+  "reaction": "2AGPGAT160",
+  "name": "2-acyl-glycerophospho-glycerol acyltransferase (n-C16:0)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpg160",
+   "hdca",
+   "pg160"
+  ],
+  "main_metabolites": [
+   "2agpg160",
+   "hdca",
+   "pg160"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r730"
+ },
+ {
+  "reaction": "2AGPGAT161",
+  "name": "2-acyl-glycerophospho-glycerol acyltransferase (n-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpg161",
+   "hdcea",
+   "pg161"
+  ],
+  "main_metabolites": [
+   "2agpg161",
+   "hdcea",
+   "pg161"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r734"
+ },
+ {
+  "reaction": "2AGPGAT181",
+  "name": "2-acyl-glycerophospho-glycerol acyltransferase (n-C18:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpg181",
+   "ocdcea",
+   "pg181"
+  ],
+  "main_metabolites": [
+   "2agpg181",
+   "ocdcea",
+   "pg181"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r734"
+ },
+ {
+  "reaction": "4PCP",
+  "name": "Tetrapeptide L,D-carboxypeptidase",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Murein Recycling",
+  "anchored": [
+   "LalaDgluMdap",
+   "LalaDgluMdapDala",
+   "ala__D"
+  ],
+  "main_metabolites": [
+   "LalaDgluMdap",
+   "LalaDgluMdapDala",
+   "ala__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r738"
+ },
+ {
+  "reaction": "4PCPpp",
+  "name": "Tetrapeptide L,D-carboxypeptidase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Murein Recycling",
+  "anchored": [
+   "LalaDgluMdap",
+   "LalaDgluMdapDala",
+   "ala__D"
+  ],
+  "main_metabolites": [
+   "LalaDgluMdap",
+   "LalaDgluMdapDala",
+   "ala__D"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r740"
+ },
+ {
+  "reaction": "5DOAN",
+  "name": "5'-deoxyadenosine nuclosidase",
+  "status": "related",
+  "subsystem": "purine-metabolism",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "ade",
+   "dad_5"
+  ],
+  "main_metabolites": [
+   "5drib",
+   "ade",
+   "dad_5"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r742"
+ },
+ {
+  "reaction": "AACPS1",
+  "name": "Acyl-[acyl-carrier-protein] synthetase (n-C14:0)",
+  "status": "related",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "myrsACP",
+   "ttdca"
+  ],
+  "main_metabolites": [
+   "myrsACP",
+   "ttdca"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r746"
+ },
+ {
+  "reaction": "AADDGT",
+  "name": "DTDP-N-4-acetamido-4,6-dideoxy-D-galactose transferase",
+  "status": "related",
+  "subsystem": "pyrimidine-metabolism",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "dtdp",
+   "unagamu",
+   "unagamuf"
+  ],
+  "main_metabolites": [
+   "dtdp",
+   "dtdp4aaddg",
+   "unagamu",
+   "unagamuf"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 2,
+  "node": "added_r751"
+ },
+ {
+  "reaction": "ACONIs",
+  "name": "Aconitate isomerase (spontaneous)",
+  "status": "not on map",
+  "subsystem": "methylaspartate-cycle",
+  "model_subsystem": "Unassigned",
+  "anchored": [
+   "acon_C",
+   "acon_T"
+  ],
+  "main_metabolites": [
+   "acon_C",
+   "acon_T"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r755"
+ },
+ {
+  "reaction": "AGPAT140",
+  "name": "1-tetradecanoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C14:0)",
+  "status": "related",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1tdecg3p",
+   "myrsACP"
+  ],
+  "main_metabolites": [
+   "1tdecg3p",
+   "myrsACP",
+   "pa140"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r757"
+ },
+ {
+  "reaction": "AGPAT160",
+  "name": "1-hexadecanoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C16:0)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1hdecg3p",
+   "pa160",
+   "palmACP"
+  ],
+  "main_metabolites": [
+   "1hdecg3p",
+   "pa160",
+   "palmACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r760"
+ },
+ {
+  "reaction": "ALDD4",
+  "name": "Aldehyde dehydrogenase (butanal, NAD)",
+  "status": "related",
+  "subsystem": "butanoate-fermentation",
+  "model_subsystem": "Alternate Carbon Metabolism",
+  "anchored": [
+   "btal",
+   "but"
+  ],
+  "main_metabolites": [
+   "btal",
+   "but"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r762"
+ },
+ {
+  "reaction": "APG3PAT140",
+  "name": "Acyl-phosphate:glycerol-3-phosphate acyltransferase (C14:0)",
+  "status": "not on map",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1tdecg3p",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "1tdecg3p",
+   "glyc3p",
+   "ttdcap"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r767"
+ },
+ {
+  "reaction": "APG3PAT160",
+  "name": "Acyl-phosphate:glycerol-3-phosphate acyltransferase (C16:0)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1hdecg3p",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "1hdecg3p",
+   "glyc3p",
+   "hdcap"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r770"
+ },
+ {
+  "reaction": "APG3PAT161",
+  "name": "Acyl-phosphate:glycerol-3-phosphate acyltransferase (C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1hdec9eg3p",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "1hdec9eg3p",
+   "glyc3p",
+   "hdceap"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r773"
+ },
+ {
+  "reaction": "APG3PAT181",
+  "name": "Acyl-phosphate:glycerol-3-phosphate acyltransferase (C18:1)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1odec11eg3p",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "1odec11eg3p",
+   "glyc3p",
+   "ocdceap"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r776"
+ },
+ {
+  "reaction": "APH160",
+  "name": "Acylphosphatase (C16:0)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "hdca",
+   "hdcap"
+  ],
+  "main_metabolites": [
+   "hdca",
+   "hdcap"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r779"
+ },
+ {
+  "reaction": "APH161",
+  "name": "Acylphosphatase (C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "hdcea",
+   "hdceap"
+  ],
+  "main_metabolites": [
+   "hdcea",
+   "hdceap"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r782"
+ },
+ {
+  "reaction": "APH181",
+  "name": "Acylphosphatase (C18:1)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "ocdcea",
+   "ocdceap"
+  ],
+  "main_metabolites": [
+   "ocdcea",
+   "ocdceap"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r785"
+ },
+ {
+  "reaction": "ATHRDHr",
+  "name": "L-allo-threonine dehydrogenase",
+  "status": "related",
+  "subsystem": "threonine-metabolism",
+  "model_subsystem": "Threonine and Lysine Metabolism",
+  "anchored": [
+   "2aobut",
+   "athr__L"
+  ],
+  "main_metabolites": [
+   "2aobut",
+   "athr__L"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r788"
+ },
+ {
+  "reaction": "CLPNS160pp",
+  "name": "Cardiolipin synthase (periplasmic, n-C16:0)",
+  "status": "not on map",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc"
+  ],
+  "main_metabolites": [
+   "clpn160",
+   "glyc",
+   "pg160"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r130"
+ },
+ {
+  "reaction": "ECAP1pp",
+  "name": "Enterobacterial common antigen polymerase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "udcpdp",
+   "unagamuf"
+  ],
+  "main_metabolites": [
+   "eca2und",
+   "udcpdp",
+   "unagamuf"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r791"
+ },
+ {
+  "reaction": "ECAP2pp",
+  "name": "Enterobacterial common antigen polymerase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "eca2und",
+   "eca3und",
+   "udcpdp",
+   "unagamuf"
+  ],
+  "main_metabolites": [
+   "eca2und",
+   "eca3und",
+   "udcpdp",
+   "unagamuf"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r793"
+ },
+ {
+  "reaction": "FA140ACPHi",
+  "name": "Fatty-acyl-ACP hydrolase",
+  "status": "related",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "myrsACP",
+   "ttdca"
+  ],
+  "main_metabolites": [
+   "myrsACP",
+   "ttdca"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r794"
+ },
+ {
+  "reaction": "G3PAT161",
+  "name": "Glycerol-3-phosphate acyltransferase (C16:1)",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1hdec9eg3p",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "1hdec9eg3p",
+   "glyc3p",
+   "hdeACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r797"
+ },
+ {
+  "reaction": "G3PAT181",
+  "name": "Glycerol-3-phosphate acyltransferase (C18:1)",
+  "status": "related",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1odec11eg3p",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "1odec11eg3p",
+   "glyc3p",
+   "octeACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r800"
+ },
+ {
+  "reaction": "GLCTR1",
+  "name": "Glucosyltransferase I (LPS core synthesis)",
+  "status": "not on map",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "icolipa",
+   "udpg"
+  ],
+  "main_metabolites": [
+   "gicolipa",
+   "icolipa",
+   "udpg"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r803"
+ },
+ {
+  "reaction": "LADGMDH",
+  "name": "L-alanyl-gamma-D-glutamyl-meso-diaminopimelate hydrolase",
+  "status": "not on map",
+  "subsystem": "lysine-metabolism",
+  "model_subsystem": "Murein Recycling",
+  "anchored": [
+   "26dap__M",
+   "LalaDgluMdap"
+  ],
+  "main_metabolites": [
+   "26dap__M",
+   "LalaDglu",
+   "LalaDgluMdap"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r807"
+ },
+ {
+  "reaction": "LIPAMPL",
+  "name": "Lipoyl-adenylate protein ligase",
+  "status": "not on map",
+  "subsystem": "lipoate-biosynthesis",
+  "model_subsystem": "Cofactor and Prosthetic Group Biosynthesis",
+  "anchored": [
+   "lipoamp",
+   "lipopb"
+  ],
+  "main_metabolites": [
+   "lipoamp",
+   "lipopb"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r811"
+ },
+ {
+  "reaction": "LPLIPAL1E161pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphoethanolamine, n-C16:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1agpe161",
+   "hdcea"
+  ],
+  "main_metabolites": [
+   "1agpe161",
+   "g3pe",
+   "hdcea"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r814"
+ },
+ {
+  "reaction": "LPLIPAL1E181pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphoethanolamine, n-C18:1) (periplasm)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1agpe181",
+   "g3pe",
+   "ocdcea"
+  ],
+  "main_metabolites": [
+   "1agpe181",
+   "g3pe",
+   "ocdcea"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r817"
+ },
+ {
+  "reaction": "LPLIPAL2E160",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphoethanolamine, n-C16:0)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "g3pe",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "2agpe160",
+   "g3pe",
+   "hdca"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r819"
+ },
+ {
+  "reaction": "LPLIPAL2E161",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphoethanolamine, n-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpe161",
+   "g3pe",
+   "hdcea"
+  ],
+  "main_metabolites": [
+   "2agpe161",
+   "g3pe",
+   "hdcea"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r822"
+ },
+ {
+  "reaction": "LPLIPAL2E181",
+  "name": "Lysophospholipase L2 (2-acylglycerophosphoethanolamine, n-C18:1)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpe181",
+   "g3pe",
+   "ocdcea"
+  ],
+  "main_metabolites": [
+   "2agpe181",
+   "g3pe",
+   "ocdcea"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r824"
+ },
+ {
+  "reaction": "MOAT3C",
+  "name": "3-deoxy-D-manno-octulosonic acid transferase III (LPS core biosynthesis)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "ckdo",
+   "kphphhlipa"
+  ],
+  "main_metabolites": [
+   "ckdo",
+   "kphphhlipa",
+   "phphhlipa"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r826"
+ },
+ {
+  "reaction": "O16AP1pp",
+  "name": "O16 antigen polymerase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "o16aund",
+   "udcpdp"
+  ],
+  "main_metabolites": [
+   "o16a2und",
+   "o16aund",
+   "udcpdp"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r830"
+ },
+ {
+  "reaction": "O16AP2pp",
+  "name": "O16 antigen polymerase (periplasm)",
+  "status": "not on map",
+  "subsystem": "peptidoglycan-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "o16a2und",
+   "o16a3und",
+   "o16aund",
+   "udcpdp"
+  ],
+  "main_metabolites": [
+   "o16a2und",
+   "o16a3und",
+   "o16aund",
+   "udcpdp"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r832"
+ },
+ {
+  "reaction": "PLIPA1E160pp",
+  "name": "Phospholipase A1 (phosphatidylethanolamine, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpe160",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "2agpe160",
+   "hdca",
+   "pe160"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r833"
+ },
+ {
+  "reaction": "PLIPA2E160pp",
+  "name": "Phospholipase A2 (phosphatidylethanolamine, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "hdca",
+   "pe160"
+  ],
+  "main_metabolites": [
+   "1agpe160",
+   "hdca",
+   "pe160"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r836"
+ },
+ {
+  "reaction": "TDPADGAT",
+  "name": "DTDP-4-amino-4,6-dideoxy-D-glucose acetyltransferase",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "accoa",
+   "dtdp4aaddg"
+  ],
+  "main_metabolites": [
+   "accoa",
+   "dtdp4aaddg",
+   "dtdp4addg"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r839"
+ },
+ {
+  "reaction": "2AGPEAT160",
+  "name": "2-acyl-glycerophospho-ethanolamine acyltransferase (n-C16:0)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "2agpe160",
+   "hdca",
+   "pe160"
+  ],
+  "main_metabolites": [
+   "2agpe160",
+   "hdca",
+   "pe160"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r843"
+ },
+ {
+  "reaction": "3OAS181",
+  "name": "3-oxoacyl-[acyl-carrier-protein] synthase (n-C18:1)",
+  "status": "related",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "hdeACP",
+   "malACP"
+  ],
+  "main_metabolites": [
+   "3ocvac11eACP",
+   "hdeACP",
+   "malACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r847"
+ },
+ {
+  "reaction": "AACPS4",
+  "name": "Acyl-[acyl-carrier-protein] synthetase  (n-C16:1)",
+  "status": "not on map",
+  "subsystem": "lipid-metabolism",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "hdcea",
+   "hdeACP"
+  ],
+  "main_metabolites": [
+   "hdcea",
+   "hdeACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r851"
+ },
+ {
+  "reaction": "AACPS5",
+  "name": "Acyl-[acyl-carrier-protein] synthetase  (n-C18:1)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "ocdcea",
+   "octeACP"
+  ],
+  "main_metabolites": [
+   "ocdcea",
+   "octeACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r856"
+ },
+ {
+  "reaction": "ACPPAT140",
+  "name": "Acyl-(acyl carrier protein):phosphate acyltransferase (C14:0)",
+  "status": "not on map",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "myrsACP",
+   "ttdcap"
+  ],
+  "main_metabolites": [
+   "myrsACP",
+   "ttdcap"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r861"
+ },
+ {
+  "reaction": "ACPPAT160",
+  "name": "Acyl-(acyl carrier protein):phosphate acyltransferase (C16:0)",
+  "status": "not on map",
+  "subsystem": "arachidonate-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "hdcap",
+   "palmACP"
+  ],
+  "main_metabolites": [
+   "hdcap",
+   "palmACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r864"
+ },
+ {
+  "reaction": "EDTXS3",
+  "name": "Endotoxin Synthesis (palmitoleoyl ACP)",
+  "status": "not on map",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "hdeACP",
+   "kdo2lipid4"
+  ],
+  "main_metabolites": [
+   "hdeACP",
+   "kdo2lipid4",
+   "kdo2lipid4p"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r867"
+ },
+ {
+  "reaction": "EDTXS4",
+  "name": "Endotoxin Synthesis (myristoyl transferase)",
+  "status": "not on map",
+  "subsystem": "CDP-diacylglycerol-biosynthesis",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "kdo2lipid4p",
+   "myrsACP"
+  ],
+  "main_metabolites": [
+   "kdo2lipid4p",
+   "lipa_cold",
+   "myrsACP"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 1,
+  "node": "added_r871"
+ },
+ {
+  "reaction": "FA161ACPHi",
+  "name": "Fatty-acyl-ACP hydrolase",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "hdcea",
+   "hdeACP"
+  ],
+  "main_metabolites": [
+   "hdcea",
+   "hdeACP"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r875"
+ },
+ {
+  "reaction": "GALT1",
+  "name": "Galactosyltransferase I (LPS core synthesis)",
+  "status": "not on map",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "gicolipa",
+   "udpg"
+  ],
+  "main_metabolites": [
+   "gagicolipa",
+   "gicolipa",
+   "udpg"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r878"
+ },
+ {
+  "reaction": "GLCTR2",
+  "name": "Glucosyltransferase II (LPS core synthesis)",
+  "status": "not on map",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "gagicolipa",
+   "udpg"
+  ],
+  "main_metabolites": [
+   "gagicolipa",
+   "ggagicolipa",
+   "udpg"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r881"
+ },
+ {
+  "reaction": "GLCTR3",
+  "name": "Glucosyltransferase III (LPS core synthesis)",
+  "status": "not on map",
+  "subsystem": "degradation-of-hexoses",
+  "model_subsystem": "Lipopolysaccharide Biosynthesis / Recycling",
+  "anchored": [
+   "ggagicolipa",
+   "udpg"
+  ],
+  "main_metabolites": [
+   "ggagicolipa",
+   "gggagicolipa",
+   "udpg"
+  ],
+  "new_metabolites": 1,
+  "linked_metabolites": 0,
+  "node": "added_r884"
+ },
+ {
+  "reaction": "GPDDA2",
+  "name": "Glycerophosphodiester phosphodiesterase (Glycerophosphoethanolamine)",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "etha",
+   "g3pe",
+   "glyc3p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r298"
+ },
+ {
+  "reaction": "GPDDA2pp",
+  "name": "Glycerophosphodiester phosphodiesterase (Glycerophosphoethanolamine)",
+  "status": "related",
+  "subsystem": "degradation-of-sugar-alcohols",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "etha",
+   "g3pe",
+   "glyc3p"
+  ],
+  "main_metabolites": [
+   "etha",
+   "g3pe",
+   "glyc3p"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r302"
+ },
+ {
+  "reaction": "LPLIPAL1E160pp",
+  "name": "Lysophospholipase L1 (2-acylglycerophosphoethanolamine, n-C16:0) (periplasm)",
+  "status": "related",
+  "subsystem": "lipid-A-biosynthesis",
+  "model_subsystem": "Glycerophospholipid Metabolism",
+  "anchored": [
+   "1agpe160",
+   "g3pe",
+   "hdca"
+  ],
+  "main_metabolites": [
+   "1agpe160",
+   "g3pe",
+   "hdca"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 0,
+  "node": "added_r887"
+ },
+ {
+  "reaction": "ETHAAL",
+  "name": "Ethanolamine ammonia-lyase",
+  "status": "not on map",
+  "subsystem": "ethanol-fermentation",
+  "model_subsystem": "Cell Envelope Biosynthesis",
+  "anchored": [
+   "acald",
+   "etha"
+  ],
+  "main_metabolites": [
+   "acald",
+   "etha"
+  ],
+  "new_metabolites": 0,
+  "linked_metabolites": 1,
+  "node": "added_r889"
+ }
+]
