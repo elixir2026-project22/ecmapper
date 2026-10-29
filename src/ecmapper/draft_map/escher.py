@@ -7,6 +7,7 @@ import math
 import re
 
 from .core import LANE, PROTONS, DraftMap, ModelData, text_width
+from .routes import fit_cubic, sample
 
 SCHEMA = "https://escher.github.io/escher/jsonschema/1-0-0#"
 
@@ -72,6 +73,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
         return escher_node[key]
 
     movable = set()
+    drawn_edge = {}  # segment ID -> (enzyme node, drawn metabolite node)
 
     def free_node(bigg_id, x, y):
         node_id = new_id()
@@ -158,10 +160,13 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
             for m, node_id in placed.items():
                 c = r["metabolites"][m]
                 marker = marker_ids["prod" if c > 0 else "sub"]
+                segment_id = new_id()
                 if c > 0:
-                    segments[new_id()] = dict(from_node_id=marker, to_node_id=node_id, b1=None, b2=None)
+                    segments[segment_id] = dict(from_node_id=marker, to_node_id=node_id, b1=None, b2=None)
                 else:
-                    segments[new_id()] = dict(from_node_id=node_id, to_node_id=marker, b1=None, b2=None)
+                    segments[segment_id] = dict(from_node_id=node_id, to_node_id=marker, b1=None, b2=None)
+                if m in drawn:
+                    drawn_edge[segment_id] = (enzyme.id, drawn[m].id)
             genes = [dict(bigg_id=g, name=name) for g, name in r.get("genes", [])]
             reactions[new_id()] = dict(
                 name=r["name"] or rid, bigg_id=rid, reversibility=bool(r["reversible"]),
@@ -184,7 +189,9 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
             text_labels[new_id()] = dict(text=s.label, x=(s.x + s.w / 2 - text_width(s.label, 18) / 2) * scale,
                                          y=s.y * scale)
     body = dict(reactions=reactions, nodes=nodes, text_labels=text_labels)
-    curve_reactions(body, movable, lane=LANE * scale)
+    moved = set()
+    curve_reactions(body, movable, lane=LANE * scale, moved=moved)
+    follow_routes(dm, body, drawn_edge, scale, skip=moved)
     place_node_labels(body)
     place_text_labels(body, references)
     xs = [n["x"] for n in nodes.values()] + [t["x"] for t in text_labels.values()]
@@ -380,9 +387,10 @@ def _pull_reactions(body: dict, parts: dict, groups: list, lane: float, movable:
     moved group uses are added to `movable` (to be put next to its
     multimarkers, on the side away from the line, like its labels). Changes
     `groups` ([x, y, reaction IDs, direction moved away from: None]) and the
-    midmarkers; returns the number of moved reactions.
+    midmarkers; returns the moved reactions.
     """
     nodes, reactions = body["nodes"], body["reactions"]
+    moved = set()
     ends = {rid: [met for segs in markers.values() for _, met in segs] for rid, (_, _, markers) in parts.items()}
     users = {}  # metabolite node -> reactions using it
     for rid, mets in ends.items():
@@ -431,7 +439,6 @@ def _pull_reactions(body: dict, parts: dict, groups: list, lane: float, movable:
         target = offset + (len(rids) - 1) / 2 * lane
         if dist > target + 20:
             candidates.append((dist, g, (fx - x0) / dist * (dist - target), (fy - y0) / dist * (dist - target), axis))
-    moved = 0
     for _, g, dx, dy, (ux, uy) in sorted(candidates, key=lambda c: -c[0]):
         x0, y0, rids, _ = g
         group = set(rids)
@@ -471,13 +478,13 @@ def _pull_reactions(body: dict, parts: dict, groups: list, lane: float, movable:
         for px, py in _footprint(x, y, ux, uy, ids, lane, far, reach):  # later groups keep out of it
             obstacles.add(rids[0], px, py)
         movable.update(own)
-        moved += len(rids)
+        moved.update(rids)
     return moved
 
 
 def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: float = 0.3,
                     marker_distance: tuple[float, float] = (20.0, 80.0), max_lead: float = 100.0,
-                    pull: bool = True) -> dict:
+                    pull: bool = True, moved: set | None = None) -> dict:
     """Draw the reactions of an Escher map: straight axes and main lines, curved cofactor branches.
 
     Post-processing of an Escher map (its second part, `body`); the
@@ -506,7 +513,7 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
 
     Other metabolite nodes are not moved. Reactions drawn in other ways are
     left as they are. Returns counts of the drawn reactions, the moved ones
-    (`pull`) and the curved segments.
+    (`pull`, their IDs are added to `moved`) and the curved segments.
     """
     nodes = body["nodes"]
     parts = {rid: p for rid, r in body["reactions"].items() if (p := _reaction_parts(nodes, r))}
@@ -516,7 +523,9 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
         places.setdefault((round(nodes[mid]["x"], 1), round(nodes[mid]["y"], 1)), []).append(rid)
     groups = [[x, y, rids, None] for (x, y), rids in places.items()]
     movable = set(movable)
-    moved = _pull_reactions(body, parts, groups, lane, movable) if pull else 0
+    pulled = _pull_reactions(body, parts, groups, lane, movable) if pull else set()
+    if moved is not None:
+        moved.update(pulled)
     segments = 0
     drawn = []  # (reaction IDs, x, y, axis, label sides in order of preference)
 
@@ -606,7 +615,39 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
         for rid, text, (lx, ly) in zip(rids, ids, options[costs.index(min(costs))]):
             body["reactions"][rid]["label_x"], body["reactions"][rid]["label_y"] = lx, ly
             _add_box(points, ("label", "reaction", rid), _label_box("reaction", text, lx, ly), 2.0)
-    return dict(drawn_reactions=len(parts), moved_reactions=moved, curved_segments=segments)
+    return dict(drawn_reactions=len(parts), moved_reactions=len(pulled), curved_segments=segments)
+
+
+def follow_routes(dm: DraftMap, body: dict, drawn_edge: dict, scale: float, skip=frozenset()) -> int:
+    """Segments of drawn edges with a route around other nodes (see :mod:`.routes`) follow it.
+
+    `drawn_edge`: {segment ID: (enzyme node, drawn metabolite node)}. The
+    segment from its multimarker to the metabolite becomes the cubic Bezier
+    curve closest to the route (from the point of the route nearest to the
+    multimarker on); reactions in `skip` (moved away from their enzyme
+    node) are left as they are. Returns the number of such segments.
+    """
+    routes = {(e.enzyme, e.met): e.route for e in dm.edges if getattr(e, "route", None)}
+    if not routes:
+        return 0
+    nodes, count = body["nodes"], 0
+    for rid, r in body["reactions"].items():
+        if rid in skip:
+            continue
+        for sid, s in r["segments"].items():
+            route = routes.get(drawn_edge.get(sid))
+            if not route:
+                continue
+            a, b = nodes[s["from_node_id"]], nodes[s["to_node_id"]]
+            marker, met = (a, b) if a["node_type"] == "multimarker" else (b, a)
+            p0, p3 = (marker["x"], marker["y"]), (met["x"], met["y"])
+            points = [(x * scale, y * scale) for x, y in sample(route)]
+            start = min(range(len(points)), key=lambda i: math.dist(points[i], p0))
+            b_marker, b_met = fit_cubic(p0, p3, points[start + 1:-1])
+            b_marker, b_met = dict(x=b_marker[0], y=b_marker[1]), dict(x=b_met[0], y=b_met[1])
+            s["b1"], s["b2"] = (b_marker, b_met) if a is marker else (b_met, b_marker)
+            count += 1
+    return count
 
 
 #: approximate label sizes in Escher (its CSS): font size, width per character

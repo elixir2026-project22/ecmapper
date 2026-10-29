@@ -6,6 +6,7 @@ import html
 import json
 
 from .core import DraftMap
+from .routes import bezier_path
 
 STYLE = """
 polygon.pw, rect.pw{stroke:none;}
@@ -92,7 +93,8 @@ def write_svg(dm: DraftMap, path: str, reaction_labels: bool = True, md=None, ma
             continue
         a, b = nodes[e.enzyme], nodes[e.met]
         markers = (' marker-start="url(#in)"' if e.arrow_enzyme else "") + (' marker-end="url(#in)"' if e.arrow_met else "")
-        out.append(f'<path class="link"{markers} d="{_line(a, b)}"/>')
+        route = getattr(e, "route", None)  # around other nodes, see .routes
+        out.append(f'<path class="link"{markers} d="{bezier_path(route) if route else _line(a, b)}"/>')
     out.append("</g>")
     out.append('<g class="all-linkCof" id="all-linkCof">')
     for e in dm.edges:

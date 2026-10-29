@@ -92,6 +92,8 @@ class Subsystem:
     flip_x: bool = False
     flip_y: bool = False
     aside: str = ""  # set aside by drop_redundant_subsystems: the rule
+    layout: str = ""  # step 3b: the layout kept
+    rigid: list = field(default_factory=list)  # groups of node IDs that condensing keeps in shape (a cycle on a circle)
 
 
 class DraftMap:

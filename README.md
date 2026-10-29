@@ -310,10 +310,12 @@ BRENDA map: it keeps the subsystems and enzyme nodes with model reactions
 aside on a separate map),
 adds model reactions that connect drawn metabolites, lays out the
 subsystems with added reactions again (networkx and Graphviz layouts, the
-one with the fewest crossings is kept), condenses the subsystems and
-arranges them with few crossings of inter-pathway links
+one with the fewest crossings is kept; `--circle` draws the cycle of named
+subsystems such as the citric acid cycle on a circle), condenses the
+subsystems and arranges them with few crossings of inter-pathway links
 (or, with `--pack`, packs them into as little space as possible and drops
-the inter-pathway links). With `--split`, it makes a central map and
+the inter-pathway links); edges that would pass through other nodes are
+routed around them. With `--split`, it makes a central map and
 auxiliary maps (one per BRENDA colour group) with references between them
 and an overview. It writes an SVG in the style of the BRENDA map, an Escher
 map (laid out like the SVG: straight main lines, curved cofactor branches)

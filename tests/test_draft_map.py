@@ -166,12 +166,19 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
         assert {m["bigg_id"] for m in reaction["metabolites"]} == set(data["reactions"][reaction["bigg_id"]]["metabolites"])
     metabolites = {n["bigg_id"] for n in body["nodes"].values() if n["node_type"] == "metabolite"}
     assert metabolites <= set(data["metabolites"])
-    # curved branches to the secondary metabolites, straight segments otherwise
+    # curved branches to the secondary metabolites; main segments straight unless routed around other nodes
+    curved_main = 0
     for reaction in body["reactions"].values():
         for segment in reaction["segments"].values():
             ends = [body["nodes"][segment[k]] for k in ("from_node_id", "to_node_id")]
             secondary = any(n["node_type"] == "metabolite" and not n["node_is_primary"] for n in ends)
-            assert (segment["b1"] is not None) == secondary
+            if secondary:
+                assert segment["b1"] is not None
+            elif "metabolite" not in {n["node_type"] for n in ends}:
+                assert segment["b1"] is None
+            else:
+                curved_main += segment["b1"] is not None
+    assert curved_main == 0 or stats["routed_edges"] > 0
 
 
 
@@ -527,3 +534,81 @@ def test_place_text_labels():
     escher.place_text_labels(body, {"t": (0.0, 0.0, 0.0)})
     label = body["text_labels"]["t"]
     assert (label["x"], label["y"]) in ((-20, 66), (-20, -50))
+
+
+def cycle_map():
+    """A subsystem with a cycle of 6 metabolites (an enzyme node between each two), a parallel enzyme node, a branch."""
+    dm = DraftMap()
+    dm.subsystems["c"] = Subsystem("c", "cycle", "pw1", "#fff", 0, 0, 1000, 1000)
+    mets = [f"m{i}" for i in range(6)]
+    for i, m in enumerate(mets):  # an irregular loop
+        angle = 2 * math.pi * i / 6
+        dm.nodes[m] = Node(m, "main", "c", 400 + 250 * math.cos(angle) * (1 + 0.3 * (i % 2)),
+                           400 + 180 * math.sin(angle), 80, 30, m, ligand_id=i)
+    for i, (a, b) in enumerate(zip(mets, mets[1:] + mets[:1])):
+        e = f"e{i}"
+        na, nb = dm.nodes[a], dm.nodes[b]
+        dm.nodes[e] = Node(e, "enzyme", "c", (na.x + nb.x) / 2, (na.y + nb.y) / 2, 60, 30, e, reactions=[f"R{i}"],
+                           status="on-map")
+        dm.edges += [Edge(e, a, "main", True, False), Edge(e, b, "main", False, True)]
+    dm.nodes["p"] = Node("p", "enzyme", "c", 520, 420, 60, 30, "p", reactions=["P"], status="added")  # parallel to e0
+    dm.edges += [Edge("p", "m0", "main", True, False), Edge("p", "m1", "main", False, True)]
+    dm.nodes["x"] = Node("x", "main", "c", 900, 400, 80, 30, "x", ligand_id=9)
+    dm.nodes["ex"] = Node("ex", "enzyme", "c", 800, 400, 60, 30, "ex", reactions=["X"], status="on-map")
+    dm.edges += [Edge("ex", "m0", "main", True, False), Edge("ex", "x", "main", False, True)]
+    for n in dm.nodes.values():
+        if n.kind == "main":
+            n.status = "map"
+    return dm
+
+
+def test_circle_layout():
+    """The cycle of main metabolites on a circle, a parallel enzyme outside it; condensing keeps the circle."""
+    pytest.importorskip("networkx")
+    dm = cycle_map()
+    cycle, graph = relayout.main_cycle(dm)
+    assert len(cycle) == 6 and set(cycle) == {f"m{i}" for i in range(6)}
+    assert graph["m0"]["m1"]["enzymes"] == {"e0", "p"}  # parallel enzyme nodes give one edge
+    assert relayout.circle_layout(dm)
+    ring = [f"m{i}" for i in range(6)] + [f"e{i}" for i in range(6)]
+    cx = sum(dm.nodes[i].x for i in ring) / len(ring)
+    cy = sum(dm.nodes[i].y for i in ring) / len(ring)
+    radii = [math.dist((dm.nodes[i].x, dm.nodes[i].y), (cx, cy)) for i in ring]
+    assert max(radii) - min(radii) < 1e-6 * max(radii) + 1.0
+    assert math.dist((dm.nodes["p"].x, dm.nodes["p"].y), (cx, cy)) > radii[0]  # outside
+    assert set(dm.subsystems["c"].rigid[0]) >= set(ring) | {"p"}
+    layout.condense_subsystems(dm)
+    cx = sum(dm.nodes[i].x for i in ring) / len(ring)
+    cy = sum(dm.nodes[i].y for i in ring) / len(ring)
+    radii2 = [math.dist((dm.nodes[i].x, dm.nodes[i].y), (cx, cy)) for i in ring]
+    assert radii2 == pytest.approx(radii)
+    # no cycle of the BRENDA map: no circle
+    dm = cycle_map()
+    dm.nodes["e3"].status = "added"
+    assert relayout.main_cycle(dm) is None and not relayout.circle_layout(dm)
+
+
+def test_route_edges():
+    """An edge through another node is routed around it, the others stay straight; the routes as one cubic each."""
+    pytest.importorskip("pygraphviz")
+    from ecmapper.draft_map import routes
+
+    dm = DraftMap()
+    dm.subsystems["s"] = Subsystem("s", "s", "pw1", "#fff", 0, 0, 1000, 1000)
+    dm.nodes["e"] = Node("e", "enzyme", "s", 300, 100, 60, 30, "e", reactions=["R1"])
+    dm.nodes["a"] = Node("a", "main", "s", 300, 500, 80, 30, "a", ligand_id=1)
+    dm.nodes["b"] = Node("b", "main", "s", 300, 300, 120, 30, "b", ligand_id=2)  # in the way of e -> a
+    dm.nodes["c"] = Node("c", "main", "s", 500, 100, 80, 30, "c", ligand_id=3)
+    dm.edges += [Edge("e", "a", "main", False, True), Edge("e", "c", "main", True, False)]
+    assert routes.route_edges(dm) == 1
+    route = dm.edges[0].route
+    assert dm.edges[1].route is None
+    assert math.dist(route[0], (300, 100)) < math.dist(route[-1], (300, 100))  # from the enzyme node
+    b = dm.nodes["b"]
+    assert not any(b.x - b.w / 2 < x < b.x + b.w / 2 and b.y - b.h / 2 < y < b.y + b.h / 2
+                   for x, y in routes.sample(route))
+    assert routes.bezier_path(route).startswith("M ")
+    # fit: points of a cubic give back its control points (nearly: the fit uses chord-length parameters)
+    p0, p1, p2, p3 = (0, 0), (100, 0), (200, 100), (200, 200)
+    b1, b2 = routes.fit_cubic(p0, p3, routes.sample([p0, p1, p2, p3], 30)[1:-1])
+    assert b1 == pytest.approx(p1, abs=6.0) and b2 == pytest.approx(p2, abs=6.0)

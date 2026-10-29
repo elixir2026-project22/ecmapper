@@ -104,22 +104,42 @@ def condense_subsystems(dm: DraftMap, gap_x=22.0, gap_y=28.0, compactness=0.5, r
 
     Nodes keep room for the reaction IDs below enzyme nodes of the map (SVG)
     and for the model reactions of an enzyme node side by side (Escher,
-    :func:`.core.lane_room`).
+    :func:`.core.lane_room`). Each `rigid` group of a subsystem (e.g. a
+    cycle on a circle) and the nodes inside its bounding box move as one
+    block and keep their arrangement.
     """
     room = lane_room(dm)
     for s in dm.subsystems.values():
         members = dm.members(s.id)
         if not members:
             continue
-        x = np.array([n.x for n in members])
-        y = np.array([n.y for n in members])
-        w = np.array([n.w for n in members])
-        h = np.array([n.h for n in members])
+        blocks = []  # [nodes] of each rigid group with the nodes inside it
+        for group in getattr(s, "rigid", []):
+            inside = [n for n in members if n.id in set(group)]
+            if not inside:
+                continue
+            x0 = min(n.x - n.w / 2 for n in inside)
+            x1 = max(n.x + n.w / 2 for n in inside)
+            y0 = min(n.y - n.h / 2 for n in inside)
+            y1 = max(n.y + n.h / 2 for n in inside)
+            taken = {n.id for block in blocks for n in block}
+            blocks.append([n for n in members if n.id not in taken and x0 <= n.x <= x1 and y0 <= n.y <= y1])
+        in_block = {n.id for block in blocks for n in block}
+        free = [n for n in members if n.id not in in_block]
+        bounds = [(min(n.x - n.w / 2 for n in b), min(n.y - n.h / 2 for n in b), max(n.x + n.w / 2 for n in b),
+                   max(n.y + n.h / 2 for n in b)) for b in blocks]
+        x = np.array([n.x for n in free] + [(b[0] + b[2]) / 2 for b in bounds])
+        y = np.array([n.y for n in free] + [(b[1] + b[3]) / 2 for b in bounds])
+        w = np.array([n.w for n in free] + [b[2] - b[0] for b in bounds])
+        h = np.array([n.h for n in free] + [b[3] - b[1] for b in bounds])
+        block_x, block_y = x[len(free):].copy(), y[len(free):].copy()
+        members = free
         # room for the model reaction IDs below enzyme nodes of the map
-        label = np.array([n.kind == "enzyme" and bool(n.reactions) and n.status != "added" for n in members])
-        lw = np.array([0.54 * 9 * len(", ".join(n.reactions[:3])) + 4 for n in members])
-        extra_w = np.array([room.get(n.id, (0.0, 0.0))[0] for n in members])
-        extra_h = np.array([room.get(n.id, (0.0, 0.0))[1] for n in members])
+        label = np.array([n.kind == "enzyme" and bool(n.reactions) and n.status != "added" for n in members]
+                         + [False] * len(blocks))
+        lw = np.array([0.54 * 9 * len(", ".join(n.reactions[:3])) + 4 for n in members] + [0.0] * len(blocks))
+        extra_w = np.array([room.get(n.id, (0.0, 0.0))[0] for n in members] + [0.0] * len(blocks))
+        extra_h = np.array([room.get(n.id, (0.0, 0.0))[1] for n in members] + [0.0] * len(blocks))
         we = np.where(label, np.maximum(w, lw), w) + extra_w
         he = np.where(label, h + 24, h) + extra_h
         ye = np.where(label, y + 12, y)
@@ -138,6 +158,9 @@ def condense_subsystems(dm: DraftMap, gap_x=22.0, gap_y=28.0, compactness=0.5, r
         dy = top - y0
         for n, nx, ny in zip(members, x, y):
             n.x, n.y = nx + dx, ny + dy
+        for block, bx, by, ox, oy in zip(blocks, x[len(members):], y[len(members):], block_x, block_y):
+            for n in block:
+                n.x, n.y = n.x + bx - ox + dx, n.y + by - oy + dy
         s.x, s.y, s.w, s.h = 0.0, 0.0, box_w, box_h
 
 

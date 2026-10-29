@@ -46,6 +46,7 @@ from .layout import (
 from .relayout import METHODS as RELAYOUT_METHODS
 from .relayout import available_methods, relayout_subsystems
 from .render import write_cnapy_maps, write_reaction_positions, write_svg
+from .routes import route_edges
 from .split import (
     ASIDE,
     DEFAULT_CENTRAL,
@@ -105,7 +106,11 @@ def arrange(dm, args, final, log):
 
 
 def write_outputs(m, md, out: Path, prefix: str, title: str, args, stats: dict) -> None:
-    """Files of a final map (absolute positions): SVG, CNApy box positions, Escher map, pickle, reaction positions."""
+    """Files of a final map (absolute positions): SVG, CNApy box positions, Escher map, pickle, reaction positions.
+
+    Main edges that pass through other nodes are routed around them first (:mod:`.routes`).
+    """
+    stats["routed_edges"] = route_edges(m) if available_methods(["fdp"]) else 0  # needs pygraphviz
     write_svg(m, str(out / f"{prefix}.svg"), md=md)
     write_cnapy_maps(m, str(out / f"{prefix}.maps"))
     stats["escher"] = write_escher(m, md, str(out / f"{prefix}.escher.json"), title, scale=args.escher_scale,
@@ -194,6 +199,9 @@ def main(argv=None) -> None:
     parser.add_argument("--relayout", default=",".join(m for m in RELAYOUT_METHODS if m != "current"),
                         help="step 3b: layouts tried for subsystems with added reactions, comma-separated from "
                         "spring, fdp, dot, neato (default: all); 'none': keep the positions of step 3")
+    parser.add_argument("--circle", default="", metavar="IDS",
+                        help="comma-separated BRENDA subsystem IDs whose cycle of main metabolites is drawn on a "
+                        "circle in step 3b (e.g. citric-acid-cycle)")
     parser.add_argument("--relayout-margin", type=float, default=0.25,
                         help="step 3b: take dot or neato (which redraw the BRENDA part) only with at least this "
                         "fraction fewer crossings")
@@ -286,7 +294,9 @@ def main(argv=None) -> None:
         missing = set(methods) - set(available_methods(methods))
         if missing:
             log(f"step 3b: layouts {sorted(missing)} skipped (networkx or pygraphviz not installed)")
-        stats["relayout"] = relayout_subsystems(dm, methods, margin=args.relayout_margin, compactness=args.compactness)
+        stats["relayout"] = relayout_subsystems(dm, methods, margin=args.relayout_margin,
+                                                circle=[k for k in args.circle.split(",") if k],
+                                                compactness=args.compactness)
         log(dm.log[-1])
         write_svg(dm, str(args.out / "step3b_relayout.svg"), md=md)
 

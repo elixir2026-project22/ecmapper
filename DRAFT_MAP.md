@@ -42,6 +42,7 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--aside-min-matched F` | 0 (off) | set aside subsystems in which < F of the enzyme nodes have model reactions (rule D) |
 | `--relayout` | `spring,fdp,dot,neato` | layouts tried in step 3b (see 1.3); `none`: keep the positions of step 3 |
 | `--relayout-margin` | 0.25 | step 3b: `dot` and `neato` (which change the BRENDA drawing) need at least this fraction fewer crossings |
+| `--circle IDS` | | step 3b: comma-separated BRENDA subsystem IDs whose cycle of main metabolites is drawn on a circle (see 1.3), e.g. `citric-acid-cycle` |
 | `--min-anchored` | 2 | drawn main metabolites a model reaction needs to be added (step 3) |
 | `--no-completion` | | skip step 3 |
 | `--compactness` | 0.5 | weight of compactness against keeping the drawing when condensing (step 4) |
@@ -97,7 +98,7 @@ model in Escher, saves a screenshot and reports reactions and metabolites missin
 | 4 | Condense each subsystem | order-preserving LP compaction, see 1.4; box and title fitted around the drawing |
 | 5 | Disconnect hub metabolites | the inter-pathway links of metabolites drawn in ≥ N subsystems are removed; their nodes stay and are marked |
 | 6 | Arrange the subsystems with few crossings of inter-pathway links | simulated annealing over sequence pairs, see 1.5 |
-| 7 | Output | SVG, Escher map, CNApy box positions, reaction positions |
+| 7 | Output | main edges that pass through other nodes routed around them (see 1.6); SVG, Escher map, CNApy box positions, reaction positions |
 
 The subsystems are arranged last, although the original idea was to arrange them right after dropping the empty
 ones: the arrangement needs the final box sizes and the positions of the linked metabolites in the boxes, and both
@@ -191,6 +192,33 @@ removes overlaps); and `fdp` keeps state between layouts in a process, so later 
 runs. Each Graphviz layout therefore runs in a process of its own (`graphviz_worker.py`, four at a time), which makes
 the step reproducible; it takes about 25 s for iML1515.
 
+**Cycles on a circle (`--circle`).** A cycle of main metabolites is found in the graph of the main metabolites of
+the BRENDA map in a subsystem, joined where an enzyme node turns one into another (substrates with products;
+metabolites on reversible edges with all others; parallel enzyme nodes give one edge): the longest simple cycle
+(5–14 metabolites), among equally long ones the one enclosing the largest area in the current drawing (the outer loop
+of the citric acid cycle, not the one through acetyl-CoA drawn inside it). Only nodes of the BRENDA map count: cycles
+closed by added reactions are mostly artefacts of reactions with several substrates (e.g. acetate, acetyl-CoA,
+oxalate, formate, formyl-CoA, oxalyl-CoA in acetate fermentation). The circular layout puts the cycle's metabolites and
+one enzyme node between each two of them on a circle, in the order and orientation closest to the current drawing,
+their boxes (with cofactors, turned with their reaction) 30 units apart. Parallel enzyme nodes (further enzymes
+between the same two metabolites, e.g. MDH, MDH2/3, MOX between malate and oxaloacetate) go on the same radius,
+outside. The other nodes follow in a networkx spring layout with the circle fixed; nodes joined to two or more nodes
+of the circle (chords such as the glyoxylate shunt) start inside it, the others outside. Condensing (step 4) moves
+the circle and the nodes inside it as one block, so that it stays a circle.
+
+In iML1515, 8 subsystems have such a cycle (citric acid cycle, propionate fermentation with the methylcitrate cycle,
+NAD, ketogluconate, methionine, pentose phosphate, purine and pyrimidine metabolism). Compared by crossings like the
+other layouts, the circle would win in two (ketogluconate metabolism, propionate fermentation), but the crossings do
+not tell whether a cycle reads better on a circle: the ketogluconate drawing got worse. In the citric acid cycle it
+has 6 crossings of main-metabolite links (`spring`: 0, current drawing: 3), from the parallel malate
+dehydrogenases outside the circle and acetyl-CoA, which both citrate synthase (on the circle) and malate synthase (in
+the glyoxylate shunt inside) use. So the circle is not chosen automatically; `--circle` names the subsystems that get
+it. Graphviz `circo` (biconnected components on circles) gave the citric acid cycle 20 crossings.
+
+| Citric acid cycle: step 3b (`spring`, BRENDA drawing kept) | `--circle citric-acid-cycle` |
+|---|---|
+| ![spring](BRENDAmap/draft_map_iML1515/figures/tca_spring.png) | ![circle](BRENDAmap/draft_map_iML1515/figures/tca_circle.png) |
+
 ### 1.4 Condensing a subsystem (step 4)
 
 Alternating x/y 1D compaction solved as an LP (scipy, HiGHS): nodes whose extents overlap in the other axis keep their
@@ -215,6 +243,23 @@ Simulated annealing (numba kernels, 1.5–2.5 minutes for 200,000 moves with abo
 with moves: swap two boxes in one sequence, exchange the places of two boxes, optionally mirror a box. It starts from
 the original BRENDA arrangement.
 
+### 1.6 Edge routes around nodes (step 7)
+
+A straight edge can pass through another node of its subsystem and look as if it joined it, especially after a
+`dot` layout in step 3b (`dot` routes long edges around the nodes of the layers between, which the straight edges do
+not show) and condensing. Before the outputs are written, Graphviz `neato -n2` routes the main edges of each
+subsystem around the node boxes with the final node positions (`splines=true`, in processes of their own); edges
+that pass through another node take their route (cubic Bezier curves), all others stay straight. The SVG draws the
+routes as paths; in the Escher map, the segment from the multimarker to the metabolite becomes the cubic curve
+closest to the route (reactions moved by the Escher export, section 5, keep straight segments).
+
+In iML1515, 465 of the 2,392 main edges passed through other nodes (139 of the 551 in the 14 subsystems
+laid out with `dot`); routed, none does.
+
+| Methionine metabolism (`dot`): straight edges | Edges through other nodes routed around them |
+|---|---|
+| ![straight](BRENDAmap/draft_map_iML1515/figures/routes_straight.png) | ![routed](BRENDAmap/draft_map_iML1515/figures/routes_routed.png) |
+
 ## 2. Layout tools
 
 Arrangement of the subsystem boxes (step 6) and compaction (step 4):
@@ -233,6 +278,8 @@ Arrangement of the subsystem boxes (step 6) and compaction (step 4):
 | igraph / networkx | No boxes or ports for the arrangement | no |
 | Metabopolis (Wu et al. 2019) | Published method closest to this scheme: pathways as blocks, inter-pathway links minimised, orthogonal routing in channels ("urban map") | no implementation available |
 | Escher | Editing target (no automatic layout); its builder draws a new reaction along a straight axis with Bezier curves to the metabolites | export, in the builder's drawing style (section 5) |
+| Graphviz `circo` | Circular layout (biconnected components on circles); the citric acid cycle: 20 crossings of main-metabolite links (`spring`: 0) | yes – own circular layout instead (`--circle`, 1.3) |
+| Graphviz `neato -n2` with `splines=true` | Routes edges around nodes with the node positions fixed | yes – used for edges through nodes (1.6) |
 | BioEMMA (KEGG KGML → Escher) | Puts the multimarkers on a straight reaction axis a fraction of the way to the main metabolites and the secondary metabolites next to them; straight segments (version 0.4.3 on PyPI) | code read; its multimarker placement is used in the Escher export |
 
 Layout inside the subsystems with added reactions (step 3b): the 59 subsystems of iML1515 with added reactions, each
@@ -488,7 +535,7 @@ maps):
   and its products below runs vertically.
 - **Multimarkers** on the axis, 30% of the way to the centre of their metabolites (20–80 units from the midmarker).
 - **Main metabolites** (primary nodes) are joined to the multimarkers by straight segments, as the main metabolites
-  in the SVG.
+  in the SVG; where the drawn edge is routed around other nodes (1.6), the segment follows the route.
 - **Cofactor branches** are cubic Bezier curves. The control point at the multimarker lies on the axis (40% of the
   segment length times the cosine of its angle to the axis, at least a quarter of that, at most 100 units), the one
   at the cofactor 35% of the way from it to the first: a branch leaves the reaction along its axis and bends towards
@@ -543,8 +590,8 @@ the model. The same holds for the set-aside map and the maps of `--split`.
 2. Completion: compartment handling (restrict to the cytosol or add a "periplasm" subsystem), a target-subsystem score
    that also uses the model subsystem, optional new subsystems for groups of added reactions without a good BRENDA
    subsystem (e.g. murein, membrane lipids).
-3. Inside subsystems: draw the bends of `dot` layouts (in the SVG and as Bezier control points in Escher), and constraints that
-   keep added reactions near the BRENDA nodes they connect (e.g. WebCola).
+3. Inside subsystems: constraints that keep added reactions near the BRENDA nodes they connect (e.g. WebCola); a
+   circular layout of cycles that also arranges the parallel reactions and chords to fewer crossings (1.3).
 4. Weights of the annealing as options; keeping the colour groups (category regions) of the BRENDA map together.
 5. Semantic zooming in a viewer: collapse subsystems into the boxes of the overview and re-pack the maps with the
    same sequence pairs, which keeps the relative positions.
