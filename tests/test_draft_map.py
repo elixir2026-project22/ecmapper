@@ -11,7 +11,7 @@ pytest.importorskip("numba")
 
 from ecmapper import ECMapper
 from ecmapper.brenda_map import BrendaMap, MapMatcher
-from ecmapper.draft_map import core, fast, relayout, run, split
+from ecmapper.draft_map import core, escher, fast, relayout, run, split
 from ecmapper.draft_map.core import DraftMap, Edge, MetLink, Node, Subsystem, localise_edges
 from ecmapper.draft_map.layout import Ports, SequencePair, compact_axis, count_crossings, evaluate_arrangement
 from ecmapper.draft_map.prepare import prepare
@@ -166,6 +166,11 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
         assert {m["bigg_id"] for m in reaction["metabolites"]} == set(data["reactions"][reaction["bigg_id"]]["metabolites"])
     metabolites = {n["bigg_id"] for n in body["nodes"].values() if n["node_type"] == "metabolite"}
     assert metabolites <= set(data["metabolites"])
+    # curved branches: every segment of a multimarker and a metabolite has control points
+    for reaction in body["reactions"].values():
+        for segment in reaction["segments"].values():
+            types = {body["nodes"][segment[k]]["node_type"] for k in ("from_node_id", "to_node_id")}
+            assert (segment["b1"] is not None) == ("metabolite" in types)
 
 
 
@@ -381,3 +386,74 @@ def test_relayout_subsystems():
     dm = relayout_map()
     rows = relayout.relayout_subsystems(dm, methods=[])
     assert rows[0]["layout"] == "current" and {i: (n.x, n.y) for i, n in dm.nodes.items()} == before
+
+
+def escher_reaction(nodes, rid, mid, sub, prod, metabolites):
+    """An Escher reaction drawn as by Escher's builder: midmarker `mid`, multimarkers `sub`, `prod`."""
+    segments = {f"{rid}a": dict(from_node_id=mid, to_node_id=sub, b1=None, b2=None),
+                f"{rid}b": dict(from_node_id=mid, to_node_id=prod, b1=None, b2=None)}
+    for met, c in metabolites.items():
+        marker = prod if c > 0 else sub
+        a, b = (marker, met) if c > 0 else (met, marker)
+        segments[f"{rid}{met}"] = dict(from_node_id=a, to_node_id=b, b1=None, b2=None)
+    return dict(bigg_id=rid, label_x=0, label_y=0, segments=segments,
+                metabolites=[dict(bigg_id=nodes[m]["bigg_id"], coefficient=c) for m, c in metabolites.items()])
+
+
+def test_curve_reactions():
+    """Straight reaction axes, curved branches, reactions at one place side by side, metabolites stay."""
+    def met(i, x, y, primary=True):
+        return dict(node_type="metabolite", x=x, y=y, bigg_id=i, label_x=x, label_y=y, node_is_primary=primary)
+
+    nodes = {"A": met("a", 0, 0), "B": met("b", 0, 400), "C": met("c", 150, 120, False), "D": met("d", 0, 0, False),
+             "E": met("e", 400, 0)}
+    for i in ("m1", "m2"):
+        nodes[i] = dict(node_type="midmarker", x=0, y=200)
+    for i in ("s1", "p1", "s2", "p2"):
+        nodes[i] = dict(node_type="multimarker", x=0, y=200)
+    body = dict(nodes=nodes, text_labels={}, reactions={
+        "1": escher_reaction(nodes, "R1", "m1", "s1", "p1", {"A": -1, "C": -1, "B": 1, "D": 1}),
+        "2": escher_reaction(nodes, "R2", "m2", "s2", "p2", {"A": -1, "B": 1})})
+    before = {i: (n["x"], n["y"]) for i, n in nodes.items() if n["node_type"] == "metabolite"}
+    result = escher.curve_reactions(body, movable={"D"}, lane=25.0)
+    assert result == dict(curved_reactions=2, curved_segments=6)
+    # metabolite nodes stay, except the movable one; D goes next to the product multimarker of R1 (below it)
+    assert all((nodes[i]["x"], nodes[i]["y"]) == xy for i, xy in before.items() if i != "D")
+    assert nodes["D"]["y"] > nodes["p1"]["y"] and abs(nodes["D"]["x"]) > 25
+    # vertical axis (A above, B below): the two reactions side by side, 25 apart; multimarkers on the axes
+    xs = sorted(nodes[m]["x"] for m in ("m1", "m2"))
+    assert xs[1] - xs[0] == pytest.approx(25.0) and nodes["m1"]["y"] == nodes["m2"]["y"] == 200
+    for mid, sub, prod in (("m1", "s1", "p1"), ("m2", "s2", "p2")):
+        assert nodes[sub]["x"] == pytest.approx(nodes[mid]["x"]) == pytest.approx(nodes[prod]["x"])
+        assert nodes[sub]["y"] < nodes[mid]["y"] < nodes[prod]["y"]
+    # control points: leave the multimarker along the axis (b1 of a product segment, b2 of a substrate segment)
+    segments = body["reactions"]["1"]["segments"]
+    assert segments["R1a"]["b1"] is None and segments["R1b"]["b2"] is None
+    to_b, from_c = segments["R1B"], segments["R1C"]
+    assert to_b["b1"]["x"] == pytest.approx(nodes["p1"]["x"]) and to_b["b1"]["y"] > nodes["p1"]["y"]
+    assert from_c["b2"]["x"] == pytest.approx(nodes["s1"]["x"]) and from_c["b2"]["y"] < nodes["s1"]["y"]
+    # labels stacked right of the lanes
+    labels = [body["reactions"][r] for r in ("1", "2")]
+    assert all(r["label_x"] > max(xs) for r in labels) and labels[0]["label_y"] != labels[1]["label_y"]
+    # a reaction drawn in another way is left alone
+    nodes["x"] = dict(node_type="midmarker", x=5, y=5)
+    body["reactions"]["3"] = dict(bigg_id="R3", metabolites=[dict(bigg_id="a", coefficient=-1)],
+                                  segments={"s": dict(from_node_id="A", to_node_id="x", b1=None, b2=None)})
+    assert escher.curve_reactions(body)["curved_reactions"] == 2
+    assert body["reactions"]["3"]["segments"]["s"]["b1"] is None
+
+
+def test_place_text_labels():
+    """A text label goes where it covers the fewest segments and nodes."""
+    def met(i, x, y):
+        return dict(node_type="metabolite", x=x, y=y, bigg_id=i, label_x=x + 15, label_y=y - 22, node_is_primary=True)
+
+    # a horizontal line through the node at (0, 0): the label goes below or above it, not right or left
+    nodes = {"L": met("l", -2000, 0), "M": met("m", 0, 0), "R": met("r", 2000, 0)}
+    reactions = {"1": dict(bigg_id="R1", label_x=None, segments={
+        "a": dict(from_node_id="L", to_node_id="M", b1=None, b2=None),
+        "b": dict(from_node_id="M", to_node_id="R", b1=None, b2=None)})}
+    body = dict(nodes=nodes, reactions=reactions, text_labels={"t": dict(text="→ Lipids", x=0, y=0)})
+    escher.place_text_labels(body, {"t": (0.0, 0.0, 0.0)})
+    label = body["text_labels"]["t"]
+    assert (label["x"], label["y"]) in ((-20, 66), (-20, -50))

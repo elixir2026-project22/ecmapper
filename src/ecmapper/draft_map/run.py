@@ -109,7 +109,7 @@ def write_outputs(m, md, out: Path, prefix: str, title: str, args, stats: dict) 
     write_svg(m, str(out / f"{prefix}.svg"), md=md)
     write_cnapy_maps(m, str(out / f"{prefix}.maps"))
     stats["escher"] = write_escher(m, md, str(out / f"{prefix}.escher.json"), title, scale=args.escher_scale,
-                                   subsystem_labels=not args.escher_no_labels,
+                                   subsystem_labels=not args.escher_no_labels, curved=not args.escher_straight,
                                    description="Draft map from the BRENDA map, made with ecmapper.draft_map")
     with open(out / f"{prefix}.pkl", "wb") as f:
         pickle.dump(m, f)
@@ -208,6 +208,8 @@ def main(argv=None) -> None:
                         help="allow mirroring subsystems in the final arrangement (x: left-right, xy: also upside down)")
     parser.add_argument("--escher-scale", type=float, default=2.5, help="scale of the Escher map")
     parser.add_argument("--escher-no-labels", action="store_true", help="no subsystem names in the Escher map")
+    parser.add_argument("--escher-straight", action="store_true",
+                        help="straight segments in the Escher map (default: straight reaction axes, curved branches)")
     parser.add_argument("--compare-flips", action="store_true", help="also anneal with mirroring (x and xy)")
     parser.add_argument("--extra", nargs="*", default=[], help="further arrangements: graphviz elk user-order")
     parser.add_argument("--pack", action="store_true",

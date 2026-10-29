@@ -316,7 +316,8 @@ arranges them with few crossings of inter-pathway links
 the inter-pathway links). With `--split`, it makes a central map and
 auxiliary maps (one per BRENDA colour group) with references between them
 and an overview. It writes an SVG in the style of the BRENDA map, an Escher
-map and box positions for CNApy (with `--split`: for each map).
+map (reactions drawn as by Escher's builder: straight axes, curved branches)
+and box positions for CNApy (with `--split`: for each map).
 
 ```bash
 python -m pip install -e "./ecmapper[draft-map]"   # numpy, scipy, numba, networkx, pygraphviz (includes Graphviz)

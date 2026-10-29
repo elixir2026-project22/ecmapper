@@ -56,6 +56,7 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--min-map-reactions` | 25 | with `--split`: colour group maps with fewer model reactions are merged into the map they have most links with |
 | `--escher-scale` | 2.5 | scale of the Escher map relative to the BRENDA map |
 | `--escher-no-labels` | | no subsystem names in the Escher map |
+| `--escher-straight` | | straight segments in the Escher map, further reactions of an enzyme node below the first (default: straight reaction axes and curved branches, see [5](#5-escher-export)) |
 | `--compare-flips`, `--extra graphviz elk user-order` | | further arrangements for comparison (`map_*.svg`, `stats.json`); Graphviz needs pygraphviz, ELK needs `node` with `elkjs` on `$NODE_PATH` |
 
 Outputs in `OUT`:
@@ -228,7 +229,8 @@ Arrangement of the subsystem boxes (step 6) and compaction (step 4):
 | Cytoscape.js `fcose` / Cytoscape (yFiles layouts) | Compound nodes (subsystems) with constraints; yFiles (commercial, free in yEd) has the best grouped hierarchical/orthogonal layouts | no |
 | igraph / networkx | No boxes or ports for the arrangement | no |
 | Metabopolis (Wu et al. 2019) | Published method closest to this scheme: pathways as blocks, inter-pathway links minimised, orthogonal routing in channels ("urban map") | no implementation available |
-| Escher | Editing target (no automatic layout) | export |
+| Escher | Editing target (no automatic layout); its builder draws a new reaction along a straight axis with Bezier curves to the metabolites | export, in the builder's drawing style (section 5) |
+| BioEMMA (KEGG KGML → Escher) | Puts the multimarkers on a straight reaction axis a fraction of the way to the main metabolites and the secondary metabolites next to them; straight segments (version 0.4.3 on PyPI) | code read; its multimarker placement is used in the Escher export |
 
 Layout inside the subsystems with added reactions (step 3b): the 59 subsystems of iML1515 with added reactions, each
 laid out after step 3 and condensed as in step 4; crossings of main-metabolite links / of all links, sum of the box
@@ -464,16 +466,46 @@ Problems
 
 `draft_map.escher.json` (Escher schema 1-0-0, coordinates × 2.5) leaves out the inter-pathway links and the subsystem
 boxes; the subsystem names are text labels (`--escher-no-labels` drops them). Each model reaction of an enzyme node is
-an Escher reaction with its midmarker at the node (further reactions of the node below it) and multimarkers towards
-its substrates and products. Drawn main metabolites are primary nodes, matched cofactors secondary nodes; metabolites
-that are not drawn get secondary nodes next to the reaction; protons are not drawn (they stay in the stoichiometry).
-There is one Escher node per drawn node and compartment-specific model metabolite. Metabolite nodes that continue on
-other maps (`--split`, set-aside map) get a text label "→ map names" below them.
+an Escher reaction with a midmarker at the node and a multimarker for its substrates and one for its products. Drawn
+main metabolites are primary nodes, matched cofactors secondary nodes; metabolites that are not drawn get secondary
+nodes next to the reaction; protons are not drawn (they stay in the stoichiometry). There is one Escher node per drawn
+node and compartment-specific model metabolite, at the position of the drawn node in the SVG. Metabolite nodes that
+continue on other maps (`--split`, set-aside map) get a text label "→ map names".
+
+The reactions are drawn as Escher's builder draws new reactions, with straight reaction axes and curved branches
+(`curve_reactions` in `escher.py`, a post-processing step of the Escher map; the multimarker placement follows
+[BioEMMA](https://pypi.org/project/bioemma/), which converts KEGG maps to Escher maps):
+
+- **Axis:** a straight line through the midmarker, along the difference of the directions from the midmarker to the
+  centre of the primary products and to the centre of the primary substrates. A reaction with its substrates above
+  and its products below runs vertically; one with both above it runs horizontally and is drawn U-shaped.
+- **Multimarkers** on the axis, 30% of the way to the centre of their metabolites (20–80 units from the midmarker).
+- **Branches:** the segments between a multimarker and its metabolites are cubic Bezier curves. The control point at
+  the multimarker lies on the axis (40% of the segment length times the cosine of its angle to the axis, at least a
+  quarter of that, at most 100 units), the one at the metabolite 35% of the way from it to the first. A branch leaves
+  the reaction along its axis and bends towards its metabolite; a metabolite on the axis gets a straight segment.
+- **Several model reactions of an enzyme node** (e.g. the NADH dehydrogenases, PYK2–4): side by side in lanes 25
+  units apart, perpendicular to their common axis, ordered by the metabolites they do not share; their labels are
+  stacked next to the lanes (right of steep axes, below flat ones).
+- **Metabolites that are not drawn** go next to the multimarker of their side, alternately left and right of the axis
+  (outwards for lanes).
+- **"→ map" labels** (Escher draws text labels at 50 px): right of, below, left of or above their node, whichever
+  covers the fewest points of segments, nodes and labels.
+
+The metabolite nodes stay where they are, so the Escher map has the layout of the SVG. In Escher's builder, the
+control points can be moved like those of reactions added there. `--escher-straight` gives the previous drawing:
+straight segments, multimarkers 25 units from the midmarker towards their metabolites, further reactions of an
+enzyme node below the first.
+
+| Straight segments (`--escher-straight`) | Straight axes, curved branches (default) |
+|---|---|
+| ![straight](BRENDAmap/draft_map_iML1515/figures/escher_straight.png) | ![curved](BRENDAmap/draft_map_iML1515/figures/escher_curved.png) |
 
 iML1515: 1,124 Escher reactions (1,010 model reactions; reactions on several nodes are drawn several times),
-6,544 nodes, 98 text labels; the set-aside map `set_aside.escher.json` has 45 Escher reactions (38 model reactions). `escher.validate.validate_map` (escher 1.7.3; schema and consistency of segments,
+6,544 nodes, 98 text labels, 4,571 curved segments; the set-aside map `set_aside.escher.json` has 45 Escher
+reactions (38 model reactions). `escher.validate.validate_map` (escher 1.7.3; schema and consistency of segments,
 stoichiometry, genes) passes; Escher 1.7.3 loads it with `iML1515.json` and finds all reactions and metabolites in
-the model. The same holds for the set-aside map.
+the model. The same holds for the set-aside map and the maps of `--split`.
 
 ![Escher: glycolysis, pentose phosphate and Entner–Doudoroff pathways](BRENDAmap/draft_map_iML1515/figures/escher_detail_central.png)
 
@@ -484,7 +516,7 @@ the model. The same holds for the set-aside map.
 2. Completion: compartment handling (restrict to the cytosol or add a "periplasm" subsystem), a target-subsystem score
    that also uses the model subsystem, optional new subsystems for groups of added reactions without a good BRENDA
    subsystem (e.g. murein, membrane lipids).
-3. Inside subsystems: draw the bends of `dot` layouts (in the SVG; Escher segments are straight), and constraints that
+3. Inside subsystems: draw the bends of `dot` layouts (in the SVG and as Bezier control points in Escher), and constraints that
    keep added reactions near the BRENDA nodes they connect (e.g. WebCola).
 4. Weights of the annealing as options; keeping the colour groups (category regions) of the BRENDA map together.
 5. Semantic zooming in a viewer: collapse subsystems into the boxes of the overview and re-pack the maps with the
