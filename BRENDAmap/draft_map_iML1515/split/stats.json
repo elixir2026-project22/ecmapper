@@ -421,86 +421,6 @@
    "links": 1
   }
  ],
- "hubs_disconnected": [
-  {
-   "key": 31,
-   "name": "pyruvate",
-   "subsystems": 24,
-   "links": 7
-  },
-  {
-   "key": 29,
-   "name": "acetyl-CoA",
-   "subsystems": 19,
-   "links": 9
-  },
-  {
-   "key": 147,
-   "name": "D-glyceraldehyde 3-phosphate",
-   "subsystems": 12,
-   "links": 4
-  },
-  {
-   "key": 87,
-   "name": "D-fructose 6-phosphate",
-   "subsystems": 8,
-   "links": 6
-  },
-  {
-   "key": 95,
-   "name": "L-Serine",
-   "subsystems": 8,
-   "links": 6
-  },
-  {
-   "key": 57,
-   "name": "oxaloacetate",
-   "subsystems": 8,
-   "links": 3
-  },
-  {
-   "key": 278,
-   "name": "dihydroxyacetone phosphate",
-   "subsystems": 8,
-   "links": 2
-  },
-  {
-   "key": 204,
-   "name": "Chorismate",
-   "subsystems": 7,
-   "links": 5
-  },
-  {
-   "key": 41,
-   "name": "L-glutamate",
-   "subsystems": 7,
-   "links": 2
-  },
-  {
-   "key": 37,
-   "name": "GTP",
-   "subsystems": 6,
-   "links": 4
-  },
-  {
-   "key": 170,
-   "name": "fumarate",
-   "subsystems": 6,
-   "links": 3
-  },
-  {
-   "key": 224,
-   "name": "succinyl-CoA",
-   "subsystems": 6,
-   "links": 3
-  },
-  {
-   "key": 90,
-   "name": "acetaldehyde",
-   "subsystems": 6,
-   "links": 1
-  }
- ],
  "log": [
   "step 1: 115 of 193 subsystems have model reactions",
   "step 1: removed 11 subsystems whose model reactions are a proper subset of another's; set aside 6 (rule B: 5, C: 1, D: 0)",
@@ -514,74 +434,74 @@
   "Central metabolism": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 4,
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 1,
-     "link_length": 2944.297926721892,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 3155.0000000000005,
      "height": 3256.0,
      "area_ratio": 2.3028385344576527
     },
     "original order (sequence pair packing)": {
-     "links": 4,
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 1,
-     "link_length": 3726.216717204211,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 3345.61,
      "height": 3256.0,
      "area_ratio": 2.4419650172002747
     },
-    "annealed": {
-     "links": 4,
+    "packed": {
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 1,
-     "link_length": 3903.833845284714,
-     "width": 3063.8600000000006,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 3063.86,
      "height": 1883.5,
-     "area_ratio": 1.2936424839241054,
-     "cost": 110.84172761751398
+     "area_ratio": 1.2936424839241052,
+     "cost": 110.22482851287806
     }
    },
    "anneal_seeds": [
     {
-     "links": 4,
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 1,
-     "link_length": 3903.833845284714,
-     "width": 3063.8600000000006,
-     "height": 1883.5,
-     "area_ratio": 1.2936424839241054,
-     "cost": 110.84172761751398
-    },
-    {
-     "links": 4,
-     "crossings": 1,
-     "box_crossings": 3,
-     "link_length": 4725.365332558728,
-     "width": 3063.8600000000006,
-     "height": 1883.5,
-     "area_ratio": 1.2936424839241054,
-     "cost": 112.86632812539895
-    },
-    {
-     "links": 4,
-     "crossings": 1,
-     "box_crossings": 1,
-     "link_length": 6326.492843244071,
-     "width": 3270.43,
-     "height": 1730.5,
-     "area_ratio": 1.2686919665540335,
-     "cost": 114.23629965057992
-    },
-    {
-     "links": 4,
-     "crossings": 1,
      "box_crossings": 0,
-     "link_length": 5503.3139035515815,
-     "width": 3204.3,
-     "height": 1778.5,
-     "area_ratio": 1.277517234075196,
-     "cost": 112.13099679402818
+     "link_length": 0.0,
+     "width": 3063.86,
+     "height": 1904.0,
+     "area_ratio": 1.3077224791035287,
+     "cost": 111.39422203498913
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 3063.8600000000006,
+     "height": 1883.5,
+     "area_ratio": 1.2936424839241054,
+     "cost": 110.22482851287809
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 3063.86,
+     "height": 1883.5,
+     "area_ratio": 1.2936424839241052,
+     "cost": 110.22482851287806
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 3063.8600000000006,
+     "height": 1883.5,
+     "area_ratio": 1.2936424839241054,
+     "cost": 110.22482851287809
     }
    ],
    "escher": {
@@ -596,7 +516,7 @@
     "main_metabolite_nodes": 77,
     "cofactor_nodes": 125,
     "edges": 293,
-    "inter_pathway_links": 4,
+    "inter_pathway_links": 0,
     "model_reactions": 83,
     "enzyme_nodes_on-map": 58,
     "enzyme_nodes_vicinity": 2,
@@ -607,74 +527,74 @@
   "Energy and C1 metabolism": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 1,
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 1,
-     "link_length": 1011.8753452756142,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 1812.5950000000003,
      "height": 3483.0,
      "area_ratio": 2.0274462710459407
     },
     "original order (sequence pair packing)": {
-     "links": 1,
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 1,
-     "link_length": 1011.8753452756144,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 1812.5950000000003,
      "height": 2974.5,
      "area_ratio": 1.7314495932317402
     },
-    "annealed": {
-     "links": 1,
+    "packed": {
+     "links": 0,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 678.2075269886491,
+     "link_length": 0.0,
      "width": 2675.8700000000003,
      "height": 1457.5,
      "area_ratio": 1.2524738748596929,
-     "cost": 110.74166934152997
+     "cost": 110.721332234606
     }
    },
    "anneal_seeds": [
     {
-     "links": 1,
+     "links": 0,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 678.2075269886491,
+     "link_length": 0.0,
      "width": 2675.8700000000003,
      "height": 1457.5,
      "area_ratio": 1.2524738748596929,
-     "cost": 110.74166934152997
+     "cost": 110.721332234606
     },
     {
-     "links": 1,
+     "links": 0,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 678.2075269886491,
+     "link_length": 0.0,
      "width": 2675.8700000000003,
      "height": 1457.5,
      "area_ratio": 1.2524738748596929,
-     "cost": 110.74166934152997
+     "cost": 110.721332234606
     },
     {
-     "links": 1,
+     "links": 0,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 678.2075269886491,
+     "link_length": 0.0,
      "width": 2675.8700000000003,
      "height": 1457.5,
      "area_ratio": 1.2524738748596929,
-     "cost": 110.74166934152997
+     "cost": 110.721332234606
     },
     {
-     "links": 1,
+     "links": 0,
      "crossings": 0,
      "box_crossings": 0,
-     "link_length": 678.2075269886491,
+     "link_length": 0.0,
      "width": 2675.8700000000003,
      "height": 1457.5,
      "area_ratio": 1.2524738748596929,
-     "cost": 110.74166934152997
+     "cost": 110.721332234606
     }
    ],
    "escher": {
@@ -689,7 +609,7 @@
     "main_metabolite_nodes": 54,
     "cofactor_nodes": 82,
     "edges": 173,
-    "inter_pathway_links": 1,
+    "inter_pathway_links": 0,
     "model_reactions": 40,
     "enzyme_nodes_on-map": 31,
     "enzyme_nodes_vicinity": 1,
@@ -700,74 +620,74 @@
   "Lipids": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 7,
-     "crossings": 4,
-     "box_crossings": 1,
-     "link_length": 18282.61128884377,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 6972.205,
      "height": 3594.0,
      "area_ratio": 2.084114506029478
     },
     "original order (sequence pair packing)": {
-     "links": 7,
-     "crossings": 4,
-     "box_crossings": 4,
-     "link_length": 30822.925985507758,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 11129.805,
      "height": 2083.5,
      "area_ratio": 1.928654415220382
     },
-    "annealed": {
-     "links": 7,
+    "packed": {
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 4,
-     "link_length": 11318.697483181995,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 4759.799999999999,
      "height": 3015.5,
      "area_ratio": 1.193772013464896,
-     "cost": 112.0453686980517
+     "cost": 109.87264093599661
     }
    },
    "anneal_seeds": [
     {
-     "links": 7,
-     "crossings": 1,
-     "box_crossings": 4,
-     "link_length": 10811.424830643635,
-     "width": 4759.799999999999,
-     "height": 3015.5,
-     "area_ratio": 1.193772013464896,
-     "cost": 113.03762751845441
-    },
-    {
-     "links": 7,
-     "crossings": 1,
-     "box_crossings": 3,
-     "link_length": 10636.837571274062,
-     "width": 4759.799999999999,
-     "height": 3015.5,
-     "area_ratio": 1.193772013464896,
-     "cost": 112.5349632484146
-    },
-    {
-     "links": 7,
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 5,
-     "link_length": 11884.897014914524,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 4759.799999999999,
      "height": 3015.5,
      "area_ratio": 1.193772013464896,
-     "cost": 112.55400912493282
+     "cost": 109.87264093599661
     },
     {
-     "links": 7,
+     "links": 0,
      "crossings": 0,
-     "box_crossings": 4,
-     "link_length": 11318.697483181995,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 4759.799999999999,
      "height": 3015.5,
      "area_ratio": 1.193772013464896,
-     "cost": 112.0453686980517
+     "cost": 109.87264093599661
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 4759.799999999999,
+     "height": 3015.5,
+     "area_ratio": 1.193772013464896,
+     "cost": 109.87264093599661
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 4759.799999999999,
+     "height": 3015.5,
+     "area_ratio": 1.193772013464896,
+     "cost": 109.87264093599661
     }
    ],
    "escher": {
@@ -782,7 +702,7 @@
     "main_metabolite_nodes": 145,
     "cofactor_nodes": 259,
     "edges": 621,
-    "inter_pathway_links": 7,
+    "inter_pathway_links": 0,
     "model_reactions": 151,
     "enzyme_nodes_on-map": 59,
     "enzyme_nodes_vicinity": 17,
@@ -793,74 +713,74 @@
   "Amino acids": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 20,
-     "crossings": 19,
-     "box_crossings": 20,
-     "link_length": 42791.71627905305,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 5235.040000000001,
      "height": 8120.0,
      "area_ratio": 2.1872304614661804
     },
     "original order (sequence pair packing)": {
-     "links": 20,
-     "crossings": 21,
-     "box_crossings": 10,
-     "link_length": 38457.56309815901,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 7631.425000000001,
      "height": 6192.5,
      "area_ratio": 2.431588986876892
     },
-    "annealed": {
-     "links": 20,
-     "crossings": 1,
-     "box_crossings": 4,
-     "link_length": 27918.00692474601,
-     "width": 6049.325000000001,
-     "height": 4092.0,
-     "area_ratio": 1.273682127239476,
-     "cost": 113.86793517170793
+    "packed": {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6201.805,
+     "height": 3790.0,
+     "area_ratio": 1.2094163314215427,
+     "cost": 103.37732084158155
     }
    },
    "anneal_seeds": [
     {
-     "links": 20,
-     "crossings": 2,
-     "box_crossings": 5,
-     "link_length": 26463.192319362577,
-     "width": 6201.555,
-     "height": 3991.5,
-     "area_ratio": 1.2736650899443516,
-     "cost": 114.15602540701194
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6110.1900000000005,
+     "height": 3858.0,
+     "area_ratio": 1.2129291974142802,
+     "cost": 103.68075852539698
     },
     {
-     "links": 20,
-     "crossings": 3,
-     "box_crossings": 4,
-     "link_length": 29090.651943630965,
-     "width": 6643.77,
-     "height": 3764.5,
-     "area_ratio": 1.286886967551036,
-     "cost": 117.20821849620016
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6201.805,
+     "height": 3790.0,
+     "area_ratio": 1.2094163314215427,
+     "cost": 103.37732084158155
     },
     {
-     "links": 20,
-     "crossings": 4,
-     "box_crossings": 3,
-     "link_length": 29209.519176122092,
-     "width": 6407.459999999999,
-     "height": 3911.5,
-     "area_ratio": 1.2895784001826134,
-     "cost": 116.36827578464334
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6127.1,
+     "height": 3870.5,
+     "area_ratio": 1.2202267805543685,
+     "cost": 104.29678323984493
     },
     {
-     "links": 20,
-     "crossings": 1,
-     "box_crossings": 4,
-     "link_length": 27918.00692474601,
-     "width": 6049.325000000001,
-     "height": 4092.0,
-     "area_ratio": 1.273682127239476,
-     "cost": 113.86793517170793
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6224.030000000001,
+     "height": 3793.5,
+     "area_ratio": 1.2148713147637276,
+     "cost": 103.85322566608964
     }
    ],
    "escher": {
@@ -875,7 +795,7 @@
     "main_metabolite_nodes": 318,
     "cofactor_nodes": 487,
     "edges": 1110,
-    "inter_pathway_links": 20,
+    "inter_pathway_links": 0,
     "model_reactions": 260,
     "enzyme_nodes_on-map": 202,
     "enzyme_nodes_vicinity": 7,
@@ -886,74 +806,74 @@
   "Nucleotides and cofactors": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 16,
-     "crossings": 17,
-     "box_crossings": 6,
-     "link_length": 44126.994990555875,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 8454.420000000002,
      "height": 4993.5,
      "area_ratio": 1.9806266773189336
     },
     "original order (sequence pair packing)": {
-     "links": 16,
-     "crossings": 18,
-     "box_crossings": 10,
-     "link_length": 49712.81556573119,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 10401.680000000002,
      "height": 3870.5,
      "area_ratio": 1.8887927706816587
     },
-    "annealed": {
-     "links": 16,
-     "crossings": 4,
-     "box_crossings": 1,
-     "link_length": 27029.447602999415,
-     "width": 6088.87,
-     "height": 4136.5,
-     "area_ratio": 1.1816353680933194,
-     "cost": 112.48546902538011
+    "packed": {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6167.665000000001,
+     "height": 3989.5,
+     "area_ratio": 1.1543911730106993,
+     "cost": 103.84208648081015
     }
    },
    "anneal_seeds": [
     {
-     "links": 16,
-     "crossings": 4,
-     "box_crossings": 6,
-     "link_length": 30023.422549140072,
-     "width": 6336.34,
-     "height": 4150.5,
-     "area_ratio": 1.2338223762739644,
-     "cost": 118.62404932319107
-    },
-    {
-     "links": 16,
-     "crossings": 4,
-     "box_crossings": 1,
-     "link_length": 27029.447602999415,
-     "width": 6088.87,
-     "height": 4136.5,
-     "area_ratio": 1.1816353680933194,
-     "cost": 112.48546902538011
-    },
-    {
-     "links": 16,
-     "crossings": 7,
-     "box_crossings": 1,
-     "link_length": 22255.862911024284,
-     "width": 6501.794999999999,
-     "height": 3950.5,
-     "area_ratio": 1.2050334138507888,
-     "cost": 115.98342032728662
-    },
-    {
-     "links": 16,
-     "crossings": 8,
+     "links": 0,
+     "crossings": 0,
      "box_crossings": 0,
-     "link_length": 31377.969031444787,
-     "width": 6154.205,
-     "height": 4121.5,
-     "area_ratio": 1.1899837039539916,
-     "cost": 116.34121422665868
+     "link_length": 0.0,
+     "width": 6167.665000000001,
+     "height": 3989.5,
+     "area_ratio": 1.1543911730106993,
+     "cost": 103.84208648081015
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6108.360000000001,
+     "height": 4025.5,
+     "area_ratio": 1.1536078606746516,
+     "cost": 104.13701502460559
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6269.17,
+     "height": 3989.5,
+     "area_ratio": 1.1733896880105332,
+     "cost": 105.30925136386811
+    },
+    {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 6501.794999999999,
+     "height": 3829.5,
+     "area_ratio": 1.1681244040859626,
+     "cost": 105.26707612893274
     }
    ],
    "escher": {
@@ -968,7 +888,7 @@
     "main_metabolite_nodes": 296,
     "cofactor_nodes": 620,
     "edges": 1286,
-    "inter_pathway_links": 16,
+    "inter_pathway_links": 0,
     "model_reactions": 296,
     "enzyme_nodes_on-map": 218,
     "enzyme_nodes_vicinity": 10,
@@ -979,74 +899,74 @@
   "Carbohydrates": {
    "arrangements": {
     "original order (compacted)": {
-     "links": 15,
-     "crossings": 8,
-     "box_crossings": 5,
-     "link_length": 25307.04454733652,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 7523.9400000000005,
      "height": 3249.0,
      "area_ratio": 2.2101612295277326
     },
     "original order (sequence pair packing)": {
-     "links": 15,
-     "crossings": 10,
-     "box_crossings": 8,
-     "link_length": 32021.425821647044,
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
      "width": 8380.52,
      "height": 3008.5,
      "area_ratio": 2.279554102011096
     },
-    "annealed": {
-     "links": 15,
-     "crossings": 5,
-     "box_crossings": 4,
-     "link_length": 22440.258876635762,
-     "width": 4657.24,
-     "height": 2916.5,
-     "area_ratio": 1.2280598164475605,
-     "cost": 114.34174438986761
+    "packed": {
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 4624.185,
+     "height": 2867.0,
+     "area_ratio": 1.1986484134784712,
+     "cost": 104.29447044650462
     }
    },
    "anneal_seeds": [
     {
-     "links": 15,
-     "crossings": 5,
-     "box_crossings": 4,
-     "link_length": 20003.0318896879,
-     "width": 4781.365,
-     "height": 2909.5,
-     "area_ratio": 1.2577640606043048,
-     "cost": 116.85086867927593
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 4624.185,
+     "height": 2867.0,
+     "area_ratio": 1.1986484134784712,
+     "cost": 104.29447044650462
     },
     {
-     "links": 15,
-     "crossings": 5,
-     "box_crossings": 3,
-     "link_length": 21278.23945954142,
-     "width": 4682.889999999999,
-     "height": 2976.5,
-     "area_ratio": 1.260226955447654,
-     "cost": 116.65360664513976
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 4656.38,
+     "height": 2867.0,
+     "area_ratio": 1.2069937728600573,
+     "cost": 105.01116782259251
     },
     {
-     "links": 15,
-     "crossings": 6,
-     "box_crossings": 4,
-     "link_length": 22061.267750558938,
-     "width": 4620.82,
-     "height": 2946.0,
-     "area_ratio": 1.2307808069193533,
-     "cost": 115.70053686795511
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 4667.970000000001,
+     "height": 2867.0,
+     "area_ratio": 1.209998050394848,
+     "cost": 105.273698161067
     },
     {
-     "links": 15,
-     "crossings": 5,
-     "box_crossings": 4,
-     "link_length": 22440.258876635762,
-     "width": 4657.24,
-     "height": 2916.5,
-     "area_ratio": 1.2280598164475605,
-     "cost": 114.34174438986761
+     "links": 0,
+     "crossings": 0,
+     "box_crossings": 0,
+     "link_length": 0.0,
+     "width": 4633.320000000001,
+     "height": 2869.0,
+     "area_ratio": 1.2018541442828026,
+     "cost": 104.56705137882423
     }
    ],
    "escher": {
@@ -1061,7 +981,7 @@
     "main_metabolite_nodes": 195,
     "cofactor_nodes": 219,
     "edges": 631,
-    "inter_pathway_links": 15,
+    "inter_pathway_links": 0,
     "model_reactions": 173,
     "enzyme_nodes_on-map": 111,
     "enzyme_nodes_vicinity": 3,
@@ -1089,7 +1009,7 @@
      "height": 2355.0,
      "area_ratio": 2.5462228796377024
     },
-    "annealed": {
+    "packed": {
      "links": 0,
      "crossings": 0,
      "box_crossings": 0,
@@ -1182,7 +1102,7 @@
      "height": 3560.0,
      "area_ratio": 2.0990255303382708
     },
-    "annealed": {
+    "packed": {
      "links": 0,
      "crossings": 0,
      "box_crossings": 0,

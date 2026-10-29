@@ -238,11 +238,18 @@ def test_draft_map_split(sources, model, tmp_path):  # noqa: F811
         assert no_overlaps([b.x for b in boxes], [b.y for b in boxes], [b.w for b in boxes], [b.h for b in boxes], 80.0)
     stats = json.loads((out / "stats.json").read_text())
     # one label per drawn node with references that is used in the Escher map
-    assert 0 < references <= sum(s["references"] for s in stats["maps"].values())
+    references_total = sum(s["references"] for s in stats["maps"].values())
+    assert 0 < references <= references_total
     overview = (out / "overview.svg").read_text()
     assert all(f'href="{m["file"].removesuffix(".escher.json")}.svg"' in overview for m in index["maps"])
     with pytest.raises(SystemExit):
         run_draft_map(prep, out, "--central", "glycolysis")
+    # --split --pack: no links on the maps, the references stay
+    packed = tmp_path / "packed"
+    run_draft_map(prep, packed, "--split", "--pack", "--min-map-reactions", "0")
+    stats = json.loads((packed / "stats.json").read_text())
+    assert all(s["final"]["inter_pathway_links"] == 0 for s in stats["maps"].values())
+    assert sum(s["references"] for s in stats["maps"].values()) == references_total
 
 
 def test_drop_redundant_subsystems():

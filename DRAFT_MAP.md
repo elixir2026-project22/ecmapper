@@ -27,9 +27,9 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 # or without inter-pathway links, the subsystems packed into as little space as possible
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT_PACKED \
     --pack --iterations 200000 --seeds 4
-# or split into a central map and auxiliary maps
+# or split into a central map and auxiliary maps, each packed without inter-pathway links
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT_SPLIT \
-    --split --hub-subsystems 6 --iterations 200000 --seeds 4
+    --split --pack --iterations 200000 --seeds 4
 ```
 
 `iML1515.xml` and `iML1515.json` are from [BiGG](http://bigg.ucsd.edu/models/iML1515). The first step takes about
@@ -318,28 +318,30 @@ and an overview:
   regions are arranged with few crossings of the links between maps (annealing as in 1.4). Grey lines: links inside
   a map, purple: between maps (width by the number of links, hub links left out).
 
-[BRENDAmap/draft_map_iML1515/split](BRENDAmap/draft_map_iML1515/split): hubs ≥ 6 subsystems, 200,000 moves, 4 seeds
-per map (about 5 minutes). "Other pathways" (7 reactions) was merged into amino acids. 117 inter-pathway links
-between maps became references on 209 metabolite nodes (85 metabolites).
+[BRENDAmap/draft_map_iML1515/split](BRENDAmap/draft_map_iML1515/split): `--split --pack`, 200,000 moves, 4 seeds
+per map (about 4 minutes). "Other pathways" (7 reactions) was merged into amino acids. 117 inter-pathway links
+between maps became references on 209 metabolite nodes (85 metabolites); the links inside the maps are dropped, as
+they add little once the maps are small.
 
-| Map | Subsystems | Model reactions | Escher reactions | Links | Crossings (original order) | Link–box crossings | Width × height | References |
-|---|---|---|---|---|---|---|---|---|
-| Central metabolism | 10 | 83 | 91 | 4 | 0 (0) | 1 | 3,064 × 1,884 | 29 |
-| Energy and C1 metabolism | 7 | 40 | 42 | 1 | 0 (0) | 0 | 2,676 × 1,458 | 17 |
-| Lipids | 7 | 151 | 159 | 7 | 0 (4) | 4 | 4,760 × 3,016 | 23 |
-| Amino acids | 32 | 260 | 285 | 20 | 1 (19) | 4 | 6,049 × 4,092 | 55 |
-| Nucleotides and cofactors | 18 | 296 | 305 | 16 | 4 (17) | 1 | 6,089 × 4,136 | 33 |
-| Carbohydrates | 15 | 173 | 193 | 15 | 5 (8) | 4 | 4,657 × 2,916 | 36 |
-| Fermentation and degradation | 9 | 48 | 49 | 0 | 0 (0) | 0 | 2,663 × 1,626 | 14 |
-| Set aside | 6 | 38 | 45 | 0 | 0 (0) | 0 | 2,463 × 1,438 | 2 |
-| **all maps** | **104** | **1,010** | **1,169** | **63** | **10** | **14** | | **209** |
+| Map | Subsystems | Model reactions | Escher reactions | Width × height | Area ÷ Σ box area | References |
+|---|---|---|---|---|---|---|
+| Central metabolism | 10 | 83 | 91 | 3,064 × 1,884 | 1.29 | 29 |
+| Energy and C1 metabolism | 7 | 40 | 42 | 2,676 × 1,458 | 1.25 | 17 |
+| Lipids | 7 | 151 | 159 | 4,760 × 3,016 | 1.19 | 23 |
+| Amino acids | 32 | 260 | 285 | 6,202 × 3,790 | 1.21 | 55 |
+| Nucleotides and cofactors | 18 | 296 | 305 | 6,168 × 3,990 | 1.15 | 33 |
+| Carbohydrates | 15 | 173 | 193 | 4,624 × 2,867 | 1.20 | 36 |
+| Fermentation and degradation | 9 | 48 | 49 | 2,663 × 1,626 | 1.29 | 14 |
+| Set aside | 6 | 38 | 45 | 2,463 × 1,438 | 1.36 | 2 |
+| **all maps** | **104** | **1,010** | **1,169** | | | **209** |
 
 The maps together show the same 1,010 model reactions as the single map; 63 of them are on several maps (BRENDA
 draws some steps in several subsystems). Without the set-aside map, 1,124 Escher reactions are drawn, as on the
-single map. Inside the maps there are 10 crossings and 14 link–box crossings (single map of 3.3: 153 and 91), and
-the maps together need 35% less area than the single map (9.5 × 10⁷ vs. 14.6 × 10⁷ units², about as little as the
-packed map, 9.3 × 10⁷). All eight Escher maps pass Escher's validator, and Escher 1.7.3 loads them with
-`iML1515.json` with no reactions or metabolites missing in the model.
+single map. The maps together need 9.3 × 10⁷ units², as much as the packed single map (9.3 × 10⁷) and 36% less than
+the single map arranged for few crossings (14.6 × 10⁷). Arranged with their links instead (`--split --hub-subsystems
+6`), the maps have 10 crossings and 14 link–box crossings in total (single map of 3.3: 153 and 91) and need 9.5 × 10⁷
+units². All eight Escher maps pass Escher's validator, and Escher 1.7.3 loads them with `iML1515.json` with no
+reactions or metabolites missing in the model.
 
 ![Overview of the maps of iML1515](BRENDAmap/draft_map_iML1515/figures/split_overview.png)
 
