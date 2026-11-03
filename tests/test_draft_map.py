@@ -269,6 +269,62 @@ def test_draft_map_split(sources, model, tmp_path):  # noqa: F811
     assert sum(s["references"] for s in stats["maps"].values()) == references_total
 
 
+def test_draft_map_split_assignment(sources, model, tmp_path):  # noqa: F811
+    """--write-assignment writes the maps of the subsystems and the subsystems of the reactions; --assignment reads
+    the edited table: a subsystem without map is left out, a new map column is a map, reactions move."""
+    pytest.importorskip("openpyxl")
+    from openpyxl import load_workbook
+
+    from ecmapper.draft_map.assignment import read_assignment
+
+    _, prep = prepared(sources, model, tmp_path)
+    reference, out = tmp_path / "reference", tmp_path / "out"
+    run_draft_map(prep, reference, "--split", "--pack", "--min-map-reactions", "0")
+    xlsx = tmp_path / "assignment.xlsx"
+    run_draft_map(prep, out, "--split", "--min-map-reactions", "0", "--write-assignment", str(xlsx))
+    assert not (out / "maps.json").exists()
+    index = json.loads((reference / "maps.json").read_text())
+    table = read_assignment(xlsx)
+    assert table.maps == [m["name"] for m in index["maps"]]
+    assert table.subsystems == {s: m["name"] for m in index["maps"] for s in m["subsystems"]}
+    drawn = {r for m in index["maps"] for r in m["reactions"]}
+    assert {r for r, subs in table.reactions.items() if subs} == drawn
+
+    # edit: the first subsystem of the last map without map, the first of the central map on a new map "Mine",
+    # PGI only in a subsystem of the central map
+    left_out, moved = index["maps"][-1]["subsystems"][0], index["maps"][0]["subsystems"][0]
+    target = index["maps"][0]["subsystems"][-1]
+    wb = load_workbook(xlsx)
+    ws = wb["Subsystems"]
+    new_col = ws.max_column + 1
+    ws.cell(1, new_col, "Mine")
+    for row in ws.iter_rows(min_row=2):
+        if row[0].value == left_out:
+            for c in row[5:]:
+                c.value = None
+        elif row[0].value == moved:
+            for c in row[5:]:
+                c.value = None
+            ws.cell(row[0].row, new_col, "x")
+    ws = wb["Reactions"]
+    for row in ws.iter_rows(min_row=2):
+        if row[0].value == "PGI":
+            row[2].value = target
+    wb.save(xlsx)
+    edited = tmp_path / "edited"
+    run_draft_map(prep, edited, "--split", "--pack", "--assignment", str(xlsx))
+    index = json.loads((edited / "maps.json").read_text())
+    names = [m["name"] for m in index["maps"]]
+    assert names[-1] == "Mine" and {m["name"]: m for m in index["maps"]}["Mine"]["subsystems"] == [moved]
+    assert all(left_out not in m["subsystems"] for m in index["maps"])
+    assert [m["name"] for m in index["maps"] if "PGI" in m["reactions"]] == [split.CENTRAL]
+    with open(edited / f"{split.slug(split.CENTRAL)}.pkl", "rb") as f:
+        central = pickle.load(f)
+    assert {n.subsystem for n in central.nodes.values() if "PGI" in n.reactions} == {target}
+    with pytest.raises(SystemExit):
+        run_draft_map(prep, edited, "--split", "--assignment", str(xlsx), "--central", "glycolysis")
+
+
 def test_drop_redundant_subsystems():
     """A: proper subsets are removed; B, C: (mostly) covered subsystems and D: few matched nodes are set aside."""
     dm = DraftMap()

@@ -487,10 +487,13 @@ class Completion:
     """
 
     def __init__(self, dm: DraftMap, md: ModelData, min_anchored: int = 2, cofactors: bool = True,
-                 origin_positions: dict[str, tuple[float, float, str]] | None = None):
+                 origin_positions: dict[str, tuple[float, float, str]] | None = None, prefix: str = "added_",
+                 anchor_aside: bool = False):
         self.dm, self.md = dm, md
         self.min_anchored = min_anchored
         self.cofactors = cofactors
+        self.prefix = prefix  # of the IDs of new nodes
+        self.anchor_aside = anchor_aside  # metabolites drawn in set-aside subsystems are anchors, too
         self.counter = 0
         self.origin_positions = origin_positions or {}
         self.added: list[dict] = []
@@ -506,7 +509,7 @@ class Completion:
     def anchors(self) -> dict[str, list[str]]:
         result = defaultdict(list)
         for n in self.dm.nodes.values():
-            if n.kind == "main" and not self.dm.subsystems[n.subsystem].aside:
+            if n.kind == "main" and (self.anchor_aside or not self.dm.subsystems[n.subsystem].aside):
                 for m in n.model_mets:
                     result[m].append(n.id)
         return result
@@ -564,9 +567,9 @@ class Completion:
         )
         return self.added
 
-    def new_id(self, prefix: str) -> str:
+    def new_id(self, kind: str) -> str:
         self.counter += 1
-        return f"{prefix}{self.counter}"
+        return f"{self.prefix}{kind}{self.counter}"
 
     def target_subsystem(self, rid, anchored, votes) -> str:
         dm, md = self.dm, self.md
@@ -578,7 +581,7 @@ class Completion:
                 per_sub[s][0] += 1
                 per_sub[s][1] += s in drawn
         related = {
-            self.origin_positions[c["node_id"]][2] for c in md.matches[rid]["candidates"]
+            self.origin_positions[c["node_id"]][2] for c in self.match_candidates(rid)
             if set(c["via"]) & {"reaction-id", "ec"} and c["node_id"] in self.origin_positions
         }
         vote = votes.get(md.reactions[rid]["subsystem"], Counter()) if md.reactions[rid]["subsystem"] else Counter()
@@ -590,10 +593,14 @@ class Completion:
                            math.dist(self.centres[s], (cx, cy)), s),
         )
 
-    def add(self, rid, mains, anchored, votes) -> None:
+    def match_candidates(self, rid) -> list[dict]:
+        return self.md.matches.get(rid, {}).get("candidates", [])
+
+    def add(self, rid, mains, anchored, votes, target: str | None = None) -> None:
+        """Draw reaction `rid` in subsystem `target` (default: :meth:`target_subsystem`)."""
         dm, md = self.dm, self.md
         reaction = md.reactions[rid]
-        target = self.target_subsystem(rid, anchored, votes)
+        target = target or self.target_subsystem(rid, anchored, votes)
         # the node of each metabolite drawn in the target subsystem, the one closest to the others
         local = {m: [n for n in nodes if dm.nodes[n].subsystem == target] for m, nodes in anchored.items()}
         local = {m: nodes for m, nodes in local.items() if nodes}
@@ -623,14 +630,17 @@ class Completion:
         members = dm.members(target)
         boxes = [n.box for n in members]
         position = None
-        for c in md.matches[rid]["candidates"]:
+        for c in self.match_candidates(rid):
             o = self.origin_positions.get(c["node_id"])
             if set(c["via"]) & {"reaction-id", "ec"} and o and o[2] == target:
                 position = o[:2]  # the related node of the map, removed in step 2
                 break
         if position is None:
             pts = [(dm.nodes[n].x, dm.nodes[n].y) for n in chosen.values()]
-            if len(pts) >= 2:
+            if not pts:  # only with a given target: next to the subsystem's drawing
+                cx, cy = self.centres[target]
+                position = (cx, max(n.box[3] for n in members) + 60)
+            elif len(pts) >= 2:
                 position = (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))
             else:
                 cx, cy = self.centres[target]
@@ -638,7 +648,7 @@ class Completion:
                 d = math.dist((px, py), (cx, cy)) or 1.0
                 position = (px + 120 * (px - cx) / d, py + 90 * (py - cy) / d)
         enzyme = Node(
-            self.new_id("added_r"), "enzyme", target, 0, 0, text_width(rid) + 6, 30.0, rid,
+            self.new_id("r"), "enzyme", target, 0, 0, text_width(rid) + 6, 30.0, rid,
             reaction["name"], "nodeEN", ec_label=";".join(reaction["ecs"][:3]), reactions=[rid], status="added",
         )
         enzyme.x, enzyme.y = place_free(position[0], position[1], enzyme.w, enzyme.h, boxes)
@@ -665,7 +675,7 @@ class Completion:
                 else:
                     label = title = md.metabolites[mid]["name"] or m
                     ligand, css = None, "nodeHM"
-                met = Node(self.new_id("added_m"), "main", target, 0, 0, text_width(label), 30.0, label, title, css,
+                met = Node(self.new_id("m"), "main", target, 0, 0, text_width(label), 30.0, label, title, css,
                            ligand, status="linked" if source else "new", model_mets={m})
                 met.base_label = label
                 met.model_met_ids = {mid}
@@ -691,7 +701,7 @@ class Completion:
                 if self.is_main(mid) or b in PROTONS:
                     continue
                 label = SHORT_NAMES.get(b, md.metabolites[mid]["name"] or b)
-                cof = Node(self.new_id("added_c"), "cofactor", target, 0, 0, text_width(label), 30.0, label,
+                cof = Node(self.new_id("c"), "cofactor", target, 0, 0, text_width(label), 30.0, label,
                            md.metabolites[mid]["name"], "nodeCM", status="added")
                 cof.model_met_ids = {mid}
                 cof.x, cof.y = place_free(
@@ -704,8 +714,8 @@ class Completion:
         enzyme.new_stems = new_stems
         self.groups.setdefault(key, []).append(enzyme)
         self.added.append(dict(
-            reaction=rid, name=reaction["name"], status=md.matches[rid]["status"], subsystem=target,
-            model_subsystem=reaction["subsystem"], anchored=sorted(anchored), main_metabolites=sorted(mains),
+            reaction=rid, name=reaction["name"], status=md.matches.get(rid, {}).get("status", ""),
+            subsystem=target, model_subsystem=reaction["subsystem"], anchored=sorted(anchored), main_metabolites=sorted(mains),
             new_metabolites=new_mets, linked_metabolites=linked, node=enzyme.id,
         ))
 
@@ -733,8 +743,8 @@ class Completion:
                     mid = next(x for x in md.reactions[rid]["metabolites"] if md.base[x] == m)
                     node.title = f"{node.title}; {md.metabolites[mid]['name']}"
         self.added.append(dict(
-            reaction=rid, name=md.reactions[rid]["name"], status=md.matches[rid]["status"], subsystem=enzyme.subsystem,
-            model_subsystem=md.reactions[rid]["subsystem"], anchored=sorted(m for m in mains if m in chosen),
+            reaction=rid, name=md.reactions[rid]["name"], status=md.matches.get(rid, {}).get("status", ""),
+            subsystem=enzyme.subsystem, model_subsystem=md.reactions[rid]["subsystem"], anchored=sorted(m for m in mains if m in chosen),
             main_metabolites=sorted(mains), new_metabolites=0, linked_metabolites=0, node=enzyme.id,
         ))
 

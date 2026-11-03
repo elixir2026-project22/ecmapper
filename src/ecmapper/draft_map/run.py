@@ -17,6 +17,7 @@ from pathlib import Path
 
 import numpy as np
 
+from .assignment import apply_assignment, read_assignment, write_assignment
 from .core import (
     Completion,
     DraftMap,
@@ -124,8 +125,10 @@ def write_outputs(m, md, out: Path, prefix: str, title: str, args, stats: dict) 
     stats["coverage"] = coverage(md, m)
 
 
-def split_maps(dm, md, args, final, log, stats) -> None:
-    """--split: a central map and auxiliary maps, each arranged on its own, and an overview of them."""
+def map_assignment(dm, args, table, log) -> tuple[list[str], dict[str, str]]:
+    """--split: the maps in order and the map of each subsystem, from the table of --assignment or the options."""
+    if table is not None:
+        return table.map_assignment(dm)
     explicit = None
     if args.maps:
         with open(args.maps, encoding="utf-8") as f:
@@ -135,6 +138,12 @@ def split_maps(dm, md, args, final, log, stats) -> None:
     order, assignment = assign_maps(dm, central, explicit, args.min_map_reactions)
     for line in dm.log[n_log:]:
         log(line)
+    return order, assignment
+
+
+def split_maps(dm, md, args, final, log, stats, table=None) -> None:
+    """--split: a central map and auxiliary maps, each arranged on its own, and an overview of them."""
+    order, assignment = map_assignment(dm, args, table, log)
     cross = cross_map_metabolites(dm, assignment)
     maps = split_map(dm, order, assignment)
     log(dm.log[-1])
@@ -230,12 +239,21 @@ def main(argv=None) -> None:
     parser.add_argument("--maps", help="with --split: JSON file {map name: [BRENDA subsystem IDs]} of further maps")
     parser.add_argument("--min-map-reactions", type=int, default=25,
                         help="with --split: merge colour group maps with fewer model reactions into another map")
+    parser.add_argument("--write-assignment", type=Path, metavar="XLSX",
+                        help="with --split: write the assignment of the subsystems to the maps and of the model "
+                        "reactions to the subsystems as an editable table after step 3, and stop")
+    parser.add_argument("--assignment", type=Path, metavar="XLSX",
+                        help="with --split: take the maps of the subsystems and the subsystems of the model reactions "
+                        "from this (edited) table of --write-assignment instead of --central, --maps and "
+                        "--min-map-reactions")
     args = parser.parse_args(argv)
     methods = [] if args.relayout == "none" else [m for m in args.relayout.split(",") if m]
     if set(methods) - set(RELAYOUT_METHODS) - {"current"}:
         parser.error(f"--relayout: unknown layouts {sorted(set(methods) - set(RELAYOUT_METHODS))}")
-    if not args.split and (args.central is not None or args.maps):
-        parser.error("--central and --maps need --split")
+    if not args.split and (args.central is not None or args.maps or args.write_assignment or args.assignment):
+        parser.error("--central, --maps, --write-assignment and --assignment need --split")
+    if args.assignment and (args.central is not None or args.maps):
+        parser.error("--assignment replaces --central and --maps")
     if args.split and (args.compare_flips or args.extra):
         parser.error("--split: --compare-flips and --extra do not apply")
     if args.pack and (args.hub_subsystems or args.flips != "none" or args.compare_flips or args.extra):
@@ -278,6 +296,14 @@ def main(argv=None) -> None:
     write_svg(dm, str(args.out / "step3_completed.svg"), md=md)
     with open(args.out / "added_reactions.json", "w") as f:
         json.dump(added, f, indent=1)
+    table = None
+    if args.assignment:
+        # the edited table: subsystems without map left out, reactions moved between subsystems
+        table = read_assignment(args.assignment)
+        stats["assignment"] = apply_assignment(dm, md, table, origin_positions)
+        log(dm.log[-1])
+        for w in stats["assignment"]["warnings"]:
+            log(f"  warning: {w}")
 
     aside = {k for k, s in dm.subsystems.items() if s.aside}
     if args.pack or args.split:
@@ -288,6 +314,13 @@ def main(argv=None) -> None:
         # no edges to set-aside subsystems, which are drawn on a separate map
         localise_edges(dm, aside)
         log(dm.log[-1])
+    if args.write_assignment:
+        order, assignment = map_assignment(dm, args, table, log)
+        write_assignment(args.write_assignment, dm, md, order, assignment)
+        log(f"assignment of {len(dm.subsystems)} subsystems to {len(order)} maps written to {args.write_assignment}")
+        with open(args.out / "stats.json", "w") as f:
+            json.dump(stats, f, indent=1, default=float)
+        return
 
     # step 3b: lay out the subsystems with added reactions again
     if methods:
@@ -319,7 +352,7 @@ def main(argv=None) -> None:
     final = "packed" if args.pack else "annealed"
     if args.split:
         # the links between the maps become references; with --pack, the links inside the maps are dropped there
-        split_maps(dm, md, args, final, log, stats)
+        split_maps(dm, md, args, final, log, stats, table)
         with open(args.out / "stats.json", "w") as f:
             json.dump(stats, f, indent=1, default=float)
         log("done")

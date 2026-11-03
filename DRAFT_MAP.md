@@ -55,6 +55,8 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--central IDS` | see 3.5 | with `--split`: comma-separated BRENDA subsystem IDs of the central map |
 | `--maps FILE` | | with `--split`: JSON file `{map name: [BRENDA subsystem IDs]}` of further maps (before the central map; the other subsystems go to the map of their colour group) |
 | `--min-map-reactions` | 25 | with `--split`: colour group maps with fewer model reactions are merged into the map they have most links with |
+| `--write-assignment XLSX` | | with `--split`: write the maps of the subsystems and the subsystems of the model reactions as an editable table after step 3 and stop (see [3.5](#35-split-into-a-central-map-and-auxiliary-maps---split)) |
+| `--assignment XLSX` | | with `--split`: take the maps of the subsystems and the subsystems of the model reactions from the (edited) table of `--write-assignment`; replaces `--central`, `--maps`, `--min-map-reactions` |
 | `--escher-scale` | 2 | scale of the Escher map relative to the BRENDA map (see [5](#5-escher-export)) |
 | `--escher-no-labels` | | no subsystem names in the Escher map |
 | `--compare-flips`, `--extra graphviz elk user-order` | | further arrangements for comparison (`map_*.svg`, `stats.json`); Graphviz needs pygraphviz, ELK needs `node` with `elkjs` on `$NODE_PATH` |
@@ -446,6 +448,25 @@ and an overview:
   reactions; the boxes keep the relative order they have on their map (sequence pair of their centres, packed). The
   regions are arranged with few crossings of the links between maps (annealing as in 1.5). Grey lines: links inside
   a map, purple: between maps (width by the number of links, hub links left out).
+- **Editing the assignment:** `--write-assignment FILE.xlsx` writes the assignment after step 3 (and the merging of
+  small maps) and stops, after a few seconds. Sheet *Subsystems*: one row per subsystem, one column per map, an `x`
+  marks the map of the subsystem; a row without `x` leaves the subsystem out, a new column is a new map (the order
+  of the columns is the order of the maps). Sheet *Reactions*: one row per model reaction (no boundary reactions)
+  with ID, name, equation (IDs and names), EC numbers, model subsystem and, editable, the IDs of the subsystems in
+  which it is drawn (`;`-separated). Removing an ID takes the reaction out of that subsystem (an empty cell: not
+  drawn); adding one draws it there as well, as in the completion (step 3: connected to the metabolites drawn in the
+  subsystem, new nodes for the others). With subsystems on several maps, the reaction is on each of them. Run again
+  with the same prepared model and options of steps 1–3 and `--assignment FILE.xlsx`; the changes are applied
+  right after step 3, subsystems left without enzyme nodes are dropped. Both options together write the table of
+  the edited assignment (to check it).
+
+  ```bash
+  python -m ecmapper.draft_map.run PREP.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
+      --split --pack --write-assignment assignment.xlsx
+  # edit assignment.xlsx, then
+  python -m ecmapper.draft_map.run PREP.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
+      --split --pack --iterations 200000 --seeds 4 --assignment assignment.xlsx
+  ```
 
 [BRENDAmap/draft_map_iML1515/split](BRENDAmap/draft_map_iML1515/split): `--split --pack`, 200,000 moves, 4 seeds
 per map (about 5 minutes). "Other pathways" (7 reactions) was merged into amino acids. 117 inter-pathway links

@@ -317,7 +317,9 @@ subsystems and arranges them with few crossings of inter-pathway links
 the inter-pathway links); edges that would pass through other nodes are
 routed around them. With `--split`, it makes a central map and
 auxiliary maps (one per BRENDA colour group) with references between them
-and an overview. It writes an SVG in the style of the BRENDA map, an Escher
+and an overview; `--write-assignment` writes which subsystem goes on which
+map and which reaction into which subsystem as an XLSX table, which can be
+edited and read back with `--assignment`. It writes an SVG in the style of the BRENDA map, an Escher
 map (laid out like the SVG: straight main lines, curved cofactor branches)
 and box positions for CNApy (with `--split`: for each map).
 
@@ -361,8 +363,4 @@ of layout tools and the results for iML1515
 python -m pip install -e "./ecmapper[dev]"
 cd ecmapper
 pytest               # offline tests with excerpts of the resource files
-pytest -m network    # download the real files and map e_coli_core
-```
-
-`tests/test_draft_map.py` is skipped without the `draft-map` dependencies
-(`pip install -e "./ecmapper[dev,draft-map]"`).
+pytest -m network    #
