@@ -330,6 +330,25 @@ python -m ecmapper.draft_map.prepare iML1515.xml BRENDAmap/BRENDA_map_reactions.
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT --hub-subsystems 6
 ```
 
+The assignment can also be edited in a GUI (`pip install -e "./ecmapper[draft-map,gui]"`
+and a Qt binding such as PyQt6). It starts from a model (SBML, JSON or MAT, also
+gzipped or zipped),
+which it matches to the BRENDA map of `BRENDAmap/` as template (or another one
+with `--brenda-json`/`--brenda-svg`), or from the arguments of `run`; without
+arguments, a dialog asks for the files. It shows a tab per map,
+the subsystems as boxes of the size of their drawings (zoomed in: the SVG
+drawings), selected, cut, copied (a copy is drawn on both maps) and pasted
+between maps, moved by hand (boxes stay `--gap` apart) or packed by simulated
+annealing. Reactions added from the model (not on the BRENDA map) are purple,
+in the GUI as in the table. It saves the table (with the arrangement of the maps arranged by
+hand) and builds the final maps with `run --assignment`.
+
+```bash
+python -m ecmapper.draft_map.gui iML1515.xml --subsystems iML1515.json --pack   # maps in iML1515_maps/
+python -m ecmapper.draft_map.gui iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
+    --split --pack --assignment assignment.xlsx
+```
+
 See [DRAFT_MAP.md](DRAFT_MAP.md) for the method, the options, a comparison
 of layout tools and the results for iML1515
 ([BRENDAmap/draft_map_iML1515](BRENDAmap/draft_map_iML1515)).

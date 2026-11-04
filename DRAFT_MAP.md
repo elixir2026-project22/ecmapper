@@ -56,7 +56,7 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--maps FILE` | | with `--split`: JSON file `{map name: [BRENDA subsystem IDs]}` of further maps (before the central map; the other subsystems go to the map of their colour group) |
 | `--min-map-reactions` | 25 | with `--split`: colour group maps with fewer model reactions are merged into the map they have most links with |
 | `--write-assignment XLSX` | | with `--split`: write the maps of the subsystems and the subsystems of the model reactions as an editable table after step 3 and stop (see [3.5](#35-split-into-a-central-map-and-auxiliary-maps---split)) |
-| `--assignment XLSX` | | with `--split`: take the maps of the subsystems and the subsystems of the model reactions from the (edited) table of `--write-assignment`; replaces `--central`, `--maps`, `--min-map-reactions` |
+| `--assignment XLSX` | | with `--split`: take the maps of the subsystems, the subsystems of the model reactions and the arrangement of maps arranged by hand from the (edited) table of `--write-assignment` or the GUI; replaces `--central`, `--maps`, `--min-map-reactions` |
 | `--escher-scale` | 2 | scale of the Escher map relative to the BRENDA map (see [5](#5-escher-export)) |
 | `--escher-no-labels` | | no subsystem names in the Escher map |
 | `--compare-flips`, `--extra graphviz elk user-order` | | further arrangements for comparison (`map_*.svg`, `stats.json`); Graphviz needs pygraphviz, ELK needs `node` with `elkjs` on `$NODE_PATH` |
@@ -450,15 +450,22 @@ and an overview:
   a map, purple: between maps (width by the number of links, hub links left out).
 - **Editing the assignment:** `--write-assignment FILE.xlsx` writes the assignment after step 3 (and the merging of
   small maps) and stops, after a few seconds. Sheet *Subsystems*: one row per subsystem, one column per map, an `x`
-  marks the map of the subsystem; a row without `x` leaves the subsystem out, a new column is a new map (the order
-  of the columns is the order of the maps). Sheet *Reactions*: one row per model reaction (no boundary reactions)
+  marks a map of the subsystem; a row without `x` leaves the subsystem out, a row with several draws the subsystem
+  on each of these maps (on the first one with its ID, on the others as a copy `ID@map` with the links of the
+  original: inside the map, or references to the maps of the other ends), a new column is a new map (the order of
+  the columns is the order of the maps). Sheet *Reactions*: one row per model reaction (no boundary reactions)
   with ID, name, equation (IDs and names), EC numbers, model subsystem and, editable, the IDs of the subsystems in
   which it is drawn (`;`-separated). Removing an ID takes the reaction out of that subsystem (an empty cell: not
   drawn); adding one draws it there as well, as in the completion (step 3: connected to the metabolites drawn in the
-  subsystem, new nodes for the others). With subsystems on several maps, the reaction is on each of them. Run again
+  subsystem, new nodes for the others). With subsystems on several maps, the reaction is on each of them.
+  Reactions added from the model (step 3, not on the BRENDA map) are purple, as their nodes in the SVG; a light
+  purple *Drawn as* marks a reaction on the BRENDA map that is also added in another subsystem. Run again
   with the same prepared model and options of steps 1–3 and `--assignment FILE.xlsx`; the changes are applied
   right after step 3, subsystems left without enzyme nodes are dropped. Both options together write the table of
-  the edited assignment (to check it).
+  the edited assignment (to check it). The optional sheet *Arrangement* (`Map, Subsystem ID, x, y`: top left of
+  the box in map units, written by the GUI) holds the arrangement of maps arranged by hand: a map with the
+  positions of all its subsystems is drawn so instead of annealed (boxes closer than `--gap` are moved apart as
+  little as possible, keeping their order); a map lacking positions is arranged by the pipeline (with a warning).
 
   ```bash
   python -m ecmapper.draft_map.run PREP.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
@@ -466,6 +473,48 @@ and an overview:
   # edit assignment.xlsx, then
   python -m ecmapper.draft_map.run PREP.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
       --split --pack --iterations 200000 --seeds 4 --assignment assignment.xlsx
+  ```
+
+- **GUI:** `python -m ecmapper.draft_map.gui` edits the assignment of the subsystems to the maps and their
+  arrangement in a window (qtpy with a Qt binding such as PyQt6: `pip install -e "./ecmapper[draft-map,gui]"`).
+  It takes the options of `run` (`--split` implied; with or without `--assignment`) and as inputs
+  - `MODEL [OUT_DIR]`: a model (SBML; JSON, YAML or MAT by the extension; also compressed: `.gz`, `.bz2`, `.xz`
+    or a `.zip` with one model file, e.g. `MODEL.xml.gz`), matched to the BRENDA map as
+    `prepare` does (`--subsystems`, `--vicinity`) into `OUT_DIR/MODEL_prep.pkl`, which is reused while model,
+    map, options and code stay the same; the template is the BRENDA map of `BRENDAmap/` unless `--brenda-json`
+    and `--brenda-svg` give another; `OUT_DIR` defaults to `MODEL_maps` next to the model;
+  - or `PREP.pkl [OUT_DIR]`, or the four arguments of `run`;
+  - or nothing: a dialog asks for model, subsystems file, assignment table, output folder and the BRENDA map
+    (also *File ▸ New from model*, Ctrl+N).
+
+  It runs steps 1–4 with the
+  options given, so the subsystems have the sizes they have on the final maps; the condensed subsystems are kept
+  in `OUT/gui_cache.pkl` for the next start with the same inputs, options and reaction sheet (R. opacus: about
+  a minute the first time, 2 s then).
+  - One tab per map (drag the tabs to reorder the maps; double-click to rename) and one for the subsystems on no
+    map. A subsystem is a box of the size of its drawing; zoomed in (from 0.3 screen pixels per map unit, or
+    with *Drawings*), its SVG is shown as on the final map, with the references to the other maps. With links
+    (no `--pack`), the inter-pathway links between the boxes are drawn.
+  - Select with a click, Ctrl+click or a rubber band; drag to move. Cut, copy, paste (Ctrl+X, C, V), *Copy to
+    map*, *Move to map* and *Remove from map* move subsystems between maps; a copy pasted on another map is drawn
+    on both. Everything can be undone.
+  - Boxes never come closer than `--gap`: dragged boxes stop at other boxes and slide along them, pasted ones go
+    to the nearest free place (at the mouse pointer or right of the map).
+  - *Pack map* anneals the current map as the pipeline does (`anneal_arrangement`, iterations and seeds in a
+    dialog, from the current places, with progress and stop); *Original order* places the boxes as on the BRENDA
+    map. A map that was moved or packed counts as arranged (✎ on the tab) and is saved in the sheet
+    *Arrangement*; *Let the pipeline arrange this map* undoes that.
+  - *Find* highlights the subsystems whose name or ID contains the text or with a reaction of that ID, on all
+    maps; the panel *Subsystem* lists the model reactions of the selected subsystem (read only; edit the sheet
+    *Reactions* to change them), those added from the model in purple as in the table; the boxes give their
+    number.
+  - *Build maps* (Ctrl+B) saves the table and runs `run --assignment` with the same options (output folder,
+    iterations and seeds of the maps arranged by the pipeline in a dialog), shows the log and a summary and opens
+    `overview.svg`.
+
+  ```bash
+  python -m ecmapper.draft_map.gui PREP.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
+      --split --pack --assignment assignment.xlsx
   ```
 
 [BRENDAmap/draft_map_iML1515/split](BRENDAmap/draft_map_iML1515/split): `--split --pack`, 200,000 moves, 4 seeds

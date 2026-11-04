@@ -27,6 +27,10 @@ ARRANGEMENT_COLUMNS = ["Map", "Subsystem ID", "x", "y"]
 SUBSYSTEM_COLUMNS = ["Subsystem ID", "Subsystem", "Colour group", "Set aside (rule)", "Model reactions"]
 REACTION_COLUMNS = ["Reaction ID", "Name", "Subsystems", "Maps (when written)", "Equation", "Equation (names)",
                     "Drawn as", "Model subsystem", "EC numbers"]
+#: fill of reactions added from the model (not on the BRENDA map), as their enzyme nodes in the SVG (render.py)
+ADDED_COLOUR = "CDA0E6"
+#: fill of reactions on the BRENDA map that are also added from the model in another subsystem
+MIXED_COLOUR = "EEDDF7"
 HELP_TEXT = [
     "Assignment of the draft map (ecmapper.draft_map.run --split) to maps; edit it and run again with "
     "--assignment FILE.",
@@ -47,6 +51,8 @@ HELP_TEXT = [
     "- Add a subsystem ID to draw the reaction there as well (as an added reaction, connected to the metabolites "
     "drawn in that subsystem); with IDs of subsystems on different maps, the reaction is on several maps.",
     "- Rows that are deleted keep their reaction as it is; the other columns are for information.",
+    "- Purple rows: reactions added from the model (step 3; not on the BRENDA map, drawn like their purple, dashed "
+    "nodes in the SVG). Light purple 'Drawn as': on the BRENDA map in one subsystem, added in another one.",
     "",
     "Sheet Arrangement (written by the GUI, python -m ecmapper.draft_map.gui): the positions (top left of the box, "
     "map units) of the subsystems on the maps arranged by hand. A map with the positions of all its subsystems is "
@@ -79,6 +85,15 @@ def reaction_subsystems(dm: DraftMap) -> dict[str, list[str]]:
             if n.subsystem not in result[r]:
                 result[r].append(n.subsystem)
     return result
+
+
+def origin(statuses) -> str:
+    """Where drawn reactions come from by the statuses of their enzyme nodes: "model" (all added from the model,
+    step 3), "both" (also added) or "map" (on the BRENDA map or its vicinity); "" if not drawn."""
+    statuses = set(statuses)
+    if not statuses:
+        return ""
+    return "model" if statuses == {"added"} else "both" if "added" in statuses else "map"
 
 
 def equation(md: ModelData, rid: str, names: bool = False) -> str:
@@ -158,9 +173,18 @@ def write_assignment(path, dm: DraftMap, md: ModelData, order: list[str], assign
     for c in ws[1]:
         c.font, c.fill = bold, head_fill
     edit_fill = PatternFill("solid", fgColor="FFF2CC")
+    added_fill, mixed_fill = PatternFill("solid", fgColor=ADDED_COLOUR), PatternFill("solid", fgColor=MIXED_COLOUR)
+    i_drawn = REACTION_COLUMNS.index("Drawn as") + 1
     ws.cell(1, 3).fill = PatternFill("solid", fgColor="FFD966")
-    for row in range(2, len(rids) + 2):
-        ws.cell(row, 3).fill = edit_fill
+    for row, rid in enumerate(rids, 2):
+        ws.cell(row, 3).fill = edit_fill  # the column to edit keeps its colour
+        source = origin(status[rid]) if in_subsystem.get(rid) else ""
+        if source == "model":
+            for j in range(1, len(REACTION_COLUMNS) + 1):
+                if j != 3:
+                    ws.cell(row, j).fill = added_fill
+        elif source == "both":
+            ws.cell(row, i_drawn).fill = mixed_fill
     ws.freeze_panes = "C2"
     ws.auto_filter.ref = f"A1:{get_column_letter(len(REACTION_COLUMNS))}{len(rids) + 1}"
 

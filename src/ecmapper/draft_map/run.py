@@ -2,7 +2,8 @@
 
 usage: python -m ecmapper.draft_map.run PREP.pkl BRENDA_map_reactions.json BRENDA_map.svg OUT_DIR [options]
 
-PREP.pkl is written by :mod:`ecmapper.draft_map.prepare`. See DRAFT_MAP.md for the steps.
+PREP.pkl is written by :mod:`ecmapper.draft_map.prepare`. See DRAFT_MAP.md for the steps. With --split, the
+assignment of the subsystems to the maps can be edited with :mod:`ecmapper.draft_map.gui`.
 """
 
 from __future__ import annotations
@@ -43,6 +44,7 @@ from .layout import (
     internal_metrics,
     to_absolute,
     to_relative,
+    user_arrangement,
 )
 from .relayout import METHODS as RELAYOUT_METHODS
 from .relayout import available_methods, relayout_subsystems
@@ -53,6 +55,7 @@ from .split import (
     DEFAULT_CENTRAL,
     assign_maps,
     cross_map_metabolites,
+    duplicate_subsystems,
     overview,
     slug,
     split_map,
@@ -74,17 +77,28 @@ def coverage(md, dm) -> dict:
                 coverage_other=drawn_other / other)
 
 
-def arrange(dm, args, final, log):
+def arrange(dm, args, final, log, positions=None):
     """Step 6: the original order (compacted, and as packed sequence pair) and the annealed arrangement.
 
-    Returns the ports, the compacted original order (x, y), {name: (x, y,
-    flip_x, flip_y, evaluation)} and the evaluations of the annealing seeds.
+    With `positions` ({subsystem ID: (x, y)} of all subsystems, from the
+    table of --assignment), the final arrangement is the given one instead
+    (:func:`.layout.user_arrangement`). Returns the ports, the compacted
+    original order (x, y), {name: (x, y, flip_x, flip_y, evaluation)} and
+    the evaluations of the annealing seeds.
     """
     ports = Ports.from_map(dm)
     results = {}
     x, y = arrangement_original(dm, gap=args.gap)
     results["original order (compacted)"] = (x, y, None, None, evaluate_arrangement(ports, x, y))
     log(f"original order: {results['original order (compacted)'][4]}")
+    if positions is not None:
+        gx = np.array([positions[k][0] for k in ports.names], float)
+        gy = np.array([positions[k][1] for k in ports.names], float)
+        ux, uy = user_arrangement(ports.w, ports.h, gx, gy, gap=args.gap)
+        moved = int(((np.abs(ux - gx) > 0.5) | (np.abs(uy - gy) > 0.5)).sum())
+        results[final] = (ux, uy, None, None, evaluate_arrangement(ports, ux, uy))
+        log(f"{final}: arrangement of the table ({moved} boxes moved apart): {results[final][4]}")
+        return ports, x, y, results, []
     sp_ = SequencePair(ports.w, ports.h, args.gap)
     gp, gn = SequencePair.from_positions(x + ports.w / 2, y + ports.h / 2)
     xs, ys = sp_.pack(gp, gn)
@@ -125,8 +139,8 @@ def write_outputs(m, md, out: Path, prefix: str, title: str, args, stats: dict) 
     stats["coverage"] = coverage(md, m)
 
 
-def map_assignment(dm, args, table, log) -> tuple[list[str], dict[str, str]]:
-    """--split: the maps in order and the map of each subsystem, from the table of --assignment or the options."""
+def map_assignment(dm, args, table, log) -> tuple[list[str], dict[str, list[str]]]:
+    """--split: the maps in order and the maps of each subsystem, from the table of --assignment or the options."""
     if table is not None:
         return table.map_assignment(dm)
     explicit = None
@@ -138,16 +152,50 @@ def map_assignment(dm, args, table, log) -> tuple[list[str], dict[str, str]]:
     order, assignment = assign_maps(dm, central, explicit, args.min_map_reactions)
     for line in dm.log[n_log:]:
         log(line)
-    return order, assignment
+    return order, {k: [m] for k, m in assignment.items()}
+
+
+def map_links(sub, args, hubs) -> None:
+    """--split: the inter-pathway links inside a map: none with --pack, those of hubs removed with --hub-subsystems.
+
+    `hubs`: :func:`.core.hub_table` of the whole map.
+    """
+    if args.pack:
+        sub.links = []
+    elif args.hub_subsystems:
+        disconnect_hubs(sub, args.hub_subsystems, hubs)
+
+
+def table_positions(sub, name, table, original, log) -> dict | None:
+    """The positions of the subsystems of map `name` in the table of --assignment, if it has all of them.
+
+    `original`: {ID of a copy of a subsystem: ID of the subsystem}.
+    """
+    given = table.positions.get(name, {}) if table is not None else {}
+    if not given:
+        return None
+    positions = {k: given[original.get(k, k)] for k in sub.subsystems if original.get(k, k) in given}
+    if len(positions) < len(sub.subsystems):
+        log(f"  warning: map {name!r}: the arrangement of the table lacks {len(sub.subsystems) - len(positions)} of "
+            f"its {len(sub.subsystems)} subsystems, arranged anew")
+        return None
+    return positions
 
 
 def split_maps(dm, md, args, final, log, stats, table=None) -> None:
-    """--split: a central map and auxiliary maps, each arranged on its own, and an overview of them."""
-    order, assignment = map_assignment(dm, args, table, log)
+    """--split: a central map and auxiliary maps, each arranged on its own (or as in the table), and an overview.
+
+    Subsystems on several maps are drawn on each of them (:func:`.split.duplicate_subsystems`).
+    """
+    order, maps_of = map_assignment(dm, args, table, log)
+    hubs = hub_table(dm)
+    assignment, copies = duplicate_subsystems(dm, maps_of)
+    if copies:
+        log(dm.log[-1])
+    original = {c: k for (k, _), c in copies.items()}
     cross = cross_map_metabolites(dm, assignment)
     maps = split_map(dm, order, assignment)
     log(dm.log[-1])
-    hubs = hub_table(dm)
     if args.hub_subsystems:
         # the links between maps (of hubs, too) are references now; inside the maps, hub links are removed
         stats["hubs_disconnected"] = [r for r in hubs if r["subsystems"] >= args.hub_subsystems]
@@ -158,23 +206,24 @@ def split_maps(dm, md, args, final, log, stats, table=None) -> None:
     for name, sub in maps:
         prefix = slug(name)
         log(f"map {name!r}: {len(sub.subsystems)} subsystems, {len(sub.links)} inter-pathway links")
-        if args.pack:
-            sub.links = []
-        elif args.hub_subsystems:
-            disconnect_hubs(sub, args.hub_subsystems, hubs)
+        map_links(sub, args, hubs)
+        if not args.pack and args.hub_subsystems:
             log(sub.log[-1])
-        ports, _, _, results, seeds = arrange(sub, args, final, log)
+        positions = table_positions(sub, name, table, original, log)
+        ports, _, _, results, seeds = arrange(sub, args, final, log, positions)
         ax, ay, fx, fy, _ = results[final]
         m = copy.deepcopy(sub)
         apply_arrangement(m, ports.names, ax, ay, fx, fy)
         to_absolute(m)
-        s = dict(arrangements={k: v[4] for k, v in results.items()}, anneal_seeds=seeds)
+        s = dict(arrangements={k: v[4] for k, v in results.items()}, anneal_seeds=seeds,
+                 arranged_by="table" if positions is not None else final)
         write_outputs(m, md, args.out, prefix, f"{md.model_id} {name} (BRENDA map draft)", args, s)
         del s["coverage"]
         s["references"] = sum(1 for n in m.nodes.values() if getattr(n, "stubs", None))
         stats["maps"][name] = s
         arranged.append((name, m))
-        index["maps"].append(dict(name=name, file=f"{prefix}.escher.json", subsystems=list(m.subsystems),
+        index["maps"].append(dict(name=name, file=f"{prefix}.escher.json",
+                                  subsystems=[original.get(k, k) for k in m.subsystems],
                                   reactions=sorted({r for n in m.nodes.values() for r in n.reactions})))
     layout = overview(arranged, dm, assignment, gap=args.gap, seed=args.seed,
                       hubs={r["key"] for r in stats.get("hubs_disconnected", [])})
@@ -185,16 +234,18 @@ def split_maps(dm, md, args, final, log, stats, table=None) -> None:
     on_maps = Counter(r for entry in index["maps"] for r in entry["reactions"])
     stats["split"] = dict(maps=len(arranged), reactions=len(on_maps),
                           reactions_on_several_maps=sum(1 for c in on_maps.values() if c > 1),
-                          cross_map_metabolites=len(cross))
+                          cross_map_metabolites=len(cross), subsystem_copies=len(copies))
     stats["coverage"] = coverage(md, dm)
 
 
-def main(argv=None) -> None:
+def build_parser(positional: bool = True) -> argparse.ArgumentParser:
+    """The options of the pipeline; `positional` False: without the input files and OUT_DIR (the GUI has its own)."""
     parser = argparse.ArgumentParser()
-    parser.add_argument("prep")
-    parser.add_argument("brenda_json")
-    parser.add_argument("brenda_svg")
-    parser.add_argument("out", type=Path)
+    if positional:
+        parser.add_argument("prep")
+        parser.add_argument("brenda_json")
+        parser.add_argument("brenda_svg")
+        parser.add_argument("out", type=Path)
     parser.add_argument("--keep-subsets", action="store_true",
                         help="keep subsystems whose model reactions are a proper subset of another subsystem's (rule A)")
     parser.add_argument("--aside-coverage", type=float, default=0.9,
@@ -243,10 +294,14 @@ def main(argv=None) -> None:
                         help="with --split: write the assignment of the subsystems to the maps and of the model "
                         "reactions to the subsystems as an editable table after step 3, and stop")
     parser.add_argument("--assignment", type=Path, metavar="XLSX",
-                        help="with --split: take the maps of the subsystems and the subsystems of the model reactions "
-                        "from this (edited) table of --write-assignment instead of --central, --maps and "
-                        "--min-map-reactions")
-    args = parser.parse_args(argv)
+                        help="with --split: take the maps of the subsystems, the subsystems of the model reactions "
+                        "and the arrangement of maps arranged by hand from this (edited) table of --write-assignment "
+                        "or the GUI instead of --central, --maps and --min-map-reactions")
+    return parser
+
+
+def check_args(parser, args) -> list[str]:
+    """Exits with an error for options that do not go together; returns the layouts of step 3b."""
     methods = [] if args.relayout == "none" else [m for m in args.relayout.split(",") if m]
     if set(methods) - set(RELAYOUT_METHODS) - {"current"}:
         parser.error(f"--relayout: unknown layouts {sorted(set(methods) - set(RELAYOUT_METHODS))}")
@@ -259,15 +314,40 @@ def main(argv=None) -> None:
     if args.pack and (args.hub_subsystems or args.flips != "none" or args.compare_flips or args.extra):
         parser.error("--pack arranges the subsystems without links: --hub-subsystems, --flips, --compare-flips "
                      "and --extra do not apply")
-    args.out.mkdir(parents=True, exist_ok=True)
-    t0 = time.time()
+    return methods
 
-    def log(msg):
-        print(f"[{time.time() - t0:6.1f}s] {msg}", flush=True)
 
+def command_line(args, parser=None) -> list[str]:
+    """Arguments that give `args` again: the positional ones and the options that differ from their defaults."""
+    parser = parser or build_parser()
+    positional, options = [], []
+    for action in parser._actions:
+        if action.dest == "help":
+            continue
+        value = getattr(args, action.dest)
+        if not action.option_strings:
+            positional.append(str(value))
+        elif value is not None and value != action.default:
+            flag = action.option_strings[-1]
+            if action.nargs == 0:  # store_true
+                options.append(flag)
+            elif isinstance(value, (list, tuple)):
+                options += [flag, *map(str, value)]
+            else:
+                options += [flag, str(value)]
+    return positional + options
+
+
+def draft_until_assignment(args, log, stats: dict, out: Path | None = None, drop_unassigned: bool = True):
+    """Steps 1-3, the table of --assignment and (with --pack or --split) the edges inside the subsystems.
+
+    Writes the SVGs of the steps and the added reactions to `out` if given.
+    `drop_unassigned`: see :func:`.assignment.apply_assignment`. Returns the
+    model data, the draft map and the table (None without --assignment).
+    """
     md = ModelData(args.prep)
     dm = DraftMap.from_brenda(args.brenda_json, args.brenda_svg)
-    stats = {"original": dm.summary()}
+    stats["original"] = dm.summary()
     origin_positions = {n.id: (n.x, n.y, n.subsystem) for n in dm.nodes.values()}
 
     # step 1: subsystems with model reactions
@@ -278,12 +358,14 @@ def main(argv=None) -> None:
     log(dm.log[-1])
     anchor_metabolites(dm, md)
     stats["step1_subsystems"] = dm.summary()
-    write_svg(dm, str(args.out / "step1_subsystems.svg"), md=md)
+    if out is not None:
+        write_svg(dm, str(out / "step1_subsystems.svg"), md=md)
 
     # step 2: enzyme nodes without model reactions (the arrangement follows after condensation, see DRAFT_MAP.md)
     prune_unassociated(dm)
     stats["step2_pruned"] = dm.summary()
-    write_svg(dm, str(args.out / "step2_pruned.svg"), md=md)
+    if out is not None:
+        write_svg(dm, str(out / "step2_pruned.svg"), md=md)
     log(dm.log[-1])
 
     # step 3: model reactions that connect drawn metabolites
@@ -293,14 +375,15 @@ def main(argv=None) -> None:
         added = completion.run()
         log(dm.log[-1])
     stats["step3_completed"] = dm.summary()
-    write_svg(dm, str(args.out / "step3_completed.svg"), md=md)
-    with open(args.out / "added_reactions.json", "w") as f:
-        json.dump(added, f, indent=1)
+    if out is not None:
+        write_svg(dm, str(out / "step3_completed.svg"), md=md)
+        with open(out / "added_reactions.json", "w") as f:
+            json.dump(added, f, indent=1)
     table = None
     if args.assignment:
         # the edited table: subsystems without map left out, reactions moved between subsystems
         table = read_assignment(args.assignment)
-        stats["assignment"] = apply_assignment(dm, md, table, origin_positions)
+        stats["assignment"] = apply_assignment(dm, md, table, origin_positions, drop_unassigned)
         log(dm.log[-1])
         for w in stats["assignment"]["warnings"]:
             log(f"  warning: {w}")
@@ -314,15 +397,17 @@ def main(argv=None) -> None:
         # no edges to set-aside subsystems, which are drawn on a separate map
         localise_edges(dm, aside)
         log(dm.log[-1])
-    if args.write_assignment:
-        order, assignment = map_assignment(dm, args, table, log)
-        write_assignment(args.write_assignment, dm, md, order, assignment)
-        log(f"assignment of {len(dm.subsystems)} subsystems to {len(order)} maps written to {args.write_assignment}")
-        with open(args.out / "stats.json", "w") as f:
-            json.dump(stats, f, indent=1, default=float)
-        return
+    return md, dm, table
 
-    # step 3b: lay out the subsystems with added reactions again
+
+def relayout_and_condense(dm, md, args, methods, log, stats: dict, out: Path | None = None,
+                          keep_uncondensed: bool = False):
+    """Steps 3b and 4: lay out the subsystems with added reactions again, condense each subsystem.
+
+    Sets the original subsystem centres (`orig_centres`, for the arrangement
+    that keeps the original order). Writes the SVG of step 3b to `out` if
+    given. Returns a copy of the map before condensing if `keep_uncondensed`.
+    """
     if methods:
         missing = set(methods) - set(available_methods(methods))
         if missing:
@@ -331,18 +416,45 @@ def main(argv=None) -> None:
                                                 circle=[k for k in args.circle.split(",") if k],
                                                 compactness=args.compactness)
         log(dm.log[-1])
-        write_svg(dm, str(args.out / "step3b_relayout.svg"), md=md)
+        if out is not None:
+            write_svg(dm, str(out / "step3b_relayout.svg"), md=md)
 
     # original subsystem centres (for the arrangement that keeps the original order)
     orig_centres = {k: (s.x + s.w / 2, s.y + s.h / 2) for k, s in dm.subsystems.items()}
 
     # step 4: condense each subsystem
-    before_condense = copy.deepcopy(dm)
+    before_condense = copy.deepcopy(dm) if keep_uncondensed else None
     stats["internal_before_condensing"] = internal_metrics(dm)
     condense_subsystems(dm, compactness=args.compactness)
     dm.orig_centres = orig_centres
     stats["internal_after_condensing"] = internal_metrics(dm)
     log(f"step 4: subsystems condensed {stats['internal_before_condensing']} -> {stats['internal_after_condensing']}")
+    return before_condense
+
+
+def main(argv=None) -> None:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    methods = check_args(parser, args)
+    args.out.mkdir(parents=True, exist_ok=True)
+    t0 = time.time()
+
+    def log(msg):
+        print(f"[{time.time() - t0:6.1f}s] {msg}", flush=True)
+
+    stats = {}
+    md, dm, table = draft_until_assignment(args, log, stats, out=args.out)
+    if args.write_assignment:
+        order, assignment = map_assignment(dm, args, table, log)
+        write_assignment(args.write_assignment, dm, md, order, assignment, table.positions if table else None)
+        log(f"assignment of {len(dm.subsystems)} subsystems to {len(order)} maps written to {args.write_assignment}")
+        with open(args.out / "stats.json", "w") as f:
+            json.dump(stats, f, indent=1, default=float)
+        return
+
+    before_condense = relayout_and_condense(dm, md, args, methods, log, stats, out=args.out,
+                                            keep_uncondensed="user-order" in args.extra)
+    aside = {k for k, s in dm.subsystems.items() if s.aside}
 
     # step 5: hub metabolites
     stats["hubs_all"] = hub_table(dm)[:40]

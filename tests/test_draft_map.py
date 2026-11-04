@@ -286,9 +286,18 @@ def test_draft_map_split_assignment(sources, model, tmp_path):  # noqa: F811
     index = json.loads((reference / "maps.json").read_text())
     table = read_assignment(xlsx)
     assert table.maps == [m["name"] for m in index["maps"]]
-    assert table.subsystems == {s: m["name"] for m in index["maps"] for s in m["subsystems"]}
+    assert table.subsystems == {s: [m["name"]] for m in index["maps"] for s in m["subsystems"]}
     drawn = {r for m in index["maps"] for r in m["reactions"]}
     assert {r for r, subs in table.reactions.items() if subs} == drawn
+    # reactions added from the model (purple), those of the BRENDA map not
+    from ecmapper.draft_map.assignment import ADDED_COLOUR, REACTION_COLUMNS
+
+    ws = load_workbook(xlsx)["Reactions"]
+    i_drawn = REACTION_COLUMNS.index("Drawn as")
+    fills = {row[0].value: (row[i_drawn].value, row[0].fill.fgColor.rgb) for row in ws.iter_rows(min_row=2)}
+    assert any(drawn_as == "added" for drawn_as, _ in fills.values())
+    for drawn_as, fill in fills.values():
+        assert fill.endswith(ADDED_COLOUR) == (drawn_as == "added")
 
     # edit: the first subsystem of the last map without map, the first of the central map on a new map "Mine",
     # PGI only in a subsystem of the central map
@@ -323,6 +332,141 @@ def test_draft_map_split_assignment(sources, model, tmp_path):  # noqa: F811
     assert {n.subsystem for n in central.nodes.values() if "PGI" in n.reactions} == {target}
     with pytest.raises(SystemExit):
         run_draft_map(prep, edited, "--split", "--assignment", str(xlsx), "--central", "glycolysis")
+
+
+def test_duplicate_subsystems():
+    """A subsystem on two maps: a copy on the second map with the links of the original, inside the map or as
+    references."""
+    dm = DraftMap()
+    for k, group in (("glycolysis", "pw1"), ("serine-metabolism", "pw3"), ("lipid-metabolism", "pw2")):
+        dm.subsystems[k] = Subsystem(k, k, group, "#fff", 0, 0, 100, 100)
+    for i, s in enumerate(dm.subsystems):
+        dm.nodes[f"e{i}"] = Node(f"e{i}", "enzyme", s, 0, 0, 60, 30, f"e{i}", reactions=[f"R{i}"])
+        dm.nodes[f"m{i}"] = Node(f"m{i}", "main", s, 50, 0, 60, 30, f"m{i}", ligand_id=1)
+        dm.edges.append(Edge(f"e{i}", f"m{i}", "main", False, True))
+    dm.links = [MetLink("m0", "m1"), MetLink("m1", "m2")]
+    dm.orig_centres = {k: (0, 0) for k in dm.subsystems}
+    maps_of = {"glycolysis": ["A", "B"], "serine-metabolism": ["B"], "lipid-metabolism": ["C"]}
+    assignment, copies = split.duplicate_subsystems(dm, maps_of)
+    assert copies == {("glycolysis", "B"): "glycolysis@b"}
+    assert assignment == {"glycolysis": "A", "glycolysis@b": "B", "serine-metabolism": "B", "lipid-metabolism": "C"}
+    assert dm.nodes["e0@b"].reactions == ["R0"] and dm.nodes["m0@b"].subsystem == "glycolysis@b"
+    assert ("e0@b", "m0@b") in {(e.enzyme, e.met) for e in dm.edges}
+    assert dm.orig_centres["glycolysis@b"] == (0, 0)
+    maps = dict(split.split_map(dm, ["A", "B", "C"], assignment))
+    # on B, the copy is linked to serine; the original on A refers to B, serine to A (original) and C
+    assert {(l.a, l.b) for l in maps["B"].links} == {("m0@b", "m1")}
+    assert maps["A"].nodes["m0"].stubs == ["B"]
+    assert maps["B"].nodes["m1"].stubs == ["A", "C"]
+    assert not getattr(maps["B"].nodes["m0@b"], "stubs", None)
+
+
+def test_user_arrangement():
+    """Given positions stay if the boxes are at least the gap apart; else boxes are moved apart as little as
+    possible, in order."""
+    w, h = np.array([100.0, 100.0, 50.0]), np.array([100.0, 60.0, 50.0])
+    x, y = np.array([10.0, 200.0, 10.0]), np.array([20.0, 20.0, 300.0])
+    ux, uy = layout.user_arrangement(w, h, x, y, gap=80)
+    assert np.allclose(ux, x) and np.allclose(uy, y)
+    x[1] = 60.0  # overlaps the first box
+    assert len(layout.too_close(x, y, w, h, 80)) == 1
+    ux, uy = layout.user_arrangement(w, h, x, y, gap=80)
+    assert no_overlaps(ux, uy, w, h, 79.99)
+    assert np.allclose(ux, [10, 190, 10], atol=1e-3) and np.allclose(uy, y, atol=1e-3)
+
+
+def test_anneal_progress_and_stop():
+    w = np.array([100.0, 50.0, 80.0])
+    h = np.array([60.0, 50.0, 40.0])
+    none = np.zeros(0, int)
+    ports = Ports(["a", "b", "c"], w, h, none, none, np.zeros((0, 2)), np.zeros((0, 2)), [], h)
+    seen = []
+    x, y, *_ = layout.anneal_arrangement(ports, np.zeros(3), np.array([0.0, 100.0, 200.0]), iterations=1000,
+                                         progress=lambda f, cost: seen.append(f), stop=lambda: len(seen) >= 3)
+    assert seen == [0.0, 0.01, 0.02]
+    assert no_overlaps(x, y, w, h, 80.0)
+
+
+def test_draft_map_split_copies_and_arrangement(sources, model, tmp_path):  # noqa: F811
+    """A subsystem marked for two maps is drawn on both; a map with the positions of all its subsystems in the
+    sheet Arrangement is drawn so, boxes that are too close are moved apart, maps lacking positions are packed."""
+    pytest.importorskip("openpyxl")
+    from openpyxl import load_workbook
+
+    from ecmapper.draft_map.assignment import read_assignment
+
+    _, prep = prepared(sources, model, tmp_path)
+    reference = tmp_path / "reference"
+    run_draft_map(prep, reference, "--split", "--pack", "--min-map-reactions", "0")
+    xlsx = tmp_path / "assignment.xlsx"
+    run_draft_map(prep, tmp_path / "out", "--split", "--pack", "--min-map-reactions", "0", "--write-assignment",
+                  str(xlsx))
+    index = json.loads((reference / "maps.json").read_text())
+    central, last = index["maps"][0], index["maps"][-1]
+    copied = central["subsystems"][0]
+    with open(reference / f"{split.slug(central['name'])}.pkl", "rb") as f:
+        reference_map = pickle.load(f)
+    reactions = {r for n in reference_map.nodes.values() if n.subsystem == copied for r in n.reactions}
+    # the copy on the last map; the central map in a column, 100 apart; the last map: the boxes at one place,
+    # (with the copy) or without the copy
+    wb = load_workbook(xlsx)
+    ws = wb["Subsystems"]
+    column = [c.value for c in ws[1]].index(last["name"]) + 1
+    for row in ws.iter_rows(min_row=2):
+        if row[0].value == copied:
+            ws.cell(row[0].row, column, "x")
+    ws = wb.create_sheet("Arrangement")
+    ws.append(["Map", "Subsystem ID", "x", "y"])
+    given, top = {}, 0.0
+    for k in central["subsystems"]:
+        given[k] = (0.0, top)
+        ws.append([central["name"], k, 0.0, top])
+        top += reference_map.subsystems[k].h + 100
+    for k in [*last["subsystems"], copied]:
+        ws.append([last["name"], k, 0.0, 0.0])
+    wb.save(xlsx)
+    table = read_assignment(xlsx)
+    assert table.subsystems[copied] == [central["name"], last["name"]]
+    assert table.positions[central["name"]] == given
+
+    edited = tmp_path / "edited"
+    run_draft_map(prep, edited, "--split", "--pack", "--assignment", str(xlsx))
+    maps = {m["name"]: m for m in json.loads((edited / "maps.json").read_text())["maps"]}
+    assert [name for name, m in maps.items() if copied in m["subsystems"]] == [central["name"], last["name"]]
+    assert reactions <= set(maps[central["name"]]["reactions"]) & set(maps[last["name"]]["reactions"])
+    stats = json.loads((edited / "stats.json").read_text())
+    assert stats["split"]["subsystem_copies"] == 1
+    assert stats["maps"][central["name"]]["arranged_by"] == stats["maps"][last["name"]]["arranged_by"] == "table"
+    with open(edited / f"{split.slug(central['name'])}.pkl", "rb") as f:
+        m = pickle.load(f)
+    for k, (x, y) in given.items():
+        assert (m.subsystems[k].x, m.subsystems[k].y) == pytest.approx((x, y), abs=0.01)
+    with open(edited / f"{split.slug(last['name'])}.pkl", "rb") as f:
+        m = pickle.load(f)
+    assert f"{copied}@{split.slug(last['name'])}" in m.subsystems
+    boxes = list(m.subsystems.values())
+    assert no_overlaps([b.x for b in boxes], [b.y for b in boxes], [b.w for b in boxes], [b.h for b in boxes], 79.99)
+
+    # without the position of the copy, the last map is packed
+    wb = load_workbook(xlsx)
+    ws = wb["Arrangement"]
+    ws.delete_rows(ws.max_row)
+    wb.save(xlsx)
+    run_draft_map(prep, edited, "--split", "--pack", "--assignment", str(xlsx))
+    stats = json.loads((edited / "stats.json").read_text())
+    assert stats["maps"][central["name"]]["arranged_by"] == "table"
+    assert stats["maps"][last["name"]]["arranged_by"] == "packed"
+
+
+def test_command_line():
+    """The arguments of a namespace give it again (the GUI builds the maps with them)."""
+    parser = run.build_parser()
+    argv = ["p.pkl", "m.json", "m.svg", "out", "--split", "--pack", "--gap", "60", "--relayout", "spring",
+            "--assignment", "a.xlsx"]
+    args = parser.parse_args(argv)
+    again = run.command_line(args, parser)
+    assert parser.parse_args(again) == args
+    assert again[:4] == argv[:4] and "--iterations" not in again
 
 
 def test_drop_redundant_subsystems():
@@ -668,3 +812,37 @@ def test_route_edges():
     p0, p1, p2, p3 = (0, 0), (100, 0), (200, 100), (200, 200)
     b1, b2 = routes.fit_cubic(p0, p3, routes.sample([p0, p1, p2, p3], 30)[1:-1])
     assert b1 == pytest.approx(p1, abs=6.0) and b2 == pytest.approx(p2, abs=6.0)
+
+
+def test_read_compressed_model(model, tmp_path):  # noqa: F811
+    """Models and subsystems files compressed with gzip, bzip2, xz or in a zip archive (with one model file)."""
+    import bz2
+    import gzip
+    import lzma
+    import zipfile
+
+    import cobra
+
+    from ecmapper.draft_map.prepare import read_model, read_subsystems
+
+    model.reactions.get_by_id("PGI").subsystem = "Glycolysis"
+    xml, js = tmp_path / "m.xml", tmp_path / "m.json"
+    cobra.io.write_sbml_model(model, str(xml))
+    cobra.io.save_json_model(model, str(js))
+    reactions = {r.id for r in model.reactions}
+    for name, compress in (("m.xml.gz", gzip.compress), ("m.xml.bz2", bz2.compress), ("m.json.xz", lzma.compress)):
+        path = tmp_path / name
+        path.write_bytes(compress((xml if ".xml" in name else js).read_bytes()))
+        assert {r.id for r in read_model(path).reactions} == reactions
+    with zipfile.ZipFile(tmp_path / "m.zip", "w") as z:
+        z.write(js, "model/m.json")
+        z.writestr("README.txt", "not a model")
+    assert {r.id for r in read_model(tmp_path / "m.zip").reactions} == reactions
+    assert read_subsystems(tmp_path / "m.zip")["PGI"] == "Glycolysis"
+    (tmp_path / "s.json.gz").write_bytes(gzip.compress(js.read_bytes()))
+    assert read_subsystems(tmp_path / "s.json.gz") == read_subsystems(js)
+    with zipfile.ZipFile(tmp_path / "two.zip", "w") as z:
+        z.write(js, "a.json")
+        z.write(xml, "b.xml")
+    with pytest.raises(ValueError, match="found 2"):
+        read_model(tmp_path / "two.zip")

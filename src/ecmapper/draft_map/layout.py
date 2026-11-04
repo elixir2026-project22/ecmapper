@@ -15,15 +15,17 @@ from .core import DraftMap, lane_room
 # --- 1D compaction (order preserving, LP) -----------------------------------------------------------
 
 
-def compact_axis(pos, size, opos, osize, gap, ogap, compactness=0.5, max_scale=1.0, keep_order=False):
+def compact_axis(pos, size, opos, osize, gap, ogap, compactness=0.5, max_scale=1.0, keep_order=False,
+                 min_scale=0.0):
     """Positions along one axis that keep the order of overlapping boxes and are compact.
 
     Boxes whose extents in the other axis overlap (with `ogap`) keep their
     order along this axis and are at least `gap` apart. Among such positions,
     the LP minimises the L1 distance to the original positions scaled by a
-    common factor s <= `max_scale` plus `compactness` * n * extent: the layout
-    is shrunk uniformly where possible and nodes are moved individually only
-    to close larger gaps. Returns positions with the minimum lower edge at 0.
+    common factor `min_scale` <= s <= `max_scale` plus `compactness` * n *
+    extent: the layout is shrunk uniformly where possible and nodes are moved
+    individually only to close larger gaps. Returns positions with the
+    minimum lower edge at 0.
     """
     pos, size = np.asarray(pos, float), np.asarray(size, float)
     opos, osize = np.asarray(opos, float), np.asarray(osize, float)
@@ -79,19 +81,20 @@ def compact_axis(pos, size, opos, osize, gap, ogap, compactness=0.5, max_scale=1
     c = np.zeros(nv)
     c[n : 2 * n] = 1.0
     c[e_col] = compactness * n
-    bounds = [(size[i] / 2, None) for i in range(n)] + [(0, None)] * n + [(0, max_scale), (0, None)]
+    bounds = [(size[i] / 2, None) for i in range(n)] + [(0, None)] * n + [(min_scale, max_scale), (0, None)]
     res = linprog(c, A_ub=A, b_ub=np.array(b), bounds=bounds, method="highs")
     if not res.success:
         raise RuntimeError(f"compaction failed: {res.message}")
     return res.x[:n]
 
 
-def compact_boxes(x, y, w, h, gap_x, gap_y, compactness=0.5, rounds=2, max_scale=1.0, keep_order=False):
+def compact_boxes(x, y, w, h, gap_x, gap_y, compactness=0.5, rounds=2, max_scale=1.0, keep_order=False,
+                  min_scale=0.0):
     """Alternating x and y compaction of boxes given by centres and sizes (see :func:`compact_axis`)."""
     x, y = np.asarray(x, float).copy(), np.asarray(y, float).copy()
     for _ in range(rounds):
-        x = compact_axis(x, w, y, h, gap_x, gap_y, compactness, max_scale, keep_order)
-        y = compact_axis(y, h, x, w, gap_y, gap_x, compactness, max_scale, keep_order)
+        x = compact_axis(x, w, y, h, gap_x, gap_y, compactness, max_scale, keep_order, min_scale)
+        y = compact_axis(y, h, x, w, gap_y, gap_x, compactness, max_scale, keep_order, min_scale)
     return x, y
 
 
@@ -320,6 +323,31 @@ def arrangement_original(dm: DraftMap, gap=80.0, compactness=0.5):
     return x - w / 2, y - h / 2
 
 
+def too_close(x, y, w, h, gap=0.0, tolerance=0.5) -> np.ndarray:
+    """Pairs (i, j), i < j, of boxes (top left, sizes) that are less than `gap` apart in both axes."""
+    x, y, w, h = (np.asarray(v, float) for v in (x, y, w, h))
+    g = gap - tolerance
+    ox = (x[:, None] < x[None, :] + w[None, :] + g) & (x[None, :] < x[:, None] + w[:, None] + g)
+    oy = (y[:, None] < y[None, :] + h[None, :] + g) & (y[None, :] < y[:, None] + h[:, None] + g)
+    return np.argwhere(np.triu(ox & oy, 1))
+
+
+def user_arrangement(w, h, x, y, gap=80.0):
+    """Given box positions (top left), with boxes less than `gap` apart moved apart.
+
+    Such boxes are moved as little as possible (L1) and keep their order
+    (:func:`compact_boxes` without shrinking); the top left corner of the
+    arrangement stays where it is.
+    """
+    w, h = np.asarray(w, float), np.asarray(h, float)
+    x, y = np.asarray(x, float).copy(), np.asarray(y, float).copy()
+    if not len(too_close(x, y, w, h, gap)):
+        return x, y
+    cx, cy = compact_boxes(x + w / 2, y + h / 2, w, h, gap, gap, compactness=0.0, max_scale=1.0, min_scale=1.0)
+    nx, ny = cx - w / 2, cy - h / 2
+    return nx + x.min() - nx.min(), ny + y.min() - ny.min()
+
+
 class SequencePair:
     """Packing of boxes encoded by a sequence pair (Murata et al. 1995).
 
@@ -368,10 +396,14 @@ class AnnealWeights:
 
 
 def anneal_arrangement(ports: Ports, init_x, init_y, gap=80.0, iterations=200000, seed=1, flips=False,
-                       weights: AnnealWeights | None = None, t_start=None, t_end=0.05, log=None):
+                       weights: AnnealWeights | None = None, t_start=None, t_end=0.05, log=None, progress=None,
+                       stop=None):
     """Arrange boxes with few link crossings: simulated annealing over sequence pairs (and flips).
 
     `flips`: False, ``"x"`` (mirror subsystems left-right) or ``"xy"`` (also upside down).
+    `progress(fraction, best cost)` is called and `stop()` checked every 1 %
+    of the iterations; if `stop()` is true, the best arrangement so far is
+    returned.
 
     The cost is a weighted sum of the crossings of links, the links passing
     through other boxes, the total link length, the area of the bounding box
@@ -416,7 +448,13 @@ def anneal_arrangement(ports: Ports, init_x, init_y, gap=80.0, iterations=200000
             deltas.append(abs(cost(g2, gn, fx, fy) - current))
         t_start = (float(np.median(deltas)) or 1.0) / -math.log(0.3)
     accepted = 0
+    check = max(1, iterations // 100)
     for it in range(iterations):
+        if it % check == 0:
+            if progress is not None:
+                progress(it / iterations, best[0])
+            if stop is not None and stop():
+                break
         temp = t_start * (t_end / t_start) ** (it / max(1, iterations - 1))
         move = rng.random()
         ngp, ngn, nfx, nfy = gp, gn, fx, fy

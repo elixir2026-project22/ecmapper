@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 
 import numpy as np
 
-from .core import DraftMap, metabolite_key, text_width
+from .core import DraftMap, MetLink, metabolite_key, text_width
 from .layout import Ports, SequencePair, anneal_arrangement
 
 CENTRAL = "Central metabolism"
@@ -98,6 +98,64 @@ def assign_maps(dm: DraftMap, central=DEFAULT_CENTRAL, explicit: dict[str, list[
             assignment[k] = target
     order = [name for name in dict.fromkeys([*explicit, CENTRAL, *groups, ASIDE]) if name in assignment.values()]
     return order, assignment
+
+
+def duplicate_subsystems(dm: DraftMap, maps_of: dict[str, list[str]]) -> tuple[dict[str, str], dict]:
+    """Subsystems on several maps: a copy of the subsystem for each further map.
+
+    `maps_of`: {subsystem ID: map names}. A subsystem keeps its ID on its
+    first map; on each further map, a copy gets the ID ``k@map`` (map name
+    as :func:`slug`) and its nodes ``id@map``. A node of a copy has the links
+    of its original: to the copy of the other end on its map if there is
+    one, else to the other end itself (a reference after :func:`split_map`).
+    Adds the copies to `dm`. Returns {subsystem ID: map name} of the
+    subsystems and copies (subsystems without map left out) and
+    {(subsystem ID, map name): ID of the copy}.
+    """
+    maps_of = {k: list(dict.fromkeys(maps)) for k, maps in maps_of.items() if k in dm.subsystems}
+    assignment, copies = {}, {}
+    for k, maps in maps_of.items():
+        if maps:
+            assignment[k] = maps[0]
+            copies.update(((k, name), f"{k}@{slug(name)}") for name in maps[1:])
+    if not copies:
+        return assignment, copies
+    members = defaultdict(list)
+    for n in dm.nodes.values():
+        members[n.subsystem].append(n)
+    node_copy = {}  # (node ID, map name) -> ID of its copy
+    for (k, name), c in copies.items():
+        s = copy.deepcopy(dm.subsystems[k])
+        s.id = c
+        dm.subsystems[c] = s
+        assignment[c] = name
+        if k in getattr(dm, "orig_centres", {}):
+            dm.orig_centres[c] = dm.orig_centres[k]
+        for n in members[k]:
+            m = copy.deepcopy(n)
+            m.id, m.subsystem = f"{n.id}@{slug(name)}", c
+            dm.nodes[m.id] = m
+            node_copy[n.id, name] = m.id
+    edges = defaultdict(list)
+    for e in dm.edges:
+        edges[dm.nodes[e.enzyme].subsystem].append(e)
+    for k, name in copies:
+        for e in edges[k]:
+            e2 = copy.copy(e)
+            # edges between subsystems stay between maps, split_map rejects them
+            e2.enzyme, e2.met = node_copy[e.enzyme, name], node_copy.get((e.met, name), e.met)
+            dm.edges.append(e2)
+    links = {(l.a, l.b) for l in dm.links} | {(l.b, l.a) for l in dm.links}
+    for l in list(dm.links):
+        for a, b in ((l.a, l.b), (l.b, l.a)):
+            for name in maps_of.get(dm.nodes[a].subsystem, [])[1:]:
+                end = b if assignment.get(dm.nodes[b].subsystem) == name else node_copy.get((b, name), b)
+                pair = (node_copy[a, name], end)
+                if pair not in links:
+                    links |= {pair, pair[::-1]}
+                    dm.links.append(MetLink(*pair, l.origin))
+    dm.log.append(f"split: {len(copies)} copies of subsystems on several maps")
+    return assignment, copies
 
 
 def split_map(dm: DraftMap, order: list[str], assignment: dict[str, str]) -> list[tuple[str, DraftMap]]:

@@ -846,5 +846,5 @@ def localise_edges(dm: DraftMap, subsystems: set[str] | None = None) -> int:
     used = {e.met for e in dm.edges}
     dm.remove_nodes({b for _, b in links if b not in used})
     dm.links = [l for l in dm.links if l.a in dm.nodes and l.b in dm.nodes]
-    dm.log.append(f"{moved} edges between subsystems: metabolite drawn in the subsystem of the enzyme node")
+    dm.log.append(f"{moved} edges to metabolites of other subsystems found: metabolite now shown in both subsystems")
     return moved

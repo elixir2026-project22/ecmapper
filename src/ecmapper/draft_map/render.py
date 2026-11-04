@@ -60,6 +60,14 @@ def _line(a, b):
 
 def write_svg(dm: DraftMap, path: str, reaction_labels: bool = True, md=None, margin: float = 60.0,
               show_links: bool = True) -> None:
+    text = svg_text(dm, reaction_labels, md, margin, show_links)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
+def svg_text(dm: DraftMap, reaction_labels: bool = True, md=None, margin: float = 60.0,
+             show_links: bool = True) -> str:
+    """The SVG of :func:`write_svg`; sets `view_origin` and `view_box` (x, y, width, height) of `dm`."""
     nodes = dm.nodes
     xs = [s.x for s in dm.subsystems.values()] + [n.x - n.w / 2 for n in nodes.values()]
     ys = [s.y - s.title_h / 2 for s in dm.subsystems.values()] + [n.y - n.h / 2 for n in nodes.values()]
@@ -68,6 +76,7 @@ def write_svg(dm: DraftMap, path: str, reaction_labels: bool = True, md=None, ma
     x0, y0 = min(xs) - margin, min(ys) - margin
     W, H = max(xe) - x0 + margin, max(ye) - y0 + margin
     dm.view_origin = (x0, y0)
+    dm.view_box = (x0, y0, W, H)
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="{x0:.1f} {y0:.1f} {W:.1f} {H:.1f}" '
         f'width="{W:.0f}" height="{H:.0f}" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">',
@@ -162,8 +171,7 @@ def write_svg(dm: DraftMap, path: str, reaction_labels: bool = True, md=None, ma
                 f'<text dominant-baseline="central">{text}</text>{extra}<title>{html.escape(title)}</title></g>'
             )
     out.append("</g></svg>")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(out))
+    return "\n".join(out)
 
 
 def write_reaction_positions(dm: DraftMap, path: str) -> int:
