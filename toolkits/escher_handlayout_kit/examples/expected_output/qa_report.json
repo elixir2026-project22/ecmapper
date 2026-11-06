@@ -1,0 +1,168 @@
+{
+ "input": "examples/central_metabolism_escher.json",
+ "spec": "specs/spec_iml1515_central_carbon.py",
+ "curvature": 0.6,
+ "packed": true,
+ "area_before_packing_Munits2": 79.7,
+ "packing": [
+  {
+   "piece": "oxidative phosphorylation: ATP synthase / ATP turnover",
+   "dx": -2077,
+   "dy": -60
+  },
+  {
+   "piece": "Fe(III)-citrate reduction",
+   "dx": -13,
+   "dy": 14
+  },
+  {
+   "piece": "NADH dehydrogenase (demethylmenaquinone)",
+   "dx": -968,
+   "dy": -613
+  },
+  {
+   "piece": "NADH dehydrogenase (menaquinone)",
+   "dx": -1200,
+   "dy": -393
+  },
+  {
+   "piece": "NADH dehydrogenase (ubiquinone)",
+   "dx": 289,
+   "dy": -1223
+  },
+  {
+   "piece": "ED: glycerate branch",
+   "dx": -13,
+   "dy": 444
+  },
+  {
+   "piece": "Fe(III)-citrate formation (extracellular)",
+   "dx": 25,
+   "dy": -1186
+  }
+ ],
+ "main_component_bbox": [
+  -250,
+  -371,
+  7200,
+  7913
+ ],
+ "output_json": "examples/expected_output/central_metabolism_escher_final_packed.json",
+ "removed_text_labels": [],
+ "area_after_packing_Munits2": 61.73,
+ "canvas": {
+  "width": 7750,
+  "height": 8587
+ },
+ "n_nodes_input": 495,
+ "n_nodes_output": 510,
+ "n_reactions": 91,
+ "validation_errors": [],
+ "validation_warnings": [],
+ "metrics": {
+  "line_crossings": 26,
+  "worst_crossing_pairs": [
+   [
+    [
+     "ATPS4rpp",
+     "NTP1"
+    ],
+    4
+   ],
+   [
+    [
+     "PFL",
+     "POR5"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "PPCK"
+    ],
+    2
+   ],
+   [
+    [
+     "PPCK",
+     "PPS"
+    ],
+    2
+   ],
+   [
+    [
+     "PPC",
+     "PPS"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "PPC"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "OAADC"
+    ],
+    2
+   ],
+   [
+    [
+     "L_LACD2",
+     "L_LACD3"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "CS"
+    ],
+    1
+   ],
+   [
+    [
+     "MALDDH",
+     "PPCK"
+    ],
+    1
+   ],
+   [
+    [
+     "ME1",
+     "PPCK"
+    ],
+    1
+   ],
+   [
+    [
+     "ME2",
+     "PPCK"
+    ],
+    1
+   ]
+  ],
+  "labels_on_lines": 5,
+  "labels_on_lines_list": [
+   "reaction PPS",
+   "metabolite pi",
+   "metabolite f6p",
+   "exit \u2192 Amino acids",
+   "exit \u2192 Amino acids"
+  ],
+  "labels_on_nodes": 0,
+  "labels_on_nodes_list": [],
+  "label_label_overlaps": 0,
+  "label_label_overlaps_list": [],
+  "primary_nodes_closer_than_70": 0,
+  "width": 7444,
+  "height": 8284,
+  "bbox_area_Munits2": 61.67
+ },
+ "output_png": "examples/expected_output/central_metabolism_escher_final_packed_overview.png"
+}

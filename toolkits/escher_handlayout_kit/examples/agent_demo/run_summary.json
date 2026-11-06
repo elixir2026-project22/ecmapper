@@ -1,0 +1,137 @@
+{
+ "model": "scripted",
+ "turns": 11,
+ "curvature": 0.6,
+ "scores": [
+  [
+   "initial",
+   41
+  ],
+  [
+   "curvature 0.60",
+   41
+  ]
+ ],
+ "notes": [
+  "plan",
+  "layout Glycolysis",
+  "layout Pentose phosphate pathway",
+  "layout Entner-Doudoroff pathway",
+  "layout Lactate fermentation",
+  "layout Oxidative decarboxylation of pyruvate",
+  "layout Ethanol fermentation",
+  "layout Acetate fermentation",
+  "layout Citric acid cycle",
+  "layout Gluconeogenesis",
+  "layout Oxidative phosphorylation"
+ ],
+ "validation_errors": [],
+ "metrics": {
+  "line_crossings": 26,
+  "worst_crossing_pairs": [
+   [
+    [
+     "ATPS4rpp",
+     "NTP1"
+    ],
+    4
+   ],
+   [
+    [
+     "PFL",
+     "POR5"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "PPCK"
+    ],
+    2
+   ],
+   [
+    [
+     "PPCK",
+     "PPS"
+    ],
+    2
+   ],
+   [
+    [
+     "PPC",
+     "PPS"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "PPC"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "OAADC"
+    ],
+    2
+   ],
+   [
+    [
+     "L_LACD2",
+     "L_LACD3"
+    ],
+    2
+   ],
+   [
+    [
+     "CITL",
+     "CS"
+    ],
+    1
+   ],
+   [
+    [
+     "MALDDH",
+     "PPCK"
+    ],
+    1
+   ],
+   [
+    [
+     "ME1",
+     "PPCK"
+    ],
+    1
+   ],
+   [
+    [
+     "ME2",
+     "PPCK"
+    ],
+    1
+   ]
+  ],
+  "labels_on_lines": 5,
+  "labels_on_nodes": 0,
+  "label_label_overlaps": 0,
+  "primary_nodes_closer_than_70": 0,
+  "width": 7444,
+  "height": 8284,
+  "bbox_area_Munits2": 61.67
+ },
+ "area_before": 79.7,
+ "area_after": 61.73,
+ "canvas": {
+  "width": 7750,
+  "height": 8587
+ },
+ "targets_met": true,
+ "outputs": {
+  "map": "/tmp/kit_test/demo/central_metabolism_escher_handlayout.json",
+  "png": "/tmp/kit_test/demo/central_metabolism_escher_handlayout_overview.png",
+  "spec": "/tmp/kit_test/demo/central_metabolism_escher_handlayout.layout.json"
+ }
+}

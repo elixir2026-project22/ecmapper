@@ -1,0 +1,632 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "escher_handlayout layout spec v1 (also valid as a partial \"fragment\" in chat turns)",
+ "type": "object",
+ "additionalProperties": false,
+ "properties": {
+  "spec_version": {
+   "const": 1
+  },
+  "notes": {
+   "type": "string",
+   "maxLength": 4000,
+   "pattern": "^[^\\x00-\\x08\\x0b-\\x1f\\x7f<>]*$"
+  },
+  "defaults": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "bend": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 400
+    }
+   }
+  },
+  "zones": {
+   "type": "array",
+   "maxItems": 40,
+   "items": {
+    "$ref": "#/$defs/zone"
+   }
+  },
+  "plan": {
+   "type": "object",
+   "maxProperties": 40,
+   "propertyNames": {
+    "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+   },
+   "additionalProperties": {
+    "$ref": "#/$defs/planEntry"
+   }
+  },
+  "splits": {
+   "type": "array",
+   "maxItems": 200,
+   "items": {
+    "$ref": "#/$defs/split"
+   }
+  },
+  "merges": {
+   "type": "array",
+   "maxItems": 200,
+   "items": {
+    "$ref": "#/$defs/merge"
+   }
+  },
+  "layouts": {
+   "type": "array",
+   "maxItems": 200,
+   "items": {
+    "$ref": "#/$defs/block"
+   }
+  },
+  "titles": {
+   "type": "object",
+   "maxProperties": 40,
+   "propertyNames": {
+    "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+   },
+   "additionalProperties": {
+    "type": "array",
+    "minItems": 2,
+    "maxItems": 2,
+    "items": {
+     "type": "number",
+     "minimum": -20000,
+     "maximum": 20000
+    }
+   }
+  },
+  "small_titles": {
+   "type": "array",
+   "maxItems": 100,
+   "items": {
+    "$ref": "#/$defs/smallTitle"
+   }
+  }
+ },
+ "$defs": {
+  "nodeRef": {
+   "type": "string",
+   "pattern": "^(\\d{1,9}|@[A-Za-z][A-Za-z0-9_]{0,30})$"
+  },
+  "zone": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "name"
+   ],
+   "properties": {
+    "name": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+    },
+    "color": {
+     "type": "string",
+     "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "title": {
+     "type": "string",
+     "maxLength": 100,
+     "pattern": "^[^\\x00-\\x1f\\x7f<>]*$"
+    },
+    "label": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "maxLength": 100,
+     "pattern": "^[^\\x00-\\x1f\\x7f<>]*$"
+    },
+    "bend": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 400
+    }
+   }
+  },
+  "planEntry": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "origin": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": -20000,
+      "maximum": 20000
+     }
+    },
+    "size": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": 100,
+      "maximum": 40000
+     }
+    },
+    "reactions": {
+     "type": "array",
+     "maxItems": 3000,
+     "items": {
+      "type": "string",
+      "pattern": "^\\d{1,9}$"
+     }
+    },
+    "description": {
+     "type": "string",
+     "maxLength": 300,
+     "pattern": "^[^\\x00-\\x1f\\x7f<>]*$"
+    }
+   }
+  },
+  "split": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "alias",
+    "node",
+    "reaction"
+   ],
+   "properties": {
+    "alias": {
+     "type": "string",
+     "pattern": "^@[A-Za-z][A-Za-z0-9_]{0,30}$"
+    },
+    "node": {
+     "type": "string",
+     "pattern": "^\\d{1,9}$"
+    },
+    "reaction": {
+     "type": "string",
+     "pattern": "^\\d{1,9}$"
+    }
+   }
+  },
+  "merge": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "keep",
+    "dups"
+   ],
+   "properties": {
+    "keep": {
+     "$ref": "#/$defs/nodeRef"
+    },
+    "dups": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 30,
+     "items": {
+      "$ref": "#/$defs/nodeRef"
+     }
+    }
+   }
+  },
+  "smallTitle": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reaction",
+    "zone",
+    "text"
+   ],
+   "properties": {
+    "reaction": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9_.\\-()]{1,60}$"
+    },
+    "zone": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+    },
+    "text": {
+     "type": "string",
+     "maxLength": 100,
+     "pattern": "^[^\\x00-\\x1f\\x7f<>]*$"
+    },
+    "reuse_label": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "maxLength": 100,
+     "pattern": "^[^\\x00-\\x1f\\x7f<>]*$"
+    }
+   }
+  },
+  "pointExpr": {
+   "oneOf": [
+    {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": -20000,
+      "maximum": 20000
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "node"
+     ],
+     "properties": {
+      "node": {
+       "$ref": "#/$defs/nodeRef"
+      }
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "mean"
+     ],
+     "properties": {
+      "mean": {
+       "type": "array",
+       "minItems": 1,
+       "maxItems": 8,
+       "items": {
+        "$ref": "#/$defs/nodeRef"
+       }
+      }
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "lerp"
+     ],
+     "properties": {
+      "lerp": {
+       "type": "array",
+       "minItems": 3,
+       "maxItems": 3,
+       "prefixItems": [
+        {
+         "$ref": "#/$defs/pointExpr"
+        },
+        {
+         "$ref": "#/$defs/pointExpr"
+        },
+        {
+         "type": "number",
+         "minimum": -2,
+         "maximum": 3
+        }
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "vecExpr": {
+   "oneOf": [
+    {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": -5000,
+      "maximum": 5000
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "perp",
+      "offset"
+     ],
+     "properties": {
+      "perp": {
+       "type": "array",
+       "minItems": 2,
+       "maxItems": 2,
+       "items": {
+        "$ref": "#/$defs/nodeRef"
+       }
+      },
+      "offset": {
+       "type": "number",
+       "minimum": -5000,
+       "maximum": 5000
+      }
+     }
+    }
+   ]
+  },
+  "axisExpr": {
+   "oneOf": [
+    {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": -5000,
+      "maximum": 5000
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "from",
+      "to"
+     ],
+     "properties": {
+      "from": {
+       "$ref": "#/$defs/pointExpr"
+      },
+      "to": {
+       "$ref": "#/$defs/pointExpr"
+      }
+     }
+    }
+   ]
+  },
+  "arc": {
+   "oneOf": [
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "ring",
+      "offset"
+     ],
+     "properties": {
+      "ring": {
+       "type": "string",
+       "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+      },
+      "offset": {
+       "type": "number",
+       "minimum": -2000,
+       "maximum": 2000
+      }
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "center",
+      "offset"
+     ],
+     "properties": {
+      "center": {
+       "type": "array",
+       "minItems": 2,
+       "maxItems": 2,
+       "items": {
+        "type": "number",
+        "minimum": -20000,
+        "maximum": 20000
+       }
+      },
+      "offset": {
+       "type": "number",
+       "minimum": -2000,
+       "maximum": 2000
+      }
+     }
+    }
+   ]
+  },
+  "ring": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "name",
+    "center",
+    "radius",
+    "nodes"
+   ],
+   "properties": {
+    "name": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+    },
+    "center": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": -20000,
+      "maximum": 20000
+     }
+    },
+    "radius": {
+     "type": "number",
+     "minimum": 50,
+     "maximum": 8000
+    },
+    "nodes": {
+     "type": "object",
+     "minProperties": 2,
+     "maxProperties": 60,
+     "propertyNames": {
+      "pattern": "^(\\d{1,9}|@[A-Za-z][A-Za-z0-9_]{0,30})$"
+     },
+     "additionalProperties": {
+      "type": "number",
+      "minimum": -720,
+      "maximum": 720
+     }
+    }
+   }
+  },
+  "reaction": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id"
+   ],
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^\\d{1,9}$"
+    },
+    "remove": {
+     "type": "boolean"
+    },
+    "zone": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+    },
+    "side": {
+     "enum": [
+      "L",
+      "R",
+      "U",
+      "D",
+      "out",
+      "in"
+     ]
+    },
+    "dist": {
+     "type": "number",
+     "minimum": 20,
+     "maximum": 800
+    },
+    "secdist": {
+     "type": "number",
+     "minimum": 20,
+     "maximum": 1200
+    },
+    "gap": {
+     "type": "number",
+     "minimum": 5,
+     "maximum": 300
+    },
+    "step": {
+     "type": "number",
+     "minimum": 20,
+     "maximum": 400
+    },
+    "bend": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 400
+    },
+    "bow": {
+     "type": "number",
+     "minimum": -0.5,
+     "maximum": 0.5
+    },
+    "curve": {
+     "type": "boolean"
+    },
+    "shift": {
+     "$ref": "#/$defs/vecExpr"
+    },
+    "axis": {
+     "$ref": "#/$defs/axisExpr"
+    },
+    "mid": {
+     "$ref": "#/$defs/pointExpr"
+    },
+    "center": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": -20000,
+      "maximum": 20000
+     }
+    },
+    "arc": {
+     "$ref": "#/$defs/arc"
+    },
+    "arc_nodes": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "$ref": "#/$defs/nodeRef"
+     }
+    }
+   }
+  },
+  "block": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "block"
+   ],
+   "properties": {
+    "block": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+    },
+    "zone": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\\-]{0,79}$"
+    },
+    "origin": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 2,
+     "items": {
+      "type": "number",
+      "minimum": -20000,
+      "maximum": 20000
+     }
+    },
+    "nodes": {
+     "type": "object",
+     "maxProperties": 2000,
+     "propertyNames": {
+      "pattern": "^(\\d{1,9}|@[A-Za-z][A-Za-z0-9_]{0,30})$"
+     },
+     "additionalProperties": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+       "type": "number",
+       "minimum": -20000,
+       "maximum": 20000
+      }
+     }
+    },
+    "remove_nodes": {
+     "type": "array",
+     "maxItems": 2000,
+     "items": {
+      "$ref": "#/$defs/nodeRef"
+     }
+    },
+    "rings": {
+     "type": "array",
+     "maxItems": 20,
+     "items": {
+      "$ref": "#/$defs/ring"
+     }
+    },
+    "reactions": {
+     "type": "array",
+     "maxItems": 3000,
+     "items": {
+      "$ref": "#/$defs/reaction"
+     }
+    }
+   }
+  }
+ }
+}

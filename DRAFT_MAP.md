@@ -570,8 +570,8 @@ reactions or metabolites missing in the model.
 
 ### 3.6 AI layouts of whole maps (GUI)
 
-A map of `--split` can be laid out by an AI in the GUI. The AI uses a layout *toolkit*, such as `escher_handlayout`
-(`Opus_metabolic_map_handlayout/escher_handlayout_toolkit`), and the layout is used for that map from then on.
+A map of `--split` can be laid out by an AI in the GUI. The AI uses a layout *toolkit*, such as `escher_handlayout_kit`
+(shipped in `toolkits/escher_handlayout_kit`) or `escher_handlayout`, and the layout is used for that map from then on.
 The AI lays out all the subsystems of the map together, so it can interconnect them, e.g. merge shared
 metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
 

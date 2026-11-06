@@ -1,0 +1,18 @@
+{
+ "spec_version": 1,
+ "notes": "TEMPLATE - schema-valid but the ids are placeholders. Look up real ids with `python run.py inspect`, then check with `python run.py check-spec`.",
+ "defaults": {"bend": 60},
+ "zones": [{"name": "Subsystem A", "color": "#2b5c9e", "title": "Subsystem A", "label": null}],
+ "plan": {"Subsystem A": {"origin": [0, 0], "size": [1000, 3000], "reactions": ["11", "12"]}},
+ "splits": [],
+ "merges": [],
+ "layouts": [
+  {"block": "Subsystem A", "zone": "Subsystem A", "origin": [0, 0],
+   "nodes": {"101": [0, 0], "102": [0, 300], "103": [0, 600]},
+   "reactions": [
+    {"id": "11", "side": "R", "dist": 110},
+    {"id": "12", "side": "L", "shift": [-110, 0]}
+   ]}
+ ],
+ "titles": {"Subsystem A": [0, -150]}
+}

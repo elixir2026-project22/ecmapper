@@ -1,0 +1,1536 @@
+{
+ "spec_version": 1,
+ "notes": "Hand-chosen layout of the iML1515 central-metabolism draft map: glycolysis column, PDH + TCA ring below, PPP and ED on the left, PEP/OAA node left of the spine, fermentations on the right.",
+ "defaults": {
+  "bend": 70
+ },
+ "zones": [
+  {
+   "name": "Glycolysis",
+   "color": "#2b5c9e",
+   "title": "Glycolysis",
+   "label": "glycolysis",
+   "bend": 45
+  },
+  {
+   "name": "Pentose phosphate pathway",
+   "color": "#5b8c2a",
+   "title": "Pentose phosphate pathway",
+   "label": "pentose phosphate pathway"
+  },
+  {
+   "name": "Entner-Doudoroff pathway",
+   "color": "#8e3b9e",
+   "title": "Entner-Doudoroff pathway",
+   "label": "Entner Doudoroff pathway"
+  },
+  {
+   "name": "Lactate fermentation",
+   "color": "#d9822b",
+   "title": "Lactate fermentation",
+   "label": "lactate fermentation"
+  },
+  {
+   "name": "Oxidative decarboxylation of pyruvate",
+   "color": "#6a4fb3",
+   "title": "Pyruvate dehydrogenase",
+   "label": "oxidative decarboxylation of pyruvate"
+  },
+  {
+   "name": "Ethanol fermentation",
+   "color": "#8a7a2a",
+   "title": "Ethanol fermentation / PFL, POR",
+   "label": "ethanol fermentation"
+  },
+  {
+   "name": "Acetate fermentation",
+   "color": "#2f9a57",
+   "title": "Acetate fermentation",
+   "label": "acetate fermentation"
+  },
+  {
+   "name": "Citric acid cycle",
+   "color": "#c9a100",
+   "title": "Citric acid cycle + glyoxylate shunt",
+   "label": "citric acid cycle"
+  },
+  {
+   "name": "Gluconeogenesis",
+   "color": "#c2415a",
+   "title": "PEP / pyruvate / OAA node",
+   "label": "gluconeogenesis"
+  },
+  {
+   "name": "Oxidative phosphorylation",
+   "color": "#1a8f9a",
+   "title": "Oxidative phosphorylation",
+   "label": "oxidative phosphorylation"
+  }
+ ],
+ "plan": {
+  "Glycolysis": {
+   "origin": [
+    2600,
+    100
+   ],
+   "size": [
+    1100,
+    4050
+   ],
+   "reactions": [
+    "492",
+    "934",
+    "1017",
+    "501",
+    "514",
+    "526",
+    "537",
+    "545",
+    "560",
+    "573",
+    "582",
+    "590",
+    "601",
+    "1070",
+    "614",
+    "1082",
+    "1094"
+   ]
+  },
+  "Pentose phosphate pathway": {
+   "origin": [
+    0,
+    400
+   ],
+   "size": [
+    2800,
+    2400
+   ],
+   "reactions": [
+    "836",
+    "860",
+    "822",
+    "850",
+    "869",
+    "887",
+    "921",
+    "944",
+    "909",
+    "1042",
+    "896",
+    "879"
+   ]
+  },
+  "Entner-Doudoroff pathway": {
+   "origin": [
+    -300,
+    -1100
+   ],
+   "size": [
+    2950,
+    1800
+   ],
+   "reactions": [
+    "12",
+    "36",
+    "25",
+    "59",
+    "46"
+   ]
+  },
+  "Lactate fermentation": {
+   "origin": [
+    4000,
+    2850
+   ],
+   "size": [
+    800,
+    1200
+   ],
+   "reactions": [
+    "628",
+    "640",
+    "653"
+   ]
+  },
+  "Oxidative decarboxylation of pyruvate": {
+   "origin": [
+    2600,
+    4050
+   ],
+   "size": [
+    800,
+    800
+   ],
+   "reactions": [
+    "671"
+   ]
+  },
+  "Ethanol fermentation": {
+   "origin": [
+    4300,
+    3500
+   ],
+   "size": [
+    1800,
+    1350
+   ],
+   "reactions": [
+    "354",
+    "1058",
+    "369",
+    "382",
+    "1127"
+   ]
+  },
+  "Acetate fermentation": {
+   "origin": [
+    3400,
+    4050
+   ],
+   "size": [
+    4000,
+    2000
+   ],
+   "reactions": [
+    "75",
+    "134",
+    "105",
+    "117",
+    "92",
+    "956",
+    "1005",
+    "1107"
+   ]
+  },
+  "Citric acid cycle": {
+   "origin": [
+    -600,
+    4750
+   ],
+   "size": [
+    5450,
+    3700
+   ],
+   "reactions": [
+    "161",
+    "146",
+    "172",
+    "236",
+    "277",
+    "304",
+    "288",
+    "328",
+    "340",
+    "316",
+    "221",
+    "209",
+    "185",
+    "197",
+    "1029",
+    "260",
+    "250",
+    "966",
+    "1116",
+    "981",
+    "993"
+   ]
+  },
+  "Gluconeogenesis": {
+   "origin": [
+    900,
+    3050
+   ],
+   "size": [
+    1400,
+    1500
+   ],
+   "reactions": [
+    "398",
+    "411",
+    "428",
+    "438",
+    "453",
+    "465",
+    "478"
+   ]
+  },
+  "Oxidative phosphorylation": {
+   "origin": [
+    5200,
+    6500
+   ],
+   "size": [
+    3500,
+    1850
+   ],
+   "reactions": [
+    "685",
+    "707",
+    "697",
+    "729",
+    "719",
+    "739",
+    "786",
+    "796",
+    "806",
+    "753",
+    "763",
+    "773"
+   ]
+  }
+ },
+ "splits": [
+  {
+   "alias": "@xu5p_copy",
+   "node": "871",
+   "reaction": "909"
+  },
+  {
+   "alias": "@f6p_tkt2",
+   "node": "898",
+   "reaction": "909"
+  },
+  {
+   "alias": "@accoa_mals",
+   "node": "147",
+   "reaction": "250"
+  },
+  {
+   "alias": "@cit_fe",
+   "node": "135",
+   "reaction": "981"
+  }
+ ],
+ "merges": [
+  {
+   "keep": "480",
+   "dups": [
+    "923"
+   ]
+  },
+  {
+   "keep": "482",
+   "dups": [
+    "823"
+   ]
+  },
+  {
+   "keep": "493",
+   "dups": [
+    "@f6p_tkt2"
+   ]
+  },
+  {
+   "keep": "528",
+   "dups": [
+    "899"
+   ]
+  },
+  {
+   "keep": "604",
+   "dups": [
+    "616",
+    "656",
+    "342",
+    "414"
+   ]
+  },
+  {
+   "keep": "592",
+   "dups": [
+    "387"
+   ]
+  },
+  {
+   "keep": "657",
+   "dups": [
+    "343",
+    "147"
+   ]
+  },
+  {
+   "keep": "355",
+   "dups": [
+    "60"
+   ]
+  },
+  {
+   "keep": "149",
+   "dups": [
+    "384"
+   ]
+  },
+  {
+   "keep": "807",
+   "dups": [
+    "1"
+   ]
+  }
+ ],
+ "layouts": [
+  {
+   "block": "Glycolysis",
+   "zone": "Glycolysis",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "480": [
+     3000,
+     500
+    ],
+    "482": [
+     3000,
+     800
+    ],
+    "493": [
+     3000,
+     1100
+    ],
+    "504": [
+     3000,
+     1400
+    ],
+    "527": [
+     3300,
+     1750
+    ],
+    "528": [
+     3000,
+     1750
+    ],
+    "548": [
+     3000,
+     2100
+    ],
+    "561": [
+     3000,
+     2400
+    ],
+    "574": [
+     3000,
+     2700
+    ],
+    "592": [
+     3000,
+     3000
+    ],
+    "604": [
+     3000,
+     3750
+    ]
+   },
+   "reactions": [
+    {
+     "id": "492",
+     "side": "R",
+     "dist": 110
+    },
+    {
+     "id": "934",
+     "side": "R",
+     "dist": 110,
+     "shift": [
+      260,
+      0
+     ]
+    },
+    {
+     "id": "1017",
+     "side": "L",
+     "shift": [
+      -110,
+      0
+     ]
+    },
+    {
+     "id": "501",
+     "side": "R"
+    },
+    {
+     "id": "514",
+     "side": "R",
+     "dist": 110
+    },
+    {
+     "id": "526",
+     "side": "L",
+     "shift": [
+      -110,
+      0
+     ]
+    },
+    {
+     "id": "537",
+     "axis": [
+      0,
+      1
+     ],
+     "mid": [
+      3000,
+      1580
+     ]
+    },
+    {
+     "id": "545"
+    },
+    {
+     "id": "560",
+     "side": "R",
+     "dist": 110
+    },
+    {
+     "id": "573",
+     "side": "R",
+     "dist": 110
+    },
+    {
+     "id": "582",
+     "side": "L",
+     "shift": [
+      -110,
+      0
+     ]
+    },
+    {
+     "id": "590",
+     "side": "R",
+     "shift": [
+      110,
+      0
+     ]
+    },
+    {
+     "id": "601",
+     "side": "R",
+     "dist": 110
+    },
+    {
+     "id": "1070",
+     "side": "R",
+     "dist": 120,
+     "gap": 40,
+     "curve": false,
+     "shift": [
+      0,
+      -225
+     ]
+    },
+    {
+     "id": "614",
+     "side": "R",
+     "dist": 120,
+     "gap": 40,
+     "curve": false,
+     "shift": [
+      0,
+      -75
+     ]
+    },
+    {
+     "id": "1082",
+     "side": "R",
+     "dist": 120,
+     "gap": 40,
+     "curve": false,
+     "shift": [
+      0,
+      75
+     ]
+    },
+    {
+     "id": "1094",
+     "side": "R",
+     "dist": 120,
+     "gap": 40,
+     "curve": false,
+     "shift": [
+      0,
+      225
+     ]
+    }
+   ]
+  },
+  {
+   "block": "Pentose phosphate pathway",
+   "zone": "Pentose phosphate pathway",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "811": [
+     400,
+     800
+    ],
+    "861": [
+     900,
+     1100
+    ],
+    "871": [
+     900,
+     1750
+    ],
+    "910": [
+     1600,
+     1100
+    ],
+    "911": [
+     1600,
+     1750
+    ],
+    "897": [
+     2300,
+     1100
+    ],
+    "898": [
+     2300,
+     1750
+    ],
+    "@xu5p_copy": [
+     2300,
+     2400
+    ],
+    "825": [
+     2400,
+     800
+    ],
+    "807": [
+     1650,
+     800
+    ],
+    "870": [
+     900,
+     2300
+    ],
+    "888": [
+     400,
+     2300
+    ],
+    "1032": [
+     1600,
+     2350
+    ]
+   },
+   "reactions": [
+    {
+     "id": "836",
+     "side": "D"
+    },
+    {
+     "id": "860",
+     "side": "U"
+    },
+    {
+     "id": "822",
+     "side": "U"
+    },
+    {
+     "id": "850",
+     "side": "D",
+     "shift": [
+      0,
+      70
+     ]
+    },
+    {
+     "id": "869",
+     "bow": 0.05
+    },
+    {
+     "id": "887",
+     "bow": 0.06
+    },
+    {
+     "id": "921"
+    },
+    {
+     "id": "944"
+    },
+    {
+     "id": "909",
+     "axis": [
+      1,
+      0
+     ],
+     "mid": [
+      2650,
+      1425
+     ]
+    },
+    {
+     "id": "1042",
+     "side": "R"
+    },
+    {
+     "id": "896"
+    },
+    {
+     "id": "879"
+    }
+   ]
+  },
+  {
+   "block": "Entner-Doudoroff pathway",
+   "zone": "Entner-Doudoroff pathway",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "2": [
+     1650,
+     300
+    ],
+    "26": [
+     1500,
+     -200
+    ],
+    "27": [
+     1800,
+     -200
+    ],
+    "13": [
+     2250,
+     300
+    ],
+    "48": [
+     100,
+     -200
+    ],
+    "37": [
+     700,
+     -200
+    ],
+    "38": [
+     700,
+     -700
+    ]
+   },
+   "reactions": [
+    {
+     "id": "12",
+     "side": "L",
+     "axis": [
+      0,
+      -1
+     ]
+    },
+    {
+     "id": "36",
+     "axis": [
+      0,
+      -1
+     ],
+     "mid": [
+      1650,
+      150
+     ]
+    },
+    {
+     "id": "25",
+     "side": "D"
+    },
+    {
+     "id": "59",
+     "side": "U"
+    },
+    {
+     "id": "46"
+    }
+   ]
+  },
+  {
+   "block": "Lactate fermentation",
+   "zone": "Lactate fermentation",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "615": [
+     4400,
+     3250
+    ],
+    "641": [
+     4400,
+     3650
+    ]
+   },
+   "reactions": [
+    {
+     "id": "628",
+     "side": "U",
+     "dist": 190,
+     "shift": {
+      "perp": [
+       "615",
+       "604"
+      ],
+      "offset": -80
+     }
+    },
+    {
+     "id": "640",
+     "side": "D",
+     "dist": 190,
+     "shift": {
+      "perp": [
+       "615",
+       "604"
+      ],
+      "offset": 80
+     }
+    },
+    {
+     "id": "653",
+     "side": "D"
+    }
+   ]
+  },
+  {
+   "block": "Oxidative decarboxylation of pyruvate",
+   "zone": "Oxidative decarboxylation of pyruvate",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "657": [
+     3000,
+     4450
+    ]
+   },
+   "reactions": [
+    {
+     "id": "671",
+     "side": "R",
+     "dist": 130
+    }
+   ]
+  },
+  {
+   "block": "Ethanol fermentation",
+   "zone": "Ethanol fermentation",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "355": [
+     4700,
+     4450
+    ],
+    "370": [
+     4900,
+     3950
+    ],
+    "1117": [
+     5700,
+     3900
+    ]
+   },
+   "reactions": [
+    {
+     "id": "354",
+     "side": "R",
+     "dist": 120,
+     "shift": [
+      300,
+      0
+     ]
+    },
+    {
+     "id": "1058",
+     "side": "R",
+     "dist": 120,
+     "shift": [
+      620,
+      0
+     ]
+    },
+    {
+     "id": "369",
+     "side": "D"
+    },
+    {
+     "id": "382",
+     "side": "R"
+    },
+    {
+     "id": "1127",
+     "side": "U",
+     "bow": 0.05
+    }
+   ]
+  },
+  {
+   "block": "Acetate fermentation",
+   "zone": "Acetate fermentation",
+   "origin": [
+    2300,
+    3750
+   ],
+   "nodes": {
+    "63": [
+     2400,
+     1300
+    ],
+    "119": [
+     3050,
+     850
+    ],
+    "78": [
+     2400,
+     1900
+    ],
+    "94": [
+     1500,
+     1600
+    ],
+    "946": [
+     3200,
+     1300
+    ],
+    "945": [
+     3200,
+     1900
+    ],
+    "994": [
+     4000,
+     1900
+    ],
+    "995": [
+     4000,
+     1300
+    ],
+    "1096": [
+     4000,
+     700
+    ],
+    "1097": [
+     4700,
+     1300
+    ]
+   },
+   "reactions": [
+    {
+     "id": "75",
+     "side": "L"
+    },
+    {
+     "id": "134",
+     "side": "U",
+     "dist": 140,
+     "step": 85
+    },
+    {
+     "id": "105",
+     "side": "U"
+    },
+    {
+     "id": "117",
+     "side": "D"
+    },
+    {
+     "id": "92",
+     "side": "L",
+     "step": 70,
+     "shift": [
+      -120,
+      0
+     ]
+    },
+    {
+     "id": "956"
+    },
+    {
+     "id": "1005"
+    },
+    {
+     "id": "1107",
+     "side": "L",
+     "axis": [
+      0,
+      1
+     ],
+     "mid": [
+      4000,
+      1000
+     ]
+    }
+   ]
+  },
+  {
+   "block": "Citric acid cycle",
+   "zone": "Citric acid cycle",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "@accoa_mals": [
+     2750,
+     6050
+    ],
+    "237": [
+     3100,
+     6900
+    ],
+    "1108": [
+     4250,
+     5850
+    ],
+    "957": [
+     2300,
+     5150
+    ],
+    "967": [
+     300,
+     7300
+    ],
+    "969": [
+     1100,
+     7550
+    ],
+    "@cit_fe": [
+     1100,
+     7050
+    ],
+    "982": [
+     -200,
+     7950
+    ],
+    "983": [
+     600,
+     7950
+    ],
+    "984": [
+     200,
+     7650
+    ]
+   },
+   "rings": [
+    {
+     "name": "TCA ring",
+     "center": [
+      3000,
+      6600
+     ],
+     "radius": 1050,
+     "nodes": {
+      "135": -90,
+      "136": -50,
+      "163": -10,
+      "223": 30,
+      "265": 70,
+      "251": 110,
+      "278": 150,
+      "173": 190,
+      "149": 230
+     }
+    }
+   ],
+   "reactions": [
+    {
+     "id": "161",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     },
+     "arc_nodes": [
+      "149",
+      "135"
+     ]
+    },
+    {
+     "id": "146",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "172",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "236",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "277",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "304",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "288",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "328",
+     "side": "in",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": -150
+     }
+    },
+    {
+     "id": "340",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "316",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 150
+     }
+    },
+    {
+     "id": "221",
+     "side": "in",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": -300
+     }
+    },
+    {
+     "id": "209",
+     "side": "in",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": -150
+     }
+    },
+    {
+     "id": "185",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 0
+     }
+    },
+    {
+     "id": "197",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 150
+     }
+    },
+    {
+     "id": "1029",
+     "side": "out",
+     "arc": {
+      "ring": "TCA ring",
+      "offset": 300
+     }
+    },
+    {
+     "id": "260",
+     "side": "U",
+     "bow": -0.08,
+     "axis": {
+      "from": {
+       "node": "163"
+      },
+      "to": {
+       "mean": [
+        "237",
+        "251"
+       ]
+      }
+     },
+     "mid": {
+      "lerp": [
+       {
+        "node": "163"
+       },
+       {
+        "mean": [
+         "237",
+         "251"
+        ]
+       },
+       0.27
+      ]
+     }
+    },
+    {
+     "id": "250",
+     "side": "D"
+    },
+    {
+     "id": "966",
+     "side": "U"
+    },
+    {
+     "id": "1116"
+    },
+    {
+     "id": "981",
+     "side": "U"
+    },
+    {
+     "id": "993"
+    }
+   ]
+  },
+  {
+   "block": "Gluconeogenesis",
+   "zone": "Gluconeogenesis",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "454": [
+     1900,
+     3450
+    ],
+    "439": [
+     1300,
+     4150
+    ]
+   },
+   "reactions": [
+    {
+     "id": "398",
+     "side": "L",
+     "shift": [
+      -70,
+      0
+     ]
+    },
+    {
+     "id": "411",
+     "side": "R",
+     "shift": [
+      70,
+      0
+     ]
+    },
+    {
+     "id": "428",
+     "side": "L",
+     "step": 70,
+     "shift": [
+      -170,
+      0
+     ]
+    },
+    {
+     "id": "438",
+     "side": "R",
+     "bow": 0.05
+    },
+    {
+     "id": "453",
+     "side": "D",
+     "bow": 0.05
+    },
+    {
+     "id": "465",
+     "side": "U",
+     "shift": {
+      "perp": [
+       "454",
+       "604"
+      ],
+      "offset": -70
+     }
+    },
+    {
+     "id": "478",
+     "side": "D",
+     "shift": {
+      "perp": [
+       "454",
+       "604"
+      ],
+      "offset": 70
+     }
+    }
+   ]
+  },
+  {
+   "block": "Oxidative phosphorylation",
+   "zone": "Oxidative phosphorylation",
+   "origin": [
+    0,
+    0
+   ],
+   "nodes": {
+    "672": [
+     5600,
+     6900
+    ],
+    "674": [
+     6800,
+     6900
+    ],
+    "686": [
+     5600,
+     7370
+    ],
+    "687": [
+     6800,
+     7370
+    ],
+    "708": [
+     5600,
+     7840
+    ],
+    "709": [
+     6800,
+     7840
+    ],
+    "740": [
+     8300,
+     7300
+    ],
+    "775": [
+     8300,
+     7950
+    ]
+   },
+   "reactions": [
+    {
+     "id": "685",
+     "side": "U",
+     "shift": [
+      0,
+      -45
+     ]
+    },
+    {
+     "id": "707",
+     "side": "D",
+     "shift": [
+      0,
+      45
+     ]
+    },
+    {
+     "id": "697",
+     "side": "U",
+     "shift": [
+      0,
+      -45
+     ]
+    },
+    {
+     "id": "729",
+     "side": "D",
+     "shift": [
+      0,
+      45
+     ]
+    },
+    {
+     "id": "719",
+     "side": "U",
+     "shift": [
+      0,
+      -45
+     ]
+    },
+    {
+     "id": "739",
+     "side": "D",
+     "shift": [
+      0,
+      45
+     ]
+    },
+    {
+     "id": "786",
+     "side": "L",
+     "shift": [
+      -190,
+      0
+     ]
+    },
+    {
+     "id": "796",
+     "side": "R",
+     "secdist": 430,
+     "gap": 85,
+     "curve": true
+    },
+    {
+     "id": "806",
+     "side": "R",
+     "shift": [
+      190,
+      0
+     ]
+    },
+    {
+     "id": "753",
+     "side": "L",
+     "shift": [
+      -190,
+      0
+     ],
+     "axis": [
+      0,
+      -1
+     ],
+     "mid": [
+      8300,
+      6900
+     ]
+    },
+    {
+     "id": "763",
+     "side": "R",
+     "secdist": 430,
+     "gap": 85,
+     "axis": [
+      0,
+      1
+     ],
+     "mid": [
+      8300,
+      6900
+     ]
+    },
+    {
+     "id": "773",
+     "side": "R",
+     "shift": [
+      190,
+      0
+     ],
+     "axis": [
+      0,
+      -1
+     ],
+     "mid": [
+      8300,
+      6900
+     ]
+    }
+   ]
+  }
+ ],
+ "titles": {
+  "Glycolysis": [
+   3250,
+   330
+  ],
+  "Pentose phosphate pathway": [
+   -250,
+   560
+  ],
+  "Entner-Doudoroff pathway": [
+   1000,
+   -330
+  ],
+  "Lactate fermentation": [
+   4350,
+   2950
+  ],
+  "Oxidative decarboxylation of pyruvate": [
+   3150,
+   4850
+  ],
+  "Ethanol fermentation": [
+   5000,
+   3600
+  ],
+  "Acetate fermentation": [
+   5100,
+   6000
+  ],
+  "Citric acid cycle": [
+   3500,
+   7900
+  ],
+  "Gluconeogenesis": [
+   700,
+   3000
+  ],
+  "Oxidative phosphorylation": [
+   5450,
+   6500
+  ]
+ },
+ "small_titles": [
+  {
+   "reaction": "ATPM",
+   "zone": "Oxidative phosphorylation",
+   "text": "oxidative phosphorylation: ATP synthase / ATP turnover",
+   "reuse_label": "oxidative phosphorylation"
+  },
+  {
+   "reaction": "NADH10",
+   "zone": "Oxidative phosphorylation",
+   "text": "NADH dehydrogenase (menaquinone)",
+   "reuse_label": null
+  },
+  {
+   "reaction": "NADH16pp",
+   "zone": "Oxidative phosphorylation",
+   "text": "NADH dehydrogenase (ubiquinone)",
+   "reuse_label": null
+  },
+  {
+   "reaction": "NADH18pp",
+   "zone": "Oxidative phosphorylation",
+   "text": "NADH dehydrogenase (demethylmenaquinone)",
+   "reuse_label": null
+  },
+  {
+   "reaction": "FE3DCITR5",
+   "zone": "Citric acid cycle",
+   "text": "Fe(III)-citrate reduction",
+   "reuse_label": null
+  },
+  {
+   "reaction": "FE3DCITexs",
+   "zone": "Citric acid cycle",
+   "text": "Fe(III)-citrate formation (extracellular)",
+   "reuse_label": null
+  },
+  {
+   "reaction": "PGM",
+   "zone": "Entner-Doudoroff pathway",
+   "text": "ED: glycerate branch",
+   "reuse_label": null
+  }
+ ]
+}

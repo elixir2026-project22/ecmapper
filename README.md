@@ -354,7 +354,7 @@ coding agent do the job: Claude Code with your Claude subscription, pi (pi.dev) 
 a web chat can do it too: ecmapper drives the chat in a browser window, where the chat's terms allow that, or you
 copy the messages back and forth (connection kind *Web chat*).
 
-The AI works with a layout toolkit such as `escher_handlayout`. The resulting Escher map is shown in the map's tab
+The AI works with a layout toolkit such as `escher_handlayout_kit` (in `toolkits/`). The resulting Escher map is shown in the map's tab
 and saved with the table, and `run --assignment` uses it as that map's Escher map. The map's SVG is exported by
 Escher itself, which needs QtWebEngine (e.g. PyQt6-WebEngine). See DRAFT_MAP.md, section 3.6.
 
