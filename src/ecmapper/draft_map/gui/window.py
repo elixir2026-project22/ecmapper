@@ -5,13 +5,17 @@ from __future__ import annotations
 import html
 import json
 import shlex
+import shutil
+import sys
+import time
 import traceback
 from pathlib import Path
 
-from qtpy.QtCore import QProcess, QProcessEnvironment, QRectF, QThread, QTimer, QUrl, Qt, Signal
+from qtpy.QtCore import QProcess, QProcessEnvironment, QRectF, QSettings, QThread, QTimer, QUrl, Qt, Signal
 from qtpy.QtGui import QAction, QActionGroup, QColor, QCursor, QDesktopServices, QKeySequence, QUndoCommand, QUndoStack
 from qtpy.QtWidgets import (
     QAbstractItemView,
+    QApplication,
     QCheckBox,
     QDialog,
     QDialogButtonBox,
@@ -32,6 +36,7 @@ from qtpy.QtWidgets import (
     QProgressDialog,
     QPushButton,
     QSpinBox,
+    QStackedWidget,
     QTableWidget,
     QTableWidgetItem,
     QTabWidget,
@@ -39,12 +44,20 @@ from qtpy.QtWidgets import (
     QWidget,
 )
 
+from ..ai import coding_agent
 from ..assignment import ADDED_COLOUR, MIXED_COLOUR
-from ..split import GROUP_NAMES
+from ..split import GROUP_NAMES, slug
+from .chat import AIDock
+from .escher_svg import ESCHER_URL, ESCHER_VERSION, EscherSvg, download_script, find_script, web_engine_available
 from .items import AUTO, BOXES, DETAIL_SCALE, DRAWINGS, MapScene, MapView
-from .session import NOT_DRAWN, Session, set_inputs, template
+from ..project import EXT, Project, options_of
+from .session import NOT_DRAWN, Session, template
 
 TITLE = "ecmapper draft map assignment"
+#: QSettings of the GUI (organisation, application)
+SETTINGS = ("ecmapper", "draft-map-gui")
+#: the number of recent projects in the menu
+RECENT = 10
 
 
 def subsystems(n: int) -> str:
@@ -69,6 +82,23 @@ class Snapshot(QUndoCommand):
     def undo(self) -> None:
         self.window.session.restore(self.before)
         self.window.refresh()
+
+
+class LayoutChange(Snapshot):
+    """A map laid out by AI; the layouts submitted in one AI job (`key`) are one step."""
+
+    def __init__(self, window: MainWindow, before, after, text: str, key=None):
+        super().__init__(window, before, after, text)
+        self.key = key
+
+    def id(self) -> int:
+        return 7 if self.key is not None else -1
+
+    def mergeWith(self, other) -> bool:
+        if isinstance(other, LayoutChange) and other.key is self.key:
+            self.after = other.after
+            return True
+        return False
 
 
 class LoadWorker(QThread):
@@ -143,14 +173,16 @@ class BuildDialog(QDialog):
         args = session.args
         layout = QFormLayout(self)
         by_pipeline = [m for m in session.maps if session.positions[m] and not session.arranged.get(m)]
-        note = (f"Builds the maps of <b>{html.escape(session.path.name)}</b> with "
+        name = session.project.name if session.project is not None else session.path.name
+        note = (f"Builds the maps of <b>{html.escape(name)}</b> with "
                 "<code>ecmapper.draft_map.run --assignment</code>. Maps arranged here are drawn as arranged")
         note += (f"; the pipeline arranges {html.escape(', '.join(by_pipeline))}." if by_pipeline else ".")
         label = QLabel(note)
         label.setWordWrap(True)
         layout.addRow(label)
         row = QHBoxLayout()
-        self.out = QLineEdit(str(args.out))
+        out = session.project.build_out if session.project is not None else None
+        self.out = QLineEdit(str(out or args.out))
         browse = QPushButton("…")
         browse.clicked.connect(self.browse)
         row.addWidget(self.out)
@@ -206,35 +238,34 @@ class FileField(QWidget):
 
 
 class StartDialog(QDialog):
-    """The input files of a session: the model (or a PREP.pkl), the BRENDA map as template, the output folder."""
+    """The input files of a new project: the model (or a PREP.pkl), the BRENDA map as template, a table to start
+    from."""
 
     def __init__(self, parent, args):
         super().__init__(parent)
-        self.setWindowTitle("New draft maps from a model")
+        self.setWindowTitle("New project")
         self.args = args
         layout = QFormLayout(self)
         intro = QLabel("The model is matched to the BRENDA map (ecmapper; the resources are downloaded on first use), "
                        "which is the template of the draft maps: its subsystems with model reactions, completed with "
-                       "further model reactions, split into maps.")
+                       "further model reactions, split into maps. The project file (*.ecmap) keeps the model, the "
+                       "match, the assignment of the subsystems to the maps and the AI layouts.")
         intro.setWordWrap(True)
         layout.addRow(intro)
         default_json, default_svg = template()
         self.model = FileField(args.model or args.prep, "open",
                                "Models (*.xml *.sbml *.json *.yml *.yaml *.mat *.gz *.bz2 *.xz *.zip *.pkl);;"
                                "All files (*)")
-        self.model.edited = self.model_chosen
         self.subsystems = FileField(getattr(args, "subsystems", None), "open",
                                     "JSON models (*.json *.json.gz *.json.bz2 *.json.xz *.zip)")
-        self.assignment = FileField(args.assignment, "open", "Excel tables (*.xlsx)")
-        self.out = FileField(args.out, "folder")
+        self.assignment = FileField(None, "open", "Excel tables (*.xlsx)")
         self.brenda_json = FileField(args.brenda_json or default_json, "open", "JSON (*.json)")
         self.brenda_svg = FileField(args.brenda_svg or default_svg, "open", "SVG (*.svg)")
         self.pack = QCheckBox("Pack the maps without inter-pathway links (--pack)")
         self.pack.setChecked(bool(args.pack) or args.model is None and args.prep is None)
         layout.addRow("Model (SBML, JSON, MAT, also zipped; or PREP.pkl)", self.model)
         layout.addRow("Subsystems (JSON model, optional)", self.subsystems)
-        layout.addRow("Assignment table (XLSX, optional)", self.assignment)
-        layout.addRow("Output folder", self.out)
+        layout.addRow("Start from assignment table (XLSX, optional)", self.assignment)
         layout.addRow("BRENDA map: reactions (JSON)", self.brenda_json)
         layout.addRow("BRENDA map: SVG", self.brenda_svg)
         layout.addRow(self.pack)
@@ -245,17 +276,10 @@ class StartDialog(QDialog):
         layout.addRow(buttons)
         self.resize(860, self.sizeHint().height())
 
-    def model_chosen(self) -> None:
-        model = self.model.path()
-        if model is not None:
-            self.out.edit.setText(str(model.parent / f"{model.name.split('.')[0]}_maps"))
-
     def problem(self) -> str | None:
-        model, out = self.model.path(), self.out.path()
+        model = self.model.path()
         if model is None or not model.is_file():
             return "Choose the model file."
-        if out is None:
-            return "Choose the output folder."
         for field in (self.brenda_json, self.brenda_svg, self.subsystems, self.assignment):
             if field.path() is not None and not field.path().is_file():
                 return f"{field.path()} does not exist."
@@ -270,12 +294,42 @@ class StartDialog(QDialog):
             return
         super().accept()
 
-    def apply(self) -> None:
-        """Set the inputs of the dialog in the options."""
-        args = self.args
-        args.subsystems, args.assignment = self.subsystems.path(), self.assignment.path()
-        args.pack = self.pack.isChecked()
-        set_inputs(args, self.model.path(), self.out.path(), self.brenda_json.path(), self.brenda_svg.path())
+    def project(self) -> Project:
+        """A new project with the inputs of the dialog and the options of `args`."""
+        options = dict(options_of(self.args), pack=self.pack.isChecked())
+        return Project.new(self.model.path(), self.subsystems.path(), self.brenda_json.path(), self.brenda_svg.path(),
+                           options, self.assignment.path())
+
+
+class WelcomePage(QWidget):
+    """Shown while no project is open: new project, open project, the recent projects."""
+
+    def __init__(self, window: MainWindow):
+        super().__init__()
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(60, 40, 60, 40)
+        title = QLabel(f"<h2>{TITLE}</h2>Draft maps of a model from the BRENDA map: start a project from a model "
+                       "(SBML, JSON, MAT) or open one.")
+        title.setWordWrap(True)
+        buttons = QHBoxLayout()
+        for text, slot in (("New project…", window.new_project), ("Open project…", window.open_project)):
+            button = QPushButton(text)
+            button.clicked.connect(lambda *_, s=slot: s())
+            buttons.addWidget(button)
+        buttons.addStretch(1)
+        self.recent = QListWidget()
+        self.recent.itemActivated.connect(lambda item: window.open_project(item.data(Qt.ItemDataRole.UserRole)))
+        layout.addWidget(title)
+        layout.addLayout(buttons)
+        layout.addWidget(QLabel("Recent projects (double-click to open):"))
+        layout.addWidget(self.recent, 1)
+
+    def show_recent(self, paths: list[str]) -> None:
+        self.recent.clear()
+        for path in paths:
+            item = QListWidgetItem(f"{Path(path).name}  —  {Path(path).parent}")
+            item.setData(Qt.ItemDataRole.UserRole, path)
+            self.recent.addItem(item)
 
 
 class InfoPanel(QWidget):
@@ -343,12 +397,18 @@ class MainWindow(QMainWindow):
 
     log_message = Signal(str)
 
-    def __init__(self, session: Session):
+    def __init__(self, session: Session, settings: QSettings | None = None):
         super().__init__()
         self.session = session
+        self.settings = settings if settings is not None else QSettings(*SETTINGS)
         session.log = self.log_message.emit
+        session.export_svg = self.export_svg
+        self._exporter = None  # EscherSvg, False: not available
         self.undo = QUndoStack(self)
-        self.undo.cleanChanged.connect(lambda clean: self.setWindowModified(not clean))
+        self.undo.cleanChanged.connect(lambda clean: self.setWindowModified(self.modified()))
+        self.dirty = False  # changes of the project outside the undo stack (new project, build folder)
+        self.discarded = False  # the changes were discarded (maybe_save)
+        self.ai_saved = None  # the AI work folders when the project was saved (ai_stamp)
         self.clipboard = None  # (subsystem IDs, their positions where they were copied)
         self.views: dict[str | None, MapView] = {}
         self.mode = AUTO
@@ -361,7 +421,11 @@ class MainWindow(QMainWindow):
         self.tabs.tabBar().tabMoved.connect(lambda *_: QTimer.singleShot(0, self.tab_moved))
         self.tabs.currentChanged.connect(self.current_changed)
         self.tabs.tabBarDoubleClicked.connect(self.rename_map)
-        self.setCentralWidget(self.tabs)
+        self.welcome = WelcomePage(self)
+        self.stack = QStackedWidget()
+        self.stack.addWidget(self.welcome)
+        self.stack.addWidget(self.tabs)
+        self.setCentralWidget(self.stack)
         self.status_label = QLabel()
         self.statusBar().addPermanentWidget(self.status_label)
         self.make_docks()
@@ -369,6 +433,7 @@ class MainWindow(QMainWindow):
         self.log_message.connect(self.show_log)
         self.update_title()
         self.update_actions()
+        self.welcome.show_recent(self.recent_projects())
         self.resize(1600, 1000)
 
     # --- setup ---------------------------------------------------------------------------------
@@ -401,6 +466,10 @@ class MainWindow(QMainWindow):
         self.resizeDocks(self.docks[:2], [260, 600], Qt.Orientation.Vertical)
         self.resizeDocks(self.docks[:1], [480], Qt.Orientation.Horizontal)
         self.resizeDocks(self.docks[2:], [150], Qt.Orientation.Vertical)
+        self.ai_dock = AIDock(self, self.settings)
+        self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, self.ai_dock)
+        self.resizeDocks([self.ai_dock], [460], Qt.Orientation.Horizontal)
+        self.ai_dock.hide()
 
     def action(self, text: str, slot, shortcut=None, tip: str = "") -> QAction:
         a = QAction(text, self)
@@ -414,11 +483,13 @@ class MainWindow(QMainWindow):
 
     def make_actions(self) -> None:
         SK = QKeySequence.StandardKey
-        self.a_new = self.action("&New from model…", self.new_from_model, SK.New,
+        self.a_new = self.action("&New project…", self.new_project, SK.New,
                                  "Match a model (SBML, JSON, MAT) to the BRENDA map and draw its maps")
-        self.a_open = self.action("&Open table…", self.open_table, SK.Open, "Open another assignment table (XLSX)")
-        self.a_save = self.action("&Save", self.save, SK.Save, "Save the assignment table (XLSX)")
+        self.a_open = self.action("&Open project…", self.open_project, SK.Open, f"Open a project (*{EXT})")
+        self.a_save = self.action("&Save", self.save, SK.Save, f"Save the project (*{EXT})")
         self.a_save_as = self.action("Save &as…", self.save_as, SK.SaveAs)
+        self.a_rematch = self.action("&Match model again", self.rematch, None,
+                                     "Match the model to the BRENDA map again (e.g. after the resources were updated)")
         self.a_build = self.action("&Build maps…", self.build_maps, "Ctrl+B",
                                    "Save the table and build the final maps with ecmapper.draft_map.run")
         self.a_quit = self.action("&Quit", self.close, SK.Quit)
@@ -459,10 +530,31 @@ class MainWindow(QMainWindow):
         self.a_new_map = self.action("&New map…", self.new_map, "Ctrl+Shift+N")
         self.a_rename_map = self.action("&Rename map…", lambda: self.rename_map(self.tabs.currentIndex()), "F6")
         self.a_delete_map = self.action("&Delete map", self.delete_map)
+        self.a_ai_layout = self.action("&Lay out with AI…", self.lay_out_with_ai, "Ctrl+Shift+L",
+                                       "Chat with an AI that lays out this map with a toolkit")
+        self.a_ai_view = self.action("&Show AI layout", self.toggle_ai_view, "F7",
+                                     "Show this map as laid out by AI, or as boxes (to change its subsystems)")
+        self.a_ai_view.setCheckable(True)
+        self.a_discard_layout = self.action("&Discard AI layout", self.discard_layout, None,
+                                            "Draw this map automatically again")
+        self.a_import_layout = self.action("&Import Escher layout…", self.import_layout, None,
+                                           "Use an Escher map laid out elsewhere (same reactions) as this map's layout")
+        self.a_ai_folder = self.action("Open AI &work folders", self.open_ai_folder, None,
+                                       "The folders of the AI jobs of this map")
+        self.a_agent_prepare = self.action("&Prepare folder for a coding agent…", self.prepare_agent_folder, None,
+                                            "A work folder with this map, the task and the toolkit, to lay it out "
+                                            "with Claude Code (your Claude subscription), pi or another coding agent")
+        self.a_agent_result = self.action("Use coding agent &result", self.use_agent_result, None,
+                                           "Take the newest final map of this map's newest coding agent folder as "
+                                           "its layout")
 
         bar = self.menuBar()
         m = bar.addMenu("&File")
-        for a in (self.a_new, self.a_open, self.a_save, self.a_save_as, None, self.a_build, None, self.a_quit):
+        m.addAction(self.a_new)
+        m.addAction(self.a_open)
+        self.recent_menu = m.addMenu("Open &recent")
+        self.recent_menu.aboutToShow.connect(self.fill_recent_menu)
+        for a in (self.a_save, self.a_save_as, None, self.a_rematch, None, self.a_build, None, self.a_quit):
             m.addSeparator() if a is None else m.addAction(a)
         m = bar.addMenu("&Edit")
         for a in (self.a_undo, self.a_redo, None, self.a_cut, self.a_copy, self.a_paste, self.a_remove, None,
@@ -476,7 +568,7 @@ class MainWindow(QMainWindow):
         for a in (self.a_fit, self.a_zoom_in, self.a_zoom_out, self.a_zoom_sel, None, *self.mode_actions.values(),
                   None):
             m.addSeparator() if a is None else m.addAction(a)
-        for dock in self.docks:
+        for dock in [*self.docks, self.ai_dock]:
             m.addAction(dock.toggleViewAction())
         m = bar.addMenu("&Arrange")
         for a in (self.a_pack, self.a_original, None, self.a_pipeline):
@@ -484,10 +576,15 @@ class MainWindow(QMainWindow):
         m = bar.addMenu("&Maps")
         for a in (self.a_new_map, self.a_rename_map, self.a_delete_map):
             m.addAction(a)
+        m = bar.addMenu("A&I")
+        for a in (self.a_ai_layout, self.a_ai_view, None, self.a_agent_prepare, self.a_agent_result, None,
+                  self.a_import_layout, self.a_discard_layout, None, self.a_ai_folder):
+            m.addSeparator() if a is None else m.addAction(a)
         tools = self.addToolBar("Tools")
         tools.setObjectName("Tools")
         for a in (self.a_save, self.a_undo, self.a_redo, None, self.a_cut, self.a_copy, self.a_paste, None, self.a_fit,
-                  *self.mode_actions.values(), None, self.a_pack, None, self.a_build):
+                  *self.mode_actions.values(), None, self.a_pack, None, self.a_ai_layout, self.a_ai_view, None,
+                  self.a_build):
             tools.addSeparator() if a is None else tools.addAction(a)
 
     # --- loading -------------------------------------------------------------------------------
@@ -515,6 +612,10 @@ class MainWindow(QMainWindow):
             if worker.error:
                 self.show_log(worker.error)
                 QMessageBox.critical(self, TITLE, f"The draft map could not be made:\n\n{worker.error[-1500:]}")
+                self.session.dm = None
+                self.clear_tabs()
+                self.update_title()
+                self.update_actions()
                 return
             self.build_tabs()
             self.undo.clear()
@@ -526,15 +627,24 @@ class MainWindow(QMainWindow):
         worker.start()
         self.load_worker = worker
 
-    def build_tabs(self) -> None:
+    def clear_tabs(self) -> None:
+        """No maps shown (the welcome page instead)."""
         self.tabs.blockSignals(True)
         while self.tabs.count():
             self.tabs.widget(0).deleteLater()
             self.tabs.removeTab(0)
         self.views = {}
+        self.tabs.blockSignals(False)
+        self.welcome.show_recent(self.recent_projects())
+        self.stack.setCurrentWidget(self.welcome)
+
+    def build_tabs(self) -> None:
+        self.clear_tabs()
+        self.tabs.blockSignals(True)
         for name in [*self.session.maps, None]:
             self.add_view(name)
         self.tabs.blockSignals(False)
+        self.stack.setCurrentWidget(self.tabs)
         self.tabs.setCurrentIndex(0)
         self.refresh_tab_titles()
         self.current_changed()
@@ -567,9 +677,23 @@ class MainWindow(QMainWindow):
         return scene.name if scene is not None else None
 
     def update_title(self) -> None:
-        name = self.session.path.name if self.session.path else "new assignment"
-        self.setWindowTitle(f"{name}[*] – {TITLE}")
-        self.setWindowModified(not self.undo.isClean())
+        project = self.session.project
+        self.setWindowTitle(f"{project.name}[*] – {TITLE}" if project is not None else TITLE)
+        self.setWindowModified(self.modified())
+
+    def ai_stamp(self) -> list | None:
+        """The files of the AI work folders of the project (to see whether AI jobs ran since it was saved)."""
+        project = self.session.project
+        folder = project.work / "ai" if project is not None else None
+        if folder is None or not folder.is_dir():
+            return []
+        return sorted((f.relative_to(folder).as_posix(), f.stat().st_mtime_ns) for f in folder.rglob("*") if f.is_file())
+
+    def modified(self) -> bool:
+        """Whether the project has changes that are not saved."""
+        if self.session.project is None:
+            return False
+        return not self.undo.isClean() or self.dirty or self.ai_stamp() != self.ai_saved
 
     def refresh(self) -> None:
         """Tabs, items and texts as in the session (after a change, undo or redo)."""
@@ -594,6 +718,7 @@ class MainWindow(QMainWindow):
         self.refresh_tab_titles()
         self.selection_changed()
         self.update_status()
+        self.ai_dock.update_state()
 
     def refresh_tab_titles(self) -> None:
         for i in range(self.tabs.count()):
@@ -602,6 +727,12 @@ class MainWindow(QMainWindow):
             found = sum(1 for k in self.found if k in scene.boxes)
             if scene.name is None:
                 text, tip = f"{NOT_DRAWN} ({n})", "Subsystems on no map; copy them onto a map"
+            elif scene.name in self.session.layouts:
+                info = self.session.layout_info(scene.name)
+                problems = info[2] if info is not None else ["no subsystems"]
+                text = f"{'⚠' if problems else '✦'} {scene.name} ({n})"
+                tip = ("AI layout, outdated (Build draws the map automatically): " + "; ".join(problems) if problems
+                       else "laid out by AI (Build uses this layout)")
             else:
                 arranged = self.session.arranged.get(scene.name)
                 text = f"{'✎ ' if arranged else ''}{scene.name} ({n})"
@@ -612,6 +743,7 @@ class MainWindow(QMainWindow):
     def current_changed(self, *_) -> None:
         self.selection_changed()
         self.update_status()
+        self.ai_dock.update_state()
 
     def selection_changed(self) -> None:
         scene = self.current_scene()
@@ -629,11 +761,21 @@ class MainWindow(QMainWindow):
         self.a_remove.setEnabled(selected and on_map)
         self.a_paste.setEnabled(on_map and self.clipboard is not None)
         self.copy_menu.setEnabled(selected)
-        self.move_menu.setEnabled(selected)
-        for a in (self.a_pack, self.a_original, self.a_rename_map, self.a_delete_map):
+        self.move_menu.setEnabled(selected and (on_map or (loaded and scene.name is None)))
+        if loaded and scene.name is not None and not on_map:  # shown as AI layout: switch to boxes to change it
+            self.a_cut.setEnabled(False)
+        for a in (self.a_pack, self.a_original):
             a.setEnabled(on_map)
+        a_map = loaded and scene.name is not None
+        for a in (self.a_rename_map, self.a_delete_map, self.a_ai_layout, self.a_import_layout, self.a_ai_folder,
+                  self.a_agent_prepare, self.a_agent_result):
+            a.setEnabled(a_map)
+        has_layout = a_map and scene.name in self.session.layouts
+        self.a_ai_view.setEnabled(has_layout)
+        self.a_ai_view.setChecked(has_layout and scene.ai_view)
+        self.a_discard_layout.setEnabled(has_layout)
         self.a_pipeline.setEnabled(on_map and bool(self.session.arranged.get(scene.name)))
-        self.a_open.setEnabled(bool(self.session.args.prep or getattr(self.session.args, "model", None)))
+        self.a_rematch.setEnabled(loaded and bool(getattr(self.session.args, "model", None)))
         for a in (self.a_save, self.a_save_as, self.a_build, self.a_new_map, self.a_select_all, self.a_fit,
                   self.a_zoom_in, self.a_zoom_out):
             a.setEnabled(loaded)
@@ -647,8 +789,14 @@ class MainWindow(QMainWindow):
         drawn = "drawings" if scene.mode == DRAWINGS or (scene.mode == AUTO and scale >= DETAIL_SCALE) else "boxes"
         if scene.name is None:
             text = f"{subsystems(len(scene.positions()))} on no map"
+        elif scene.ai_info() is not None:
+            outdated = " (outdated)" if scene.ai_info()[2] else ""
+            text = f"{scene.name}: {subsystems(len(scene.positions()))}, AI layout{outdated}; F7: boxes"
+            drawn = "AI layout"
         else:
             how = "arranged here" if self.session.arranged.get(scene.name) else "arranged by the pipeline"
+            if scene.name in self.session.layouts:
+                how += "; has an AI layout (F7)"
             text = f"{scene.name}: {subsystems(len(scene.positions()))}, {how}"
         self.status_label.setText(f"{text}  |  zoom {scale:.2f} ({drawn})")
 
@@ -662,12 +810,26 @@ class MainWindow(QMainWindow):
     # --- changes -------------------------------------------------------------------------------
 
     def change(self, text: str, apply, select=None, scene: MapScene | None = None) -> None:
-        """Make a change of the session (`apply()`) undoable and show it; select `select` on `scene`."""
+        """Make a change of the session (`apply()`) undoable and show it; select `select` on `scene`.
+
+        A change that makes the AI layout of a map outdated is asked for first.
+        """
         before = self.session.state()
+        fitting = [m for m in self.session.layouts if not self.session.outdated(m)]
         apply()
         after = self.session.state()
         if after == before:
             return
+        spoiled = [m for m in fitting if m in self.session.layouts and self.session.outdated(m)]
+        if spoiled:
+            answer = QMessageBox.question(
+                self, text, f"This changes the subsystems of {', '.join(map(repr, spoiled))}, laid out by AI: the "
+                "layout no longer fits and is kept as outdated (Build draws the map automatically until it is laid out "
+                "again, e.g. with “Update with AI”). Go on?")
+            if answer != QMessageBox.StandardButton.Yes:
+                self.session.restore(before)
+                self.refresh()
+                return
         self.undo.push(Snapshot(self, before, after, text))
         self.refresh()
         if select:
@@ -767,6 +929,11 @@ class MainWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.a_zoom_sel)
         menu.addAction(self.a_fit)
+        if scene.name is not None:
+            menu.addSeparator()
+            menu.addAction(self.a_ai_layout)
+            if scene.name in self.session.layouts:
+                menu.addAction(self.a_ai_view)
         menu.exec(global_pos)
 
     def zoom_to_selection(self) -> None:
@@ -836,6 +1003,197 @@ class MainWindow(QMainWindow):
         name = self.current_map()
         if name is not None:
             self.change(f"Let the pipeline arrange {name}", lambda: self.session.set_arranged(name, False))
+
+    # --- AI layouts ----------------------------------------------------------------------------
+
+    def lay_out_with_ai(self) -> None:
+        self.ai_dock.show()
+        self.ai_dock.raise_()
+        self.ai_dock.update_state()
+        self.ai_dock.input.setFocus()
+
+    def toggle_ai_view(self) -> None:
+        scene = self.current_scene()
+        if scene is not None and scene.name in self.session.layouts:
+            scene.clearSelection()
+            scene.set_ai_view(not scene.ai_view)
+            self.current_view().zoom_to_fit()
+            self.update_actions()
+            self.update_status()
+
+    def apply_ai_layout(self, name: str, layout, key=None, text: str = "AI layout") -> None:
+        """Lay out map `name` so (undoable; the layouts of one AI job, `key`, are one step) and show it."""
+        before = self.session.state()
+        self.session.set_layout(name, layout)
+        self.undo.push(LayoutChange(self, before, self.session.state(), f"{text} of {name}", key))
+        self.refresh()
+        scene = self.views[name].map_scene()
+        if not scene.ai_view:
+            scene.set_ai_view(True)
+        self.views[name].zoom_to_fit()
+        self.update_actions()
+
+    def discard_layout(self) -> None:
+        name = self.current_map()
+        if name in self.session.layouts:
+            self.change(f"Discard the AI layout of {name}", lambda: self.session.set_layout(name, None))
+            self.views[name].zoom_to_fit()
+
+    def import_layout(self) -> None:
+        """Use an Escher map laid out elsewhere (e.g. with a toolkit, from this map's Escher map) for the map."""
+        name = self.current_map()
+        if name is None:
+            return
+        project = self.session.project
+        start = str(project.path.parent if project is not None and project.path else Path(self.session.args.out))
+        path, _ = QFileDialog.getOpenFileName(self, f"Escher layout of {name}", start, "Escher maps (*.json)")
+        if not path:
+            return
+        path = Path(path)
+        source = dict(toolkit="imported", file=str(path), date=time.strftime("%Y-%m-%d %H:%M"))
+        found = coding_agent.find_job(path)
+        ids = None
+        if found is not None and found[1]["map"] == name:  # in a folder prepared for a coding agent: its IDs
+            ids = found[1]["ids"]
+            source.update(toolkit=found[1].get("toolkit_name", ""), connection="coding agent", folder=str(found[0]))
+        self.take_layout(name, path, ids, source, "Import Escher layout")
+
+    def take_layout(self, name: str, path: Path, ids: dict | None, source: dict, text: str) -> bool:
+        """Lay out map `name` as the Escher map in file `path` (exported with `ids`; None: matched by content) if it
+        fits the map (tells the user otherwise)."""
+        try:
+            final = json.loads(path.read_text(encoding="utf-8"))
+            final[1]["nodes"], final[1]["reactions"], final[1]["canvas"]  # noqa: B018 (an Escher map)
+        except (OSError, ValueError, KeyError, IndexError, TypeError) as e:
+            QMessageBox.warning(self, text, f"{path} is no Escher map: {e}")
+            return False
+        run_log = None
+        if (path.parent / "run_log.json").is_file():
+            try:
+                run_log = json.loads((path.parent / "run_log.json").read_text(encoding="utf-8"))
+            except ValueError:
+                pass
+        layout, problems = self.session.new_layout(name, final, ids, None, run_log, source)
+        if problems:
+            QMessageBox.warning(self, text, f"{path.name} does not fit the map {name!r}:\n\n- "
+                                + "\n- ".join(problems))
+            return False
+        layout.svg = self.export_svg(layout.escher)
+        self.apply_ai_layout(name, layout, text=text)
+        self.status(f"{path.name} is the layout of {name} now")
+        return True
+
+    def prepare_agent_folder(self) -> None:
+        """A work folder in which a coding agent lays out the current map (see :mod:`..ai.coding_agent`)."""
+        name = self.current_map()
+        if name is None:
+            return
+        title = "Prepare folder for a coding agent"
+        if self.ai_dock.current_toolkit() is None:
+            self.ai_dock.add_toolkit()
+            if self.ai_dock.current_toolkit() is None:
+                return
+        try:
+            folder = self.ai_dock.prepare_agent_folder(name)
+        except (ValueError, OSError) as e:
+            QMessageBox.warning(self, title, str(e))
+            return
+        toolkit = self.ai_dock.current_toolkit()
+        commands = {agent: coding_agent.command(folder, toolkit, agent) for agent in coding_agent.AGENTS}
+        text = "\n\n".join(f"{agent}:\n{c}" for agent, c in commands.items())
+        box = QMessageBox(self)
+        box.setWindowTitle(title)
+        box.setIcon(QMessageBox.Icon.Information)
+        box.setText(f"The map {name} and its task (AGENTS.md, imported by CLAUDE.md) are in\n{folder}\n\nStart a coding "
+                    f"agent there, e.g.\n\n{text}\n\nThe toolkit runs Python code that the model writes, with your "
+                    "rights. Claude Code asks before it runs commands; pi does not. When a final map is written, use "
+                    "AI ▸ Use coding agent result.")
+        box.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
+        starts = {}
+        if sys.platform == "win32":
+            for agent in coding_agent.AGENTS:
+                if shutil.which(coding_agent.AGENTS[agent][0]):
+                    starts[box.addButton(f"Start {agent}", QMessageBox.ButtonRole.AcceptRole)] = agent
+        copy = box.addButton("Copy commands", QMessageBox.ButtonRole.ActionRole)
+        open_folder = box.addButton("Open folder", QMessageBox.ButtonRole.ActionRole)
+        box.addButton(QMessageBox.StandardButton.Close)
+        box.exec()
+        clicked = box.clickedButton()
+        if clicked in starts:
+            try:
+                coding_agent.start_terminal(folder, toolkit, starts[clicked])
+            except OSError as e:
+                QMessageBox.warning(self, f"Start {starts[clicked]}", str(e))
+        elif clicked is copy:
+            QApplication.clipboard().setText(text)
+        elif clicked is open_folder:
+            QDesktopServices.openUrl(QUrl.fromLocalFile(str(folder)))
+        self.status(f"Folder for a coding agent: {folder}")
+
+    def use_agent_result(self) -> None:
+        """Lay out the current map as the newest final map of its newest coding agent folder."""
+        name = self.current_map()
+        if name is None:
+            return
+        title = "Use coding agent result"
+        found = coding_agent.newest_job(Path(self.session.args.out) / "ai" / slug(name), name)
+        if found is None:
+            QMessageBox.information(self, title, f"There is no folder for a coding agent of the map {name} yet: use "
+                                    "AI ▸ Prepare folder for a coding agent… first.")
+            return
+        folder, job, result = found
+        if result is None:
+            QMessageBox.information(self, title, f"There is no final map (*_final.json) in\n{folder}\nyet.")
+            return
+        source = dict(toolkit=job.get("toolkit_name", ""), connection="coding agent",
+                      date=time.strftime("%Y-%m-%d %H:%M"), folder=str(folder),
+                      file=result.relative_to(folder).as_posix())
+        self.take_layout(name, result, job["ids"], source, "Coding agent layout")
+
+    def open_ai_folder(self) -> None:
+        name = self.current_map()
+        if name is not None:
+            folder = Path(self.session.args.out) / "ai" / slug(name)
+            folder.mkdir(parents=True, exist_ok=True)
+            QDesktopServices.openUrl(QUrl.fromLocalFile(str(folder)))
+
+    def escher_exporter(self):
+        """The SVG export by Escher (:class:`.escher_svg.EscherSvg`), None if it can not be run."""
+        if self._exporter is None:
+            self._exporter = False
+            if not web_engine_available():
+                self.show_log("SVG export of AI layouts: QtWebEngine is not available (e.g. pip install "
+                              "PyQt6-WebEngine); the layouts are kept without SVG")
+                return None
+            script = find_script(self.settings)
+            if script is None:
+                answer = QMessageBox.question(
+                    self, "Escher", f"The SVG of an AI layout is exported by Escher {ESCHER_VERSION} (escher.min.js, "
+                    f"500 kB, MIT license). Download it once from\n{ESCHER_URL}?")
+                if answer != QMessageBox.StandardButton.Yes:
+                    self.show_log("SVG export of AI layouts: escher.min.js not downloaded")
+                    return None
+                try:
+                    script = download_script()
+                except OSError as e:
+                    self.show_log(f"escher.min.js could not be downloaded: {e}")
+                    return None
+            try:
+                self._exporter = EscherSvg(script)
+            except Exception as e:  # noqa: BLE001 (no export, said in the log)
+                self.show_log(f"Escher could not be started for the SVG export: {e}")
+        return self._exporter or None
+
+    def export_svg(self, escher_map: list) -> str | None:
+        """The SVG of an Escher map as Escher exports it (None if Escher can not be run here)."""
+        exporter = self.escher_exporter()
+        if exporter is None:
+            return None
+        try:
+            return exporter.export(escher_map)
+        except RuntimeError as e:
+            self.show_log(f"SVG export failed: {e}")
+            return None
 
     # --- maps ----------------------------------------------------------------------------------
 
@@ -931,72 +1289,180 @@ class MainWindow(QMainWindow):
     # --- files ---------------------------------------------------------------------------------
 
     def save(self) -> bool:
-        if self.session.dm is None:
+        project = self.session.project
+        if self.session.dm is None or project is None:
             return False
-        if self.session.path is None:
+        if project.path is None:
             return self.save_as()
+        return self.save_to(project.path)
+
+    def save_to(self, path: Path) -> bool:
+        """Save the project as `path`."""
         try:
-            path = self.session.save()
-        except PermissionError:
-            QMessageBox.warning(self, TITLE, f"{self.session.path} can not be written. Is it open in Excel?")
+            path = self.session.save_project(path)
+        except OSError as e:
+            QMessageBox.warning(self, TITLE, f"The project could not be saved as {path}:\n\n{e}")
             return False
         self.undo.setClean()
+        self.dirty = False
+        self.ai_saved = self.ai_stamp()
+        self.add_recent(path)
         self.update_title()
         self.status(f"Saved {path}")
         return True
 
     def save_as(self) -> bool:
-        start = str(self.session.path or Path(self.session.args.out) / "assignment.xlsx")
-        path, _ = QFileDialog.getSaveFileName(self, "Save assignment table", start, "Excel tables (*.xlsx)")
+        project = self.session.project
+        if self.session.dm is None or project is None:
+            return False
+        if project.path is not None:
+            start = project.path
+        else:
+            model = Path(project.meta.get("start_model") or Path.home() / "draft_maps")
+            start = model.parent / f"{model.name.split('.')[0]}{EXT}"
+        path, _ = QFileDialog.getSaveFileName(self, "Save project", str(start), f"ecmapper projects (*{EXT})")
         if not path:
             return False
         path = Path(path)
-        if path.suffix.lower() != ".xlsx":
-            path = path.with_suffix(".xlsx")
-        self.session.path = path
-        return self.save()
+        if path.suffix.lower() != EXT:
+            path = path.with_name(path.name + EXT)
+        return self.save_to(path)
 
     def maybe_save(self) -> bool:
-        """True if the changes are saved or may be discarded."""
-        if self.undo.isClean():
+        """True if the changes are saved or may be discarded (then `discarded` is set)."""
+        self.discarded = False
+        if not self.modified():
             return True
         answer = QMessageBox.question(
-            self, TITLE, "Save the changes of the assignment?",
+            self, TITLE, f"Save the changes of the project {self.session.project.name}?",
             QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Discard | QMessageBox.StandardButton.Cancel)
         if answer == QMessageBox.StandardButton.Save:
             return self.save()
-        return answer == QMessageBox.StandardButton.Discard
+        self.discarded = answer == QMessageBox.StandardButton.Discard
+        return self.discarded
 
-    def new_from_model(self) -> bool:
-        """Choose the model, the template and the output folder (:class:`StartDialog`), then start."""
+    def release_project(self) -> None:
+        """The project of the session is not used any more (after :meth:`maybe_save`)."""
+        if self.session.project is not None:
+            self.session.project.close(discard=self.discarded)
+            self.session.project = None
+
+    def busy(self) -> bool:
         if self.process is not None:
             self.status("The maps are being built")
-            return False
-        if not self.maybe_save():
+            return True
+        if self.ai_dock.worker is not None:
+            self.status("The AI is working")
+            return True
+        return False
+
+    def start_project(self, project: Project, warnings=()) -> None:
+        """Show the project (after the old one was released): its files and options in the session, then load."""
+        self.release_project()
+        args = self.session.args
+        self.session.project = project
+        self.session.methods = project.apply(args)
+        self.session.path = args.assignment
+        for warning in warnings:
+            self.show_log(f"warning: {warning}")
+        self.dirty = project.path is None
+        self.ai_saved = self.ai_stamp()
+        self.undo.clear()
+        self.update_title()
+        self.start_loading()
+
+    def new_project(self) -> bool:
+        """Choose the model and the template (:class:`StartDialog`), then start a new project."""
+        if self.busy() or not self.maybe_save():
             return False
         dialog = StartDialog(self, self.session.args)
         if not dialog.exec():
             return False
-        dialog.apply()
-        self.session.path = self.session.args.assignment
-        self.update_title()
-        self.start_loading()
+        try:
+            project = dialog.project()
+        except OSError as e:
+            QMessageBox.warning(self, "New project", f"The project could not be made:\n\n{e}")
+            return False
+        self.start_project(project)
         return True
 
-    def open_table(self) -> None:
-        if not self.maybe_save():
+    def open_project(self, path=None) -> bool:
+        """Open the project file `path` (None: chosen in a file dialog)."""
+        if self.busy() or not self.maybe_save():
+            return False
+        if path is None:
+            project = self.session.project
+            start = str(project.path.parent if project is not None and project.path else Path.home())
+            path, _ = QFileDialog.getOpenFileName(self, "Open project", start, f"ecmapper projects (*{EXT})")
+            if not path:
+                return False
+        path = Path(path)
+        if not path.is_file():
+            QMessageBox.warning(self, "Open project", f"{path} does not exist.")
+            self.remove_recent(path)
+            return False
+        if self.session.project is not None and self.session.project.path == path.resolve():
+            self.release_project()  # the same project again: unpacked again if its changes were discarded
+        try:
+            project, warnings = Project.open(path)
+        except (OSError, ValueError) as e:
+            QMessageBox.warning(self, "Open project", f"{path} could not be opened:\n\n{e}")
+            return False
+        self.add_recent(project.path)
+        self.start_project(project, warnings)
+        return True
+
+    def rematch(self) -> None:
+        """Match the model to the BRENDA map again, then draw the maps again (from the saved table)."""
+        if self.busy() or not self.maybe_save():
             return
-        start = str(self.session.path or self.session.args.out)
-        path, _ = QFileDialog.getOpenFileName(self, "Open assignment table", start, "Excel tables (*.xlsx)")
-        if path:
-            self.session.args.assignment = self.session.path = Path(path)
-            self.start_loading()
+        self.session.rematch()
+        self.start_loading()
+
+    # --- recent projects -----------------------------------------------------------------------
+
+    def recent_projects(self) -> list[str]:
+        try:
+            paths = json.loads(self.settings.value("recent_projects", "[]") or "[]")
+        except ValueError:
+            return []
+        return [p for p in paths if isinstance(p, str)]
+
+    def set_recent(self, paths: list[str]) -> None:
+        self.settings.setValue("recent_projects", json.dumps(paths[:RECENT]))
+        self.welcome.show_recent(self.recent_projects())
+
+    def add_recent(self, path) -> None:
+        path = str(Path(path).resolve())
+        self.set_recent([path, *(p for p in self.recent_projects() if p != path)])
+
+    def remove_recent(self, path) -> None:
+        path = str(Path(path).resolve())
+        self.set_recent([p for p in self.recent_projects() if p != path])
+
+    def fill_recent_menu(self) -> None:
+        self.recent_menu.clear()
+        paths = self.recent_projects()
+        for i, path in enumerate(paths, 1):
+            a = self.recent_menu.addAction(f"&{i % 10} {Path(path).name}", lambda p=path: self.open_project(p))
+            a.setStatusTip(path)
+        if paths:
+            self.recent_menu.addSeparator()
+        self.recent_menu.addAction("&Clear list", lambda: self.set_recent([])).setEnabled(bool(paths))
 
     def closeEvent(self, event) -> None:
+        if self.ai_dock.worker is not None:
+            answer = QMessageBox.question(self, TITLE, "The AI is still working. Stop it and quit?")
+            if answer != QMessageBox.StandardButton.Yes:
+                event.ignore()
+                return
+            self.ai_dock.worker.stop()
+            self.ai_dock.worker.wait(10000)
         if self.maybe_save():
             if self.process is not None:
                 self.process.kill()
                 self.process.waitForFinished(3000)
+            self.release_project()
             event.accept()
         else:
             event.ignore()
@@ -1007,12 +1473,17 @@ class MainWindow(QMainWindow):
         if self.process is not None:
             self.status("The maps are being built")
             return
-        if (not self.undo.isClean() or self.session.path is None or not self.session.path.exists()) and not self.save():
+        if (self.modified() or self.session.path is None or not self.session.path.exists()) and not self.save():
             return
         dialog = BuildDialog(self, self.session)
         if not dialog.exec():
             return
         out = Path(dialog.out.text())
+        project = self.session.project
+        if project is not None and out != project.build_out:  # the folder of the next build
+            project.meta["build_out"] = str(out)
+            self.dirty = True
+            self.update_title()
         command = self.session.build_command(out, dialog.iterations.value(), dialog.seeds.value())
         self.show_log("$ " + " ".join(shlex.quote(c) for c in command))
         process = QProcess(self)
@@ -1064,8 +1535,12 @@ class MainWindow(QMainWindow):
             rows.append(f"Drawn: {cov.get('drawn', '?')} of {cov.get('reactions', '?')} model reactions; "
                         f"{cov.get('coverage_other', 0):.0%} of those that are neither boundary nor transport "
                         "reactions")
+        outdated = stats.get("ai_layouts_outdated", {})
         for name, s in stats.get("maps", {}).items():
-            how = "as arranged here" if s.get("arranged_by") == "table" else "arranged by the pipeline"
+            how = {"table": "as arranged here", "AI layout": "as laid out by AI"}.get(s.get("arranged_by"),
+                                                                                     "arranged by the pipeline")
+            if name in outdated:
+                how += " (its AI layout is outdated)"
             rows.append(f"{html.escape(name)}: {how}")
         box = QMessageBox(self)
         box.setWindowTitle("Maps built")

@@ -23,6 +23,9 @@ draft-map = ["numpy", "scipy", "numba", "networkx", "pygraphviz>=2.0", "openpyxl
 # the GUI for the assignment of the subsystems to the maps (ecmapper.draft_map.gui), with draft-map; needs a Qt binding
 # (PyQt6, PySide6 or PyQt5, e.g. from conda-forge)
 gui = ["qtpy"]
+# AI layouts of whole maps in the GUI (DRAFT_MAP.md 3.6): Anthropic and OpenAI-compatible APIs; the SVG export by Escher
+# needs QtWebEngine (e.g. PyQt6-WebEngine); keyring (optional) stores API keys
+ai = ["anthropic", "openai"]
 
 [project.scripts]
 ecmapper = "ecmapper.cli:main"

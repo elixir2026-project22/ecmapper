@@ -334,17 +334,32 @@ The assignment can also be edited in a GUI (`pip install -e "./ecmapper[draft-ma
 and a Qt binding such as PyQt6). It starts from a model (SBML, JSON or MAT, also
 gzipped or zipped),
 which it matches to the BRENDA map of `BRENDAmap/` as template (or another one
-with `--brenda-json`/`--brenda-svg`), or from the arguments of `run`; without
-arguments, a dialog asks for the files. It shows a tab per map,
+with `--brenda-json`/`--brenda-svg`), or from the arguments of `run` (a new project); without
+arguments, it offers to start a new project or to open one. It shows a tab per map,
 the subsystems as boxes of the size of their drawings (zoomed in: the SVG
 drawings), selected, cut, copied (a copy is drawn on both maps) and pasted
 between maps, moved by hand (boxes stay `--gap` apart) or packed by simulated
 annealing. Reactions added from the model (not on the BRENDA map) are purple,
-in the GUI as in the table. It saves the table (with the arrangement of the maps arranged by
-hand) and builds the final maps with `run --assignment`.
+in the GUI as in the table. It keeps everything of a task in a project file (`PROJECT.ecmap`, a
+zip file with the model, its match to the BRENDA map, the table with the arrangement of the maps arranged by hand,
+the AI layouts and work folders, and the options): *File ▸ New project…*, *Open project…*, *Open recent*, *Save*,
+*Save as…*. It builds the final maps with `run --assignment`; `run --project PROJECT.ecmap OUT` builds them from a
+saved project without the GUI.
+
+The GUI can also have a whole map laid out by an AI (*AI ▸ Lay out with AI…*). You chat with an AI of your
+choice: the Anthropic API, or an OpenAI-compatible API such as OpenAI, OpenRouter, or a local Ollama or LM Studio.
+Install them with `pip install -e "./ecmapper[draft-map,gui,ai]"`. Instead of chatting in the GUI, you can also let a
+coding agent do the job: Claude Code with your Claude subscription, pi (pi.dev) or another agent that reads
+`AGENTS.md` (*AI ▸ Prepare folder for a coding agent…*, then *Use coding agent result*). A model you reach only in
+a web chat can do it too: ecmapper drives the chat in a browser window, where the chat's terms allow that, or you
+copy the messages back and forth (connection kind *Web chat*).
+
+The AI works with a layout toolkit such as `escher_handlayout`. The resulting Escher map is shown in the map's tab
+and saved with the table, and `run --assignment` uses it as that map's Escher map. The map's SVG is exported by
+Escher itself, which needs QtWebEngine (e.g. PyQt6-WebEngine). See DRAFT_MAP.md, section 3.6.
 
 ```bash
-python -m ecmapper.draft_map.gui iML1515.xml --subsystems iML1515.json --pack   # maps in iML1515_maps/
+python -m ecmapper.draft_map.gui iML1515.xml --subsystems iML1515.json --pack   # a new project; maps in iML1515_maps/
 python -m ecmapper.draft_map.gui iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
     --split --pack --assignment assignment.xlsx
 ```
@@ -382,4 +397,8 @@ of layout tools and the results for iML1515
 python -m pip install -e "./ecmapper[dev]"
 cd ecmapper
 pytest               # offline tests with excerpts of the resource files
-pytest -m network    #
+pytest -m network    # download the real files and map e_coli_core
+```
+
+`tests/test_draft_map.py` is skipped without the `draft-map` dependencies
+(`pip install -e "./ecmapper[dev,draft-map]"`).

@@ -13,16 +13,28 @@ SCHEMA = "https://escher.github.io/escher/jsonschema/1-0-0#"
 
 
 class _Ids:
-    def __init__(self):
-        self.n = 0
+    """Sequential Escher IDs; IDs with a key (see :func:`to_escher`) are recorded in `record` ({ID: key}) and, with
+    `reuse` (the record of an earlier export), keys of that export get their IDs again (new ones are numbered above
+    the largest of them)."""
 
-    def __call__(self) -> str:
-        self.n += 1
-        return str(self.n)
+    def __init__(self, reuse: dict | None = None, record: dict | None = None):
+        self.known = {tuple(key): i for i, key in (reuse or {}).items()}
+        self.n = max((int(i) for i in (reuse or {}) if str(i).isdigit()), default=0)
+        self.record = record
+
+    def __call__(self, key: tuple | None = None) -> str:
+        if key is not None and key in self.known:
+            i = self.known[key]
+        else:
+            self.n += 1
+            i = str(self.n)
+        if key is not None and self.record is not None:
+            self.record[i] = list(key)
+        return i
 
 
 def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, subsystem_labels: bool = True,
-              protons: bool = False, description: str = "") -> list:
+              protons: bool = False, description: str = "", ids: dict | None = None, reuse: dict | None = None) -> list:
     """An Escher map of the model reactions of a draft map.
 
     Every model reaction of an enzyme node becomes an Escher reaction with its
@@ -39,6 +51,14 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
     (:func:`place_text_labels`; Escher draws text labels at 50 px, so with
     short map names, :func:`short_name`).
 
+    `ids` (a dict) receives the draft objects of the Escher IDs: ("node",
+    drawn node, BiGG ID) for metabolite nodes, ("free", enzyme node,
+    reaction, BiGG ID) for metabolites that are not drawn, ("reaction",
+    enzyme node, reaction) and ("mid", enzyme node, reaction) for reactions
+    and their midmarkers, ("title", subsystem) and ("stub", drawn node) for
+    text labels; with `reuse` (`ids` of an earlier export), the same objects
+    get the same IDs (:mod:`.ai_layouts`).
+
     The reactions get straight axes and main lines and curved cofactor
     branches (:func:`curve_reactions`): the reactions of an enzyme node side
     by side (`LANE` apart, as the layout leaves room for them), U-shaped
@@ -49,7 +69,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
     Escher's labels (20 px for metabolites) have about the size relative to
     the drawing that the labels of the SVG have.
     """
-    new_id = _Ids()
+    new_id = _Ids(reuse, ids)
     nodes, reactions, text_labels = {}, {}, {}
     escher_node = {}  # (drawn node ID, BiGG ID) -> Escher node ID
     offsets = {}  # drawn node ID -> list of BiGG IDs (later ones are drawn below the first)
@@ -64,7 +84,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
             ids.append(bigg_id)
             k = len(ids) - 1
             x, y = drawn.x * scale, (drawn.y + 34 * k) * scale
-            escher_node[key] = node_id = new_id()
+            escher_node[key] = node_id = new_id(("node", *key))
             nodes[node_id] = dict(
                 node_type="metabolite", x=x, y=y, bigg_id=bigg_id, name=md.metabolites[bigg_id]["name"] or bigg_id,
                 label_x=x + (15 if primary else 8) * scale / 2.5, label_y=y - (22 if primary else 12) * scale / 2.5,
@@ -75,8 +95,8 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
     movable = set()
     drawn_edge = {}  # segment ID -> (enzyme node, drawn metabolite node)
 
-    def free_node(bigg_id, x, y):
-        node_id = new_id()
+    def free_node(bigg_id, x, y, key):
+        node_id = new_id(key)
         movable.add(node_id)
         nodes[node_id] = dict(node_type="metabolite", x=x, y=y, bigg_id=bigg_id,
                               name=md.metabolites[bigg_id]["name"] or bigg_id, label_x=x + 8, label_y=y - 12,
@@ -140,7 +160,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
                 d = math.dist((cx, cy), (mx, my)) or 1.0
                 step = min(10 * scale, d / 3)
                 markers[side] = (mx + (cx - mx) / d * step, my + (cy - my) / d * step)
-            mid = new_id()
+            mid = new_id(("mid", enzyme.id, rid))
             nodes[mid] = dict(node_type="midmarker", x=mx, y=my)
             segments = {}
             marker_ids = {}
@@ -156,7 +176,8 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
                 angle = math.atan2(ay, ax) if (ax or ay) else (0.0 if sign > 0 else math.pi)
                 for k, m in enumerate(ms):
                     a = angle + (k - (len(ms) - 1) / 2) * 0.6
-                    placed[m] = free_node(m, x + math.cos(a) * 40 * scale, y + math.sin(a) * 40 * scale)
+                    placed[m] = free_node(m, x + math.cos(a) * 40 * scale, y + math.sin(a) * 40 * scale,
+                                          ("free", enzyme.id, rid, m))
             for m, node_id in placed.items():
                 c = r["metabolites"][m]
                 marker = marker_ids["prod" if c > 0 else "sub"]
@@ -168,7 +189,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
                 if m in drawn:
                     drawn_edge[segment_id] = (enzyme.id, drawn[m].id)
             genes = [dict(bigg_id=g, name=name) for g, name in r.get("genes", [])]
-            reactions[new_id()] = dict(
+            reactions[new_id(("reaction", enzyme.id, rid))] = dict(
                 name=r["name"] or rid, bigg_id=rid, reversibility=bool(r["reversible"]),
                 label_x=mx + 12 * scale / 2.5, label_y=my + 30 * scale / 2.5,
                 gene_reaction_rule=r.get("gpr", "") or "", genes=genes,
@@ -179,15 +200,15 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
     for drawn_id, ids in offsets.items():
         drawn = dm.nodes[drawn_id]
         if getattr(drawn, "stubs", None):
-            label_id = new_id()
-            text = "→ " + ", ".join(dict.fromkeys(short_name(m) for m in drawn.stubs))
+            label_id = new_id(("stub", drawn_id))
+            text = stub_text(drawn.stubs)
             text_labels[label_id] = dict(text=text, x=drawn.x * scale,
                                          y=(drawn.y + 34 * (len(ids) - 1)) * scale + 66)
             references[label_id] = (drawn.x * scale, drawn.y * scale, (drawn.y + 34 * (len(ids) - 1)) * scale)
     if subsystem_labels:
         for s in dm.subsystems.values():
-            text_labels[new_id()] = dict(text=s.label, x=(s.x + s.w / 2 - text_width(s.label, 18) / 2) * scale,
-                                         y=s.y * scale)
+            text_labels[new_id(("title", s.id))] = dict(
+                text=s.label, x=(s.x + s.w / 2 - text_width(s.label, 18) / 2) * scale, y=s.y * scale)
     body = dict(reactions=reactions, nodes=nodes, text_labels=text_labels)
     moved = set()
     curve_reactions(body, movable, lane=LANE * scale, moved=moved)
@@ -203,6 +224,11 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
     head = dict(map_name=map_name, map_id=re.sub(r"\W+", "_", map_name), map_description=description,
                 homepage="https://escher.github.io", schema=SCHEMA)
     return [head, dict(body, canvas=canvas)]
+
+
+def stub_text(maps) -> str:
+    """The text label of a metabolite node that continues on other maps."""
+    return "→ " + ", ".join(dict.fromkeys(short_name(m) for m in maps))
 
 
 def short_name(map_name: str) -> str:
@@ -781,6 +807,11 @@ def write_escher(dm: DraftMap, md: ModelData, path: str, map_name: str, **kwargs
     data = to_escher(dm, md, map_name, **kwargs)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f)
+    return escher_counts(data)
+
+
+def escher_counts(data: list) -> dict:
+    """The numbers of reactions, nodes and text labels of an Escher map."""
     body = data[1]
     return dict(reactions=len(body["reactions"]), nodes=len(body["nodes"]), text_labels=len(body["text_labels"]),
                 bigg_reactions=len({r["bigg_id"] for r in body["reactions"].values()}))

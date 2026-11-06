@@ -1,9 +1,11 @@
 """Build a draft map of a model from the BRENDA map.
 
 usage: python -m ecmapper.draft_map.run PREP.pkl BRENDA_map_reactions.json BRENDA_map.svg OUT_DIR [options]
+       python -m ecmapper.draft_map.run --project PROJECT.ecmap OUT_DIR [options]
 
 PREP.pkl is written by :mod:`ecmapper.draft_map.prepare`. See DRAFT_MAP.md for the steps. With --split, the
-assignment of the subsystems to the maps can be edited with :mod:`ecmapper.draft_map.gui`.
+assignment of the subsystems to the maps can be edited with :mod:`ecmapper.draft_map.gui`, whose projects
+(:mod:`.project`) can be built with --project.
 """
 
 from __future__ import annotations
@@ -11,7 +13,9 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import os
 import pickle
+import tempfile
 import time
 from collections import Counter
 from pathlib import Path
@@ -31,7 +35,10 @@ from .core import (
     localise_edges,
     prune_unassociated,
 )
-from .escher import write_escher
+from .ai_layouts import apply as apply_layout
+from .ai_layouts import check as check_layout
+from .ai_layouts import load_layouts, refresh_exit_labels
+from .escher import escher_counts, write_escher
 from .layout import (
     Ports,
     SequencePair,
@@ -120,17 +127,30 @@ def arrange(dm, args, final, log, positions=None):
     return ports, x, y, results, [r[4] for r in runs]
 
 
-def write_outputs(m, md, out: Path, prefix: str, title: str, args, stats: dict) -> None:
+def write_outputs(m, md, out: Path, prefix: str, title: str, args, stats: dict, layout=None) -> None:
     """Files of a final map (absolute positions): SVG, CNApy box positions, Escher map, pickle, reaction positions.
 
-    Main edges that pass through other nodes are routed around them first (:mod:`.routes`).
+    Main edges that pass through other nodes are routed around them first (:mod:`.routes`). With an AI `layout`
+    (:mod:`.ai_layouts`, applied to `m`), the Escher map and the SVG are those of the layout.
     """
-    stats["routed_edges"] = route_edges(m) if available_methods(["fdp"]) else 0  # needs pygraphviz
-    write_svg(m, str(out / f"{prefix}.svg"), md=md)
+    description = "Draft map from the BRENDA map, made with ecmapper.draft_map"
+    if layout is None:
+        stats["routed_edges"] = route_edges(m) if available_methods(["fdp"]) else 0  # needs pygraphviz
+        write_svg(m, str(out / f"{prefix}.svg"), md=md)
+    elif layout.svg is not None:
+        (out / f"{prefix}.svg").write_text(layout.svg, encoding="utf-8")
+    else:
+        write_svg(m, str(out / f"{prefix}.svg"), md=md)
+        stats["svg"] = "drawn automatically: the AI layout has no SVG export (export it in the GUI)"
     write_cnapy_maps(m, str(out / f"{prefix}.maps"))
-    stats["escher"] = write_escher(m, md, str(out / f"{prefix}.escher.json"), title, scale=args.escher_scale,
-                                   subsystem_labels=not args.escher_no_labels,
-                                   description="Draft map from the BRENDA map, made with ecmapper.draft_map")
+    if layout is None:
+        stats["escher"] = write_escher(m, md, str(out / f"{prefix}.escher.json"), title, scale=args.escher_scale,
+                                       subsystem_labels=not args.escher_no_labels, description=description)
+    else:
+        data = layout.map_json(title, description + ", laid out by AI")
+        with open(out / f"{prefix}.escher.json", "w", encoding="utf-8") as f:
+            json.dump(data, f)
+        stats["escher"] = escher_counts(data)
     with open(out / f"{prefix}.pkl", "wb") as f:
         pickle.dump(m, f)
     positions = "reaction_positions.json" if prefix == "draft_map" else f"{prefix}.reaction_positions.json"
@@ -203,21 +223,40 @@ def split_maps(dm, md, args, final, log, stats, table=None) -> None:
     stats["maps"] = {}
     arranged = []
     index = dict(maps=[], cross_map_metabolites=cross)
+    layouts = load_layouts(table, Path(args.assignment).parent if args.assignment else Path("."), log)
     for name, sub in maps:
         prefix = slug(name)
         log(f"map {name!r}: {len(sub.subsystems)} subsystems, {len(sub.links)} inter-pathway links")
         map_links(sub, args, hubs)
         if not args.pack and args.hub_subsystems:
             log(sub.log[-1])
-        positions = table_positions(sub, name, table, original, log)
-        ports, _, _, results, seeds = arrange(sub, args, final, log, positions)
-        ax, ay, fx, fy, _ = results[final]
-        m = copy.deepcopy(sub)
-        apply_arrangement(m, ports.names, ax, ay, fx, fy)
-        to_absolute(m)
-        s = dict(arrangements={k: v[4] for k, v in results.items()}, anneal_seeds=seeds,
-                 arranged_by="table" if positions is not None else final)
-        write_outputs(m, md, args.out, prefix, f"{md.model_id} {name} (BRENDA map draft)", args, s)
+        layout = layouts.get(name)
+        if layout is not None:
+            problems = check_layout(layout, sub, md)
+            if problems:
+                log(f"  warning: the AI layout of map {name!r} is outdated, the map is drawn automatically: "
+                    f"{'; '.join(problems)}")
+                stats.setdefault("ai_layouts_outdated", {})[name] = problems
+                layout = None
+        if layout is not None:
+            # the map as laid out by the AI (ai_layouts.py), the boxes around the nodes of their subsystems
+            m = copy.deepcopy(sub)
+            unplaced = apply_layout(m, layout)
+            log(f"map {name!r}: AI layout ({unplaced} nodes not placed by it)")
+            if refresh_exit_labels(layout, m):
+                log(f"  warning: map {name!r}: the '→ map' labels of the AI layout changed with the assignment, "
+                    "its SVG shows the old ones (save the table in the GUI to export it again)")
+            s = dict(arranged_by="AI layout", ai_layout=dict(layout.source, nodes_not_placed=unplaced))
+        else:
+            positions = table_positions(sub, name, table, original, log)
+            ports, _, _, results, seeds = arrange(sub, args, final, log, positions)
+            ax, ay, fx, fy, _ = results[final]
+            m = copy.deepcopy(sub)
+            apply_arrangement(m, ports.names, ax, ay, fx, fy)
+            to_absolute(m)
+            s = dict(arrangements={k: v[4] for k, v in results.items()}, anneal_seeds=seeds,
+                     arranged_by="table" if positions is not None else final)
+        write_outputs(m, md, args.out, prefix, f"{md.model_id} {name} (BRENDA map draft)", args, s, layout)
         del s["coverage"]
         s["references"] = sum(1 for n in m.nodes.values() if getattr(n, "stubs", None))
         stats["maps"][name] = s
@@ -246,6 +285,10 @@ def build_parser(positional: bool = True) -> argparse.ArgumentParser:
         parser.add_argument("brenda_json")
         parser.add_argument("brenda_svg")
         parser.add_argument("out", type=Path)
+        parser.add_argument("--project", metavar="ECMAP",
+                            help="build the maps of a project of the GUI (PROJECT.ecmap OUT_DIR instead of the four "
+                            "files): its prepared model, BRENDA map, assignment table, AI layouts and options (options "
+                            "given here take precedence); implies --split")
     parser.add_argument("--keep-subsets", action="store_true",
                         help="keep subsystems whose model reactions are a proper subset of another subsystem's (rule A)")
     parser.add_argument("--aside-coverage", type=float, default=0.9,
@@ -324,7 +367,7 @@ def command_line(args, parser=None) -> list[str]:
     for action in parser._actions:
         if action.dest == "help":
             continue
-        value = getattr(args, action.dest)
+        value = getattr(args, action.dest, action.default)
         if not action.option_strings:
             positional.append(str(value))
         elif value is not None and value != action.default:
@@ -433,9 +476,46 @@ def relayout_and_condense(dm, md, args, methods, log, stats: dict, out: Path | N
 
 
 def main(argv=None) -> None:
+    pre = argparse.ArgumentParser(add_help=False)
+    pre.add_argument("--project", type=Path)
+    known, rest = pre.parse_known_args(argv)
+    if known.project is not None:
+        main_project(known.project, rest)
+        return
     parser = build_parser()
     args = parser.parse_args(argv)
     methods = check_args(parser, args)
+    build(args, methods)
+
+
+def main_project(path: Path, argv: list[str]) -> None:
+    """--project: the maps of a project file (unpacked into a temporary folder), the options from the project
+    unless given in `argv` (OUT_DIR and options)."""
+    from .project import Project, extract
+
+    parser = build_parser(positional=False)
+    parser.prog = "python -m ecmapper.draft_map.run --project PROJECT.ecmap"
+    parser.add_argument("out", type=Path)
+    with tempfile.TemporaryDirectory(prefix="ecmapper-project-") as tmp:
+        extract(path, tmp)
+        meta = json.loads((Path(tmp) / "project.json").read_text(encoding="utf-8"))
+        project = Project(Path(tmp), path, meta)
+        parser.set_defaults(**{k: v for k, v in meta.get("options", {}).items()
+                               if any(a.dest == k for a in parser._actions)})
+        args = parser.parse_args(argv)
+        out = args.out
+        project.apply_files(args)
+        args.out = out.resolve()
+        if args.prep is None or not Path(args.prep).is_file():
+            parser.error(f"{path}: the model was not matched to the BRENDA map yet (open the project in the GUI first)")
+        if args.assignment is None or not Path(args.assignment).is_file():
+            parser.error(f"{path} has no assignment table yet (save it in the GUI first)")
+        methods = check_args(parser, args)
+        build(args, methods)
+
+
+def build(args, methods: list[str]) -> None:
+    """The pipeline with the options `args` (see :func:`build_parser`)."""
     args.out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
 
@@ -446,7 +526,12 @@ def main(argv=None) -> None:
     md, dm, table = draft_until_assignment(args, log, stats, out=args.out)
     if args.write_assignment:
         order, assignment = map_assignment(dm, args, table, log)
-        write_assignment(args.write_assignment, dm, md, order, assignment, table.positions if table else None)
+        layouts = None
+        if table is not None and table.layouts:  # the folders of the AI layouts, relative to the new table
+            base, target = Path(args.assignment).parent, Path(args.write_assignment).parent
+            layouts = {name: (os.path.relpath(base / folder, target), "") for name, folder in table.layouts.items()}
+        write_assignment(args.write_assignment, dm, md, order, assignment, table.positions if table else None,
+                         layouts)
         log(f"assignment of {len(dm.subsystems)} subsystems to {len(order)} maps written to {args.write_assignment}")
         with open(args.out / "stats.json", "w") as f:
             json.dump(stats, f, indent=1, default=float)

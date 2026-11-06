@@ -477,20 +477,34 @@ and an overview:
 
 - **GUI:** `python -m ecmapper.draft_map.gui` edits the assignment of the subsystems to the maps and their
   arrangement in a window (qtpy with a Qt binding such as PyQt6: `pip install -e "./ecmapper[draft-map,gui]"`).
-  It takes the options of `run` (`--split` implied; with or without `--assignment`) and as inputs
-  - `MODEL [OUT_DIR]`: a model (SBML; JSON, YAML or MAT by the extension; also compressed: `.gz`, `.bz2`, `.xz`
-    or a `.zip` with one model file, e.g. `MODEL.xml.gz`), matched to the BRENDA map as
-    `prepare` does (`--subsystems`, `--vicinity`) into `OUT_DIR/MODEL_prep.pkl`, which is reused while model,
-    map, options and code stay the same; the template is the BRENDA map of `BRENDAmap/` unless `--brenda-json`
-    and `--brenda-svg` give another; `OUT_DIR` defaults to `MODEL_maps` next to the model;
-  - or `PREP.pkl [OUT_DIR]`, or the four arguments of `run`;
-  - or nothing: a dialog asks for model, subsystems file, assignment table, output folder and the BRENDA map
-    (also *File ▸ New from model*, Ctrl+N).
+  It works on **projects**: a project file (`PROJECT.ecmap`, a zip file) holds everything of a task, namely
+  - `project.json`: the options of `run` (and `--vicinity`), the files of the project, the template;
+  - `model/`: a copy of the model (SBML; JSON, YAML or MAT by the extension; also compressed: `.gz`, `.bz2`,
+    `.xz` or a `.zip` with one model file) and of the JSON model with the subsystems (`--subsystems`);
+  - `prep.pkl`: the model matched to the BRENDA map as `prepare` does (`prep.key`: matched again only when the
+    model, the subsystems file, the BRENDA map, `--vicinity` or the ecmapper version change, or with *File ▸
+    Match model again*);
+  - `assignment.xlsx` with `assignment_layouts/MAP` (the AI layouts) and `ai/` (the AI work folders, see 3.6);
+  - `gui_cache.pkl`: the condensed subsystems (see below), so a project opens in seconds;
+  - `template/`: the BRENDA map, only if it is not the one of `BRENDAmap/` (that one is referenced by its
+    SHA-256; a change of it is reported when the project is opened).
+
+  An open project is unpacked into a work folder in the ecmapper cache (`projects/` in `~/.cache/ecmapper`,
+  `$ECMAPPER_CACHE`), which is `OUT` below; it is reused while the project file does not change, and *Save* zips
+  it again (written to a temporary file first). *File* has *New project…* (Ctrl+N: model or PREP.pkl, subsystems
+  file, an assignment table to start from, the BRENDA map, `--pack`), *Open project…* (Ctrl+O), *Open recent*,
+  *Save* and *Save as…*; without arguments the window shows these and the recent projects. Arguments start a
+  new project:
+  - `MODEL [OUT_DIR]`: a model with the BRENDA map of `BRENDAmap/` as template unless `--brenda-json` and
+    `--brenda-svg` give another; `OUT_DIR` (default: `MODEL_maps` next to the model) is the folder of the built
+    maps;
+  - or `PREP.pkl [OUT_DIR]`, or the four arguments of `run`; with the options of `run` (`--split` implied; with or
+    without `--assignment`).
 
   It runs steps 1–4 with the
   options given, so the subsystems have the sizes they have on the final maps; the condensed subsystems are kept
-  in `OUT/gui_cache.pkl` for the next start with the same inputs, options and reaction sheet (R. opacus: about
-  a minute the first time, 2 s then).
+  in `OUT/gui_cache.pkl` for the next start with the same inputs (by content), options, code and reaction sheet
+  (R. opacus: about a minute the first time, 2 s then).
   - One tab per map (drag the tabs to reorder the maps; double-click to rename) and one for the subsystems on no
     map. A subsystem is a box of the size of its drawing; zoomed in (from 0.3 screen pixels per map unit, or
     with *Drawings*), its SVG is shown as on the final map, with the references to the other maps. With links
@@ -508,14 +522,20 @@ and an overview:
     maps; the panel *Subsystem* lists the model reactions of the selected subsystem (read only; edit the sheet
     *Reactions* to change them), those added from the model in purple as in the table; the boxes give their
     number.
-  - *Build maps* (Ctrl+B) saves the table and runs `run --assignment` with the same options (output folder,
-    iterations and seeds of the maps arranged by the pipeline in a dialog), shows the log and a summary and opens
-    `overview.svg`.
+  - *Build maps* (Ctrl+B) saves the project and runs `run --assignment` with the same options (output folder,
+    default `PROJECT_maps` next to the project file and kept in the project, iterations and seeds of the maps
+    arranged by the pipeline in a dialog), shows the log and a summary and opens `overview.svg`.
 
   ```bash
+  python -m ecmapper.draft_map.gui iML1515.xml --subsystems iML1515.json --pack   # a new project
   python -m ecmapper.draft_map.gui PREP.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT \
       --split --pack --assignment assignment.xlsx
+  python -m ecmapper.draft_map.run --project iML1515.ecmap OUT --iterations 200000 --seeds 4
   ```
+
+  `run --project PROJECT.ecmap OUT_DIR` builds the maps of a saved project without the GUI: it unpacks the
+  project into a temporary folder and takes its prepared model, BRENDA map, table, AI layouts and options
+  (options given on the command line take precedence).
 
 [BRENDAmap/draft_map_iML1515/split](BRENDAmap/draft_map_iML1515/split): `--split --pack`, 200,000 moves, 4 seeds
 per map (about 5 minutes). "Other pathways" (7 reactions) was merged into amino acids. 117 inter-pathway links
@@ -547,6 +567,125 @@ reactions or metabolites missing in the model.
 | Central map | Central map in Escher |
 |---|---|
 | ![central map](BRENDAmap/draft_map_iML1515/figures/split_central_metabolism.png) | ![central map in Escher](BRENDAmap/draft_map_iML1515/figures/escher_split_central_metabolism.png) |
+
+### 3.6 AI layouts of whole maps (GUI)
+
+A map of `--split` can be laid out by an AI in the GUI. The AI uses a layout *toolkit*, such as `escher_handlayout`
+(`Opus_metabolic_map_handlayout/escher_handlayout_toolkit`), and the layout is used for that map from then on.
+The AI lays out all the subsystems of the map together, so it can interconnect them, e.g. merge shared
+metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
+
+**Using it:**
+
+- *AI ▸ Lay out with AI…* (Ctrl+Shift+L) opens the chat panel *AI layout* for the current map.
+- **Connections:**
+  - the Anthropic API (`anthropic` SDK). The default model is `claude-opus-5-5`, with adaptive thinking, a
+    selectable effort (default high) and prompt caching. A request the model declines is passed to another model
+    (`fallbacks="default"`).
+  - OpenAI-compatible APIs (`openai` SDK). Presets cover OpenAI, OpenRouter, Mistral, Gemini, Ollama and LM Studio;
+    the model must support tool calls.
+  - The key comes from an environment variable, or it is typed in. A typed key is stored with `keyring` if that is
+    installed, otherwise it is kept for the session only. Connections are saved without keys.
+  - Web chats, see *With a web chat* below.
+- **Toolkits:** a folder added with *…*. `escher_handlayout` (v1.0 and v1.1, `python -m escher_handlayout`) and
+  `escher_handlayout_kit` (`run.py`: inspect, check-spec, build, validate; the final map is the best build's
+  `*_handlayout.json`) are recognised as they are. Other toolkits need a file `ecmapper_toolkit.json`:
+
+  ```json
+  {"name": "my_toolkit", "package": "my_toolkit", "instructions": ["PROMPT.md"],
+   "commands": ["inspect", "run"], "result": "**/*_final.json", "notes": "how to use it on draft.escher.json"}
+  ```
+
+  The files in `instructions` go into the AI's system prompt, and `commands` are the allowed first arguments of
+  `python -m package`.
+
+**A job:**
+
+- **The work folder** is `OUT/ai/MAP/DATE-TIME` (`ai/` of the project, saved with it). It holds the map as the pipeline draws it with the current
+  arrangement (`draft.escher.json`), whose subsystem titles serve as zone proposals, and the conversation
+  (`transcript.jsonl`).
+- **The AI's tools:**
+  - it reads and writes files in the work folder (the toolkit's files are readable as `toolkit/…`);
+  - it runs the toolkit (`run_toolkit`, which needs approval, see below);
+  - it looks at PNGs, if the model can see images;
+  - it submits the final map (`submit_layout`).
+- **Checking a submission:** ecmapper accepts the map only if it has the draft's reactions, with their
+  stoichiometry, and the same subsystems; otherwise the AI gets the problems back. It maps the positions of the
+  draft nodes back by the Escher IDs of the export, following the toolkit's merges in `run_log.json`. Escher
+  1.7.3 then exports the map as SVG in a hidden QtWebEngine view; it gets `escher.min.js` from the setting
+  `ai/escher_js`, the `escher` package, or a one-time download it asks for. The map's tab shows the result
+  (✦; F7 switches between the AI layout and the boxes). One undo step undoes the job.
+- **Follow-up messages** refine the layout. *New conversation* continues in the same folder with a fresh context,
+  as escher_handlayout's NOTES.md protocol expects.
+
+**Outdated layouts:**
+
+- A change of the map's subsystems or reactions makes its layout outdated (⚠), after asking. *Update with AI*
+  gives the AI the map as it is now in `draft_vN.escher.json`, where the objects keep their Escher IDs.
+- Changes on other maps only change the "→ map" labels. They are updated when the table is saved, and the SVG is
+  exported again.
+
+**With a coding agent** instead of the chat: Claude Code (with your Claude subscription), pi (pi.dev: many providers
+through its own logins), Codex or another agent that reads `AGENTS.md`.
+
+- *AI ▸ Prepare folder for a coding agent…* makes a work folder `OUT/ai/MAP/DATE-TIME-agent` with the map
+  (`draft.escher.json`), the task as `AGENTS.md` (read by pi, Codex and others when they start there; `CLAUDE.md`
+  imports it for Claude Code), `run_toolkit.py` (runs the toolkit with the GUI's Python, the toolkit on the path and
+  UTF-8 output) and `ecmapper_job.json` (the map and the draft objects of its Escher IDs). It uses the toolkit chosen
+  in the AI dock.
+- The dialog shows the commands that start Claude Code (`claude --add-dir TOOLKIT "Lay out this map."`) or pi
+  (`pi "Lay out this map."`) there, copies them, or opens a terminal with an agent found on the PATH (Windows).
+  Further instructions are given in the agent.
+- **Security:** the toolkit runs Python code the model wrote. Claude Code asks before it runs commands; pi has no
+  permission prompts and runs them (any command) with your rights; run it in a container if in doubt.
+- *AI ▸ Use coding agent result* takes the newest final map (`*_final.json`) of the map's newest such folder. It is
+  checked like a submitted map and mapped back by the Escher IDs, so all draft nodes are placed. Use it again after
+  further changes.
+
+**With a web chat:** a connection of the kind *Web chat* runs the same job through the text of a chat on a web page,
+for models you reach only there (`ai/webchat.py`, `gui/webchat.py`). If the chat also offers an API key
+(OpenAI-compatible, as Open WebUI and many institutional portals do), that connection is more reliable.
+
+- **How it works:** ecmapper's first message has the task, the toolkit's instructions and the tools with their JSON
+  schemas. The model calls tools by writing JSON blocks (`{"tool": NAME, "input": {...}}`) in its reply, and gets
+  their results in the next message. The messages are numbered ("ecmapper message N"), and the model ends each reply
+  with the line `@@END N@@`. Images (renders) are pasted only by the browser, and only if *Send images* is on.
+- **Browser:** a window with QtWebEngine; logins are kept in its profile `ecmapper-webchat`. Log in, open a new
+  conversation and click *Start*. ecmapper pastes each message into the chat's input field (the lowest visible text
+  field), presses Enter (or clicks the send button), and reads the page until the reply ends with its end line. A
+  reply without one can be taken with *Use the reply as it is*. *Stop* in the dock stops waiting.
+- **Copy/paste:** a panel in the dock puts each message on the clipboard. Paste it into the chat, copy the model's
+  whole reply, and click *Paste reply*. This works with any chat.
+- **Terms of use:** use the browser only for chats whose terms allow automated use, e.g. your own or your institute's
+  Open WebUI or LibreChat. claude.ai, ChatGPT and Gemini forbid it, so ecmapper does not send messages there in
+  the browser. With a subscription to them, use a coding agent (above); copy/paste is fine with any chat.
+
+**Other commands:** *Import Escher layout…* takes a map laid out elsewhere. It is matched by content (reactions by
+BiGG ID, metabolites by their reactions) and accepted if it has the map's reactions; a file in a folder prepared for
+a coding agent is matched by its Escher IDs. *Discard AI layout* draws the map automatically again.
+
+**Saving and building:**
+
+- The table gets a sheet *AI layouts* (map, folder, source). The folders are `TABLE_layouts/MAP` (in a project
+  `assignment_layouts/MAP`), each with `layout.json`, `final.escher.json` and `final.svg`.
+- `run --assignment` writes a fitting layout as the map's Escher map and SVG. The positions mapped back give the
+  pickle, the CNApy maps and the reaction positions; each subsystem box is the bounding box of its nodes, and the
+  boxes may overlap.
+- `stats.json` says `arranged_by: "AI layout"`. An outdated layout is not used: the map is drawn automatically, with
+  a warning (`ai_layouts_outdated`).
+- These SVGs look like Escher's, without the BRENDA links of the automatic maps.
+
+**Security:** toolkits run Python code the AI wrote (escher_handlayout executes the spec), with the user's rights.
+Every toolkit command is therefore shown for approval, unless *Run toolkit commands without asking* is checked or a
+job is allowed with *Run all of this job*. The file tools only reach the work folder and, read-only, the toolkit.
+
+**R. opacus:**
+
+- The hand layout of the central map in `R_opacus_HANDLAYOUT/central_metabolism/v7_autotrophic`, made outside the
+  GUI, still fits the current central map. Imported, it places 279 of the 305 draft nodes by content; the others
+  keep their offset from a neighbour.
+- `run --assignment` writes it as `central_metabolism.escher.json` (98 reactions) with Escher's SVG.
+- `escher_handlayout inspect` proposes 11 zones for the exported central map.
 
 ## 4. Evaluation
 

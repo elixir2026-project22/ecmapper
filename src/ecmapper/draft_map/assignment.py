@@ -7,6 +7,8 @@ Sheet "Reactions": one row per model reaction (no boundary reactions) with the I
 drawn ("Subsystems", separated by ";"); a reaction in several subsystems is drawn in each of them, on their maps.
 Sheet "Arrangement" (optional, written by the GUI, :mod:`.gui`): the positions of the subsystem boxes (top left, map
 units) on the maps arranged by hand; the other maps are arranged by the pipeline.
+Sheet "AI layouts" (optional, written by the GUI): the folders (relative to the table) of the maps laid out by an AI
+(:mod:`.ai_layouts`).
 """
 
 from __future__ import annotations
@@ -23,6 +25,8 @@ REACTIONS = "Reactions"
 HELP = "Help"
 ARRANGEMENT = "Arrangement"
 ARRANGEMENT_COLUMNS = ["Map", "Subsystem ID", "x", "y"]
+AI_LAYOUTS = "AI layouts"
+AI_LAYOUT_COLUMNS = ["Map", "Folder", "Source"]
 #: columns of the subsystems sheet before the map columns
 SUBSYSTEM_COLUMNS = ["Subsystem ID", "Subsystem", "Colour group", "Set aside (rule)", "Model reactions"]
 REACTION_COLUMNS = ["Reaction ID", "Name", "Subsystems", "Maps (when written)", "Equation", "Equation (names)",
@@ -58,6 +62,10 @@ HELP_TEXT = [
     "map units) of the subsystems on the maps arranged by hand. A map with the positions of all its subsystems is "
     "drawn so (boxes closer than --gap are moved apart); the other maps are arranged by the pipeline.",
     "",
+    "Sheet AI layouts (written by the GUI): the folders (relative to this table) with the Escher maps of the maps laid "
+    "out by an AI. Such a map is drawn as its layout as long as it has the same subsystems and reactions; otherwise "
+    "it is drawn automatically (with a warning). Delete a row to draw the map automatically again.",
+    "",
     "The table is read at the same point of the pipeline at which it was written (after step 3, the completion), "
     "so run with the same prepared model and the same options of steps 1-3.",
 ]
@@ -69,6 +77,7 @@ class AssignmentTable:
     subsystems: dict[str, list[str]] = field(default_factory=dict)  # subsystem ID -> map names (none: not drawn)
     reactions: dict[str, list[str]] = field(default_factory=dict)  # reaction ID -> subsystem IDs
     positions: dict[str, dict[str, tuple[float, float]]] = field(default_factory=dict)  # map -> subsystem -> x, y
+    layouts: dict[str, str] = field(default_factory=dict)  # map -> folder of its AI layout (relative to the table)
 
     def map_assignment(self, dm: DraftMap) -> tuple[list[str], dict[str, list[str]]]:
         """Map names in order (those with subsystems) and {subsystem ID: map names} of the subsystems of `dm`."""
@@ -111,11 +120,14 @@ def equation(md: ModelData, rid: str, names: bool = False) -> str:
 
 
 def write_assignment(path, dm: DraftMap, md: ModelData, order: list[str], assignment: dict[str, list[str]],
-                     positions: dict[str, dict[str, tuple[float, float]]] | None = None) -> None:
+                     positions: dict[str, dict[str, tuple[float, float]]] | None = None,
+                     layouts: dict[str, tuple[str, str]] | None = None) -> None:
     """XLSX table of the assignment of the subsystems of `dm` to the maps and of the model reactions to subsystems.
 
     `assignment`: {subsystem ID: map names}; `positions`: {map name:
-    {subsystem ID: (x, y)}} of the maps arranged by hand (sheet Arrangement).
+    {subsystem ID: (x, y)}} of the maps arranged by hand (sheet Arrangement);
+    `layouts`: {map name: (folder, source)} of the maps laid out by an AI
+    (sheet AI layouts).
     """
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
@@ -200,6 +212,17 @@ def write_assignment(path, dm: DraftMap, md: ModelData, order: list[str], assign
             c.font, c.fill = bold, head_fill
         ws.freeze_panes = "A2"
 
+    if layouts:
+        ws = wb.create_sheet(AI_LAYOUTS)
+        ws.append(AI_LAYOUT_COLUMNS)
+        for name in sorted(layouts, key=lambda m: rank.get(m, len(order))):
+            ws.append([name, *layouts[name]])
+        for i, width in enumerate([30, 40, 60], 1):
+            ws.column_dimensions[get_column_letter(i)].width = width
+        for c in ws[1]:
+            c.font, c.fill = bold, head_fill
+        ws.freeze_panes = "A2"
+
     ws = wb.create_sheet(HELP)
     for line in HELP_TEXT:
         ws.append([line])
@@ -242,6 +265,14 @@ def read_assignment(path) -> AssignmentTable:
                 continue
             name, k = str(row[i_map]).strip(), str(row[i_sub]).strip()
             table.positions.setdefault(name, {})[k] = (float(row[i_x]), float(row[i_y]))
+    if AI_LAYOUTS in wb.sheetnames:
+        rows = wb[AI_LAYOUTS].iter_rows(values_only=True)
+        header = [str(c).strip() if c is not None else "" for c in next(rows, [])]
+        i_map, i_folder = header.index("Map"), header.index("Folder")
+        for row in rows:
+            if not row or any(i >= len(row) or row[i] is None or str(row[i]).strip() == "" for i in (i_map, i_folder)):
+                continue
+            table.layouts[str(row[i_map]).strip()] = str(row[i_folder]).strip()
     wb.close()
     return table
 

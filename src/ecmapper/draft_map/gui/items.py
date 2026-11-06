@@ -1,4 +1,5 @@
-"""Drawing the maps: a box per subsystem with two zoom levels, the links between the boxes, the view."""
+"""Drawing the maps: a box per subsystem with two zoom levels, the links between the boxes, the view; maps with an
+AI layout as their Escher drawing with the outlines of the subsystems."""
 
 from __future__ import annotations
 
@@ -36,18 +37,20 @@ def qcolor(text: str) -> QColor:
 
 
 class SubsystemItem(QGraphicsObject):
-    """A subsystem on a map: its box with name (zoomed out) or its SVG drawing (zoomed in).
+    """A subsystem on a map: its box with name (zoomed out) or its SVG drawing (zoomed in); on a map shown as its
+    AI layout, the outline of its nodes there (`outline`: x, y, w, h).
 
     The local coordinates are those of the box (top left at 0, 0, map
     units); the title of the drawing sticks out above the box.
     """
 
-    def __init__(self, map_scene: MapScene, key: str):
+    def __init__(self, map_scene: MapScene, key: str, outline=None):
         super().__init__()
         self.map_scene, self.key = map_scene, key
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsSelectable)
         self.found = False
         self.renderer = None
+        self.outline = outline
         self.refresh()
 
     def refresh(self) -> None:
@@ -57,7 +60,11 @@ class SubsystemItem(QGraphicsObject):
         self.prepareGeometryChange()
         self.w, self.h, self.label, self.fill = s.w, s.h, s.label, qcolor(s.fill)
         self.renderer = None
-        self.view_box = QRectF(*session.subsystem_svg(self.map_scene.name, self.key)[1])
+        if self.outline is not None:
+            self.w, self.h = self.outline[2], self.outline[3]
+            self.view_box = self.box()
+        else:
+            self.view_box = QRectF(*session.subsystem_svg(self.map_scene.name, self.key)[1])
         others = [m for m in session.maps_of(self.key) if m != self.map_scene.name]
         count, added = session.counts.get(self.key, 0), session.added_counts.get(self.key, 0)
         self.lines = [(self.label, True, 15), (f"{count} reactions", False, 12)]
@@ -83,6 +90,15 @@ class SubsystemItem(QGraphicsObject):
     def paint(self, painter: QPainter, option, widget=None) -> None:
         scale = QStyleOptionGraphicsItem.levelOfDetailFromTransform(painter.worldTransform())
         box = self.box()
+        if self.outline is not None:
+            marked = self.isSelected() or self.found
+            pen = QPen(SELECTED if self.isSelected() else FOUND if self.found else self.fill.darker(170),
+                       4 if marked else 1.5, Qt.PenStyle.SolidLine if marked else Qt.PenStyle.DashLine)
+            pen.setCosmetic(True)
+            painter.setPen(pen)
+            painter.setBrush(Qt.BrushStyle.NoBrush)
+            painter.drawRect(box)
+            return
         if self.detailed(scale):
             if self.renderer is None:
                 data, _ = self.map_scene.session.subsystem_svg(self.map_scene.name, self.key)
@@ -132,8 +148,49 @@ class SubsystemItem(QGraphicsObject):
         painter.restore()
 
 
+class EscherItem(QGraphicsObject):
+    """The AI layout of a map: the SVG export of its Escher map in map units (or a note if there is none)."""
+
+    def __init__(self, layout):
+        super().__init__()
+        self.setZValue(-1)
+        self.setCacheMode(QGraphicsItem.CacheMode.DeviceCoordinateCache)
+        self.set_layout(layout)
+
+    def set_layout(self, layout) -> None:
+        self.prepareGeometryChange()
+        self.layout = layout
+        self.rect = QRectF(*layout.extent())
+        self.renderer = QSvgRenderer(QByteArray(layout.svg.encode("utf-8"))) if layout.svg else None
+        self.update()
+
+    def boundingRect(self) -> QRectF:
+        return self.rect
+
+    def paint(self, painter: QPainter, option, widget=None) -> None:
+        if self.renderer is not None and self.renderer.isValid():
+            self.renderer.render(painter, self.rect)
+            return
+        painter.fillRect(self.rect, QColor(255, 255, 255))
+        scale = QStyleOptionGraphicsItem.levelOfDetailFromTransform(painter.worldTransform())
+        painter.save()
+        painter.translate(self.rect.center())
+        painter.scale(1 / scale, 1 / scale)
+        font = QFont()
+        font.setPixelSize(14)
+        painter.setFont(font)
+        painter.setPen(TEXT)
+        painter.drawText(QRectF(-250, -30, 500, 60), Qt.AlignmentFlag.AlignCenter,
+                         "AI layout without SVG export\n(Escher could not be run: no QtWebEngine or escher.min.js)")
+        painter.restore()
+
+
 class MapScene(QGraphicsScene):
-    """The subsystems of one map (`name`; None: the subsystems on no map, which can not be moved)."""
+    """The subsystems of one map (`name`; None: the subsystems on no map, which can not be moved).
+
+    A map with an AI layout is shown as that (`ai_view`, :class:`EscherItem`)
+    with the outlines of its subsystems, which can be selected, not moved.
+    """
 
     def __init__(self, session: Session, name: str | None, parent=None):
         super().__init__(parent)
@@ -142,40 +199,68 @@ class MapScene(QGraphicsScene):
         self.link_items: list[tuple[QGraphicsLineItem, str, QPointF, str, QPointF]] = []
         self.mode = AUTO
         self.version = None
+        self.ai_view = True
+        self.escher_item = None
+        self.shown = None  # the layout shown (by the items)
         self.setBackgroundBrush(QColor(250, 250, 250))
+
+    def ai_info(self):
+        """(layout, outlines of the subsystems, problems) if the map is shown as its AI layout, else None."""
+        return self.session.layout_info(self.name) if self.ai_view and self.name is not None else None
 
     @property
     def read_only(self) -> bool:
-        return self.name is None
+        return self.name is None or self.ai_info() is not None
 
     def positions(self) -> dict[str, tuple[float, float]]:
-        return self.session.unassigned_positions() if self.name is None else self.session.positions[self.name]
+        if self.name is None:
+            return self.session.unassigned_positions()
+        info = self.ai_info()
+        if info is not None:
+            return {k: (x, y) for k, (x, y, _, _) in info[1].items() if k in self.session.positions[self.name]}
+        return self.session.positions[self.name]
 
     def sync(self) -> None:
         """Items and positions as in the session; the drawings again if the assignment changed."""
         positions = self.positions()
-        redraw = self.version != self.session.version
+        info = self.ai_info()
+        layout = info[0] if info is not None else None
+        redraw = self.version != self.session.version or self.shown is not layout
+        if layout is None and self.escher_item is not None:
+            self.removeItem(self.escher_item)
+            self.escher_item = None
+        elif layout is not None and self.escher_item is None:
+            self.escher_item = EscherItem(layout)
+            self.addItem(self.escher_item)
+        elif layout is not None and self.escher_item.layout is not layout:
+            self.escher_item.set_layout(layout)
         for k in [k for k in self.boxes if k not in positions]:
             self.removeItem(self.boxes.pop(k))
         for k, (x, y) in positions.items():
+            outline = info[1][k] if info is not None else None
             item = self.boxes.get(k)
             if item is None:
-                item = self.boxes[k] = SubsystemItem(self, k)
+                item = self.boxes[k] = SubsystemItem(self, k, outline)
                 self.addItem(item)
             elif redraw:
+                item.outline = outline
                 item.refresh()
             item.setPos(x, y)
-        self.version = self.session.version
+        self.version, self.shown = self.session.version, layout
         if redraw:
             self.make_links()
         self.update_links()
         self.fit_scene_rect()
 
+    def set_ai_view(self, on: bool) -> None:
+        self.ai_view = on
+        self.sync()
+
     def make_links(self) -> None:
         for line, *_ in self.link_items:
             self.removeItem(line)
         self.link_items = []
-        if self.name is None:
+        if self.name is None or self.ai_info() is not None:
             return
         pen = QPen(QColor(120, 120, 120, 170), 2.5, Qt.PenStyle.DashLine)
         pen.setCosmetic(True)
@@ -201,7 +286,7 @@ class MapScene(QGraphicsScene):
 
     def content_rect(self) -> QRectF:
         rect = QRectF()
-        for item in self.boxes.values():
+        for item in [*self.boxes.values(), *([self.escher_item] if self.escher_item is not None else [])]:
             rect = rect.united(item.mapRectToScene(item.boundingRect()))
         return rect
 

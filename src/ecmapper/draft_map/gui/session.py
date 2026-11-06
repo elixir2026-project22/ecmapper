@@ -12,8 +12,11 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import json
 import math
+import os
 import pickle
+import shutil
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -21,12 +24,16 @@ from pathlib import Path
 import numpy as np
 
 from .. import run
+from ..ai_layouts import DRAFT, MapLayout, export_draft, load_layouts, make_layout, match_ids, refresh_exit_labels
+from ..ai_layouts import apply as apply_layout
+from ..ai_layouts import check as check_layout
 from ..assignment import equation, origin, reaction_subsystems, read_assignment, write_assignment
 from ..core import DraftMap, hub_table, place_free
-from ..layout import Ports, anneal_arrangement, arrangement_original, user_arrangement
+from ..layout import Ports, anneal_arrangement, arrangement_original, to_absolute, user_arrangement
+from ..project import PREP, TABLE, Project, bundled_template, digests, ecmapper_version
 from ..relayout import subsystem_map
 from ..render import svg_text
-from ..split import duplicate_subsystems, split_map
+from ..split import duplicate_subsystems, slug, split_map
 
 #: the tab of the subsystems on no map
 NOT_DRAWN = "Not drawn"
@@ -46,8 +53,7 @@ USAGE = "give MODEL [OUT_DIR] or PREP.pkl BRENDA_map_reactions.json BRENDA_map.s
 
 def template() -> tuple[Path, Path]:
     """The BRENDA map of ecmapper (BRENDAmap/ of the project), the default template of the draft maps."""
-    folder = Path(__file__).resolve().parents[4] / "BRENDAmap"
-    return folder / "BRENDA_map_reactions.json", folder / "BRENDA_map.svg"
+    return bundled_template()
 
 
 def build_parser():
@@ -111,10 +117,6 @@ def parse_args(argv=None):
     methods = run.check_args(parser, args)
     args.write_assignment = None
     return args, methods
-
-
-def _stamps(files) -> list:
-    return [(str(p), p.stat().st_size, p.stat().st_mtime_ns) for p in (Path(f) for f in files if f)]
 
 
 def _free(moving: np.ndarray, others: np.ndarray, gap: float) -> bool:
@@ -206,12 +208,17 @@ class Session:
     `positions[map]` ({subsystem ID: top left (x, y)}) says which subsystems
     are on a map; a subsystem may be on several maps or none. `arranged[map]`:
     the map is arranged by hand (its positions are saved and used by the
-    pipeline); the others are annealed by the pipeline.
+    pipeline); the others are annealed by the pipeline. `layouts[map]`: the
+    AI layout of a map (:mod:`..ai_layouts`), used by the pipeline while it
+    fits the map; `export_svg(escher map) -> SVG or None`: set by the GUI,
+    to export layouts whose "→ map" labels changed when saving. `project`:
+    the project (:mod:`..project`) whose work folder is OUT_DIR, if any.
     """
 
-    def __init__(self, args, methods: list[str], log=print, mapper=None):
+    def __init__(self, args, methods: list[str], log=print, mapper=None, project: Project | None = None):
         self.args, self.methods, self.log = args, methods, log
         self.mapper = mapper  # the ECMapper for matching a model (default: all sources)
+        self.project = project
         self.path: Path | None = args.assignment
         self.md = self.dm = self.table = None
         self.maps: list[str] = []
@@ -224,6 +231,9 @@ class Session:
         self.version = 0  # counts the changes of the assignment (the drawings of the subsystems may change)
         self._views = None
         self._svgs: dict = {}
+        self.layouts: dict[str, MapLayout] = {}
+        self._layout_info: dict = {}
+        self.export_svg = None
 
     @property
     def gap(self) -> float:
@@ -232,17 +242,22 @@ class Session:
     # --- loading and saving ------------------------------------------------------------------
 
     def cache_key(self) -> str:
-        """What the drawings of the subsystems depend on (besides the reaction sheet): inputs, options, code."""
-        stamps = _stamps([self.args.prep, self.args.brenda_json, self.args.brenda_svg,
-                          *sorted(Path(__file__).parents[1].glob("*.py"))])
+        """What the drawings of the subsystems depend on (besides the reaction sheet): inputs, options, code.
+
+        By the contents of the files, so the cache of a project stays valid when it is unpacked elsewhere.
+        """
+        files = digests([self.args.prep, self.args.brenda_json, self.args.brenda_svg,
+                         *sorted(Path(__file__).parents[1].glob("*.py"))])
         options = {o: getattr(self.args, o) for o in DRAWING_OPTIONS}
-        return hashlib.sha256(repr((stamps, options, self.methods)).encode()).hexdigest()
+        return hashlib.sha256(repr((files, options, self.methods)).encode()).hexdigest()
 
     def prepare_model(self) -> Path:
-        """Match the model (`args.model`) to the BRENDA map (:mod:`..prepare`): OUT/MODEL_prep.pkl.
+        """Match the model (`args.model`) to the BRENDA map (:mod:`..prepare`): OUT/MODEL_prep.pkl (in a project:
+        OUT/prep.pkl).
 
         Kept for the next start with the same model, BRENDA map, subsystems
-        file, options and code (OUT/MODEL_prep.key).
+        file, vicinity option and ecmapper version (by contents, OUT/MODEL_prep.key);
+        :meth:`rematch` matches again.
         """
         from ...brenda_map import BrendaMap, MapMatcher
         from ...mapper import ECMapper
@@ -252,11 +267,10 @@ class Session:
         model_path = Path(args.model)
         out = Path(args.out)
         out.mkdir(parents=True, exist_ok=True)
-        prep = out / f"{model_path.name.split('.')[0]}_prep.pkl"
+        prep = out / (PREP if self.project is not None else f"{model_path.name.split('.')[0]}_prep.pkl")
         key_file = prep.with_suffix(".key")
-        code = sorted(Path(__file__).parents[2].glob("*.py")) + [Path(__file__).parents[1] / "prepare.py"]
-        key = hashlib.sha256(repr((_stamps([model_path, args.brenda_json, args.subsystems, *code]),
-                                   args.vicinity)).encode()).hexdigest()
+        key = hashlib.sha256(repr((digests([model_path, args.brenda_json, args.subsystems]), args.vicinity,
+                                   ecmapper_version())).encode()).hexdigest()
         if prep.is_file() and key_file.is_file() and key_file.read_text().strip() == key:
             self.log(f"model matched to the BRENDA map before: {prep}")
             return prep
@@ -273,6 +287,13 @@ class Session:
         on_map = sum(m["status"] == "on map" for m in data["matches"].values())
         self.log(f"{len(data['matches'])} reactions, {on_map} on the BRENDA map; written to {prep}")
         return prep
+
+    def rematch(self) -> None:
+        """Match the model to the BRENDA map again at the next :meth:`load` (e.g. after the resources were
+        updated or the matching changed)."""
+        if getattr(self.args, "model", None) and self.args.prep:
+            for f in (Path(self.args.prep), Path(self.args.prep).with_suffix(".key")):
+                f.unlink(missing_ok=True)
 
     @staticmethod
     def reusable(cached: dict, table) -> bool:
@@ -366,20 +387,61 @@ class Session:
                     self.log(f"map {name!r}: the arrangement of the table lacks subsystems, original order")
                 self.positions[name] = self.original_order(keys)
                 self.arranged[name] = False
+        self.layouts = load_layouts(table, Path(self.args.assignment).parent, self.log) if table is not None else {}
         self.modified = False
         self._changed()
         self.log(f"{len(dm.subsystems)} subsystems, {len(self.maps)} maps, {len(self.unassigned())} subsystems "
                  f"without map")
+        for name in list(self.layouts):
+            info = self.layout_info(name)
+            if info is None:
+                self.log(f"the AI layout of map {name!r} is left out: there is no such map (with subsystems)")
+                del self.layouts[name]
+            elif info[2]:
+                self.log(f"the AI layout of map {name!r} is outdated: {'; '.join(info[2])}")
 
     def save(self, path=None) -> Path:
-        """The assignment as XLSX table (:func:`..assignment.write_assignment`) with the arranged maps."""
+        """The assignment as XLSX table (:func:`..assignment.write_assignment`) with the arranged maps.
+
+        The AI layouts go into folders next to it (TABLE_layouts/MAP); their
+        "→ map" labels are updated first (and exported again with
+        `export_svg`).
+        """
         path = Path(path or self.path)
         assignment = {k: self.maps_of(k) for k in self.dm.subsystems}
         positions = {m: dict(self.positions[m]) for m in self.maps if self.arranged.get(m) and self.positions[m]}
-        write_assignment(path, self.dm, self.md, self.maps, assignment, positions)
+        layouts = {}
+        for name, layout in list(self.layouts.items()):
+            if name not in self.maps:
+                continue
+            if name in self.views():
+                updated = copy.deepcopy(layout)
+                if refresh_exit_labels(updated, self.map_draft(name)):
+                    if self.export_svg is not None:
+                        updated.svg = self.export_svg(updated.escher)
+                    self.layouts[name] = layout = updated
+                    self.log(f"the '→ map' labels of the AI layout of {name!r} updated")
+            folder = path.with_name(f"{path.stem}_layouts") / slug(name)
+            layout.save(folder)
+            source = ", ".join(str(layout.source[k]) for k in ("toolkit", "model", "date") if layout.source.get(k))
+            layouts[name] = (os.path.relpath(folder, path.parent).replace(os.sep, "/"), source)
+        write_assignment(path, self.dm, self.md, self.maps, assignment, positions, layouts)
         self.path = self.args.assignment = path
         self.modified = False
         return path
+
+    def save_project(self, path=None) -> Path:
+        """Save the project: the table (:meth:`save`) into its work folder, then the project file `path` (default:
+        the one it was opened from or saved as)."""
+        table = self.project.work / TABLE
+        self.save(table)
+        folder = table.with_name(f"{table.stem}_layouts")
+        kept = {slug(name) for name in self.layouts if name in self.maps}
+        if folder.is_dir():  # the layouts of maps without layout now
+            for sub in folder.iterdir():
+                if sub.is_dir() and sub.name not in kept:
+                    shutil.rmtree(sub, ignore_errors=True)
+        return self.project.save(path)
 
     def build_command(self, out=None, iterations: int | None = None, seeds: int | None = None) -> list[str]:
         """The command line of :mod:`..run` that builds the maps of the saved table (`path`)."""
@@ -560,26 +622,98 @@ class Session:
                 break
         return {back[c]: (float(a), float(b)) for c, a, b in zip(ports.names, best[0], best[1])}
 
+    # --- AI layouts (..ai_layouts) --------------------------------------------------------------
+
+    def map_draft(self, name: str) -> DraftMap:
+        """Map `name` as the pipeline draws it with the current arrangement (absolute positions)."""
+        sub, ids = self.views()[name]
+        m = copy.deepcopy(sub)
+        back = {v: k for k, v in ids.items()}
+        for c, s in m.subsystems.items():
+            s.x, s.y = self.positions[name][back[c]]
+        to_absolute(m)
+        return m
+
+    def export_map(self, name: str, folder, file: str = DRAFT, reuse: dict | None = None) -> tuple[Path, dict]:
+        """Write map `name` as Escher map to `folder`/`file` for an AI job; the draft objects of its Escher IDs
+        (`reuse`: those of an earlier export, kept)."""
+        data, ids = export_draft(self.map_draft(name), self.md, name, scale=self.args.escher_scale, reuse=reuse)
+        path = Path(folder) / file
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(data), encoding="utf-8")
+        return path, ids
+
+    def new_layout(self, name: str, final: list, ids: dict | None, svg: str | None = None, run_log: dict | None = None,
+                   source: dict | None = None) -> tuple[MapLayout, list[str]]:
+        """The layout of map `name` laid out as the Escher map `final` (exported with `ids`; None: made elsewhere,
+        matched by content, :func:`..ai_layouts.match_ids`) and why it does not fit the map (empty: it fits)."""
+        m = self.map_draft(name)
+        scale = self.args.escher_scale
+        if ids is None:
+            draft, draft_ids = export_draft(m, self.md, name, scale=scale)
+            ids = match_ids(draft, draft_ids, final)
+        layout = make_layout(m, self.md, name, final, ids, scale, svg, run_log, source)
+        return layout, check_layout(layout, m, self.md)
+
+    def set_layout(self, name: str, layout: MapLayout | None) -> None:
+        """Lay out map `name` so (None: draw it automatically again)."""
+        if layout is None:
+            if self.layouts.pop(name, None) is None:
+                return
+        else:
+            self.layouts[name] = layout
+        self.modified = True
+        self._layout_info = {}
+        self.version += 1
+
+    def layout_info(self, name: str | None):
+        """The layout of map `name`, the boxes of its subsystems in it ({subsystem: (x, y, w, h)}) and why it is
+        outdated (empty: it fits the map); None without layout."""
+        layout = self.layouts.get(name)
+        if layout is None or name not in self.views():
+            return None
+        key = (name, self.version, id(layout))
+        if key not in self._layout_info:
+            sub, ids = self.views()[name]
+            m = copy.deepcopy(sub)
+            problems = check_layout(layout, m, self.md)
+            apply_layout(m, layout)
+            back = {v: k for k, v in ids.items()}
+            boxes = {back[c]: (s.x, s.y, s.w, s.h) for c, s in m.subsystems.items() if c in back}
+            self._layout_info[key] = (layout, boxes, problems)
+        return self._layout_info[key]
+
+    def outdated(self, name: str | None) -> bool:
+        info = self.layout_info(name)
+        return info is not None and bool(info[2])
+
     # --- changes -------------------------------------------------------------------------------
 
     def _changed(self) -> None:
         """The assignment changed: the maps are drawn anew."""
         self._views = None
         self._svgs = {}
+        self._layout_info = {}
         self.version += 1
 
     def state(self):
-        return list(self.maps), {m: dict(p) for m, p in self.positions.items()}, dict(self.arranged)
+        return (list(self.maps), {m: dict(p) for m, p in self.positions.items()}, dict(self.arranged),
+                dict(self.layouts))
 
     def restore(self, state) -> None:
-        maps, positions, arranged = state
+        maps, positions, arranged, layouts = state
         members = {m: set(p) for m, p in positions.items()}
         assignment_changed = maps != self.maps or members != {m: set(p) for m, p in self.positions.items()}
+        layouts_changed = layouts != self.layouts
         self.maps, self.arranged = list(maps), dict(arranged)
         self.positions = {m: dict(p) for m, p in positions.items()}
+        self.layouts = dict(layouts)
         self.modified = True
         if assignment_changed:
             self._changed()
+        elif layouts_changed:
+            self._layout_info = {}
+            self.version += 1
 
     def add(self, name: str, positions: dict[str, tuple[float, float]]) -> None:
         new = {k: p for k, p in positions.items() if k not in self.positions[name]}
@@ -627,6 +761,8 @@ class Session:
         self.maps[self.maps.index(old)] = new
         self.positions[new] = self.positions.pop(old)
         self.arranged[new] = self.arranged.pop(old, False)
+        if old in self.layouts:
+            self.layouts[new] = self.layouts.pop(old)
         self.modified = True
         self._changed()
 
@@ -634,6 +770,7 @@ class Session:
         self.maps.remove(name)
         del self.positions[name]
         self.arranged.pop(name, None)
+        self.layouts.pop(name, None)
         self.modified = True
         self._changed()
 
