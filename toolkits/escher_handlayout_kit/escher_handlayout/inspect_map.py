@@ -63,7 +63,7 @@ def analyse(path):
                                       bbox=[round(min(xs)), round(min(ys)), round(max(xs)), round(max(ys))]))
         for r in rids: rid_comp[r] = ci
     # reactions
-    def lab(n): return N[n]['bigg_id'] + ('*' if N[n]['node_is_primary'] else '')
+    def lab(n): return N[n]['bigg_id'] + (f'[{n}]' if N[n]['node_is_primary'] else '')  # primary: with its node id
     out['reactions'] = []
     for rid in sorted(R, key=int):
         r = R[rid]; x = rx[rid]
@@ -110,7 +110,7 @@ def to_markdown(a):
     L += ['', '## Connected components (over primary nodes)', '', '| # | reactions | suggested subsystem | bbox | reaction ids |', '|---|---|---|---|---|']
     for c in a['components']:
         L.append(f"| {c['index']} | {c['n_reactions']} | {c['suggested_subsystem']} | {c['bbox']} | {', '.join(c['reactions'][:14])}{' ...' if len(c['reactions']) > 14 else ''} |")
-    L += ['', '## Reactions (`*` = primary metabolite node)', '', '| id | bigg_id | rev | comp | mid | substrates -> products |', '|---|---|---|---|---|---|']
+    L += ['', '## Reactions (`name[id]` = primary metabolite node with its node id; the spec places these node ids)', '', '| id | bigg_id | rev | comp | mid | substrates -> products |', '|---|---|---|---|---|---|']
     for r in a['reactions']:
         L.append(f"| {r['id']} | {r['bigg_id']} | {'r' if r['reversible'] else '-'} | {r['component']} | {r['mid']} | {' + '.join(r['substrates'])} -> {' + '.join(r['products'])} |")
     L += ['', '## Traps / hints', '',

@@ -597,7 +597,9 @@ metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
   ```
 
   The files in `instructions` go into the AI's system prompt, and `commands` are the allowed first arguments of
-  `python -m package`.
+  `python -m package`. An optional `"omit": ["### Step A", ...]` leaves out the sections whose headings start
+  with these texts (up to the next heading), e.g. setup steps that only an agent on its own needs.
+  escher_handlayout_kit omits its parameters, setup, deliverables and final-message sections.
 
 **A job:**
 

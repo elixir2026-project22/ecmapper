@@ -32,7 +32,7 @@ from qtpy.QtWidgets import (
 )
 
 from ..ai.providers import ProviderError
-from ..ai.webchat import blocked, end_line, reply_of, tail
+from ..ai.webchat import blocked, end_line, parse, reply_of, tail
 
 PROFILE = "ecmapper-webchat"
 #: focus the chat's input field (the lowest visible text field); false if there is none
@@ -295,7 +295,7 @@ class BrowserWindow(QWidget, Transport):
             cur["text"], cur["changed"] = text, now
         reply, complete = reply_of(text, n)
         if complete and now - cur["changed"] >= 2:
-            self.finish(reply=reply)
+            self.finish(reply=f"{reply}\n{end_line(n)}")
         elif tail(n) not in text and not cur["clicked"] and now - cur["sent"] > 10:
             cur["clicked"] = True  # Enter did not send it (or the chat shows it as an attachment): its send button
             self.view.page().runJavaScript(SEND_JS)
@@ -407,12 +407,19 @@ class ClipboardPanel(QFrame, Transport):
         if cur is None:
             return
         text = QApplication.clipboard().text()
-        reply, _ = reply_of(text, cur["number"])
+        reply, complete = reply_of(text, cur["number"])
         if not text.strip() or text.strip() == cur["message"].strip() or not reply:
             QMessageBox.information(self, "Web chat", "The clipboard does not hold a reply of the model: copy its "
                                     "whole reply (e.g. with the chat's copy button), then click Paste reply.")
             return
-        self.finish(reply=reply)
+        calls = [] if complete else parse(reply, cur["number"], complete=False)[1]
+        if calls and calls[-1].error:  # without its end line (some models leave it out) and its last call broken
+            answer = QMessageBox.question(
+                self, "Web chat", "The reply ends in a broken call: the model may still be writing, or the chat cut "
+                "the reply off. Use it as it is? (ecmapper tells the model that the call was cut off.)")
+            if answer != QMessageBox.StandardButton.Yes:
+                return
+        self.finish(reply=reply + (f"\n{end_line(cur['number'])}" if complete else ""))
 
     def cancel(self) -> None:
         self.current = None

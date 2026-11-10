@@ -9,8 +9,10 @@ described by `ecmapper_toolkit.json` in the folder (:data:`MANIFEST`)::
 
 `package` is run as ``python -m package ARGS`` in the work folder (with the
 toolkit folder on PYTHONPATH), `commands` are the allowed first arguments
-(empty: any), `instructions` are put into the AI's system prompt, `result`
-finds the final map in the work folder. escher_handlayout and
+(empty: any), `instructions` are put into the AI's system prompt without
+the sections whose headings start with an entry of `omit` (optional; parts
+for an agent on its own, e.g. setup), `result` finds the final map in the
+work folder. escher_handlayout and
 escher_handlayout_kit are recognised without a manifest
 (:data:`ESCHER_HANDLAYOUT`, :data:`ESCHER_HANDLAYOUT_KIT`).
 """
@@ -41,15 +43,37 @@ ESCHER_HANDLAYOUT = dict(
 ESCHER_HANDLAYOUT_KIT = dict(
     name="escher_handlayout_kit", package="run", instructions=["PROMPT.md"],
     commands=["inspect", "check-spec", "build", "validate"], result="**/*_handlayout.json",
-    notes=f"Parameters of PROMPT.md: KIT_DIR = {TOOLKIT} (read-only: write specs into the work folder, e.g. "
+    # the parts for an agent on its own: title and intro, parameters, setup, deliverables, final message
+    omit=["# AUTONOMOUS TASK", "## 0.", "### Step A", "## 6.", "## 7."],
+    notes=f"In PROMPT.md: KIT_DIR = {TOOLKIT} (read-only: write specs into the work folder, e.g. "
           f"specs/MAP.layout.json, starting from a copy of {TOOLKIT}/specs/layout_template.json), INPUT_MAP = {DRAFT}, "
           "OUT_DIR = . (the work folder), MAP_NAME = draft. The commands written `python run.py ...` there are run "
           "with the tool run_toolkit (its arguments after run.py, e.g. [\"inspect\", \"--input\", "
-          f"\"{DRAFT}\", \"--out\", \"analysis\"]). Skip the setup step (the requirements are installed; there is no "
-          "selftest command). Only JSON specs: never a Python spec or --unsafe-python-spec. The final map is the "
-          "best build's *_handlayout.json; submit that file. The map's subsystems (the title labels) are the zone "
-          f"proposals. The other documents (docs/GUIDE.md, schema/, specs/, examples/) are readable as {TOOLKIT}/....",
+          f"\"{DRAFT}\", \"--out\", \"analysis\"]). Only JSON specs: never a Python spec or --unsafe-python-spec. "
+          "Before writing the spec read toolkit/escher_handlayout/agent/prompts/format_reference.md and "
+          "toolkit/docs/GUIDE.md: the spec places metabolite nodes (not reactions) by the numeric node ids of "
+          "analysis/analysis.md (strings of digits such as \"66\", never BiGG ids such as \"pyr_c\"); reactions "
+          "too have numeric ids there (only small_titles take a BiGG id). Keep PLAN.md and DECISIONS.md short (tables and lists, no prose). "
+          "The deliverables are the files of the work folder; the final map is the best build's *_handlayout.json: "
+          "submit that file. The map's subsystems (the title labels) are the zone proposals. The other documents "
+          f"(docs/GUIDE.md, schema/, specs/, examples/) are readable as {TOOLKIT}/....",
 )
+
+
+def omit_sections(text: str, headings: list[str]) -> str:
+    """Markdown `text` without the sections whose heading line starts with one of `headings`; a section ends at the
+    next heading of any level (lines in ``` fences are no headings)."""
+    if not headings:
+        return text
+    kept, fenced, skip = [], False, False
+    for line in text.splitlines(keepends=True):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+        elif not fenced and line.startswith("#"):
+            skip = line.startswith(tuple(headings))
+        if not skip:
+            kept.append(line)
+    return "".join(kept).strip("\n") + "\n"
 
 
 @dataclass
@@ -61,6 +85,7 @@ class Toolkit:
     commands: list[str] = field(default_factory=list)
     result: str = "**/*_final.json"
     notes: str = ""
+    omit: list[str] = field(default_factory=list)
 
     @classmethod
     def detect(cls, folder) -> Toolkit:
@@ -88,7 +113,8 @@ class Toolkit:
         for name in self.instructions:
             p = self.folder / name
             if p.is_file():
-                parts.append(f"=== {name} (toolkit/{name}) ===\n{p.read_text(encoding='utf-8', errors='replace')}")
+                text = omit_sections(p.read_text(encoding="utf-8", errors="replace"), self.omit)
+                parts.append(f"=== {name} (toolkit/{name}) ===\n{text}")
         return "\n\n".join(parts)
 
     def command(self, args: list[str]) -> list[str]:
