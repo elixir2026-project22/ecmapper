@@ -84,20 +84,40 @@ The grammar is [`pwl.ebnf`](src/ecmapper/pwl/pwl.ebnf). In short:
 **File.** `pwl 2.0;` then `subsystem <id> '<title>' { ... }`. Statements end
 with `;`. `//` starts a comment.
 
+**Only the layout is required.** PWL is primarily a layout description, so
+everything biochemical is optional and can be added or revised later:
+
+- compound and compartment declarations;
+- cross-references;
+- reaction IDs and enzymes;
+- coefficients;
+- directions.
+
+A file can start as `A -[]- B -[]- C;` and gain detail step by step. The
+smallest file:
+
+```
+pwl 2.0;
+subsystem demo 'demo' {
+  A -[PGI]- B -[]- (C + D);       // a reaction given only by its own ID, and one without any
+  direction PGI ->;               // added later, without touching the layout
+}
+```
+
 **Declarations.**
 
 | Statement | Meaning |
 |---|---|
 | `flow down;` | Main heading of the drawing (`down`, `up`, `left`, `right`). |
 | `compartment side1 'side 1';` | A compartment. |
-| `compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;` | A compound: token, label, cross-references `namespace:id`. Every token used must be declared. |
+| `compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;` | A compound: token, label, cross-references `namespace:id`. Optional: undeclared tokens are allowed, and the namespace can be anything (`local:my_id`). |
 | `port pyruvate side R to gluconeogenesis;` | The drawn node is linked to another subsystem in that direction. |
 
 **Reactions.** A chain alternates nodes and links:
 `A -[r1: 1.1.1.1 | NAD>NADH]-> B -[r2: ...]- C;`
 
 - A **node** is a compound (`pyruvate`, the second drawn copy `pyruvate#2`, in a
-  compartment `H@side2`, with a coefficient `2*H2O`), a **group** `(A + B)`, or
+  compartment `H@side2`, with an optional coefficient `2*H2O`), a **group** `(A + B)`, or
   the open end `_`. Members of a group are on the **same side** of the reaction.
   The node before the link and the node after it are opposite sides.
 - The **link arrows** give the direction:
@@ -113,10 +133,22 @@ with `;`. `//` starts a comment.
 
   Every other combination is a syntax error.
 - A **fan** `[r1: ... || r2: ...]` holds reactions between the same two nodes.
-  If they run in different directions, the link is plain `-[..]-` and each
-  reaction carries its own direction: `-[r3: -> 2.7.1.11 | ATP>ADP || r4: <- 3.1.3.11 | -H2O, +Pi]-`.
-- **A reaction** is `ID: [direction] [~]EC[/EC] [| cofactors] [^L|^R] [{attributes}]`.
-  - The ID is unique in the file; the generator uses the BRENDA node ID.
+  A reaction can carry its own direction, which overrides the link arrows:
+  `-[r3: -> 2.7.1.11 | ATP>ADP || r4: <- 3.1.3.11 | -H2O, +Pi]-`.
+- **A reaction** is `[ID:] [direction] [~][EC[/EC]] [| cofactors] [^L|^R] [{attributes}]`.
+  Every part is optional:
+
+  | Body | Meaning |
+  |---|---|
+  | `[r1: 2.7.1.1 \| ATP>ADP]` | ID and EC number |
+  | `[PGI \| ATP>ADP]` | a reaction given only by its ID |
+  | `[2.7.1.1]` | EC number, no ID |
+  | `[]` | neither |
+
+  - IDs can be any name; no EC number or other primary data source is needed.
+  - An ID, where given, is unique in the file. Motifs, effectors and
+    `direction` statements can refer only to reactions with an ID.
+  - The generator uses the BRENDA node ID.
   - `~?` is a spontaneous reaction.
   - Cofactors are `A>B` (A consumed, B produced), `-A` (consumed) or `+A`
     (produced), with optional coefficient and compartment: `-2*H@side1`.
@@ -139,6 +171,19 @@ with `;`. `//` starts a comment.
 - `ring cw|ccw { chains; chord chains; react ...; }`;
 - `star HUB arc 210 order cw { spoke; ... }`;
 - turn letters `-L[`, `-R[`, `-B[` (90° left, right, back relative to the heading).
+
+**Directions set later.** `direction r1, r2 ->;` sets or changes the direction
+of reactions after the layout statements. The direction is relative to the
+order in which the reaction's sides are written, and `?` makes it unknown
+again. The statements are applied in file order, after everything else, so a
+later statement wins. The layout part of the file stays as it is; a
+curator, or another source of directions, appends or edits these lines:
+
+```
+direction node8565 <->;           // glucose-6-phosphate isomerase is reversible
+direction node8581, node11140 =>; // phosphofructokinases are irreversible
+direction node2304 ?;             // direction withdrawn
+```
 
 **Motifs and regulation.**
 
@@ -264,16 +309,18 @@ through compounds that are cofactors elsewhere in the file (acetyl-CoA, NH3, ATP
 - **Labels.** Labels are given in `compound` declarations, so the 1.1 rule
   "label on first mention" is gone.
 - **Validation.** `parse` reports the following, each with line and column:
-  - undeclared compounds and compartments;
   - keywords used as compounds;
-  - reaction IDs that are missing or used twice;
-  - motif or effector references to unknown reactions or compounds;
+  - reaction IDs used twice;
+  - motif, effector or `direction` references to unknown reactions;
+  - motif references to unknown compounds;
   - cofactor side `^L` without cofactors;
   - copy numbers `#1`;
   - groups with one member;
   - bad coefficients;
-  - a direction in a `react` statement;
-  - a per-reaction direction inside an arrowed link.
+  - a direction for a `react` statement (it has no sides).
+
+  Declarations, reaction IDs, enzymes, coefficients and directions are not
+  required (see [Language](#language)).
 - **Reaction IDs** (`node8579:`) are part of the syntax, because motifs refer
   to reactions. As a result, the check no longer depends on node IDs in
   comments (part of point 6). Comments now hold only the enzyme names.
@@ -329,6 +376,11 @@ named in `br` and tests whether the substrates and products are on the sides
 that `ev` implies. Current result: 2,277 checked, 0 contradictions.
 
 ## Check of the generated files
+
+This check is stricter than `parse`. It compares the files with the BRENDA
+export, so it expects what the generator writes: a node ID for every reaction
+and declared compounds with their ligand IDs. Hand-written or edited files need
+only pass `parse`.
 
 `BRENDAmap/pwl/validation_report.json`:
 

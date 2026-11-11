@@ -1,16 +1,18 @@
 (* PWL 2.0 - Pathway Layout Language. Grammar as implemented by ecmapper/pwl/syntax.py.
    Whitespace separates tokens; '//' starts a comment that runs to the end of the line.
-   A comment on the line of a link is kept as the comment of its reactions; it carries no meaning. *)
+   A comment on the line of a link is kept as the comment of its reactions; it carries no meaning.
+   PWL is primarily a layout description: declarations, cross-references, reaction IDs, enzymes,
+   coefficients and directions are all optional and can be added or changed later. *)
 
 file          = 'pwl' VERSION ';' 'subsystem' SUBID STR '{' { statement } '}' ;
 statement     = flow | compartment | compound | port
-              | chain [ wrap ] ';' | ring | star | react | motif | effector ;
+              | chain [ wrap ] ';' | ring | star | react | motif | effector | direction ;
 
 (* ---------------------------------------------------------------- declarations *)
 flow          = 'flow' ( 'down' | 'up' | 'left' | 'right' ) ';' ;          (* at most once *)
 compartment   = 'compartment' ID [ STR ] ';' ;
-compound      = 'compound' TOKEN [ STR ] { XREF } ';' ;                    (* every token used must be declared *)
-XREF          = NAMESPACE ':' ( ID | NUM ) ;                                (* brenda:29  kegg:C00024 *)
+compound      = 'compound' TOKEN [ STR ] { XREF } ';' ;                    (* optional: tokens need no declaration *)
+XREF          = NAMESPACE ':' ( ID | NUM ) ;                                (* brenda:29  kegg:C00024  local:my_id *)
 port          = 'port' species 'side' ( 'U' | 'D' | 'L' | 'R' ) [ 'to' SUBID ] ';' ;
 
 (* ---------------------------------------------------------------- reactions *)
@@ -18,7 +20,7 @@ chain         = node link node { link node } ;
 node          = participant                                                (* one compound *)
               | '(' participant '+' participant { '+' participant } ')'    (* compounds on the SAME side *)
               | '_' ;                                                      (* no drawn compound on this side *)
-participant   = [ COEF '*' ] species ;
+participant   = [ COEF '*' ] species ;                                     (* coefficient optional: 1 or not stated *)
 species       = TOKEN [ '#' INT ] [ '@' ID ] ;                             (* #n: n-th drawn copy (n >= 2); @: compartment *)
 COEF          = NUM | 'n' ;
 
@@ -33,9 +35,13 @@ CLOSE         = '-' | '->' | '=>' ;
 TURN          = 'F' | 'L' | 'R' | 'B' ;                                    (* drawn step relative to the heading *)
 
 reactions     = reaction { '||' reaction } ;                               (* fan: parallel reactions *)
-reaction      = RID ':' [ DIR ] [ '~' ] enzyme [ '|' cofactor { ',' cofactor } ] [ '^' ( 'L' | 'R' ) ] [ attrs ] ;
-(* DIR: direction of this reaction from the left to the right node; only inside a plain link -[..]-
-   (a link with arrows gives the direction of all its reactions) *)
+reaction      = [ RID ':' ] [ DIR ] [ '~' ] [ enzyme ] [ '|' cofactor { ',' cofactor } ] [ '^' ( 'L' | 'R' ) ]
+                [ attrs ]
+              | [ DIR ] RID [ '|' cofactor { ',' cofactor } ] [ '^' ( 'L' | 'R' ) ] [ attrs ] ;
+(* everything is optional: [] is a reaction without ID and enzyme; [PGI | ATP>ADP] is a reaction given only by
+   its ID (any name, no EC number or other primary source needed); [r1: 2.7.1.1] has ID and EC number.
+   DIR: direction of this reaction from the left to the right node; it overrides the arrows of the link,
+   which give the direction of all reactions of the link that have none of their own *)
 DIR           = '->' | '<-' | '<->' | '=>' | '<=' ;
 enzyme        = EC { '/' EC } | '?' ;                                      (* '~?' = spontaneous *)
 cofactor      = cof_species '>' cof_species                                (* consumed > produced *)
@@ -61,12 +67,19 @@ members       = '{' { ID [ '@' ID ] } '}' ;                                (* co
    carrier (forward, backward), transport (via); other kinds are accepted without checks *)
 effector      = 'effector' species ( 'inhibits' | 'activates' ) RID { ',' RID } ';' ;
 
+(* ---------------------------------------------------------------- directions set later *)
+direction     = 'direction' RID { ',' RID } ( DIR | '?' ) ';' ;
+(* sets or changes the direction of reactions (relative to their written left and right side) after the
+   layout statements; '?' makes it unknown. Applied in the order of the file, after all other statements,
+   so the layout can be written first and the biochemistry added or revised later. A react statement
+   (no sides) only takes '?'. *)
+
 (* ---------------------------------------------------------------- lexical *)
 TOKEN         = ID - KEYWORD ;                                             (* compound token, no '+' *)
 KEYWORD       = 'pwl' | 'subsystem' | 'compartment' | 'compound' | 'flow' | 'port' | 'ring' | 'chord'
-              | 'star' | 'react' | 'motif' | 'effector' | 'wrap' ;
+              | 'star' | 'react' | 'motif' | 'effector' | 'wrap' | 'direction' ;
 ID            = [A-Za-z0-9_]+ ;
-RID           = ID ;                                                       (* reaction ID, unique in the file *)
+RID           = ID ;                                                       (* reaction ID, unique in the file if given *)
 SUBID         = [A-Za-z0-9_][A-Za-z0-9_-]* ;                               (* only after 'subsystem' and 'to' *)
 EC            = DIGITS '.' SEG '.' SEG [ '.' SEG ] ;                       (* SEG = [0-9A-Za-z?-]+ *)
 NUM           = DIGITS [ '.' DIGITS ] ;                                    (* not followed by a letter, digit, '_' or '.' *)

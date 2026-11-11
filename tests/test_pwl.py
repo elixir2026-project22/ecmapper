@@ -87,10 +87,7 @@ def test_detect_motifs_in_hand_written_document():
         (("-[r6: 5.3.1.1]-", "<=[r6: 5.3.1.1]->"), "undefined link arrows"),
         (("-[r6: 5.3.1.1]-", "-[r6: 5.3.1.1"), "malformed link"),
         (("]=> G6P", "]=> G6P ]"), "unexpected character ']'"),
-        (("-[r3: -> 2.7.1.11 | ATP>ADP || r4: <- 3.1.3.11 | -H2O, +Pi ^L]- FBP",
-          "-[r3: -> 2.7.1.11 | ATP>ADP]-> FBP"), "plain link"),
         (("compound F6P;", "compound ring;"), "keyword"),
-        (("compound F6P;", ""), "'F6P' is not declared"),
         (("compound F6P;", "compound F6P;\n  compound F6P;"), "declared twice"),
         (("backward { r4 }", "backward { r42 }"), "unknown reaction r42"),
         (("react [r8: 1.1.1.1]", "react [r8: -> 1.1.1.1]"), "no direction"),
@@ -100,9 +97,12 @@ def test_detect_motifs_in_hand_written_document():
         (("-2*H2O", "-x*H2O"), "bad coefficient"),
         (("Glc#2 -[r1", "Glc#1 -[r1"), "copy numbers start at #2"),
         (("(DHAP + GAP)", "(DHAP)"), "at least two members"),
-        (("H@in]", "H@nowhere]"), "compartment 'nowhere' is not declared"),
         (("\n}\n", "\n}\nflow up;\n"), "after the end"),
         (("ev=cof+eq}", "ev cof}"), "bad attribute"),
+        (("  effector", "  direction r42 ->;\n  effector"), "direction of unknown reaction r42"),
+        (("  effector", "  direction r8 ->;\n  effector"), "reaction r8 has no sides"),
+        (("  effector", "  direction r1 -> ->;\n  effector"), "expected ';', got '->'"),
+        (("[r9: 1.1.1.2]", "[r9: 1.1.1.2 x]"), "unexpected 'x'"),
     ],
 )
 def test_parse_errors(change, message):
@@ -110,6 +110,44 @@ def test_parse_errors(change, message):
     assert old in EXAMPLE
     with pytest.raises(PWLError, match=re.escape(message)):
         parse(EXAMPLE.replace(old, new, 1))
+
+
+def test_relaxed_document():
+    """Declarations, reaction IDs, enzymes and coefficients are optional; directions can be set later."""
+    doc = parse("""pwl 2.0;
+subsystem demo 'demo' {
+  A -[PGI | ATP>ADP]- B -[]- C -[r3: 1.1.1.1]-> (D + 2*E) -[| NAD>NADH@mito]- F;
+  F -[R_1 || R_2 || ~?]- G;
+  react [myrxn] {A, G};
+  direction PGI, R_1 ->;
+  direction r3 <-;
+  direction r3 ?;
+  direction myrxn ?;
+  motif cycle { A B C };
+  effector X inhibits PGI;
+}""")
+    assert not doc.compounds and not doc.compartments
+    rs = doc.reactions()
+    assert [r.rid for r in rs] == ["PGI", None, "r3", None, "R_1", "R_2", None, "myrxn"]
+    assert [r.enzyme_label for r in rs] == ["", "", "1.1.1.1", "", "", "", "?", ""]
+    assert [r.direction for r in rs] == ["->", None, None, None, "->", None, None, None]
+    assert rs[2].right[0].coef is None and rs[2].right[1].coef == "2"
+    assert rs[3].produced[0].location == "mito" and rs[6].spontaneous
+
+
+def test_reaction_direction_overrides_link_arrow():
+    doc = parse(EXAMPLE.replace("-[r3: -> 2.7.1.11 | ATP>ADP || r4: <- 3.1.3.11 | -H2O, +Pi ^L]- FBP",
+                                "-[r3: 2.7.1.11 | ATP>ADP || r4: <- 3.1.3.11 | -H2O, +Pi ^L]-> FBP"))
+    rs = doc.reaction_index()
+    assert rs["r3"].direction == "->" and rs["r4"].direction == "<-"
+
+
+def test_direction_statements_apply_in_order():
+    doc = parse(EXAMPLE.replace("  effector", "  direction r2, r6 =>;\n  direction r2 <-;\n  effector"))
+    rs = doc.reaction_index()
+    assert rs["r2"].direction == "<-" and [p.token for p in rs["r2"].substrates] == ["F6P"]
+    assert rs["r6"].direction == "=>" and rs["r6"].reversible is False
+    assert len(doc.directions) == 2
 
 
 def test_error_position():

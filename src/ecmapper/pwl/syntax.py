@@ -2,8 +2,12 @@
 
 The parser has no dependencies. :func:`parse` returns a :class:`Document`;
 syntax errors raise :class:`PWLError` with line and column. :meth:`Document.problems`
-lists the semantic errors (undeclared compounds, unknown reaction IDs in
+lists the semantic errors (reaction IDs used twice, unknown reaction IDs in
 motifs, ...), :func:`parse` raises them as well unless ``validate=False``.
+
+PWL is primarily a layout description: compound declarations, reaction IDs,
+enzymes, coefficients and directions are optional. ``direction`` statements
+set or change directions after the layout statements.
 """
 
 from __future__ import annotations
@@ -17,7 +21,7 @@ VERSION = "2.0"
 #: words that start a statement or end a chain; compound tokens must not be one of them
 KEYWORDS = frozenset(
     {"pwl", "subsystem", "compartment", "compound", "flow", "port", "ring", "chord", "star", "react", "motif",
-     "effector", "wrap"}
+     "effector", "wrap", "direction"}
 )
 FLOWS = ("down", "up", "left", "right")
 PORT_SIDES = ("U", "D", "L", "R")
@@ -179,6 +183,7 @@ class Reaction:
 
     @property
     def enzyme_label(self) -> str:
+        """EC numbers joined by '/', '?' for an unknown enzyme, '' for a reaction given only by its ID."""
         return "/".join(self.enzymes)
 
 
@@ -259,6 +264,19 @@ class Effector:
 
 
 @dataclass
+class DirectionSetting:
+    """``direction r1, r2 ->;``: sets (or changes) the direction of reactions after the layout statements.
+
+    The direction is relative to the order in which the reaction's sides are
+    written (left node to right node); ``?`` makes it unknown again.
+    """
+
+    reactions: list[str]
+    direction: str | None
+    line: int = 0
+
+
+@dataclass
 class Document:
     id: str
     title: str
@@ -270,6 +288,7 @@ class Document:
     statements: list = field(default_factory=list)  # Chain, Ring, Star, React
     motifs: list[Motif] = field(default_factory=list)
     effectors: list[Effector] = field(default_factory=list)
+    directions: list[DirectionSetting] = field(default_factory=list)
 
     def reactions(self) -> list[Reaction]:
         """All reactions in the order of the text."""
@@ -309,7 +328,8 @@ _BRACKET = re.compile(r"(?:(<=|<-|-)([FLRB])?)?\[([^\]\n]*)\](=>|->|-)?")
 _NUM = re.compile(r"\d+(?:\.\d+)?(?![A-Za-z0-9_.])")
 _ID = re.compile(r"[A-Za-z0-9_]+")
 _WIDE_ID = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_\-]*")
-_PUNCT = set("{}();,+*#@:=")
+_PUNCT = set("{}();,+*#@:=?")
+_DIR = re.compile(r"<->|->|<-|=>|<=")
 
 
 @dataclass
@@ -354,6 +374,11 @@ def _lex(text: str) -> tuple[list[_Tok], dict[int, str]]:
             m = _BRACKET.match(line, pos)
             if m and (c in "-<[" ):
                 toks.append(_Tok("BRK", (m.group(1), m.group(2) or "", m.group(3), m.group(4)), ln, col))
+                pos = m.end()
+                continue
+            m = _DIR.match(line, pos)
+            if m and not line.startswith("[", m.end()):
+                toks.append(_Tok("DIR", m.group(0), ln, col))
                 pos = m.end()
                 continue
             if c in "-<[":
@@ -457,8 +482,14 @@ def _parse_reaction(text: str, line: int, col: int) -> Reaction:
         enzymes = ["?"]
     elif peek()[0] == "ec":
         enzymes = take()[1].split("/")
+    elif peek()[0] == "id" and rid is None and not spont and peek(1) not in (("punct", "*"), ("punct", ">")):
+        # a reaction given only by its ID (any name, no primary data source needed): [PGI | ATP>ADP]
+        rid = take()[1]
+        enzymes = []
+    elif peek()[0] in ("end",) or peek() in (("punct", "|"), ("punct", "^")):
+        enzymes = []  # no enzyme: [r1:], [], [| ATP>ADP]
     else:
-        raise PWLError(f"expected EC number or '?' in reaction, got {peek()[1] or 'end'!r}", line, col)
+        raise PWLError(f"expected EC number, '?' or a reaction ID in reaction, got {peek()[1]!r}", line, col)
     cofactors = []
 
     def participant() -> Participant:
@@ -503,8 +534,7 @@ def _parse_reaction(text: str, line: int, col: int) -> Reaction:
 
 
 def _parse_body(body: str, line: int, col: int) -> list[Reaction]:
-    if not body.strip():
-        raise PWLError("empty reaction", line, col)
+    """The reactions of a link; an empty body is one reaction without ID and enzyme."""
     return [_parse_reaction(part, line, col) for part in _split_reactions(body)]
 
 
@@ -572,7 +602,20 @@ class _Parser:
         self.take("PUNCT", "}")
         if self.peek().kind != "EOF":
             raise self.error("content after the end of the subsystem")
+        self.apply_directions(doc)
         return doc
+
+    def apply_directions(self, doc: Document) -> None:
+        """Apply the ``direction`` statements, in their order, to the reactions."""
+        index = doc.reaction_index()
+        for setting in doc.directions:
+            for rid in setting.reactions:
+                r = index.get(rid)
+                if r is None:
+                    raise PWLError(f"direction of unknown reaction {rid}", setting.line)
+                if setting.direction is not None and not r.sided:
+                    raise PWLError(f"reaction {rid} has no sides, so it has no direction", setting.line)
+                r.direction = setting.direction
 
     def statement(self, doc: Document) -> None:
         t = self.peek()
@@ -644,6 +687,20 @@ class _Parser:
                 return
             if t.value == "motif":
                 doc.motifs.append(self.motif())
+                return
+            if t.value == "direction":
+                self.take()
+                rids = [self.take("ID").value]
+                while self.is_punct(","):
+                    self.take()
+                    rids.append(self.take("ID").value)
+                if self.is_punct("?"):
+                    self.take()
+                    direction = None
+                else:
+                    direction = self.take("DIR").value
+                self.take("PUNCT", ";")
+                doc.directions.append(DirectionSetting(rids, direction, t.line))
                 return
             if t.value == "effector":
                 self.take()
@@ -805,8 +862,7 @@ class _Parser:
         reactions = _parse_body(body, t.line, t.col)
         comment = self.comments.get(t.line, "")
         for r in reactions:
-            if r.direction is not None and arrow is not None:
-                raise self.error("a reaction with its own direction needs a plain link -[...]-", t)
+            # a direction of the reaction itself overrides the arrows of the link
             if r.direction is None:
                 r.direction = arrow
             r.comment = comment
@@ -879,8 +935,7 @@ def parse_file(path, validate: bool = True) -> Document:
 def validate(doc: Document) -> list[str]:
     """Semantic errors of a document.
 
-    - every compound and compartment used is declared, no compound token is a keyword
-    - every reaction has an ID, IDs are unique
+    - reaction IDs are unique (reactions need no ID, compounds and compartments need no declaration)
     - motifs and effectors refer to existing reactions/compounds; members of the known motif kinds have the right type
     - ports name drawn nodes
     """
@@ -889,19 +944,12 @@ def validate(doc: Document) -> list[str]:
     rids: dict[str, Reaction] = {}
     for r in reactions:
         where = f"line {r.line}"
-        if not r.rid:
-            problems.append(f"{where}: reaction {r.enzyme_label} has no ID")
-        elif r.rid in rids:
+        if r.rid and r.rid in rids:
             problems.append(f"{where}: reaction ID {r.rid} used twice")
-        else:
+        elif r.rid:
             rids[r.rid] = r
-        for p in r.participants + r.consumed + r.produced:
-            if p.token not in doc.compounds:
-                problems.append(f"{where}: compound {p.token!r} is not declared")
-            if p.location is not None and p.location not in doc.compartments:
-                problems.append(f"{where}: compartment {p.location!r} is not declared")
         if r.context != "react" and not r.left and not r.right:
-            problems.append(f"{where}: reaction {r.rid} has no main metabolite")
+            problems.append(f"{where}: reaction {r.rid or r.enzyme_label} has no main metabolite")
         for value in r.attrs.values():
             if not value:
                 problems.append(f"{where}: empty attribute")
@@ -930,8 +978,6 @@ def validate(doc: Document) -> list[str]:
                 if kind == "compound" and m not in species and m.split("@")[0] not in tokens:
                     problems.append(f"{where}: motif {motif.kind}: unknown compound {m}")
     for eff in doc.effectors:
-        if eff.participant.token not in doc.compounds:
-            problems.append(f"line {eff.line}: effector {eff.participant.token!r} is not declared")
         for rid in eff.reactions:
             if rid not in rids:
                 problems.append(f"line {eff.line}: effector of unknown reaction {rid}")
