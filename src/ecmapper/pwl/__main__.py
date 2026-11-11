@@ -60,7 +60,25 @@ def main(argv=None) -> int:
     p.add_argument("files", nargs="+", type=Path)
     m = sub.add_parser("motifs", help="detect motifs in PWL files")
     m.add_argument("files", nargs="+", type=Path)
+    lay = sub.add_parser("layout", help="draw PWL subsystems in the style of the BRENDA map (networkx, Graphviz)")
+    lay.add_argument("pwl_dir", type=Path, help="directory with subsystems/*.pwl and node_index.json")
+    lay.add_argument("outdir", type=Path)
+    lay.add_argument("--brenda-json", type=Path, help="BRENDA_map_reactions.json: compare with the original")
+    lay.add_argument("--brenda-svg", type=Path, help="BRENDA_map.svg: colours of the subsystems")
+    lay.add_argument("--methods", help="comma separated layouts (default: all), see ecmapper.pwl.layout")
+    lay.add_argument("--subsystem", action="append", help="only these subsystems (repeatable)")
+    lay.add_argument("--no-routes", action="store_true", help="do not route edges around nodes")
     args = parser.parse_args(argv)
+
+    if args.command == "layout":
+        from .compare import layout_directory
+
+        methods = args.methods.split(",") if args.methods else None
+        rows = layout_directory(args.pwl_dir, args.outdir, args.brenda_json, args.brenda_svg, methods,
+                                args.subsystem, routes=not args.no_routes)
+        if rows:
+            print((args.outdir / "summary.md").read_text(encoding="utf-8"))
+        return 0
 
     if args.command in ("generate", "check"):
         data = json.loads(args.map_json.read_text(encoding="utf-8"))
