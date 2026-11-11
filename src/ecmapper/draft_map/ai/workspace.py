@@ -96,11 +96,13 @@ class Workspace:
         note = f"\n… {more} more lines (offset={offset + len(part)})" if more > 0 else ""
         return f"{self.show(p)}: {len(lines)} lines\n{text}{note}"
 
-    def write_file(self, path: str, content: str) -> str:
+    def write_file(self, path: str, content: str, append: bool = False) -> str:
         p = self.path(path, write=True)
         p.parent.mkdir(parents=True, exist_ok=True)
+        if append and p.is_file():
+            content = p.read_text(encoding="utf-8") + content
         p.write_text(content, encoding="utf-8")
-        return f"wrote {self.show(p)} ({len(content.splitlines())} lines)"
+        return f"{'appended to' if append else 'wrote'} {self.show(p)} ({len(content.splitlines())} lines)"
 
     def edit_file(self, path: str, old: str, new: str) -> str:
         p = self.path(path, write=True)
@@ -146,8 +148,10 @@ class Workspace:
                  {"type": "object", "properties": {"path": {"type": "string"}, "offset": {"type": "integer"},
                                                    "limit": {"type": "integer"}},
                   "required": ["path"], "additionalProperties": False}, self.read_file),
-            Tool("write_file", "Write (create or replace) a text file in the work folder.",
-                 {"type": "object", "properties": {"path": {"type": "string"}, "content": {"type": "string"}},
+            Tool("write_file", "Write (create or replace) a text file in the work folder; `append`: add `content` to "
+                 "its end instead (to write a long file in parts).",
+                 {"type": "object", "properties": {"path": {"type": "string"}, "content": {"type": "string"},
+                                                   "append": {"type": "boolean"}},
                   "required": ["path", "content"], "additionalProperties": False}, self.write_file),
             Tool("edit_file", "Replace the text `old`, which must occur exactly once, by `new` in a file of the work "
                  "folder.",

@@ -291,12 +291,15 @@ def build_parser(positional: bool = True) -> argparse.ArgumentParser:
                             "given here take precedence); implies --split")
     parser.add_argument("--keep-subsets", action="store_true",
                         help="keep subsystems whose model reactions are a proper subset of another subsystem's (rule A)")
+    parser.add_argument("--keep-borrowed", action="store_true",
+                        help="keep subsystems whose model reactions are all drawn in other subsystems that have model "
+                        "reactions of their own (rule B)")
     parser.add_argument("--aside-coverage", type=float, default=0.9,
                         help="set aside subsystems of which at least this fraction of the model reactions are in other "
-                        "subsystems (rules B and C; 1: only fully covered ones, above 1: off)")
+                        "subsystems (rules C and D; 1: only fully covered ones, above 1: off)")
     parser.add_argument("--aside-min-matched", type=float, default=0.0,
                         help="set aside subsystems in which less than this fraction of the enzyme nodes have model "
-                        "reactions (rule D)")
+                        "reactions (rule E)")
     parser.add_argument("--min-anchored", type=int, default=2)
     parser.add_argument("--no-completion", action="store_true")
     parser.add_argument("--relayout", default=",".join(m for m in RELAYOUT_METHODS if m != "current"),
@@ -397,7 +400,7 @@ def draft_until_assignment(args, log, stats: dict, out: Path | None = None, drop
     drop_empty_subsystems(dm, md)
     log(dm.log[-1])
     stats["redundant_subsystems"] = drop_redundant_subsystems(dm, not args.keep_subsets, args.aside_coverage,
-                                                              args.aside_min_matched)
+                                                              args.aside_min_matched, not args.keep_borrowed)
     log(dm.log[-1])
     anchor_metabolites(dm, md)
     stats["step1_subsystems"] = dm.summary()

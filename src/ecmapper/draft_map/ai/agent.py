@@ -70,7 +70,8 @@ def schema_problem(value, schema: dict, where: str = "input") -> str | None:
         if schema.get("additionalProperties") is False:
             extra = sorted(set(value) - set(props))
             if extra:
-                return f"{where}: unknown {', '.join(map(repr, extra))}"
+                return (f"{where}: unknown {', '.join(map(repr, extra))} (it has only "
+                        f"{', '.join(map(repr, props)) or 'no entries'}: leave the others out)")
         for name, sub in props.items():
             if name in value:
                 problem = schema_problem(value[name], sub, f"{where}.{name}")
@@ -111,7 +112,8 @@ class Agent:
             if turn.stop == "cancelled":
                 return "stopped"
             self.log(role="assistant", text=turn.text, thinking=turn.thinking, stop=turn.stop, usage=turn.usage,
-                     calls=[dict(id=c.id, name=c.name, input=c.input, error=c.error) for c in turn.calls])
+                     calls=[dict(id=c.id, name=c.name, input=c.input, error=c.error) for c in turn.calls],
+                     **(dict(detail=turn.detail) if turn.detail else {}))
             events.turn(turn)
             if turn.stop == "refusal":
                 return f"refusal: {turn.detail}" if turn.detail else "refusal"

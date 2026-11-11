@@ -68,16 +68,18 @@ Legacy: `specs/legacy_python/` holds the old Python-code specs (they execute cod
 
 ## 5. Interconnecting subsystems
 
-Goal: one connected map in a biologically plausible flow with **few** shared hub nodes and few crossings.
+Goal: one connected map in a biologically plausible flow, connected through the metabolites the subsystems share,
+with few crossings. Rearrange the subsystems (move, mirror, rotate) so that the shared metabolites are neighbours.
 
-1. Look at `merge_candidates` in `analysis.md` (same metabolite drawn as several primary nodes). Merge only the
-   important ones - default list: glucose, G6P, F6P, G3P, PEP, pyruvate, acetyl-CoA, acetaldehyde, OAA, 6-phosphogluconate
+1. Look at `merge_candidates` in `analysis.md` (same metabolite drawn as several primary nodes). Merge them by rule M
+   of `PROMPT.md` (connectivity plan, planarity check) - at least the default hubs: glucose, G6P, F6P, G3P, PEP, pyruvate, acetyl-CoA, acetaldehyde, OAA, 6-phosphogluconate
    (and analogous hubs in other maps: the 3-5 metabolites that connect the big modules).
 2. `merges: [{"keep": id, "dups": [ids]}]`: all segments of the duplicates are re-pointed to `keep`; give `keep` one coordinate (only primary nodes of the SAME metabolite can be merged).
-3. Everything else stays a separate copy; the exit label (`-> ...`) already tells the reader where it continues.
+3. A metabolite that rule M leaves as a copy keeps its exit label (`-> ...`), which tells the reader where it
+   continues. Duplicate reactions drawn in several subsystems become lanes of the host pathway.
 4. Never merge cofactors (ATP/ADP/NAD(H)/NADP(H)/CoA/H2O/Pi/CO2/O2/quinones...).
 5. Choose the side on which a module hangs so that hubs are close to each other and connecting lines do not cross a
-   main chain. A long line is acceptable if it is the only one for that module.
+   main chain. Rearrange first; a long line only if no arrangement avoids it.
 6. Default flow for central carbon metabolism: glycolysis = central column; pyruvate -> acetyl-CoA below it; TCA ring
    below that; PPP (and ED branching at 6PG) to one side of upper glycolysis; the PEP/pyruvate/OAA node on the side
    between glycolysis and TCA; fermentations beside pyruvate/acetyl-CoA; respiratory chain separate.

@@ -27,6 +27,19 @@ _ZONE = r"^[A-Za-z0-9][A-Za-z0-9 .,()/+:'_\-]{0,79}$"
 _REF = r'^(\d{1,9}|@[A-Za-z][A-Za-z0-9_]{0,30})$'     # node id of the map, or @alias created by "splits"
 _BIGG = r'^[A-Za-z0-9_.\-()]{1,60}$'
 _C = LIMITS['coord']
+# what the patterns ask for, in the error messages (models write e.g. BiGG ids where node ids belong)
+_ALIAS = r'^@[A-Za-z][A-Za-z0-9_]{0,30}$'
+_FORMATS = {_REF: 'a node id of analysis.md (digits, e.g. "1234", not a BiGG id) or an @alias of "splits" (@, a letter, '
+                  'then letters, digits or _, e.g. "@pg3_b")',
+            _ALIAS: '@, a letter, then letters, digits or _ (e.g. "@pg3_b", not "@3pg_b")',
+            r'^\d{1,9}$': 'an id of analysis.md (digits, e.g. "1234", not a BiGG id)',
+            _ZONE: 'a name of letters, digits, spaces and .,()/+:\'_-', _BIGG: 'a BiGG id',
+            _TEXT: 'one line without < and >', _NOTES: 'text without < and >',
+            r'^#[0-9a-fA-F]{6}$': 'a colour #rrggbb with 6 hex digits, e.g. "#eef3fb"'}
+
+def _bad_format(path, what, value, pattern):
+    hint = _FORMATS.get(pattern)
+    return f'{path}: {what}{value[:40]!r} has a forbidden format' + (f' (expected {hint})' if hint else '')
 
 def _num(lo, hi): return {'type': 'number', 'minimum': lo, 'maximum': hi}
 _POINT = {'type': 'array', 'minItems': 2, 'maxItems': 2, 'items': _num(-_C, _C)}
@@ -65,7 +78,7 @@ SCHEMA = {
                                      'reactions': {'type': 'array', 'maxItems': 3000, 'items': {'type': 'string', 'pattern': r'^\d{1,9}$'}},
                                      'description': {'type': 'string', 'maxLength': 300, 'pattern': _TEXT}}},
         'split': {'type': 'object', 'additionalProperties': False, 'required': ['alias', 'node', 'reaction'],
-                  'properties': {'alias': {'type': 'string', 'pattern': r'^@[A-Za-z][A-Za-z0-9_]{0,30}$'},
+                  'properties': {'alias': {'type': 'string', 'pattern': _ALIAS},
                                  'node': {'type': 'string', 'pattern': r'^\d{1,9}$'},
                                  'reaction': {'type': 'string', 'pattern': r'^\d{1,9}$'}}},
         'merge': {'type': 'object', 'additionalProperties': False, 'required': ['keep', 'dups'],
@@ -161,7 +174,7 @@ def validate_schema(inst, schema=SCHEMA, root=SCHEMA, path='$', errs=None, depth
         if 'maximum' in schema and inst > schema['maximum']: errs.append(f"{path}: {inst} > maximum {schema['maximum']}")
     elif isinstance(inst, str):
         if 'maxLength' in schema and len(inst) > schema['maxLength']: errs.append(f"{path}: longer than {schema['maxLength']} characters")
-        if 'pattern' in schema and not re.search(schema['pattern'], inst): errs.append(f'{path}: {inst[:40]!r} has a forbidden format')
+        if 'pattern' in schema and not re.search(schema['pattern'], inst): errs.append(_bad_format(path, '', inst, schema['pattern']))
     elif isinstance(inst, list):
         if 'minItems' in schema and len(inst) < schema['minItems']: errs.append(f"{path}: fewer than {schema['minItems']} items")
         if 'maxItems' in schema and len(inst) > schema['maxItems']: errs.append(f"{path}: more than {schema['maxItems']} items")
@@ -178,7 +191,7 @@ def validate_schema(inst, schema=SCHEMA, root=SCHEMA, path='$', errs=None, depth
         if 'maxProperties' in schema and len(inst) > schema['maxProperties']: errs.append(f"{path}: more than {schema['maxProperties']} entries")
         for k, v in inst.items():
             if 'propertyNames' in schema and not re.search(schema['propertyNames']['pattern'], k):
-                errs.append(f'{path}: key {k[:40]!r} has a forbidden format'); continue
+                errs.append(_bad_format(path, 'key ', k, schema['propertyNames']['pattern'])); continue
             if k in props: validate_schema(v, props[k], root, f'{path}.{k}', errs, depth + 1)
             elif schema.get('additionalProperties') is False: errs.append(f'{path}: unknown key "{k[:40]}"')
             elif isinstance(schema.get('additionalProperties'), dict):
@@ -300,15 +313,19 @@ def compile_spec(spec, L, partial=False):
 
     # ---- splits then merges (ids of the map; aliases defined by splits)
     alias, merged_into = {}, {}
+    def missing(i, what):
+        hint = (f" ({i} is the id of reaction {R[i]['bigg_id']}: give the node ids of its metabolites, "
+                f"name[id] in the reactions of analysis.md)") if i in R else ''
+        P.append(f'{what}: node {i} does not exist{hint}')
     def prim_node(i, what):
-        if i not in N: P.append(f'{what}: node {i} does not exist'); return False
+        if i not in N: missing(i, what); return False
         if N[i]['node_type'] != 'metabolite' or not N[i]['node_is_primary']: P.append(f'{what}: node {i} is not a primary metabolite node'); return False
         return True
     def ref(r, what):
         i = alias.get(r) if r.startswith('@') else r
         if i is None: P.append(f'{what}: unknown alias {r}'); return None
         if i in merged_into: P.append(f'{what}: node {i} was merged into {merged_into[i]}; use that id'); return None
-        if i not in N: P.append(f'{what}: node {i} does not exist'); return None
+        if i not in N: missing(i, what); return None
         return i
     for s in spec.get('splits', []):
         if s['alias'] in alias: P.append(f"split alias {s['alias']} defined twice"); continue

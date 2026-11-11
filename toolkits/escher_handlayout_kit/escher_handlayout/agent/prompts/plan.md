@@ -9,7 +9,8 @@ which metabolites need a second node. Return ONE JSON fragment with these keys:
   around it), and `reactions` = the ids of its reactions. EVERY reaction id of the map must appear in exactly one zone.
   List the zones in the order you want to lay them out (hubs get their coordinates in the first zone that uses them, so start
   with the zone that forms the central spine).
-- `merges`: hub merges (rules in the recipes). Use only ids from the MERGE CANDIDATES table.
+- `merges`: hub merges (rules in the recipes): merge the metabolites the subsystems share and place the zones so that
+  merge partners are neighbours. Use only ids from the MERGE CANDIDATES table.
 - `splits`: only if a metabolite is needed twice inside a zone.
 - `notes`: your arrangement in two or three sentences.
 

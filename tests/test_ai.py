@@ -266,7 +266,7 @@ from ecmapper.draft_map.ai.providers import (  # noqa: E402
     ToolResult,
     Turn,
 )
-from ecmapper.draft_map.ai.toolkits import LayoutJob, Toolkit  # noqa: E402
+from ecmapper.draft_map.ai.toolkits import LayoutJob, Toolkit, omit_sections  # noqa: E402
 from ecmapper.draft_map.ai.webchat import WebChat  # noqa: E402
 from ecmapper.draft_map.ai.workspace import Workspace, clip  # noqa: E402
 
@@ -294,7 +294,8 @@ def fake_toolkit(tmp_path):
 def test_workspace(tmp_path):
     toolkit = fake_toolkit(tmp_path)
     w = Workspace(tmp_path / "work", toolkit.folder, max_output=500)
-    assert "wrote" in w.write_file("a/b.txt", "one\ntwo\nthree\n")
+    assert "wrote" in w.write_file("a/b.txt", "one\n")
+    assert "appended to a/b.txt (3 lines)" in w.write_file("a/b.txt", "two\nthree\n", append=True)
     assert "2  two" in w.read_file("a/b.txt") and "3 lines" in w.read_file("a/b.txt")
     assert "1 more lines" in w.read_file("a/b.txt", 0, 2)
     w.edit_file("a/b.txt", "two", "2")
@@ -314,6 +315,16 @@ def test_workspace(tmp_path):
     assert schema_problem({"path": 1}, {"type": "object", "properties": {"path": {"type": "string"}}}) == \
         "input.path must be of type string"
     assert "missing" in schema_problem({}, {"type": "object", "required": ["path"]})
+    assert "(it has only 'path', 'old': leave the others out)" in schema_problem(
+        {"path": "a", "append": True}, {"type": "object", "additionalProperties": False,
+                                        "properties": {"path": {"type": "string"}, "old": {"type": "string"}}})
+
+
+def test_omit_sections():
+    text = "Intro\n## A\na\n```\n# in a fence\n```\nstill a\n### A.1\nsub\n## B\nb\n"
+    assert omit_sections(text, []) == text
+    assert omit_sections(text, ["## A"]) == "Intro\n### A.1\nsub\n## B\nb\n"
+    assert omit_sections(text, ["## B", "### A.1"]) == "Intro\n## A\na\n```\n# in a fence\n```\nstill a\n"
 
 
 def test_layout_job(tmp_path):
@@ -327,6 +338,12 @@ def test_layout_job(tmp_path):
     (kit / "escher_handlayout" / "declspec.py").write_text("")
     found = Toolkit.detect(kit)
     assert (found.package, found.result) == ("run", "**/*_handlayout.json") and "build" in found.commands
+    (kit / "PROMPT.md").write_text("# AUTONOMOUS TASK: no user interaction\nWithout asking.\n## 0. Task parameters\n"
+                                   "## 3. Procedure\n### Step A - Set up\n```bash\ncd KIT_DIR\n# a comment\n```\n"
+                                   "### Step B - Inspect\nInspect it.\n## 7. Final message\n25 lines.\n")
+    text = found.instructions_text()
+    assert "Step B" in text and "## 3. Procedure" in text
+    assert not any(s in text for s in ("AUTONOMOUS", "Without asking", "Step A", "cd KIT_DIR", "Final message"))
     submitted = []
 
     def submit(path):
@@ -553,10 +570,31 @@ def test_webchat_protocol():
     assert [c.id for c in calls] == ["3.1", "3.2", "3.3", "3.4"]
     assert calls[0] == ToolCall("3.1", "list_files", {"path": "."})
     assert calls[1].input == {"path": "a.txt", "limit": 5} and calls[1].error is None
-    assert calls[2].name == "run_toolkit" and "not valid JSON" in calls[2].error
+    assert calls[2].name == "run_toolkit" and "not valid JSON (Expecting value in line 1 of the call, at '}" in \
+        calls[2].error
+    # a file with literal line breaks in its string is taken
+    _, (call,) = webchat.parse('{"tool": "write_file", "input": {"path": "a.md", "content": "# A\n\tb\n"}}', 6)
+    assert call.error is None and call.input["content"] == "# A\n\tb\n"
+    # a call without its last brace is completed (not in a reply that was cut off)
+    short = 'Spec:\n```json\n{"tool": "write_file", "input": {"path": "s.json", "content": "{\\"a\\": 1}"}\n```\nok'
+    text2, (call,) = webchat.parse(short, 7)
+    assert call.error is None and call.input == {"path": "s.json", "content": '{"a": 1}'} and text2 == "Spec:\n\nok"
+    assert webchat.parse(short, 7, complete=False)[1][0].error == webchat.CUT_OFF
+    # ... also when the next call follows on the next line (the page shows code without its fences)
+    page = '{"tool": "write_file", "input": {"path": "s.json", "content": "{\\n}"}\n{"tool": "list_files", "input": {}}'
+    _, two = webchat.parse(page, 8)
+    assert [(c.name, c.input, c.error) for c in two] == [("write_file", {"path": "s.json", "content": "{\n}"}, None),
+                                                        ("list_files", {}, None)]
+    # a broken call does not hide the next one
+    _, two = webchat.parse('{"tool": "write_file", "input": {"path": "a" "b"}}\n{"tool": "list_files", "input": {}}', 9)
+    assert two[0].error and two[1] == ToolCall("9.2", "list_files", {})
     assert calls[3].name == "edit_file" and "must be a JSON object" in calls[3].error
     assert text.startswith("I look first.") and '"tool"' not in text and '{"x": 1}' in text and "```" not in text
     assert webchat.parse("All done.", 4) == ("All done.", [])
+    # a reply cut off by the chat in its last call
+    cut = '```json\n{"tool": "write_file", "input": {"path": "PLAN.md", "content": "# PLAN\\n\\n## 1. Sub'
+    assert "not valid JSON" in webchat.parse(cut, 5)[1][0].error
+    assert webchat.parse(cut, 5, complete=False)[1][0].error == webchat.CUT_OFF
     # the reply in the text of the page: after the message's last line, up to the end line
     page = (f"ecmapper message 1\n{webchat.PROTOCOL[:200]}\n{webchat.tail(1)}\nCalling\njson\nCopy\n{{...}}\n"
             f"@@END 1@@\necmapper message 2\nresults\n{webchat.tail(2)}\nDone so far")
@@ -606,6 +644,7 @@ def test_webchat(tmp_path):
     first, second, third = transport.messages
     assert first.startswith("ecmapper message 1\n") and first.endswith(webchat.tail(1))
     assert "Lay out the map nicely." in first and '"tool": "list_files"' in first and "- submit_layout:" in first
+    assert "You need no files and run no code yourself" in first
     assert "=== The user ===\nLay out this map." in first and "How to call the tools" not in second
     assert "[call 1.1: run_toolkit]\nexit code 0" in second and second.endswith(webchat.tail(2))
     assert "[call 2.1: submit_layout]\naccepted" in third
@@ -614,3 +653,14 @@ def test_webchat(tmp_path):
     chat.add_results([ToolResult("4.1", "a render", [b"PNG"])])
     assert "1 image(s)" in chat.pending[-1] and chat.images == []
     assert Agent(chat, job.tools()).run("Go on.") == "stopped"  # the transport stopped (no reply)
+
+
+def test_webchat_unfinished(tmp_path):
+    """A reply without calls and end line (a full chat answers with nothing) gets one reminder, not the end."""
+    job = LayoutJob(fake_toolkit(tmp_path), tmp_path / "work", "Central", "", [], {}, lambda path: "accepted")
+    transport = FakeTransport(["Reasoning Process", '{"tool": "list_files", "input": {"path": "."}}\n@@END N@@',
+                               "Thinking", "Still thinking"])
+    chat = WebChat(Connection("w", kind=WEBCHAT, transport="clipboard"), job.system_prompt(), job.tools(), transport)
+    assert Agent(chat, job.tools()).run("Lay out this map.") == "done"
+    assert webchat.UNFINISHED in transport.messages[1] and "[call 2.1: list_files]" in transport.messages[2]
+    assert webchat.UNFINISHED in transport.messages[3] and len(transport.messages) == 4  # once in a row, then done

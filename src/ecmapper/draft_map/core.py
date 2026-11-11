@@ -281,25 +281,62 @@ def drop_empty_subsystems(dm: DraftMap, md: ModelData) -> None:
     dm.log.append(f"step 1: {len(keep)} of {before} subsystems have model reactions")
 
 
+def borrowed_subsystems(reactions: dict[str, frozenset[str]]) -> list[tuple[str, list[str]]]:
+    """Rule B: subsystems whose model reactions are all borrowed from subsystems with reactions of their own.
+
+    `reactions`: {subsystem ID: model reactions}. A subsystem has a reaction
+    of its own if no other subsystem draws it. A subsystem is borrowed if each
+    of its reactions is also drawn in another subsystem that has reactions of
+    its own, so it only repeats steps that have a home elsewhere (e.g. the
+    Calvin cycle steps of photosynthesis in a model without photosynthesis
+    are those of glycolysis and the pentose phosphate pathway). Borrowed
+    subsystems are found from the smallest and taken out, until no further
+    one is borrowed: the reactions of a subsystem taken out may become the own
+    reactions of another one. Returns the borrowed subsystems in that order,
+    each with the subsystems with own reactions that draw its reactions.
+    """
+    remaining = dict(reactions)
+    result = []
+    while True:
+        counts = Counter(r for rs in remaining.values() for r in rs)
+        own = {k for k, rs in remaining.items() if any(counts[r] == 1 for r in rs)}
+        found = None
+        for k in sorted(remaining, key=lambda k: (len(remaining[k]), k)):
+            if k in own or not remaining[k]:
+                continue
+            homes = {o for o in own if remaining[o] & remaining[k]}
+            if remaining[k] <= set().union(*(remaining[o] for o in homes)):
+                found = (k, sorted(homes))
+                break
+        if found is None:
+            return result
+        result.append(found)
+        del remaining[found[0]]
+
+
 def drop_redundant_subsystems(dm: DraftMap, drop_subsets: bool = True, coverage: float = 0.9,
-                              min_matched: float = 0.0) -> dict:
+                              min_matched: float = 0.0, drop_borrowed: bool = True) -> dict:
     """Step 1, continued: drop or set aside subsystems whose model reactions are drawn elsewhere.
 
     Model reactions of a subsystem: those of its enzyme nodes (after step 1).
 
     - Rule A (`drop_subsets`): a subsystem whose model reactions are a proper
       subset of those of another subsystem is removed.
-    - Rule B/C (`coverage`): going through the remaining subsystems from the
+    - Rule B (`drop_borrowed`): a subsystem whose model reactions are all
+      drawn in other remaining subsystems that have model reactions of their
+      own (drawn in no other subsystem) is removed; see
+      :func:`borrowed_subsystems`.
+    - Rule C/D (`coverage`): going through the remaining subsystems from the
       smallest (fewest model reactions), a subsystem of which at least the
       fraction `coverage` of the model reactions are in the other remaining
-      subsystems is set aside (B: all of them, C: the fraction). ``1.0``:
-      only B; above 1: off.
-    - Rule D (`min_matched`): a subsystem in which less than this fraction of
+      subsystems is set aside (C: all of them, D: the fraction). ``1.0``:
+      only C; above 1: off.
+    - Rule E (`min_matched`): a subsystem in which less than this fraction of
       the enzyme nodes have model reactions is set aside.
 
     Set-aside subsystems stay in the map with ``aside`` set to the rule; they
     are drawn on a separate map and are not used by the completion (step 3).
-    Returns the dropped and set-aside subsystems.
+    Returns the dropped (with their rule) and set-aside subsystems.
     """
     reactions = {k: frozenset(r for n in dm.members(k) for r in n.reactions) for k in dm.subsystems}
     dropped = []
@@ -307,8 +344,13 @@ def drop_redundant_subsystems(dm: DraftMap, drop_subsets: bool = True, coverage:
         for k, rs in sorted(reactions.items()):
             for other, ors in sorted(reactions.items()):
                 if other != k and rs < ors:
-                    dropped.append(dict(subsystem=k, reactions=sorted(rs), subset_of=other))
+                    dropped.append(dict(subsystem=k, rule="A", reactions=sorted(rs), subset_of=other))
                     break
+    if drop_borrowed:
+        gone = {d["subsystem"] for d in dropped}
+        for k, homes in borrowed_subsystems({k: rs for k, rs in reactions.items() if k not in gone}):
+            dropped.append(dict(subsystem=k, rule="B", reactions=sorted(reactions[k]), drawn_in=homes))
+    if dropped:
         gone = {d["subsystem"] for d in dropped}
         dm.subsystems = {k: v for k, v in dm.subsystems.items() if k not in gone}
         dm.remove_nodes({n.id for n in dm.nodes.values() if n.subsystem in gone})
@@ -321,7 +363,7 @@ def drop_redundant_subsystems(dm: DraftMap, drop_subsets: bool = True, coverage:
             covered = len(reactions[k] & others) / len(reactions[k])
             if covered >= coverage:
                 del remaining[k]
-                rule = "B" if covered == 1.0 else "C"
+                rule = "C" if covered == 1.0 else "D"
                 dm.subsystems[k].aside = rule
                 aside.append(dict(subsystem=k, rule=rule, reactions=len(reactions[k]), covered=covered))
     if min_matched > 0:
@@ -329,12 +371,14 @@ def drop_redundant_subsystems(dm: DraftMap, drop_subsets: bool = True, coverage:
             enzymes = [n for n in dm.members(k) if n.kind == "enzyme"]
             matched = sum(bool(n.reactions) for n in enzymes) / len(enzymes)
             if matched < min_matched:
-                dm.subsystems[k].aside = "D"
-                aside.append(dict(subsystem=k, rule="D", reactions=len(reactions[k]), matched=matched))
+                dm.subsystems[k].aside = "E"
+                aside.append(dict(subsystem=k, rule="E", reactions=len(reactions[k]), matched=matched))
+    removed = Counter(d["rule"] for d in dropped)
     rules = Counter(a["rule"] for a in aside)
     dm.log.append(
-        f"step 1: removed {len(dropped)} subsystems whose model reactions are a proper subset of another's; set "
-        f"aside {len(aside)} (rule B: {rules['B']}, C: {rules['C']}, D: {rules['D']})"
+        f"step 1: removed {len(dropped)} subsystems (rule A, model reactions a proper subset of another's: "
+        f"{removed['A']}; rule B, all borrowed from subsystems with reactions of their own: {removed['B']}); set "
+        f"aside {len(aside)} (rule C: {rules['C']}, D: {rules['D']}, E: {rules['E']})"
     )
     return dict(dropped=dropped, set_aside=aside)
 
@@ -633,7 +677,8 @@ class Completion:
         for c in self.match_candidates(rid):
             o = self.origin_positions.get(c["node_id"])
             if set(c["via"]) & {"reaction-id", "ec"} and o and o[2] == target:
-                position = o[:2]  # the related node of the map, removed in step 2
+                # the related node of the map: removed in step 2 or, if still there, the new node goes next to it
+                position = o[:2]
                 break
         if position is None:
             pts = [(dm.nodes[n].x, dm.nodes[n].y) for n in chosen.values()]

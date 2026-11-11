@@ -599,8 +599,24 @@ def test_web_chat(tmp_path, monkeypatch):
         panel.paste()
 
     QTimer.singleShot(200, user)
-    assert panel.exchange(message, 1, []) == "Hi." and "does not hold a reply" in infos[0]
+    assert panel.exchange(message, 1, []) == "Hi.\n@@END 1@@" and "does not hold a reply" in infos[0]
     assert panel.current is None and not panel.isVisible()
+    # a reply without its end line: taken as it is, but if its last call is broken (cut off by the chat) only if the
+    # user says so
+    questions = []
+    QTimer.singleShot(200, lambda: (QApplication.clipboard().setText("Hi."), panel.paste()))
+    assert panel.exchange(message, 1, []) == "Hi."
+    monkeypatch.setattr(QMessageBox, "question", lambda parent, title, text: questions.append(text) or (
+        QMessageBox.StandardButton.No if len(questions) == 1 else QMessageBox.StandardButton.Yes))
+
+    def cut():
+        QApplication.clipboard().setText('Hi.\n{"tool": "write_file", "input": {"path": "PLAN.md", "content": "# P')
+        panel.paste()  # No: still waits
+        assert panel.current is not None
+        panel.paste()
+
+    QTimer.singleShot(200, cut)
+    assert panel.exchange(message, 1, []).endswith('"content": "# P') and "broken call" in questions[0]
     assert panel.exchange(message, 1, [], stop=lambda: True) is None
     if not web:
         pytest.skip("no QtWebEngine")
@@ -630,12 +646,12 @@ def test_web_chat(tmp_path, monkeypatch):
     start = time.time()
     reply = browser.exchange(f"ecmapper message 1\n\nLay out\n\n{tail(1)}", 1, [],
                              stop=lambda: time.time() - start > 60)
-    assert reply == "Reply to message 1", browser.status.text()
+    assert reply == "Reply to message 1\n@@END 1@@", browser.status.text()
     assert QApplication.clipboard().text() == ""
     QApplication.clipboard().setText("the user's text")  # is restored after the paste
     start = time.time()
     assert browser.exchange(f"ecmapper message 2\n\nResults\n\n{tail(2)}", 2, [],
-                            stop=lambda: time.time() - start > 60) == "Reply to message 2"
+                            stop=lambda: time.time() - start > 60) == "Reply to message 2\n@@END 2@@"
     assert QApplication.clipboard().text() == "the user's text"
     browser.current = dict(number=4, done=threading.Event())
     browser.read("text")  # an error in a callback ends the exchange, not the program

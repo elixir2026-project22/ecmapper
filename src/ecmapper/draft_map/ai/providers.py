@@ -81,7 +81,8 @@ class ToolResult:
 @dataclass
 class Turn:
     """An answer of the model. `stop`: tool_use, end, max_tokens, refusal, pause (continue with another step) or
-    cancelled (not added to the history); `detail`: e.g. the category of a refusal."""
+    cancelled (not added to the history); `detail`: e.g. the category of a refusal, the reply of a web chat with a
+    broken call."""
 
     text: str
     calls: list[ToolCall]
