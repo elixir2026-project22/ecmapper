@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1398.3 2303.0" width="1398" height="2303" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1398.3" height="2303.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_C4-and-CAM-carbon-fixation" class="pw " x="0.0" y="0.0" width="1278.3" height="2167.5" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 607.2 138.2 L 456.5 138.2"/>
+<path class="link" marker-end="url(#in)" d="M 671.0 138.2 L 821.7 138.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 989.3 273.8 L 869.6 154.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1021.3 305.8 L 1141.3 425.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1157.0 640.0 L 1157.0 457.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1157.0 672.0 L 1157.0 854.5"/>
+<path class="link" marker-end="url(#in)" d="M 1021.3 1006.2 L 1141.0 886.5"/>
+<path class="link" marker-start="url(#in)" d="M 989.3 1038.2 L 869.6 1157.9"/>
+<path class="link" marker-end="url(#in)" d="M 671.0 1173.9 L 821.7 1173.9"/>
+<path class="link" marker-start="url(#in)" d="M 607.2 1173.9 L 469.5 1173.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 289.0 1038.2 L 408.6 1157.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 257.0 1006.2 L 137.0 886.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 121.3 672.0 L 121.3 854.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 121.3 640.0 L 121.3 457.5"/>
+<path class="link" marker-start="url(#in)" d="M 257.0 305.8 L 137.3 425.5"/>
+<path class="link" marker-end="url(#in)" d="M 289.0 273.8 L 408.6 154.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 607.2 1602.9 L 440.3 1602.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 671.0 1602.9 L 808.7 1602.9"/>
+<path class="link" marker-start="url(#in)" d="M 853.6 1801.4 L 853.6 1618.9"/>
+<path class="link" marker-end="url(#in)" d="M 853.6 1833.4 L 853.6 2015.9"/>
+<path class="link" marker-start="url(#in)" d="M 671.0 2031.9 L 821.7 2031.9"/>
+<path class="link" marker-end="url(#in)" d="M 607.2 2031.9 L 456.5 2031.9"/>
+<path class="link" marker-start="url(#in)" d="M 424.6 1833.4 L 424.6 2015.9"/>
+<path class="link" marker-end="url(#in)" d="M 424.6 1801.4 L 424.6 1618.9"/>
+<path class="link" marker-start="url(#in)" d="M 608.4 1082.0 C 567.6 1102.4 496.1 1138.2 455.3 1158.5"/>
+<path class="link" marker-end="url(#in)" d="M 671.0 1050.7 L 837.9 967.2"/>
+<path class="link" marker-start="url(#in)" d="M 973.4 924.3 L 869.3 954.8"/>
+<path class="link" marker-end="url(#in)" d="M 1037.2 905.6 L 1125.1 879.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 627.9 154.2 L 598.4 196.4"/>
+<path class="link" marker-end="url(#in)" d="M 644.5 122.2 L 662.5 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 659.1 122.2 L 692.1 95.8"/>
+<path class="link" marker-start="url(#in)" d="M 1008.1 273.8 L 1017.7 219.8"/>
+<path class="link" marker-end="url(#in)" d="M 1034.0 284.8 L 1075.6 277.4"/>
+<path class="link" marker-start="url(#in)" d="M 1179.8 640.0 L 1212.8 616.9"/>
+<path class="link" marker-end="url(#in)" d="M 1179.8 672.0 L 1212.8 695.1"/>
+<path class="link" marker-start="url(#in)" d="M 1008.1 1038.2 L 1017.9 1093.8"/>
+<path class="link" marker-end="url(#in)" d="M 996.8 1006.2 L 974.8 964.9"/>
+<path class="link" marker-end="url(#in)" d="M 1007.3 1006.2 L 1012.4 964.9"/>
+<path class="link" marker-start="url(#in)" d="M 627.9 1157.9 L 599.3 1117.0"/>
+<path class="link" marker-end="url(#in)" d="M 650.3 1157.9 L 679.0 1117.0"/>
+<path class="link" marker-start="url(#in)" d="M 270.1 1038.2 L 260.6 1092.2"/>
+<path class="link" marker-end="url(#in)" d="M 244.3 1027.2 L 202.6 1034.6"/>
+<path class="link" marker-start="url(#in)" d="M 98.4 672.0 L 65.4 695.1"/>
+<path class="link" marker-end="url(#in)" d="M 98.4 640.0 L 65.4 616.9"/>
+<path class="link" marker-start="url(#in)" d="M 241.0 284.2 L 205.9 278.0"/>
+<path class="link" marker-end="url(#in)" d="M 270.1 273.8 L 260.0 216.6"/>
+<path class="link" marker-start="url(#in)" d="M 633.6 1618.9 L 616.2 1669.5"/>
+<path class="link" marker-start="url(#in)" d="M 619.4 1618.9 L 587.0 1645.1"/>
+<path class="link" marker-end="url(#in)" d="M 650.3 1586.9 L 677.1 1548.6"/>
+<path class="link" marker-start="url(#in)" d="M 830.8 1801.4 L 799.7 1779.6"/>
+<path class="link" marker-end="url(#in)" d="M 830.8 1833.4 L 799.7 1855.1"/>
+<path class="link" marker-start="url(#in)" d="M 650.3 2015.9 L 679.9 1973.6"/>
+<path class="link" marker-end="url(#in)" d="M 633.8 2047.9 L 615.8 2101.5"/>
+<path class="link" marker-end="url(#in)" d="M 619.1 2047.9 L 586.2 2074.3"/>
+<path class="link" marker-start="url(#in)" d="M 453.3 1827.2 L 491.5 1840.4"/>
+<path class="link" marker-start="url(#in)" d="M 437.6 1833.4 L 466.1 1868.6"/>
+<path class="link" marker-end="url(#in)" d="M 395.9 1807.5 L 357.7 1794.3"/>
+<path class="link" marker-end="url(#in)" d="M 411.7 1801.4 L 382.6 1765.5"/>
+<path class="link" marker-start="url(#in)" d="M 636.3 1082.6 L 629.1 1123.9"/>
+<path class="link" marker-end="url(#in)" d="M 637.0 1050.6 L 629.8 996.0"/>
+<path class="link" marker-end="url(#in)" d="M 646.4 1050.6 L 668.0 1003.1"/>
+<path class="link" marker-start="url(#in)" d="M 985.3 898.9 L 952.8 872.9"/>
+<path class="link" marker-end="url(#in)" d="M 1010.7 898.9 L 1027.9 848.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_C4-and-CAM-carbon-fixation" transform="translate(639.1,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">C4 and CAM-carbon fixation</text></g>
+<g id="node10425" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid200" transform="translate(424.6,138.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200" target="_blank">L-malate</a></text><title></title></g>
+<g id="node10429" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid31" transform="translate(853.6,138.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node10458" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid103" transform="translate(1157.0,441.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node10403" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid31" transform="translate(1157.0,870.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node10401" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid200" transform="translate(853.6,1173.9)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200" target="_blank">L-malate</a></text><title></title></g>
+<g id="node10467" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid57" transform="translate(424.6,1173.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57" target="_blank">oxaloacetate</a></text><title></title></g>
+<g id="node10449" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid97" transform="translate(121.3,870.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=97" target="_blank">Asp</a></text><title></title></g>
+<g id="node10421" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid57" transform="translate(121.3,441.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57" target="_blank">oxaloacetate</a></text><title></title></g>
+<g id="node10459" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid51" transform="translate(424.6,1602.9)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=51" target="_blank">PEP</a></text><title></title></g>
+<g id="node10445" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid57" transform="translate(853.6,1602.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57" target="_blank">oxaloacetate</a></text><title></title></g>
+<g id="node10413" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid200" transform="translate(853.6,2031.9)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200" target="_blank">L-malate</a></text><title></title></g>
+<g id="node10412" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid31" transform="translate(424.6,2031.9)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node10453" class="node nodeHM pw_C4-and-CAM-carbon-fixation lid51" transform="translate(853.6,959.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=51" target="_blank">PEP</a></text><title></title></g>
+<g id="node10423" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(639.1,138.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.40" target="_blank">1.1.1.40</a></text><title>malate dehydrogenase (oxaloacetate-decarboxylating) (NADP+)</title></g>
+<g id="node10456" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(1005.3,289.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.2" target="_blank">2.6.1.2</a></text><title>alanine transaminase</title></g>
+<g id="node10457" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(1157.0,656.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.2" target="_blank">2.6.1.2</a></text><title>alanine transaminase</title></g>
+<g id="node10447" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(1005.3,1022.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.39" target="_blank">1.1.1.39</a></text><title>malate dehydrogenase (decarboxylating)</title></g>
+<g id="node10444" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(639.1,1173.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.37" target="_blank">1.1.1.37</a></text><title>malate dehydrogenase</title></g>
+<g id="node10452" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(273.0,1022.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.1" target="_blank">2.6.1.1</a></text><title>aspartate transaminase</title></g>
+<g id="node10440" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(121.3,656.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.1" target="_blank">2.6.1.1</a></text><title>aspartate transaminase</title></g>
+<g id="node10422" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(273.0,289.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.82" target="_blank">1.1.1.82</a></text><title>malate dehydrogenase (NADP+)</title></g>
+<g id="node10408" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(639.1,1602.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.31" target="_blank">4.1.1.31</a></text><title>phosphoenolpyruvate carboxylase</title></g>
+<g id="node10414" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(853.6,1817.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.37" target="_blank">1.1.1.37</a></text><title>malate dehydrogenase</title></g>
+<g id="node10409" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(639.1,2031.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.40" target="_blank">1.1.1.40</a></text><title>malate dehydrogenase (oxaloacetate-decarboxylating) (NADP+)</title></g>
+<g id="node10400" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(424.6,1817.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.9.1" target="_blank">2.7.9.1</a></text><title>pyruvate, phosphate dikinase</title></g>
+<g id="node10434" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(639.1,1066.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.49" target="_blank">4.1.1.49</a></text><title>phosphoenolpyruvate carboxykinase (ATP)</title></g>
+<g id="node10448" class="node nodeEN pw_C4-and-CAM-carbon-fixation" transform="translate(1005.3,914.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.40" target="_blank">2.7.1.40</a></text><title>pyruvate kinase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10423~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid10" transform="translate(587.2,212.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10423~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid5" transform="translate(667.9,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10423~2" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid28" transform="translate(707.8,83.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node10456~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid41" transform="translate(1020.5,203.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10456~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid34" transform="translate(1091.3,274.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node10457~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid34" transform="translate(1228.5,605.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node10457~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid41" transform="translate(1228.5,706.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10447~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid7" transform="translate(1020.8,1109.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10447~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid8" transform="translate(966.3,948.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10447~2" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid28" transform="translate(1014.4,948.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node10444~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid8" transform="translate(588.1,1101.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10444~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid7" transform="translate(690.2,1101.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10452~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid34" transform="translate(257.8,1108.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node10452~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid41" transform="translate(186.9,1037.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10440~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid41" transform="translate(49.7,706.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10440~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid34" transform="translate(49.7,605.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node10422~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid5" transform="translate(183.7,274.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10422~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid10" transform="translate(257.2,200.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10408~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid28" transform="translate(610.7,1685.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node10408~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid1" transform="translate(571.2,1657.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10408~2" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid16" transform="translate(688.3,1532.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10414~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid8" transform="translate(780.7,1766.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10414~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid7" transform="translate(780.7,1868.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10409~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid10" transform="translate(691.1,1957.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10409~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid5" transform="translate(610.4,2117.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10409~2" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid28" transform="translate(570.5,2086.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node10400~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid4" transform="translate(507.2,1845.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10400~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid16" transform="translate(478.6,1884.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10400~2" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid30" transform="translate(342.0,1788.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10400~3" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid17" transform="translate(369.7,1749.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10434~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid4" transform="translate(626.3,1139.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10434~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid13" transform="translate(627.6,980.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10434~2" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid28" transform="translate(675.3,987.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node10448~0" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid13" transform="translate(937.1,860.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10448~1" class="node nodeCM pw_C4-and-CAM-carbon-fixation lid4" transform="translate(1033.3,832.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+</g></svg>

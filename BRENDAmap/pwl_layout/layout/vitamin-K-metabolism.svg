@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1988.5 1727.3" width="1989" height="1727" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1988.5" height="1727.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_vitamin-K-metabolism" class="pw " x="0.0" y="0.0" width="1868.5" height="1591.8" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 175.8 1379.9 L 110.8 1379.9"/>
+<path class="link" marker-end="url(#in)" d="M 229.5 1395.9 L 321.3 1454.5"/>
+<path class="link" marker-start="url(#in)" d="M 482.2 1470.2 L 394.4 1470.4"/>
+<path class="link" marker-end="url(#in)" d="M 539.6 1470.2 L 649.7 1470.2"/>
+<path class="link" marker-start="url(#in)" d="M 794.2 1392.3 L 702.2 1454.2"/>
+<path class="link" marker-end="url(#in)" d="M 825.7 1360.3 L 878.3 1251.3"/>
+<path class="link" marker-start="url(#in)" d="M 884.6 1086.3 L 885.8 1219.3"/>
+<path class="link" marker-end="url(#in)" d="M 884.5 1054.3 L 884.5 927.0"/>
+<path class="link" marker-start="url(#in)" d="M 785.5 774.6 L 872.9 895.0"/>
+<path class="link" marker-end="url(#in)" d="M 774.0 742.6 L 774.4 616.2"/>
+<path class="link" marker-start="url(#in)" d="M 774.4 458.6 L 774.4 584.2"/>
+<path class="link" marker-end="url(#in)" d="M 787.8 426.6 L 880.0 316.2"/>
+<path class="link" marker-start="url(#in)" d="M 1018.2 293.7 L 993.3 295.0"/>
+<path class="link" marker-end="url(#in)" d="M 1082.0 290.5 L 1127.1 288.4"/>
+<path class="link" marker-start="url(#in)" d="M 1355.3 281.1 L 1307.5 282.2"/>
+<path class="link" marker-end="url(#in)" d="M 1419.1 280.4 L 1477.6 280.4"/>
+<path class="link" marker-start="url(#in)" d="M 1666.5 191.5 L 1569.6 264.4"/>
+<path class="link" marker-end="url(#in)" d="M 1715.2 159.5 L 1762.1 132.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 499.7 1486.2 L 472.0 1525.8"/>
+<path class="link" marker-end="url(#in)" d="M 522.1 1486.2 L 549.8 1525.7"/>
+<path class="link" marker-end="url(#in)" d="M 853.2 1380.3 L 880.9 1383.5"/>
+<path class="link" marker-end="url(#in)" d="M 907.1 1054.3 L 940.1 1031.0"/>
+<path class="link" marker-start="url(#in)" d="M 805.9 758.4 L 845.6 758.0"/>
+<path class="link" marker-start="url(#in)" d="M 800.1 774.6 L 832.7 794.7"/>
+<path class="link" marker-end="url(#in)" d="M 742.0 758.9 L 702.3 759.3"/>
+<path class="link" marker-end="url(#in)" d="M 747.8 742.6 L 715.2 722.6"/>
+<path class="link" marker-end="url(#in)" d="M 806.3 432.8 L 915.8 399.0"/>
+<path class="link" marker-start="url(#in)" d="M 1031.5 308.0 L 947.2 380.6"/>
+<path class="link" marker-end="url(#in)" d="M 1062.5 308.0 L 1091.3 345.0"/>
+<path class="link" marker-start="url(#in)" d="M 1376.3 296.4 L 1327.9 367.3"/>
+<path class="link" marker-end="url(#in)" d="M 1392.5 264.4 L 1409.4 213.5"/>
+<path class="link" marker-end="url(#in)" d="M 1406.5 264.4 L 1438.7 237.7"/>
+<path class="link" marker-start="url(#in)" d="M 1652.6 162.2 L 1617.9 149.0"/>
+<path class="link" marker-end="url(#in)" d="M 1687.9 159.5 L 1689.1 68.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_vitamin-K-metabolism" transform="translate(934.3,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">vitamin K metabolism</text></g>
+<g id="node1196" class="node nodeHM pw_vitamin-K-metabolism lid204" transform="translate(72.4,1379.9)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=204" target="_blank">chorismate</a></text><title></title></g>
+<g id="node4189" class="node nodeHM pw_vitamin-K-metabolism lid1280" transform="translate(346.3,1470.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1280" target="_blank">isochorismate</a></text><title></title></g>
+<g id="node4195" class="node nodeHM pw_vitamin-K-metabolism lid138471" transform="translate(678.4,1470.2)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=138471" target="_blank">SEPHCHC</a></text><title></title></g>
+<g id="node4199" class="node nodeHM pw_vitamin-K-metabolism lid24567" transform="translate(886.0,1235.3)"><rect height="30.0" width="405.3" x="-202.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24567" target="_blank">(1R,6R)-6-hydroxy-2-succinylcyclohexa-2,4-diene-1-carboxylate</a></text><title></title></g>
+<g id="node4201" class="node nodeHM pw_vitamin-K-metabolism lid7261" transform="translate(884.5,911.0)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7261" target="_blank">2-suc-benzoate</a></text><title></title></g>
+<g id="node4186" class="node nodeHM pw_vitamin-K-metabolism lid5683" transform="translate(774.4,600.2)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5683" target="_blank">2-succinylbenzoyl-CoA</a></text><title></title></g>
+<g id="node4183" class="node nodeHM pw_vitamin-K-metabolism lid14477" transform="translate(893.4,300.2)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=14477" target="_blank">1,4-dihydroxy-2-naphthoyl-CoA</a></text><title></title></g>
+<g id="node4180" class="node nodeHM pw_vitamin-K-metabolism lid5885" transform="translate(1217.3,284.3)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5885" target="_blank">1,4-dihydroxy-2-naphthoate</a></text><title></title></g>
+<g id="node4175" class="node nodeHM pw_vitamin-K-metabolism lid75884" transform="translate(1548.4,280.4)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=75884" target="_blank">a demethylmenaquinol</a></text><title></title></g>
+<g id="node4174" class="node nodeHM pw_vitamin-K-metabolism lid26809" transform="translate(1789.6,116.2)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26809" target="_blank">a menaquinol</a></text><title></title></g>
+<g id="node4190" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(204.5,1379.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.4.2" target="_blank">5.4.4.2</a></text><title>Isochorismate synthase</title></g>
+<g id="node4198" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(510.9,1470.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.9" target="_blank">2.2.1.9</a></text><title>2-succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylic-acid synthase</title></g>
+<g id="node4194" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(818.0,1376.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.99.20" target="_blank">4.2.99.20</a></text><title>2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate synthase</title></g>
+<g id="node4197" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(884.5,1070.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.113" target="_blank">4.2.1.113</a></text><title>o-succinylbenzoate synthase</title></g>
+<g id="node4200" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(773.9,758.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.26" target="_blank">6.2.1.26</a></text><title>O-succinylbenzoate-CoA ligase</title></g>
+<g id="node4187" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(774.4,442.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.36" target="_blank">4.1.3.36</a></text><title>1,4-dihydroxy-2-naphthoyl-CoA synthase</title></g>
+<g id="node4182" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(1050.1,292.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.28" target="_blank">3.1.2.28</a></text><title>1,4-dihydroxy-2-naphthoyl-CoA hydrolase</title></g>
+<g id="node4178" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(1387.2,280.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.74" target="_blank">2.5.1.74</a></text><title>1,4-dihydroxy-2-naphthoate polyprenyltransferase</title></g>
+<g id="node4173" class="node nodeEN pw_vitamin-K-metabolism" transform="translate(1687.7,175.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.163" target="_blank">2.1.1.163</a></text><title>demethylmenaquinone methyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node4198~0" class="node nodeCM pw_vitamin-K-metabolism lid34" transform="translate(460.8,1541.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node4198~1" class="node nodeCM pw_vitamin-K-metabolism lid28" transform="translate(561.1,1541.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4194~0" class="node nodeCM pw_vitamin-K-metabolism lid31" transform="translate(912.9,1387.1)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node4197~0" class="node nodeCM pw_vitamin-K-metabolism lid1" transform="translate(955.8,1019.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4200~0" class="node nodeCM pw_vitamin-K-metabolism lid4" transform="translate(861.3,757.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node4200~1" class="node nodeCM pw_vitamin-K-metabolism lid18" transform="translate(848.4,804.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node4200~2" class="node nodeCM pw_vitamin-K-metabolism lid30" transform="translate(686.6,759.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node4200~3" class="node nodeCM pw_vitamin-K-metabolism lid17" transform="translate(699.5,713.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node4182~0" class="node nodeCM pw_vitamin-K-metabolism lid1" transform="translate(931.5,394.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4182~1" class="node nodeCM pw_vitamin-K-metabolism lid18" transform="translate(1103.7,361.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node4178~0" class="node nodeCM pw_vitamin-K-metabolism lid152144" transform="translate(1316.9,383.3)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=152144" target="_blank">an all-trans-polyprenyl PP</a></text><title></title></g>
+<g id="node4178~1" class="node nodeCM pw_vitamin-K-metabolism lid28" transform="translate(1414.7,197.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4178~2" class="node nodeCM pw_vitamin-K-metabolism lid17" transform="translate(1454.5,224.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node4173~0" class="node nodeCM pw_vitamin-K-metabolism lid24" transform="translate(1575.7,133.0)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node4173~1" class="node nodeCM pw_vitamin-K-metabolism lid36" transform="translate(1689.4,52.5)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+</g></svg>

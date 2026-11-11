@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2077.7 1846.8" width="2078" height="1847" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2077.7" height="1846.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_palmitate-biosynthesis" class="pw " x="0.0" y="0.0" width="1957.7" height="1711.2" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 786.7 1446.8 L 927.6 1446.8"/>
+<path class="link" marker-start="url(#in)" d="M 722.9 1446.8 L 591.6 1446.8"/>
+<path class="link" marker-start="url(#in)" d="M 357.7 1446.8 L 488.9 1446.8"/>
+<path class="link" marker-end="url(#in)" d="M 293.9 1446.8 L 188.6 1446.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 293.8 1355.5 L 143.3 1430.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 357.8 1323.5 L 508.3 1248.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 722.9 1232.2 L 633.8 1232.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 786.7 1232.2 L 882.3 1232.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1155.1 1232.2 L 1056.3 1232.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1212.5 1232.2 L 1350.2 1232.2"/>
+<path class="link" marker-start="url(#in)" d="M 1580.9 1232.2 L 1446.4 1232.2"/>
+<path class="link" marker-end="url(#in)" d="M 1644.7 1232.2 L 1753.2 1232.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1643.5 1140.4 C 1684.3 1160.8 1755.9 1196.5 1796.6 1216.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1580.8 1109.0 L 1430.3 1033.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1215.7 1017.8 L 1304.8 1017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1151.9 1017.8 L 1059.5 1017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 783.5 1017.8 L 879.0 1017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 726.1 1017.8 L 598.1 1017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 357.7 1017.8 L 482.4 1017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 293.9 1017.8 L 146.4 1017.8"/>
+<path class="link" marker-start="url(#in)" d="M 1827.3 133.0 L 1827.3 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1827.3 165.0 L 1827.3 229.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1644.7 245.5 L 1737.0 245.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1580.9 245.5 L 1443.2 245.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1212.5 245.5 L 1353.4 245.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1155.1 245.5 L 1020.6 245.5"/>
+<path class="link" marker-start="url(#in)" d="M 786.7 245.5 L 917.9 245.5"/>
+<path class="link" marker-end="url(#in)" d="M 722.9 245.5 L 601.4 245.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 540.3 326.1 L 540.3 261.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 540.3 358.1 L 540.3 422.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 722.9 438.6 L 630.5 438.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 786.7 438.6 L 898.5 438.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1155.1 438.6 L 1040.1 438.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1212.5 438.6 L 1353.4 438.6"/>
+<path class="link" marker-start="url(#in)" d="M 1580.9 438.6 L 1443.2 438.6"/>
+<path class="link" marker-end="url(#in)" d="M 1644.7 438.6 L 1766.2 438.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1827.3 519.1 L 1827.3 454.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1827.3 551.1 L 1827.3 615.7"/>
+<path class="link" marker-start="url(#in)" d="M 1644.7 631.7 L 1737.0 631.7"/>
+<path class="link" marker-end="url(#in)" d="M 1580.9 631.7 L 1469.1 631.7"/>
+<path class="link" marker-start="url(#in)" d="M 1212.5 631.7 L 1327.5 631.7"/>
+<path class="link" marker-end="url(#in)" d="M 1155.1 631.7 L 1014.2 631.7"/>
+<path class="link" marker-start="url(#in)" d="M 786.7 631.7 L 924.4 631.7"/>
+<path class="link" marker-end="url(#in)" d="M 722.9 631.7 L 601.4 631.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 540.3 712.2 L 540.3 647.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 540.3 744.2 L 540.3 808.7"/>
+<path class="link" marker-start="url(#in)" d="M 722.9 824.7 L 630.5 824.7"/>
+<path class="link" marker-end="url(#in)" d="M 786.7 824.7 L 898.5 824.7"/>
+<path class="link" marker-start="url(#in)" d="M 1155.1 824.7 L 1040.1 824.7"/>
+<path class="link" marker-end="url(#in)" d="M 1212.5 824.7 L 1353.4 824.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1398.3 1131.4 C 1398.3 1077.4 1398.3 894.6 1398.3 840.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1398.3 1161.5 C 1398.3 1215.5 1398.3 1398.3 1398.3 1452.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1398.3 1548.7 L 1398.3 1484.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1398.3 1580.7 L 1398.3 1645.2"/>
+<path class="link" marker-start="url(#in)" d="M 1215.7 1661.2 L 1301.6 1661.2"/>
+<path class="link" marker-end="url(#in)" d="M 1151.9 1661.2 L 1046.6 1661.2"/>
+<path class="link" marker-start="url(#in)" d="M 783.5 1568.3 L 937.3 1645.2"/>
+<path class="link" marker-end="url(#in)" d="M 726.1 1539.7 L 572.3 1462.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 754.8 1430.8 L 754.8 1355.5"/>
+<path class="link" marker-end="url(#in)" d="M 766.0 1430.8 L 798.3 1384.6"/>
+<path class="link" marker-start="url(#in)" d="M 338.3 1430.8 L 370.8 1389.5"/>
+<path class="link" marker-end="url(#in)" d="M 320.6 1462.8 L 304.4 1513.4"/>
+<path class="link" marker-end="url(#in)" d="M 305.5 1462.8 L 269.9 1490.8"/>
+<path class="link" marker-start="url(#in)" d="M 322.9 1355.5 L 315.4 1396.8"/>
+<path class="link" marker-end="url(#in)" d="M 328.2 1323.5 L 336.7 1265.9"/>
+<path class="link" marker-end="url(#in)" d="M 754.8 1248.2 L 754.8 1323.5"/>
+<path class="link" marker-start="url(#in)" d="M 1172.6 1248.2 L 1143.9 1289.1"/>
+<path class="link" marker-end="url(#in)" d="M 1195.0 1248.2 L 1223.6 1289.1"/>
+<path class="link" marker-start="url(#in)" d="M 1601.6 1248.2 L 1566.4 1298.4"/>
+<path class="link" marker-end="url(#in)" d="M 1618.6 1216.2 L 1633.5 1175.0"/>
+<path class="link" marker-end="url(#in)" d="M 1633.1 1216.2 L 1668.6 1188.2"/>
+<path class="link" marker-start="url(#in)" d="M 1642.3 1109.0 L 1670.2 1093.9"/>
+<path class="link" marker-end="url(#in)" d="M 1585.4 1141.0 L 1561.1 1155.2"/>
+<path class="link" marker-end="url(#in)" d="M 1172.6 1001.8 L 1144.9 962.2"/>
+<path class="link" marker-start="url(#in)" d="M 766.0 1001.8 L 794.6 960.9"/>
+<path class="link" marker-end="url(#in)" d="M 743.6 1001.8 L 714.9 960.9"/>
+<path class="link" marker-start="url(#in)" d="M 337.0 1001.8 L 364.7 962.2"/>
+<path class="link" marker-end="url(#in)" d="M 314.6 1001.8 L 282.2 955.6"/>
+<path class="link" marker-start="url(#in)" d="M 1804.4 133.0 L 1775.3 112.6"/>
+<path class="link" marker-end="url(#in)" d="M 1804.4 165.0 L 1775.3 185.4"/>
+<path class="link" marker-end="url(#in)" d="M 1601.6 229.5 L 1573.9 190.0"/>
+<path class="link" marker-start="url(#in)" d="M 1195.0 229.5 L 1223.6 188.7"/>
+<path class="link" marker-end="url(#in)" d="M 1172.6 229.5 L 1143.9 188.7"/>
+<path class="link" marker-start="url(#in)" d="M 766.0 229.5 L 801.1 179.4"/>
+<path class="link" marker-end="url(#in)" d="M 749.3 261.5 L 731.8 312.2"/>
+<path class="link" marker-end="url(#in)" d="M 735.0 261.5 L 702.6 287.8"/>
+<path class="link" marker-start="url(#in)" d="M 517.4 326.1 L 488.3 305.7"/>
+<path class="link" marker-end="url(#in)" d="M 563.1 358.1 L 592.3 378.5"/>
+<path class="link" marker-end="url(#in)" d="M 766.0 454.6 L 793.7 494.2"/>
+<path class="link" marker-start="url(#in)" d="M 1183.8 454.6 L 1183.8 519.1"/>
+<path class="link" marker-end="url(#in)" d="M 1177.0 454.6 L 1139.5 542.8"/>
+<path class="link" marker-start="url(#in)" d="M 1601.6 454.6 L 1566.4 504.8"/>
+<path class="link" marker-end="url(#in)" d="M 1617.9 422.6 L 1634.1 372.0"/>
+<path class="link" marker-end="url(#in)" d="M 1633.1 422.6 L 1668.6 394.5"/>
+<path class="link" marker-start="url(#in)" d="M 1804.4 519.1 L 1775.3 498.7"/>
+<path class="link" marker-end="url(#in)" d="M 1850.1 551.1 L 1879.3 571.5"/>
+<path class="link" marker-end="url(#in)" d="M 1601.6 615.7 L 1573.9 576.1"/>
+<path class="link" marker-start="url(#in)" d="M 1183.8 615.7 L 1183.8 551.1"/>
+<path class="link" marker-end="url(#in)" d="M 1172.6 615.7 L 1143.9 574.8"/>
+<path class="link" marker-start="url(#in)" d="M 766.0 615.7 L 801.1 565.5"/>
+<path class="link" marker-end="url(#in)" d="M 749.6 647.7 L 733.4 698.3"/>
+<path class="link" marker-end="url(#in)" d="M 734.5 647.7 L 698.9 675.7"/>
+<path class="link" marker-start="url(#in)" d="M 517.4 712.2 L 488.3 691.8"/>
+<path class="link" marker-end="url(#in)" d="M 563.1 744.2 L 592.3 764.6"/>
+<path class="link" marker-end="url(#in)" d="M 766.0 840.7 L 793.7 880.3"/>
+<path class="link" marker-start="url(#in)" d="M 1172.6 840.7 L 1143.9 881.6"/>
+<path class="link" marker-end="url(#in)" d="M 1195.0 840.7 L 1223.6 881.6"/>
+<path class="link" marker-start="url(#in)" d="M 1375.4 1130.5 L 1339.0 1104.9"/>
+<path class="link" marker-end="url(#in)" d="M 1430.2 1158.2 L 1450.8 1165.8"/>
+<path class="link" marker-end="url(#in)" d="M 1413.8 1162.5 L 1448.6 1198.3"/>
+<path class="link" marker-start="url(#in)" d="M 1375.4 1548.7 L 1346.3 1528.3"/>
+<path class="link" marker-end="url(#in)" d="M 1421.1 1580.7 L 1450.3 1601.1"/>
+<path class="link" marker-end="url(#in)" d="M 1172.6 1645.2 L 1144.9 1605.7"/>
+<path class="link" marker-start="url(#in)" d="M 783.5 1538.5 L 814.1 1521.9"/>
+<path class="link" marker-end="url(#in)" d="M 751.9 1538.0 L 744.6 1496.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_palmitate-biosynthesis" transform="translate(978.8,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">palmitate biosynthesis</text></g>
+<g id="node3051" class="node nodeHM pw_palmitate-biosynthesis lid2737" transform="translate(969.3,1446.8)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2737" target="_blank">dodecanoate</a></text><title></title></g>
+<g id="node3075" class="node nodeHM pw_palmitate-biosynthesis lid3855" transform="translate(540.3,1446.8)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3855" target="_blank">Dodecanoyl-ACP</a></text><title></title></g>
+<g id="node3081" class="node nodeHM pw_palmitate-biosynthesis lid50517" transform="translate(111.3,1446.8)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50517" target="_blank">3-oxotetradecanoyl-ACP</a></text><title></title></g>
+<g id="node3068" class="node nodeHM pw_palmitate-biosynthesis lid2623" transform="translate(540.3,1232.2)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2623" target="_blank">(3R)-3-hydroxymyristoyl-ACP</a></text><title></title></g>
+<g id="node3076" class="node nodeHM pw_palmitate-biosynthesis lid191247" transform="translate(969.3,1232.2)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191247" target="_blank">(2E)-tetradec-2-enoyl-ACP</a></text><title></title></g>
+<g id="node3070" class="node nodeHM pw_palmitate-biosynthesis lid4069" transform="translate(1398.3,1232.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4069" target="_blank">myristoyl-ACP</a></text><title></title></g>
+<g id="node3072" class="node nodeHM pw_palmitate-biosynthesis lid130899" transform="translate(1827.3,1232.2)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130899" target="_blank">3-oxohexadecanoyl-ACP</a></text><title></title></g>
+<g id="node3084" class="node nodeHM pw_palmitate-biosynthesis lid90274" transform="translate(1398.3,1017.8)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90274" target="_blank">(3R)-3-hydroxypalmitoyl-ACP</a></text><title></title></g>
+<g id="node3060" class="node nodeHM pw_palmitate-biosynthesis lid191361" transform="translate(969.3,1017.8)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191361" target="_blank">(2E)-hexadec-2-enoyl-[ACP]</a></text><title></title></g>
+<g id="node3059" class="node nodeHM pw_palmitate-biosynthesis lid1598" transform="translate(540.3,1017.8)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1598" target="_blank">palmitoleoyl-ACP</a></text><title></title></g>
+<g id="node3055" class="node nodeHM pw_palmitate-biosynthesis lid517" transform="translate(111.3,1017.8)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=517" target="_blank">palmitate</a></text><title></title></g>
+<g id="node1285" class="node nodeHM pw_palmitate-biosynthesis lid7137" transform="translate(1827.3,52.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7137" target="_blank">acetoacetyl-ACP</a></text><title></title></g>
+<g id="node3136" class="node nodeHM pw_palmitate-biosynthesis lid44951" transform="translate(1827.3,245.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44951" target="_blank">(3R)-3-hydroxybutanoyl-ACP</a></text><title></title></g>
+<g id="node3154" class="node nodeHM pw_palmitate-biosynthesis lid3854" transform="translate(1398.3,245.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3854" target="_blank">Crotonyl-ACP</a></text><title></title></g>
+<g id="node3155" class="node nodeHM pw_palmitate-biosynthesis lid11554" transform="translate(969.3,245.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11554" target="_blank">butanoyl-[ACP]</a></text><title></title></g>
+<g id="node3144" class="node nodeHM pw_palmitate-biosynthesis lid130885" transform="translate(540.3,245.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130885" target="_blank">3-oxohexanoyl-ACP</a></text><title></title></g>
+<g id="node3126" class="node nodeHM pw_palmitate-biosynthesis lid44954" transform="translate(540.3,438.6)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44954" target="_blank">(3R)-3-hydroxyhexanoyl-ACP</a></text><title></title></g>
+<g id="node3159" class="node nodeHM pw_palmitate-biosynthesis lid191356" transform="translate(969.3,438.6)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191356" target="_blank">(2E)-hex-2-enoyl-ACP</a></text><title></title></g>
+<g id="node3157" class="node nodeHM pw_palmitate-biosynthesis lid4018" transform="translate(1398.3,438.6)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4018" target="_blank">hexanoyl-ACP</a></text><title></title></g>
+<g id="node3150" class="node nodeHM pw_palmitate-biosynthesis lid59550" transform="translate(1827.3,438.6)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=59550" target="_blank">3-oxooctanoyl-ACP</a></text><title></title></g>
+<g id="node3147" class="node nodeHM pw_palmitate-biosynthesis lid30515" transform="translate(1827.3,631.7)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30515" target="_blank">(3R)-3-hydroxyoctanoyl-ACP</a></text><title></title></g>
+<g id="node3139" class="node nodeHM pw_palmitate-biosynthesis lid191355" transform="translate(1398.3,631.7)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191355" target="_blank">(2E)-oct-2-enoyl-ACP</a></text><title></title></g>
+<g id="node3140" class="node nodeHM pw_palmitate-biosynthesis lid2861" transform="translate(969.3,631.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2861" target="_blank">octanoyl-ACP</a></text><title></title></g>
+<g id="node3069" class="node nodeHM pw_palmitate-biosynthesis lid131209" transform="translate(540.3,631.7)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=131209" target="_blank">3-oxodecanoyl-ACP</a></text><title></title></g>
+<g id="node3079" class="node nodeHM pw_palmitate-biosynthesis lid44952" transform="translate(540.3,824.7)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44952" target="_blank">(3R)-3-hydroxydecanoyl-ACP</a></text><title></title></g>
+<g id="node3088" class="node nodeHM pw_palmitate-biosynthesis lid191248" transform="translate(969.3,824.7)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191248" target="_blank">(2E)-dec-2-enoyl-ACP</a></text><title></title></g>
+<g id="node3089" class="node nodeHM pw_palmitate-biosynthesis lid2957" transform="translate(1398.3,824.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2957" target="_blank">Decanoyl-ACP</a></text><title></title></g>
+<g id="node3073" class="node nodeHM pw_palmitate-biosynthesis lid156605" transform="translate(1398.3,1468.2)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=156605" target="_blank">3-oxododecanoyl-ACP</a></text><title></title></g>
+<g id="node3087" class="node nodeHM pw_palmitate-biosynthesis lid95423" transform="translate(1398.3,1661.2)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95423" target="_blank">(3R)-3-hydroxydodecanoyl-ACP</a></text><title></title></g>
+<g id="node3080" class="node nodeHM pw_palmitate-biosynthesis lid56509" transform="translate(969.3,1661.2)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56509" target="_blank">(2E)-dodec-2-enoyl-ACP</a></text><title></title></g>
+<g id="node3054" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,1446.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.21" target="_blank">3.1.2.21</a></text><title>dodecanoyl-[acyl-carrier-protein] hydrolase</title></g>
+<g id="node3103" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(325.8,1446.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.41" target="_blank">2.3.1.41</a></text><title>beta-ketoacyl-[acyl-carrier-protein] synthase I</title></g>
+<g id="node3104" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(325.8,1339.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node3077" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,1232.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node3115" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1183.8,1232.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+<g id="node3116" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1612.8,1232.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.41" target="_blank">2.3.1.41</a></text><title>beta-ketoacyl-[acyl-carrier-protein] synthase I</title></g>
+<g id="node3095" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1612.8,1125.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node3061" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1183.8,1017.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node3096" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,1017.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+<g id="node3058" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(325.8,1017.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.14" target="_blank">3.1.2.14</a></text><title>oleoyl-[acyl-carrier-protein] hydrolase</title></g>
+<g id="node3128" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1827.3,149.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node3164" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1612.8,245.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node3161" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1183.8,245.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+<g id="node3162" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,245.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.41" target="_blank">2.3.1.41</a></text><title>beta-ketoacyl-[acyl-carrier-protein] synthase I</title></g>
+<g id="node3156" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(540.3,342.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node3165" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,438.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node3134" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1183.8,438.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+<g id="node3137" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1612.8,438.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.41" target="_blank">2.3.1.41</a></text><title>beta-ketoacyl-[acyl-carrier-protein] synthase I</title></g>
+<g id="node3123" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1827.3,535.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node3135" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1612.8,631.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node3152" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1183.8,631.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+<g id="node3121" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,631.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.41" target="_blank">2.3.1.41</a></text><title>beta-ketoacyl-[acyl-carrier-protein] synthase I</title></g>
+<g id="node3106" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(540.3,728.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node3101" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,824.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node3097" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1183.8,824.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+<g id="node3091" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1398.3,1146.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.41" target="_blank">2.3.1.41</a></text><title>beta-ketoacyl-[acyl-carrier-protein] synthase I</title></g>
+<g id="node3094" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1398.3,1564.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node3083" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(1183.8,1661.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node3110" class="node nodeEN pw_palmitate-biosynthesis" transform="translate(754.8,1554.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3054~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(754.8,1339.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3054~1" class="node nodeCM pw_palmitate-biosynthesis lid2745" transform="translate(809.5,1368.6)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3103~0" class="node nodeCM pw_palmitate-biosynthesis lid811" transform="translate(383.3,1373.5)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node3103~1" class="node nodeCM pw_palmitate-biosynthesis lid28" transform="translate(299.3,1529.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3103~2" class="node nodeCM pw_palmitate-biosynthesis lid2745" transform="translate(249.6,1506.8)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3104~0" class="node nodeCM pw_palmitate-biosynthesis lid5" transform="translate(312.5,1412.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3104~1" class="node nodeCM pw_palmitate-biosynthesis lid10" transform="translate(339.1,1249.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3115~0" class="node nodeCM pw_palmitate-biosynthesis lid8" transform="translate(1132.7,1305.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3115~1" class="node nodeCM pw_palmitate-biosynthesis lid7" transform="translate(1234.8,1305.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3116~0" class="node nodeCM pw_palmitate-biosynthesis lid811" transform="translate(1555.2,1314.4)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node3116~1" class="node nodeCM pw_palmitate-biosynthesis lid28" transform="translate(1639.3,1159.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3116~2" class="node nodeCM pw_palmitate-biosynthesis lid2745" transform="translate(1688.9,1172.2)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3095~0" class="node nodeCM pw_palmitate-biosynthesis lid5" transform="translate(1692.4,1081.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3095~1" class="node nodeCM pw_palmitate-biosynthesis lid10" transform="translate(1538.9,1168.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3061~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(1133.7,946.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3096~0" class="node nodeCM pw_palmitate-biosynthesis lid8" transform="translate(805.8,944.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3096~1" class="node nodeCM pw_palmitate-biosynthesis lid7" transform="translate(703.7,944.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3058~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(375.9,946.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3058~1" class="node nodeCM pw_palmitate-biosynthesis lid2745" transform="translate(271.0,939.6)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3128~0" class="node nodeCM pw_palmitate-biosynthesis lid5" transform="translate(1753.1,97.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3128~1" class="node nodeCM pw_palmitate-biosynthesis lid10" transform="translate(1753.1,201.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3164~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(1562.7,174.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3161~0" class="node nodeCM pw_palmitate-biosynthesis lid8" transform="translate(1234.8,172.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3161~1" class="node nodeCM pw_palmitate-biosynthesis lid7" transform="translate(1132.7,172.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3162~0" class="node nodeCM pw_palmitate-biosynthesis lid811" transform="translate(812.3,163.4)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node3162~1" class="node nodeCM pw_palmitate-biosynthesis lid28" transform="translate(726.3,328.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3162~2" class="node nodeCM pw_palmitate-biosynthesis lid551" transform="translate(686.9,300.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=551" target="_blank">ACP</a></text><title></title></g>
+<g id="node3156~0" class="node nodeCM pw_palmitate-biosynthesis lid5" transform="translate(466.1,290.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3156~1" class="node nodeCM pw_palmitate-biosynthesis lid10" transform="translate(614.5,394.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3165~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(804.9,510.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3134~0" class="node nodeCM pw_palmitate-biosynthesis lid8" transform="translate(1183.8,535.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3134~1" class="node nodeCM pw_palmitate-biosynthesis lid7" transform="translate(1132.7,558.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3137~0" class="node nodeCM pw_palmitate-biosynthesis lid811" transform="translate(1555.2,520.8)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node3137~1" class="node nodeCM pw_palmitate-biosynthesis lid28" transform="translate(1639.3,356.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3137~2" class="node nodeCM pw_palmitate-biosynthesis lid2745" transform="translate(1688.9,378.5)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3123~0" class="node nodeCM pw_palmitate-biosynthesis lid5" transform="translate(1753.1,483.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3123~1" class="node nodeCM pw_palmitate-biosynthesis lid10" transform="translate(1901.5,587.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3135~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(1562.7,560.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3121~0" class="node nodeCM pw_palmitate-biosynthesis lid811" transform="translate(812.3,549.5)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node3121~1" class="node nodeCM pw_palmitate-biosynthesis lid28" transform="translate(728.3,714.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3121~2" class="node nodeCM pw_palmitate-biosynthesis lid2745" transform="translate(678.6,691.7)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3106~0" class="node nodeCM pw_palmitate-biosynthesis lid5" transform="translate(466.1,676.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3106~1" class="node nodeCM pw_palmitate-biosynthesis lid10" transform="translate(614.5,780.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3101~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(804.9,896.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3097~0" class="node nodeCM pw_palmitate-biosynthesis lid8" transform="translate(1132.7,897.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3097~1" class="node nodeCM pw_palmitate-biosynthesis lid7" transform="translate(1234.8,897.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3091~0" class="node nodeCM pw_palmitate-biosynthesis lid811" transform="translate(1316.1,1088.9)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node3091~1" class="node nodeCM pw_palmitate-biosynthesis lid2745" transform="translate(1482.8,1177.5)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3091~2" class="node nodeCM pw_palmitate-biosynthesis lid28" transform="translate(1464.1,1214.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3094~0" class="node nodeCM pw_palmitate-biosynthesis lid5" transform="translate(1324.1,1512.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3094~1" class="node nodeCM pw_palmitate-biosynthesis lid10" transform="translate(1472.5,1616.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3083~0" class="node nodeCM pw_palmitate-biosynthesis lid1" transform="translate(1133.7,1589.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3110~0" class="node nodeCM pw_palmitate-biosynthesis lid8" transform="translate(833.0,1511.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3110~1" class="node nodeCM pw_palmitate-biosynthesis lid7" transform="translate(741.7,1480.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+</g></svg>

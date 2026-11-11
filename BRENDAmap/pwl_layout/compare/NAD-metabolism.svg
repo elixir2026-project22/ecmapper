@@ -1,0 +1,489 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3780" height="1621" viewBox="0 0 3779.5 1621.4"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="7748.6 271.8 1828.2 1118.3" width="1828" height="1118" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="7748.6" y="271.8" width="1828.2" height="1118.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_NAD-metabolism" class="pw pw4" x="7788.6" y="327.3" width="1748.2" height="1022.8" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8698.3 417.6 L 8331.2 472.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8719.7 428.6 L 8538.1 666.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8189.3 476.3 L 8275.4 476.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8122.2 476.0 L 8033.9 476.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8524.0 493.1 L 8524.0 666.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8490.4 477.1 L 8331.2 477.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8838.7 557.8 L 9045.5 671.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8777.8 557.8 L 8549.1 672.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8345.9 543.8 L 8313.5 493.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8377.6 575.8 L 8499.3 666.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8246.5 545.3 L 8290.0 493.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8199.7 548.7 L 8033.9 486.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8266.8 575.6 L 8498.9 674.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8841.2 685.3 L 9045.5 685.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8774.1 685.3 L 8549.1 685.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8217.1 686.1 L 7968.1 685.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8289.9 686.1 L 8498.9 685.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9411.1 680.0 L 9328.3 595.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9411.0 712.0 L 9323.0 801.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9210.7 682.5 L 9296.9 595.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9210.0 714.5 L 9292.3 801.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8220.8 744.4 L 7968.1 694.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8287.9 742.8 L 8498.9 691.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8524.0 833.9 L 8524.0 1026.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8524.0 801.9 L 8524.0 703.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8787.4 833.9 L 8544.2 1026.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8774.1 802.2 L 8549.1 697.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8249.4 910.6 L 8490.7 1026.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8193.5 878.6 L 7943.0 701.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9307.4 955.0 L 9307.4 833.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9307.4 987.0 L 9307.4 1090.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7919.5 987.0 L 7919.5 1226.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7919.6 955.0 L 7920.4 701.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9070.5 987.0 L 9070.5 1226.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9070.5 955.0 L 9070.5 701.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8276.3 1058.6 L 8276.3 1162.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8312.6 1042.6 L 8433.9 1042.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8771.2 1042.6 L 8614.1 1042.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8828.7 1058.6 L 9049.5 1226.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8524.0 1162.9 L 8524.0 1058.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8490.4 1178.9 L 8349.4 1178.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8487.6 1242.6 L 7961.6 1242.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8560.4 1242.6 L 9025.7 1242.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9309.1 1226.6 L 9307.6 1122.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9273.0 1242.6 L 9115.4 1242.6"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 8765.4 397.1 L 8798.0 382.2"/>
+<path class="link" marker-end="url(#in)" d="M 8700.0 396.6 L 8675.2 384.1"/>
+<path class="link" marker-start="url(#in)" d="M 8140.5 460.0 L 8113.1 431.4"/>
+<path class="link" marker-end="url(#in)" d="M 8175.0 460.0 L 8208.2 432.4"/>
+<path class="link" marker-start="url(#in)" d="M 8557.6 476.9 L 8616.5 476.3"/>
+<path class="link" marker-end="url(#in)" d="M 8542.1 493.1 L 8574.1 521.4"/>
+<path class="link" marker-start="url(#in)" d="M 8821.2 557.8 L 8846.1 592.4"/>
+<path class="link" marker-start="url(#in)" d="M 8843.2 554.0 L 8905.7 576.7"/>
+<path class="link" marker-start="url(#in)" d="M 8843.2 526.6 L 8888.8 505.9"/>
+<path class="link" marker-end="url(#in)" d="M 8776.1 542.3 L 8742.6 542.8"/>
+<path class="link" marker-end="url(#in)" d="M 8802.1 557.8 L 8784.4 595.7"/>
+<path class="link" marker-end="url(#in)" d="M 8804.7 525.8 L 8794.1 491.3"/>
+<path class="link" marker-end="url(#in)" d="M 8783.2 525.8 L 8753.1 507.6"/>
+<path class="link" marker-start="url(#in)" d="M 8392.6 559.4 L 8445.5 558.9"/>
+<path class="link" marker-end="url(#in)" d="M 8392.6 546.5 L 8446.0 527.0"/>
+<path class="link" marker-end="url(#in)" d="M 8363.2 543.8 L 8374.1 518.9"/>
+<path class="link" marker-end="url(#in)" d="M 8199.7 572.1 L 8163.5 583.7"/>
+<path class="link" marker-start="url(#in)" d="M 8841.2 694.3 L 8891.1 707.8"/>
+<path class="link" marker-start="url(#in)" d="M 8823.6 701.3 L 8854.4 732.1"/>
+<path class="link" marker-end="url(#in)" d="M 8774.1 695.3 L 8733.9 707.1"/>
+<path class="link" marker-end="url(#in)" d="M 8791.5 701.3 L 8761.2 731.4"/>
+<path class="link" marker-start="url(#in)" d="M 8279.3 670.2 L 8297.5 659.0"/>
+<path class="link" marker-end="url(#in)" d="M 8227.5 670.2 L 8206.7 657.5"/>
+<path class="link" marker-start="url(#in)" d="M 9415.6 712.0 L 9383.5 758.1"/>
+<path class="link" marker-end="url(#in)" d="M 9417.5 680.0 L 9388.5 629.2"/>
+<path class="link" marker-end="url(#in)" d="M 9390.3 682.3 L 9330.7 659.7"/>
+<path class="link" marker-start="url(#in)" d="M 9207.3 714.5 L 9238.7 754.9"/>
+<path class="link" marker-end="url(#in)" d="M 9205.7 682.5 L 9239.9 631.8"/>
+<path class="link" marker-end="url(#in)" d="M 9231.3 684.1 L 9291.9 660.1"/>
+<path class="link" marker-start="url(#in)" d="M 8223.9 767.0 L 8184.9 787.4"/>
+<path class="link" marker-end="url(#in)" d="M 8286.5 767.0 L 8334.1 790.6"/>
+<path class="link" marker-start="url(#in)" d="M 8538.9 801.9 L 8567.5 771.0"/>
+<path class="link" marker-end="url(#in)" d="M 8538.6 833.9 L 8570.7 869.0"/>
+<path class="link" marker-end="url(#in)" d="M 8508.7 833.9 L 8477.9 866.1"/>
+<path class="link" marker-start="url(#in)" d="M 8774.1 821.7 L 8741.7 825.4"/>
+<path class="link" marker-end="url(#in)" d="M 8830.6 833.9 L 8848.1 846.0"/>
+<path class="link" marker-start="url(#in)" d="M 8229.7 910.6 L 8248.0 932.2"/>
+<path class="link" marker-end="url(#in)" d="M 8179.7 898.9 L 8111.0 907.0"/>
+<path class="link" marker-end="url(#in)" d="M 8198.7 910.6 L 8175.3 932.2"/>
+<path class="link" marker-start="url(#in)" d="M 9323.3 987.0 L 9354.1 1017.8"/>
+<path class="link" marker-end="url(#in)" d="M 9323.4 955.0 L 9354.1 924.2"/>
+<path class="link" marker-end="url(#in)" d="M 9291.3 955.0 L 9260.6 924.2"/>
+<path class="link" marker-start="url(#in)" d="M 7903.8 955.0 L 7862.6 913.2"/>
+<path class="link" marker-end="url(#in)" d="M 7901.7 987.0 L 7862.0 1022.5"/>
+<path class="link" marker-start="url(#in)" d="M 9087.8 955.0 L 9121.0 924.2"/>
+<path class="link" marker-end="url(#in)" d="M 9087.8 987.0 L 9121.0 1017.8"/>
+<path class="link" marker-start="url(#in)" d="M 8292.3 1058.6 L 8323.0 1089.4"/>
+<path class="link" marker-end="url(#in)" d="M 8239.9 1042.2 L 8177.5 1041.5"/>
+<path class="link" marker-end="url(#in)" d="M 8312.6 1026.7 L 8352.2 1009.4"/>
+<path class="link" marker-start="url(#in)" d="M 8791.6 1058.6 L 8760.9 1089.4"/>
+<path class="link" marker-end="url(#in)" d="M 8824.6 1026.6 L 8853.4 999.4"/>
+<path class="link" marker-end="url(#in)" d="M 8823.6 1058.6 L 8854.4 1089.4"/>
+<path class="link" marker-start="url(#in)" d="M 8508.4 1162.9 L 8478.4 1132.1"/>
+<path class="link" marker-end="url(#in)" d="M 8540.2 1162.9 L 8571.3 1132.1"/>
+<path class="link" marker-start="url(#in)" d="M 8487.6 1229.6 L 8470.2 1223.4"/>
+<path class="link" marker-start="url(#in)" d="M 8512.8 1258.6 L 8483.3 1300.7"/>
+<path class="link" marker-start="url(#in)" d="M 8487.6 1254.6 L 8446.7 1268.2"/>
+<path class="link" marker-end="url(#in)" d="M 8560.4 1254.7 L 8603.8 1269.3"/>
+<path class="link" marker-end="url(#in)" d="M 8533.9 1258.6 L 8559.7 1300.5"/>
+<path class="link" marker-end="url(#in)" d="M 8560.4 1229.8 L 8601.9 1215.3"/>
+<path class="link" marker-start="url(#in)" d="M 9324.9 1258.6 L 9355.7 1290.3"/>
+<path class="link" marker-start="url(#in)" d="M 9297.2 1258.6 L 9272.6 1290.8"/>
+<path class="link" marker-end="url(#in)" d="M 9325.9 1226.6 L 9356.6 1196.8"/>
+<path class="link" marker-end="url(#in)" d="M 9293.9 1226.6 L 9263.1 1194.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_NAD-metabolism" transform="translate(8662.7,327.3)"><rect rx="10" height="31" width="160" x="-80.0" y="-15.5"/><text dominant-baseline="central">NAD metabolism</text></g>
+<g id="node9149" class="node nodeSM pw_NAD-metabolism lid7" transform="translate(8524.0,685.3)"><rect height="35.0" width="48.2" x="-24.1" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node9858" class="node nodeHM pw_NAD-metabolism lid10" transform="translate(8303.3,477.1)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node9870" class="node nodeHM pw_NAD-metabolism lid2493" transform="translate(8276.3,1178.9)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2493" target="_blank">nicotinamide riboside</a></text><title>nicotinamide riboside</title></g>
+<g id="node9873" class="node nodeHM pw_NAD-metabolism lid1029" transform="translate(7919.5,1242.6)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1029" target="_blank">nicotinate</a></text><title>nicotinate</title></g>
+<g id="node9884" class="node nodeHM pw_NAD-metabolism lid267" transform="translate(7920.4,685.3)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=267" target="_blank">nicotinamide</a></text><title>nicotinamide</title></g>
+<g id="node9893" class="node nodeHM pw_NAD-metabolism lid1831" transform="translate(8524.0,1042.6)"><rect height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1831" target="_blank">nicotinamide mononucleotide</a></text><title>nicotinamide mononucleotide</title></g>
+<g id="node10192" class="node nodeHM pw_NAD-metabolism lid5" transform="translate(8006.0,476.0)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node10236" class="node nodeHM pw_NAD-metabolism lid5194" transform="translate(9070.5,1242.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5194" target="_blank">Deamido-NMN</a></text><title>nicotinate mononucleotide</title></g>
+<g id="node10238" class="node nodeHM pw_NAD-metabolism lid1300" transform="translate(9070.5,685.3)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1300" target="_blank">DNAD</a></text><title>Deamido-NAD+</title></g>
+<g id="node10240" class="node nodeHM pw_NAD-metabolism lid107528" transform="translate(9307.4,817.9)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107528" target="_blank">alpha-iminosuccinate</a></text><title>alpha-iminosuccinate</title></g>
+<g id="node10242" class="node nodeHM pw_NAD-metabolism lid2500" transform="translate(9307.4,1106.3)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2500" target="_blank">quinolinate</a></text><title>quinolinate</title></g>
+<g id="node10305" class="node nodeHM pw_NAD-metabolism lid97" transform="translate(9312.6,579.1)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=97" target="_blank">Asp</a></text><title>L-aspartate</title></g>
+<g id="node11671" class="node nodeEN pw_NAD-metabolism" transform="translate(8731.9,412.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.6.1.3" target="_blank">1.6.1.3</a></text><title>NAD(P)+ transhydrogenase</title></g>
+<g id="node10193" class="node nodeEN pw_NAD-metabolism" transform="translate(8155.8,476.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.6.1.2" target="_blank">1.6.1.2</a></text><title>NAD(P)+ transhydrogenase (Re/Si-specific)</title></g>
+<g id="node9859" class="node nodeEN pw_NAD-metabolism" transform="translate(8524.0,477.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.2" target="_blank">3.1.3.2</a></text><title>acid phosphatase</title></g>
+<g id="node10237" class="node nodeEN pw_NAD-metabolism" transform="translate(8809.6,541.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.5.1" target="_blank">6.3.5.1</a></text><title>NAD+ synthase (glutamine-hydrolysing)</title></g>
+<g id="node10178" class="node nodeEN pw_NAD-metabolism" transform="translate(8356.2,559.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.23" target="_blank">2.7.1.23</a></text><title>NAD+ kinase</title></g>
+<g id="node10287" class="node nodeEN pw_NAD-metabolism" transform="translate(8233.2,561.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.6.1.1" target="_blank">1.6.1.1</a></text><title>NAD(P)+ transhydrogenase (Si-specific)</title></g>
+<g id="node10234" class="node nodeEN pw_NAD-metabolism" transform="translate(8807.6,685.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.5" target="_blank">6.3.1.5</a></text><title>NAD+ synthase</title></g>
+<g id="node10625" class="node nodeEN pw_NAD-metabolism" transform="translate(8253.5,686.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.30" target="_blank">2.4.2.30</a></text><title>NAD+ ADP-ribosyltransferase</title></g>
+<g id="node8292" class="node nodeEN pw_NAD-metabolism" transform="translate(9426.7,696.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.21" target="_blank">1.4.1.21</a></text><title>aspartate dehydrogenase</title></g>
+<g id="node10245" class="node nodeEN pw_NAD-metabolism" transform="translate(9194.9,698.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.16" target="_blank">1.4.3.16</a></text><title>L-aspartate oxidase</title></g>
+<g id="node9883" class="node nodeEN pw_NAD-metabolism" transform="translate(8254.4,751.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.5" target="_blank">3.2.2.5</a></text><title> NAD+ glycohydrolase</title></g>
+<g id="node9889" class="node nodeEN pw_NAD-metabolism" transform="translate(8524.0,817.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.22" target="_blank">3.6.1.22</a></text><title>NAD+ diphosphatase</title></g>
+<g id="node9869" class="node nodeEN pw_NAD-metabolism" transform="translate(8807.6,817.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.1" target="_blank">2.7.7.1</a></text><title>nicotinamide-nucleotide adenylyltransferase</title></g>
+<g id="node9887" class="node nodeEN pw_NAD-metabolism" transform="translate(8216.1,894.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.14" target="_blank">3.2.2.14</a></text><title>NMN nucleosidase</title></g>
+<g id="node10239" class="node nodeEN pw_NAD-metabolism" transform="translate(9307.4,971.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.72" target="_blank">2.5.1.72</a></text><title>quinolinate synthase</title></g>
+<g id="node9888" class="node nodeEN pw_NAD-metabolism" transform="translate(7919.5,971.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.19" target="_blank">3.5.1.19</a></text><title>nicotinamidase</title></g>
+<g id="node10235" class="node nodeEN pw_NAD-metabolism" transform="translate(9070.5,971.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.18" target="_blank">2.7.7.18</a></text><title>nicotinate-nucleotide adenylyltransferase</title></g>
+<g id="node9864" class="node nodeEN pw_NAD-metabolism" transform="translate(8276.3,1042.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.22" target="_blank">2.7.1.22</a></text><title>ribosylnicotinamide kinase</title></g>
+<g id="node9868" class="node nodeEN pw_NAD-metabolism" transform="translate(8807.6,1042.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.42" target="_blank">3.5.1.42</a></text><title>nicotinamide-nucleotide amidase</title></g>
+<g id="node9866" class="node nodeEN pw_NAD-metabolism" transform="translate(8524.0,1178.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.5" target="_blank">3.1.3.5</a></text><title>5&#x27;-nucleotidase</title></g>
+<g id="node9867" class="node nodeEN pw_NAD-metabolism" transform="translate(8524.0,1242.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.4.21" target="_blank">6.3.4.21</a></text><title>nicotinate phosphoribosyltransferase</title></g>
+<g id="node10241" class="node nodeEN pw_NAD-metabolism" transform="translate(9309.4,1242.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.19" target="_blank">2.4.2.19</a></text><title>nicotinate-nucleotide diphosphorylase (carboxylating)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2617" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(8624.1,1207.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node2618" class="node nodeCM pw_NAD-metabolism lid13" transform="translate(8569.6,1316.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node2619" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8424.5,1275.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2620" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(8472.0,1316.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node8290" class="node nodeCM pw_NAD-metabolism lid10" transform="translate(9372.4,774.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node8291" class="node nodeCM pw_NAD-metabolism lid5" transform="translate(9379.3,613.2)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node9855" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(8870.3,861.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node9857" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8638.8,476.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9860" class="node nodeCM pw_NAD-metabolism lid13" transform="translate(8374.5,999.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node9861" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(8719.5,828.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node9862" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8462.8,1116.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9863" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(8592.3,537.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node9865" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(8339.0,1105.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node9871" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(8587.5,1116.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node9872" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(8158.1,1041.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9874" class="node nodeCM pw_NAD-metabolism lid27" transform="translate(8870.4,983.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node9875" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(8462.7,882.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9876" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(8623.2,1275.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node9877" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(8870.4,1105.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9878" class="node nodeCM pw_NAD-metabolism lid158" transform="translate(8425.4,1207.4)"><rect rx="5" height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title>5-phospho-alpha-D-ribose 1-diphosphate</title></g>
+<g id="node9879" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8744.9,1105.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9880" class="node nodeCM pw_NAD-metabolism lid30" transform="translate(8585.2,885.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node9881" class="node nodeCM pw_NAD-metabolism lid27" transform="translate(7844.2,1038.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node9882" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(7846.9,897.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9885" class="node nodeCM pw_NAD-metabolism lid183" transform="translate(8157.9,948.2)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title>D-ribose 5-phosphate</title></g>
+<g id="node9886" class="node nodeCM pw_NAD-metabolism lid402" transform="translate(8154.4,803.4)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=402" target="_blank">ADP-Rib</a></text><title>ADP-ribose</title></g>
+<g id="node9890" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8356.3,801.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9891" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(8091.5,909.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9892" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8582.3,755.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9894" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8261.6,948.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10175" class="node nodeCM pw_NAD-metabolism lid13" transform="translate(8381.2,502.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node10177" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(8467.8,558.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10179" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(8465.5,519.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10180" class="node nodeCM pw_NAD-metabolism lid8" transform="translate(8227.4,416.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node10191" class="node nodeCM pw_NAD-metabolism lid7" transform="translate(8097.8,415.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node10243" class="node nodeCM pw_NAD-metabolism lid1126" transform="translate(9250.6,615.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node10244" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(9311.3,652.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10246" class="node nodeCM pw_NAD-metabolism lid9" transform="translate(9251.1,770.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node10249" class="node nodeCM pw_NAD-metabolism lid30" transform="translate(8776.9,611.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node10250" class="node nodeCM pw_NAD-metabolism lid102" transform="translate(8911.1,495.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title>L-glutamine</title></g>
+<g id="node10251" class="node nodeCM pw_NAD-metabolism lid41" transform="translate(8789.2,475.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node10252" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(8720.4,543.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node10253" class="node nodeCM pw_NAD-metabolism lid30" transform="translate(8711.6,713.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node10254" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(9244.6,908.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node10255" class="node nodeCM pw_NAD-metabolism lid278" transform="translate(9370.1,1033.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=278" target="_blank">DHAP</a></text><title>dihydroxyacetone phosphate</title></g>
+<g id="node10256" class="node nodeCM pw_NAD-metabolism lid158" transform="translate(9260.5,1306.8)"><rect rx="5" height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title>5-phospho-alpha-D-ribose 1-diphosphate</title></g>
+<g id="node10257" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(9370.1,908.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10258" class="node nodeCM pw_NAD-metabolism lid28" transform="translate(9247.6,1178.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node10259" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(9371.2,1306.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10260" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(9138.2,908.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10261" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(9373.1,1180.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node10262" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(8870.4,748.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10263" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(9138.2,1033.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node10264" class="node nodeCM pw_NAD-metabolism lid27" transform="translate(8913.4,713.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node10265" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(8928.0,584.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10266" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(8745.0,747.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node10267" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(8733.7,495.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10268" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(8857.6,608.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10626" class="node nodeCM pw_NAD-metabolism lid31094" transform="translate(8323.3,643.0)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31094" target="_blank">(ADP-D-ribosyl)n</a></text><title>(ADP-D-ribosyl)n-acceptor</title></g>
+<g id="node10627" class="node nodeCM pw_NAD-metabolism lid31093" transform="translate(8180.7,641.5)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31093" target="_blank">(ADP-D-ribosyl)n+1</a></text><title>(ADP-D-ribosyl)n+1-acceptor</title></g>
+<g id="node11672" class="node nodeCM pw_NAD-metabolism lid8" transform="translate(8650.2,371.5)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node11673" class="node nodeCM pw_NAD-metabolism lid5" transform="translate(8825.9,369.4)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node12021" class="node nodeCM pw_NAD-metabolism lid8" transform="translate(8138.5,591.7)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1908.2" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1871.3 1581.4" width="1871" height="1581" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1871.3" height="1581.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_NAD-metabolism" class="pw " x="0.0" y="0.0" width="1791.3" height="1485.9" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 316.3 1118.4 L 242.8 842.3"/>
+<path class="link" marker-end="url(#in)" d="M 331.6 1150.4 L 482.6 1368.3"/>
+<path class="link" marker-start="url(#in)" d="M 649.9 1332.5 L 532.1 1371.6"/>
+<path class="link" marker-end="url(#in)" d="M 704.0 1305.9 L 847.1 1203.2"/>
+<path class="link" marker-start="url(#in)" d="M 869.1 1053.8 L 869.3 1171.2"/>
+<path class="link" marker-end="url(#in)" d="M 869.0 1021.8 L 869.0 839.5"/>
+<path class="link" marker-start="url(#in)" d="M 769.1 717.4 L 854.0 807.5"/>
+<path class="link" marker-end="url(#in)" d="M 729.0 685.9 C 681.6 656.6 579.7 593.6 538.1 567.9"/>
+<path class="link" marker-start="url(#in)" d="M 798.9 644.2 C 813.1 680.5 848.7 771.5 863.0 808.0"/>
+<path class="link" marker-end="url(#in)" d="M 764.2 621.4 L 538.8 561.7"/>
+<path class="link" marker-start="url(#in)" d="M 464.5 670.2 L 512.1 572.7"/>
+<path class="link" marker-end="url(#in)" d="M 432.9 701.5 C 391.1 728.3 304.6 783.8 262.6 810.8"/>
+<path class="link" marker-end="url(#in)" d="M 417.8 612.5 C 443.1 598.6 479.9 578.6 501.6 566.6"/>
+<path class="link" marker-start="url(#in)" d="M 377.7 643.7 L 250.7 810.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1660.6 690.6 L 1652.4 596.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1651.0 722.1 C 1633.9 746.0 1601.2 791.8 1584.2 815.6"/>
+<path class="link" marker-start="url(#in)" d="M 1575.6 666.3 C 1592.3 647.3 1620.6 615.2 1637.3 596.2"/>
+<path class="link" marker-end="url(#in)" d="M 1563.3 697.6 L 1572.0 814.9"/>
+<path class="link" marker-start="url(#in)" d="M 1465.1 1003.3 L 1563.2 846.9"/>
+<path class="link" marker-end="url(#in)" d="M 1441.8 1035.3 L 1311.0 1192.8"/>
+<path class="link" marker-start="url(#in)" d="M 1115.7 1196.5 L 1256.1 1206.0"/>
+<path class="link" marker-end="url(#in)" d="M 1051.8 1193.3 L 911.0 1188.6"/>
+<path class="link" marker-end="url(#in)" d="M 675.7 1187.2 L 827.7 1187.2"/>
+<path class="link" marker-start="url(#in)" d="M 621.4 1171.2 L 429.6 1034.6"/>
+<path class="link" marker-end="url(#in)" d="M 575.0 825.4 C 541.5 863.9 454.0 964.6 420.5 1003.2"/>
+<path class="link" marker-start="url(#in)" d="M 584.0 794.0 L 524.2 572.7"/>
+<path class="link" marker-start="url(#in)" d="M 467.9 802.5 C 456.1 844.4 423.2 961.4 411.4 1003.3"/>
+<path class="link" marker-end="url(#in)" d="M 475.4 771.3 L 516.6 572.7"/>
+<path class="link" marker-start="url(#in)" d="M 522.3 389.3 L 520.1 540.7"/>
+<path class="link" marker-end="url(#in)" d="M 523.3 357.9 C 525.6 313.5 532.2 186.3 534.5 142.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 544.1 316.8 C 539.5 362.1 526.0 495.7 521.4 541.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 544.7 285.6 L 536.3 142.5"/>
+<path class="link" marker-start="url(#in)" d="M 608.4 417.0 C 589.6 446.8 548.4 511.6 529.6 541.3"/>
+<path class="link" marker-end="url(#in)" d="M 613.6 386.4 C 599.2 338.4 554.5 190.4 540.0 142.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 480.9 136.0 L 513.1 130.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 436.1 157.1 L 391.6 201.1"/>
+<path class="link" marker-start="url(#in)" d="M 196.8 953.0 L 355.8 1002.6"/>
+<path class="link" marker-end="url(#in)" d="M 174.9 927.1 L 228.4 842.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 304.4 1215.5 C 324.8 1176.4 378.6 1073.2 399.1 1034.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 264.5 1230.5 L 215.9 1230.1"/>
+<path class="link" marker-start="url(#in)" d="M 168.3 1097.8 L 358.9 1034.6"/>
+<path class="link" marker-end="url(#in)" d="M 139.9 1122.8 C 140.3 1146.3 141.1 1190.8 141.6 1214.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 425.1 350.0 L 381.4 233.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 437.7 350.7 C 456.6 307.4 509.9 184.8 528.7 141.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 438.5 382.0 L 512.4 540.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 288.6 1128.5 L 250.3 1121.5"/>
+<path class="link" marker-end="url(#in)" d="M 309.2 1150.4 L 287.6 1180.7"/>
+<path class="link" marker-start="url(#in)" d="M 689.1 1337.9 L 710.9 1385.3"/>
+<path class="link" marker-start="url(#in)" d="M 679.7 1337.9 L 669.2 1419.9"/>
+<path class="link" marker-start="url(#in)" d="M 649.9 1318.6 L 615.0 1315.0"/>
+<path class="link" marker-end="url(#in)" d="M 674.4 1305.9 L 652.6 1258.5"/>
+<path class="link" marker-end="url(#in)" d="M 683.8 1305.9 L 690.6 1252.9"/>
+<path class="link" marker-end="url(#in)" d="M 694.9 1305.9 L 724.0 1270.3"/>
+<path class="link" marker-start="url(#in)" d="M 891.9 1053.8 L 924.9 1076.9"/>
+<path class="link" marker-end="url(#in)" d="M 891.8 1021.8 L 924.8 998.7"/>
+<path class="link" marker-start="url(#in)" d="M 776.2 685.4 L 791.6 674.3"/>
+<path class="link" marker-start="url(#in)" d="M 782.7 692.6 L 825.0 679.7"/>
+<path class="link" marker-start="url(#in)" d="M 782.7 708.7 L 823.0 719.0"/>
+<path class="link" marker-end="url(#in)" d="M 746.8 717.4 L 725.2 764.9"/>
+<path class="link" marker-end="url(#in)" d="M 730.0 717.4 L 697.0 739.3"/>
+<path class="link" marker-end="url(#in)" d="M 725.4 702.2 L 682.5 703.4"/>
+<path class="link" marker-end="url(#in)" d="M 725.9 685.4 L 690.2 665.1"/>
+<path class="link" marker-start="url(#in)" d="M 817.0 613.0 L 849.9 591.0"/>
+<path class="link" marker-start="url(#in)" d="M 821.6 628.2 L 864.5 626.9"/>
+<path class="link" marker-end="url(#in)" d="M 764.2 644.1 L 735.9 659.1"/>
+<path class="link" marker-end="url(#in)" d="M 764.2 629.8 L 723.7 631.0"/>
+<path class="link" marker-start="url(#in)" d="M 454.2 670.2 L 442.6 595.1"/>
+<path class="link" marker-end="url(#in)" d="M 458.7 702.2 L 471.7 805.3"/>
+<path class="link" marker-start="url(#in)" d="M 390.8 643.7 L 393.2 688.1"/>
+<path class="link" marker-end="url(#in)" d="M 387.4 611.7 L 379.1 557.4"/>
+<path class="link" marker-start="url(#in)" d="M 1649.6 690.6 L 1619.0 650.9"/>
+<path class="link" marker-end="url(#in)" d="M 1683.9 722.6 L 1713.3 744.1"/>
+<path class="link" marker-end="url(#in)" d="M 1668.4 722.6 L 1687.4 770.2"/>
+<path class="link" marker-start="url(#in)" d="M 1549.8 665.6 L 1522.0 629.8"/>
+<path class="link" marker-end="url(#in)" d="M 1581.6 697.6 L 1614.9 725.0"/>
+<path class="link" marker-end="url(#in)" d="M 1568.5 697.6 L 1587.5 745.2"/>
+<path class="link" marker-start="url(#in)" d="M 1449.6 1003.3 L 1431.7 951.1"/>
+<path class="link" marker-end="url(#in)" d="M 1466.3 1035.3 L 1493.9 1075.0"/>
+<path class="link" marker-end="url(#in)" d="M 1455.9 1035.3 L 1458.6 1088.9"/>
+<path class="link" marker-start="url(#in)" d="M 1089.4 1178.4 L 1110.1 1119.8"/>
+<path class="link" marker-start="url(#in)" d="M 1110.0 1178.4 L 1150.4 1153.8"/>
+<path class="link" marker-end="url(#in)" d="M 1077.3 1210.4 L 1057.6 1259.4"/>
+<path class="link" marker-end="url(#in)" d="M 1061.8 1210.4 L 1028.9 1234.4"/>
+<path class="link" marker-start="url(#in)" d="M 638.2 1203.2 L 605.0 1297.4"/>
+<path class="link" marker-end="url(#in)" d="M 656.8 1171.2 L 685.9 1135.3"/>
+<path class="link" marker-end="url(#in)" d="M 675.7 1176.2 L 712.4 1163.6"/>
+<path class="link" marker-start="url(#in)" d="M 574.3 794.0 L 544.8 760.4"/>
+<path class="link" marker-end="url(#in)" d="M 613.3 826.0 L 646.1 847.1"/>
+<path class="link" marker-end="url(#in)" d="M 595.9 826.0 L 617.4 871.5"/>
+<path class="link" marker-start="url(#in)" d="M 485.7 803.3 L 516.2 839.3"/>
+<path class="link" marker-end="url(#in)" d="M 453.4 771.3 L 430.2 751.5"/>
+<path class="link" marker-start="url(#in)" d="M 541.1 389.3 L 576.3 419.6"/>
+<path class="link" marker-end="url(#in)" d="M 501.3 357.3 L 470.5 334.0"/>
+<path class="link" marker-start="url(#in)" d="M 566.8 317.6 L 599.6 342.4"/>
+<path class="link" marker-end="url(#in)" d="M 524.4 285.6 L 489.7 259.4"/>
+<path class="link" marker-start="url(#in)" d="M 639.4 417.6 L 672.2 442.4"/>
+<path class="link" marker-end="url(#in)" d="M 597.2 385.6 L 552.3 351.3"/>
+<path class="link" marker-end="url(#in)" d="M 605.7 385.6 L 579.2 351.6"/>
+<path class="link" marker-start="url(#in)" d="M 453.8 125.1 L 459.2 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 423.6 127.4 L 390.9 111.9"/>
+<path class="link" marker-start="url(#in)" d="M 163.2 959.1 L 157.6 1012.0"/>
+<path class="link" marker-end="url(#in)" d="M 132.9 956.2 L 98.0 970.5"/>
+<path class="link" marker-end="url(#in)" d="M 132.9 937.6 L 104.3 932.7"/>
+<path class="link" marker-start="url(#in)" d="M 291.8 1214.7 L 275.6 1159.5"/>
+<path class="link" marker-end="url(#in)" d="M 302.1 1246.7 L 319.9 1297.1"/>
+<path class="link" marker-end="url(#in)" d="M 292.9 1246.7 L 281.4 1298.4"/>
+<path class="link" marker-start="url(#in)" d="M 136.5 1091.4 L 125.6 1036.2"/>
+<path class="link" marker-end="url(#in)" d="M 140.6 1123.4 L 143.9 1177.0"/>
+<path class="link" marker-end="url(#in)" d="M 438.1 350.0 L 444.4 335.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_NAD-metabolism" transform="translate(895.6,0.0)"><rect rx="10" height="31" width="146" x="-73.0" y="-15.5"/><text dominant-baseline="central">NAD metabolism</text></g>
+<g id="node9884" class="node nodeHM pw_NAD-metabolism lid267" transform="translate(238.5,826.3)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=267" target="_blank">nicotinamide</a></text><title></title></g>
+<g id="node9873" class="node nodeHM pw_NAD-metabolism lid1029" transform="translate(493.7,1384.3)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1029" target="_blank">nicotinate</a></text><title></title></g>
+<g id="node10236" class="node nodeHM pw_NAD-metabolism lid5194" transform="translate(869.4,1187.2)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5194" target="_blank">Deamido-NMN</a></text><title></title></g>
+<g id="node10238" class="node nodeHM pw_NAD-metabolism lid1300" transform="translate(869.0,823.5)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1300" target="_blank">DNAD</a></text><title></title></g>
+<g id="node9149" class="node nodeHM pw_NAD-metabolism lid7" transform="translate(519.9,556.7)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10305" class="node nodeHM pw_NAD-metabolism lid97" transform="translate(1650.9,580.7)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=97" target="_blank">Asp</a></text><title></title></g>
+<g id="node10240" class="node nodeHM pw_NAD-metabolism lid107528" transform="translate(1573.2,830.9)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107528" target="_blank">alpha-iminosuccinate</a></text><title></title></g>
+<g id="node10242" class="node nodeHM pw_NAD-metabolism lid2500" transform="translate(1297.8,1208.8)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2500" target="_blank">quinolinate</a></text><title></title></g>
+<g id="node9893" class="node nodeHM pw_NAD-metabolism lid1831" transform="translate(407.1,1018.6)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1831" target="_blank">nicotinamide mononucleotide</a></text><title></title></g>
+<g id="node9858" class="node nodeHM pw_NAD-metabolism lid10" transform="translate(535.3,126.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10192" class="node nodeHM pw_NAD-metabolism lid5" transform="translate(375.5,217.1)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9870" class="node nodeHM pw_NAD-metabolism lid2493" transform="translate(141.8,1229.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2493" target="_blank">nicotinamide riboside</a></text><title></title></g>
+<g id="node9888" class="node nodeEN pw_NAD-metabolism" transform="translate(320.5,1134.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.19" target="_blank">3.5.1.19</a></text><title>nicotinamidase</title></g>
+<g id="node9867" class="node nodeEN pw_NAD-metabolism" transform="translate(681.8,1321.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.4.21" target="_blank">6.3.4.21</a></text><title>nicotinate phosphoribosyltransferase</title></g>
+<g id="node10235" class="node nodeEN pw_NAD-metabolism" transform="translate(869.0,1037.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.18" target="_blank">2.7.7.18</a></text><title>nicotinate-nucleotide adenylyltransferase</title></g>
+<g id="node10237" class="node nodeEN pw_NAD-metabolism" transform="translate(754.1,701.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.5.1" target="_blank">6.3.5.1</a></text><title>NAD+ synthase (glutamine-hydrolysing); NAD+ synthase</title></g>
+<g id="node10234" class="node nodeEN pw_NAD-metabolism" transform="translate(792.9,629.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.5" target="_blank">6.3.1.5</a></text><title>NAD+ synthase (glutamine-hydrolysing); NAD+ synthase</title></g>
+<g id="node10625" class="node nodeEN pw_NAD-metabolism" transform="translate(456.7,686.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.30" target="_blank">2.4.2.30</a></text><title>NAD+ ADP-ribosyltransferase;  NAD+ glycohydrolase</title></g>
+<g id="node9883" class="node nodeEN pw_NAD-metabolism" transform="translate(389.9,627.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.5" target="_blank">3.2.2.5</a></text><title>NAD+ ADP-ribosyltransferase;  NAD+ glycohydrolase</title></g>
+<g id="node8292" class="node nodeEN pw_NAD-metabolism" transform="translate(1662.0,706.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.21" target="_blank">1.4.1.21</a></text><title>aspartate dehydrogenase; L-aspartate oxidase</title></g>
+<g id="node10245" class="node nodeEN pw_NAD-metabolism" transform="translate(1562.1,681.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.16" target="_blank">1.4.3.16</a></text><title>aspartate dehydrogenase; L-aspartate oxidase</title></g>
+<g id="node10239" class="node nodeEN pw_NAD-metabolism" transform="translate(1455.1,1019.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.72" target="_blank">2.5.1.72</a></text><title>quinolinate synthase</title></g>
+<g id="node10241" class="node nodeEN pw_NAD-metabolism" transform="translate(1083.8,1194.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.19" target="_blank">2.4.2.19</a></text><title>nicotinate-nucleotide diphosphorylase (carboxylating)</title></g>
+<g id="node9868" class="node nodeEN pw_NAD-metabolism" transform="translate(643.8,1187.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.42" target="_blank">3.5.1.42</a></text><title>nicotinamide-nucleotide amidase</title></g>
+<g id="node9889" class="node nodeEN pw_NAD-metabolism" transform="translate(588.4,810.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.22" target="_blank">3.6.1.22</a></text><title>NAD+ diphosphatase; nicotinamide-nucleotide adenylyltransferase</title></g>
+<g id="node9869" class="node nodeEN pw_NAD-metabolism" transform="translate(472.1,787.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.1" target="_blank">2.7.7.1</a></text><title>NAD+ diphosphatase; nicotinamide-nucleotide adenylyltransferase</title></g>
+<g id="node11671" class="node nodeEN pw_NAD-metabolism" transform="translate(522.5,373.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.6.1.3" target="_blank">1.6.1.3</a></text><title>NAD(P)+ transhydrogenase; acid phosphatase; NAD+ kinase</title></g>
+<g id="node9859" class="node nodeEN pw_NAD-metabolism" transform="translate(545.6,301.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.2" target="_blank">3.1.3.2</a></text><title>NAD(P)+ transhydrogenase; acid phosphatase; NAD+ kinase</title></g>
+<g id="node10178" class="node nodeEN pw_NAD-metabolism" transform="translate(618.2,401.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.23" target="_blank">2.7.1.23</a></text><title>NAD(P)+ transhydrogenase; acid phosphatase; NAD+ kinase</title></g>
+<g id="node10193" class="node nodeEN pw_NAD-metabolism" transform="translate(452.3,141.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.6.1.2" target="_blank">1.6.1.2</a></text><title>NAD(P)+ transhydrogenase (Re/Si-specific)</title></g>
+<g id="node9887" class="node nodeEN pw_NAD-metabolism" transform="translate(164.8,943.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.14" target="_blank">3.2.2.14</a></text><title>NMN nucleosidase</title></g>
+<g id="node9864" class="node nodeEN pw_NAD-metabolism" transform="translate(296.5,1230.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.22" target="_blank">2.7.1.22</a></text><title>ribosylnicotinamide kinase; 5&#x27;-nucleotidase</title></g>
+<g id="node9866" class="node nodeEN pw_NAD-metabolism" transform="translate(139.6,1107.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.5" target="_blank">3.1.3.5</a></text><title>ribosylnicotinamide kinase; 5&#x27;-nucleotidase</title></g>
+<g id="node10287" class="node nodeEN pw_NAD-metabolism" transform="translate(431.0,366.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.6.1.1" target="_blank">1.6.1.1</a></text><title>NAD(P)+ transhydrogenase (Si-specific)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9888~0" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(234.6,1118.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9888~1" class="node nodeCM pw_NAD-metabolism lid27" transform="translate(276.3,1196.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node9867~0" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(718.3,1401.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9867~1" class="node nodeCM pw_NAD-metabolism lid158" transform="translate(667.1,1435.9)"><rect rx="5" height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title></title></g>
+<g id="node9867~2" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(599.3,1313.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9867~3" class="node nodeCM pw_NAD-metabolism lid13" transform="translate(645.3,1242.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9867~4" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(692.7,1236.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9867~5" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(737.1,1254.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10235~0" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(940.6,1087.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10235~1" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(940.6,987.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10237~0" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(807.3,663.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10237~1" class="node nodeCM pw_NAD-metabolism lid102" transform="translate(840.7,674.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node10237~2" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(838.7,723.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10237~3" class="node nodeCM pw_NAD-metabolism lid30" transform="translate(718.0,780.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10237~4" class="node nodeCM pw_NAD-metabolism lid41" transform="translate(681.3,749.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10237~5" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(666.7,703.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10237~6" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(677.7,658.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10234~0" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(865.7,580.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10234~1" class="node nodeCM pw_NAD-metabolism lid27" transform="translate(880.2,626.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node10234~2" class="node nodeCM pw_NAD-metabolism lid30" transform="translate(720.2,667.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10234~3" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(707.9,631.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10625~0" class="node nodeCM pw_NAD-metabolism lid31094" transform="translate(440.1,579.1)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31094" target="_blank">(ADP-D-ribosyl)n</a></text><title></title></g>
+<g id="node10625~1" class="node nodeCM pw_NAD-metabolism lid31093" transform="translate(473.7,821.3)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31093" target="_blank">(ADP-D-ribosyl)n+1</a></text><title></title></g>
+<g id="node9883~0" class="node nodeCM pw_NAD-metabolism lid402" transform="translate(394.1,704.1)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=402" target="_blank">ADP-Rib</a></text><title></title></g>
+<g id="node9883~1" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(376.6,541.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8292~0" class="node nodeCM pw_NAD-metabolism lid10" transform="translate(1606.6,634.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8292~1" class="node nodeCM pw_NAD-metabolism lid5" transform="translate(1735.1,760.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8292~2" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(1693.8,786.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10245~0" class="node nodeCM pw_NAD-metabolism lid9" transform="translate(1509.7,613.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10245~1" class="node nodeCM pw_NAD-metabolism lid1126" transform="translate(1633.9,740.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node10245~2" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(1593.9,761.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10239~0" class="node nodeCM pw_NAD-metabolism lid278" transform="translate(1426.3,935.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=278" target="_blank">DHAP</a></text><title></title></g>
+<g id="node10239~1" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(1505.1,1091.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10239~2" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(1459.4,1104.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10241~0" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(1115.7,1103.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10241~1" class="node nodeCM pw_NAD-metabolism lid158" transform="translate(1176.6,1137.8)"><rect rx="5" height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title></title></g>
+<g id="node10241~2" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(1051.2,1275.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10241~3" class="node nodeCM pw_NAD-metabolism lid28" transform="translate(1013.2,1245.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9868~1" class="node nodeCM pw_NAD-metabolism lid27" transform="translate(698.8,1119.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node9868~2" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(724.9,1159.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9889~0" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(530.7,744.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9889~1" class="node nodeCM pw_NAD-metabolism lid30" transform="translate(661.9,857.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node9889~2" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(625.0,887.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9869~0" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(529.8,855.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9869~1" class="node nodeCM pw_NAD-metabolism lid17" transform="translate(414.5,738.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11671~0" class="node nodeCM pw_NAD-metabolism lid5" transform="translate(594.8,435.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9859~0" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(615.3,354.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9859~1" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(477.2,250.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10178~0" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(687.9,454.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10178~1" class="node nodeCM pw_NAD-metabolism lid13" transform="translate(536.6,339.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10178~2" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(566.8,335.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10193~0" class="node nodeCM pw_NAD-metabolism lid7" transform="translate(460.7,52.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10193~1" class="node nodeCM pw_NAD-metabolism lid8" transform="translate(371.9,102.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9887~0" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(155.9,1028.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9887~1" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(85.5,975.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9887~2" class="node nodeCM pw_NAD-metabolism lid183" transform="translate(69.2,926.6)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title></title></g>
+<g id="node9864~0" class="node nodeCM pw_NAD-metabolism lid4" transform="translate(270.9,1143.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9864~1" class="node nodeCM pw_NAD-metabolism lid13" transform="translate(325.6,1313.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9864~2" class="node nodeCM pw_NAD-metabolism lid12" transform="translate(277.9,1314.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9866~0" class="node nodeCM pw_NAD-metabolism lid1" transform="translate(122.5,1020.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9866~1" class="node nodeCM pw_NAD-metabolism lid16" transform="translate(144.9,1193.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10287~0" class="node nodeCM pw_NAD-metabolism lid8" transform="translate(451.5,319.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>
+<text x="1918.2" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring+neato)</text></svg>

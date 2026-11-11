@@ -1,0 +1,386 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="5266" height="1908" viewBox="0 0 5266.3 1907.5"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="16999.3 10536.9 2163.0 1053.9" width="2163" height="1054" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="16999.3" y="10536.9" width="2163.0" height="1053.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_isoleucine-metabolism" class="pw pw3" x="17039.3" y="10592.4" width="2083.0" height="958.4" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18375.0 10725.5 L 18463.0 10725.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18338.6 10741.5 L 18338.6 10896.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18991.7 10787.1 L 18991.7 10891.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18991.7 10755.1 L 18991.7 10653.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17253.8 10843.5 L 17253.8 10950.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17253.8 10811.5 L 17253.8 10705.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17679.7 10895.4 L 17563.5 10895.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17752.5 10895.4 L 17872.9 10895.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18094.8 10895.4 L 17973.9 10895.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18131.2 10911.4 L 18131.2 11077.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18749.5 10923.5 L 18579.2 11077.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18800.7 10907.5 L 18921.4 10907.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18561.6 10893.5 L 18561.6 10741.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18561.6 10925.5 L 18561.6 11077.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17790.3 11109.7 L 17790.3 11222.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17823.9 11093.7 L 18077.8 11093.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18338.6 11077.7 L 18338.6 10928.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18305.1 11093.7 L 18184.5 11093.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18803.5 11093.7 L 18929.4 11093.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18730.7 11093.7 L 18643.1 11093.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17253.8 11120.6 L 17253.8 11227.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17253.8 11088.6 L 17253.8 10982.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18131.2 11251.0 L 18131.2 11404.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18131.2 11219.0 L 18131.2 11109.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17515.3 11239.4 L 17714.4 11238.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17448.1 11240.1 L 17298.6 11242.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18561.6 11260.3 L 18561.6 11109.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18561.6 11292.3 L 18561.6 11404.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17318.4 11420.9 L 17200.0 11420.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17391.2 11420.9 L 17517.1 11420.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17834.4 11420.9 L 17691.6 11420.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17901.5 11420.9 L 18060.9 11420.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18783.3 11404.9 L 18783.3 11303.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18816.9 11420.9 L 18932.2 11420.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18749.8 11420.9 L 18583.8 11420.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 18315.6 10709.5 L 18284.3 10687.7"/>
+<path class="link" marker-end="url(#in)" d="M 18362.0 10709.5 L 18393.7 10687.7"/>
+<path class="link" marker-start="url(#in)" d="M 18973.5 10787.1 L 18948.7 10808.8"/>
+<path class="link" marker-start="url(#in)" d="M 19013.6 10787.1 L 19043.2 10808.8"/>
+<path class="link" marker-end="url(#in)" d="M 18975.7 10755.1 L 18946.5 10725.9"/>
+<path class="link" marker-end="url(#in)" d="M 19010.9 10755.1 L 19045.9 10725.9"/>
+<path class="link" marker-start="url(#in)" d="M 17277.6 10811.5 L 17304.9 10793.2"/>
+<path class="link" marker-start="url(#in)" d="M 17235.4 10811.5 L 17214.3 10793.2"/>
+<path class="link" marker-end="url(#in)" d="M 17271.8 10843.5 L 17310.7 10878.0"/>
+<path class="link" marker-start="url(#in)" d="M 17700.1 10911.4 L 17678.6 10932.9"/>
+<path class="link" marker-start="url(#in)" d="M 17700.1 10879.4 L 17678.6 10857.8"/>
+<path class="link" marker-end="url(#in)" d="M 17725.3 10911.4 L 17744.7 10944.9"/>
+<path class="link" marker-end="url(#in)" d="M 17725.3 10879.4 L 17744.7 10845.8"/>
+<path class="link" marker-end="url(#in)" d="M 17743.8 10911.4 L 17759.4 10920.3"/>
+<path class="link" marker-start="url(#in)" d="M 18113.8 10911.4 L 18090.4 10932.9"/>
+<path class="link" marker-start="url(#in)" d="M 18113.8 10879.4 L 18090.4 10857.8"/>
+<path class="link" marker-end="url(#in)" d="M 18145.8 10911.4 L 18165.4 10932.9"/>
+<path class="link" marker-end="url(#in)" d="M 18145.8 10879.4 L 18165.4 10857.8"/>
+<path class="link" marker-start="url(#in)" d="M 18782.9 10891.5 L 18804.5 10869.5"/>
+<path class="link" marker-start="url(#in)" d="M 18783.4 10923.5 L 18804.8 10944.5"/>
+<path class="link" marker-end="url(#in)" d="M 18750.8 10891.5 L 18729.4 10870.4"/>
+<path class="link" marker-end="url(#in)" d="M 18750.8 10923.5 L 18729.4 10944.5"/>
+<path class="link" marker-end="url(#in)" d="M 18545.8 10925.5 L 18524.6 10947.0"/>
+<path class="link" marker-start="url(#in)" d="M 17776.7 11109.7 L 17758.3 11131.2"/>
+<path class="link" marker-end="url(#in)" d="M 17807.6 11109.7 L 17831.1 11131.4"/>
+<path class="link" marker-end="url(#in)" d="M 17806.4 11077.7 L 17831.7 11052.7"/>
+<path class="link" marker-start="url(#in)" d="M 18322.6 11109.7 L 18301.2 11131.0"/>
+<path class="link" marker-end="url(#in)" d="M 18354.7 11109.7 L 18376.1 11131.0"/>
+<path class="link" marker-start="url(#in)" d="M 18748.4 11109.7 L 18726.2 11128.7"/>
+<path class="link" marker-start="url(#in)" d="M 18750.8 11077.7 L 18729.3 11056.8"/>
+<path class="link" marker-start="url(#in)" d="M 18783.0 11077.7 L 18804.7 11055.9"/>
+<path class="link" marker-end="url(#in)" d="M 18783.2 11109.7 L 18802.2 11128.7"/>
+<path class="link" marker-end="url(#in)" d="M 17275.5 11120.6 L 17307.0 11143.9"/>
+<path class="link" marker-end="url(#in)" d="M 18146.7 11251.0 L 18167.6 11272.5"/>
+<path class="link" marker-start="url(#in)" d="M 17465.7 11255.5 L 17444.2 11277.1"/>
+<path class="link" marker-start="url(#in)" d="M 18547.5 11260.3 L 18520.7 11229.9"/>
+<path class="link" marker-end="url(#in)" d="M 18575.0 11260.3 L 18600.6 11229.9"/>
+<path class="link" marker-start="url(#in)" d="M 17851.9 11436.9 L 17830.5 11458.2"/>
+<path class="link" marker-end="url(#in)" d="M 17884.1 11436.9 L 17905.4 11458.2"/>
+<path class="link" marker-start="url(#in)" d="M 18764.5 11436.9 L 18729.9 11466.2"/>
+<path class="link" marker-end="url(#in)" d="M 18803.4 11404.9 L 18841.3 11374.7"/>
+<path class="link" marker-end="url(#in)" d="M 18803.7 11436.9 L 18841.0 11466.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_isoleucine-metabolism" transform="translate(18080.8,10592.4)"><rect rx="10" height="31" width="209" x="-104.5" y="-15.5"/><text dominant-baseline="central">isoleucine metabolism</text></g>
+<g id="node1145" class="node nodeHM pw_isoleucine-metabolism lid9023" transform="translate(18991.7,10637.0)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9023" target="_blank">2-methylbutanoate</a></text><title>2-methylbutanoate</title></g>
+<g id="node4238" class="node nodeHM pw_isoleucine-metabolism lid5473" transform="translate(18991.7,10907.5)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5473" target="_blank">2-methylbutanoyl-CoA</a></text><title>2-methylbutanoyl-CoA</title></g>
+<g id="node4242" class="node nodeHM pw_isoleucine-metabolism lid5473" transform="translate(18999.6,11093.7)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5473" target="_blank">2-methylbutanoyl-CoA</a></text><title>2-methylbutanoyl-CoA</title></g>
+<g id="node4259" class="node nodeHM pw_isoleucine-metabolism lid182126" transform="translate(18131.2,11420.9)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182126" target="_blank">3-methyloxaloacetate</a></text><title>methyloxaloacetate</title></g>
+<g id="node4261" class="node nodeHM pw_isoleucine-metabolism lid16181" transform="translate(17604.4,11420.9)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16181" target="_blank">(2S, 3S)-3-methylaspartate</a></text><title>(2S,3S)-3-methylaspartate</title></g>
+<g id="node4273" class="node nodeHM pw_isoleucine-metabolism lid31" transform="translate(17253.8,10689.0)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node4275" class="node nodeHM pw_isoleucine-metabolism lid11647" transform="translate(17253.8,10966.0)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11647" target="_blank">(R)-citramalate</a></text><title>(R)-citramalate</title></g>
+<g id="node4277" class="node nodeHM pw_isoleucine-metabolism lid5952" transform="translate(17253.8,11243.1)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5952" target="_blank">citraconate</a></text><title>citraconate</title></g>
+<g id="node4279" class="node nodeHM pw_isoleucine-metabolism lid254202" transform="translate(17790.3,11238.0)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=254202" target="_blank">(2R,3S)-3-methylmalate</a></text><title>(2R,3S)-3-methylmalate</title></g>
+<g id="node4282" class="node nodeHM pw_isoleucine-metabolism lid311" transform="translate(18561.6,11420.9)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=311" target="_blank">Ile</a></text><title>L-isoleucine</title></g>
+<g id="node4284" class="node nodeHM pw_isoleucine-metabolism lid178674" transform="translate(18561.6,11093.7)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=178674" target="_blank">2-keto-3-methyl-valerate</a></text><title>2-keto-3-methyl-valerate</title></g>
+<g id="node4287" class="node nodeHM pw_isoleucine-metabolism lid390" transform="translate(18131.2,11093.7)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=390" target="_blank">2-oxobutanoate</a></text><title>2-oxobutanoate</title></g>
+<g id="node4289" class="node nodeHM pw_isoleucine-metabolism lid182168" transform="translate(18338.6,10912.1)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182168" target="_blank">2-aceto-2-hydroxy-butyrate</a></text><title>2-aceto-2-hydroxy-butyrate</title></g>
+<g id="node4292" class="node nodeHM pw_isoleucine-metabolism lid47551" transform="translate(18561.6,10725.5)"><rect height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47551" target="_blank">2,3-dihydroxy-3-methylvalerate</a></text><title>2,3-Dihydroxy-3-methylvalerate</title></g>
+<g id="node6451" class="node nodeHM pw_isoleucine-metabolism lid782" transform="translate(17923.4,10895.4)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title>propanoyl-CoA</title></g>
+<g id="node6453" class="node nodeHM pw_isoleucine-metabolism lid949" transform="translate(17521.5,10895.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=949" target="_blank">propanoate</a></text><title>propanoate</title></g>
+<g id="node10969" class="node nodeHM pw_isoleucine-metabolism lid44319" transform="translate(18999.6,11420.9)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44319" target="_blank">L-isoleucyl-tRNAIle</a></text><title>L-isoleucyl-tRNAIle</title></g>
+<g id="node10970" class="node nodeHM pw_isoleucine-metabolism lid3671" transform="translate(18783.3,11287.5)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3671" target="_blank">tRNAIle</a></text><title>tRNAIle</title></g>
+<g id="node12078" class="node nodeHM pw_isoleucine-metabolism lid41" transform="translate(17177.7,11420.9)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4290" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18338.6,10725.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.86" target="_blank">1.1.1.86</a></text><title>ketol-acid reductoisomerase (NADP+)</title></g>
+<g id="node1146" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18991.7,10771.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.13" target="_blank">6.2.1.13</a></text><title>acetate-CoA ligase (ADP-forming)</title></g>
+<g id="node4274" class="node nodeEN pw_isoleucine-metabolism" transform="translate(17253.8,10827.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.3.21" target="_blank">2.3.3.21</a></text><title>(R)-citramalate synthase</title></g>
+<g id="node6452" class="node nodeEN pw_isoleucine-metabolism" transform="translate(17716.1,10895.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.17" target="_blank">6.2.1.17</a></text><title>Propionate-CoA ligase</title></g>
+<g id="node6450" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18131.2,10895.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.11" target="_blank">1.2.7.11</a></text><title>2-oxoacid oxidoreductase (ferredoxin)</title></g>
+<g id="node4240" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18767.1,10907.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.7" target="_blank">1.2.7.7</a></text><title>3-methyl-2-oxobutanoate dehydrogenase (ferredoxin)</title></g>
+<g id="node4291" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18561.6,10909.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.9" target="_blank">4.2.1.9</a></text><title>dihydroxy-acid dehydratase</title></g>
+<g id="node4267" class="node nodeEN pw_isoleucine-metabolism" transform="translate(17790.3,11093.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.-" target="_blank">1.1.1.-</a></text><title>3-methyllmalate dehydrogenase</title></g>
+<g id="node4288" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18338.6,11093.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.6" target="_blank">2.2.1.6</a></text><title>acetolactate synthase</title></g>
+<g id="node4241" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18767.1,11093.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.25" target="_blank">1.2.1.25</a></text><title>branched-chain alpha-keto acid dehydrogenase system</title></g>
+<g id="node4276" class="node nodeEN pw_isoleucine-metabolism" transform="translate(17253.8,11104.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.35" target="_blank">4.2.1.35</a></text><title>(R)-2-Methylmalate dehydratase</title></g>
+<g id="node4258" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18131.2,11235.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.112" target="_blank">4.1.1.112</a></text><title>oxaloacetate decarboxylase</title></g>
+<g id="node4278" class="node nodeEN pw_isoleucine-metabolism" transform="translate(17481.7,11239.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central">?.?.?.?</text><title>isopropylmalate isomerase</title></g>
+<g id="node4283" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18561.6,11276.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.42" target="_blank">2.6.1.42</a></text><title>branched-chain-amino-acid transaminase</title></g>
+<g id="node4262" class="node nodeEN pw_isoleucine-metabolism" transform="translate(17354.8,11420.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.1" target="_blank">5.4.99.1</a></text><title>Methylaspartate mutase</title></g>
+<g id="node4260" class="node nodeEN pw_isoleucine-metabolism" transform="translate(17868.0,11420.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.-" target="_blank">2.6.1.-</a></text><title>Beta-methylaspartate aminotransferase</title></g>
+<g id="node10968" class="node nodeEN pw_isoleucine-metabolism" transform="translate(18783.3,11420.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.5" target="_blank">6.1.1.5</a></text><title>Isoleucine-tRNA ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node770" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(17847.8,11036.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node1144" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(18930.5,10709.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node1147" class="node nodeCM pw_isoleucine-metabolism lid4" transform="translate(19065.1,10709.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node1148" class="node nodeCM pw_isoleucine-metabolism lid13" transform="translate(19065.1,10824.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node1149" class="node nodeCM pw_isoleucine-metabolism lid16" transform="translate(18930.5,10824.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node4235" class="node nodeCM pw_isoleucine-metabolism lid289" transform="translate(18713.2,10960.5)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title>oxidized ferredoxin</title></g>
+<g id="node4236" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(18713.2,10854.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node4237" class="node nodeCM pw_isoleucine-metabolism lid265" transform="translate(18821.1,10960.5)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title>reduced ferredoxin</title></g>
+<g id="node4239" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(18820.2,10853.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4243" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(18820.6,11039.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4245" class="node nodeCM pw_isoleucine-metabolism lid265" transform="translate(18073.0,10841.8)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title>reduced ferredoxin</title></g>
+<g id="node4246" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(18073.0,10948.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4255" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(18183.1,11288.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4256" class="node nodeCM pw_isoleucine-metabolism lid41" transform="translate(17921.5,11474.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4257" class="node nodeCM pw_isoleucine-metabolism lid34" transform="translate(17814.5,11474.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node4265" class="node nodeCM pw_isoleucine-metabolism lid8" transform="translate(17848.4,11147.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node4266" class="node nodeCM pw_isoleucine-metabolism lid7" transform="translate(17744.7,11147.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node4268" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(17428.2,11293.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4269" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(17328.7,11159.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4270" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(17328.7,10894.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node4271" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(17195.9,10777.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4272" class="node nodeCM pw_isoleucine-metabolism lid29" transform="translate(17328.7,10777.2)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node4280" class="node nodeCM pw_isoleucine-metabolism lid34" transform="translate(18614.1,11213.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node4281" class="node nodeCM pw_isoleucine-metabolism lid41" transform="translate(18506.6,11213.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4285" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(18508.9,10963.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4286" class="node nodeCM pw_isoleucine-metabolism lid10" transform="translate(18417.1,10671.7)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node4293" class="node nodeCM pw_isoleucine-metabolism lid31" transform="translate(18285.1,11147.0)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node4294" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(18392.2,11147.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4295" class="node nodeCM pw_isoleucine-metabolism lid5" transform="translate(18261.2,10671.7)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node6454" class="node nodeCM pw_isoleucine-metabolism lid30" transform="translate(17781.6,10933.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node6455" class="node nodeCM pw_isoleucine-metabolism lid17" transform="translate(17753.9,10829.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node6456" class="node nodeCM pw_isoleucine-metabolism lid12" transform="translate(17753.9,10960.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6457" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(18180.0,10948.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node6458" class="node nodeCM pw_isoleucine-metabolism lid289" transform="translate(18180.0,10841.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title>oxidized ferredoxin</title></g>
+<g id="node6459" class="node nodeCM pw_isoleucine-metabolism lid4" transform="translate(17662.6,10841.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node6460" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(17662.6,10948.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node10962" class="node nodeCM pw_isoleucine-metabolism lid4" transform="translate(18711.0,11482.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10965" class="node nodeCM pw_isoleucine-metabolism lid30" transform="translate(18861.4,11482.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node10967" class="node nodeCM pw_isoleucine-metabolism lid17" transform="translate(18861.4,11358.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node11200" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(18713.0,11040.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node11201" class="node nodeCM pw_isoleucine-metabolism lid7" transform="translate(18707.5,11144.7)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node11202" class="node nodeCM pw_isoleucine-metabolism lid8" transform="translate(18818.3,11144.7)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2243.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 3023.4 1867.5" width="3023" height="1868" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="3023.4" height="1867.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_isoleucine-metabolism" class="pw " x="0.0" y="0.0" width="2943.4" height="1772.0" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 818.1 1570.8 L 755.1 1635.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 847.1 1538.8 L 928.3 1442.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1033.4 1292.9 L 952.8 1410.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1057.6 1260.9 L 1171.8 1121.8"/>
+<path class="link" marker-start="url(#in)" d="M 1195.7 927.8 L 1185.9 1089.8"/>
+<path class="link" marker-end="url(#in)" d="M 1197.1 895.8 L 1204.2 676.3"/>
+<path class="link" marker-start="url(#in)" d="M 1425.1 660.2 L 1226.9 660.3"/>
+<path class="link" marker-end="url(#in)" d="M 1480.1 644.2 L 1611.4 564.5"/>
+<path class="link" marker-start="url(#in)" d="M 1787.4 548.5 L 1728.0 548.5"/>
+<path class="link" marker-end="url(#in)" d="M 1851.2 562.2 L 1949.5 604.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2116.6 746.1 L 2003.4 636.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2143.5 778.1 L 2232.9 915.4"/>
+<path class="link" marker-start="url(#in)" d="M 2238.3 1142.2 L 2242.9 947.4"/>
+<path class="link" marker-end="url(#in)" d="M 2237.6 1174.2 L 2233.8 1361.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2402.5 1000.1 L 2280.4 947.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2466.4 1029.9 L 2532.5 1063.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2426.1 831.8 L 2272.7 915.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2480.5 800.2 L 2582.6 736.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2717.8 644.1 L 2631.2 704.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2762.1 612.1 L 2827.0 563.4"/>
+<path class="link" marker-start="url(#in)" d="M 138.0 193.4 L 87.7 117.5"/>
+<path class="link" marker-end="url(#in)" d="M 159.3 225.4 L 221.8 319.0"/>
+<path class="link" marker-start="url(#in)" d="M 340.4 436.7 L 249.5 351.0"/>
+<path class="link" marker-end="url(#in)" d="M 382.1 468.7 L 485.5 535.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 667.1 647.4 L 536.4 567.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 709.1 660.3 L 795.1 660.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1030.1 660.3 L 949.7 660.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1087.4 660.3 L 1182.5 660.3"/>
+<path class="link" marker-start="url(#in)" d="M 1133.2 163.0 L 1133.2 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1141.8 195.0 L 1204.2 310.4"/>
+<path class="link" marker-start="url(#in)" d="M 1205.5 485.7 L 1212.1 342.4"/>
+<path class="link" marker-end="url(#in)" d="M 1204.7 517.7 L 1204.7 644.3"/>
+<path class="link" marker-start="url(#in)" d="M 2232.3 1598.5 L 2224.6 1706.0"/>
+<path class="link" marker-start="url(#in)" d="M 2233.5 1566.5 L 2233.5 1393.3"/>
+<path class="link" marker-end="url(#in)" d="M 2248.0 1598.5 L 2329.1 1687.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1049.6 1292.9 L 1066.0 1344.0"/>
+<path class="link" marker-end="url(#in)" d="M 1073.1 1278.0 L 1116.0 1279.6"/>
+<path class="link" marker-end="url(#in)" d="M 1221.8 895.8 L 1254.6 875.0"/>
+<path class="link" marker-start="url(#in)" d="M 1447.8 676.2 L 1426.3 733.6"/>
+<path class="link" marker-end="url(#in)" d="M 1472.5 676.2 L 1504.4 703.5"/>
+<path class="link" marker-start="url(#in)" d="M 1812.4 532.5 L 1790.2 481.4"/>
+<path class="link" marker-end="url(#in)" d="M 1836.2 532.5 L 1868.2 502.3"/>
+<path class="link" marker-end="url(#in)" d="M 2128.6 778.1 L 2114.2 830.3"/>
+<path class="link" marker-start="url(#in)" d="M 2216.1 1142.2 L 2183.2 1118.1"/>
+<path class="link" marker-end="url(#in)" d="M 2259.7 1174.2 L 2292.6 1198.4"/>
+<path class="link" marker-start="url(#in)" d="M 2426.1 1029.9 L 2401.5 1076.7"/>
+<path class="link" marker-start="url(#in)" d="M 2407.1 1029.9 L 2374.8 1048.8"/>
+<path class="link" marker-start="url(#in)" d="M 2421.2 997.9 L 2398.6 970.6"/>
+<path class="link" marker-end="url(#in)" d="M 2461.8 997.9 L 2492.3 980.1"/>
+<path class="link" marker-start="url(#in)" d="M 2457.9 832.2 L 2469.3 890.7"/>
+<path class="link" marker-start="url(#in)" d="M 2446.8 832.2 L 2393.4 938.6"/>
+<path class="link" marker-end="url(#in)" d="M 2451.7 800.2 L 2440.6 743.3"/>
+<path class="link" marker-end="url(#in)" d="M 2461.0 800.2 L 2480.0 750.6"/>
+<path class="link" marker-start="url(#in)" d="M 2745.6 644.1 L 2761.2 695.8"/>
+<path class="link" marker-start="url(#in)" d="M 2736.4 644.1 L 2722.6 694.9"/>
+<path class="link" marker-end="url(#in)" d="M 2735.9 612.1 L 2720.4 560.5"/>
+<path class="link" marker-end="url(#in)" d="M 2745.1 612.1 L 2759.3 559.8"/>
+<path class="link" marker-start="url(#in)" d="M 116.7 217.7 L 84.9 226.1"/>
+<path class="link" marker-start="url(#in)" d="M 116.7 199.4 L 81.0 188.3"/>
+<path class="link" marker-end="url(#in)" d="M 180.6 210.2 L 220.3 211.1"/>
+<path class="link" marker-end="url(#in)" d="M 389.3 442.9 L 425.2 431.9"/>
+<path class="link" marker-start="url(#in)" d="M 667.8 676.2 L 635.2 701.9"/>
+<path class="link" marker-start="url(#in)" d="M 1047.5 676.3 L 1018.9 717.2"/>
+<path class="link" marker-end="url(#in)" d="M 1064.2 644.3 L 1082.2 592.1"/>
+<path class="link" marker-end="url(#in)" d="M 1067.8 644.3 L 1129.9 534.9"/>
+<path class="link" marker-start="url(#in)" d="M 1101.2 177.5 L 1061.6 175.6"/>
+<path class="link" marker-start="url(#in)" d="M 1110.1 163.0 L 1077.1 140.1"/>
+<path class="link" marker-end="url(#in)" d="M 1165.1 171.5 L 1202.5 162.8"/>
+<path class="link" marker-end="url(#in)" d="M 1165.1 189.9 L 1201.9 202.4"/>
+<path class="link" marker-end="url(#in)" d="M 1146.2 195.0 L 1175.3 230.7"/>
+<path class="link" marker-start="url(#in)" d="M 1172.8 489.9 L 1143.7 479.1"/>
+<path class="link" marker-start="url(#in)" d="M 1172.8 510.1 L 1154.7 514.8"/>
+<path class="link" marker-end="url(#in)" d="M 1236.6 513.6 L 1267.4 525.1"/>
+<path class="link" marker-end="url(#in)" d="M 1217.0 517.7 L 1245.7 554.9"/>
+<path class="link" marker-start="url(#in)" d="M 2204.8 1583.4 L 2161.9 1584.7"/>
+<path class="link" marker-end="url(#in)" d="M 2262.2 1573.3 L 2301.0 1560.8"/>
+<path class="link" marker-end="url(#in)" d="M 2262.2 1589.7 L 2302.5 1599.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_isoleucine-metabolism" transform="translate(1471.7,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">isoleucine metabolism</text></g>
+<g id="node12078" class="node nodeHM pw_isoleucine-metabolism lid41" transform="translate(739.6,1651.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node4261" class="node nodeHM pw_isoleucine-metabolism lid16181" transform="translate(941.8,1426.1)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16181" target="_blank">(2S, 3S)-3-methylaspartate</a></text><title></title></g>
+<g id="node4259" class="node nodeHM pw_isoleucine-metabolism lid182126" transform="translate(1184.9,1105.8)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182126" target="_blank">3-methyloxaloacetate</a></text><title></title></g>
+<g id="node4287" class="node nodeHM pw_isoleucine-metabolism lid390" transform="translate(1204.7,660.3)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=390" target="_blank">2OBUT</a></text><title></title></g>
+<g id="node4289" class="node nodeHM pw_isoleucine-metabolism lid182168" transform="translate(1637.8,548.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182168" target="_blank">2-aceto-2-hydroxy-butyrate</a></text><title></title></g>
+<g id="node4292" class="node nodeHM pw_isoleucine-metabolism lid47551" transform="translate(1987.0,620.2)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47551" target="_blank">2,3-dihydroxy-3-methylvalerate</a></text><title></title></g>
+<g id="node4284" class="node nodeHM pw_isoleucine-metabolism lid178674" transform="translate(2243.3,931.4)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=178674" target="_blank">2-keto-3-methyl-valerate</a></text><title></title></g>
+<g id="node4282" class="node nodeHM pw_isoleucine-metabolism lid311" transform="translate(2233.5,1377.3)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=311" target="_blank">Ile</a></text><title></title></g>
+<g id="node4242" class="node nodeHM pw_isoleucine-metabolism lid5473" transform="translate(2564.5,1079.0)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5473" target="_blank">2-methylbutanoyl-CoA</a></text><title></title></g>
+<g id="node4238" class="node nodeHM pw_isoleucine-metabolism lid5473" transform="translate(2608.2,720.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5473" target="_blank">2-methylbutanoyl-CoA</a></text><title></title></g>
+<g id="node1145" class="node nodeHM pw_isoleucine-metabolism lid9023" transform="translate(2848.3,547.4)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9023" target="_blank">2-methylbutanoate</a></text><title></title></g>
+<g id="node4273" class="node nodeHM pw_isoleucine-metabolism lid31" transform="translate(77.0,101.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node4275" class="node nodeHM pw_isoleucine-metabolism lid11647" transform="translate(232.5,335.0)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11647" target="_blank">(R)-citramalate</a></text><title></title></g>
+<g id="node4277" class="node nodeHM pw_isoleucine-metabolism lid5952" transform="translate(510.2,551.4)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5952" target="_blank">citraconate</a></text><title></title></g>
+<g id="node4279" class="node nodeHM pw_isoleucine-metabolism lid254202" transform="translate(872.4,660.4)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=254202" target="_blank">(2R,3S)-3-methylmalate</a></text><title></title></g>
+<g id="node6453" class="node nodeHM pw_isoleucine-metabolism lid949" transform="translate(1133.2,52.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=949" target="_blank">propanoate</a></text><title></title></g>
+<g id="node6451" class="node nodeHM pw_isoleucine-metabolism lid782" transform="translate(1212.8,326.4)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title></title></g>
+<g id="node10970" class="node nodeHM pw_isoleucine-metabolism lid3671" transform="translate(2223.4,1722.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3671" target="_blank">tRNAIle</a></text><title></title></g>
+<g id="node10969" class="node nodeHM pw_isoleucine-metabolism lid44319" transform="translate(2343.6,1703.7)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44319" target="_blank">L-isoleucyl-tRNAIle</a></text><title></title></g>
+<g id="node4262" class="node nodeEN pw_isoleucine-metabolism" transform="translate(833.7,1554.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.1" target="_blank">5.4.99.1</a></text><title>Methylaspartate mutase</title></g>
+<g id="node4260" class="node nodeEN pw_isoleucine-metabolism" transform="translate(1044.4,1276.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.-" target="_blank">2.6.1.-</a></text><title>Beta-methylaspartate aminotransferase</title></g>
+<g id="node4258" class="node nodeEN pw_isoleucine-metabolism" transform="translate(1196.6,911.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.112" target="_blank">4.1.1.112</a></text><title>oxaloacetate decarboxylase</title></g>
+<g id="node4288" class="node nodeEN pw_isoleucine-metabolism" transform="translate(1453.7,660.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.6" target="_blank">2.2.1.6</a></text><title>acetolactate synthase</title></g>
+<g id="node4290" class="node nodeEN pw_isoleucine-metabolism" transform="translate(1819.3,548.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.86" target="_blank">1.1.1.86</a></text><title>ketol-acid reductoisomerase (NADP+)</title></g>
+<g id="node4291" class="node nodeEN pw_isoleucine-metabolism" transform="translate(2133.1,762.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.9" target="_blank">4.2.1.9</a></text><title>dihydroxy-acid dehydratase</title></g>
+<g id="node4283" class="node nodeEN pw_isoleucine-metabolism" transform="translate(2237.9,1158.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.42" target="_blank">2.6.1.42</a></text><title>branched-chain-amino-acid transaminase</title></g>
+<g id="node4241" class="node nodeEN pw_isoleucine-metabolism" transform="translate(2434.5,1013.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.25" target="_blank">1.2.1.25</a></text><title>branched-chain alpha-keto acid dehydrogenase system</title></g>
+<g id="node4240" class="node nodeEN pw_isoleucine-metabolism" transform="translate(2454.8,816.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.7" target="_blank">1.2.7.7</a></text><title>3-methyl-2-oxobutanoate dehydrogenase (ferredoxin)</title></g>
+<g id="node1146" class="node nodeEN pw_isoleucine-metabolism" transform="translate(2740.8,628.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.13" target="_blank">6.2.1.13</a></text><title>acetate-CoA ligase (ADP-forming)</title></g>
+<g id="node4274" class="node nodeEN pw_isoleucine-metabolism" transform="translate(148.7,209.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.3.21" target="_blank">2.3.3.21</a></text><title>(R)-citramalate synthase</title></g>
+<g id="node4276" class="node nodeEN pw_isoleucine-metabolism" transform="translate(357.4,452.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.35" target="_blank">4.2.1.35</a></text><title>(R)-2-Methylmalate dehydratase</title></g>
+<g id="node4278" class="node nodeEN pw_isoleucine-metabolism" transform="translate(688.1,660.2)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>isopropylmalate isomerase</title></g>
+<g id="node4267" class="node nodeEN pw_isoleucine-metabolism" transform="translate(1058.7,660.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.-" target="_blank">1.1.1.-</a></text><title>3-methyllmalate dehydrogenase</title></g>
+<g id="node6452" class="node nodeEN pw_isoleucine-metabolism" transform="translate(1133.2,179.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.17" target="_blank">6.2.1.17</a></text><title>Propionate-CoA ligase</title></g>
+<g id="node6450" class="node nodeEN pw_isoleucine-metabolism" transform="translate(1204.7,501.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.11" target="_blank">1.2.7.11</a></text><title>2-oxoacid oxidoreductase (ferredoxin)</title></g>
+<g id="node10968" class="node nodeEN pw_isoleucine-metabolism" transform="translate(2233.5,1582.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.5" target="_blank">6.1.1.5</a></text><title>Isoleucine-tRNA ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node4260~0" class="node nodeCM pw_isoleucine-metabolism lid34" transform="translate(1071.2,1360.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node4260~1" class="node nodeCM pw_isoleucine-metabolism lid41" transform="translate(1131.7,1280.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node4258~0" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(1270.3,865.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4288~0" class="node nodeCM pw_isoleucine-metabolism lid31" transform="translate(1420.3,749.6)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node4288~1" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(1520.1,717.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4290~0" class="node nodeCM pw_isoleucine-metabolism lid5" transform="translate(1783.3,465.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4290~1" class="node nodeCM pw_isoleucine-metabolism lid10" transform="translate(1885.1,486.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node4291~0" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(2109.7,846.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4283~0" class="node nodeCM pw_isoleucine-metabolism lid41" transform="translate(2167.4,1106.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node4283~1" class="node nodeCM pw_isoleucine-metabolism lid34" transform="translate(2308.3,1209.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node4241~0" class="node nodeCM pw_isoleucine-metabolism lid7" transform="translate(2393.1,1092.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node4241~1" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(2359.0,1058.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node4241~3" class="node nodeCM pw_isoleucine-metabolism lid8" transform="translate(2511.3,969.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4240~0" class="node nodeCM pw_isoleucine-metabolism lid265" transform="translate(2472.5,906.7)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node4240~1" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(2385.3,954.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4240~2" class="node nodeCM pw_isoleucine-metabolism lid289" transform="translate(2437.5,727.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node4240~3" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(2486.1,734.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node1146~0" class="node nodeCM pw_isoleucine-metabolism lid13" transform="translate(2766.0,711.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node1146~1" class="node nodeCM pw_isoleucine-metabolism lid16" transform="translate(2718.3,710.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1146~2" class="node nodeCM pw_isoleucine-metabolism lid4" transform="translate(2715.5,544.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node1146~3" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(2763.7,543.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node4274~0" class="node nodeCM pw_isoleucine-metabolism lid29" transform="translate(59.4,232.7)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node4274~1" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(65.3,183.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4274~2" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(236.0,211.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node4276~0" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(440.9,427.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4278~0" class="node nodeCM pw_isoleucine-metabolism lid1" transform="translate(619.5,714.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4267~0" class="node nodeCM pw_isoleucine-metabolism lid7" transform="translate(1007.7,733.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node4267~1" class="node nodeCM pw_isoleucine-metabolism lid8" transform="translate(1087.7,576.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4267~2" class="node nodeCM pw_isoleucine-metabolism lid28" transform="translate(1139.0,518.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node6452~0" class="node nodeCM pw_isoleucine-metabolism lid4" transform="translate(1045.9,174.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6452~1" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(1061.4,129.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node6452~2" class="node nodeCM pw_isoleucine-metabolism lid30" transform="translate(1218.2,159.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node6452~3" class="node nodeCM pw_isoleucine-metabolism lid12" transform="translate(1214.3,206.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6452~4" class="node nodeCM pw_isoleucine-metabolism lid17" transform="translate(1188.4,246.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6450~0" class="node nodeCM pw_isoleucine-metabolism lid265" transform="translate(1118.3,469.6)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node6450~2" class="node nodeCM pw_isoleucine-metabolism lid289" transform="translate(1289.6,533.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node6450~3" class="node nodeCM pw_isoleucine-metabolism lid18" transform="translate(1258.0,570.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10968~0" class="node nodeCM pw_isoleucine-metabolism lid4" transform="translate(2146.2,1585.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10968~1" class="node nodeCM pw_isoleucine-metabolism lid30" transform="translate(2316.7,1555.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10968~2" class="node nodeCM pw_isoleucine-metabolism lid17" transform="translate(2318.2,1603.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>
+<text x="2253.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

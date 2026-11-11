@@ -1,0 +1,622 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="4953" height="3258" viewBox="0 0 4953.0 3257.9"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="7845.9 9062.9 1914.7 1833.5" width="1915" height="1834" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="7845.9" y="9062.9" width="1914.7" height="1833.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_arachidonic-acid-metabolism" class="pw pw2" x="7885.9" y="9118.4" width="1818.7" height="1738.0" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8099.2 9162.5 L 8254.1 9162.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8060.0 9178.5 L 8060.0 9256.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8276.2 9272.8 L 8380.7 9272.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8197.7 9272.8 L 8087.9 9272.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8603.9 9272.8 L 8695.1 9272.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8531.2 9272.8 L 8436.5 9272.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8720.2 9399.8 L 8720.2 9487.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8720.2 9367.8 L 8720.2 9288.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9077.7 9373.9 L 9077.7 9292.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9077.7 9405.9 L 9077.7 9488.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8114.5 9438.9 L 8029.9 9438.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8153.7 9454.9 L 8153.7 9537.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8455.8 9439.8 L 8455.8 9353.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8455.8 9471.8 L 8455.8 9552.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9475.0 9494.1 L 9475.0 9406.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9475.0 9526.1 L 9475.0 9628.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8734.4 9633.2 L 8861.2 9776.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8720.2 9601.2 L 8720.2 9519.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9059.7 9633.2 L 8898.4 9776.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9077.7 9601.2 L 9077.7 9520.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9312.3 9657.8 L 9312.3 9574.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9312.3 9689.8 L 9312.3 9778.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8455.8 9693.6 L 8455.8 9778.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8455.8 9661.6 L 8455.8 9584.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8278.5 9661.8 L 8172.1 9569.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8277.5 9693.8 L 8174.5 9778.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8038.4 9693.8 L 8136.6 9778.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8037.1 9661.8 L 8136.5 9569.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8035.9 9794.7 L 8130.0 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7996.7 9810.7 L 7996.7 9887.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8333.3 9794.7 L 8430.7 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8260.5 9794.7 L 8180.2 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8596.2 9794.7 L 8480.8 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8674.6 9794.7 L 8829.9 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9070.8 9794.7 L 8925.2 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9154.8 9794.7 L 9267.4 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9475.0 9810.7 L 9475.0 9924.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9475.0 9778.7 L 9475.0 9660.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9441.4 9794.7 L 9357.1 9794.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8268.1 9962.1 L 8268.1 10046.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8288.0 9930.1 L 8435.9 9810.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8421.9 9962.1 L 8421.9 10046.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8425.5 9930.1 L 8452.2 9810.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8538.3 9930.1 L 8465.5 9810.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8548.1 9962.1 L 8548.1 10046.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8878.3 9962.1 L 8878.3 10046.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8878.2 9930.1 L 8877.6 9813.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9177.7 9962.1 L 9177.7 10258.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9146.0 9930.1 L 8914.2 9813.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7996.7 9986.6 L 7996.7 9919.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7996.7 10018.6 L 7996.7 10113.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9475.0 10044.8 L 9475.0 9956.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9475.0 10076.8 L 9475.0 10164.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8161.0 10062.1 L 8243.0 10062.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8121.8 10078.1 L 8121.8 10168.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8268.1 10168.5 L 8268.1 10078.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8268.1 10200.5 L 8268.1 10296.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8421.9 10168.5 L 8421.9 10078.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8421.9 10200.5 L 8421.9 10296.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8878.3 10200.5 L 8878.3 10264.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8878.3 10168.5 L 8878.3 10078.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8788.2 10401.6 L 9128.6 10290.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8725.3 10429.5 L 8561.9 10528.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8945.8 10400.0 L 9148.1 10290.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8916.2 10432.0 L 8916.2 10525.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9493.2 10454.2 L 9205.9 10290.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9521.3 10486.2 L 9521.3 10567.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8535.4 10641.8 L 8535.4 10560.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8535.4 10673.8 L 8535.4 10768.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8916.2 10673.9 L 8916.2 10760.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8916.2 10641.9 L 8916.2 10557.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9521.3 10717.3 L 9521.3 10795.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9521.3 10685.3 L 9521.3 10599.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 8041.5 9178.5 L 8005.9 9209.3"/>
+<path class="link" marker-start="url(#in)" d="M 8258.5 9256.8 L 8298.3 9227.2"/>
+<path class="link" marker-end="url(#in)" d="M 8222.2 9256.8 L 8194.9 9227.2"/>
+<path class="link" marker-start="url(#in)" d="M 8555.5 9256.8 L 8533.2 9227.2"/>
+<path class="link" marker-end="url(#in)" d="M 8585.2 9256.8 L 8618.0 9227.2"/>
+<path class="link" marker-end="url(#in)" d="M 8739.7 9399.8 L 8765.8 9421.4"/>
+<path class="link" marker-start="url(#in)" d="M 9093.7 9405.9 L 9124.5 9436.7"/>
+<path class="link" marker-end="url(#in)" d="M 9061.7 9373.9 L 9030.9 9343.1"/>
+<path class="link" marker-end="url(#in)" d="M 9093.7 9373.9 L 9124.5 9343.1"/>
+<path class="link" marker-start="url(#in)" d="M 8170.9 9454.9 L 8203.8 9485.7"/>
+<path class="link" marker-end="url(#in)" d="M 8170.9 9422.9 L 8203.8 9392.1"/>
+<path class="link" marker-start="url(#in)" d="M 8429.6 9471.8 L 8408.3 9484.8"/>
+<path class="link" marker-end="url(#in)" d="M 8436.9 9439.8 L 8402.0 9410.1"/>
+<path class="link" marker-start="url(#in)" d="M 9492.9 9526.1 L 9534.4 9563.0"/>
+<path class="link" marker-start="url(#in)" d="M 9078.4 9633.2 L 9079.6 9664.6"/>
+<path class="link" marker-start="url(#in)" d="M 8428.9 9693.6 L 8398.9 9711.5"/>
+<path class="link" marker-end="url(#in)" d="M 8431.9 9661.6 L 8395.9 9637.4"/>
+<path class="link" marker-start="url(#in)" d="M 8257.7 9690.8 L 8183.0 9715.6"/>
+<path class="link" marker-end="url(#in)" d="M 8257.7 9665.2 L 8183.0 9641.1"/>
+<path class="link" marker-start="url(#in)" d="M 8059.1 9691.5 L 8127.2 9715.1"/>
+<path class="link" marker-end="url(#in)" d="M 8059.1 9664.6 L 8127.2 9641.6"/>
+<path class="link" marker-start="url(#in)" d="M 7976.8 9778.7 L 7959.6 9764.8"/>
+<path class="link" marker-end="url(#in)" d="M 7979.6 9810.7 L 7956.8 9832.0"/>
+<path class="link" marker-start="url(#in)" d="M 8648.9 9778.7 L 8683.2 9738.0"/>
+<path class="link" marker-start="url(#in)" d="M 8674.6 9782.5 L 8700.0 9774.6"/>
+<path class="link" marker-end="url(#in)" d="M 8597.1 9778.7 L 8588.0 9774.9"/>
+<path class="link" marker-end="url(#in)" d="M 8626.2 9778.7 L 8602.0 9736.9"/>
+<path class="link" marker-start="url(#in)" d="M 9096.4 9778.7 L 9070.3 9753.3"/>
+<path class="link" marker-end="url(#in)" d="M 9453.6 9810.7 L 9414.9 9839.7"/>
+<path class="link" marker-start="url(#in)" d="M 8839.1 9934.3 L 8784.4 9917.9"/>
+<path class="link" marker-start="url(#in)" d="M 8903.9 9930.1 L 8929.7 9914.0"/>
+<path class="link" marker-end="url(#in)" d="M 8839.1 9957.9 L 8784.7 9974.1"/>
+<path class="link" marker-end="url(#in)" d="M 8904.0 9962.1 L 8926.8 9976.3"/>
+<path class="link" marker-start="url(#in)" d="M 9191.4 9930.1 L 9219.5 9897.3"/>
+<path class="link" marker-start="url(#in)" d="M 7974.0 9986.6 L 7962.4 9978.4"/>
+<path class="link" marker-end="url(#in)" d="M 7978.1 10018.6 L 7958.3 10035.5"/>
+<path class="link" marker-start="url(#in)" d="M 9452.7 10044.8 L 9408.5 10013.0"/>
+<path class="link" marker-start="url(#in)" d="M 8139.8 10046.1 L 8172.1 10017.4"/>
+<path class="link" marker-end="url(#in)" d="M 8110.8 10046.1 L 8089.8 10015.5"/>
+<path class="link" marker-start="url(#in)" d="M 8244.6 10168.5 L 8213.6 10147.5"/>
+<path class="link" marker-end="url(#in)" d="M 8246.1 10200.5 L 8215.4 10222.9"/>
+<path class="link" marker-start="url(#in)" d="M 8459.6 10168.5 L 8502.0 10150.5"/>
+<path class="link" marker-end="url(#in)" d="M 8460.6 10200.5 L 8509.1 10220.6"/>
+<path class="link" marker-start="url(#in)" d="M 8863.9 10168.5 L 8829.9 10130.7"/>
+<path class="link" marker-start="url(#in)" d="M 8731.7 10397.5 L 8700.0 10372.2"/>
+<path class="link" marker-end="url(#in)" d="M 8732.2 10429.5 L 8699.5 10456.1"/>
+<path class="link" marker-end="url(#in)" d="M 8775.0 10429.5 L 8814.6 10456.8"/>
+<path class="link" marker-start="url(#in)" d="M 8895.8 10400.0 L 8859.6 10371.5"/>
+<path class="link" marker-start="url(#in)" d="M 8955.4 10406.9 L 9078.8 10378.4"/>
+<path class="link" marker-end="url(#in)" d="M 8893.6 10432.0 L 8859.1 10456.4"/>
+<path class="link" marker-end="url(#in)" d="M 8955.4 10426.0 L 9046.9 10449.6"/>
+<path class="link" marker-start="url(#in)" d="M 9539.4 10454.2 L 9566.0 10430.8"/>
+<path class="link" marker-start="url(#in)" d="M 9482.1 10460.3 L 9361.8 10430.0"/>
+<path class="link" marker-end="url(#in)" d="M 9539.0 10486.2 L 9566.4 10511.0"/>
+<path class="link" marker-end="url(#in)" d="M 9482.1 10482.1 L 9392.1 10509.5"/>
+<path class="link" marker-start="url(#in)" d="M 8522.7 10641.8 L 8496.4 10608.9"/>
+<path class="link" marker-end="url(#in)" d="M 8519.4 10673.8 L 8488.7 10704.6"/>
+<path class="link" marker-start="url(#in)" d="M 8900.2 10641.9 L 8869.4 10611.1"/>
+<path class="link" marker-start="url(#in)" d="M 8955.4 10647.1 L 9085.8 10611.1"/>
+<path class="link" marker-end="url(#in)" d="M 8900.2 10673.9 L 8869.4 10704.7"/>
+<path class="link" marker-end="url(#in)" d="M 8955.4 10671.3 L 9053.3 10704.7"/>
+<path class="link" marker-start="url(#in)" d="M 9482.1 10691.5 L 9363.8 10661.9"/>
+<path class="link" marker-start="url(#in)" d="M 9537.2 10685.3 L 9568.2 10654.0"/>
+<path class="link" marker-end="url(#in)" d="M 9482.1 10715.8 L 9384.3 10751.9"/>
+<path class="link" marker-end="url(#in)" d="M 9537.3 10717.3 L 9568.1 10748.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_arachidonic-acid-metabolism" transform="translate(8795.2,9118.4)"><rect rx="10" height="31" width="263" x="-131.5" y="-15.5"/><text dominant-baseline="central">arachidonic acid metabolism</text></g>
+<g id="node482" class="node nodeHM pw_arachidonic-acid-metabolism lid145213" transform="translate(7996.7,10129.8)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=145213" target="_blank">13,14-dihydro-15-keto-PGD2</a></text><title>13,14-dihydro-15-keto-prostaglandin E2</title></g>
+<g id="node485" class="node nodeHM pw_arachidonic-acid-metabolism lid3433" transform="translate(7996.7,9903.5)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3433" target="_blank">15-keto-PGE2</a></text><title>15-ketoprostaglandin E2</title></g>
+<g id="node490" class="node nodeHM pw_arachidonic-acid-metabolism lid30461" transform="translate(8548.1,10062.1)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30461" target="_blank">thromboxane A2</a></text><title>thromboxane A2</title></g>
+<g id="node491" class="node nodeHM pw_arachidonic-acid-metabolism lid7973" transform="translate(8455.8,9337.8)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7973" target="_blank">15-keto-PGF2alpha</a></text><title>15-ketoprostaglandin F2alpha</title></g>
+<g id="node496" class="node nodeHM pw_arachidonic-acid-metabolism lid2217" transform="translate(8455.8,9568.7)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2217" target="_blank">PGF2alpha</a></text><title>prostaglandin F2alpha</title></g>
+<g id="node500" class="node nodeHM pw_arachidonic-acid-metabolism lid48444" transform="translate(8121.8,10184.5)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=48444" target="_blank">15-keto-PGD2</a></text><title>15-ketoprostaglandin D2</title></g>
+<g id="node504" class="node nodeHM pw_arachidonic-acid-metabolism lid48445" transform="translate(8421.9,10312.3)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=48445" target="_blank">15-keto-PGI2</a></text><title>15-ketoprostaglandin I2</title></g>
+<g id="node3784" class="node nodeHM pw_arachidonic-acid-metabolism lid44960" transform="translate(9312.3,9794.7)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44960" target="_blank">12(S)-HPETE</a></text><title>(5Z,8Z,10E,14Z)-(12S)-12-Hydroperoxyicosa-5,8,10,14-tetraenoate</title></g>
+<g id="node3786" class="node nodeHM pw_arachidonic-acid-metabolism lid189781" transform="translate(8535.4,10784.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189781" target="_blank">15-oxo-ETE</a></text><title>(5Z,8Z,11Z,13E)-15-oxoicosa-5,8,11,13-tetraenoic acid</title></g>
+<g id="node3790" class="node nodeHM pw_arachidonic-acid-metabolism lid189780" transform="translate(8535.4,10544.3)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189780" target="_blank">15(S)-HETE</a></text><title>(5Z,8Z,11Z,13E,15S)-15-hydroxyicosa-5,8,11,13-tetraenoic acid</title></g>
+<g id="node3794" class="node nodeHM pw_arachidonic-acid-metabolism lid189779" transform="translate(8916.2,10776.5)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189779" target="_blank">11,14,15H-ETA</a></text><title>(5Z,8Z,12E)-11,14,15-Trihydroxyicosa-5,8,12-trienoic acid</title></g>
+<g id="node3798" class="node nodeHM pw_arachidonic-acid-metabolism lid189778" transform="translate(8916.2,10541.0)"><rect height="30.0" width="364.6" x="-182.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189778" target="_blank">(5Z,8Z,12E)-14,15-epoxy-11-hydroxyicosa-5,8,12-trienoic acid</a></text><title>(5Z,8Z,12E)-14,15-epoxy-11-hydroxyicosa-5,8,12-trienoic acid</title></g>
+<g id="node7158" class="node nodeHM pw_arachidonic-acid-metabolism lid33022" transform="translate(8720.2,9503.9)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=33022" target="_blank">5(S)-HPETE</a></text><title>(6E,8Z,11Z,14Z)-(5S)-5-hydroperoxyicosa-6,8,11,14-tetraenoate</title></g>
+<g id="node7159" class="node nodeHM pw_arachidonic-acid-metabolism lid807" transform="translate(8720.2,9272.8)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=807" target="_blank">LTA4</a></text><title>Leukotriene A4</title></g>
+<g id="node7162" class="node nodeHM pw_arachidonic-acid-metabolism lid44962" transform="translate(9077.7,9504.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44962" target="_blank">8(R)-HPETE</a></text><title>(5Z,9E,11Z,14Z)-(8R)-8-hydroperoxyicosa-5,9,11,14-tetraenoate</title></g>
+<g id="node7169" class="node nodeSM pw_arachidonic-acid-metabolism lid619" transform="translate(8877.5,9794.7)"><rect height="35.0" width="93.4" x="-46.7" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=619" target="_blank">arachidonate</a></text><title>arachidonate</title></g>
+<g id="node7171" class="node nodeHM pw_arachidonic-acid-metabolism lid2274" transform="translate(8408.6,9272.8)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2274" target="_blank">LTEC4</a></text><title>Leukotriene C4</title></g>
+<g id="node7173" class="node nodeHM pw_arachidonic-acid-metabolism lid6548" transform="translate(8060.0,9272.8)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6548" target="_blank">LTED4</a></text><title>leukotriene D4</title></g>
+<g id="node7174" class="node nodeHM pw_arachidonic-acid-metabolism lid20769" transform="translate(8279.2,9162.5)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20769" target="_blank">LTE4</a></text><title>leukotriene E4</title></g>
+<g id="node7186" class="node nodeHM pw_arachidonic-acid-metabolism lid612" transform="translate(8455.8,9794.7)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=612" target="_blank">PGH2</a></text><title>prostaglandin H2</title></g>
+<g id="node7187" class="node nodeHM pw_arachidonic-acid-metabolism lid913" transform="translate(8155.1,9794.7)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=913" target="_blank">PGE2</a></text><title>Prostaglandin E2</title></g>
+<g id="node7188" class="node nodeHM pw_arachidonic-acid-metabolism lid2217" transform="translate(8153.7,9553.4)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2217" target="_blank">PGF2a</a></text><title>Prostaglandin F2alpha</title></g>
+<g id="node7193" class="node nodeHM pw_arachidonic-acid-metabolism lid7973" transform="translate(7970.9,9438.9)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7973" target="_blank">15-oxo-PGF2alpha</a></text><title>15-Ketoprostaglandin F2alpha</title></g>
+<g id="node7195" class="node nodeHM pw_arachidonic-acid-metabolism lid44961" transform="translate(9177.7,10274.7)"><rect height="30.0" width="381.5" x="-190.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44961" target="_blank">(5Z,8Z,11Z,13E)-(15S)-15-hydroperoxyicosa-5,8,11,13-tetraenoate</a></text><title>(5Z,8Z,11Z,13E)-(15S)-15-hydroperoxyicosa-5,8,11,13-tetraenoate</title></g>
+<g id="node7196" class="node nodeHM pw_arachidonic-acid-metabolism lid189743" transform="translate(9521.3,10583.8)"><rect height="30.0" width="398.4" x="-199.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189743" target="_blank">(5Z,8Z,13E)-(15S)-11,12-epoxy-15-hydroxyicosa-5,8,13-trienoic acid</a></text><title>(5Z,8Z,13E)-(15S)-11,12-Epoxy-15-hydroxyicosa-5,8,13-trienoic acid</title></g>
+<g id="node7203" class="node nodeHM pw_arachidonic-acid-metabolism lid56539" transform="translate(8268.1,10312.3)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56539" target="_blank">9-alpha,11-beta-PGF2</a></text><title>prostaglandin 9alpha,11beta-F2</title></g>
+<g id="node7205" class="node nodeHM pw_arachidonic-acid-metabolism lid189742" transform="translate(9521.3,10811.0)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189742" target="_blank">11,12,15H-ETA</a></text><title>(5Z,8Z,13E)-(15S)-11,12,15-Trihydroxyicosa-5,8,12-trienoic acid</title></g>
+<g id="node7212" class="node nodeHM pw_arachidonic-acid-metabolism lid6018" transform="translate(8421.9,10062.1)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6018" target="_blank">PGI2</a></text><title>prostaglandin I2</title></g>
+<g id="node7215" class="node nodeHM pw_arachidonic-acid-metabolism lid1985" transform="translate(8268.1,10062.1)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1985" target="_blank">PGD2</a></text><title>Prostaglandin D2</title></g>
+<g id="node7216" class="node nodeHM pw_arachidonic-acid-metabolism lid44220" transform="translate(9475.0,9644.1)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44220" target="_blank">hepoxilin A3</a></text><title>hepoxilin A3</title></g>
+<g id="node7218" class="node nodeHM pw_arachidonic-acid-metabolism lid189741" transform="translate(9312.3,9558.9)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189741" target="_blank">12-oxo-ETE</a></text><title>(5Z,8Z,10E,14Z)-12-Oxoicosa-5,8,10,14-tetraenoic acid</title></g>
+<g id="node7219" class="node nodeHM pw_arachidonic-acid-metabolism lid188909" transform="translate(9475.0,10180.9)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188909" target="_blank">trioxilin B3</a></text><title>(5Z,8Z,11S,12R,14Z)-10,11,12-trihydroxyicosa-5,8,14-trienoic acid</title></g>
+<g id="node7223" class="node nodeHM pw_arachidonic-acid-metabolism lid136839" transform="translate(9475.0,9940.7)"><rect height="30.0" width="438.0" x="-219.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=136839" target="_blank">(5Z,8Z,10R,11S,12S,14Z)-11,12-epoxy-10-hydroxyeicosa-5,8,14-trienoic acid</a></text><title>(10R)-hydroxy-(11S,12S)-epoxyeicosa-(5Z,8Z,14Z)-trienoic acid</title></g>
+<g id="node7226" class="node nodeHM pw_arachidonic-acid-metabolism lid95255" transform="translate(9475.0,9390.5)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95255" target="_blank">trioxilin A3</a></text><title>trioxilin A3</title></g>
+<g id="node7230" class="node nodeHM pw_arachidonic-acid-metabolism lid188910" transform="translate(9077.7,9276.9)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188910" target="_blank">8-(R)-HETE</a></text><title>(5Z,9E,11Z,14Z)-(8R)-8-Hydroxyeicosa-5,9,11,14-tetraenoate</title></g>
+<g id="node7232" class="node nodeHM pw_arachidonic-acid-metabolism lid152392" transform="translate(8878.3,10062.1)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=152392" target="_blank">11,12-EET</a></text><title>(5Z,8Z,14Z)-11,12-epoxyeicosa-5,8,14-trienoic acid</title></g>
+<g id="node7238" class="node nodeHM pw_arachidonic-acid-metabolism lid153610" transform="translate(8878.3,10280.0)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=153610" target="_blank">11,12-DiHETE</a></text><title>(5Z,8Z,14Z)-11,12-Dihydroxyeicosa-5,8,14-trienoic acid</title></g>
+<g id="node7176" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8060.0,9162.5)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.13.19" target="_blank">3.4.13.19</a></text><title>membrane dipeptidase</title></g>
+<g id="node7167" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8237.0,9272.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.19.14" target="_blank">3.4.19.14</a></text><title>leukotriene-C4 hydrolase</title></g>
+<g id="node7157" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8567.6,9272.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.20" target="_blank">4.4.1.20</a></text><title>leukotriene-C4 synthase</title></g>
+<g id="node7155" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8720.2,9383.8)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.34" target="_blank">1.13.11.34</a></text><title>arachidonate 5-lipoxygenase</title></g>
+<g id="node7164" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9077.7,9389.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.9" target="_blank">1.11.1.9</a></text><title>glutathione peroxidase</title></g>
+<g id="node7190" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8153.7,9438.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.196" target="_blank">1.1.1.196</a></text><title>15-hydroxyprostaglandin-D dehydrogenase (NADP+)</title></g>
+<g id="node497" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8455.8,9455.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.141" target="_blank">1.1.1.141</a></text><title>15-hydroxyprostaglandin dehydrogenase (NAD+)</title></g>
+<g id="node7222" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9475.0,9510.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.3.2.7" target="_blank">3.3.2.7</a></text><title>hepoxilin-epoxide hydrolase</title></g>
+<g id="node7165" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8720.2,9617.2)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.34" target="_blank">1.13.11.34</a></text><title>arachidonate 5-lipoxygenase</title></g>
+<g id="node7163" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9077.7,9617.2)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.40" target="_blank">1.13.11.40</a></text><title>arachidonate 8-lipoxygenase</title></g>
+<g id="node7229" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9312.3,9673.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.152" target="_blank">4.2.1.152</a></text><title>hydroperoxy icosatetraenoate dehydratase</title></g>
+<g id="node498" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8455.8,9677.6)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.20" target="_blank">1.11.1.20</a></text><title>prostamide/prostaglandin F2alpha synthase</title></g>
+<g id="node7189" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8296.9,9677.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.189" target="_blank">1.1.1.189</a></text><title>prostaglandin-E2 9-reductase</title></g>
+<g id="node7181" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8019.9,9677.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.184" target="_blank">1.1.1.184</a></text><title>carbonyl reductase (NADPH)</title></g>
+<g id="node486" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(7996.7,9794.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.141" target="_blank">1.1.1.141</a></text><title>15-hydroxyprostaglandin dehydrogenase (NAD+)</title></g>
+<g id="node7177" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8296.9,9794.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.3" target="_blank">5.3.99.3</a></text><title>prostaglandin-E synthase</title></g>
+<g id="node7191" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8635.4,9794.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.1" target="_blank">1.14.99.1</a></text><title>prostaglandin-endoperoxide synthase</title></g>
+<g id="node3785" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9112.8,9794.7)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.31" target="_blank">1.13.11.31</a></text><title>arachidonate 12-lipoxygenase</title></g>
+<g id="node7228" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9475.0,9794.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.4.-" target="_blank">5.4.4.-</a></text><title>hydroperoxide dehydratase</title></g>
+<g id="node7209" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8268.1,9946.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.2" target="_blank">5.3.99.2</a></text><title>Prostaglandin-D synthase</title></g>
+<g id="node7211" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8421.9,9946.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.4" target="_blank">5.3.99.4</a></text><title>prostaglandin-I synthase</title></g>
+<g id="node489" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8548.1,9946.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.5" target="_blank">5.3.99.5</a></text><title>thromboxane-A synthase</title></g>
+<g id="node7220" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8878.3,9946.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node7204" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9177.7,9946.1)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.33" target="_blank">1.13.11.33</a></text><title>arachidonate 15-lipoxygenase</title></g>
+<g id="node481" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(7996.7,10002.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.48" target="_blank">1.3.1.48</a></text><title>13,14-dehydro-15-oxoprostaglandin 13-reductase</title></g>
+<g id="node7217" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9475.0,10060.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.3.2.10" target="_blank">3.3.2.10</a></text><title>soluble epoxide hydrolase</title></g>
+<g id="node499" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8121.8,10062.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.196" target="_blank">1.1.1.196</a></text><title>15-hydroxyprostaglandin-D dehydrogenase (NADP+)</title></g>
+<g id="node7210" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8268.1,10184.5)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.188" target="_blank">1.1.1.188</a></text><title>prostaglandin-F synthase</title></g>
+<g id="node503" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8421.9,10184.5)"><rect rx="15" height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.196" target="_blank">1.1.1.196/1.1.1.231</a></text><title>15-hydroxyprostaglandin-D dehydrogenase (NADP+);15-hydroxyprostaglandin-I dehydrogenase (NADP+)</title></g>
+<g id="node7237" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8878.3,10184.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.3.2.10" target="_blank">3.3.2.10</a></text><title>soluble epoxide hydrolase</title></g>
+<g id="node3801" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8751.8,10413.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.9" target="_blank">1.11.1.9</a></text><title>glutathione peroxidase</title></g>
+<g id="node3800" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8916.2,10416.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node7194" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9521.3,10470.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node3788" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8535.4,10657.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.232" target="_blank">1.1.1.232</a></text><title>15-hydroxyicosatetraenoate dehydrogenase</title></g>
+<g id="node3804" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(8916.2,10657.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node7202" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(9521.3,10701.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node483" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(7939.7,10051.5)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node484" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(7939.7,9962.4)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node487" class="node nodeCM pw_arachidonic-acid-metabolism lid7" transform="translate(7939.7,9748.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node488" class="node nodeCM pw_arachidonic-acid-metabolism lid12" transform="translate(7939.7,9848.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node492" class="node nodeCM pw_arachidonic-acid-metabolism lid7" transform="translate(8383.2,9500.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node493" class="node nodeCM pw_arachidonic-acid-metabolism lid12" transform="translate(8383.2,9394.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node494" class="node nodeCM pw_arachidonic-acid-metabolism lid121" transform="translate(8372.0,9727.5)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=121" target="_blank">thioredoxin</a></text><title>thioredoxin</title></g>
+<g id="node495" class="node nodeCM pw_arachidonic-acid-metabolism lid476" transform="translate(8372.0,9621.4)"><rect rx="5" height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=476" target="_blank">thioredoxin disulfide</a></text><title>thioredoxin disulfide</title></g>
+<g id="node501" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(8190.1,10001.4)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node502" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(8078.9,9999.5)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node505" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(8530.0,10138.7)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node506" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(8537.0,10232.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node2246" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(9386.3,9997.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3787" class="node nodeCM pw_arachidonic-acid-metabolism lid40" transform="translate(8472.7,10720.6)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node3789" class="node nodeCM pw_arachidonic-acid-metabolism lid50" transform="translate(8483.6,10592.9)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+<g id="node3791" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8853.4,10720.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3792" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(9100.2,10720.7)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+<g id="node3793" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(9109.1,10465.6)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+<g id="node3795" class="node nodeCM pw_arachidonic-acid-metabolism lid973" transform="translate(8679.9,10472.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title>glutathione disulfide</title></g>
+<g id="node3796" class="node nodeCM pw_arachidonic-acid-metabolism lid44" transform="translate(8679.9,10356.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title>glutathione</title></g>
+<g id="node3797" class="node nodeCM pw_arachidonic-acid-metabolism lid3252" transform="translate(9148.1,10362.4)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node3799" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8836.9,10472.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3802" class="node nodeCM pw_arachidonic-acid-metabolism lid3252" transform="translate(9143.8,10595.1)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node3803" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(8853.4,10595.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node3805" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(8840.2,10356.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node3806" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(9341.0,10767.9)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+<g id="node7156" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(9080.3,9680.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7160" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8785.3,9437.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7161" class="node nodeCM pw_arachidonic-acid-metabolism lid44" transform="translate(8521.2,9211.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title>glutathione</title></g>
+<g id="node7166" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8635.7,9211.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7168" class="node nodeCM pw_arachidonic-acid-metabolism lid44" transform="translate(9140.5,9452.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title>glutathione</title></g>
+<g id="node7170" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8319.8,9211.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7172" class="node nodeCM pw_arachidonic-acid-metabolism lid41" transform="translate(8180.2,9211.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node7175" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(7987.3,9225.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7178" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(8155.1,9724.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node7179" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(8221.0,9501.7)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node7180" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(8155.1,9632.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node7182" class="node nodeCM pw_arachidonic-acid-metabolism lid66" transform="translate(8551.6,9759.7)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title>acceptor</title></g>
+<g id="node7183" class="node nodeCM pw_arachidonic-acid-metabolism lid77" transform="translate(8751.2,9758.6)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title>reduced acceptor</title></g>
+<g id="node7184" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(8696.7,9722.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7185" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8592.8,9720.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7192" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(8221.0,9376.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node7197" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(9584.1,10638.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7198" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(9584.1,10764.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7199" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(9339.6,10525.5)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+<g id="node7200" class="node nodeCM pw_arachidonic-acid-metabolism lid3252" transform="translate(9298.4,10414.0)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node7201" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(9584.1,10527.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7206" class="node nodeCM pw_arachidonic-acid-metabolism lid3252" transform="translate(9299.9,10645.9)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node7207" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(9584.1,10414.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7208" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(8190.1,10131.5)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node7213" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(8193.4,10238.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node7214" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(9233.2,9881.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7221" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(9014.9,9327.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7224" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(9393.5,9855.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7225" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(9552.3,9579.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7227" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(9053.9,9737.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7231" class="node nodeCM pw_arachidonic-acid-metabolism lid973" transform="translate(9140.5,9327.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title>glutathione disulfide</title></g>
+<g id="node7233" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(8949.1,9901.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7234" class="node nodeCM pw_arachidonic-acid-metabolism lid3252" transform="translate(8731.2,9901.9)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node7235" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8949.1,9990.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7236" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(8731.2,9990.1)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+<g id="node7239" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(8815.5,10114.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1994.7" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 2958.3 3217.9" width="2958" height="3218" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="2958.3" height="3217.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_arachidonic-acid-metabolism" class="pw " x="0.0" y="0.0" width="2878.3" height="3122.4" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1740.3 1359.5 L 1661.5 1202.7"/>
+<path class="link" marker-end="url(#in)" d="M 1753.0 1390.9 C 1765.3 1430.9 1798.2 1538.3 1810.5 1578.4"/>
+<path class="link" marker-start="url(#in)" d="M 1863.7 1793.6 L 1819.0 1609.7"/>
+<path class="link" marker-end="url(#in)" d="M 1870.7 1825.6 L 1903.6 1996.8"/>
+<path class="link" marker-start="url(#in)" d="M 1934.7 2188.2 L 1909.2 2028.8"/>
+<path class="link" marker-end="url(#in)" d="M 1939.7 2220.2 L 1963.3 2370.9"/>
+<path class="link" marker-start="url(#in)" d="M 1992.2 2547.7 L 1968.4 2402.9"/>
+<path class="link" marker-end="url(#in)" d="M 1997.7 2579.7 L 2022.2 2720.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2053.2 2889.7 L 2027.9 2752.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2059.2 2921.7 L 2085.0 3056.4"/>
+<path class="link" marker-start="url(#in)" d="M 1660.2 1305.5 L 1654.4 1202.7"/>
+<path class="link" marker-end="url(#in)" d="M 1660.4 1336.7 C 1658.7 1375.5 1654.2 1478.2 1652.5 1517.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1633.4 1724.2 L 1650.3 1548.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1628.9 1756.2 L 1598.3 1920.7"/>
+<path class="link" marker-start="url(#in)" d="M 1812.5 1209.6 L 1698.4 1193.2"/>
+<path class="link" marker-end="url(#in)" d="M 1889.3 1226.5 L 2012.1 1262.9"/>
+<path class="link" marker-start="url(#in)" d="M 2114.2 1439.0 L 2059.6 1291.3"/>
+<path class="link" marker-end="url(#in)" d="M 2132.0 1471.0 L 2216.2 1583.7"/>
+<path class="link" marker-start="url(#in)" d="M 1733.3 1023.1 L 1661.3 1170.7"/>
+<path class="link" marker-end="url(#in)" d="M 1751.9 991.1 L 1838.5 862.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1568.6 1300.1 C 1587.1 1275.4 1623.5 1226.7 1642.1 1202.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1552.2 1331.4 L 1499.0 1500.7"/>
+<path class="link" marker-start="url(#in)" d="M 1428.4 1702.3 L 1488.3 1532.7"/>
+<path class="link" marker-end="url(#in)" d="M 1416.8 1734.3 L 1358.5 1892.7"/>
+<path class="link" marker-start="url(#in)" d="M 1469.6 1138.0 L 1608.6 1174.8"/>
+<path class="link" marker-end="url(#in)" d="M 1399.3 1122.0 L 1226.9 1089.2"/>
+<path class="link" marker-start="url(#in)" d="M 1125.2 1253.6 L 1200.1 1101.6"/>
+<path class="link" marker-end="url(#in)" d="M 1107.5 1285.6 L 1009.3 1446.3"/>
+<path class="link" marker-start="url(#in)" d="M 891.5 1617.4 L 988.3 1478.3"/>
+<path class="link" marker-end="url(#in)" d="M 867.0 1649.4 L 768.5 1767.4"/>
+<path class="link" marker-start="url(#in)" d="M 1218.0 1182.5 L 1209.6 1101.6"/>
+<path class="link" marker-end="url(#in)" d="M 1213.4 1213.9 C 1199.2 1248.6 1164.8 1332.5 1150.6 1367.3"/>
+<path class="link" marker-start="url(#in)" d="M 1082.1 1154.3 L 1189.0 1096.0"/>
+<path class="link" marker-end="url(#in)" d="M 1033.5 1186.3 L 904.8 1293.0"/>
+<path class="link" marker-start="url(#in)" d="M 744.1 1426.2 L 866.9 1324.4"/>
+<path class="link" marker-end="url(#in)" d="M 704.8 1458.2 L 591.5 1548.7"/>
+<path class="link" marker-start="url(#in)" d="M 1208.5 918.8 L 1208.0 1069.6"/>
+<path class="link" marker-end="url(#in)" d="M 1205.1 886.8 L 1170.3 723.6"/>
+<path class="link" marker-start="url(#in)" d="M 1051.1 1017.5 L 1189.0 1077.4"/>
+<path class="link" marker-end="url(#in)" d="M 987.3 995.3 L 831.1 954.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1782.3 658.0 C 1795.8 695.9 1830.5 793.7 1843.9 831.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1776.9 627.4 C 1777.0 589.4 1777.3 490.2 1777.5 451.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1798.2 253.5 C 1794.0 290.4 1783.4 384.1 1779.2 421.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1802.9 222.3 L 1831.0 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 661.0 961.1 L 793.2 951.2"/>
+<path class="link" marker-end="url(#in)" d="M 592.2 979.7 L 475.1 1035.4"/>
+<path class="link" marker-start="url(#in)" d="M 664.3 1046.2 L 793.2 962.2"/>
+<path class="link" marker-end="url(#in)" d="M 605.5 1059.2 C 567.2 1055.9 506.6 1050.7 474.5 1047.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 303.7 1069.9 L 430.7 1049.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 233.4 1080.2 L 149.7 1091.5"/>
+<path class="link" marker-start="url(#in)" d="M 736.2 782.0 L 804.9 933.8"/>
+<path class="link" marker-end="url(#in)" d="M 714.0 750.0 L 610.4 638.9"/>
+<path class="link" marker-start="url(#in)" d="M 477.5 512.2 L 578.4 606.9"/>
+<path class="link" marker-end="url(#in)" d="M 442.3 480.2 L 345.6 395.2"/>
+<path class="link" marker-start="url(#in)" d="M 1049.1 584.0 L 1151.6 691.6"/>
+<path class="link" marker-end="url(#in)" d="M 1026.2 552.0 L 956.7 405.5"/>
+<path class="link" marker-start="url(#in)" d="M 1207.0 537.7 L 1170.7 691.6"/>
+<path class="link" marker-end="url(#in)" d="M 1208.2 505.7 L 1182.1 341.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1931.8 693.9 C 1914.5 725.9 1874.6 799.9 1857.4 831.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1949.5 663.4 C 1969.7 630.9 2017.0 554.9 2037.3 522.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2142.3 355.1 C 2122.3 386.9 2076.6 459.5 2056.6 491.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2161.7 324.2 C 2180.9 293.8 2223.2 226.8 2242.2 196.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2015.3 801.5 L 1907.9 830.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2079.2 781.5 L 2194.9 740.5"/>
+<path class="link" marker-start="url(#in)" d="M 2376.6 641.6 L 2260.2 710.9"/>
+<path class="link" marker-end="url(#in)" d="M 2427.0 609.6 L 2535.5 536.0"/>
+<path class="link" marker-start="url(#in)" d="M 2587.4 1144.9 L 2472.4 1169.0"/>
+<path class="link" marker-end="url(#in)" d="M 2644.8 1135.7 L 2754.5 1123.5"/>
+<path class="link" marker-start="url(#in)" d="M 2554.1 1504.7 L 2434.4 1417.0"/>
+<path class="link" marker-end="url(#in)" d="M 2607.9 1535.8 L 2707.3 1582.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2290.0 1259.0 L 2400.2 1194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2234.1 1275.0 L 2095.4 1275.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2281.1 1290.5 C 2310.0 1314.8 2365.8 1361.7 2394.5 1385.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 1829.2 1815.7 L 1774.8 1824.3"/>
+<path class="link" marker-start="url(#in)" d="M 1905.3 2188.6 L 1874.4 2173.5"/>
+<path class="link" marker-end="url(#in)" d="M 1920.6 2220.2 L 1890.1 2249.7"/>
+<path class="link" marker-start="url(#in)" d="M 1961.2 2547.7 L 1931.7 2533.7"/>
+<path class="link" marker-end="url(#in)" d="M 1978.7 2579.7 L 1948.4 2609.5"/>
+<path class="link" marker-start="url(#in)" d="M 2021.0 2889.7 L 1992.3 2876.7"/>
+<path class="link" marker-start="url(#in)" d="M 1638.4 1305.5 L 1603.5 1280.8"/>
+<path class="link" marker-start="url(#in)" d="M 1614.7 1724.2 L 1583.7 1695.3"/>
+<path class="link" marker-end="url(#in)" d="M 1655.4 1756.2 L 1743.4 1816.1"/>
+<path class="link" marker-end="url(#in)" d="M 1641.5 1756.2 L 1668.2 1800.4"/>
+<path class="link" marker-start="url(#in)" d="M 1844.3 1199.1 L 1824.7 1151.9"/>
+<path class="link" marker-start="url(#in)" d="M 1702.7 1010.5 L 1668.2 1013.6"/>
+<path class="link" marker-start="url(#in)" d="M 1541.9 1299.4 L 1465.6 1219.6"/>
+<path class="link" marker-start="url(#in)" d="M 1553.2 1299.4 L 1541.6 1253.6"/>
+<path class="link" marker-end="url(#in)" d="M 1571.6 1331.4 L 1640.3 1407.4"/>
+<path class="link" marker-end="url(#in)" d="M 1561.5 1331.4 L 1572.8 1373.4"/>
+<path class="link" marker-start="url(#in)" d="M 1411.5 1702.3 L 1383.7 1662.9"/>
+<path class="link" marker-start="url(#in)" d="M 1446.5 1112.7 L 1491.7 1052.6"/>
+<path class="link" marker-start="url(#in)" d="M 1466.9 1112.7 L 1498.9 1097.0"/>
+<path class="link" marker-end="url(#in)" d="M 1430.8 1112.7 L 1415.6 1046.0"/>
+<path class="link" marker-end="url(#in)" d="M 1421.1 1112.7 L 1393.8 1080.0"/>
+<path class="link" marker-start="url(#in)" d="M 1152.5 1265.9 L 1175.4 1263.5"/>
+<path class="link" marker-end="url(#in)" d="M 1127.7 1285.6 L 1158.1 1332.7"/>
+<path class="link" marker-start="url(#in)" d="M 915.5 1634.8 L 950.3 1636.1"/>
+<path class="link" marker-end="url(#in)" d="M 885.5 1649.4 L 902.3 1702.1"/>
+<path class="link" marker-start="url(#in)" d="M 784.2 1458.2 L 794.4 1461.0"/>
+<path class="link" marker-end="url(#in)" d="M 726.0 1458.2 L 730.3 1516.6"/>
+<path class="link" marker-start="url(#in)" d="M 1812.0 648.2 L 1849.1 654.1"/>
+<path class="link" marker-start="url(#in)" d="M 1795.2 658.6 L 1872.0 725.5"/>
+<path class="link" marker-end="url(#in)" d="M 1812.0 632.6 L 1867.1 617.0"/>
+<path class="link" marker-end="url(#in)" d="M 1758.5 626.6 L 1691.5 568.2"/>
+<path class="link" marker-start="url(#in)" d="M 1835.1 252.6 L 1894.4 276.8"/>
+<path class="link" marker-start="url(#in)" d="M 1807.8 254.3 L 1835.7 310.8"/>
+<path class="link" marker-end="url(#in)" d="M 1764.8 223.3 L 1715.2 202.1"/>
+<path class="link" marker-end="url(#in)" d="M 1791.7 222.3 L 1763.7 168.1"/>
+<path class="link" marker-start="url(#in)" d="M 631.7 947.7 L 651.1 894.6"/>
+<path class="link" marker-end="url(#in)" d="M 617.3 979.7 L 588.9 1032.9"/>
+<path class="link" marker-start="url(#in)" d="M 648.2 1046.2 L 676.7 993.0"/>
+<path class="link" marker-end="url(#in)" d="M 633.9 1078.2 L 614.5 1131.3"/>
+<path class="link" marker-start="url(#in)" d="M 276.6 1059.5 L 301.1 1010.5"/>
+<path class="link" marker-end="url(#in)" d="M 260.6 1091.5 L 236.0 1140.5"/>
+<path class="link" marker-start="url(#in)" d="M 764.1 766.9 L 798.9 767.8"/>
+<path class="link" marker-end="url(#in)" d="M 693.8 765.1 L 658.9 764.2"/>
+<path class="link" marker-start="url(#in)" d="M 492.4 489.0 L 526.6 481.3"/>
+<path class="link" marker-end="url(#in)" d="M 462.5 480.2 L 469.9 422.4"/>
+<path class="link" marker-start="url(#in)" d="M 1069.0 568.4 L 1102.2 568.8"/>
+<path class="link" marker-end="url(#in)" d="M 1039.8 552.0 L 1059.7 499.2"/>
+<path class="link" marker-start="url(#in)" d="M 1232.1 537.7 L 1261.9 560.1"/>
+<path class="link" marker-end="url(#in)" d="M 1181.5 537.7 L 1146.6 556.9"/>
+<path class="link" marker-start="url(#in)" d="M 1904.8 668.6 L 1874.0 659.7"/>
+<path class="link" marker-start="url(#in)" d="M 1927.3 694.7 L 1903.0 725.5"/>
+<path class="link" marker-end="url(#in)" d="M 1926.2 662.7 L 1896.7 628.6"/>
+<path class="link" marker-end="url(#in)" d="M 1937.5 662.7 L 1921.3 558.7"/>
+<path class="link" marker-start="url(#in)" d="M 2164.8 355.6 L 2193.2 390.9"/>
+<path class="link" marker-start="url(#in)" d="M 2154.1 355.6 L 2167.6 456.6"/>
+<path class="link" marker-end="url(#in)" d="M 2139.1 323.6 L 2110.1 287.5"/>
+<path class="link" marker-end="url(#in)" d="M 2149.9 323.6 L 2137.8 231.3"/>
+<path class="link" marker-start="url(#in)" d="M 2042.4 808.8 L 2025.6 864.8"/>
+<path class="link" marker-end="url(#in)" d="M 2047.7 776.8 L 2049.4 719.8"/>
+<path class="link" marker-end="url(#in)" d="M 2057.9 776.8 L 2085.0 736.1"/>
+<path class="link" marker-start="url(#in)" d="M 2402.7 641.6 L 2400.1 700.1"/>
+<path class="link" marker-end="url(#in)" d="M 2438.6 640.2 L 2464.9 651.1"/>
+<path class="link" marker-start="url(#in)" d="M 2608.3 1154.9 L 2585.8 1201.5"/>
+<path class="link" marker-start="url(#in)" d="M 2544.0 1534.9 L 2511.8 1549.2"/>
+<path class="link" marker-end="url(#in)" d="M 2285.6 1291.0 L 2318.6 1314.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_arachidonic-acid-metabolism" transform="translate(1439.2,0.0)"><rect rx="10" height="31" width="272" x="-136.2" y="-15.5"/><text dominant-baseline="central">arachidonic acid metabolism</text></g>
+<g id="node7169" class="node nodeHM pw_arachidonic-acid-metabolism lid619" transform="translate(1653.5,1186.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=619" target="_blank">arachidonate</a></text><title></title></g>
+<g id="node7158" class="node nodeHM pw_arachidonic-acid-metabolism lid33022" transform="translate(1815.2,1593.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=33022" target="_blank">5(S)-HPETE</a></text><title></title></g>
+<g id="node7159" class="node nodeHM pw_arachidonic-acid-metabolism lid807" transform="translate(1906.6,2012.8)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=807" target="_blank">LTA4</a></text><title></title></g>
+<g id="node7171" class="node nodeHM pw_arachidonic-acid-metabolism lid2274" transform="translate(1965.8,2386.9)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2274" target="_blank">LTEC4</a></text><title></title></g>
+<g id="node7173" class="node nodeHM pw_arachidonic-acid-metabolism lid6548" transform="translate(2025.0,2736.3)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6548" target="_blank">LTED4</a></text><title></title></g>
+<g id="node7174" class="node nodeHM pw_arachidonic-acid-metabolism lid20769" transform="translate(2088.1,3072.4)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20769" target="_blank">LTE4</a></text><title></title></g>
+<g id="node7162" class="node nodeHM pw_arachidonic-acid-metabolism lid44962" transform="translate(1651.8,1532.4)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44962" target="_blank">8(R)-HPETE</a></text><title></title></g>
+<g id="node7230" class="node nodeHM pw_arachidonic-acid-metabolism lid188910" transform="translate(1595.3,1936.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188910" target="_blank">8-(R)-HETE</a></text><title></title></g>
+<g id="node3784" class="node nodeHM pw_arachidonic-acid-metabolism lid44960" transform="translate(2053.7,1275.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44960" target="_blank">12(S)-HPETE</a></text><title></title></g>
+<g id="node7218" class="node nodeHM pw_arachidonic-acid-metabolism lid189741" transform="translate(2228.2,1599.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189741" target="_blank">12-oxo-ETE</a></text><title></title></g>
+<g id="node7195" class="node nodeHM pw_arachidonic-acid-metabolism lid44961" transform="translate(1849.3,846.8)"><rect height="30.0" width="418.2" x="-209.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44961" target="_blank">(5Z,8Z,11Z,13E)-(15S)-15-hydroperoxyicosa-5,8,11,13-tetraenoate</a></text><title></title></g>
+<g id="node7232" class="node nodeHM pw_arachidonic-acid-metabolism lid152392" transform="translate(1494.0,1516.7)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=152392" target="_blank">11,12-EET</a></text><title></title></g>
+<g id="node7238" class="node nodeHM pw_arachidonic-acid-metabolism lid153610" transform="translate(1352.6,1908.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=153610" target="_blank">11,12-DiHETE</a></text><title></title></g>
+<g id="node7186" class="node nodeHM pw_arachidonic-acid-metabolism lid612" transform="translate(1207.9,1085.6)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=612" target="_blank">PGH2</a></text><title></title></g>
+<g id="node496" class="node nodeHM pw_arachidonic-acid-metabolism lid2217" transform="translate(999.5,1462.3)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2217" target="_blank">PGF2a</a></text><title></title></g>
+<g id="node491" class="node nodeHM pw_arachidonic-acid-metabolism lid7973" transform="translate(755.2,1783.4)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7973" target="_blank">15-oxo-PGF2alpha</a></text><title></title></g>
+<g id="node490" class="node nodeHM pw_arachidonic-acid-metabolism lid30461" transform="translate(1144.2,1382.7)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30461" target="_blank">thromboxane A2</a></text><title></title></g>
+<g id="node7212" class="node nodeHM pw_arachidonic-acid-metabolism lid6018" transform="translate(885.9,1308.7)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6018" target="_blank">PGI2</a></text><title></title></g>
+<g id="node504" class="node nodeHM pw_arachidonic-acid-metabolism lid48445" transform="translate(571.5,1564.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=48445" target="_blank">15-keto-PGI2</a></text><title></title></g>
+<g id="node7215" class="node nodeHM pw_arachidonic-acid-metabolism lid1985" transform="translate(1166.9,707.6)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1985" target="_blank">PGD2</a></text><title></title></g>
+<g id="node7187" class="node nodeHM pw_arachidonic-acid-metabolism lid913" transform="translate(812.2,949.8)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=913" target="_blank">PGE2</a></text><title></title></g>
+<g id="node7196" class="node nodeHM pw_arachidonic-acid-metabolism lid189743" transform="translate(1777.5,436.3)"><rect height="30.0" width="437.7" x="-218.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189743" target="_blank">(5Z,8Z,13E)-(15S)-11,12-epoxy-15-hydroxyicosa-5,8,13-trienoic acid</a></text><title></title></g>
+<g id="node7205" class="node nodeHM pw_arachidonic-acid-metabolism lid189742" transform="translate(1833.9,52.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189742" target="_blank">11,12,15H-ETA</a></text><title></title></g>
+<g id="node7188" class="node nodeHM pw_arachidonic-acid-metabolism lid2217" transform="translate(452.9,1046.0)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2217" target="_blank">PGF2a</a></text><title></title></g>
+<g id="node7193" class="node nodeHM pw_arachidonic-acid-metabolism lid7973" transform="translate(91.8,1099.3)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7973" target="_blank">15-oxo-PGF2alpha</a></text><title></title></g>
+<g id="node485" class="node nodeHM pw_arachidonic-acid-metabolism lid3433" transform="translate(595.5,622.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3433" target="_blank">15-keto-PGE2</a></text><title></title></g>
+<g id="node482" class="node nodeHM pw_arachidonic-acid-metabolism lid145213" transform="translate(327.4,379.2)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=145213" target="_blank">13,14-dihydro-15-keto-PGD2</a></text><title></title></g>
+<g id="node7203" class="node nodeHM pw_arachidonic-acid-metabolism lid56539" transform="translate(949.2,389.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56539" target="_blank">9-alpha,11-beta-PGF2</a></text><title></title></g>
+<g id="node500" class="node nodeHM pw_arachidonic-acid-metabolism lid48444" transform="translate(1179.6,325.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=48444" target="_blank">15-keto-PGD2</a></text><title></title></g>
+<g id="node3798" class="node nodeHM pw_arachidonic-acid-metabolism lid189778" transform="translate(2047.0,506.6)"><rect height="30.0" width="398.8" x="-199.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189778" target="_blank">(5Z,8Z,12E)-14,15-epoxy-11-hydroxyicosa-5,8,12-trienoic acid</a></text><title></title></g>
+<g id="node3794" class="node nodeHM pw_arachidonic-acid-metabolism lid189779" transform="translate(2251.9,181.3)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189779" target="_blank">11,14,15H-ETA</a></text><title></title></g>
+<g id="node3790" class="node nodeHM pw_arachidonic-acid-metabolism lid189780" transform="translate(2233.3,726.9)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189780" target="_blank">15(S)-HETE</a></text><title></title></g>
+<g id="node3786" class="node nodeHM pw_arachidonic-acid-metabolism lid189781" transform="translate(2559.1,520.0)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189781" target="_blank">15-oxo-ETE</a></text><title></title></g>
+<g id="node7216" class="node nodeHM pw_arachidonic-acid-metabolism lid44220" transform="translate(2427.5,1178.3)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44220" target="_blank">hepoxilin A3</a></text><title></title></g>
+<g id="node7226" class="node nodeHM pw_arachidonic-acid-metabolism lid95255" transform="translate(2799.4,1118.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95255" target="_blank">trioxilin A3</a></text><title></title></g>
+<g id="node7223" class="node nodeHM pw_arachidonic-acid-metabolism lid136839" transform="translate(2412.6,1401.0)"><rect height="30.0" width="483.0" x="-241.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=136839" target="_blank">(5Z,8Z,10R,11S,12S,14Z)-11,12-epoxy-10-hydroxyeicosa-5,8,14-trienoic acid</a></text><title></title></g>
+<g id="node7219" class="node nodeHM pw_arachidonic-acid-metabolism lid188909" transform="translate(2741.1,1598.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188909" target="_blank">trioxilin B3</a></text><title></title></g>
+<g id="node7165" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1748.3,1375.5)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.34" target="_blank">1.13.11.34</a></text><title>arachidonate 5-lipoxygenase</title></g>
+<g id="node7155" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1867.6,1809.6)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.34" target="_blank">1.13.11.34</a></text><title>arachidonate 5-lipoxygenase</title></g>
+<g id="node7157" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1937.2,2204.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.20" target="_blank">4.4.1.20</a></text><title>leukotriene-C4 synthase</title></g>
+<g id="node7167" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1994.9,2563.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.19.14" target="_blank">3.4.19.14</a></text><title>leukotriene-C4 hydrolase</title></g>
+<g id="node7176" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2056.2,2905.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.13.19" target="_blank">3.4.13.19</a></text><title>membrane dipeptidase</title></g>
+<g id="node7163" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1661.1,1321.5)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.40" target="_blank">1.13.11.40</a></text><title>arachidonate 8-lipoxygenase</title></g>
+<g id="node7164" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1631.9,1740.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.9" target="_blank">1.11.1.9</a></text><title>glutathione peroxidase</title></g>
+<g id="node3785" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1850.9,1215.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.31" target="_blank">1.13.11.31</a></text><title>arachidonate 12-lipoxygenase</title></g>
+<g id="node7229" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2120.1,1455.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.152" target="_blank">4.2.1.152</a></text><title>hydroperoxy icosatetraenoate dehydratase</title></g>
+<g id="node7204" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1741.1,1007.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.33" target="_blank">1.13.11.33</a></text><title>arachidonate 15-lipoxygenase</title></g>
+<g id="node7220" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1557.2,1315.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node7237" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1422.7,1718.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.3.2.10" target="_blank">3.3.2.10</a></text><title>soluble epoxide hydrolase</title></g>
+<g id="node7191" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1434.4,1128.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.1" target="_blank">1.14.99.1</a></text><title>prostaglandin-endoperoxide synthase</title></g>
+<g id="node498" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1117.3,1269.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.20" target="_blank">1.11.1.20</a></text><title>prostamide/prostaglandin F2alpha synthase</title></g>
+<g id="node497" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(880.4,1633.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.141" target="_blank">1.1.1.141</a></text><title>15-hydroxyprostaglandin dehydrogenase (NAD+)</title></g>
+<g id="node489" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1219.7,1198.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.5" target="_blank">5.3.99.5</a></text><title>thromboxane-A synthase</title></g>
+<g id="node7211" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1052.8,1170.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.4" target="_blank">5.3.99.4</a></text><title>prostaglandin-I synthase</title></g>
+<g id="node503" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(724.9,1442.2)"><rect rx="15" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.196" target="_blank">1.1.1.196/1.1.1.231</a></text><title>15-hydroxyprostaglandin-D dehydrogenase (NADP+);15-hydroxyprostaglandin-I dehydrogenase (NADP+)</title></g>
+<g id="node7209" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1208.5,902.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.2" target="_blank">5.3.99.2</a></text><title>Prostaglandin-D synthase</title></g>
+<g id="node7177" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1019.2,1003.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.99.3" target="_blank">5.3.99.3</a></text><title>prostaglandin-E synthase</title></g>
+<g id="node7194" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1776.9,642.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node7202" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1799.9,238.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node7189" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(625.9,963.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.189" target="_blank">1.1.1.189</a></text><title>prostaglandin-E2 9-reductase; carbonyl reductase (NADPH)</title></g>
+<g id="node7181" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(639.7,1062.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.184" target="_blank">1.1.1.184</a></text><title>prostaglandin-E2 9-reductase; carbonyl reductase (NADPH)</title></g>
+<g id="node7190" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(268.6,1075.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.196" target="_blank">1.1.1.196</a></text><title>15-hydroxyprostaglandin-D dehydrogenase (NADP+)</title></g>
+<g id="node486" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(728.9,766.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.141" target="_blank">1.1.1.141</a></text><title>15-hydroxyprostaglandin dehydrogenase (NAD+)</title></g>
+<g id="node481" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(460.5,496.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.48" target="_blank">1.3.1.48</a></text><title>13,14-dehydro-15-oxoprostaglandin 13-reductase</title></g>
+<g id="node7210" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1033.8,568.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.188" target="_blank">1.1.1.188</a></text><title>prostaglandin-F synthase</title></g>
+<g id="node499" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1210.8,521.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.196" target="_blank">1.1.1.196</a></text><title>15-hydroxyprostaglandin-D dehydrogenase (NADP+)</title></g>
+<g id="node3800" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(1940.0,678.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node3804" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2152.0,339.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.1" target="_blank">1.14.14.1</a></text><title>unspecific monooxygenase</title></g>
+<g id="node3801" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2047.2,792.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.9" target="_blank">1.11.1.9</a></text><title>glutathione peroxidase</title></g>
+<g id="node3788" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2403.4,625.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.232" target="_blank">1.1.1.232</a></text><title>15-hydroxyicosatetraenoate dehydrogenase</title></g>
+<g id="node7222" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2616.1,1138.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.3.2.7" target="_blank">3.3.2.7</a></text><title>hepoxilin-epoxide hydrolase</title></g>
+<g id="node7217" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2575.9,1520.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.3.2.10" target="_blank">3.3.2.10</a></text><title>soluble epoxide hydrolase</title></g>
+<g id="node7228" class="node nodeEN pw_arachidonic-acid-metabolism" transform="translate(2262.7,1275.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.4.-" target="_blank">5.4.4.-</a></text><title>hydroperoxide dehydratase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7155~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1759.1,1826.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7157~0" class="node nodeCM pw_arachidonic-acid-metabolism lid44" transform="translate(1858.7,2165.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node7157~1" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1874.4,2264.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7167~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1915.9,2526.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7167~1" class="node nodeCM pw_arachidonic-acid-metabolism lid41" transform="translate(1932.7,2625.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node7176~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1976.6,2869.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7163~0" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(1591.1,1272.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7164~0" class="node nodeCM pw_arachidonic-acid-metabolism lid44" transform="translate(1568.0,1680.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node7164~2" class="node nodeCM pw_arachidonic-acid-metabolism lid973" transform="translate(1677.8,1816.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title></title></g>
+<g id="node3785~0" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(1818.1,1135.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7204~0" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(1655.7,1014.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7220~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1892" transform="translate(1450.4,1203.6)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node7220~1" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(1537.6,1237.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7220~2" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(1654.8,1423.4)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node7220~3" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1577.1,1389.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7237~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1372.4,1646.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7191~0" class="node nodeCM pw_arachidonic-acid-metabolism lid77" transform="translate(1503.7,1036.6)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node7191~1" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(1511.4,1090.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7191~2" class="node nodeCM pw_arachidonic-acid-metabolism lid66" transform="translate(1412.0,1030.0)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node7191~3" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1380.4,1064.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node498~0" class="node nodeCM pw_arachidonic-acid-metabolism lid121" transform="translate(1217.1,1259.1)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=121" target="_blank">thioredoxin</a></text><title></title></g>
+<g id="node498~1" class="node nodeCM pw_arachidonic-acid-metabolism lid476" transform="translate(1168.5,1348.7)"><rect rx="5" height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=476" target="_blank">thioredoxin disulfide</a></text><title></title></g>
+<g id="node497~0" class="node nodeCM pw_arachidonic-acid-metabolism lid7" transform="translate(969.3,1636.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node497~1" class="node nodeCM pw_arachidonic-acid-metabolism lid8" transform="translate(907.5,1718.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node503~0" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(816.6,1467.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node503~1" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(731.4,1532.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7194~3" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(1673.2,552.2)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node7202~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1892" transform="translate(1933.6,292.8)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node7202~1" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(1843.6,326.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7202~2" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(1677.8,186.1)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node7202~3" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1755.4,152.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7189~0" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(656.9,878.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7189~1" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(580.3,1048.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7181~0" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(685.2,977.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7181~1" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(608.7,1147.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7190~0" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(309.2,994.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7190~1" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(228.0,1156.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node486~0" class="node nodeCM pw_arachidonic-acid-metabolism lid7" transform="translate(817.9,768.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node486~1" class="node nodeCM pw_arachidonic-acid-metabolism lid8" transform="translate(640.0,763.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node481~0" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(548.8,476.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node481~1" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(471.9,406.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7210~1" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(1065.7,483.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node499~0" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(1283.2,576.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node499~1" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(1124.4,569.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3800~0" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(1861.5,656.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node3800~1" class="node nodeCM pw_arachidonic-acid-metabolism lid1892" transform="translate(1890.3,741.5)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node3800~2" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(1882.9,612.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3800~3" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(1918.9,542.7)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node3804~0" class="node nodeCM pw_arachidonic-acid-metabolism lid9" transform="translate(2205.7,406.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node3804~1" class="node nodeCM pw_arachidonic-acid-metabolism lid1892" transform="translate(2169.8,472.6)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node3804~2" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(2097.2,271.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3804~3" class="node nodeCM pw_arachidonic-acid-metabolism lid2297" transform="translate(2135.7,215.3)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node3801~0" class="node nodeCM pw_arachidonic-acid-metabolism lid44" transform="translate(2020.7,880.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node3801~1" class="node nodeCM pw_arachidonic-acid-metabolism lid973" transform="translate(2049.8,703.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title></title></g>
+<g id="node3801~2" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(2095.7,720.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3788~0" class="node nodeCM pw_arachidonic-acid-metabolism lid10" transform="translate(2399.4,716.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node3788~1" class="node nodeCM pw_arachidonic-acid-metabolism lid5" transform="translate(2487.1,660.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7222~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(2578.0,1217.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7217~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(2496.1,1556.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7228~0" class="node nodeCM pw_arachidonic-acid-metabolism lid1" transform="translate(2334.3,1325.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>
+<text x="2004.7" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (kamada_kawai)</text></svg>

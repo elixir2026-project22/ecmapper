@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3056" height="2063" viewBox="0 0 3055.5 2063.1"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="13234.6 6105.9 1374.6 1323.0" width="1375" height="1323" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="13234.6" y="6105.9" width="1374.6" height="1323.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glutathione-metabolism" class="pw pw3" x="13274.6" y="6161.4" width="1294.6" height="1227.5" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14158.4 6296.9 L 14029.5 6296.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14231.1 6296.9 L 14338.6 6296.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14389.1 6463.8 L 14389.1 6312.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14389.1 6495.8 L 14389.1 6694.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14383.2 6495.8 L 14173.1 7062.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13640.1 6514.6 L 13776.1 6479.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13606.5 6539.2 L 13606.5 6858.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14031.9 6542.9 L 14149.0 6654.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13981.6 6517.2 L 13854.5 6480.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13776.1 6670.5 L 13492.2 6670.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13829.0 6686.5 L 14150.5 7062.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13406.8 6860.8 L 13454.3 6686.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13406.7 6892.8 L 13452.1 7062.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14215.2 6892.8 L 14171.1 7062.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14185.8 6867.7 L 13492.2 6679.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14215.2 6860.8 L 14169.9 6686.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14389.1 6897.4 L 14389.1 6977.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14389.1 6865.4 L 14389.1 6726.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14371.3 6897.4 L 14186.9 7062.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14389.1 7097.4 L 14389.1 7236.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14355.6 7081.4 L 14188.5 7081.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13815.0 7120.9 L 13815.0 7028.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13815.0 7152.9 L 13815.3 7268.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14267.3 7247.6 L 14267.3 7331.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14256.5 7215.6 L 14178.7 7099.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14030.3 7216.5 L 14147.7 7099.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13980.6 7241.3 L 13865.8 7271.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13640.1 7241.6 L 13764.8 7272.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13590.9 7217.4 L 13475.2 7099.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13606.5 7217.4 L 13606.5 6895.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 14210.7 6280.9 L 14241.5 6250.1"/>
+<path class="link" marker-end="url(#in)" d="M 14178.8 6280.9 L 14148.0 6250.1"/>
+<path class="link" marker-end="url(#in)" d="M 14178.7 6312.9 L 14148.0 6343.6"/>
+<path class="link" marker-start="url(#in)" d="M 14407.4 6495.8 L 14448.7 6532.0"/>
+<path class="link" marker-end="url(#in)" d="M 14372.6 6463.8 L 14340.9 6433.1"/>
+<path class="link" marker-end="url(#in)" d="M 14406.1 6463.8 L 14450.1 6422.2"/>
+<path class="link" marker-start="url(#in)" d="M 13616.0 6507.2 L 13642.2 6462.8"/>
+<path class="link" marker-start="url(#in)" d="M 13633.6 6539.2 L 13660.7 6555.2"/>
+<path class="link" marker-end="url(#in)" d="M 13590.9 6507.2 L 13560.1 6475.8"/>
+<path class="link" marker-end="url(#in)" d="M 13594.8 6539.2 L 13555.6 6592.7"/>
+<path class="link" marker-end="url(#in)" d="M 14003.8 6510.9 L 13963.7 6454.1"/>
+<path class="link" marker-end="url(#in)" d="M 13981.6 6529.3 L 13934.6 6532.7"/>
+<path class="link" marker-start="url(#in)" d="M 13805.6 6654.5 L 13771.5 6598.1"/>
+<path class="link" marker-end="url(#in)" d="M 13827.6 6654.5 L 13870.8 6598.0"/>
+<path class="link" marker-start="url(#in)" d="M 13393.3 6860.8 L 13367.5 6815.8"/>
+<path class="link" marker-end="url(#in)" d="M 13374.4 6892.8 L 13347.6 6908.2"/>
+<path class="link" marker-start="url(#in)" d="M 14190.9 6892.8 L 14152.9 6914.3"/>
+<path class="link" marker-start="url(#in)" d="M 14422.7 6881.4 L 14472.7 6881.4"/>
+<path class="link" marker-end="url(#in)" d="M 14402.6 6865.4 L 14453.5 6805.1"/>
+<path class="link" marker-end="url(#in)" d="M 14355.6 6881.4 L 14307.4 6881.4"/>
+<path class="link" marker-start="url(#in)" d="M 14372.6 7097.4 L 14340.9 7128.2"/>
+<path class="link" marker-end="url(#in)" d="M 14407.4 7097.4 L 14448.7 7133.6"/>
+<path class="link" marker-end="url(#in)" d="M 14410.2 7065.4 L 14447.6 7037.0"/>
+<path class="link" marker-start="url(#in)" d="M 13831.5 7152.9 L 13854.4 7175.1"/>
+<path class="link" marker-end="url(#in)" d="M 13798.5 7120.9 L 13773.0 7096.2"/>
+<path class="link" marker-end="url(#in)" d="M 13831.8 7120.9 L 13855.9 7098.0"/>
+<path class="link" marker-start="url(#in)" d="M 14286.5 7215.6 L 14305.2 7200.1"/>
+<path class="link" marker-end="url(#in)" d="M 14285.4 7247.6 L 14306.3 7266.1"/>
+<path class="link" marker-start="url(#in)" d="M 14004.8 7248.5 L 13978.7 7293.1"/>
+<path class="link" marker-start="url(#in)" d="M 13994.0 7216.5 L 13972.0 7199.2"/>
+<path class="link" marker-end="url(#in)" d="M 14047.8 7241.8 L 14080.4 7250.8"/>
+<path class="link" marker-end="url(#in)" d="M 14030.0 7248.5 L 14060.8 7279.7"/>
+<path class="link" marker-end="url(#in)" d="M 14047.8 7221.3 L 14099.5 7204.0"/>
+<path class="link" marker-start="url(#in)" d="M 13573.0 7233.0 L 13540.0 7232.7"/>
+<path class="link" marker-end="url(#in)" d="M 13618.2 7249.4 L 13657.6 7303.4"/>
+<path class="link" marker-end="url(#in)" d="M 13640.1 7223.8 L 13686.4 7210.7"/>
+<path class="link" marker-end="url(#in)" d="M 13594.8 7249.4 L 13555.6 7302.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glutathione-metabolism" transform="translate(13921.9,6161.4)"><rect rx="10" height="31" width="218" x="-109.0" y="-15.5"/><text dominant-baseline="central">glutathione metabolism</text></g>
+<g id="node3469" class="node nodeHM pw_glutathione-metabolism lid1024" transform="translate(13815.3,6469.6)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1024" target="_blank">5-oxo-Pro</a></text><title>5-oxoproline</title></g>
+<g id="node3473" class="node nodeHM pw_glutathione-metabolism lid43554" transform="translate(14165.8,6670.5)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43554" target="_blank">5-L-glutamyl-L-amino acid</a></text><title>5-L-glutamyl-L-amino acid</title></g>
+<g id="node3929" class="node nodeHM pw_glutathione-metabolism lid4246" transform="translate(13815.3,7284.4)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4246" target="_blank">gamma-Glu-Cys</a></text><title>gamma-L-glutamyl-L-cysteine</title></g>
+<g id="node3932" class="node nodeSM pw_glutathione-metabolism lid41" transform="translate(13606.5,6876.8)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node3934" class="node nodeSM pw_glutathione-metabolism lid44" transform="translate(14166.3,7081.4)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title>glutathione</title></g>
+<g id="node3939" class="node nodeSM pw_glutathione-metabolism lid74" transform="translate(13457.1,7080.7)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title>L-cysteine</title></g>
+<g id="node5443" class="node nodeHM pw_glutathione-metabolism lid973" transform="translate(14389.1,7252.0)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title>glutathione disulfide</title></g>
+<g id="node7566" class="node nodeHM pw_glutathione-metabolism lid4306" transform="translate(13458.6,6670.5)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4306" target="_blank">Cys-Gly</a></text><title>L-cysteinylglycine</title></g>
+<g id="node7567" class="node nodeHM pw_glutathione-metabolism lid47549" transform="translate(14267.3,7347.0)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47549" target="_blank">R-GSH</a></text><title>R-S-glutathione</title></g>
+<g id="node8051" class="node nodeHM pw_glutathione-metabolism lid3375" transform="translate(14389.1,6710.6)"><rect height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3375" target="_blank">N1-(g-Glu-Cys-Gly)-spermidine</a></text><title>Glutathionylspermidine</title></g>
+<g id="node8053" class="node nodeHM pw_glutathione-metabolism lid1726" transform="translate(14389.1,6296.9)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1726" target="_blank">trypanothione</a></text><title>Trypanothione</title></g>
+<g id="node8055" class="node nodeHM pw_glutathione-metabolism lid1390" transform="translate(13950.8,6296.9)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1390" target="_blank">Trypanothione disulfide</a></text><title>Trypanothione disulfide</title></g>
+<g id="node8056" class="node nodeHM pw_glutathione-metabolism lid148" transform="translate(14389.1,6993.8)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=148" target="_blank">spermidine</a></text><title>spermidine</title></g>
+<g id="node10861" class="node nodeHM pw_glutathione-metabolism lid15665" transform="translate(13815.0,7012.8)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15665" target="_blank">bis-gamma-glutamylcystine</a></text><title>bis-gamma-glutamylcystine</title></g>
+<g id="node8054" class="node nodeEN pw_glutathione-metabolism" transform="translate(14194.8,6296.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.12" target="_blank">1.8.1.12</a></text><title>trypanothione-disulfide reductase</title></g>
+<g id="node8052" class="node nodeEN pw_glutathione-metabolism" transform="translate(14389.1,6479.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.9" target="_blank">6.3.1.9</a></text><title>Trypanothione synthase</title></g>
+<g id="node3468" class="node nodeEN pw_glutathione-metabolism" transform="translate(13606.5,6523.2)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.9" target="_blank">3.5.2.9</a></text><title>5-oxoprolinase (ATP-hydrolysing)</title></g>
+<g id="node3472" class="node nodeEN pw_glutathione-metabolism" transform="translate(14015.1,6526.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.9" target="_blank">4.3.2.9</a></text><title>gamma-glutamylcyclotransferase</title></g>
+<g id="node7571" class="node nodeEN pw_glutathione-metabolism" transform="translate(13815.3,6670.5)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.19.13" target="_blank">3.4.19.13</a></text><title>glutathione gamma-glutamate hydrolase</title></g>
+<g id="node3463" class="node nodeEN pw_glutathione-metabolism" transform="translate(13402.4,6876.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.11.2" target="_blank">3.4.11.2</a></text><title>membrane alanyl aminopeptidase</title></g>
+<g id="node3475" class="node nodeEN pw_glutathione-metabolism" transform="translate(14219.3,6876.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.2" target="_blank">2.3.2.2</a></text><title>gamma-glutamyltransferase</title></g>
+<g id="node8050" class="node nodeEN pw_glutathione-metabolism" transform="translate(14389.1,6881.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.8" target="_blank">6.3.1.8</a></text><title>Glutathionylspermidine synthase</title></g>
+<g id="node7565" class="node nodeEN pw_glutathione-metabolism" transform="translate(14389.1,7081.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.7" target="_blank">1.8.1.7</a></text><title>glutathione-disulfide reductase</title></g>
+<g id="node10860" class="node nodeEN pw_glutathione-metabolism" transform="translate(13815.0,7136.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.13" target="_blank">1.8.1.13</a></text><title>bis-gamma-glutamylcystine reductase</title></g>
+<g id="node7569" class="node nodeEN pw_glutathione-metabolism" transform="translate(14267.3,7231.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.18" target="_blank">2.5.1.18</a></text><title>glutathione transferase</title></g>
+<g id="node3937" class="node nodeEN pw_glutathione-metabolism" transform="translate(14014.2,7232.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.3" target="_blank">6.3.2.3</a></text><title>Glutathione synthase</title></g>
+<g id="node3940" class="node nodeEN pw_glutathione-metabolism" transform="translate(13606.5,7233.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.2" target="_blank">6.3.2.2</a></text><title>Glutamate-cysteine ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3461" class="node nodeCM pw_glutathione-metabolism lid72" transform="translate(13325.3,6920.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title>glycine</title></g>
+<g id="node3462" class="node nodeCM pw_glutathione-metabolism lid1" transform="translate(13358.3,6799.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3464" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(13543.8,6608.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3465" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(13544.4,6459.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node3466" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(13682.9,6568.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3467" class="node nodeCM pw_glutathione-metabolism lid1" transform="translate(13651.7,6446.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3470" class="node nodeCM pw_glutathione-metabolism lid5166" transform="translate(13887.0,6536.1)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5166" target="_blank">L-Amino acid</a></text><title>L-Amino acid</title></g>
+<g id="node3471" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(13952.4,6438.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3474" class="node nodeCM pw_glutathione-metabolism lid5166" transform="translate(14124.5,6930.3)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5166" target="_blank">L-Amino acid</a></text><title>L-Amino acid</title></g>
+<g id="node3926" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(13669.2,7319.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3927" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(14099.8,7256.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3928" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(13951.8,7183.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3930" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(13705.8,7205.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3931" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(14118.9,7197.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node3933" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(13517.8,7232.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3935" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(14076.5,7295.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3936" class="node nodeCM pw_glutathione-metabolism lid72" transform="translate(13969.3,7309.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title>glycine</title></g>
+<g id="node3938" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(13543.8,7318.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node7562" class="node nodeCM pw_glutathione-metabolism lid10" transform="translate(14324.4,7144.2)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node7563" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(14467.0,7022.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node7564" class="node nodeCM pw_glutathione-metabolism lid5" transform="translate(14467.0,7149.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node7568" class="node nodeCM pw_glutathione-metabolism lid41" transform="translate(13883.0,6582.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node7570" class="node nodeCM pw_glutathione-metabolism lid31084" transform="translate(14324.4,7184.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31084" target="_blank">RX</a></text><title>RX</title></g>
+<g id="node8057" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(14495.0,6881.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node8058" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(14285.1,6881.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node8059" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(14467.0,6789.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node8060" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(14467.0,6548.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node8061" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(14324.4,6417.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node8062" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(14467.0,6406.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node8063" class="node nodeCM pw_glutathione-metabolism lid10" transform="translate(14257.5,6234.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node8064" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(14132.0,6359.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node8065" class="node nodeCM pw_glutathione-metabolism lid5" transform="translate(14132.0,6234.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node10616" class="node nodeCM pw_glutathione-metabolism lid20904" transform="translate(14324.4,7282.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20904" target="_blank">HX</a></text><title>HX</title></g>
+<g id="node10862" class="node nodeCM pw_glutathione-metabolism lid10" transform="translate(13870.9,7191.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node10863" class="node nodeCM pw_glutathione-metabolism lid5" transform="translate(13872.7,7082.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node10864" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(13756.5,7080.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node13563" class="node nodeCM pw_glutathione-metabolism lid1" transform="translate(13761.8,6582.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1454.6" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1600.9 2023.1" width="1601" height="2023" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1600.9" height="2023.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glutathione-metabolism" class="pw " x="0.0" y="0.0" width="1520.9" height="1927.6" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 736.3 868.6 L 540.4 778.9"/>
+<path class="link" marker-end="url(#in)" d="M 793.6 895.0 L 1013.1 996.7"/>
+<path class="link" marker-start="url(#in)" d="M 986.3 266.9 L 1048.0 440.8"/>
+<path class="link" marker-end="url(#in)" d="M 956.2 234.9 L 835.0 155.3"/>
+<path class="link" marker-start="url(#in)" d="M 649.6 139.3 L 775.5 139.3"/>
+<path class="link" marker-end="url(#in)" d="M 608.3 155.3 L 517.5 270.3"/>
+<path class="link" marker-start="url(#in)" d="M 505.4 496.6 L 504.9 302.3"/>
+<path class="link" marker-start="url(#in)" d="M 534.1 512.9 L 630.4 514.1"/>
+<path class="link" marker-end="url(#in)" d="M 505.4 528.6 L 505.4 746.9"/>
+<path class="link" marker-start="url(#in)" d="M 1158.3 739.1 C 1134.4 788.1 1060.3 939.6 1036.3 988.6"/>
+<path class="link" marker-end="url(#in)" d="M 1148.3 707.6 L 1060.4 627.6"/>
+<path class="link" marker-end="url(#in)" d="M 1159.2 707.6 L 1060.4 472.8"/>
+<path class="link" marker-start="url(#in)" d="M 1211.4 1117.6 L 1044.5 1013.8"/>
+<path class="link" marker-end="url(#in)" d="M 1259.8 1149.6 L 1367.1 1225.3"/>
+<path class="link" marker-start="url(#in)" d="M 324.4 763.7 L 457.3 763.1"/>
+<path class="link" marker-end="url(#in)" d="M 260.6 763.8 L 208.0 763.8"/>
+<path class="link" marker-start="url(#in)" d="M 1253.6 979.9 L 1044.5 1002.3"/>
+<path class="link" marker-end="url(#in)" d="M 1311.0 976.8 L 1449.0 976.8"/>
+<path class="link" marker-start="url(#in)" d="M 1065.9 857.6 L 1032.9 988.0"/>
+<path class="link" marker-end="url(#in)" d="M 1068.0 825.6 L 1044.7 627.6"/>
+<path class="link" marker-start="url(#in)" d="M 846.3 527.8 L 1014.2 599.3"/>
+<path class="link" marker-end="url(#in)" d="M 782.4 514.2 L 661.9 514.2"/>
+<path class="link" marker-start="url(#in)" d="M 903.0 1717.0 L 1014.7 1552.4"/>
+<path class="link" marker-end="url(#in)" d="M 883.9 1749.0 L 826.3 1861.6"/>
+<path class="link" marker-start="url(#in)" d="M 1000.0 1294.0 L 957.4 1320.5"/>
+<path class="link" marker-start="url(#in)" d="M 1025.8 1262.9 C 1026.3 1215.1 1028.1 1067.6 1028.6 1019.4"/>
+<path class="link" marker-end="url(#in)" d="M 1025.6 1293.4 C 1025.6 1339.3 1025.6 1475.3 1025.6 1521.1"/>
+<path class="link" marker-start="url(#in)" d="M 905.3 1195.9 L 811.6 1252.6"/>
+<path class="link" marker-start="url(#in)" d="M 940.6 1163.9 L 1020.0 1020.0"/>
+<path class="link" marker-end="url(#in)" d="M 931.8 1195.9 L 931.8 1320.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 749.6 897.7 L 719.9 928.8"/>
+<path class="link" marker-start="url(#in)" d="M 736.3 889.0 L 696.0 899.2"/>
+<path class="link" marker-end="url(#in)" d="M 773.4 865.7 L 797.2 820.4"/>
+<path class="link" marker-end="url(#in)" d="M 792.4 865.7 L 826.5 845.8"/>
+<path class="link" marker-end="url(#in)" d="M 793.6 882.6 L 838.2 883.9"/>
+<path class="link" marker-end="url(#in)" d="M 951.9 260.5 L 911.7 273.9"/>
+<path class="link" marker-end="url(#in)" d="M 951.9 244.0 L 926.4 237.9"/>
+<path class="link" marker-start="url(#in)" d="M 619.1 123.3 L 612.7 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 628.5 123.3 L 650.7 76.3"/>
+<path class="link" marker-end="url(#in)" d="M 622.8 155.3 L 629.2 210.0"/>
+<path class="link" marker-end="url(#in)" d="M 613.4 155.3 L 591.9 200.8"/>
+<path class="link" marker-start="url(#in)" d="M 489.9 496.6 L 460.1 465.8"/>
+<path class="link" marker-end="url(#in)" d="M 534.1 519.7 L 574.5 529.8"/>
+<path class="link" marker-end="url(#in)" d="M 520.9 528.6 L 552.5 561.3"/>
+<path class="link" marker-end="url(#in)" d="M 508.8 528.6 L 519.9 580.5"/>
+<path class="link" marker-start="url(#in)" d="M 1186.8 739.6 L 1226.0 769.5"/>
+<path class="link" marker-start="url(#in)" d="M 1236.7 1117.6 L 1235.0 1050.0"/>
+<path class="link" marker-end="url(#in)" d="M 1269.0 1120.9 L 1304.3 1106.9"/>
+<path class="link" marker-start="url(#in)" d="M 303.6 747.8 L 333.1 705.4"/>
+<path class="link" marker-end="url(#in)" d="M 287.0 779.8 L 268.7 833.5"/>
+<path class="link" marker-end="url(#in)" d="M 272.8 779.8 L 238.5 807.7"/>
+<path class="link" marker-start="url(#in)" d="M 1274.0 992.8 L 1243.3 1052.0"/>
+<path class="link" marker-end="url(#in)" d="M 1286.7 960.8 L 1302.0 905.5"/>
+<path class="link" marker-end="url(#in)" d="M 1299.7 960.8 L 1333.0 930.3"/>
+<path class="link" marker-start="url(#in)" d="M 1091.1 857.6 L 1123.9 882.3"/>
+<path class="link" marker-end="url(#in)" d="M 1094.6 825.6 L 1127.5 804.2"/>
+<path class="link" marker-start="url(#in)" d="M 832.6 498.2 L 864.4 470.4"/>
+<path class="link" marker-end="url(#in)" d="M 808.2 498.2 L 789.0 448.8"/>
+<path class="link" marker-start="url(#in)" d="M 885.1 1717.0 L 862.7 1666.0"/>
+<path class="link" marker-end="url(#in)" d="M 905.4 1749.0 L 936.7 1786.7"/>
+<path class="link" marker-end="url(#in)" d="M 894.3 1749.0 L 901.4 1801.9"/>
+<path class="link" marker-start="url(#in)" d="M 996.9 1262.7 L 964.2 1245.4"/>
+<path class="link" marker-end="url(#in)" d="M 1023.9 1262.0 L 1018.9 1214.0"/>
+<path class="link" marker-end="url(#in)" d="M 1012.3 1262.0 L 1006.0 1254.4"/>
+<path class="link" marker-start="url(#in)" d="M 936.5 1195.9 L 943.8 1221.0"/>
+<path class="link" marker-end="url(#in)" d="M 960.5 1186.0 L 1001.5 1194.7"/>
+<path class="link" marker-end="url(#in)" d="M 948.4 1195.9 L 981.0 1227.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glutathione-metabolism" transform="translate(760.5,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">glutathione metabolism</text></g>
+<g id="node3929" class="node nodeHM pw_glutathione-metabolism lid4246" transform="translate(505.4,762.9)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4246" target="_blank">gamma-Glu-Cys</a></text><title></title></g>
+<g id="node3934" class="node nodeHM pw_glutathione-metabolism lid44" transform="translate(1028.8,1004.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node3473" class="node nodeHM pw_glutathione-metabolism lid43554" transform="translate(1053.7,456.8)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43554" target="_blank">5-L-glutamyl-L-amino acid</a></text><title></title></g>
+<g id="node3469" class="node nodeHM pw_glutathione-metabolism lid1024" transform="translate(810.6,139.3)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1024" target="_blank">5-oxo-Pro</a></text><title></title></g>
+<g id="node3932" class="node nodeHM pw_glutathione-metabolism lid41" transform="translate(504.9,286.3)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node3939" class="node nodeHM pw_glutathione-metabolism lid74" transform="translate(646.2,514.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title></title></g>
+<g id="node7566" class="node nodeHM pw_glutathione-metabolism lid4306" transform="translate(1042.8,611.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4306" target="_blank">Cys-Gly</a></text><title></title></g>
+<g id="node7567" class="node nodeHM pw_glutathione-metabolism lid47549" transform="translate(1389.7,1241.3)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47549" target="_blank">R-S-glutathione</a></text><title></title></g>
+<g id="node10861" class="node nodeHM pw_glutathione-metabolism lid15665" transform="translate(121.0,763.8)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15665" target="_blank">bis-gamma-glutamylcystine</a></text><title></title></g>
+<g id="node5443" class="node nodeHM pw_glutathione-metabolism lid973" transform="translate(1468.0,976.8)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title></title></g>
+<g id="node8053" class="node nodeHM pw_glutathione-metabolism lid1726" transform="translate(1025.6,1536.4)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1726" target="_blank">trypanothione</a></text><title></title></g>
+<g id="node8055" class="node nodeHM pw_glutathione-metabolism lid1390" transform="translate(818.1,1877.6)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1390" target="_blank">Trypanothione disulfide</a></text><title></title></g>
+<g id="node8051" class="node nodeHM pw_glutathione-metabolism lid3375" transform="translate(931.8,1336.5)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3375" target="_blank">N1-(g-Glu-Cys-Gly)-spermidine</a></text><title></title></g>
+<g id="node8056" class="node nodeHM pw_glutathione-metabolism lid148" transform="translate(785.2,1268.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=148" target="_blank">spermidine</a></text><title></title></g>
+<g id="node3937" class="node nodeEN pw_glutathione-metabolism" transform="translate(765.0,881.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.3" target="_blank">6.3.2.3</a></text><title>Glutathione synthase</title></g>
+<g id="node3472" class="node nodeEN pw_glutathione-metabolism" transform="translate(980.6,250.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.9" target="_blank">4.3.2.9</a></text><title>gamma-glutamylcyclotransferase</title></g>
+<g id="node3468" class="node nodeEN pw_glutathione-metabolism" transform="translate(621.0,139.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.9" target="_blank">3.5.2.9</a></text><title>5-oxoprolinase (ATP-hydrolysing)</title></g>
+<g id="node3940" class="node nodeEN pw_glutathione-metabolism" transform="translate(505.4,512.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.2" target="_blank">6.3.2.2</a></text><title>Glutamate-cysteine ligase</title></g>
+<g id="node3475" class="node nodeEN pw_glutathione-metabolism" transform="translate(1165.9,723.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.2" target="_blank">2.3.2.2</a></text><title>gamma-glutamyltransferase</title></g>
+<g id="node7569" class="node nodeEN pw_glutathione-metabolism" transform="translate(1237.1,1133.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.18" target="_blank">2.5.1.18</a></text><title>glutathione transferase</title></g>
+<g id="node10860" class="node nodeEN pw_glutathione-metabolism" transform="translate(292.5,763.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.13" target="_blank">1.8.1.13</a></text><title>bis-gamma-glutamylcystine reductase</title></g>
+<g id="node7565" class="node nodeEN pw_glutathione-metabolism" transform="translate(1282.3,976.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.7" target="_blank">1.8.1.7</a></text><title>glutathione-disulfide reductase</title></g>
+<g id="node7571" class="node nodeEN pw_glutathione-metabolism" transform="translate(1069.9,841.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.19.13" target="_blank">3.4.19.13</a></text><title>glutathione gamma-glutamate hydrolase</title></g>
+<g id="node3463" class="node nodeEN pw_glutathione-metabolism" transform="translate(814.4,514.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.11.2" target="_blank">3.4.11.2</a></text><title>membrane alanyl aminopeptidase</title></g>
+<g id="node8054" class="node nodeEN pw_glutathione-metabolism" transform="translate(892.1,1733.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.12" target="_blank">1.8.1.12</a></text><title>trypanothione-disulfide reductase</title></g>
+<g id="node8052" class="node nodeEN pw_glutathione-metabolism" transform="translate(1025.6,1278.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.9" target="_blank">6.3.1.9</a></text><title>Trypanothione synthase</title></g>
+<g id="node8050" class="node nodeEN pw_glutathione-metabolism" transform="translate(931.8,1179.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.8" target="_blank">6.3.1.8</a></text><title>Glutathionylspermidine synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3937~0" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(704.6,944.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3937~1" class="node nodeCM pw_glutathione-metabolism lid72" transform="translate(680.3,903.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node3937~2" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(805.6,804.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3937~3" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(839.0,838.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3937~4" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(850.7,884.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node3472~0" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(899.2,278.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3472~1" class="node nodeCM pw_glutathione-metabolism lid5166" transform="translate(881.5,227.0)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5166" target="_blank">L-Amino acid</a></text><title></title></g>
+<g id="node3468~0" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(610.8,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3468~1" class="node nodeCM pw_glutathione-metabolism lid1" transform="translate(658.3,60.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3468~2" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(631.1,226.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3468~3" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(584.3,216.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node3940~0" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(444.7,449.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3940~1" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(590.2,533.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3940~2" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(565.0,574.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3940~3" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(523.3,596.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node3475~0" class="node nodeCM pw_glutathione-metabolism lid5166" transform="translate(1246.9,785.5)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5166" target="_blank">L-Amino acid</a></text><title></title></g>
+<g id="node7569~0" class="node nodeCM pw_glutathione-metabolism lid31084" transform="translate(1234.6,1034.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31084" target="_blank">RX</a></text><title></title></g>
+<g id="node7569~1" class="node nodeCM pw_glutathione-metabolism lid20904" transform="translate(1316.8,1102.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20904" target="_blank">HX</a></text><title></title></g>
+<g id="node10860~0" class="node nodeCM pw_glutathione-metabolism lid10" transform="translate(344.3,689.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10860~1" class="node nodeCM pw_glutathione-metabolism lid5" transform="translate(263.2,849.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10860~2" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(226.0,817.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7565~0" class="node nodeCM pw_glutathione-metabolism lid10" transform="translate(1235.0,1068.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7565~1" class="node nodeCM pw_glutathione-metabolism lid5" transform="translate(1306.4,889.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7565~2" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(1345.5,918.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7571~0" class="node nodeCM pw_glutathione-metabolism lid1" transform="translate(1139.6,894.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7571~1" class="node nodeCM pw_glutathione-metabolism lid41" transform="translate(1143.2,794.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node3463~0" class="node nodeCM pw_glutathione-metabolism lid1" transform="translate(880.1,456.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3463~1" class="node nodeCM pw_glutathione-metabolism lid72" transform="translate(782.8,432.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node8054~0" class="node nodeCM pw_glutathione-metabolism lid10" transform="translate(855.7,1650.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8054~1" class="node nodeCM pw_glutathione-metabolism lid5" transform="translate(950.0,1802.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8054~2" class="node nodeCM pw_glutathione-metabolism lid12" transform="translate(903.6,1817.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8050~0" class="node nodeCM pw_glutathione-metabolism lid4" transform="translate(948.4,1237.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8050~1" class="node nodeCM pw_glutathione-metabolism lid13" transform="translate(1017.3,1198.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node8050~2" class="node nodeCM pw_glutathione-metabolism lid16" transform="translate(993.5,1239.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>
+<text x="1464.6" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring+neato)</text></svg>

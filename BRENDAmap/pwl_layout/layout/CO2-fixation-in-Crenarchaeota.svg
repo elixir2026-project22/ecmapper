@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2100.1 2117.5" width="2100" height="2117" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2100.1" height="2117.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_CO2-fixation-in-Crenarchaeota" class="pw " x="0.0" y="0.0" width="1980.1" height="1982.0" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 930.9 1797.2 L 839.5 1797.2"/>
+<path class="link" marker-end="url(#in)" d="M 994.8 1797.2 L 1053.8 1797.2"/>
+<path class="link" marker-start="url(#in)" d="M 1245.1 1748.6 L 1166.5 1781.2"/>
+<path class="link" marker-end="url(#in)" d="M 1315.4 1719.5 L 1394.1 1686.9"/>
+<path class="link" marker-start="url(#in)" d="M 1533.4 1570.2 L 1448.7 1654.9"/>
+<path class="link" marker-end="url(#in)" d="M 1565.4 1538.2 L 1650.1 1453.6"/>
+<path class="link" marker-start="url(#in)" d="M 1722.6 1301.1 L 1672.7 1421.6"/>
+<path class="link" marker-end="url(#in)" d="M 1735.8 1269.1 L 1785.7 1148.7"/>
+<path class="link" marker-start="url(#in)" d="M 1792.3 983.7 L 1792.3 1116.7"/>
+<path class="link" marker-end="url(#in)" d="M 1792.3 951.7 L 1792.3 818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1565.4 397.1 L 1650.1 481.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1533.4 365.1 L 1448.7 280.4"/>
+<path class="link" marker-start="url(#in)" d="M 1312.2 214.5 L 1394.1 248.4"/>
+<path class="link" marker-end="url(#in)" d="M 1248.4 188.1 L 1166.5 154.2"/>
+<path class="link" marker-start="url(#in)" d="M 994.8 138.2 L 1083.0 138.2"/>
+<path class="link" marker-end="url(#in)" d="M 930.9 138.2 L 849.2 138.2"/>
+<path class="link" marker-start="url(#in)" d="M 685.0 236.8 L 779.5 154.2"/>
+<path class="link" marker-end="url(#in)" d="M 634.8 254.9 L 557.3 260.1"/>
+<path class="link" marker-start="url(#in)" d="M 658.8 146.6 L 746.5 141.3"/>
+<path class="link" marker-end="url(#in)" d="M 605.5 164.7 L 511.0 248.4"/>
+<path class="link" marker-start="url(#in)" d="M 427.7 409.3 L 485.7 280.4"/>
+<path class="link" marker-end="url(#in)" d="M 388.5 439.7 L 295.1 481.8"/>
+<path class="link" marker-start="url(#in)" d="M 362.4 325.2 L 458.6 280.4"/>
+<path class="link" marker-end="url(#in)" d="M 326.3 354.6 L 267.1 481.8"/>
+<path class="link" marker-start="url(#in)" d="M 203.1 634.2 L 253.0 513.8"/>
+<path class="link" marker-end="url(#in)" d="M 189.8 666.2 L 139.9 786.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 188.3 951.7 L 139.2 818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 188.3 983.7 L 139.2 1116.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 75.4 951.7 L 127.1 818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 75.4 983.7 L 127.1 1116.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 240.5 1244.5 L 148.7 1148.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 256.2 1276.5 L 259.3 1421.6"/>
+<path class="link" marker-start="url(#in)" d="M 136.7 1293.7 L 133.7 1148.7"/>
+<path class="link" marker-end="url(#in)" d="M 152.4 1325.7 L 244.3 1421.6"/>
+<path class="link" marker-start="url(#in)" d="M 360.3 1538.2 L 275.6 1453.6"/>
+<path class="link" marker-end="url(#in)" d="M 392.3 1570.2 L 477.0 1654.9"/>
+<path class="link" marker-start="url(#in)" d="M 641.8 1783.3 L 514.1 1686.9"/>
+<path class="link" marker-start="url(#in)" d="M 651.4 1814.8 C 632.2 1840.3 594.1 1891.1 575.0 1916.6"/>
+<path class="link" marker-end="url(#in)" d="M 691.7 1798.9 L 756.2 1797.8"/>
+<path class="link" marker-start="url(#in)" d="M 1790.8 587.7 C 1824.4 582.9 1880.2 574.9 1908.8 570.9"/>
+<path class="link" marker-start="url(#in)" d="M 1765.1 607.6 L 1790.1 786.7"/>
+<path class="link" marker-end="url(#in)" d="M 1746.4 575.6 L 1682.6 513.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 951.6 1813.2 L 922.1 1855.4"/>
+<path class="link" marker-end="url(#in)" d="M 968.2 1813.2 L 986.2 1866.8"/>
+<path class="link" marker-end="url(#in)" d="M 982.8 1813.2 L 1015.8 1839.6"/>
+<path class="link" marker-start="url(#in)" d="M 1276.7 1750.0 L 1264.2 1806.5"/>
+<path class="link" marker-end="url(#in)" d="M 1305.4 1750.0 L 1334.5 1768.6"/>
+<path class="link" marker-start="url(#in)" d="M 1557.2 1570.2 L 1579.9 1616.7"/>
+<path class="link" marker-start="url(#in)" d="M 1547.7 1570.2 L 1541.9 1625.1"/>
+<path class="link" marker-end="url(#in)" d="M 1541.6 1538.2 L 1518.9 1491.7"/>
+<path class="link" marker-end="url(#in)" d="M 1551.1 1538.2 L 1556.8 1483.3"/>
+<path class="link" marker-end="url(#in)" d="M 1764.4 1277.3 L 1798.8 1269.7"/>
+<path class="link" marker-start="url(#in)" d="M 1815.2 983.7 L 1844.4 1004.1"/>
+<path class="link" marker-end="url(#in)" d="M 1815.2 951.7 L 1844.4 931.3"/>
+<path class="link" marker-start="url(#in)" d="M 968.3 122.2 L 986.8 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 982.6 122.2 L 1017.0 94.3"/>
+<path class="link" marker-end="url(#in)" d="M 957.5 154.2 L 939.5 207.8"/>
+<path class="link" marker-end="url(#in)" d="M 942.9 154.2 L 909.9 180.6"/>
+<path class="link" marker-start="url(#in)" d="M 670.2 236.8 L 682.4 181.9"/>
+<path class="link" marker-end="url(#in)" d="M 663.2 268.8 L 651.0 323.6"/>
+<path class="link" marker-start="url(#in)" d="M 627.2 132.7 L 639.7 76.3"/>
+<path class="link" marker-end="url(#in)" d="M 620.1 164.7 L 607.5 221.2"/>
+<path class="link" marker-start="url(#in)" d="M 412.6 409.3 L 390.0 362.8"/>
+<path class="link" marker-start="url(#in)" d="M 422.1 409.3 L 427.9 354.4"/>
+<path class="link" marker-end="url(#in)" d="M 428.3 441.3 L 450.9 487.8"/>
+<path class="link" marker-end="url(#in)" d="M 418.8 441.3 L 413.0 496.2"/>
+<path class="link" marker-start="url(#in)" d="M 330.9 322.6 L 320.5 263.7"/>
+<path class="link" marker-end="url(#in)" d="M 336.5 354.6 L 347.2 415.0"/>
+<path class="link" marker-end="url(#in)" d="M 161.3 658.0 L 126.9 665.7"/>
+<path class="link" marker-start="url(#in)" d="M 171.4 951.7 L 138.4 928.6"/>
+<path class="link" marker-start="url(#in)" d="M 86.2 951.7 L 107.0 932.3"/>
+<path class="link" marker-start="url(#in)" d="M 224.0 1253.4 L 188.0 1245.5"/>
+<path class="link" marker-end="url(#in)" d="M 248.4 1276.5 L 231.4 1313.0"/>
+<path class="link" marker-start="url(#in)" d="M 144.5 1293.7 L 161.5 1257.2"/>
+<path class="link" marker-end="url(#in)" d="M 169.0 1316.8 L 205.0 1324.8"/>
+<path class="link" marker-start="url(#in)" d="M 347.6 1559.3 L 306.0 1566.6"/>
+<path class="link" marker-start="url(#in)" d="M 652.2 1815.3 L 624.9 1855.7"/>
+<path class="link" marker-end="url(#in)" d="M 668.2 1783.3 L 684.9 1732.3"/>
+<path class="link" marker-end="url(#in)" d="M 682.1 1783.3 L 716.3 1754.7"/>
+<path class="link" marker-start="url(#in)" d="M 1791.6 586.1 L 1833.0 578.1"/>
+<path class="link" marker-end="url(#in)" d="M 1734.2 606.2 L 1700.7 623.2"/>
+<path class="link" marker-end="url(#in)" d="M 1734.2 589.1 L 1690.0 585.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_CO2-fixation-in-Crenarchaeota" transform="translate(990.1,0.0)"><rect rx="10" height="31" width="292" x="-145.9" y="-15.5"/><text dominant-baseline="central">CO2 fixation in Crenarchaeota</text></g>
+<g id="node10133" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid76" transform="translate(797.8,1797.2)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node10057" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid2969" transform="translate(1127.8,1797.2)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2969" target="_blank">malonate semialdehyde</a></text><title></title></g>
+<g id="node10134" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid1632" transform="translate(1432.7,1670.9)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1632" target="_blank">3-Hydroxypropionate</a></text><title></title></g>
+<g id="node10145" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid30964" transform="translate(1666.1,1437.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30964" target="_blank">3-Hydroxypropanoyl-CoA</a></text><title></title></g>
+<g id="node10148" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid2191" transform="translate(1792.3,1132.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2191" target="_blank">acryloyl-CoA</a></text><title></title></g>
+<g id="node10150" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid782" transform="translate(1792.3,802.7)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title></title></g>
+<g id="node9105" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid2455" transform="translate(1666.1,497.8)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2455" target="_blank">(S)-methylmalonyl-CoA</a></text><title></title></g>
+<g id="node9079" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid21229" transform="translate(1432.7,264.4)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21229" target="_blank">(R)-methylmalonyl-CoA</a></text><title></title></g>
+<g id="node2329" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid224" transform="translate(1127.8,138.2)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node9136" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid6454" transform="translate(797.8,138.2)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6454" target="_blank">4-oxobutanoate</a></text><title></title></g>
+<g id="node9120" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid4210" transform="translate(493.0,264.4)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4210" target="_blank">4-hydroxybutanoate</a></text><title></title></g>
+<g id="node9130" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid8018" transform="translate(259.6,497.8)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8018" target="_blank">4-hydroxybutanoyl-CoA</a></text><title></title></g>
+<g id="node9102" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid406" transform="translate(133.3,802.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=406" target="_blank">crotonyl-CoA</a></text><title></title></g>
+<g id="node9096" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid7958" transform="translate(133.3,1132.7)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7958" target="_blank">(S)-3-OH-butanoyl-CoA</a></text><title></title></g>
+<g id="node9128" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid187" transform="translate(259.6,1437.6)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=187" target="_blank">acetoacetyl-CoA</a></text><title></title></g>
+<g id="node9095" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid29" transform="translate(493.0,1670.9)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node10125" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid195" transform="translate(563.4,1932.0)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title></title></g>
+<g id="node9114" class="node nodeHM pw_CO2-fixation-in-Crenarchaeota lid195" transform="translate(1927.1,568.2)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title></title></g>
+<g id="node10126" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(962.8,1797.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.75" target="_blank">1.2.1.75</a></text><title>malonyl-CoA reductase (malonate semialdehyde-forming)</title></g>
+<g id="node10147" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(1280.3,1734.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.298" target="_blank">1.1.1.298</a></text><title>3-hydroxypropionate dehydrogenase (NADP+)</title></g>
+<g id="node10140" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(1549.4,1554.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.36" target="_blank">6.2.1.36</a></text><title>3-hydroxypropionyl-CoA synthase</title></g>
+<g id="node10137" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(1729.2,1285.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.116" target="_blank">4.2.1.116</a></text><title>3-hydroxypropionyl-CoA dehydratase</title></g>
+<g id="node10131" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(1792.3,967.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.84" target="_blank">1.3.1.84</a></text><title>acrylyl-CoA reductase (NADPH)</title></g>
+<g id="node9112" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(1549.4,381.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.1" target="_blank">5.1.99.1</a></text><title>Methylmalonyl-CoA epimerase</title></g>
+<g id="node9198" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(1280.3,201.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.2" target="_blank">5.4.99.2</a></text><title>Methylmalonyl-CoA mutase</title></g>
+<g id="node9138" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(962.8,138.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.76" target="_blank">1.2.1.76</a></text><title>succinate-semialdehyde dehydrogenase (acylating)</title></g>
+<g id="node9122" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(666.7,252.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.61" target="_blank">1.1.1.61</a></text><title>4-hydroxybutyrate dehydrogenase; succinate semialdehyde reductase (NADPH)</title></g>
+<g id="node2297" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(623.6,148.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.B47" target="_blank">1.1.1.B47</a></text><title>4-hydroxybutyrate dehydrogenase; succinate semialdehyde reductase (NADPH)</title></g>
+<g id="node9197" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(420.5,425.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.40" target="_blank">6.2.1.40</a></text><title>4-hydroxybutyrate-CoA ligase (AMP-forming); propionate CoA-transferase</title></g>
+<g id="node11232" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(333.7,338.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.1" target="_blank">2.8.3.1</a></text><title>4-hydroxybutyrate-CoA ligase (AMP-forming); propionate CoA-transferase</title></g>
+<g id="node9093" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(196.5,650.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.120" target="_blank">4.2.1.120</a></text><title>4-hydroxybutanoyl-CoA dehydratase</title></g>
+<g id="node9091" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(194.2,967.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.55" target="_blank">4.2.1.55</a></text><title>3-Hydroxybutyryl-CoA dehydratase; short-chain-enoyl-CoA hydratase</title></g>
+<g id="node2299" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(69.2,967.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.150" target="_blank">4.2.1.150</a></text><title>3-Hydroxybutyryl-CoA dehydratase; short-chain-enoyl-CoA hydratase</title></g>
+<g id="node9133" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(255.9,1260.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.36" target="_blank">1.1.1.36</a></text><title>acetoacetyl-CoA reductase; 3-hydroxyacyl-CoA dehydrogenase</title></g>
+<g id="node2298" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(137.1,1309.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.35" target="_blank">1.1.1.35</a></text><title>acetoacetyl-CoA reductase; 3-hydroxyacyl-CoA dehydrogenase</title></g>
+<g id="node9109" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(376.3,1554.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.9" target="_blank">2.3.1.9</a></text><title>acetyl-CoA C-acetyltransferase</title></g>
+<g id="node10132" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(663.0,1799.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.4.1.2" target="_blank">6.4.1.2</a></text><title>acetyl-CoA carboxylase</title></g>
+<g id="node9104" class="node nodeEN pw_CO2-fixation-in-Crenarchaeota" transform="translate(1762.9,591.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.4.1.3" target="_blank">6.4.1.3</a></text><title>propionyl-CoA carboxylase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10126~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid5" transform="translate(910.9,1871.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10126~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid10" transform="translate(991.6,1882.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10126~2" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid18" transform="translate(1031.5,1852.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10147~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid5" transform="translate(1260.7,1822.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10147~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid10" transform="translate(1356.7,1782.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10140~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid4" transform="translate(1587.7,1632.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10140~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid18" transform="translate(1540.3,1641.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10140~2" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid30" transform="translate(1511.1,1475.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10140~3" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid17" transform="translate(1558.5,1467.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10137~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid1" transform="translate(1814.5,1266.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10131~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid5" transform="translate(1866.6,1019.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10131~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid10" transform="translate(1866.6,915.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9138~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid5" transform="translate(992.3,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9138~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid12" transform="translate(1029.5,84.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9138~2" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid10" transform="translate(934.1,223.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9138~3" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid18" transform="translate(894.2,193.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9122~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid8" transform="translate(686.0,165.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9122~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid7" transform="translate(647.4,339.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2297~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid5" transform="translate(643.2,60.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2297~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid10" transform="translate(604.0,237.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9197~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid4" transform="translate(382.2,346.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9197~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid18" transform="translate(429.6,338.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9197~2" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid30" transform="translate(458.7,503.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node9197~3" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid17" transform="translate(411.3,512.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11232~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid29" transform="translate(317.7,247.7)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node11232~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid47" transform="translate(350.0,431.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node9093~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid1" transform="translate(111.2,669.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2299~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid1" transform="translate(122.7,917.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2298~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid7" transform="translate(169.0,1241.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2298~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid8" transform="translate(223.9,1329.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9109~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid18" transform="translate(290.2,1569.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10132~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid4" transform="translate(614.0,1871.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10132~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid13" transform="translate(690.1,1716.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10132~2" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid16" transform="translate(728.8,1744.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9104~0" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid4" transform="translate(1848.7,575.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9104~1" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid13" transform="translate(1685.0,631.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9104~2" class="node nodeCM pw_CO2-fixation-in-Crenarchaeota lid16" transform="translate(1677.5,584.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>

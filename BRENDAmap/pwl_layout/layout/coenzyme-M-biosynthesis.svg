@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2320.9 3005.6" width="2321" height="3006" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2320.9" height="3005.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_coenzyme-M-biosynthesis" class="pw " x="0.0" y="0.0" width="2200.9" height="2870.1" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 548.6 2624.9 L 362.8 2401.2"/>
+<path class="link" marker-start="url(#in)" d="M 561.2 2656.9 L 554.3 2804.1"/>
+<path class="link" marker-end="url(#in)" d="M 562.2 2624.9 L 565.8 2423.3"/>
+<path class="link" marker-start="url(#in)" d="M 579.3 2114.3 C 610.1 2078.6 686.5 1989.9 717.3 1954.1"/>
+<path class="link" marker-start="url(#in)" d="M 558.0 2114.1 C 539.0 2077.8 491.8 1987.7 472.9 1951.6"/>
+<path class="link" marker-start="url(#in)" d="M 552.6 2145.6 L 363.1 2369.2"/>
+<path class="link" marker-end="url(#in)" d="M 566.1 2145.6 L 566.1 2391.3"/>
+<path class="link" marker-end="url(#in)" d="M 586.8 2114.2 C 616.0 2092.5 669.2 2053.1 698.5 2031.3"/>
+<path class="link" marker-start="url(#in)" d="M 639.3 1893.5 C 663.7 1905.6 696.5 1921.9 715.4 1931.2"/>
+<path class="link" marker-start="url(#in)" d="M 577.0 1890.7 C 547.1 1902.9 503.0 1920.8 480.1 1930.1"/>
+<path class="link" marker-end="url(#in)" d="M 620.4 1893.3 C 641.8 1919.8 685.5 1974.0 706.9 2000.5"/>
+<path class="link" marker-start="url(#in)" d="M 638.0 1980.8 C 662.8 1969.6 696.3 1954.3 715.5 1945.6"/>
+<path class="link" marker-start="url(#in)" d="M 575.6 1982.2 C 545.9 1969.9 502.5 1951.9 479.8 1942.5"/>
+<path class="link" marker-end="url(#in)" d="M 638.7 2001.0 L 677.7 2008.1"/>
+<path class="link" marker-start="url(#in)" d="M 639.3 1937.1 C 663.7 1937.5 696.5 1938.1 715.4 1938.5"/>
+<path class="link" marker-start="url(#in)" d="M 577.0 1936.5 C 547.1 1936.4 503.0 1936.4 480.1 1936.3"/>
+<path class="link" marker-end="url(#in)" d="M 629.8 1952.0 C 649.4 1966.0 678.1 1986.4 697.6 2000.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 758.8 135.7 L 655.6 63.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 811.7 167.7 L 939.5 235.9"/>
+<path class="link" marker-start="url(#in)" d="M 1141.2 349.5 L 997.6 267.9"/>
+<path class="link" marker-end="url(#in)" d="M 1189.0 381.5 L 1345.1 508.9"/>
+<path class="link" marker-start="url(#in)" d="M 1432.1 641.4 L 1373.9 540.9"/>
+<path class="link" marker-end="url(#in)" d="M 1439.2 672.9 C 1432.5 720.9 1411.9 867.1 1405.2 914.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1400.0 700.6 C 1392.8 664.9 1375.0 576.2 1367.8 540.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1403.0 731.9 L 1403.0 914.2"/>
+<path class="link" marker-start="url(#in)" d="M 1160.3 943.1 L 1348.4 933.1"/>
+<path class="link" marker-end="url(#in)" d="M 1096.5 945.7 L 911.4 950.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 615.6 952.1 L 789.2 952.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 573.6 967.9 L 384.3 1110.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 230.0 1276.7 L 348.8 1142.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 216.0 1308.1 C 216.5 1348.4 217.7 1456.3 218.1 1496.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 218.3 1717.0 L 218.3 1527.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 236.8 1748.3 C 283.8 1787.0 406.6 1888.2 449.7 1923.8"/>
+<path class="link" marker-start="url(#in)" d="M 852.0 1938.7 L 746.3 1938.7"/>
+<path class="link" marker-end="url(#in)" d="M 852.5 1952.2 C 824.4 1965.6 781.1 1986.3 751.5 2000.4"/>
+<path class="link" marker-start="url(#in)" d="M 2001.2 1408.8 L 2099.1 1488.5"/>
+<path class="link" marker-end="url(#in)" d="M 1964.4 1376.8 L 1834.7 1255.7"/>
+<path class="link" marker-start="url(#in)" d="M 1644.6 1085.3 L 1799.6 1223.7"/>
+<path class="link" marker-end="url(#in)" d="M 1600.9 1053.3 L 1428.7 946.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 595.5 1894.1 L 550.3 1951.4"/>
+<path class="link" marker-start="url(#in)" d="M 576.2 1883.9 L 570.1 1885.0"/>
+<path class="link" marker-start="url(#in)" d="M 576.2 1872.6 L 536.1 1865.6"/>
+<path class="link" marker-end="url(#in)" d="M 619.2 1862.1 L 674.5 1782.6"/>
+<path class="link" marker-end="url(#in)" d="M 640.0 1876.0 L 642.0 1875.9"/>
+<path class="link" marker-start="url(#in)" d="M 590.0 2011.1 L 516.7 2081.2"/>
+<path class="link" marker-start="url(#in)" d="M 574.9 2009.0 L 534.0 2026.8"/>
+<path class="link" marker-end="url(#in)" d="M 625.5 1979.1 L 696.2 1918.6"/>
+<path class="link" marker-end="url(#in)" d="M 638.7 1990.1 L 679.5 1983.8"/>
+<path class="link" marker-start="url(#in)" d="M 598.2 1952.6 L 538.5 2048.7"/>
+<path class="link" marker-start="url(#in)" d="M 587.5 1952.6 L 541.2 1988.6"/>
+<path class="link" marker-start="url(#in)" d="M 576.2 1936.0 L 537.7 1935.3"/>
+<path class="link" marker-end="url(#in)" d="M 620.8 1920.6 L 703.5 1816.6"/>
+<path class="link" marker-end="url(#in)" d="M 640.0 1940.1 L 655.5 1941.8"/>
+<path class="link" marker-start="url(#in)" d="M 762.5 167.7 L 728.8 195.8"/>
+<path class="link" marker-start="url(#in)" d="M 749.8 156.1 L 709.3 161.6"/>
+<path class="link" marker-start="url(#in)" d="M 1169.3 349.5 L 1168.9 294.1"/>
+<path class="link" marker-end="url(#in)" d="M 1201.3 353.7 L 1237.3 340.3"/>
+<path class="link" marker-start="url(#in)" d="M 1413.2 641.4 L 1384.8 625.3"/>
+<path class="link" marker-end="url(#in)" d="M 1469.6 673.4 L 1498.0 689.5"/>
+<path class="link" marker-start="url(#in)" d="M 1374.9 699.9 L 1344.6 682.7"/>
+<path class="link" marker-end="url(#in)" d="M 1431.2 731.9 L 1461.4 749.1"/>
+<path class="link" marker-start="url(#in)" d="M 1138.7 928.8 L 1164.5 888.7"/>
+<path class="link" marker-end="url(#in)" d="M 1116.2 928.8 L 1087.7 891.3"/>
+<path class="link" marker-start="url(#in)" d="M 599.0 936.1 L 613.4 883.9"/>
+<path class="link" marker-end="url(#in)" d="M 581.9 936.1 L 552.9 899.9"/>
+<path class="link" marker-end="url(#in)" d="M 573.6 944.8 L 526.2 928.1"/>
+<path class="link" marker-start="url(#in)" d="M 194.8 1278.7 L 145.2 1245.8"/>
+<path class="link" marker-start="url(#in)" d="M 211.4 1276.7 L 193.2 1211.8"/>
+<path class="link" marker-end="url(#in)" d="M 226.8 1308.7 L 275.4 1379.4"/>
+<path class="link" marker-start="url(#in)" d="M 197.3 1731.2 L 147.0 1727.0"/>
+<path class="link" marker-end="url(#in)" d="M 239.3 1722.2 L 280.3 1701.2"/>
+<path class="link" marker-end="url(#in)" d="M 239.3 1734.8 L 281.5 1738.3"/>
+<path class="link" marker-end="url(#in)" d="M 239.3 1748.7 L 274.4 1775.1"/>
+<path class="link" marker-start="url(#in)" d="M 869.6 1922.7 L 819.8 1850.6"/>
+<path class="link" marker-end="url(#in)" d="M 852.0 1953.2 L 825.5 1966.5"/>
+<path class="link" marker-start="url(#in)" d="M 2013.4 1385.1 L 2044.0 1377.6"/>
+<path class="link" marker-end="url(#in)" d="M 1983.3 1376.8 L 1989.2 1323.6"/>
+<path class="link" marker-start="url(#in)" d="M 1655.3 1059.9 L 1693.9 1047.1"/>
+<path class="link" marker-end="url(#in)" d="M 1598.0 1078.8 L 1559.4 1091.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_coenzyme-M-biosynthesis" transform="translate(1100.4,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">coenzyme M biosynthesis</text></g>
+<g id="node3228" class="node nodeHM pw_coenzyme-M-biosynthesis lid22131" transform="translate(349.5,2385.2)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22131" target="_blank">methanophenazine</a></text><title></title></g>
+<g id="node12187" class="node nodeHM pw_coenzyme-M-biosynthesis lid361" transform="translate(553.5,2820.1)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=361" target="_blank">H2</a></text><title></title></g>
+<g id="node3229" class="node nodeHM pw_coenzyme-M-biosynthesis lid13397" transform="translate(566.1,2407.3)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13397" target="_blank">dihydromethanophenazine</a></text><title></title></g>
+<g id="node3226" class="node nodeHM pw_coenzyme-M-biosynthesis lid2300" transform="translate(730.5,1938.7)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2300" target="_blank">CoB</a></text><title></title></g>
+<g id="node7508" class="node nodeHM pw_coenzyme-M-biosynthesis lid1614" transform="translate(464.9,1936.3)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1614" target="_blank">CoM</a></text><title></title></g>
+<g id="node3227" class="node nodeHM pw_coenzyme-M-biosynthesis lid5687" transform="translate(719.3,2015.8)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5687" target="_blank">CoM-S-S-CoB</a></text><title></title></g>
+<g id="node7489" class="node nodeHM pw_coenzyme-M-biosynthesis lid51" transform="translate(639.9,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=51" target="_blank">PEP</a></text><title></title></g>
+<g id="node7486" class="node nodeHM pw_coenzyme-M-biosynthesis lid50394" transform="translate(969.4,251.9)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50394" target="_blank">(2R)-O-phospho-3-sulfolactate</a></text><title></title></g>
+<g id="node7490" class="node nodeHM pw_coenzyme-M-biosynthesis lid13424" transform="translate(1364.7,524.9)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13424" target="_blank">(2R)-3-sulfolactate</a></text><title></title></g>
+<g id="node7491" class="node nodeHM pw_coenzyme-M-biosynthesis lid3119" transform="translate(1403.0,930.2)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3119" target="_blank">3-sulfopyruvate</a></text><title></title></g>
+<g id="node7494" class="node nodeHM pw_coenzyme-M-biosynthesis lid7288" transform="translate(850.3,952.1)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7288" target="_blank">sulfoacetaldehyde</a></text><title></title></g>
+<g id="node7505" class="node nodeHM pw_coenzyme-M-biosynthesis lid188809" transform="translate(362.9,1126.0)"><rect height="30.0" width="308.1" x="-154.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188809" target="_blank">2-(sulfomethyl)-1,3-thiazolidine-4-carboxylate</a></text><title></title></g>
+<g id="node7506" class="node nodeHM pw_coenzyme-M-biosynthesis lid190017" transform="translate(218.3,1511.9)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=190017" target="_blank">S-(2-sulfoethyl)-L-cysteine</a></text><title></title></g>
+<g id="node11120" class="node nodeHM pw_coenzyme-M-biosynthesis lid1189" transform="translate(2118.8,1504.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1189" target="_blank">O-phospho-Ser</a></text><title></title></g>
+<g id="node11122" class="node nodeHM pw_coenzyme-M-biosynthesis lid4827" transform="translate(1817.6,1239.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4827" target="_blank">L-cysteate</a></text><title></title></g>
+<g id="node10836" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(561.9,2640.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.12.98.3" target="_blank">1.12.98.3</a></text><title>Methanosarcina-phenazine hydrogenase</title></g>
+<g id="node3230" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(566.1,2129.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.98.1" target="_blank">1.8.98.1</a></text><title>dihydromethanophenazine:CoB-CoM heterodisulfide reductase</title></g>
+<g id="node1485" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(608.1,1878.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.98.4" target="_blank">1.8.98.4</a></text><title>coenzyme F420:CoB-CoM heterodisulfide,ferredoxin reductase</title></g>
+<g id="node1484" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(606.8,1995.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.98.5" target="_blank">1.8.98.5</a></text><title>H2:CoB-CoM heterodisulfide,ferredoxin reductase</title></g>
+<g id="node1483" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(608.1,1936.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.98.6" target="_blank">1.8.98.6</a></text><title>formate:CoB-CoM heterodisulfide,ferredoxin reductase</title></g>
+<g id="node7488" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(781.7,151.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.19" target="_blank">4.4.1.19</a></text><title>phosphosulfolactate synthase</title></g>
+<g id="node7481" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(1169.4,365.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.71" target="_blank">3.1.3.71</a></text><title>2-phosphosulfolactate phosphatase</title></g>
+<g id="node7484" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(1441.4,657.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.375" target="_blank">1.1.1.375</a></text><title>L-2-hydroxycarboxylate dehydrogenase [NAD(P)+]; L-2-hydroxycarboxylate dehydrogenase (NAD+)</title></g>
+<g id="node2722" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(1403.0,715.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.337" target="_blank">1.1.1.337</a></text><title>L-2-hydroxycarboxylate dehydrogenase [NAD(P)+]; L-2-hydroxycarboxylate dehydrogenase (NAD+)</title></g>
+<g id="node7493" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(1128.4,944.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.79" target="_blank">4.1.1.79</a></text><title>sulfopyruvate decarboxylase</title></g>
+<g id="node7496" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(594.6,952.1)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>unknown enzyme</title></g>
+<g id="node7504" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(215.8,1292.7)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>unknown enzyme</title></g>
+<g id="node7507" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(218.3,1733.0)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>unknown enzyme</title></g>
+<g id="node3225" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(880.6,1938.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.4.1" target="_blank">2.8.4.1</a></text><title>coenzyme-B sulfoethylthiotransferase</title></g>
+<g id="node11121" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(1981.5,1392.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.76" target="_blank">2.5.1.76</a></text><title>cysteate synthase</title></g>
+<g id="node11123" class="node nodeEN pw_coenzyme-M-biosynthesis" transform="translate(1626.6,1069.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.1" target="_blank">2.6.1.1</a></text><title>aspartate transaminase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1485~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid1665" transform="translate(537.7,1967.4)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1665" target="_blank">F420 (ox)</a></text><title></title></g>
+<g id="node1485~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid202701" transform="translate(482.2,1901.0)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1485~2" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(523.6,1863.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1485~3" class="node nodeCM pw_coenzyme-M-biosynthesis lid1244" transform="translate(685.7,1766.6)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1244" target="_blank">F420 (red)</a></text><title></title></g>
+<g id="node1485~4" class="node nodeCM pw_coenzyme-M-biosynthesis lid202698" transform="translate(758.2,1868.6)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1484~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid202701" transform="translate(500.0,2097.2)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1484~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(521.5,2032.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1484~2" class="node nodeCM pw_coenzyme-M-biosynthesis lid202698" transform="translate(714.9,1902.6)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1484~3" class="node nodeCM pw_coenzyme-M-biosynthesis lid361" transform="translate(692.0,1981.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=361" target="_blank">H2</a></text><title></title></g>
+<g id="node1483~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid202701" transform="translate(528.6,2064.7)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1483~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(528.7,1998.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1483~2" class="node nodeCM pw_coenzyme-M-biosynthesis lid28" transform="translate(522.0,1935.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1483~3" class="node nodeCM pw_coenzyme-M-biosynthesis lid202698" transform="translate(716.2,1800.6)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1483~4" class="node nodeCM pw_coenzyme-M-biosynthesis lid120" transform="translate(684.1,1945.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node7488~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid92" transform="translate(709.7,211.8)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92" target="_blank">sulfite</a></text><title></title></g>
+<g id="node7488~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(696.8,163.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7481~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid1" transform="translate(1168.8,278.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7481~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid16" transform="translate(1249.7,335.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node7484~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid10" transform="translate(1362.6,612.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7484~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid5" transform="translate(1520.2,702.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2722~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid7" transform="translate(1325.7,672.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2722~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid8" transform="translate(1480.4,759.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node7493~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(1174.7,872.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7493~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid28" transform="translate(1075.5,875.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node7496~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid74" transform="translate(617.8,867.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title></title></g>
+<g id="node7496~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid1" transform="translate(540.1,883.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7496~2" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(513.8,923.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7504~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid1661" transform="translate(121.0,1229.8)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node7504~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(188.7,1195.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7504~2" class="node nodeCM pw_coenzyme-M-biosynthesis lid374" transform="translate(286.3,1395.4)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node7507~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid1" transform="translate(131.2,1725.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7507~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid27" transform="translate(296.0,1693.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node7507~2" class="node nodeCM pw_coenzyme-M-biosynthesis lid31" transform="translate(313.4,1741.1)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node7507~3" class="node nodeCM pw_coenzyme-M-biosynthesis lid12" transform="translate(286.9,1784.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3225~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid3879" transform="translate(808.8,1834.6)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3879" target="_blank">methyl-CoM</a></text><title></title></g>
+<g id="node3225~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid2028" transform="translate(796.8,1980.9)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2028" target="_blank">methane</a></text><title></title></g>
+<g id="node11121~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid92" transform="translate(2072.7,1370.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92" target="_blank">sulfite</a></text><title></title></g>
+<g id="node11121~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid16" transform="translate(1990.9,1307.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node11123~0" class="node nodeCM pw_coenzyme-M-biosynthesis lid34" transform="translate(1709.6,1041.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node11123~1" class="node nodeCM pw_coenzyme-M-biosynthesis lid41" transform="translate(1543.7,1096.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+</g></svg>

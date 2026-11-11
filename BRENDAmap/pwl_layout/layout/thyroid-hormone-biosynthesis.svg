@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 841.5 1228.0" width="842" height="1228" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="841.5" height="1228.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_thyroid-hormone-biosynthesis" class="pw " x="0.0" y="0.0" width="721.5" height="1092.5" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 506.1 201.5 L 506.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 506.1 233.5 L 506.1 366.5"/>
+<path class="link" marker-start="url(#in)" d="M 506.1 531.5 L 506.1 398.5"/>
+<path class="link" marker-end="url(#in)" d="M 506.1 563.5 L 506.1 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 506.1 861.5 L 506.1 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 506.1 892.7 C 506.1 924.2 506.1 995.9 506.1 1027.3"/>
+<path class="link" marker-start="url(#in)" d="M 351.4 614.5 C 381.0 570.1 466.1 442.4 495.8 398.0"/>
+<path class="link" marker-start="url(#in)" d="M 373.0 646.0 L 474.1 696.5"/>
+<path class="link" marker-end="url(#in)" d="M 309.2 646.0 L 208.1 696.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 474.2 206.5 L 444.3 196.2"/>
+<path class="link" marker-start="url(#in)" d="M 493.1 201.5 L 463.0 164.3"/>
+<path class="link" marker-end="url(#in)" d="M 528.9 233.5 L 561.9 256.6"/>
+<path class="link" marker-start="url(#in)" d="M 474.2 536.5 L 444.3 526.2"/>
+<path class="link" marker-start="url(#in)" d="M 493.1 531.5 L 463.0 494.3"/>
+<path class="link" marker-end="url(#in)" d="M 528.9 563.5 L 561.9 586.6"/>
+<path class="link" marker-start="url(#in)" d="M 483.2 861.5 L 452.2 839.7"/>
+<path class="link" marker-end="url(#in)" d="M 538.0 888.5 L 573.0 900.5"/>
+<path class="link" marker-end="url(#in)" d="M 519.0 893.5 L 574.6 962.1"/>
+<path class="link" marker-start="url(#in)" d="M 343.5 614.0 L 351.8 558.0"/>
+<path class="link" marker-end="url(#in)" d="M 343.2 646.0 L 350.4 699.2"/>
+<path class="link" marker-end="url(#in)" d="M 333.9 646.0 L 294.7 733.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_thyroid-hormone-biosynthesis" transform="translate(360.8,0.0)"><rect rx="10" height="31" width="282" x="-141.1" y="-15.5"/><text dominant-baseline="central">thyroid hormone biosynthesis</text></g>
+<g id="node12887" class="node nodeHM pw_thyroid-hormone-biosynthesis lid169568" transform="translate(506.1,52.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=169568" target="_blank">[thyroglobulin]-L-tyrosine</a></text><title></title></g>
+<g id="node12884" class="node nodeHM pw_thyroid-hormone-biosynthesis lid42054" transform="translate(506.1,382.5)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42054" target="_blank">[thyroglobulin]-3-iodo-L-tyrosine</a></text><title></title></g>
+<g id="node12890" class="node nodeHM pw_thyroid-hormone-biosynthesis lid42053" transform="translate(506.1,712.5)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42053" target="_blank">[thyroglobulin]-3,5-diiodo-L-tyrosine</a></text><title></title></g>
+<g id="node12895" class="node nodeHM pw_thyroid-hormone-biosynthesis lid169567" transform="translate(506.1,1042.5)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=169567" target="_blank">[thyroglobulin]-L-thyroxine</a></text><title></title></g>
+<g id="node12901" class="node nodeHM pw_thyroid-hormone-biosynthesis lid169566" transform="translate(176.1,712.5)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=169566" target="_blank">[thyroglobulin]-3,5,3&#x27;-triiodo-L-thyronine</a></text><title></title></g>
+<g id="node12888" class="node nodeEN pw_thyroid-hormone-biosynthesis" transform="translate(506.1,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.8" target="_blank">1.11.1.8</a></text><title>iodide peroxidase</title></g>
+<g id="node12893" class="node nodeEN pw_thyroid-hormone-biosynthesis" transform="translate(506.1,547.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.8" target="_blank">1.11.1.8</a></text><title>iodide peroxidase</title></g>
+<g id="node12898" class="node nodeEN pw_thyroid-hormone-biosynthesis" transform="translate(506.1,877.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.8" target="_blank">1.11.1.8</a></text><title>iodide peroxidase</title></g>
+<g id="node12903" class="node nodeEN pw_thyroid-hormone-biosynthesis" transform="translate(341.1,630.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.11.1.8" target="_blank">1.11.1.8</a></text><title>iodide peroxidase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node12888~0" class="node nodeCM pw_thyroid-hormone-biosynthesis lid636" transform="translate(418.9,187.5)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=636" target="_blank">iodide</a></text><title></title></g>
+<g id="node12888~1" class="node nodeCM pw_thyroid-hormone-biosynthesis lid22" transform="translate(450.1,148.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node12888~2" class="node nodeCM pw_thyroid-hormone-biosynthesis lid1" transform="translate(577.6,267.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12893~0" class="node nodeCM pw_thyroid-hormone-biosynthesis lid636" transform="translate(418.9,517.5)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=636" target="_blank">iodide</a></text><title></title></g>
+<g id="node12893~1" class="node nodeCM pw_thyroid-hormone-biosynthesis lid22" transform="translate(450.1,478.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node12893~2" class="node nodeCM pw_thyroid-hormone-biosynthesis lid1" transform="translate(577.6,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12898~0" class="node nodeCM pw_thyroid-hormone-biosynthesis lid22" transform="translate(433.2,826.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node12898~1" class="node nodeCM pw_thyroid-hormone-biosynthesis lid1" transform="translate(588.7,905.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12898~2" class="node nodeCM pw_thyroid-hormone-biosynthesis lid87567" transform="translate(587.6,978.1)"><rect rx="5" height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87567" target="_blank">[thyroglobulin]-aminoacrylate</a></text><title></title></g>
+<g id="node12903~0" class="node nodeCM pw_thyroid-hormone-biosynthesis lid22" transform="translate(354.1,542.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node12903~1" class="node nodeCM pw_thyroid-hormone-biosynthesis lid1" transform="translate(352.6,715.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12903~2" class="node nodeCM pw_thyroid-hormone-biosynthesis lid87567" transform="translate(287.5,749.2)"><rect rx="5" height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87567" target="_blank">[thyroglobulin]-aminoacrylate</a></text><title></title></g>
+</g></svg>

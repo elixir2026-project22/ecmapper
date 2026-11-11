@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1152.0 1381.9" width="1152" height="1382" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1152.0" height="1381.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ketogluconate-metabolism" class="pw " x="0.0" y="0.0" width="1032.0" height="1246.4" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 161.5 576.2 L 130.9 506.4"/>
+<path class="link" marker-end="url(#in)" d="M 154.5 608.2 L 131.1 634.7"/>
+<path class="link" marker-start="url(#in)" d="M 247.8 867.1 L 126.7 666.7"/>
+<path class="link" marker-end="url(#in)" d="M 277.8 867.1 L 311.7 840.6"/>
+<path class="link" marker-start="url(#in)" d="M 857.3 1089.8 L 363.7 840.6"/>
+<path class="link" marker-end="url(#in)" d="M 881.4 1089.8 L 652.4 609.9"/>
+<path class="link" marker-start="url(#in)" d="M 657.2 858.7 L 367.2 828.2"/>
+<path class="link" marker-end="url(#in)" d="M 689.6 847.1 C 681.3 800.0 655.9 656.7 647.5 609.3"/>
+<path class="link" marker-start="url(#in)" d="M 777.8 555.9 L 700.7 577.9"/>
+<path class="link" marker-end="url(#in)" d="M 777.8 534.9 L 657.3 490.0"/>
+<path class="link" marker-start="url(#in)" d="M 653.1 336.0 L 625.7 460.9"/>
+<path class="link" marker-end="url(#in)" d="M 624.7 318.6 L 396.2 308.9"/>
+<path class="link" marker-start="url(#in)" d="M 297.1 348.2 L 312.7 321.7"/>
+<path class="link" marker-end="url(#in)" d="M 266.9 380.2 L 144.6 474.4"/>
+<path class="link" marker-start="url(#in)" d="M 162.9 191.3 C 197.7 216.3 266.0 265.4 300.8 290.4"/>
+<path class="link" marker-end="url(#in)" d="M 140.7 191.1 C 137.7 244.2 127.7 421.6 124.7 475.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 451.5 572.6 C 390.4 557.3 262.3 525.2 185.6 505.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 521.0 584.1 L 570.7 588.0"/>
+<path class="link" marker-start="url(#in)" d="M 267.6 515.0 L 210.9 505.3"/>
+<path class="link" marker-end="url(#in)" d="M 320.6 505.1 L 352.3 476.7"/>
+<path class="link" marker-start="url(#in)" d="M 582.3 525.0 C 540.4 512.3 469.4 490.7 421.2 476.1"/>
+<path class="link" marker-end="url(#in)" d="M 618.3 519.4 L 620.7 492.9"/>
+<path class="link" marker-start="url(#in)" d="M 919.6 454.7 L 657.3 474.3"/>
+<path class="link" marker-end="url(#in)" d="M 919.6 443.5 L 861.4 427.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 193.1 576.2 L 221.2 558.0"/>
+<path class="link" marker-end="url(#in)" d="M 189.5 608.2 L 219.6 631.3"/>
+<path class="link" marker-start="url(#in)" d="M 258.5 867.1 L 262.6 808.7"/>
+<path class="link" marker-end="url(#in)" d="M 292.6 873.2 L 322.3 864.8"/>
+<path class="link" marker-start="url(#in)" d="M 889.4 1121.8 L 890.9 1180.4"/>
+<path class="link" marker-end="url(#in)" d="M 888.6 1089.8 L 887.2 1031.3"/>
+<path class="link" marker-start="url(#in)" d="M 692.7 878.3 L 694.1 935.3"/>
+<path class="link" marker-end="url(#in)" d="M 691.9 846.3 L 690.5 789.4"/>
+<path class="link" marker-start="url(#in)" d="M 841.6 561.1 L 870.2 573.9"/>
+<path class="link" marker-end="url(#in)" d="M 825.2 530.8 L 857.3 497.7"/>
+<path class="link" marker-start="url(#in)" d="M 688.5 304.9 L 719.9 290.1"/>
+<path class="link" marker-end="url(#in)" d="M 655.1 304.0 L 649.7 245.8"/>
+<path class="link" marker-start="url(#in)" d="M 285.5 348.2 L 277.3 287.7"/>
+<path class="link" marker-end="url(#in)" d="M 287.2 380.2 L 285.3 438.0"/>
+<path class="link" marker-start="url(#in)" d="M 139.3 159.9 L 126.5 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 143.7 191.9 L 156.3 281.7"/>
+<path class="link" marker-start="url(#in)" d="M 478.8 565.3 L 456.4 514.4"/>
+<path class="link" marker-end="url(#in)" d="M 502.6 565.3 L 534.6 534.6"/>
+<path class="link" marker-start="url(#in)" d="M 294.2 537.1 L 268.6 585.0"/>
+<path class="link" marker-end="url(#in)" d="M 294.9 537.1 L 248.4 631.3"/>
+<path class="link" marker-start="url(#in)" d="M 581.7 527.6 L 471.6 503.3"/>
+<path class="link" marker-end="url(#in)" d="M 581.7 526.4 L 573.5 524.3"/>
+<path class="link" marker-start="url(#in)" d="M 932.9 436.3 L 900.9 408.8"/>
+<path class="link" marker-end="url(#in)" d="M 957.5 436.3 L 976.3 386.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ketogluconate-metabolism" transform="translate(516.0,0.0)"><rect rx="10" height="31" width="243" x="-121.6" y="-15.5"/><text dominant-baseline="central">ketogluconate metabolism</text></g>
+<g id="node9720" class="node nodeHM pw_ketogluconate-metabolism lid1741" transform="translate(123.9,490.4)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1741" target="_blank">2,5-didehydro-D-gluconate</a></text><title></title></g>
+<g id="node2025" class="node nodeHM pw_ketogluconate-metabolism lid12310" transform="translate(117.0,650.7)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12310" target="_blank">2-keto-L-gulonate</a></text><title></title></g>
+<g id="node4038" class="node nodeHM pw_ketogluconate-metabolism lid5565" transform="translate(332.1,824.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5565" target="_blank">L-idonate</a></text><title></title></g>
+<g id="node9716" class="node nodeHM pw_ketogluconate-metabolism lid5500" transform="translate(644.7,593.9)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5500" target="_blank">5-dehydro-D-gluconate</a></text><title></title></g>
+<g id="node4035" class="node nodeHM pw_ketogluconate-metabolism lid698" transform="translate(622.2,476.9)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=698" target="_blank">gluconate</a></text><title></title></g>
+<g id="node7561" class="node nodeHM pw_ketogluconate-metabolism lid2930" transform="translate(322.2,305.7)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2930" target="_blank">2-dehydro-D-gluconate</a></text><title></title></g>
+<g id="node4040" class="node nodeHM pw_ketogluconate-metabolism lid104586" transform="translate(370.1,460.7)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=104586" target="_blank">2-keto-D-gulonate</a></text><title></title></g>
+<g id="node1232" class="node nodeHM pw_ketogluconate-metabolism lid43607" transform="translate(839.2,421.4)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43607" target="_blank">GA-6P</a></text><title></title></g>
+<g id="node2026" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(168.6,592.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.346" target="_blank">1.1.1.346</a></text><title>2,5-didehydrogluconate reductase (2-dehydro-L-gulonate-forming)</title></g>
+<g id="node4037" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(257.4,883.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.215" target="_blank">1.1.1.215</a></text><title>gluconate 2-dehydrogenase</title></g>
+<g id="node4039" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(889.0,1105.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.264" target="_blank">1.1.1.264</a></text><title>L-idonate 5-dehydrogenase; L-idonate 5-dehydrogenase (NAD+)</title></g>
+<g id="node2024" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(692.3,862.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.366" target="_blank">1.1.1.366</a></text><title>L-idonate 5-dehydrogenase; L-idonate 5-dehydrogenase (NAD+)</title></g>
+<g id="node9721" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(809.7,546.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.69" target="_blank">1.1.1.69</a></text><title>gluconate 5-dehydrogenase</title></g>
+<g id="node7559" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(656.6,320.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.3" target="_blank">1.1.99.3</a></text><title>gluconate 2-dehydrogenase (acceptor)</title></g>
+<g id="node11544" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(287.7,364.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.274" target="_blank">1.1.1.274</a></text><title>2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming); dehydrogluconate dehydrogenase</title></g>
+<g id="node11545" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(141.5,175.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.4" target="_blank">1.1.99.4</a></text><title>2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming); dehydrogluconate dehydrogenase</title></g>
+<g id="node9715" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(485.9,581.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.215" target="_blank">1.1.1.215</a></text><title>gluconate 2-dehydrogenase</title></g>
+<g id="node4034" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(302.7,521.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.274" target="_blank">1.1.1.274</a></text><title>2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming)</title></g>
+<g id="node4029" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(616.9,535.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.215" target="_blank">1.1.1.215</a></text><title>gluconate 2-dehydrogenase</title></g>
+<g id="node4030" class="node nodeEN pw_ketogluconate-metabolism" transform="translate(951.5,452.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.12" target="_blank">2.7.1.12</a></text><title>gluconokinase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2026~0" class="node nodeCM pw_ketogluconate-metabolism lid5" transform="translate(243.4,543.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2026~1" class="node nodeCM pw_ketogluconate-metabolism lid10" transform="translate(240.5,647.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node4037~0" class="node nodeCM pw_ketogluconate-metabolism lid5" transform="translate(263.7,792.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4037~1" class="node nodeCM pw_ketogluconate-metabolism lid10" transform="translate(344.5,858.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node4039~0" class="node nodeCM pw_ketogluconate-metabolism lid10" transform="translate(891.3,1196.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node4039~1" class="node nodeCM pw_ketogluconate-metabolism lid5" transform="translate(886.8,1015.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2024~0" class="node nodeCM pw_ketogluconate-metabolism lid7" transform="translate(694.5,951.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2024~1" class="node nodeCM pw_ketogluconate-metabolism lid8" transform="translate(690.1,773.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9721~0" class="node nodeCM pw_ketogluconate-metabolism lid5" transform="translate(892.4,583.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9721~1" class="node nodeCM pw_ketogluconate-metabolism lid10" transform="translate(872.8,481.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7559~0" class="node nodeCM pw_ketogluconate-metabolism lid20" transform="translate(735.6,282.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20" target="_blank">FAD</a></text><title></title></g>
+<g id="node7559~1" class="node nodeCM pw_ketogluconate-metabolism lid256" transform="translate(648.2,229.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256" target="_blank">FADH2</a></text><title></title></g>
+<g id="node11544~0" class="node nodeCM pw_ketogluconate-metabolism lid10" transform="translate(275.1,271.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11544~1" class="node nodeCM pw_ketogluconate-metabolism lid5" transform="translate(284.8,454.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11545~0" class="node nodeCM pw_ketogluconate-metabolism lid374" transform="translate(124.2,52.5)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node11545~1" class="node nodeCM pw_ketogluconate-metabolism lid1661" transform="translate(158.5,297.7)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node4034~0" class="node nodeCM pw_ketogluconate-metabolism lid5" transform="translate(260.1,601.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4029~0" class="node nodeCM pw_ketogluconate-metabolism lid5" transform="translate(449.4,498.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4029~1" class="node nodeCM pw_ketogluconate-metabolism lid10" transform="translate(551.3,518.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node4030~0" class="node nodeCM pw_ketogluconate-metabolism lid4" transform="translate(885.2,395.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node4030~1" class="node nodeCM pw_ketogluconate-metabolism lid13" transform="translate(982.3,370.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+</g></svg>

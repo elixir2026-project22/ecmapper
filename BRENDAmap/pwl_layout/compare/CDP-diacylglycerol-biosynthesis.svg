@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1960" height="642" viewBox="0 0 1959.8 642.4"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="5026.8 4778.3 888.1 602.4" width="888" height="602" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="5026.8" y="4778.3" width="888.1" height="602.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_CDP-diacylglycerol-biosynthesis" class="pw pw2" x="5066.8" y="4833.8" width="808.1" height="506.9" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5394.1 4921.5 L 5468.9 4921.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5321.3 4921.2 L 5235.2 4920.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5738.9 4937.5 L 5738.9 5034.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5702.5 4921.5 L 5626.4 4921.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5738.9 5169.5 L 5738.9 5066.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5738.9 5201.5 L 5738.9 5290.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5490.4 5306.2 L 5629.1 5306.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5417.6 5306.2 L 5232.4 5306.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 5343.4 4937.5 L 5313.7 4970.9"/>
+<path class="link" marker-start="url(#in)" d="M 5342.7 4905.5 L 5314.4 4875.3"/>
+<path class="link" marker-end="url(#in)" d="M 5374.2 4937.5 L 5408.8 4970.9"/>
+<path class="link" marker-start="url(#in)" d="M 5722.3 4905.5 L 5691.0 4875.3"/>
+<path class="link" marker-end="url(#in)" d="M 5723.1 4937.5 L 5690.1 4970.9"/>
+<path class="link" marker-start="url(#in)" d="M 5722.4 5169.5 L 5690.8 5138.8"/>
+<path class="link" marker-end="url(#in)" d="M 5720.9 5201.5 L 5692.4 5226.8"/>
+<path class="link" marker-start="url(#in)" d="M 5469.6 5290.2 L 5500.4 5258.8"/>
+<path class="link" marker-end="url(#in)" d="M 5440.1 5290.2 L 5412.9 5258.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_CDP-diacylglycerol-biosynthesis" transform="translate(5470.9,4833.8)"><rect rx="10" height="31" width="295" x="-147.5" y="-15.5"/><text dominant-baseline="central">CDP-diacylglycerol biosynthesis</text></g>
+<g id="node1281" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid1248" transform="translate(5167.8,5306.2)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1248" target="_blank">CDP-diacylglycerol</a></text><title>CDP-diacylglycerol</title></g>
+<g id="node1282" class="node nodeSM pw_CDP-diacylglycerol-biosynthesis lid482" transform="translate(5167.8,4920.2)"><rect height="35.0" width="132.9" x="-66.5" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=482" target="_blank">glycerone phosphate</a></text><title>glycerone phosphate</title></g>
+<g id="node9578" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid422" transform="translate(5547.6,4921.5)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=422" target="_blank">sn-glycerol 3-phosphate</a></text><title>sn-glycerol 3-phosphate</title></g>
+<g id="node9580" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid2185" transform="translate(5738.9,5050.4)"><rect height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2185" target="_blank">1-acyl-sn-glycerol 3-phosphate</a></text><title>1-Acyl-sn-glycerol 3-phosphate</title></g>
+<g id="node9586" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid4752" transform="translate(5738.9,5306.2)"><rect height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4752" target="_blank">1,2-diacyl-sn-glycerol 3-phosphate</a></text><title>1,2-diacyl-sn-glycerol 3-phosphate</title></g>
+<g id="node9576" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(5357.7,4921.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.94" target="_blank">1.1.1.94</a></text><title>glycerol-3-phosphate dehydrogenase [NAD(P)+]</title></g>
+<g id="node9579" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(5738.9,4921.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.15" target="_blank">2.3.1.15</a></text><title>glycerol-3-phosphate 1-O-acyltransferase</title></g>
+<g id="node9559" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(5738.9,5185.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.51" target="_blank">2.3.1.51</a></text><title>1-acylglycerol-3-phosphate O-acyltransferase</title></g>
+<g id="node9584" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(5454.0,5306.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.41" target="_blank">2.7.7.41</a></text><title>phosphatidate cytidylyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1278" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid12" transform="translate(5299.4,4859.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9561" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid5" transform="translate(5299.4,4986.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node9563" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid10" transform="translate(5425.3,4986.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node9565" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid18" transform="translate(5674.4,4986.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node9567" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid492" transform="translate(5674.4,4859.3)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=492" target="_blank">acyl-CoA</a></text><title>Acyl-CoA</title></g>
+<g id="node9569" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid18" transform="translate(5674.4,5242.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node9571" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid492" transform="translate(5674.4,5122.8)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=492" target="_blank">acyl-CoA</a></text><title>Acyl-CoA</title></g>
+<g id="node9573" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid60" transform="translate(5516.0,5242.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title>CTP</title></g>
+<g id="node9587" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid17" transform="translate(5399.0,5242.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="968.1" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 991.7 602.2" width="992" height="602" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="991.7" height="602.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_CDP-diacylglycerol-biosynthesis" class="pw " x="0.0" y="0.0" width="911.7" height="506.7" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 234.6 126.7 L 169.1 126.7"/>
+<path class="link" marker-end="url(#in)" d="M 298.5 126.7 L 351.0 126.7"/>
+<path class="link" marker-start="url(#in)" d="M 564.6 126.7 L 512.1 126.7"/>
+<path class="link" marker-end="url(#in)" d="M 628.5 126.7 L 658.4 126.7"/>
+<path class="link" marker-start="url(#in)" d="M 761.6 275.7 L 761.6 142.7"/>
+<path class="link" marker-end="url(#in)" d="M 761.6 307.7 L 761.6 440.7"/>
+<path class="link" marker-start="url(#in)" d="M 546.0 456.7 L 645.4 456.7"/>
+<path class="link" marker-end="url(#in)" d="M 482.1 456.7 L 330.9 456.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 261.1 142.7 L 242.6 196.4"/>
+<path class="link" marker-start="url(#in)" d="M 246.8 142.7 L 212.4 170.6"/>
+<path class="link" marker-end="url(#in)" d="M 277.8 110.7 L 307.3 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 599.3 142.7 L 609.9 204.9"/>
+<path class="link" marker-end="url(#in)" d="M 607.8 110.7 L 635.5 71.2"/>
+<path class="link" marker-start="url(#in)" d="M 729.6 276.5 L 644.5 236.1"/>
+<path class="link" marker-end="url(#in)" d="M 738.7 307.7 L 705.7 330.8"/>
+<path class="link" marker-start="url(#in)" d="M 525.3 440.7 L 553.0 401.2"/>
+<path class="link" marker-end="url(#in)" d="M 502.9 440.7 L 475.2 401.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_CDP-diacylglycerol-biosynthesis" transform="translate(455.9,0.0)"><rect rx="10" height="31" width="311" x="-155.7" y="-15.5"/><text dominant-baseline="central">CDP-diacylglycerol biosynthesis</text></g>
+<g id="node1282" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid482" transform="translate(101.6,126.7)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=482" target="_blank">glycerone phosphate</a></text><title></title></g>
+<g id="node9578" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid422" transform="translate(431.6,126.7)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=422" target="_blank">sn-glycerol 3-phosphate</a></text><title></title></g>
+<g id="node9580" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid2185" transform="translate(761.6,126.7)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2185" target="_blank">1-acyl-sn-glycerol 3-phosphate</a></text><title></title></g>
+<g id="node9586" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid4752" transform="translate(761.6,456.7)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4752" target="_blank">1,2-diacyl-sn-glycerol 3-phosphate</a></text><title></title></g>
+<g id="node1281" class="node nodeHM pw_CDP-diacylglycerol-biosynthesis lid1248" transform="translate(266.6,456.7)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1248" target="_blank">CDP-diacylglycerol</a></text><title></title></g>
+<g id="node9576" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(266.6,126.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.94" target="_blank">1.1.1.94</a></text><title>glycerol-3-phosphate dehydrogenase [NAD(P)+]</title></g>
+<g id="node9579" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(596.6,126.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.15" target="_blank">2.3.1.15</a></text><title>glycerol-3-phosphate 1-O-acyltransferase</title></g>
+<g id="node9559" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(761.6,291.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.51" target="_blank">2.3.1.51</a></text><title>1-acylglycerol-3-phosphate O-acyltransferase</title></g>
+<g id="node9584" class="node nodeEN pw_CDP-diacylglycerol-biosynthesis" transform="translate(514.1,456.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.41" target="_blank">2.7.7.41</a></text><title>phosphatidate cytidylyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9576~0" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid5" transform="translate(237.1,212.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9576~1" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid12" transform="translate(199.9,180.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9576~2" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid10" transform="translate(318.5,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9579~1" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid18" transform="translate(646.7,55.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9559~0" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid492" transform="translate(612.6,220.9)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=492" target="_blank">acyl-CoA</a></text><title></title></g>
+<g id="node9559~1" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid18" transform="translate(690.0,341.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9584~0" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid60" transform="translate(564.2,385.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title></title></g>
+<g id="node9584~1" class="node nodeCM pw_CDP-diacylglycerol-biosynthesis lid17" transform="translate(464.0,385.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>
+<text x="978.1" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

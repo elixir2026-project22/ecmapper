@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1539" height="642" viewBox="0 0 1539.2 642.2"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="7336.4 5688.7 854.7 331.6" width="855" height="332" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="7336.4" y="5688.7" width="854.7" height="331.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_phenylmercury-acetate-degradation" class="pw pw7" x="7376.4" y="5744.2" width="774.7" height="236.1" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7663.7 5859.8 L 7663.7 5927.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7700.1 5843.8 L 7786.0 5843.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7627.3 5843.8 L 7547.0 5843.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7927.6 5843.8 L 7836.2 5843.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8000.4 5843.8 L 8094.5 5843.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 7649.2 5827.8 L 7630.2 5806.9"/>
+<path class="link" marker-end="url(#in)" d="M 7684.5 5827.8 L 7713.1 5805.8"/>
+<path class="link" marker-start="url(#in)" d="M 7939.0 5827.8 L 7906.4 5806.9"/>
+<path class="link" marker-end="url(#in)" d="M 7989.7 5859.8 L 8014.6 5875.3"/>
+<path class="link" marker-end="url(#in)" d="M 7936.2 5859.8 L 7900.8 5880.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_phenylmercury-acetate-degradation" transform="translate(7763.8,5744.2)"><rect rx="10" height="31" width="320" x="-160.0" y="-15.5"/><text dominant-baseline="central">phenylmercury acetate degradation</text></g>
+<g id="node10209" class="node nodeHM pw_phenylmercury-acetate-degradation lid12860" transform="translate(7468.2,5843.8)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12860" target="_blank">phenyl mercuric acetate</a></text><title>phenyl mercuric acetate</title></g>
+<g id="node10211" class="node nodeHM pw_phenylmercury-acetate-degradation lid9181" transform="translate(8113.9,5843.8)"><rect height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9181" target="_blank">Hg</a></text><title>Hg</title></g>
+<g id="node10217" class="node nodeHM pw_phenylmercury-acetate-degradation lid33" transform="translate(7811.1,5843.8)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=33" target="_blank">Hg2+</a></text><title>Hg2+</title></g>
+<g id="node12161" class="node nodeSM pw_phenylmercury-acetate-degradation lid47" transform="translate(7663.7,5946.4)"><rect height="35.0" width="65.1" x="-32.6" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>Acetate</title></g>
+<g id="node10214" class="node nodeEN pw_phenylmercury-acetate-degradation" transform="translate(7663.7,5843.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.99.1.2" target="_blank">4.99.1.2</a></text><title>alkylmercury lyase</title></g>
+<g id="node10204" class="node nodeEN pw_phenylmercury-acetate-degradation" transform="translate(7964.0,5843.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.16.1.1" target="_blank">1.16.1.1</a></text><title>mercury(II) reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10203" class="node nodeCM pw_phenylmercury-acetate-degradation lid12" transform="translate(7615.7,5790.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10208" class="node nodeCM pw_phenylmercury-acetate-degradation lid5" transform="translate(7881.4,5790.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node10210" class="node nodeCM pw_phenylmercury-acetate-degradation lid10" transform="translate(8040.3,5891.3)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node10212" class="node nodeCM pw_phenylmercury-acetate-degradation lid12" transform="translate(7881.4,5891.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10218" class="node nodeCM pw_phenylmercury-acetate-degradation lid1750" transform="translate(7732.6,5790.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1750" target="_blank">Bn</a></text><title>benzene</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="934.7" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 604.5 602.2" width="605" height="602" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="604.5" height="602.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_phenylmercury-acetate-degradation" class="pw " x="0.0" y="0.0" width="524.5" height="506.7" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 281.1 382.5 L 167.0 382.5"/>
+<path class="link" marker-end="url(#in)" d="M 345.0 382.5 L 465.6 382.5"/>
+<path class="link" marker-start="url(#in)" d="M 128.8 201.5 L 146.0 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 128.8 233.5 L 146.0 366.5"/>
+<path class="link" marker-end="url(#in)" d="M 120.5 233.5 L 68.9 366.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 301.8 398.5 L 272.3 440.7"/>
+<path class="link" marker-end="url(#in)" d="M 318.5 366.5 L 337.0 312.8"/>
+<path class="link" marker-end="url(#in)" d="M 332.8 366.5 L 367.2 338.6"/>
+<path class="link" marker-start="url(#in)" d="M 109.2 201.5 L 75.8 171.1"/>
+<path class="link" marker-end="url(#in)" d="M 144.2 233.5 L 177.6 263.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_phenylmercury-acetate-degradation" transform="translate(262.3,0.0)"><rect rx="10" height="31" width="331" x="-165.4" y="-15.5"/><text dominant-baseline="central">phenylmercury acetate degradation</text></g>
+<g id="node10217" class="node nodeHM pw_phenylmercury-acetate-degradation lid33" transform="translate(148.0,382.5)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=33" target="_blank">Hg2+</a></text><title></title></g>
+<g id="node10211" class="node nodeHM pw_phenylmercury-acetate-degradation lid9181" transform="translate(478.0,382.5)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9181" target="_blank">Hg</a></text><title></title></g>
+<g id="node10209" class="node nodeHM pw_phenylmercury-acetate-degradation lid12860" transform="translate(148.0,52.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12860" target="_blank">phenyl mercuric acetate</a></text><title></title></g>
+<g id="node12161" class="node nodeHM pw_phenylmercury-acetate-degradation lid47" transform="translate(62.7,382.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node10204" class="node nodeEN pw_phenylmercury-acetate-degradation" transform="translate(313.0,382.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.16.1.1" target="_blank">1.16.1.1</a></text><title>mercury(II) reductase</title></g>
+<g id="node10214" class="node nodeEN pw_phenylmercury-acetate-degradation" transform="translate(126.7,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.99.1.2" target="_blank">4.99.1.2</a></text><title>alkylmercury lyase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10204~0" class="node nodeCM pw_phenylmercury-acetate-degradation lid5" transform="translate(261.1,456.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10204~1" class="node nodeCM pw_phenylmercury-acetate-degradation lid10" transform="translate(342.5,296.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10204~2" class="node nodeCM pw_phenylmercury-acetate-degradation lid12" transform="translate(379.7,328.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10214~0" class="node nodeCM pw_phenylmercury-acetate-degradation lid12" transform="translate(63.4,159.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10214~1" class="node nodeCM pw_phenylmercury-acetate-degradation lid1750" transform="translate(190.0,275.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1750" target="_blank">Bn</a></text><title></title></g>
+</g></svg>
+<text x="944.7" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

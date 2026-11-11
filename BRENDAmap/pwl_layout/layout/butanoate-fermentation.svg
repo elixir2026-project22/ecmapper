@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1250.6 1766.6" width="1251" height="1767" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1250.6" height="1766.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_butanoate-fermentation" class="pw " x="0.0" y="0.0" width="1130.6" height="1631.1" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 162.7 135.2 L 79.4 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 204.8 167.2 L 329.5 257.3"/>
+<path class="link" marker-end="url(#in)" d="M 474.4 305.6 L 406.3 287.7"/>
+<path class="link" marker-start="url(#in)" d="M 518.5 330.2 C 539.5 366.4 591.6 456.3 612.5 492.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 483.1 352.8 L 378.1 289.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 522.4 384.8 L 608.4 491.7"/>
+<path class="link" marker-start="url(#in)" d="M 824.7 608.2 L 653.7 523.7"/>
+<path class="link" marker-end="url(#in)" d="M 873.9 640.0 L 1031.2 786.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1047.0 1008.4 C 1047.2 967.9 1048.0 858.0 1048.3 817.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1046.8 1039.0 C 1046.6 1081.6 1046.2 1200.3 1046.1 1242.9"/>
+<path class="link" marker-start="url(#in)" d="M 1046.0 1444.0 L 1046.0 1274.3"/>
+<path class="link" marker-end="url(#in)" d="M 1025.4 1476.0 L 910.6 1565.1"/>
+<path class="link" marker-start="url(#in)" d="M 747.6 1581.1 L 828.9 1581.1"/>
+<path class="link" marker-end="url(#in)" d="M 718.9 1565.6 C 718.9 1541.3 718.9 1494.3 718.9 1470.2"/>
+<path class="link" marker-end="url(#in)" d="M 847.3 1365.6 L 741.9 1439.0"/>
+<path class="link" marker-start="url(#in)" d="M 899.0 1334.7 L 1015.2 1274.3"/>
+<path class="link" marker-start="url(#in)" d="M 433.8 715.3 L 388.6 715.3"/>
+<path class="link" marker-start="url(#in)" d="M 480.7 699.3 L 609.6 523.7"/>
+<path class="link" marker-end="url(#in)" d="M 469.0 731.3 L 469.0 831.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 211.3 142.0 L 250.1 129.4"/>
+<path class="link" marker-start="url(#in)" d="M 544.7 316.8 L 575.2 318.6"/>
+<path class="link" marker-end="url(#in)" d="M 480.8 330.8 L 443.8 351.4"/>
+<path class="link" marker-start="url(#in)" d="M 477.6 367.0 L 443.8 365.0"/>
+<path class="link" marker-end="url(#in)" d="M 538.3 352.8 L 575.2 332.3"/>
+<path class="link" marker-end="url(#in)" d="M 888.6 612.1 L 922.8 599.4"/>
+<path class="link" marker-start="url(#in)" d="M 1024.2 1007.7 L 945.3 951.7"/>
+<path class="link" marker-end="url(#in)" d="M 1023.7 1039.7 L 946.2 1093.4"/>
+<path class="link" marker-start="url(#in)" d="M 1037.1 1444.0 L 1013.2 1401.2"/>
+<path class="link" marker-end="url(#in)" d="M 1014.1 1465.2 L 975.5 1471.5"/>
+<path class="link" marker-start="url(#in)" d="M 747.6 1571.4 L 786.0 1558.5"/>
+<path class="link" marker-end="url(#in)" d="M 719.3 1565.1 L 720.7 1509.7"/>
+<path class="link" marker-start="url(#in)" d="M 871.4 1333.6 L 875.7 1272.0"/>
+<path class="link" marker-end="url(#in)" d="M 841.6 1336.8 L 811.5 1323.4"/>
+<path class="link" marker-end="url(#in)" d="M 493.5 731.3 L 526.4 752.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_butanoate-fermentation" transform="translate(565.3,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">butanoate fermentation</text></g>
+<g id="node12045" class="node nodeHM pw_butanoate-fermentation lid29" transform="translate(59.4,52.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node9478" class="node nodeHM pw_butanoate-fermentation lid187" transform="translate(351.7,273.3)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=187" target="_blank">acetoacetyl-CoA</a></text><title></title></g>
+<g id="node9444" class="node nodeHM pw_butanoate-fermentation lid44983" transform="translate(621.3,507.7)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44983" target="_blank">(R)-3-OH-butanoyl-CoA</a></text><title></title></g>
+<g id="node9442" class="node nodeHM pw_butanoate-fermentation lid3806" transform="translate(1048.4,802.1)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3806" target="_blank">crotonoyl-CoA</a></text><title></title></g>
+<g id="node9455" class="node nodeHM pw_butanoate-fermentation lid270" transform="translate(1046.0,1258.3)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=270" target="_blank">butanoyl-CoA</a></text><title></title></g>
+<g id="node9452" class="node nodeHM pw_butanoate-fermentation lid20172" transform="translate(889.9,1581.1)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20172" target="_blank">butyryl phosphate</a></text><title></title></g>
+<g id="node9453" class="node nodeHM pw_butanoate-fermentation lid462" transform="translate(718.9,1455.0)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=462" target="_blank">butanoate</a></text><title></title></g>
+<g id="node2637" class="node nodeHM pw_butanoate-fermentation lid8726" transform="translate(301.6,715.3)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8726" target="_blank">[(R)-3-hydroxybutanoate]n</a></text><title></title></g>
+<g id="node2638" class="node nodeHM pw_butanoate-fermentation lid38022" transform="translate(469.0,847.0)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=38022" target="_blank">[(R)-3-hydroxybutanoate](n+1)</a></text><title></title></g>
+<g id="node9476" class="node nodeEN pw_butanoate-fermentation" transform="translate(182.7,151.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.9" target="_blank">2.3.1.9</a></text><title>acetyl-CoA C-acetyltransferase</title></g>
+<g id="node10373" class="node nodeEN pw_butanoate-fermentation" transform="translate(509.5,314.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.157" target="_blank">1.1.1.157</a></text><title>3-hydroxybutyryl-CoA dehydrogenase; acetoacetyl-CoA reductase</title></g>
+<g id="node9474" class="node nodeEN pw_butanoate-fermentation" transform="translate(509.5,368.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.36" target="_blank">1.1.1.36</a></text><title>3-hydroxybutyryl-CoA dehydrogenase; acetoacetyl-CoA reductase</title></g>
+<g id="node9446" class="node nodeEN pw_butanoate-fermentation" transform="translate(856.6,624.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.55" target="_blank">4.2.1.55</a></text><title>3-Hydroxybutyryl-CoA dehydratase</title></g>
+<g id="node9449" class="node nodeEN pw_butanoate-fermentation" transform="translate(1046.8,1023.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.1" target="_blank">1.3.8.1</a></text><title>short-chain acyl-CoA dehydrogenase</title></g>
+<g id="node9441" class="node nodeEN pw_butanoate-fermentation" transform="translate(1046.0,1460.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.19" target="_blank">2.3.1.19</a></text><title>phosphate butyryltransferase</title></g>
+<g id="node9454" class="node nodeEN pw_butanoate-fermentation" transform="translate(718.9,1581.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.7" target="_blank">2.7.2.7</a></text><title>butyrate kinase</title></g>
+<g id="node11229" class="node nodeEN pw_butanoate-fermentation" transform="translate(870.3,1349.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.8" target="_blank">2.8.3.8</a></text><title>acetate CoA-transferase</title></g>
+<g id="node2639" class="node nodeEN pw_butanoate-fermentation" transform="translate(469.0,715.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.304" target="_blank">2.3.1.304</a></text><title>poly[(R)-3-hydroxyalkanoate] polymerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9476~0" class="node nodeCM pw_butanoate-fermentation lid18" transform="translate(265.8,124.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10373~0" class="node nodeCM pw_butanoate-fermentation lid10" transform="translate(597.4,319.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10373~1" class="node nodeCM pw_butanoate-fermentation lid5" transform="translate(421.6,363.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9446~0" class="node nodeCM pw_butanoate-fermentation lid1" transform="translate(938.5,593.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9449~0" class="node nodeCM pw_butanoate-fermentation lid99538" transform="translate(922.7,935.7)"><rect rx="5" height="30.0" width="288.6" x="-144.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=99538" target="_blank">oxidized electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node9449~1" class="node nodeCM pw_butanoate-fermentation lid1892" transform="translate(923.1,1109.4)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node9441~0" class="node nodeCM pw_butanoate-fermentation lid16" transform="translate(1004.2,1385.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9441~1" class="node nodeCM pw_butanoate-fermentation lid18" transform="translate(959.8,1474.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9454~0" class="node nodeCM pw_butanoate-fermentation lid13" transform="translate(801.7,1553.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9454~1" class="node nodeCM pw_butanoate-fermentation lid4" transform="translate(721.1,1493.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11229~0" class="node nodeCM pw_butanoate-fermentation lid47" transform="translate(876.8,1256.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node11229~1" class="node nodeCM pw_butanoate-fermentation lid29" transform="translate(786.1,1312.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node2639~0" class="node nodeCM pw_butanoate-fermentation lid18" transform="translate(542.1,763.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,377 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3873" height="3566" viewBox="0 0 3873.0 3566.1"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="2986.4 3983.0 2060.2 1203.9" width="2060" height="1204" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="2986.4" y="3983.0" width="2060.2" height="1203.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_degradation-of-sugar-alcohols" class="pw pw5" x="3026.4" y="4038.5" width="1980.2" height="1108.4" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3480.6 4112.5 L 3602.1 4112.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3407.8 4112.4 L 3258.2 4112.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3799.1 4112.6 L 3669.2 4113.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3877.5 4112.6 L 4008.9 4112.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4241.7 4113.3 L 4093.0 4112.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4308.8 4113.4 L 4544.7 4113.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4461.3 4281.6 L 4566.4 4240.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4461.3 4309.3 L 4539.7 4338.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4388.5 4296.0 L 4244.2 4296.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3441.2 4296.7 L 3332.3 4296.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3519.6 4296.7 L 3614.3 4296.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3917.7 4296.6 L 4064.1 4296.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3839.2 4296.7 L 3721.0 4296.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4284.9 4545.3 L 4508.1 4545.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4212.1 4545.3 L 4078.3 4545.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4738.3 4545.6 L 4819.3 4545.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4665.5 4545.6 L 4563.9 4545.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3216.2 4651.1 L 3325.4 4651.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3182.7 4635.1 L 3182.7 4547.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3588.6 4651.1 L 3477.3 4651.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3661.4 4662.5 L 3795.9 4704.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4537.2 4719.0 L 4536.1 4827.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4537.3 4687.0 L 4536.1 4561.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4059.9 4736.7 L 4059.9 4978.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4026.4 4720.7 L 3925.8 4720.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4701.8 4788.6 L 4701.4 4872.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4701.9 4756.6 L 4701.8 4682.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3661.4 4786.6 L 3802.0 4736.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3588.6 4799.5 L 3440.5 4799.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4582.1 4994.1 L 4459.6 4994.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4654.9 4994.1 L 4774.5 4994.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3404.1 4980.8 L 3404.1 4818.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3437.7 4996.8 L 3594.0 4996.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3925.5 4996.8 L 4034.8 4996.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3852.8 4996.8 L 3712.0 4996.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3855.8 5093.9 L 3686.4 5012.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3913.3 5093.9 L 4034.8 5013.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 3428.2 4128.4 L 3397.5 4159.2"/>
+<path class="link" marker-end="url(#in)" d="M 3460.2 4128.4 L 3491.0 4159.2"/>
+<path class="link" marker-start="url(#in)" d="M 3855.2 4128.6 L 3891.5 4163.1"/>
+<path class="link" marker-end="url(#in)" d="M 3819.9 4128.6 L 3783.0 4160.6"/>
+<path class="link" marker-start="url(#in)" d="M 4291.2 4129.4 L 4323.1 4161.5"/>
+<path class="link" marker-end="url(#in)" d="M 4257.4 4129.4 L 4221.4 4161.8"/>
+<path class="link" marker-start="url(#in)" d="M 3464.4 4312.7 L 3433.6 4343.4"/>
+<path class="link" marker-end="url(#in)" d="M 3496.4 4312.7 L 3527.2 4343.4"/>
+<path class="link" marker-start="url(#in)" d="M 3862.4 4312.7 L 3831.7 4343.4"/>
+<path class="link" marker-end="url(#in)" d="M 3894.5 4312.7 L 3925.2 4343.4"/>
+<path class="link" marker-end="url(#in)" d="M 3894.4 4280.7 L 3925.2 4249.9"/>
+<path class="link" marker-start="url(#in)" d="M 4232.6 4561.2 L 4201.8 4592.1"/>
+<path class="link" marker-end="url(#in)" d="M 4264.6 4561.2 L 4295.3 4591.9"/>
+<path class="link" marker-start="url(#in)" d="M 4685.9 4561.6 L 4655.1 4592.4"/>
+<path class="link" marker-end="url(#in)" d="M 4720.3 4529.6 L 4756.7 4497.9"/>
+<path class="link" marker-end="url(#in)" d="M 4722.1 4561.6 L 4755.6 4588.0"/>
+<path class="link" marker-start="url(#in)" d="M 3161.8 4667.1 L 3137.1 4686.0"/>
+<path class="link" marker-end="url(#in)" d="M 3166.7 4635.1 L 3135.9 4604.4"/>
+<path class="link" marker-start="url(#in)" d="M 3609.0 4667.1 L 3578.2 4697.9"/>
+<path class="link" marker-end="url(#in)" d="M 3641.0 4667.1 L 3671.7 4697.9"/>
+<path class="link" marker-start="url(#in)" d="M 4515.5 4719.0 L 4478.1 4746.3"/>
+<path class="link" marker-end="url(#in)" d="M 4516.9 4687.0 L 4475.1 4654.4"/>
+<path class="link" marker-start="url(#in)" d="M 4043.6 4736.7 L 4012.3 4767.4"/>
+<path class="link" marker-end="url(#in)" d="M 4075.6 4736.7 L 4105.9 4767.4"/>
+<path class="link" marker-start="url(#in)" d="M 4718.4 4788.6 L 4752.1 4821.2"/>
+<path class="link" marker-end="url(#in)" d="M 4718.6 4756.6 L 4751.7 4724.8"/>
+<path class="link" marker-start="url(#in)" d="M 3613.4 4815.5 L 3576.3 4866.6"/>
+<path class="link" marker-end="url(#in)" d="M 3638.3 4815.5 L 3680.9 4866.9"/>
+<path class="link" marker-start="url(#in)" d="M 4601.9 5010.1 L 4570.0 5040.8"/>
+<path class="link" marker-end="url(#in)" d="M 4633.9 5010.1 L 4663.5 5040.8"/>
+<path class="link" marker-start="url(#in)" d="M 3389.3 4980.8 L 3358.6 4947.6"/>
+<path class="link" marker-end="url(#in)" d="M 3420.2 4980.8 L 3453.5 4947.6"/>
+<path class="link" marker-start="url(#in)" d="M 3872.1 4980.8 L 3836.7 4947.6"/>
+<path class="link" marker-end="url(#in)" d="M 3902.1 4980.8 L 3928.9 4947.6"/>
+<path class="link" marker-start="url(#in)" d="M 3865.0 5093.9 L 3816.6 5061.9"/>
+<path class="link" marker-end="url(#in)" d="M 3912.8 5093.9 L 3960.1 5061.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_degradation-of-sugar-alcohols" transform="translate(4016.5,4038.5)"><rect rx="10" height="31" width="273" x="-136.5" y="-15.5"/><text dominant-baseline="central">degradation of sugar alcohols</text></g>
+<g id="node1284" class="node nodeHM pw_degradation-of-sugar-alcohols lid922" transform="translate(4816.6,4994.1)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=922" target="_blank">D-ribulose</a></text><title>D-ribulose</title></g>
+<g id="node1370" class="node nodeHM pw_degradation-of-sugar-alcohols lid620" transform="translate(3653.0,4996.8)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=620" target="_blank">dihydroxyacetone</a></text><title>1,3-dihydroxyacetone</title></g>
+<g id="node3325" class="node nodeHM pw_degradation-of-sugar-alcohols lid2427" transform="translate(3182.7,4531.3)"><rect height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2427" target="_blank">2-acylglycerophosphocholine</a></text><title>2-acylglycerophosphocholine</title></g>
+<g id="node3411" class="node nodeHM pw_degradation-of-sugar-alcohols lid117" transform="translate(4701.8,4666.2)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=117" target="_blank">Fru</a></text><title>D-Fructose</title></g>
+<g id="node3891" class="node nodeHM pw_degradation-of-sugar-alcohols lid422" transform="translate(3847.1,4720.7)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=422" target="_blank">sn-glycerol 3-phosphate</a></text><title>sn-glycerol 3-phosphate</title></g>
+<g id="node3892" class="node nodeSM pw_degradation-of-sugar-alcohols lid135" transform="translate(3404.1,4799.5)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=135" target="_blank">glycerol</a></text><title>Glycerol</title></g>
+<g id="node6831" class="node nodeHM pw_degradation-of-sugar-alcohols lid3459" transform="translate(3667.7,4296.7)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3459" target="_blank">D-tagatose 6-P</a></text><title>D-tagatose 6-phosphate</title></g>
+<g id="node6836" class="node nodeSM pw_degradation-of-sugar-alcohols lid45534" transform="translate(3256.3,4296.7)"><rect height="35.0" width="149.9" x="-74.9" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45534" target="_blank">galactitol-1-phosphate</a></text><title>galactitol-1-phosphate</title></g>
+<g id="node6838" class="node nodeHM pw_degradation-of-sugar-alcohols lid45996" transform="translate(4154.2,4296.0)"><rect height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45996" target="_blank">D-Tagatose 1,6-bisphosphate</a></text><title>D-Tagatose-1,6-bisphosphate</title></g>
+<g id="node6841" class="node nodeSM pw_degradation-of-sugar-alcohols lid482" transform="translate(4590.3,4356.5)"><rect height="35.0" width="132.9" x="-66.5" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=482" target="_blank">glycerone phosphate</a></text><title>glycerone phosphate</title></g>
+<g id="node6842" class="node nodeSM pw_degradation-of-sugar-alcohols lid147" transform="translate(4588.7,4231.3)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title>D-Glyceraldehyde 3-phosphate</title></g>
+<g id="node6843" class="node nodeSM pw_degradation-of-sugar-alcohols lid114624" transform="translate(3187.9,4112.4)"><rect height="35.0" width="138.6" x="-69.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=114624" target="_blank">mannitol-1-phosphate</a></text><title>mannitol-1-phosphate</title></g>
+<g id="node6846" class="node nodeSM pw_degradation-of-sugar-alcohols lid87" transform="translate(3635.6,4113.1)"><rect height="35.0" width="65.1" x="-32.6" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87" target="_blank">Fru 6-P</a></text><title>D-fructose 6-phosphate</title></g>
+<g id="node6849" class="node nodeHM pw_degradation-of-sugar-alcohols lid715" transform="translate(4536.0,4545.6)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=715" target="_blank">D-Xul</a></text><title>D-xylulose</title></g>
+<g id="node6854" class="node nodeSM pw_degradation-of-sugar-alcohols lid1786" transform="translate(4036.3,4545.6)"><rect height="35.0" width="82.1" x="-41.0" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1786" target="_blank">D-arabitol</a></text><title>D-arabitol</title></g>
+<g id="node6857" class="node nodeHM pw_degradation-of-sugar-alcohols lid644" transform="translate(4858.5,4545.6)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=644" target="_blank">D-Xul 5-P</a></text><title>D-xylulose 5-phosphate</title></g>
+<g id="node6969" class="node nodeHM pw_degradation-of-sugar-alcohols lid47262" transform="translate(3401.3,4651.1)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47262" target="_blank">glycerylphosphocholine</a></text><title>glycerylphosphocholine</title></g>
+<g id="node6970" class="node nodeSM pw_degradation-of-sugar-alcohols lid278" transform="translate(4059.9,4996.8)"><rect height="35.0" width="48.2" x="-24.1" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=278" target="_blank">DHAP</a></text><title>dihydroxyacetone phosphate</title></g>
+<g id="node7590" class="node nodeHM pw_degradation-of-sugar-alcohols lid4001" transform="translate(4420.4,4994.1)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4001" target="_blank">D-ribitol</a></text><title>D-ribitol</title></g>
+<g id="node7602" class="node nodeHM pw_degradation-of-sugar-alcohols lid1921" transform="translate(4535.9,4843.7)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1921" target="_blank">D-Xylitol</a></text><title>D-Xylitol</title></g>
+<g id="node7833" class="node nodeHM pw_degradation-of-sugar-alcohols lid45620" transform="translate(4586.7,4113.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45620" target="_blank">L-Sorb 1-P</a></text><title>L-Sorbose 1-phosphate</title></g>
+<g id="node7835" class="node nodeHM pw_degradation-of-sugar-alcohols lid4804" transform="translate(4050.9,4112.6)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4804" target="_blank">D-Sorb 6-P</a></text><title>D-sorbitol 6-phosphate</title></g>
+<g id="node11515" class="node nodeHM pw_degradation-of-sugar-alcohols lid627" transform="translate(4701.4,4888.4)"><rect height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=627" target="_blank">Glc-ol</a></text><title>D-Sorbitol</title></g>
+<g id="node6844" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3444.2,4112.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.17" target="_blank">1.1.1.17</a></text><title>mannitol-1-phosphate 5-dehydrogenase</title></g>
+<g id="node7836" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3838.3,4112.6)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.140" target="_blank">1.1.1.140</a></text><title>sorbitol-6-phosphate 2-dehydrogenase</title></g>
+<g id="node7834" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4275.3,4113.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.-" target="_blank">1.1.1.-</a></text><title>L-sorbose 1-phosphate reductase</title></g>
+<g id="node6840" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4424.9,4296.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.40" target="_blank">4.1.2.40</a></text><title>Tagatose-bisphosphate aldolase</title></g>
+<g id="node6833" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3480.4,4296.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.251" target="_blank">1.1.1.251</a></text><title>galactitol-1-phosphate 5-dehydrogenase</title></g>
+<g id="node6834" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3878.4,4296.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.144" target="_blank">2.7.1.144</a></text><title>tagatose-6-phosphate kinase</title></g>
+<g id="node6855" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4248.5,4545.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.11" target="_blank">1.1.1.11</a></text><title>D-arabinitol 4-dehydrogenase</title></g>
+<g id="node6852" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4701.9,4545.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.17" target="_blank">2.7.1.17</a></text><title>xylulokinase</title></g>
+<g id="node3326" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3182.7,4651.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.5" target="_blank">3.1.1.5</a></text><title>lysophospholipase</title></g>
+<g id="node6966" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3625.0,4651.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.4.46" target="_blank">3.1.4.46</a></text><title>glycerophosphodiester phosphodiesterase</title></g>
+<g id="node7601" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4537.4,4703.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.9" target="_blank">1.1.1.9</a></text><title>D-xylulose reductase</title></g>
+<g id="node6961" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4059.9,4720.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.3" target="_blank">1.1.5.3</a></text><title>glycerol-3-phosphate dehydrogenase</title></g>
+<g id="node3412" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4701.9,4772.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.14" target="_blank">1.1.1.14</a></text><title>L-iditol 2-dehydrogenase</title></g>
+<g id="node6968" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3625.0,4799.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.30" target="_blank">2.7.1.30</a></text><title>glycerol kinase</title></g>
+<g id="node7588" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(4618.5,4994.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.56" target="_blank">1.1.1.56</a></text><title>ribitol 2-dehydrogenase</title></g>
+<g id="node1372" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3404.1,4996.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.6" target="_blank">1.1.1.6</a></text><title>glycerol dehydrogenase</title></g>
+<g id="node1374" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3889.1,4996.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.29" target="_blank">2.7.1.29</a></text><title>glycerone kinase</title></g>
+<g id="node1366" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(3889.1,5109.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.121" target="_blank">2.7.1.121</a></text><title>phosphoenolpyruvate-glycerone phosphotransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1364" class="node nodeCM pw_degradation-of-sugar-alcohols lid31" transform="translate(3983.8,5045.9)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>pyruvate</title></g>
+<g id="node1365" class="node nodeCM pw_degradation-of-sugar-alcohols lid51" transform="translate(3792.4,5045.9)"><rect rx="5" height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=51" target="_blank">phosphoenolpyruvate</a></text><title>phosphoenolpyruvate</title></g>
+<g id="node1368" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(3469.5,4931.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node1369" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(3343.7,4931.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node1371" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(3941.9,4931.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node1373" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(3819.7,4931.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3323" class="node nodeCM pw_degradation-of-sugar-alcohols lid1" transform="translate(3116.2,4702.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3324" class="node nodeCM pw_degradation-of-sugar-alcohols lid833" transform="translate(3119.9,4588.4)"><rect rx="5" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=833" target="_blank">fatty acid</a></text><title>fatty acid</title></g>
+<g id="node3409" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(4768.3,4708.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node3410" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(4768.6,4837.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6830" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(3815.7,4359.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node6832" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(3543.2,4359.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node6835" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(3417.6,4359.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6837" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(3941.2,4233.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node6839" class="node nodeCM pw_degradation-of-sugar-alcohols lid12" transform="translate(3941.2,4359.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6845" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(3381.5,4175.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6847" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(3507.0,4175.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node6848" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(4311.4,4607.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node6850" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(4775.8,4604.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node6851" class="node nodeCM pw_degradation-of-sugar-alcohols lid12" transform="translate(4775.1,4481.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6853" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(4185.8,4608.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6856" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(4639.1,4608.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node6962" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(3694.1,4882.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node6963" class="node nodeCM pw_degradation-of-sugar-alcohols lid1" transform="translate(3562.2,4713.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6964" class="node nodeCM pw_degradation-of-sugar-alcohols lid2695" transform="translate(4121.6,4783.4)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title>a quinol</title></g>
+<g id="node6965" class="node nodeCM pw_degradation-of-sugar-alcohols lid149" transform="translate(3687.8,4713.9)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=149" target="_blank">choline</a></text><title>choline</title></g>
+<g id="node6967" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(3564.7,4882.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node6971" class="node nodeCM pw_degradation-of-sugar-alcohols lid1992" transform="translate(3996.0,4783.4)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title>a quinone</title></g>
+<g id="node7587" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(4553.4,5056.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node7589" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(4678.9,5056.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node7600" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(4456.2,4762.3)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node7603" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(4454.6,4638.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node7837" class="node nodeCM pw_degradation-of-sugar-alcohols lid40" transform="translate(4339.0,4177.5)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node7838" class="node nodeCM pw_degradation-of-sugar-alcohols lid50" transform="translate(4203.6,4177.8)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+<g id="node7839" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(3908.4,4179.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node7840" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(3764.5,4176.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2140.2" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1732.8 3526.1" width="1733" height="3526" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1732.8" height="3526.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_degradation-of-sugar-alcohols" class="pw " x="0.0" y="0.0" width="1652.8" height="3430.6" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1122.2 537.1 L 1122.2 354.6"/>
+<path class="link" marker-end="url(#in)" d="M 1122.2 569.1 L 1122.2 751.6"/>
+<path class="link" marker-end="url(#in)" d="M 939.6 717.8 L 1103.3 762.4"/>
+<path class="link" marker-start="url(#in)" d="M 875.8 717.8 L 751.1 751.8"/>
+<path class="link" marker-end="url(#in)" d="M 942.9 816.5 L 1103.3 772.7"/>
+<path class="link" marker-start="url(#in)" d="M 872.6 816.5 L 751.1 783.3"/>
+<path class="link" marker-end="url(#in)" d="M 693.2 569.1 L 693.2 751.6"/>
+<path class="link" marker-start="url(#in)" d="M 693.2 537.1 L 693.2 354.6"/>
+<path class="link" marker-start="url(#in)" d="M 875.8 338.6 L 725.1 338.6"/>
+<path class="link" marker-end="url(#in)" d="M 939.6 338.6 L 1041.7 338.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 939.6 247.3 L 1090.2 322.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 875.8 215.4 L 725.2 140.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 507.4 124.1 L 615.9 124.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 450.0 124.1 L 357.7 124.1"/>
+<path class="link" marker-start="url(#in)" d="M 446.8 1196.6 L 335.0 1196.6"/>
+<path class="link" marker-end="url(#in)" d="M 510.6 1196.6 L 664.5 1196.6"/>
+<path class="link" marker-end="url(#in)" d="M 872.6 1196.6 L 721.9 1196.6"/>
+<path class="link" marker-start="url(#in)" d="M 942.9 1196.6 L 1083.8 1196.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1308.0 1196.6 L 1160.6 1196.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1365.4 1196.6 L 1512.8 1196.6"/>
+<path class="link" marker-start="url(#in)" d="M 443.6 1625.6 L 341.5 1625.6"/>
+<path class="link" marker-end="url(#in)" d="M 513.9 1625.6 L 641.9 1625.6"/>
+<path class="link" marker-start="url(#in)" d="M 872.6 1625.6 L 744.6 1625.6"/>
+<path class="link" marker-end="url(#in)" d="M 942.9 1625.6 L 1028.7 1625.6"/>
+<path class="link" marker-start="url(#in)" d="M 446.8 2093.6 L 302.6 2093.6"/>
+<path class="link" marker-end="url(#in)" d="M 510.6 2093.6 L 671.0 2093.6"/>
+<path class="link" marker-start="url(#in)" d="M 875.8 2093.6 L 715.4 2093.6"/>
+<path class="link" marker-end="url(#in)" d="M 939.6 2093.6 L 1087.1 2093.6"/>
+<path class="link" marker-start="url(#in)" d="M 693.2 2324.1 L 693.2 2506.6"/>
+<path class="link" marker-end="url(#in)" d="M 693.2 2292.1 L 693.2 2109.6"/>
+<path class="link" marker-start="url(#in)" d="M 446.8 2951.6 L 299.4 2951.6"/>
+<path class="link" marker-end="url(#in)" d="M 510.6 2951.6 L 654.8 2951.6"/>
+<path class="link" marker-start="url(#in)" d="M 165.0 3182.1 L 256.2 3364.6"/>
+<path class="link" marker-end="url(#in)" d="M 149.0 3150.1 L 57.7 2967.6"/>
+<path class="link" marker-start="url(#in)" d="M 1304.8 1625.6 L 1215.7 1625.6"/>
+<path class="link" marker-end="url(#in)" d="M 1368.6 1619.8 L 1535.5 1589.4"/>
+<path class="link" marker-end="url(#in)" d="M 1368.6 1631.4 L 1483.7 1652.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1099.4 537.1 L 1065.5 513.4"/>
+<path class="link" marker-end="url(#in)" d="M 1145.1 569.1 L 1177.6 591.8"/>
+<path class="link" marker-start="url(#in)" d="M 896.5 725.1 L 868.8 764.6"/>
+<path class="link" marker-end="url(#in)" d="M 918.9 693.1 L 946.6 653.5"/>
+<path class="link" marker-start="url(#in)" d="M 896.5 842.1 L 868.8 881.6"/>
+<path class="link" marker-end="url(#in)" d="M 918.9 810.1 L 951.3 763.9"/>
+<path class="link" marker-start="url(#in)" d="M 670.4 537.1 L 639.3 515.3"/>
+<path class="link" marker-end="url(#in)" d="M 670.4 569.1 L 639.3 590.8"/>
+<path class="link" marker-start="url(#in)" d="M 896.5 354.6 L 868.8 394.1"/>
+<path class="link" marker-end="url(#in)" d="M 918.9 354.6 L 946.6 394.1"/>
+<path class="link" marker-start="url(#in)" d="M 910.5 247.3 L 917.7 288.6"/>
+<path class="link" marker-end="url(#in)" d="M 878.2 247.3 L 853.9 260.5"/>
+<path class="link" marker-start="url(#in)" d="M 489.9 108.1 L 517.6 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 467.5 140.1 L 433.3 188.9"/>
+<path class="link" marker-start="url(#in)" d="M 467.5 1212.6 L 438.9 1253.4"/>
+<path class="link" marker-end="url(#in)" d="M 489.9 1212.6 L 518.6 1253.4"/>
+<path class="link" marker-start="url(#in)" d="M 918.9 1180.6 L 947.6 1139.7"/>
+<path class="link" marker-end="url(#in)" d="M 896.5 1180.6 L 867.9 1139.7"/>
+<path class="link" marker-start="url(#in)" d="M 1325.5 1212.6 L 1296.0 1254.8"/>
+<path class="link" marker-end="url(#in)" d="M 1347.9 1212.6 L 1377.5 1254.8"/>
+<path class="link" marker-start="url(#in)" d="M 467.5 1641.6 L 438.9 1682.4"/>
+<path class="link" marker-end="url(#in)" d="M 489.9 1641.6 L 518.6 1682.4"/>
+<path class="link" marker-start="url(#in)" d="M 896.5 1641.6 L 868.8 1681.1"/>
+<path class="link" marker-end="url(#in)" d="M 913.2 1609.6 L 930.7 1559.0"/>
+<path class="link" marker-end="url(#in)" d="M 927.5 1609.6 L 961.9 1581.7"/>
+<path class="link" marker-start="url(#in)" d="M 467.5 2109.6 L 438.9 2150.4"/>
+<path class="link" marker-end="url(#in)" d="M 491.8 2109.6 L 562.0 2195.7"/>
+<path class="link" marker-start="url(#in)" d="M 896.5 2109.6 L 868.8 2149.1"/>
+<path class="link" marker-end="url(#in)" d="M 913.2 2077.6 L 930.7 2027.0"/>
+<path class="link" marker-end="url(#in)" d="M 927.5 2077.6 L 961.9 2049.7"/>
+<path class="link" marker-start="url(#in)" d="M 670.4 2324.1 L 639.3 2345.8"/>
+<path class="link" marker-end="url(#in)" d="M 673.6 2292.1 L 594.0 2227.2"/>
+<path class="link" marker-start="url(#in)" d="M 467.5 2967.6 L 438.9 3008.4"/>
+<path class="link" marker-end="url(#in)" d="M 489.9 2967.6 L 518.6 3008.4"/>
+<path class="link" marker-start="url(#in)" d="M 188.9 3170.8 L 226.0 3176.3"/>
+<path class="link" marker-end="url(#in)" d="M 165.6 3150.1 L 190.7 3103.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_degradation-of-sugar-alcohols" transform="translate(826.4,0.0)"><rect rx="10" height="31" width="292" x="-145.9" y="-15.5"/><text dominant-baseline="central">degradation of sugar alcohols</text></g>
+<g id="node3891" class="node nodeHM pw_degradation-of-sugar-alcohols lid422" transform="translate(1122.2,338.6)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=422" target="_blank">sn-glycerol 3-phosphate</a></text><title></title></g>
+<g id="node6970" class="node nodeHM pw_degradation-of-sugar-alcohols lid278" transform="translate(1122.2,767.6)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=278" target="_blank">DHAP</a></text><title></title></g>
+<g id="node1370" class="node nodeHM pw_degradation-of-sugar-alcohols lid620" transform="translate(693.2,767.6)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=620" target="_blank">dihydroxyacetone</a></text><title></title></g>
+<g id="node3892" class="node nodeHM pw_degradation-of-sugar-alcohols lid135" transform="translate(693.2,338.6)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=135" target="_blank">glycerol</a></text><title></title></g>
+<g id="node6969" class="node nodeHM pw_degradation-of-sugar-alcohols lid47262" transform="translate(693.2,124.1)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47262" target="_blank">glycerylphosphocholine</a></text><title></title></g>
+<g id="node3325" class="node nodeHM pw_degradation-of-sugar-alcohols lid2427" transform="translate(264.2,124.1)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2427" target="_blank">2-acylglycerophosphocholine</a></text><title></title></g>
+<g id="node6843" class="node nodeHM pw_degradation-of-sugar-alcohols lid114624" transform="translate(264.2,1196.6)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=114624" target="_blank">mannitol-1-phosphate</a></text><title></title></g>
+<g id="node6846" class="node nodeHM pw_degradation-of-sugar-alcohols lid87" transform="translate(693.2,1196.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87" target="_blank">Fru 6-P</a></text><title></title></g>
+<g id="node7835" class="node nodeHM pw_degradation-of-sugar-alcohols lid4804" transform="translate(1122.2,1196.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4804" target="_blank">D-Sorb 6-P</a></text><title></title></g>
+<g id="node7833" class="node nodeHM pw_degradation-of-sugar-alcohols lid45620" transform="translate(1551.2,1196.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45620" target="_blank">L-Sorb 1-P</a></text><title></title></g>
+<g id="node6836" class="node nodeHM pw_degradation-of-sugar-alcohols lid45534" transform="translate(264.2,1625.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45534" target="_blank">galactitol-1-phosphate</a></text><title></title></g>
+<g id="node6831" class="node nodeHM pw_degradation-of-sugar-alcohols lid3459" transform="translate(693.2,1625.6)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3459" target="_blank">D-tagatose 6-P</a></text><title></title></g>
+<g id="node6838" class="node nodeHM pw_degradation-of-sugar-alcohols lid45996" transform="translate(1122.2,1625.6)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45996" target="_blank">D-Tagatose 1,6-bisphosphate</a></text><title></title></g>
+<g id="node6854" class="node nodeHM pw_degradation-of-sugar-alcohols lid1786" transform="translate(264.2,2093.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1786" target="_blank">D-arabitol</a></text><title></title></g>
+<g id="node6849" class="node nodeHM pw_degradation-of-sugar-alcohols lid715" transform="translate(693.2,2093.6)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=715" target="_blank">D-Xul</a></text><title></title></g>
+<g id="node6857" class="node nodeHM pw_degradation-of-sugar-alcohols lid644" transform="translate(1122.2,2093.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=644" target="_blank">D-Xul 5-P</a></text><title></title></g>
+<g id="node7602" class="node nodeHM pw_degradation-of-sugar-alcohols lid1921" transform="translate(693.2,2522.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1921" target="_blank">D-Xylitol</a></text><title></title></g>
+<g id="node7590" class="node nodeHM pw_degradation-of-sugar-alcohols lid4001" transform="translate(264.2,2951.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4001" target="_blank">D-ribitol</a></text><title></title></g>
+<g id="node1284" class="node nodeHM pw_degradation-of-sugar-alcohols lid922" transform="translate(693.2,2951.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=922" target="_blank">D-ribulose</a></text><title></title></g>
+<g id="node11515" class="node nodeHM pw_degradation-of-sugar-alcohols lid627" transform="translate(264.2,3380.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=627" target="_blank">D-Sorbitol</a></text><title></title></g>
+<g id="node3411" class="node nodeHM pw_degradation-of-sugar-alcohols lid117" transform="translate(49.7,2951.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=117" target="_blank">Fru</a></text><title></title></g>
+<g id="node6842" class="node nodeHM pw_degradation-of-sugar-alcohols lid147" transform="translate(1551.2,1586.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node6841" class="node nodeHM pw_degradation-of-sugar-alcohols lid482" transform="translate(1551.2,1664.6)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=482" target="_blank">glycerone phosphate</a></text><title></title></g>
+<g id="node6961" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(1122.2,553.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.3" target="_blank">1.1.5.3</a></text><title>glycerol-3-phosphate dehydrogenase</title></g>
+<g id="node1374" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(907.7,709.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.29" target="_blank">2.7.1.29</a></text><title>glycerone kinase; phosphoenolpyruvate-glycerone phosphotransferase</title></g>
+<g id="node1366" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(907.7,826.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.121" target="_blank">2.7.1.121</a></text><title>glycerone kinase; phosphoenolpyruvate-glycerone phosphotransferase</title></g>
+<g id="node1372" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(693.2,553.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.6" target="_blank">1.1.1.6</a></text><title>glycerol dehydrogenase</title></g>
+<g id="node6968" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(907.7,338.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.30" target="_blank">2.7.1.30</a></text><title>glycerol kinase</title></g>
+<g id="node6966" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(907.7,231.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.4.46" target="_blank">3.1.4.46</a></text><title>glycerophosphodiester phosphodiesterase</title></g>
+<g id="node3326" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(478.7,124.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.5" target="_blank">3.1.1.5</a></text><title>lysophospholipase</title></g>
+<g id="node6844" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(478.7,1196.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.17" target="_blank">1.1.1.17</a></text><title>mannitol-1-phosphate 5-dehydrogenase</title></g>
+<g id="node7836" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(907.7,1196.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.140" target="_blank">1.1.1.140</a></text><title>sorbitol-6-phosphate 2-dehydrogenase</title></g>
+<g id="node7834" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(1336.7,1196.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.-" target="_blank">1.1.1.-</a></text><title>L-sorbose 1-phosphate reductase</title></g>
+<g id="node6833" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(478.7,1625.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.251" target="_blank">1.1.1.251</a></text><title>galactitol-1-phosphate 5-dehydrogenase</title></g>
+<g id="node6834" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(907.7,1625.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.144" target="_blank">2.7.1.144</a></text><title>tagatose-6-phosphate kinase</title></g>
+<g id="node6855" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(478.7,2093.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.11" target="_blank">1.1.1.11</a></text><title>D-arabinitol 4-dehydrogenase</title></g>
+<g id="node6852" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(907.7,2093.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.17" target="_blank">2.7.1.17</a></text><title>xylulokinase</title></g>
+<g id="node7601" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(693.2,2308.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.9" target="_blank">1.1.1.9</a></text><title>D-xylulose reductase</title></g>
+<g id="node7588" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(478.7,2951.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.56" target="_blank">1.1.1.56</a></text><title>ribitol 2-dehydrogenase</title></g>
+<g id="node3412" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(157.0,3166.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.14" target="_blank">1.1.1.14</a></text><title>L-iditol 2-dehydrogenase</title></g>
+<g id="node6840" class="node nodeEN pw_degradation-of-sugar-alcohols" transform="translate(1336.7,1625.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.40" target="_blank">4.1.2.40</a></text><title>Tagatose-bisphosphate aldolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6961~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid1992" transform="translate(1042.7,497.4)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node6961~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid2695" transform="translate(1200.4,607.8)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title></title></g>
+<g id="node1374~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(857.6,780.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node1374~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(957.8,637.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node1366~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid51" transform="translate(857.6,897.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=51" target="_blank">PEP</a></text><title></title></g>
+<g id="node1366~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid31" transform="translate(962.5,747.9)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node1372~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(620.3,502.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node1372~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(620.3,604.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node6968~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(857.6,410.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6968~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(957.8,410.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6966~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid1" transform="translate(920.5,304.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6966~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid149" transform="translate(825.2,276.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=149" target="_blank">choline</a></text><title></title></g>
+<g id="node3326~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid1" transform="translate(528.8,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3326~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid833" transform="translate(422.1,204.9)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=833" target="_blank">fatty acid</a></text><title></title></g>
+<g id="node6844~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(427.7,1269.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node6844~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(529.8,1269.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node7836~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(958.8,1123.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node7836~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(856.7,1123.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node7834~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid5" transform="translate(1284.8,1270.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7834~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid10" transform="translate(1388.7,1270.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node6833~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(427.7,1698.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node6833~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(529.8,1698.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node6834~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(857.6,1697.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6834~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(936.2,1543.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6834~2" class="node nodeCM pw_degradation-of-sugar-alcohols lid12" transform="translate(974.4,1571.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6855~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(427.7,2166.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node6855~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(575.0,2211.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node6852~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid4" transform="translate(857.6,2165.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6852~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid13" transform="translate(936.2,2011.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6852~2" class="node nodeCM pw_degradation-of-sugar-alcohols lid12" transform="translate(974.4,2039.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7601~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(620.3,2359.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node7588~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(427.7,3024.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node7588~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(529.8,3024.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3412~0" class="node nodeCM pw_degradation-of-sugar-alcohols lid7" transform="translate(245.0,3179.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3412~1" class="node nodeCM pw_degradation-of-sugar-alcohols lid8" transform="translate(199.3,3087.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>
+<text x="2150.2" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

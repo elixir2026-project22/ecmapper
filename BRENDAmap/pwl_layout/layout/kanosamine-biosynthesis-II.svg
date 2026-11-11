@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 974.0 1085.6" width="974" height="1086" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="974.0" height="1085.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_kanosamine-biosynthesis-II" class="pw " x="0.0" y="0.0" width="854.0" height="950.1" style="opacity: 0.5; fill: rgb(221, 221, 221);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 133.9 716.7 L 203.1 569.6"/>
+<path class="link" marker-end="url(#in)" d="M 126.3 748.7 L 126.3 884.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 309.4 396.8 L 220.7 537.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 336.9 364.8 L 451.7 259.2"/>
+<path class="link" marker-start="url(#in)" d="M 606.6 157.0 L 494.6 227.2"/>
+<path class="link" marker-end="url(#in)" d="M 666.2 125.0 L 750.7 85.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 112.3 716.7 L 82.7 683.1"/>
+<path class="link" marker-end="url(#in)" d="M 94.4 745.2 L 59.0 759.0"/>
+<path class="link" marker-start="url(#in)" d="M 329.2 396.8 L 355.1 439.5"/>
+<path class="link" marker-start="url(#in)" d="M 319.3 396.8 L 318.5 452.1"/>
+<path class="link" marker-start="url(#in)" d="M 634.9 157.0 L 644.5 212.6"/>
+<path class="link" marker-start="url(#in)" d="M 625.6 157.0 L 606.2 204.4"/>
+<path class="link" marker-end="url(#in)" d="M 633.8 125.0 L 639.9 68.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_kanosamine-biosynthesis-II" transform="translate(427.0,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">kanosamine biosynthesis II</text></g>
+<g id="node11861" class="node nodeHM pw_kanosamine-biosynthesis-II lid10405" transform="translate(210.7,553.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10405" target="_blank">kanosamine 6-phosphate</a></text><title></title></g>
+<g id="node11863" class="node nodeHM pw_kanosamine-biosynthesis-II lid28801" transform="translate(126.3,900.1)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28801" target="_blank">kanosamine</a></text><title></title></g>
+<g id="node11857" class="node nodeHM pw_kanosamine-biosynthesis-II lid28985" transform="translate(469.1,243.2)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28985" target="_blank">3-dehydro-D-glucose 6-phosphate</a></text><title></title></g>
+<g id="node1225" class="node nodeHM pw_kanosamine-biosynthesis-II lid105" transform="translate(784.8,69.4)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=105" target="_blank">D-Glc 6-P</a></text><title></title></g>
+<g id="node11862" class="node nodeEN pw_kanosamine-biosynthesis-II" transform="translate(126.3,732.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.92" target="_blank">3.1.3.92</a></text><title>kanosamine-6-phosphate phosphatase</title></g>
+<g id="node11858" class="node nodeEN pw_kanosamine-biosynthesis-II" transform="translate(319.5,380.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.104" target="_blank">2.6.1.104</a></text><title>3-dehydro-glucose-6-phosphate-glutamate transaminase</title></g>
+<g id="node11853" class="node nodeEN pw_kanosamine-biosynthesis-II" transform="translate(632.1,141.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.361" target="_blank">1.1.1.361</a></text><title>glucose-6-phosphate 3-dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11862~0" class="node nodeCM pw_kanosamine-biosynthesis-II lid1" transform="translate(68.7,667.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11862~1" class="node nodeCM pw_kanosamine-biosynthesis-II lid174005" transform="translate(46.5,763.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=174005" target="_blank">Pi</a></text><title></title></g>
+<g id="node11858~0" class="node nodeCM pw_kanosamine-biosynthesis-II lid34" transform="translate(364.8,455.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node11858~1" class="node nodeCM pw_kanosamine-biosynthesis-II lid41" transform="translate(318.3,468.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node11853~0" class="node nodeCM pw_kanosamine-biosynthesis-II lid8" transform="translate(647.3,228.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node11853~1" class="node nodeCM pw_kanosamine-biosynthesis-II lid12" transform="translate(599.7,220.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node11853~2" class="node nodeCM pw_kanosamine-biosynthesis-II lid7" transform="translate(641.6,52.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+</g></svg>

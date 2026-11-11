@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2143.4 1867.3" width="2143" height="1867" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2143.4" height="1867.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_cysteine-metabolism" class="pw " x="0.0" y="0.0" width="2023.4" height="1731.8" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1145.0 1113.3 L 1429.3 959.1"/>
+<path class="link" marker-end="url(#in)" d="M 1082.7 1145.3 L 817.3 1274.9"/>
+<path class="link" marker-start="url(#in)" d="M 839.7 1415.3 L 791.7 1306.9"/>
+<path class="link" marker-end="url(#in)" d="M 861.2 1447.3 L 937.6 1531.9"/>
+<path class="link" marker-start="url(#in)" d="M 784.6 1473.8 L 784.6 1306.9"/>
+<path class="link" marker-end="url(#in)" d="M 813.2 1499.8 L 905.9 1531.9"/>
+<path class="link" marker-start="url(#in)" d="M 1162.6 1544.7 L 1016.4 1546.9"/>
+<path class="link" marker-end="url(#in)" d="M 1204.6 1544.3 L 1410.4 1543.5"/>
+<path class="link" marker-end="url(#in)" d="M 1575.2 1569.4 L 1474.3 1549.6"/>
+<path class="link" marker-start="url(#in)" d="M 1612.3 1560.4 C 1622.1 1531.4 1643.1 1469.0 1652.9 1440.0"/>
+<path class="link" marker-end="url(#in)" d="M 1658.1 1224.7 L 1658.1 1408.7"/>
+<path class="link" marker-start="url(#in)" d="M 1645.4 1193.3 C 1607.5 1147.4 1495.5 1011.6 1457.7 965.8"/>
+<path class="link" marker-start="url(#in)" d="M 1442.5 1234.0 C 1442.9 1182.8 1444.4 1016.9 1444.9 965.7"/>
+<path class="link" marker-end="url(#in)" d="M 1442.3 1265.3 L 1442.3 1527.3"/>
+<path class="link" marker-start="url(#in)" d="M 135.3 1371.9 L 249.2 1307.6"/>
+<path class="link" marker-end="url(#in)" d="M 107.0 1403.3 C 107.0 1433.9 107.0 1502.5 107.0 1532.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 205.2 1549.9 L 135.6 1548.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 269.0 1550.6 L 346.6 1550.6"/>
+<path class="link" marker-end="url(#in)" d="M 542.7 1445.9 L 409.1 1534.6"/>
+<path class="link" marker-start="url(#in)" d="M 584.7 1418.5 L 759.5 1306.9"/>
+<path class="link" marker-start="url(#in)" d="M 542.3 1291.5 L 717.0 1291.1"/>
+<path class="link" marker-end="url(#in)" d="M 478.5 1291.6 L 319.2 1291.6"/>
+<path class="link" marker-start="url(#in)" d="M 1652.7 1119.9 L 1460.8 963.4"/>
+<path class="link" marker-end="url(#in)" d="M 1678.3 1151.9 L 1740.9 1320.9"/>
+<path class="link" marker-start="url(#in)" d="M 1644.6 1501.8 C 1665.8 1467.7 1716.3 1386.2 1737.4 1352.2"/>
+<path class="link" marker-end="url(#in)" d="M 1606.4 1521.1 L 1474.3 1539.0"/>
+<path class="link" marker-end="url(#in)" d="M 1473.0 1585.8 L 1453.9 1559.3"/>
+<path class="link" marker-start="url(#in)" d="M 1483.5 1585.8 L 1473.9 1433.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1458.6 1206.0 C 1461.4 1247.2 1469.0 1360.5 1471.8 1402.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1456.7 1174.8 L 1445.9 966.6"/>
+<path class="link" marker-start="url(#in)" d="M 1444.3 655.5 L 1433.3 427.4"/>
+<path class="link" marker-end="url(#in)" d="M 1445.0 687.5 L 1445.0 934.6"/>
+<path class="link" marker-end="url(#in)" d="M 1254.2 788.0 C 1294.8 822.6 1392.3 905.7 1429.9 937.7"/>
+<path class="link" marker-start="url(#in)" d="M 1212.8 756.5 L 1023.8 626.4"/>
+<path class="link" marker-start="url(#in)" d="M 1287.0 212.9 L 1064.6 315.6"/>
+<path class="link" marker-start="url(#in)" d="M 1311.4 182.1 L 1257.6 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1327.5 214.1 L 1424.0 395.4"/>
+<path class="link" marker-start="url(#in)" d="M 810.8 432.9 L 1033.2 330.2"/>
+<path class="link" marker-start="url(#in)" d="M 746.9 447.5 L 609.6 446.8"/>
+<path class="link" marker-end="url(#in)" d="M 800.7 463.6 L 978.7 594.4"/>
+<path class="link" marker-start="url(#in)" d="M 1667.3 945.9 L 1460.8 950.2"/>
+<path class="link" marker-end="url(#in)" d="M 1724.7 945.3 L 1827.2 945.3"/>
+<path class="link" marker-start="url(#in)" d="M 1314.1 966.6 L 1252.9 1005.1"/>
+<path class="link" marker-end="url(#in)" d="M 1371.4 950.6 L 1429.3 950.6"/>
+<path class="link" marker-start="url(#in)" d="M 330.1 458.3 L 267.5 481.4"/>
+<path class="link" marker-end="url(#in)" d="M 393.9 446.6 L 506.9 446.6"/>
+<path class="link" marker-start="url(#in)" d="M 1679.1 683.7 L 1764.4 577.6"/>
+<path class="link" marker-start="url(#in)" d="M 1652.1 715.7 L 1459.1 934.6"/>
+<path class="link" marker-end="url(#in)" d="M 1666.2 683.7 L 1666.2 519.1"/>
+<path class="link" marker-start="url(#in)" d="M 1793.5 826.5 L 1958.0 826.5"/>
+<path class="link" marker-start="url(#in)" d="M 1778.0 842.5 L 1849.2 929.3"/>
+<path class="link" marker-end="url(#in)" d="M 1778.1 810.5 L 1836.2 740.1"/>
+<path class="link" marker-end="url(#in)" d="M 1736.8 837.3 C 1671.2 862.8 1510.0 925.3 1460.0 944.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1117.7 1113.3 L 1124.9 1060.4"/>
+<path class="link" marker-start="url(#in)" d="M 818.1 1437.7 L 744.1 1454.2"/>
+<path class="link" marker-end="url(#in)" d="M 853.3 1447.3 L 865.3 1476.7"/>
+<path class="link" marker-start="url(#in)" d="M 756.6 1473.8 L 744.1 1466.6"/>
+<path class="link" marker-end="url(#in)" d="M 813.2 1490.8 L 856.2 1492.2"/>
+<path class="link" marker-start="url(#in)" d="M 1172.6 1560.4 L 1145.1 1600.4"/>
+<path class="link" marker-end="url(#in)" d="M 1188.9 1528.4 L 1205.4 1479.1"/>
+<path class="link" marker-end="url(#in)" d="M 1203.0 1528.4 L 1236.6 1500.7"/>
+<path class="link" marker-start="url(#in)" d="M 1608.8 1559.7 L 1615.0 1499.2"/>
+<path class="link" marker-end="url(#in)" d="M 1611.3 1591.7 L 1627.6 1655.3"/>
+<path class="link" marker-end="url(#in)" d="M 1601.6 1591.7 L 1584.4 1640.6"/>
+<path class="link" marker-start="url(#in)" d="M 1626.1 1202.6 L 1594.6 1196.6"/>
+<path class="link" marker-end="url(#in)" d="M 1690.0 1214.8 L 1728.2 1222.0"/>
+<path class="link" marker-start="url(#in)" d="M 1419.7 1233.3 L 1386.7 1209.9"/>
+<path class="link" marker-end="url(#in)" d="M 1413.7 1259.0 L 1375.3 1272.0"/>
+<path class="link" marker-end="url(#in)" d="M 1429.3 1265.3 L 1400.1 1300.9"/>
+<path class="link" marker-start="url(#in)" d="M 94.7 1371.9 L 65.2 1333.2"/>
+<path class="link" marker-start="url(#in)" d="M 105.5 1371.9 L 100.3 1316.9"/>
+<path class="link" marker-end="url(#in)" d="M 119.2 1403.9 L 148.8 1442.6"/>
+<path class="link" marker-end="url(#in)" d="M 108.5 1403.9 L 113.5 1457.3"/>
+<path class="link" marker-end="url(#in)" d="M 248.5 1534.6 L 276.5 1495.5"/>
+<path class="link" marker-start="url(#in)" d="M 559.7 1415.9 L 546.1 1361.6"/>
+<path class="link" marker-start="url(#in)" d="M 568.9 1415.9 L 585.4 1364.8"/>
+<path class="link" marker-end="url(#in)" d="M 543.2 1415.9 L 512.5 1392.0"/>
+<path class="link" marker-end="url(#in)" d="M 542.7 1429.7 L 490.9 1424.3"/>
+<path class="link" marker-end="url(#in)" d="M 499.1 1275.6 L 471.4 1236.1"/>
+<path class="link" marker-start="url(#in)" d="M 1643.6 1137.4 L 1600.8 1139.6"/>
+<path class="link" marker-end="url(#in)" d="M 1701.0 1134.4 L 1743.8 1132.1"/>
+<path class="link" marker-start="url(#in)" d="M 1663.8 1528.1 L 1701.0 1542.3"/>
+<path class="link" marker-end="url(#in)" d="M 1634.9 1533.2 L 1634.0 1593.7"/>
+<path class="link" marker-start="url(#in)" d="M 1474.5 1585.8 L 1436.8 1525.3"/>
+<path class="link" marker-end="url(#in)" d="M 1505.7 1617.8 L 1529.7 1636.0"/>
+<path class="link" marker-end="url(#in)" d="M 1492.0 1617.8 L 1514.5 1665.8"/>
+<path class="link" marker-start="url(#in)" d="M 1421.0 655.5 L 1388.0 633.6"/>
+<path class="link" marker-end="url(#in)" d="M 1423.3 687.5 L 1391.2 711.1"/>
+<path class="link" marker-start="url(#in)" d="M 1207.3 781.6 L 1168.5 793.9"/>
+<path class="link" marker-end="url(#in)" d="M 1260.1 756.5 L 1289.3 737.2"/>
+<path class="link" marker-end="url(#in)" d="M 1264.7 771.8 L 1307.6 770.6"/>
+<path class="link" marker-end="url(#in)" d="M 1350.9 188.6 L 1386.9 177.8"/>
+<path class="link" marker-end="url(#in)" d="M 810.8 444.2 L 850.0 440.0"/>
+<path class="link" marker-start="url(#in)" d="M 1684.5 929.3 L 1655.5 889.1"/>
+<path class="link" marker-end="url(#in)" d="M 1701.3 929.3 L 1718.6 876.8"/>
+<path class="link" marker-end="url(#in)" d="M 1715.2 929.3 L 1749.4 900.9"/>
+<path class="link" marker-start="url(#in)" d="M 1318.3 934.6 L 1285.5 909.8"/>
+<path class="link" marker-end="url(#in)" d="M 1344.4 934.6 L 1359.7 884.6"/>
+<path class="link" marker-start="url(#in)" d="M 354.1 462.6 L 331.2 508.8"/>
+<path class="link" marker-end="url(#in)" d="M 370.0 430.6 L 395.8 378.5"/>
+<path class="link" marker-start="url(#in)" d="M 1681.0 715.7 L 1710.7 747.8"/>
+<path class="link" marker-end="url(#in)" d="M 1639.8 683.7 L 1607.2 663.9"/>
+<path class="link" marker-end="url(#in)" d="M 1658.1 683.7 L 1634.9 637.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_cysteine-metabolism" transform="translate(1011.7,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">cysteine metabolism</text></g>
+<g id="node5418" class="node nodeHM pw_cysteine-metabolism lid74" transform="translate(1445.0,950.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title></title></g>
+<g id="node5334" class="node nodeHM pw_cysteine-metabolism lid30957" transform="translate(784.6,1290.9)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30957" target="_blank">3-sulfino-L-alanine</a></text><title></title></g>
+<g id="node5331" class="node nodeHM pw_cysteine-metabolism lid182190" transform="translate(952.1,1547.9)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182190" target="_blank">3-sulfinylpyruvate</a></text><title></title></g>
+<g id="node7735" class="node nodeHM pw_cysteine-metabolism lid31" transform="translate(1442.3,1543.3)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node5343" class="node nodeHM pw_cysteine-metabolism lid4827" transform="translate(1658.1,1424.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4827" target="_blank">L-cysteate</a></text><title></title></g>
+<g id="node523" class="node nodeHM pw_cysteine-metabolism lid5161" transform="translate(277.5,1291.6)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5161" target="_blank">hypotaurine</a></text><title></title></g>
+<g id="node513" class="node nodeHM pw_cysteine-metabolism lid595" transform="translate(107.0,1548.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=595" target="_blank">taurine</a></text><title></title></g>
+<g id="node515" class="node nodeHM pw_cysteine-metabolism lid4827" transform="translate(385.0,1550.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4827" target="_blank">L-cysteate</a></text><title></title></g>
+<g id="node5648" class="node nodeHM pw_cysteine-metabolism lid1122" transform="translate(1746.9,1336.9)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1122" target="_blank">mercaptopyruvate</a></text><title></title></g>
+<g id="node5421" class="node nodeHM pw_cysteine-metabolism lid1350" transform="translate(1472.9,1417.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1350" target="_blank">D-Cys</a></text><title></title></g>
+<g id="node5414" class="node nodeHM pw_cysteine-metabolism lid680" transform="translate(1432.5,411.4)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=680" target="_blank">Ac-Ser</a></text><title></title></g>
+<g id="node5423" class="node nodeHM pw_cysteine-metabolism lid585" transform="translate(1000.5,610.4)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=585" target="_blank">L-cystathionine</a></text><title></title></g>
+<g id="node12193" class="node nodeHM pw_cysteine-metabolism lid95" transform="translate(1048.9,322.9)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95" target="_blank">Ser</a></text><title></title></g>
+<g id="node12194" class="node nodeHM pw_cysteine-metabolism lid29" transform="translate(1250.1,52.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node5436" class="node nodeHM pw_cysteine-metabolism lid305" transform="translate(558.2,446.6)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=305" target="_blank">L-homocysteine</a></text><title></title></g>
+<g id="node5424" class="node nodeHM pw_cysteine-metabolism lid1218" transform="translate(1862.3,945.3)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1218" target="_blank">L-cystine</a></text><title></title></g>
+<g id="node1210" class="node nodeHM pw_cysteine-metabolism lid1189" transform="translate(1227.5,1021.1)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1189" target="_blank">O-phospho-Ser</a></text><title></title></g>
+<g id="node7580" class="node nodeHM pw_cysteine-metabolism lid948" transform="translate(224.0,497.4)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=948" target="_blank">O-Ac-homoSer</a></text><title></title></g>
+<g id="node11030" class="node nodeHM pw_cysteine-metabolism lid914" transform="translate(1777.3,561.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=914" target="_blank">tRNACys</a></text><title></title></g>
+<g id="node11029" class="node nodeHM pw_cysteine-metabolism lid10689" transform="translate(1666.2,503.1)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10689" target="_blank">L-cysteinyl-tRNACys</a></text><title></title></g>
+<g id="node1212" class="node nodeHM pw_cysteine-metabolism lid44" transform="translate(1973.7,826.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node1211" class="node nodeHM pw_cysteine-metabolism lid973" transform="translate(1849.4,724.1)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title></title></g>
+<g id="node5335" class="node nodeEN pw_cysteine-metabolism" transform="translate(1115.5,1129.3)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.20" target="_blank">1.13.11.20</a></text><title>cysteine dioxygenase</title></g>
+<g id="node11333" class="node nodeEN pw_cysteine-metabolism" transform="translate(846.8,1431.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.1" target="_blank">2.6.1.1</a></text><title>aspartate transaminase; aspartate transaminase</title></g>
+<g id="node5332" class="node nodeEN pw_cysteine-metabolism" transform="translate(784.6,1489.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.1" target="_blank">2.6.1.1</a></text><title>aspartate transaminase; aspartate transaminase</title></g>
+<g id="node5328" class="node nodeEN pw_cysteine-metabolism" transform="translate(1183.6,1544.4)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node5341" class="node nodeEN pw_cysteine-metabolism" transform="translate(1607.2,1575.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.25" target="_blank">4.4.1.25</a></text><title>L-cysteate sulfo-lyase</title></g>
+<g id="node5342" class="node nodeEN pw_cysteine-metabolism" transform="translate(1658.1,1208.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.10" target="_blank">4.4.1.10</a></text><title>cysteine lyase</title></g>
+<g id="node5326" class="node nodeEN pw_cysteine-metabolism" transform="translate(1442.3,1249.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.1" target="_blank">4.4.1.1</a></text><title>cystathionine gamma-lyase</title></g>
+<g id="node512" class="node nodeEN pw_cysteine-metabolism" transform="translate(107.0,1387.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.8" target="_blank">1.14.13.8</a></text><title>flavin-containing monooxygenase</title></g>
+<g id="node514" class="node nodeEN pw_cysteine-metabolism" transform="translate(237.1,1550.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.29" target="_blank">4.1.1.29</a></text><title>sulfinoalanine decarboxylase</title></g>
+<g id="node516" class="node nodeEN pw_cysteine-metabolism" transform="translate(563.7,1431.9)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node524" class="node nodeEN pw_cysteine-metabolism" transform="translate(510.4,1291.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.29" target="_blank">4.1.1.29</a></text><title>sulfinoalanine decarboxylase</title></g>
+<g id="node5646" class="node nodeEN pw_cysteine-metabolism" transform="translate(1672.3,1135.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.3" target="_blank">2.6.1.3</a></text><title>cysteine transaminase</title></g>
+<g id="node5650" class="node nodeEN pw_cysteine-metabolism" transform="translate(1635.1,1517.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.1.2" target="_blank">2.8.1.2</a></text><title>3-mercaptopyruvate sulfurtransferase</title></g>
+<g id="node5430" class="node nodeEN pw_cysteine-metabolism" transform="translate(1484.5,1601.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.15" target="_blank">4.4.1.15</a></text><title>D-cysteine desulfhydrase</title></g>
+<g id="node5420" class="node nodeEN pw_cysteine-metabolism" transform="translate(1457.6,1190.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.1.10" target="_blank">5.1.1.10</a></text><title>Amino-acid racemase</title></g>
+<g id="node5419" class="node nodeEN pw_cysteine-metabolism" transform="translate(1445.0,671.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.47" target="_blank">2.5.1.47</a></text><title>cysteine synthase</title></g>
+<g id="node5642" class="node nodeEN pw_cysteine-metabolism" transform="translate(1236.0,772.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.1" target="_blank">4.4.1.1</a></text><title>cystathionine gamma-lyase</title></g>
+<g id="node5413" class="node nodeEN pw_cysteine-metabolism" transform="translate(1319.0,198.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.30" target="_blank">2.3.1.30</a></text><title>serine O-acetyltransferase</title></g>
+<g id="node5415" class="node nodeEN pw_cysteine-metabolism" transform="translate(778.9,447.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.22" target="_blank">4.2.1.22</a></text><title>Cystathionine beta-synthase</title></g>
+<g id="node5426" class="node nodeEN pw_cysteine-metabolism" transform="translate(1696.0,945.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.6" target="_blank">1.8.1.6</a></text><title>cystine reductase</title></g>
+<g id="node5422" class="node nodeEN pw_cysteine-metabolism" transform="translate(1339.5,950.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.65" target="_blank">2.5.1.65</a></text><title>O-phosphoserine sulfhydrylase</title></g>
+<g id="node7579" class="node nodeEN pw_cysteine-metabolism" transform="translate(362.0,446.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.49" target="_blank">2.5.1.49</a></text><title>O-acetylhomoserine aminocarboxypropyltransferase</title></g>
+<g id="node11028" class="node nodeEN pw_cysteine-metabolism" transform="translate(1666.2,699.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.16" target="_blank">6.1.1.16</a></text><title>Cysteine-tRNA ligase</title></g>
+<g id="node5425" class="node nodeEN pw_cysteine-metabolism" transform="translate(1764.9,826.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.4.4" target="_blank">1.8.4.4</a></text><title>glutathione-cystine transhydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5335~0" class="node nodeCM pw_cysteine-metabolism lid9" transform="translate(1127.1,1044.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11333~0" class="node nodeCM pw_cysteine-metabolism lid34" transform="translate(728.4,1457.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node11333~1" class="node nodeCM pw_cysteine-metabolism lid41" transform="translate(871.9,1492.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5328~0" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(1134.1,1616.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5328~1" class="node nodeCM pw_cysteine-metabolism lid12" transform="translate(1210.7,1463.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5328~2" class="node nodeCM pw_cysteine-metabolism lid92" transform="translate(1255.9,1484.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92" target="_blank">sulfite</a></text><title></title></g>
+<g id="node5341~0" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(1616.6,1483.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5341~1" class="node nodeCM pw_cysteine-metabolism lid2546" transform="translate(1631.7,1671.3)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2546" target="_blank">bisulfite</a></text><title></title></g>
+<g id="node5341~2" class="node nodeCM pw_cysteine-metabolism lid27" transform="translate(1578.8,1656.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5342~0" class="node nodeCM pw_cysteine-metabolism lid92" transform="translate(1565.9,1191.1)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92" target="_blank">sulfite</a></text><title></title></g>
+<g id="node5342~1" class="node nodeCM pw_cysteine-metabolism lid911" transform="translate(1743.9,1225.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=911" target="_blank">H2S</a></text><title></title></g>
+<g id="node5326~0" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(1371.0,1198.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5326~1" class="node nodeCM pw_cysteine-metabolism lid911" transform="translate(1359.6,1277.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=911" target="_blank">H2S</a></text><title></title></g>
+<g id="node5326~2" class="node nodeCM pw_cysteine-metabolism lid27" transform="translate(1387.0,1316.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node512~0" class="node nodeCM pw_cysteine-metabolism lid7" transform="translate(53.0,1317.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node512~1" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(98.8,1300.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node512~2" class="node nodeCM pw_cysteine-metabolism lid8" transform="translate(161.0,1458.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node512~3" class="node nodeCM pw_cysteine-metabolism lid12" transform="translate(115.0,1473.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node514~0" class="node nodeCM pw_cysteine-metabolism lid28" transform="translate(287.9,1479.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node516~0" class="node nodeCM pw_cysteine-metabolism lid7" transform="translate(542.1,1345.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node516~1" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(590.6,1348.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node516~2" class="node nodeCM pw_cysteine-metabolism lid8" transform="translate(493.5,1377.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node516~3" class="node nodeCM pw_cysteine-metabolism lid12" transform="translate(478.4,1423.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node524~0" class="node nodeCM pw_cysteine-metabolism lid28" transform="translate(460.2,1220.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5646~0" class="node nodeCM pw_cysteine-metabolism lid34" transform="translate(1585.1,1140.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5646~1" class="node nodeCM pw_cysteine-metabolism lid41" transform="translate(1759.6,1131.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5650~0" class="node nodeCM pw_cysteine-metabolism lid118" transform="translate(1716.8,1548.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=118" target="_blank">CN-</a></text><title></title></g>
+<g id="node5650~1" class="node nodeCM pw_cysteine-metabolism lid931" transform="translate(1633.8,1609.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=931" target="_blank">NCS-</a></text><title></title></g>
+<g id="node5430~0" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(1426.8,1509.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5430~1" class="node nodeCM pw_cysteine-metabolism lid911" transform="translate(1545.4,1647.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=911" target="_blank">H2S</a></text><title></title></g>
+<g id="node5430~2" class="node nodeCM pw_cysteine-metabolism lid27" transform="translate(1521.9,1681.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5419~0" class="node nodeCM pw_cysteine-metabolism lid911" transform="translate(1372.3,623.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=911" target="_blank">H2S</a></text><title></title></g>
+<g id="node5419~1" class="node nodeCM pw_cysteine-metabolism lid47" transform="translate(1369.4,727.1)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node5642~0" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(1152.7,798.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5642~1" class="node nodeCM pw_cysteine-metabolism lid390" transform="translate(1311.5,722.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=390" target="_blank">2OBUT</a></text><title></title></g>
+<g id="node5642~2" class="node nodeCM pw_cysteine-metabolism lid27" transform="translate(1323.3,770.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5413~0" class="node nodeCM pw_cysteine-metabolism lid18" transform="translate(1402.6,173.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node5415~0" class="node nodeCM pw_cysteine-metabolism lid1" transform="translate(865.7,438.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5426~0" class="node nodeCM pw_cysteine-metabolism lid7" transform="translate(1644.0,873.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5426~1" class="node nodeCM pw_cysteine-metabolism lid8" transform="translate(1723.9,860.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5426~2" class="node nodeCM pw_cysteine-metabolism lid12" transform="translate(1761.9,890.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5422~0" class="node nodeCM pw_cysteine-metabolism lid911" transform="translate(1269.7,898.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=911" target="_blank">H2S</a></text><title></title></g>
+<g id="node5422~1" class="node nodeCM pw_cysteine-metabolism lid16" transform="translate(1364.6,868.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node7579~0" class="node nodeCM pw_cysteine-metabolism lid911" transform="translate(323.2,524.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=911" target="_blank">H2S</a></text><title></title></g>
+<g id="node7579~1" class="node nodeCM pw_cysteine-metabolism lid47" transform="translate(403.7,362.5)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node11028~0" class="node nodeCM pw_cysteine-metabolism lid4" transform="translate(1725.5,763.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11028~1" class="node nodeCM pw_cysteine-metabolism lid30" transform="translate(1591.5,654.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node11028~2" class="node nodeCM pw_cysteine-metabolism lid17" transform="translate(1626.9,621.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>

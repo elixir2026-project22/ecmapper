@@ -1,0 +1,525 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="4281" height="3936" viewBox="0 0 4281.2 3936.2"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="15388.9 2004.6 1939.0 1504.8" width="1939" height="1505" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="15388.9" y="2004.6" width="1939.0" height="1504.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_heme-metabolism" class="pw pw4" x="15428.9" y="2060.1" width="1859.0" height="1409.3" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15713.2 2194.3 L 15840.4 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15640.4 2194.3 L 15508.2 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16106.9 2194.3 L 15969.7 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16179.6 2194.3 L 16312.2 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16577.5 2194.3 L 16441.5 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16644.6 2194.3 L 16785.0 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17089.8 2194.3 L 17203.1 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17017.0 2194.3 L 16908.6 2194.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15676.7 2485.0 L 15676.2 2590.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15713.2 2469.0 L 16082.6 2469.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16421.2 2469.2 L 16548.1 2469.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16348.4 2469.2 L 16217.5 2469.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16810.4 2469.2 L 16660.4 2469.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16846.8 2453.2 L 16846.8 2210.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15944.0 2607.6 L 16095.9 2609.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15865.6 2607.1 L 15746.4 2606.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16874.7 2609.8 L 17076.8 2609.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16802.0 2609.8 L 16655.5 2609.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16314.1 2610.1 L 16185.7 2609.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16392.5 2610.1 L 16565.8 2609.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15675.8 2746.6 L 15675.8 2829.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15675.8 2714.6 L 15676.1 2622.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16633.9 2876.6 L 16806.4 2876.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16555.5 2876.6 L 16385.7 2876.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17099.4 2876.6 L 16879.1 2876.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17135.8 2860.6 L 17135.8 2625.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15572.5 2993.2 L 15660.4 3095.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15572.9 2961.2 L 15661.6 2861.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15762.5 2993.2 L 15686.2 3095.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15762.5 2961.2 L 15687.7 2861.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16301.4 2971.8 L 16301.3 2892.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16301.4 3003.8 L 16301.3 3085.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16213.4 3206.7 L 16287.9 3117.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16211.6 3238.7 L 16287.9 3344.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16393.8 3209.3 L 16315.0 3117.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16395.1 3241.3 L 16315.6 3344.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15586.9 3257.6 L 15661.6 3346.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15585.9 3225.6 L 15661.9 3127.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15762.2 3225.9 L 15686.5 3127.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15761.3 3257.9 L 15688.2 3346.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15988.2 3362.7 L 15736.8 3362.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16061.0 3362.7 L 16262.1 3362.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16567.8 3362.7 L 16340.5 3362.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16651.8 3362.7 L 16791.7 3362.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17062.2 3362.7 L 17173.6 3362.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16989.4 3362.7 L 16875.8 3362.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 15640.4 2183.3 L 15576.4 2164.0"/>
+<path class="link" marker-start="url(#in)" d="M 15660.5 2210.3 L 15627.7 2242.6"/>
+<path class="link" marker-start="url(#in)" d="M 15659.7 2178.3 L 15628.5 2149.1"/>
+<path class="link" marker-end="url(#in)" d="M 15692.5 2178.3 L 15721.2 2149.1"/>
+<path class="link" marker-end="url(#in)" d="M 15691.7 2210.3 L 15722.0 2242.6"/>
+<path class="link" marker-start="url(#in)" d="M 16127.2 2210.3 L 16094.7 2242.6"/>
+<path class="link" marker-end="url(#in)" d="M 16158.4 2210.3 L 16189.0 2242.6"/>
+<path class="link" marker-end="url(#in)" d="M 16159.2 2178.3 L 16188.3 2149.1"/>
+<path class="link" marker-start="url(#in)" d="M 17073.2 2178.3 L 17110.9 2147.7"/>
+<path class="link" marker-start="url(#in)" d="M 17072.7 2210.3 L 17111.4 2242.3"/>
+<path class="link" marker-end="url(#in)" d="M 17038.0 2178.3 L 17008.7 2147.7"/>
+<path class="link" marker-end="url(#in)" d="M 17038.4 2210.3 L 17008.3 2242.3"/>
+<path class="link" marker-end="url(#in)" d="M 15643.4 2485.0 L 15598.0 2506.8"/>
+<path class="link" marker-start="url(#in)" d="M 16400.8 2453.2 L 16435.8 2418.2"/>
+<path class="link" marker-end="url(#in)" d="M 16370.8 2453.2 L 16340.3 2418.2"/>
+<path class="link" marker-end="url(#in)" d="M 16820.0 2453.2 L 16773.7 2425.6"/>
+<path class="link" marker-end="url(#in)" d="M 16822.7 2485.2 L 16776.5 2516.0"/>
+<path class="link" marker-start="url(#in)" d="M 15883.3 2623.2 L 15826.8 2665.1"/>
+<path class="link" marker-end="url(#in)" d="M 15921.1 2623.2 L 15963.9 2665.1"/>
+<path class="link" marker-end="url(#in)" d="M 15929.7 2591.2 L 15974.7 2562.2"/>
+<path class="link" marker-start="url(#in)" d="M 16822.6 2625.8 L 16783.9 2665.1"/>
+<path class="link" marker-end="url(#in)" d="M 16855.3 2625.8 L 16896.9 2665.1"/>
+<path class="link" marker-end="url(#in)" d="M 16874.7 2621.5 L 16930.2 2639.4"/>
+<path class="link" marker-start="url(#in)" d="M 16333.7 2626.1 L 16285.8 2665.1"/>
+<path class="link" marker-end="url(#in)" d="M 16376.9 2626.1 L 16434.3 2665.1"/>
+<path class="link" marker-start="url(#in)" d="M 15647.0 2714.6 L 15595.2 2685.7"/>
+<path class="link" marker-end="url(#in)" d="M 15645.9 2746.6 L 15598.0 2772.1"/>
+<path class="link" marker-start="url(#in)" d="M 16605.9 2860.6 L 16627.9 2829.5"/>
+<path class="link" marker-end="url(#in)" d="M 16573.7 2860.6 L 16532.9 2829.5"/>
+<path class="link" marker-start="url(#in)" d="M 17151.2 2860.6 L 17181.3 2829.5"/>
+<path class="link" marker-end="url(#in)" d="M 17113.0 2860.6 L 17065.2 2827.1"/>
+<path class="link" marker-start="url(#in)" d="M 15548.3 2961.2 L 15523.9 2923.8"/>
+<path class="link" marker-end="url(#in)" d="M 15546.9 2993.2 L 15512.3 3039.8"/>
+<path class="link" marker-end="url(#in)" d="M 15593.1 2993.2 L 15646.3 3018.0"/>
+<path class="link" marker-end="url(#in)" d="M 15564.6 2993.2 L 15581.5 3039.8"/>
+<path class="link" marker-start="url(#in)" d="M 15787.0 2961.2 L 15824.1 2913.6"/>
+<path class="link" marker-start="url(#in)" d="M 15808.0 2971.2 L 15842.4 2965.0"/>
+<path class="link" marker-end="url(#in)" d="M 15741.3 2993.2 L 15690.8 3017.6"/>
+<path class="link" marker-end="url(#in)" d="M 15787.4 2993.2 L 15813.3 3025.3"/>
+<path class="link" marker-start="url(#in)" d="M 16334.9 2976.2 L 16415.5 2948.4"/>
+<path class="link" marker-start="url(#in)" d="M 16267.8 2975.5 L 16219.7 2957.9"/>
+<path class="link" marker-end="url(#in)" d="M 16332.9 3003.8 L 16407.9 3041.8"/>
+<path class="link" marker-end="url(#in)" d="M 16334.9 2993.1 L 16422.9 3007.1"/>
+<path class="link" marker-end="url(#in)" d="M 16281.8 3003.8 L 16240.1 3038.1"/>
+<path class="link" marker-end="url(#in)" d="M 16315.5 3003.8 L 16349.1 3041.8"/>
+<path class="link" marker-end="url(#in)" d="M 16267.8 2994.3 L 16216.8 3004.2"/>
+<path class="link" marker-start="url(#in)" d="M 16186.0 3206.7 L 16146.1 3161.3"/>
+<path class="link" marker-end="url(#in)" d="M 16236.1 3238.7 L 16269.5 3253.5"/>
+<path class="link" marker-end="url(#in)" d="M 16176.2 3238.7 L 16153.0 3254.3"/>
+<path class="link" marker-start="url(#in)" d="M 16425.0 3209.3 L 16484.9 3154.8"/>
+<path class="link" marker-end="url(#in)" d="M 16443.9 3221.2 L 16507.8 3213.9"/>
+<path class="link" marker-end="url(#in)" d="M 16441.2 3241.3 L 16474.9 3257.4"/>
+<path class="link" marker-end="url(#in)" d="M 16371.1 3237.3 L 16314.0 3256.1"/>
+<path class="link" marker-start="url(#in)" d="M 15558.7 3225.6 L 15524.7 3189.0"/>
+<path class="link" marker-end="url(#in)" d="M 15540.0 3256.3 L 15493.4 3276.7"/>
+<path class="link" marker-end="url(#in)" d="M 15560.8 3257.6 L 15526.8 3300.4"/>
+<path class="link" marker-start="url(#in)" d="M 15790.5 3225.9 L 15827.5 3189.0"/>
+<path class="link" marker-end="url(#in)" d="M 15790.3 3257.9 L 15832.2 3300.4"/>
+<path class="link" marker-start="url(#in)" d="M 15988.2 3373.3 L 15943.1 3386.5"/>
+<path class="link" marker-end="url(#in)" d="M 16008.6 3378.7 L 15977.8 3409.5"/>
+<path class="link" marker-start="url(#in)" d="M 16567.8 3351.0 L 16507.6 3334.3"/>
+<path class="link" marker-start="url(#in)" d="M 16600.6 3346.7 L 16574.6 3301.8"/>
+<path class="link" marker-end="url(#in)" d="M 16637.5 3378.7 L 16664.4 3394.2"/>
+<path class="link" marker-end="url(#in)" d="M 16651.8 3352.0 L 16721.5 3334.3"/>
+<path class="link" marker-end="url(#in)" d="M 16619.0 3378.7 L 16644.9 3423.6"/>
+<path class="link" marker-end="url(#in)" d="M 16619.0 3346.7 L 16644.9 3301.8"/>
+<path class="link" marker-start="url(#in)" d="M 17009.8 3378.7 L 16979.0 3409.5"/>
+<path class="link" marker-end="url(#in)" d="M 17045.2 3378.7 L 17080.0 3407.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_heme-metabolism" transform="translate(16358.4,2060.1)"><rect rx="10" height="31" width="168" x="-84.0" y="-15.5"/><text dominant-baseline="central">heme metabolism</text></g>
+<g id="node2237" class="node nodeHM pw_heme-metabolism lid199180" transform="translate(16301.3,3101.6)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=199180" target="_blank">Fe-coproporphyrin III</a></text><title>Fe-coproporphyrin III</title></g>
+<g id="node2239" class="node nodeHM pw_heme-metabolism lid195017" transform="translate(16301.3,2876.6)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195017" target="_blank">12,18-didecarboxysiroheme</a></text><title>12,18-didecarboxysiroheme</title></g>
+<g id="node3183" class="node nodeHM pw_heme-metabolism lid599" transform="translate(17212.8,3362.7)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=599" target="_blank">bilirubin</a></text><title>Bilirubin</title></g>
+<g id="node3191" class="node nodeHM pw_heme-metabolism lid1713" transform="translate(16833.7,3362.7)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1713" target="_blank">biliverdin</a></text><title>biliverdin</title></g>
+<g id="node3423" class="node nodeHM pw_heme-metabolism lid72" transform="translate(17225.4,2194.3)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title>glycine</title></g>
+<g id="node3424" class="node nodeHM pw_heme-metabolism lid41" transform="translate(15485.9,2194.3)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4205" class="node nodeHM pw_heme-metabolism lid4234" transform="translate(15675.8,2845.0)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4234" target="_blank">coproporphyrinogen III</a></text><title>coproporphyrinogen III</title></g>
+<g id="node4211" class="node nodeHM pw_heme-metabolism lid2363" transform="translate(15676.1,2606.8)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2363" target="_blank">uroporphyrinogen-III</a></text><title>uroporphyrinogen III</title></g>
+<g id="node4216" class="node nodeHM pw_heme-metabolism lid1119" transform="translate(15674.2,3111.2)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1119" target="_blank">protoporphyrinogen IX</a></text><title>Protoporphyrinogen IX</title></g>
+<g id="node4223" class="node nodeHM pw_heme-metabolism lid2845" transform="translate(16150.1,2469.3)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2845" target="_blank">hydroxymethylbilane</a></text><title>Hydroxymethylbilane</title></g>
+<g id="node4224" class="node nodeSM pw_heme-metabolism lid3360" transform="translate(16301.3,3362.7)"><rect height="35.0" width="76.4" x="-38.2" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3360" target="_blank">protoheme</a></text><title>heme</title></g>
+<g id="node4227" class="node nodeHM pw_heme-metabolism lid868" transform="translate(15675.0,3362.8)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=868" target="_blank">protoporphyrin IX</a></text><title>protoporphyrin IX</title></g>
+<g id="node6462" class="node nodeHM pw_heme-metabolism lid43523" transform="translate(16846.8,2194.3)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43523" target="_blank">5-aminolevulinate</a></text><title>5-Amino-4-oxopentanoate</title></g>
+<g id="node6463" class="node nodeHM pw_heme-metabolism lid1763" transform="translate(16604.2,2469.2)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1763" target="_blank">porphobilinogen</a></text><title>Porphobilinogen</title></g>
+<g id="node6475" class="node nodeHM pw_heme-metabolism lid55894" transform="translate(16376.9,2194.3)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=55894" target="_blank">Glu 1-semialdehyde</a></text><title>glutamate-1-semialdehyde</title></g>
+<g id="node6476" class="node nodeHM pw_heme-metabolism lid6545" transform="translate(15905.0,2194.3)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6545" target="_blank">L-glutamyl-tRNAGlu</a></text><title>L-glutamyl-tRNAGlu</title></g>
+<g id="node6521" class="node nodeHM pw_heme-metabolism lid6581" transform="translate(16610.6,2609.8)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6581" target="_blank">precorrin-2</a></text><title>precorrin-2</title></g>
+<g id="node6537" class="node nodeHM pw_heme-metabolism lid72196" transform="translate(16140.8,2609.8)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72196" target="_blank">precorrin-1</a></text><title>precorrin-1</title></g>
+<g id="node6927" class="node nodeSM pw_heme-metabolism lid1288" transform="translate(16842.7,2876.6)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1288" target="_blank">siroheme</a></text><title>siroheme</title></g>
+<g id="node6929" class="node nodeHM pw_heme-metabolism lid5216" transform="translate(17135.8,2609.8)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5216" target="_blank">sirohydrochlorin</a></text><title>sirohydrochlorin</title></g>
+<g id="node6473" class="node nodeEN pw_heme-metabolism" transform="translate(15676.8,2194.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.17" target="_blank">6.1.1.17</a></text><title>Glutamate-tRNA ligase</title></g>
+<g id="node6470" class="node nodeEN pw_heme-metabolism" transform="translate(16143.3,2194.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.70" target="_blank">1.2.1.70</a></text><title>glutamyl-tRNA reductase</title></g>
+<g id="node6467" class="node nodeEN pw_heme-metabolism" transform="translate(16611.0,2194.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.3.8" target="_blank">5.4.3.8</a></text><title>glutamate-1-semialdehyde 2,1-aminomutase</title></g>
+<g id="node3418" class="node nodeEN pw_heme-metabolism" transform="translate(17053.4,2194.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.37" target="_blank">2.3.1.37</a></text><title>5-aminolevulinate synthase</title></g>
+<g id="node6468" class="node nodeEN pw_heme-metabolism" transform="translate(15676.8,2469.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.75" target="_blank">4.2.1.75</a></text><title>uroporphyrinogen-III synthase</title></g>
+<g id="node4221" class="node nodeEN pw_heme-metabolism" transform="translate(16384.8,2469.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.61" target="_blank">2.5.1.61</a></text><title>hydroxymethylbilane synthase</title></g>
+<g id="node6474" class="node nodeEN pw_heme-metabolism" transform="translate(16846.8,2469.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.24" target="_blank">4.2.1.24</a></text><title>porphobilinogen synthase</title></g>
+<g id="node6538" class="node nodeEN pw_heme-metabolism" transform="translate(15904.8,2607.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.107" target="_blank">2.1.1.107</a></text><title>uroporphyrinogen-III C-methyltransferase</title></g>
+<g id="node6933" class="node nodeEN pw_heme-metabolism" transform="translate(16838.4,2609.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.76" target="_blank">1.3.1.76</a></text><title>precorrin-2 dehydrogenase</title></g>
+<g id="node6534" class="node nodeEN pw_heme-metabolism" transform="translate(16353.3,2610.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.107" target="_blank">2.1.1.107</a></text><title>uroporphyrinogen-III C-methyltransferase</title></g>
+<g id="node4212" class="node nodeEN pw_heme-metabolism" transform="translate(15675.8,2730.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.37" target="_blank">4.1.1.37</a></text><title>Uroporphyrinogen decarboxylase</title></g>
+<g id="node2240" class="node nodeEN pw_heme-metabolism" transform="translate(16594.7,2876.6)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.111" target="_blank">4.1.1.111</a></text><title>siroheme decarboxylase</title></g>
+<g id="node6932" class="node nodeEN pw_heme-metabolism" transform="translate(17135.8,2876.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.99.1.4" target="_blank">4.99.1.4</a></text><title>sirohydrochlorin ferrochelatase</title></g>
+<g id="node4217" class="node nodeEN pw_heme-metabolism" transform="translate(15558.7,2977.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.98.3" target="_blank">1.3.98.3</a></text><title>coproporphyrinogen dehydrogenase</title></g>
+<g id="node4213" class="node nodeEN pw_heme-metabolism" transform="translate(15774.5,2977.2)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.3.3" target="_blank">1.3.3.3</a></text><title>coproporphyrinogen oxidase</title></g>
+<g id="node2238" class="node nodeEN pw_heme-metabolism" transform="translate(16301.4,2987.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.-" target="_blank">4.1.3.-</a></text><title>Fe-coproporphyrin synthase</title></g>
+<g id="node1473" class="node nodeEN pw_heme-metabolism" transform="translate(16200.1,3222.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.98.5" target="_blank">1.3.98.5</a></text><title>hydrogen peroxide-dependent heme synthase</title></g>
+<g id="node2236" class="node nodeEN pw_heme-metabolism" transform="translate(16407.5,3225.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.98.6" target="_blank">1.3.98.6</a></text><title>AdoMet-dependent heme synthase</title></g>
+<g id="node4219" class="node nodeEN pw_heme-metabolism" transform="translate(15573.6,3241.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.3.4" target="_blank">1.3.3.4</a></text><title>protoporphyrinogen oxidase</title></g>
+<g id="node2223" class="node nodeEN pw_heme-metabolism" transform="translate(15774.5,3241.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.3" target="_blank">1.3.5.3</a></text><title>protoporphyrinogen IX dehydrogenase (quinone)</title></g>
+<g id="node4225" class="node nodeEN pw_heme-metabolism" transform="translate(16024.6,3362.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.98.1.1" target="_blank">4.98.1.1</a></text><title>protoporphyrin ferrochelatase</title></g>
+<g id="node3186" class="node nodeEN pw_heme-metabolism" transform="translate(16609.8,3362.7)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.18" target="_blank">1.14.14.18</a></text><title>heme oxygenase (biliverdin-producing)</title></g>
+<g id="node3194" class="node nodeEN pw_heme-metabolism" transform="translate(17025.8,3362.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.24" target="_blank">1.3.1.24</a></text><title>biliverdin reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1470" class="node nodeCM pw_heme-metabolism lid1" transform="translate(15826.2,3041.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1471" class="node nodeCM pw_heme-metabolism lid1" transform="translate(16130.8,3269.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1472" class="node nodeCM pw_heme-metabolism lid1126" transform="translate(16132.1,3145.3)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node1474" class="node nodeCM pw_heme-metabolism lid28" transform="translate(16291.7,3263.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node2221" class="node nodeCM pw_heme-metabolism lid3003" transform="translate(15848.0,3316.4)"><rect rx="5" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3003" target="_blank">menaquinol</a></text><title>menaquinol</title></g>
+<g id="node2222" class="node nodeCM pw_heme-metabolism lid2295" transform="translate(15843.6,3173.0)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2295" target="_blank">menaquinone</a></text><title>menaquinone</title></g>
+<g id="node2224" class="node nodeCM pw_heme-metabolism lid88" transform="translate(16497.2,3267.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title>L-methionine</title></g>
+<g id="node2225" class="node nodeCM pw_heme-metabolism lid943" transform="translate(16569.6,3206.8)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title>5&#x27;-deoxyadenosine</title></g>
+<g id="node2226" class="node nodeCM pw_heme-metabolism lid24" transform="translate(16502.5,3138.8)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node2227" class="node nodeCM pw_heme-metabolism lid943" transform="translate(16155.0,3016.2)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title>5&#x27;-deoxyadenosine</title></g>
+<g id="node2228" class="node nodeCM pw_heme-metabolism lid12" transform="translate(16363.2,3057.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2229" class="node nodeCM pw_heme-metabolism lid88" transform="translate(16220.6,3054.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title>L-methionine</title></g>
+<g id="node2230" class="node nodeCM pw_heme-metabolism lid47" transform="translate(16439.5,3057.8)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>Acetate</title></g>
+<g id="node2231" class="node nodeCM pw_heme-metabolism lid12937" transform="translate(16510.1,3021.0)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12937" target="_blank">oxidized electron acceptor</a></text><title>oxidized electron acceptor</title></g>
+<g id="node2232" class="node nodeCM pw_heme-metabolism lid24" transform="translate(16175.9,2941.9)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node2233" class="node nodeCM pw_heme-metabolism lid1661" transform="translate(16461.9,2932.4)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title>reduced electron acceptor</title></g>
+<g id="node2234" class="node nodeCM pw_heme-metabolism lid28" transform="translate(16511.9,2813.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node2235" class="node nodeCM pw_heme-metabolism lid12" transform="translate(16639.2,2813.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2241" class="node nodeCM pw_heme-metabolism lid12" transform="translate(16949.7,2645.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3184" class="node nodeCM pw_heme-metabolism lid50" transform="translate(17099.5,3423.3)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+<g id="node3185" class="node nodeCM pw_heme-metabolism lid40" transform="translate(16963.0,3425.5)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node3187" class="node nodeCM pw_heme-metabolism lid9" transform="translate(16565.4,3285.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node3188" class="node nodeCM pw_heme-metabolism lid12937" transform="translate(16784.5,3318.3)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12937" target="_blank">oxidized electron acceptor</a></text><title>oxidized electron acceptor</title></g>
+<g id="node3189" class="node nodeCM pw_heme-metabolism lid1" transform="translate(16686.7,3407.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3190" class="node nodeCM pw_heme-metabolism lid25" transform="translate(16654.2,3285.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=25" target="_blank">Fe2+</a></text><title>Fe2+</title></g>
+<g id="node3192" class="node nodeCM pw_heme-metabolism lid3261" transform="translate(16654.2,3439.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3261" target="_blank">CO</a></text><title>carbon monoxide</title></g>
+<g id="node3193" class="node nodeCM pw_heme-metabolism lid1661" transform="translate(16449.9,3318.3)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title>reduced electron acceptor</title></g>
+<g id="node3419" class="node nodeCM pw_heme-metabolism lid18" transform="translate(16993.3,2131.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node3420" class="node nodeCM pw_heme-metabolism lid28" transform="translate(16993.3,2258.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node3421" class="node nodeCM pw_heme-metabolism lid12" transform="translate(17130.7,2258.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3422" class="node nodeCM pw_heme-metabolism lid224" transform="translate(17130.7,2131.7)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title>succinyl-CoA</title></g>
+<g id="node4206" class="node nodeCM pw_heme-metabolism lid28" transform="translate(15668.6,3028.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4207" class="node nodeCM pw_heme-metabolism lid943" transform="translate(15500.5,3055.8)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title>5&#x27;-deoxyadenosine</title></g>
+<g id="node4208" class="node nodeCM pw_heme-metabolism lid88" transform="translate(15587.3,3055.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title>L-methionine</title></g>
+<g id="node4209" class="node nodeCM pw_heme-metabolism lid24" transform="translate(15513.5,2907.8)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node4210" class="node nodeCM pw_heme-metabolism lid12" transform="translate(15473.9,3285.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4214" class="node nodeCM pw_heme-metabolism lid9" transform="translate(15861.9,2961.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node4215" class="node nodeCM pw_heme-metabolism lid12" transform="translate(15836.6,2897.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4218" class="node nodeCM pw_heme-metabolism lid28" transform="translate(15575.8,2784.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4220" class="node nodeCM pw_heme-metabolism lid1126" transform="translate(15514.1,3316.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node4222" class="node nodeCM pw_heme-metabolism lid27" transform="translate(16326.3,2402.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node4226" class="node nodeCM pw_heme-metabolism lid9" transform="translate(15509.9,3173.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node4228" class="node nodeCM pw_heme-metabolism lid12" transform="translate(15575.8,2674.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4229" class="node nodeCM pw_heme-metabolism lid12" transform="translate(15923.6,3392.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4230" class="node nodeCM pw_heme-metabolism lid25" transform="translate(15961.8,3425.5)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=25" target="_blank">Fe2+</a></text><title>Fe2+</title></g>
+<g id="node6464" class="node nodeCM pw_heme-metabolism lid12" transform="translate(16754.3,2414.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6465" class="node nodeCM pw_heme-metabolism lid1" transform="translate(16451.8,2402.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6466" class="node nodeCM pw_heme-metabolism lid1" transform="translate(16754.3,2530.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6469" class="node nodeCM pw_heme-metabolism lid10" transform="translate(16204.2,2133.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node6471" class="node nodeCM pw_heme-metabolism lid17" transform="translate(15737.0,2133.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node6472" class="node nodeCM pw_heme-metabolism lid30" transform="translate(15737.0,2258.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node6477" class="node nodeCM pw_heme-metabolism lid1988" transform="translate(15611.5,2133.1)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1988" target="_blank">tRNAGlu</a></text><title>tRNAGlu</title></g>
+<g id="node6478" class="node nodeCM pw_heme-metabolism lid4" transform="translate(15611.5,2258.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node6479" class="node nodeCM pw_heme-metabolism lid12" transform="translate(15557.0,2158.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6480" class="node nodeCM pw_heme-metabolism lid1988" transform="translate(16204.2,2258.6)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1988" target="_blank">tRNAGlu</a></text><title>tRNAGlu</title></g>
+<g id="node6481" class="node nodeCM pw_heme-metabolism lid1" transform="translate(15575.8,2517.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6482" class="node nodeCM pw_heme-metabolism lid5" transform="translate(16078.7,2258.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node6532" class="node nodeCM pw_heme-metabolism lid36" transform="translate(16457.8,2681.1)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title>S-adenosyl-L-homocysteine</title></g>
+<g id="node6533" class="node nodeCM pw_heme-metabolism lid24" transform="translate(16266.2,2681.1)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node6535" class="node nodeCM pw_heme-metabolism lid36" transform="translate(15980.2,2681.1)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title>S-adenosyl-L-homocysteine</title></g>
+<g id="node6536" class="node nodeCM pw_heme-metabolism lid12" transform="translate(15994.2,2549.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6540" class="node nodeCM pw_heme-metabolism lid24" transform="translate(15805.3,2681.1)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node6928" class="node nodeCM pw_heme-metabolism lid7" transform="translate(16768.2,2681.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6930" class="node nodeCM pw_heme-metabolism lid12" transform="translate(17045.8,2813.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6931" class="node nodeCM pw_heme-metabolism lid25" transform="translate(17196.8,2813.5)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=25" target="_blank">Fe2+</a></text><title>Fe2+</title></g>
+<g id="node6934" class="node nodeCM pw_heme-metabolism lid8" transform="translate(16913.8,2681.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2019.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 2262.2 3896.2" width="2262" height="3896" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="2262.2" height="3896.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_heme-metabolism" class="pw " x="0.0" y="0.0" width="2182.2" height="3800.7" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1627.1 2274.6 L 1499.4 2192.9"/>
+<path class="link" marker-end="url(#in)" d="M 1673.2 2306.6 L 1792.1 2396.8"/>
+<path class="link" marker-start="url(#in)" d="M 1926.5 2550.0 L 1826.4 2428.8"/>
+<path class="link" marker-end="url(#in)" d="M 1945.9 2582.0 L 2005.2 2734.0"/>
+<path class="link" marker-start="url(#in)" d="M 2024.6 2931.3 L 2012.6 2766.0"/>
+<path class="link" marker-end="url(#in)" d="M 2022.4 2963.3 L 1988.0 3125.7"/>
+<path class="link" marker-start="url(#in)" d="M 1900.8 3302.5 L 1976.3 3157.7"/>
+<path class="link" marker-end="url(#in)" d="M 1877.9 3334.5 L 1772.3 3450.0"/>
+<path class="link" marker-start="url(#in)" d="M 1614.0 3556.7 L 1732.4 3482.0"/>
+<path class="link" marker-end="url(#in)" d="M 1553.5 3583.1 L 1451.2 3613.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1226.9 3627.2 L 1310.3 3628.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1170.4 3615.1 C 1138.5 3601.7 1086.5 3579.8 1051.6 3565.0"/>
+<path class="link" marker-start="url(#in)" d="M 864.1 3495.2 L 970.6 3533.6"/>
+<path class="link" marker-end="url(#in)" d="M 822.6 3468.3 C 801.7 3435.1 752.6 3356.6 731.7 3323.3"/>
+<path class="link" marker-start="url(#in)" d="M 913.8 3405.4 L 1003.7 3533.6"/>
+<path class="link" marker-end="url(#in)" d="M 871.5 3375.4 C 839.5 3360.9 789.6 3338.4 756.4 3323.4"/>
+<path class="link" marker-start="url(#in)" d="M 702.5 3115.4 L 720.5 3291.9"/>
+<path class="link" marker-end="url(#in)" d="M 700.4 3083.4 L 695.6 2913.9"/>
+<path class="link" marker-end="url(#in)" d="M 677.7 2712.0 L 693.7 2881.9"/>
+<path class="link" marker-start="url(#in)" d="M 692.1 2680.6 C 719.8 2654.0 776.4 2599.6 804.1 2573.0"/>
+<path class="link" marker-end="url(#in)" d="M 799.9 2766.6 L 707.9 2881.9"/>
+<path class="link" marker-start="url(#in)" d="M 813.2 2734.6 L 819.5 2573.6"/>
+<path class="link" marker-end="url(#in)" d="M 885.1 2387.9 C 871.7 2422.8 839.3 2507.5 826.0 2542.3"/>
+<path class="link" marker-start="url(#in)" d="M 923.0 2362.1 L 1035.9 2325.6"/>
+<path class="link" marker-end="url(#in)" d="M 967.6 2487.7 L 853.9 2541.6"/>
+<path class="link" marker-start="url(#in)" d="M 1004.6 2458.6 C 1021.7 2427.1 1060.4 2355.9 1077.2 2324.7"/>
+<path class="link" marker-end="url(#in)" d="M 1242.0 2248.5 L 1126.5 2293.6"/>
+<path class="link" marker-start="url(#in)" d="M 1305.9 2226.7 L 1420.2 2192.9"/>
+<path class="link" marker-start="url(#in)" d="M 573.6 3373.4 L 687.0 3323.4"/>
+<path class="link" marker-end="url(#in)" d="M 509.1 3404.7 C 479.1 3421.1 431.8 3446.8 401.7 3463.2"/>
+<path class="link" marker-start="url(#in)" d="M 245.7 3554.0 L 346.3 3494.6"/>
+<path class="link" marker-end="url(#in)" d="M 192.8 3586.0 L 95.0 3646.5"/>
+<path class="link" marker-end="url(#in)" d="M 1509.1 208.9 L 1501.6 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1511.4 240.9 L 1524.6 382.0"/>
+<path class="link" marker-start="url(#in)" d="M 1549.6 555.7 L 1528.5 414.0"/>
+<path class="link" marker-end="url(#in)" d="M 1555.8 587.7 L 1589.1 729.4"/>
+<path class="link" marker-start="url(#in)" d="M 1650.9 901.1 L 1598.9 761.4"/>
+<path class="link" marker-end="url(#in)" d="M 1666.4 933.1 L 1747.6 1068.5"/>
+<path class="link" marker-start="url(#in)" d="M 1687.4 1246.3 L 1750.2 1100.5"/>
+<path class="link" marker-end="url(#in)" d="M 1675.2 1278.3 L 1627.5 1420.9"/>
+<path class="link" marker-start="url(#in)" d="M 1581.5 1597.7 L 1618.1 1452.9"/>
+<path class="link" marker-end="url(#in)" d="M 1574.2 1629.7 L 1543.8 1777.7"/>
+<path class="link" marker-start="url(#in)" d="M 1509.5 1963.0 L 1537.5 1809.7"/>
+<path class="link" marker-end="url(#in)" d="M 1504.0 1995.0 L 1477.0 2160.9"/>
+<path class="link" marker-start="url(#in)" d="M 1985.5 1043.9 L 2116.8 1006.4"/>
+<path class="link" marker-end="url(#in)" d="M 1921.7 1058.1 L 1818.2 1074.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1617.0 2303.5 L 1583.3 2315.8"/>
+<path class="link" marker-end="url(#in)" d="M 1674.1 2274.6 L 1729.6 2234.0"/>
+<path class="link" marker-end="url(#in)" d="M 1687.3 2288.0 L 1725.2 2285.3"/>
+<path class="link" marker-start="url(#in)" d="M 1904.5 2563.2 L 1900.8 2562.9"/>
+<path class="link" marker-end="url(#in)" d="M 1932.4 2582.0 L 1895.9 2661.9"/>
+<path class="link" marker-start="url(#in)" d="M 2006.0 2931.3 L 1975.5 2906.8"/>
+<path class="link" marker-end="url(#in)" d="M 1993.9 2956.0 L 1958.8 2965.4"/>
+<path class="link" marker-end="url(#in)" d="M 2010.9 2963.3 L 1979.9 2996.7"/>
+<path class="link" marker-start="url(#in)" d="M 1886.6 3302.5 L 1867.8 3250.9"/>
+<path class="link" marker-end="url(#in)" d="M 1860.6 3318.5 L 1819.2 3318.5"/>
+<path class="link" marker-start="url(#in)" d="M 1591.7 3556.7 L 1601.5 3504.4"/>
+<path class="link" marker-end="url(#in)" d="M 1561.6 3556.7 L 1529.2 3537.5"/>
+<path class="link" marker-start="url(#in)" d="M 1207.7 3610.8 L 1251.6 3537.2"/>
+<path class="link" marker-start="url(#in)" d="M 1226.9 3612.1 L 1273.6 3588.1"/>
+<path class="link" marker-end="url(#in)" d="M 1203.0 3642.8 L 1230.3 3734.7"/>
+<path class="link" marker-end="url(#in)" d="M 1193.9 3642.8 L 1178.5 3700.7"/>
+<path class="link" marker-end="url(#in)" d="M 1180.0 3642.8 L 1150.3 3668.9"/>
+<path class="link" marker-end="url(#in)" d="M 1169.5 3632.5 L 1126.6 3641.0"/>
+<path class="link" marker-end="url(#in)" d="M 1169.5 3615.9 L 1137.5 3603.8"/>
+<path class="link" marker-start="url(#in)" d="M 864.1 3474.8 L 899.0 3465.1"/>
+<path class="link" marker-end="url(#in)" d="M 806.0 3499.6 L 773.4 3519.6"/>
+<path class="link" marker-end="url(#in)" d="M 800.2 3483.3 L 760.5 3482.9"/>
+<path class="link" marker-start="url(#in)" d="M 934.5 3380.6 L 960.2 3373.5"/>
+<path class="link" marker-end="url(#in)" d="M 882.8 3405.4 L 847.9 3433.6"/>
+<path class="link" marker-end="url(#in)" d="M 870.7 3398.2 L 834.1 3408.3"/>
+<path class="link" marker-end="url(#in)" d="M 870.7 3379.9 L 834.6 3369.2"/>
+<path class="link" marker-start="url(#in)" d="M 680.9 3115.4 L 646.5 3143.1"/>
+<path class="link" marker-end="url(#in)" d="M 674.5 3083.4 L 643.8 3064.8"/>
+<path class="link" marker-start="url(#in)" d="M 665.0 2680.0 L 638.3 2641.6"/>
+<path class="link" marker-end="url(#in)" d="M 695.8 2712.0 L 730.2 2740.0"/>
+<path class="link" marker-end="url(#in)" d="M 681.6 2712.0 L 699.4 2764.2"/>
+<path class="link" marker-start="url(#in)" d="M 801.5 2734.6 L 766.4 2684.2"/>
+<path class="link" marker-end="url(#in)" d="M 823.7 2766.6 L 857.9 2815.6"/>
+<path class="link" marker-start="url(#in)" d="M 888.8 2356.4 L 876.5 2269.8"/>
+<path class="link" marker-end="url(#in)" d="M 909.9 2388.4 L 943.0 2416.5"/>
+<path class="link" marker-end="url(#in)" d="M 893.1 2388.4 L 901.2 2450.5"/>
+<path class="link" marker-end="url(#in)" d="M 883.9 2388.4 L 862.7 2436.3"/>
+<path class="link" marker-start="url(#in)" d="M 989.1 2458.1 L 968.4 2411.8"/>
+<path class="link" marker-start="url(#in)" d="M 998.5 2458.1 L 1005.8 2405.1"/>
+<path class="link" marker-end="url(#in)" d="M 1003.4 2490.1 L 1024.7 2537.8"/>
+<path class="link" marker-end="url(#in)" d="M 994.0 2490.1 L 986.4 2544.6"/>
+<path class="link" marker-start="url(#in)" d="M 1295.8 2252.1 L 1330.7 2277.5"/>
+<path class="link" marker-end="url(#in)" d="M 1269.3 2252.1 L 1254.3 2304.0"/>
+<path class="link" marker-start="url(#in)" d="M 535.3 3373.4 L 524.1 3283.4"/>
+<path class="link" marker-start="url(#in)" d="M 544.7 3373.4 L 566.0 3327.7"/>
+<path class="link" marker-end="url(#in)" d="M 550.3 3405.4 L 602.9 3470.2"/>
+<path class="link" marker-end="url(#in)" d="M 572.9 3405.4 L 729.1 3475.7"/>
+<path class="link" marker-end="url(#in)" d="M 529.9 3405.4 L 508.6 3451.2"/>
+<path class="link" marker-end="url(#in)" d="M 512.7 3405.4 L 481.7 3425.6"/>
+<path class="link" marker-start="url(#in)" d="M 219.7 3554.0 L 223.6 3495.6"/>
+<path class="link" marker-end="url(#in)" d="M 186.7 3555.9 L 158.0 3543.2"/>
+<path class="link" marker-start="url(#in)" d="M 1541.9 224.2 L 1581.6 223.4"/>
+<path class="link" marker-start="url(#in)" d="M 1536.8 240.9 L 1571.1 261.3"/>
+<path class="link" marker-start="url(#in)" d="M 1518.2 240.9 L 1544.6 292.3"/>
+<path class="link" marker-end="url(#in)" d="M 1478.0 216.4 L 1441.2 206.7"/>
+<path class="link" marker-end="url(#in)" d="M 1494.9 208.9 L 1465.2 177.2"/>
+<path class="link" marker-start="url(#in)" d="M 1520.1 557.5 L 1491.5 544.7"/>
+<path class="link" marker-end="url(#in)" d="M 1584.0 576.3 L 1619.5 581.4"/>
+<path class="link" marker-end="url(#in)" d="M 1571.0 587.7 L 1604.8 616.2"/>
+<path class="link" marker-end="url(#in)" d="M 1648.6 1261.2 L 1607.3 1259.8"/>
+<path class="link" marker-end="url(#in)" d="M 1652.9 1278.3 L 1620.6 1296.9"/>
+<path class="link" marker-start="url(#in)" d="M 1563.0 1597.7 L 1533.4 1564.9"/>
+<path class="link" marker-end="url(#in)" d="M 1545.6 1626.7 L 1512.3 1640.2"/>
+<path class="link" marker-end="url(#in)" d="M 1522.7 1995.0 L 1552.9 2024.9"/>
+<path class="link" marker-start="url(#in)" d="M 1955.4 1037.0 L 1963.4 967.7"/>
+<path class="link" marker-start="url(#in)" d="M 1966.3 1037.0 L 1994.6 1001.6"/>
+<path class="link" marker-end="url(#in)" d="M 1951.7 1069.0 L 1945.4 1123.7"/>
+<path class="link" marker-end="url(#in)" d="M 1940.8 1069.0 L 1911.9 1105.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_heme-metabolism" transform="translate(1091.1,0.0)"><rect rx="10" height="31" width="156" x="-77.9" y="-15.5"/><text dominant-baseline="central">heme metabolism</text></g>
+<g id="node4211" class="node nodeHM pw_heme-metabolism lid2363" transform="translate(1474.4,2176.9)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2363" target="_blank">uroporphyrinogen-III</a></text><title></title></g>
+<g id="node6537" class="node nodeHM pw_heme-metabolism lid72196" transform="translate(1813.2,2412.8)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72196" target="_blank">precorrin-1</a></text><title></title></g>
+<g id="node6521" class="node nodeHM pw_heme-metabolism lid6581" transform="translate(2011.4,2750.0)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6581" target="_blank">precorrin-2</a></text><title></title></g>
+<g id="node6929" class="node nodeHM pw_heme-metabolism lid5216" transform="translate(1984.7,3141.7)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5216" target="_blank">sirohydrochlorin</a></text><title></title></g>
+<g id="node6927" class="node nodeHM pw_heme-metabolism lid1288" transform="translate(1757.7,3466.0)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1288" target="_blank">siroheme</a></text><title></title></g>
+<g id="node2239" class="node nodeHM pw_heme-metabolism lid195017" transform="translate(1397.3,3629.5)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195017" target="_blank">12,18-didecarboxysiroheme</a></text><title></title></g>
+<g id="node2237" class="node nodeHM pw_heme-metabolism lid199180" transform="translate(1014.9,3549.6)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=199180" target="_blank">Fe-coproporphyrin III</a></text><title></title></g>
+<g id="node4224" class="node nodeHM pw_heme-metabolism lid3360" transform="translate(722.1,3307.9)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3360" target="_blank">protoheme</a></text><title></title></g>
+<g id="node4227" class="node nodeHM pw_heme-metabolism lid868" transform="translate(695.2,2897.9)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=868" target="_blank">protoporphyrin IX</a></text><title></title></g>
+<g id="node4216" class="node nodeHM pw_heme-metabolism lid1119" transform="translate(820.2,2557.6)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1119" target="_blank">protoporphyrinogen IX</a></text><title></title></g>
+<g id="node4205" class="node nodeHM pw_heme-metabolism lid4234" transform="translate(1085.5,2309.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4234" target="_blank">coproporphyrinogen III</a></text><title></title></g>
+<g id="node3191" class="node nodeHM pw_heme-metabolism lid1713" transform="translate(373.4,3478.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1713" target="_blank">biliverdin</a></text><title></title></g>
+<g id="node3183" class="node nodeHM pw_heme-metabolism lid599" transform="translate(69.2,3662.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=599" target="_blank">bilirubin</a></text><title></title></g>
+<g id="node3424" class="node nodeHM pw_heme-metabolism lid41" transform="translate(1500.7,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node6476" class="node nodeHM pw_heme-metabolism lid6545" transform="translate(1526.1,398.0)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6545" target="_blank">L-glutamyl-tRNAGlu</a></text><title></title></g>
+<g id="node6475" class="node nodeHM pw_heme-metabolism lid55894" transform="translate(1592.9,745.4)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=55894" target="_blank">Glu 1-semialdehyde</a></text><title></title></g>
+<g id="node6462" class="node nodeHM pw_heme-metabolism lid43523" transform="translate(1757.1,1084.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43523" target="_blank">5-aminolevulinate</a></text><title></title></g>
+<g id="node6463" class="node nodeHM pw_heme-metabolism lid1763" transform="translate(1622.2,1436.9)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1763" target="_blank">porphobilinogen</a></text><title></title></g>
+<g id="node4223" class="node nodeHM pw_heme-metabolism lid2845" transform="translate(1540.5,1793.7)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2845" target="_blank">hydroxymethylbilane</a></text><title></title></g>
+<g id="node3423" class="node nodeHM pw_heme-metabolism lid72" transform="translate(2132.5,1001.9)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node6538" class="node nodeEN pw_heme-metabolism" transform="translate(1652.2,2290.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.107" target="_blank">2.1.1.107</a></text><title>uroporphyrinogen-III C-methyltransferase</title></g>
+<g id="node6534" class="node nodeEN pw_heme-metabolism" transform="translate(1939.7,2566.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.107" target="_blank">2.1.1.107</a></text><title>uroporphyrinogen-III C-methyltransferase</title></g>
+<g id="node6933" class="node nodeEN pw_heme-metabolism" transform="translate(2025.8,2947.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.76" target="_blank">1.3.1.76</a></text><title>precorrin-2 dehydrogenase</title></g>
+<g id="node6932" class="node nodeEN pw_heme-metabolism" transform="translate(1892.5,3318.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.99.1.4" target="_blank">4.99.1.4</a></text><title>sirohydrochlorin ferrochelatase</title></g>
+<g id="node2240" class="node nodeEN pw_heme-metabolism" transform="translate(1588.7,3572.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.111" target="_blank">4.1.1.111</a></text><title>siroheme decarboxylase</title></g>
+<g id="node2238" class="node nodeEN pw_heme-metabolism" transform="translate(1198.2,3626.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.-" target="_blank">4.1.3.-</a></text><title>Fe-coproporphyrin synthase</title></g>
+<g id="node1473" class="node nodeEN pw_heme-metabolism" transform="translate(832.2,3483.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.98.5" target="_blank">1.3.98.5</a></text><title>hydrogen peroxide-dependent heme synthase; AdoMet-dependent heme synthase</title></g>
+<g id="node2236" class="node nodeEN pw_heme-metabolism" transform="translate(902.6,3389.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.98.6" target="_blank">1.3.98.6</a></text><title>hydrogen peroxide-dependent heme synthase; AdoMet-dependent heme synthase</title></g>
+<g id="node4225" class="node nodeEN pw_heme-metabolism" transform="translate(700.9,3099.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.98.1.1" target="_blank">4.98.1.1</a></text><title>protoporphyrin ferrochelatase</title></g>
+<g id="node4219" class="node nodeEN pw_heme-metabolism" transform="translate(676.2,2696.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.3.4" target="_blank">1.3.3.4</a></text><title>protoporphyrinogen oxidase; protoporphyrinogen IX dehydrogenase (quinone)</title></g>
+<g id="node2223" class="node nodeEN pw_heme-metabolism" transform="translate(812.6,2750.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.3" target="_blank">1.3.5.3</a></text><title>protoporphyrinogen oxidase; protoporphyrinogen IX dehydrogenase (quinone)</title></g>
+<g id="node4217" class="node nodeEN pw_heme-metabolism" transform="translate(891.0,2372.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.98.3" target="_blank">1.3.98.3</a></text><title>coproporphyrinogen dehydrogenase; coproporphyrinogen oxidase</title></g>
+<g id="node4213" class="node nodeEN pw_heme-metabolism" transform="translate(996.2,2474.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.3.3" target="_blank">1.3.3.3</a></text><title>coproporphyrinogen dehydrogenase; coproporphyrinogen oxidase</title></g>
+<g id="node4212" class="node nodeEN pw_heme-metabolism" transform="translate(1273.9,2236.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.37" target="_blank">4.1.1.37</a></text><title>Uroporphyrinogen decarboxylase</title></g>
+<g id="node3186" class="node nodeEN pw_heme-metabolism" transform="translate(537.3,3389.4)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.18" target="_blank">1.14.14.18</a></text><title>heme oxygenase (biliverdin-producing)</title></g>
+<g id="node3194" class="node nodeEN pw_heme-metabolism" transform="translate(218.6,3570.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.24" target="_blank">1.3.1.24</a></text><title>biliverdin reductase</title></g>
+<g id="node6473" class="node nodeEN pw_heme-metabolism" transform="translate(1509.9,224.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.17" target="_blank">6.1.1.17</a></text><title>Glutamate-tRNA ligase</title></g>
+<g id="node6470" class="node nodeEN pw_heme-metabolism" transform="translate(1552.0,571.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.70" target="_blank">1.2.1.70</a></text><title>glutamyl-tRNA reductase</title></g>
+<g id="node6467" class="node nodeEN pw_heme-metabolism" transform="translate(1656.8,917.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.3.8" target="_blank">5.4.3.8</a></text><title>glutamate-1-semialdehyde 2,1-aminomutase</title></g>
+<g id="node6474" class="node nodeEN pw_heme-metabolism" transform="translate(1680.5,1262.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.24" target="_blank">4.2.1.24</a></text><title>porphobilinogen synthase</title></g>
+<g id="node4221" class="node nodeEN pw_heme-metabolism" transform="translate(1577.5,1613.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.61" target="_blank">2.5.1.61</a></text><title>hydroxymethylbilane synthase</title></g>
+<g id="node6468" class="node nodeEN pw_heme-metabolism" transform="translate(1506.6,1979.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.75" target="_blank">4.2.1.75</a></text><title>uroporphyrinogen-III synthase</title></g>
+<g id="node3418" class="node nodeEN pw_heme-metabolism" transform="translate(1953.6,1053.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.37" target="_blank">2.3.1.37</a></text><title>5-aminolevulinate synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6538~0" class="node nodeCM pw_heme-metabolism lid24" transform="translate(1539.7,2331.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node6538~1" class="node nodeCM pw_heme-metabolism lid36" transform="translate(1751.5,2218.0)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node6538~2" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1737.7,2284.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6534~0" class="node nodeCM pw_heme-metabolism lid24" transform="translate(1820.3,2556.5)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node6534~1" class="node nodeCM pw_heme-metabolism lid36" transform="translate(1888.6,2677.9)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node6933~0" class="node nodeCM pw_heme-metabolism lid7" transform="translate(1956.6,2891.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node6933~1" class="node nodeCM pw_heme-metabolism lid8" transform="translate(1939.9,2970.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node6933~2" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1967.4,3010.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6932~0" class="node nodeCM pw_heme-metabolism lid25" transform="translate(1862.0,3234.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=25" target="_blank">Fe2+</a></text><title></title></g>
+<g id="node6932~1" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1806.7,3318.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2240~0" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1604.4,3488.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2240~1" class="node nodeCM pw_heme-metabolism lid28" transform="translate(1513.5,3528.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node2238~0" class="node nodeCM pw_heme-metabolism lid1661" transform="translate(1261.2,3521.2)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node2238~1" class="node nodeCM pw_heme-metabolism lid24" transform="translate(1304.7,3572.1)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node2238~2" class="node nodeCM pw_heme-metabolism lid374" transform="translate(1235.1,3750.7)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node2238~3" class="node nodeCM pw_heme-metabolism lid47" transform="translate(1174.3,3716.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node2238~4" class="node nodeCM pw_heme-metabolism lid88" transform="translate(1134.5,3682.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node2238~5" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1114.1,3643.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2238~6" class="node nodeCM pw_heme-metabolism lid943" transform="translate(1095.3,3587.8)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node1473~0" class="node nodeCM pw_heme-metabolism lid1126" transform="translate(917.9,3459.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node1473~1" class="node nodeCM pw_heme-metabolism lid28" transform="translate(757.6,3529.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1473~2" class="node nodeCM pw_heme-metabolism lid1" transform="translate(744.8,3482.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2236~0" class="node nodeCM pw_heme-metabolism lid24" transform="translate(1018.0,3357.5)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node2236~1" class="node nodeCM pw_heme-metabolism lid943" transform="translate(828.2,3449.6)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node2236~2" class="node nodeCM pw_heme-metabolism lid88" transform="translate(818.4,3412.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node2236~3" class="node nodeCM pw_heme-metabolism lid28" transform="translate(818.8,3364.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4225~0" class="node nodeCM pw_heme-metabolism lid12" transform="translate(634.0,3153.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4225~1" class="node nodeCM pw_heme-metabolism lid25" transform="translate(624.8,3053.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=25" target="_blank">Fe2+</a></text><title></title></g>
+<g id="node4219~0" class="node nodeCM pw_heme-metabolism lid9" transform="translate(627.2,2625.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node4219~1" class="node nodeCM pw_heme-metabolism lid12" transform="translate(742.6,2750.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4219~2" class="node nodeCM pw_heme-metabolism lid1126" transform="translate(704.9,2780.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node2223~0" class="node nodeCM pw_heme-metabolism lid2295" transform="translate(755.3,2668.2)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2295" target="_blank">menaquinone</a></text><title></title></g>
+<g id="node2223~1" class="node nodeCM pw_heme-metabolism lid3003" transform="translate(869.0,2831.6)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3003" target="_blank">menaquinol</a></text><title></title></g>
+<g id="node4217~0" class="node nodeCM pw_heme-metabolism lid24" transform="translate(874.3,2253.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node4217~1" class="node nodeCM pw_heme-metabolism lid943" transform="translate(961.9,2432.5)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node4217~2" class="node nodeCM pw_heme-metabolism lid28" transform="translate(903.3,2466.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4217~3" class="node nodeCM pw_heme-metabolism lid88" transform="translate(855.6,2452.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node4213~0" class="node nodeCM pw_heme-metabolism lid12" transform="translate(961.3,2395.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4213~1" class="node nodeCM pw_heme-metabolism lid9" transform="translate(1008.1,2389.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node4213~2" class="node nodeCM pw_heme-metabolism lid28" transform="translate(1031.8,2553.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4213~3" class="node nodeCM pw_heme-metabolism lid1" transform="translate(984.2,2560.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4212~0" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1343.2,2286.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4212~1" class="node nodeCM pw_heme-metabolism lid28" transform="translate(1249.6,2320.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3186~0" class="node nodeCM pw_heme-metabolism lid1661" transform="translate(522.2,3267.4)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node3186~1" class="node nodeCM pw_heme-metabolism lid9" transform="translate(573.4,3311.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node3186~2" class="node nodeCM pw_heme-metabolism lid374" transform="translate(615.9,3486.2)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node3186~4" class="node nodeCM pw_heme-metabolism lid3261" transform="translate(501.2,3467.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3261" target="_blank">CO</a></text><title></title></g>
+<g id="node3186~5" class="node nodeCM pw_heme-metabolism lid25" transform="translate(462.8,3438.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=25" target="_blank">Fe2+</a></text><title></title></g>
+<g id="node3194~0" class="node nodeCM pw_heme-metabolism lid5" transform="translate(224.7,3479.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node3194~1" class="node nodeCM pw_heme-metabolism lid10" transform="translate(135.8,3533.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node6473~0" class="node nodeCM pw_heme-metabolism lid4" transform="translate(1597.3,223.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6473~1" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1583.6,268.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6473~2" class="node nodeCM pw_heme-metabolism lid1988" transform="translate(1552.8,308.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1988" target="_blank">tRNAGlu</a></text><title></title></g>
+<g id="node6473~3" class="node nodeCM pw_heme-metabolism lid30" transform="translate(1425.5,202.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node6473~4" class="node nodeCM pw_heme-metabolism lid17" transform="translate(1450.1,161.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6470~0" class="node nodeCM pw_heme-metabolism lid5" transform="translate(1469.3,534.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node6470~1" class="node nodeCM pw_heme-metabolism lid10" transform="translate(1641.7,584.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node6470~2" class="node nodeCM pw_heme-metabolism lid1988" transform="translate(1623.8,632.2)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1988" target="_blank">tRNAGlu</a></text><title></title></g>
+<g id="node6474~0" class="node nodeCM pw_heme-metabolism lid12" transform="translate(1594.9,1259.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6474~1" class="node nodeCM pw_heme-metabolism lid1" transform="translate(1604.9,1306.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4221~0" class="node nodeCM pw_heme-metabolism lid1" transform="translate(1518.9,1548.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4221~1" class="node nodeCM pw_heme-metabolism lid27" transform="translate(1496.6,1646.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node6468~0" class="node nodeCM pw_heme-metabolism lid1" transform="translate(1568.6,2040.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3418~0" class="node nodeCM pw_heme-metabolism lid224" transform="translate(1965.3,951.7)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node3418~1" class="node nodeCM pw_heme-metabolism lid12" transform="translate(2007.1,985.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3418~2" class="node nodeCM pw_heme-metabolism lid18" transform="translate(1943.5,1139.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node3418~3" class="node nodeCM pw_heme-metabolism lid28" transform="translate(1899.1,1121.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+</g></svg>
+<text x="2029.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (kamada_kawai)</text></svg>

@@ -1,0 +1,454 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="5039" height="2461" viewBox="0 0 5038.7 2461.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="5019.2 3105.2 2093.7 797.6" width="2094" height="798" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="5019.2" y="3105.2" width="2093.7" height="797.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_degradation-of-pentoses" class="pw pw5" x="5059.2" y="3160.7" width="2013.7" height="702.1" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6195.5 3220.1 L 6084.7 3232.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6273.9 3230.3 L 6391.0 3273.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5854.6 3241.5 L 5927.2 3241.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5781.8 3241.5 L 5718.9 3241.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6549.7 3257.7 L 6480.7 3277.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6616.8 3248.0 L 6677.0 3248.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6816.9 3248.0 L 6761.1 3248.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6889.7 3248.0 L 6964.2 3248.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6278.0 3264.0 L 6391.0 3282.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6199.6 3254.8 L 6084.7 3246.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5209.2 3242.7 L 5209.2 3202.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5209.2 3274.7 L 5209.2 3318.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6818.2 3290.4 L 6480.7 3290.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6890.9 3290.4 L 6967.1 3290.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5668.4 3307.2 L 5668.4 3257.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5668.4 3339.2 L 5668.4 3386.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6209.9 3341.9 L 6038.5 3257.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6281.6 3344.2 L 6391.0 3306.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6147.1 3392.8 L 6054.6 3392.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6225.5 3392.8 L 6327.5 3392.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6589.4 3392.8 L 6657.7 3392.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6499.7 3392.8 L 6434.1 3392.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6890.3 3392.8 L 6963.9 3392.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6817.6 3392.8 L 6730.5 3392.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5469.1 3402.8 L 5567.1 3402.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5390.7 3390.8 L 5260.7 3350.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5209.2 3426.4 L 5209.2 3468.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5209.2 3394.4 L 5209.2 3350.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5393.1 3483.9 L 5310.6 3484.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5465.8 3479.8 L 5558.9 3469.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5465.8 3488.0 L 5575.7 3500.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6687.1 3536.0 L 6531.2 3536.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6723.5 3552.0 L 6723.5 3638.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5209.2 3540.8 L 5209.2 3500.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5245.6 3556.8 L 5295.0 3556.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5471.4 3556.8 L 5396.0 3556.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5544.1 3556.8 L 5647.4 3556.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5904.4 3576.0 L 5804.9 3565.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5975.2 3596.2 L 6081.6 3650.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6906.6 3654.9 L 6776.8 3654.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6942.9 3670.9 L 6942.9 3766.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6942.9 3638.9 L 6942.9 3554.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5118.3 3684.5 L 5118.3 3776.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5151.8 3668.5 L 5308.2 3668.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5508.1 3668.5 L 5386.6 3668.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5580.9 3668.5 L 5686.8 3668.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5910.1 3668.5 L 5770.9 3668.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5977.2 3668.5 L 6073.3 3668.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5347.4 3714.8 L 5347.4 3684.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5347.3 3746.8 L 5347.0 3778.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6385.7 3782.7 L 6496.5 3782.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6349.3 3766.7 L 6349.3 3701.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6723.5 3766.7 L 6723.5 3670.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6687.1 3782.7 L 6574.9 3782.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5581.2 3794.9 L 5691.4 3794.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5508.5 3794.9 L 5386.1 3794.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6129.2 3794.9 L 6211.8 3794.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5870.0 3794.9 L 5775.5 3794.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 6273.9 3202.5 L 6303.7 3192.5"/>
+<path class="link" marker-end="url(#in)" d="M 6195.5 3201.7 L 6172.5 3193.6"/>
+<path class="link" marker-end="url(#in)" d="M 6195.5 3211.2 L 6105.5 3200.9"/>
+<path class="link" marker-start="url(#in)" d="M 5852.6 3225.5 L 5892.5 3207.0"/>
+<path class="link" marker-start="url(#in)" d="M 6834.1 3232.0 L 6798.9 3202.6"/>
+<path class="link" marker-end="url(#in)" d="M 6869.3 3232.0 L 6897.8 3203.3"/>
+<path class="link" marker-start="url(#in)" d="M 6254.3 3273.5 L 6272.1 3291.9"/>
+<path class="link" marker-end="url(#in)" d="M 6230.2 3273.5 L 6219.7 3293.0"/>
+<path class="link" marker-end="url(#in)" d="M 6199.6 3242.4 L 6105.5 3206.1"/>
+<path class="link" marker-start="url(#in)" d="M 5245.6 3271.5 L 5292.9 3288.1"/>
+<path class="link" marker-start="url(#in)" d="M 5172.8 3273.0 L 5131.4 3289.2"/>
+<path class="link" marker-end="url(#in)" d="M 5172.8 3244.3 L 5128.6 3226.8"/>
+<path class="link" marker-end="url(#in)" d="M 5245.6 3245.4 L 5290.6 3228.8"/>
+<path class="link" marker-start="url(#in)" d="M 6871.2 3306.4 L 6905.2 3339.0"/>
+<path class="link" marker-end="url(#in)" d="M 5702.0 3336.8 L 5742.1 3353.2"/>
+<path class="link" marker-start="url(#in)" d="M 6281.6 3357.0 L 6347.1 3355.4"/>
+<path class="link" marker-end="url(#in)" d="M 6203.2 3358.8 L 6145.4 3360.2"/>
+<path class="link" marker-start="url(#in)" d="M 6832.5 3376.8 L 6809.3 3359.6"/>
+<path class="link" marker-end="url(#in)" d="M 6890.3 3404.3 L 6953.9 3424.4"/>
+<path class="link" marker-end="url(#in)" d="M 6869.1 3408.8 L 6903.2 3444.6"/>
+<path class="link" marker-end="url(#in)" d="M 5429.8 3387.0 L 5429.8 3344.5"/>
+<path class="link" marker-start="url(#in)" d="M 6707.0 3520.0 L 6675.3 3489.2"/>
+<path class="link" marker-end="url(#in)" d="M 6739.0 3520.0 L 6768.9 3489.2"/>
+<path class="link" marker-end="url(#in)" d="M 5172.8 3542.1 L 5131.4 3525.3"/>
+<path class="link" marker-start="url(#in)" d="M 5529.3 3572.8 L 5566.3 3600.3"/>
+<path class="link" marker-start="url(#in)" d="M 5945.7 3564.2 L 5950.1 3529.8"/>
+<path class="link" marker-end="url(#in)" d="M 5928.7 3564.2 L 5896.5 3529.8"/>
+<path class="link" marker-start="url(#in)" d="M 5562.2 3684.5 L 5593.8 3713.1"/>
+<path class="link" marker-end="url(#in)" d="M 5527.7 3652.5 L 5494.8 3621.3"/>
+<path class="link" marker-end="url(#in)" d="M 5527.1 3684.5 L 5494.7 3714.2"/>
+<path class="link" marker-start="url(#in)" d="M 6382.7 3766.7 L 6405.2 3755.9"/>
+<path class="link" marker-end="url(#in)" d="M 6378.6 3798.7 L 6407.4 3814.4"/>
+<path class="link" marker-start="url(#in)" d="M 6741.1 3798.7 L 6753.7 3810.2"/>
+<path class="link" marker-start="url(#in)" d="M 6759.9 3772.7 L 6801.4 3761.2"/>
+<path class="link" marker-end="url(#in)" d="M 6703.3 3798.7 L 6685.5 3812.9"/>
+<path class="link" marker-start="url(#in)" d="M 5561.1 3778.9 L 5595.3 3745.1"/>
+<path class="link" marker-end="url(#in)" d="M 5528.1 3778.9 L 5494.0 3746.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_degradation-of-pentoses" transform="translate(6066.1,3160.7)"><rect rx="10" height="31" width="225" x="-112.5" y="-15.5"/><text dominant-baseline="central">degradation of pentoses</text></g>
+<g id="node1236" class="node nodeSM pw_degradation-of-pentoses lid482" transform="translate(6942.9,3536.0)"><rect height="35.0" width="132.9" x="-66.5" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=482" target="_blank">glycerone phosphate</a></text><title>glycerone phosphate</title></g>
+<g id="node1237" class="node nodeHM pw_degradation-of-pentoses lid644" transform="translate(5118.3,3792.9)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=644" target="_blank">D-Xul 5-P</a></text><title>D-xylulose 5-phosphate</title></g>
+<g id="node2242" class="node nodeSM pw_degradation-of-pentoses lid31" transform="translate(5612.1,3504.7)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node2243" class="node nodeHM pw_degradation-of-pentoses lid604" transform="translate(5612.2,3463.7)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=604" target="_blank">glycolaldehyde</a></text><title>glycolaldehyde</title></g>
+<g id="node3774" class="node nodeHM pw_degradation-of-pentoses lid19918" transform="translate(5668.4,3402.1)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19918" target="_blank">2-dehydro-3-deoxy-D-arabinonate</a></text><title>2-dehydro-3-deoxy-D-arabinonate</title></g>
+<g id="node3775" class="node nodeHM pw_degradation-of-pentoses lid12428" transform="translate(7003.4,3290.4)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12428" target="_blank">arabinan</a></text><title>arabinan</title></g>
+<g id="node3779" class="node nodeHM pw_degradation-of-pentoses lid9136" transform="translate(5668.4,3241.5)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9136" target="_blank">D-arabinonate</a></text><title>D-arabinonate</title></g>
+<g id="node3780" class="node nodeHM pw_degradation-of-pentoses lid3305" transform="translate(5209.2,3334.4)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3305" target="_blank">2,5-dioxopentanoate</a></text><title>2,5-dioxopentanoate</title></g>
+<g id="node6776" class="node nodeSM pw_degradation-of-pentoses lid479" transform="translate(6535.7,3782.7)"><rect height="35.0" width="76.4" x="-38.2" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=479" target="_blank">glycolate</a></text><title>glycolate</title></g>
+<g id="node6863" class="node nodeSM pw_degradation-of-pentoses lid206" transform="translate(6118.2,3668.5)"><rect height="35.0" width="87.7" x="-43.9" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=206" target="_blank">L-arabinose</a></text><title>L-arabinose</title></g>
+<g id="node6864" class="node nodeHM pw_degradation-of-pentoses lid1621" transform="translate(5728.8,3668.5)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1621" target="_blank">L-ribulose</a></text><title>L-ribulose</title></g>
+<g id="node6869" class="node nodeHM pw_degradation-of-pentoses lid1106" transform="translate(5347.4,3668.5)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1106" target="_blank">L-Rul 5-P</a></text><title>L-ribulose 5-phosphate</title></g>
+<g id="node6873" class="node nodeHM pw_degradation-of-pentoses lid10703" transform="translate(5346.9,3794.9)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10703" target="_blank">L-Xul 5-P</a></text><title>L-Xylulose 5-phosphate</title></g>
+<g id="node6874" class="node nodeHM pw_degradation-of-pentoses lid1238" transform="translate(5733.4,3794.9)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1238" target="_blank">L-xylulose</a></text><title>L-xylulose</title></g>
+<g id="node6877" class="node nodeSM pw_degradation-of-pentoses lid1647" transform="translate(6248.2,3794.9)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1647" target="_blank">L-lyxose</a></text><title>L-lyxose</title></g>
+<g id="node6878" class="node nodeHM pw_degradation-of-pentoses lid16502" transform="translate(6380.8,3392.8)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16502" target="_blank">D-ribofuranose</a></text><title>D-ribofuranose</title></g>
+<g id="node6879" class="node nodeHM pw_degradation-of-pentoses lid292" transform="translate(6694.1,3392.8)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=292" target="_blank">D-ribose</a></text><title>D-Ribose</title></g>
+<g id="node6883" class="node nodeSM pw_degradation-of-pentoses lid186622" transform="translate(5987.2,3392.8)"><rect height="35.0" width="132.9" x="-66.5" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186622" target="_blank">beta-D-ribopyranose</a></text><title>beta-D-ribopyranose</title></g>
+<g id="node6887" class="node nodeSM pw_degradation-of-pentoses lid183" transform="translate(7003.1,3392.8)"><rect height="35.0" width="76.4" x="-38.2" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title>D-ribose 5-phosphate</title></g>
+<g id="node6974" class="node nodeSM pw_degradation-of-pentoses lid1410" transform="translate(6469.4,3536.0)"><rect height="35.0" width="121.6" x="-60.8" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1410" target="_blank">[enzyme]-cysteine</a></text><title>ethylene glycol</title></g>
+<g id="node7721" class="node nodeHM pw_degradation-of-pentoses lid1317" transform="translate(6349.3,3685.6)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1317" target="_blank">2-Phosphoglycolate</a></text><title>2-Phosphoglycolate</title></g>
+<g id="node9691" class="node nodeSM pw_degradation-of-pentoses lid443" transform="translate(7003.4,3248.0)"><rect height="35.0" width="76.4" x="-38.2" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=443" target="_blank">D-Rul 5-P</a></text><title>D-ribulose 5-phosphate</title></g>
+<g id="node9949" class="node nodeHM pw_degradation-of-pentoses lid44007" transform="translate(6942.9,3782.7)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44007" target="_blank">D-Ribulose 1-phosphate</a></text><title>D-Ribulose 1-phosphate</title></g>
+<g id="node9951" class="node nodeHM pw_degradation-of-pentoses lid922" transform="translate(6719.0,3248.0)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=922" target="_blank">D-ribulose</a></text><title>D-ribulose</title></g>
+<g id="node9955" class="node nodeHM pw_degradation-of-pentoses lid604" transform="translate(6723.5,3654.9)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=604" target="_blank">glycolaldehyde</a></text><title>glycolaldehyde</title></g>
+<g id="node9958" class="node nodeSM pw_degradation-of-pentoses lid565" transform="translate(6435.9,3290.4)"><rect height="35.0" width="87.7" x="-43.9" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=565" target="_blank">D-arabinose</a></text><title>D-arabinose</title></g>
+<g id="node10098" class="node nodeHM pw_degradation-of-pentoses lid34" transform="translate(5209.2,3186.4)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node10105" class="node nodeHM pw_degradation-of-pentoses lid2650" transform="translate(6006.0,3241.5)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2650" target="_blank">D-arabinono-1,4-lactone</a></text><title>D-arabinono-1,4-lactone</title></g>
+<g id="node11398" class="node nodeHM pw_degradation-of-pentoses lid10687" transform="translate(5726.1,3556.8)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10687" target="_blank">L-arabinono-1,4-lactone</a></text><title>L-arabinono-1,4-lactone</title></g>
+<g id="node11400" class="node nodeHM pw_degradation-of-pentoses lid8879" transform="translate(5345.5,3556.8)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8879" target="_blank">L-arabinonate</a></text><title>L-arabinonate</title></g>
+<g id="node11402" class="node nodeHM pw_degradation-of-pentoses lid7095" transform="translate(5209.2,3484.6)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7095" target="_blank">2-dehydro-3-deoxy-L-arabinonate</a></text><title>2-dehydro-3-deoxy-L-arabinonate</title></g>
+<g id="node2859" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6234.7,3215.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.427" target="_blank">1.1.1.427</a></text><title>D-arabinose 1-dehydrogenase (NADP+)</title></g>
+<g id="node10101" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5818.2,3241.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.30" target="_blank">3.1.1.30</a></text><title>D-arabinonolactonase</title></g>
+<g id="node9952" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6583.3,3248.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.3" target="_blank">5.3.1.3</a></text><title>D-arabinose isomerase</title></g>
+<g id="node9944" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6853.3,3248.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.47" target="_blank">2.7.1.47</a></text><title>D-ribulokinase</title></g>
+<g id="node2171" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6238.8,3257.5)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.117" target="_blank">1.1.1.117</a></text><title>D-arabinose 1-dehydrogenase [NAD(P)+]</title></g>
+<g id="node10107" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5209.2,3258.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.26" target="_blank">1.2.1.26</a></text><title>2,5-dioxovalerate dehydrogenase</title></g>
+<g id="node10122" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6854.5,3290.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.55" target="_blank">3.2.1.55</a></text><title>non-reducing end alpha-L-arabinofuranosidase</title></g>
+<g id="node3776" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5668.4,3323.2)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.5" target="_blank">4.2.1.5</a></text><title>Arabinonate dehydratase</title></g>
+<g id="node11394" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6242.4,3357.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.116" target="_blank">1.1.1.116</a></text><title>D-arabinose 1-dehydrogenase (NAD+)</title></g>
+<g id="node6882" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6186.3,3392.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.62" target="_blank">5.4.99.62</a></text><title>D-ribose pyranase</title></g>
+<g id="node6881" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6544.6,3392.8)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node6884" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6853.9,3392.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.15" target="_blank">2.7.1.15</a></text><title>ribokinase</title></g>
+<g id="node2868" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5429.9,3403.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.141" target="_blank">4.2.1.141</a></text><title>2-dehydro-3-deoxy-D-arabinonate dehydratase</title></g>
+<g id="node3777" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5209.2,3410.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.43" target="_blank">4.2.1.43</a></text><title>2-dehydro-3-deoxy-L-arabinonate dehydratase</title></g>
+<g id="node2244" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5429.4,3483.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.18" target="_blank">4.1.2.18</a></text><title>2-dehydro-3-deoxy-L-pentonate aldolase</title></g>
+<g id="node6973" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6723.5,3536.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.21" target="_blank">1.2.1.21</a></text><title>glycolaldehyde dehydrogenase</title></g>
+<g id="node11401" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5209.2,3556.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.25" target="_blank">4.2.1.25</a></text><title>L-Arabinonate dehydratase</title></g>
+<g id="node11399" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5507.8,3556.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.15" target="_blank">3.1.1.15</a></text><title>L-arabinonolactonase</title></g>
+<g id="node10110" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5943.6,3580.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.376" target="_blank">1.1.1.376</a></text><title>L-arabinose 1-dehydrogenase [NAD(P)+]</title></g>
+<g id="node9947" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6942.9,3654.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.17" target="_blank">4.1.2.17</a></text><title>L-Fuculose-phosphate aldolase</title></g>
+<g id="node6871" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5118.3,3668.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.4" target="_blank">5.1.3.4</a></text><title>L-ribulose-5-phosphate 4-epimerase</title></g>
+<g id="node6867" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5544.5,3668.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.16" target="_blank">2.7.1.16</a></text><title>ribulokinase</title></g>
+<g id="node6868" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5943.6,3668.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.4" target="_blank">5.3.1.4</a></text><title>L-Arabinose isomerase</title></g>
+<g id="node6875" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5347.4,3730.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.22" target="_blank">5.1.3.22</a></text><title>L-ribulose-5-phosphate 3-epimerase</title></g>
+<g id="node7722" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6349.3,3782.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.18" target="_blank">3.1.3.18</a></text><title>phosphoglycolate phosphatase</title></g>
+<g id="node9954" class="node nodeEN pw_degradation-of-pentoses" transform="translate(6723.5,3782.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.21" target="_blank">1.2.1.21</a></text><title>glycolaldehyde dehydrogenase</title></g>
+<g id="node6872" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5544.9,3794.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.53" target="_blank">2.7.1.53</a></text><title>L-xylulokinase</title></g>
+<g id="node6876" class="node nodeEN pw_degradation-of-pentoses" transform="translate(5999.6,3794.9)"><rect rx="15" height="30.0" width="257.2" x="-128.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.3" target="_blank">5.3.1.3/5.3.1.6/5.3.1.8/5.3.1.14/5.3.1.15</a></text><title>D-arabinose isomerase;ribose-5-phosphate isomerase;mannose-6-phosphate isomerase;L-rhamnose isomerase;D-lyxose ketol-isomerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2169" class="node nodeCM pw_degradation-of-pentoses lid50" transform="translate(6287.6,3307.9)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+<g id="node2170" class="node nodeCM pw_degradation-of-pentoses lid40" transform="translate(6211.2,3309.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node2346" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(6086.0,3198.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2857" class="node nodeCM pw_degradation-of-pentoses lid10" transform="translate(6331.6,3183.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node2858" class="node nodeCM pw_degradation-of-pentoses lid5" transform="translate(6144.6,3183.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node3778" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(5764.3,3362.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3781" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(5429.7,3328.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6865" class="node nodeCM pw_degradation-of-pentoses lid13" transform="translate(5477.2,3730.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node6866" class="node nodeCM pw_degradation-of-pentoses lid4" transform="translate(5611.5,3729.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node6870" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(5478.0,3605.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6880" class="node nodeCM pw_degradation-of-pentoses lid4" transform="translate(6787.9,3343.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node6885" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(6973.4,3430.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6886" class="node nodeCM pw_degradation-of-pentoses lid13" transform="translate(6918.4,3460.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node6972" class="node nodeCM pw_degradation-of-pentoses lid7" transform="translate(6658.9,3473.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6975" class="node nodeCM pw_degradation-of-pentoses lid8" transform="translate(6784.4,3473.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node7723" class="node nodeCM pw_degradation-of-pentoses lid16" transform="translate(6426.8,3825.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node7724" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(6427.5,3745.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9945" class="node nodeCM pw_degradation-of-pentoses lid13" transform="translate(6913.8,3187.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node9948" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(6823.7,3755.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9950" class="node nodeCM pw_degradation-of-pentoses lid8" transform="translate(6665.3,3828.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node9953" class="node nodeCM pw_degradation-of-pentoses lid7" transform="translate(6771.2,3826.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node9956" class="node nodeCM pw_degradation-of-pentoses lid4" transform="translate(6779.7,3186.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10099" class="node nodeCM pw_degradation-of-pentoses lid5" transform="translate(5318.6,3218.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node10100" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(5109.2,3298.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10102" class="node nodeCM pw_degradation-of-pentoses lid10" transform="translate(5320.8,3297.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node10114" class="node nodeCM pw_degradation-of-pentoses lid10" transform="translate(5952.1,3513.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node10117" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(6921.8,3355.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10119" class="node nodeCM pw_degradation-of-pentoses lid5" transform="translate(5881.5,3513.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node11395" class="node nodeCM pw_degradation-of-pentoses lid8" transform="translate(6120.3,3360.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node11396" class="node nodeCM pw_degradation-of-pentoses lid7" transform="translate(6372.2,3354.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node11397" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(5109.2,3219.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node11403" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(5587.9,3616.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11404" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(5109.2,3516.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11405" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(5914.7,3196.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2173.7" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 2865.0 2421.0" width="2865" height="2421" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="2865.0" height="2421.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_degradation-of-pentoses" class="pw " x="0.0" y="0.0" width="2785.0" height="2325.5" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1608.2 1339.5 L 1496.4 1339.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1678.5 1339.5 L 1825.9 1339.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2051.4 1339.5 L 1889.8 1339.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2093.4 1339.5 L 2254.9 1339.5"/>
+<path class="link" marker-start="url(#in)" d="M 2469.4 1339.5 L 2318.8 1339.5"/>
+<path class="link" marker-end="url(#in)" d="M 2533.3 1339.5 L 2680.7 1339.5"/>
+<path class="link" marker-start="url(#in)" d="M 1356.0 1768.5 L 1424.1 1768.5"/>
+<path class="link" marker-end="url(#in)" d="M 1078.3 1768.5 L 1008.3 1768.5"/>
+<path class="link" marker-start="url(#in)" d="M 817.3 1768.5 L 931.5 1768.5"/>
+<path class="link" marker-end="url(#in)" d="M 753.4 1768.5 L 606.0 1768.5"/>
+<path class="link" marker-end="url(#in)" d="M 570.9 1570.0 L 570.9 1752.5"/>
+<path class="link" marker-start="url(#in)" d="M 570.9 1538.0 L 570.9 1355.5"/>
+<path class="link" marker-start="url(#in)" d="M 385.0 1339.5 L 535.7 1339.5"/>
+<path class="link" marker-end="url(#in)" d="M 327.7 1339.5 L 177.0 1339.5"/>
+<path class="link" marker-end="url(#in)" d="M 753.4 1339.5 L 606.0 1339.5"/>
+<path class="link" marker-start="url(#in)" d="M 817.3 1339.5 L 961.5 1339.5"/>
+<path class="link" marker-end="url(#in)" d="M 1185.7 1246.6 L 1031.9 1323.5"/>
+<path class="link" marker-start="url(#in)" d="M 1243.0 1217.9 L 1396.9 1141.0"/>
+<path class="link" marker-start="url(#in)" d="M 1249.5 1125.0 L 1387.2 1125.0"/>
+<path class="link" marker-end="url(#in)" d="M 1179.2 1125.0 L 1080.4 1125.0"/>
+<path class="link" marker-start="url(#in)" d="M 817.3 1125.0 L 919.3 1125.0"/>
+<path class="link" marker-end="url(#in)" d="M 753.4 1125.0 L 619.0 1125.0"/>
+<path class="link" marker-start="url(#in)" d="M 388.3 1125.0 L 522.7 1125.0"/>
+<path class="link" marker-end="url(#in)" d="M 324.4 1125.0 L 248.3 1125.0"/>
+<path class="link" marker-start="url(#in)" d="M 141.9 926.5 L 141.9 1109.0"/>
+<path class="link" marker-end="url(#in)" d="M 141.9 894.5 L 141.9 712.0"/>
+<path class="link" marker-start="url(#in)" d="M 141.9 497.5 L 141.9 680.0"/>
+<path class="link" marker-end="url(#in)" d="M 141.9 465.5 L 141.9 283.0"/>
+<path class="link" marker-end="url(#in)" d="M 2104.3 267.0 L 2251.7 267.0"/>
+<path class="link" marker-start="url(#in)" d="M 2040.4 267.0 L 1896.3 267.0"/>
+<path class="link" marker-end="url(#in)" d="M 1672.0 267.0 L 1819.5 267.0"/>
+<path class="link" marker-start="url(#in)" d="M 1614.7 267.0 L 1470.5 267.0"/>
+<path class="link" marker-start="url(#in)" d="M 1243.7 368.0 L 1399.5 283.0"/>
+<path class="link" marker-end="url(#in)" d="M 1186.3 368.7 C 1145.3 346.3 1069.4 305.0 1028.2 282.5"/>
+<path class="link" marker-start="url(#in)" d="M 1249.5 267.0 L 1387.2 267.0"/>
+<path class="link" marker-end="url(#in)" d="M 1179.2 267.0 L 1080.4 267.0"/>
+<path class="link" marker-start="url(#in)" d="M 1243.7 166.0 L 1399.5 251.0"/>
+<path class="link" marker-end="url(#in)" d="M 1185.0 166.0 L 1029.2 251.0"/>
+<path class="link" marker-start="url(#in)" d="M 817.3 267.0 L 919.3 267.0"/>
+<path class="link" marker-end="url(#in)" d="M 753.4 267.0 L 619.0 267.0"/>
+<path class="link" marker-start="url(#in)" d="M 570.9 465.5 L 570.9 283.0"/>
+<path class="link" marker-end="url(#in)" d="M 570.9 497.5 L 570.9 680.0"/>
+<path class="link" marker-start="url(#in)" d="M 391.5 696.0 L 464.4 696.0"/>
+<path class="link" marker-end="url(#in)" d="M 321.2 696.0 L 209.4 696.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1611.4 175.7 L 1460.9 251.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1675.3 143.8 L 1825.9 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 324.4 2197.5 L 206.2 2197.5"/>
+<path class="link" marker-end="url(#in)" d="M 388.3 2197.5 L 535.7 2197.5"/>
+<path class="link" marker-end="url(#in)" d="M 753.4 2197.5 L 606.0 2197.5"/>
+<path class="link" marker-start="url(#in)" d="M 817.3 2197.5 L 948.5 2197.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 816.0 2105.6 C 856.8 2126.0 928.4 2161.8 969.1 2182.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 753.4 2074.3 L 602.9 1999.0"/>
+<path class="link" marker-start="url(#in)" d="M 325.6 1033.1 C 284.8 1053.5 213.2 1089.3 172.5 1109.7"/>
+<path class="link" marker-end="url(#in)" d="M 379.8 1001.8 L 547.4 887.5"/>
+<path class="link" marker-end="url(#in)" d="M 388.3 1007.6 L 538.9 959.7"/>
+<path class="link" marker-start="url(#in)" d="M 1182.4 2225.7 L 1058.5 2259.5"/>
+<path class="link" marker-start="url(#in)" d="M 1182.4 2214.1 L 1051.2 2202.2"/>
+<path class="link" marker-end="url(#in)" d="M 1246.3 2214.1 L 1351.6 2204.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2490.2 1355.5 L 2462.5 1395.1"/>
+<path class="link" marker-end="url(#in)" d="M 2506.9 1323.5 L 2524.3 1272.9"/>
+<path class="link" marker-end="url(#in)" d="M 2521.1 1323.5 L 2555.5 1295.6"/>
+<path class="link" marker-start="url(#in)" d="M 796.6 1752.5 L 824.3 1712.9"/>
+<path class="link" marker-end="url(#in)" d="M 774.2 1752.5 L 746.5 1712.9"/>
+<path class="link" marker-start="url(#in)" d="M 796.6 1323.5 L 824.3 1283.9"/>
+<path class="link" marker-end="url(#in)" d="M 779.9 1355.5 L 762.4 1406.1"/>
+<path class="link" marker-end="url(#in)" d="M 765.6 1355.5 L 731.2 1383.4"/>
+<path class="link" marker-start="url(#in)" d="M 1225.6 1109.0 L 1255.1 1066.8"/>
+<path class="link" marker-end="url(#in)" d="M 1203.2 1109.0 L 1173.6 1066.8"/>
+<path class="link" marker-start="url(#in)" d="M 796.6 1141.0 L 824.3 1180.6"/>
+<path class="link" marker-end="url(#in)" d="M 345.2 1109.0 L 317.5 1069.4"/>
+<path class="link" marker-start="url(#in)" d="M 173.8 492.5 L 205.3 503.4"/>
+<path class="link" marker-start="url(#in)" d="M 158.5 497.5 L 235.8 571.8"/>
+<path class="link" marker-end="url(#in)" d="M 109.9 470.5 L 78.4 459.6"/>
+<path class="link" marker-end="url(#in)" d="M 128.9 465.5 L 100.4 430.3"/>
+<path class="link" marker-start="url(#in)" d="M 2061.2 283.0 L 2033.5 322.6"/>
+<path class="link" marker-end="url(#in)" d="M 2083.6 283.0 L 2111.3 322.6"/>
+<path class="link" marker-start="url(#in)" d="M 1225.6 368.0 L 1255.1 325.8"/>
+<path class="link" marker-end="url(#in)" d="M 1208.9 400.0 L 1190.4 453.7"/>
+<path class="link" marker-end="url(#in)" d="M 1197.5 368.0 L 1160.2 332.8"/>
+<path class="link" marker-start="url(#in)" d="M 1233.8 283.0 L 1246.9 293.8"/>
+<path class="link" marker-end="url(#in)" d="M 1208.7 283.0 L 1190.6 334.0"/>
+<path class="link" marker-end="url(#in)" d="M 1194.6 283.0 L 1160.2 310.9"/>
+<path class="link" marker-start="url(#in)" d="M 1225.6 134.0 L 1254.2 93.1"/>
+<path class="link" marker-end="url(#in)" d="M 1203.2 166.0 L 1174.5 206.9"/>
+<path class="link" marker-start="url(#in)" d="M 796.6 251.0 L 824.3 211.4"/>
+<path class="link" marker-end="url(#in)" d="M 593.7 497.5 L 626.7 520.6"/>
+<path class="link" marker-end="url(#in)" d="M 341.0 680.0 L 266.9 602.9"/>
+<path class="link" marker-start="url(#in)" d="M 1640.6 175.8 L 1633.3 217.0"/>
+<path class="link" marker-start="url(#in)" d="M 345.2 2213.5 L 317.5 2253.1"/>
+<path class="link" marker-end="url(#in)" d="M 367.6 2181.5 L 394.3 2143.3"/>
+<path class="link" marker-start="url(#in)" d="M 791.7 2181.5 L 808.0 2140.2"/>
+<path class="link" marker-start="url(#in)" d="M 805.1 2181.5 L 837.5 2155.3"/>
+<path class="link" marker-end="url(#in)" d="M 774.2 2213.5 L 745.5 2254.4"/>
+<path class="link" marker-start="url(#in)" d="M 814.9 2074.2 L 844.6 2058.1"/>
+<path class="link" marker-end="url(#in)" d="M 783.0 2074.2 L 774.7 2018.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_degradation-of-pentoses" transform="translate(1392.5,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">degradation of pentoses</text></g>
+<g id="node6883" class="node nodeHM pw_degradation-of-pentoses lid186622" transform="translate(1428.9,1339.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186622" target="_blank">beta-D-ribopyranose</a></text><title></title></g>
+<g id="node6878" class="node nodeHM pw_degradation-of-pentoses lid292" transform="translate(1857.9,1339.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=292" target="_blank">D-ribose</a></text><title></title></g>
+<g id="node6879" class="node nodeHM pw_degradation-of-pentoses lid292" transform="translate(2286.9,1339.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=292" target="_blank">D-ribose</a></text><title></title></g>
+<g id="node6887" class="node nodeHM pw_degradation-of-pentoses lid183" transform="translate(2715.9,1339.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title></title></g>
+<g id="node6877" class="node nodeHM pw_degradation-of-pentoses lid1647" transform="translate(1456.1,1768.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1647" target="_blank">L-lyxose</a></text><title></title></g>
+<g id="node6874" class="node nodeHM pw_degradation-of-pentoses lid1238" transform="translate(969.9,1768.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1238" target="_blank">L-xylulose</a></text><title></title></g>
+<g id="node6873" class="node nodeHM pw_degradation-of-pentoses lid10703" transform="translate(570.9,1768.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10703" target="_blank">L-Xul 5-P</a></text><title></title></g>
+<g id="node6869" class="node nodeHM pw_degradation-of-pentoses lid1106" transform="translate(570.9,1339.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1106" target="_blank">L-Rul 5-P</a></text><title></title></g>
+<g id="node1237" class="node nodeHM pw_degradation-of-pentoses lid644" transform="translate(141.9,1339.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=644" target="_blank">D-Xul 5-P</a></text><title></title></g>
+<g id="node6864" class="node nodeHM pw_degradation-of-pentoses lid1621" transform="translate(999.9,1339.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1621" target="_blank">L-ribulose</a></text><title></title></g>
+<g id="node6863" class="node nodeHM pw_degradation-of-pentoses lid206" transform="translate(1428.9,1125.0)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=206" target="_blank">L-arabinose</a></text><title></title></g>
+<g id="node11398" class="node nodeHM pw_degradation-of-pentoses lid10687" transform="translate(999.9,1125.0)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10687" target="_blank">L-arabinono-1,4-lactone</a></text><title></title></g>
+<g id="node11400" class="node nodeHM pw_degradation-of-pentoses lid8879" transform="translate(570.9,1125.0)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8879" target="_blank">L-arabinonate</a></text><title></title></g>
+<g id="node11402" class="node nodeHM pw_degradation-of-pentoses lid7095" transform="translate(141.9,1125.0)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7095" target="_blank">2-dehydro-3-deoxy-L-arabinonate</a></text><title></title></g>
+<g id="node3780" class="node nodeHM pw_degradation-of-pentoses lid3305" transform="translate(141.9,696.0)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3305" target="_blank">2,5-dioxopentanoate</a></text><title></title></g>
+<g id="node10098" class="node nodeHM pw_degradation-of-pentoses lid34" transform="translate(141.9,267.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node9691" class="node nodeHM pw_degradation-of-pentoses lid443" transform="translate(2286.9,267.0)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=443" target="_blank">D-Rul 5-P</a></text><title></title></g>
+<g id="node9951" class="node nodeHM pw_degradation-of-pentoses lid922" transform="translate(1857.9,267.0)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=922" target="_blank">D-ribulose</a></text><title></title></g>
+<g id="node9958" class="node nodeHM pw_degradation-of-pentoses lid565" transform="translate(1428.9,267.0)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=565" target="_blank">D-arabinose</a></text><title></title></g>
+<g id="node10105" class="node nodeHM pw_degradation-of-pentoses lid2650" transform="translate(999.9,267.0)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2650" target="_blank">D-arabinono-1,4-lactone</a></text><title></title></g>
+<g id="node3779" class="node nodeHM pw_degradation-of-pentoses lid9136" transform="translate(570.9,267.0)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9136" target="_blank">D-arabinonate</a></text><title></title></g>
+<g id="node3774" class="node nodeHM pw_degradation-of-pentoses lid19918" transform="translate(570.9,696.0)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19918" target="_blank">2-dehydro-3-deoxy-D-arabinonate</a></text><title></title></g>
+<g id="node3775" class="node nodeHM pw_degradation-of-pentoses lid12428" transform="translate(1857.9,52.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12428" target="_blank">arabinan</a></text><title></title></g>
+<g id="node7721" class="node nodeHM pw_degradation-of-pentoses lid1317" transform="translate(141.9,2197.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1317" target="_blank">2-Phosphoglycolate</a></text><title></title></g>
+<g id="node6776" class="node nodeHM pw_degradation-of-pentoses lid479" transform="translate(570.9,2197.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=479" target="_blank">glycolate</a></text><title></title></g>
+<g id="node9955" class="node nodeHM pw_degradation-of-pentoses lid604" transform="translate(999.9,2197.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=604" target="_blank">glycolaldehyde</a></text><title></title></g>
+<g id="node6974" class="node nodeHM pw_degradation-of-pentoses lid1410" transform="translate(570.9,1983.0)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1410" target="_blank">[enzyme]-cysteine</a></text><title></title></g>
+<g id="node2243" class="node nodeHM pw_degradation-of-pentoses lid604" transform="translate(570.9,871.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=604" target="_blank">glycolaldehyde</a></text><title></title></g>
+<g id="node2242" class="node nodeHM pw_degradation-of-pentoses lid31" transform="translate(570.9,949.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node1236" class="node nodeHM pw_degradation-of-pentoses lid482" transform="translate(999.9,2275.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=482" target="_blank">glycerone phosphate</a></text><title></title></g>
+<g id="node9949" class="node nodeHM pw_degradation-of-pentoses lid44007" transform="translate(1428.9,2197.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44007" target="_blank">D-Ribulose 1-phosphate</a></text><title></title></g>
+<g id="node6882" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1643.4,1339.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.62" target="_blank">5.4.99.62</a></text><title>D-ribose pyranase</title></g>
+<g id="node6881" class="node nodeEN pw_degradation-of-pentoses" transform="translate(2072.4,1339.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node6884" class="node nodeEN pw_degradation-of-pentoses" transform="translate(2501.4,1339.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.15" target="_blank">2.7.1.15</a></text><title>ribokinase</title></g>
+<g id="node6876" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1217.2,1768.5)"><rect rx="15" height="30.0" width="275.7" x="-137.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.3" target="_blank">5.3.1.3/5.3.1.6/5.3.1.8/5.3.1.14/5.3.1.15</a></text><title>D-arabinose isomerase;ribose-5-phosphate isomerase;mannose-6-phosphate isomerase;L-rhamnose isomerase;D-lyxose ketol-isomerase</title></g>
+<g id="node6872" class="node nodeEN pw_degradation-of-pentoses" transform="translate(785.4,1768.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.53" target="_blank">2.7.1.53</a></text><title>L-xylulokinase</title></g>
+<g id="node6875" class="node nodeEN pw_degradation-of-pentoses" transform="translate(570.9,1554.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.22" target="_blank">5.1.3.22</a></text><title>L-ribulose-5-phosphate 3-epimerase</title></g>
+<g id="node6871" class="node nodeEN pw_degradation-of-pentoses" transform="translate(356.4,1339.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.4" target="_blank">5.1.3.4</a></text><title>L-ribulose-5-phosphate 4-epimerase</title></g>
+<g id="node6867" class="node nodeEN pw_degradation-of-pentoses" transform="translate(785.4,1339.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.16" target="_blank">2.7.1.16</a></text><title>ribulokinase</title></g>
+<g id="node6868" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1214.4,1232.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.4" target="_blank">5.3.1.4</a></text><title>L-Arabinose isomerase</title></g>
+<g id="node10110" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1214.4,1125.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.376" target="_blank">1.1.1.376</a></text><title>L-arabinose 1-dehydrogenase [NAD(P)+]</title></g>
+<g id="node11399" class="node nodeEN pw_degradation-of-pentoses" transform="translate(785.4,1125.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.15" target="_blank">3.1.1.15</a></text><title>L-arabinonolactonase</title></g>
+<g id="node11401" class="node nodeEN pw_degradation-of-pentoses" transform="translate(356.4,1125.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.25" target="_blank">4.2.1.25</a></text><title>L-Arabinonate dehydratase</title></g>
+<g id="node3777" class="node nodeEN pw_degradation-of-pentoses" transform="translate(141.9,910.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.43" target="_blank">4.2.1.43</a></text><title>2-dehydro-3-deoxy-L-arabinonate dehydratase</title></g>
+<g id="node10107" class="node nodeEN pw_degradation-of-pentoses" transform="translate(141.9,481.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.26" target="_blank">1.2.1.26</a></text><title>2,5-dioxovalerate dehydrogenase</title></g>
+<g id="node9944" class="node nodeEN pw_degradation-of-pentoses" transform="translate(2072.4,267.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.47" target="_blank">2.7.1.47</a></text><title>D-ribulokinase</title></g>
+<g id="node9952" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1643.4,267.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.3" target="_blank">5.3.1.3</a></text><title>D-arabinose isomerase</title></g>
+<g id="node2859" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1214.4,384.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.427" target="_blank">1.1.1.427</a></text><title>D-arabinose 1-dehydrogenase (NADP+); D-arabinose 1-dehydrogenase [NAD(P)+]; D-arabinose 1-dehydrogenase (NAD+)</title></g>
+<g id="node2171" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1214.4,267.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.117" target="_blank">1.1.1.117</a></text><title>D-arabinose 1-dehydrogenase (NADP+); D-arabinose 1-dehydrogenase [NAD(P)+]; D-arabinose 1-dehydrogenase (NAD+)</title></g>
+<g id="node11394" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1214.4,150.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.116" target="_blank">1.1.1.116</a></text><title>D-arabinose 1-dehydrogenase (NADP+); D-arabinose 1-dehydrogenase [NAD(P)+]; D-arabinose 1-dehydrogenase (NAD+)</title></g>
+<g id="node10101" class="node nodeEN pw_degradation-of-pentoses" transform="translate(785.4,267.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.30" target="_blank">3.1.1.30</a></text><title>D-arabinonolactonase</title></g>
+<g id="node3776" class="node nodeEN pw_degradation-of-pentoses" transform="translate(570.9,481.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.5" target="_blank">4.2.1.5</a></text><title>Arabinonate dehydratase</title></g>
+<g id="node2868" class="node nodeEN pw_degradation-of-pentoses" transform="translate(356.4,696.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.141" target="_blank">4.2.1.141</a></text><title>2-dehydro-3-deoxy-D-arabinonate dehydratase</title></g>
+<g id="node10122" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1643.4,159.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.55" target="_blank">3.2.1.55</a></text><title>non-reducing end alpha-L-arabinofuranosidase</title></g>
+<g id="node7722" class="node nodeEN pw_degradation-of-pentoses" transform="translate(356.4,2197.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.18" target="_blank">3.1.3.18</a></text><title>phosphoglycolate phosphatase</title></g>
+<g id="node9954" class="node nodeEN pw_degradation-of-pentoses" transform="translate(785.4,2197.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.21" target="_blank">1.2.1.21</a></text><title>glycolaldehyde dehydrogenase</title></g>
+<g id="node6973" class="node nodeEN pw_degradation-of-pentoses" transform="translate(785.4,2090.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.21" target="_blank">1.2.1.21</a></text><title>glycolaldehyde dehydrogenase</title></g>
+<g id="node2244" class="node nodeEN pw_degradation-of-pentoses" transform="translate(356.4,1017.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.18" target="_blank">4.1.2.18</a></text><title>2-dehydro-3-deoxy-L-pentonate aldolase</title></g>
+<g id="node9947" class="node nodeEN pw_degradation-of-pentoses" transform="translate(1214.4,2217.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.17" target="_blank">4.1.2.17</a></text><title>L-Fuculose-phosphate aldolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6884~0" class="node nodeCM pw_degradation-of-pentoses lid4" transform="translate(2451.3,1411.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6884~1" class="node nodeCM pw_degradation-of-pentoses lid13" transform="translate(2529.8,1256.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6884~2" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(2568.0,1285.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6872~0" class="node nodeCM pw_degradation-of-pentoses lid4" transform="translate(835.5,1696.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6872~1" class="node nodeCM pw_degradation-of-pentoses lid13" transform="translate(735.3,1696.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6867~0" class="node nodeCM pw_degradation-of-pentoses lid4" transform="translate(835.5,1267.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6867~1" class="node nodeCM pw_degradation-of-pentoses lid13" transform="translate(756.9,1422.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6867~2" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(718.7,1393.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10110~0" class="node nodeCM pw_degradation-of-pentoses lid10" transform="translate(1266.3,1050.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10110~1" class="node nodeCM pw_degradation-of-pentoses lid5" transform="translate(1162.4,1050.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11399~0" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(835.5,1196.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11401~0" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(306.3,1053.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10107~0" class="node nodeCM pw_degradation-of-pentoses lid10" transform="translate(227.5,511.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10107~1" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(251.5,586.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10107~2" class="node nodeCM pw_degradation-of-pentoses lid5" transform="translate(56.2,452.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10107~3" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(87.9,414.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9944~0" class="node nodeCM pw_degradation-of-pentoses lid4" transform="translate(2022.3,338.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9944~1" class="node nodeCM pw_degradation-of-pentoses lid13" transform="translate(2122.5,338.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2859~1" class="node nodeCM pw_degradation-of-pentoses lid5" transform="translate(1184.9,469.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2171~0" class="node nodeCM pw_degradation-of-pentoses lid10" transform="translate(1266.3,309.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2171~1" class="node nodeCM pw_degradation-of-pentoses lid5" transform="translate(1184.9,350.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2171~2" class="node nodeCM pw_degradation-of-pentoses lid12" transform="translate(1147.7,321.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node11394~0" class="node nodeCM pw_degradation-of-pentoses lid7" transform="translate(1265.4,77.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11394~1" class="node nodeCM pw_degradation-of-pentoses lid8" transform="translate(1163.3,222.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10101~0" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(835.5,195.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3776~0" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(642.4,531.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10122~0" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(1630.5,233.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7722~0" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(306.3,2269.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7722~1" class="node nodeCM pw_degradation-of-pentoses lid16" transform="translate(405.5,2127.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9954~0" class="node nodeCM pw_degradation-of-pentoses lid7" transform="translate(814.3,2124.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node9954~1" class="node nodeCM pw_degradation-of-pentoses lid1" transform="translate(853.3,2142.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9954~2" class="node nodeCM pw_degradation-of-pentoses lid8" transform="translate(734.3,2270.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node6973~0" class="node nodeCM pw_degradation-of-pentoses lid7" transform="translate(863.6,2047.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node6973~1" class="node nodeCM pw_degradation-of-pentoses lid8" transform="translate(772.3,2002.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>
+<text x="2183.7" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

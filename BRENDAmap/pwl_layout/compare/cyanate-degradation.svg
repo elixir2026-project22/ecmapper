@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1834" height="864" viewBox="0 0 1833.7 864.4"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="14582.2 6985.4 862.7 325.2" width="863" height="325" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="14582.2" y="6985.4" width="862.7" height="325.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_cyanate-degradation" class="pw pw7" x="14622.2" y="7040.9" width="782.7" height="229.7" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14785.6 7144.9 L 14703.9 7144.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14864.0 7144.9 L 14953.2 7144.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15110.7 7144.9 L 15031.6 7144.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15189.1 7144.9 L 15288.9 7144.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15311.1 7214.9 L 15311.1 7160.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15277.6 7230.9 L 15205.5 7230.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 14848.9 7128.9 L 14867.9 7116.3"/>
+<path class="link" marker-start="url(#in)" d="M 14802.2 7128.9 L 14781.1 7114.0"/>
+<path class="link" marker-end="url(#in)" d="M 14849.6 7160.9 L 14870.7 7174.6"/>
+<path class="link" marker-start="url(#in)" d="M 15127.2 7128.9 L 15106.2 7114.0"/>
+<path class="link" marker-end="url(#in)" d="M 15174.0 7128.9 L 15194.8 7115.1"/>
+<path class="link" marker-start="url(#in)" d="M 15334.8 7214.9 L 15351.0 7204.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_cyanate-degradation" transform="translate(15013.6,7040.9)"><rect rx="10" height="31" width="191" x="-95.5" y="-15.5"/><text dominant-baseline="central">cyanate degradation</text></g>
+<g id="node7020" class="node nodeHM pw_cyanate-degradation lid195" transform="translate(15180.4,7230.9)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title>HCO3-</title></g>
+<g id="node7022" class="node nodeHM pw_cyanate-degradation lid3992" transform="translate(14992.4,7144.9)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3992" target="_blank">carbamate</a></text><title>carbamate</title></g>
+<g id="node7024" class="node nodeHM pw_cyanate-degradation lid1376" transform="translate(14670.4,7144.9)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1376" target="_blank">cyanate</a></text><title>Cyanate</title></g>
+<g id="node11210" class="node nodeHM pw_cyanate-degradation lid28" transform="translate(15311.1,7144.9)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node7023" class="node nodeEN pw_cyanate-degradation" transform="translate(14824.8,7144.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.104" target="_blank">4.2.1.104</a></text><title>cyanase</title></g>
+<g id="node7021" class="node nodeEN pw_cyanate-degradation" transform="translate(15149.9,7144.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.104" target="_blank">4.2.1.104</a></text><title>cyanase</title></g>
+<g id="node7019" class="node nodeEN pw_cyanate-degradation" transform="translate(15311.1,7230.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.1" target="_blank">4.2.1.1</a></text><title>carbonic anhydrase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7025" class="node nodeCM pw_cyanate-degradation lid12" transform="translate(14761.7,7100.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node7026" class="node nodeCM pw_cyanate-degradation lid195" transform="translate(14892.0,7100.3)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title>HCO3-</title></g>
+<g id="node7027" class="node nodeCM pw_cyanate-degradation lid28" transform="translate(14893.0,7189.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node7028" class="node nodeCM pw_cyanate-degradation lid12" transform="translate(15086.7,7100.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node7029" class="node nodeCM pw_cyanate-degradation lid27" transform="translate(15217.0,7100.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node7030" class="node nodeCM pw_cyanate-degradation lid1" transform="translate(15373.2,7189.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="942.7" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 890.9 824.4" width="891" height="824" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="890.9" height="824.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_cyanate-degradation" class="pw " x="0.0" y="0.0" width="810.9" height="728.9" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 163.0 590.3 L 91.4 590.3"/>
+<path class="link" marker-end="url(#in)" d="M 232.4 574.3 L 313.3 536.6"/>
+<path class="link" marker-start="url(#in)" d="M 463.5 449.7 L 373.8 504.6"/>
+<path class="link" marker-end="url(#in)" d="M 504.6 417.7 L 589.7 326.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 686.2 195.8 L 616.0 294.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 705.2 163.8 L 750.4 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 196.6 606.3 L 191.4 662.9"/>
+<path class="link" marker-start="url(#in)" d="M 185.9 606.3 L 158.4 642.6"/>
+<path class="link" marker-end="url(#in)" d="M 204.3 574.3 L 223.6 524.9"/>
+<path class="link" marker-start="url(#in)" d="M 454.4 423.8 L 419.6 414.0"/>
+<path class="link" marker-end="url(#in)" d="M 488.4 417.7 L 484.3 362.6"/>
+<path class="link" marker-start="url(#in)" d="M 704.8 195.8 L 726.3 243.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_cyanate-degradation" transform="translate(405.5,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">cyanate degradation</text></g>
+<g id="node7024" class="node nodeHM pw_cyanate-degradation lid1376" transform="translate(62.7,590.3)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1376" target="_blank">cyanate</a></text><title></title></g>
+<g id="node7022" class="node nodeHM pw_cyanate-degradation lid3992" transform="translate(347.7,520.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3992" target="_blank">carbamate</a></text><title></title></g>
+<g id="node11210" class="node nodeHM pw_cyanate-degradation lid28" transform="translate(604.6,310.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node7020" class="node nodeHM pw_cyanate-degradation lid195" transform="translate(758.0,52.5)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title></title></g>
+<g id="node7023" class="node nodeEN pw_cyanate-degradation" transform="translate(198.1,590.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.104" target="_blank">4.2.1.104</a></text><title>cyanase</title></g>
+<g id="node7021" class="node nodeEN pw_cyanate-degradation" transform="translate(489.6,433.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.104" target="_blank">4.2.1.104</a></text><title>cyanase</title></g>
+<g id="node7019" class="node nodeEN pw_cyanate-degradation" transform="translate(697.6,179.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.1" target="_blank">4.2.1.1</a></text><title>carbonic anhydrase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7023~0" class="node nodeCM pw_cyanate-degradation lid195" transform="translate(190.0,678.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title></title></g>
+<g id="node7023~1" class="node nodeCM pw_cyanate-degradation lid12" transform="translate(146.2,658.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7023~2" class="node nodeCM pw_cyanate-degradation lid28" transform="translate(229.8,508.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node7021~0" class="node nodeCM pw_cyanate-degradation lid12" transform="translate(407.1,410.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7021~1" class="node nodeCM pw_cyanate-degradation lid27" transform="translate(483.1,346.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node7019~0" class="node nodeCM pw_cyanate-degradation lid1" transform="translate(733.5,259.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>
+<text x="952.7" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

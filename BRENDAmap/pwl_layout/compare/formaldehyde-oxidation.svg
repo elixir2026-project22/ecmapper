@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="932" height="898" viewBox="0 0 931.8 898.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="13317.4 5388.3 423.4 699.2" width="423" height="699" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="13317.4" y="5388.3" width="423.4" height="699.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_formaldehyde-oxidation" class="pw pw1" x="13357.4" y="5443.8" width="343.4" height="603.7" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13437.8 5593.9 L 13498.9 5507.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13426.5 5625.9 L 13426.5 5714.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13576.4 5595.0 L 13520.4 5507.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13586.6 5627.0 L 13586.6 5714.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13586.6 5907.7 L 13586.6 6001.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13586.6 5875.7 L 13586.6 5746.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 13452.7 5625.9 L 13481.6 5643.6"/>
+<path class="link" marker-start="url(#in)" d="M 13608.2 5627.0 L 13627.3 5641.2"/>
+<path class="link" marker-end="url(#in)" d="M 13606.9 5595.0 L 13628.5 5578.0"/>
+<path class="link" marker-start="url(#in)" d="M 13564.2 5907.7 L 13543.1 5922.8"/>
+<path class="link" marker-end="url(#in)" d="M 13566.6 5875.7 L 13540.8 5855.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_formaldehyde-oxidation" transform="translate(13529.1,5443.8)"><rect rx="10" height="31" width="219" x="-109.5" y="-15.5"/><text dominant-baseline="central">formaldehyde oxidation</text></g>
+<g id="node1202" class="node nodeHM pw_formaldehyde-oxidation lid120" transform="translate(13586.6,6017.6)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node9384" class="node nodeHM pw_formaldehyde-oxidation lid1656" transform="translate(13586.6,5730.4)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1656" target="_blank">S-formylglutathione</a></text><title>S-formylglutathione</title></g>
+<g id="node9387" class="node nodeHM pw_formaldehyde-oxidation lid130" transform="translate(13426.5,5730.4)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title>formaldehyde</title></g>
+<g id="node9410" class="node nodeHM pw_formaldehyde-oxidation lid8583" transform="translate(13510.1,5491.4)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8583" target="_blank">S-hydroxymethylglutathione</a></text><title>S-(hydroxymethyl)glutathione</title></g>
+<g id="node9388" class="node nodeEN pw_formaldehyde-oxidation" transform="translate(13426.5,5609.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.22" target="_blank">4.4.1.22</a></text><title>S-(hydroxymethyl)glutathione synthase</title></g>
+<g id="node9406" class="node nodeEN pw_formaldehyde-oxidation" transform="translate(13586.6,5611.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.284" target="_blank">1.1.1.284</a></text><title>S-(hydroxymethyl)glutathione dehydrogenase</title></g>
+<g id="node9385" class="node nodeEN pw_formaldehyde-oxidation" transform="translate(13586.6,5891.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.12" target="_blank">3.1.2.12</a></text><title>S-formylglutathione hydrolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9383" class="node nodeCM pw_formaldehyde-oxidation lid50" transform="translate(13648.9,5657.2)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+<g id="node9386" class="node nodeCM pw_formaldehyde-oxidation lid44" transform="translate(13503.9,5657.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title>glutathione</title></g>
+<g id="node9405" class="node nodeCM pw_formaldehyde-oxidation lid44" transform="translate(13520.9,5839.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title>glutathione</title></g>
+<g id="node9409" class="node nodeCM pw_formaldehyde-oxidation lid1" transform="translate(13520.9,5938.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9411" class="node nodeCM pw_formaldehyde-oxidation lid40" transform="translate(13648.9,5562.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="503.4" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 428.4 858.0" width="428" height="858" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="428.4" height="858.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_formaldehyde-oxidation" class="pw " x="0.0" y="0.0" width="348.4" height="762.5" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 218.0 201.5 L 218.0 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 218.0 233.5 L 218.0 366.5"/>
+<path class="link" marker-start="url(#in)" d="M 218.0 531.5 L 218.0 398.5"/>
+<path class="link" marker-end="url(#in)" d="M 218.0 563.5 L 218.0 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 151.5 119.0 L 202.0 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 119.5 151.0 L 69.0 201.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 240.8 201.5 L 270.0 181.1"/>
+<path class="link" marker-end="url(#in)" d="M 240.8 233.5 L 270.0 253.9"/>
+<path class="link" marker-start="url(#in)" d="M 195.1 531.5 L 162.1 508.4"/>
+<path class="link" marker-end="url(#in)" d="M 195.1 563.5 L 162.1 586.6"/>
+<path class="link" marker-end="url(#in)" d="M 138.3 151.0 L 147.8 205.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_formaldehyde-oxidation" transform="translate(174.2,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">formaldehyde oxidation</text></g>
+<g id="node9410" class="node nodeHM pw_formaldehyde-oxidation lid8583" transform="translate(218.0,52.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8583" target="_blank">S-hydroxymethylglutathione</a></text><title></title></g>
+<g id="node9384" class="node nodeHM pw_formaldehyde-oxidation lid1656" transform="translate(218.0,382.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1656" target="_blank">S-formylglutathione</a></text><title></title></g>
+<g id="node1202" class="node nodeHM pw_formaldehyde-oxidation lid120" transform="translate(218.0,712.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node9387" class="node nodeHM pw_formaldehyde-oxidation lid130" transform="translate(53.0,217.5)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title></title></g>
+<g id="node9406" class="node nodeEN pw_formaldehyde-oxidation" transform="translate(218.0,217.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.284" target="_blank">1.1.1.284</a></text><title>S-(hydroxymethyl)glutathione dehydrogenase</title></g>
+<g id="node9385" class="node nodeEN pw_formaldehyde-oxidation" transform="translate(218.0,547.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.12" target="_blank">3.1.2.12</a></text><title>S-formylglutathione hydrolase</title></g>
+<g id="node9388" class="node nodeEN pw_formaldehyde-oxidation" transform="translate(135.5,135.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.22" target="_blank">4.4.1.22</a></text><title>S-(hydroxymethyl)glutathione synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9406~0" class="node nodeCM pw_formaldehyde-oxidation lid10" transform="translate(292.2,165.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9406~1" class="node nodeCM pw_formaldehyde-oxidation lid5" transform="translate(292.2,269.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9385~0" class="node nodeCM pw_formaldehyde-oxidation lid1" transform="translate(146.4,497.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9385~1" class="node nodeCM pw_formaldehyde-oxidation lid44" transform="translate(146.4,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node9388~0" class="node nodeCM pw_formaldehyde-oxidation lid44" transform="translate(150.6,221.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+</g></svg>
+<text x="513.4" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

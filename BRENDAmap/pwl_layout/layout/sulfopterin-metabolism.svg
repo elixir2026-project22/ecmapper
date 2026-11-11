@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1822.9 975.1" width="1823" height="975" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1822.9" height="975.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_sulfopterin-metabolism" class="pw " x="0.0" y="0.0" width="1702.9" height="839.6" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 200.7 718.1 L 65.4 718.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 264.5 718.1 L 315.5 718.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 614.2 635.1 L 490.4 702.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 675.6 603.1 L 809.7 536.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1007.8 437.0 L 873.7 504.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1071.6 405.1 L 1205.7 338.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1071.6 239.0 L 1205.7 306.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1007.8 207.1 L 863.9 135.2"/>
+<path class="link" marker-start="url(#in)" d="M 675.6 124.1 L 819.5 124.1"/>
+<path class="link" marker-end="url(#in)" d="M 611.8 124.1 L 536.0 124.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1011.0 124.1 L 863.9 124.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1068.4 124.1 L 1222.0 124.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1414.7 124.1 L 1253.4 124.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1456.7 124.1 L 1598.6 124.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 221.4 734.1 L 193.7 773.6"/>
+<path class="link" marker-start="url(#in)" d="M 641.6 635.1 L 634.4 689.7"/>
+<path class="link" marker-end="url(#in)" d="M 674.4 635.1 L 698.3 647.5"/>
+<path class="link" marker-end="url(#in)" d="M 632.5 140.1 L 603.9 180.9"/>
+<path class="link" marker-start="url(#in)" d="M 1028.5 108.1 L 1000.8 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1050.9 108.1 L 1077.7 69.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_sulfopterin-metabolism" transform="translate(851.4,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">sulfopterin metabolism</text></g>
+<g id="node1221" class="node nodeHM pw_sulfopterin-metabolism lid37" transform="translate(49.7,718.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node9154" class="node nodeHM pw_sulfopterin-metabolism lid182109" transform="translate(460.9,718.1)"><rect height="30.0" width="288.6" x="-144.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182109" target="_blank">formamidopyrimidine nucleoside triphosphate</a></text><title></title></g>
+<g id="node9158" class="node nodeHM pw_sulfopterin-metabolism lid189991" transform="translate(841.7,520.1)"><rect height="30.0" width="301.6" x="-150.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189991" target="_blank">2,5-diaminopyrimidine nucleoside triphosphate</a></text><title></title></g>
+<g id="node9156" class="node nodeHM pw_sulfopterin-metabolism lid182183" transform="translate(1237.7,322.1)"><rect height="30.0" width="554.3" x="-277.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182183" target="_blank">2,5-diamino-6-(5&#x27;-triphosphoryl-3&#x27;,4&#x27;-trihydroxy-2&#x27;-oxopentyl)-amino-4-oxopyrimidine</a></text><title></title></g>
+<g id="node9152" class="node nodeHM pw_sulfopterin-metabolism lid4130" transform="translate(841.7,124.1)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4130" target="_blank">H2NTP</a></text><title></title></g>
+<g id="node10366" class="node nodeHM pw_sulfopterin-metabolism lid6471" transform="translate(445.7,124.1)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6471" target="_blank">6-Pyruvoyltetrahydropterin</a></text><title></title></g>
+<g id="node9142" class="node nodeHM pw_sulfopterin-metabolism lid3544" transform="translate(1237.7,124.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3544" target="_blank">NPR</a></text><title></title></g>
+<g id="node9147" class="node nodeHM pw_sulfopterin-metabolism lid21656" transform="translate(1633.7,124.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21656" target="_blank">neopterin</a></text><title></title></g>
+<g id="node9157" class="node nodeEN pw_sulfopterin-metabolism" transform="translate(232.6,718.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.16" target="_blank">3.5.4.16</a></text><title>GTP cyclohydrolase I</title></g>
+<g id="node9155" class="node nodeEN pw_sulfopterin-metabolism" transform="translate(643.7,619.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.16" target="_blank">3.5.4.16</a></text><title>GTP cyclohydrolase I</title></g>
+<g id="node9139" class="node nodeEN pw_sulfopterin-metabolism" transform="translate(1039.7,421.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.16" target="_blank">3.5.4.16</a></text><title>GTP cyclohydrolase I</title></g>
+<g id="node9143" class="node nodeEN pw_sulfopterin-metabolism" transform="translate(1039.7,223.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.16" target="_blank">3.5.4.16</a></text><title>GTP cyclohydrolase I</title></g>
+<g id="node10365" class="node nodeEN pw_sulfopterin-metabolism" transform="translate(643.7,124.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.12" target="_blank">4.2.3.12</a></text><title>6-pyruvoyltetrahydropterin synthase</title></g>
+<g id="node9144" class="node nodeEN pw_sulfopterin-metabolism" transform="translate(1039.7,124.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.1" target="_blank">3.1.3.1</a></text><title>alkaline phosphatase</title></g>
+<g id="node9140" class="node nodeEN pw_sulfopterin-metabolism" transform="translate(1435.7,124.1)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>unknown enzyme</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9157~0" class="node nodeCM pw_sulfopterin-metabolism lid1" transform="translate(182.5,789.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9155~0" class="node nodeCM pw_sulfopterin-metabolism lid1" transform="translate(632.3,705.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9155~1" class="node nodeCM pw_sulfopterin-metabolism lid120" transform="translate(726.9,662.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node10365~0" class="node nodeCM pw_sulfopterin-metabolism lid940" transform="translate(592.7,196.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=940" target="_blank">PPPi</a></text><title></title></g>
+<g id="node9144~0" class="node nodeCM pw_sulfopterin-metabolism lid1" transform="translate(989.6,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9144~1" class="node nodeCM pw_sulfopterin-metabolism lid16" transform="translate(1088.9,53.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>

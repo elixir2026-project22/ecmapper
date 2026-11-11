@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 790.4 718.1" width="790" height="718" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="790.4" height="718.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_alginate-biosynthesis" class="pw " x="0.0" y="0.0" width="670.4" height="582.6" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 296.8 136.6 L 162.6 136.6"/>
+<path class="link" marker-end="url(#in)" d="M 367.1 136.6 L 498.0 136.6"/>
+<path class="link" marker-start="url(#in)" d="M 530.0 318.6 L 530.0 152.6"/>
+<path class="link" marker-end="url(#in)" d="M 530.0 350.6 L 530.0 516.6"/>
+<path class="link" marker-start="url(#in)" d="M 363.9 532.6 L 423.5 532.6"/>
+<path class="link" marker-end="url(#in)" d="M 300.0 532.6 L 233.9 532.6"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 326.5 152.6 L 308.5 204.8"/>
+<path class="link" marker-start="url(#in)" d="M 312.2 152.6 L 279.8 178.9"/>
+<path class="link" marker-end="url(#in)" d="M 337.5 120.6 L 355.4 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 351.7 120.6 L 386.1 92.8"/>
+<path class="link" marker-start="url(#in)" d="M 507.1 318.6 L 446.7 276.4"/>
+<path class="link" marker-end="url(#in)" d="M 507.1 350.6 L 474.1 373.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_alginate-biosynthesis" transform="translate(335.2,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">alginate biosynthesis</text></g>
+<g id="node12178" class="node nodeHM pw_alginate-biosynthesis lid3633" transform="translate(134.0,136.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3633" target="_blank">GDP-Man</a></text><title></title></g>
+<g id="node8734" class="node nodeHM pw_alginate-biosynthesis lid103884" transform="translate(530.0,136.6)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103884" target="_blank">GDP-ManA</a></text><title></title></g>
+<g id="node2125" class="node nodeHM pw_alginate-biosynthesis lid205993" transform="translate(530.0,532.6)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=205993" target="_blank">[mannuronan]-beta-D-mannuronate</a></text><title></title></g>
+<g id="node2123" class="node nodeHM pw_alginate-biosynthesis lid205992" transform="translate(134.0,532.6)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=205992" target="_blank">[alginate]-alpha-L-guluronate</a></text><title></title></g>
+<g id="node8739" class="node nodeEN pw_alginate-biosynthesis" transform="translate(332.0,136.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.132" target="_blank">1.1.1.132</a></text><title>GDP-mannose 6-dehydrogenase</title></g>
+<g id="node8737" class="node nodeEN pw_alginate-biosynthesis" transform="translate(530.0,334.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.33" target="_blank">2.4.1.33</a></text><title>mannuronan synthase</title></g>
+<g id="node2124" class="node nodeEN pw_alginate-biosynthesis" transform="translate(332.0,532.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.37" target="_blank">5.1.3.37</a></text><title>mannuronan 5-epimerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8739~0" class="node nodeCM pw_alginate-biosynthesis lid7" transform="translate(303.0,220.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node8739~1" class="node nodeCM pw_alginate-biosynthesis lid1" transform="translate(264.1,191.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8739~2" class="node nodeCM pw_alginate-biosynthesis lid8" transform="translate(360.9,52.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node8739~3" class="node nodeCM pw_alginate-biosynthesis lid12" transform="translate(398.6,82.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8737~0" class="node nodeCM pw_alginate-biosynthesis lid202712" transform="translate(423.9,260.4)"><rect rx="5" height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202712" target="_blank">[(1-&gt;4)-beta-D-mannuronosyl]n</a></text><title></title></g>
+<g id="node8737~1" class="node nodeCM pw_alginate-biosynthesis lid53" transform="translate(458.4,384.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+</g></svg>

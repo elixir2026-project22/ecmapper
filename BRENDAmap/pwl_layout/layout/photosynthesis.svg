@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2365.1 3838.9" width="2365" height="3839" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2365.1" height="3838.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_photosynthesis" class="pw " x="0.0" y="0.0" width="2245.1" height="3703.4" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 570.3 766.1 L 659.1 912.5"/>
+<path class="link" marker-end="url(#in)" d="M 560.8 734.1 L 563.3 553.0"/>
+<path class="link" marker-start="url(#in)" d="M 563.5 307.9 L 563.5 521.0"/>
+<path class="link" marker-end="url(#in)" d="M 585.6 275.9 L 789.1 128.4"/>
+<path class="link" marker-start="url(#in)" d="M 1035.4 120.3 L 849.6 113.8"/>
+<path class="link" marker-end="url(#in)" d="M 1099.2 122.0 L 1277.7 124.8"/>
+<path class="link" marker-start="url(#in)" d="M 1612.0 126.0 L 1425.7 126.0"/>
+<path class="link" marker-end="url(#in)" d="M 1662.7 142.0 L 1890.2 307.6"/>
+<path class="link" marker-start="url(#in)" d="M 2085.8 406.7 C 2046.2 387.7 1978.4 355.2 1940.3 337.0"/>
+<path class="link" marker-end="url(#in)" d="M 2116.9 437.7 L 2116.1 617.6"/>
+<path class="link" marker-start="url(#in)" d="M 2036.5 464.8 C 2010.1 434.8 1951.8 368.5 1925.5 338.6"/>
+<path class="link" marker-end="url(#in)" d="M 2056.9 496.2 L 2109.2 617.6"/>
+<path class="link" marker-start="url(#in)" d="M 2116.1 844.6 L 2116.1 649.6"/>
+<path class="link" marker-end="url(#in)" d="M 2098.6 876.6 L 1936.7 1025.2"/>
+<path class="link" marker-start="url(#in)" d="M 1806.6 1273.4 L 1911.5 1057.2"/>
+<path class="link" marker-end="url(#in)" d="M 1766.9 1289.9 L 1669.1 1291.5"/>
+<path class="link" marker-start="url(#in)" d="M 1388.6 1292.7 L 1514.6 1292.7"/>
+<path class="link" marker-end="url(#in)" d="M 1324.8 1277.1 L 1147.0 1189.8"/>
+<path class="link" marker-start="url(#in)" d="M 912.2 1042.0 L 1115.6 1172.0"/>
+<path class="link" marker-end="url(#in)" d="M 880.4 1010.0 L 808.9 841.3"/>
+<path class="link" marker-end="url(#in)" d="M 858.5 1013.2 L 704.0 944.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 555.6 1383.1 L 675.3 1241.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 537.1 1415.1 L 450.2 1698.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 531.0 1415.1 L 360.6 1663.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 561.4 1415.1 L 712.7 1540.4"/>
+<path class="link" marker-start="url(#in)" d="M 704.4 1801.0 L 655.9 2073.6"/>
+<path class="link" marker-start="url(#in)" d="M 709.0 1769.0 L 730.3 1572.4"/>
+<path class="link" marker-end="url(#in)" d="M 678.6 1777.3 L 493.4 1727.4"/>
+<path class="link" marker-end="url(#in)" d="M 694.9 1801.0 L 542.0 1998.8"/>
+<path class="link" marker-start="url(#in)" d="M 351.6 2195.1 C 323.5 2208.3 283.2 2227.2 255.1 2240.4"/>
+<path class="link" marker-start="url(#in)" d="M 398.5 2163.7 L 515.6 2030.8"/>
+<path class="link" marker-end="url(#in)" d="M 419.6 2167.9 L 605.4 2105.6"/>
+<path class="link" marker-end="url(#in)" d="M 386.2 2195.7 L 403.6 2354.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 203.3 2355.7 L 219.3 2271.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 202.2 2387.7 L 219.1 2523.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 232.1 2371.5 L 292.5 2371.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 168.3 2371.7 L 78.4 2371.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 595.7 3554.0 L 595.7 3431.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 568.4 3586.0 L 520.3 3614.2"/>
+<path class="link" marker-start="url(#in)" d="M 356.4 3628.8 L 448.1 3629.7"/>
+<path class="link" marker-end="url(#in)" d="M 292.5 3628.4 L 176.8 3628.4"/>
+<path class="link" marker-start="url(#in)" d="M 144.9 3469.0 L 144.9 3612.4"/>
+<path class="link" marker-end="url(#in)" d="M 157.7 3437.0 L 236.0 3339.2"/>
+<path class="link" marker-start="url(#in)" d="M 400.0 3323.2 L 280.8 3323.2"/>
+<path class="link" marker-end="url(#in)" d="M 457.3 3339.0 L 580.0 3406.5"/>
+<path class="link" marker-start="url(#in)" d="M 1766.0 937.0 L 1900.3 1028.3"/>
+<path class="link" marker-end="url(#in)" d="M 1716.6 905.0 L 1560.1 808.2"/>
+<path class="link" marker-start="url(#in)" d="M 1366.7 707.2 L 1528.6 790.4"/>
+<path class="link" marker-end="url(#in)" d="M 1303.6 691.3 L 1156.8 691.9"/>
+<path class="link" marker-start="url(#in)" d="M 957.8 692.1 L 1099.4 692.1"/>
+<path class="link" marker-end="url(#in)" d="M 913.9 708.1 L 817.4 809.3"/>
+<path class="link" marker-end="url(#in)" d="M 662.8 694.4 L 785.1 809.3"/>
+<path class="link" marker-start="url(#in)" d="M 636.5 662.4 L 572.8 553.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 570.9 307.9 L 592.7 355.2"/>
+<path class="link" marker-end="url(#in)" d="M 595.4 298.2 L 633.4 305.8"/>
+<path class="link" marker-end="url(#in)" d="M 595.4 279.8 L 631.2 266.2"/>
+<path class="link" marker-start="url(#in)" d="M 1061.3 137.5 L 1042.7 187.3"/>
+<path class="link" marker-start="url(#in)" d="M 1046.5 137.5 L 1013.8 162.6"/>
+<path class="link" marker-end="url(#in)" d="M 1079.1 105.5 L 1106.4 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1618.4 142.0 L 1585.4 165.5"/>
+<path class="link" marker-end="url(#in)" d="M 1653.4 110.0 L 1682.3 73.5"/>
+<path class="link" marker-end="url(#in)" d="M 1669.4 115.8 L 1709.0 101.7"/>
+<path class="link" marker-start="url(#in)" d="M 2085.0 429.8 L 2051.3 438.4"/>
+<path class="link" marker-start="url(#in)" d="M 2085.0 411.5 L 2047.7 399.6"/>
+<path class="link" marker-end="url(#in)" d="M 2126.2 437.7 L 2128.5 441.8"/>
+<path class="link" marker-end="url(#in)" d="M 2148.8 431.8 L 2186.1 443.7"/>
+<path class="link" marker-start="url(#in)" d="M 2040.8 464.2 L 2038.4 460.1"/>
+<path class="link" marker-start="url(#in)" d="M 2018.1 470.0 L 1980.8 458.1"/>
+<path class="link" marker-end="url(#in)" d="M 2081.9 472.0 L 2115.6 463.4"/>
+<path class="link" marker-end="url(#in)" d="M 2081.9 473.2 L 2186.1 450.4"/>
+<path class="link" marker-start="url(#in)" d="M 1798.1 1273.4 L 1795.6 1218.1"/>
+<path class="link" marker-start="url(#in)" d="M 1374.8 1276.7 L 1406.4 1248.8"/>
+<path class="link" marker-end="url(#in)" d="M 1338.6 1308.7 L 1304.9 1338.5"/>
+<path class="link" marker-start="url(#in)" d="M 915.9 1017.0 L 954.9 1004.8"/>
+<path class="link" marker-start="url(#in)" d="M 519.2 1383.1 L 484.3 1358.6"/>
+<path class="link" marker-start="url(#in)" d="M 714.2 1769.0 L 734.5 1722.4"/>
+<path class="link" marker-end="url(#in)" d="M 700.3 1801.0 L 680.0 1847.6"/>
+<path class="link" marker-start="url(#in)" d="M 349.2 2194.9 L 318.1 2208.3"/>
+<path class="link" marker-start="url(#in)" d="M 579.4 3554.0 L 549.1 3524.2"/>
+<path class="link" marker-start="url(#in)" d="M 591.9 3554.0 L 579.2 3501.0"/>
+<path class="link" marker-end="url(#in)" d="M 612.0 3586.0 L 644.3 3617.8"/>
+<path class="link" marker-end="url(#in)" d="M 599.5 3586.0 L 611.8 3637.4"/>
+<path class="link" marker-start="url(#in)" d="M 330.0 3612.4 L 348.8 3558.9"/>
+<path class="link" marker-start="url(#in)" d="M 344.4 3612.4 L 378.9 3584.8"/>
+<path class="link" marker-end="url(#in)" d="M 292.5 3623.3 L 257.4 3617.8"/>
+<path class="link" marker-start="url(#in)" d="M 153.8 3469.0 L 226.3 3598.2"/>
+<path class="link" marker-end="url(#in)" d="M 124.3 3437.0 L 93.9 3413.4"/>
+<path class="link" marker-end="url(#in)" d="M 139.0 3437.0 L 120.6 3387.0"/>
+<path class="link" marker-start="url(#in)" d="M 417.9 3339.2 L 390.7 3379.8"/>
+<path class="link" marker-start="url(#in)" d="M 400.0 3336.1 L 362.9 3352.7"/>
+<path class="link" marker-end="url(#in)" d="M 433.8 3307.2 L 450.3 3256.1"/>
+<path class="link" marker-end="url(#in)" d="M 447.6 3307.2 L 479.7 3280.2"/>
+<path class="link" marker-end="url(#in)" d="M 457.3 3319.1 L 501.1 3312.9"/>
+<path class="link" marker-start="url(#in)" d="M 1743.0 937.0 L 1745.1 992.3"/>
+<path class="link" marker-start="url(#in)" d="M 1341.6 707.2 L 1360.3 756.9"/>
+<path class="link" marker-end="url(#in)" d="M 1316.9 707.2 L 1283.0 736.3"/>
+<path class="link" marker-start="url(#in)" d="M 932.7 676.1 L 944.8 622.9"/>
+<path class="link" marker-end="url(#in)" d="M 904.3 676.1 L 871.4 654.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_photosynthesis" transform="translate(1122.5,0.0)"><rect rx="10" height="31" width="146" x="-73.0" y="-15.5"/><text dominant-baseline="central">photosynthesis</text></g>
+<g id="node9829" class="node nodeHM pw_photosynthesis lid183" transform="translate(668.8,928.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title></title></g>
+<g id="node9838" class="node nodeHM pw_photosynthesis lid443" transform="translate(563.5,537.0)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=443" target="_blank">D-Rul 5-P</a></text><title></title></g>
+<g id="node9727" class="node nodeHM pw_photosynthesis lid490" transform="translate(811.2,112.4)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=490" target="_blank">Rul 1,5-PP</a></text><title></title></g>
+<g id="node9843" class="node nodeHM pw_photosynthesis lid201" transform="translate(1351.7,126.0)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=201" target="_blank">3-phospho-D-glycerate</a></text><title></title></g>
+<g id="node9841" class="node nodeHM pw_photosynthesis lid2125" transform="translate(1912.2,323.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2125" target="_blank">1,3-BPG</a></text><title></title></g>
+<g id="node9835" class="node nodeHM pw_photosynthesis lid147" transform="translate(2116.1,633.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node9828" class="node nodeHM pw_photosynthesis lid278" transform="translate(1919.3,1041.2)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=278" target="_blank">DHAP</a></text><title></title></g>
+<g id="node9836" class="node nodeHM pw_photosynthesis lid20229" transform="translate(1591.9,1292.7)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20229" target="_blank">D-sedoheptulose 1,7-PP</a></text><title></title></g>
+<g id="node9830" class="node nodeHM pw_photosynthesis lid1657" transform="translate(1131.3,1182.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1657" target="_blank">S7P</a></text><title></title></g>
+<g id="node9825" class="node nodeHM pw_photosynthesis lid644" transform="translate(802.1,825.3)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=644" target="_blank">D-Xul 5-P</a></text><title></title></g>
+<g id="node9568" class="node nodeHM pw_photosynthesis lid1" transform="translate(688.9,1225.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1427" class="node nodeHM pw_photosynthesis lid3359" transform="translate(445.3,1714.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3359" target="_blank">plastoquinone</a></text><title></title></g>
+<g id="node9585" class="node nodeHM pw_photosynthesis lid9" transform="translate(349.6,1679.1)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node9564" class="node nodeHM pw_photosynthesis lid3663" transform="translate(732.0,1556.4)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3663" target="_blank">plastoquinol</a></text><title></title></g>
+<g id="node1426" class="node nodeHM pw_photosynthesis lid16309" transform="translate(653.1,2089.6)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16309" target="_blank">oxidized plastocyanin</a></text><title></title></g>
+<g id="node1424" class="node nodeHM pw_photosynthesis lid9404" transform="translate(529.7,2014.8)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9404" target="_blank">reduced plastocyanin</a></text><title></title></g>
+<g id="node9581" class="node nodeHM pw_photosynthesis lid202698" transform="translate(222.3,2255.8)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node9560" class="node nodeHM pw_photosynthesis lid202701" transform="translate(405.4,2370.2)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12020" class="node nodeHM pw_photosynthesis lid5" transform="translate(221.1,2539.4)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9577" class="node nodeHM pw_photosynthesis lid10" transform="translate(56.2,2371.7)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9678" class="node nodeHM pw_photosynthesis lid51" transform="translate(595.7,3415.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=51" target="_blank">PEP</a></text><title></title></g>
+<g id="node9681" class="node nodeHM pw_photosynthesis lid57" transform="translate(493.0,3630.2)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57" target="_blank">oxaloacetate</a></text><title></title></g>
+<g id="node9683" class="node nodeHM pw_photosynthesis lid200" transform="translate(144.9,3628.4)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200" target="_blank">L-malate</a></text><title></title></g>
+<g id="node9665" class="node nodeHM pw_photosynthesis lid31" transform="translate(248.8,3323.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node9821" class="node nodeHM pw_photosynthesis lid6523" transform="translate(1544.3,798.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6523" target="_blank">FBP</a></text><title></title></g>
+<g id="node9823" class="node nodeHM pw_photosynthesis lid87" transform="translate(1128.1,692.1)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87" target="_blank">Fru 6-P</a></text><title></title></g>
+<g id="node9842" class="node nodeEN pw_photosynthesis" transform="translate(560.6,750.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.6" target="_blank">5.3.1.6</a></text><title>Ribose-5-phosphate isomerase</title></g>
+<g id="node9837" class="node nodeEN pw_photosynthesis" transform="translate(563.5,291.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.19" target="_blank">2.7.1.19</a></text><title>phosphoribulokinase</title></g>
+<g id="node9729" class="node nodeEN pw_photosynthesis" transform="translate(1067.3,121.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.39" target="_blank">4.1.1.39</a></text><title>Ribulose-bisphosphate carboxylase</title></g>
+<g id="node9834" class="node nodeEN pw_photosynthesis" transform="translate(1640.7,126.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.3" target="_blank">2.7.2.3</a></text><title>phosphoglycerate kinase</title></g>
+<g id="node8288" class="node nodeEN pw_photosynthesis" transform="translate(2116.9,421.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.59" target="_blank">1.2.1.59</a></text><title>glyceraldehyde-3-phosphate dehydrogenase (NAD(P)+) (phosphorylating); glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating)</title></g>
+<g id="node9840" class="node nodeEN pw_photosynthesis" transform="translate(2050.0,480.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.13" target="_blank">1.2.1.13</a></text><title>glyceraldehyde-3-phosphate dehydrogenase (NAD(P)+) (phosphorylating); glyceraldehyde-3-phosphate dehydrogenase (NADP+) (phosphorylating)</title></g>
+<g id="node9832" class="node nodeEN pw_photosynthesis" transform="translate(2116.1,860.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.1" target="_blank">5.3.1.1</a></text><title>Triose-phosphate isomerase</title></g>
+<g id="node9833" class="node nodeEN pw_photosynthesis" transform="translate(1798.8,1289.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.13" target="_blank">4.1.2.13</a></text><title>fructose-bisphosphate aldolase</title></g>
+<g id="node9831" class="node nodeEN pw_photosynthesis" transform="translate(1356.7,1292.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.37" target="_blank">3.1.3.37</a></text><title>sedoheptulose-bisphosphatase</title></g>
+<g id="node9839" class="node nodeEN pw_photosynthesis" transform="translate(887.2,1026.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.1" target="_blank">2.2.1.1</a></text><title>transketolase</title></g>
+<g id="node9566" class="node nodeEN pw_photosynthesis" transform="translate(542.0,1399.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.10.3.9" target="_blank">1.10.3.9</a></text><title>photosystem II</title></g>
+<g id="node1425" class="node nodeEN pw_photosynthesis" transform="translate(707.2,1785.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.1.1.6" target="_blank">7.1.1.6</a></text><title>plastoquinol-plastocyanin reductase</title></g>
+<g id="node9562" class="node nodeEN pw_photosynthesis" transform="translate(384.4,2179.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.97.1.12" target="_blank">1.97.1.12</a></text><title>photosystem I</title></g>
+<g id="node9558" class="node nodeEN pw_photosynthesis" transform="translate(200.2,2371.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.18.1.6" target="_blank">1.18.1.6</a></text><title>adrenodoxin-NADP+ reductase</title></g>
+<g id="node9687" class="node nodeEN pw_photosynthesis" transform="translate(595.7,3570.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.31" target="_blank">4.1.1.31</a></text><title>phosphoenolpyruvate carboxylase</title></g>
+<g id="node9685" class="node nodeEN pw_photosynthesis" transform="translate(324.5,3628.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.82" target="_blank">1.1.1.82</a></text><title>malate dehydrogenase (NADP+)</title></g>
+<g id="node9668" class="node nodeEN pw_photosynthesis" transform="translate(144.9,3453.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.40" target="_blank">1.1.1.40</a></text><title>malate dehydrogenase (oxaloacetate-decarboxylating) (NADP+)</title></g>
+<g id="node9663" class="node nodeEN pw_photosynthesis" transform="translate(428.7,3323.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.9.1" target="_blank">2.7.9.1</a></text><title>pyruvate, phosphate dikinase</title></g>
+<g id="node9820" class="node nodeEN pw_photosynthesis" transform="translate(1742.5,921.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.13" target="_blank">4.1.2.13</a></text><title>Fructose-bisphosphate aldolase</title></g>
+<g id="node9822" class="node nodeEN pw_photosynthesis" transform="translate(1335.5,691.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.11" target="_blank">3.1.3.11</a></text><title>fructose-bisphosphatase</title></g>
+<g id="node9824" class="node nodeEN pw_photosynthesis" transform="translate(929.1,692.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.1" target="_blank">2.2.1.1</a></text><title>transketolase</title></g>
+<g id="node9826" class="node nodeEN pw_photosynthesis" transform="translate(645.8,678.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.1" target="_blank">5.1.3.1</a></text><title>ribulose-phosphate 3-epimerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9837~0" class="node nodeCM pw_photosynthesis lid4" transform="translate(600.0,371.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9837~1" class="node nodeCM pw_photosynthesis lid13" transform="translate(649.2,308.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9837~2" class="node nodeCM pw_photosynthesis lid12" transform="translate(643.7,261.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9729~0" class="node nodeCM pw_photosynthesis lid1" transform="translate(1036.8,203.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9729~1" class="node nodeCM pw_photosynthesis lid28" transform="translate(998.0,174.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9729~2" class="node nodeCM pw_photosynthesis lid12" transform="translate(1118.2,52.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9834~0" class="node nodeCM pw_photosynthesis lid4" transform="translate(1569.7,176.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9834~1" class="node nodeCM pw_photosynthesis lid13" transform="translate(1695.0,57.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9834~2" class="node nodeCM pw_photosynthesis lid12" transform="translate(1721.5,97.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8288~0" class="node nodeCM pw_photosynthesis lid5" transform="translate(2029.1,444.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8288~1" class="node nodeCM pw_photosynthesis lid12" transform="translate(2035.2,395.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8288~2" class="node nodeCM pw_photosynthesis lid10" transform="translate(2137.8,457.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8288~3" class="node nodeCM pw_photosynthesis lid16" transform="translate(2198.6,447.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9840~1" class="node nodeCM pw_photosynthesis lid12" transform="translate(1968.3,454.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9833~0" class="node nodeCM pw_photosynthesis lid500" transform="translate(1794.9,1202.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=500" target="_blank">E4P</a></text><title></title></g>
+<g id="node9831~0" class="node nodeCM pw_photosynthesis lid1" transform="translate(1422.1,1234.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9831~1" class="node nodeCM pw_photosynthesis lid16" transform="translate(1292.4,1349.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9839~0" class="node nodeCM pw_photosynthesis lid147" transform="translate(970.6,999.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node9566~0" class="node nodeCM pw_photosynthesis lid1405" transform="translate(471.8,1349.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1405" target="_blank">hv</a></text><title></title></g>
+<g id="node1425~0" class="node nodeCM pw_photosynthesis lid12" transform="translate(741.5,1706.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1425~1" class="node nodeCM pw_photosynthesis lid12" transform="translate(673.0,1863.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9562~0" class="node nodeCM pw_photosynthesis lid1405" transform="translate(305.7,2213.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1405" target="_blank">hv</a></text><title></title></g>
+<g id="node9687~0" class="node nodeCM pw_photosynthesis lid1" transform="translate(533.4,3508.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9687~1" class="node nodeCM pw_photosynthesis lid28" transform="translate(575.3,3485.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9687~2" class="node nodeCM pw_photosynthesis lid12" transform="translate(656.8,3630.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9687~3" class="node nodeCM pw_photosynthesis lid16" transform="translate(615.7,3653.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9685~0" class="node nodeCM pw_photosynthesis lid5" transform="translate(354.4,3542.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9685~1" class="node nodeCM pw_photosynthesis lid12" transform="translate(391.4,3574.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9668~0" class="node nodeCM pw_photosynthesis lid10" transform="translate(235.2,3614.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9668~1" class="node nodeCM pw_photosynthesis lid5" transform="translate(73.3,3397.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9668~2" class="node nodeCM pw_photosynthesis lid28" transform="translate(114.7,3371.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9663~0" class="node nodeCM pw_photosynthesis lid4" transform="translate(380.0,3395.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9663~1" class="node nodeCM pw_photosynthesis lid16" transform="translate(350.4,3358.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9663~2" class="node nodeCM pw_photosynthesis lid30" transform="translate(455.4,3240.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node9663~3" class="node nodeCM pw_photosynthesis lid17" transform="translate(495.4,3266.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node9663~4" class="node nodeCM pw_photosynthesis lid12" transform="translate(513.5,3311.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9820~0" class="node nodeCM pw_photosynthesis lid147" transform="translate(1745.6,1008.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node9822~0" class="node nodeCM pw_photosynthesis lid1" transform="translate(1366.4,772.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9822~1" class="node nodeCM pw_photosynthesis lid16" transform="translate(1270.5,747.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9824~0" class="node nodeCM pw_photosynthesis lid147" transform="translate(948.4,606.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node9824~1" class="node nodeCM pw_photosynthesis lid500" transform="translate(855.7,644.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=500" target="_blank">E4P</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2702" height="1463" viewBox="0 0 2702.0 1463.2"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="5341.0 12675.0 1440.8 1169.9" width="1441" height="1170" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="5341.0" y="12675.0" width="1440.8" height="1169.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_camphor-degradation" class="pw pw7" x="5381.0" y="12730.5" width="1360.8" height="1074.4" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5587.6 12899.3 L 5587.6 12801.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5587.6 12931.3 L 5587.6 13017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6081.0 12931.3 L 6081.0 13017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6081.0 12899.3 L 6081.0 12820.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6573.4 12899.3 L 6573.4 12801.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6573.4 12931.3 L 6573.4 13017.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5587.6 13160.0 L 5587.6 13049.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5587.6 13192.0 L 5587.6 13327.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6081.0 13192.0 L 6081.0 13327.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6081.0 13160.0 L 6081.0 13049.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6573.4 13160.0 L 6573.4 13049.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6573.4 13192.0 L 6573.4 13327.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5587.6 13486.1 L 5587.6 13359.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5587.6 13518.1 L 5587.6 13660.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6081.0 13518.1 L 6081.0 13660.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6081.0 13486.1 L 6081.0 13359.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6573.4 13486.1 L 6573.4 13359.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6573.4 13518.1 L 6573.4 13660.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5741.9 13676.2 L 5669.2 13676.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5831.6 13676.2 L 5923.1 13676.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6320.9 13676.2 L 6238.8 13676.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 6410.6 13676.2 L 6491.8 13676.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 5624.4 12899.3 L 5672.6 12878.3"/>
+<path class="link" marker-start="url(#in)" d="M 5554.8 12899.3 L 5527.1 12885.8"/>
+<path class="link" marker-end="url(#in)" d="M 5559.0 12931.3 L 5522.9 12951.5"/>
+<path class="link" marker-end="url(#in)" d="M 5619.6 12931.3 L 5669.8 12956.4"/>
+<path class="link" marker-end="url(#in)" d="M 6045.4 12899.3 L 5999.2 12878.6"/>
+<path class="link" marker-start="url(#in)" d="M 6610.4 12899.3 L 6659.2 12878.2"/>
+<path class="link" marker-start="url(#in)" d="M 6540.6 12899.3 L 6512.8 12885.8"/>
+<path class="link" marker-end="url(#in)" d="M 6605.7 12931.3 L 6656.4 12956.5"/>
+<path class="link" marker-end="url(#in)" d="M 6544.8 12931.3 L 6508.6 12951.5"/>
+<path class="link" marker-start="url(#in)" d="M 5619.7 13160.0 L 5667.0 13136.4"/>
+<path class="link" marker-end="url(#in)" d="M 5601.9 13192.0 L 5630.2 13223.6"/>
+<path class="link" marker-end="url(#in)" d="M 5601.9 13192.0 L 5630.2 13223.6"/>
+<path class="link" marker-start="url(#in)" d="M 6106.9 13192.0 L 6164.4 13227.6"/>
+<path class="link" marker-start="url(#in)" d="M 6070.0 13192.0 L 6048.4 13223.6"/>
+<path class="link" marker-start="url(#in)" d="M 6055.5 13192.0 L 6005.2 13223.6"/>
+<path class="link" marker-end="url(#in)" d="M 6049.9 13160.0 L 6007.6 13138.3"/>
+<path class="link" marker-end="url(#in)" d="M 6112.6 13160.0 L 6161.6 13135.2"/>
+<path class="link" marker-start="url(#in)" d="M 6605.7 13160.0 L 6653.6 13136.3"/>
+<path class="link" marker-end="url(#in)" d="M 6587.7 13192.0 L 6615.9 13223.6"/>
+<path class="link" marker-end="url(#in)" d="M 6587.7 13192.0 L 6615.9 13223.6"/>
+<path class="link" marker-start="url(#in)" d="M 5616.8 13486.1 L 5672.6 13455.4"/>
+<path class="link" marker-start="url(#in)" d="M 5561.5 13486.1 L 5520.3 13460.8"/>
+<path class="link" marker-end="url(#in)" d="M 5561.5 13518.1 L 5516.5 13545.6"/>
+<path class="link" marker-end="url(#in)" d="M 5616.9 13518.1 L 5669.8 13547.0"/>
+<path class="link" marker-start="url(#in)" d="M 6052.7 13518.1 L 6002.0 13546.7"/>
+<path class="link" marker-start="url(#in)" d="M 6109.8 13518.1 L 6161.6 13546.9"/>
+<path class="link" marker-end="url(#in)" d="M 6052.7 13486.1 L 6002.0 13457.4"/>
+<path class="link" marker-end="url(#in)" d="M 6109.7 13486.1 L 6161.6 13457.2"/>
+<path class="link" marker-start="url(#in)" d="M 6602.8 13486.1 L 6659.2 13455.4"/>
+<path class="link" marker-start="url(#in)" d="M 6547.3 13486.1 L 6506.1 13460.8"/>
+<path class="link" marker-end="url(#in)" d="M 6602.9 13518.1 L 6656.4 13547.1"/>
+<path class="link" marker-end="url(#in)" d="M 6547.3 13518.1 L 6502.3 13545.6"/>
+<path class="link" marker-end="url(#in)" d="M 5803.8 13692.2 L 5838.0 13724.5"/>
+<path class="link" marker-end="url(#in)" d="M 6343.5 13692.2 L 6295.7 13726.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_camphor-degradation" transform="translate(6061.4,12730.5)"><rect rx="10" height="31" width="200" x="-100.0" y="-15.5"/><text dominant-baseline="central">camphor degradation</text></g>
+<g id="node1008" class="node nodeHM pw_camphor-degradation lid245119" transform="translate(6081.0,12804.0)"><rect height="30.0" width="229.0" x="-114.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=245119" target="_blank">DELTA2,5-3,4,4-trimethylpimeloyl-CoA</a></text><title>DELTA2,5-3,4,4-trimethylpimeloyl-CoA</title></g>
+<g id="node1012" class="node nodeHM pw_camphor-degradation lid86273" transform="translate(6081.0,13033.8)"><rect height="30.0" width="387.1" x="-193.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86273" target="_blank">[(2R)-3,3,4-trimethyl-6-oxo-3,6-dihydro-1H-pyran-2-yl]acetyl-CoA</a></text><title>[(2R)-3,3,4-trimethyl-6-oxo-3,6-dihydro-1H-pyran-2-yl]acetyl-CoA</title></g>
+<g id="node1017" class="node nodeHM pw_camphor-degradation lid28537" transform="translate(6081.0,13343.9)"><rect height="30.0" width="296.8" x="-148.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28537" target="_blank">2,2,3-trimethyl-5-oxocyclopent-3-enyl]acetyl-CoA</a></text><title>2,2,3-trimethyl-5-oxocyclopent-3-enyl]acetyl-CoA</title></g>
+<g id="node1024" class="node nodeHM pw_camphor-degradation lid86272" transform="translate(6081.0,13676.2)"><rect height="30.0" width="313.7" x="-156.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86272" target="_blank">[(1R)-2,2,3-trimethyl-5-oxocyclopent-3-enyl]acetate</a></text><title>[(1R)-2,2,3-trimethyl-5-oxocyclopent-3-enyl]acetate</title></g>
+<g id="node1031" class="node nodeHM pw_camphor-degradation lid167666" transform="translate(5587.6,13676.2)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=167666" target="_blank">(+)-5-oxo-1,2-campholide</a></text><title>(+)-5-oxo-1,2-campholide</title></g>
+<g id="node1036" class="node nodeHM pw_camphor-degradation lid167678" transform="translate(5587.6,13343.9)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=167678" target="_blank">bornane-2,5-dione</a></text><title>bornane-2,5-dione</title></g>
+<g id="node1042" class="node nodeHM pw_camphor-degradation lid10444" transform="translate(5587.6,13033.8)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10444" target="_blank">(+)-exo-5-hydroxycamphor</a></text><title>(+)-exo-5-hydroxycamphor</title></g>
+<g id="node1043" class="node nodeHM pw_camphor-degradation lid2387" transform="translate(5587.6,12785.1)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2387" target="_blank">(+)-camphor</a></text><title>(+)-camphor</title></g>
+<g id="node12451" class="node nodeHM pw_camphor-degradation lid224832" transform="translate(6573.4,13676.2)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224832" target="_blank">(-)-5-oxo-1,2-campholide</a></text><title>(-)-5-oxo-1,2-campholide</title></g>
+<g id="node12456" class="node nodeHM pw_camphor-degradation lid182879" transform="translate(6573.4,13343.9)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182879" target="_blank">(1S)-bornane-2,5-dione</a></text><title>(1S)-bornane-2,5-dione</title></g>
+<g id="node12462" class="node nodeHM pw_camphor-degradation lid245120" transform="translate(6573.4,13033.8)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=245120" target="_blank">(-)-exo-3-hydroxycamphor</a></text><title>(-)-exo-3-hydroxycamphor</title></g>
+<g id="node12463" class="node nodeHM pw_camphor-degradation lid19816" transform="translate(6573.4,12785.1)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19816" target="_blank">(-)-camphor</a></text><title>(-)-camphor</title></g>
+<g id="node1038" class="node nodeEN pw_camphor-degradation" transform="translate(5587.6,12915.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.1" target="_blank">1.14.15.1</a></text><title>camphor 5-monooxygenase</title></g>
+<g id="node1007" class="node nodeEN pw_camphor-degradation" transform="translate(6081.0,12915.3)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node12458" class="node nodeEN pw_camphor-degradation" transform="translate(6573.4,12915.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.1" target="_blank">1.14.15.1</a></text><title>camphor 5-monooxygenase</title></g>
+<g id="node1033" class="node nodeEN pw_camphor-degradation" transform="translate(5587.6,13176.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.327" target="_blank">1.1.1.327</a></text><title>5-exo-hydroxycamphor dehydrogenase</title></g>
+<g id="node1014" class="node nodeEN pw_camphor-degradation" transform="translate(6081.0,13176.0)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.160" target="_blank">1.14.13.160</a></text><title>(2,2,3-trimethyl-5-oxocyclopent-3-enyl)acetyl-CoA 1,5-monooxygenase</title></g>
+<g id="node12453" class="node nodeEN pw_camphor-degradation" transform="translate(6573.4,13176.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.-" target="_blank">1.1.1.-</a></text><title>3-exo-hydroxycamphor dehydrogenase</title></g>
+<g id="node1027" class="node nodeEN pw_camphor-degradation" transform="translate(5587.6,13502.1)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.108" target="_blank">1.14.14.108</a></text><title>2,5-diketocamphane 1,2-monooxygenase</title></g>
+<g id="node1019" class="node nodeEN pw_camphor-degradation" transform="translate(6081.0,13502.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.38" target="_blank">6.2.1.38</a></text><title>(2,2,3-trimethyl-5-oxocyclopent-3-enyl)acetyl-CoA synthase</title></g>
+<g id="node12447" class="node nodeEN pw_camphor-degradation" transform="translate(6573.4,13502.1)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.155" target="_blank">1.14.14.155</a></text><title>3,6-diketocamphane 1,2-monooxygenase</title></g>
+<g id="node1023" class="node nodeEN pw_camphor-degradation" transform="translate(5786.8,13676.2)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node12464" class="node nodeEN pw_camphor-degradation" transform="translate(6365.8,13676.2)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1009" class="node nodeCM pw_camphor-degradation lid12" transform="translate(5979.7,12869.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node1010" class="node nodeCM pw_camphor-degradation lid10" transform="translate(5979.7,13123.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node1011" class="node nodeCM pw_camphor-degradation lid5" transform="translate(5979.7,13239.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node1013" class="node nodeCM pw_camphor-degradation lid12" transform="translate(6037.4,13239.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node1015" class="node nodeCM pw_camphor-degradation lid9" transform="translate(6183.8,13239.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node1016" class="node nodeCM pw_camphor-degradation lid1" transform="translate(6183.8,13123.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1018" class="node nodeCM pw_camphor-degradation lid30" transform="translate(5979.7,13444.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node1020" class="node nodeCM pw_camphor-degradation lid17" transform="translate(6183.8,13444.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node1021" class="node nodeCM pw_camphor-degradation lid18" transform="translate(6183.8,13559.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node1022" class="node nodeCM pw_camphor-degradation lid4" transform="translate(5979.7,13559.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node1025" class="node nodeCM pw_camphor-degradation lid12" transform="translate(5855.0,13740.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node1026" class="node nodeCM pw_camphor-degradation lid335" transform="translate(5494.2,13444.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=335" target="_blank">FMNH2</a></text><title>FMNH2</title></g>
+<g id="node1028" class="node nodeCM pw_camphor-degradation lid9" transform="translate(5692.1,13444.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node1029" class="node nodeCM pw_camphor-degradation lid1" transform="translate(5692.1,13559.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1030" class="node nodeCM pw_camphor-degradation lid56" transform="translate(5494.2,13559.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56" target="_blank">FMN</a></text><title>FMN</title></g>
+<g id="node1032" class="node nodeCM pw_camphor-degradation lid12" transform="translate(5644.5,13239.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node1034" class="node nodeCM pw_camphor-degradation lid7" transform="translate(5692.1,13123.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node1035" class="node nodeCM pw_camphor-degradation lid8" transform="translate(5692.1,13239.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node1037" class="node nodeCM pw_camphor-degradation lid2450" transform="translate(5494.2,12869.8)"><rect rx="5" height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2450" target="_blank">reduced putidaredoxin</a></text><title>reduced putidaredoxin</title></g>
+<g id="node1039" class="node nodeCM pw_camphor-degradation lid9" transform="translate(5692.1,12869.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node1040" class="node nodeCM pw_camphor-degradation lid1" transform="translate(5692.1,12967.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1041" class="node nodeCM pw_camphor-degradation lid1454" transform="translate(5494.2,12967.5)"><rect rx="5" height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1454" target="_blank">oxidized putidaredoxin</a></text><title>oxidized putidaredoxin</title></g>
+<g id="node12445" class="node nodeCM pw_camphor-degradation lid12" transform="translate(6276.2,13740.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node12446" class="node nodeCM pw_camphor-degradation lid335" transform="translate(6480.0,13444.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=335" target="_blank">FMNH2</a></text><title>FMNH2</title></g>
+<g id="node12448" class="node nodeCM pw_camphor-degradation lid9" transform="translate(6678.6,13444.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node12449" class="node nodeCM pw_camphor-degradation lid1" transform="translate(6678.6,13559.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node12450" class="node nodeCM pw_camphor-degradation lid56" transform="translate(6480.0,13559.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56" target="_blank">FMN</a></text><title>FMN</title></g>
+<g id="node12452" class="node nodeCM pw_camphor-degradation lid12" transform="translate(6630.2,13239.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node12454" class="node nodeCM pw_camphor-degradation lid7" transform="translate(6678.6,13123.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node12455" class="node nodeCM pw_camphor-degradation lid8" transform="translate(6678.6,13239.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node12457" class="node nodeCM pw_camphor-degradation lid2450" transform="translate(6480.0,12869.8)"><rect rx="5" height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2450" target="_blank">reduced putidaredoxin</a></text><title>reduced putidaredoxin</title></g>
+<g id="node12459" class="node nodeCM pw_camphor-degradation lid9" transform="translate(6678.6,12869.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node12460" class="node nodeCM pw_camphor-degradation lid1" transform="translate(6678.6,12967.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node12461" class="node nodeCM pw_camphor-degradation lid1454" transform="translate(6480.0,12967.5)"><rect rx="5" height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1454" target="_blank">oxidized putidaredoxin</a></text><title>oxidized putidaredoxin</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1520.8" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1181.2 1423.2" width="1181" height="1423" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1181.2" height="1423.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_camphor-degradation" class="pw " x="0.0" y="0.0" width="1101.2" height="1327.7" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 218.2 366.5 L 218.2 233.5"/>
+<path class="link" marker-end="url(#in)" d="M 218.2 398.5 L 218.2 531.5"/>
+<path class="link" marker-start="url(#in)" d="M 218.2 696.5 L 218.2 563.5"/>
+<path class="link" marker-end="url(#in)" d="M 218.2 728.5 L 218.2 861.5"/>
+<path class="link" marker-start="url(#in)" d="M 218.2 1026.5 L 218.2 893.5"/>
+<path class="link" marker-end="url(#in)" d="M 218.2 1058.5 L 218.2 1191.5"/>
+<path class="link" marker-start="url(#in)" d="M 342.1 1207.5 L 302.0 1207.5"/>
+<path class="link" marker-end="url(#in)" d="M 384.1 1207.5 L 397.1 1207.5"/>
+<path class="link" marker-start="url(#in)" d="M 550.2 1058.5 L 566.4 1191.5"/>
+<path class="link" marker-end="url(#in)" d="M 548.2 1026.5 L 548.2 893.5"/>
+<path class="link" marker-start="url(#in)" d="M 548.2 728.5 L 548.2 861.5"/>
+<path class="link" marker-end="url(#in)" d="M 548.2 696.5 L 548.2 563.5"/>
+<path class="link" marker-start="url(#in)" d="M 548.2 398.5 L 548.2 531.5"/>
+<path class="link" marker-end="url(#in)" d="M 548.2 366.5 L 548.2 233.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 878.2 201.5 L 878.2 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 878.2 233.5 L 878.2 366.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 878.2 531.5 L 878.2 398.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 878.2 563.5 L 878.2 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 878.2 861.5 L 878.2 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 878.2 893.5 L 878.2 1026.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 734.2 1114.5 L 846.2 1058.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 692.2 1137.0 L 596.4 1191.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 183.1 371.2 L 158.0 363.2"/>
+<path class="link" marker-start="url(#in)" d="M 205.8 366.5 L 176.7 329.2"/>
+<path class="link" marker-end="url(#in)" d="M 253.4 393.9 L 280.5 402.7"/>
+<path class="link" marker-end="url(#in)" d="M 230.7 398.5 L 260.7 436.7"/>
+<path class="link" marker-start="url(#in)" d="M 241.1 696.5 L 272.1 674.7"/>
+<path class="link" marker-end="url(#in)" d="M 253.4 724.6 L 286.8 736.1"/>
+<path class="link" marker-end="url(#in)" d="M 231.2 728.5 L 259.7 763.7"/>
+<path class="link" marker-start="url(#in)" d="M 176.6 1028.2 L 154.7 1020.6"/>
+<path class="link" marker-start="url(#in)" d="M 205.3 1026.5 L 176.7 991.3"/>
+<path class="link" marker-end="url(#in)" d="M 259.9 1056.8 L 285.1 1065.5"/>
+<path class="link" marker-end="url(#in)" d="M 231.2 1058.5 L 260.2 1094.4"/>
+<path class="link" marker-end="url(#in)" d="M 374.3 1223.5 L 401.1 1261.7"/>
+<path class="link" marker-start="url(#in)" d="M 580.1 1051.4 L 616.7 1061.5"/>
+<path class="link" marker-start="url(#in)" d="M 562.9 1058.5 L 592.6 1090.9"/>
+<path class="link" marker-end="url(#in)" d="M 516.3 1033.6 L 479.8 1023.5"/>
+<path class="link" marker-end="url(#in)" d="M 533.6 1026.5 L 503.9 994.1"/>
+<path class="link" marker-start="url(#in)" d="M 589.9 714.7 L 616.5 716.1"/>
+<path class="link" marker-start="url(#in)" d="M 571.1 728.5 L 606.0 752.9"/>
+<path class="link" marker-start="url(#in)" d="M 555.0 728.5 L 574.9 775.4"/>
+<path class="link" marker-end="url(#in)" d="M 506.6 698.2 L 484.7 690.6"/>
+<path class="link" marker-end="url(#in)" d="M 535.3 696.5 L 506.2 660.6"/>
+<path class="link" marker-end="url(#in)" d="M 527.2 367.8 L 490.5 342.1"/>
+<path class="link" marker-start="url(#in)" d="M 843.1 206.2 L 818.0 198.2"/>
+<path class="link" marker-start="url(#in)" d="M 865.8 201.5 L 836.7 164.2"/>
+<path class="link" marker-end="url(#in)" d="M 913.4 228.9 L 940.5 237.7"/>
+<path class="link" marker-end="url(#in)" d="M 890.7 233.5 L 920.7 271.7"/>
+<path class="link" marker-start="url(#in)" d="M 901.1 531.5 L 932.1 509.7"/>
+<path class="link" marker-end="url(#in)" d="M 906.9 557.4 L 946.8 571.1"/>
+<path class="link" marker-end="url(#in)" d="M 891.2 563.5 L 919.7 598.7"/>
+<path class="link" marker-start="url(#in)" d="M 836.6 863.2 L 814.7 855.6"/>
+<path class="link" marker-start="url(#in)" d="M 865.3 861.5 L 836.7 826.3"/>
+<path class="link" marker-end="url(#in)" d="M 919.9 891.8 L 945.1 900.5"/>
+<path class="link" marker-end="url(#in)" d="M 891.2 893.5 L 920.2 929.4"/>
+<path class="link" marker-end="url(#in)" d="M 711.8 1141.0 L 704.2 1225.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_camphor-degradation" transform="translate(550.6,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">camphor degradation</text></g>
+<g id="node1043" class="node nodeHM pw_camphor-degradation lid2387" transform="translate(218.2,217.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2387" target="_blank">(+)-camphor</a></text><title></title></g>
+<g id="node1042" class="node nodeHM pw_camphor-degradation lid10444" transform="translate(218.2,547.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10444" target="_blank">(+)-exo-5-hydroxycamphor</a></text><title></title></g>
+<g id="node1036" class="node nodeHM pw_camphor-degradation lid167678" transform="translate(218.2,877.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=167678" target="_blank">bornane-2,5-dione</a></text><title></title></g>
+<g id="node1031" class="node nodeHM pw_camphor-degradation lid167666" transform="translate(218.2,1207.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=167666" target="_blank">(+)-5-oxo-1,2-campholide</a></text><title></title></g>
+<g id="node1024" class="node nodeHM pw_camphor-degradation lid86272" transform="translate(568.3,1207.5)"><rect height="30.0" width="340.5" x="-170.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86272" target="_blank">[(1R)-2,2,3-trimethyl-5-oxocyclopent-3-enyl]acetate</a></text><title></title></g>
+<g id="node1017" class="node nodeHM pw_camphor-degradation lid28537" transform="translate(548.2,877.5)"><rect height="30.0" width="321.0" x="-160.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28537" target="_blank">2,2,3-trimethyl-5-oxocyclopent-3-enyl]acetyl-CoA</a></text><title></title></g>
+<g id="node1012" class="node nodeHM pw_camphor-degradation lid86273" transform="translate(548.2,547.5)"><rect height="30.0" width="424.7" x="-212.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86273" target="_blank">[(2R)-3,3,4-trimethyl-6-oxo-3,6-dihydro-1H-pyran-2-yl]acetyl-CoA</a></text><title></title></g>
+<g id="node1008" class="node nodeHM pw_camphor-degradation lid245119" transform="translate(548.2,217.5)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=245119" target="_blank">DELTA2,5-3,4,4-trimethylpimeloyl-CoA</a></text><title></title></g>
+<g id="node12463" class="node nodeHM pw_camphor-degradation lid19816" transform="translate(878.2,52.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19816" target="_blank">(-)-camphor</a></text><title></title></g>
+<g id="node12462" class="node nodeHM pw_camphor-degradation lid245120" transform="translate(878.2,382.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=245120" target="_blank">(-)-exo-3-hydroxycamphor</a></text><title></title></g>
+<g id="node12456" class="node nodeHM pw_camphor-degradation lid182879" transform="translate(878.2,712.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182879" target="_blank">(1S)-bornane-2,5-dione</a></text><title></title></g>
+<g id="node12451" class="node nodeHM pw_camphor-degradation lid224832" transform="translate(878.2,1042.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224832" target="_blank">(-)-5-oxo-1,2-campholide</a></text><title></title></g>
+<g id="node1038" class="node nodeEN pw_camphor-degradation" transform="translate(218.2,382.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.1" target="_blank">1.14.15.1</a></text><title>camphor 5-monooxygenase</title></g>
+<g id="node1033" class="node nodeEN pw_camphor-degradation" transform="translate(218.2,712.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.327" target="_blank">1.1.1.327</a></text><title>5-exo-hydroxycamphor dehydrogenase</title></g>
+<g id="node1027" class="node nodeEN pw_camphor-degradation" transform="translate(218.2,1042.5)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.108" target="_blank">1.14.14.108</a></text><title>2,5-diketocamphane 1,2-monooxygenase</title></g>
+<g id="node1023" class="node nodeEN pw_camphor-degradation" transform="translate(363.1,1207.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node1019" class="node nodeEN pw_camphor-degradation" transform="translate(548.2,1042.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.38" target="_blank">6.2.1.38</a></text><title>(2,2,3-trimethyl-5-oxocyclopent-3-enyl)acetyl-CoA synthase</title></g>
+<g id="node1014" class="node nodeEN pw_camphor-degradation" transform="translate(548.2,712.5)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.160" target="_blank">1.14.13.160</a></text><title>(2,2,3-trimethyl-5-oxocyclopent-3-enyl)acetyl-CoA 1,5-monooxygenase</title></g>
+<g id="node1007" class="node nodeEN pw_camphor-degradation" transform="translate(548.2,382.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node12458" class="node nodeEN pw_camphor-degradation" transform="translate(878.2,217.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.1" target="_blank">1.14.15.1</a></text><title>camphor 5-monooxygenase</title></g>
+<g id="node12453" class="node nodeEN pw_camphor-degradation" transform="translate(878.2,547.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.-" target="_blank">1.1.1.-</a></text><title>3-exo-hydroxycamphor dehydrogenase</title></g>
+<g id="node12447" class="node nodeEN pw_camphor-degradation" transform="translate(878.2,877.5)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.155" target="_blank">1.14.14.155</a></text><title>3,6-diketocamphane 1,2-monooxygenase</title></g>
+<g id="node12464" class="node nodeEN pw_camphor-degradation" transform="translate(713.2,1125.0)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1038~0" class="node nodeCM pw_camphor-degradation lid2450" transform="translate(108.0,347.2)"><rect rx="5" height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2450" target="_blank">reduced putidaredoxin</a></text><title></title></g>
+<g id="node1038~1" class="node nodeCM pw_camphor-degradation lid9" transform="translate(164.3,313.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1038~2" class="node nodeCM pw_camphor-degradation lid1454" transform="translate(329.9,418.7)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1454" target="_blank">oxidized putidaredoxin</a></text><title></title></g>
+<g id="node1038~3" class="node nodeCM pw_camphor-degradation lid1" transform="translate(273.2,452.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1033~0" class="node nodeCM pw_camphor-degradation lid7" transform="translate(291.1,661.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node1033~1" class="node nodeCM pw_camphor-degradation lid12" transform="translate(299.3,740.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1033~2" class="node nodeCM pw_camphor-degradation lid12" transform="translate(272.2,779.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1027~0" class="node nodeCM pw_camphor-degradation lid335" transform="translate(132.5,1013.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=335" target="_blank">FMNH2</a></text><title></title></g>
+<g id="node1027~1" class="node nodeCM pw_camphor-degradation lid9" transform="translate(164.3,975.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1027~2" class="node nodeCM pw_camphor-degradation lid56" transform="translate(300.8,1070.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56" target="_blank">FMN</a></text><title></title></g>
+<g id="node1027~3" class="node nodeCM pw_camphor-degradation lid1" transform="translate(273.2,1110.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1023~0" class="node nodeCM pw_camphor-degradation lid12" transform="translate(412.3,1277.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1019~0" class="node nodeCM pw_camphor-degradation lid4" transform="translate(632.4,1065.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node1019~1" class="node nodeCM pw_camphor-degradation lid18" transform="translate(607.2,1106.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node1019~2" class="node nodeCM pw_camphor-degradation lid30" transform="translate(464.0,1019.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node1019~3" class="node nodeCM pw_camphor-degradation lid17" transform="translate(489.2,978.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node1014~0" class="node nodeCM pw_camphor-degradation lid5" transform="translate(638.7,717.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node1014~1" class="node nodeCM pw_camphor-degradation lid9" transform="translate(618.4,761.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1014~2" class="node nodeCM pw_camphor-degradation lid12" transform="translate(581.7,791.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1014~3" class="node nodeCM pw_camphor-degradation lid10" transform="translate(462.5,683.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node1014~4" class="node nodeCM pw_camphor-degradation lid1" transform="translate(493.2,644.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1007~0" class="node nodeCM pw_camphor-degradation lid12" transform="translate(478.0,333.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12458~0" class="node nodeCM pw_camphor-degradation lid2450" transform="translate(768.0,182.2)"><rect rx="5" height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2450" target="_blank">reduced putidaredoxin</a></text><title></title></g>
+<g id="node12458~1" class="node nodeCM pw_camphor-degradation lid9" transform="translate(824.3,148.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12458~2" class="node nodeCM pw_camphor-degradation lid1454" transform="translate(989.9,253.7)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1454" target="_blank">oxidized putidaredoxin</a></text><title></title></g>
+<g id="node12458~3" class="node nodeCM pw_camphor-degradation lid1" transform="translate(933.2,287.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12453~0" class="node nodeCM pw_camphor-degradation lid7" transform="translate(951.1,496.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12453~1" class="node nodeCM pw_camphor-degradation lid12" transform="translate(959.3,575.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12453~2" class="node nodeCM pw_camphor-degradation lid12" transform="translate(932.2,614.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12447~0" class="node nodeCM pw_camphor-degradation lid335" transform="translate(792.5,848.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=335" target="_blank">FMNH2</a></text><title></title></g>
+<g id="node12447~1" class="node nodeCM pw_camphor-degradation lid9" transform="translate(824.3,810.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12447~2" class="node nodeCM pw_camphor-degradation lid56" transform="translate(960.8,905.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56" target="_blank">FMN</a></text><title></title></g>
+<g id="node12447~3" class="node nodeCM pw_camphor-degradation lid1" transform="translate(933.2,945.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12464~0" class="node nodeCM pw_camphor-degradation lid12" transform="translate(702.8,1241.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>
+<text x="1530.8" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

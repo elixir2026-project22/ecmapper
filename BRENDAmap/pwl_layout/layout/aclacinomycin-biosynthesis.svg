@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 608.2 4528.0" width="608" height="4528" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="608.2" height="4528.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_aclacinomycin-biosynthesis" class="pw " x="0.0" y="0.0" width="488.2" height="4392.5" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 201.5 L 244.1 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 233.5 L 244.1 366.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 531.5 L 244.1 398.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 563.5 L 244.1 696.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 861.5 L 244.1 728.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 892.7 C 244.1 924.2 244.1 995.9 244.1 1027.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 1191.5 L 244.1 1058.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 1223.5 L 244.1 1356.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 1521.5 L 244.1 1388.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 1553.5 L 244.1 1686.5"/>
+<path class="link" marker-start="url(#in)" d="M 244.1 1851.5 L 244.1 1718.5"/>
+<path class="link" marker-end="url(#in)" d="M 244.1 1883.5 L 244.1 2016.5"/>
+<path class="link" marker-end="url(#in)" d="M 244.1 2181.5 L 244.1 2048.5"/>
+<path class="link" marker-start="url(#in)" d="M 244.1 2213.5 L 244.1 2346.5"/>
+<path class="link" marker-end="url(#in)" d="M 244.1 2511.5 L 244.1 2378.5"/>
+<path class="link" marker-start="url(#in)" d="M 244.1 2543.5 L 244.1 2676.5"/>
+<path class="link" marker-start="url(#in)" d="M 244.1 2841.5 L 244.1 2708.5"/>
+<path class="link" marker-end="url(#in)" d="M 244.1 2873.5 L 244.1 3006.5"/>
+<path class="link" marker-start="url(#in)" d="M 244.1 3171.5 L 244.1 3038.5"/>
+<path class="link" marker-end="url(#in)" d="M 244.1 3203.5 L 244.1 3336.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 3501.5 L 244.1 3368.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 244.1 3533.5 L 244.1 3666.5"/>
+<path class="link" marker-start="url(#in)" d="M 244.1 3831.5 L 244.1 3698.5"/>
+<path class="link" marker-end="url(#in)" d="M 244.1 3863.5 L 244.1 3996.5"/>
+<path class="link" marker-start="url(#in)" d="M 244.1 4161.5 L 244.1 4028.5"/>
+<path class="link" marker-end="url(#in)" d="M 244.1 4193.5 L 244.1 4326.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 215.4 207.6 L 190.9 199.2"/>
+<path class="link" marker-start="url(#in)" d="M 231.2 201.5 L 188.8 149.2"/>
+<path class="link" marker-end="url(#in)" d="M 272.8 227.4 L 311.0 240.5"/>
+<path class="link" marker-end="url(#in)" d="M 257.1 233.5 L 286.1 269.4"/>
+<path class="link" marker-start="url(#in)" d="M 215.4 537.6 L 180.7 525.6"/>
+<path class="link" marker-start="url(#in)" d="M 231.2 531.5 L 202.6 496.3"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 563.5 L 296.1 583.9"/>
+<path class="link" marker-end="url(#in)" d="M 272.8 879.0 L 315.6 881.2"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 893.5 L 301.9 917.9"/>
+<path class="link" marker-end="url(#in)" d="M 250.9 893.5 L 279.7 961.3"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 1223.5 L 300.0 1246.6"/>
+<path class="link" marker-start="url(#in)" d="M 267.0 1521.5 L 301.9 1497.1"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 1553.5 L 300.0 1576.6"/>
+<path class="link" marker-start="url(#in)" d="M 267.0 1851.5 L 319.4 1814.8"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 1883.5 L 322.0 1922.0"/>
+<path class="link" marker-start="url(#in)" d="M 267.0 2543.5 L 296.1 2563.9"/>
+<path class="link" marker-end="url(#in)" d="M 209.0 2515.4 L 180.7 2505.6"/>
+<path class="link" marker-end="url(#in)" d="M 231.2 2511.5 L 202.6 2476.3"/>
+<path class="link" marker-start="url(#in)" d="M 267.0 2841.5 L 319.4 2804.8"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 2873.5 L 298.0 2895.3"/>
+<path class="link" marker-start="url(#in)" d="M 267.0 3171.5 L 323.4 3132.0"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 3203.5 L 298.0 3225.3"/>
+<path class="link" marker-start="url(#in)" d="M 221.3 3501.5 L 178.2 3471.3"/>
+<path class="link" marker-end="url(#in)" d="M 279.3 3529.6 L 309.3 3539.9"/>
+<path class="link" marker-end="url(#in)" d="M 257.1 3533.5 L 285.6 3568.7"/>
+<path class="link" marker-start="url(#in)" d="M 267.0 3831.5 L 301.9 3807.1"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 3863.5 L 298.0 3885.3"/>
+<path class="link" marker-start="url(#in)" d="M 267.0 4161.5 L 301.9 4137.1"/>
+<path class="link" marker-end="url(#in)" d="M 267.0 4193.5 L 298.0 4215.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_aclacinomycin-biosynthesis" transform="translate(244.1,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">aclacinomycin biosynthesis</text></g>
+<g id="node12069" class="node nodeHM pw_aclacinomycin-biosynthesis lid782" transform="translate(244.1,52.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title></title></g>
+<g id="node1896" class="node nodeHM pw_aclacinomycin-biosynthesis lid212369" transform="translate(244.1,382.5)"><rect height="30.0" width="321.0" x="-160.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212369" target="_blank">3,5,7,9,11,13,15,17,19-nonaoxohenicosanoyl-[acp]</a></text><title></title></g>
+<g id="node1891" class="node nodeHM pw_aclacinomycin-biosynthesis lid212370" transform="translate(244.1,712.5)"><rect height="30.0" width="372.9" x="-186.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212370" target="_blank">9-hydroxy-3,5,7,11,13,15,17,19-octaoxohenicosanoyl-[acp]</a></text><title></title></g>
+<g id="node1886" class="node nodeHM pw_aclacinomycin-biosynthesis lid212371" transform="translate(244.1,1042.5)"><rect height="30.0" width="418.2" x="-209.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212371" target="_blank">6-[3-hydroxy-2-(3,5,7-trioxononanoyl)phenyl]-3,5-dioxohexanoate</a></text><title></title></g>
+<g id="node1882" class="node nodeHM pw_aclacinomycin-biosynthesis lid212372" transform="translate(244.1,1372.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212372" target="_blank">12-deoxyaklanoate</a></text><title></title></g>
+<g id="node1877" class="node nodeHM pw_aclacinomycin-biosynthesis lid89272" transform="translate(244.1,1702.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89272" target="_blank">aklanonate</a></text><title></title></g>
+<g id="node1875" class="node nodeHM pw_aclacinomycin-biosynthesis lid19757" transform="translate(244.1,2032.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19757" target="_blank">methyl aklanonate</a></text><title></title></g>
+<g id="node1871" class="node nodeHM pw_aclacinomycin-biosynthesis lid28969" transform="translate(244.1,2362.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28969" target="_blank">aklaviketone</a></text><title></title></g>
+<g id="node1869" class="node nodeHM pw_aclacinomycin-biosynthesis lid4454" transform="translate(244.1,2692.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4454" target="_blank">aklavinone</a></text><title></title></g>
+<g id="node1864" class="node nodeHM pw_aclacinomycin-biosynthesis lid42281" transform="translate(244.1,3022.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42281" target="_blank">aclacinomycin T</a></text><title></title></g>
+<g id="node1860" class="node nodeHM pw_aclacinomycin-biosynthesis lid193495" transform="translate(244.1,3352.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=193495" target="_blank">aclacinomycin S</a></text><title></title></g>
+<g id="node11719" class="node nodeHM pw_aclacinomycin-biosynthesis lid61248" transform="translate(244.1,3682.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=61248" target="_blank">aclacinomycin N</a></text><title></title></g>
+<g id="node1857" class="node nodeHM pw_aclacinomycin-biosynthesis lid11114" transform="translate(244.1,4012.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11114" target="_blank">aclacinomycin A</a></text><title></title></g>
+<g id="node1853" class="node nodeHM pw_aclacinomycin-biosynthesis lid88383" transform="translate(244.1,4342.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88383" target="_blank">aclacinomycin Y</a></text><title></title></g>
+<g id="node1897" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,217.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.-" target="_blank">2.3.1.-</a></text><title>aclacinomycin polyketide synthase complex</title></g>
+<g id="node1892" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,547.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.-" target="_blank">1.1.1.-</a></text><title>aclacinomycin polyketide synthase reductase</title></g>
+<g id="node1887" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,877.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.-" target="_blank">4.2.1.-</a></text><title>aclacinomycin polyketide synthase aromatase</title></g>
+<g id="node1885" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,1207.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.-" target="_blank">4.2.1.-</a></text><title>12-deoxyaklanoate synthase</title></g>
+<g id="node1880" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,1537.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.12.-" target="_blank">1.13.12.-</a></text><title>aklanoate anthrone monooxygenase</title></g>
+<g id="node1876" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,1867.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.288" target="_blank">2.1.1.288</a></text><title>aklanonic acid methyltransferase</title></g>
+<g id="node1872" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,2197.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.23" target="_blank">5.5.1.23</a></text><title>aklanonic acid methyl ester cyclase</title></g>
+<g id="node1870" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,2527.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.362" target="_blank">1.1.1.362</a></text><title>aklaviketone reductase</title></g>
+<g id="node1865" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,2857.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.326" target="_blank">2.4.1.326</a></text><title>aklavinone 7-L-rhodosaminyltransferase</title></g>
+<g id="node1861" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,3187.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.327" target="_blank">2.4.1.327</a></text><title>aclacinomycin-T 2-deoxy-L-fucose transferase</title></g>
+<g id="node11718" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,3517.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.327" target="_blank">2.4.1.327</a></text><title>aclacinomycin-T 2-deoxy-L-fucose transferase</title></g>
+<g id="node11723" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,3847.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.3.45" target="_blank">1.1.3.45</a></text><title>aclacinomycin-N oxidase</title></g>
+<g id="node1854" class="node nodeEN pw_aclacinomycin-biosynthesis" transform="translate(244.1,4177.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.3.14" target="_blank">1.3.3.14</a></text><title>aclacinomycin-A oxidase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1897~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid811" transform="translate(149.3,184.8)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node1897~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid230452" transform="translate(175.9,133.2)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230452" target="_blank">polyketide-[acp]</a></text><title></title></g>
+<g id="node1897~2" class="node nodeCM pw_aclacinomycin-biosynthesis lid18" transform="translate(326.7,245.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node1897~3" class="node nodeCM pw_aclacinomycin-biosynthesis lid28" transform="translate(299.1,285.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1892~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid5" transform="translate(158.5,518.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node1892~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid12" transform="translate(190.2,480.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1892~2" class="node nodeCM pw_aclacinomycin-biosynthesis lid10" transform="translate(318.3,599.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node1887~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid1" transform="translate(331.4,882.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1887~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid12" transform="translate(314.4,926.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1887~2" class="node nodeCM pw_aclacinomycin-biosynthesis lid230452" transform="translate(286.5,977.3)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230452" target="_blank">polyketide-[acp]</a></text><title></title></g>
+<g id="node1885~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid1" transform="translate(315.7,1257.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1880~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid9" transform="translate(314.4,1488.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1880~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid1" transform="translate(315.7,1587.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1876~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid24" transform="translate(342.2,1798.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node1876~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid36" transform="translate(344.9,1938.0)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node1870~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid10" transform="translate(318.3,2579.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node1870~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid5" transform="translate(158.5,2498.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node1870~2" class="node nodeCM pw_aclacinomycin-biosynthesis lid12" transform="translate(190.2,2460.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1865~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid193494" transform="translate(342.2,2788.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=193494" target="_blank">dTDP-beta-L-rhodosamine</a></text><title></title></g>
+<g id="node1865~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid542" transform="translate(317.0,2908.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node1861~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid195060" transform="translate(346.2,3116.0)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195060" target="_blank">dTDP-2-deoxy-beta-L-fucose</a></text><title></title></g>
+<g id="node1861~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid542" transform="translate(317.0,3238.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node11718~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid212374" transform="translate(155.3,3455.3)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212374" target="_blank">dTDP-L-rhodinose</a></text><title></title></g>
+<g id="node11718~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid542" transform="translate(328.3,3546.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node11718~2" class="node nodeCM pw_aclacinomycin-biosynthesis lid12" transform="translate(298.1,3584.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node11723~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid9" transform="translate(314.4,3798.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11723~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid22" transform="translate(317.0,3898.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node1854~0" class="node nodeCM pw_aclacinomycin-biosynthesis lid9" transform="translate(314.4,4128.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1854~1" class="node nodeCM pw_aclacinomycin-biosynthesis lid22" transform="translate(317.0,4228.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+</g></svg>

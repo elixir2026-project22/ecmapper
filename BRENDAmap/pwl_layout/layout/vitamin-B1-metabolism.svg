@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2352.8 2857.6" width="2353" height="2858" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2352.8" height="2857.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_vitamin-B1-metabolism" class="pw " x="0.0" y="0.0" width="2232.8" height="2722.1" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1201.5 2196.0 L 1218.2 2007.7"/>
+<path class="link" marker-end="url(#in)" d="M 1207.9 2228.0 L 1266.9 2348.9"/>
+<path class="link" marker-start="url(#in)" d="M 1262.0 1796.3 L 1396.1 2081.4"/>
+<path class="link" marker-start="url(#in)" d="M 1286.4 1783.6 L 1437.8 1799.1"/>
+<path class="link" marker-start="url(#in)" d="M 1226.4 1796.3 L 1097.1 1870.0"/>
+<path class="link" marker-end="url(#in)" d="M 1251.8 1796.3 L 1222.3 1975.7"/>
+<path class="link" marker-end="url(#in)" d="M 1252.0 1764.3 L 1229.6 1620.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1488.3 2232.1 C 1524.3 2260.1 1600.3 2319.2 1636.3 2347.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1460.3 2201.6 C 1447.9 2178.8 1424.5 2135.8 1412.0 2112.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1447.6 2232.7 L 1295.6 2348.9"/>
+<path class="link" marker-start="url(#in)" d="M 893.0 2101.7 L 786.0 2230.3"/>
+<path class="link" marker-end="url(#in)" d="M 919.4 2069.7 L 1056.0 1902.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1726.8 2543.5 L 1819.5 2656.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1708.0 2511.5 L 1661.7 2378.6"/>
+<path class="link" marker-start="url(#in)" d="M 1767.2 1847.7 L 1889.2 1883.4"/>
+<path class="link" marker-end="url(#in)" d="M 1697.5 1832.7 C 1656.2 1827.1 1586.9 1817.7 1539.6 1811.2"/>
+<path class="link" marker-start="url(#in)" d="M 898.7 696.4 L 783.1 586.4"/>
+<path class="link" marker-end="url(#in)" d="M 938.1 728.4 L 1060.9 815.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1150.8 645.7 L 1089.3 815.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1157.3 613.7 L 1164.6 435.8"/>
+<path class="link" marker-start="url(#in)" d="M 1834.1 838.4 L 1952.1 739.3"/>
+<path class="link" marker-end="url(#in)" d="M 1806.3 869.9 C 1786.7 904.2 1739.9 986.3 1720.4 1020.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1536.8 1069.9 L 1689.4 1040.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1479.5 1090.0 L 1330.9 1165.2"/>
+<path class="link" marker-start="url(#in)" d="M 1945.5 1114.9 L 2087.5 1041.2"/>
+<path class="link" marker-end="url(#in)" d="M 1882.8 1116.0 L 1733.8 1046.4"/>
+<path class="link" marker-start="url(#in)" d="M 874.0 1376.6 L 966.3 1297.6"/>
+<path class="link" marker-end="url(#in)" d="M 823.4 1404.6 L 679.4 1458.9"/>
+<path class="link" marker-end="url(#in)" d="M 489.5 1384.6 C 522.2 1404.6 579.1 1439.5 611.8 1459.5"/>
+<path class="link" marker-start="url(#in)" d="M 473.5 1353.2 L 550.1 1219.3"/>
+<path class="link" marker-start="url(#in)" d="M 734.4 1244.9 L 591.2 1210.9"/>
+<path class="link" marker-end="url(#in)" d="M 798.2 1257.7 L 966.3 1284.9"/>
+<path class="link" marker-end="url(#in)" d="M 746.6 1154.3 L 591.2 1194.9"/>
+<path class="link" marker-start="url(#in)" d="M 798.5 1162.8 L 966.3 1278.3"/>
+<path class="link" marker-start="url(#in)" d="M 1176.6 197.7 L 1285.8 83.8"/>
+<path class="link" marker-start="url(#in)" d="M 1149.0 198.3 C 1124.7 167.4 1070.4 98.3 1046.3 67.7"/>
+<path class="link" marker-end="url(#in)" d="M 1161.5 229.2 C 1162.3 267.5 1164.2 366.3 1164.9 404.4"/>
+<path class="link" marker-start="url(#in)" d="M 1109.3 1039.4 L 1085.5 847.3"/>
+<path class="link" marker-start="url(#in)" d="M 1135.2 1071.4 L 1275.4 1165.2"/>
+<path class="link" marker-end="url(#in)" d="M 1102.1 1071.4 L 987.9 1270.9"/>
+<path class="link" marker-start="url(#in)" d="M 1175.8 1397.1 L 1223.2 1588.5"/>
+<path class="link" marker-start="url(#in)" d="M 1182.1 1365.1 L 1289.1 1197.2"/>
+<path class="link" marker-end="url(#in)" d="M 1143.2 1367.1 L 991.2 1293.0"/>
+<path class="link" marker-start="url(#in)" d="M 378.7 1156.5 L 527.4 1195.0"/>
+<path class="link" marker-end="url(#in)" d="M 329.1 1132.3 L 220.0 1033.2"/>
+<path class="link" marker-end="url(#in)" d="M 317.5 1164.3 L 182.7 1238.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1221.9 2196.0 L 1247.9 2177.0"/>
+<path class="link" marker-end="url(#in)" d="M 1232.0 2228.0 L 1262.5 2243.3"/>
+<path class="link" marker-end="url(#in)" d="M 1222.6 1781.1 L 1182.9 1782.2"/>
+<path class="link" marker-start="url(#in)" d="M 1447.7 2200.7 L 1378.1 2147.4"/>
+<path class="link" marker-end="url(#in)" d="M 1497.2 2218.2 L 1499.2 2218.3"/>
+<path class="link" marker-end="url(#in)" d="M 1494.9 2232.7 L 1532.4 2255.5"/>
+<path class="link" marker-end="url(#in)" d="M 1474.7 2232.7 L 1496.5 2289.5"/>
+<path class="link" marker-start="url(#in)" d="M 877.7 2075.0 L 840.2 2061.0"/>
+<path class="link" marker-start="url(#in)" d="M 877.7 2091.5 L 834.8 2100.3"/>
+<path class="link" marker-end="url(#in)" d="M 901.9 2069.7 L 887.4 2017.5"/>
+<path class="link" marker-start="url(#in)" d="M 1706.0 2543.5 L 1675.5 2608.0"/>
+<path class="link" marker-end="url(#in)" d="M 1684.9 2524.8 L 1642.3 2520.9"/>
+<path class="link" marker-start="url(#in)" d="M 1741.4 1821.4 L 1784.8 1747.3"/>
+<path class="link" marker-start="url(#in)" d="M 1762.6 1821.4 L 1807.5 1797.8"/>
+<path class="link" marker-end="url(#in)" d="M 1732.4 1853.4 L 1735.1 1946.0"/>
+<path class="link" marker-end="url(#in)" d="M 1722.6 1853.4 L 1688.2 1912.0"/>
+<path class="link" marker-end="url(#in)" d="M 1701.4 1853.4 L 1665.1 1872.4"/>
+<path class="link" marker-end="url(#in)" d="M 1696.8 1834.7 L 1660.6 1831.9"/>
+<path class="link" marker-start="url(#in)" d="M 883.6 721.3 L 847.1 731.4"/>
+<path class="link" marker-end="url(#in)" d="M 941.5 696.4 L 974.2 676.3"/>
+<path class="link" marker-end="url(#in)" d="M 947.4 712.6 L 988.7 712.9"/>
+<path class="link" marker-start="url(#in)" d="M 1135.7 638.9 L 1092.4 658.0"/>
+<path class="link" marker-end="url(#in)" d="M 1135.7 617.4 L 1096.9 594.8"/>
+<path class="link" marker-end="url(#in)" d="M 1148.2 613.7 L 1124.4 568.4"/>
+<path class="link" marker-start="url(#in)" d="M 1809.9 838.4 L 1788.6 773.3"/>
+<path class="link" marker-end="url(#in)" d="M 1848.1 870.4 L 1870.3 881.2"/>
+<path class="link" marker-end="url(#in)" d="M 1824.6 870.4 L 1850.1 913.1"/>
+<path class="link" marker-end="url(#in)" d="M 1814.9 870.4 L 1814.0 948.4"/>
+<path class="link" marker-end="url(#in)" d="M 1804.8 870.4 L 1778.2 911.9"/>
+<path class="link" marker-start="url(#in)" d="M 1512.6 1059.4 L 1527.2 1007.3"/>
+<path class="link" marker-end="url(#in)" d="M 1485.8 1059.4 L 1452.8 1035.8"/>
+<path class="link" marker-start="url(#in)" d="M 1926.6 1146.9 L 1954.9 1185.1"/>
+<path class="link" marker-end="url(#in)" d="M 1909.7 1146.9 L 1893.5 1198.3"/>
+<path class="link" marker-end="url(#in)" d="M 1896.0 1146.9 L 1862.0 1176.0"/>
+<path class="link" marker-start="url(#in)" d="M 841.6 1376.6 L 797.7 1325.3"/>
+<path class="link" marker-end="url(#in)" d="M 823.4 1376.9 L 792.6 1361.8"/>
+<path class="link" marker-start="url(#in)" d="M 435.7 1359.3 L 397.5 1346.1"/>
+<path class="link" marker-end="url(#in)" d="M 493.0 1370.7 L 535.9 1373.0"/>
+<path class="link" marker-end="url(#in)" d="M 487.2 1385.2 L 522.1 1409.7"/>
+<path class="link" marker-start="url(#in)" d="M 771.3 1268.5 L 779.0 1293.3"/>
+<path class="link" marker-end="url(#in)" d="M 768.0 1268.5 L 775.2 1338.1"/>
+<path class="link" marker-start="url(#in)" d="M 792.0 1130.8 L 822.7 1101.5"/>
+<path class="link" marker-end="url(#in)" d="M 758.6 1162.8 L 725.8 1194.2"/>
+<path class="link" marker-start="url(#in)" d="M 1138.7 197.7 L 1071.6 150.1"/>
+<path class="link" marker-end="url(#in)" d="M 1193.1 215.6 L 1218.1 217.1"/>
+<path class="link" marker-end="url(#in)" d="M 1183.7 229.7 L 1216.7 253.2"/>
+<path class="link" marker-end="url(#in)" d="M 1167.9 229.7 L 1209.9 330.7"/>
+<path class="link" marker-start="url(#in)" d="M 1106.1 1039.4 L 1090.2 989.8"/>
+<path class="link" marker-end="url(#in)" d="M 1116.4 1071.4 L 1132.9 1122.6"/>
+<path class="link" marker-start="url(#in)" d="M 1195.1 1365.1 L 1230.0 1341.1"/>
+<path class="link" marker-end="url(#in)" d="M 1148.7 1397.1 L 1115.7 1419.9"/>
+<path class="link" marker-start="url(#in)" d="M 362.8 1132.3 L 392.9 1102.3"/>
+<path class="link" marker-end="url(#in)" d="M 330.7 1164.3 L 298.6 1196.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_vitamin-B1-metabolism" transform="translate(1116.4,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">vitamin B1 metabolism</text></g>
+<g id="node11260" class="node nodeHM pw_vitamin-B1-metabolism lid40714" transform="translate(1219.6,1991.7)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40714" target="_blank">[ThiS]</a></text><title></title></g>
+<g id="node11261" class="node nodeHM pw_vitamin-B1-metabolism lid81604" transform="translate(1274.7,2364.9)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=81604" target="_blank">adenylyl-[ThiS]</a></text><title></title></g>
+<g id="node11268" class="node nodeHM pw_vitamin-B1-metabolism lid84260" transform="translate(1403.6,2097.4)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=84260" target="_blank">thiocarboxy-adenylate-[ThiS]</a></text><title></title></g>
+<g id="node11271" class="node nodeHM pw_vitamin-B1-metabolism lid12117" transform="translate(1489.2,1804.4)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12117" target="_blank">2-iminoacetate</a></text><title></title></g>
+<g id="node6572" class="node nodeHM pw_vitamin-B1-metabolism lid1263" transform="translate(1069.0,1886.0)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1263" target="_blank">1-deoxy-Xyl 5-P</a></text><title></title></g>
+<g id="node11280" class="node nodeHM pw_vitamin-B1-metabolism lid28130" transform="translate(1227.1,1604.5)"><rect height="30.0" width="437.7" x="-218.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28130" target="_blank">2-[(2R,5Z)-2-carboxy-4-methylthiazol-5(2H)-ylidene]ethyl phosphate</a></text><title></title></g>
+<g id="node11257" class="node nodeHM pw_vitamin-B1-metabolism lid176120" transform="translate(1656.1,2362.6)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=176120" target="_blank">[ThiI]-S-sulfanylcysteine</a></text><title></title></g>
+<g id="node6585" class="node nodeHM pw_vitamin-B1-metabolism lid31" transform="translate(772.7,2246.3)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node11255" class="node nodeHM pw_vitamin-B1-metabolism lid74" transform="translate(1832.7,2672.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title></title></g>
+<g id="node11269" class="node nodeHM pw_vitamin-B1-metabolism lid109" transform="translate(1904.9,1888.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=109" target="_blank">Tyr</a></text><title></title></g>
+<g id="node6583" class="node nodeHM pw_vitamin-B1-metabolism lid20033" transform="translate(766.2,570.4)"><rect height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20033" target="_blank">5-(2-hydroxyethyl)-4-methylthiazole</a></text><title></title></g>
+<g id="node6575" class="node nodeHM pw_vitamin-B1-metabolism lid179877" transform="translate(1083.5,831.3)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=179877" target="_blank">4-methyl-5-(2-phosphoethyl)-thiazole</a></text><title></title></g>
+<g id="node11243" class="node nodeHM pw_vitamin-B1-metabolism lid224877" transform="translate(1165.3,419.8)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224877" target="_blank">ADP-5-ethyl-4-methylthiazole-2-carboxylate</a></text><title></title></g>
+<g id="node1216" class="node nodeHM pw_vitamin-B1-metabolism lid5283" transform="translate(1971.1,723.3)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5283" target="_blank">5-amino-1-(5-phospho-D-ribosyl)imidazole</a></text><title></title></g>
+<g id="node6590" class="node nodeHM pw_vitamin-B1-metabolism lid47568" transform="translate(1711.6,1036.1)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47568" target="_blank">4AMPM</a></text><title></title></g>
+<g id="node6573" class="node nodeHM pw_vitamin-B1-metabolism lid95921" transform="translate(1299.3,1181.2)"><rect height="30.0" width="295.1" x="-147.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95921" target="_blank">4-amino-2-methyl-5-diphosphomethylpyrimidine</a></text><title></title></g>
+<g id="node6593" class="node nodeHM pw_vitamin-B1-metabolism lid180351" transform="translate(2118.3,1025.2)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=180351" target="_blank">hydroxymethylpyrimidine</a></text><title></title></g>
+<g id="node6599" class="node nodeHM pw_vitamin-B1-metabolism lid4570" transform="translate(978.8,1286.9)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4570" target="_blank">TP</a></text><title></title></g>
+<g id="node6606" class="node nodeHM pw_vitamin-B1-metabolism lid91" transform="translate(636.9,1474.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91" target="_blank">thiamine-PPi</a></text><title></title></g>
+<g id="node6605" class="node nodeHM pw_vitamin-B1-metabolism lid16149" transform="translate(559.3,1203.3)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16149" target="_blank">thiamine</a></text><title></title></g>
+<g id="node11247" class="node nodeHM pw_vitamin-B1-metabolism lid7" transform="translate(1301.1,67.8)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11246" class="node nodeHM pw_vitamin-B1-metabolism lid72" transform="translate(1034.3,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node3308" class="node nodeHM pw_vitamin-B1-metabolism lid6446" transform="translate(202.4,1017.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6446" target="_blank">2-M-4-A-5-Hmp</a></text><title></title></g>
+<g id="node3305" class="node nodeHM pw_vitamin-B1-metabolism lid20033" transform="translate(153.4,1254.0)"><rect height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20033" target="_blank">5-(2-hydroxyethyl)-4-methylthiazole</a></text><title></title></g>
+<g id="node11262" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1200.1,2212.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.73" target="_blank">2.7.7.73</a></text><title>sulfur carrier protein ThiS adenylyltransferase</title></g>
+<g id="node11278" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1254.5,1780.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.1.10" target="_blank">2.8.1.10</a></text><title>thiazole synthase</title></g>
+<g id="node11265" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1468.5,2216.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.1.-" target="_blank">2.8.1.-</a></text><title>ThiS adenylyltransferase</title></g>
+<g id="node6582" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(906.3,2085.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.7" target="_blank">2.2.1.7</a></text><title>1-deoxy-D-xylulose-5-phosphate synthase</title></g>
+<g id="node11256" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1713.6,2527.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.1.7" target="_blank">2.8.1.7</a></text><title>cysteine desulfurase</title></g>
+<g id="node11270" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1732.0,1837.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.99.19" target="_blank">4.1.99.19</a></text><title>2-iminoacetate synthase</title></g>
+<g id="node6576" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(915.5,712.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.50" target="_blank">2.7.1.50</a></text><title>hydroxyethylthiazole kinase</title></g>
+<g id="node11244" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1156.7,629.7)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>HET-P synthase</title></g>
+<g id="node6587" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1815.1,854.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.99.17" target="_blank">4.1.99.17</a></text><title>phosphomethylpyrimidine synthase</title></g>
+<g id="node6586" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1508.1,1075.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.4.7" target="_blank">2.7.4.7</a></text><title>phosphooxymethylpyrimidine kinase</title></g>
+<g id="node6591" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1914.7,1130.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.49" target="_blank">2.7.1.49</a></text><title>hydroxymethylpyrimidine kinase</title></g>
+<g id="node6607" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(855.3,1392.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.4.16" target="_blank">2.7.4.16</a></text><title>thiamine-phosphate kinase</title></g>
+<g id="node7597" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(464.3,1369.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.6.2" target="_blank">2.7.6.2</a></text><title>thiamine diphosphokinase</title></g>
+<g id="node6604" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(766.3,1252.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.89" target="_blank">2.7.1.89</a></text><title>thiamine kinase; acid phosphatase</title></g>
+<g id="node11238" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(775.3,1146.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.2" target="_blank">3.1.3.2</a></text><title>thiamine kinase; acid phosphatase</title></g>
+<g id="node11245" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1161.2,213.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.60" target="_blank">2.4.2.60</a></text><title>cysteine-dependent adenosine diphosphate thiazole synthase</title></g>
+<g id="node11281" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1111.3,1055.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.3" target="_blank">2.5.1.3</a></text><title>thiamine phosphate synthase</title></g>
+<g id="node6601" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(1171.9,1381.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.3" target="_blank">2.5.1.3</a></text><title>thiamine phosphate synthase</title></g>
+<g id="node3309" class="node nodeEN pw_vitamin-B1-metabolism" transform="translate(346.8,1148.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.99.2" target="_blank">3.5.99.2</a></text><title>aminopyrimidine aminohydrolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11262~0" class="node nodeCM pw_vitamin-B1-metabolism lid4" transform="translate(1263.6,2165.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11262~1" class="node nodeCM pw_vitamin-B1-metabolism lid17" transform="translate(1278.2,2251.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11278~0" class="node nodeCM pw_vitamin-B1-metabolism lid1" transform="translate(1167.2,1782.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11265~0" class="node nodeCM pw_vitamin-B1-metabolism lid202701" transform="translate(1357.2,2131.4)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node11265~1" class="node nodeCM pw_vitamin-B1-metabolism lid202698" transform="translate(1615.4,2224.0)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node11265~2" class="node nodeCM pw_vitamin-B1-metabolism lid230433" transform="translate(1558.7,2271.5)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230433" target="_blank">[Thil]-L-cysteine</a></text><title></title></g>
+<g id="node11265~3" class="node nodeCM pw_vitamin-B1-metabolism lid30" transform="translate(1502.7,2305.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node6582~0" class="node nodeCM pw_vitamin-B1-metabolism lid147" transform="translate(824.5,2055.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node6582~1" class="node nodeCM pw_vitamin-B1-metabolism lid12" transform="translate(822.3,2102.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6582~2" class="node nodeCM pw_vitamin-B1-metabolism lid28" transform="translate(882.9,2001.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11256~0" class="node nodeCM pw_vitamin-B1-metabolism lid176119" transform="translate(1668.0,2624.0)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=176119" target="_blank">[ThiI]-cysteine</a></text><title></title></g>
+<g id="node11256~1" class="node nodeCM pw_vitamin-B1-metabolism lid103" transform="translate(1626.6,2519.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node11270~0" class="node nodeCM pw_vitamin-B1-metabolism lid1661" transform="translate(1794.2,1731.3)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node11270~1" class="node nodeCM pw_vitamin-B1-metabolism lid24" transform="translate(1838.1,1781.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node11270~2" class="node nodeCM pw_vitamin-B1-metabolism lid374" transform="translate(1735.5,1962.0)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node11270~3" class="node nodeCM pw_vitamin-B1-metabolism lid3180" transform="translate(1678.8,1928.0)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3180" target="_blank">4-methylphenol</a></text><title></title></g>
+<g id="node11270~4" class="node nodeCM pw_vitamin-B1-metabolism lid943" transform="translate(1634.5,1888.4)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node11270~5" class="node nodeCM pw_vitamin-B1-metabolism lid88" transform="translate(1644.9,1830.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node6576~0" class="node nodeCM pw_vitamin-B1-metabolism lid4" transform="translate(831.3,735.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6576~1" class="node nodeCM pw_vitamin-B1-metabolism lid13" transform="translate(989.9,666.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6576~2" class="node nodeCM pw_vitamin-B1-metabolism lid12" transform="translate(1001.2,713.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node11244~0" class="node nodeCM pw_vitamin-B1-metabolism lid1" transform="translate(1076.7,664.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11244~1" class="node nodeCM pw_vitamin-B1-metabolism lid30" transform="translate(1081.2,585.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node11244~2" class="node nodeCM pw_vitamin-B1-metabolism lid28" transform="translate(1116.0,552.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node6587~0" class="node nodeCM pw_vitamin-B1-metabolism lid24" transform="translate(1783.4,757.3)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node6587~1" class="node nodeCM pw_vitamin-B1-metabolism lid120" transform="translate(1898.9,895.1)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node6587~2" class="node nodeCM pw_vitamin-B1-metabolism lid3261" transform="translate(1859.7,929.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3261" target="_blank">CO</a></text><title></title></g>
+<g id="node6587~3" class="node nodeCM pw_vitamin-B1-metabolism lid943" transform="translate(1813.8,964.4)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node6587~4" class="node nodeCM pw_vitamin-B1-metabolism lid88" transform="translate(1767.9,927.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node6586~0" class="node nodeCM pw_vitamin-B1-metabolism lid4" transform="translate(1531.7,991.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6586~1" class="node nodeCM pw_vitamin-B1-metabolism lid13" transform="translate(1437.1,1024.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6591~0" class="node nodeCM pw_vitamin-B1-metabolism lid4" transform="translate(1966.7,1201.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6591~1" class="node nodeCM pw_vitamin-B1-metabolism lid13" transform="translate(1888.5,1214.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6591~2" class="node nodeCM pw_vitamin-B1-metabolism lid12" transform="translate(1849.6,1186.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7597~0" class="node nodeCM pw_vitamin-B1-metabolism lid4" transform="translate(381.8,1340.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node7597~1" class="node nodeCM pw_vitamin-B1-metabolism lid30" transform="translate(551.6,1373.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node7597~2" class="node nodeCM pw_vitamin-B1-metabolism lid12" transform="translate(534.5,1418.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6604~0" class="node nodeCM pw_vitamin-B1-metabolism lid4" transform="translate(783.9,1309.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6604~1" class="node nodeCM pw_vitamin-B1-metabolism lid13" transform="translate(776.9,1354.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node11238~0" class="node nodeCM pw_vitamin-B1-metabolism lid1" transform="translate(838.4,1086.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11238~1" class="node nodeCM pw_vitamin-B1-metabolism lid16" transform="translate(713.3,1206.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node11245~0" class="node nodeCM pw_vitamin-B1-metabolism lid224938" transform="translate(1049.1,134.1)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224938" target="_blank">[ADP-thiazole synthase]-L-cysteine</a></text><title></title></g>
+<g id="node11245~1" class="node nodeCM pw_vitamin-B1-metabolism lid267" transform="translate(1263.0,219.8)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=267" target="_blank">nicotinamide</a></text><title></title></g>
+<g id="node11245~2" class="node nodeCM pw_vitamin-B1-metabolism lid1" transform="translate(1232.4,264.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11245~3" class="node nodeCM pw_vitamin-B1-metabolism lid224937" transform="translate(1216.6,346.7)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224937" target="_blank">[ADP-thiazole synthase]-dehydroalanine</a></text><title></title></g>
+<g id="node11281~0" class="node nodeCM pw_vitamin-B1-metabolism lid12" transform="translate(1085.0,973.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node11281~1" class="node nodeCM pw_vitamin-B1-metabolism lid17" transform="translate(1138.1,1138.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6601~0" class="node nodeCM pw_vitamin-B1-metabolism lid12" transform="translate(1242.5,1332.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6601~1" class="node nodeCM pw_vitamin-B1-metabolism lid17" transform="translate(1099.9,1430.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node3309~0" class="node nodeCM pw_vitamin-B1-metabolism lid1" transform="translate(408.6,1086.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3309~1" class="node nodeCM pw_vitamin-B1-metabolism lid12" transform="translate(286.1,1208.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>

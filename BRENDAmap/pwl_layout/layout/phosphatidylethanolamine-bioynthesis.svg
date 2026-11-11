@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 879.8 2878.0" width="880" height="2878" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="879.8" height="2878.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_phosphatidylethanolamine-bioynthesis" class="pw " x="0.0" y="0.0" width="759.8" height="2742.5" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 208.1 201.5 L 208.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 208.1 233.5 L 208.1 366.5"/>
+<path class="link" marker-start="url(#in)" d="M 208.1 531.5 L 208.1 398.5"/>
+<path class="link" marker-end="url(#in)" d="M 208.1 563.5 L 208.1 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 341.1 712.5 L 220.5 712.5"/>
+<path class="link" marker-end="url(#in)" d="M 405.0 712.5 L 425.1 712.5"/>
+<path class="link" marker-start="url(#in)" d="M 538.1 861.5 L 538.1 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 538.1 893.5 L 538.1 1026.5"/>
+<path class="link" marker-start="url(#in)" d="M 538.1 1191.5 L 538.1 1058.5"/>
+<path class="link" marker-end="url(#in)" d="M 538.1 1223.5 L 538.1 1356.5"/>
+<path class="link" marker-end="url(#in)" d="M 538.1 1521.5 L 538.1 1388.5"/>
+<path class="link" marker-start="url(#in)" d="M 538.1 1553.5 L 538.1 1686.5"/>
+<path class="link" marker-end="url(#in)" d="M 538.1 1829.0 L 538.1 1718.5"/>
+<path class="link" marker-start="url(#in)" d="M 565.6 1860.5 C 568.8 1863.4 571.5 1866.7 573.5 1870.5 C 598.9 1920.2 565.5 1987.6 547.8 2017.3"/>
+<path class="link" marker-end="url(#in)" d="M 538.1 2181.5 L 538.1 2048.5"/>
+<path class="link" marker-start="url(#in)" d="M 538.1 2213.5 L 538.1 2346.5"/>
+<path class="link" marker-start="url(#in)" d="M 538.1 2511.5 L 538.1 2378.5"/>
+<path class="link" marker-end="url(#in)" d="M 538.1 2543.5 L 538.1 2676.5"/>
+<path class="link" marker-start="url(#in)" d="M 547.4 1905.2 C 560.6 1927.8 584.1 1971.8 592.9 2013.0 C 603.3 2061.8 589.8 2126.2 573.5 2217.0 C 564.8 2265.1 549.8 2321.0 542.4 2347.3"/>
+<path class="link" marker-end="url(#in)" d="M 511.1 1874.7 C 507.8 1871.8 504.8 1868.3 502.6 1864.5 C 465.2 1797.2 494.5 1594.2 505.9 1518.0 C 513.0 1469.9 527.0 1414.0 534.0 1387.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 208.1 1883.5 L 208.1 2016.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 208.1 1851.5 L 208.1 1718.5"/>
+<path class="link" marker-start="url(#in)" d="M 208.1 1553.5 L 208.1 1686.5"/>
+<path class="link" marker-end="url(#in)" d="M 208.1 1521.5 L 208.1 1388.5"/>
+<path class="link" marker-start="url(#in)" d="M 208.1 1223.5 L 208.1 1356.5"/>
+<path class="link" marker-end="url(#in)" d="M 208.1 1191.5 L 208.1 1058.5"/>
+<path class="link" marker-start="url(#in)" d="M 208.1 893.5 L 208.1 1026.5"/>
+<path class="link" marker-end="url(#in)" d="M 208.1 861.5 L 208.1 728.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 230.9 201.5 L 263.9 178.4"/>
+<path class="link" marker-end="url(#in)" d="M 230.9 233.5 L 263.9 256.6"/>
+<path class="link" marker-end="url(#in)" d="M 230.9 563.5 L 263.9 586.6"/>
+<path class="link" marker-start="url(#in)" d="M 361.9 728.5 L 315.6 794.6"/>
+<path class="link" marker-end="url(#in)" d="M 384.3 696.5 L 432.4 627.7"/>
+<path class="link" marker-start="url(#in)" d="M 560.9 861.5 L 613.3 824.8"/>
+<path class="link" marker-end="url(#in)" d="M 560.9 893.5 L 616.0 932.0"/>
+<path class="link" marker-start="url(#in)" d="M 560.9 1191.5 L 613.3 1154.8"/>
+<path class="link" marker-end="url(#in)" d="M 560.9 1223.5 L 616.0 1262.0"/>
+<path class="link" marker-start="url(#in)" d="M 560.9 1553.5 L 612.0 1589.3"/>
+<path class="link" marker-end="url(#in)" d="M 560.9 1521.5 L 593.9 1498.4"/>
+<path class="link" marker-start="url(#in)" d="M 560.9 1861.0 L 593.9 1884.1"/>
+<path class="link" marker-end="url(#in)" d="M 560.9 1829.0 L 593.9 1805.9"/>
+<path class="link" marker-start="url(#in)" d="M 560.9 2213.5 L 593.9 2236.6"/>
+<path class="link" marker-end="url(#in)" d="M 560.9 2181.5 L 593.9 2158.4"/>
+<path class="link" marker-end="url(#in)" d="M 560.9 2543.5 L 598.7 2570.0"/>
+<path class="link" marker-start="url(#in)" d="M 515.2 1906.0 L 469.4 1938.0"/>
+<path class="link" marker-end="url(#in)" d="M 515.2 1874.0 L 482.2 1850.9"/>
+<path class="link" marker-start="url(#in)" d="M 185.2 1883.5 L 150.3 1907.9"/>
+<path class="link" marker-end="url(#in)" d="M 185.2 1851.5 L 152.2 1828.4"/>
+<path class="link" marker-start="url(#in)" d="M 185.2 1553.5 L 152.2 1576.6"/>
+<path class="link" marker-end="url(#in)" d="M 185.2 1521.5 L 152.2 1498.4"/>
+<path class="link" marker-start="url(#in)" d="M 185.2 1223.5 L 152.2 1246.6"/>
+<path class="link" marker-end="url(#in)" d="M 185.2 1191.5 L 152.2 1168.4"/>
+<path class="link" marker-start="url(#in)" d="M 185.2 893.5 L 134.1 929.3"/>
+<path class="link" marker-end="url(#in)" d="M 185.2 861.5 L 152.2 838.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_phosphatidylethanolamine-bioynthesis" transform="translate(379.9,0.0)"><rect rx="10" height="31" width="360" x="-180.0" y="-15.5"/><text dominant-baseline="central">phosphatidylethanolamine bioynthesis</text></g>
+<g id="node1280" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid1248" transform="translate(208.1,52.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1248" target="_blank">CDP-diacylglycerol</a></text><title></title></g>
+<g id="node9919" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid30588" transform="translate(208.1,382.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30588" target="_blank">Ptd-L-Ser</a></text><title></title></g>
+<g id="node9923" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid513" transform="translate(208.1,712.5)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=513" target="_blank">PE</a></text><title></title></g>
+<g id="node2161" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid15918" transform="translate(538.1,712.5)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15918" target="_blank">phosphatidyl-N-methylethanolamine</a></text><title></title></g>
+<g id="node2159" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid20464" transform="translate(538.1,1042.5)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20464" target="_blank">phosphatidyl-N,N-dimethylethanolamine</a></text><title></title></g>
+<g id="node2157" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid215" transform="translate(538.1,1372.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=215" target="_blank">phosphatidylcholine</a></text><title></title></g>
+<g id="node2155" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid1216" transform="translate(538.1,1702.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1216" target="_blank">CDP-choline</a></text><title></title></g>
+<g id="node2153" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid748" transform="translate(538.1,2032.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=748" target="_blank">phosphocholine</a></text><title></title></g>
+<g id="node2151" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid149" transform="translate(538.1,2362.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=149" target="_blank">choline</a></text><title></title></g>
+<g id="node2019" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid734" transform="translate(538.1,2692.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=734" target="_blank">trimethylamine</a></text><title></title></g>
+<g id="node2128" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid95" transform="translate(208.1,2032.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95" target="_blank">Ser</a></text><title></title></g>
+<g id="node2163" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid456" transform="translate(208.1,1702.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=456" target="_blank">ethanolamine</a></text><title></title></g>
+<g id="node2165" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid1797" transform="translate(208.1,1372.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1797" target="_blank">phosphoethanolamine</a></text><title></title></g>
+<g id="node2167" class="node nodeHM pw_phosphatidylethanolamine-bioynthesis lid1604" transform="translate(208.1,1042.5)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1604" target="_blank">CDP-ethanolamine</a></text><title></title></g>
+<g id="node9850" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(208.1,217.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.8" target="_blank">2.7.8.8</a></text><title>CDP-diacylglycerol-serine O-phosphatidyltransferase</title></g>
+<g id="node9921" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(208.1,547.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.65" target="_blank">4.1.1.65</a></text><title>phosphatidylserine decarboxylase</title></g>
+<g id="node2162" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(373.1,712.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.17" target="_blank">2.1.1.17</a></text><title>phosphatidylethanolamine N-methyltransferase</title></g>
+<g id="node2160" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(538.1,877.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.71" target="_blank">2.1.1.71</a></text><title>phosphatidyl-N-methylethanolamine N-methyltransferase</title></g>
+<g id="node2158" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(538.1,1207.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.71" target="_blank">2.1.1.71</a></text><title>phosphatidyl-N-methylethanolamine N-methyltransferase</title></g>
+<g id="node2156" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(538.1,1537.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.2" target="_blank">2.7.8.2</a></text><title>diacylglycerol cholinephosphotransferase</title></g>
+<g id="node2154" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(538.1,1845.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.15" target="_blank">2.7.7.15</a></text><title>choline-phosphate cytidylyltransferase</title></g>
+<g id="node2152" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(538.1,2197.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.32" target="_blank">2.7.1.32</a></text><title>choline kinase</title></g>
+<g id="node2020" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(538.1,2527.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.99.4" target="_blank">4.3.99.4</a></text><title>choline trimethylamine-lyase</title></g>
+<g id="node2150" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(538.1,1890.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.24" target="_blank">2.7.8.24</a></text><title>phosphatidylcholine synthase</title></g>
+<g id="node2129" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(208.1,1867.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.-" target="_blank">4.1.1.-</a></text><title>serine decarboxylase</title></g>
+<g id="node2164" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(208.1,1537.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.82" target="_blank">2.7.1.82</a></text><title>ethanolamine kinase</title></g>
+<g id="node2166" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(208.1,1207.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.14" target="_blank">2.7.7.14</a></text><title>ethanolamine-phosphate cytidylyltransferase</title></g>
+<g id="node2168" class="node nodeEN pw_phosphatidylethanolamine-bioynthesis" transform="translate(208.1,877.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.1" target="_blank">2.7.8.1</a></text><title>ethanolaminephosphotransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9850~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid95" transform="translate(279.6,167.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95" target="_blank">Ser</a></text><title></title></g>
+<g id="node9850~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid100" transform="translate(279.6,267.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title></title></g>
+<g id="node9921~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid28" transform="translate(279.6,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node2162~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid24" transform="translate(304.4,810.6)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node2162~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid36" transform="translate(443.6,611.7)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node2160~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid24" transform="translate(636.2,808.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node2160~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid36" transform="translate(638.8,948.0)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node2158~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid24" transform="translate(636.2,1138.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node2158~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid36" transform="translate(638.8,1278.0)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node2156~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid2063" transform="translate(634.8,1605.3)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2063" target="_blank">1,2-diacyl-sn-glycerol</a></text><title></title></g>
+<g id="node2156~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid100" transform="translate(609.6,1487.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title></title></g>
+<g id="node2154~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid60" transform="translate(609.6,1895.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title></title></g>
+<g id="node2154~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid17" transform="translate(609.6,1794.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2152~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid4" transform="translate(609.6,2247.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2152~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid13" transform="translate(609.6,2147.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2020~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid90" transform="translate(621.6,2586.0)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title></title></g>
+<g id="node2150~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid1248" transform="translate(446.6,1954.0)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1248" target="_blank">CDP-diacylglycerol</a></text><title></title></g>
+<g id="node2150~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid100" transform="translate(466.5,1839.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title></title></g>
+<g id="node2129~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid12" transform="translate(137.8,1916.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2129~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid28" transform="translate(136.5,1817.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node2164~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid4" transform="translate(136.5,1587.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2164~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid13" transform="translate(136.5,1487.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2166~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid60" transform="translate(136.5,1257.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title></title></g>
+<g id="node2166~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid17" transform="translate(136.5,1157.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2168~0" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid2063" transform="translate(111.3,945.3)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2063" target="_blank">1,2-diacyl-sn-glycerol</a></text><title></title></g>
+<g id="node2168~1" class="node nodeCM pw_phosphatidylethanolamine-bioynthesis lid100" transform="translate(136.5,827.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title></title></g>
+</g></svg>

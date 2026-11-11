@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2149" height="2248" viewBox="0 0 2148.6 2248.4"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="267.4 12967.9 908.9 2208.4" width="909" height="2208" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="267.4" y="12967.9" width="908.9" height="2208.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glutathione-mediated-detoxification" class="pw pw0" x="307.4" y="13023.4" width="828.9" height="2112.9" style="opacity: 0.5; fill: rgb(221, 221, 221);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 661.6 13291.6 L 661.6 13189.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 661.6 13323.6 L 661.6 13414.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 661.6 13578.3 L 661.6 13682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 661.6 13546.3 L 661.6 13446.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 793.6 13829.0 L 677.7 13714.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 809.7 13861.0 L 809.7 13988.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 541.6 13830.0 L 647.1 13714.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 527.1 13862.0 L 527.1 13989.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 809.7 14144.1 L 809.7 14020.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 793.5 14176.1 L 677.8 14290.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 541.9 14177.0 L 646.8 14290.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 527.1 14145.0 L 527.1 14021.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 517.5 14452.1 L 517.5 14528.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 535.2 14420.1 L 643.9 14322.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 785.7 14452.1 L 736.2 14528.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 808.9 14452.1 L 869.5 14528.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 779.6 14420.1 L 678.2 14322.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 725.8 14662.4 L 725.8 14560.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 725.8 14694.4 L 725.8 14781.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 882.3 14662.4 L 882.3 14560.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 882.3 14694.4 L 882.3 14781.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 725.8 14912.6 L 725.8 14813.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 725.8 14944.6 L 725.8 15029.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 632.9 13291.6 L 579.9 13262.1"/>
+<path class="link" marker-end="url(#in)" d="M 629.3 13323.6 L 570.6 13352.7"/>
+<path class="link" marker-start="url(#in)" d="M 630.1 13546.3 L 573.4 13517.5"/>
+<path class="link" marker-start="url(#in)" d="M 643.2 13546.3 L 569.5 13482.1"/>
+<path class="link" marker-end="url(#in)" d="M 625.6 13578.3 L 573.4 13601.5"/>
+<path class="link" marker-end="url(#in)" d="M 642.0 13578.3 L 570.6 13636.7"/>
+<path class="link" marker-start="url(#in)" d="M 809.7 13829.0 L 809.7 13796.3"/>
+<path class="link" marker-end="url(#in)" d="M 833.6 13861.0 L 874.5 13888.3"/>
+<path class="link" marker-start="url(#in)" d="M 527.1 13830.0 L 527.1 13794.5"/>
+<path class="link" marker-end="url(#in)" d="M 496.7 13862.0 L 446.6 13888.3"/>
+<path class="link" marker-start="url(#in)" d="M 847.1 14144.1 L 876.1 14131.7"/>
+<path class="link" marker-end="url(#in)" d="M 809.7 14176.1 L 809.7 14237.1"/>
+<path class="link" marker-start="url(#in)" d="M 488.5 14145.0 L 455.6 14131.4"/>
+<path class="link" marker-end="url(#in)" d="M 527.1 14177.0 L 527.1 14237.1"/>
+<path class="link" marker-start="url(#in)" d="M 496.9 14420.1 L 450.1 14383.9"/>
+<path class="link" marker-end="url(#in)" d="M 495.0 14452.1 L 451.7 14482.8"/>
+<path class="link" marker-start="url(#in)" d="M 909.5 14662.4 L 985.3 14617.9"/>
+<path class="link" marker-end="url(#in)" d="M 915.9 14689.7 L 964.9 14706.2"/>
+<path class="link" marker-start="url(#in)" d="M 701.1 14912.6 L 653.2 14881.5"/>
+<path class="link" marker-end="url(#in)" d="M 701.1 14944.6 L 653.2 14975.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glutathione-mediated-detoxification" transform="translate(721.9,13023.4)"><rect rx="10" height="31" width="320" x="-160.0" y="-15.5"/><text dominant-baseline="central">glutathione-mediated detoxification</text></g>
+<g id="node13303" class="node nodeHM pw_glutathione-mediated-detoxification lid47549" transform="translate(661.6,13430.6)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47549" target="_blank">R-S-glutathione</a></text><title>R-S-glutathione</title></g>
+<g id="node13308" class="node nodeHM pw_glutathione-mediated-detoxification lid47556" transform="translate(661.6,14306.0)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47556" target="_blank">an L-cysteine-S-conjugate</a></text><title>an L-cysteine-S-conjugate</title></g>
+<g id="node13309" class="node nodeHM pw_glutathione-mediated-detoxification lid162454" transform="translate(882.3,14797.9)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=162454" target="_blank">a methyl thioether</a></text><title>a methyl thioether</title></g>
+<g id="node13313" class="node nodeHM pw_glutathione-mediated-detoxification lid47549" transform="translate(661.6,13698.0)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47549" target="_blank">R-S-glutathione</a></text><title>R-S-glutathione</title></g>
+<g id="node13315" class="node nodeHM pw_glutathione-mediated-detoxification lid31" transform="translate(725.8,15045.1)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>pyruvate</title></g>
+<g id="node13320" class="node nodeHM pw_glutathione-mediated-detoxification lid31084" transform="translate(661.6,13173.2)"><rect height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31084" target="_blank">RX</a></text><title>RX</title></g>
+<g id="node13321" class="node nodeHM pw_glutathione-mediated-detoxification lid90067" transform="translate(725.8,14544.1)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90067" target="_blank">2-aminoprop-2-enoate</a></text><title>2-aminoprop-2-enoate</title></g>
+<g id="node13325" class="node nodeHM pw_glutathione-mediated-detoxification lid89411" transform="translate(517.5,14544.1)"><rect height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89411" target="_blank">an N-acetyl-L-cysteine-S-conjugate</a></text><title>an N-acetyl-L-cysteine-S-conjugate</title></g>
+<g id="node13326" class="node nodeHM pw_glutathione-mediated-detoxification lid7366" transform="translate(882.3,14544.1)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7366" target="_blank">thiol</a></text><title></title></g>
+<g id="node13330" class="node nodeHM pw_glutathione-mediated-detoxification lid230352" transform="translate(527.1,14005.6)"><rect height="30.0" width="223.3" x="-111.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230352" target="_blank">an (L-cysteinylglycine)-S-conjugate</a></text><title>an (L-cysteinylglycine)-S-conjugate</title></g>
+<g id="node13333" class="node nodeHM pw_glutathione-mediated-detoxification lid29163" transform="translate(725.8,14797.9)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29163" target="_blank">2-iminopropanoate</a></text><title>2-iminopropanoate</title></g>
+<g id="node13345" class="node nodeHM pw_glutathione-mediated-detoxification lid258628" transform="translate(809.7,14004.7)"><rect height="30.0" width="257.2" x="-128.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=258628" target="_blank">a [gamma-glutamyl-L-cysteine]-S-conjugate</a></text><title></title></g>
+<g id="node13317" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(661.6,13307.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.18" target="_blank">2.5.1.18</a></text><title>glutathione transferase</title></g>
+<g id="node13314" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(661.6,13562.3)"><rect rx="15" height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.6.2.2" target="_blank">7.6.2.2/7.6.2.3</a></text><title>ABC-type Cd2+ transporter;ABC-type glutathione-S-conjugate transporter</title></g>
+<g id="node13310" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(809.7,13845.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.17.25" target="_blank">3.4.17.25</a></text><title>glutathione-S-conjugate glycine hydrolase</title></g>
+<g id="node13304" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(527.1,13846.0)"><rect rx="15" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.19.13" target="_blank">3.4.19.13/2.3.2.2</a></text><title>glutathione gamma-glutamate hydrolase;gamma-glutamyltransferase</title></g>
+<g id="node13305" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(809.7,14160.1)"><rect rx="15" height="30.0" width="75.0" x="-37.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.13.-" target="_blank">3.4.13.-</a></text><title></title></g>
+<g id="node13338" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(527.1,14161.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.13.23" target="_blank">3.4.13.23</a></text><title>cysteinylglycine-S-conjugate dipeptidase</title></g>
+<g id="node13323" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(517.5,14436.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.80" target="_blank">2.3.1.80</a></text><title>cysteine-S-conjugate N-acetyltransferase</title></g>
+<g id="node13322" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(796.1,14436.1)"><rect rx="15" height="30.0" width="75.0" x="-37.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+<g id="node64" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(725.8,14678.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+<g id="node13312" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(882.3,14678.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.9" target="_blank">2.1.1.9</a></text><title>thiol S-methyltransferase</title></g>
+<g id="node63" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(725.8,14928.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node13301" class="node nodeCM pw_glutathione-mediated-detoxification lid29" transform="translate(429.4,14367.9)"><rect rx="5" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">acetyl-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node13306" class="node nodeCM pw_glutathione-mediated-detoxification lid44" transform="translate(551.2,13246.1)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">glutathione</a></text><title>glutathione</title></g>
+<g id="node13307" class="node nodeCM pw_glutathione-mediated-detoxification lid4" transform="translate(551.2,13466.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node13311" class="node nodeCM pw_glutathione-mediated-detoxification lid16" transform="translate(551.2,13652.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node13316" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(551.2,13506.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node13318" class="node nodeCM pw_glutathione-mediated-detoxification lid13" transform="translate(551.2,13611.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node13319" class="node nodeCM pw_glutathione-mediated-detoxification lid20904" transform="translate(551.2,13362.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20904" target="_blank">HX</a></text><title>HX</title></g>
+<g id="node13324" class="node nodeCM pw_glutathione-mediated-detoxification lid72" transform="translate(527.1,14253.1)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">glycine</a></text><title>glycine</title></g>
+<g id="node13331" class="node nodeCM pw_glutathione-mediated-detoxification lid41" transform="translate(416.2,13904.3)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">L-glutamate</a></text><title>L-glutamate</title></g>
+<g id="node13336" class="node nodeCM pw_glutathione-mediated-detoxification lid24" transform="translate(1012.5,14601.9)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node13340" class="node nodeCM pw_glutathione-mediated-detoxification lid27" transform="translate(631.0,14989.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node13341" class="node nodeCM pw_glutathione-mediated-detoxification lid18" transform="translate(429.4,14498.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node13344" class="node nodeCM pw_glutathione-mediated-detoxification lid41" transform="translate(809.7,14253.1)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">L-glutamate</a></text><title>L-glutamate</title></g>
+<g id="node13347" class="node nodeCM pw_glutathione-mediated-detoxification lid36" transform="translate(1012.5,14722.2)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title>S-adenosyl-L-homocysteine</title></g>
+<g id="node13350" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(898.4,14122.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node13352" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(433.4,14122.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node13353" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(527.1,13778.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node13356" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(631.0,14867.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node13358" class="node nodeCM pw_glutathione-mediated-detoxification lid72" transform="translate(898.4,13904.3)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">glycine</a></text><title>glycine</title></g>
+<g id="node13360" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(809.7,13780.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="988.9" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1159.6 2199.8" width="1160" height="2200" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1159.6" height="2199.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glutathione-mediated-detoxification" class="pw " x="0.0" y="0.0" width="1079.6" height="2104.3" style="opacity: 0.5; fill: rgb(221, 221, 221);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 870.5 751.0 L 877.9 652.1"/>
+<path class="link" marker-end="url(#in)" d="M 869.3 783.0 L 869.3 890.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 748.2 988.6 L 845.7 922.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 694.4 1020.6 L 581.7 1080.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 570.9 929.8 L 553.4 1080.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 572.7 897.8 L 572.7 780.7"/>
+<path class="link" marker-end="url(#in)" d="M 686.7 652.1 L 588.9 748.7"/>
+<path class="link" marker-start="url(#in)" d="M 764.0 636.1 L 824.5 636.1"/>
+<path class="link" marker-start="url(#in)" d="M 991.2 154.9 L 992.2 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 991.0 186.9 L 991.0 300.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 891.7 441.7 L 978.4 332.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 879.1 473.7 L 879.1 620.1"/>
+<path class="link" marker-start="url(#in)" d="M 648.1 1167.0 L 573.3 1112.2"/>
+<path class="link" marker-end="url(#in)" d="M 686.6 1199.0 L 731.2 1241.7"/>
+<path class="link" marker-start="url(#in)" d="M 636.2 1612.7 L 554.2 1477.3"/>
+<path class="link" marker-end="url(#in)" d="M 645.9 1644.7 L 645.9 1771.3"/>
+<path class="link" marker-end="url(#in)" d="M 716.0 1919.2 L 654.4 1803.3"/>
+<path class="link" marker-start="url(#in)" d="M 730.5 1951.2 L 763.1 2038.3"/>
+<path class="link" marker-start="url(#in)" d="M 231.5 1406.8 L 319.9 1333.4"/>
+<path class="link" marker-end="url(#in)" d="M 183.5 1438.0 L 128.7 1466.9"/>
+<path class="link" marker-start="url(#in)" d="M 545.0 1301.4 L 551.0 1112.2"/>
+<path class="link" marker-end="url(#in)" d="M 544.5 1333.4 L 544.5 1445.3"/>
+<path class="link" marker-end="url(#in)" d="M 512.6 1317.4 L 361.4 1317.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 867.0 751.0 L 862.1 717.1"/>
+<path class="link" marker-end="url(#in)" d="M 890.5 783.0 L 923.3 807.7"/>
+<path class="link" marker-start="url(#in)" d="M 756.5 1018.9 L 788.6 1033.3"/>
+<path class="link" marker-end="url(#in)" d="M 723.4 1020.6 L 719.4 1075.7"/>
+<path class="link" marker-start="url(#in)" d="M 546.5 929.8 L 513.8 949.7"/>
+<path class="link" marker-end="url(#in)" d="M 552.7 897.8 L 520.2 871.8"/>
+<path class="link" marker-start="url(#in)" d="M 741.5 652.1 L 844.0 694.6"/>
+<path class="link" marker-end="url(#in)" d="M 699.4 652.1 L 687.9 705.5"/>
+<path class="link" marker-start="url(#in)" d="M 968.4 154.9 L 935.5 131.5"/>
+<path class="link" marker-end="url(#in)" d="M 967.9 186.9 L 933.0 211.1"/>
+<path class="link" marker-start="url(#in)" d="M 858.8 441.7 L 826.2 416.0"/>
+<path class="link" marker-start="url(#in)" d="M 873.3 441.7 L 855.3 391.4"/>
+<path class="link" marker-end="url(#in)" d="M 824.5 457.4 L 807.4 457.3"/>
+<path class="link" marker-end="url(#in)" d="M 853.2 473.7 L 818.6 495.0"/>
+<path class="link" marker-start="url(#in)" d="M 638.0 1191.9 L 606.5 1200.7"/>
+<path class="link" marker-end="url(#in)" d="M 668.9 1199.0 L 664.2 1275.7"/>
+<path class="link" marker-start="url(#in)" d="M 756.4 1941.0 L 794.7 1947.9"/>
+<path class="link" marker-end="url(#in)" d="M 733.8 1919.2 L 759.1 1875.8"/>
+<path class="link" marker-start="url(#in)" d="M 240.9 1433.6 L 281.6 1448.8"/>
+<path class="link" marker-end="url(#in)" d="M 212.1 1438.8 L 211.3 1529.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glutathione-mediated-detoxification" transform="translate(539.8,0.0)"><rect rx="10" height="31" width="350" x="-175.1" y="-15.5"/><text dominant-baseline="central">glutathione-mediated detoxification</text></g>
+<g id="node13313" class="node nodeHM pw_glutathione-mediated-detoxification lid47549" transform="translate(879.1,636.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47549" target="_blank">R-S-glutathione</a></text><title></title></g>
+<g id="node13345" class="node nodeHM pw_glutathione-mediated-detoxification lid258628" transform="translate(869.3,906.7)"><rect height="30.0" width="275.7" x="-137.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=258628" target="_blank">a [gamma-glutamyl-L-cysteine]-S-conjugate</a></text><title></title></g>
+<g id="node13308" class="node nodeHM pw_glutathione-mediated-detoxification lid47556" transform="translate(551.5,1096.2)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47556" target="_blank">an L-cysteine-S-conjugate</a></text><title></title></g>
+<g id="node13330" class="node nodeHM pw_glutathione-mediated-detoxification lid230352" transform="translate(572.7,764.7)"><rect height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230352" target="_blank">an (L-cysteinylglycine)-S-conjugate</a></text><title></title></g>
+<g id="node13320" class="node nodeHM pw_glutathione-mediated-detoxification lid31084" transform="translate(992.4,52.5)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31084" target="_blank">RX</a></text><title></title></g>
+<g id="node13303" class="node nodeHM pw_glutathione-mediated-detoxification lid47549" transform="translate(991.0,316.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47549" target="_blank">R-S-glutathione</a></text><title></title></g>
+<g id="node13325" class="node nodeHM pw_glutathione-mediated-detoxification lid89411" transform="translate(747.8,1257.7)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89411" target="_blank">an N-acetyl-L-cysteine-S-conjugate</a></text><title></title></g>
+<g id="node13321" class="node nodeHM pw_glutathione-mediated-detoxification lid90067" transform="translate(544.5,1461.3)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90067" target="_blank">2-aminoprop-2-enoate</a></text><title></title></g>
+<g id="node13333" class="node nodeHM pw_glutathione-mediated-detoxification lid29163" transform="translate(645.9,1787.3)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29163" target="_blank">2-iminopropanoate</a></text><title></title></g>
+<g id="node13315" class="node nodeHM pw_glutathione-mediated-detoxification lid31" transform="translate(769.1,2054.3)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node13326" class="node nodeHM pw_glutathione-mediated-detoxification lid7366" transform="translate(339.2,1317.4)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7366" target="_blank">thiol</a></text><title></title></g>
+<g id="node13309" class="node nodeHM pw_glutathione-mediated-detoxification lid162454" transform="translate(98.3,1482.9)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=162454" target="_blank">a methyl thioether</a></text><title></title></g>
+<g id="node13310" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(869.3,767.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.17.25" target="_blank">3.4.17.25</a></text><title>glutathione-S-conjugate glycine hydrolase</title></g>
+<g id="node13305" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(724.6,1004.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.13.-" target="_blank">3.4.13.-</a></text><title></title></g>
+<g id="node13338" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(572.7,913.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.13.23" target="_blank">3.4.13.23</a></text><title>cysteinylglycine-S-conjugate dipeptidase</title></g>
+<g id="node13304" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(702.9,636.1)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.19.13" target="_blank">3.4.19.13/2.3.2.2</a></text><title>glutathione gamma-glutamate hydrolase;gamma-glutamyltransferase</title></g>
+<g id="node13317" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(991.0,170.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.18" target="_blank">2.5.1.18</a></text><title>glutathione transferase</title></g>
+<g id="node13314" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(879.1,457.7)"><rect rx="15" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.6.2.2" target="_blank">7.6.2.2/7.6.2.3</a></text><title>ABC-type Cd2+ transporter;ABC-type glutathione-S-conjugate transporter</title></g>
+<g id="node13323" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(669.9,1183.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.80" target="_blank">2.3.1.80</a></text><title>cysteine-S-conjugate N-acetyltransferase</title></g>
+<g id="node64" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(645.9,1628.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+<g id="node63" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(724.5,1935.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+<g id="node13312" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(212.2,1422.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.9" target="_blank">2.1.1.9</a></text><title>thiol S-methyltransferase</title></g>
+<g id="node13322" class="node nodeEN pw_glutathione-mediated-detoxification" transform="translate(544.5,1317.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node13310~1" class="node nodeCM pw_glutathione-mediated-detoxification lid72" transform="translate(939.0,819.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node13305~0" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(804.3,1040.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13305~1" class="node nodeCM pw_glutathione-mediated-detoxification lid41" transform="translate(718.2,1091.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node13338~0" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(498.1,959.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13338~1" class="node nodeCM pw_glutathione-mediated-detoxification lid72" transform="translate(504.5,859.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node13304~0" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(859.7,701.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13304~1" class="node nodeCM pw_glutathione-mediated-detoxification lid41" transform="translate(684.4,721.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node13317~0" class="node nodeCM pw_glutathione-mediated-detoxification lid44" transform="translate(919.7,120.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node13317~1" class="node nodeCM pw_glutathione-mediated-detoxification lid20904" transform="translate(920.5,219.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20904" target="_blank">HX</a></text><title></title></g>
+<g id="node13314~0" class="node nodeCM pw_glutathione-mediated-detoxification lid4" transform="translate(810.5,403.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node13314~1" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(849.6,375.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13314~2" class="node nodeCM pw_glutathione-mediated-detoxification lid13" transform="translate(791.7,457.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node13314~3" class="node nodeCM pw_glutathione-mediated-detoxification lid16" transform="translate(806.1,502.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node13323~0" class="node nodeCM pw_glutathione-mediated-detoxification lid29" transform="translate(581.1,1207.8)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node13323~1" class="node nodeCM pw_glutathione-mediated-detoxification lid18" transform="translate(663.2,1291.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node63~0" class="node nodeCM pw_glutathione-mediated-detoxification lid1" transform="translate(810.4,1950.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node63~1" class="node nodeCM pw_glutathione-mediated-detoxification lid27" transform="translate(768.4,1859.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node13312~0" class="node nodeCM pw_glutathione-mediated-detoxification lid24" transform="translate(324.4,1464.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node13312~1" class="node nodeCM pw_glutathione-mediated-detoxification lid36" transform="translate(211.1,1545.8)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+</g></svg>
+<text x="998.9" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

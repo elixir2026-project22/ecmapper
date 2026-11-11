@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2370.7 2101.0" width="2371" height="2101" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2370.7" height="2101.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_oxidative-phosphorylation" class="pw " x="0.0" y="0.0" width="2250.7" height="1965.5" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 510.9 67.9 C 510.5 91.8 509.7 137.4 509.3 161.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 519.5 68.0 C 537.5 101.7 580.1 181.5 598.1 215.0"/>
+<path class="link" marker-start="url(#in)" d="M 669.0 665.2 L 545.8 647.5"/>
+<path class="link" marker-end="url(#in)" d="M 669.0 673.3 L 542.5 691.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 151.0 1239.0 L 342.4 1033.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 135.5 1271.0 L 126.5 1482.7"/>
+<path class="link" marker-start="url(#in)" d="M 121.0 1712.0 L 125.5 1514.7"/>
+<path class="link" marker-end="url(#in)" d="M 120.7 1744.0 L 120.7 1899.5"/>
+<path class="link" marker-start="url(#in)" d="M 2124.8 569.3 L 2124.7 442.3"/>
+<path class="link" marker-end="url(#in)" d="M 2124.9 601.3 L 2124.9 728.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 507.5 404.2 L 508.9 192.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 515.7 404.2 L 597.9 246.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 507.4 435.4 C 507.4 483.6 507.4 632.6 507.4 680.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 507.4 436.2 L 507.4 625.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 507.4 837.7 L 507.4 711.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 507.4 838.5 C 507.4 799.5 507.4 696.5 507.4 657.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 492.7 869.7 L 367.4 1006.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 379.6 778.9 L 482.7 711.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 370.9 778.9 L 491.4 657.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 354.9 810.9 L 354.9 1003.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 482.5 66.5 L 446.6 84.0"/>
+<path class="link" marker-end="url(#in)" d="M 512.9 68.5 L 518.6 123.4"/>
+<path class="link" marker-start="url(#in)" d="M 720.6 653.3 L 798.2 599.0"/>
+<path class="link" marker-end="url(#in)" d="M 720.6 685.3 L 787.6 732.2"/>
+<path class="link" marker-start="url(#in)" d="M 119.9 1239.0 L 87.5 1207.1"/>
+<path class="link" marker-start="url(#in)" d="M 132.3 1239.0 L 119.7 1186.0"/>
+<path class="link" marker-end="url(#in)" d="M 152.4 1271.0 L 182.7 1300.8"/>
+<path class="link" marker-end="url(#in)" d="M 140.0 1271.0 L 152.2 1322.4"/>
+<path class="link" marker-start="url(#in)" d="M 98.4 1712.0 L 65.4 1688.3"/>
+<path class="link" marker-end="url(#in)" d="M 97.2 1744.0 L 62.3 1767.8"/>
+<path class="link" marker-start="url(#in)" d="M 2092.9 574.3 L 2059.7 562.9"/>
+<path class="link" marker-start="url(#in)" d="M 2111.9 569.3 L 2083.3 534.1"/>
+<path class="link" marker-end="url(#in)" d="M 2147.7 601.3 L 2178.8 623.1"/>
+<path class="link" marker-start="url(#in)" d="M 478.7 841.9 L 442.2 826.8"/>
+<path class="link" marker-start="url(#in)" d="M 494.8 837.7 L 465.9 800.9"/>
+<path class="link" marker-end="url(#in)" d="M 530.2 869.7 L 561.3 891.5"/>
+<path class="link" marker-start="url(#in)" d="M 383.6 792.0 L 440.9 786.2"/>
+<path class="link" marker-start="url(#in)" d="M 342.0 778.9 L 313.4 743.7"/>
+<path class="link" marker-end="url(#in)" d="M 374.6 810.9 L 410.8 840.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_oxidative-phosphorylation" transform="translate(1125.4,0.0)"><rect rx="10" height="31" width="253" x="-126.5" y="-15.5"/><text dominant-baseline="central">oxidative phosphorylation</text></g>
+<g id="node8626" class="node nodeHM pw_oxidative-phosphorylation lid856" transform="translate(509.0,176.3)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=856" target="_blank">reduced cytochrome c</a></text><title></title></g>
+<g id="node8625" class="node nodeHM pw_oxidative-phosphorylation lid3116" transform="translate(606.3,230.3)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3116" target="_blank">oxidized cytochrome c</a></text><title></title></g>
+<g id="node10036" class="node nodeHM pw_oxidative-phosphorylation lid410" transform="translate(507.4,641.9)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=410" target="_blank">ubiquinone</a></text><title></title></g>
+<g id="node9957" class="node nodeHM pw_oxidative-phosphorylation lid749" transform="translate(507.4,695.9)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=749" target="_blank">ubiquinol</a></text><title></title></g>
+<g id="node10032" class="node nodeHM pw_oxidative-phosphorylation lid12" transform="translate(354.9,1019.8)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10049" class="node nodeHM pw_oxidative-phosphorylation lid4" transform="translate(125.8,1498.7)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10053" class="node nodeHM pw_oxidative-phosphorylation lid13" transform="translate(120.7,1915.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10042" class="node nodeHM pw_oxidative-phosphorylation lid265" transform="translate(2124.7,426.3)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node10040" class="node nodeHM pw_oxidative-phosphorylation lid289" transform="translate(2124.9,744.7)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node8627" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(511.2,52.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.1.1.9" target="_blank">7.1.1.9</a></text><title>cytochrome-c oxidase</title></g>
+<g id="node10033" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(697.7,669.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.5.1" target="_blank">1.5.5.1</a></text><title>electron-transferring-flavoprotein dehydrogenase</title></g>
+<g id="node10028" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(136.2,1255.0)"><rect rx="15" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.1.2.1" target="_blank">7.1.2.1/7.1.2.2</a></text><title>P-type H+-exporting transporter;H+-transporting two-sector ATPase</title></g>
+<g id="node10050" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(120.7,1728.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.15" target="_blank">3.6.1.15</a></text><title>nucleoside-triphosphate phosphatase</title></g>
+<g id="node10046" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(2124.9,585.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.18.1.3" target="_blank">1.18.1.3</a></text><title>ferredoxin-NAD+ reductase</title></g>
+<g id="node8624" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(507.4,420.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.1.1.8" target="_blank">7.1.1.8</a></text><title>quinol-cytochrome-c reductase</title></g>
+<g id="node10039" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(507.4,853.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.1.1.2" target="_blank">7.1.1.2</a></text><title>NADH:ubiquinone reductase (H+-translocating)</title></g>
+<g id="node10034" class="node nodeEN pw_oxidative-phosphorylation" transform="translate(354.9,794.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.1.1.3" target="_blank">7.1.1.3</a></text><title>ubiquinol oxidase (H+-transporting)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8627~0" class="node nodeCM pw_oxidative-phosphorylation lid9" transform="translate(434.1,90.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8627~1" class="node nodeCM pw_oxidative-phosphorylation lid1" transform="translate(520.3,139.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10033~0" class="node nodeCM pw_oxidative-phosphorylation lid1892" transform="translate(821.0,583.0)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node10033~1" class="node nodeCM pw_oxidative-phosphorylation lid2297" transform="translate(810.4,748.2)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node10028~0" class="node nodeCM pw_oxidative-phosphorylation lid16" transform="translate(75.1,1194.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10028~1" class="node nodeCM pw_oxidative-phosphorylation lid13" transform="translate(115.9,1170.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10028~2" class="node nodeCM pw_oxidative-phosphorylation lid1" transform="translate(198.4,1316.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10028~3" class="node nodeCM pw_oxidative-phosphorylation lid12" transform="translate(156.1,1338.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10050~0" class="node nodeCM pw_oxidative-phosphorylation lid1" transform="translate(49.7,1677.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10050~1" class="node nodeCM pw_oxidative-phosphorylation lid16" transform="translate(49.8,1776.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10046~0" class="node nodeCM pw_oxidative-phosphorylation lid7" transform="translate(2040.7,556.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10046~1" class="node nodeCM pw_oxidative-phosphorylation lid12" transform="translate(2070.9,518.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10046~2" class="node nodeCM pw_oxidative-phosphorylation lid8" transform="translate(2197.8,636.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10039~0" class="node nodeCM pw_oxidative-phosphorylation lid8" transform="translate(423.2,819.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10039~2" class="node nodeCM pw_oxidative-phosphorylation lid7" transform="translate(580.2,904.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10034~0" class="node nodeCM pw_oxidative-phosphorylation lid12" transform="translate(453.4,785.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10034~1" class="node nodeCM pw_oxidative-phosphorylation lid9" transform="translate(301.0,728.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10034~2" class="node nodeCM pw_oxidative-phosphorylation lid1" transform="translate(426.5,853.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

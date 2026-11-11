@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2695" height="681" viewBox="0 0 2695.2 680.6"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="15895.1 5689.6 1591.0 386.6" width="1591" height="387" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="15895.1" y="5689.6" width="1591.0" height="386.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_grixazone-biosynthesis" class="pw pw7" x="15935.1" y="5745.1" width="1511.0" height="291.1" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16149.3 5907.4 L 16149.3 5983.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16113.0 5891.4 L 16013.6 5891.4"/>
+<path class="link" d="M 16185.7 5891.4 L 16265.3 5891.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16752.0 5891.4 L 16878.5 5891.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16673.6 5891.4 L 16586.7 5891.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17218.8 5891.4 L 17339.0 5891.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17140.3 5891.4 L 17047.3 5891.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 16728.8 5875.4 L 16764.8 5839.3"/>
+<path class="link" marker-end="url(#in)" d="M 16727.7 5907.4 L 16766.0 5948.8"/>
+<path class="link" marker-start="url(#in)" d="M 17161.2 5907.4 L 17114.0 5948.8"/>
+<path class="link" marker-start="url(#in)" d="M 17159.9 5875.4 L 17115.3 5839.3"/>
+<path class="link" marker-end="url(#in)" d="M 17196.3 5907.4 L 17239.6 5948.8"/>
+<path class="link" marker-end="url(#in)" d="M 17197.6 5875.4 L 17238.3 5839.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_grixazone-biosynthesis" transform="translate(16690.6,5745.1)"><rect rx="10" height="31" width="215" x="-107.5" y="-15.5"/><text dominant-baseline="central">grixazone biosynthesis</text></g>
+<g id="node11837" class="node nodeHM pw_grixazone-biosynthesis lid90065" transform="translate(16426.0,5891.4)"><rect height="30.0" width="319.4" x="-159.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90065" target="_blank">2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate</a></text><title>2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate</title></g>
+<g id="node11841" class="node nodeHM pw_grixazone-biosynthesis lid12334" transform="translate(16962.9,5891.4)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12334" target="_blank">3-amino-4-hydroxybenzoate</a></text><title>3-amino-4-hydroxybenzoate</title></g>
+<g id="node11843" class="node nodeHM pw_grixazone-biosynthesis lid193483" transform="translate(17383.8,5891.4)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=193483" target="_blank">grixazone B</a></text><title>grixazone B</title></g>
+<g id="node12195" class="node nodeHM pw_grixazone-biosynthesis lid278" transform="translate(15988.5,5891.4)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=278" target="_blank">DHAP</a></text><title>glycerone phosphate</title></g>
+<g id="node12196" class="node nodeHM pw_grixazone-biosynthesis lid573" transform="translate(16149.3,5999.6)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=573" target="_blank">Asp 4-semialdehyde</a></text><title>L-Aspartate 4-semialdehyde</title></g>
+<g id="node11836" class="node nodeEN pw_grixazone-biosynthesis" transform="translate(16149.3,5891.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.56" target="_blank">4.1.2.56</a></text><title>2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate synthase</title></g>
+<g id="node11838" class="node nodeEN pw_grixazone-biosynthesis" transform="translate(16712.8,5891.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.99.20" target="_blank">4.1.99.20</a></text><title>3-amino-4-hydroxybenzoate synthase</title></g>
+<g id="node11842" class="node nodeEN pw_grixazone-biosynthesis" transform="translate(17179.5,5891.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.10.3.15" target="_blank">1.10.3.15</a></text><title>grixazone synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11839" class="node nodeCM pw_grixazone-biosynthesis lid1" transform="translate(16780.8,5823.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11840" class="node nodeCM pw_grixazone-biosynthesis lid174005" transform="translate(16780.8,5964.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=174005" target="_blank">Pi</a></text><title>Pi</title></g>
+<g id="node11844" class="node nodeCM pw_grixazone-biosynthesis lid2415" transform="translate(17095.7,5823.3)"><rect rx="5" height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2415" target="_blank">N-acetyl-L-cysteine</a></text><title>N-acetyl-L-cysteine</title></g>
+<g id="node11845" class="node nodeCM pw_grixazone-biosynthesis lid9" transform="translate(17095.7,5964.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node11846" class="node nodeCM pw_grixazone-biosynthesis lid1" transform="translate(17256.3,5823.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11847" class="node nodeCM pw_grixazone-biosynthesis lid28" transform="translate(17256.3,5964.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1671.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1024.1 640.6" width="1024" height="641" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1024.1" height="640.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_grixazone-biosynthesis" class="pw " x="0.0" y="0.0" width="944.1" height="545.1" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 341.5 233.6 L 240.5 284.1"/>
+<path class="link" marker-end="url(#in)" d="M 405.5 201.6 L 506.5 151.1"/>
+<path class="link" marker-start="url(#in)" d="M 668.3 135.1 L 625.5 135.1"/>
+<path class="link" marker-end="url(#in)" d="M 738.6 135.1 L 826.8 135.1"/>
+<path class="link" marker-start="url(#in)" d="M 341.6 366.6 L 240.5 316.1"/>
+<path class="link" marker-end="url(#in)" d="M 405.4 392.8 L 488.2 419.1"/>
+<path class="link" marker-end="url(#in)" d="M 396.9 398.6 L 515.0 479.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 371.4 201.6 L 364.1 147.0"/>
+<path class="link" marker-end="url(#in)" d="M 380.7 201.6 L 401.7 155.5"/>
+<path class="link" marker-start="url(#in)" d="M 700.1 151.1 L 689.9 200.2"/>
+<path class="link" marker-start="url(#in)" d="M 681.3 151.1 L 626.7 190.4"/>
+<path class="link" marker-end="url(#in)" d="M 709.0 119.1 L 726.4 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 723.2 119.1 L 755.7 92.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_grixazone-biosynthesis" transform="translate(472.1,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">grixazone biosynthesis</text></g>
+<g id="node11837" class="node nodeHM pw_grixazone-biosynthesis lid90065" transform="translate(208.5,300.1)"><rect height="30.0" width="347.0" x="-173.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90065" target="_blank">2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate</a></text><title></title></g>
+<g id="node11841" class="node nodeHM pw_grixazone-biosynthesis lid12334" transform="translate(538.5,135.1)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12334" target="_blank">3-amino-4-hydroxybenzoate</a></text><title></title></g>
+<g id="node11843" class="node nodeHM pw_grixazone-biosynthesis lid193483" transform="translate(868.5,135.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=193483" target="_blank">grixazone B</a></text><title></title></g>
+<g id="node12195" class="node nodeHM pw_grixazone-biosynthesis lid482" transform="translate(538.5,435.1)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=482" target="_blank">glycerone phosphate</a></text><title></title></g>
+<g id="node12196" class="node nodeHM pw_grixazone-biosynthesis lid573" transform="translate(538.5,495.1)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=573" target="_blank">Asp 4-semialdehyde</a></text><title></title></g>
+<g id="node11838" class="node nodeEN pw_grixazone-biosynthesis" transform="translate(373.5,217.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.99.20" target="_blank">4.1.99.20</a></text><title>3-amino-4-hydroxybenzoate synthase</title></g>
+<g id="node11842" class="node nodeEN pw_grixazone-biosynthesis" transform="translate(703.5,135.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.10.3.15" target="_blank">1.10.3.15</a></text><title>grixazone synthase</title></g>
+<g id="node11836" class="node nodeEN pw_grixazone-biosynthesis" transform="translate(373.5,382.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.56" target="_blank">4.1.2.56</a></text><title>2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11838~0" class="node nodeCM pw_grixazone-biosynthesis lid1" transform="translate(362.0,131.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11838~1" class="node nodeCM pw_grixazone-biosynthesis lid174005" transform="translate(408.9,139.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=174005" target="_blank">Pi</a></text><title></title></g>
+<g id="node11842~0" class="node nodeCM pw_grixazone-biosynthesis lid9" transform="translate(686.5,216.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11842~1" class="node nodeCM pw_grixazone-biosynthesis lid2415" transform="translate(604.5,206.4)"><rect rx="5" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2415" target="_blank">N-acetyl-L-cysteine</a></text><title></title></g>
+<g id="node11842~2" class="node nodeCM pw_grixazone-biosynthesis lid28" transform="translate(731.9,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11842~3" class="node nodeCM pw_grixazone-biosynthesis lid1" transform="translate(771.4,80.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>
+<text x="1681.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

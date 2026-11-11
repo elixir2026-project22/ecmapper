@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1899.2 3101.9" width="1899" height="3102" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1899.2" height="3101.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_cholesterol-biosynthesis" class="pw " x="0.0" y="0.0" width="1779.2" height="2966.4" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 275.9 2824.2 L 214.0 2825.1"/>
+<path class="link" marker-end="url(#in)" d="M 339.7 2822.6 L 431.3 2819.2"/>
+<path class="link" marker-start="url(#in)" d="M 706.3 2803.1 L 592.3 2810.8"/>
+<path class="link" marker-end="url(#in)" d="M 770.1 2799.2 L 940.6 2789.5"/>
+<path class="link" marker-start="url(#in)" d="M 1162.9 2782.1 L 1004.5 2786.7"/>
+<path class="link" marker-end="url(#in)" d="M 1239.7 2781.0 L 1335.7 2781.0"/>
+<path class="link" marker-start="url(#in)" d="M 1560.9 2670.2 L 1431.5 2765.0"/>
+<path class="link" marker-end="url(#in)" d="M 1582.7 2638.2 L 1582.7 2512.4"/>
+<path class="link" marker-start="url(#in)" d="M 1474.0 2343.9 L 1571.3 2480.4"/>
+<path class="link" marker-end="url(#in)" d="M 1426.6 2312.6 C 1391.3 2297.5 1337.7 2274.7 1302.4 2259.6"/>
+<path class="link" marker-start="url(#in)" d="M 1076.0 2305.8 L 1216.8 2260.2"/>
+<path class="link" marker-end="url(#in)" d="M 1012.2 2304.5 L 865.0 2251.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 652.3 2283.6 C 683.8 2274.5 730.8 2261.0 767.2 2250.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 602.9 2277.5 L 490.6 2157.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 475.6 2006.6 L 475.6 2125.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 498.7 1974.6 L 606.4 1900.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 779.9 1824.7 L 670.1 1868.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 850.2 1796.9 L 963.8 1751.6"/>
+<path class="link" marker-start="url(#in)" d="M 1131.8 1653.2 L 1028.8 1719.6"/>
+<path class="link" marker-end="url(#in)" d="M 1162.7 1621.2 L 1206.1 1506.0"/>
+<path class="link" marker-start="url(#in)" d="M 1122.7 1378.2 L 1199.3 1474.0"/>
+<path class="link" marker-end="url(#in)" d="M 1084.5 1346.2 L 952.2 1263.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 757.5 1221.2 L 826.8 1231.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 687.2 1225.3 L 565.4 1258.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 338.3 1153.6 L 484.0 1258.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 302.4 1121.6 L 219.3 1023.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 274.8 882.8 L 214.5 991.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 310.0 850.8 L 439.9 772.1"/>
+<path class="link" marker-start="url(#in)" d="M 651.4 706.9 L 526.6 740.1"/>
+<path class="link" marker-end="url(#in)" d="M 721.7 697.5 L 815.9 697.5"/>
+<path class="link" marker-start="url(#in)" d="M 1122.8 689.5 L 1028.8 693.2"/>
+<path class="link" marker-end="url(#in)" d="M 1193.1 688.1 L 1340.8 688.1"/>
+<path class="link" marker-start="url(#in)" d="M 1544.5 551.4 L 1398.5 672.1"/>
+<path class="link" marker-end="url(#in)" d="M 1571.2 519.4 L 1621.7 408.5"/>
+<path class="link" marker-start="url(#in)" d="M 1629.0 203.1 L 1629.0 376.5"/>
+<path class="link" marker-end="url(#in)" d="M 1597.1 185.0 L 1456.1 176.1"/>
+<path class="link" marker-start="url(#in)" d="M 1235.6 162.9 L 1372.9 171.0"/>
+<path class="link" marker-end="url(#in)" d="M 1158.8 158.9 L 1034.1 153.1"/>
+<path class="link" marker-start="url(#in)" d="M 758.5 140.2 L 892.5 146.5"/>
+<path class="link" marker-end="url(#in)" d="M 694.7 137.6 L 541.3 131.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 346.8 127.0 L 458.0 129.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 270.0 126.1 L 214.5 126.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 318.4 2807.8 L 345.4 2766.9"/>
+<path class="link" marker-start="url(#in)" d="M 728.4 2817.0 L 700.7 2862.3"/>
+<path class="link" marker-end="url(#in)" d="M 742.6 2785.0 L 757.9 2729.7"/>
+<path class="link" marker-end="url(#in)" d="M 755.7 2785.0 L 786.9 2756.3"/>
+<path class="link" marker-start="url(#in)" d="M 1196.0 2797.0 L 1162.2 2900.4"/>
+<path class="link" marker-start="url(#in)" d="M 1182.1 2797.0 L 1147.9 2825.6"/>
+<path class="link" marker-end="url(#in)" d="M 1206.5 2765.0 L 1240.8 2660.1"/>
+<path class="link" marker-end="url(#in)" d="M 1220.4 2765.0 L 1252.6 2738.1"/>
+<path class="link" marker-start="url(#in)" d="M 1487.8 2311.9 L 1557.6 2267.5"/>
+<path class="link" marker-start="url(#in)" d="M 1504.2 2327.6 L 1535.9 2327.4"/>
+<path class="link" marker-end="url(#in)" d="M 1448.4 2343.9 L 1381.2 2419.7"/>
+<path class="link" marker-end="url(#in)" d="M 1421.0 2340.2 L 1401.3 2346.0"/>
+<path class="link" marker-end="url(#in)" d="M 1421.0 2316.3 L 1394.2 2308.9"/>
+<path class="link" marker-start="url(#in)" d="M 1054.8 2332.1 L 1083.8 2375.4"/>
+<path class="link" marker-end="url(#in)" d="M 1032.4 2332.1 L 1002.3 2373.2"/>
+<path class="link" marker-start="url(#in)" d="M 626.7 2277.5 L 659.9 2217.0"/>
+<path class="link" marker-start="url(#in)" d="M 653.0 2282.5 L 683.8 2272.9"/>
+<path class="link" marker-end="url(#in)" d="M 607.0 2309.5 L 577.9 2352.5"/>
+<path class="link" marker-end="url(#in)" d="M 582.7 2309.1 L 553.7 2321.9"/>
+<path class="link" marker-start="url(#in)" d="M 489.1 2006.6 L 520.5 2043.9"/>
+<path class="link" marker-start="url(#in)" d="M 477.9 2006.6 L 485.5 2059.5"/>
+<path class="link" marker-end="url(#in)" d="M 462.1 1974.6 L 430.7 1937.4"/>
+<path class="link" marker-end="url(#in)" d="M 472.9 1974.6 L 465.9 1934.0"/>
+<path class="link" marker-start="url(#in)" d="M 815.6 1826.8 L 818.5 1902.0"/>
+<path class="link" marker-start="url(#in)" d="M 808.7 1826.8 L 779.2 1902.0"/>
+<path class="link" marker-end="url(#in)" d="M 814.4 1794.8 L 811.5 1717.6"/>
+<path class="link" marker-end="url(#in)" d="M 821.3 1794.8 L 851.6 1717.6"/>
+<path class="link" marker-start="url(#in)" d="M 1162.3 1653.2 L 1173.9 1685.6"/>
+<path class="link" marker-end="url(#in)" d="M 1147.1 1621.2 L 1119.8 1575.3"/>
+<path class="link" marker-end="url(#in)" d="M 1157.0 1621.2 L 1158.2 1565.9"/>
+<path class="link" marker-start="url(#in)" d="M 1137.0 1346.2 L 1165.7 1329.2"/>
+<path class="link" marker-start="url(#in)" d="M 1145.1 1363.0 L 1183.2 1364.0"/>
+<path class="link" marker-end="url(#in)" d="M 1074.8 1371.3 L 1044.5 1379.2"/>
+<path class="link" marker-start="url(#in)" d="M 726.7 1199.8 L 741.9 1144.4"/>
+<path class="link" marker-start="url(#in)" d="M 739.7 1199.8 L 772.9 1169.2"/>
+<path class="link" marker-end="url(#in)" d="M 718.2 1231.8 L 702.6 1292.3"/>
+<path class="link" marker-end="url(#in)" d="M 711.3 1231.8 L 669.3 1292.3"/>
+<path class="link" marker-start="url(#in)" d="M 316.5 1121.6 L 321.4 964.9"/>
+<path class="link" marker-start="url(#in)" d="M 351.2 1139.2 L 389.2 1140.9"/>
+<path class="link" marker-end="url(#in)" d="M 287.7 1153.6 L 259.3 1169.6"/>
+<path class="link" marker-end="url(#in)" d="M 280.8 1136.1 L 244.5 1134.4"/>
+<path class="link" marker-start="url(#in)" d="M 291.1 882.8 L 314.5 932.9"/>
+<path class="link" marker-start="url(#in)" d="M 281.7 882.8 L 275.2 935.9"/>
+<path class="link" marker-end="url(#in)" d="M 276.2 850.8 L 252.8 800.7"/>
+<path class="link" marker-end="url(#in)" d="M 285.8 850.8 L 292.0 806.1"/>
+<path class="link" marker-start="url(#in)" d="M 680.3 713.6 L 661.5 761.8"/>
+<path class="link" marker-end="url(#in)" d="M 689.9 681.6 L 701.6 624.8"/>
+<path class="link" marker-end="url(#in)" d="M 701.8 681.6 L 731.6 650.4"/>
+<path class="link" marker-start="url(#in)" d="M 1147.2 704.1 L 1118.2 747.3"/>
+<path class="link" marker-end="url(#in)" d="M 1169.7 704.1 L 1199.7 745.2"/>
+<path class="link" marker-start="url(#in)" d="M 1660.9 181.8 L 1696.2 175.9"/>
+<path class="link" marker-end="url(#in)" d="M 1632.0 171.1 L 1642.7 114.0"/>
+<path class="link" marker-start="url(#in)" d="M 1203.6 144.7 L 1224.6 92.5"/>
+<path class="link" marker-start="url(#in)" d="M 1219.3 144.7 L 1254.0 119.5"/>
+<path class="link" marker-end="url(#in)" d="M 1190.7 176.7 L 1169.6 229.4"/>
+<path class="link" marker-end="url(#in)" d="M 1174.8 176.7 L 1142.2 200.1"/>
+<path class="link" marker-start="url(#in)" d="M 738.9 122.7 L 769.4 82.8"/>
+<path class="link" marker-end="url(#in)" d="M 716.4 122.7 L 688.1 78.4"/>
+<path class="link" marker-start="url(#in)" d="M 319.8 110.1 L 349.7 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 307.4 142.1 L 303.6 200.5"/>
+<path class="link" marker-end="url(#in)" d="M 296.9 142.1 L 269.9 179.8"/>
+<path class="link" marker-end="url(#in)" d="M 270.4 142.1 L 243.3 153.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_cholesterol-biosynthesis" transform="translate(889.6,0.0)"><rect rx="10" height="31" width="243" x="-121.6" y="-15.5"/><text dominant-baseline="central">cholesterol biosynthesis</text></g>
+<g id="node12141" class="node nodeHM pw_cholesterol-biosynthesis lid1392" transform="translate(146.4,2826.0)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1392" target="_blank">(2E,6E)-farnesyl-PP</a></text><title></title></g>
+<g id="node8990" class="node nodeHM pw_cholesterol-biosynthesis lid5208" transform="translate(511.8,2816.2)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5208" target="_blank">presqualene diphosphate</a></text><title></title></g>
+<g id="node8991" class="node nodeHM pw_cholesterol-biosynthesis lid496" transform="translate(972.5,2787.7)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=496" target="_blank">squalene</a></text><title></title></g>
+<g id="node8981" class="node nodeHM pw_cholesterol-biosynthesis lid10455" transform="translate(1409.7,2781.0)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10455" target="_blank">(S)-2,3-epoxysqualene</a></text><title></title></g>
+<g id="node8975" class="node nodeHM pw_cholesterol-biosynthesis lid1188" transform="translate(1582.7,2496.4)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1188" target="_blank">lanosterol</a></text><title></title></g>
+<g id="node8982" class="node nodeHM pw_cholesterol-biosynthesis lid16614" transform="translate(1266.3,2244.2)"><rect height="30.0" width="340.5" x="-170.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16614" target="_blank">4,4-dimethyl-5alpha-cholesta-8,14,24-trien-3beta-ol</a></text><title></title></g>
+<g id="node8967" class="node nodeHM pw_cholesterol-biosynthesis lid32080" transform="translate(821.0,2235.0)"><rect height="30.0" width="314.6" x="-157.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32080" target="_blank">4,4-dimethyl-5alpha-cholesta-8,24-dien-3beta-ol</a></text><title></title></g>
+<g id="node8940" class="node nodeHM pw_cholesterol-biosynthesis lid189752" transform="translate(475.6,2141.8)"><rect height="30.0" width="470.1" x="-235.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189752" target="_blank">(3beta,4alpha,5alpha)-4-(hydroxymethyl)-4-methylcholesta-8,24-dien-3-ol</a></text><title></title></g>
+<g id="node8939" class="node nodeHM pw_cholesterol-biosynthesis lid189754" transform="translate(629.5,1884.0)"><rect height="30.0" width="489.5" x="-244.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189754" target="_blank">(3beta,4alpha,5alpha)-3-hydroxy-4-methylcholesta-8,24-diene-4-carbaldehyde</a></text><title></title></g>
+<g id="node8936" class="node nodeHM pw_cholesterol-biosynthesis lid154481" transform="translate(1004.0,1735.6)"><rect height="30.0" width="411.8" x="-205.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=154481" target="_blank">4alpha-carboxy-4beta-methyl-5alpha-cholesta-8,24-dien-3beta-ol</a></text><title></title></g>
+<g id="node8963" class="node nodeHM pw_cholesterol-biosynthesis lid89320" transform="translate(1212.1,1490.0)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89320" target="_blank">3-dehydro-4-methylzymosterol</a></text><title></title></g>
+<g id="node8955" class="node nodeHM pw_cholesterol-biosynthesis lid191345" transform="translate(926.7,1247.1)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191345" target="_blank">4alpha-methyl-beta-zymosterol</a></text><title></title></g>
+<g id="node9025" class="node nodeHM pw_cholesterol-biosynthesis lid189744" transform="translate(506.3,1274.3)"><rect height="30.0" width="411.8" x="-205.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189744" target="_blank">(3beta,4alpha,5alpha)-4-(hydroxymethyl)cholesta-8,24-dien-3-ol</a></text><title></title></g>
+<g id="node9028" class="node nodeHM pw_cholesterol-biosynthesis lid189747" transform="translate(205.7,1007.9)"><rect height="30.0" width="321.0" x="-160.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189747" target="_blank">4alpha-formyl-5alpha-cholesta-8,24-dien-3beta-ol</a></text><title></title></g>
+<g id="node9033" class="node nodeHM pw_cholesterol-biosynthesis lid154480" transform="translate(466.3,756.1)"><rect height="30.0" width="327.5" x="-163.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=154480" target="_blank">4alpha-carboxy-5alpha-cholesta-8,24-dien-3beta-ol</a></text><title></title></g>
+<g id="node9023" class="node nodeHM pw_cholesterol-biosynthesis lid154479" transform="translate(922.3,697.4)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=154479" target="_blank">5alpha-cholesta-8,24-dien-3-one</a></text><title></title></g>
+<g id="node9038" class="node nodeHM pw_cholesterol-biosynthesis lid1067" transform="translate(1379.2,688.1)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1067" target="_blank">zymosterol</a></text><title></title></g>
+<g id="node9045" class="node nodeHM pw_cholesterol-biosynthesis lid13141" transform="translate(1629.0,392.5)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13141" target="_blank">5alpha-cholesta-7,24-dien-3beta-ol</a></text><title></title></g>
+<g id="node9006" class="node nodeHM pw_cholesterol-biosynthesis lid9203" transform="translate(1414.5,173.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9203" target="_blank">lathosterol</a></text><title></title></g>
+<g id="node9035" class="node nodeHM pw_cholesterol-biosynthesis lid5120" transform="translate(963.3,149.9)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5120" target="_blank">7-dehydrocholesterol</a></text><title></title></g>
+<g id="node9039" class="node nodeHM pw_cholesterol-biosynthesis lid189" transform="translate(499.6,130.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189" target="_blank">cholesterol</a></text><title></title></g>
+<g id="node11632" class="node nodeHM pw_cholesterol-biosynthesis lid10615" transform="translate(124.2,126.1)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10615" target="_blank">cholesta-5,7-dien-3beta-ol</a></text><title></title></g>
+<g id="node8948" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(307.8,2823.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.21" target="_blank">2.5.1.21</a></text><title>squalene synthase</title></g>
+<g id="node8988" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(738.2,2801.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.21" target="_blank">2.5.1.21</a></text><title>squalene synthase</title></g>
+<g id="node8992" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1201.3,2781.0)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.17" target="_blank">1.14.14.17</a></text><title>squalene monooxygenase</title></g>
+<g id="node8994" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1582.7,2654.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.7" target="_blank">5.4.99.7</a></text><title>Lanosterol synthase</title></g>
+<g id="node8996" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1462.6,2327.9)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.154" target="_blank">1.14.14.154</a></text><title>sterol 14alpha-demethylase</title></g>
+<g id="node8985" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1044.1,2316.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.70" target="_blank">1.3.1.70</a></text><title>DELTA14-sterol reductase</title></g>
+<g id="node8983" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(617.9,2293.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.18.9" target="_blank">1.14.18.9</a></text><title>4alpha-methylsterol monooxygenase</title></g>
+<g id="node8945" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(475.6,1990.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.18.9" target="_blank">1.14.18.9</a></text><title>4alpha-methylsterol monooxygenase</title></g>
+<g id="node8934" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(815.0,1810.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.18.9" target="_blank">1.14.18.9</a></text><title>4alpha-methylsterol monooxygenase</title></g>
+<g id="node8965" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1156.6,1637.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.170" target="_blank">1.1.1.170</a></text><title>3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase (decarboxylating)</title></g>
+<g id="node8962" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1110.0,1362.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.270" target="_blank">1.1.1.270</a></text><title>3beta-hydroxysteroid 3-dehydrogenase</title></g>
+<g id="node9019" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(722.4,1215.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.18.9" target="_blank">1.14.18.9</a></text><title>4alpha-methylsterol monooxygenase</title></g>
+<g id="node9027" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(316.0,1137.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.18.9" target="_blank">1.14.18.9</a></text><title>4alpha-methylsterol monooxygenase</title></g>
+<g id="node8953" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(283.6,866.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.18.9" target="_blank">1.14.18.9</a></text><title>4alpha-methylsterol monooxygenase</title></g>
+<g id="node9034" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(686.6,697.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.170" target="_blank">1.1.1.170</a></text><title>3beta-hydroxysteroid-4alpha-carboxylate 3-dehydrogenase (decarboxylating)</title></g>
+<g id="node9047" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1158.0,688.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.270" target="_blank">1.1.1.270</a></text><title>3beta-hydroxysteroid 3-dehydrogenase</title></g>
+<g id="node9049" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1563.9,535.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.3.5" target="_blank">5.3.3.5</a></text><title>cholestenol DELTA-isomerase</title></g>
+<g id="node9050" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1629.0,187.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.72" target="_blank">1.3.1.72</a></text><title>DELTA24-sterol reductase</title></g>
+<g id="node9036" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(1197.2,160.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.19.20" target="_blank">1.14.19.20</a></text><title>DELTA7-sterol 5(6)-desaturase</title></g>
+<g id="node9041" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(726.6,138.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.21" target="_blank">1.3.1.21</a></text><title>7-dehydrocholesterol reductase</title></g>
+<g id="node11631" class="node nodeEN pw_cholesterol-biosynthesis" transform="translate(308.4,126.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.19.21" target="_blank">1.14.19.21</a></text><title>cholesterol 7-desaturase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8948~0" class="node nodeCM pw_cholesterol-biosynthesis lid17" transform="translate(356.0,2750.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node8988~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(690.9,2878.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8988~1" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(762.4,2713.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8988~2" class="node nodeCM pw_cholesterol-biosynthesis lid17" transform="translate(802.6,2741.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node8992~0" class="node nodeCM pw_cholesterol-biosynthesis lid1123" transform="translate(1156.9,2916.4)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node8992~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(1135.5,2836.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8992~2" class="node nodeCM pw_cholesterol-biosynthesis lid88270" transform="translate(1246.1,2644.1)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node8992~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(1268.3,2725.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8996~0" class="node nodeCM pw_cholesterol-biosynthesis lid1123" transform="translate(1582.8,2251.5)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node8996~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(1548.3,2327.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8996~2" class="node nodeCM pw_cholesterol-biosynthesis lid88270" transform="translate(1367.0,2435.7)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node8996~3" class="node nodeCM pw_cholesterol-biosynthesis lid120" transform="translate(1372.6,2354.5)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node8996~4" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(1378.4,2304.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8985~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(1094.5,2391.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8985~1" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(990.6,2389.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8983~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(668.7,2201.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8983~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(696.3,2269.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8983~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(567.1,2368.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8983~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(538.0,2328.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8945~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(534.0,2059.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8945~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(487.8,2075.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8945~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(417.2,1921.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8945~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(463.2,1918.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8934~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(819.2,1918.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8934~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(772.9,1918.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8934~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(810.9,1701.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8934~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(857.9,1701.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8965~0" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(1179.7,1701.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8965~1" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(1110.3,1559.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8965~2" class="node nodeCM pw_cholesterol-biosynthesis lid28" transform="translate(1158.6,1549.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node8962~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(1187.9,1316.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8962~1" class="node nodeCM pw_cholesterol-biosynthesis lid12" transform="translate(1195.7,1364.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8962~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(1022.3,1385.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9019~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(746.3,1128.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9019~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(785.4,1157.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node9019~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(698.5,1308.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9019~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(658.2,1308.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9027~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(401.7,1141.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node9027~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(237.1,1182.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9027~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(228.7,1133.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8953~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(321.9,948.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8953~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(273.2,951.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8953~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(245.3,784.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8953~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(294.3,790.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9034~0" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(655.3,777.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9034~1" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(704.9,608.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9034~2" class="node nodeCM pw_cholesterol-biosynthesis lid28" transform="translate(746.9,634.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9047~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(1107.5,763.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9047~1" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(1211.4,761.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9050~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(1718.4,172.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9050~1" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(1645.7,98.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9036~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(1231.1,76.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9036~1" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(1266.5,110.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node9036~2" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(1163.2,245.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9036~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(1126.5,211.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9041~0" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(781.7,66.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9041~1" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(677.8,62.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11631~0" class="node nodeCM pw_cholesterol-biosynthesis lid10" transform="translate(361.2,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11631~1" class="node nodeCM pw_cholesterol-biosynthesis lid5" transform="translate(302.6,216.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11631~2" class="node nodeCM pw_cholesterol-biosynthesis lid9" transform="translate(258.4,195.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11631~3" class="node nodeCM pw_cholesterol-biosynthesis lid1" transform="translate(227.6,160.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

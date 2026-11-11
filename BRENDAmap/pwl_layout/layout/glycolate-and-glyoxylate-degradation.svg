@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 826.6 2145.2" width="827" height="2145" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="826.6" height="2145.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glycolate-and-glyoxylate-degradation" class="pw " x="0.0" y="0.0" width="706.6" height="2009.7" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 260.8 142.7 L 105.0 227.7"/>
+<path class="link" marker-end="url(#in)" d="M 318.2 142.0 C 359.2 164.4 435.1 205.7 476.2 228.2"/>
+<path class="link" marker-start="url(#in)" d="M 258.2 243.7 L 110.8 243.7"/>
+<path class="link" marker-end="url(#in)" d="M 322.1 243.7 L 466.2 243.7"/>
+<path class="link" marker-start="url(#in)" d="M 262.1 345.4 C 221.1 323.0 145.2 281.7 104.0 259.2"/>
+<path class="link" marker-end="url(#in)" d="M 318.2 345.4 C 359.2 323.0 435.1 281.7 476.2 259.2"/>
+<path class="link" marker-start="url(#in)" d="M 504.6 442.2 L 504.6 259.7"/>
+<path class="link" marker-end="url(#in)" d="M 504.6 474.2 L 504.6 656.7"/>
+<path class="link" marker-start="url(#in)" d="M 258.2 1101.7 L 117.3 1101.7"/>
+<path class="link" marker-end="url(#in)" d="M 322.1 1101.7 L 430.6 1101.7"/>
+<path class="link" marker-start="url(#in)" d="M 504.6 1300.2 L 504.6 1117.7"/>
+<path class="link" marker-end="url(#in)" d="M 504.6 1332.2 L 504.6 1514.7"/>
+<path class="link" marker-start="url(#in)" d="M 504.6 1729.2 L 504.6 1546.7"/>
+<path class="link" marker-end="url(#in)" d="M 504.6 1761.2 L 504.6 1943.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 278.9 142.7 L 249.4 184.9"/>
+<path class="link" marker-end="url(#in)" d="M 301.3 110.7 L 330.9 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 278.9 259.7 L 250.3 300.6"/>
+<path class="link" marker-end="url(#in)" d="M 301.3 227.7 L 330.0 186.8"/>
+<path class="link" marker-start="url(#in)" d="M 278.9 376.7 L 229.9 446.8"/>
+<path class="link" marker-end="url(#in)" d="M 303.7 344.7 L 347.1 293.7"/>
+<path class="link" marker-end="url(#in)" d="M 527.5 474.2 L 560.5 497.3"/>
+<path class="link" marker-start="url(#in)" d="M 278.9 1117.7 L 251.2 1157.3"/>
+<path class="link" marker-end="url(#in)" d="M 301.3 1117.7 L 329.0 1157.3"/>
+<path class="link" marker-start="url(#in)" d="M 527.5 1300.2 L 558.7 1278.4"/>
+<path class="link" marker-end="url(#in)" d="M 527.5 1332.2 L 560.5 1355.3"/>
+<path class="link" marker-start="url(#in)" d="M 527.5 1729.2 L 560.5 1706.1"/>
+<path class="link" marker-end="url(#in)" d="M 527.5 1761.2 L 562.4 1785.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glycolate-and-glyoxylate-degradation" transform="translate(353.3,0.0)"><rect rx="10" height="31" width="360" x="-180.0" y="-15.5"/><text dominant-baseline="central">glycolate and glyoxylate degradation</text></g>
+<g id="node1235" class="node nodeHM pw_glycolate-and-glyoxylate-degradation lid479" transform="translate(75.6,243.7)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=479" target="_blank">glycolate</a></text><title></title></g>
+<g id="node9236" class="node nodeHM pw_glycolate-and-glyoxylate-degradation lid101" transform="translate(504.6,243.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101" target="_blank">glyoxylate</a></text><title></title></g>
+<g id="node1234" class="node nodeHM pw_glycolate-and-glyoxylate-degradation lid7099" transform="translate(504.6,672.7)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7099" target="_blank">2-hydroxy-3-oxopropanoate</a></text><title></title></g>
+<g id="node1233" class="node nodeHM pw_glycolate-and-glyoxylate-degradation lid2454" transform="translate(75.6,1101.7)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2454" target="_blank">D-glycerate</a></text><title></title></g>
+<g id="node9242" class="node nodeHM pw_glycolate-and-glyoxylate-degradation lid201" transform="translate(504.6,1101.7)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=201" target="_blank">3-phospho-D-glycerate</a></text><title></title></g>
+<g id="node2634" class="node nodeHM pw_glycolate-and-glyoxylate-degradation lid3045" transform="translate(504.6,1530.7)"><rect height="30.0" width="334.0" x="-167.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3045" target="_blank">2-O-(alpha-D-glucopyranosyl)-3-phospho-D-glycerate</a></text><title></title></g>
+<g id="node11052" class="node nodeHM pw_glycolate-and-glyoxylate-degradation lid8878" transform="translate(504.6,1959.7)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8878" target="_blank">2-O-(alpha-D-Glc)-glycerate</a></text><title></title></g>
+<g id="node2717" class="node nodeEN pw_glycolate-and-glyoxylate-degradation" transform="translate(290.1,126.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.79" target="_blank">1.1.1.79</a></text><title>glyoxylate reductase (NADP+); glyoxylate reductase; glycolate dehydrogenase</title></g>
+<g id="node10370" class="node nodeEN pw_glycolate-and-glyoxylate-degradation" transform="translate(290.1,243.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.26" target="_blank">1.1.1.26</a></text><title>glyoxylate reductase (NADP+); glyoxylate reductase; glycolate dehydrogenase</title></g>
+<g id="node9228" class="node nodeEN pw_glycolate-and-glyoxylate-degradation" transform="translate(290.1,360.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.14" target="_blank">1.1.99.14</a></text><title>glyoxylate reductase (NADP+); glyoxylate reductase; glycolate dehydrogenase</title></g>
+<g id="node9246" class="node nodeEN pw_glycolate-and-glyoxylate-degradation" transform="translate(504.6,458.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.47" target="_blank">4.1.1.47</a></text><title>Tartronate-semialdehyde synthase</title></g>
+<g id="node9226" class="node nodeEN pw_glycolate-and-glyoxylate-degradation" transform="translate(290.1,1101.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.31" target="_blank">2.7.1.31</a></text><title>glycerate 3-kinase</title></g>
+<g id="node2635" class="node nodeEN pw_glycolate-and-glyoxylate-degradation" transform="translate(504.6,1316.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.266" target="_blank">2.4.1.266</a></text><title>glucosyl-3-phosphoglycerate synthase</title></g>
+<g id="node11051" class="node nodeEN pw_glycolate-and-glyoxylate-degradation" transform="translate(504.6,1745.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.85" target="_blank">3.1.3.85</a></text><title>glucosyl-3-phosphoglycerate phosphatase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2717~0" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid10" transform="translate(238.2,200.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2717~1" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid5" transform="translate(342.1,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10370~0" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid7" transform="translate(239.1,316.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10370~1" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid8" transform="translate(341.2,170.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9228~0" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid374" transform="translate(218.7,462.8)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node9228~1" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid1661" transform="translate(360.7,277.7)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node9246~0" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid28" transform="translate(576.2,508.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9226~0" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid4" transform="translate(240.0,1173.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9226~1" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid13" transform="translate(340.2,1173.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2635~0" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid22142" transform="translate(581.5,1262.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22142" target="_blank">NDP-Glc</a></text><title></title></g>
+<g id="node2635~1" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid1474" transform="translate(576.2,1366.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1474" target="_blank">NDP</a></text><title></title></g>
+<g id="node11051~0" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid1" transform="translate(576.2,1695.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11051~1" class="node nodeCM pw_glycolate-and-glyoxylate-degradation lid16" transform="translate(574.9,1794.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>

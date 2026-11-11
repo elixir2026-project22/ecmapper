@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 3463.3 2070.8" width="3463" height="2071" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="3463.3" height="2070.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_chlorophyll-metabolism" class="pw " x="0.0" y="0.0" width="3343.3" height="1935.3" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 1723.3 706.4 L 1723.3 523.9"/>
+<path class="link" marker-start="url(#in)" d="M 1723.3 738.4 L 1723.3 920.9"/>
+<path class="link" marker-start="url(#in)" d="M 1847.7 1085.2 L 1736.7 952.9"/>
+<path class="link" marker-end="url(#in)" d="M 1874.6 1117.2 L 1985.6 1249.5"/>
+<path class="link" marker-start="url(#in)" d="M 2168.6 1295.4 L 2086.0 1280.8"/>
+<path class="link" marker-end="url(#in)" d="M 2251.9 1310.1 L 2363.7 1329.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2579.5 1248.7 L 2449.2 1324.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2635.0 1216.7 L 2765.3 1141.5"/>
+<path class="link" marker-start="url(#in)" d="M 2860.6 939.9 L 2798.8 1109.5"/>
+<path class="link" marker-end="url(#in)" d="M 2872.2 907.9 L 2933.9 738.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2872.2 536.8 L 2933.9 706.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2860.6 504.8 L 2798.8 335.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2628.3 224.1 L 2765.3 303.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2586.3 199.8 L 2449.6 120.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2230.8 138.3 L 2330.8 120.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2188.8 145.7 L 2089.6 163.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1874.6 327.5 L 1985.6 195.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1847.7 359.5 L 1736.7 491.9"/>
+<path class="link" marker-start="url(#in)" d="M 2285.9 612.0 L 2765.3 335.2"/>
+<path class="link" marker-end="url(#in)" d="M 2230.4 644.0 L 1751.0 920.9"/>
+<path class="link" marker-start="url(#in)" d="M 3222.0 549.7 L 3222.0 732.2"/>
+<path class="link" marker-end="url(#in)" d="M 3222.0 517.7 L 3222.0 335.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3039.4 319.2 L 3196.6 319.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2975.6 319.2 L 2841.1 319.2"/>
+<path class="link" marker-start="url(#in)" d="M 221.8 1135.4 L 221.8 952.9"/>
+<path class="link" marker-end="url(#in)" d="M 221.8 1167.4 L 221.8 1349.9"/>
+<path class="link" marker-start="url(#in)" d="M 221.8 1564.4 L 221.8 1381.9"/>
+<path class="link" marker-end="url(#in)" d="M 221.8 1596.4 L 221.8 1778.9"/>
+<path class="link" marker-start="url(#in)" d="M 504.4 1794.9 L 337.9 1794.9"/>
+<path class="link" marker-end="url(#in)" d="M 581.2 1794.9 L 668.8 1794.9"/>
+<path class="link" marker-start="url(#in)" d="M 865.3 1596.4 L 865.9 1778.9"/>
+<path class="link" marker-end="url(#in)" d="M 865.3 1564.4 L 865.3 1381.9"/>
+<path class="link" marker-start="url(#in)" d="M 865.3 1167.4 L 865.3 1349.9"/>
+<path class="link" marker-end="url(#in)" d="M 865.3 1135.4 L 865.3 952.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1047.8 936.9 L 965.2 936.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1111.7 936.9 L 1187.8 936.9"/>
+<path class="link" marker-start="url(#in)" d="M 1476.8 936.9 L 1400.7 936.9"/>
+<path class="link" marker-end="url(#in)" d="M 1540.7 936.9 L 1665.4 936.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1700.4 738.4 L 1644.0 777.8"/>
+<path class="link" marker-end="url(#in)" d="M 1700.4 706.4 L 1667.4 683.3"/>
+<path class="link" marker-start="url(#in)" d="M 1839.9 1117.2 L 1810.0 1139.7"/>
+<path class="link" marker-start="url(#in)" d="M 1819.5 1104.8 L 1788.2 1107.6"/>
+<path class="link" marker-start="url(#in)" d="M 1829.7 1085.2 L 1797.2 1068.6"/>
+<path class="link" marker-end="url(#in)" d="M 1902.8 1085.2 L 1923.5 1077.2"/>
+<path class="link" marker-end="url(#in)" d="M 1902.8 1109.3 L 1931.2 1114.8"/>
+<path class="link" marker-start="url(#in)" d="M 2206.6 1318.7 L 2193.6 1375.0"/>
+<path class="link" marker-start="url(#in)" d="M 2194.3 1318.7 L 2162.1 1350.9"/>
+<path class="link" marker-start="url(#in)" d="M 2168.6 1312.4 L 2139.2 1319.1"/>
+<path class="link" marker-end="url(#in)" d="M 2219.1 1286.7 L 2245.3 1239.5"/>
+<path class="link" marker-end="url(#in)" d="M 2239.1 1286.7 L 2270.9 1269.1"/>
+<path class="link" marker-start="url(#in)" d="M 2605.9 1248.7 L 2600.2 1313.5"/>
+<path class="link" marker-end="url(#in)" d="M 2608.7 1216.7 L 2613.5 1161.7"/>
+<path class="link" marker-start="url(#in)" d="M 2886.1 939.9 L 2920.5 967.8"/>
+<path class="link" marker-start="url(#in)" d="M 2871.9 939.9 L 2890.4 993.6"/>
+<path class="link" marker-end="url(#in)" d="M 2855.2 907.9 L 2825.6 865.7"/>
+<path class="link" marker-start="url(#in)" d="M 2898.3 520.2 L 2933.1 519.6"/>
+<path class="link" marker-start="url(#in)" d="M 2893.0 536.8 L 2927.4 557.5"/>
+<path class="link" marker-end="url(#in)" d="M 2834.5 521.4 L 2798.0 522.0"/>
+<path class="link" marker-end="url(#in)" d="M 2839.8 504.8 L 2807.2 485.3"/>
+<path class="link" marker-start="url(#in)" d="M 2625.7 196.0 L 2657.2 168.6"/>
+<path class="link" marker-start="url(#in)" d="M 2628.3 208.7 L 2679.5 200.6"/>
+<path class="link" marker-end="url(#in)" d="M 2586.3 221.8 L 2547.3 239.9"/>
+<path class="link" marker-start="url(#in)" d="M 2212.4 126.0 L 2221.5 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 2223.8 126.0 L 2253.6 91.6"/>
+<path class="link" marker-end="url(#in)" d="M 2202.4 158.0 L 2179.0 208.1"/>
+<path class="link" marker-start="url(#in)" d="M 1851.5 327.5 L 1824.1 281.9"/>
+<path class="link" marker-start="url(#in)" d="M 1861.4 327.5 L 1862.4 273.8"/>
+<path class="link" marker-end="url(#in)" d="M 1840.1 341.7 L 1793.1 337.6"/>
+<path class="link" marker-start="url(#in)" d="M 2290.1 642.9 L 2321.6 657.6"/>
+<path class="link" marker-end="url(#in)" d="M 2261.2 644.0 L 2271.4 696.2"/>
+<path class="link" marker-end="url(#in)" d="M 2252.0 644.0 L 2229.5 702.7"/>
+<path class="link" marker-start="url(#in)" d="M 3244.9 549.7 L 3277.9 572.8"/>
+<path class="link" marker-end="url(#in)" d="M 3244.9 517.7 L 3277.9 494.6"/>
+<path class="link" marker-start="url(#in)" d="M 3012.4 303.2 L 3031.0 242.8"/>
+<path class="link" marker-start="url(#in)" d="M 3030.6 303.2 L 3068.7 276.8"/>
+<path class="link" marker-start="url(#in)" d="M 193.1 1149.9 L 150.2 1147.6"/>
+<path class="link" marker-start="url(#in)" d="M 198.9 1135.4 L 165.9 1112.3"/>
+<path class="link" marker-start="url(#in)" d="M 215.0 1135.4 L 193.8 1085.5"/>
+<path class="link" marker-end="url(#in)" d="M 250.4 1152.9 L 293.3 1155.1"/>
+<path class="link" marker-end="url(#in)" d="M 244.6 1167.4 L 279.5 1191.8"/>
+<path class="link" marker-end="url(#in)" d="M 228.5 1167.4 L 248.5 1214.3"/>
+<path class="link" marker-start="url(#in)" d="M 198.9 1564.4 L 146.5 1527.7"/>
+<path class="link" marker-end="url(#in)" d="M 198.9 1596.4 L 143.9 1634.9"/>
+<path class="link" marker-start="url(#in)" d="M 542.0 1810.9 L 538.9 1869.3"/>
+<path class="link" marker-start="url(#in)" d="M 531.6 1810.9 L 504.8 1849.1"/>
+<path class="link" marker-start="url(#in)" d="M 505.1 1810.9 L 476.4 1823.1"/>
+<path class="link" marker-end="url(#in)" d="M 548.2 1778.9 L 566.2 1725.2"/>
+<path class="link" marker-end="url(#in)" d="M 562.8 1778.9 L 595.8 1752.5"/>
+<path class="link" marker-start="url(#in)" d="M 903.7 1582.3 L 933.5 1583.8"/>
+<path class="link" marker-start="url(#in)" d="M 888.2 1596.4 L 923.1 1620.7"/>
+<path class="link" marker-start="url(#in)" d="M 872.1 1596.4 L 892.1 1643.2"/>
+<path class="link" marker-end="url(#in)" d="M 826.9 1567.2 L 801.7 1558.6"/>
+<path class="link" marker-end="url(#in)" d="M 852.3 1564.4 L 823.2 1528.6"/>
+<path class="link" marker-start="url(#in)" d="M 900.8 1135.4 L 980.8 1099.3"/>
+<path class="link" marker-start="url(#in)" d="M 888.1 1167.4 L 923.0 1191.8"/>
+<path class="link" marker-start="url(#in)" d="M 872.0 1167.4 L 892.0 1214.3"/>
+<path class="link" marker-end="url(#in)" d="M 826.9 1138.1 L 801.8 1129.5"/>
+<path class="link" marker-end="url(#in)" d="M 852.3 1135.4 L 823.2 1099.5"/>
+<path class="link" marker-start="url(#in)" d="M 1071.7 952.9 L 1011.1 1073.3"/>
+<path class="link" marker-start="url(#in)" d="M 1060.0 952.9 L 1025.6 980.7"/>
+<path class="link" marker-end="url(#in)" d="M 1091.0 920.9 L 1120.5 878.6"/>
+<path class="link" marker-start="url(#in)" d="M 1503.2 952.9 L 1484.8 1006.5"/>
+<path class="link" marker-start="url(#in)" d="M 1489.0 952.9 L 1454.6 980.7"/>
+<path class="link" marker-end="url(#in)" d="M 1520.0 920.9 L 1549.5 878.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_chlorophyll-metabolism" transform="translate(1671.7,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">chlorophyll metabolism</text></g>
+<g id="node7071" class="node nodeHM pw_chlorophyll-metabolism lid113548" transform="translate(1723.3,507.9)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113548" target="_blank">geranylgeranylchlorophyllide a</a></text><title></title></g>
+<g id="node7061" class="node nodeHM pw_chlorophyll-metabolism lid2400" transform="translate(1723.3,936.9)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2400" target="_blank">chlorophyllide a</a></text><title></title></g>
+<g id="node7085" class="node nodeHM pw_chlorophyll-metabolism lid23585" transform="translate(1999.0,1265.5)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=23585" target="_blank">7-hydroxychlorophyllide a</a></text><title></title></g>
+<g id="node7083" class="node nodeHM pw_chlorophyll-metabolism lid6086" transform="translate(2421.5,1340.0)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6086" target="_blank">chlorophyllide b</a></text><title></title></g>
+<g id="node7081" class="node nodeHM pw_chlorophyll-metabolism lid5270" transform="translate(2793.0,1125.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5270" target="_blank">chlorophyll b</a></text><title></title></g>
+<g id="node7077" class="node nodeHM pw_chlorophyll-metabolism lid192228" transform="translate(2939.7,722.4)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192228" target="_blank">7(1)-hydroxychlorophyll a</a></text><title></title></g>
+<g id="node7076" class="node nodeHM pw_chlorophyll-metabolism lid2647" transform="translate(2793.0,319.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2647" target="_blank">chlorophyll a</a></text><title></title></g>
+<g id="node7074" class="node nodeHM pw_chlorophyll-metabolism lid189758" transform="translate(2421.9,104.7)"><rect height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189758" target="_blank">tetrahydrogeranylgeranyl-chlorophyll a</a></text><title></title></g>
+<g id="node7073" class="node nodeHM pw_chlorophyll-metabolism lid189759" transform="translate(1999.0,179.2)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189759" target="_blank">dihydrogeranygeranyl-chlorophyll a</a></text><title></title></g>
+<g id="node1931" class="node nodeHM pw_chlorophyll-metabolism lid42713" transform="translate(3222.0,748.2)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42713" target="_blank">phytyl phosphate</a></text><title></title></g>
+<g id="node1935" class="node nodeHM pw_chlorophyll-metabolism lid2351" transform="translate(3222.0,319.2)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2351" target="_blank">phytol</a></text><title></title></g>
+<g id="node12185" class="node nodeHM pw_chlorophyll-metabolism lid868" transform="translate(221.8,936.9)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=868" target="_blank">protoporphyrin IX</a></text><title></title></g>
+<g id="node7056" class="node nodeHM pw_chlorophyll-metabolism lid50840" transform="translate(221.8,1365.9)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50840" target="_blank">Mg-protoporphyrin</a></text><title></title></g>
+<g id="node7063" class="node nodeHM pw_chlorophyll-metabolism lid15836" transform="translate(221.8,1794.9)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15836" target="_blank">Mg-protoporphyrin monomethyl ester</a></text><title></title></g>
+<g id="node7059" class="node nodeHM pw_chlorophyll-metabolism lid32785" transform="translate(865.9,1794.9)"><rect height="30.0" width="392.3" x="-196.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32785" target="_blank">131-hydroxy-magnesium-protoporphyrin IX 13-monomethyl ester</a></text><title></title></g>
+<g id="node7060" class="node nodeHM pw_chlorophyll-metabolism lid32786" transform="translate(865.3,1365.9)"><rect height="30.0" width="327.5" x="-163.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32786" target="_blank">131-oxo-magnesium-protoporphyrin IX 13-monomethyl</a></text><title></title></g>
+<g id="node7067" class="node nodeHM pw_chlorophyll-metabolism lid61381" transform="translate(865.3,936.9)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=61381" target="_blank">divinyl protochlorophyllide a</a></text><title></title></g>
+<g id="node7066" class="node nodeHM pw_chlorophyll-metabolism lid61382" transform="translate(1294.3,936.9)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=61382" target="_blank">monovinyl protochlorophyllide a</a></text><title></title></g>
+<g id="node7069" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(1723.3,722.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.62" target="_blank">2.5.1.62</a></text><title>chlorophyll synthase</title></g>
+<g id="node7082" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(1861.1,1101.2)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.122" target="_blank">1.14.13.122</a></text><title>chlorophyllide-a oxygenase</title></g>
+<g id="node7084" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(2210.3,1302.7)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.122" target="_blank">1.14.13.122</a></text><title>chlorophyllide-a oxygenase</title></g>
+<g id="node7080" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(2607.3,1232.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.62" target="_blank">2.5.1.62</a></text><title>chlorophyll synthase</title></g>
+<g id="node7086" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(2866.4,923.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.294" target="_blank">1.1.1.294</a></text><title>chlorophyll(ide) b reductase</title></g>
+<g id="node7079" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(2866.4,520.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.7.2" target="_blank">1.17.7.2</a></text><title>7-hydroxymethyl chlorophyll a reductase</title></g>
+<g id="node7070" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(2607.3,212.0)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>geranylgeranyl diphosphate reductase</title></g>
+<g id="node7075" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(2209.8,142.0)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>geranylgeranyl diphosphate reductase</title></g>
+<g id="node7072" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(1861.1,343.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>geranylgeranyl diphosphate reductase</title></g>
+<g id="node7078" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(2258.1,628.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.62" target="_blank">2.5.1.62</a></text><title>chlorophyll synthase</title></g>
+<g id="node1932" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(3222.0,533.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.182" target="_blank">2.7.1.182</a></text><title>phytol kinase</title></g>
+<g id="node1936" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(3007.5,319.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.14" target="_blank">3.1.1.14</a></text><title>chlorophyllase</title></g>
+<g id="node7055" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(221.8,1151.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.6.1.1" target="_blank">6.6.1.1</a></text><title>magnesium chelatase</title></g>
+<g id="node7057" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(221.8,1580.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.11" target="_blank">2.1.1.11</a></text><title>magnesium protoporphyrin IX methyltransferase</title></g>
+<g id="node7064" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(542.8,1794.9)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.81" target="_blank">1.14.13.81</a></text><title>magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase</title></g>
+<g id="node7058" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(865.3,1580.4)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.81" target="_blank">1.14.13.81</a></text><title>magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase</title></g>
+<g id="node7068" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(865.3,1151.4)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.81" target="_blank">1.14.13.81</a></text><title>magnesium-protoporphyrin IX monomethyl ester (oxidative) cyclase</title></g>
+<g id="node7065" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(1079.8,936.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.75" target="_blank">1.3.1.75</a></text><title>3,8-divinyl protochlorophyllide a 8-vinyl-reductase (NADPH)</title></g>
+<g id="node7062" class="node nodeEN pw_chlorophyll-metabolism" transform="translate(1508.8,936.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.33" target="_blank">1.3.1.33</a></text><title>protochlorophyllide reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7069~0" class="node nodeCM pw_chlorophyll-metabolism lid231" transform="translate(1621.2,793.8)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=231" target="_blank">geranylgeranyl diphosphate</a></text><title></title></g>
+<g id="node7069~1" class="node nodeCM pw_chlorophyll-metabolism lid17" transform="translate(1651.7,672.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node7082~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(1788.8,1155.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7082~1" class="node nodeCM pw_chlorophyll-metabolism lid9" transform="translate(1775.7,1108.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7082~2" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(1784.7,1062.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7082~3" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(1945.7,1068.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7082~4" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(1946.9,1117.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7084~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(2189.9,1391.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7084~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(2149.6,1363.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7084~2" class="node nodeCM pw_chlorophyll-metabolism lid9" transform="translate(2126.7,1322.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7084~3" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(2254.2,1223.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7084~4" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(2286.7,1260.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7080~0" class="node nodeCM pw_chlorophyll-metabolism lid3092" transform="translate(2598.8,1329.5)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3092" target="_blank">phytyl-PP</a></text><title></title></g>
+<g id="node7080~1" class="node nodeCM pw_chlorophyll-metabolism lid17" transform="translate(2614.9,1145.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node7086~0" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(2933.0,977.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7086~1" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(2895.9,1009.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7086~2" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(2814.4,849.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7079~0" class="node nodeCM pw_chlorophyll-metabolism lid265" transform="translate(2958.6,519.2)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node7079~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(2939.9,565.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7079~2" class="node nodeCM pw_chlorophyll-metabolism lid289" transform="translate(2775.8,522.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node7079~3" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(2791.5,475.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7070~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(2675.7,152.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7070~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(2691.9,198.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7070~2" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(2525.1,250.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7075~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(2224.0,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7075~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(2266.1,77.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7075~2" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(2171.5,224.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7072~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(1814.5,265.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7072~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(1862.6,257.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7072~2" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(1770.9,335.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7078~0" class="node nodeCM pw_chlorophyll-metabolism lid17" transform="translate(2337.3,665.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node7078~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(2274.5,712.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7078~2" class="node nodeCM pw_chlorophyll-metabolism lid3092" transform="translate(2223.3,718.7)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3092" target="_blank">phytyl-PP</a></text><title></title></g>
+<g id="node1932~0" class="node nodeCM pw_chlorophyll-metabolism lid212" transform="translate(3293.6,583.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212" target="_blank">CDP</a></text><title></title></g>
+<g id="node1932~1" class="node nodeCM pw_chlorophyll-metabolism lid60" transform="translate(3293.6,483.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title></title></g>
+<g id="node1936~0" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(3036.0,226.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1936~1" class="node nodeCM pw_chlorophyll-metabolism lid2400" transform="translate(3091.8,260.8)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2400" target="_blank">chlorophyllide a</a></text><title></title></g>
+<g id="node7055~0" class="node nodeCM pw_chlorophyll-metabolism lid4" transform="translate(134.5,1146.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node7055~1" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(150.2,1101.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7055~2" class="node nodeCM pw_chlorophyll-metabolism lid6551" transform="translate(187.0,1069.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6551" target="_blank">MG2+</a></text><title></title></g>
+<g id="node7055~3" class="node nodeCM pw_chlorophyll-metabolism lid13" transform="translate(309.0,1155.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node7055~4" class="node nodeCM pw_chlorophyll-metabolism lid16" transform="translate(292.0,1200.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node7055~5" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(255.3,1230.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7057~0" class="node nodeCM pw_chlorophyll-metabolism lid24" transform="translate(123.7,1511.7)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node7057~1" class="node nodeCM pw_chlorophyll-metabolism lid36" transform="translate(121.0,1650.9)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node7064~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(538.1,1885.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7064~1" class="node nodeCM pw_chlorophyll-metabolism lid9" transform="translate(493.6,1865.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7064~2" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(463.9,1828.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7064~3" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(571.6,1709.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7064~4" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(611.5,1739.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7058~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(955.7,1585.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7058~1" class="node nodeCM pw_chlorophyll-metabolism lid9" transform="translate(935.6,1629.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7058~2" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(898.9,1659.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7058~3" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(779.5,1551.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7058~4" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(810.2,1512.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7068~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(935.5,1200.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7068~2" class="node nodeCM pw_chlorophyll-metabolism lid9" transform="translate(898.8,1230.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7068~3" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(779.6,1121.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7068~4" class="node nodeCM pw_chlorophyll-metabolism lid1" transform="translate(810.3,1083.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7065~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(1003.0,1089.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7065~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(1013.1,990.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7065~2" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(1131.7,862.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7062~0" class="node nodeCM pw_chlorophyll-metabolism lid5" transform="translate(1479.3,1022.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7062~1" class="node nodeCM pw_chlorophyll-metabolism lid12" transform="translate(1442.1,990.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7062~2" class="node nodeCM pw_chlorophyll-metabolism lid10" transform="translate(1560.7,862.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 3197.3 2991.5" width="3197" height="2991" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="3197.3" height="2991.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_aerobic-toluene-degradation" class="pw " x="0.0" y="0.0" width="3077.3" height="2856.0" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1450.4 194.7 L 1585.0 290.1"/>
+<path class="link" marker-end="url(#in)" d="M 1389.5 178.7 L 1285.5 178.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1068.8 178.9 L 1182.8 178.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1005.0 178.9 L 889.1 178.9"/>
+<path class="link" marker-start="url(#in)" d="M 690.6 262.5 L 814.8 194.9"/>
+<path class="link" marker-end="url(#in)" d="M 641.0 294.5 L 522.9 388.2"/>
+<path class="link" marker-start="url(#in)" d="M 383.8 555.2 L 490.1 420.2"/>
+<path class="link" marker-end="url(#in)" d="M 363.1 587.2 L 280.5 750.5"/>
+<path class="link" marker-start="url(#in)" d="M 277.7 956.6 L 272.8 782.5"/>
+<path class="link" marker-end="url(#in)" d="M 278.4 988.6 L 280.8 1170.4"/>
+<path class="link" marker-start="url(#in)" d="M 281.0 1376.3 L 281.0 1202.4"/>
+<path class="link" marker-end="url(#in)" d="M 287.6 1408.3 L 358.8 1582.7"/>
+<path class="link" marker-start="url(#in)" d="M 250.7 1683.2 L 343.6 1614.7"/>
+<path class="link" marker-end="url(#in)" d="M 220.8 1715.2 L 168.1 1817.9"/>
+<path class="link" marker-start="url(#in)" d="M 212.9 1967.4 L 166.2 1849.9"/>
+<path class="link" marker-end="url(#in)" d="M 248.0 1983.3 L 286.7 1983.3"/>
+<path class="link" marker-start="url(#in)" d="M 500.1 1983.1 L 460.7 1983.1"/>
+<path class="link" marker-end="url(#in)" d="M 554.9 1967.1 L 656.4 1896.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 889.4 1879.8 L 743.6 1879.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 931.4 1879.7 L 1046.5 1879.7"/>
+<path class="link" marker-start="url(#in)" d="M 1163.2 2073.0 L 1156.8 1895.7"/>
+<path class="link" marker-end="url(#in)" d="M 1164.0 2105.0 L 1167.2 2272.3"/>
+<path class="link" marker-start="url(#in)" d="M 1167.5 2462.0 L 1167.5 2304.3"/>
+<path class="link" marker-end="url(#in)" d="M 1182.1 2494.0 L 1286.5 2608.2"/>
+<path class="link" marker-start="url(#in)" d="M 1420.1 2718.3 L 1321.3 2640.2"/>
+<path class="link" marker-end="url(#in)" d="M 1472.3 2747.2 L 1591.4 2795.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1774.2 2805.6 L 1642.3 2805.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1844.5 2805.5 L 1956.2 2805.5"/>
+<path class="link" marker-end="url(#in)" d="M 2166.8 2743.7 L 2051.2 2789.5"/>
+<path class="link" marker-start="url(#in)" d="M 2223.9 2716.4 L 2340.1 2650.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2494.6 2532.0 L 2388.1 2618.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2528.8 2500.0 L 2625.5 2393.8"/>
+<path class="link" marker-end="url(#in)" d="M 2730.7 2244.8 L 2651.0 2361.8"/>
+<path class="link" marker-start="url(#in)" d="M 2750.0 2212.8 L 2817.8 2083.5"/>
+<path class="link" marker-end="url(#in)" d="M 2917.7 1915.9 L 2835.9 2051.5"/>
+<path class="link" marker-start="url(#in)" d="M 2927.6 1883.9 L 2929.5 1737.6"/>
+<path class="link" marker-end="url(#in)" d="M 2930.8 1557.5 L 2929.8 1705.6"/>
+<path class="link" marker-start="url(#in)" d="M 2930.9 1525.5 L 2931.4 1370.4"/>
+<path class="link" marker-end="url(#in)" d="M 2931.4 1188.0 L 2931.4 1338.4"/>
+<path class="link" marker-start="url(#in)" d="M 2925.4 1156.0 L 2868.3 1004.1"/>
+<path class="link" marker-end="url(#in)" d="M 2784.6 830.8 L 2854.4 972.1"/>
+<path class="link" marker-start="url(#in)" d="M 2766.1 798.8 L 2674.2 660.8"/>
+<path class="link" marker-end="url(#in)" d="M 2546.4 498.4 L 2650.7 628.8"/>
+<path class="link" marker-start="url(#in)" d="M 2519.7 466.4 L 2408.6 338.5"/>
+<path class="link" marker-end="url(#in)" d="M 2235.3 209.8 L 2372.1 306.5"/>
+<path class="link" marker-start="url(#in)" d="M 2180.7 193.8 L 2065.8 193.9"/>
+<path class="link" marker-end="url(#in)" d="M 1855.8 193.9 L 1963.1 193.9"/>
+<path class="link" marker-start="url(#in)" d="M 1785.9 209.2 C 1746.3 230.7 1674.9 269.5 1635.5 290.9"/>
+<path class="link" marker-start="url(#in)" d="M 501.7 1723.8 L 382.7 1614.7"/>
+<path class="link" marker-end="url(#in)" d="M 537.4 1755.8 L 661.0 1864.0"/>
+<path class="link" marker-start="url(#in)" d="M 1610.5 464.7 L 1607.9 322.1"/>
+<path class="link" marker-end="url(#in)" d="M 1610.9 496.7 L 1612.3 643.6"/>
+<path class="link" marker-start="url(#in)" d="M 1612.4 814.0 L 1612.4 675.6"/>
+<path class="link" marker-end="url(#in)" d="M 1619.8 846.0 L 1673.7 962.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1753.1 811.8 L 1688.0 962.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1759.9 779.8 L 1758.7 621.6"/>
+<path class="link" marker-end="url(#in)" d="M 1758.6 440.7 L 1758.6 589.6"/>
+<path class="link" marker-start="url(#in)" d="M 1738.8 409.1 C 1709.7 386.3 1655.7 343.8 1626.8 321.2"/>
+<path class="link" marker-start="url(#in)" d="M 1593.3 1203.1 L 1674.8 994.7"/>
+<path class="link" marker-end="url(#in)" d="M 1578.1 1235.1 L 1468.3 1430.0"/>
+<path class="link" marker-start="url(#in)" d="M 1314.6 1656.7 L 1448.3 1462.0"/>
+<path class="link" marker-end="url(#in)" d="M 1292.2 1688.7 L 1167.6 1863.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1434.3 162.7 L 1472.0 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1449.8 162.7 L 1484.6 137.2"/>
+<path class="link" marker-start="url(#in)" d="M 1466.3 175.9 L 1500.9 173.4"/>
+<path class="link" marker-end="url(#in)" d="M 1415.5 194.7 L 1355.9 271.4"/>
+<path class="link" marker-end="url(#in)" d="M 1389.5 192.8 L 1361.6 203.1"/>
+<path class="link" marker-start="url(#in)" d="M 1048.1 194.9 L 1076.7 235.8"/>
+<path class="link" marker-end="url(#in)" d="M 1025.7 194.9 L 997.1 235.8"/>
+<path class="link" marker-start="url(#in)" d="M 657.0 262.5 L 643.1 208.4"/>
+<path class="link" marker-start="url(#in)" d="M 666.2 262.5 L 682.5 211.3"/>
+<path class="link" marker-end="url(#in)" d="M 665.3 294.5 L 679.2 348.7"/>
+<path class="link" marker-end="url(#in)" d="M 656.1 294.5 L 640.3 344.3"/>
+<path class="link" marker-start="url(#in)" d="M 348.7 555.2 L 317.7 533.1"/>
+<path class="link" marker-start="url(#in)" d="M 364.6 555.2 L 345.0 508.0"/>
+<path class="link" marker-start="url(#in)" d="M 373.9 555.2 L 382.6 502.6"/>
+<path class="link" marker-end="url(#in)" d="M 377.9 587.2 L 398.7 637.4"/>
+<path class="link" marker-start="url(#in)" d="M 254.3 956.6 L 223.2 935.8"/>
+<path class="link" marker-end="url(#in)" d="M 310.1 982.9 L 343.9 993.8"/>
+<path class="link" marker-end="url(#in)" d="M 291.7 988.6 L 321.0 1023.4"/>
+<path class="link" marker-start="url(#in)" d="M 296.2 1376.3 L 327.5 1343.2"/>
+<path class="link" marker-start="url(#in)" d="M 219.8 1683.2 L 193.9 1638.1"/>
+<path class="link" marker-start="url(#in)" d="M 229.6 1683.2 L 231.7 1627.9"/>
+<path class="link" marker-end="url(#in)" d="M 238.2 1715.2 L 264.1 1760.4"/>
+<path class="link" marker-end="url(#in)" d="M 228.4 1715.2 L 226.4 1768.9"/>
+<path class="link" marker-end="url(#in)" d="M 536.7 1967.1 L 551.9 1915.3"/>
+<path class="link" marker-start="url(#in)" d="M 1185.3 2073.0 L 1218.2 2048.6"/>
+<path class="link" marker-end="url(#in)" d="M 1199.4 2485.6 L 1228.5 2492.5"/>
+<path class="link" marker-start="url(#in)" d="M 1422.0 2750.3 L 1391.6 2776.7"/>
+<path class="link" marker-start="url(#in)" d="M 1408.5 2739.4 L 1369.8 2745.5"/>
+<path class="link" marker-end="url(#in)" d="M 1458.7 2718.3 L 1489.1 2691.8"/>
+<path class="link" marker-end="url(#in)" d="M 1472.3 2729.2 L 1512.6 2722.8"/>
+<path class="link" marker-start="url(#in)" d="M 1798.1 2789.5 L 1770.4 2750.0"/>
+<path class="link" marker-end="url(#in)" d="M 1820.5 2789.5 L 1856.5 2737.9"/>
+<path class="link" marker-start="url(#in)" d="M 2198.2 2716.4 L 2209.6 2647.8"/>
+<path class="link" marker-end="url(#in)" d="M 2167.2 2716.4 L 2139.3 2700.6"/>
+<path class="link" marker-start="url(#in)" d="M 2516.6 2532.0 L 2524.6 2586.4"/>
+<path class="link" marker-end="url(#in)" d="M 2709.7 2231.1 L 2670.2 2233.9"/>
+<path class="link" marker-start="url(#in)" d="M 2908.2 1525.5 L 2873.3 1500.8"/>
+<path class="link" marker-start="url(#in)" d="M 2896.3 1176.8 L 2863.8 1181.1"/>
+<path class="link" marker-start="url(#in)" d="M 2896.3 1156.1 L 2865.8 1142.4"/>
+<path class="link" marker-start="url(#in)" d="M 2920.8 1156.0 L 2894.5 1116.7"/>
+<path class="link" marker-end="url(#in)" d="M 2966.6 1177.2 L 2998.9 1181.9"/>
+<path class="link" marker-end="url(#in)" d="M 2950.3 1188.0 L 2982.3 1215.2"/>
+<path class="link" marker-start="url(#in)" d="M 2744.8 821.0 L 2710.0 827.9"/>
+<path class="link" marker-start="url(#in)" d="M 2744.8 802.6 L 2710.9 789.6"/>
+<path class="link" marker-end="url(#in)" d="M 2808.7 808.5 L 2843.4 801.7"/>
+<path class="link" marker-end="url(#in)" d="M 2808.7 827.0 L 2844.3 840.6"/>
+<path class="link" marker-start="url(#in)" d="M 2501.7 485.1 L 2481.8 486.8"/>
+<path class="link" marker-end="url(#in)" d="M 2565.5 470.3 L 2589.8 461.0"/>
+<path class="link" marker-end="url(#in)" d="M 2565.5 488.7 L 2605.2 496.6"/>
+<path class="link" marker-start="url(#in)" d="M 2200.3 209.8 L 2159.7 262.3"/>
+<path class="link" marker-start="url(#in)" d="M 2180.7 205.6 L 2146.5 218.3"/>
+<path class="link" marker-end="url(#in)" d="M 2225.0 177.8 L 2264.6 126.5"/>
+<path class="link" marker-end="url(#in)" d="M 2244.6 181.9 L 2280.6 168.6"/>
+<path class="link" marker-start="url(#in)" d="M 1817.7 209.9 L 1829.8 264.8"/>
+<path class="link" marker-start="url(#in)" d="M 1808.5 209.9 L 1791.1 258.7"/>
+<path class="link" marker-start="url(#in)" d="M 1794.0 209.9 L 1759.5 237.3"/>
+<path class="link" marker-end="url(#in)" d="M 1815.2 177.9 L 1818.7 121.1"/>
+<path class="link" marker-end="url(#in)" d="M 1825.6 177.9 L 1853.6 138.9"/>
+<path class="link" marker-start="url(#in)" d="M 490.5 1746.5 L 449.8 1756.0"/>
+<path class="link" marker-end="url(#in)" d="M 517.2 1755.8 L 509.9 1817.0"/>
+<path class="link" marker-start="url(#in)" d="M 1652.4 468.1 L 1658.2 466.3"/>
+<path class="link" marker-start="url(#in)" d="M 1587.3 464.7 L 1552.4 441.0"/>
+<path class="link" marker-start="url(#in)" d="M 1603.7 464.7 L 1583.3 418.3"/>
+<path class="link" marker-end="url(#in)" d="M 1652.4 491.7 L 1686.9 500.8"/>
+<path class="link" marker-end="url(#in)" d="M 1624.1 496.7 L 1653.4 531.9"/>
+<path class="link" marker-start="url(#in)" d="M 1570.8 836.7 L 1543.5 841.1"/>
+<path class="link" marker-start="url(#in)" d="M 1574.5 814.0 L 1545.9 801.9"/>
+<path class="link" marker-start="url(#in)" d="M 1601.2 814.0 L 1574.3 775.9"/>
+<path class="link" marker-end="url(#in)" d="M 1654.1 835.0 L 1681.8 838.3"/>
+<path class="link" marker-end="url(#in)" d="M 1632.3 846.0 L 1664.7 872.1"/>
+<path class="link" marker-start="url(#in)" d="M 1738.9 811.8 L 1719.7 826.3"/>
+<path class="link" marker-end="url(#in)" d="M 1792.0 791.7 L 1829.3 787.0"/>
+<path class="link" marker-end="url(#in)" d="M 1779.6 779.8 L 1813.9 751.7"/>
+<path class="link" marker-start="url(#in)" d="M 1722.2 440.7 L 1696.1 452.2"/>
+<path class="link" marker-start="url(#in)" d="M 1720.2 419.1 L 1686.2 414.2"/>
+<path class="link" marker-start="url(#in)" d="M 1739.7 408.7 L 1705.6 379.9"/>
+<path class="link" marker-end="url(#in)" d="M 1748.2 440.7 L 1716.3 489.8"/>
+<path class="link" marker-start="url(#in)" d="M 1578.0 1203.1 L 1553.8 1160.6"/>
+<path class="link" marker-start="url(#in)" d="M 1335.5 1672.7 L 1375.3 1672.7"/>
+<path class="link" marker-end="url(#in)" d="M 1309.5 1688.7 L 1330.0 1744.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_aerobic-toluene-degradation" transform="translate(1538.6,0.0)"><rect rx="10" height="31" width="272" x="-136.2" y="-15.5"/><text dominant-baseline="central">aerobic toluene degradation</text></g>
+<g id="node12914" class="node nodeHM pw_aerobic-toluene-degradation lid1335" transform="translate(1607.6,306.1)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1335" target="_blank">toluene</a></text><title></title></g>
+<g id="node451" class="node nodeHM pw_aerobic-toluene-degradation lid260" transform="translate(1234.1,178.8)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=260" target="_blank">benzyl alcohol</a></text><title></title></g>
+<g id="node12918" class="node nodeHM pw_aerobic-toluene-degradation lid146" transform="translate(844.2,178.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=146" target="_blank">benzaldehyde</a></text><title></title></g>
+<g id="node12923" class="node nodeHM pw_aerobic-toluene-degradation lid316" transform="translate(502.7,404.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=316" target="_blank">benzoate</a></text><title></title></g>
+<g id="node12929" class="node nodeHM pw_aerobic-toluene-degradation lid149149" transform="translate(272.4,766.5)"><rect height="30.0" width="340.5" x="-170.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=149149" target="_blank">cis-1,2-dihydroxy-cyclohexa-3,5-diene-1-carboxylate</a></text><title></title></g>
+<g id="node12935" class="node nodeHM pw_aerobic-toluene-degradation lid156" transform="translate(281.0,1186.4)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=156" target="_blank">catechol</a></text><title></title></g>
+<g id="node12938" class="node nodeHM pw_aerobic-toluene-degradation lid5232" transform="translate(365.3,1598.7)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5232" target="_blank">2-hydroxymuconate-6-semialdehyde</a></text><title></title></g>
+<g id="node12943" class="node nodeHM pw_aerobic-toluene-degradation lid5068" transform="translate(159.9,1833.9)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5068" target="_blank">(2Z,4E)-2-hydroxyhexa-2,4-dienedioate</a></text><title></title></g>
+<g id="node445" class="node nodeHM pw_aerobic-toluene-degradation lid28632" transform="translate(373.7,1983.1)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28632" target="_blank">(3E)-2-oxohex-3-enedioate</a></text><title></title></g>
+<g id="node443" class="node nodeHM pw_aerobic-toluene-degradation lid5101" transform="translate(679.2,1880.0)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5101" target="_blank">2-oxopent-4-enoate</a></text><title></title></g>
+<g id="node437" class="node nodeHM pw_aerobic-toluene-degradation lid86950" transform="translate(1156.2,1879.7)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86950" target="_blank">(2Z)-2-hydroxypenta-2,4-dienoate</a></text><title></title></g>
+<g id="node435" class="node nodeHM pw_aerobic-toluene-degradation lid5073" transform="translate(1167.5,2288.3)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5073" target="_blank">(S)-4-hydroxy-2-oxopentanoate</a></text><title></title></g>
+<g id="node431" class="node nodeHM pw_aerobic-toluene-degradation lid90" transform="translate(1301.1,2624.2)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title></title></g>
+<g id="node427" class="node nodeHM pw_aerobic-toluene-degradation lid29" transform="translate(1616.8,2806.0)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node392" class="node nodeHM pw_aerobic-toluene-degradation lid9045" transform="translate(2010.8,2805.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9045" target="_blank">3-oxoadipyl-CoA</a></text><title></title></g>
+<g id="node396" class="node nodeHM pw_aerobic-toluene-degradation lid2817" transform="translate(2368.5,2634.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2817" target="_blank">3-oxoadipate</a></text><title></title></g>
+<g id="node399" class="node nodeHM pw_aerobic-toluene-degradation lid95914" transform="translate(2640.1,2377.8)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95914" target="_blank">4,5-dihydro-5-oxofuran-2-acetate</a></text><title></title></g>
+<g id="node402" class="node nodeHM pw_aerobic-toluene-degradation lid5096" transform="translate(2826.2,2067.5)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5096" target="_blank">2-carboxy-2,5-dihydro-5-oxofuran-2-acetate</a></text><title></title></g>
+<g id="node404" class="node nodeHM pw_aerobic-toluene-degradation lid5907" transform="translate(2929.7,1721.6)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5907" target="_blank">3-carboxy-cis,cis-muconate</a></text><title></title></g>
+<g id="node409" class="node nodeHM pw_aerobic-toluene-degradation lid736" transform="translate(2931.4,1354.4)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=736" target="_blank">3,4-dihydroxybenzoate</a></text><title></title></g>
+<g id="node419" class="node nodeHM pw_aerobic-toluene-degradation lid365" transform="translate(2862.3,988.1)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=365" target="_blank">4-hydroxybenzoate</a></text><title></title></g>
+<g id="node424" class="node nodeHM pw_aerobic-toluene-degradation lid711" transform="translate(2663.5,644.8)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=711" target="_blank">4-hydroxybenzaldehyde</a></text><title></title></g>
+<g id="node12987" class="node nodeHM pw_aerobic-toluene-degradation lid2463" transform="translate(2394.7,322.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2463" target="_blank">4-hydroxybenzyl alcohol</a></text><title></title></g>
+<g id="node12981" class="node nodeHM pw_aerobic-toluene-degradation lid3180" transform="translate(2014.4,193.9)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3180" target="_blank">4-methylphenol</a></text><title></title></g>
+<g id="node12951" class="node nodeHM pw_aerobic-toluene-degradation lid7994" transform="translate(1612.4,659.6)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7994" target="_blank">2-methylphenol</a></text><title></title></g>
+<g id="node12959" class="node nodeHM pw_aerobic-toluene-degradation lid675" transform="translate(1681.1,978.7)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=675" target="_blank">3-methylcatechol</a></text><title></title></g>
+<g id="node12965" class="node nodeHM pw_aerobic-toluene-degradation lid29188" transform="translate(1758.6,605.6)"><rect height="30.0" width="295.1" x="-147.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29188" target="_blank">(1S,2R)-3-methylcyclohexa-3,5-diene-1,2-diol</a></text><title></title></g>
+<g id="node12970" class="node nodeHM pw_aerobic-toluene-degradation lid230495" transform="translate(1459.3,1446.0)"><rect height="30.0" width="275.7" x="-137.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230495" target="_blank">(2Z,4E)-2-hydroxy-6-oxohepta-2,4-dienoate</a></text><title></title></g>
+<g id="node12915" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1427.9,178.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.26" target="_blank">1.14.15.26</a></text><title>toluene methyl-monooxygenase</title></g>
+<g id="node12919" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1036.9,178.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.90" target="_blank">1.1.1.90</a></text><title>aryl-alcohol dehydrogenase</title></g>
+<g id="node12924" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(661.2,278.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.28" target="_blank">1.2.1.28</a></text><title>benzaldehyde dehydrogenase (NAD+)</title></g>
+<g id="node12930" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(371.2,571.2)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.12.10" target="_blank">1.14.12.10</a></text><title>benzoate 1,2-dioxygenase</title></g>
+<g id="node12936" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(278.2,972.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.25" target="_blank">1.3.1.25</a></text><title>1,6-dihydroxycyclohexa-2,4-diene-1-carboxylate dehydrogenase</title></g>
+<g id="node12939" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(281.0,1392.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.2" target="_blank">1.13.11.2</a></text><title>catechol 2,3-dioxygenase</title></g>
+<g id="node12944" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(229.0,1699.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.85" target="_blank">1.2.1.85</a></text><title>2-hydroxymuconate-6-semialdehyde dehydrogenase</title></g>
+<g id="node446" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(219.3,1983.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.2.6" target="_blank">5.3.2.6</a></text><title>2-hydroxymuconate tautomerase</title></g>
+<g id="node444" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(532.0,1983.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.77" target="_blank">4.1.1.77</a></text><title>2-oxo-3-hexenedioate decarboxylase</title></g>
+<g id="node438" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(910.4,1879.7)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node434" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1163.7,2089.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.80" target="_blank">4.2.1.80</a></text><title>2-oxopent-4-enoate hydratase</title></g>
+<g id="node433" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1167.5,2478.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.39" target="_blank">4.1.3.39</a></text><title>4-hydroxy-2-oxovalerate aldolase</title></g>
+<g id="node428" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1440.4,2734.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.10" target="_blank">1.2.1.10</a></text><title>acetaldehyde dehydrogenase (acetylating)</title></g>
+<g id="node389" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1809.3,2805.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.174" target="_blank">2.3.1.174</a></text><title>3-oxoadipyl-CoA thiolase</title></g>
+<g id="node393" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2195.5,2732.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.6" target="_blank">2.8.3.6</a></text><title>3-oxoadipate CoA-transferase</title></g>
+<g id="node397" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2514.2,2516.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.24" target="_blank">3.1.1.24</a></text><title>3-oxoadipate enol-lactonase</title></g>
+<g id="node400" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2741.6,2228.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.44" target="_blank">4.1.1.44</a></text><title>4-carboxymuconolactone decarboxylase</title></g>
+<g id="node403" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2927.4,1899.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.2" target="_blank">5.5.1.2</a></text><title>3-carboxy-cis,cis-muconate cycloisomerase</title></g>
+<g id="node405" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2930.9,1541.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.3" target="_blank">1.13.11.3</a></text><title>protocatechuate 3,4-dioxygenase</title></g>
+<g id="node410" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2931.4,1172.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.2" target="_blank">1.14.13.2</a></text><title>4-hydroxybenzoate 3-monooxygenase</title></g>
+<g id="node414" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2776.7,814.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.96" target="_blank">1.2.1.96</a></text><title>4-hydroxybenzaldehyde dehydrogenase (NADP+)</title></g>
+<g id="node420" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2533.6,482.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.9.1" target="_blank">1.17.9.1</a></text><title>4-methylphenol dehydrogenase (hydroxylating)</title></g>
+<g id="node12988" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(2212.7,193.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.9.1" target="_blank">1.17.9.1</a></text><title>4-methylphenol dehydrogenase (hydroxylating)</title></g>
+<g id="node12976" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1814.2,193.9)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.236" target="_blank">1.14.13.236</a></text><title>toluene 4-monooxygenase</title></g>
+<g id="node441" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(519.2,1739.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.9" target="_blank">3.7.1.9</a></text><title>2-hydroxymuconate-6-semialdehyde hydrolase</title></g>
+<g id="node12946" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1610.8,480.7)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.243" target="_blank">1.14.13.243</a></text><title>toluene 2-monooxygenase</title></g>
+<g id="node12954" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1612.4,830.0)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.243" target="_blank">1.14.13.243</a></text><title>toluene 2-monooxygenase</title></g>
+<g id="node12967" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1760.0,795.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.19" target="_blank">1.3.1.19</a></text><title>cis-1,2-dihydrobenzene-1,2-diol dehydrogenase</title></g>
+<g id="node12961" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1758.6,424.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.12.11" target="_blank">1.14.12.11</a></text><title>toluene dioxygenase</title></g>
+<g id="node12972" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1587.1,1219.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.2" target="_blank">1.13.11.2</a></text><title>catechol 2,3-dioxygenase</title></g>
+<g id="node12975" class="node nodeEN pw_aerobic-toluene-degradation" transform="translate(1303.6,1672.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.25" target="_blank">3.7.1.25</a></text><title>2-hydroxy-6-oxohepta-2,4-dienoate hydrolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node12915~0" class="node nodeCM pw_aerobic-toluene-degradation lid202701" transform="translate(1478.4,52.5)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12915~1" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(1497.1,128.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12915~2" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(1513.4,172.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12915~3" class="node nodeCM pw_aerobic-toluene-degradation lid202698" transform="translate(1343.5,287.4)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12915~4" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(1345.9,208.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12919~0" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(1088.0,251.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12919~1" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(985.9,251.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12924~0" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(639.0,192.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12924~1" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(687.6,195.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12924~2" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(683.3,364.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12924~3" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(635.2,360.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12930~0" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(298.7,519.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12930~1" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(338.3,492.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12930~2" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(385.3,486.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12930~3" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(405.3,653.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12936~0" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(204.2,923.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12936~1" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(362.9,999.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12936~2" class="node nodeCM pw_aerobic-toluene-degradation lid28" transform="translate(334.5,1039.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node12939~0" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(340.0,1330.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12944~0" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(184.7,1622.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12944~1" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(232.3,1611.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12944~2" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(273.3,1776.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12944~3" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(225.8,1784.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node444~0" class="node nodeCM pw_aerobic-toluene-degradation lid28" transform="translate(556.6,1899.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node434~0" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(1233.9,2036.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node433~0" class="node nodeCM pw_aerobic-toluene-degradation lid31" transform="translate(1260.4,2500.0)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node428~0" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(1373.3,2792.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node428~1" class="node nodeCM pw_aerobic-toluene-degradation lid18" transform="translate(1354.1,2748.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node428~2" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(1507.5,2675.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node428~3" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(1525.0,2720.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node389~0" class="node nodeCM pw_aerobic-toluene-degradation lid18" transform="translate(1759.2,2734.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node389~1" class="node nodeCM pw_aerobic-toluene-degradation lid224" transform="translate(1867.7,2721.9)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node393~0" class="node nodeCM pw_aerobic-toluene-degradation lid224" transform="translate(2212.3,2631.8)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node393~1" class="node nodeCM pw_aerobic-toluene-degradation lid58" transform="translate(2111.0,2684.6)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node397~0" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(2527.0,2602.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node400~0" class="node nodeCM pw_aerobic-toluene-degradation lid28" transform="translate(2654.5,2235.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node405~0" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(2860.8,1492.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node410~0" class="node nodeCM pw_aerobic-toluene-degradation lid5" transform="translate(2841.6,1184.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node410~1" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(2853.3,1136.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node410~2" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(2883.9,1100.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node410~3" class="node nodeCM pw_aerobic-toluene-degradation lid10" transform="translate(3021.1,1185.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node410~4" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(2998.0,1228.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node414~0" class="node nodeCM pw_aerobic-toluene-degradation lid10" transform="translate(2687.8,832.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node414~1" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(2695.1,783.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node414~2" class="node nodeCM pw_aerobic-toluene-degradation lid5" transform="translate(2865.6,797.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node414~3" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(2856.8,845.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node420~0" class="node nodeCM pw_aerobic-toluene-degradation lid8304" transform="translate(2427.2,491.4)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8304" target="_blank">oxidized azurin</a></text><title></title></g>
+<g id="node420~1" class="node nodeCM pw_aerobic-toluene-degradation lid5660" transform="translate(2631.9,445.0)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5660" target="_blank">reduced azurin</a></text><title></title></g>
+<g id="node420~2" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(2617.7,499.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12988~0" class="node nodeCM pw_aerobic-toluene-degradation lid8304" transform="translate(2147.4,278.3)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8304" target="_blank">oxidized azurin</a></text><title></title></g>
+<g id="node12988~1" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(2130.7,224.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12988~2" class="node nodeCM pw_aerobic-toluene-degradation lid5660" transform="translate(2277.0,110.5)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5660" target="_blank">reduced azurin</a></text><title></title></g>
+<g id="node12988~3" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(2293.1,164.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12976~0" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(1833.3,280.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12976~1" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(1785.4,274.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12976~2" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(1747.0,247.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12976~3" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(1819.7,105.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12976~4" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(1865.0,122.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node441~0" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(434.1,1759.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node441~1" class="node nodeCM pw_aerobic-toluene-degradation lid120" transform="translate(507.9,1833.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node12946~0" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(1677.1,460.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12946~1" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(1539.9,432.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12946~2" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(1576.2,402.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12946~3" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(1705.9,505.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12946~4" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(1666.7,547.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12954~0" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(1524.6,844.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12954~1" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(1533.4,796.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12954~2" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(1563.1,759.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12954~3" class="node nodeCM pw_aerobic-toluene-degradation lid7" transform="translate(1700.8,840.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12954~4" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(1680.5,884.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12967~1" class="node nodeCM pw_aerobic-toluene-degradation lid8" transform="translate(1848.3,784.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12967~2" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(1826.4,741.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12961~1" class="node nodeCM pw_aerobic-toluene-degradation lid12" transform="translate(1673.7,412.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12961~2" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(1693.1,369.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12972~0" class="node nodeCM pw_aerobic-toluene-degradation lid9" transform="translate(1544.7,1144.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12975~0" class="node nodeCM pw_aerobic-toluene-degradation lid1" transform="translate(1391.0,1672.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12975~1" class="node nodeCM pw_aerobic-toluene-degradation lid47" transform="translate(1335.8,1760.9)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+</g></svg>

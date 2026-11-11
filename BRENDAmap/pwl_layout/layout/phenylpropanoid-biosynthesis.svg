@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 3509.4 1610.7" width="3509" height="1611" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="3509.4" height="1610.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_phenylpropanoid-biosynthesis" class="pw " x="0.0" y="0.0" width="3389.4" height="1475.2" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 2416.2 567.2 L 2320.6 567.2"/>
+<path class="link" marker-start="url(#in)" d="M 2486.5 567.2 L 2611.2 567.2"/>
+<path class="link" marker-start="url(#in)" d="M 2763.9 736.9 L 2675.1 583.2"/>
+<path class="link" marker-end="url(#in)" d="M 2782.3 768.9 L 2871.1 922.7"/>
+<path class="link" marker-start="url(#in)" d="M 2483.3 1310.2 L 2604.8 1310.2"/>
+<path class="link" marker-end="url(#in)" d="M 2419.4 1310.2 L 2281.7 1310.2"/>
+<path class="link" marker-end="url(#in)" d="M 2138.4 1139.6 C 2158.5 1174.5 2207.7 1259.8 2227.9 1294.8"/>
+<path class="link" marker-start="url(#in)" d="M 2120.4 1108.5 L 2031.6 954.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2413.6 938.7 C 2348.2 938.7 2211.7 938.7 2118.5 938.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2442.4 923.2 C 2407.4 862.6 2280.2 642.3 2245.6 582.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2489.7 938.7 L 2809.5 938.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2460.3 954.2 C 2495.3 1014.7 2622.5 1235.1 2657.1 1295.1"/>
+<path class="link" marker-start="url(#in)" d="M 2057.5 1310.2 L 2192.0 1310.2"/>
+<path class="link" marker-end="url(#in)" d="M 1987.2 1310.2 L 1852.7 1310.2"/>
+<path class="link" marker-start="url(#in)" d="M 1625.3 1310.2 L 1763.0 1310.2"/>
+<path class="link" marker-end="url(#in)" d="M 1561.4 1310.2 L 1433.4 1310.2"/>
+<path class="link" marker-start="url(#in)" d="M 1199.5 1310.2 L 1324.2 1310.2"/>
+<path class="link" marker-end="url(#in)" d="M 1129.2 1310.2 L 1010.9 1310.2"/>
+<path class="link" marker-end="url(#in)" d="M 767.3 1310.2 L 888.8 1310.2"/>
+<path class="link" marker-start="url(#in)" d="M 703.4 1310.2 L 581.9 1310.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 520.8 1111.7 L 520.8 1294.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 520.9 1080.3 C 520.9 1040.7 520.9 935.9 520.9 896.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 520.9 1003.5 C 520.9 1057.5 520.9 1240.3 520.9 1294.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 520.9 973.4 C 520.9 919.4 520.9 736.6 520.9 682.1"/>
+<path class="link" marker-start="url(#in)" d="M 341.5 666.7 L 482.4 666.7"/>
+<path class="link" marker-end="url(#in)" d="M 271.2 666.7 L 149.7 666.7"/>
+<path class="link" marker-start="url(#in)" d="M 1378.8 1111.7 L 1378.8 1294.2"/>
+<path class="link" marker-end="url(#in)" d="M 1378.8 1079.7 L 1378.8 897.2"/>
+<path class="link" marker-start="url(#in)" d="M 1378.8 682.7 L 1378.8 865.2"/>
+<path class="link" marker-end="url(#in)" d="M 1378.8 650.7 L 1378.8 468.2"/>
+<path class="link" marker-start="url(#in)" d="M 1199.5 452.2 L 1330.7 452.2"/>
+<path class="link" marker-end="url(#in)" d="M 1129.2 452.2 L 1004.4 452.2"/>
+<path class="link" marker-start="url(#in)" d="M 2665.8 368.7 L 2665.8 551.2"/>
+<path class="link" marker-end="url(#in)" d="M 2665.8 336.7 L 2665.8 154.2"/>
+<path class="link" marker-start="url(#in)" d="M 2486.5 138.2 L 2614.5 138.2"/>
+<path class="link" marker-end="url(#in)" d="M 2416.2 138.2 L 2301.2 138.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2483.3 475.9 L 2633.8 551.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2420.6 444.5 C 2379.8 424.2 2308.3 388.4 2267.5 368.0"/>
+<path class="link" marker-start="url(#in)" d="M 3094.8 1226.7 L 3094.8 1409.2"/>
+<path class="link" marker-end="url(#in)" d="M 3094.8 1194.7 L 3094.8 1012.2"/>
+<path class="link" marker-start="url(#in)" d="M 3094.8 797.7 L 3094.8 980.2"/>
+<path class="link" marker-end="url(#in)" d="M 3094.8 765.7 L 3094.8 583.2"/>
+<path class="link" marker-start="url(#in)" d="M 2912.3 567.2 L 3053.2 567.2"/>
+<path class="link" marker-end="url(#in)" d="M 2848.4 567.2 L 2720.4 567.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2462.5 583.2 L 2495.8 630.7"/>
+<path class="link" marker-end="url(#in)" d="M 2440.1 583.2 L 2412.4 622.7"/>
+<path class="link" marker-start="url(#in)" d="M 2737.9 749.9 L 2711.5 747.5"/>
+<path class="link" marker-end="url(#in)" d="M 2765.6 768.9 L 2743.6 816.1"/>
+<path class="link" marker-start="url(#in)" d="M 2462.5 1294.2 L 2490.2 1254.7"/>
+<path class="link" marker-end="url(#in)" d="M 2440.1 1326.2 L 2406.9 1373.7"/>
+<path class="link" marker-start="url(#in)" d="M 2097.7 1121.7 L 2058.3 1118.2"/>
+<path class="link" marker-end="url(#in)" d="M 2123.3 1140.5 L 2094.8 1213.3"/>
+<path class="link" marker-start="url(#in)" d="M 2412.9 936.7 L 2383.1 935.1"/>
+<path class="link" marker-start="url(#in)" d="M 2428.5 922.7 L 2393.6 898.2"/>
+<path class="link" marker-start="url(#in)" d="M 2444.5 922.7 L 2424.6 875.8"/>
+<path class="link" marker-end="url(#in)" d="M 2489.7 951.9 L 2514.8 960.5"/>
+<path class="link" marker-end="url(#in)" d="M 2464.3 954.7 L 2493.4 990.6"/>
+<path class="link" marker-start="url(#in)" d="M 2031.9 1294.2 L 2081.5 1211.3"/>
+<path class="link" marker-end="url(#in)" d="M 2011.1 1326.2 L 1963.0 1395.0"/>
+<path class="link" marker-start="url(#in)" d="M 1604.5 1294.2 L 1634.1 1252.0"/>
+<path class="link" marker-end="url(#in)" d="M 1588.0 1326.2 L 1570.0 1379.9"/>
+<path class="link" marker-end="url(#in)" d="M 1573.4 1326.2 L 1540.4 1352.6"/>
+<path class="link" marker-start="url(#in)" d="M 1169.8 1294.2 L 1188.3 1240.5"/>
+<path class="link" marker-start="url(#in)" d="M 1184.1 1294.2 L 1218.5 1266.4"/>
+<path class="link" marker-end="url(#in)" d="M 1153.1 1326.2 L 1123.6 1368.4"/>
+<path class="link" marker-start="url(#in)" d="M 724.1 1294.2 L 696.4 1254.7"/>
+<path class="link" marker-end="url(#in)" d="M 746.5 1294.2 L 777.0 1250.7"/>
+<path class="link" marker-start="url(#in)" d="M 556.0 1097.6 L 589.1 1099.3"/>
+<path class="link" marker-start="url(#in)" d="M 543.7 1111.7 L 572.9 1132.1"/>
+<path class="link" marker-start="url(#in)" d="M 548.4 1079.7 L 552.4 1077.4"/>
+<path class="link" marker-start="url(#in)" d="M 556.0 1000.6 L 584.3 1010.3"/>
+<path class="link" marker-start="url(#in)" d="M 533.8 1004.5 L 566.9 1045.4"/>
+<path class="link" marker-end="url(#in)" d="M 498.0 972.5 L 468.8 952.0"/>
+<path class="link" marker-start="url(#in)" d="M 1420.5 1107.9 L 1459.0 1119.2"/>
+<path class="link" marker-start="url(#in)" d="M 1390.6 1111.7 L 1421.1 1153.2"/>
+<path class="link" marker-end="url(#in)" d="M 1337.2 1083.4 L 1296.6 1071.3"/>
+<path class="link" marker-end="url(#in)" d="M 1367.0 1079.7 L 1335.7 1037.3"/>
+<path class="link" marker-start="url(#in)" d="M 1401.7 682.7 L 1454.1 719.4"/>
+<path class="link" marker-end="url(#in)" d="M 1401.7 650.7 L 1456.7 612.2"/>
+<path class="link" marker-start="url(#in)" d="M 1169.8 436.2 L 1188.3 382.5"/>
+<path class="link" marker-start="url(#in)" d="M 1184.1 436.2 L 1218.5 408.4"/>
+<path class="link" marker-end="url(#in)" d="M 1153.1 468.2 L 1123.6 510.4"/>
+<path class="link" marker-start="url(#in)" d="M 2697.8 363.7 L 2729.3 374.5"/>
+<path class="link" marker-start="url(#in)" d="M 2678.8 368.7 L 2707.3 403.9"/>
+<path class="link" marker-end="url(#in)" d="M 2633.9 341.7 L 2602.4 330.8"/>
+<path class="link" marker-end="url(#in)" d="M 2652.9 336.7 L 2623.8 300.8"/>
+<path class="link" marker-start="url(#in)" d="M 2456.8 122.2 L 2475.3 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 2471.1 122.2 L 2505.5 94.3"/>
+<path class="link" marker-end="url(#in)" d="M 2440.1 154.2 L 2410.6 196.4"/>
+<path class="link" marker-end="url(#in)" d="M 2447.8 475.9 L 2438.5 517.2"/>
+<path class="link" marker-end="url(#in)" d="M 2434.1 475.9 L 2392.9 514.1"/>
+<path class="link" marker-end="url(#in)" d="M 2416.2 467.7 L 2381.7 475.3"/>
+<path class="link" marker-end="url(#in)" d="M 2416.2 447.4 L 2384.7 436.2"/>
+<path class="link" marker-end="url(#in)" d="M 3062.9 1199.7 L 3026.3 1187.0"/>
+<path class="link" marker-end="url(#in)" d="M 3081.9 1194.7 L 3052.8 1158.8"/>
+<path class="link" marker-start="url(#in)" d="M 3133.2 792.9 L 3175.0 805.2"/>
+<path class="link" marker-start="url(#in)" d="M 3106.6 797.7 L 3137.1 839.2"/>
+<path class="link" marker-end="url(#in)" d="M 3056.4 770.3 L 3012.6 757.3"/>
+<path class="link" marker-end="url(#in)" d="M 3083.0 765.7 L 3051.7 723.3"/>
+<path class="link" marker-start="url(#in)" d="M 2885.8 551.2 L 2903.3 500.6"/>
+<path class="link" marker-start="url(#in)" d="M 2900.1 551.2 L 2932.5 524.9"/>
+<path class="link" marker-end="url(#in)" d="M 2874.8 583.2 L 2857.4 633.8"/>
+<path class="link" marker-end="url(#in)" d="M 2860.6 583.2 L 2828.2 609.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_phenylpropanoid-biosynthesis" transform="translate(1694.7,0.0)"><rect rx="10" height="31" width="282" x="-141.1" y="-15.5"/><text dominant-baseline="central">phenylpropanoid biosynthesis</text></g>
+<g id="node10558" class="node nodeHM pw_phenylpropanoid-biosynthesis lid91818" transform="translate(2236.8,567.2)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91818" target="_blank">5-O-(4-coumaroyl)quinate</a></text><title></title></g>
+<g id="node10548" class="node nodeHM pw_phenylpropanoid-biosynthesis lid448" transform="translate(2665.8,567.2)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=448" target="_blank">4-coumaroyl-CoA</a></text><title></title></g>
+<g id="node10554" class="node nodeHM pw_phenylpropanoid-biosynthesis lid20627" transform="translate(2880.3,938.7)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20627" target="_blank">4-coumaroylshikimate</a></text><title></title></g>
+<g id="node10559" class="node nodeHM pw_phenylpropanoid-biosynthesis lid179021" transform="translate(2665.8,1310.2)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=179021" target="_blank">caffeoylshikimate</a></text><title></title></g>
+<g id="node10563" class="node nodeHM pw_phenylpropanoid-biosynthesis lid537" transform="translate(2236.8,1310.2)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=537" target="_blank">caffeoyl-CoA</a></text><title></title></g>
+<g id="node10560" class="node nodeHM pw_phenylpropanoid-biosynthesis lid46404" transform="translate(2022.3,938.7)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=46404" target="_blank">trans-5-O-caffeoyl-D-quinate</a></text><title></title></g>
+<g id="node10565" class="node nodeHM pw_phenylpropanoid-biosynthesis lid427" transform="translate(1807.8,1310.2)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=427" target="_blank">feruloyl-CoA</a></text><title></title></g>
+<g id="node10567" class="node nodeHM pw_phenylpropanoid-biosynthesis lid3680" transform="translate(1378.8,1310.2)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3680" target="_blank">coniferaldehyde</a></text><title></title></g>
+<g id="node10578" class="node nodeHM pw_phenylpropanoid-biosynthesis lid1202" transform="translate(949.8,1310.2)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1202" target="_blank">coniferyl alcohol</a></text><title></title></g>
+<g id="node11703" class="node nodeHM pw_phenylpropanoid-biosynthesis lid4187" transform="translate(520.8,1310.2)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4187" target="_blank">coniferyl acetate</a></text><title></title></g>
+<g id="node11706" class="node nodeHM pw_phenylpropanoid-biosynthesis lid909" transform="translate(520.8,881.2)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=909" target="_blank">eugenol</a></text><title></title></g>
+<g id="node11707" class="node nodeHM pw_phenylpropanoid-biosynthesis lid3640" transform="translate(520.8,666.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3640" target="_blank">isoeugenol</a></text><title></title></g>
+<g id="node11717" class="node nodeHM pw_phenylpropanoid-biosynthesis lid49488" transform="translate(91.8,666.7)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=49488" target="_blank">isomethyleugenol</a></text><title></title></g>
+<g id="node10570" class="node nodeHM pw_phenylpropanoid-biosynthesis lid78504" transform="translate(1378.8,881.2)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=78504" target="_blank">5-hydroxyconiferaldehyde</a></text><title></title></g>
+<g id="node10572" class="node nodeHM pw_phenylpropanoid-biosynthesis lid5214" transform="translate(1378.8,452.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5214" target="_blank">sinapaldehyde</a></text><title></title></g>
+<g id="node10574" class="node nodeHM pw_phenylpropanoid-biosynthesis lid3670" transform="translate(949.8,452.2)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3670" target="_blank">sinapyl alcohol</a></text><title></title></g>
+<g id="node10575" class="node nodeHM pw_phenylpropanoid-biosynthesis lid63251" transform="translate(2665.8,138.2)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=63251" target="_blank">coumaraldehyde</a></text><title></title></g>
+<g id="node10577" class="node nodeHM pw_phenylpropanoid-biosynthesis lid6575" transform="translate(2236.8,138.2)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6575" target="_blank">4-coumaryl alcohol</a></text><title></title></g>
+<g id="node1924" class="node nodeHM pw_phenylpropanoid-biosynthesis lid88234" transform="translate(2236.8,352.7)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88234" target="_blank">4-hydroxybenzalacetone</a></text><title></title></g>
+<g id="node12041" class="node nodeHM pw_phenylpropanoid-biosynthesis lid203" transform="translate(3094.8,1425.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=203" target="_blank">Phe</a></text><title></title></g>
+<g id="node10544" class="node nodeHM pw_phenylpropanoid-biosynthesis lid1544" transform="translate(3094.8,996.2)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1544" target="_blank">trans-cinnamate</a></text><title></title></g>
+<g id="node10546" class="node nodeHM pw_phenylpropanoid-biosynthesis lid1215" transform="translate(3094.8,567.2)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1215" target="_blank">4-coumarate</a></text><title></title></g>
+<g id="node10550" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2451.3,567.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.133" target="_blank">2.3.1.133</a></text><title>shikimate O-hydroxycinnamoyltransferase</title></g>
+<g id="node10549" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2773.1,752.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.133" target="_blank">2.3.1.133</a></text><title>shikimate O-hydroxycinnamoyltransferase</title></g>
+<g id="node10561" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2451.3,1310.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.99" target="_blank">2.3.1.99</a></text><title>quinate O-hydroxycinnamoyltransferase</title></g>
+<g id="node10562" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2129.6,1124.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.99" target="_blank">2.3.1.99</a></text><title>quinate O-hydroxycinnamoyltransferase</title></g>
+<g id="node10555" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2451.3,938.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.96" target="_blank">1.14.14.96</a></text><title>5-O-(4-coumaroyl)-D-quinate 3&#x27;-monooxygenase</title></g>
+<g id="node10564" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2022.3,1310.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.104" target="_blank">2.1.1.104</a></text><title>caffeoyl-CoA O-methyltransferase</title></g>
+<g id="node10566" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(1593.3,1310.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.44" target="_blank">1.2.1.44</a></text><title>cinnamoyl-CoA reductase</title></g>
+<g id="node10568" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(1164.3,1310.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.195" target="_blank">1.1.1.195</a></text><title>cinnamyl-alcohol dehydrogenase</title></g>
+<g id="node11702" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(735.3,1310.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.84" target="_blank">2.3.1.84</a></text><title>acalcohol O-acetyltransferase</title></g>
+<g id="node11704" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(520.8,1095.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.318" target="_blank">1.1.1.318</a></text><title>eugenol synthase</title></g>
+<g id="node11705" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(520.8,988.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.319" target="_blank">1.1.1.319</a></text><title>isoeugenol synthase</title></g>
+<g id="node11716" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(306.3,666.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.279" target="_blank">2.1.1.279</a></text><title>trans-anol O-methyltransferase</title></g>
+<g id="node10569" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(1378.8,1095.7)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.B13" target="_blank">1.14.14.B13</a></text><title>coniferylaldehyde 5-hydroxylase</title></g>
+<g id="node10571" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(1378.8,666.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.68" target="_blank">2.1.1.68</a></text><title>caffeate O-methyltransferase</title></g>
+<g id="node10573" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(1164.3,452.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.195" target="_blank">1.1.1.195</a></text><title>cinnamyl-alcohol dehydrogenase</title></g>
+<g id="node10551" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2665.8,352.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.44" target="_blank">1.2.1.44</a></text><title>cinnamoyl-CoA reductase</title></g>
+<g id="node10576" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2451.3,138.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.195" target="_blank">1.1.1.195</a></text><title>cinnamyl-alcohol dehydrogenase</title></g>
+<g id="node1925" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2451.3,459.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.212" target="_blank">2.3.1.212</a></text><title>benzalacetone synthase</title></g>
+<g id="node10543" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(3094.8,1210.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.24" target="_blank">4.3.1.24</a></text><title>phenylalanine ammonia-lyase</title></g>
+<g id="node10545" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(3094.8,781.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.91" target="_blank">1.14.14.91</a></text><title>trans-cinnamate 4-monooxygenase</title></g>
+<g id="node10547" class="node nodeEN pw_phenylpropanoid-biosynthesis" transform="translate(2880.3,567.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.12" target="_blank">6.2.1.12</a></text><title>4-Coumarate-CoA ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10550~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid2243" transform="translate(2507.0,646.7)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2243" target="_blank">L-quinate</a></text><title></title></g>
+<g id="node10550~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(2401.2,638.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10549~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid352" transform="translate(2676.4,744.5)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=352" target="_blank">shikimate</a></text><title></title></g>
+<g id="node10549~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(2736.2,832.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10561~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(2501.4,1238.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10561~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid352" transform="translate(2395.7,1389.7)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=352" target="_blank">shikimate</a></text><title></title></g>
+<g id="node10562~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(2042.6,1116.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10562~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid2243" transform="translate(2088.6,1229.3)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2243" target="_blank">L-quinate</a></text><title></title></g>
+<g id="node10555~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(2360.9,933.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10555~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid12" transform="translate(2381.1,889.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10555~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid9" transform="translate(2417.8,859.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10555~3" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(2537.0,968.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10555~4" class="node nodeCM pw_phenylpropanoid-biosynthesis lid1" transform="translate(2506.3,1006.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10564~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid24" transform="translate(2091.0,1195.3)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node10564~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid36" transform="translate(1951.8,1411.0)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node10566~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(1645.3,1236.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10566~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(1564.6,1395.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10566~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(1524.7,1365.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10568~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(1193.8,1224.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10568~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid12" transform="translate(1231.0,1256.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10568~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(1112.4,1384.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11702~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(685.2,1238.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node11702~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid29" transform="translate(788.2,1234.7)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node11704~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(611.3,1100.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11704~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(595.1,1147.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11704~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid47" transform="translate(579.9,1061.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node11705~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(606.5,1018.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11705~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(446.6,936.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10569~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid1123" transform="translate(1513.5,1135.2)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node10569~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid9" transform="translate(1432.8,1169.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10569~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid88270" transform="translate(1242.6,1055.3)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node10569~3" class="node nodeCM pw_phenylpropanoid-biosynthesis lid1" transform="translate(1323.9,1021.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10571~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid24" transform="translate(1476.9,735.4)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node10571~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid36" transform="translate(1479.6,596.2)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node10573~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(1193.8,366.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10573~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid12" transform="translate(1231.0,398.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10573~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(1112.4,526.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10551~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(2751.5,382.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10551~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid12" transform="translate(2719.8,419.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10551~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(2580.2,323.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10551~3" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(2610.9,284.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10576~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid5" transform="translate(2480.8,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10576~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid12" transform="translate(2518.0,84.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10576~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid10" transform="translate(2399.4,212.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node1925~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid1" transform="translate(2435.0,533.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1925~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid76" transform="translate(2375.6,530.1)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node1925~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid28" transform="translate(2366.0,478.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1925~3" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(2369.0,430.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10543~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid12" transform="translate(3013.8,1182.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10543~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid27" transform="translate(3039.9,1142.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node10545~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid1123" transform="translate(3229.5,821.2)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node10545~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid9" transform="translate(3148.8,855.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10545~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid88270" transform="translate(2958.6,741.3)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node10545~3" class="node nodeCM pw_phenylpropanoid-biosynthesis lid1" transform="translate(3039.9,707.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10547~0" class="node nodeCM pw_phenylpropanoid-biosynthesis lid4" transform="translate(2908.8,484.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10547~1" class="node nodeCM pw_phenylpropanoid-biosynthesis lid18" transform="translate(2948.2,512.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10547~2" class="node nodeCM pw_phenylpropanoid-biosynthesis lid30" transform="translate(2851.9,649.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10547~3" class="node nodeCM pw_phenylpropanoid-biosynthesis lid17" transform="translate(2812.4,622.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>

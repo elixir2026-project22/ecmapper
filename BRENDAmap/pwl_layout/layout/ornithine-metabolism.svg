@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 883.0 1228.0" width="883" height="1228" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="883.0" height="1228.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ornithine-metabolism" class="pw " x="0.0" y="0.0" width="763.0" height="1092.5" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 483.2 382.5 L 600.6 382.5"/>
+<path class="link" marker-end="url(#in)" d="M 419.4 382.5 L 302.0 382.5"/>
+<path class="link" marker-start="url(#in)" d="M 616.3 233.5 L 616.3 366.5"/>
+<path class="link" marker-end="url(#in)" d="M 616.3 201.5 L 616.3 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 616.3 531.5 L 616.3 398.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 616.3 563.5 L 616.3 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 616.3 861.5 L 616.3 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 616.3 893.5 L 616.3 1026.5"/>
+<path class="link" marker-start="url(#in)" d="M 483.2 1042.5 L 542.2 1042.5"/>
+<path class="link" marker-end="url(#in)" d="M 419.4 1042.5 L 366.8 1042.5"/>
+<path class="link" marker-start="url(#in)" d="M 286.3 893.5 L 286.3 1026.5"/>
+<path class="link" marker-end="url(#in)" d="M 286.3 861.5 L 286.3 728.5"/>
+<path class="link" marker-start="url(#in)" d="M 211.8 563.5 L 278.3 696.5"/>
+<path class="link" marker-end="url(#in)" d="M 195.8 531.5 L 129.3 398.5"/>
+<path class="link" marker-start="url(#in)" d="M 121.3 233.5 L 121.3 366.5"/>
+<path class="link" marker-end="url(#in)" d="M 121.3 201.5 L 121.3 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 440.1 398.5 L 412.4 438.1"/>
+<path class="link" marker-start="url(#in)" d="M 657.9 219.7 L 684.6 221.1"/>
+<path class="link" marker-start="url(#in)" d="M 639.1 233.5 L 674.0 257.9"/>
+<path class="link" marker-start="url(#in)" d="M 623.1 233.5 L 643.0 280.4"/>
+<path class="link" marker-end="url(#in)" d="M 574.6 203.2 L 552.8 195.6"/>
+<path class="link" marker-end="url(#in)" d="M 603.3 201.5 L 574.3 165.6"/>
+<path class="link" marker-start="url(#in)" d="M 456.6 1026.5 L 474.6 972.8"/>
+<path class="link" marker-start="url(#in)" d="M 471.3 1026.5 L 504.2 1000.1"/>
+<path class="link" marker-end="url(#in)" d="M 446.1 1026.5 L 428.7 972.8"/>
+<path class="link" marker-end="url(#in)" d="M 431.0 1026.5 L 399.3 1001.5"/>
+<path class="link" marker-start="url(#in)" d="M 263.4 893.5 L 230.4 916.6"/>
+<path class="link" marker-end="url(#in)" d="M 263.4 861.5 L 234.3 841.1"/>
+<path class="link" marker-start="url(#in)" d="M 195.1 563.5 L 171.6 606.9"/>
+<path class="link" marker-end="url(#in)" d="M 175.1 543.2 L 133.1 537.0"/>
+<path class="link" marker-start="url(#in)" d="M 98.4 233.5 L 65.4 256.6"/>
+<path class="link" marker-end="url(#in)" d="M 98.4 201.5 L 65.4 178.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ornithine-metabolism" transform="translate(381.5,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">ornithine metabolism</text></g>
+<g id="node62" class="node nodeHM pw_ornithine-metabolism lid192" transform="translate(616.3,382.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192" target="_blank">Orn</a></text><title></title></g>
+<g id="node12370" class="node nodeHM pw_ornithine-metabolism lid243" transform="translate(286.3,382.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=243" target="_blank">Pro</a></text><title></title></g>
+<g id="node1983" class="node nodeHM pw_ornithine-metabolism lid14791" transform="translate(616.3,52.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=14791" target="_blank">N5-hydroxy-L-ornithine</a></text><title></title></g>
+<g id="node2406" class="node nodeHM pw_ornithine-metabolism lid2550" transform="translate(616.3,712.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2550" target="_blank">D-Orn</a></text><title></title></g>
+<g id="node2404" class="node nodeHM pw_ornithine-metabolism lid55675" transform="translate(616.3,1042.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=55675" target="_blank">2,4-diaminopentanoate</a></text><title></title></g>
+<g id="node2402" class="node nodeHM pw_ornithine-metabolism lid7983" transform="translate(286.3,1042.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7983" target="_blank">2-amino-4-oxopentanoate</a></text><title></title></g>
+<g id="node2398" class="node nodeHM pw_ornithine-metabolism lid29" transform="translate(286.3,712.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node12363" class="node nodeHM pw_ornithine-metabolism lid358" transform="translate(121.3,382.5)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=358" target="_blank">acetyl phosphate</a></text><title></title></g>
+<g id="node12367" class="node nodeHM pw_ornithine-metabolism lid47" transform="translate(121.3,52.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node12369" class="node nodeEN pw_ornithine-metabolism" transform="translate(451.3,382.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.12" target="_blank">4.3.1.12</a></text><title>ornithine cyclodeaminase</title></g>
+<g id="node1982" class="node nodeEN pw_ornithine-metabolism" transform="translate(616.3,217.5)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.195" target="_blank">1.14.13.195</a></text><title>L-ornithine N5-monooxygenase (NADPH)</title></g>
+<g id="node2407" class="node nodeEN pw_ornithine-metabolism" transform="translate(616.3,547.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.1.12" target="_blank">5.1.1.12</a></text><title>ornithine racemase</title></g>
+<g id="node2405" class="node nodeEN pw_ornithine-metabolism" transform="translate(616.3,877.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.3.5" target="_blank">5.4.3.5</a></text><title>D-ornithine 4,5-aminomutase</title></g>
+<g id="node2403" class="node nodeEN pw_ornithine-metabolism" transform="translate(451.3,1042.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.12" target="_blank">1.4.1.12</a></text><title>2,4-diaminopentanoate dehydrogenase</title></g>
+<g id="node2401" class="node nodeEN pw_ornithine-metabolism" transform="translate(286.3,877.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.263" target="_blank">2.3.1.263</a></text><title>2-amino-4-oxopentanoate thiolase</title></g>
+<g id="node12361" class="node nodeEN pw_ornithine-metabolism" transform="translate(203.8,547.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.8" target="_blank">2.3.1.8</a></text><title>phosphate acetyltransferase</title></g>
+<g id="node12366" class="node nodeEN pw_ornithine-metabolism" transform="translate(121.3,217.5)"><rect rx="15" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.1" target="_blank">2.7.2.1/2.7.2.15</a></text><title>acetate kinase;propionate kinase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node12369~0" class="node nodeCM pw_ornithine-metabolism lid27" transform="translate(401.2,454.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node1982~0" class="node nodeCM pw_ornithine-metabolism lid5" transform="translate(706.8,222.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node1982~1" class="node nodeCM pw_ornithine-metabolism lid9" transform="translate(686.5,266.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1982~2" class="node nodeCM pw_ornithine-metabolism lid12" transform="translate(649.8,296.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1982~3" class="node nodeCM pw_ornithine-metabolism lid10" transform="translate(530.6,188.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node1982~4" class="node nodeCM pw_ornithine-metabolism lid1" transform="translate(561.3,149.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2403~0" class="node nodeCM pw_ornithine-metabolism lid10" transform="translate(480.0,956.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2403~1" class="node nodeCM pw_ornithine-metabolism lid1" transform="translate(519.9,987.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2403~2" class="node nodeCM pw_ornithine-metabolism lid5" transform="translate(423.5,956.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2403~3" class="node nodeCM pw_ornithine-metabolism lid4224" transform="translate(380.4,986.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4224" target="_blank">NH4+</a></text><title></title></g>
+<g id="node2401~0" class="node nodeCM pw_ornithine-metabolism lid18" transform="translate(214.7,927.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node2401~1" class="node nodeCM pw_ornithine-metabolism lid164" transform="translate(212.1,825.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=164" target="_blank">D-Ala</a></text><title></title></g>
+<g id="node12361~0" class="node nodeCM pw_ornithine-metabolism lid16" transform="translate(163.0,622.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node12361~1" class="node nodeCM pw_ornithine-metabolism lid18" transform="translate(117.4,534.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node12366~0" class="node nodeCM pw_ornithine-metabolism lid13" transform="translate(49.7,267.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node12366~1" class="node nodeCM pw_ornithine-metabolism lid4" transform="translate(49.7,167.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+</g></svg>

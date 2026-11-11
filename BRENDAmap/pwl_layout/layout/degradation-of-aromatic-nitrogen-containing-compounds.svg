@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 931.3 3814.1" width="931" height="3814" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="931.3" height="3814.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_degradation-of-aromatic-nitrogen-containing-compounds" class="pw " x="0.0" y="0.0" width="811.3" height="3678.6" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 560.9 201.5 L 560.9 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 560.9 233.5 L 560.9 344.0"/>
+<path class="link" marker-start="url(#in)" d="M 395.9 1026.5 L 395.9 893.5"/>
+<path class="link" marker-end="url(#in)" d="M 395.9 1058.5 L 395.9 1191.5"/>
+<path class="link" marker-start="url(#in)" d="M 395.9 1356.5 L 395.9 1223.5"/>
+<path class="link" marker-end="url(#in)" d="M 395.9 1388.5 L 395.9 1521.5"/>
+<path class="link" marker-start="url(#in)" d="M 395.9 2046.5 L 395.9 1913.5"/>
+<path class="link" marker-end="url(#in)" d="M 395.9 2078.5 L 395.9 2211.5"/>
+<path class="link" marker-start="url(#in)" d="M 395.9 2376.5 L 395.9 2243.5"/>
+<path class="link" marker-end="url(#in)" d="M 395.9 2408.5 L 395.9 2541.5"/>
+<path class="link" marker-start="url(#in)" d="M 395.9 2706.5 L 395.9 2573.5"/>
+<path class="link" marker-end="url(#in)" d="M 395.9 2738.5 L 395.9 2871.5"/>
+<path class="link" marker-start="url(#in)" d="M 395.9 3366.5 L 395.9 3233.5"/>
+<path class="link" marker-end="url(#in)" d="M 395.9 3398.5 L 395.9 3531.5"/>
+<path class="link" marker-start="url(#in)" d="M 259.6 3547.5 L 357.5 3547.5"/>
+<path class="link" marker-end="url(#in)" d="M 202.2 3547.5 L 97.8 3547.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 214.9 3398.5 L 81.9 3531.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 246.9 3366.5 L 379.9 3233.5"/>
+<path class="link" marker-start="url(#in)" d="M 529.0 1537.5 L 463.5 1537.5"/>
+<path class="link" marker-end="url(#in)" d="M 592.8 1531.7 L 674.6 1516.8"/>
+<path class="link" marker-end="url(#in)" d="M 592.8 1543.3 L 690.8 1561.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 543.2 389.0 L 551.1 376.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 536.5 421.0 L 557.8 531.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 521.7 389.0 L 407.7 233.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 538.1 201.5 L 505.1 178.4"/>
+<path class="link" marker-end="url(#in)" d="M 538.1 233.5 L 503.2 257.9"/>
+<path class="link" marker-start="url(#in)" d="M 373.1 1026.5 L 340.1 1003.4"/>
+<path class="link" marker-end="url(#in)" d="M 424.6 1052.4 L 464.5 1066.1"/>
+<path class="link" marker-end="url(#in)" d="M 408.9 1058.5 L 437.9 1094.4"/>
+<path class="link" marker-start="url(#in)" d="M 364.0 1361.5 L 329.0 1349.5"/>
+<path class="link" marker-start="url(#in)" d="M 383.0 1356.5 L 354.4 1321.3"/>
+<path class="link" marker-end="url(#in)" d="M 418.8 1388.5 L 453.9 1413.1"/>
+<path class="link" marker-end="url(#in)" d="M 418.8 2078.5 L 451.8 2101.6"/>
+<path class="link" marker-start="url(#in)" d="M 418.8 2376.5 L 451.8 2353.4"/>
+<path class="link" marker-start="url(#in)" d="M 373.1 2706.5 L 340.1 2683.4"/>
+<path class="link" marker-end="url(#in)" d="M 424.6 2732.4 L 464.5 2746.1"/>
+<path class="link" marker-end="url(#in)" d="M 408.9 2738.5 L 437.9 2774.4"/>
+<path class="link" marker-start="url(#in)" d="M 364.0 3394.8 L 299.5 3419.6"/>
+<path class="link" marker-start="url(#in)" d="M 237.9 3531.5 L 276.9 3441.6"/>
+<path class="link" marker-end="url(#in)" d="M 225.4 3563.5 L 208.5 3612.6"/>
+<path class="link" marker-end="url(#in)" d="M 211.2 3563.5 L 178.7 3589.7"/>
+<path class="link" marker-start="url(#in)" d="M 250.6 3398.5 L 268.1 3412.8"/>
+<path class="link" marker-end="url(#in)" d="M 223.1 3366.5 L 201.1 3321.4"/>
+<path class="link" marker-end="url(#in)" d="M 232.6 3366.5 L 238.4 3311.6"/>
+<path class="link" marker-start="url(#in)" d="M 555.4 1553.5 L 538.5 1602.6"/>
+<path class="link" marker-start="url(#in)" d="M 541.2 1553.5 L 508.7 1579.7"/>
+<path class="link" marker-start="url(#in)" d="M 510.6 389.0 L 477.6 365.9"/>
+<path class="link" marker-end="url(#in)" d="M 556.3 421.0 L 591.2 445.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(405.6,0.0)"><rect rx="10" height="31" width="535" x="-267.4" y="-15.5"/><text dominant-baseline="central">degradation of aromatic, nitrogen containing compounds</text></g>
+<g id="node2450" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid136" transform="translate(560.9,52.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=136" target="_blank">4-nitrophenyl phosphate</a></text><title></title></g>
+<g id="node2899" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid80" transform="translate(560.9,360.0)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=80" target="_blank">4-nitrophenol</a></text><title></title></g>
+<g id="node8855" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1113" transform="translate(395.9,877.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1113" target="_blank">atrazine</a></text><title></title></g>
+<g id="node8854" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid25570" transform="translate(395.9,1207.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=25570" target="_blank">hydroxyatrazine</a></text><title></title></g>
+<g id="node8845" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid9442" transform="translate(395.9,1537.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9442" target="_blank">N-isopropylammelide</a></text><title></title></g>
+<g id="node8852" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid55043" transform="translate(395.9,1897.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=55043" target="_blank">(E)-pyridine-3-aldoxime</a></text><title></title></g>
+<g id="node8844" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1784" transform="translate(395.9,2227.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1784" target="_blank">3-cyanopyridine</a></text><title></title></g>
+<g id="node12018" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid267" transform="translate(395.9,2557.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=267" target="_blank">nicotinamide</a></text><title></title></g>
+<g id="node12019" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1029" transform="translate(395.9,2887.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1029" target="_blank">nicotinate</a></text><title></title></g>
+<g id="node7624" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1749" transform="translate(395.9,3217.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1749" target="_blank">acrylonitrile</a></text><title></title></g>
+<g id="node7630" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1914" transform="translate(395.9,3547.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1914" target="_blank">acrylamide</a></text><title></title></g>
+<g id="node7628" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1915" transform="translate(65.9,3547.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1915" target="_blank">acrylate</a></text><title></title></g>
+<g id="node8865" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid10864" transform="translate(725.9,1507.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10864" target="_blank">isopropylamine</a></text><title></title></g>
+<g id="node8864" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid92978" transform="translate(725.9,1567.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92978" target="_blank">cyanurate</a></text><title></title></g>
+<g id="node2900" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid2106" transform="translate(560.9,547.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2106" target="_blank">diethyl phosphate</a></text><title></title></g>
+<g id="node2902" class="node nodeHM pw_degradation-of-aromatic-nitrogen-containing-compounds lid228" transform="translate(395.9,217.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=228" target="_blank">paraoxon</a></text><title></title></g>
+<g id="node2451" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(560.9,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.41" target="_blank">3.1.3.41</a></text><title>4-nitrophenylphosphatase</title></g>
+<g id="node8853" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(395.9,1042.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.8.1.8" target="_blank">3.8.1.8</a></text><title>atrazine chlorohydrolase</title></g>
+<g id="node8867" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(395.9,1372.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.43" target="_blank">3.5.4.43</a></text><title>hydroxydechloroatrazine ethylaminohydrolase</title></g>
+<g id="node8849" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(395.9,2062.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.8.1.2" target="_blank">4.8.1.2</a></text><title>aliphatic aldoxime dehydratase</title></g>
+<g id="node8851" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(395.9,2392.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.84" target="_blank">4.2.1.84</a></text><title>nitrile hydratase</title></g>
+<g id="node8850" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(395.9,2722.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.4" target="_blank">3.5.1.4</a></text><title>amidase</title></g>
+<g id="node7629" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(395.9,3382.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.84" target="_blank">4.2.1.84</a></text><title>nitrile hydratase</title></g>
+<g id="node7634" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(230.9,3547.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.4" target="_blank">3.5.1.4</a></text><title>amidase</title></g>
+<g id="node7625" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(230.9,3382.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.5.7" target="_blank">3.5.5.7</a></text><title>Aliphatic nitrilase</title></g>
+<g id="node8856" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(560.9,1537.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.42" target="_blank">3.5.4.42</a></text><title>N-isopropylammelide isopropylaminohydrolase</title></g>
+<g id="node2901" class="node nodeEN pw_degradation-of-aromatic-nitrogen-containing-compounds" transform="translate(533.4,405.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.8.1" target="_blank">3.1.8.1</a></text><title>aryldialkylphosphatase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2451~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(489.4,167.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2451~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid16" transform="translate(490.7,266.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node8853~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(324.4,992.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8853~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid12" transform="translate(477.0,1070.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8853~2" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid298" transform="translate(450.9,1110.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=298" target="_blank">Cl-</a></text><title></title></g>
+<g id="node8867~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(313.3,1344.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8867~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid12" transform="translate(342.0,1305.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8867~2" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid701" transform="translate(476.8,1429.1)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=701" target="_blank">ethylamine</a></text><title></title></g>
+<g id="node8849~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(467.5,2112.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8851~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(467.5,2342.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8850~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(324.4,2672.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8850~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid12" transform="translate(477.0,2750.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8850~2" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid27" transform="translate(450.9,2790.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node7634~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid12" transform="translate(203.0,3628.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7634~2" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid27" transform="translate(163.0,3602.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node7625~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(283.8,3425.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7625~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid12" transform="translate(193.3,3305.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7625~2" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid27" transform="translate(240.1,3295.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node8856~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid12" transform="translate(533.0,1618.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8856~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(493.0,1592.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2901~0" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid1" transform="translate(461.9,354.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2901~1" class="node nodeCM pw_degradation-of-aromatic-nitrogen-containing-compounds lid12" transform="translate(603.7,454.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>

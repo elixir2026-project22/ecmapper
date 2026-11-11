@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1706" height="1318" viewBox="0 0 1706.5 1317.8"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="12771.7 9815.4 723.1 970.4" width="723" height="970" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="12771.7" y="9815.4" width="723.1" height="970.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_nitrate-assimilation" class="pw pw1" x="12811.7" y="9870.9" width="643.1" height="874.9" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13319.4 10056.1 L 13318.9 10143.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13319.5 10024.1 L 13319.8 9935.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13101.9 10057.0 L 13005.1 10142.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13103.4 10025.0 L 13003.6 9928.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12987.0 10025.0 L 12987.0 9928.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12987.0 10057.0 L 12987.0 10142.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12987.0 10237.5 L 12987.0 10174.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12987.0 10269.5 L 12987.0 10347.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13142.9 10269.5 L 13009.2 10349.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13194.9 10237.5 L 13293.5 10175.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13275.3 10363.1 L 13009.2 10363.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13317.5 10347.1 L 13318.7 10175.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12987.0 10554.9 L 12987.0 10379.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12987.0 10586.9 L 12987.0 10668.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13161.5 10554.9 L 13001.5 10379.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13149.4 10586.9 L 13006.4 10672.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 13306.2 10056.1 L 13281.8 10085.4"/>
+<path class="link" marker-start="url(#in)" d="M 13337.2 10056.1 L 13368.0 10083.9"/>
+<path class="link" marker-end="url(#in)" d="M 13337.6 10024.1 L 13367.3 9997.7"/>
+<path class="link" marker-end="url(#in)" d="M 13304.1 10024.1 L 13278.3 9997.2"/>
+<path class="link" marker-start="url(#in)" d="M 13087.4 10025.0 L 13067.4 10015.1"/>
+<path class="link" marker-start="url(#in)" d="M 13153.6 10025.7 L 13166.9 10019.6"/>
+<path class="link" marker-end="url(#in)" d="M 13153.6 10055.1 L 13166.3 10060.5"/>
+<path class="link" marker-end="url(#in)" d="M 13086.4 10055.0 L 13067.6 10062.9"/>
+<path class="link" marker-start="url(#in)" d="M 12978.1 10057.0 L 12947.7 10111.6"/>
+<path class="link" marker-start="url(#in)" d="M 12953.3 10057.0 L 12922.4 10071.6"/>
+<path class="link" marker-end="url(#in)" d="M 12978.0 10025.0 L 12944.3 9965.1"/>
+<path class="link" marker-end="url(#in)" d="M 12954.5 10025.0 L 12916.4 10006.2"/>
+<path class="link" marker-start="url(#in)" d="M 12971.0 10237.5 L 12937.5 10203.9"/>
+<path class="link" marker-start="url(#in)" d="M 12953.4 10242.5 L 12890.6 10221.8"/>
+<path class="link" marker-end="url(#in)" d="M 12966.7 10269.5 L 12942.0 10289.0"/>
+<path class="link" marker-end="url(#in)" d="M 12953.4 10261.0 L 12895.4 10274.0"/>
+<path class="link" marker-start="url(#in)" d="M 13173.8 10237.5 L 13190.9 10174.0"/>
+<path class="link" marker-end="url(#in)" d="M 13143.7 10237.5 L 13110.8 10217.1"/>
+<path class="link" marker-end="url(#in)" d="M 13169.8 10269.5 L 13170.5 10303.8"/>
+<path class="link" marker-start="url(#in)" d="M 13292.6 10347.1 L 13250.6 10320.0"/>
+<path class="link" marker-start="url(#in)" d="M 13280.2 10379.1 L 13216.3 10406.6"/>
+<path class="link" marker-end="url(#in)" d="M 13328.5 10347.1 L 13361.0 10300.6"/>
+<path class="link" marker-end="url(#in)" d="M 13328.4 10379.1 L 13346.3 10405.0"/>
+<path class="link" marker-start="url(#in)" d="M 12972.5 10586.9 L 12936.0 10627.3"/>
+<path class="link" marker-start="url(#in)" d="M 13023.4 10585.8 L 13037.4 10591.5"/>
+<path class="link" marker-start="url(#in)" d="M 12950.6 10585.5 L 12932.3 10592.8"/>
+<path class="link" marker-start="url(#in)" d="M 13001.4 10586.9 L 13037.7 10627.3"/>
+<path class="link" marker-end="url(#in)" d="M 12980.6 10554.9 L 12949.6 10478.0"/>
+<path class="link" marker-end="url(#in)" d="M 13006.7 10554.9 L 13041.2 10526.9"/>
+<path class="link" marker-end="url(#in)" d="M 12993.2 10554.9 L 13023.1 10478.3"/>
+<path class="link" marker-end="url(#in)" d="M 12968.3 10554.9 L 12931.1 10523.1"/>
+<path class="link" marker-start="url(#in)" d="M 13201.5 10586.9 L 13285.7 10639.8"/>
+<path class="link" marker-start="url(#in)" d="M 13140.7 10586.9 L 13132.8 10590.5"/>
+<path class="link" marker-start="url(#in)" d="M 13163.8 10586.9 L 13132.9 10627.3"/>
+<path class="link" marker-end="url(#in)" d="M 13212.5 10560.2 L 13275.7 10541.5"/>
+<path class="link" marker-end="url(#in)" d="M 13175.1 10554.9 L 13171.8 10499.8"/>
+<path class="link" marker-end="url(#in)" d="M 13186.3 10554.9 L 13223.0 10497.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_nitrate-assimilation" transform="translate(13133.2,9870.9)"><rect rx="10" height="31" width="180" x="-90.0" y="-15.5"/><text dominant-baseline="central">nitrate assimilation</text></g>
+<g id="node1192" class="node nodeHM pw_nitrate-assimilation lid6051" transform="translate(12987.0,10684.1)"><rect height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6051" target="_blank">N2</a></text><title>nitrogen</title></g>
+<g id="node2711" class="node nodeHM pw_nitrate-assimilation lid168" transform="translate(13319.8,9919.6)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=168" target="_blank">NO2-</a></text><title>nitrite</title></g>
+<g id="node2713" class="node nodeHM pw_nitrate-assimilation lid85" transform="translate(13318.8,10159.2)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=85" target="_blank">NH2OH</a></text><title>hydroxylamine</title></g>
+<g id="node4249" class="node nodeHM pw_nitrate-assimilation lid27" transform="translate(12987.0,10363.2)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node6317" class="node nodeHM pw_nitrate-assimilation lid168" transform="translate(12987.0,10158.5)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=168" target="_blank">NO2</a></text><title>nitrite</title></g>
+<g id="node6319" class="node nodeHM pw_nitrate-assimilation lid308" transform="translate(12987.0,9912.8)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=308" target="_blank">NO3</a></text><title>Nitrate</title></g>
+<g id="node2712" class="node nodeEN pw_nitrate-assimilation" transform="translate(13319.5,10040.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.2.6" target="_blank">1.7.2.6</a></text><title>hydroxylamine dehydrogenase</title></g>
+<g id="node10851" class="node nodeEN pw_nitrate-assimilation" transform="translate(13120.0,10041.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.7.2" target="_blank">1.7.7.2</a></text><title>ferredoxin-nitrate reductase</title></g>
+<g id="node6318" class="node nodeEN pw_nitrate-assimilation" transform="translate(12987.0,10041.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.99.-" target="_blank">1.7.99.-</a></text><title>nitrite:(acceptor) oxidoreductase</title></g>
+<g id="node6316" class="node nodeEN pw_nitrate-assimilation" transform="translate(12987.0,10253.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.7.1" target="_blank">1.7.7.1</a></text><title>ferredoxin-nitrite reductase</title></g>
+<g id="node10856" class="node nodeEN pw_nitrate-assimilation" transform="translate(13169.5,10253.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.99.1" target="_blank">1.7.99.1</a></text><title>hydroxylamine reductase</title></g>
+<g id="node2714" class="node nodeEN pw_nitrate-assimilation" transform="translate(13317.4,10363.1)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.39" target="_blank">1.14.99.39</a></text><title>ammonia monooxygenase</title></g>
+<g id="node3508" class="node nodeEN pw_nitrate-assimilation" transform="translate(12987.0,10570.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.18.6.1" target="_blank">1.18.6.1</a></text><title>nitrogenase</title></g>
+<g id="node2698" class="node nodeEN pw_nitrate-assimilation" transform="translate(13176.1,10570.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.19.6.1" target="_blank">1.19.6.1</a></text><title>nitrogenase (flavodoxin)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2692" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(13120.7,10643.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2693" class="node nodeCM pw_nitrate-assimilation lid16" transform="translate(13233.2,10481.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node2694" class="node nodeCM pw_nitrate-assimilation lid13" transform="translate(13170.9,10483.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node2695" class="node nodeCM pw_nitrate-assimilation lid4" transform="translate(13110.6,10600.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node2696" class="node nodeCM pw_nitrate-assimilation lid2297" transform="translate(13329.9,10525.5)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+<g id="node2697" class="node nodeCM pw_nitrate-assimilation lid3252" transform="translate(13311.1,10655.8)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node2703" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(13262.9,9981.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2704" class="node nodeCM pw_nitrate-assimilation lid530" transform="translate(13385.4,9981.7)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=530" target="_blank">ferrocytochrome c</a></text><title>ferrocytochrome c</title></g>
+<g id="node2705" class="node nodeCM pw_nitrate-assimilation lid313" transform="translate(13385.7,10099.9)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=313" target="_blank">ferricytochrome c</a></text><title>ferricytochrome c</title></g>
+<g id="node2706" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(13268.4,10101.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2707" class="node nodeCM pw_nitrate-assimilation lid200969" transform="translate(13357.3,10421.0)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200969" target="_blank">an acceptor</a></text><title>an acceptor</title></g>
+<g id="node2708" class="node nodeCM pw_nitrate-assimilation lid200967" transform="translate(13179.1,10422.6)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200967" target="_blank">a reduced acceptor</a></text><title>a reduced acceptor</title></g>
+<g id="node2709" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(13372.1,10284.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2710" class="node nodeCM pw_nitrate-assimilation lid9" transform="translate(13231.1,10307.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node3500" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(13052.0,10643.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3501" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(12912.8,10600.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3502" class="node nodeCM pw_nitrate-assimilation lid4" transform="translate(13059.7,10600.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3503" class="node nodeCM pw_nitrate-assimilation lid13" transform="translate(13060.9,10510.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3504" class="node nodeCM pw_nitrate-assimilation lid16" transform="translate(13029.3,10462.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node3505" class="node nodeCM pw_nitrate-assimilation lid289" transform="translate(12943.2,10462.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title>oxidized ferredoxin</title></g>
+<g id="node3506" class="node nodeCM pw_nitrate-assimilation lid265" transform="translate(12921.6,10643.3)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title>reduced ferredoxin</title></g>
+<g id="node3507" class="node nodeCM pw_nitrate-assimilation lid361" transform="translate(12912.4,10507.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=361" target="_blank">H2</a></text><title>H2</title></g>
+<g id="node6320" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(12871.1,10215.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6321" class="node nodeCM pw_nitrate-assimilation lid265" transform="translate(12921.6,10187.9)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title>reduced ferredoxin</title></g>
+<g id="node6322" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(12873.1,10279.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6323" class="node nodeCM pw_nitrate-assimilation lid289" transform="translate(12921.8,10305.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title>oxidized ferredoxin</title></g>
+<g id="node6324" class="node nodeCM pw_nitrate-assimilation lid530" transform="translate(12888.7,10087.6)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=530" target="_blank">ferrocytochrome c</a></text><title>ferrocytochrome c</title></g>
+<g id="node6325" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(12935.2,9949.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6326" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(12938.8,10127.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6327" class="node nodeCM pw_nitrate-assimilation lid313" transform="translate(12883.8,9990.2)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=313" target="_blank">ferricytochrome c</a></text><title>ferricytochrome c</title></g>
+<g id="node10852" class="node nodeCM pw_nitrate-assimilation lid265" transform="translate(13197.6,10005.6)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title>reduced ferredoxin</title></g>
+<g id="node10853" class="node nodeCM pw_nitrate-assimilation lid289" transform="translate(13194.2,10072.3)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title>oxidized ferredoxin</title></g>
+<g id="node10854" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(13048.0,10005.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10855" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(13045.4,10072.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10857" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(13170.8,10319.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10858" class="node nodeCM pw_nitrate-assimilation lid1661" transform="translate(13195.2,10158.0)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title>reduced electron acceptor</title></g>
+<g id="node10859" class="node nodeCM pw_nitrate-assimilation lid12937" transform="translate(13085.0,10201.1)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12937" target="_blank">oxidized electron acceptor</a></text><title>oxidized electron acceptor</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="803.1" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 903.4 1277.8" width="903" height="1278" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="903.4" height="1277.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_nitrate-assimilation" class="pw " x="0.0" y="0.0" width="823.4" height="1182.3" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 372.4 206.8 L 324.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 372.6 238.2 C 361.3 270.6 335.1 345.6 323.8 377.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 261.3 207.4 C 273.3 175.0 300.9 100.1 312.9 67.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 261.3 238.2 C 273.3 270.6 300.9 345.6 312.9 377.8"/>
+<path class="link" marker-start="url(#in)" d="M 318.5 547.4 L 318.5 409.1"/>
+<path class="link" marker-end="url(#in)" d="M 318.6 579.4 L 320.4 778.8"/>
+<path class="link" marker-end="url(#in)" d="M 170.5 877.3 C 208.6 856.4 275.7 819.5 305.5 803.0"/>
+<path class="link" marker-start="url(#in)" d="M 142.9 908.6 L 145.0 1078.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 316.8 992.0 C 317.5 952.9 319.5 849.5 320.2 810.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 285.0 1023.3 L 157.7 1088.0"/>
+<path class="link" marker-end="url(#in)" d="M 456.8 762.8 L 336.3 791.1"/>
+<path class="link" marker-start="url(#in)" d="M 520.7 751.3 L 636.8 736.5"/>
+<path class="link" marker-start="url(#in)" d="M 450.4 802.5 L 336.3 795.7"/>
+<path class="link" marker-end="url(#in)" d="M 527.0 788.8 L 636.8 742.9"/>
+<path class="link" marker-start="url(#in)" d="M 659.0 579.4 L 659.0 717.6"/>
+<path class="link" marker-end="url(#in)" d="M 659.0 547.4 L 659.0 409.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 349.4 211.6 L 316.3 198.7"/>
+<path class="link" marker-start="url(#in)" d="M 365.3 206.8 L 336.6 170.6"/>
+<path class="link" marker-end="url(#in)" d="M 406.7 232.7 L 441.5 244.7"/>
+<path class="link" marker-end="url(#in)" d="M 391.0 238.8 L 420.1 274.7"/>
+<path class="link" marker-start="url(#in)" d="M 271.8 206.8 L 311.6 167.2"/>
+<path class="link" marker-start="url(#in)" d="M 242.7 206.8 L 199.4 153.3"/>
+<path class="link" marker-end="url(#in)" d="M 287.6 236.0 L 322.5 250.4"/>
+<path class="link" marker-end="url(#in)" d="M 268.6 238.8 L 311.9 292.3"/>
+<path class="link" marker-start="url(#in)" d="M 289.8 553.7 L 256.6 542.4"/>
+<path class="link" marker-start="url(#in)" d="M 305.4 547.4 L 276.7 512.3"/>
+<path class="link" marker-end="url(#in)" d="M 289.8 573.4 L 255.2 585.5"/>
+<path class="link" marker-end="url(#in)" d="M 305.7 579.4 L 276.7 615.5"/>
+<path class="link" marker-start="url(#in)" d="M 174.6 902.6 L 205.3 912.2"/>
+<path class="link" marker-start="url(#in)" d="M 161.7 908.6 L 205.8 945.8"/>
+<path class="link" marker-start="url(#in)" d="M 145.1 908.6 L 153.2 961.4"/>
+<path class="link" marker-start="url(#in)" d="M 135.8 908.6 L 115.0 956.9"/>
+<path class="link" marker-end="url(#in)" d="M 110.8 882.7 L 78.4 872.6"/>
+<path class="link" marker-end="url(#in)" d="M 128.8 876.6 L 99.0 842.4"/>
+<path class="link" marker-end="url(#in)" d="M 140.2 876.6 L 132.2 823.9"/>
+<path class="link" marker-end="url(#in)" d="M 149.6 876.6 L 169.7 829.9"/>
+<path class="link" marker-start="url(#in)" d="M 284.9 991.3 L 237.3 967.1"/>
+<path class="link" marker-start="url(#in)" d="M 309.1 991.3 L 252.2 867.6"/>
+<path class="link" marker-start="url(#in)" d="M 284.5 1001.3 L 168.1 979.7"/>
+<path class="link" marker-end="url(#in)" d="M 340.8 1023.3 L 373.7 1044.9"/>
+<path class="link" marker-end="url(#in)" d="M 323.8 1023.3 L 366.5 1116.3"/>
+<path class="link" marker-end="url(#in)" d="M 314.4 1023.3 L 307.6 1076.3"/>
+<path class="link" marker-start="url(#in)" d="M 496.1 739.3 L 532.9 659.6"/>
+<path class="link" marker-end="url(#in)" d="M 487.3 771.3 L 480.6 847.0"/>
+<path class="link" marker-end="url(#in)" d="M 475.0 771.3 L 445.5 805.5"/>
+<path class="link" marker-start="url(#in)" d="M 488.2 820.8 L 485.8 888.6"/>
+<path class="link" marker-start="url(#in)" d="M 474.5 820.8 L 420.7 881.0"/>
+<path class="link" marker-end="url(#in)" d="M 450.4 816.1 L 447.5 816.9"/>
+<path class="link" marker-end="url(#in)" d="M 501.3 788.8 L 541.7 737.3"/>
+<path class="link" marker-start="url(#in)" d="M 687.7 573.2 L 725.9 586.4"/>
+<path class="link" marker-start="url(#in)" d="M 672.0 579.4 L 715.3 632.9"/>
+<path class="link" marker-end="url(#in)" d="M 630.4 553.9 L 603.6 545.1"/>
+<path class="link" marker-end="url(#in)" d="M 646.4 547.4 L 617.6 510.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_nitrate-assimilation" transform="translate(411.7,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">nitrate assimilation</text></g>
+<g id="node6319" class="node nodeHM pw_nitrate-assimilation lid308" transform="translate(318.5,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=308" target="_blank">NO3</a></text><title></title></g>
+<g id="node6317" class="node nodeHM pw_nitrate-assimilation lid168" transform="translate(318.5,393.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=168" target="_blank">NO2</a></text><title></title></g>
+<g id="node4249" class="node nodeHM pw_nitrate-assimilation lid27" transform="translate(320.5,794.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node1192" class="node nodeHM pw_nitrate-assimilation lid6051" transform="translate(145.2,1094.3)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6051" target="_blank">N2</a></text><title></title></g>
+<g id="node2713" class="node nodeHM pw_nitrate-assimilation lid85" transform="translate(659.0,733.6)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=85" target="_blank">NH2OH</a></text><title></title></g>
+<g id="node2711" class="node nodeHM pw_nitrate-assimilation lid168" transform="translate(659.0,393.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=168" target="_blank">NO2</a></text><title></title></g>
+<g id="node10851" class="node nodeEN pw_nitrate-assimilation" transform="translate(378.0,222.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.7.2" target="_blank">1.7.7.2</a></text><title>ferredoxin-nitrate reductase; nitrite:(acceptor) oxidoreductase</title></g>
+<g id="node6318" class="node nodeEN pw_nitrate-assimilation" transform="translate(255.6,222.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.99.-" target="_blank">1.7.99.-</a></text><title>ferredoxin-nitrate reductase; nitrite:(acceptor) oxidoreductase</title></g>
+<g id="node6316" class="node nodeEN pw_nitrate-assimilation" transform="translate(318.5,563.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.7.1" target="_blank">1.7.7.1</a></text><title>ferredoxin-nitrite reductase</title></g>
+<g id="node3508" class="node nodeEN pw_nitrate-assimilation" transform="translate(142.7,892.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.18.6.1" target="_blank">1.18.6.1</a></text><title>nitrogenase; nitrogenase (flavodoxin)</title></g>
+<g id="node2698" class="node nodeEN pw_nitrate-assimilation" transform="translate(316.5,1007.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.19.6.1" target="_blank">1.19.6.1</a></text><title>nitrogenase; nitrogenase (flavodoxin)</title></g>
+<g id="node10856" class="node nodeEN pw_nitrate-assimilation" transform="translate(488.8,755.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.99.1" target="_blank">1.7.99.1</a></text><title>hydroxylamine reductase; ammonia monooxygenase</title></g>
+<g id="node2714" class="node nodeEN pw_nitrate-assimilation" transform="translate(488.8,804.8)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.39" target="_blank">1.14.99.39</a></text><title>hydroxylamine reductase; ammonia monooxygenase</title></g>
+<g id="node2712" class="node nodeEN pw_nitrate-assimilation" transform="translate(659.0,563.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.2.6" target="_blank">1.7.2.6</a></text><title>hydroxylamine dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10851~0" class="node nodeCM pw_nitrate-assimilation lid265" transform="translate(290.8,188.8)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node10851~1" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(324.1,154.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10851~2" class="node nodeCM pw_nitrate-assimilation lid289" transform="translate(463.7,252.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node10851~3" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(433.0,290.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6318~1" class="node nodeCM pw_nitrate-assimilation lid530" transform="translate(186.4,137.3)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=530" target="_blank">ferrocytochrome c</a></text><title></title></g>
+<g id="node6318~2" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(338.2,256.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6318~3" class="node nodeCM pw_nitrate-assimilation lid313" transform="translate(324.9,308.3)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=313" target="_blank">ferricytochrome c</a></text><title></title></g>
+<g id="node6316~0" class="node nodeCM pw_nitrate-assimilation lid265" transform="translate(231.1,533.8)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node6316~1" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(264.2,497.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6316~2" class="node nodeCM pw_nitrate-assimilation lid289" transform="translate(233.0,593.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node6316~3" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(263.9,631.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3508~0" class="node nodeCM pw_nitrate-assimilation lid265" transform="translate(230.7,920.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node3508~3" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(108.1,972.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3508~4" class="node nodeCM pw_nitrate-assimilation lid289" transform="translate(56.2,865.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node3508~5" class="node nodeCM pw_nitrate-assimilation lid13" transform="translate(85.1,826.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3508~6" class="node nodeCM pw_nitrate-assimilation lid16" transform="translate(129.8,807.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node3508~7" class="node nodeCM pw_nitrate-assimilation lid361" transform="translate(176.6,813.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=361" target="_blank">H2</a></text><title></title></g>
+<g id="node2698~0" class="node nodeCM pw_nitrate-assimilation lid4" transform="translate(221.5,959.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2698~1" class="node nodeCM pw_nitrate-assimilation lid1892" transform="translate(244.9,851.6)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node2698~2" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(155.6,977.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2698~3" class="node nodeCM pw_nitrate-assimilation lid13" transform="translate(389.4,1055.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2698~4" class="node nodeCM pw_nitrate-assimilation lid2297" transform="translate(373.9,1132.3)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node2698~5" class="node nodeCM pw_nitrate-assimilation lid16" transform="translate(305.5,1092.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10856~0" class="node nodeCM pw_nitrate-assimilation lid1661" transform="translate(540.3,643.6)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node10856~1" class="node nodeCM pw_nitrate-assimilation lid374" transform="translate(479.2,863.0)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node10856~2" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(431.7,821.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2714~0" class="node nodeCM pw_nitrate-assimilation lid9" transform="translate(485.2,904.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2714~1" class="node nodeCM pw_nitrate-assimilation lid200967" transform="translate(406.4,897.0)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200967" target="_blank">a reduced acceptor</a></text><title></title></g>
+<g id="node2714~3" class="node nodeCM pw_nitrate-assimilation lid200969" transform="translate(554.3,721.3)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200969" target="_blank">an acceptor</a></text><title></title></g>
+<g id="node2712~0" class="node nodeCM pw_nitrate-assimilation lid1" transform="translate(741.6,591.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2712~1" class="node nodeCM pw_nitrate-assimilation lid313" transform="translate(728.3,648.9)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=313" target="_blank">ferricytochrome c</a></text><title></title></g>
+<g id="node2712~2" class="node nodeCM pw_nitrate-assimilation lid530" transform="translate(555.0,529.1)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=530" target="_blank">ferrocytochrome c</a></text><title></title></g>
+<g id="node2712~3" class="node nodeCM pw_nitrate-assimilation lid12" transform="translate(605.1,495.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>
+<text x="813.1" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+neato)</text></svg>

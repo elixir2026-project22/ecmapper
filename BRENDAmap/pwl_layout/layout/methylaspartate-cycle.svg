@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2219.7 2432.4" width="2220" height="2432" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2219.7" height="2432.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_methylaspartate-cycle" class="pw " x="0.0" y="0.0" width="2099.7" height="2296.9" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1083.9 55.9 L 984.3 53.3"/>
+<path class="link" marker-end="url(#in)" d="M 1141.2 57.1 L 1219.2 58.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1396.4 58.8 L 1315.4 58.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1449.6 74.8 L 1552.5 142.0"/>
+<path class="link" marker-start="url(#in)" d="M 1699.9 240.8 L 1600.7 174.0"/>
+<path class="link" marker-end="url(#in)" d="M 1737.8 272.8 L 1820.5 366.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1944.5 512.8 L 1848.1 398.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1957.8 544.8 L 1957.2 672.2"/>
+<path class="link" marker-end="url(#in)" d="M 1955.4 830.0 L 1956.9 704.2"/>
+<path class="link" marker-start="url(#in)" d="M 1955.1 862.0 L 1954.3 994.2"/>
+<path class="link" marker-start="url(#in)" d="M 1954.2 1146.9 L 1954.2 1026.2"/>
+<path class="link" marker-end="url(#in)" d="M 1943.7 1178.9 L 1867.3 1294.6"/>
+<path class="link" marker-start="url(#in)" d="M 1772.3 1420.6 L 1844.5 1326.6"/>
+<path class="link" marker-end="url(#in)" d="M 1745.5 1452.6 L 1656.7 1550.6"/>
+<path class="link" marker-start="url(#in)" d="M 1541.6 1568.8 L 1574.6 1568.1"/>
+<path class="link" marker-end="url(#in)" d="M 1471.3 1569.6 L 1440.3 1569.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 807.0 1472.5 L 869.6 1472.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 743.2 1472.6 L 689.4 1472.6"/>
+<path class="link" marker-start="url(#in)" d="M 503.2 1421.8 L 580.0 1456.6"/>
+<path class="link" marker-end="url(#in)" d="M 454.1 1391.4 L 374.6 1317.1"/>
+<path class="link" marker-start="url(#in)" d="M 306.8 1165.6 L 351.5 1285.1"/>
+<path class="link" marker-end="url(#in)" d="M 301.0 1133.6 L 302.1 1003.3"/>
+<path class="link" marker-start="url(#in)" d="M 302.2 854.1 L 302.2 971.3"/>
+<path class="link" marker-end="url(#in)" d="M 320.7 822.1 L 414.5 740.8"/>
+<path class="link" marker-start="url(#in)" d="M 544.5 673.3 L 464.9 710.1"/>
+<path class="link" marker-end="url(#in)" d="M 601.8 660.0 L 706.2 660.0"/>
+<path class="link" marker-start="url(#in)" d="M 739.4 494.7 L 738.3 644.0"/>
+<path class="link" marker-end="url(#in)" d="M 739.6 462.7 L 739.6 335.0"/>
+<path class="link" marker-start="url(#in)" d="M 812.0 142.4 L 766.2 72.3"/>
+<path class="link" marker-start="url(#in)" d="M 814.2 174.4 L 747.8 303.0"/>
+<path class="link" marker-end="url(#in)" d="M 842.6 142.4 L 935.5 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1486.8 1257.5 L 1360.1 1553.6"/>
+<path class="link" marker-end="url(#in)" d="M 1473.1 1225.5 L 1334.8 1117.7"/>
+<path class="link" marker-end="url(#in)" d="M 1470.3 1257.5 L 877.2 1663.8"/>
+<path class="link" marker-start="url(#in)" d="M 194.0 2134.0 L 71.9 2231.7"/>
+<path class="link" marker-start="url(#in)" d="M 237.3 2102.0 L 830.4 1695.8"/>
+<path class="link" marker-end="url(#in)" d="M 232.1 2102.0 L 925.6 1488.5"/>
+<path class="link" marker-start="url(#in)" d="M 809.8 839.0 L 878.1 982.3"/>
+<path class="link" marker-end="url(#in)" d="M 795.9 807.0 L 744.4 676.0"/>
+<path class="link" marker-start="url(#in)" d="M 959.8 1160.0 L 893.0 1014.3"/>
+<path class="link" marker-end="url(#in)" d="M 935.2 1190.1 L 919.0 1197.3"/>
+<path class="link" marker-end="url(#in)" d="M 999.1 1169.2 L 1275.9 1110.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 1141.2 69.2 L 1242.6 113.6"/>
+<path class="link" marker-start="url(#in)" d="M 1396.4 69.5 L 1274.1 114.7"/>
+<path class="link" marker-start="url(#in)" d="M 1691.7 264.7 L 1657.9 273.2"/>
+<path class="link" marker-end="url(#in)" d="M 1751.4 240.8 L 1779.9 224.3"/>
+<path class="link" marker-end="url(#in)" d="M 1755.6 257.9 L 1795.2 259.3"/>
+<path class="link" marker-start="url(#in)" d="M 1929.2 530.3 L 1888.0 532.3"/>
+<path class="link" marker-start="url(#in)" d="M 1929.3 512.8 L 1897.3 495.0"/>
+<path class="link" marker-end="url(#in)" d="M 1986.6 527.4 L 2027.8 525.4"/>
+<path class="link" marker-end="url(#in)" d="M 1986.5 544.8 L 2018.4 562.7"/>
+<path class="link" marker-end="url(#in)" d="M 1925.5 1171.6 L 1886.4 1183.6"/>
+<path class="link" marker-start="url(#in)" d="M 1755.8 1420.6 L 1737.9 1354.2"/>
+<path class="link" marker-end="url(#in)" d="M 1728.1 1433.9 L 1698.5 1431.3"/>
+<path class="link" marker-start="url(#in)" d="M 1517.4 1553.6 L 1544.9 1513.5"/>
+<path class="link" marker-start="url(#in)" d="M 329.5 1154.1 L 371.4 1160.7"/>
+<path class="link" marker-start="url(#in)" d="M 319.2 1165.6 L 353.0 1195.0"/>
+<path class="link" marker-end="url(#in)" d="M 272.1 1145.0 L 230.3 1138.4"/>
+<path class="link" marker-end="url(#in)" d="M 282.4 1133.6 L 250.6 1105.9"/>
+<path class="link" marker-start="url(#in)" d="M 310.9 854.1 L 339.9 907.4"/>
+<path class="link" marker-end="url(#in)" d="M 293.5 822.1 L 265.3 770.2"/>
+<path class="link" marker-start="url(#in)" d="M 566.4 676.0 L 545.8 724.4"/>
+<path class="link" marker-start="url(#in)" d="M 762.2 494.7 L 793.3 516.7"/>
+<path class="link" marker-end="url(#in)" d="M 762.6 462.7 L 793.7 441.2"/>
+<path class="link" marker-start="url(#in)" d="M 821.9 174.4 L 820.0 229.7"/>
+<path class="link" marker-end="url(#in)" d="M 823.1 142.4 L 825.0 87.1"/>
+<path class="link" marker-start="url(#in)" d="M 216.8 2134.0 L 226.4 2188.0"/>
+<path class="link" marker-end="url(#in)" d="M 206.2 2102.0 L 183.4 2055.5"/>
+<path class="link" marker-end="url(#in)" d="M 215.6 2102.0 L 221.2 2048.8"/>
+<path class="link" marker-start="url(#in)" d="M 792.4 839.0 L 766.4 881.6"/>
+<path class="link" marker-end="url(#in)" d="M 770.2 816.6 L 732.3 808.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_methylaspartate-cycle" transform="translate(1049.9,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">methylaspartate cycle</text></g>
+<g id="node12268" class="node nodeHM pw_methylaspartate-cycle lid131" transform="translate(955.7,52.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=131" target="_blank">citrate</a></text><title></title></g>
+<g id="node12276" class="node nodeHM pw_methylaspartate-cycle lid1230" transform="translate(1267.3,58.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1230" target="_blank">cis-aconitate</a></text><title></title></g>
+<g id="node12272" class="node nodeHM pw_methylaspartate-cycle lid279" transform="translate(1577.0,158.0)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=279" target="_blank">isocitrate</a></text><title></title></g>
+<g id="node12265" class="node nodeHM pw_methylaspartate-cycle lid34" transform="translate(1834.7,382.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node12297" class="node nodeHM pw_methylaspartate-cycle lid41" transform="translate(1957.1,688.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node12263" class="node nodeHM pw_methylaspartate-cycle lid4538" transform="translate(1954.2,1010.2)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4538" target="_blank">L-threo-3-Me-Asp</a></text><title></title></g>
+<g id="node12275" class="node nodeHM pw_methylaspartate-cycle lid3214" transform="translate(1856.8,1310.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3214" target="_blank">mesaconate</a></text><title></title></g>
+<g id="node12312" class="node nodeHM pw_methylaspartate-cycle lid19810" transform="translate(1642.2,1566.6)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19810" target="_blank">2-methylfumaryl-CoA</a></text><title></title></g>
+<g id="node12315" class="node nodeHM pw_methylaspartate-cycle lid19809" transform="translate(1353.3,1569.6)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19809" target="_blank">(2R,3S)-2-methylmalyl-CoA</a></text><title></title></g>
+<g id="node12317" class="node nodeHM pw_methylaspartate-cycle lid2455" transform="translate(943.6,1472.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2455" target="_blank">(S)-methylmalonyl-CoA</a></text><title></title></g>
+<g id="node12307" class="node nodeHM pw_methylaspartate-cycle lid21229" transform="translate(615.3,1472.6)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21229" target="_blank">(R)-methylmalonyl-CoA</a></text><title></title></g>
+<g id="node12301" class="node nodeHM pw_methylaspartate-cycle lid224" transform="translate(357.5,1301.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node12264" class="node nodeHM pw_methylaspartate-cycle lid58" transform="translate(302.2,987.3)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node12305" class="node nodeHM pw_methylaspartate-cycle lid170" transform="translate(433.0,724.8)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170" target="_blank">fumarate</a></text><title></title></g>
+<g id="node12266" class="node nodeHM pw_methylaspartate-cycle lid200" transform="translate(738.2,660.0)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200" target="_blank">L-malate</a></text><title></title></g>
+<g id="node12286" class="node nodeHM pw_methylaspartate-cycle lid57" transform="translate(739.6,319.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57" target="_blank">oxaloacetate</a></text><title></title></g>
+<g id="node12322" class="node nodeHM pw_methylaspartate-cycle lid29" transform="translate(755.7,56.3)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node12277" class="node nodeHM pw_methylaspartate-cycle lid101" transform="translate(1314.3,1101.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101" target="_blank">glyoxylate</a></text><title></title></g>
+<g id="node12278" class="node nodeHM pw_methylaspartate-cycle lid782" transform="translate(853.8,1679.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title></title></g>
+<g id="node12318" class="node nodeHM pw_methylaspartate-cycle lid195" transform="translate(53.0,2246.9)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title></title></g>
+<g id="node12280" class="node nodeHM pw_methylaspartate-cycle lid12124" transform="translate(885.7,998.3)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12124" target="_blank">malyl-CoA</a></text><title></title></g>
+<g id="node12330" class="node nodeHM pw_methylaspartate-cycle lid29" transform="translate(893.5,1208.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node12261" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1112.5,56.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.3" target="_blank">4.2.1.3</a></text><title>aconitate hydratase</title></g>
+<g id="node12316" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1425.1,58.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.3" target="_blank">4.2.1.3</a></text><title>aconitate hydratase</title></g>
+<g id="node12260" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1723.6,256.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.42" target="_blank">1.1.1.42</a></text><title>isocitrate dehydrogenase (NADP+)</title></g>
+<g id="node12267" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1957.9,528.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.2" target="_blank">1.4.1.2</a></text><title>glutamate dehydrogenase</title></g>
+<g id="node12269" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1955.2,846.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.1" target="_blank">5.4.99.1</a></text><title>methylaspartate mutase</title></g>
+<g id="node12274" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1954.2,1162.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.2" target="_blank">4.3.1.2</a></text><title>methylaspartate ammonia-lyase</title></g>
+<g id="node12320" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1760.0,1436.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.26" target="_blank">2.8.3.26</a></text><title>succinyl-CoA:mesaconate CoA transferase</title></g>
+<g id="node12262" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1506.4,1569.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.148" target="_blank">4.2.1.148</a></text><title>2-methylfumaryl-CoA hydratase</title></g>
+<g id="node12296" class="node nodeEN pw_methylaspartate-cycle" transform="translate(775.1,1472.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.1" target="_blank">5.1.99.1</a></text><title>methylmalonyl-CoA epimerase</title></g>
+<g id="node12311" class="node nodeEN pw_methylaspartate-cycle" transform="translate(471.3,1407.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.2" target="_blank">5.4.99.2</a></text><title>methylmalonyl-CoA mutase</title></g>
+<g id="node12302" class="node nodeEN pw_methylaspartate-cycle" transform="translate(300.8,1149.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.5" target="_blank">6.2.1.5</a></text><title>succinate-CoA ligase (ADP-forming)</title></g>
+<g id="node12304" class="node nodeEN pw_methylaspartate-cycle" transform="translate(302.2,838.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.1" target="_blank">1.3.5.1</a></text><title>succinate dehydrogenase</title></g>
+<g id="node12270" class="node nodeEN pw_methylaspartate-cycle" transform="translate(573.2,660.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.2" target="_blank">4.2.1.2</a></text><title>fumarate hydratase</title></g>
+<g id="node12290" class="node nodeEN pw_methylaspartate-cycle" transform="translate(739.6,478.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.37" target="_blank">1.1.1.37</a></text><title>malate dehydrogenase</title></g>
+<g id="node12303" class="node nodeEN pw_methylaspartate-cycle" transform="translate(822.5,158.4)"><rect rx="15" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.3.1" target="_blank">2.3.3.1/2.3.3.16</a></text><title>citrate (Si)-synthase/citrate synthase (unknown stereospecificity)</title></g>
+<g id="node12259" class="node nodeEN pw_methylaspartate-cycle" transform="translate(1493.6,1241.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.24" target="_blank">4.1.3.24</a></text><title>malyl-CoA lyase</title></g>
+<g id="node12295" class="node nodeEN pw_methylaspartate-cycle" transform="translate(214.0,2118.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.4.1.3" target="_blank">6.4.1.3</a></text><title>propionyl-CoA carboxylase</title></g>
+<g id="node12310" class="node nodeEN pw_methylaspartate-cycle" transform="translate(802.2,823.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.30" target="_blank">3.1.2.30</a></text><title>(3S)-malyl-CoA thioesterase</title></g>
+<g id="node12294" class="node nodeEN pw_methylaspartate-cycle" transform="translate(967.2,1176.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.24" target="_blank">4.1.3.24</a></text><title>malyl-CoA lyase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node12261~0" class="node nodeCM pw_methylaspartate-cycle lid1" transform="translate(1258.4,120.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12260~0" class="node nodeCM pw_methylaspartate-cycle lid10" transform="translate(1635.7,278.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node12260~1" class="node nodeCM pw_methylaspartate-cycle lid5" transform="translate(1802.1,211.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node12260~2" class="node nodeCM pw_methylaspartate-cycle lid28" transform="translate(1810.9,259.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node12267~0" class="node nodeCM pw_methylaspartate-cycle lid8" transform="translate(1869.0,533.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12267~1" class="node nodeCM pw_methylaspartate-cycle lid27" transform="translate(1881.6,486.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node12267~2" class="node nodeCM pw_methylaspartate-cycle lid7" transform="translate(2046.8,524.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12267~3" class="node nodeCM pw_methylaspartate-cycle lid1" transform="translate(2034.1,571.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12274~0" class="node nodeCM pw_methylaspartate-cycle lid27" transform="translate(1870.7,1188.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node12320~0" class="node nodeCM pw_methylaspartate-cycle lid224" transform="translate(1733.6,1338.2)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node12320~1" class="node nodeCM pw_methylaspartate-cycle lid58" transform="translate(1663.3,1428.2)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node12262~0" class="node nodeCM pw_methylaspartate-cycle lid1" transform="translate(1555.8,1497.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12302~0" class="node nodeCM pw_methylaspartate-cycle lid13" transform="translate(387.1,1163.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node12302~1" class="node nodeCM pw_methylaspartate-cycle lid16" transform="translate(365.5,1205.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node12302~2" class="node nodeCM pw_methylaspartate-cycle lid4" transform="translate(214.5,1135.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node12302~3" class="node nodeCM pw_methylaspartate-cycle lid18" transform="translate(234.9,1092.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node12304~0" class="node nodeCM pw_methylaspartate-cycle lid1992" transform="translate(348.6,923.4)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node12304~1" class="node nodeCM pw_methylaspartate-cycle lid2695" transform="translate(256.6,754.2)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title></title></g>
+<g id="node12270~0" class="node nodeCM pw_methylaspartate-cycle lid1" transform="translate(539.0,740.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12290~0" class="node nodeCM pw_methylaspartate-cycle lid7" transform="translate(812.2,530.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12290~1" class="node nodeCM pw_methylaspartate-cycle lid8" transform="translate(812.7,428.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12303~0" class="node nodeCM pw_methylaspartate-cycle lid1" transform="translate(819.5,245.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12303~1" class="node nodeCM pw_methylaspartate-cycle lid18" transform="translate(825.5,71.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node12295~0" class="node nodeCM pw_methylaspartate-cycle lid4" transform="translate(229.2,2204.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node12295~1" class="node nodeCM pw_methylaspartate-cycle lid13" transform="translate(175.6,2039.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node12295~2" class="node nodeCM pw_methylaspartate-cycle lid16" transform="translate(222.9,2032.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node12310~0" class="node nodeCM pw_methylaspartate-cycle lid1" transform="translate(756.6,897.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12310~1" class="node nodeCM pw_methylaspartate-cycle lid18" transform="translate(716.5,805.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+</g></svg>

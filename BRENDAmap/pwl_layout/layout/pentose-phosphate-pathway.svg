@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1435.3 1705.4" width="1435" height="1705" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1435.3" height="1705.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_pentose-phosphate-pathway" class="pw " x="0.0" y="0.0" width="1315.3" height="1569.9" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 808.6 948.8 L 918.6 1128.2"/>
+<path class="link" marker-end="url(#in)" d="M 770.1 931.8 L 672.8 928.1"/>
+<path class="link" marker-start="url(#in)" d="M 510.2 977.5 L 602.5 940.8"/>
+<path class="link" marker-end="url(#in)" d="M 465.3 1006.1 L 337.0 1163.6"/>
+<path class="link" marker-start="url(#in)" d="M 337.7 1298.1 L 325.8 1195.6"/>
+<path class="link" marker-end="url(#in)" d="M 350.0 1330.1 L 446.8 1478.0"/>
+<path class="link" marker-start="url(#in)" d="M 714.9 1509.1 L 837.3 1463.0"/>
+<path class="link" marker-start="url(#in)" d="M 696.0 1503.9 L 762.1 1396.4"/>
+<path class="link" marker-end="url(#in)" d="M 657.5 1516.7 L 485.9 1497.2"/>
+<path class="link" marker-end="url(#in)" d="M 679.7 1503.9 L 652.2 1435.6"/>
+<path class="link" marker-start="url(#in)" d="M 857.3 1256.8 L 853.4 1441.0"/>
+<path class="link" marker-start="url(#in)" d="M 847.9 1256.8 L 781.8 1364.4"/>
+<path class="link" marker-end="url(#in)" d="M 869.4 1224.8 L 916.7 1160.2"/>
+<path class="link" marker-end="url(#in)" d="M 829.0 1244.4 L 746.5 1254.8"/>
+<path class="link" marker-start="url(#in)" d="M 633.5 1303.3 L 683.1 1275.2"/>
+<path class="link" marker-start="url(#in)" d="M 611.7 1335.3 L 639.3 1403.6"/>
+<path class="link" marker-end="url(#in)" d="M 591.7 1335.3 L 470.8 1478.0"/>
+<path class="link" marker-end="url(#in)" d="M 592.5 1303.3 L 528.0 1222.4"/>
+<path class="link" marker-start="url(#in)" d="M 656.5 1027.1 L 640.6 942.8"/>
+<path class="link" marker-end="url(#in)" d="M 663.3 1059.1 L 707.5 1243.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 436.2 302.1 L 407.7 115.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 403.5 324.3 L 278.9 346.1"/>
+<path class="link" marker-start="url(#in)" d="M 232.4 128.5 L 370.1 105.5"/>
+<path class="link" marker-end="url(#in)" d="M 206.7 149.3 L 240.9 336.3"/>
+<path class="link" marker-start="url(#in)" d="M 291.7 441.2 L 252.4 368.3"/>
+<path class="link" marker-end="url(#in)" d="M 291.6 473.2 L 223.2 598.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 156.5 390.3 L 208.6 367.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 127.0 422.3 L 207.2 598.9"/>
+<path class="link" marker-start="url(#in)" d="M 290.3 635.3 L 259.3 627.0"/>
+<path class="link" marker-end="url(#in)" d="M 354.1 642.4 L 478.4 636.7"/>
+<path class="link" marker-start="url(#in)" d="M 616.4 784.4 L 513.1 651.7"/>
+<path class="link" marker-end="url(#in)" d="M 630.0 816.4 L 636.5 910.8"/>
+<path class="link" marker-start="url(#in)" d="M 461.1 843.3 L 497.6 651.7"/>
+<path class="link" marker-end="url(#in)" d="M 489.3 864.0 C 513.1 867.8 544.0 873.3 556.0 877.8 C 578.0 886.2 600.9 900.5 616.9 911.5"/>
+<path class="link" marker-start="url(#in)" d="M 719.3 672.5 C 707.3 665.5 692.2 657.7 677.6 653.2 C 623.3 636.9 555.9 634.9 522.1 635.2"/>
+<path class="link" marker-end="url(#in)" d="M 735.7 703.9 L 644.7 910.8"/>
+<path class="link" marker-start="url(#in)" d="M 1129.4 1362.4 L 1181.7 1324.7"/>
+<path class="link" marker-end="url(#in)" d="M 1075.2 1388.3 L 868.7 1452.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 477.2 974.1 L 473.4 917.4"/>
+<path class="link" marker-start="url(#in)" d="M 418.3 302.1 L 336.9 238.1"/>
+<path class="link" marker-end="url(#in)" d="M 445.2 334.1 L 465.3 382.9"/>
+<path class="link" marker-start="url(#in)" d="M 197.2 117.3 L 177.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 224.1 149.3 L 305.5 213.3"/>
+<path class="link" marker-start="url(#in)" d="M 282.1 441.2 L 250.5 413.3"/>
+<path class="link" marker-end="url(#in)" d="M 318.4 473.2 L 350.1 501.0"/>
+<path class="link" marker-start="url(#in)" d="M 101.6 390.3 L 71.1 363.5"/>
+<path class="link" marker-end="url(#in)" d="M 137.9 422.3 L 168.3 449.1"/>
+<path class="link" marker-start="url(#in)" d="M 312.7 627.9 L 287.0 584.9"/>
+<path class="link" marker-start="url(#in)" d="M 593.7 794.3 L 561.8 788.8"/>
+<path class="link" marker-end="url(#in)" d="M 602.6 816.4 L 570.4 836.0"/>
+<path class="link" marker-end="url(#in)" d="M 664.0 795.7 L 748.8 784.3"/>
+<path class="link" marker-start="url(#in)" d="M 475.6 843.3 L 522.1 801.0"/>
+<path class="link" marker-end="url(#in)" d="M 490.0 855.9 L 526.0 851.9"/>
+<path class="link" marker-end="url(#in)" d="M 490.0 874.8 L 521.0 889.7"/>
+<path class="link" marker-start="url(#in)" d="M 707.6 681.8 L 674.1 676.0"/>
+<path class="link" marker-end="url(#in)" d="M 777.9 684.1 L 812.3 680.3"/>
+<path class="link" marker-end="url(#in)" d="M 746.5 703.9 L 760.8 766.2"/>
+<path class="link" marker-start="url(#in)" d="M 1132.6 1394.4 L 1165.4 1415.0"/>
+<path class="link" marker-end="url(#in)" d="M 1103.7 1394.4 L 1092.6 1446.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_pentose-phosphate-pathway" transform="translate(657.6,0.0)"><rect rx="10" height="31" width="253" x="-126.5" y="-15.5"/><text dominant-baseline="central">pentose phosphate pathway</text></g>
+<g id="node8514" class="node nodeHM pw_pentose-phosphate-pathway lid183" transform="translate(928.4,1144.2)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title></title></g>
+<g id="node8511" class="node nodeHM pw_pentose-phosphate-pathway lid443" transform="translate(637.6,926.8)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=443" target="_blank">D-Rul 5-P</a></text><title></title></g>
+<g id="node10276" class="node nodeHM pw_pentose-phosphate-pathway lid18730" transform="translate(323.9,1179.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18730" target="_blank">H6P</a></text><title></title></g>
+<g id="node12179" class="node nodeHM pw_pentose-phosphate-pathway lid87" transform="translate(457.2,1494.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87" target="_blank">Fru 6-P</a></text><title></title></g>
+<g id="node8512" class="node nodeHM pw_pentose-phosphate-pathway lid3626" transform="translate(853.0,1457.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3626" target="_blank">S7P</a></text><title></title></g>
+<g id="node8513" class="node nodeHM pw_pentose-phosphate-pathway lid147" transform="translate(771.9,1380.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node8519" class="node nodeHM pw_pentose-phosphate-pathway lid500" transform="translate(645.7,1419.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=500" target="_blank">E4P</a></text><title></title></g>
+<g id="node8523" class="node nodeHM pw_pentose-phosphate-pathway lid644" transform="translate(711.4,1259.2)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=644" target="_blank">D-Xul 5-P</a></text><title></title></g>
+<g id="node12181" class="node nodeHM pw_pentose-phosphate-pathway lid147" transform="translate(515.3,1206.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node13564" class="node nodeHM pw_pentose-phosphate-pathway lid35" transform="translate(405.3,99.7)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node12180" class="node nodeHM pw_pentose-phosphate-pathway lid105" transform="translate(243.8,352.3)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=105" target="_blank">D-Glc 6-P</a></text><title></title></g>
+<g id="node8505" class="node nodeHM pw_pentose-phosphate-pathway lid180115" transform="translate(214.5,614.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=180115" target="_blank">6PGlclactone</a></text><title></title></g>
+<g id="node8501" class="node nodeHM pw_pentose-phosphate-pathway lid43607" transform="translate(500.6,635.7)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43607" target="_blank">GA-6P</a></text><title></title></g>
+<g id="node10248" class="node nodeHM pw_pentose-phosphate-pathway lid20229" transform="translate(1204.0,1308.7)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20229" target="_blank">D-sedoheptulose 1,7-PP</a></text><title></title></g>
+<g id="node8517" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(798.8,932.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.6" target="_blank">5.3.1.6</a></text><title>Ribose-5-phosphate isomerase</title></g>
+<g id="node10271" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(478.3,990.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.43" target="_blank">4.1.2.43</a></text><title>3-hexulose-6-phosphate synthase</title></g>
+<g id="node10278" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(339.6,1314.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.27" target="_blank">5.3.1.27</a></text><title>6-phospho-3-hexuloisomerase</title></g>
+<g id="node8518" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(686.2,1519.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.2" target="_blank">2.2.1.2</a></text><title>transaldolase</title></g>
+<g id="node8515" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(857.7,1240.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.1" target="_blank">2.2.1.1</a></text><title>transketolase</title></g>
+<g id="node8524" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(605.2,1319.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.1" target="_blank">2.2.1.1</a></text><title>transketolase</title></g>
+<g id="node8516" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(659.5,1043.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.1" target="_blank">5.1.3.1</a></text><title>ribulose-phosphate 3-epimerase</title></g>
+<g id="node13568" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(438.6,318.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.147" target="_blank">2.7.1.147</a></text><title>ADP-specific glucose/glucosamine kinase; hexokinase</title></g>
+<g id="node13565" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(203.8,133.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.1" target="_blank">2.7.1.1</a></text><title>ADP-specific glucose/glucosamine kinase; hexokinase</title></g>
+<g id="node8507" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(300.3,457.2)"><rect rx="15" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.49" target="_blank">1.1.1.49/1.1.1.363</a></text><title>glucose-6-phosphate dehydrogenase (NADP+);glucose-6-phosphate dehydrogenase [NAD(P)+]; glucose-6-phosphate dehydrogenase [NAD(P)+];glucose-6-phosphate dehydrogenase (NAD+)</title></g>
+<g id="node11406" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(119.7,406.3)"><rect rx="15" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.363" target="_blank">1.1.1.363/1.1.1.388</a></text><title>glucose-6-phosphate dehydrogenase (NADP+);glucose-6-phosphate dehydrogenase [NAD(P)+]; glucose-6-phosphate dehydrogenase [NAD(P)+];glucose-6-phosphate dehydrogenase (NAD+)</title></g>
+<g id="node8503" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(322.2,643.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.31" target="_blank">3.1.1.31</a></text><title>6-phosphogluconolactonase</title></g>
+<g id="node1972" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(628.9,800.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.351" target="_blank">1.1.1.351</a></text><title>phosphogluconate dehydrogenase [NAD(P)+-dependent, decarboxylating]; phosphogluconate dehydrogenase (NADP+-dependent, decarboxylating); phosphogluconate dehydrogenase (NAD+-dependent, decarboxylating)</title></g>
+<g id="node8510" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(458.1,859.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.44" target="_blank">1.1.1.44</a></text><title>phosphogluconate dehydrogenase [NAD(P)+-dependent, decarboxylating]; phosphogluconate dehydrogenase (NADP+-dependent, decarboxylating); phosphogluconate dehydrogenase (NAD+-dependent, decarboxylating)</title></g>
+<g id="node11480" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(742.8,687.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.343" target="_blank">1.1.1.343</a></text><title>phosphogluconate dehydrogenase [NAD(P)+-dependent, decarboxylating]; phosphogluconate dehydrogenase (NADP+-dependent, decarboxylating); phosphogluconate dehydrogenase (NAD+-dependent, decarboxylating)</title></g>
+<g id="node10247" class="node nodeEN pw_pentose-phosphate-pathway" transform="translate(1107.1,1378.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.11" target="_blank">3.1.3.11</a></text><title>fructose-bisphosphatase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10271~0" class="node nodeCM pw_pentose-phosphate-pathway lid130" transform="translate(472.3,901.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title></title></g>
+<g id="node13568~1" class="node nodeCM pw_pentose-phosphate-pathway lid30" transform="translate(471.9,398.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node13565~0" class="node nodeCM pw_pentose-phosphate-pathway lid4" transform="translate(170.5,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node13565~1" class="node nodeCM pw_pentose-phosphate-pathway lid13" transform="translate(321.2,225.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node8507~0" class="node nodeCM pw_pentose-phosphate-pathway lid10" transform="translate(232.3,397.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8507~1" class="node nodeCM pw_pentose-phosphate-pathway lid5" transform="translate(368.3,517.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11406~0" class="node nodeCM pw_pentose-phosphate-pathway lid7" transform="translate(53.0,347.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11406~1" class="node nodeCM pw_pentose-phosphate-pathway lid8" transform="translate(186.5,465.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node8503~0" class="node nodeCM pw_pentose-phosphate-pathway lid1" transform="translate(277.4,568.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1972~0" class="node nodeCM pw_pentose-phosphate-pathway lid10" transform="translate(539.6,785.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node1972~1" class="node nodeCM pw_pentose-phosphate-pathway lid5" transform="translate(548.2,849.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8510~2" class="node nodeCM pw_pentose-phosphate-pathway lid28" transform="translate(536.7,897.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11480~0" class="node nodeCM pw_pentose-phosphate-pathway lid7" transform="translate(655.1,672.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11480~1" class="node nodeCM pw_pentose-phosphate-pathway lid8" transform="translate(831.2,678.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node11480~2" class="node nodeCM pw_pentose-phosphate-pathway lid28" transform="translate(764.5,782.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node10247~0" class="node nodeCM pw_pentose-phosphate-pathway lid1" transform="translate(1181.1,1424.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10247~1" class="node nodeCM pw_pentose-phosphate-pathway lid16" transform="translate(1089.2,1462.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>

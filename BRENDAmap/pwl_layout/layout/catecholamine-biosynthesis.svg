@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 577.2 1558.0" width="577" height="1558" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="577.2" height="1558.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_catecholamine-biosynthesis" class="pw " x="0.0" y="0.0" width="457.2" height="1422.5" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 212.6 201.5 L 212.6 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 212.6 233.5 L 212.6 366.5"/>
+<path class="link" marker-start="url(#in)" d="M 212.6 531.5 L 212.6 398.5"/>
+<path class="link" marker-end="url(#in)" d="M 212.6 563.5 L 212.6 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 212.6 861.5 L 212.6 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 212.6 893.5 L 212.6 1026.5"/>
+<path class="link" marker-start="url(#in)" d="M 212.6 1191.5 L 212.6 1058.5"/>
+<path class="link" marker-end="url(#in)" d="M 212.6 1223.5 L 212.6 1356.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 177.5 206.1 L 154.8 198.7"/>
+<path class="link" marker-start="url(#in)" d="M 200.1 201.5 L 171.1 164.6"/>
+<path class="link" marker-end="url(#in)" d="M 235.5 233.5 L 297.2 276.7"/>
+<path class="link" marker-start="url(#in)" d="M 189.8 531.5 L 154.9 507.1"/>
+<path class="link" marker-end="url(#in)" d="M 189.8 563.5 L 156.8 586.6"/>
+<path class="link" marker-start="url(#in)" d="M 177.5 875.7 L 139.5 873.7"/>
+<path class="link" marker-start="url(#in)" d="M 189.8 861.5 L 154.9 837.1"/>
+<path class="link" marker-start="url(#in)" d="M 205.8 861.5 L 180.2 801.2"/>
+<path class="link" marker-end="url(#in)" d="M 247.8 889.6 L 279.5 900.5"/>
+<path class="link" marker-end="url(#in)" d="M 225.6 893.5 L 269.9 948.3"/>
+<path class="link" marker-start="url(#in)" d="M 189.8 1191.5 L 137.4 1154.8"/>
+<path class="link" marker-end="url(#in)" d="M 244.5 1217.5 L 277.7 1227.8"/>
+<path class="link" marker-end="url(#in)" d="M 224.9 1223.5 L 254.3 1261.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_catecholamine-biosynthesis" transform="translate(228.6,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">catecholamine biosynthesis</text></g>
+<g id="node12040" class="node nodeHM pw_catecholamine-biosynthesis lid109" transform="translate(212.6,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=109" target="_blank">Tyr</a></text><title></title></g>
+<g id="node10513" class="node nodeHM pw_catecholamine-biosynthesis lid320" transform="translate(212.6,382.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=320" target="_blank">L-DOPA</a></text><title></title></g>
+<g id="node10518" class="node nodeHM pw_catecholamine-biosynthesis lid242" transform="translate(212.6,712.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=242" target="_blank">dopamine</a></text><title></title></g>
+<g id="node10522" class="node nodeHM pw_catecholamine-biosynthesis lid2574" transform="translate(212.6,1042.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2574" target="_blank">noradrenaline</a></text><title></title></g>
+<g id="node10524" class="node nodeHM pw_catecholamine-biosynthesis lid3189" transform="translate(212.6,1372.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3189" target="_blank">adrenaline</a></text><title></title></g>
+<g id="node10512" class="node nodeEN pw_catecholamine-biosynthesis" transform="translate(212.6,217.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.16.2" target="_blank">1.14.16.2</a></text><title>tyrosine 3-monooxygenase</title></g>
+<g id="node10517" class="node nodeEN pw_catecholamine-biosynthesis" transform="translate(212.6,547.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.28" target="_blank">4.1.1.28</a></text><title>aromatic-L-amino-acid decarboxylase</title></g>
+<g id="node10521" class="node nodeEN pw_catecholamine-biosynthesis" transform="translate(212.6,877.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.17.1" target="_blank">1.14.17.1</a></text><title>dopamine beta-monooxygenase</title></g>
+<g id="node10523" class="node nodeEN pw_catecholamine-biosynthesis" transform="translate(212.6,1207.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.28" target="_blank">2.1.1.28</a></text><title>phenylethanolamine N-methyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10512~0" class="node nodeCM pw_catecholamine-biosynthesis lid252" transform="translate(105.5,182.7)"><rect rx="5" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=252" target="_blank">tetrahydrobiopterin</a></text><title></title></g>
+<g id="node10512~1" class="node nodeCM pw_catecholamine-biosynthesis lid9" transform="translate(158.7,148.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10512~2" class="node nodeCM pw_catecholamine-biosynthesis lid3853" transform="translate(320.0,292.7)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3853" target="_blank">4a-hydroxy-tetrahydrobiopterin</a></text><title></title></g>
+<g id="node10517~0" class="node nodeCM pw_catecholamine-biosynthesis lid12" transform="translate(142.4,498.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10517~1" class="node nodeCM pw_catecholamine-biosynthesis lid28" transform="translate(141.1,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node10521~0" class="node nodeCM pw_catecholamine-biosynthesis lid12" transform="translate(127.0,873.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10521~1" class="node nodeCM pw_catecholamine-biosynthesis lid9" transform="translate(142.4,828.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10521~2" class="node nodeCM pw_catecholamine-biosynthesis lid548" transform="translate(173.4,785.2)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=548" target="_blank">L-ascorbate</a></text><title></title></g>
+<g id="node10521~3" class="node nodeCM pw_catecholamine-biosynthesis lid1" transform="translate(295.2,905.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10521~4" class="node nodeCM pw_catecholamine-biosynthesis lid8124" transform="translate(282.9,964.3)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8124" target="_blank">L-dehydroascorbate</a></text><title></title></g>
+<g id="node10523~0" class="node nodeCM pw_catecholamine-biosynthesis lid24" transform="translate(114.5,1138.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node10523~1" class="node nodeCM pw_catecholamine-biosynthesis lid36" transform="translate(328.9,1243.8)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node10523~2" class="node nodeCM pw_catecholamine-biosynthesis lid12" transform="translate(266.6,1277.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>

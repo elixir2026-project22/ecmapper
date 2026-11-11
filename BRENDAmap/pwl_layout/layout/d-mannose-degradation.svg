@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1274.9 1295.4" width="1275" height="1295" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1274.9" height="1295.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_d-mannose-degradation" class="pw " x="0.0" y="0.0" width="1154.9" height="1159.9" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 539.8 479.6 L 502.4 479.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 603.7 492.1 L 710.2 534.0"/>
+<path class="link" marker-start="url(#in)" d="M 839.9 632.4 L 741.7 552.9"/>
+<path class="link" marker-end="url(#in)" d="M 866.6 664.4 L 915.3 775.7"/>
+<path class="link" marker-start="url(#in)" d="M 1072.3 670.8 L 942.1 775.7"/>
+<path class="link" marker-end="url(#in)" d="M 1092.2 638.8 L 1092.2 504.4"/>
+<path class="link" marker-end="url(#in)" d="M 755.3 961.2 L 906.5 807.7"/>
+<path class="link" marker-start="url(#in)" d="M 710.9 977.1 L 549.5 976.9"/>
+<path class="link" marker-end="url(#in)" d="M 385.9 998.6 L 453.2 985.9"/>
+<path class="link" marker-start="url(#in)" d="M 342.0 988.1 L 253.6 895.2"/>
+<path class="link" marker-start="url(#in)" d="M 347.9 1046.9 C 381.1 1031.7 433.5 1007.8 467.6 992.2"/>
+<path class="link" marker-end="url(#in)" d="M 310.0 1046.0 C 295.3 1011.7 259.7 928.8 244.9 894.5"/>
+<path class="link" marker-start="url(#in)" d="M 388.5 955.9 C 407.6 959.4 432.5 964.0 454.0 968.0"/>
+<path class="link" marker-end="url(#in)" d="M 330.4 934.1 L 265.2 895.2"/>
+<path class="link" marker-start="url(#in)" d="M 145.5 655.6 L 231.7 863.2"/>
+<path class="link" marker-end="url(#in)" d="M 138.9 623.6 L 140.3 413.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 140.4 204.0 L 140.4 381.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 159.2 172.0 L 280.8 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 554.9 495.6 L 524.2 524.9"/>
+<path class="link" marker-start="url(#in)" d="M 864.6 632.4 L 880.4 580.8"/>
+<path class="link" marker-end="url(#in)" d="M 888.3 646.9 L 931.2 644.7"/>
+<path class="link" marker-start="url(#in)" d="M 328.6 1019.8 L 282.6 1045.1"/>
+<path class="link" marker-end="url(#in)" d="M 380.4 988.1 L 413.4 965.3"/>
+<path class="link" marker-start="url(#in)" d="M 344.6 1045.2 L 387.9 1020.5"/>
+<path class="link" marker-end="url(#in)" d="M 293.3 1077.2 L 258.4 1101.3"/>
+<path class="link" marker-start="url(#in)" d="M 380.4 934.1 L 413.4 911.3"/>
+<path class="link" marker-end="url(#in)" d="M 334.1 966.1 L 301.1 988.9"/>
+<path class="link" marker-end="url(#in)" d="M 106.9 625.7 L 74.4 611.6"/>
+<path class="link" marker-start="url(#in)" d="M 157.2 204.0 L 187.8 233.3"/>
+<path class="link" marker-start="url(#in)" d="M 144.5 204.0 L 157.9 256.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_d-mannose-degradation" transform="translate(577.4,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">d-mannose degradation</text></g>
+<g id="node10398" class="node nodeHM pw_d-mannose-degradation lid139634" transform="translate(425.1,479.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=139634" target="_blank">1,3-alpha-D-mannobiose</a></text><title></title></g>
+<g id="node9068" class="node nodeHM pw_d-mannose-degradation lid993" transform="translate(725.9,540.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=993" target="_blank">Man</a></text><title></title></g>
+<g id="node10437" class="node nodeHM pw_d-mannose-degradation lid700" transform="translate(922.2,791.7)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=700" target="_blank">Man 6-P</a></text><title></title></g>
+<g id="node12177" class="node nodeHM pw_d-mannose-degradation lid87" transform="translate(1092.2,488.4)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87" target="_blank">Fru 6-P</a></text><title></title></g>
+<g id="node9072" class="node nodeHM pw_d-mannose-degradation lid638" transform="translate(501.3,976.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=638" target="_blank">alpha-Man 1-P</a></text><title></title></g>
+<g id="node9170" class="node nodeHM pw_d-mannose-degradation lid3633" transform="translate(238.4,879.2)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3633" target="_blank">GDP-Man</a></text><title></title></g>
+<g id="node10363" class="node nodeHM pw_d-mannose-degradation lid4524" transform="translate(140.4,397.9)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4524" target="_blank">GDP-4-dehydro-6-deoxy-D-mannose</a></text><title></title></g>
+<g id="node11644" class="node nodeHM pw_d-mannose-degradation lid89354" transform="translate(299.6,52.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89354" target="_blank">GDP-alpha-D-perosamine</a></text><title></title></g>
+<g id="node10395" class="node nodeEN pw_d-mannose-degradation" transform="translate(571.7,479.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.24" target="_blank">3.2.1.24</a></text><title>alpha-mannosidase</title></g>
+<g id="node9052" class="node nodeEN pw_d-mannose-degradation" transform="translate(859.7,648.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.7" target="_blank">2.7.1.7</a></text><title>mannokinase</title></g>
+<g id="node10466" class="node nodeEN pw_d-mannose-degradation" transform="translate(1092.2,654.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.8" target="_blank">5.3.1.8</a></text><title>Mannose-6-phosphate isomerase</title></g>
+<g id="node9173" class="node nodeEN pw_d-mannose-degradation" transform="translate(739.6,977.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.2.8" target="_blank">5.4.2.8</a></text><title>phosphomannomutase</title></g>
+<g id="node9169" class="node nodeEN pw_d-mannose-degradation" transform="translate(357.2,1004.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.9" target="_blank">3.6.1.9</a></text><title>nucleotide diphosphatase; mannose-1-phosphate guanylyltransferase (GDP); mannose-1-phosphate guanylyltransferase</title></g>
+<g id="node8270" class="node nodeEN pw_d-mannose-degradation" transform="translate(316.5,1061.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.22" target="_blank">2.7.7.22</a></text><title>nucleotide diphosphatase; mannose-1-phosphate guanylyltransferase (GDP); mannose-1-phosphate guanylyltransferase</title></g>
+<g id="node9066" class="node nodeEN pw_d-mannose-degradation" transform="translate(357.2,950.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.13" target="_blank">2.7.7.13</a></text><title>nucleotide diphosphatase; mannose-1-phosphate guanylyltransferase (GDP); mannose-1-phosphate guanylyltransferase</title></g>
+<g id="node10362" class="node nodeEN pw_d-mannose-degradation" transform="translate(138.8,639.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.47" target="_blank">4.2.1.47</a></text><title>GDP-mannose 4,6-dehydratase</title></g>
+<g id="node11643" class="node nodeEN pw_d-mannose-degradation" transform="translate(140.4,188.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.102" target="_blank">2.6.1.102</a></text><title>GDP-perosamine synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10395~0" class="node nodeCM pw_d-mannose-degradation lid1" transform="translate(508.5,539.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9052~0" class="node nodeCM pw_d-mannose-degradation lid4" transform="translate(885.3,564.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9052~1" class="node nodeCM pw_d-mannose-degradation lid13" transform="translate(946.9,643.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9169~0" class="node nodeCM pw_d-mannose-degradation lid1" transform="translate(266.8,1053.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9169~1" class="node nodeCM pw_d-mannose-degradation lid162" transform="translate(429.1,954.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=162" target="_blank">GMP</a></text><title></title></g>
+<g id="node8270~0" class="node nodeCM pw_d-mannose-degradation lid53" transform="translate(403.6,1011.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node8270~1" class="node nodeCM pw_d-mannose-degradation lid16" transform="translate(245.9,1109.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9066~0" class="node nodeCM pw_d-mannose-degradation lid37" transform="translate(429.1,900.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node9066~1" class="node nodeCM pw_d-mannose-degradation lid17" transform="translate(285.4,999.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10362~0" class="node nodeCM pw_d-mannose-degradation lid1" transform="translate(58.7,604.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11643~0" class="node nodeCM pw_d-mannose-degradation lid34" transform="translate(203.6,248.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node11643~1" class="node nodeCM pw_d-mannose-degradation lid41" transform="translate(162.0,272.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+</g></svg>

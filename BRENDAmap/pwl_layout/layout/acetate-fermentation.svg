@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 973.5 1318.1" width="974" height="1318" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="973.5" height="1318.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_acetate-fermentation" class="pw " x="0.0" y="0.0" width="853.5" height="1182.6" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 304.7 226.1 L 195.6 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 315.8 258.1 L 315.8 498.4"/>
+<path class="link" marker-start="url(#in)" d="M 386.4 694.0 L 322.1 530.4"/>
+<path class="link" marker-end="url(#in)" d="M 401.2 726.0 L 475.3 865.4"/>
+<path class="link" marker-end="url(#in)" d="M 461.5 618.9 L 338.1 530.4"/>
+<path class="link" marker-start="url(#in)" d="M 483.8 650.3 C 483.8 694.6 483.8 821.7 483.8 866.0"/>
+<path class="link" marker-start="url(#in)" d="M 244.4 881.4 L 458.3 881.4"/>
+<path class="link" marker-end="url(#in)" d="M 204.4 865.4 L 103.2 722.3"/>
+<path class="link" marker-start="url(#in)" d="M 91.8 529.8 C 91.8 565.7 91.8 654.9 91.8 690.9"/>
+<path class="link" marker-end="url(#in)" d="M 120.5 514.4 L 287.1 514.4"/>
+<path class="link" marker-start="url(#in)" d="M 159.4 602.6 L 102.3 690.3"/>
+<path class="link" marker-end="url(#in)" d="M 198.5 572.4 L 287.1 528.6"/>
+<path class="link" marker-end="url(#in)" d="M 617.5 673.4 C 555.1 640.6 406.1 562.0 343.8 529.2"/>
+<path class="link" marker-start="url(#in)" d="M 645.7 704.3 L 646.7 891.6"/>
+<path class="link" marker-start="url(#in)" d="M 565.0 1037.4 C 582.5 1009.6 619.4 951.0 637.0 923.0"/>
+<path class="link" marker-end="url(#in)" d="M 548.7 1036.7 L 490.5 897.4"/>
+<path class="link" marker-start="url(#in)" d="M 650.4 1008.2 L 647.3 923.6"/>
+<path class="link" marker-end="url(#in)" d="M 633.1 1008.9 C 601.0 981.5 534.0 924.3 501.8 896.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 287.1 240.5 L 247.5 238.3"/>
+<path class="link" marker-start="url(#in)" d="M 293.0 226.1 L 260.0 202.9"/>
+<path class="link" marker-end="url(#in)" d="M 344.4 252.0 L 379.2 264.1"/>
+<path class="link" marker-start="url(#in)" d="M 364.0 712.8 L 321.4 717.0"/>
+<path class="link" marker-start="url(#in)" d="M 393.6 694.0 L 396.9 635.1"/>
+<path class="link" marker-end="url(#in)" d="M 421.3 709.2 L 463.9 708.1"/>
+<path class="link" marker-end="url(#in)" d="M 421.3 724.2 L 455.2 741.0"/>
+<path class="link" marker-start="url(#in)" d="M 515.7 636.7 L 554.0 638.8"/>
+<path class="link" marker-end="url(#in)" d="M 451.8 629.0 L 413.6 622.0"/>
+<path class="link" marker-start="url(#in)" d="M 218.8 897.4 L 228.9 949.6"/>
+<path class="link" marker-end="url(#in)" d="M 189.0 897.4 L 156.5 916.9"/>
+<path class="link" marker-start="url(#in)" d="M 93.4 530.4 L 98.8 585.4"/>
+<path class="link" marker-end="url(#in)" d="M 90.3 498.4 L 85.0 445.1"/>
+<path class="link" marker-start="url(#in)" d="M 171.4 602.6 L 176.8 657.5"/>
+<path class="link" marker-end="url(#in)" d="M 168.3 570.6 L 162.9 515.6"/>
+<path class="link" marker-start="url(#in)" d="M 674.3 677.2 L 711.4 662.9"/>
+<path class="link" marker-start="url(#in)" d="M 674.3 693.8 L 690.9 697.0"/>
+<path class="link" marker-end="url(#in)" d="M 616.9 699.3 L 579.8 713.7"/>
+<path class="link" marker-end="url(#in)" d="M 616.9 684.5 L 600.3 682.2"/>
+<path class="link" marker-start="url(#in)" d="M 563.2 1036.7 L 586.7 988.8"/>
+<path class="link" marker-start="url(#in)" d="M 575.6 1036.7 L 618.8 1002.6"/>
+<path class="link" marker-end="url(#in)" d="M 546.8 1068.7 L 521.2 1116.6"/>
+<path class="link" marker-end="url(#in)" d="M 527.5 1068.7 L 495.3 1087.2"/>
+<path class="link" marker-start="url(#in)" d="M 659.6 1008.2 L 685.2 960.3"/>
+<path class="link" marker-start="url(#in)" d="M 678.9 1008.2 L 711.1 989.7"/>
+<path class="link" marker-end="url(#in)" d="M 643.6 1040.2 L 620.5 1089.6"/>
+<path class="link" marker-end="url(#in)" d="M 630.2 1040.2 L 585.6 1074.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_acetate-fermentation" transform="translate(426.8,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">acetate fermentation</text></g>
+<g id="node12162" class="node nodeHM pw_acetate-fermentation lid90" transform="translate(184.5,52.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title></title></g>
+<g id="node9427" class="node nodeHM pw_acetate-fermentation lid47" transform="translate(315.8,514.4)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node8617" class="node nodeHM pw_acetate-fermentation lid29" transform="translate(483.8,881.4)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node9413" class="node nodeHM pw_acetate-fermentation lid358" transform="translate(91.8,706.3)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=358" target="_blank">acetyl phosphate</a></text><title></title></g>
+<g id="node8615" class="node nodeHM pw_acetate-fermentation lid31" transform="translate(646.7,907.6)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node8667" class="node nodeEN pw_acetate-fermentation" transform="translate(315.8,242.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.4" target="_blank">1.2.1.4</a></text><title>aldehyde dehydrogenase (NADP+)</title></g>
+<g id="node8885" class="node nodeEN pw_acetate-fermentation" transform="translate(392.7,710.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.1" target="_blank">6.2.1.1</a></text><title>acetate-CoA ligase; acyl-CoA hydrolase</title></g>
+<g id="node10291" class="node nodeEN pw_acetate-fermentation" transform="translate(483.8,634.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.20" target="_blank">3.1.2.20</a></text><title>acetate-CoA ligase; acyl-CoA hydrolase</title></g>
+<g id="node9428" class="node nodeEN pw_acetate-fermentation" transform="translate(215.7,881.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.8" target="_blank">2.3.1.8</a></text><title>phosphate acetyltransferase</title></g>
+<g id="node2927" class="node nodeEN pw_acetate-fermentation" transform="translate(91.8,514.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.7" target="_blank">3.6.1.7</a></text><title>acylphosphatase; acetate kinase</title></g>
+<g id="node9429" class="node nodeEN pw_acetate-fermentation" transform="translate(169.9,586.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.1" target="_blank">2.7.2.1</a></text><title>acylphosphatase; acetate kinase</title></g>
+<g id="node8641" class="node nodeEN pw_acetate-fermentation" transform="translate(645.6,688.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.5.1" target="_blank">1.2.5.1</a></text><title>pyruvate dehydrogenase (quinone)</title></g>
+<g id="node9458" class="node nodeEN pw_acetate-fermentation" transform="translate(555.4,1052.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.51" target="_blank">1.2.1.51</a></text><title>pyruvate dehydrogenase (NADP+); pyruvate synthase</title></g>
+<g id="node9412" class="node nodeEN pw_acetate-fermentation" transform="translate(651.0,1024.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.1" target="_blank">1.2.7.1</a></text><title>pyruvate dehydrogenase (NADP+); pyruvate synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8667~0" class="node nodeCM pw_acetate-fermentation lid10" transform="translate(225.3,237.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8667~1" class="node nodeCM pw_acetate-fermentation lid1" transform="translate(244.3,191.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8667~2" class="node nodeCM pw_acetate-fermentation lid5" transform="translate(401.4,271.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8885~0" class="node nodeCM pw_acetate-fermentation lid4" transform="translate(305.7,718.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8885~2" class="node nodeCM pw_acetate-fermentation lid30" transform="translate(479.6,707.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node8885~3" class="node nodeCM pw_acetate-fermentation lid17" transform="translate(470.9,748.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10291~0" class="node nodeCM pw_acetate-fermentation lid1" transform="translate(569.7,639.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10291~1" class="node nodeCM pw_acetate-fermentation lid18" transform="translate(397.8,619.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9428~0" class="node nodeCM pw_acetate-fermentation lid16" transform="translate(232.0,965.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9428~1" class="node nodeCM pw_acetate-fermentation lid18" transform="translate(140.8,926.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node2927~0" class="node nodeCM pw_acetate-fermentation lid1" transform="translate(100.4,601.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2927~1" class="node nodeCM pw_acetate-fermentation lid16" transform="translate(83.5,429.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9429~0" class="node nodeCM pw_acetate-fermentation lid13" transform="translate(178.4,673.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9429~1" class="node nodeCM pw_acetate-fermentation lid4" transform="translate(161.3,499.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8641~0" class="node nodeCM pw_acetate-fermentation lid1" transform="translate(727.1,656.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8641~1" class="node nodeCM pw_acetate-fermentation lid44128" transform="translate(755.2,709.4)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44128" target="_blank">ferricytochrome b1</a></text><title></title></g>
+<g id="node8641~2" class="node nodeCM pw_acetate-fermentation lid28" transform="translate(564.1,719.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node8641~3" class="node nodeCM pw_acetate-fermentation lid44129" transform="translate(535.9,673.7)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44129" target="_blank">ferrocytochrome b1</a></text><title></title></g>
+<g id="node9458~0" class="node nodeCM pw_acetate-fermentation lid10" transform="translate(594.6,972.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9458~1" class="node nodeCM pw_acetate-fermentation lid18" transform="translate(634.5,990.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9458~2" class="node nodeCM pw_acetate-fermentation lid5" transform="translate(512.7,1132.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9458~3" class="node nodeCM pw_acetate-fermentation lid28" transform="translate(479.6,1096.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9412~0" class="node nodeCM pw_acetate-fermentation lid289" transform="translate(693.7,944.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node9412~1" class="node nodeCM pw_acetate-fermentation lid18" transform="translate(726.8,980.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node9412~2" class="node nodeCM pw_acetate-fermentation lid265" transform="translate(613.0,1105.6)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node9412~3" class="node nodeCM pw_acetate-fermentation lid28" transform="translate(569.9,1086.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+</g></svg>

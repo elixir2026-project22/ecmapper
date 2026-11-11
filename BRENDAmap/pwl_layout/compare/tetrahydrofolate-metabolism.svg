@@ -1,0 +1,412 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="4663" height="2988" viewBox="0 0 4662.6 2987.8"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10508.9 2215.9 1301.0 1296.7" width="1301" height="1297" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="10508.9" y="2215.9" width="1301.0" height="1296.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_tetrahydrofolate-metabolism" class="pw pw4" x="10548.9" y="2271.4" width="1221.0" height="1201.2" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10963.1 2434.8 L 11112.2 2434.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10929.6 2450.8 L 10929.6 2641.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 2480.6 L 11595.1 2367.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 2512.6 L 11595.1 2626.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11171.2 2529.7 L 11171.2 2574.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11171.2 2497.7 L 11171.2 2453.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11040.6 2585.3 L 10954.3 2641.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11078.0 2553.3 L 11156.7 2453.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11434.2 2642.2 L 11502.2 2642.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11397.9 2658.2 L 11398.7 2759.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11171.2 2740.4 L 11171.2 2843.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11171.2 2708.4 L 11171.2 2606.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10703.6 2744.2 L 10702.6 2843.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10703.7 2712.2 L 10703.7 2610.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10844.5 2773.1 L 10728.7 2843.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10880.2 2741.1 L 10920.2 2673.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 2759.7 L 11595.1 2658.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 2791.7 L 11595.1 2886.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10982.3 2859.7 L 10801.0 2859.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11018.7 2875.7 L 11018.7 2929.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11397.9 2886.5 L 11398.7 2791.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11397.8 2918.5 L 11397.8 3033.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 3013.9 L 11595.1 2918.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 3045.9 L 11595.1 3166.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10713.3 3066.1 L 10713.3 3181.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10713.3 3034.1 L 10713.3 2950.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10749.7 3050.1 L 10903.6 3050.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11171.2 3034.1 L 11171.2 2875.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11134.8 3050.1 L 11015.9 3050.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11171.2 3066.1 L 11171.2 3181.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10959.7 3139.1 L 10959.7 3066.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10959.7 3171.1 L 10959.7 3221.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11397.8 3160.5 L 11397.8 3065.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11397.8 3192.5 L 11397.8 3303.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10959.7 3355.1 L 10959.7 3424.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10959.7 3323.1 L 10959.7 3253.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 3335.9 L 11595.1 3198.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11595.1 3367.9 L 11595.1 3427.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 10963.1 2419.4 L 11036.1 2386.1"/>
+<path class="link" marker-end="url(#in)" d="M 10905.0 2450.8 L 10879.0 2467.7"/>
+<path class="link" marker-end="url(#in)" d="M 10896.0 2419.2 L 10824.7 2386.1"/>
+<path class="link" marker-start="url(#in)" d="M 11580.1 2480.6 L 11551.3 2449.8"/>
+<path class="link" marker-end="url(#in)" d="M 11579.9 2512.6 L 11551.6 2542.2"/>
+<path class="link" marker-start="url(#in)" d="M 11204.8 2501.0 L 11231.8 2490.9"/>
+<path class="link" marker-end="url(#in)" d="M 11204.8 2526.3 L 11231.8 2536.5"/>
+<path class="link" marker-start="url(#in)" d="M 11068.1 2553.3 L 11074.9 2513.6"/>
+<path class="link" marker-end="url(#in)" d="M 11029.0 2566.0 L 11006.8 2564.0"/>
+<path class="link" marker-end="url(#in)" d="M 11048.0 2553.3 L 11015.1 2522.9"/>
+<path class="link" marker-start="url(#in)" d="M 11155.1 2708.4 L 11124.3 2677.6"/>
+<path class="link" marker-start="url(#in)" d="M 11187.2 2708.4 L 11217.8 2677.6"/>
+<path class="link" marker-end="url(#in)" d="M 11143.4 2740.4 L 11113.5 2757.6"/>
+<path class="link" marker-end="url(#in)" d="M 11161.9 2740.4 L 11135.9 2785.3"/>
+<path class="link" marker-end="url(#in)" d="M 11198.8 2740.4 L 11225.6 2755.9"/>
+<path class="link" marker-start="url(#in)" d="M 10683.9 2712.2 L 10638.7 2675.8"/>
+<path class="link" marker-end="url(#in)" d="M 10683.5 2744.2 L 10639.3 2779.2"/>
+<path class="link" marker-end="url(#in)" d="M 10670.2 2736.2 L 10631.1 2745.4"/>
+<path class="link" marker-start="url(#in)" d="M 10856.6 2741.1 L 10836.2 2718.2"/>
+<path class="link" marker-end="url(#in)" d="M 10904.3 2757.1 L 10947.3 2757.1"/>
+<path class="link" marker-start="url(#in)" d="M 11613.5 2759.7 L 11646.0 2731.3"/>
+<path class="link" marker-end="url(#in)" d="M 11614.0 2791.7 L 11650.6 2822.7"/>
+<path class="link" marker-end="url(#in)" d="M 11631.5 2786.6 L 11699.5 2807.0"/>
+<path class="link" marker-end="url(#in)" d="M 11573.7 2791.7 L 11528.4 2825.5"/>
+<path class="link" marker-start="url(#in)" d="M 10997.2 2843.7 L 10976.2 2828.1"/>
+<path class="link" marker-end="url(#in)" d="M 10990.6 2875.7 L 10971.8 2886.5"/>
+<path class="link" marker-start="url(#in)" d="M 11425.1 2918.5 L 11463.2 2940.8"/>
+<path class="link" marker-start="url(#in)" d="M 11368.9 2918.5 L 11333.2 2938.2"/>
+<path class="link" marker-end="url(#in)" d="M 11364.3 2886.5 L 11330.4 2870.2"/>
+<path class="link" marker-end="url(#in)" d="M 11610.6 3045.9 L 11648.2 3084.6"/>
+<path class="link" marker-end="url(#in)" d="M 10742.2 3066.1 L 10782.1 3088.2"/>
+<path class="link" marker-end="url(#in)" d="M 10684.4 3066.1 L 10648.0 3086.2"/>
+<path class="link" marker-end="url(#in)" d="M 11186.8 3034.1 L 11218.2 3001.7"/>
+<path class="link" marker-end="url(#in)" d="M 10943.7 3139.1 L 10913.0 3108.3"/>
+<path class="link" marker-end="url(#in)" d="M 10977.3 3139.1 L 11011.0 3108.3"/>
+<path class="link" marker-start="url(#in)" d="M 11434.2 3191.5 L 11454.7 3200.1"/>
+<path class="link" marker-start="url(#in)" d="M 11373.9 3192.5 L 11330.0 3221.9"/>
+<path class="link" marker-start="url(#in)" d="M 11376.6 3160.5 L 11335.4 3129.4"/>
+<path class="link" marker-start="url(#in)" d="M 10943.7 3323.1 L 10913.0 3292.3"/>
+<path class="link" marker-end="url(#in)" d="M 10943.7 3355.1 L 10913.0 3385.8"/>
+<path class="link" marker-start="url(#in)" d="M 11575.9 3335.9 L 11543.8 3309.2"/>
+<path class="link" marker-start="url(#in)" d="M 11614.6 3335.9 L 11645.8 3310.2"/>
+<path class="link" marker-end="url(#in)" d="M 11616.2 3367.9 L 11644.3 3389.2"/>
+<path class="link" marker-end="url(#in)" d="M 11572.8 3367.9 L 11543.3 3389.0"/>
+<path class="link" marker-end="url(#in)" d="M 11558.8 3351.3 L 11523.1 3350.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_tetrahydrofolate-metabolism" transform="translate(11159.4,2271.4)"><rect rx="10" height="31" width="258" x="-129.0" y="-15.5"/><text dominant-baseline="central">tetrahydrofolate metabolism</text></g>
+<g id="node1218" class="node nodeHM pw_tetrahydrofolate-metabolism lid4667" transform="translate(11171.2,3197.4)"><rect height="30.0" width="234.6" x="-117.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4667" target="_blank">6-hydroxymethyl-7,8-dihydropterin PPi</a></text><title>6-hydroxymethyl-7,8-dihydropterin diphosphate</title></g>
+<g id="node1904" class="node nodeHM pw_tetrahydrofolate-metabolism lid202583" transform="translate(11397.8,3319.6)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202583" target="_blank">5,6,7,8-tetrahydromonapterin</a></text><title>5,6,7,8-tetrahydromonapterin</title></g>
+<g id="node1906" class="node nodeHM pw_tetrahydrofolate-metabolism lid16051" transform="translate(11397.8,3049.9)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16051" target="_blank">7,8-dihydromonapterin</a></text><title>7,8-dihydromonapterin</title></g>
+<g id="node1908" class="node nodeHM pw_tetrahydrofolate-metabolism lid202589" transform="translate(11398.9,2775.7)"><rect height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202589" target="_blank">7,8-dihydromonapterin 3&#x27;-PPPi</a></text><title>7,8-dihydromonapterin 3&#x27;-triphosphate</title></g>
+<g id="node2611" class="node nodeHM pw_tetrahydrofolate-metabolism lid17839" transform="translate(11595.1,3443.0)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17839" target="_blank">preQ0</a></text><title>7-cyano-7-deazaguanine</title></g>
+<g id="node2613" class="node nodeHM pw_tetrahydrofolate-metabolism lid170496" transform="translate(11595.1,3182.6)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170496" target="_blank">7-carboxy-7-deazaguanine</a></text><title>7-carboxy-7-deazaguanine</title></g>
+<g id="node2615" class="node nodeHM pw_tetrahydrofolate-metabolism lid10265" transform="translate(11595.1,2902.5)"><rect height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10265" target="_blank">6-carboxy-5,6,7,8-tetrahydropterin</a></text><title>6-carboxy-5,6,7,8-tetrahydropterin</title></g>
+<g id="node8889" class="node nodeHM pw_tetrahydrofolate-metabolism lid1373" transform="translate(11018.7,2945.2)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1373" target="_blank">5-methyltetrahydrofolate</a></text><title>5-methyltetrahydrofolate</title></g>
+<g id="node9193" class="node nodeHM pw_tetrahydrofolate-metabolism lid9567" transform="translate(10959.7,3237.9)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9567" target="_blank">4-amino-4-deoxychorismate</a></text><title>4-amino-4-deoxychorismate</title></g>
+<g id="node9195" class="node nodeHM pw_tetrahydrofolate-metabolism lid1491" transform="translate(10959.7,3050.1)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1491" target="_blank">4-aminobenzoate</a></text><title>4-aminobenzoate</title></g>
+<g id="node9196" class="node nodeHM pw_tetrahydrofolate-metabolism lid536" transform="translate(10929.6,2657.1)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=536" target="_blank">10-formyltetrahydrofolate</a></text><title>10-formyltetrahydrofolate</title></g>
+<g id="node9214" class="node nodeHM pw_tetrahydrofolate-metabolism lid401" transform="translate(10702.5,2859.7)"><rect height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=401" target="_blank">5,10-methylenetetrahydrofolate</a></text><title>5,10-methylenetetrahydrofolate</title></g>
+<g id="node9223" class="node nodeHM pw_tetrahydrofolate-metabolism lid193" transform="translate(11171.2,2590.1)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=193" target="_blank">DHF</a></text><title>7,8-dihydrofolate</title></g>
+<g id="node9234" class="node nodeSM pw_tetrahydrofolate-metabolism lid207" transform="translate(11171.2,2434.8)"><rect height="35.0" width="116.0" x="-58.0" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=207" target="_blank">tetrahydrofolate</a></text><title>Tetrahydrofolate</title></g>
+<g id="node9251" class="node nodeHM pw_tetrahydrofolate-metabolism lid204" transform="translate(10959.7,3440.2)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=204" target="_blank">chorismate</a></text><title>Chorismate</title></g>
+<g id="node9259" class="node nodeHM pw_tetrahydrofolate-metabolism lid1965" transform="translate(11171.2,2859.7)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1965" target="_blank">7,8-dihydropteroate</a></text><title>7,8-dihydropteroate</title></g>
+<g id="node9273" class="node nodeHM pw_tetrahydrofolate-metabolism lid4130" transform="translate(11595.1,2642.2)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4130" target="_blank">7,8-dihydroneopterin 3&#x27;-PPPi</a></text><title>7,8-dihydroneopterin 3&#x27;-triphosphate</title></g>
+<g id="node10385" class="node nodeHM pw_tetrahydrofolate-metabolism lid1611" transform="translate(10703.7,2594.7)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1611" target="_blank">5-formyltetrahydrofolate</a></text><title>5-formyltetrahydrofolate</title></g>
+<g id="node11325" class="node nodeHM pw_tetrahydrofolate-metabolism lid158" transform="translate(10713.3,2934.1)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title>5-phospho-alpha-D-ribose 1-diphosphate</title></g>
+<g id="node11329" class="node nodeHM pw_tetrahydrofolate-metabolism lid28785" transform="translate(10713.3,3197.4)"><rect height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28785" target="_blank">4-(beta-D-ribosyl)aniline 5&#x27;-P</a></text><title>4-(beta-D-ribofuranosyl)aniline 5&#x27;-phosphate</title></g>
+<g id="node12183" class="node nodeHM pw_tetrahydrofolate-metabolism lid37" transform="translate(11595.1,2351.0)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title>GTP</title></g>
+<g id="node9208" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(10929.6,2434.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.2.2" target="_blank">2.1.2.2</a></text><title>phosphoribosylglycinamide formyltransferase 1</title></g>
+<g id="node9244" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11595.1,2496.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.16" target="_blank">3.5.4.16</a></text><title>GTP cyclohydrolase I</title></g>
+<g id="node9212" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11171.2,2513.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.3" target="_blank">1.5.1.3</a></text><title>dihydrofolate reductase</title></g>
+<g id="node8911" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11065.4,2569.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.10" target="_blank">3.5.1.10</a></text><title>formyltetrahydrofolate deformylase</title></g>
+<g id="node1909" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11397.8,2642.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.7" target="_blank">5.1.99.7</a></text><title>dihydroneopterin triphosphate 2&#x27;-epimerase</title></g>
+<g id="node9225" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11171.2,2724.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.12" target="_blank">6.3.2.12</a></text><title>dihydrofolate synthase</title></g>
+<g id="node10386" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(10703.7,2728.2)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.2" target="_blank">6.3.3.2</a></text><title>5-Formyltetrahydrofolate cyclo-ligase</title></g>
+<g id="node9207" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(10870.8,2757.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.9" target="_blank">3.5.4.9</a></text><title>methenyltetrahydrofolate cyclohydrolase</title></g>
+<g id="node2616" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11595.1,2775.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.50" target="_blank">4.1.2.50</a></text><title>6-carboxytetrahydropterin synthase</title></g>
+<g id="node8914" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11018.7,2859.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.20" target="_blank">1.5.1.20</a></text><title>methylenetetrahydrofolate reductase [NAD(P)H]</title></g>
+<g id="node1907" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11397.8,2902.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central">?.?.?.?</text><title>hypothetical, spontaneous</title></g>
+<g id="node2614" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11595.1,3029.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.99.3" target="_blank">4.3.99.3</a></text><title>7-carboxy-7-deazaguanine synthase</title></g>
+<g id="node11326" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(10713.3,3050.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.54" target="_blank">2.4.2.54</a></text><title>beta-ribofuranosylphenol 5&#x27;-phosphate synthase</title></g>
+<g id="node9249" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11171.2,3050.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.15" target="_blank">2.5.1.15</a></text><title>dihydropteroate synthase</title></g>
+<g id="node9219" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(10959.7,3155.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.38" target="_blank">4.1.3.38</a></text><title>aminodeoxychorismate lyase</title></g>
+<g id="node1905" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11397.8,3176.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.50" target="_blank">1.5.1.50</a></text><title>dihydromonapterin reductase</title></g>
+<g id="node9199" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(10959.7,3339.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.85" target="_blank">2.6.1.85</a></text><title>aminodeoxychorismate synthase</title></g>
+<g id="node2612" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(11595.1,3351.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.4.20" target="_blank">6.3.4.20</a></text><title>7-cyano-7-deazaguanine synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1898" class="node nodeCM pw_tetrahydrofolate-metabolism lid5" transform="translate(11314.2,3113.4)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node1899" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(11310.5,3235.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node1900" class="node nodeCM pw_tetrahydrofolate-metabolism lid10" transform="translate(11482.6,3211.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node1901" class="node nodeCM pw_tetrahydrofolate-metabolism lid940" transform="translate(11308.1,2952.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=940" target="_blank">PPPi</a></text><title>triphosphate</title></g>
+<g id="node1902" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(11482.6,2952.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node1903" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(11308.1,2859.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2602" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(11665.4,3405.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2603" class="node nodeCM pw_tetrahydrofolate-metabolism lid13" transform="translate(11521.1,3405.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node2604" class="node nodeCM pw_tetrahydrofolate-metabolism lid16" transform="translate(11503.6,3350.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node2605" class="node nodeCM pw_tetrahydrofolate-metabolism lid27" transform="translate(11665.2,3294.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node2606" class="node nodeCM pw_tetrahydrofolate-metabolism lid4" transform="translate(11524.6,3293.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node2607" class="node nodeCM pw_tetrahydrofolate-metabolism lid4224" transform="translate(11663.7,3100.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4224" target="_blank">NH4+</a></text><title>ammonium</title></g>
+<g id="node2608" class="node nodeCM pw_tetrahydrofolate-metabolism lid940" transform="translate(11724.5,2814.5)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=940" target="_blank">PPPi</a></text><title>triphosphate</title></g>
+<g id="node2609" class="node nodeCM pw_tetrahydrofolate-metabolism lid90" transform="translate(11669.5,2838.7)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title>acetaldehyde</title></g>
+<g id="node2610" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(11664.4,2715.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node8890" class="node nodeCM pw_tetrahydrofolate-metabolism lid50" transform="translate(10954.7,2812.1)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+<g id="node8909" class="node nodeCM pw_tetrahydrofolate-metabolism lid120" transform="translate(10973.3,2561.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node8910" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(10997.7,2506.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node8912" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(11077.6,2497.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node8913" class="node nodeCM pw_tetrahydrofolate-metabolism lid40" transform="translate(10943.8,2902.5)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node9194" class="node nodeCM pw_tetrahydrofolate-metabolism lid41" transform="translate(10897.0,3401.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node9201" class="node nodeCM pw_tetrahydrofolate-metabolism lid102" transform="translate(10897.0,3276.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title>L-glutamine</title></g>
+<g id="node9202" class="node nodeCM pw_tetrahydrofolate-metabolism lid31" transform="translate(10897.0,3092.3)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node9203" class="node nodeCM pw_tetrahydrofolate-metabolism lid21327" transform="translate(10790.2,2370.1)"><rect rx="5" height="30.0" width="279.8" x="-139.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21327" target="_blank">N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide</a></text><title>N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide</title></g>
+<g id="node9204" class="node nodeCM pw_tetrahydrofolate-metabolism lid16124" transform="translate(11071.2,2370.1)"><rect rx="5" height="30.0" width="223.3" x="-111.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16124" target="_blank">N1-(5-phospho-D-ribosyl)glycinamide</a></text><title>N1-(5-phospho-D-ribosyl)glycinamide</title></g>
+<g id="node9205" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(10859.5,2480.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9206" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(10822.0,2702.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9210" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(10966.7,2757.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9216" class="node nodeCM pw_tetrahydrofolate-metabolism lid10" transform="translate(11259.7,2547.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node9221" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(11126.6,2801.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9227" class="node nodeCM pw_tetrahydrofolate-metabolism lid41" transform="translate(11233.7,2661.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node9230" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(11028.5,3092.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9232" class="node nodeCM pw_tetrahydrofolate-metabolism lid13" transform="translate(11247.9,2768.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node9235" class="node nodeCM pw_tetrahydrofolate-metabolism lid4" transform="translate(11108.2,2661.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node9237" class="node nodeCM pw_tetrahydrofolate-metabolism lid16" transform="translate(11094.1,2768.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node9239" class="node nodeCM pw_tetrahydrofolate-metabolism lid120" transform="translate(11536.3,2558.2)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node9241" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(11536.3,2433.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9247" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(11508.9,2840.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9254" class="node nodeCM pw_tetrahydrofolate-metabolism lid5" transform="translate(11259.7,2480.4)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node9256" class="node nodeCM pw_tetrahydrofolate-metabolism lid17" transform="translate(11233.7,2985.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node10382" class="node nodeCM pw_tetrahydrofolate-metabolism lid16" transform="translate(10611.7,2750.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node10383" class="node nodeCM pw_tetrahydrofolate-metabolism lid13" transform="translate(10619.1,2795.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node10384" class="node nodeCM pw_tetrahydrofolate-metabolism lid4" transform="translate(10618.9,2659.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node11327" class="node nodeCM pw_tetrahydrofolate-metabolism lid28" transform="translate(10804.3,3100.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node11328" class="node nodeCM pw_tetrahydrofolate-metabolism lid17" transform="translate(10625.8,3098.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1381.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 3281.6 2947.8" width="3282" height="2948" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="3281.6" height="2947.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_tetrahydrofolate-metabolism" class="pw " x="0.0" y="0.0" width="3201.6" height="2852.3" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1065.2 802.9 L 1052.8 668.2"/>
+<path class="link" marker-end="url(#in)" d="M 1067.8 834.9 L 1079.9 1000.4"/>
+<path class="link" marker-start="url(#in)" d="M 1088.9 1237.9 L 1081.7 1032.4"/>
+<path class="link" marker-end="url(#in)" d="M 1089.5 1269.9 L 1089.9 1467.8"/>
+<path class="link" marker-start="url(#in)" d="M 1088.4 1691.7 L 1089.8 1499.8"/>
+<path class="link" marker-end="url(#in)" d="M 1088.2 1723.7 L 1087.5 1904.2"/>
+<path class="link" marker-start="url(#in)" d="M 1087.4 2097.3 L 1087.4 1936.2"/>
+<path class="link" marker-end="url(#in)" d="M 1080.8 2129.3 L 1028.8 2255.6"/>
+<path class="link" marker-start="url(#in)" d="M 867.2 1016.6 L 958.5 1016.5"/>
+<path class="link" marker-end="url(#in)" d="M 803.3 1016.6 L 736.5 1016.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 507.4 1106.0 L 613.5 1032.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 473.8 1136.5 L 387.9 1245.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 276.2 1380.5 L 361.9 1277.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 238.6 1412.5 L 155.0 1467.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2011.2 404.1 L 1928.3 282.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2050.7 420.1 L 2094.0 420.1"/>
+<path class="link" marker-start="url(#in)" d="M 2310.4 601.0 L 2207.2 436.1"/>
+<path class="link" marker-end="url(#in)" d="M 2349.1 629.2 L 2478.5 684.1"/>
+<path class="link" marker-start="url(#in)" d="M 2671.6 700.1 L 2603.2 700.1"/>
+<path class="link" marker-end="url(#in)" d="M 2711.2 715.4 C 2731.9 744.3 2776.6 806.7 2797.3 835.6"/>
+<path class="link" marker-start="url(#in)" d="M 2633.8 773.9 C 2607.8 757.6 2566.8 731.9 2540.8 715.6"/>
+<path class="link" marker-end="url(#in)" d="M 2690.2 802.3 L 2773.2 836.5"/>
+<path class="link" marker-end="url(#in)" d="M 2932.5 1016.4 L 2820.3 866.9"/>
+<path class="link" marker-start="url(#in)" d="M 2950.2 1048.4 L 3015.8 1232.0"/>
+<path class="link" marker-end="url(#in)" d="M 3020.5 1456.3 L 3021.5 1264.0"/>
+<path class="link" marker-start="url(#in)" d="M 3020.4 1488.3 L 3020.4 1684.7"/>
+<path class="link" marker-start="url(#in)" d="M 2274.8 215.9 L 2274.8 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 2268.2 247.9 L 2203.8 404.1"/>
+<path class="link" marker-start="url(#in)" d="M 3129.2 2679.7 L 3129.2 2786.3"/>
+<path class="link" marker-end="url(#in)" d="M 3122.5 2647.7 L 3072.8 2528.3"/>
+<path class="link" marker-start="url(#in)" d="M 2966.2 2357.9 L 3055.8 2496.3"/>
+<path class="link" marker-end="url(#in)" d="M 2946.2 2325.9 L 2857.1 2179.7"/>
+<path class="link" marker-start="url(#in)" d="M 2607.5 2308.8 C 2607.5 2341.7 2607.5 2418.8 2607.5 2451.5"/>
+<path class="link" marker-start="url(#in)" d="M 2637.1 2277.4 L 2817.8 2179.7"/>
+<path class="link" marker-end="url(#in)" d="M 2579.4 2308.9 C 2555.7 2321.9 2522.0 2340.5 2498.4 2353.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2859.3 1910.2 C 2891.0 1869.0 2977.1 1757.0 3008.7 1716.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2847.4 1941.6 L 2847.4 2147.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2853.7 1909.6 L 2878.3 1847.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1039.3 802.9 L 1006.9 784.0"/>
+<path class="link" marker-end="url(#in)" d="M 1047.3 834.9 L 1013.7 862.8"/>
+<path class="link" marker-start="url(#in)" d="M 1065.7 1237.9 L 1032.7 1215.7"/>
+<path class="link" marker-end="url(#in)" d="M 1121.4 1255.0 L 1146.5 1255.8"/>
+<path class="link" marker-end="url(#in)" d="M 1113.3 1269.9 L 1144.4 1290.8"/>
+<path class="link" marker-end="url(#in)" d="M 1096.6 1269.9 L 1117.3 1316.2"/>
+<path class="link" marker-end="url(#in)" d="M 1110.8 1723.7 L 1141.9 1745.7"/>
+<path class="link" marker-start="url(#in)" d="M 1059.1 2097.3 L 1027.1 2079.2"/>
+<path class="link" marker-start="url(#in)" d="M 1078.7 2097.3 L 1054.4 2052.5"/>
+<path class="link" marker-end="url(#in)" d="M 1119.3 2121.0 L 1156.6 2129.9"/>
+<path class="link" marker-end="url(#in)" d="M 1103.1 2129.3 L 1132.9 2159.6"/>
+<path class="link" marker-end="url(#in)" d="M 1091.0 2129.3 L 1102.4 2181.0"/>
+<path class="link" marker-start="url(#in)" d="M 479.3 1104.5 L 458.5 1058.3"/>
+<path class="link" marker-start="url(#in)" d="M 488.6 1104.5 L 496.4 1048.4"/>
+<path class="link" marker-end="url(#in)" d="M 488.7 1136.5 L 496.5 1191.0"/>
+<path class="link" marker-start="url(#in)" d="M 249.8 1380.5 L 218.7 1342.3"/>
+<path class="link" marker-start="url(#in)" d="M 260.9 1380.5 L 254.1 1327.4"/>
+<path class="link" marker-start="url(#in)" d="M 270.3 1380.5 L 293.5 1330.2"/>
+<path class="link" marker-start="url(#in)" d="M 1993.4 434.2 L 1959.4 450.9"/>
+<path class="link" marker-end="url(#in)" d="M 2019.3 436.1 L 2009.9 490.2"/>
+<path class="link" marker-end="url(#in)" d="M 2028.6 436.1 L 2047.9 483.5"/>
+<path class="link" marker-start="url(#in)" d="M 2322.1 601.0 L 2328.2 546.2"/>
+<path class="link" marker-end="url(#in)" d="M 2349.1 610.0 L 2391.2 599.7"/>
+<path class="link" marker-start="url(#in)" d="M 2671.6 712.9 L 2612.5 739.2"/>
+<path class="link" marker-end="url(#in)" d="M 2714.8 684.1 L 2749.8 645.8"/>
+<path class="link" marker-end="url(#in)" d="M 2728.9 693.7 L 2780.8 682.1"/>
+<path class="link" marker-start="url(#in)" d="M 2627.8 805.2 L 2596.6 821.6"/>
+<path class="link" marker-end="url(#in)" d="M 2678.1 773.2 L 2706.7 750.1"/>
+<path class="link" marker-end="url(#in)" d="M 2690.2 782.6 L 2729.7 774.4"/>
+<path class="link" marker-start="url(#in)" d="M 2936.4 1048.4 L 2911.7 1097.3"/>
+<path class="link" marker-end="url(#in)" d="M 2915.8 1029.0 L 2876.7 1024.4"/>
+<path class="link" marker-start="url(#in)" d="M 3052.3 1483.4 L 3087.2 1495.5"/>
+<path class="link" marker-start="url(#in)" d="M 3033.3 1488.3 L 3062.3 1524.4"/>
+<path class="link" marker-end="url(#in)" d="M 2988.5 1470.6 L 2948.9 1468.4"/>
+<path class="link" marker-end="url(#in)" d="M 2997.7 1456.3 L 2962.8 1431.8"/>
+<path class="link" marker-end="url(#in)" d="M 3013.7 1456.3 L 2993.9 1409.3"/>
+<path class="link" marker-start="url(#in)" d="M 2259.8 215.9 L 2227.9 181.7"/>
+<path class="link" marker-end="url(#in)" d="M 2289.7 247.9 L 2321.7 282.1"/>
+<path class="link" marker-start="url(#in)" d="M 3114.4 2679.7 L 3084.7 2711.9"/>
+<path class="link" marker-end="url(#in)" d="M 3097.3 2650.4 L 3064.3 2636.6"/>
+<path class="link" marker-end="url(#in)" d="M 2924.0 2349.3 L 2894.8 2356.1"/>
+<path class="link" marker-end="url(#in)" d="M 2924.0 2331.0 L 2887.3 2318.4"/>
+<path class="link" marker-end="url(#in)" d="M 2605.5 2309.4 L 2598.6 2364.1"/>
+<path class="link" marker-end="url(#in)" d="M 2586.3 2309.4 L 2568.1 2323.1"/>
+<path class="link" marker-end="url(#in)" d="M 2870.2 1941.6 L 2903.2 1964.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_tetrahydrofolate-metabolism" transform="translate(1600.8,0.0)"><rect rx="10" height="31" width="272" x="-136.2" y="-15.5"/><text dominant-baseline="central">tetrahydrofolate metabolism</text></g>
+<g id="node12183" class="node nodeHM pw_tetrahydrofolate-metabolism lid37" transform="translate(1051.3,652.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node9273" class="node nodeHM pw_tetrahydrofolate-metabolism lid27690" transform="translate(1081.1,1016.4)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27690" target="_blank">7,8-dihydroneopterin 3&#x27;-triphosphate</a></text><title></title></g>
+<g id="node2615" class="node nodeHM pw_tetrahydrofolate-metabolism lid10265" transform="translate(1089.9,1483.8)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10265" target="_blank">6-carboxy-5,6,7,8-tetrahydropterin</a></text><title></title></g>
+<g id="node2613" class="node nodeHM pw_tetrahydrofolate-metabolism lid170496" transform="translate(1087.4,1920.2)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170496" target="_blank">7-carboxy-7-deazaguanine</a></text><title></title></g>
+<g id="node2611" class="node nodeHM pw_tetrahydrofolate-metabolism lid17839" transform="translate(1022.2,2271.6)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17839" target="_blank">preQ0</a></text><title></title></g>
+<g id="node1908" class="node nodeHM pw_tetrahydrofolate-metabolism lid202589" transform="translate(636.6,1016.6)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202589" target="_blank">7,8-dihydromonapterin 3&#x27;-PPPi</a></text><title></title></g>
+<g id="node1906" class="node nodeHM pw_tetrahydrofolate-metabolism lid16051" transform="translate(375.2,1261.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16051" target="_blank">7,8-dihydromonapterin</a></text><title></title></g>
+<g id="node1904" class="node nodeHM pw_tetrahydrofolate-metabolism lid202583" transform="translate(130.7,1483.5)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202583" target="_blank">5,6,7,8-tetrahydromonapterin</a></text><title></title></g>
+<g id="node10385" class="node nodeHM pw_tetrahydrofolate-metabolism lid1611" transform="translate(1917.5,266.2)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1611" target="_blank">5-formyltetrahydrofolate</a></text><title></title></g>
+<g id="node9214" class="node nodeHM pw_tetrahydrofolate-metabolism lid401" transform="translate(2197.2,420.1)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=401" target="_blank">5,10-methylenetetrahydrofolate</a></text><title></title></g>
+<g id="node9196" class="node nodeHM pw_tetrahydrofolate-metabolism lid536" transform="translate(2516.2,700.1)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=536" target="_blank">10-formyltetrahydrofolate</a></text><title></title></g>
+<g id="node9234" class="node nodeHM pw_tetrahydrofolate-metabolism lid207" transform="translate(2808.3,850.9)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=207" target="_blank">(6S)-THFA</a></text><title></title></g>
+<g id="node9223" class="node nodeHM pw_tetrahydrofolate-metabolism lid193" transform="translate(3021.6,1248.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=193" target="_blank">DHF</a></text><title></title></g>
+<g id="node9259" class="node nodeHM pw_tetrahydrofolate-metabolism lid1965" transform="translate(3020.4,1700.7)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1965" target="_blank">7,8-dihydropteroate</a></text><title></title></g>
+<g id="node8889" class="node nodeHM pw_tetrahydrofolate-metabolism lid1373" transform="translate(2274.8,52.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1373" target="_blank">5-methyltetrahydrofolate</a></text><title></title></g>
+<g id="node9251" class="node nodeHM pw_tetrahydrofolate-metabolism lid204" transform="translate(3129.2,2802.3)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=204" target="_blank">chorismate</a></text><title></title></g>
+<g id="node9193" class="node nodeHM pw_tetrahydrofolate-metabolism lid9567" transform="translate(3066.1,2512.3)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9567" target="_blank">4-amino-4-deoxychorismate</a></text><title></title></g>
+<g id="node9195" class="node nodeHM pw_tetrahydrofolate-metabolism lid1491" transform="translate(2847.4,2163.7)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1491" target="_blank">4-aminobenzoate</a></text><title></title></g>
+<g id="node11325" class="node nodeHM pw_tetrahydrofolate-metabolism lid158" transform="translate(2607.5,2466.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title></title></g>
+<g id="node11329" class="node nodeHM pw_tetrahydrofolate-metabolism lid28785" transform="translate(2470.3,2369.0)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28785" target="_blank">4-(beta-D-ribosyl)aniline 5&#x27;-P</a></text><title></title></g>
+<g id="node1218" class="node nodeHM pw_tetrahydrofolate-metabolism lid4667" transform="translate(2884.6,1831.1)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4667" target="_blank">6-hydroxymethyl-7,8-dihydropterin-PP</a></text><title></title></g>
+<g id="node9244" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(1066.6,818.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.16" target="_blank">3.5.4.16</a></text><title>GTP cyclohydrolase I</title></g>
+<g id="node2616" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(1089.5,1253.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.50" target="_blank">4.1.2.50</a></text><title>6-carboxytetrahydropterin synthase</title></g>
+<g id="node2614" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(1088.2,1707.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.99.3" target="_blank">4.3.99.3</a></text><title>7-carboxy-7-deazaguanine synthase</title></g>
+<g id="node2612" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(1087.4,2113.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.4.20" target="_blank">6.3.4.20</a></text><title>7-cyano-7-deazaguanine synthase</title></g>
+<g id="node1909" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(835.2,1016.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.7" target="_blank">5.1.99.7</a></text><title>dihydroneopterin triphosphate 2&#x27;-epimerase</title></g>
+<g id="node1907" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(486.4,1120.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>hypothetical, spontaneous</title></g>
+<g id="node1905" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(262.9,1396.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.50" target="_blank">1.5.1.50</a></text><title>dihydromonapterin reductase</title></g>
+<g id="node10386" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2022.1,420.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.2" target="_blank">6.3.3.2</a></text><title>5-Formyltetrahydrofolate cyclo-ligase</title></g>
+<g id="node9207" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2320.4,617.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.9" target="_blank">3.5.4.9</a></text><title>methenyltetrahydrofolate cyclohydrolase</title></g>
+<g id="node9208" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2700.3,700.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.2.2" target="_blank">2.1.2.2</a></text><title>phosphoribosylglycinamide formyltransferase 1; formyltetrahydrofolate deformylase</title></g>
+<g id="node8911" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2658.2,789.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.10" target="_blank">3.5.1.10</a></text><title>phosphoribosylglycinamide formyltransferase 1; formyltetrahydrofolate deformylase</title></g>
+<g id="node9212" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2944.5,1032.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.3" target="_blank">1.5.1.3</a></text><title>dihydrofolate reductase</title></g>
+<g id="node9225" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(3020.4,1472.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.12" target="_blank">6.3.2.12</a></text><title>dihydrofolate synthase</title></g>
+<g id="node8914" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2274.8,231.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.20" target="_blank">1.5.1.20</a></text><title>methylenetetrahydrofolate reductase [NAD(P)H]</title></g>
+<g id="node9199" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(3129.2,2663.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.85" target="_blank">2.6.1.85</a></text><title>aminodeoxychorismate synthase</title></g>
+<g id="node9219" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2955.9,2341.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.38" target="_blank">4.1.3.38</a></text><title>aminodeoxychorismate lyase</title></g>
+<g id="node11326" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2607.5,2293.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.54" target="_blank">2.4.2.54</a></text><title>beta-ribofuranosylphenol 5&#x27;-phosphate synthase</title></g>
+<g id="node9249" class="node nodeEN pw_tetrahydrofolate-metabolism" transform="translate(2847.4,1925.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.15" target="_blank">2.5.1.15</a></text><title>dihydropteroate synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9244~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(991.2,774.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9244~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid120" transform="translate(994.4,878.8)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node2616~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(1017.0,1205.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2616~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid90" transform="translate(1191.4,1257.3)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title></title></g>
+<g id="node2616~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid940" transform="translate(1163.3,1303.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=940" target="_blank">PPPi</a></text><title></title></g>
+<g id="node2616~3" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(1124.5,1332.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2614~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid4224" transform="translate(1160.8,1759.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4224" target="_blank">NH4+</a></text><title></title></g>
+<g id="node2612~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid4" transform="translate(1011.4,2070.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2612~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid27" transform="translate(1045.7,2036.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node2612~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid13" transform="translate(1172.4,2133.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2612~3" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(1148.6,2175.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2612~4" class="node nodeCM pw_tetrahydrofolate-metabolism lid16" transform="translate(1106.0,2197.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1907~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(451.4,1042.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1907~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid940" transform="translate(498.6,1032.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=940" target="_blank">PPPi</a></text><title></title></g>
+<g id="node1907~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(498.8,1207.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1905~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid10" transform="translate(205.6,1326.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node1905~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(252.1,1311.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1905~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid5" transform="translate(300.9,1314.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10386~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid4" transform="translate(1943.7,458.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10386~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid13" transform="translate(2007.2,506.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10386~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid16" transform="translate(2054.4,499.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9207~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(2329.9,530.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9207~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(2403.7,596.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9208~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid16124" transform="translate(2576.5,755.2)"><rect rx="5" height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16124" target="_blank">N1-(5-phospho-D-ribosyl)glycinamide</a></text><title></title></g>
+<g id="node9208~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(2762.2,632.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9208~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid21327" transform="translate(2852.4,666.1)"><rect rx="5" height="30.0" width="301.6" x="-150.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21327" target="_blank">N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide</a></text><title></title></g>
+<g id="node8911~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid1" transform="translate(2580.9,829.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8911~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid120" transform="translate(2726.6,734.1)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node8911~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(2742.2,771.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9212~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid5" transform="translate(2903.7,1113.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9212~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid10" transform="translate(2854.5,1021.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9225~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid4" transform="translate(3102.9,1501.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9225~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid41" transform="translate(3075.2,1540.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node9225~2" class="node nodeCM pw_tetrahydrofolate-metabolism lid13" transform="translate(2933.2,1467.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node9225~3" class="node nodeCM pw_tetrahydrofolate-metabolism lid16" transform="translate(2950.3,1423.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9225~4" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(2987.1,1393.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8914~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid10" transform="translate(2212.9,165.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8914~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid5" transform="translate(2336.7,298.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9199~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid102" transform="translate(3069.9,2727.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node9199~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid41" transform="translate(3048.6,2630.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node9219~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid31" transform="translate(2862.9,2363.5)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node9219~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid12" transform="translate(2874.8,2314.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node11326~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid28" transform="translate(2596.6,2380.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11326~1" class="node nodeCM pw_tetrahydrofolate-metabolism lid17" transform="translate(2552.3,2335.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node9249~0" class="node nodeCM pw_tetrahydrofolate-metabolism lid17" transform="translate(2919.0,1975.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>
+<text x="1391.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

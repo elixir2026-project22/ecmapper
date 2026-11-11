@@ -1,0 +1,530 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="5534" height="4942" viewBox="0 0 5533.8 4941.9"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="17125.4 9101.3 2178.0 1476.8" width="2178" height="1477" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="17125.4" y="9101.3" width="2178.0" height="1476.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_polyamine-pathway" class="pw pw3" x="17165.4" y="9156.8" width="2098.0" height="1381.2" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17707.5 9213.1 L 17370.7 9213.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 9229.1 L 17743.9 9308.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17384.8 9324.0 L 17707.5 9324.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17348.4 9340.0 L 17348.4 9414.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18103.6 9340.0 L 18563.1 9828.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18049.3 9324.0 L 17780.3 9324.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 9342.5 L 18993.7 9240.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 9374.5 L 18993.7 9473.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 9414.3 L 17743.9 9340.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 9446.3 L 17743.9 9519.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17832.9 9483.8 L 17766.2 9522.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17860.7 9451.8 L 17861.0 9371.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18843.0 9491.7 L 18926.3 9490.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18806.6 9508.2 L 18806.6 9579.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17348.4 9519.0 L 17348.4 9446.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17384.8 9535.0 L 17721.7 9535.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18088.5 9551.0 L 18088.5 9828.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18052.1 9535.0 L 17766.2 9535.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 9619.8 L 18993.7 9712.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 9587.8 L 18993.7 9505.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17384.8 9673.9 L 17721.7 9543.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17348.4 9703.9 L 17348.4 9790.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 9671.9 L 17743.9 9551.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 9703.9 L 17743.9 9828.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 9823.8 L 18993.7 9744.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 9855.8 L 18993.7 9939.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17877.3 9844.1 L 17805.7 9844.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17950.0 9844.1 L 18046.5 9844.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18280.7 9844.1 L 18130.5 9844.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18353.5 9844.1 L 18491.0 9844.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17348.4 9947.0 L 17348.4 10030.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17348.4 9915.0 L 17348.4 9822.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 9972.0 L 17743.9 10078.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17783.1 9943.3 L 18046.5 9857.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18481.8 9996.5 L 18481.8 10113.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18435.7 9964.5 L 18130.5 9858.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 10084.8 L 18993.7 10172.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 10052.8 L 18993.7 9971.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17996.8 10093.0 L 18082.6 9860.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17990.9 10125.0 L 17990.9 10403.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17297.6 10177.3 L 17339.7 10254.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17297.2 10145.3 L 17340.1 10062.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17418.4 10177.3 L 17360.4 10254.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17419.0 10145.3 L 17359.8 10062.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 10271.1 L 17743.9 10403.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17743.9 10239.1 L 17743.9 10110.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18481.8 10253.2 L 18481.8 10145.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18481.8 10285.2 L 18481.8 10403.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 10323.0 L 18993.7 10415.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18993.7 10291.0 L 18993.7 10204.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17348.4 10365.5 L 17348.4 10286.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17348.4 10397.5 L 17348.4 10480.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18279.2 10419.8 L 18420.0 10419.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18155.6 10419.8 L 18058.4 10419.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 17780.3 9213.1 L 17837.8 9213.1"/>
+<path class="link" marker-start="url(#in)" d="M 17364.9 9308.0 L 17394.3 9279.5"/>
+<path class="link" marker-end="url(#in)" d="M 17327.7 9308.0 L 17290.7 9279.5"/>
+<path class="link" marker-start="url(#in)" d="M 18061.5 9308.0 L 18013.4 9279.5"/>
+<path class="link" marker-end="url(#in)" d="M 18112.0 9308.0 L 18153.7 9279.5"/>
+<path class="link" marker-end="url(#in)" d="M 19030.1 9358.7 L 19096.3 9359.2"/>
+<path class="link" marker-start="url(#in)" d="M 17722.6 9414.3 L 17689.5 9389.4"/>
+<path class="link" marker-end="url(#in)" d="M 17724.6 9446.3 L 17687.5 9477.0"/>
+<path class="link" marker-end="url(#in)" d="M 17897.1 9481.3 L 17925.1 9491.8"/>
+<path class="link" marker-start="url(#in)" d="M 18831.6 9508.2 L 18863.5 9528.6"/>
+<path class="link" marker-end="url(#in)" d="M 18806.6 9476.2 L 18806.6 9433.9"/>
+<path class="link" marker-start="url(#in)" d="M 17325.3 9519.0 L 17292.3 9496.1"/>
+<path class="link" marker-end="url(#in)" d="M 17328.5 9551.0 L 17289.9 9581.9"/>
+<path class="link" marker-end="url(#in)" d="M 17364.3 9551.0 L 17395.0 9581.9"/>
+<path class="link" marker-start="url(#in)" d="M 18073.9 9519.0 L 18028.8 9469.4"/>
+<path class="link" marker-end="url(#in)" d="M 18107.6 9519.0 L 18166.8 9469.4"/>
+<path class="link" marker-start="url(#in)" d="M 19027.6 9587.8 L 19084.7 9560.9"/>
+<path class="link" marker-start="url(#in)" d="M 19030.1 9596.7 L 19090.7 9584.9"/>
+<path class="link" marker-end="url(#in)" d="M 19020.7 9619.8 L 19091.6 9661.8"/>
+<path class="link" marker-end="url(#in)" d="M 19030.1 9614.2 L 19096.3 9633.1"/>
+<path class="link" marker-start="url(#in)" d="M 17348.4 9671.9 L 17348.4 9642.6"/>
+<path class="link" marker-start="url(#in)" d="M 17312.0 9676.4 L 17292.3 9670.1"/>
+<path class="link" marker-end="url(#in)" d="M 17372.5 9703.9 L 17391.4 9716.4"/>
+<path class="link" marker-end="url(#in)" d="M 17318.1 9703.9 L 17292.3 9717.6"/>
+<path class="link" marker-start="url(#in)" d="M 17780.3 9672.6 L 17813.3 9658.8"/>
+<path class="link" marker-start="url(#in)" d="M 17710.7 9703.9 L 17685.9 9715.9"/>
+<path class="link" marker-end="url(#in)" d="M 17780.3 9701.9 L 17823.4 9718.6"/>
+<path class="link" marker-end="url(#in)" d="M 19030.1 9839.8 L 19096.3 9839.8"/>
+<path class="link" marker-end="url(#in)" d="M 17913.7 9828.1 L 17913.7 9785.8"/>
+<path class="link" marker-start="url(#in)" d="M 18303.0 9828.1 L 18265.7 9785.8"/>
+<path class="link" marker-end="url(#in)" d="M 18332.0 9828.1 L 18371.3 9785.8"/>
+<path class="link" marker-start="url(#in)" d="M 17365.4 9915.0 L 17393.9 9888.2"/>
+<path class="link" marker-start="url(#in)" d="M 17327.1 9915.0 L 17291.3 9888.2"/>
+<path class="link" marker-end="url(#in)" d="M 17328.2 9947.0 L 17290.3 9976.9"/>
+<path class="link" marker-end="url(#in)" d="M 17364.5 9947.0 L 17394.7 9976.9"/>
+<path class="link" marker-start="url(#in)" d="M 17705.2 9940.0 L 17657.0 9920.1"/>
+<path class="link" marker-end="url(#in)" d="M 17704.7 9971.3 L 17659.2 9989.2"/>
+<path class="link" marker-start="url(#in)" d="M 18517.8 9964.5 L 18582.5 9935.7"/>
+<path class="link" marker-end="url(#in)" d="M 18523.2 9996.5 L 18577.0 10017.3"/>
+<path class="link" marker-start="url(#in)" d="M 19030.1 10052.8 L 19082.2 10029.9"/>
+<path class="link" marker-end="url(#in)" d="M 19030.8 10084.8 L 19081.5 10106.6"/>
+<path class="link" marker-start="url(#in)" d="M 17967.7 10093.0 L 17945.5 10077.7"/>
+<path class="link" marker-end="url(#in)" d="M 17965.5 10125.0 L 17944.6 10138.2"/>
+<path class="link" marker-start="url(#in)" d="M 17271.0 10145.3 L 17238.4 10116.1"/>
+<path class="link" marker-start="url(#in)" d="M 17305.4 10145.3 L 17335.5 10116.1"/>
+<path class="link" marker-end="url(#in)" d="M 17270.2 10177.3 L 17239.2 10203.9"/>
+<path class="link" marker-start="url(#in)" d="M 17409.9 10145.3 L 17372.5 10116.1"/>
+<path class="link" marker-start="url(#in)" d="M 17446.7 10145.3 L 17476.5 10116.1"/>
+<path class="link" marker-end="url(#in)" d="M 17447.4 10177.3 L 17475.8 10203.9"/>
+<path class="link" marker-start="url(#in)" d="M 17709.3 10239.1 L 17654.3 10213.7"/>
+<path class="link" marker-end="url(#in)" d="M 17718.6 10271.1 L 17645.1 10317.5"/>
+<path class="link" marker-start="url(#in)" d="M 18517.8 10253.2 L 18587.7 10222.2"/>
+<path class="link" marker-end="url(#in)" d="M 18518.2 10277.7 L 18596.2 10295.9"/>
+<path class="link" marker-start="url(#in)" d="M 19021.4 10291.0 L 19090.9 10250.7"/>
+<path class="link" marker-end="url(#in)" d="M 19025.2 10323.0 L 19087.0 10354.4"/>
+<path class="link" marker-start="url(#in)" d="M 17365.1 10365.5 L 17394.2 10337.6"/>
+<path class="link" marker-end="url(#in)" d="M 17366.5 10397.5 L 17392.7 10420.7"/>
+<path class="link" marker-start="url(#in)" d="M 18244.1 10403.8 L 18307.7 10365.6"/>
+<path class="link" marker-start="url(#in)" d="M 18245.7 10435.8 L 18304.8 10469.3"/>
+<path class="link" marker-end="url(#in)" d="M 18195.9 10435.8 L 18155.7 10465.8"/>
+<path class="link" marker-end="url(#in)" d="M 18197.1 10403.8 L 18154.4 10370.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_polyamine-pathway" transform="translate(18214.4,9156.8)"><rect rx="10" height="31" width="182" x="-91.0" y="-15.5"/><text dominant-baseline="central">polyamine pathway</text></g>
+<g id="node1352" class="node nodeHM pw_polyamine-pathway lid597" transform="translate(17348.4,10496.9)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=597" target="_blank">4-aminobutanoate</a></text><title>4-aminobutanoate</title></g>
+<g id="node1353" class="node nodeHM pw_polyamine-pathway lid192" transform="translate(17861.1,9355.1)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192" target="_blank">Orn</a></text><title>L-ornithine</title></g>
+<g id="node2908" class="node nodeHM pw_polyamine-pathway lid7915" transform="translate(17743.9,9844.1)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7915" target="_blank">carboxyspermidine</a></text><title>carboxyspermidine</title></g>
+<g id="node2912" class="node nodeHM pw_polyamine-pathway lid10788" transform="translate(18806.6,9595.6)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10788" target="_blank">sym-norspermidine</a></text><title>sym-norspermidine</title></g>
+<g id="node2919" class="node nodeHM pw_polyamine-pathway lid7488" transform="translate(18993.7,9955.4)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7488" target="_blank">norspermidine</a></text><title>norspermidine</title></g>
+<g id="node2921" class="node nodeHM pw_polyamine-pathway lid5063" transform="translate(18993.7,9728.9)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5063" target="_blank">carboxynorspermidine</a></text><title>carboxynorspermidine</title></g>
+<g id="node2922" class="node nodeHM pw_polyamine-pathway lid721" transform="translate(18993.7,9489.6)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=721" target="_blank">propane-1,3-diamine</a></text><title>1,3-Diaminopropane</title></g>
+<g id="node4009" class="node nodeHM pw_polyamine-pathway lid35036" transform="translate(17348.4,9806.2)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35036" target="_blank">gamma-L-glutamylputrescine</a></text><title>gamma-L-glutamylputrescine</title></g>
+<g id="node4010" class="node nodeHM pw_polyamine-pathway lid62549" transform="translate(17348.4,10046.4)"><rect height="30.0" width="245.9" x="-123.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=62549" target="_blank">gamma-glutamyl-gamma-aminobutyraldehyde</a></text><title>gamma-glutamyl-gamma-aminobutyraldehyde</title></g>
+<g id="node4012" class="node nodeHM pw_polyamine-pathway lid127712" transform="translate(17348.4,10270.9)"><rect height="30.0" width="206.4" x="-103.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=127712" target="_blank">4-(gamma-glutamylamino)butanoate</a></text><title>4-(gamma-glutamylamino)butanoate</title></g>
+<g id="node4872" class="node nodeHM pw_polyamine-pathway lid4032" transform="translate(17348.4,9430.2)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4032" target="_blank">N-carbamoylputrescine</a></text><title>N-carbamoylputrescine</title></g>
+<g id="node4876" class="node nodeHM pw_polyamine-pathway lid155" transform="translate(17743.9,9535.0)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=155" target="_blank">Put</a></text><title>Putrescine</title></g>
+<g id="node4880" class="node nodeHM pw_polyamine-pathway lid505" transform="translate(17743.9,9324.0)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=505" target="_blank">agmatine</a></text><title>Agmatine</title></g>
+<g id="node5178" class="node nodeHM pw_polyamine-pathway lid1932" transform="translate(17990.9,10419.8)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1932" target="_blank">N1-acetylspermidine</a></text><title>N1-acetylspermidine</title></g>
+<g id="node5179" class="node nodeHM pw_polyamine-pathway lid1108" transform="translate(18481.8,10419.8)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1108" target="_blank">N1-acetylspermine</a></text><title>N1-acetylspermine</title></g>
+<g id="node5603" class="node nodeHM pw_polyamine-pathway lid148" transform="translate(18088.5,9844.1)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=148" target="_blank">spermidine</a></text><title>spermidine</title></g>
+<g id="node5610" class="node nodeHM pw_polyamine-pathway lid197" transform="translate(18481.8,10129.8)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197" target="_blank">spermine</a></text><title>spermine</title></g>
+<g id="node11042" class="node nodeHM pw_polyamine-pathway lid170005" transform="translate(18578.2,9844.1)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170005" target="_blank">N1-(3-aminopropyl)agmatine</a></text><title>N1-(3-aminopropyl)agmatine</title></g>
+<g id="node11173" class="node nodeHM pw_polyamine-pathway lid4120" transform="translate(18993.7,10188.1)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4120" target="_blank">norspermine</a></text><title>norspermine</title></g>
+<g id="node11175" class="node nodeHM pw_polyamine-pathway lid194273" transform="translate(18993.7,10431.5)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=194273" target="_blank">caldopentamine</a></text><title>caldopentamine</title></g>
+<g id="node11181" class="node nodeHM pw_polyamine-pathway lid195064" transform="translate(17743.9,10094.7)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195064" target="_blank">N4-aminopropylspermidine</a></text><title>N4-aminopropylspermidine</title></g>
+<g id="node11193" class="node nodeHM pw_polyamine-pathway lid194275" transform="translate(17743.9,10419.8)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=194275" target="_blank">N4-bis(3-aminopropyl)spermidine</a></text><title>N4-bis(aminopropyl)spermidine</title></g>
+<g id="node12079" class="node nodeHM pw_polyamine-pathway lid123" transform="translate(17348.4,9213.1)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=123" target="_blank">Arg</a></text><title>L-Arginine</title></g>
+<g id="node12087" class="node nodeHM pw_polyamine-pathway lid2561" transform="translate(18993.7,9224.5)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2561" target="_blank">L-2,4-diaminobutanoate</a></text><title>L-2,4-diaminobutanoate</title></g>
+<g id="node4882" class="node nodeEN pw_polyamine-pathway" transform="translate(17743.9,9213.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.19" target="_blank">4.1.1.19</a></text><title>Arginine decarboxylase</title></g>
+<g id="node4875" class="node nodeEN pw_polyamine-pathway" transform="translate(17348.4,9324.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.12" target="_blank">3.5.3.12</a></text><title>agmatine deiminase</title></g>
+<g id="node11041" class="node nodeEN pw_polyamine-pathway" transform="translate(18088.5,9324.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.104" target="_blank">2.5.1.104</a></text><title>N1-aminopropylagmatine synthase</title></g>
+<g id="node2924" class="node nodeEN pw_polyamine-pathway" transform="translate(18993.7,9358.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.86" target="_blank">4.1.1.86</a></text><title>diaminobutyrate decarboxylase</title></g>
+<g id="node4879" class="node nodeEN pw_polyamine-pathway" transform="translate(17743.9,9430.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.11" target="_blank">3.5.3.11</a></text><title>agmatinase</title></g>
+<g id="node5608" class="node nodeEN pw_polyamine-pathway" transform="translate(17860.7,9467.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.17" target="_blank">4.1.1.17</a></text><title>ornithine decarboxylase</title></g>
+<g id="node2913" class="node nodeEN pw_polyamine-pathway" transform="translate(18806.6,9492.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.23" target="_blank">2.5.1.23</a></text><title>sym-norspermidine synthase</title></g>
+<g id="node4871" class="node nodeEN pw_polyamine-pathway" transform="translate(17348.4,9535.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.53" target="_blank">3.5.1.53</a></text><title>N-carbamoylputrescine amidase</title></g>
+<g id="node5598" class="node nodeEN pw_polyamine-pathway" transform="translate(18088.5,9535.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.16" target="_blank">2.5.1.16</a></text><title>spermidine synthase</title></g>
+<g id="node2923" class="node nodeEN pw_polyamine-pathway" transform="translate(18993.7,9603.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.43" target="_blank">1.5.1.43</a></text><title>carboxynorspermidine synthase</title></g>
+<g id="node4022" class="node nodeEN pw_polyamine-pathway" transform="translate(17348.4,9687.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.11" target="_blank">6.3.1.11</a></text><title>glutamate-putrescine ligase</title></g>
+<g id="node2909" class="node nodeEN pw_polyamine-pathway" transform="translate(17743.9,9687.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.43" target="_blank">1.5.1.43</a></text><title>carboxynorspermidine synthase</title></g>
+<g id="node2920" class="node nodeEN pw_polyamine-pathway" transform="translate(18993.7,9839.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.96" target="_blank">4.1.1.96</a></text><title>carboxynorspermidine decarboxylase</title></g>
+<g id="node2907" class="node nodeEN pw_polyamine-pathway" transform="translate(17913.7,9844.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.96" target="_blank">4.1.1.96</a></text><title>carboxynorspermidine decarboxylase</title></g>
+<g id="node11044" class="node nodeEN pw_polyamine-pathway" transform="translate(18317.1,9844.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.24" target="_blank">3.5.3.24</a></text><title>N1-aminopropylagmatine ureohydrolase</title></g>
+<g id="node4024" class="node nodeEN pw_polyamine-pathway" transform="translate(17348.4,9931.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.B1" target="_blank">1.4.3.B1</a></text><title>gamma-glutamylputrescine oxidase</title></g>
+<g id="node11180" class="node nodeEN pw_polyamine-pathway" transform="translate(17743.9,9956.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.128" target="_blank">2.5.1.128</a></text><title>N4-bis(aminopropyl)spermidine synthase</title></g>
+<g id="node11191" class="node nodeEN pw_polyamine-pathway" transform="translate(18481.8,9980.5)"><rect rx="15" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.22" target="_blank">2.5.1.22/2.5.1.104</a></text><title>spermine synthase\n;N1-aminopropylagmatine synthase</title></g>
+<g id="node11172" class="node nodeEN pw_polyamine-pathway" transform="translate(18993.7,10068.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.126" target="_blank">2.5.1.126</a></text><title>norspermine synthase</title></g>
+<g id="node5180" class="node nodeEN pw_polyamine-pathway" transform="translate(17990.9,10109.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.57" target="_blank">2.3.1.57</a></text><title>diamine N-acetyltransferase</title></g>
+<g id="node13573" class="node nodeEN pw_polyamine-pathway" transform="translate(17288.9,10161.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.99" target="_blank">1.2.1.99</a></text><title>4-(gamma-glutamylamino)butanal dehydrogenase</title></g>
+<g id="node4020" class="node nodeEN pw_polyamine-pathway" transform="translate(17430.4,10161.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.99" target="_blank">1.2.1.99</a></text><title>4-(gamma-glutamylamino)butanal dehydrogenase</title></g>
+<g id="node11192" class="node nodeEN pw_polyamine-pathway" transform="translate(17743.9,10255.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.128" target="_blank">2.5.1.128</a></text><title>N4-bis(aminopropyl)spermidine synthase</title></g>
+<g id="node5181" class="node nodeEN pw_polyamine-pathway" transform="translate(18481.8,10269.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.57" target="_blank">2.3.1.57</a></text><title>diamine N-acetyltransferase</title></g>
+<g id="node11174" class="node nodeEN pw_polyamine-pathway" transform="translate(18993.7,10307.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.127" target="_blank">2.5.1.127</a></text><title>caldopentamine synthase</title></g>
+<g id="node4011" class="node nodeEN pw_polyamine-pathway" transform="translate(17348.4,10381.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.94" target="_blank">3.5.1.94</a></text><title>gamma-glutamyl-gamma-aminobutyrate hydrolase</title></g>
+<g id="node2983" class="node nodeEN pw_polyamine-pathway" transform="translate(18217.4,10419.8)"><rect rx="15" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.3.13" target="_blank">1.5.3.13/1.5.3.17</a></text><title>N1-acetylpolyamine oxidase;non-specific polyamine oxidase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1348" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(17619.7,10333.5)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node1349" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(17618.3,10005.2)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node1350" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(17618.3,9904.1)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node1351" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(17619.7,10197.7)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node2903" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(17913.7,9769.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node2904" class="node nodeCM pw_polyamine-pathway lid10" transform="translate(17851.3,9729.3)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node2905" class="node nodeCM pw_polyamine-pathway lid5" transform="translate(17658.0,9729.3)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node2906" class="node nodeCM pw_polyamine-pathway lid573" transform="translate(17851.3,9642.8)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=573" target="_blank">Asp 4-semialdehyde</a></text><title>L-Aspartate 4-semialdehyde</title></g>
+<g id="node2910" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(18806.6,9417.9)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node2911" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(18888.5,9544.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">dcSAM</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node2914" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(19118.6,9839.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node2915" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(19118.6,9639.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2916" class="node nodeCM pw_polyamine-pathway lid10" transform="translate(19118.6,9677.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node2917" class="node nodeCM pw_polyamine-pathway lid5" transform="translate(19118.6,9579.5)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node2918" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(19118.6,9359.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node2979" class="node nodeCM pw_polyamine-pathway lid5485" transform="translate(18134.2,10481.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5485" target="_blank">3-APA</a></text><title>3-aminopropanal</title></g>
+<g id="node2980" class="node nodeCM pw_polyamine-pathway lid1126" transform="translate(18134.2,10354.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node2981" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(18327.1,10481.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2982" class="node nodeCM pw_polyamine-pathway lid9" transform="translate(18327.1,10354.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node4013" class="node nodeCM pw_polyamine-pathway lid41" transform="translate(17410.8,10436.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4014" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(17270.0,9872.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4015" class="node nodeCM pw_polyamine-pathway lid4" transform="translate(17270.0,9663.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node4016" class="node nodeCM pw_polyamine-pathway lid9" transform="translate(17410.8,9872.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node4017" class="node nodeCM pw_polyamine-pathway lid27" transform="translate(17270.0,9992.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node4018" class="node nodeCM pw_polyamine-pathway lid5" transform="translate(17492.8,10219.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node4019" class="node nodeCM pw_polyamine-pathway lid10" transform="translate(17492.8,10100.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node4021" class="node nodeCM pw_polyamine-pathway lid13" transform="translate(17270.0,9729.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node4023" class="node nodeCM pw_polyamine-pathway lid41" transform="translate(17348.4,9626.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4025" class="node nodeCM pw_polyamine-pathway lid1126" transform="translate(17410.8,9992.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node4026" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(17410.8,10321.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4027" class="node nodeCM pw_polyamine-pathway lid16" transform="translate(17410.8,9729.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node4028" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(17352.0,10100.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4868" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(17270.0,9480.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4869" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(17410.8,9597.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4870" class="node nodeCM pw_polyamine-pathway lid27" transform="translate(17270.0,9597.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node4873" class="node nodeCM pw_polyamine-pathway lid27" transform="translate(17270.0,9263.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node4874" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(17410.8,9263.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4877" class="node nodeCM pw_polyamine-pathway lid116" transform="translate(17668.3,9493.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">UREA</a></text><title>Urea</title></g>
+<g id="node4878" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(17668.3,9373.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4881" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(17860.1,9213.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node5174" class="node nodeCM pw_polyamine-pathway lid18" transform="translate(17922.4,10152.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node5175" class="node nodeCM pw_polyamine-pathway lid29" transform="translate(17922.4,10061.7)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node5176" class="node nodeCM pw_polyamine-pathway lid18" transform="translate(18618.5,10301.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node5177" class="node nodeCM pw_polyamine-pathway lid29" transform="translate(18618.5,10208.5)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node5599" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(17986.4,9263.5)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node5609" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(17947.4,9500.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node11043" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(18177.2,9263.5)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node11045" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(18251.6,9769.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11046" class="node nodeCM pw_polyamine-pathway lid116" transform="translate(18386.2,9769.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title>Urea</title></g>
+<g id="node11171" class="node nodeCM pw_polyamine-pathway lid573" transform="translate(19118.6,9544.9)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=573" target="_blank">Asp 4-semialdehyde</a></text><title>L-aspartate 4-semialdehyde</title></g>
+<g id="node11176" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(19118.6,10013.9)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node11177" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(19118.6,10122.6)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node11178" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(19118.6,10234.7)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node11179" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(19118.6,10370.4)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node11182" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(18618.5,9919.7)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node11183" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(18618.5,10033.3)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node12085" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(18014.2,9453.4)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node12086" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(18185.9,9453.4)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node13571" class="node nodeCM pw_polyamine-pathway lid8" transform="translate(17220.5,10219.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node13572" class="node nodeCM pw_polyamine-pathway lid7" transform="translate(17220.5,10100.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2258.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 3275.8 4901.9" width="3276" height="4902" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="3275.8" height="4901.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_polyamine-pathway" class="pw " x="0.0" y="0.0" width="3195.8" height="4806.4" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 2028.0 338.4 L 2137.3 409.4"/>
+<path class="link" marker-end="url(#in)" d="M 1971.4 337.6 L 1876.8 382.8"/>
+<path class="link" marker-start="url(#in)" d="M 1742.3 565.9 L 1833.6 414.8"/>
+<path class="link" marker-end="url(#in)" d="M 1732.5 597.9 L 1731.9 834.0"/>
+<path class="link" marker-start="url(#in)" d="M 1731.9 1010.8 L 1731.9 866.0"/>
+<path class="link" marker-end="url(#in)" d="M 1739.9 1042.8 L 1822.5 1208.8"/>
+<path class="link" marker-start="url(#in)" d="M 2012.8 1232.0 L 1891.5 1227.2"/>
+<path class="link" marker-end="url(#in)" d="M 2076.7 1234.2 L 2256.1 1239.7"/>
+<path class="link" marker-end="url(#in)" d="M 2424.9 1002.7 L 2303.3 1224.9"/>
+<path class="link" marker-start="url(#in)" d="M 2433.6 970.7 L 2433.6 746.9"/>
+<path class="link" marker-end="url(#in)" d="M 2361.3 535.8 C 2375.8 574.8 2413.6 676.9 2428.0 715.6"/>
+<path class="link" marker-start="url(#in)" d="M 2322.9 504.4 L 2193.9 441.0"/>
+<path class="link" marker-start="url(#in)" d="M 1964.2 599.2 L 2143.8 441.4"/>
+<path class="link" marker-end="url(#in)" d="M 1931.4 631.2 L 1746.5 834.0"/>
+<path class="link" marker-start="url(#in)" d="M 1983.9 1016.1 L 1747.6 860.3"/>
+<path class="link" marker-end="url(#in)" d="M 2030.2 1048.1 L 2272.6 1224.9"/>
+<path class="link" marker-start="url(#in)" d="M 2490.5 1243.8 L 2332.9 1241.4"/>
+<path class="link" marker-end="url(#in)" d="M 2619.1 1244.7 L 2779.3 1244.7"/>
+<path class="link" marker-start="url(#in)" d="M 2984.2 1356.5 L 2835.9 1260.7"/>
+<path class="link" marker-end="url(#in)" d="M 3017.8 1388.5 L 3091.9 1523.5"/>
+<path class="link" marker-start="url(#in)" d="M 2986.1 1540.8 L 3039.6 1540.2"/>
+<path class="link" marker-end="url(#in)" d="M 2863.9 1541.5 L 2784.9 1541.5"/>
+<path class="link" marker-end="url(#in)" d="M 2518.5 1406.7 L 2693.7 1525.5"/>
+<path class="link" marker-start="url(#in)" d="M 2474.2 1375.2 C 2435.7 1346.4 2353.5 1285.0 2315.1 1256.2"/>
+<path class="link" marker-start="url(#in)" d="M 2307.8 1506.7 L 2295.3 1256.9"/>
+<path class="link" marker-end="url(#in)" d="M 2309.4 1538.7 L 2320.2 1779.1"/>
+<path class="link" marker-start="url(#in)" d="M 2326.6 1985.6 L 2321.4 1811.1"/>
+<path class="link" marker-end="url(#in)" d="M 2327.0 2017.6 L 2327.0 2160.5"/>
+<path class="link" marker-start="url(#in)" d="M 2307.4 203.5 L 2388.3 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 2287.3 235.5 L 2172.5 409.4"/>
+<path class="link" marker-start="url(#in)" d="M 1455.2 850.0 L 1716.2 850.0"/>
+<path class="link" marker-end="url(#in)" d="M 1391.5 866.0 L 1167.1 978.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 910.2 1107.3 L 1103.2 1010.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 855.9 1139.2 L 693.1 1255.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 566.8 1408.8 L 658.6 1287.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 523.5 1440.1 C 496.8 1453.1 458.5 1471.8 431.7 1484.9"/>
+<path class="link" marker-start="url(#in)" d="M 505.5 1338.4 C 539.9 1324.5 595.3 1302.2 632.4 1287.2"/>
+<path class="link" marker-end="url(#in)" d="M 466.4 1367.0 L 408.2 1484.3"/>
+<path class="link" marker-start="url(#in)" d="M 261.5 1609.9 L 380.0 1516.3"/>
+<path class="link" marker-end="url(#in)" d="M 210.1 1641.9 L 122.9 1686.8"/>
+<path class="link" marker-start="url(#in)" d="M 1539.8 600.0 L 1457.1 462.7"/>
+<path class="link" marker-end="url(#in)" d="M 1561.9 632.0 L 1719.4 834.0"/>
+<path class="link" marker-start="url(#in)" d="M 1293.4 3365.6 L 1343.1 3365.8"/>
+<path class="link" marker-end="url(#in)" d="M 1229.6 3365.4 L 1150.7 3365.2"/>
+<path class="link" marker-start="url(#in)" d="M 999.7 3533.2 C 1016.8 3498.7 1058.3 3415.1 1075.5 3380.5"/>
+<path class="link" marker-end="url(#in)" d="M 992.0 3564.6 L 992.1 3719.3"/>
+<path class="link" marker-start="url(#in)" d="M 992.1 3881.4 L 992.1 3751.3"/>
+<path class="link" marker-end="url(#in)" d="M 1005.3 3913.4 L 1095.3 4022.3"/>
+<path class="link" marker-start="url(#in)" d="M 1108.5 4214.4 C 1108.5 4178.6 1108.5 4089.6 1108.5 4053.7"/>
+<path class="link" marker-end="url(#in)" d="M 1118.3 4245.8 L 1215.3 4404.2"/>
+<path class="link" marker-start="url(#in)" d="M 1225.1 4582.6 L 1225.1 4436.2"/>
+<path class="link" marker-end="url(#in)" d="M 1231.8 4614.6 L 1284.5 4740.4"/>
+<path class="link" marker-start="url(#in)" d="M 934.0 3364.9 L 1015.6 3365.0"/>
+<path class="link" marker-end="url(#in)" d="M 870.1 3364.9 L 800.2 3364.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2016.7 306.4 L 2045.9 271.3"/>
+<path class="link" marker-end="url(#in)" d="M 1994.0 306.4 L 1968.7 262.9"/>
+<path class="link" marker-start="url(#in)" d="M 1718.6 565.9 L 1689.1 532.1"/>
+<path class="link" marker-end="url(#in)" d="M 1757.4 597.9 L 1790.2 619.1"/>
+<path class="link" marker-end="url(#in)" d="M 1724.3 597.9 L 1711.5 622.3"/>
+<path class="link" marker-start="url(#in)" d="M 1700.0 1024.4 L 1663.8 1021.7"/>
+<path class="link" marker-start="url(#in)" d="M 1710.1 1010.8 L 1663.7 976.7"/>
+<path class="link" marker-end="url(#in)" d="M 1763.8 1038.6 L 1794.7 1050.0"/>
+<path class="link" marker-end="url(#in)" d="M 2056.8 1217.2 L 2085.3 1179.5"/>
+<path class="link" marker-start="url(#in)" d="M 2465.5 975.3 L 2500.1 962.9"/>
+<path class="link" marker-end="url(#in)" d="M 2446.9 1002.7 L 2477.2 1039.2"/>
+<path class="link" marker-start="url(#in)" d="M 2320.4 524.5 L 2318.4 524.7"/>
+<path class="link" marker-end="url(#in)" d="M 2351.7 536.4 L 2330.9 624.1"/>
+<path class="link" marker-start="url(#in)" d="M 1943.3 599.2 L 1934.1 545.0"/>
+<path class="link" marker-end="url(#in)" d="M 1914.0 609.3 L 1877.4 602.6"/>
+<path class="link" marker-start="url(#in)" d="M 2008.2 1016.1 L 2007.8 926.7"/>
+<path class="link" marker-end="url(#in)" d="M 2040.1 1020.3 L 2080.2 1005.6"/>
+<path class="link" marker-start="url(#in)" d="M 2542.7 1260.7 L 2492.1 1327.6"/>
+<path class="link" marker-end="url(#in)" d="M 2566.2 1228.7 L 2614.7 1160.5"/>
+<path class="link" marker-start="url(#in)" d="M 3012.0 1356.5 L 3022.9 1297.8"/>
+<path class="link" marker-end="url(#in)" d="M 3040.9 1367.2 L 3079.5 1360.7"/>
+<path class="link" marker-start="url(#in)" d="M 2930.4 1525.5 L 2947.1 1476.3"/>
+<path class="link" marker-start="url(#in)" d="M 2944.6 1525.5 L 2976.9 1499.0"/>
+<path class="link" marker-end="url(#in)" d="M 2919.9 1557.5 L 2902.7 1611.3"/>
+<path class="link" marker-end="url(#in)" d="M 2905.0 1557.5 L 2873.4 1582.7"/>
+<path class="link" marker-start="url(#in)" d="M 2495.0 1374.7 L 2495.4 1314.5"/>
+<path class="link" marker-end="url(#in)" d="M 2526.8 1379.9 L 2565.8 1366.7"/>
+<path class="link" marker-start="url(#in)" d="M 2283.3 1506.7 L 2231.4 1473.9"/>
+<path class="link" marker-end="url(#in)" d="M 2334.0 1538.7 L 2387.3 1572.4"/>
+<path class="link" marker-start="url(#in)" d="M 2303.4 1985.6 L 2250.2 1949.6"/>
+<path class="link" marker-end="url(#in)" d="M 2305.0 2017.6 L 2249.5 2057.8"/>
+<path class="link" marker-end="url(#in)" d="M 2304.5 235.5 L 2324.8 284.1"/>
+<path class="link" marker-start="url(#in)" d="M 1424.8 834.0 L 1430.0 779.0"/>
+<path class="link" marker-start="url(#in)" d="M 1435.5 834.0 L 1464.1 796.5"/>
+<path class="link" marker-end="url(#in)" d="M 1421.8 866.0 L 1416.7 920.9"/>
+<path class="link" marker-end="url(#in)" d="M 1411.1 866.0 L 1383.5 902.1"/>
+<path class="link" marker-start="url(#in)" d="M 874.9 1107.2 L 864.1 1055.3"/>
+<path class="link" marker-start="url(#in)" d="M 884.2 1107.2 L 902.5 1057.3"/>
+<path class="link" marker-end="url(#in)" d="M 881.6 1139.2 L 892.8 1192.8"/>
+<path class="link" marker-end="url(#in)" d="M 872.4 1139.2 L 853.4 1190.8"/>
+<path class="link" marker-start="url(#in)" d="M 549.4 1408.8 L 532.5 1357.9"/>
+<path class="link" marker-start="url(#in)" d="M 557.7 1408.8 L 568.0 1355.0"/>
+<path class="link" marker-end="url(#in)" d="M 556.1 1440.8 L 561.3 1497.4"/>
+<path class="link" marker-start="url(#in)" d="M 468.1 1335.0 L 447.8 1282.5"/>
+<path class="link" marker-start="url(#in)" d="M 477.4 1335.0 L 487.6 1281.2"/>
+<path class="link" marker-end="url(#in)" d="M 475.8 1367.0 L 481.1 1425.2"/>
+<path class="link" marker-start="url(#in)" d="M 273.1 1638.7 L 306.6 1652.0"/>
+<path class="link" marker-end="url(#in)" d="M 240.7 1641.9 L 239.1 1697.3"/>
+<path class="link" marker-end="url(#in)" d="M 1581.3 620.7 L 1687.5 636.1"/>
+<path class="link" marker-end="url(#in)" d="M 1250.2 3381.5 L 1222.4 3420.9"/>
+<path class="link" marker-start="url(#in)" d="M 1023.9 3545.7 L 1060.0 3542.4"/>
+<path class="link" marker-start="url(#in)" d="M 1013.1 3532.6 L 1059.9 3497.1"/>
+<path class="link" marker-end="url(#in)" d="M 1017.0 3564.6 L 1046.4 3583.5"/>
+<path class="link" marker-end="url(#in)" d="M 999.4 3564.6 L 1021.3 3611.7"/>
+<path class="link" marker-end="url(#in)" d="M 1024.0 3905.3 L 1061.1 3914.6"/>
+<path class="link" marker-start="url(#in)" d="M 1121.0 4213.8 L 1170.7 4150.2"/>
+<path class="link" marker-end="url(#in)" d="M 1143.6 4241.2 L 1176.2 4251.8"/>
+<path class="link" marker-start="url(#in)" d="M 1240.5 4582.6 L 1293.8 4527.1"/>
+<path class="link" marker-end="url(#in)" d="M 1260.2 4614.2 L 1301.4 4632.4"/>
+<path class="link" marker-start="url(#in)" d="M 913.2 3348.9 L 960.5 3281.5"/>
+<path class="link" marker-end="url(#in)" d="M 890.8 3380.9 L 842.6 3449.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_polyamine-pathway" transform="translate(1597.9,0.0)"><rect rx="10" height="31" width="175" x="-87.6" y="-15.5"/><text dominant-baseline="central">polyamine pathway</text></g>
+<g id="node4880" class="node nodeHM pw_polyamine-pathway lid505" transform="translate(2162.0,425.4)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=505" target="_blank">agmatine</a></text><title></title></g>
+<g id="node4872" class="node nodeHM pw_polyamine-pathway lid4032" transform="translate(1843.2,398.8)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4032" target="_blank">N-carbamoylputrescine</a></text><title></title></g>
+<g id="node4876" class="node nodeHM pw_polyamine-pathway lid155" transform="translate(1731.9,850.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=155" target="_blank">Put</a></text><title></title></g>
+<g id="node2908" class="node nodeHM pw_polyamine-pathway lid7915" transform="translate(1830.4,1224.8)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7915" target="_blank">carboxyspermidine</a></text><title></title></g>
+<g id="node5603" class="node nodeHM pw_polyamine-pathway lid148" transform="translate(2294.5,1240.9)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=148" target="_blank">spermidine</a></text><title></title></g>
+<g id="node11042" class="node nodeHM pw_polyamine-pathway lid170005" transform="translate(2433.6,730.9)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170005" target="_blank">N1-(3-aminopropyl)agmatine</a></text><title></title></g>
+<g id="node5610" class="node nodeHM pw_polyamine-pathway lid197" transform="translate(2811.2,1244.7)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197" target="_blank">spermine</a></text><title></title></g>
+<g id="node5179" class="node nodeHM pw_polyamine-pathway lid1108" transform="translate(3100.7,1539.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1108" target="_blank">N1-acetylspermine</a></text><title></title></g>
+<g id="node5178" class="node nodeHM pw_polyamine-pathway lid1932" transform="translate(2717.4,1541.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1932" target="_blank">N1-acetylspermidine</a></text><title></title></g>
+<g id="node11181" class="node nodeHM pw_polyamine-pathway lid195064" transform="translate(2320.9,1795.1)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195064" target="_blank">N4-aminopropylspermidine</a></text><title></title></g>
+<g id="node11193" class="node nodeHM pw_polyamine-pathway lid194275" transform="translate(2327.0,2176.5)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=194275" target="_blank">N4-bis(3-aminopropyl)spermidine</a></text><title></title></g>
+<g id="node12079" class="node nodeHM pw_polyamine-pathway lid123" transform="translate(2397.9,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=123" target="_blank">Arg</a></text><title></title></g>
+<g id="node4009" class="node nodeHM pw_polyamine-pathway lid35036" transform="translate(1135.3,994.9)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35036" target="_blank">gamma-L-glutamylputrescine</a></text><title></title></g>
+<g id="node4010" class="node nodeHM pw_polyamine-pathway lid62549" transform="translate(670.7,1271.8)"><rect height="30.0" width="262.7" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=62549" target="_blank">gamma-glutamyl-gamma-aminobutyraldehyde</a></text><title></title></g>
+<g id="node4012" class="node nodeHM pw_polyamine-pathway lid127712" transform="translate(400.2,1500.3)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=127712" target="_blank">4-(gamma-glutamylamino)butanoate</a></text><title></title></g>
+<g id="node1352" class="node nodeHM pw_polyamine-pathway lid597" transform="translate(91.8,1702.8)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=597" target="_blank">4-aminobutanoate</a></text><title></title></g>
+<g id="node1353" class="node nodeHM pw_polyamine-pathway lid192" transform="translate(1447.4,446.7)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192" target="_blank">Orn</a></text><title></title></g>
+<g id="node12087" class="node nodeHM pw_polyamine-pathway lid2561" transform="translate(1420.3,3366.0)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2561" target="_blank">L-2,4-diaminobutanoate</a></text><title></title></g>
+<g id="node2922" class="node nodeHM pw_polyamine-pathway lid721" transform="translate(1083.1,3365.1)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=721" target="_blank">propane-1,3-diamine</a></text><title></title></g>
+<g id="node2921" class="node nodeHM pw_polyamine-pathway lid5063" transform="translate(992.1,3735.3)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5063" target="_blank">carboxynorspermidine</a></text><title></title></g>
+<g id="node2919" class="node nodeHM pw_polyamine-pathway lid7488" transform="translate(1108.5,4038.3)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7488" target="_blank">norspermidine</a></text><title></title></g>
+<g id="node11173" class="node nodeHM pw_polyamine-pathway lid4120" transform="translate(1225.1,4420.2)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4120" target="_blank">norspermine</a></text><title></title></g>
+<g id="node11175" class="node nodeHM pw_polyamine-pathway lid194273" transform="translate(1291.2,4756.4)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=194273" target="_blank">caldopentamine</a></text><title></title></g>
+<g id="node2912" class="node nodeHM pw_polyamine-pathway lid10788" transform="translate(739.1,3364.9)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10788" target="_blank">sym-norspermidine</a></text><title></title></g>
+<g id="node4875" class="node nodeEN pw_polyamine-pathway" transform="translate(2003.3,322.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.12" target="_blank">3.5.3.12</a></text><title>agmatine deiminase</title></g>
+<g id="node4871" class="node nodeEN pw_polyamine-pathway" transform="translate(1732.6,581.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.53" target="_blank">3.5.1.53</a></text><title>N-carbamoylputrescine amidase</title></g>
+<g id="node2909" class="node nodeEN pw_polyamine-pathway" transform="translate(1731.9,1026.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.43" target="_blank">1.5.1.43</a></text><title>carboxynorspermidine synthase</title></g>
+<g id="node2907" class="node nodeEN pw_polyamine-pathway" transform="translate(2044.8,1233.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.96" target="_blank">4.1.1.96</a></text><title>carboxynorspermidine decarboxylase</title></g>
+<g id="node11044" class="node nodeEN pw_polyamine-pathway" transform="translate(2433.6,986.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.24" target="_blank">3.5.3.24</a></text><title>N1-aminopropylagmatine ureohydrolase</title></g>
+<g id="node11041" class="node nodeEN pw_polyamine-pathway" transform="translate(2355.5,520.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.104" target="_blank">2.5.1.104</a></text><title>N1-aminopropylagmatine synthase</title></g>
+<g id="node4879" class="node nodeEN pw_polyamine-pathway" transform="translate(1946.0,615.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.11" target="_blank">3.5.3.11</a></text><title>agmatinase</title></g>
+<g id="node5598" class="node nodeEN pw_polyamine-pathway" transform="translate(2008.2,1032.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.16" target="_blank">2.5.1.16</a></text><title>spermidine synthase</title></g>
+<g id="node11191" class="node nodeEN pw_polyamine-pathway" transform="translate(2554.8,1244.7)"><rect rx="15" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.22" target="_blank">2.5.1.22/2.5.1.104</a></text><title>spermine synthase\n;N1-aminopropylagmatine synthase</title></g>
+<g id="node5181" class="node nodeEN pw_polyamine-pathway" transform="translate(3009.0,1372.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.57" target="_blank">2.3.1.57</a></text><title>diamine N-acetyltransferase</title></g>
+<g id="node2983" class="node nodeEN pw_polyamine-pathway" transform="translate(2925.0,1541.5)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.3.13" target="_blank">1.5.3.13/1.5.3.17</a></text><title>N1-acetylpolyamine oxidase;non-specific polyamine oxidase</title></g>
+<g id="node5180" class="node nodeEN pw_polyamine-pathway" transform="translate(2494.9,1390.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.57" target="_blank">2.3.1.57</a></text><title>diamine N-acetyltransferase</title></g>
+<g id="node11180" class="node nodeEN pw_polyamine-pathway" transform="translate(2308.7,1522.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.128" target="_blank">2.5.1.128</a></text><title>N4-bis(aminopropyl)spermidine synthase</title></g>
+<g id="node11192" class="node nodeEN pw_polyamine-pathway" transform="translate(2327.0,2001.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.128" target="_blank">2.5.1.128</a></text><title>N4-bis(aminopropyl)spermidine synthase</title></g>
+<g id="node4882" class="node nodeEN pw_polyamine-pathway" transform="translate(2297.8,219.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.19" target="_blank">4.1.1.19</a></text><title>Arginine decarboxylase</title></g>
+<g id="node4022" class="node nodeEN pw_polyamine-pathway" transform="translate(1423.3,850.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.11" target="_blank">6.3.1.11</a></text><title>glutamate-putrescine ligase</title></g>
+<g id="node4024" class="node nodeEN pw_polyamine-pathway" transform="translate(878.3,1123.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.B1" target="_blank">1.4.3.B1</a></text><title>gamma-glutamylputrescine oxidase</title></g>
+<g id="node13573" class="node nodeEN pw_polyamine-pathway" transform="translate(554.7,1424.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.99" target="_blank">1.2.1.99</a></text><title>4-(gamma-glutamylamino)butanal dehydrogenase; 4-(gamma-glutamylamino)butanal dehydrogenase</title></g>
+<g id="node4020" class="node nodeEN pw_polyamine-pathway" transform="translate(474.3,1351.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.99" target="_blank">1.2.1.99</a></text><title>4-(gamma-glutamylamino)butanal dehydrogenase; 4-(gamma-glutamylamino)butanal dehydrogenase</title></g>
+<g id="node4011" class="node nodeEN pw_polyamine-pathway" transform="translate(241.2,1625.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.94" target="_blank">3.5.1.94</a></text><title>gamma-glutamyl-gamma-aminobutyrate hydrolase</title></g>
+<g id="node5608" class="node nodeEN pw_polyamine-pathway" transform="translate(1549.4,616.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.17" target="_blank">4.1.1.17</a></text><title>ornithine decarboxylase</title></g>
+<g id="node2924" class="node nodeEN pw_polyamine-pathway" transform="translate(1261.5,3365.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.86" target="_blank">4.1.1.86</a></text><title>diaminobutyrate decarboxylase</title></g>
+<g id="node2923" class="node nodeEN pw_polyamine-pathway" transform="translate(992.0,3548.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.43" target="_blank">1.5.1.43</a></text><title>carboxynorspermidine synthase</title></g>
+<g id="node2920" class="node nodeEN pw_polyamine-pathway" transform="translate(992.1,3897.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.96" target="_blank">4.1.1.96</a></text><title>carboxynorspermidine decarboxylase</title></g>
+<g id="node11172" class="node nodeEN pw_polyamine-pathway" transform="translate(1108.5,4229.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.126" target="_blank">2.5.1.126</a></text><title>norspermine synthase</title></g>
+<g id="node11174" class="node nodeEN pw_polyamine-pathway" transform="translate(1225.1,4598.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.127" target="_blank">2.5.1.127</a></text><title>caldopentamine synthase</title></g>
+<g id="node2913" class="node nodeEN pw_polyamine-pathway" transform="translate(902.0,3364.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.23" target="_blank">2.5.1.23</a></text><title>sym-norspermidine synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node4875~0" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(2059.2,255.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4875~1" class="node nodeCM pw_polyamine-pathway lid27" transform="translate(1959.4,246.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node4871~0" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(1675.1,516.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4871~1" class="node nodeCM pw_polyamine-pathway lid27" transform="translate(1806.0,629.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node4871~2" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(1703.2,638.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node2909~0" class="node nodeCM pw_polyamine-pathway lid5" transform="translate(1641.6,1020.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2909~1" class="node nodeCM pw_polyamine-pathway lid573" transform="translate(1641.9,960.7)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=573" target="_blank">Asp 4-semialdehyde</a></text><title></title></g>
+<g id="node2909~2" class="node nodeCM pw_polyamine-pathway lid10" transform="translate(1816.9,1058.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2907~0" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(2097.3,1163.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11044~0" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(2515.9,957.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11044~1" class="node nodeCM pw_polyamine-pathway lid116" transform="translate(2490.5,1055.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node11041~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(2234.6,534.4)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node11041~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(2327.1,640.1)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node4879~0" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(1931.4,529.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4879~1" class="node nodeCM pw_polyamine-pathway lid116" transform="translate(1858.4,599.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node5598~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(2007.8,910.7)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node5598~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(2123.6,989.6)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node11191~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(2480.0,1343.6)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node11191~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(2626.1,1144.5)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node5181~0" class="node nodeCM pw_polyamine-pathway lid29" transform="translate(3025.8,1281.8)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node5181~1" class="node nodeCM pw_polyamine-pathway lid18" transform="translate(3095.2,1358.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node2983~0" class="node nodeCM pw_polyamine-pathway lid9" transform="translate(2952.5,1460.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2983~1" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(2992.6,1486.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2983~2" class="node nodeCM pw_polyamine-pathway lid5485" transform="translate(2897.6,1627.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5485" target="_blank">3-APA</a></text><title></title></g>
+<g id="node2983~3" class="node nodeCM pw_polyamine-pathway lid1126" transform="translate(2854.5,1597.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node5180~0" class="node nodeCM pw_polyamine-pathway lid29" transform="translate(2495.5,1298.5)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node5180~1" class="node nodeCM pw_polyamine-pathway lid18" transform="translate(2581.5,1361.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node11180~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(2206.0,1457.9)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node11180~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(2412.6,1588.4)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node11192~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(2226.5,1933.6)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node11192~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(2227.4,2073.8)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node4882~0" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(2331.5,300.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4022~0" class="node nodeCM pw_polyamine-pathway lid4" transform="translate(1431.5,763.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node4022~1" class="node nodeCM pw_polyamine-pathway lid41" transform="translate(1476.3,780.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node4022~2" class="node nodeCM pw_polyamine-pathway lid13" transform="translate(1415.2,936.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node4022~3" class="node nodeCM pw_polyamine-pathway lid16" transform="translate(1371.3,918.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node4024~0" class="node nodeCM pw_polyamine-pathway lid9" transform="translate(860.7,1039.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node4024~1" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(908.4,1041.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4024~2" class="node nodeCM pw_polyamine-pathway lid27" transform="translate(896.1,1208.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node4024~3" class="node nodeCM pw_polyamine-pathway lid1126" transform="translate(847.5,1206.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node13573~0" class="node nodeCM pw_polyamine-pathway lid7" transform="translate(527.2,1341.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node13573~1" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(571.1,1339.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13573~2" class="node nodeCM pw_polyamine-pathway lid8" transform="translate(562.8,1513.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4020~0" class="node nodeCM pw_polyamine-pathway lid10" transform="translate(441.6,1266.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node4020~1" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(490.7,1265.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4020~2" class="node nodeCM pw_polyamine-pathway lid5" transform="translate(482.5,1441.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4011~0" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(322.4,1658.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4011~1" class="node nodeCM pw_polyamine-pathway lid41" transform="translate(238.6,1713.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node2924~0" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(1211.2,3436.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node2923~0" class="node nodeCM pw_polyamine-pathway lid5" transform="translate(1082.2,3540.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2923~1" class="node nodeCM pw_polyamine-pathway lid573" transform="translate(1081.0,3481.1)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=573" target="_blank">Asp 4-semialdehyde</a></text><title></title></g>
+<g id="node2923~2" class="node nodeCM pw_polyamine-pathway lid10" transform="translate(1068.6,3597.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2923~3" class="node nodeCM pw_polyamine-pathway lid1" transform="translate(1028.7,3627.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2920~0" class="node nodeCM pw_polyamine-pathway lid28" transform="translate(1076.9,3918.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11172~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(1183.2,4134.2)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node11172~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(1225.4,4267.8)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node11174~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(1309.2,4511.1)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node11174~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(1337.6,4648.4)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node2913~0" class="node nodeCM pw_polyamine-pathway lid1431" transform="translate(971.7,3265.5)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node2913~1" class="node nodeCM pw_polyamine-pathway lid1578" transform="translate(831.4,3465.6)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+</g></svg>
+<text x="2268.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

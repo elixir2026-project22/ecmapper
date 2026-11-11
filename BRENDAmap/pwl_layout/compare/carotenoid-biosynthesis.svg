@@ -1,0 +1,498 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8484" height="3213" viewBox="0 0 8484.2 3212.6"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="685.5 6300.1 3633.7 589.6" width="3634" height="590" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="685.5" y="6300.1" width="3633.7" height="589.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_carotenoid-biosynthesis" class="pw pw7" x="725.5" y="6355.6" width="3553.7" height="494.1" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1125.9 6402.3 L 1297.5 6402.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1092.4 6418.3 L 1092.4 6490.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1876.2 6485.3 L 1731.2 6627.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1928.9 6469.3 L 2037.6 6469.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2325.1 6469.3 L 2438.3 6469.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2252.3 6469.3 L 2144.3 6469.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2752.4 6469.3 L 2863.8 6469.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2674.0 6469.3 L 2545.0 6469.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3145.0 6469.3 L 3257.9 6469.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3055.3 6469.3 L 2959.1 6469.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3552.5 6486.1 L 3321.8 6627.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3615.5 6486.1 L 3749.8 6544.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3956.1 6486.1 L 3823.3 6544.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4021.2 6486.1 L 4125.1 6544.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 829.4 6522.8 L 829.4 6595.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 829.4 6490.8 L 829.4 6418.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1384.7 6538.6 L 1384.7 6626.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1384.7 6506.6 L 1384.7 6418.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1092.4 6595.2 L 1092.4 6522.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1092.4 6627.2 L 1092.4 6699.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3536.8 6643.2 L 3337.8 6643.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3609.5 6629.0 L 3745.5 6576.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3956.2 6628.5 L 3826.5 6576.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4023.7 6627.1 L 4122.6 6576.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1576.0 6643.5 L 1650.3 6643.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1503.3 6643.3 L 1429.6 6643.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1862.9 6643.9 L 1779.5 6643.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1935.7 6643.9 L 2025.3 6643.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2330.5 6643.9 L 2443.8 6643.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2257.8 6643.9 L 2131.9 6643.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2755.0 6643.9 L 2852.5 6643.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2671.0 6643.9 L 2544.8 6643.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3140.5 6643.9 L 3253.8 6643.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3056.4 6643.9 L 2981.8 6643.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 829.4 6731.7 L 829.4 6804.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 829.4 6699.7 L 829.4 6627.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1715.2 6742.8 L 1715.3 6802.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1715.1 6710.8 L 1714.9 6659.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2044.2 6818.7 L 2168.1 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1965.7 6818.7 L 1822.3 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2534.7 6818.7 L 2658.0 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2456.3 6818.7 L 2342.5 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3067.8 6818.7 L 3193.7 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2989.4 6818.7 L 2866.4 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3552.9 6818.7 L 3666.3 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3474.5 6818.7 L 3362.5 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4023.8 6818.7 L 4102.4 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3945.4 6818.7 L 3840.8 6818.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1092.4 6804.1 L 1092.4 6731.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1058.8 6820.1 L 908.1 6820.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1058.8 6417.7 L 1040.9 6425.9"/>
+<path class="link" marker-end="url(#in)" d="M 1125.9 6417.1 L 1146.0 6425.9"/>
+<path class="link" marker-start="url(#in)" d="M 2696.9 6453.3 L 2657.0 6414.3"/>
+<path class="link" marker-start="url(#in)" d="M 2700.9 6485.3 L 2660.8 6537.5"/>
+<path class="link" marker-start="url(#in)" d="M 2684.2 6485.3 L 2580.0 6542.8"/>
+<path class="link" marker-end="url(#in)" d="M 2726.0 6485.3 L 2768.0 6537.5"/>
+<path class="link" marker-end="url(#in)" d="M 2728.7 6453.3 L 2768.7 6412.2"/>
+<path class="link" marker-start="url(#in)" d="M 3084.0 6453.3 L 3043.7 6413.3"/>
+<path class="link" marker-start="url(#in)" d="M 3087.5 6485.3 L 3046.3 6537.5"/>
+<path class="link" marker-start="url(#in)" d="M 3070.2 6485.3 L 2962.2 6543.1"/>
+<path class="link" marker-end="url(#in)" d="M 3113.8 6453.3 L 3151.7 6408.8"/>
+<path class="link" marker-end="url(#in)" d="M 3113.6 6485.3 L 3157.5 6537.5"/>
+<path class="link" marker-start="url(#in)" d="M 3536.5 6461.2 L 3485.7 6450.5"/>
+<path class="link" marker-start="url(#in)" d="M 3567.9 6486.1 L 3550.4 6512.2"/>
+<path class="link" marker-start="url(#in)" d="M 3544.5 6454.1 L 3473.5 6420.8"/>
+<path class="link" marker-end="url(#in)" d="M 3600.2 6454.1 L 3645.2 6420.8"/>
+<path class="link" marker-end="url(#in)" d="M 3593.1 6486.1 L 3616.7 6512.2"/>
+<path class="link" marker-start="url(#in)" d="M 3950.6 6461.1 L 3901.2 6450.5"/>
+<path class="link" marker-start="url(#in)" d="M 3982.8 6486.1 L 3966.7 6512.2"/>
+<path class="link" marker-start="url(#in)" d="M 3968.4 6454.1 L 3918.0 6420.8"/>
+<path class="link" marker-end="url(#in)" d="M 4004.4 6486.1 L 4023.5 6512.2"/>
+<path class="link" marker-end="url(#in)" d="M 4026.9 6454.1 L 4098.2 6420.8"/>
+<path class="link" marker-end="url(#in)" d="M 848.2 6522.8 L 879.0 6548.8"/>
+<path class="link" marker-start="url(#in)" d="M 1359.9 6506.6 L 1324.4 6483.7"/>
+<path class="link" marker-end="url(#in)" d="M 1354.9 6538.6 L 1329.4 6552.3"/>
+<path class="link" marker-start="url(#in)" d="M 3598.5 6659.1 L 3648.8 6690.8"/>
+<path class="link" marker-end="url(#in)" d="M 3556.4 6627.1 L 3539.1 6610.6"/>
+<path class="link" marker-end="url(#in)" d="M 3546.2 6659.1 L 3492.6 6690.8"/>
+<path class="link" marker-start="url(#in)" d="M 4014.9 6659.1 L 4059.1 6690.8"/>
+<path class="link" marker-end="url(#in)" d="M 3992.6 6627.1 L 3992.6 6601.1"/>
+<path class="link" marker-end="url(#in)" d="M 3963.9 6659.1 L 3907.0 6690.8"/>
+<path class="link" marker-start="url(#in)" d="M 2701.6 6627.9 L 2660.0 6569.5"/>
+<path class="link" marker-start="url(#in)" d="M 2686.0 6627.9 L 2580.0 6565.0"/>
+<path class="link" marker-start="url(#in)" d="M 2697.9 6659.9 L 2668.7 6690.8"/>
+<path class="link" marker-end="url(#in)" d="M 2725.0 6627.9 L 2768.8 6569.5"/>
+<path class="link" marker-end="url(#in)" d="M 2730.4 6659.9 L 2764.2 6690.8"/>
+<path class="link" marker-start="url(#in)" d="M 3087.0 6627.9 L 3045.1 6569.5"/>
+<path class="link" marker-start="url(#in)" d="M 3070.9 6627.9 L 2962.2 6564.8"/>
+<path class="link" marker-start="url(#in)" d="M 3081.6 6659.9 L 3048.9 6690.8"/>
+<path class="link" marker-end="url(#in)" d="M 3111.3 6627.9 L 3158.1 6569.5"/>
+<path class="link" marker-end="url(#in)" d="M 3116.5 6659.9 L 3151.5 6690.8"/>
+<path class="link" marker-start="url(#in)" d="M 851.8 6699.7 L 875.4 6682.8"/>
+<path class="link" marker-end="url(#in)" d="M 851.4 6731.7 L 875.8 6749.4"/>
+<path class="link" marker-start="url(#in)" d="M 1675.9 6736.7 L 1594.0 6757.4"/>
+<path class="link" marker-start="url(#in)" d="M 1675.9 6719.8 L 1631.6 6711.8"/>
+<path class="link" marker-end="url(#in)" d="M 1754.4 6726.5 L 1789.6 6726.2"/>
+<path class="link" marker-start="url(#in)" d="M 1992.0 6802.7 L 1947.1 6747.4"/>
+<path class="link" marker-end="url(#in)" d="M 2018.6 6802.7 L 2045.9 6770.7"/>
+<path class="link" marker-start="url(#in)" d="M 2491.5 6802.7 L 2479.0 6752.2"/>
+<path class="link" marker-start="url(#in)" d="M 2466.9 6802.7 L 2371.2 6749.2"/>
+<path class="link" marker-end="url(#in)" d="M 2528.5 6802.7 L 2585.1 6775.3"/>
+<path class="link" marker-start="url(#in)" d="M 3015.0 6802.7 L 2977.7 6758.8"/>
+<path class="link" marker-end="url(#in)" d="M 3049.0 6802.7 L 3077.0 6780.9"/>
+<path class="link" marker-start="url(#in)" d="M 3494.5 6802.7 L 3451.4 6766.8"/>
+<path class="link" marker-start="url(#in)" d="M 3963.9 6802.7 L 3916.6 6766.2"/>
+<path class="link" marker-start="url(#in)" d="M 1067.1 6804.1 L 1031.2 6781.4"/>
+<path class="link" marker-end="url(#in)" d="M 1118.7 6804.1 L 1156.1 6781.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_carotenoid-biosynthesis" transform="translate(2502.3,6355.6)"><rect rx="10" height="31" width="223" x="-111.5" y="-15.5"/><text dominant-baseline="central">carotenoid biosynthesis</text></g>
+<g id="node1296" class="node nodeHM pw_carotenoid-biosynthesis lid9247" transform="translate(829.4,6402.3)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9247" target="_blank">prephytoene-PP</a></text><title>prephytoene diphosphate</title></g>
+<g id="node2793" class="node nodeHM pw_carotenoid-biosynthesis lid3412" transform="translate(4153.7,6560.3)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3412" target="_blank">violaxanthin</a></text><title>violaxanthin</title></g>
+<g id="node2796" class="node nodeHM pw_carotenoid-biosynthesis lid3283" transform="translate(3786.7,6560.3)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3283" target="_blank">antheraxanthin</a></text><title>antheraxanthin</title></g>
+<g id="node2799" class="node nodeHM pw_carotenoid-biosynthesis lid3892" transform="translate(2917.2,6643.9)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3892" target="_blank">beta-cryptoxanthin</a></text><title>beta-cryptoxanthin</title></g>
+<g id="node2800" class="node nodeHM pw_carotenoid-biosynthesis lid858" transform="translate(2494.3,6643.9)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=858" target="_blank">beta-carotene</a></text><title>beta-carotene</title></g>
+<g id="node2801" class="node nodeHM pw_carotenoid-biosynthesis lid8104" transform="translate(2078.6,6643.9)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8104" target="_blank">gamma-carotene</a></text><title>gamma-carotene</title></g>
+<g id="node2806" class="node nodeHM pw_carotenoid-biosynthesis lid166871" transform="translate(2091.0,6469.3)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=166871" target="_blank">delta-carotene</a></text><title>delta-carotene</title></g>
+<g id="node2807" class="node nodeHM pw_carotenoid-biosynthesis lid1849" transform="translate(3295.8,6643.9)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1849" target="_blank">zeaxanthin</a></text><title>zeaxanthin</title></g>
+<g id="node2808" class="node nodeHM pw_carotenoid-biosynthesis lid16796" transform="translate(3288.7,6469.3)"><rect height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16796" target="_blank">lutein</a></text><title>lutein</title></g>
+<g id="node2809" class="node nodeHM pw_carotenoid-biosynthesis lid41764" transform="translate(2911.4,6469.3)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41764" target="_blank">zeinoxanthin</a></text><title>zeinoxanthin</title></g>
+<g id="node2810" class="node nodeHM pw_carotenoid-biosynthesis lid3878" transform="translate(2491.7,6469.3)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3878" target="_blank">alpha-carotene</a></text><title>alpha-carotene</title></g>
+<g id="node2815" class="node nodeHM pw_carotenoid-biosynthesis lid5062" transform="translate(1714.9,6643.8)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5062" target="_blank">all-trans-lycopene</a></text><title>all-trans-lycopene</title></g>
+<g id="node2816" class="node nodeHM pw_carotenoid-biosynthesis lid10238" transform="translate(1384.7,6642.8)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10238" target="_blank">prolycopene</a></text><title>7,9,7&#x27;,9&#x27;-tetracis-lycopene</title></g>
+<g id="node2817" class="node nodeHM pw_carotenoid-biosynthesis lid7825" transform="translate(1384.7,6402.3)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7825" target="_blank">7,9,9&#x27;-tricis-neurosporene</a></text><title>7,9,9&#x27;-tricis-neurosporene</title></g>
+<g id="node2818" class="node nodeHM pw_carotenoid-biosynthesis lid12006" transform="translate(1092.4,6506.8)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12006" target="_blank">9,9&#x27;-dicis-zeta-carotene</a></text><title>9,9&#x27;-dicis-zeta-carotene</title></g>
+<g id="node2819" class="node nodeHM pw_carotenoid-biosynthesis lid2061" transform="translate(829.4,6611.2)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2061" target="_blank">15-cis-phytoene</a></text><title>15-cis-phytoene</title></g>
+<g id="node2820" class="node nodeHM pw_carotenoid-biosynthesis lid28122" transform="translate(829.4,6820.1)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28122" target="_blank">15,9&#x27;-dicis-phytofluene</a></text><title>15,9&#x27;-dicis-phytofluene</title></g>
+<g id="node2821" class="node nodeHM pw_carotenoid-biosynthesis lid5443" transform="translate(1092.4,6715.7)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5443" target="_blank">9,15,9&#x27;-tricis-zeta-carotene</a></text><title>9,15,9&#x27;-tricis-zeta-carotene</title></g>
+<g id="node11410" class="node nodeHM pw_carotenoid-biosynthesis lid197910" transform="translate(1715.3,6818.7)"><rect height="30.0" width="212.0" x="-106.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197910" target="_blank">dihydroisopentenyldehydrorhodopin</a></text><title>dihydroisopentenyldehydrorhodopin</title></g>
+<g id="node11412" class="node nodeHM pw_carotenoid-biosynthesis lid197912" transform="translate(2255.3,6818.7)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197912" target="_blank">isopentenyldehydrorhodopin</a></text><title>isopentenyldehydrorhodopin</title></g>
+<g id="node11414" class="node nodeHM pw_carotenoid-biosynthesis lid197909" transform="translate(2762.2,6818.7)"><rect height="30.0" width="206.4" x="-103.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197909" target="_blank">dihydrobisanhydrobacterioruberin</a></text><title>dihydrobisanhydrobacterioruberin</title></g>
+<g id="node11416" class="node nodeHM pw_carotenoid-biosynthesis lid197908" transform="translate(3278.1,6818.7)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197908" target="_blank">bisanhydrobacterioruberin</a></text><title>bisanhydrobacterioruberin</title></g>
+<g id="node11418" class="node nodeHM pw_carotenoid-biosynthesis lid197924" transform="translate(3753.6,6818.7)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197924" target="_blank">monoanhydrobacterioruberin</a></text><title>monoanhydrobacterioruberin</title></g>
+<g id="node11420" class="node nodeHM pw_carotenoid-biosynthesis lid197907" transform="translate(4158.5,6818.7)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197907" target="_blank">bacterioruberin</a></text><title>bacterioruberin</title></g>
+<g id="node2824" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1092.4,6402.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.6" target="_blank">1.3.5.6</a></text><title>9,9&#x27;-dicis-zeta-carotene desaturase</title></g>
+<g id="node2814" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1892.5,6469.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.18" target="_blank">5.5.1.18</a></text><title>lycopene epsilon-cyclase</title></g>
+<g id="node2813" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2288.7,6469.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.19" target="_blank">5.5.1.19</a></text><title>lycopene beta-cyclase</title></g>
+<g id="node2812" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2713.2,6469.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.-" target="_blank">1.14.99.-</a></text><title>beta-ring hydroxylase</title></g>
+<g id="node2811" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3100.2,6469.3)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.158" target="_blank">1.14.14.158</a></text><title>carotenoid epsilon hydroxylase</title></g>
+<g id="node2798" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3578.6,6470.1)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.21" target="_blank">1.14.15.21</a></text><title>zeaxanthin epoxidase</title></g>
+<g id="node2795" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3992.6,6470.1)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.21" target="_blank">1.14.15.21</a></text><title>zeaxanthin epoxidase</title></g>
+<g id="node2828" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(829.4,6506.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.32" target="_blank">2.5.1.32</a></text><title>15-cis-phytoene synthase</title></g>
+<g id="node2823" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1384.7,6522.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.6" target="_blank">1.3.5.6</a></text><title>9,9&#x27;-dicis-zeta-carotene desaturase</title></g>
+<g id="node2825" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1092.4,6611.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.2.1.12" target="_blank">5.2.1.12</a></text><title>zeta-carotene isomerase</title></g>
+<g id="node2797" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3573.2,6643.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.23.5.1" target="_blank">1.23.5.1</a></text><title>violaxanthin de-epoxidase</title></g>
+<g id="node2794" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3992.6,6643.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.23.5.1" target="_blank">1.23.5.1</a></text><title>violaxanthin de-epoxidase</title></g>
+<g id="node2822" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1539.6,6643.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.2.1.13" target="_blank">5.2.1.13</a></text><title>prolycopene isomerase</title></g>
+<g id="node2805" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1899.3,6643.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.19" target="_blank">5.5.1.19</a></text><title>lycopene beta-cyclase</title></g>
+<g id="node2804" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2294.1,6643.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.19" target="_blank">5.5.1.19</a></text><title>lycopene beta-cyclase</title></g>
+<g id="node2803" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2713.0,6643.9)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.24" target="_blank">1.14.15.24</a></text><title>beta-carotene 3-hydroxylase</title></g>
+<g id="node2802" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3098.4,6643.9)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.24" target="_blank">1.14.15.24</a></text><title>beta-carotene 3-hydroxylase</title></g>
+<g id="node2827" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(829.4,6715.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.5" target="_blank">1.3.5.5</a></text><title>15-cis-phytoene desaturase</title></g>
+<g id="node11409" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1715.2,6726.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.150" target="_blank">2.5.1.150</a></text><title>lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)</title></g>
+<g id="node11411" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2005.0,6818.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.99.37" target="_blank">1.3.99.37</a></text><title>1-hydroxy-2-isopentenylcarotenoid 3,4-desaturase</title></g>
+<g id="node11413" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2495.5,6818.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.150" target="_blank">2.5.1.150</a></text><title>lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)</title></g>
+<g id="node11415" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3028.6,6818.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.99.37" target="_blank">1.3.99.37</a></text><title>1-hydroxy-2-isopentenylcarotenoid 3,4-desaturase</title></g>
+<g id="node11417" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3513.7,6818.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.161" target="_blank">4.2.1.161</a></text><title>bisanhydrobacterioruberin hydratase</title></g>
+<g id="node11419" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3984.6,6818.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.161" target="_blank">4.2.1.161</a></text><title>bisanhydrobacterioruberin hydratase</title></g>
+<g id="node2826" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1092.4,6820.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.5" target="_blank">1.3.5.5</a></text><title>15-cis-phytoene desaturase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2754" class="node nodeCM pw_carotenoid-biosynthesis lid8124" transform="translate(3465.6,6706.8)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8124" target="_blank">L-dehydroascorbate</a></text><title>L-dehydroascorbate</title></g>
+<g id="node2755" class="node nodeCM pw_carotenoid-biosynthesis lid8124" transform="translate(3878.4,6706.8)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8124" target="_blank">L-dehydroascorbate</a></text><title>L-dehydroascorbate</title></g>
+<g id="node2756" class="node nodeCM pw_carotenoid-biosynthesis lid548" transform="translate(3674.2,6706.8)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=548" target="_blank">L-ascorbate</a></text><title>L-ascorbate</title></g>
+<g id="node2757" class="node nodeCM pw_carotenoid-biosynthesis lid548" transform="translate(4081.3,6706.8)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=548" target="_blank">L-ascorbate</a></text><title>L-ascorbate</title></g>
+<g id="node2758" class="node nodeCM pw_carotenoid-biosynthesis lid202698" transform="translate(3666.9,6404.8)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [FE-S] cluster</a></text><title>oxidized ferredoxin [iron-sulfur] cluster</title></g>
+<g id="node2759" class="node nodeCM pw_carotenoid-biosynthesis lid202698" transform="translate(4132.5,6404.8)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [FE-S] cluster</a></text><title>oxidized ferredoxin [iron-sulfur] cluster</title></g>
+<g id="node2760" class="node nodeCM pw_carotenoid-biosynthesis lid202701" transform="translate(3439.4,6404.8)"><rect rx="5" height="30.0" width="212.0" x="-106.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [FE-S] cluster</a></text><title>reduced ferredoxin [iron-sulfur] cluster</title></g>
+<g id="node2761" class="node nodeCM pw_carotenoid-biosynthesis lid202701" transform="translate(3893.7,6404.8)"><rect rx="5" height="30.0" width="212.0" x="-106.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [FE-S] cluster</a></text><title>reduced ferredoxin [iron-sulfur] cluster</title></g>
+<g id="node2762" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(3956.8,6528.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node2763" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(3539.7,6528.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node2764" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(3881.8,6446.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2765" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(3466.2,6446.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2766" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3992.6,6585.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2767" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3631.2,6528.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2768" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3522.4,6594.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2769" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(4035.3,6528.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2770" class="node nodeCM pw_carotenoid-biosynthesis lid7" transform="translate(3169.6,6706.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node2771" class="node nodeCM pw_carotenoid-biosynthesis lid8" transform="translate(3032.0,6706.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node2772" class="node nodeCM pw_carotenoid-biosynthesis lid7" transform="translate(2781.7,6706.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node2773" class="node nodeCM pw_carotenoid-biosynthesis lid8" transform="translate(2653.6,6706.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node2774" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3171.0,6553.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2775" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(2942.8,6553.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2776" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(3033.7,6553.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node2777" class="node nodeCM pw_carotenoid-biosynthesis lid10" transform="translate(3165.3,6392.8)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node2778" class="node nodeCM pw_carotenoid-biosynthesis lid5" transform="translate(3027.6,6397.3)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node2779" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(2780.8,6553.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2780" class="node nodeCM pw_carotenoid-biosynthesis lid10" transform="translate(2784.3,6396.2)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node2781" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(2560.5,6553.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node2782" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(2648.6,6553.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node2783" class="node nodeCM pw_carotenoid-biosynthesis lid5" transform="translate(2640.7,6398.3)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node2784" class="node nodeCM pw_carotenoid-biosynthesis lid2695" transform="translate(1299.6,6568.3)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title>a quinol</title></g>
+<g id="node2785" class="node nodeCM pw_carotenoid-biosynthesis lid1992" transform="translate(1299.6,6467.7)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title>a quinone</title></g>
+<g id="node2786" class="node nodeCM pw_carotenoid-biosynthesis lid2695" transform="translate(1182.4,6441.9)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title>a quinol</title></g>
+<g id="node2787" class="node nodeCM pw_carotenoid-biosynthesis lid1992" transform="translate(1006.0,6441.9)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title>a quinone</title></g>
+<g id="node2788" class="node nodeCM pw_carotenoid-biosynthesis lid3663" transform="translate(1182.4,6765.4)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3663" target="_blank">plastoquinol</a></text><title>plastoquinol</title></g>
+<g id="node2789" class="node nodeCM pw_carotenoid-biosynthesis lid3359" transform="translate(1006.0,6765.4)"><rect rx="5" height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3359" target="_blank">plastoquinone</a></text><title>plastoquinone</title></g>
+<g id="node2790" class="node nodeCM pw_carotenoid-biosynthesis lid3663" transform="translate(897.8,6765.4)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3663" target="_blank">plastoquinol</a></text><title>plastoquinol</title></g>
+<g id="node2791" class="node nodeCM pw_carotenoid-biosynthesis lid3359" transform="translate(897.8,6666.8)"><rect rx="5" height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3359" target="_blank">plastoquinone</a></text><title>plastoquinone</title></g>
+<g id="node2792" class="node nodeCM pw_carotenoid-biosynthesis lid17" transform="translate(897.8,6564.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node11421" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3895.9,6750.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11422" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3432.2,6750.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11423" class="node nodeCM pw_carotenoid-biosynthesis lid66" transform="translate(1934.1,6731.4)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title>acceptor</title></g>
+<g id="node11424" class="node nodeCM pw_carotenoid-biosynthesis lid77" transform="translate(2059.6,6754.7)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title>reduced acceptor</title></g>
+<g id="node11425" class="node nodeCM pw_carotenoid-biosynthesis lid66" transform="translate(2964.1,6742.8)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title>acceptor</title></g>
+<g id="node11426" class="node nodeCM pw_carotenoid-biosynthesis lid77" transform="translate(3097.4,6764.9)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title>reduced acceptor</title></g>
+<g id="node11956" class="node nodeCM pw_carotenoid-biosynthesis lid157" transform="translate(1547.2,6696.6)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl diphosphate</a></text><title>dimethylallyl diphosphate</title></g>
+<g id="node11957" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(1571.7,6763.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11958" class="node nodeCM pw_carotenoid-biosynthesis lid17" transform="translate(1811.9,6726.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node11959" class="node nodeCM pw_carotenoid-biosynthesis lid157" transform="translate(2342.7,6733.2)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl diphosphate</a></text><title>dimethylallyl diphosphate</title></g>
+<g id="node11960" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(2475.0,6736.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11961" class="node nodeCM pw_carotenoid-biosynthesis lid17" transform="translate(2607.4,6764.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="3713.7" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 4770.5 3172.6" width="4770" height="3173" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="4770.5" height="3172.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_carotenoid-biosynthesis" class="pw " x="0.0" y="0.0" width="4690.5" height="3077.1" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 198.4 948.7 L 103.4 864.3"/>
+<path class="link" marker-end="url(#in)" d="M 216.4 980.7 L 216.4 1107.7"/>
+<path class="link" marker-start="url(#in)" d="M 286.6 1278.6 C 271.9 1246.2 237.9 1171.2 223.3 1138.9"/>
+<path class="link" marker-end="url(#in)" d="M 322.3 1294.5 L 371.9 1295.1"/>
+<path class="link" marker-start="url(#in)" d="M 589.2 1296.2 L 533.0 1296.2"/>
+<path class="link" marker-end="url(#in)" d="M 635.2 1280.2 L 743.9 1180.2"/>
+<path class="link" marker-start="url(#in)" d="M 873.0 1040.1 L 775.7 1148.2"/>
+<path class="link" marker-end="url(#in)" d="M 912.3 1008.1 L 1000.9 950.9"/>
+<path class="link" marker-start="url(#in)" d="M 1178.4 934.9 L 1109.5 934.9"/>
+<path class="link" marker-end="url(#in)" d="M 1227.9 950.9 L 1345.8 1041.5"/>
+<path class="link" marker-start="url(#in)" d="M 1482.1 1159.0 L 1384.9 1073.5"/>
+<path class="link" marker-end="url(#in)" d="M 1522.1 1191.0 L 1651.9 1286.4"/>
+<path class="link" marker-start="url(#in)" d="M 1821.4 1383.9 L 1702.7 1318.4"/>
+<path class="link" marker-end="url(#in)" d="M 1881.7 1415.9 L 2041.1 1497.2"/>
+<path class="link" marker-start="url(#in)" d="M 2223.3 1513.2 L 2136.8 1513.2"/>
+<path class="link" marker-end="url(#in)" d="M 2287.1 1528.4 L 2419.9 1591.4"/>
+<path class="link" marker-start="url(#in)" d="M 2638.1 1603.1 L 2504.9 1606.2"/>
+<path class="link" marker-end="url(#in)" d="M 2702.0 1600.1 L 2831.9 1591.4"/>
+<path class="link" marker-start="url(#in)" d="M 3089.1 1567.0 L 2928.2 1583.2"/>
+<path class="link" marker-end="url(#in)" d="M 3165.9 1559.5 L 3293.9 1547.6"/>
+<path class="link" marker-start="url(#in)" d="M 3595.3 1532.4 L 3422.5 1539.1"/>
+<path class="link" marker-end="url(#in)" d="M 3672.1 1530.9 L 3868.6 1530.9"/>
+<path class="link" marker-start="url(#in)" d="M 4095.0 1378.4 C 4055.5 1410.4 3965.5 1483.4 3926.1 1515.4"/>
+<path class="link" marker-end="url(#in)" d="M 4152.5 1368.8 L 4257.0 1384.7"/>
+<path class="link" marker-end="url(#in)" d="M 4083.8 1437.4 L 3937.3 1514.9"/>
+<path class="link" marker-start="url(#in)" d="M 4146.0 1416.7 L 4257.0 1400.1"/>
+<path class="link" marker-start="url(#in)" d="M 4461.7 1297.9 C 4427.9 1318.8 4367.5 1356.0 4333.5 1377.0"/>
+<path class="link" marker-end="url(#in)" d="M 4524.8 1291.7 L 4566.7 1301.5"/>
+<path class="link" marker-end="url(#in)" d="M 4459.2 1350.1 L 4359.8 1378.1"/>
+<path class="link" marker-start="url(#in)" d="M 4523.1 1333.4 L 4566.7 1322.9"/>
+<path class="link" marker-start="url(#in)" d="M 2111.4 1257.9 L 2074.9 1497.2"/>
+<path class="link" marker-end="url(#in)" d="M 2125.8 1225.9 L 2275.6 1026.1"/>
+<path class="link" marker-start="url(#in)" d="M 2415.3 819.5 L 2298.3 994.1"/>
+<path class="link" marker-end="url(#in)" d="M 2439.7 787.5 L 2578.4 625.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2734.6 467.9 L 2608.2 593.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2771.6 435.9 L 2900.2 337.7"/>
+<path class="link" marker-start="url(#in)" d="M 3052.5 205.6 L 2939.2 305.7"/>
+<path class="link" marker-end="url(#in)" d="M 3081.9 173.6 L 3156.1 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 2057.0 1737.4 L 2071.3 1529.2"/>
+<path class="link" marker-end="url(#in)" d="M 2055.3 1769.4 L 2048.1 1980.2"/>
+<path class="link" marker-start="url(#in)" d="M 2047.6 2208.7 L 2047.6 2012.2"/>
+<path class="link" marker-end="url(#in)" d="M 2062.1 2240.7 L 2213.5 2407.2"/>
+<path class="link" marker-start="url(#in)" d="M 2407.3 2583.9 L 2245.9 2439.2"/>
+<path class="link" marker-end="url(#in)" d="M 2443.4 2615.9 L 2628.9 2779.3"/>
+<path class="link" marker-start="url(#in)" d="M 2874.0 2810.4 L 2756.8 2802.6"/>
+<path class="link" marker-end="url(#in)" d="M 2944.3 2814.9 L 3064.0 2822.2"/>
+<path class="link" marker-start="url(#in)" d="M 3350.4 2833.7 L 3238.0 2830.2"/>
+<path class="link" marker-end="url(#in)" d="M 3420.8 2834.9 L 3504.7 2834.9"/>
+<path class="link" marker-start="url(#in)" d="M 3749.7 2917.4 L 3624.9 2850.9"/>
+<path class="link" marker-end="url(#in)" d="M 3803.0 2949.4 L 3892.8 3011.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 248.3 970.1 L 286.8 976.6"/>
+<path class="link" marker-start="url(#in)" d="M 293.9 1278.1 L 295.4 1206.5"/>
+<path class="link" marker-end="url(#in)" d="M 322.3 1284.3 L 345.2 1276.5"/>
+<path class="link" marker-start="url(#in)" d="M 592.1 1280.2 L 555.6 1257.6"/>
+<path class="link" marker-end="url(#in)" d="M 621.3 1280.2 L 635.4 1214.2"/>
+<path class="link" marker-start="url(#in)" d="M 1184.4 950.9 L 1150.4 974.9"/>
+<path class="link" marker-end="url(#in)" d="M 1211.4 950.9 L 1227.8 1011.0"/>
+<path class="link" marker-start="url(#in)" d="M 1471.7 1183.4 L 1442.4 1192.1"/>
+<path class="link" marker-end="url(#in)" d="M 1499.3 1191.0 L 1495.4 1254.3"/>
+<path class="link" marker-start="url(#in)" d="M 3128.2 1579.1 L 3130.8 1636.0"/>
+<path class="link" marker-start="url(#in)" d="M 3118.5 1579.1 L 3094.4 1621.7"/>
+<path class="link" marker-start="url(#in)" d="M 3098.1 1579.1 L 3064.7 1597.3"/>
+<path class="link" marker-end="url(#in)" d="M 3131.3 1547.1 L 3144.4 1492.5"/>
+<path class="link" marker-end="url(#in)" d="M 3143.8 1547.1 L 3174.1 1517.3"/>
+<path class="link" marker-start="url(#in)" d="M 3633.2 1546.9 L 3631.3 1603.8"/>
+<path class="link" marker-start="url(#in)" d="M 3623.0 1546.9 L 3596.7 1586.0"/>
+<path class="link" marker-start="url(#in)" d="M 3598.0 1546.9 L 3568.0 1560.3"/>
+<path class="link" marker-end="url(#in)" d="M 3638.9 1514.9 L 3655.9 1462.2"/>
+<path class="link" marker-end="url(#in)" d="M 3652.7 1514.9 L 3684.8 1487.8"/>
+<path class="link" marker-start="url(#in)" d="M 4118.8 1378.9 L 4146.9 1473.4"/>
+<path class="link" marker-start="url(#in)" d="M 4110.0 1378.9 L 4094.6 1439.4"/>
+<path class="link" marker-start="url(#in)" d="M 4096.3 1378.9 L 4062.9 1409.1"/>
+<path class="link" marker-end="url(#in)" d="M 4114.1 1346.9 L 4114.0 1241.4"/>
+<path class="link" marker-end="url(#in)" d="M 4124.1 1346.9 L 4150.3 1304.8"/>
+<path class="link" marker-start="url(#in)" d="M 4118.7 1405.4 L 4137.1 1341.0"/>
+<path class="link" marker-end="url(#in)" d="M 4115.9 1437.4 L 4123.7 1507.4"/>
+<path class="link" marker-end="url(#in)" d="M 4103.0 1437.4 L 4054.6 1507.4"/>
+<path class="link" marker-start="url(#in)" d="M 4490.0 1298.6 L 4510.8 1393.1"/>
+<path class="link" marker-start="url(#in)" d="M 4481.3 1298.6 L 4462.0 1359.1"/>
+<path class="link" marker-start="url(#in)" d="M 4465.9 1298.6 L 4431.2 1325.6"/>
+<path class="link" marker-end="url(#in)" d="M 4487.6 1266.6 L 4495.2 1161.4"/>
+<path class="link" marker-end="url(#in)" d="M 4498.1 1266.6 L 4526.3 1228.1"/>
+<path class="link" marker-start="url(#in)" d="M 4497.0 1325.1 L 4519.8 1263.0"/>
+<path class="link" marker-end="url(#in)" d="M 4491.9 1357.1 L 4495.3 1427.1"/>
+<path class="link" marker-end="url(#in)" d="M 4479.0 1357.1 L 4426.1 1427.1"/>
+<path class="link" marker-start="url(#in)" d="M 2763.3 467.9 L 2794.1 507.2"/>
+<path class="link" marker-start="url(#in)" d="M 2752.4 467.9 L 2758.1 521.2"/>
+<path class="link" marker-start="url(#in)" d="M 2742.9 467.9 L 2721.1 513.1"/>
+<path class="link" marker-end="url(#in)" d="M 2744.2 435.9 L 2723.1 384.0"/>
+<path class="link" marker-end="url(#in)" d="M 2753.5 435.9 L 2762.9 381.9"/>
+<path class="link" marker-start="url(#in)" d="M 3086.3 205.6 L 3118.4 238.2"/>
+<path class="link" marker-start="url(#in)" d="M 3074.1 205.6 L 3085.6 257.3"/>
+<path class="link" marker-start="url(#in)" d="M 3064.9 205.6 L 3047.7 254.5"/>
+<path class="link" marker-end="url(#in)" d="M 3061.9 173.6 L 3036.0 126.1"/>
+<path class="link" marker-end="url(#in)" d="M 3071.5 173.6 L 3074.9 118.4"/>
+<path class="link" marker-start="url(#in)" d="M 2020.7 1739.2 L 1990.6 1727.1"/>
+<path class="link" marker-start="url(#in)" d="M 2044.2 1737.4 L 2003.7 1681.7"/>
+<path class="link" marker-end="url(#in)" d="M 2076.4 1769.4 L 2109.0 1794.8"/>
+<path class="link" marker-start="url(#in)" d="M 2057.6 2208.7 L 2088.3 2159.8"/>
+<path class="link" marker-end="url(#in)" d="M 2082.8 2232.2 L 2095.8 2235.0"/>
+<path class="link" marker-start="url(#in)" d="M 2432.2 2583.9 L 2451.8 2539.1"/>
+<path class="link" marker-start="url(#in)" d="M 2422.6 2583.9 L 2410.0 2505.1"/>
+<path class="link" marker-end="url(#in)" d="M 2460.3 2591.5 L 2494.4 2583.4"/>
+<path class="link" marker-start="url(#in)" d="M 2899.4 2796.8 L 2869.3 2747.3"/>
+<path class="link" marker-end="url(#in)" d="M 2922.0 2796.8 L 2964.1 2744.1"/>
+<path class="link" marker-start="url(#in)" d="M 3374.8 2818.9 L 3347.5 2778.5"/>
+<path class="link" marker-start="url(#in)" d="M 3778.5 2917.4 L 3774.6 2862.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_carotenoid-biosynthesis" transform="translate(2345.2,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">carotenoid biosynthesis</text></g>
+<g id="node1296" class="node nodeHM pw_carotenoid-biosynthesis lid9247" transform="translate(85.4,848.3)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9247" target="_blank">prephytoene-PP</a></text><title></title></g>
+<g id="node2819" class="node nodeHM pw_carotenoid-biosynthesis lid2061" transform="translate(216.4,1123.7)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2061" target="_blank">15-cis-phytoene</a></text><title></title></g>
+<g id="node2820" class="node nodeHM pw_carotenoid-biosynthesis lid28122" transform="translate(452.4,1296.2)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28122" target="_blank">15,9&#x27;-dicis-phytofluene</a></text><title></title></g>
+<g id="node2821" class="node nodeHM pw_carotenoid-biosynthesis lid5443" transform="translate(761.2,1164.2)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5443" target="_blank">9,15,9&#x27;-tricis-zeta-carotene</a></text><title></title></g>
+<g id="node2818" class="node nodeHM pw_carotenoid-biosynthesis lid12006" transform="translate(1025.7,934.9)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12006" target="_blank">9,9&#x27;-dicis-zeta-carotene</a></text><title></title></g>
+<g id="node2817" class="node nodeHM pw_carotenoid-biosynthesis lid7825" transform="translate(1366.7,1057.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7825" target="_blank">7,9,9&#x27;-tricis-neurosporene</a></text><title></title></g>
+<g id="node2816" class="node nodeHM pw_carotenoid-biosynthesis lid10238" transform="translate(1673.6,1302.4)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10238" target="_blank">prolycopene</a></text><title></title></g>
+<g id="node2815" class="node nodeHM pw_carotenoid-biosynthesis lid5062" transform="translate(2072.4,1513.2)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5062" target="_blank">all-trans-lycopene</a></text><title></title></g>
+<g id="node2801" class="node nodeHM pw_carotenoid-biosynthesis lid8104" transform="translate(2453.6,1607.4)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8104" target="_blank">gamma-carotene</a></text><title></title></g>
+<g id="node2800" class="node nodeHM pw_carotenoid-biosynthesis lid858" transform="translate(2880.1,1588.1)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=858" target="_blank">beta-carotene</a></text><title></title></g>
+<g id="node2799" class="node nodeHM pw_carotenoid-biosynthesis lid3892" transform="translate(3358.2,1541.6)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3892" target="_blank">beta-cryptoxanthin</a></text><title></title></g>
+<g id="node2807" class="node nodeHM pw_carotenoid-biosynthesis lid1849" transform="translate(3907.0,1530.9)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1849" target="_blank">zeaxanthin</a></text><title></title></g>
+<g id="node2796" class="node nodeHM pw_carotenoid-biosynthesis lid3283" transform="translate(4308.4,1392.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3283" target="_blank">antheraxanthin</a></text><title></title></g>
+<g id="node2793" class="node nodeHM pw_carotenoid-biosynthesis lid3412" transform="translate(4611.6,1312.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3412" target="_blank">violaxanthin</a></text><title></title></g>
+<g id="node2806" class="node nodeHM pw_carotenoid-biosynthesis lid166871" transform="translate(2287.6,1010.1)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=166871" target="_blank">delta-carotene</a></text><title></title></g>
+<g id="node2810" class="node nodeHM pw_carotenoid-biosynthesis lid3878" transform="translate(2592.0,609.2)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3878" target="_blank">alpha-carotene</a></text><title></title></g>
+<g id="node2809" class="node nodeHM pw_carotenoid-biosynthesis lid41764" transform="translate(2921.1,321.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41764" target="_blank">zeinoxanthin</a></text><title></title></g>
+<g id="node2808" class="node nodeHM pw_carotenoid-biosynthesis lid16796" transform="translate(3167.4,52.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16796" target="_blank">lutein</a></text><title></title></g>
+<g id="node11410" class="node nodeHM pw_carotenoid-biosynthesis lid197910" transform="translate(2047.6,1996.2)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197910" target="_blank">dihydroisopentenyldehydrorhodopin</a></text><title></title></g>
+<g id="node11412" class="node nodeHM pw_carotenoid-biosynthesis lid197912" transform="translate(2228.1,2423.2)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197912" target="_blank">isopentenyldehydrorhodopin</a></text><title></title></g>
+<g id="node11414" class="node nodeHM pw_carotenoid-biosynthesis lid197909" transform="translate(2647.1,2795.3)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197909" target="_blank">dihydrobisanhydrobacterioruberin</a></text><title></title></g>
+<g id="node11416" class="node nodeHM pw_carotenoid-biosynthesis lid197908" transform="translate(3151.0,2827.5)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197908" target="_blank">bisanhydrobacterioruberin</a></text><title></title></g>
+<g id="node11418" class="node nodeHM pw_carotenoid-biosynthesis lid197924" transform="translate(3594.9,2834.9)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197924" target="_blank">monoanhydrobacterioruberin</a></text><title></title></g>
+<g id="node11420" class="node nodeHM pw_carotenoid-biosynthesis lid197907" transform="translate(3916.1,3027.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=197907" target="_blank">bacterioruberin</a></text><title></title></g>
+<g id="node2828" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(216.4,964.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.32" target="_blank">2.5.1.32</a></text><title>15-cis-phytoene synthase</title></g>
+<g id="node2827" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(293.6,1294.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.5" target="_blank">1.3.5.5</a></text><title>15-cis-phytoene desaturase</title></g>
+<g id="node2826" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(617.9,1296.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.5" target="_blank">1.3.5.5</a></text><title>15-cis-phytoene desaturase</title></g>
+<g id="node2825" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(887.5,1024.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.2.1.12" target="_blank">5.2.1.12</a></text><title>zeta-carotene isomerase</title></g>
+<g id="node2824" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1207.0,934.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.6" target="_blank">1.3.5.6</a></text><title>9,9&#x27;-dicis-zeta-carotene desaturase</title></g>
+<g id="node2823" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1500.3,1175.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.6" target="_blank">1.3.5.6</a></text><title>9,9&#x27;-dicis-zeta-carotene desaturase</title></g>
+<g id="node2822" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(1850.4,1399.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.2.1.13" target="_blank">5.2.1.13</a></text><title>prolycopene isomerase</title></g>
+<g id="node2805" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2255.2,1513.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.19" target="_blank">5.5.1.19</a></text><title>lycopene beta-cyclase</title></g>
+<g id="node2804" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2670.1,1602.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.19" target="_blank">5.5.1.19</a></text><title>lycopene beta-cyclase</title></g>
+<g id="node2803" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3127.5,1563.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.24" target="_blank">1.14.15.24</a></text><title>beta-carotene 3-hydroxylase</title></g>
+<g id="node2802" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3633.7,1530.9)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.24" target="_blank">1.14.15.24</a></text><title>beta-carotene 3-hydroxylase</title></g>
+<g id="node2798" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(4114.1,1362.9)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.21" target="_blank">1.14.15.21</a></text><title>zeaxanthin epoxidase; violaxanthin de-epoxidase</title></g>
+<g id="node2797" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(4114.1,1421.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.23.5.1" target="_blank">1.23.5.1</a></text><title>zeaxanthin epoxidase; violaxanthin de-epoxidase</title></g>
+<g id="node2795" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(4486.4,1282.6)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.21" target="_blank">1.14.15.21</a></text><title>zeaxanthin epoxidase; violaxanthin de-epoxidase</title></g>
+<g id="node2794" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(4491.1,1341.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.23.5.1" target="_blank">1.23.5.1</a></text><title>zeaxanthin epoxidase; violaxanthin de-epoxidase</title></g>
+<g id="node2814" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2113.8,1241.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.18" target="_blank">5.5.1.18</a></text><title>lycopene epsilon-cyclase</title></g>
+<g id="node2813" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2426.0,803.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.19" target="_blank">5.5.1.19</a></text><title>lycopene beta-cyclase</title></g>
+<g id="node2812" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2750.7,451.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.-" target="_blank">1.14.99.-</a></text><title>beta-ring hydroxylase</title></g>
+<g id="node2811" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3070.6,189.6)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.158" target="_blank">1.14.14.158</a></text><title>carotenoid epsilon hydroxylase</title></g>
+<g id="node11409" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2055.9,1753.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.150" target="_blank">2.5.1.150</a></text><title>lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)</title></g>
+<g id="node11411" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2047.6,2224.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.99.37" target="_blank">1.3.99.37</a></text><title>1-hydroxy-2-isopentenylcarotenoid 3,4-desaturase</title></g>
+<g id="node11413" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2425.2,2599.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.150" target="_blank">2.5.1.150</a></text><title>lycopene elongase/hydratase (dihydrobisanhydrobacterioruberin-forming)</title></g>
+<g id="node11415" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(2909.2,2812.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.99.37" target="_blank">1.3.99.37</a></text><title>1-hydroxy-2-isopentenylcarotenoid 3,4-desaturase</title></g>
+<g id="node11417" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3385.6,2834.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.161" target="_blank">4.2.1.161</a></text><title>bisanhydrobacterioruberin hydratase</title></g>
+<g id="node11419" class="node nodeEN pw_carotenoid-biosynthesis" transform="translate(3779.7,2933.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.161" target="_blank">4.2.1.161</a></text><title>bisanhydrobacterioruberin hydratase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2828~0" class="node nodeCM pw_carotenoid-biosynthesis lid17" transform="translate(302.5,979.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2827~0" class="node nodeCM pw_carotenoid-biosynthesis lid3359" transform="translate(295.7,1190.5)"><rect rx="5" height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3359" target="_blank">plastoquinone</a></text><title></title></g>
+<g id="node2827~1" class="node nodeCM pw_carotenoid-biosynthesis lid3663" transform="translate(390.1,1261.1)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3663" target="_blank">plastoquinol</a></text><title></title></g>
+<g id="node2826~0" class="node nodeCM pw_carotenoid-biosynthesis lid3359" transform="translate(529.9,1241.6)"><rect rx="5" height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3359" target="_blank">plastoquinone</a></text><title></title></g>
+<g id="node2826~1" class="node nodeCM pw_carotenoid-biosynthesis lid3663" transform="translate(638.8,1198.2)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3663" target="_blank">plastoquinol</a></text><title></title></g>
+<g id="node2824~0" class="node nodeCM pw_carotenoid-biosynthesis lid1992" transform="translate(1127.7,990.9)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node2824~1" class="node nodeCM pw_carotenoid-biosynthesis lid2695" transform="translate(1232.1,1027.0)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title></title></g>
+<g id="node2823~0" class="node nodeCM pw_carotenoid-biosynthesis lid1992" transform="translate(1407.2,1202.4)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node2823~1" class="node nodeCM pw_carotenoid-biosynthesis lid2695" transform="translate(1494.4,1270.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title></title></g>
+<g id="node2803~0" class="node nodeCM pw_carotenoid-biosynthesis lid8" transform="translate(3131.5,1652.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node2803~1" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(3085.4,1637.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2803~2" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(3052.2,1604.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2803~3" class="node nodeCM pw_carotenoid-biosynthesis lid7" transform="translate(3148.2,1476.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2803~4" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3189.8,1501.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2802~0" class="node nodeCM pw_carotenoid-biosynthesis lid8" transform="translate(3630.8,1619.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node2802~1" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(3585.9,1602.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2802~2" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(3555.5,1565.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2802~3" class="node nodeCM pw_carotenoid-biosynthesis lid7" transform="translate(3661.1,1446.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2802~4" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3700.5,1474.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2798~0" class="node nodeCM pw_carotenoid-biosynthesis lid202701" transform="translate(4151.6,1489.4)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node2798~1" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(4090.5,1455.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2798~2" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(4050.4,1420.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2798~3" class="node nodeCM pw_carotenoid-biosynthesis lid202698" transform="translate(4114.0,1225.4)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node2798~4" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(4160.3,1288.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2797~0" class="node nodeCM pw_carotenoid-biosynthesis lid548" transform="translate(4141.7,1325.0)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=548" target="_blank">L-ascorbate</a></text><title></title></g>
+<g id="node2797~1" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(4125.5,1523.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2797~2" class="node nodeCM pw_carotenoid-biosynthesis lid8124" transform="translate(4043.5,1523.4)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8124" target="_blank">L-dehydroascorbate</a></text><title></title></g>
+<g id="node2795~0" class="node nodeCM pw_carotenoid-biosynthesis lid202701" transform="translate(4514.4,1409.1)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node2795~1" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(4456.9,1375.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2795~2" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(4418.7,1335.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2795~3" class="node nodeCM pw_carotenoid-biosynthesis lid202698" transform="translate(4496.4,1145.4)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node2795~4" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(4538.0,1212.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2794~0" class="node nodeCM pw_carotenoid-biosynthesis lid548" transform="translate(4525.7,1247.0)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=548" target="_blank">L-ascorbate</a></text><title></title></g>
+<g id="node2794~1" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(4496.1,1443.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2794~2" class="node nodeCM pw_carotenoid-biosynthesis lid8124" transform="translate(4414.0,1443.1)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8124" target="_blank">L-dehydroascorbate</a></text><title></title></g>
+<g id="node2812~0" class="node nodeCM pw_carotenoid-biosynthesis lid5" transform="translate(2806.7,523.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2812~1" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(2759.9,537.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2812~2" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(2713.3,529.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2812~3" class="node nodeCM pw_carotenoid-biosynthesis lid10" transform="translate(2716.6,368.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2812~4" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(2765.7,365.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2811~0" class="node nodeCM pw_carotenoid-biosynthesis lid5" transform="translate(3134.1,254.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2811~1" class="node nodeCM pw_carotenoid-biosynthesis lid9" transform="translate(3089.2,273.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2811~2" class="node nodeCM pw_carotenoid-biosynthesis lid12" transform="translate(3042.0,270.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2811~3" class="node nodeCM pw_carotenoid-biosynthesis lid10" transform="translate(3027.3,110.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2811~4" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3075.9,102.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11409~0" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(1974.8,1720.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11409~1" class="node nodeCM pw_carotenoid-biosynthesis lid157" transform="translate(1992.1,1665.7)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl-PP</a></text><title></title></g>
+<g id="node11409~2" class="node nodeCM pw_carotenoid-biosynthesis lid17" transform="translate(2124.8,1807.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11411~0" class="node nodeCM pw_carotenoid-biosynthesis lid66" transform="translate(2098.3,2143.8)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node11411~1" class="node nodeCM pw_carotenoid-biosynthesis lid77" transform="translate(2153.6,2247.4)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node11413~0" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(2458.8,2523.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11413~1" class="node nodeCM pw_carotenoid-biosynthesis lid157" transform="translate(2407.5,2489.1)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl-PP</a></text><title></title></g>
+<g id="node11413~2" class="node nodeCM pw_carotenoid-biosynthesis lid17" transform="translate(2510.2,2579.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11415~0" class="node nodeCM pw_carotenoid-biosynthesis lid66" transform="translate(2859.5,2731.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node11415~1" class="node nodeCM pw_carotenoid-biosynthesis lid77" transform="translate(2976.9,2728.1)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node11417~0" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3336.7,2762.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11419~0" class="node nodeCM pw_carotenoid-biosynthesis lid1" transform="translate(3773.4,2846.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>
+<text x="3723.7" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

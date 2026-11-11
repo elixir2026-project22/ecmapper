@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1778.6 2216.8" width="1779" height="2217" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1778.6" height="2216.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_curcuminoid-biosynthesis" class="pw " x="0.0" y="0.0" width="1658.6" height="2081.3" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 710.1 755.9 L 583.5 755.9"/>
+<path class="link" marker-end="url(#in)" d="M 916.5 756.0 L 979.8 756.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1197.0 835.5 L 1064.5 772.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1252.2 867.5 L 1409.4 983.0"/>
+<path class="link" marker-start="url(#in)" d="M 1435.7 1197.5 L 1431.6 1015.0"/>
+<path class="link" marker-end="url(#in)" d="M 1436.1 1229.5 L 1436.1 1415.9"/>
+<path class="link" marker-start="url(#in)" d="M 1348.5 1615.6 L 1428.4 1447.9"/>
+<path class="link" marker-end="url(#in)" d="M 1328.7 1646.9 C 1297.6 1686.1 1215.5 1789.6 1184.3 1828.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 972.9 1841.4 L 1107.7 1843.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 902.6 1840.6 L 769.8 1839.6"/>
+<path class="link" marker-end="url(#in)" d="M 581.4 1839.1 C 603.1 1839.1 627.1 1839.1 648.3 1839.1"/>
+<path class="link" marker-start="url(#in)" d="M 502.8 1823.1 L 360.4 1630.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 215.6 1614.8 C 231.0 1614.8 250.0 1614.8 268.8 1614.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 174.2 1598.8 L 111.9 1458.3"/>
+<path class="link" marker-end="url(#in)" d="M 162.7 1302.0 L 111.4 1426.3"/>
+<path class="link" marker-start="url(#in)" d="M 204.1 1270.0 L 311.7 1220.6"/>
+<path class="link" marker-end="url(#in)" d="M 447.4 993.2 L 354.2 1188.6"/>
+<path class="link" marker-start="url(#in)" d="M 461.3 961.2 L 535.6 771.9"/>
+<path class="link" marker-start="url(#in)" d="M 346.8 1405.0 L 346.5 1220.6"/>
+<path class="link" marker-end="url(#in)" d="M 347.0 1437.0 L 348.4 1598.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 529.8 571.0 L 540.8 739.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 527.9 539.0 L 518.7 378.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 512.8 217.4 L 517.2 346.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 512.2 185.4 L 512.2 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1172.0 1929.0 L 1172.0 1860.3"/>
+<path class="link" marker-end="url(#in)" d="M 1136.8 1945.0 L 1092.3 1945.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 807.8 772.0 L 778.7 856.3"/>
+<path class="link" marker-start="url(#in)" d="M 793.5 772.0 L 759.1 799.8"/>
+<path class="link" marker-end="url(#in)" d="M 818.8 740.0 L 848.4 654.2"/>
+<path class="link" marker-end="url(#in)" d="M 833.1 740.0 L 865.5 713.8"/>
+<path class="link" marker-start="url(#in)" d="M 1211.1 867.5 L 1178.9 894.3"/>
+<path class="link" marker-start="url(#in)" d="M 1169.3 859.8 L 1159.5 861.1"/>
+<path class="link" marker-end="url(#in)" d="M 1249.6 835.5 L 1281.9 808.8"/>
+<path class="link" marker-end="url(#in)" d="M 1291.5 843.2 L 1301.2 841.9"/>
+<path class="link" marker-start="url(#in)" d="M 1458.4 1197.5 L 1511.1 1159.7"/>
+<path class="link" marker-end="url(#in)" d="M 1459.5 1229.5 L 1514.2 1266.9"/>
+<path class="link" marker-start="url(#in)" d="M 1334.2 1615.6 L 1309.2 1554.9"/>
+<path class="link" marker-end="url(#in)" d="M 1353.5 1647.6 L 1382.4 1684.1"/>
+<path class="link" marker-end="url(#in)" d="M 1342.6 1647.6 L 1348.7 1702.5"/>
+<path class="link" marker-start="url(#in)" d="M 949.2 1824.8 L 988.5 1770.0"/>
+<path class="link" marker-end="url(#in)" d="M 932.0 1856.8 L 914.1 1907.1"/>
+<path class="link" marker-end="url(#in)" d="M 917.5 1856.8 L 885.0 1882.6"/>
+<path class="link" marker-start="url(#in)" d="M 494.9 1855.1 L 447.6 1893.5"/>
+<path class="link" marker-start="url(#in)" d="M 447.0 1847.5 L 443.6 1847.9"/>
+<path class="link" marker-end="url(#in)" d="M 534.3 1823.1 L 566.7 1796.8"/>
+<path class="link" marker-end="url(#in)" d="M 582.2 1830.7 L 585.6 1830.3"/>
+<path class="link" marker-start="url(#in)" d="M 203.6 1598.8 L 245.8 1568.5"/>
+<path class="link" marker-start="url(#in)" d="M 216.5 1611.9 L 234.6 1610.4"/>
+<path class="link" marker-end="url(#in)" d="M 159.0 1630.8 L 126.1 1654.5"/>
+<path class="link" marker-end="url(#in)" d="M 146.1 1617.1 L 109.8 1619.5"/>
+<path class="link" marker-start="url(#in)" d="M 161.1 1270.0 L 131.1 1211.5"/>
+<path class="link" marker-start="url(#in)" d="M 171.7 1270.0 L 179.9 1215.2"/>
+<path class="link" marker-end="url(#in)" d="M 176.7 1302.0 L 198.5 1348.9"/>
+<path class="link" marker-end="url(#in)" d="M 167.5 1302.0 L 161.2 1356.8"/>
+<path class="link" marker-start="url(#in)" d="M 437.6 961.2 L 406.4 932.6"/>
+<path class="link" marker-start="url(#in)" d="M 450.6 961.2 L 436.2 909.0"/>
+<path class="link" marker-end="url(#in)" d="M 472.5 993.2 L 503.7 1021.8"/>
+<path class="link" marker-end="url(#in)" d="M 459.5 993.2 L 473.9 1045.4"/>
+<path class="link" marker-start="url(#in)" d="M 324.0 1405.0 L 288.1 1379.9"/>
+<path class="link" marker-end="url(#in)" d="M 382.0 1432.9 L 413.8 1443.7"/>
+<path class="link" marker-end="url(#in)" d="M 359.9 1437.0 L 389.1 1472.6"/>
+<path class="link" marker-start="url(#in)" d="M 567.2 564.5 L 601.5 573.0"/>
+<path class="link" marker-start="url(#in)" d="M 542.4 571.0 L 574.2 608.3"/>
+<path class="link" marker-end="url(#in)" d="M 490.4 545.4 L 454.5 536.5"/>
+<path class="link" marker-end="url(#in)" d="M 515.0 539.0 L 483.6 502.5"/>
+<path class="link" marker-end="url(#in)" d="M 534.2 185.4 L 567.2 161.4"/>
+<path class="link" marker-start="url(#in)" d="M 1166.8 1929.0 L 1133.5 1826.3"/>
+<path class="link" marker-start="url(#in)" d="M 1175.3 1929.0 L 1182.3 1894.3"/>
+<path class="link" marker-end="url(#in)" d="M 1178.8 1961.0 L 1199.4 2009.4"/>
+<path class="link" marker-end="url(#in)" d="M 1169.5 1961.0 L 1160.9 2015.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_curcuminoid-biosynthesis" transform="translate(829.3,0.0)"><rect rx="10" height="31" width="243" x="-121.6" y="-15.5"/><text dominant-baseline="central">curcuminoid biosynthesis</text></g>
+<g id="node13471" class="node nodeHM pw_curcuminoid-biosynthesis lid1215" transform="translate(541.8,755.9)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1215" target="_blank">4-coumarate</a></text><title></title></g>
+<g id="node13548" class="node nodeHM pw_curcuminoid-biosynthesis lid426" transform="translate(1031.1,756.0)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=426" target="_blank">trans-caffeate</a></text><title></title></g>
+<g id="node13447" class="node nodeHM pw_curcuminoid-biosynthesis lid537" transform="translate(1431.2,999.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=537" target="_blank">caffeoyl-CoA</a></text><title></title></g>
+<g id="node13443" class="node nodeHM pw_curcuminoid-biosynthesis lid427" transform="translate(1436.1,1431.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=427" target="_blank">feruloyl-CoA</a></text><title></title></g>
+<g id="node13441" class="node nodeHM pw_curcuminoid-biosynthesis lid15297" transform="translate(1172.0,1844.3)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15297" target="_blank">feruloylacetyl-CoA</a></text><title></title></g>
+<g id="node13459" class="node nodeHM pw_curcuminoid-biosynthesis lid13941" transform="translate(708.8,1839.1)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13941" target="_blank">demethoxycurcumin</a></text><title></title></g>
+<g id="node13463" class="node nodeHM pw_curcuminoid-biosynthesis lid12224" transform="translate(348.6,1614.8)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12224" target="_blank">(4-coumaroyl)acetyl-CoA</a></text><title></title></g>
+<g id="node13452" class="node nodeHM pw_curcuminoid-biosynthesis lid6260" transform="translate(104.8,1442.3)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6260" target="_blank">bisdemethoxycurcumin</a></text><title></title></g>
+<g id="node13469" class="node nodeHM pw_curcuminoid-biosynthesis lid448" transform="translate(346.5,1204.6)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=448" target="_blank">4-coumaroyl-CoA</a></text><title></title></g>
+<g id="node13427" class="node nodeHM pw_curcuminoid-biosynthesis lid6144" transform="translate(517.8,362.9)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6144" target="_blank">(E)-cinnamate</a></text><title></title></g>
+<g id="node13421" class="node nodeHM pw_curcuminoid-biosynthesis lid104" transform="translate(512.2,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=104" target="_blank">Phe</a></text><title></title></g>
+<g id="node13432" class="node nodeHM pw_curcuminoid-biosynthesis lid696" transform="translate(1060.4,1945.0)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=696" target="_blank">curcumin</a></text><title></title></g>
+<g id="node13547" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(813.3,756.0)"><rect rx="15" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.9" target="_blank">1.14.14.9/1.14.18.1/1.14.99.15</a></text><title>4-hydroxyphenylacetate 3-monooxygenase;tyrosinase;4-methoxybenzoate monooxygenase (O-demethylating)</title></g>
+<g id="node13551" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(1230.4,851.5)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.12" target="_blank">6.2.1.12/6.2.1.27</a></text><title>4-coumarate-CoA ligase;4-hydroxybenzoate-CoA ligase</title></g>
+<g id="node13446" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(1436.1,1213.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.104" target="_blank">2.1.1.104</a></text><title>caffeoyl-CoA O-methyltransferase</title></g>
+<g id="node13442" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(1340.8,1631.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.218" target="_blank">2.3.1.218</a></text><title>phenylpropanoylacetyl-CoA synthase</title></g>
+<g id="node13437" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(937.7,1840.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.219" target="_blank">2.3.1.219</a></text><title>demethoxycurcumin synthase</title></g>
+<g id="node13456" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(514.6,1839.1)"><rect rx="15" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.217" target="_blank">2.3.1.217/2.3.1.219</a></text><title>curcumin synthase;demethoxycurcumin synthase</title></g>
+<g id="node13453" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(181.3,1614.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.219" target="_blank">2.3.1.219</a></text><title>demethoxycurcumin synthase</title></g>
+<g id="node13418" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(169.3,1286.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.211" target="_blank">2.3.1.211</a></text><title>bisdemethoxycurcumin synthase</title></g>
+<g id="node13470" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(455.1,977.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.12" target="_blank">6.2.1.12</a></text><title>4-coumarate-CoA ligase</title></g>
+<g id="node13464" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(346.8,1421.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.218" target="_blank">2.3.1.218</a></text><title>phenylpropanoylacetyl-CoA synthase</title></g>
+<g id="node13426" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(528.8,555.0)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.91" target="_blank">1.14.14.91</a></text><title>trans-cinnamate 4-monooxygenase</title></g>
+<g id="node13420" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(512.2,201.4)"><rect rx="15" height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.23" target="_blank">4.3.1.23/4.3.1.24/4.3.1.25/4.3.1.31</a></text><title>tyrosine ammonia-lyase;phenylalanine ammonia-lyase;phenylalanine/tyrosine ammonia-lyase;L-tryptophan ammonia lyase</title></g>
+<g id="node13433" class="node nodeEN pw_curcuminoid-biosynthesis" transform="translate(1172.0,1945.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.217" target="_blank">2.3.1.217</a></text><title>curcumin synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node13547~0" class="node nodeCM pw_curcuminoid-biosynthesis lid1661" transform="translate(773.2,872.3)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node13547~1" class="node nodeCM pw_curcuminoid-biosynthesis lid9" transform="translate(746.7,809.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13547~2" class="node nodeCM pw_curcuminoid-biosynthesis lid374" transform="translate(853.9,638.2)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node13547~3" class="node nodeCM pw_curcuminoid-biosynthesis lid1" transform="translate(881.2,701.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13551~0" class="node nodeCM pw_curcuminoid-biosynthesis lid4" transform="translate(1163.2,907.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node13551~1" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(1143.8,863.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13551~2" class="node nodeCM pw_curcuminoid-biosynthesis lid30" transform="translate(1297.6,795.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node13551~3" class="node nodeCM pw_curcuminoid-biosynthesis lid17" transform="translate(1317.0,839.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13446~0" class="node nodeCM pw_curcuminoid-biosynthesis lid24" transform="translate(1533.4,1143.7)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node13446~1" class="node nodeCM pw_curcuminoid-biosynthesis lid36" transform="translate(1537.6,1282.9)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node13442~0" class="node nodeCM pw_curcuminoid-biosynthesis lid76" transform="translate(1302.7,1538.9)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node13442~1" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(1395.1,1700.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13442~2" class="node nodeCM pw_curcuminoid-biosynthesis lid28" transform="translate(1350.5,1718.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node13437~0" class="node nodeCM pw_curcuminoid-biosynthesis lid448" transform="translate(1000.0,1754.0)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=448" target="_blank">4-coumaroyl-CoA</a></text><title></title></g>
+<g id="node13437~1" class="node nodeCM pw_curcuminoid-biosynthesis lid28" transform="translate(908.4,1923.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node13437~2" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(869.2,1895.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13456~0" class="node nodeCM pw_curcuminoid-biosynthesis lid47517" transform="translate(427.9,1909.5)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47517" target="_blank">trans-feruloyl-CoA</a></text><title></title></g>
+<g id="node13456~1" class="node nodeCM pw_curcuminoid-biosynthesis lid1" transform="translate(427.9,1849.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13456~2" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(582.4,1784.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13456~3" class="node nodeCM pw_curcuminoid-biosynthesis lid28" transform="translate(601.3,1828.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node13453~0" class="node nodeCM pw_curcuminoid-biosynthesis lid448" transform="translate(268.0,1552.5)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=448" target="_blank">4-coumaroyl-CoA</a></text><title></title></g>
+<g id="node13453~1" class="node nodeCM pw_curcuminoid-biosynthesis lid1" transform="translate(250.3,1609.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13453~2" class="node nodeCM pw_curcuminoid-biosynthesis lid28" transform="translate(110.4,1665.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node13453~3" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(94.1,1620.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13418~0" class="node nodeCM pw_curcuminoid-biosynthesis lid76" transform="translate(122.9,1195.5)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node13418~1" class="node nodeCM pw_curcuminoid-biosynthesis lid1" transform="translate(182.3,1199.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13418~2" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(206.0,1364.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13418~3" class="node nodeCM pw_curcuminoid-biosynthesis lid28" transform="translate(159.4,1372.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node13470~0" class="node nodeCM pw_curcuminoid-biosynthesis lid4" transform="translate(390.7,918.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node13470~1" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(431.7,893.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13470~2" class="node nodeCM pw_curcuminoid-biosynthesis lid30" transform="translate(519.4,1036.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node13470~3" class="node nodeCM pw_curcuminoid-biosynthesis lid17" transform="translate(478.4,1061.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13464~0" class="node nodeCM pw_curcuminoid-biosynthesis lid76" transform="translate(265.3,1363.9)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node13464~1" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(429.6,1449.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node13464~2" class="node nodeCM pw_curcuminoid-biosynthesis lid28" transform="translate(402.1,1488.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node13426~0" class="node nodeCM pw_curcuminoid-biosynthesis lid1123" transform="translate(666.1,589.0)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13426~1" class="node nodeCM pw_curcuminoid-biosynthesis lid9" transform="translate(586.7,623.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13426~2" class="node nodeCM pw_curcuminoid-biosynthesis lid88270" transform="translate(390.0,520.5)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13426~3" class="node nodeCM pw_curcuminoid-biosynthesis lid1" transform="translate(469.8,486.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13420~0" class="node nodeCM pw_curcuminoid-biosynthesis lid27" transform="translate(582.9,150.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node13433~0" class="node nodeCM pw_curcuminoid-biosynthesis lid47517" transform="translate(1128.3,1810.3)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47517" target="_blank">trans-feruloyl-CoA</a></text><title></title></g>
+<g id="node13433~1" class="node nodeCM pw_curcuminoid-biosynthesis lid1" transform="translate(1185.6,1878.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13433~2" class="node nodeCM pw_curcuminoid-biosynthesis lid28" transform="translate(1206.2,2025.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node13433~3" class="node nodeCM pw_curcuminoid-biosynthesis lid18" transform="translate(1158.4,2031.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+</g></svg>

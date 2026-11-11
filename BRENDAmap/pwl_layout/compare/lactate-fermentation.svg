@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1549" height="473" viewBox="0 0 1549.0 472.7"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10919.2 6447.0 594.0 432.7" width="594" height="433" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="10919.2" y="6447.0" width="594.0" height="432.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_lactate-fermentation" class="pw pw6" x="10959.2" y="6502.5" width="514.0" height="337.2" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11238.7 6569.2 L 11238.7 6701.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11205.1 6553.2 L 11077.0 6553.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11077.0 6720.3 L 11199.5 6720.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11040.6 6704.3 L 11040.6 6571.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11358.9 6720.3 L 11277.9 6720.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11392.4 6736.3 L 11392.4 6798.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 11272.2 6564.5 L 11321.8 6581.1"/>
+<path class="link" marker-end="url(#in)" d="M 11272.2 6547.2 L 11307.5 6540.8"/>
+<path class="link" marker-end="url(#in)" d="M 11219.2 6569.2 L 11201.2 6583.8"/>
+<path class="link" marker-start="url(#in)" d="M 11031.1 6704.3 L 11007.6 6664.5"/>
+<path class="link" marker-end="url(#in)" d="M 11029.3 6736.3 L 11009.4 6764.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_lactate-fermentation" transform="translate(11216.2,6502.5)"><rect rx="10" height="31" width="187" x="-93.5" y="-15.5"/><text dominant-baseline="central">lactate fermentation</text></g>
+<g id="node1390" class="node nodeSM pw_lactate-fermentation lid31" transform="translate(11040.6,6553.2)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>pyruvate</title></g>
+<g id="node2594" class="node nodeHM pw_lactate-fermentation lid600" transform="translate(11392.4,6814.3)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=600" target="_blank">D-lactate</a></text><title>D-Lactate</title></g>
+<g id="node9728" class="node nodeSM pw_lactate-fermentation lid403" transform="translate(11238.7,6720.3)"><rect height="35.0" width="76.4" x="-38.2" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=403" target="_blank">L-lactate</a></text><title>L-lactate</title></g>
+<g id="node8829" class="node nodeEN pw_lactate-fermentation" transform="translate(11238.7,6553.2)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.2.3" target="_blank">1.1.2.3</a></text><title>L-lactate dehydrogenase (cytochrome)</title></g>
+<g id="node9734" class="node nodeEN pw_lactate-fermentation" transform="translate(11040.6,6720.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.27" target="_blank">1.1.1.27</a></text><title>L-lactate dehydrogenase</title></g>
+<g id="node2593" class="node nodeEN pw_lactate-fermentation" transform="translate(11392.4,6720.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.2.1" target="_blank">5.1.2.1</a></text><title>Lactate racemase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2994" class="node nodeCM pw_lactate-fermentation lid12" transform="translate(11181.8,6599.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node8830" class="node nodeCM pw_lactate-fermentation lid313" transform="translate(11369.4,6597.1)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=313" target="_blank">ferricytochrome c</a></text><title>ferricytochrome c</title></g>
+<g id="node8831" class="node nodeCM pw_lactate-fermentation lid530" transform="translate(11369.4,6529.8)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=530" target="_blank">ferrocytochrome c</a></text><title>ferrocytochrome c</title></g>
+<g id="node9732" class="node nodeCM pw_lactate-fermentation lid8" transform="translate(10998.1,6648.5)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node9738" class="node nodeCM pw_lactate-fermentation lid7" transform="translate(10998.1,6780.5)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="674.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 875.1 416.1" width="875" height="416" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="875.1" height="416.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_lactate-fermentation" class="pw " x="0.0" y="0.0" width="795.1" height="320.6" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 202.2 138.7 L 97.8 124.5"/>
+<path class="link" marker-start="url(#in)" d="M 259.6 138.7 L 360.8 124.9"/>
+<path class="link" marker-start="url(#in)" d="M 199.0 174.6 L 97.8 133.2"/>
+<path class="link" marker-end="url(#in)" d="M 262.8 174.6 L 360.8 134.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 532.2 120.1 L 431.1 120.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 589.6 120.1 L 690.8 120.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 242.1 126.6 L 282.8 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 224.8 158.6 L 201.2 220.6"/>
+<path class="link" marker-end="url(#in)" d="M 211.2 158.6 L 176.8 186.5"/>
+<path class="link" marker-start="url(#in)" d="M 221.1 203.6 L 189.7 254.6"/>
+<path class="link" marker-end="url(#in)" d="M 242.1 171.6 L 270.8 130.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_lactate-fermentation" transform="translate(397.5,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">lactate fermentation</text></g>
+<g id="node1390" class="node nodeHM pw_lactate-fermentation lid31" transform="translate(65.9,120.1)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node9728" class="node nodeHM pw_lactate-fermentation lid403" transform="translate(395.9,120.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=403" target="_blank">L-lactate</a></text><title></title></g>
+<g id="node2594" class="node nodeHM pw_lactate-fermentation lid600" transform="translate(725.9,120.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=600" target="_blank">D-lactate</a></text><title></title></g>
+<g id="node8829" class="node nodeEN pw_lactate-fermentation" transform="translate(230.9,142.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.2.3" target="_blank">1.1.2.3</a></text><title>L-lactate dehydrogenase (cytochrome); L-lactate dehydrogenase</title></g>
+<g id="node9734" class="node nodeEN pw_lactate-fermentation" transform="translate(230.9,187.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.27" target="_blank">1.1.1.27</a></text><title>L-lactate dehydrogenase (cytochrome); L-lactate dehydrogenase</title></g>
+<g id="node2593" class="node nodeEN pw_lactate-fermentation" transform="translate(560.9,120.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.2.1" target="_blank">5.1.2.1</a></text><title>Lactate racemase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8829~0" class="node nodeCM pw_lactate-fermentation lid313" transform="translate(294.0,52.5)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=313" target="_blank">ferricytochrome c</a></text><title></title></g>
+<g id="node8829~1" class="node nodeCM pw_lactate-fermentation lid530" transform="translate(195.1,236.6)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=530" target="_blank">ferrocytochrome c</a></text><title></title></g>
+<g id="node8829~2" class="node nodeCM pw_lactate-fermentation lid12" transform="translate(164.3,196.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9734~0" class="node nodeCM pw_lactate-fermentation lid8" transform="translate(179.9,270.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9734~1" class="node nodeCM pw_lactate-fermentation lid7" transform="translate(282.0,114.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+</g></svg>
+<text x="684.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 634.0 898.0" width="634" height="898" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="634.0" height="898.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ppGpp-biosynthesis" class="pw " x="0.0" y="0.0" width="514.0" height="762.5" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 121.3 201.5 L 121.3 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 121.3 233.5 L 121.3 366.5"/>
+<path class="link" marker-start="url(#in)" d="M 254.4 382.5 L 146.7 382.5"/>
+<path class="link" marker-end="url(#in)" d="M 318.2 382.5 L 429.1 382.5"/>
+<path class="link" marker-start="url(#in)" d="M 451.3 531.5 L 451.3 398.5"/>
+<path class="link" marker-end="url(#in)" d="M 451.3 563.5 L 451.3 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 451.3 201.5 L 451.3 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 451.3 233.5 L 451.3 366.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 98.4 201.5 L 65.4 178.4"/>
+<path class="link" marker-end="url(#in)" d="M 98.4 233.5 L 65.4 256.6"/>
+<path class="link" marker-start="url(#in)" d="M 290.0 398.5 L 304.2 459.7"/>
+<path class="link" marker-end="url(#in)" d="M 297.5 366.5 L 324.3 328.3"/>
+<path class="link" marker-start="url(#in)" d="M 422.6 533.1 L 323.7 483.6"/>
+<path class="link" marker-end="url(#in)" d="M 428.4 563.5 L 395.4 586.6"/>
+<path class="link" marker-start="url(#in)" d="M 428.4 201.5 L 395.4 178.4"/>
+<path class="link" marker-end="url(#in)" d="M 428.4 233.5 L 395.4 256.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ppGpp-biosynthesis" transform="translate(257.0,0.0)"><rect rx="10" height="31" width="185" x="-92.5" y="-15.5"/><text dominant-baseline="central">ppGpp biosynthesis</text></g>
+<g id="node1241" class="node nodeHM pw_ppGpp-biosynthesis lid37" transform="translate(121.3,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node6812" class="node nodeHM pw_ppGpp-biosynthesis lid10664" transform="translate(121.3,382.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10664" target="_blank">pppGpp</a></text><title></title></g>
+<g id="node6816" class="node nodeHM pw_ppGpp-biosynthesis lid46041" transform="translate(451.3,382.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=46041" target="_blank">ppGpp</a></text><title></title></g>
+<g id="node6824" class="node nodeHM pw_ppGpp-biosynthesis lid53" transform="translate(451.3,712.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node6818" class="node nodeHM pw_ppGpp-biosynthesis lid53" transform="translate(451.3,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node6811" class="node nodeEN pw_ppGpp-biosynthesis" transform="translate(121.3,217.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.6.5" target="_blank">2.7.6.5</a></text><title>GTP diphosphokinase</title></g>
+<g id="node6815" class="node nodeEN pw_ppGpp-biosynthesis" transform="translate(286.3,382.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.40" target="_blank">3.6.1.40</a></text><title>guanosine-5&#x27;-triphosphate,3&#x27;-diphosphate phosphatase</title></g>
+<g id="node6823" class="node nodeEN pw_ppGpp-biosynthesis" transform="translate(451.3,547.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.7.2" target="_blank">3.1.7.2</a></text><title>guanosine-3&#x27;,5&#x27;-bis(diphosphate) 3&#x27;-diphosphatase</title></g>
+<g id="node6817" class="node nodeEN pw_ppGpp-biosynthesis" transform="translate(451.3,217.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.6.5" target="_blank">2.7.6.5</a></text><title>GTP diphosphokinase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6811~0" class="node nodeCM pw_ppGpp-biosynthesis lid4" transform="translate(49.7,167.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6811~1" class="node nodeCM pw_ppGpp-biosynthesis lid30" transform="translate(49.7,267.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node6815~0" class="node nodeCM pw_ppGpp-biosynthesis lid1" transform="translate(307.9,475.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6815~1" class="node nodeCM pw_ppGpp-biosynthesis lid16" transform="translate(335.5,312.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6823~1" class="node nodeCM pw_ppGpp-biosynthesis lid17" transform="translate(379.7,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6817~0" class="node nodeCM pw_ppGpp-biosynthesis lid4" transform="translate(379.7,167.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6817~1" class="node nodeCM pw_ppGpp-biosynthesis lid30" transform="translate(379.7,267.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+</g></svg>

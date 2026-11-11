@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1084" height="1888" viewBox="0 0 1083.7 1888.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="19279.2 7405.9 485.6 1092.7" width="486" height="1093" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="19279.2" y="7405.9" width="485.6" height="1092.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_D-cycloserine-biosynthesis" class="pw pw0" x="19319.2" y="7461.4" width="405.6" height="997.2" style="opacity: 0.5; fill: rgb(221, 221, 221);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19527.4 7568.1 L 19527.0 7520.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19527.6 7600.1 L 19527.6 7653.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19527.6 7750.7 L 19527.6 7685.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19527.6 7782.7 L 19527.6 7846.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19527.6 7939.6 L 19527.6 7878.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19527.9 7971.6 L 19529.4 8042.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19491.2 7955.6 L 19401.9 7955.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19529.7 8138.0 L 19529.7 8074.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19529.7 8170.0 L 19529.7 8230.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19529.7 8321.8 L 19529.7 8262.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 19529.7 8353.8 L 19529.7 8412.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 19566.8 7569.3 L 19604.2 7555.2"/>
+<path class="link" marker-end="url(#in)" d="M 19488.4 7596.4 L 19446.9 7609.4"/>
+<path class="link" marker-end="url(#in)" d="M 19488.4 7570.3 L 19442.0 7554.1"/>
+<path class="link" marker-end="url(#in)" d="M 19566.8 7594.3 L 19611.5 7606.1"/>
+<path class="link" marker-start="url(#in)" d="M 19560.8 7782.7 L 19591.5 7797.5"/>
+<path class="link" marker-end="url(#in)" d="M 19559.7 7750.7 L 19602.4 7729.4"/>
+<path class="link" marker-end="url(#in)" d="M 19564.0 7971.4 L 19591.1 7983.2"/>
+<path class="link" marker-start="url(#in)" d="M 19496.2 8336.1 L 19455.0 8334.0"/>
+<path class="link" marker-start="url(#in)" d="M 19563.3 8336.1 L 19604.5 8334.0"/>
+<path class="link" marker-start="url(#in)" d="M 19496.2 8353.4 L 19455.0 8372.5"/>
+<path class="link" marker-start="url(#in)" d="M 19563.3 8353.4 L 19607.3 8373.8"/>
+<path class="link" marker-end="url(#in)" d="M 19506.0 8321.8 L 19455.0 8287.4"/>
+<path class="link" marker-end="url(#in)" d="M 19553.4 8321.8 L 19604.5 8287.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_D-cycloserine-biosynthesis" transform="translate(19522.0,7461.4)"><rect rx="10" height="31" width="249" x="-124.5" y="-15.5"/><text dominant-baseline="central">D-cycloserine biosynthesis</text></g>
+<g id="node1200" class="node nodeHM pw_D-cycloserine-biosynthesis lid680" transform="translate(19371.1,7955.6)"><rect height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=680" target="_blank">Ac-Ser</a></text><title>O-Acetyl-L-Serine</title></g>
+<g id="node1700" class="node nodeHM pw_D-cycloserine-biosynthesis lid874" transform="translate(19529.7,8428.5)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=874" target="_blank">D-cycloserine</a></text><title>D-cycloserine</title></g>
+<g id="node1702" class="node nodeHM pw_D-cycloserine-biosynthesis lid10418" transform="translate(19529.7,8246.9)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10418" target="_blank">O-ureido-D-serine</a></text><title>O-ureido-D-serine</title></g>
+<g id="node1705" class="node nodeHM pw_D-cycloserine-biosynthesis lid15356" transform="translate(19529.7,8058.2)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15356" target="_blank">O-ureido-L-serine</a></text><title>O-ureido-L-serine</title></g>
+<g id="node1707" class="node nodeHM pw_D-cycloserine-biosynthesis lid850" transform="translate(19527.6,7862.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=850" target="_blank">hydroxyurea</a></text><title>hydroxyurea</title></g>
+<g id="node1715" class="node nodeHM pw_D-cycloserine-biosynthesis lid2523" transform="translate(19527.6,7669.9)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2523" target="_blank">L-hydroxyarginine</a></text><title>Nomega-hydroxy-L-arginine</title></g>
+<g id="node12080" class="node nodeSM pw_D-cycloserine-biosynthesis lid123" transform="translate(19526.8,7501.8)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=123" target="_blank">Arg</a></text><title>L-Arginine</title></g>
+<g id="node1716" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(19527.6,7584.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.-" target="_blank">1.14.11.-</a></text><title>L-arginine N-omega-oxidase</title></g>
+<g id="node1710" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(19527.6,7766.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.25" target="_blank">3.5.3.25</a></text><title>Nomega-hydroxy-L-arginine amidinohydrolase</title></g>
+<g id="node1706" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(19527.6,7955.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.99.3" target="_blank">2.6.99.3</a></text><title>O-ureido-L-serine synthase</title></g>
+<g id="node1703" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(19529.7,8154.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.1.19" target="_blank">5.1.1.19</a></text><title>O-ureido-serine racemase</title></g>
+<g id="node1701" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(19529.7,8337.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.5" target="_blank">6.3.3.5</a></text><title>O-ureido-D-serine cyclo-ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1694" class="node nodeCM pw_D-cycloserine-biosynthesis lid16" transform="translate(19626.8,8382.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node1695" class="node nodeCM pw_D-cycloserine-biosynthesis lid28" transform="translate(19432.7,8382.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node1696" class="node nodeCM pw_D-cycloserine-biosynthesis lid27" transform="translate(19626.8,8332.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node1697" class="node nodeCM pw_D-cycloserine-biosynthesis lid4" transform="translate(19626.8,8272.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node1698" class="node nodeCM pw_D-cycloserine-biosynthesis lid13" transform="translate(19432.7,8332.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node1699" class="node nodeCM pw_D-cycloserine-biosynthesis lid1" transform="translate(19432.7,8272.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1704" class="node nodeCM pw_D-cycloserine-biosynthesis lid47" transform="translate(19624.7,7997.8)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>acetate</title></g>
+<g id="node1708" class="node nodeCM pw_D-cycloserine-biosynthesis lid192" transform="translate(19624.7,7813.5)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192" target="_blank">L-ornithine</a></text><title>L-ornithine</title></g>
+<g id="node1709" class="node nodeCM pw_D-cycloserine-biosynthesis lid1" transform="translate(19624.7,7718.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1711" class="node nodeCM pw_D-cycloserine-biosynthesis lid34" transform="translate(19646.7,7539.2)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2-oxoglutarate</a></text><title>2-oxoglutarate</title></g>
+<g id="node1712" class="node nodeCM pw_D-cycloserine-biosynthesis lid58" transform="translate(19650.7,7616.4)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title>succinate</title></g>
+<g id="node1713" class="node nodeCM pw_D-cycloserine-biosynthesis lid28" transform="translate(19424.6,7616.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node1714" class="node nodeCM pw_D-cycloserine-biosynthesis lid9" transform="translate(19422.6,7547.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="565.6" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 518.2 1848.0" width="518" height="1848" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="518.2" height="1848.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_D-cycloserine-biosynthesis" class="pw " x="0.0" y="0.0" width="438.2" height="1752.5" style="opacity: 0.5; fill: rgb(221, 221, 221);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 303.3 563.5 L 303.3 696.5"/>
+<path class="link" marker-end="url(#in)" d="M 303.3 531.5 L 303.3 398.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 303.3 233.5 L 303.3 366.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 303.3 201.5 L 303.3 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 303.3 1553.5 L 303.3 1686.5"/>
+<path class="link" marker-end="url(#in)" d="M 303.3 1521.5 L 303.3 1388.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 303.3 1223.5 L 303.3 1356.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 303.3 1191.5 L 303.3 1058.5"/>
+<path class="link" marker-start="url(#in)" d="M 248.3 861.5 L 297.4 728.5"/>
+<path class="link" marker-start="url(#in)" d="M 224.6 861.5 L 77.2 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 248.3 893.5 L 297.4 1026.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 326.2 563.5 L 359.2 586.6"/>
+<path class="link" marker-end="url(#in)" d="M 326.2 531.5 L 359.2 508.4"/>
+<path class="link" marker-start="url(#in)" d="M 326.2 233.5 L 359.2 256.6"/>
+<path class="link" marker-end="url(#in)" d="M 268.2 215.7 L 231.8 213.8"/>
+<path class="link" marker-end="url(#in)" d="M 280.5 201.5 L 245.6 177.1"/>
+<path class="link" marker-end="url(#in)" d="M 296.5 201.5 L 272.2 144.1"/>
+<path class="link" marker-start="url(#in)" d="M 332.0 1530.9 L 372.7 1521.5"/>
+<path class="link" marker-start="url(#in)" d="M 332.0 1547.4 L 370.2 1560.5"/>
+<path class="link" marker-start="url(#in)" d="M 316.3 1553.5 L 345.3 1589.4"/>
+<path class="link" marker-start="url(#in)" d="M 305.3 1553.5 L 311.8 1606.6"/>
+<path class="link" marker-end="url(#in)" d="M 274.6 1527.6 L 236.4 1514.5"/>
+<path class="link" marker-end="url(#in)" d="M 290.4 1521.5 L 261.3 1485.6"/>
+<path class="link" marker-end="url(#in)" d="M 274.3 885.9 L 304.4 893.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_D-cycloserine-biosynthesis" transform="translate(219.1,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">D-cycloserine biosynthesis</text></g>
+<g id="node1707" class="node nodeHM pw_D-cycloserine-biosynthesis lid850" transform="translate(303.3,712.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=850" target="_blank">hydroxyurea</a></text><title></title></g>
+<g id="node1715" class="node nodeHM pw_D-cycloserine-biosynthesis lid2523" transform="translate(303.3,382.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2523" target="_blank">L-hydroxyarginine</a></text><title></title></g>
+<g id="node12080" class="node nodeHM pw_D-cycloserine-biosynthesis lid123" transform="translate(303.3,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=123" target="_blank">Arg</a></text><title></title></g>
+<g id="node1700" class="node nodeHM pw_D-cycloserine-biosynthesis lid874" transform="translate(303.3,1702.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=874" target="_blank">D-cycloserine</a></text><title></title></g>
+<g id="node1702" class="node nodeHM pw_D-cycloserine-biosynthesis lid10418" transform="translate(303.3,1372.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10418" target="_blank">O-ureido-D-serine</a></text><title></title></g>
+<g id="node1705" class="node nodeHM pw_D-cycloserine-biosynthesis lid15356" transform="translate(303.3,1042.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15356" target="_blank">O-ureido-L-serine</a></text><title></title></g>
+<g id="node1200" class="node nodeHM pw_D-cycloserine-biosynthesis lid680" transform="translate(59.4,712.5)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=680" target="_blank">Ac-Ser</a></text><title></title></g>
+<g id="node1710" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(303.3,547.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.25" target="_blank">3.5.3.25</a></text><title>Nomega-hydroxy-L-arginine amidinohydrolase</title></g>
+<g id="node1716" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(303.3,217.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.-" target="_blank">1.14.11.-</a></text><title>L-arginine N-omega-oxidase</title></g>
+<g id="node1701" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(303.3,1537.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.5" target="_blank">6.3.3.5</a></text><title>O-ureido-D-serine cyclo-ligase</title></g>
+<g id="node1703" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(303.3,1207.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.1.19" target="_blank">5.1.1.19</a></text><title>O-ureido-serine racemase</title></g>
+<g id="node1706" class="node nodeEN pw_D-cycloserine-biosynthesis" transform="translate(242.3,877.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.99.3" target="_blank">2.6.99.3</a></text><title>O-ureido-L-serine synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1710~0" class="node nodeCM pw_D-cycloserine-biosynthesis lid192" transform="translate(374.9,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192" target="_blank">Orn</a></text><title></title></g>
+<g id="node1710~1" class="node nodeCM pw_D-cycloserine-biosynthesis lid1" transform="translate(374.9,497.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1716~0" class="node nodeCM pw_D-cycloserine-biosynthesis lid34" transform="translate(374.9,267.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node1716~1" class="node nodeCM pw_D-cycloserine-biosynthesis lid28" transform="translate(216.1,212.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1716~2" class="node nodeCM pw_D-cycloserine-biosynthesis lid9" transform="translate(233.1,168.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1716~3" class="node nodeCM pw_D-cycloserine-biosynthesis lid58" transform="translate(265.4,128.1)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node1701~0" class="node nodeCM pw_D-cycloserine-biosynthesis lid13" transform="translate(388.4,1517.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node1701~1" class="node nodeCM pw_D-cycloserine-biosynthesis lid27" transform="translate(385.9,1565.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node1701~2" class="node nodeCM pw_D-cycloserine-biosynthesis lid28" transform="translate(358.3,1605.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1701~3" class="node nodeCM pw_D-cycloserine-biosynthesis lid16" transform="translate(313.8,1622.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1701~4" class="node nodeCM pw_D-cycloserine-biosynthesis lid4" transform="translate(220.7,1509.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node1701~5" class="node nodeCM pw_D-cycloserine-biosynthesis lid1" transform="translate(248.3,1469.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1706~0" class="node nodeCM pw_D-cycloserine-biosynthesis lid47" transform="translate(333.1,901.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+</g></svg>
+<text x="575.6" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

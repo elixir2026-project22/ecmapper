@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="4122" height="426" viewBox="0 0 4122.3 426.2"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="7889.0 8503.2 2105.9 326.2" width="2106" height="326" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="7889.0" y="8503.2" width="2105.9" height="326.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ceramide-biosynthesis" class="pw pw2" x="7929.0" y="8558.8" width="2025.9" height="230.7" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9303.7 8681.3 L 9380.3 8681.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9230.9 8681.3 L 9141.0 8681.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8199.0 8682.0 L 8305.0 8682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8131.8 8682.0 L 8014.4 8682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8509.3 8682.0 L 8406.1 8682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8582.1 8682.0 L 8665.6 8682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8965.2 8682.0 L 9051.3 8682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8886.8 8682.0 L 8806.1 8682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9575.6 8682.0 L 9492.6 8682.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9659.7 8682.0 L 9740.0 8682.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 9251.3 8665.1 L 9220.7 8634.5"/>
+<path class="link" marker-end="url(#in)" d="M 9286.3 8665.1 L 9322.6 8634.5"/>
+<path class="link" marker-start="url(#in)" d="M 8153.1 8666.0 L 8128.8 8634.5"/>
+<path class="link" marker-start="url(#in)" d="M 8152.1 8698.0 L 8129.7 8725.1"/>
+<path class="link" marker-end="url(#in)" d="M 8180.1 8666.0 L 8209.2 8634.5"/>
+<path class="link" marker-end="url(#in)" d="M 8181.3 8698.0 L 8208.1 8725.1"/>
+<path class="link" marker-start="url(#in)" d="M 8528.5 8698.0 L 8499.3 8725.1"/>
+<path class="link" marker-start="url(#in)" d="M 8529.7 8666.0 L 8498.1 8634.5"/>
+<path class="link" marker-end="url(#in)" d="M 8563.3 8698.0 L 8593.0 8725.1"/>
+<path class="link" marker-end="url(#in)" d="M 8562.1 8666.0 L 8594.3 8634.5"/>
+<path class="link" marker-start="url(#in)" d="M 8912.5 8698.0 L 8889.8 8725.1"/>
+<path class="link" marker-end="url(#in)" d="M 8946.6 8698.0 L 8981.3 8725.1"/>
+<path class="link" marker-start="url(#in)" d="M 9600.7 8698.0 L 9572.2 8725.1"/>
+<path class="link" marker-start="url(#in)" d="M 9595.4 8666.0 L 9551.5 8634.5"/>
+<path class="link" marker-end="url(#in)" d="M 9633.6 8666.0 L 9665.1 8634.5"/>
+<path class="link" marker-end="url(#in)" d="M 9634.0 8698.0 L 9661.6 8725.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ceramide-biosynthesis" transform="translate(8941.9,8558.8)"><rect rx="10" height="31" width="210" x="-105.0" y="-15.5"/><text dominant-baseline="central">ceramide biosynthesis</text></g>
+<g id="node1286" class="node nodeSM pw_ceramide-biosynthesis lid202596" transform="translate(9838.5,8682.0)"><rect height="35.0" width="195.1" x="-97.5" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202596" target="_blank">a (4E)-sphing-4-enine ceramide</a></text><title>a (4E)-sphing-4-enine ceramide</title></g>
+<g id="node1287" class="node nodeHM pw_ceramide-biosynthesis lid517" transform="translate(7975.2,8682.0)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=517" target="_blank">palmitate</a></text><title>palmitate</title></g>
+<g id="node8223" class="node nodeHM pw_ceramide-biosynthesis lid2221" transform="translate(9096.2,8682.0)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2221" target="_blank">sphinganine</a></text><title>sphinganine</title></g>
+<g id="node8227" class="node nodeHM pw_ceramide-biosynthesis lid12337" transform="translate(8735.9,8682.0)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12337" target="_blank">3-dehydrosphinganine</a></text><title>3-dehydrosphinganine</title></g>
+<g id="node8241" class="node nodeHM pw_ceramide-biosynthesis lid16848" transform="translate(9436.5,8682.0)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16848" target="_blank">dihydroceramide</a></text><title>dihydroceramide</title></g>
+<g id="node8245" class="node nodeHM pw_ceramide-biosynthesis lid128" transform="translate(8355.5,8682.0)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=128" target="_blank">palmitoyl-CoA</a></text><title>palmitoyl-CoA</title></g>
+<g id="node8225" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(9267.3,8681.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.24" target="_blank">2.3.1.24</a></text><title>sphingosine N-acyltransferase</title></g>
+<g id="node8244" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(8165.4,8682.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.3" target="_blank">6.2.1.3</a></text><title>long-chain-fatty-acid-CoA ligase</title></g>
+<g id="node8235" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(8545.7,8682.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.50" target="_blank">2.3.1.50</a></text><title>serine C-palmitoyltransferase</title></g>
+<g id="node8239" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(8926.0,8682.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.102" target="_blank">1.1.1.102</a></text><title>3-dehydrosphinganine reductase</title></g>
+<g id="node8237" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(9617.6,8682.0)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.19.17" target="_blank">1.14.19.17</a></text><title>sphingolipid 4-desaturase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node756" class="node nodeCM pw_ceramide-biosynthesis lid1" transform="translate(9678.0,8741.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node757" class="node nodeCM pw_ceramide-biosynthesis lid1034" transform="translate(9681.1,8618.5)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1034" target="_blank">ferricytochrome b5</a></text><title>ferricytochrome b5</title></g>
+<g id="node758" class="node nodeCM pw_ceramide-biosynthesis lid1129" transform="translate(9529.2,8618.5)"><rect rx="5" height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1129" target="_blank">ferrocytochrome b5</a></text><title>ferrocytochrome b5</title></g>
+<g id="node759" class="node nodeCM pw_ceramide-biosynthesis lid9" transform="translate(9555.3,8741.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node8221" class="node nodeCM pw_ceramide-biosynthesis lid18" transform="translate(8116.4,8741.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node8222" class="node nodeCM pw_ceramide-biosynthesis lid95" transform="translate(8482.1,8618.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95" target="_blank">Ser</a></text><title>L-Serine</title></g>
+<g id="node8224" class="node nodeCM pw_ceramide-biosynthesis lid18" transform="translate(9341.5,8618.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node8226" class="node nodeCM pw_ceramide-biosynthesis lid5" transform="translate(8876.3,8741.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node8228" class="node nodeCM pw_ceramide-biosynthesis lid6656" transform="translate(9204.6,8618.5)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6656" target="_blank">acyl-CoA</a></text><title>an acyl-CoA</title></g>
+<g id="node8233" class="node nodeCM pw_ceramide-biosynthesis lid28" transform="translate(8610.6,8741.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node8236" class="node nodeCM pw_ceramide-biosynthesis lid18" transform="translate(8610.6,8618.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node8238" class="node nodeCM pw_ceramide-biosynthesis lid4" transform="translate(8116.4,8618.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node8240" class="node nodeCM pw_ceramide-biosynthesis lid30" transform="translate(8223.9,8741.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node8242" class="node nodeCM pw_ceramide-biosynthesis lid10" transform="translate(9001.8,8741.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node8243" class="node nodeCM pw_ceramide-biosynthesis lid12" transform="translate(8482.1,8741.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node8246" class="node nodeCM pw_ceramide-biosynthesis lid17" transform="translate(8223.9,8618.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2185.9" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1936.4 386.2" width="1936" height="386" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1936.4" height="386.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ceramide-biosynthesis" class="pw " x="0.0" y="0.0" width="1856.4" height="290.7" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 205.5 158.1 L 104.3 158.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 262.8 158.1 L 351.0 158.1"/>
+<path class="link" marker-start="url(#in)" d="M 532.2 158.1 L 447.3 158.1"/>
+<path class="link" marker-end="url(#in)" d="M 596.1 158.1 L 658.4 158.1"/>
+<path class="link" marker-start="url(#in)" d="M 859.0 158.1 L 800.0 158.1"/>
+<path class="link" marker-end="url(#in)" d="M 929.3 158.1 L 1017.5 158.1"/>
+<path class="link" marker-start="url(#in)" d="M 1192.2 158.1 L 1100.8 158.1"/>
+<path class="link" marker-end="url(#in)" d="M 1256.1 158.1 L 1334.6 158.1"/>
+<path class="link" marker-start="url(#in)" d="M 1515.8 158.1 L 1443.8 158.1"/>
+<path class="link" marker-end="url(#in)" d="M 1592.6 158.1 L 1616.0 158.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 228.7 174.1 L 211.2 224.7"/>
+<path class="link" marker-start="url(#in)" d="M 214.4 174.1 L 182.0 200.3"/>
+<path class="link" marker-end="url(#in)" d="M 239.7 142.1 L 257.1 91.5"/>
+<path class="link" marker-end="url(#in)" d="M 253.9 142.1 L 286.3 115.8"/>
+<path class="link" marker-start="url(#in)" d="M 558.7 174.1 L 541.8 223.1"/>
+<path class="link" marker-start="url(#in)" d="M 544.4 174.1 L 512.0 200.3"/>
+<path class="link" marker-end="url(#in)" d="M 569.7 142.1 L 587.1 91.5"/>
+<path class="link" marker-end="url(#in)" d="M 583.9 142.1 L 616.3 115.8"/>
+<path class="link" marker-start="url(#in)" d="M 883.0 174.1 L 853.4 216.3"/>
+<path class="link" marker-end="url(#in)" d="M 905.4 174.1 L 934.9 216.3"/>
+<path class="link" marker-start="url(#in)" d="M 1213.0 142.1 L 1180.6 95.9"/>
+<path class="link" marker-end="url(#in)" d="M 1235.4 142.1 L 1263.1 102.5"/>
+<path class="link" marker-start="url(#in)" d="M 1550.6 174.1 L 1539.8 223.1"/>
+<path class="link" marker-start="url(#in)" d="M 1532.1 174.1 L 1479.4 212.3"/>
+<path class="link" marker-end="url(#in)" d="M 1559.7 142.1 L 1585.0 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1573.9 142.1 L 1606.3 115.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ceramide-biosynthesis" transform="translate(928.2,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">ceramide biosynthesis</text></g>
+<g id="node1287" class="node nodeHM pw_ceramide-biosynthesis lid517" transform="translate(69.2,158.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=517" target="_blank">palmitate</a></text><title></title></g>
+<g id="node8245" class="node nodeHM pw_ceramide-biosynthesis lid128" transform="translate(399.2,158.1)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=128" target="_blank">palmitoyl-CoA</a></text><title></title></g>
+<g id="node8227" class="node nodeHM pw_ceramide-biosynthesis lid12337" transform="translate(729.2,158.1)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12337" target="_blank">3-dehydrosphinganine</a></text><title></title></g>
+<g id="node8223" class="node nodeHM pw_ceramide-biosynthesis lid2221" transform="translate(1059.2,158.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2221" target="_blank">sphinganine</a></text><title></title></g>
+<g id="node8241" class="node nodeHM pw_ceramide-biosynthesis lid16848" transform="translate(1389.2,158.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16848" target="_blank">dihydroceramide</a></text><title></title></g>
+<g id="node1286" class="node nodeHM pw_ceramide-biosynthesis lid202596" transform="translate(1719.2,158.1)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202596" target="_blank">a (4E)-sphing-4-enine ceramide</a></text><title></title></g>
+<g id="node8244" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(234.2,158.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.3" target="_blank">6.2.1.3</a></text><title>long-chain-fatty-acid-CoA ligase</title></g>
+<g id="node8235" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(564.2,158.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.50" target="_blank">2.3.1.50</a></text><title>serine C-palmitoyltransferase</title></g>
+<g id="node8239" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(894.2,158.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.102" target="_blank">1.1.1.102</a></text><title>3-dehydrosphinganine reductase</title></g>
+<g id="node8225" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(1224.2,158.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.24" target="_blank">2.3.1.24</a></text><title>sphingosine N-acyltransferase</title></g>
+<g id="node8237" class="node nodeEN pw_ceramide-biosynthesis" transform="translate(1554.2,158.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.19.17" target="_blank">1.14.19.17</a></text><title>sphingolipid 4-desaturase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8244~0" class="node nodeCM pw_ceramide-biosynthesis lid4" transform="translate(205.7,240.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8244~1" class="node nodeCM pw_ceramide-biosynthesis lid18" transform="translate(166.3,213.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8244~2" class="node nodeCM pw_ceramide-biosynthesis lid30" transform="translate(262.6,75.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node8244~3" class="node nodeCM pw_ceramide-biosynthesis lid17" transform="translate(302.1,103.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node8235~0" class="node nodeCM pw_ceramide-biosynthesis lid12" transform="translate(536.2,239.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8235~1" class="node nodeCM pw_ceramide-biosynthesis lid95" transform="translate(496.3,213.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95" target="_blank">Ser</a></text><title></title></g>
+<g id="node8235~2" class="node nodeCM pw_ceramide-biosynthesis lid28" transform="translate(592.6,75.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node8235~3" class="node nodeCM pw_ceramide-biosynthesis lid18" transform="translate(632.1,103.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8239~0" class="node nodeCM pw_ceramide-biosynthesis lid5" transform="translate(842.2,232.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8239~1" class="node nodeCM pw_ceramide-biosynthesis lid10" transform="translate(946.1,232.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8225~0" class="node nodeCM pw_ceramide-biosynthesis lid6656" transform="translate(1169.4,79.9)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6656" target="_blank">acyl-CoA</a></text><title></title></g>
+<g id="node8225~1" class="node nodeCM pw_ceramide-biosynthesis lid18" transform="translate(1274.3,86.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8237~0" class="node nodeCM pw_ceramide-biosynthesis lid9" transform="translate(1536.2,239.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8237~1" class="node nodeCM pw_ceramide-biosynthesis lid1129" transform="translate(1457.4,228.3)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1129" target="_blank">ferrocytochrome b5</a></text><title></title></g>
+<g id="node8237~2" class="node nodeCM pw_ceramide-biosynthesis lid1034" transform="translate(1590.5,52.5)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1034" target="_blank">ferricytochrome b5</a></text><title></title></g>
+<g id="node8237~3" class="node nodeCM pw_ceramide-biosynthesis lid1" transform="translate(1622.1,103.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>
+<text x="2195.9" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

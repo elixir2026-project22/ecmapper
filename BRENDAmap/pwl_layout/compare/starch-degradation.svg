@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2245" height="1607" viewBox="0 0 2244.9 1606.5"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="8863.2 2424.6 889.4 1049.8" width="889" height="1050" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="8863.2" y="2424.6" width="889.4" height="1049.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_starch-degradation" class="pw pw6" x="8903.2" y="2480.1" width="809.4" height="954.4" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9402.3 2581.3 L 9292.5 2544.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9435.9 2608.6 L 9435.8 2668.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9072.8 2583.3 L 9231.1 2542.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9036.5 2608.8 L 9036.5 2667.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9294.0 2669.3 L 9265.6 2550.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9310.5 2701.3 L 9425.1 2845.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9036.5 2755.4 L 9036.5 2699.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9036.5 2787.4 L 9036.5 2846.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9437.0 2756.2 L 9436.1 2700.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9437.3 2788.2 L 9437.7 2845.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9134.4 2757.7 L 9252.7 2550.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9109.3 2789.7 L 9052.5 2846.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9136.0 2789.7 L 9427.5 3226.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9123.1 2789.7 L 9040.8 3396.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9261.7 2844.6 L 9261.8 2550.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9228.1 2860.8 L 9084.1 2862.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9269.1 2876.6 L 9430.8 3226.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9437.8 2940.6 L 9437.8 2877.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9437.8 2972.6 L 9437.7 3033.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9038.1 3128.8 L 9036.6 2878.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9074.6 3153.6 L 9404.6 3233.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9038.2 3160.8 L 9038.6 3396.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9438.1 3131.3 L 9437.8 3065.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9438.2 3163.3 L 9438.2 3226.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9368.3 3286.3 L 9412.9 3258.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9306.7 3315.5 L 9082.6 3396.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9438.2 3318.1 L 9438.2 3258.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9401.8 3341.3 L 9083.4 3404.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9404.0 3411.6 L 9083.4 3412.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9471.2 3411.4 L 9566.4 3411.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 9465.0 2576.6 L 9511.0 2551.3"/>
+<path class="link" marker-start="url(#in)" d="M 9310.9 2669.3 L 9332.3 2643.0"/>
+<path class="link" marker-start="url(#in)" d="M 9012.9 2755.4 L 8974.6 2729.5"/>
+<path class="link" marker-start="url(#in)" d="M 9463.0 2756.2 L 9501.1 2732.6"/>
+<path class="link" marker-start="url(#in)" d="M 9158.9 2774.1 L 9188.5 2774.5"/>
+<path class="link" marker-start="url(#in)" d="M 9287.4 2844.6 L 9310.2 2830.4"/>
+<path class="link" marker-start="url(#in)" d="M 9464.2 2940.6 L 9507.1 2914.6"/>
+<path class="link" marker-start="url(#in)" d="M 9017.0 3128.8 L 8981.1 3101.7"/>
+<path class="link" marker-start="url(#in)" d="M 9463.5 3131.3 L 9506.9 3103.9"/>
+<path class="link" marker-end="url(#in)" d="M 9471.7 3159.2 L 9534.7 3181.5"/>
+<path class="link" marker-start="url(#in)" d="M 9314.7 3286.3 L 9254.3 3252.3"/>
+<path class="link" marker-end="url(#in)" d="M 9306.7 3301.2 L 9267.5 3299.9"/>
+<path class="link" marker-start="url(#in)" d="M 9464.1 3318.1 L 9501.6 3294.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_starch-degradation" transform="translate(9307.9,2480.1)"><rect rx="10" height="31" width="178" x="-89.0" y="-15.5"/><text dominant-baseline="central">starch degradation</text></g>
+<g id="node2338" class="node nodeHM pw_starch-degradation lid285" transform="translate(9038.6,3412.9)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-Glc</a></text><title>alpha-D-glucose</title></g>
+<g id="node2444" class="node nodeHM pw_starch-degradation lid1326" transform="translate(9036.5,2862.4)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1326" target="_blank">maltodextrin</a></text><title>maltodextrin</title></g>
+<g id="node2446" class="node nodeHM pw_starch-degradation lid3112" transform="translate(9036.5,2683.7)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3112" target="_blank">cyclodextrin</a></text><title>cyclodextrin</title></g>
+<g id="node2932" class="node nodeHM pw_starch-degradation lid96" transform="translate(9608.5,3411.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=96" target="_blank">beta-D-Glc</a></text><title>beta-D-glucose</title></g>
+<g id="node2940" class="node nodeHM pw_starch-degradation lid86" transform="translate(9438.2,3242.1)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86" target="_blank">maltose</a></text><title>maltose</title></g>
+<g id="node2942" class="node nodeHM pw_starch-degradation lid32914" transform="translate(9437.7,3049.8)"><rect height="30.0" width="234.6" x="-117.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32914" target="_blank">linear malto-oligosaccharide [(Glc)n]</a></text><title>linear malto-oligosaccharide [(Glc)n]</title></g>
+<g id="node2944" class="node nodeHM pw_starch-degradation lid230494" transform="translate(9437.8,2861.4)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230494" target="_blank">long-linear alpha-D-glucan</a></text><title>long-linear alpha-D-glucan</title></g>
+<g id="node2946" class="node nodeHM pw_starch-degradation lid230496" transform="translate(9435.8,2684.2)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230496" target="_blank">large-branched glucan</a></text><title>large-branched glucan</title></g>
+<g id="node2948" class="node nodeHM pw_starch-degradation lid214" transform="translate(9261.8,2534.1)"><rect height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=214" target="_blank">starch</a></text><title>starch</title></g>
+<g id="node2947" class="node nodeEN pw_starch-degradation" transform="translate(9435.9,2592.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1</a></text><title>alpha-amylase</title></g>
+<g id="node2447" class="node nodeEN pw_starch-degradation" transform="translate(9036.5,2592.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.19" target="_blank">2.4.1.19</a></text><title>cyclomaltodextrin glucanotransferase</title></g>
+<g id="node2340" class="node nodeEN pw_starch-degradation" transform="translate(9297.8,2685.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.-" target="_blank">3.2.1.-</a></text><title>hypothetical</title></g>
+<g id="node2445" class="node nodeEN pw_starch-degradation" transform="translate(9036.5,2771.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.54" target="_blank">3.2.1.54</a></text><title>cyclomaltodextrinase</title></g>
+<g id="node2945" class="node nodeEN pw_starch-degradation" transform="translate(9437.2,2772.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.41" target="_blank">3.2.1.41</a></text><title>pullulanase</title></g>
+<g id="node1447" class="node nodeEN pw_starch-degradation" transform="translate(9125.3,2773.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1</a></text><title>alpha-amylase</title></g>
+<g id="node2331" class="node nodeEN pw_starch-degradation" transform="translate(9261.7,2860.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1</a></text><title>alpha-amylase</title></g>
+<g id="node2943" class="node nodeEN pw_starch-degradation" transform="translate(9437.8,2956.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.-" target="_blank">3.2.1.-</a></text><title>alpha-amylase</title></g>
+<g id="node2337" class="node nodeEN pw_starch-degradation" transform="translate(9038.2,3144.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.54" target="_blank">3.2.1.54</a></text><title>cyclomaltodextrinase</title></g>
+<g id="node2941" class="node nodeEN pw_starch-degradation" transform="translate(9438.2,3147.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.2" target="_blank">3.2.1.2</a></text><title>beta-amylase</title></g>
+<g id="node2334" class="node nodeEN pw_starch-degradation" transform="translate(9343.0,3302.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.25" target="_blank">2.4.1.25</a></text><title>4-alpha-glucanotransferase</title></g>
+<g id="node2939" class="node nodeEN pw_starch-degradation" transform="translate(9438.2,3334.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.20" target="_blank">3.2.1.20</a></text><title>alpha-glucosidase</title></g>
+<g id="node2335" class="node nodeEN pw_starch-degradation" transform="translate(9437.6,3411.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.3" target="_blank">5.1.3.3</a></text><title>aldose 1-epimerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1446" class="node nodeCM pw_starch-degradation lid1" transform="translate(9210.8,2774.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2330" class="node nodeCM pw_starch-degradation lid1" transform="translate(9332.5,2816.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2332" class="node nodeCM pw_starch-degradation lid1246" transform="translate(9194.4,3297.6)"><rect rx="5" height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1246" target="_blank">maltooligosaccharides</a></text><title>maltooligosaccharides</title></g>
+<g id="node2333" class="node nodeCM pw_starch-degradation lid1326" transform="translate(9226.0,3236.3)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1326" target="_blank">maltodextrin</a></text><title>maltodextrin</title></g>
+<g id="node2336" class="node nodeCM pw_starch-degradation lid1" transform="translate(8960.0,3085.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2339" class="node nodeCM pw_starch-degradation lid1" transform="translate(9345.4,2627.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2443" class="node nodeCM pw_starch-degradation lid1" transform="translate(8952.4,2714.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2933" class="node nodeCM pw_starch-degradation lid1" transform="translate(9523.9,3281.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2934" class="node nodeCM pw_starch-degradation lid152997" transform="translate(9580.0,3197.5)"><rect rx="5" height="30.0" width="245.9" x="-123.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=152997" target="_blank">linear malto-oligosaccharide [(Glc)n-2]</a></text><title>linear malto-oligosaccharide [(Glc)n-2]</title></g>
+<g id="node2935" class="node nodeCM pw_starch-degradation lid1" transform="translate(9529.2,3089.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2936" class="node nodeCM pw_starch-degradation lid1" transform="translate(9529.3,2901.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2937" class="node nodeCM pw_starch-degradation lid1" transform="translate(9523.4,2718.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2938" class="node nodeCM pw_starch-degradation lid1" transform="translate(9533.2,2539.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="969.4" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1275.5 1566.5" width="1275" height="1567" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1275.5" height="1566.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_starch-degradation" class="pw " x="0.0" y="0.0" width="1195.5" height="1471.0" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 108.0 535.1 L 244.2 665.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 91.2 503.1 L 91.2 358.9"/>
+<path class="link" marker-start="url(#in)" d="M 247.1 367.4 L 136.1 349.9"/>
+<path class="link" marker-end="url(#in)" d="M 310.9 379.9 L 462.4 415.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 597.8 240.3 C 575.5 277.0 519.5 369.3 497.2 405.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 635.9 209.2 L 743.6 150.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 917.6 134.5 L 847.0 134.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 949.6 150.5 L 949.6 373.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1026.6 526.6 L 958.5 405.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1035.6 558.6 L 1035.6 716.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 828.1 836.3 L 1003.5 748.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 770.8 850.2 L 592.7 847.9"/>
+<path class="link" marker-start="url(#in)" d="M 565.8 992.1 C 565.5 961.5 564.6 893.0 564.2 862.6"/>
+<path class="link" marker-end="url(#in)" d="M 534.1 1012.0 L 410.9 1029.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 595.9 1088.6 C 589.9 1043.0 572.1 908.2 566.1 862.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 566.0 1094.4 L 410.9 1048.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 246.9 899.8 L 260.0 697.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 277.7 909.0 L 535.4 853.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 262.3 931.8 L 352.8 1019.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 708.9 392.7 L 513.3 418.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 766.3 389.0 L 859.3 389.0"/>
+<path class="link" marker-start="url(#in)" d="M 420.9 717.1 C 432.9 664.0 472.5 489.1 484.4 436.5"/>
+<path class="link" marker-end="url(#in)" d="M 388.8 723.1 L 305.9 695.8"/>
+<path class="link" marker-end="url(#in)" d="M 437.8 748.5 L 543.7 831.6"/>
+<path class="link" marker-end="url(#in)" d="M 414.9 748.5 L 371.8 1019.7"/>
+<path class="link" marker-start="url(#in)" d="M 462.8 594.9 L 485.6 437.3"/>
+<path class="link" marker-end="url(#in)" d="M 431.8 620.9 L 305.9 665.2"/>
+<path class="link" marker-end="url(#in)" d="M 467.4 626.9 L 557.1 831.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 466.5 1230.1 L 377.2 1051.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 485.5 1262.1 L 583.5 1405.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 82.5 535.1 L 58.3 580.0"/>
+<path class="link" marker-start="url(#in)" d="M 605.1 240.9 L 604.0 249.5"/>
+<path class="link" marker-start="url(#in)" d="M 955.5 118.5 L 973.9 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1049.5 526.6 L 1079.0 492.7"/>
+<path class="link" marker-start="url(#in)" d="M 817.7 866.6 L 849.4 894.4"/>
+<path class="link" marker-end="url(#in)" d="M 793.2 866.6 L 752.8 970.3"/>
+<path class="link" marker-start="url(#in)" d="M 563.5 991.4 L 552.6 922.7"/>
+<path class="link" marker-end="url(#in)" d="M 569.7 1023.4 L 577.3 1056.7"/>
+<path class="link" marker-start="url(#in)" d="M 594.6 1087.9 L 587.6 1054.7"/>
+<path class="link" marker-start="url(#in)" d="M 223.0 899.8 L 190.0 876.7"/>
+<path class="link" marker-start="url(#in)" d="M 720.0 373.0 L 617.6 279.8"/>
+<path class="link" marker-start="url(#in)" d="M 402.4 716.5 L 372.6 685.0"/>
+<path class="link" marker-start="url(#in)" d="M 432.1 626.9 L 373.2 660.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_starch-degradation" transform="translate(597.7,0.0)"><rect rx="10" height="31" width="185" x="-92.5" y="-15.5"/><text dominant-baseline="central">starch degradation</text></g>
+<g id="node2444" class="node nodeHM pw_starch-degradation lid1326" transform="translate(261.0,681.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1326" target="_blank">maltodextrin</a></text><title></title></g>
+<g id="node2446" class="node nodeHM pw_starch-degradation lid3112" transform="translate(91.2,342.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3112" target="_blank">cyclodextrin</a></text><title></title></g>
+<g id="node2948" class="node nodeHM pw_starch-degradation lid214" transform="translate(487.9,421.3)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=214" target="_blank">starch</a></text><title></title></g>
+<g id="node2946" class="node nodeHM pw_starch-degradation lid230496" transform="translate(773.0,134.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230496" target="_blank">large-branched glucan</a></text><title></title></g>
+<g id="node2944" class="node nodeHM pw_starch-degradation lid230494" transform="translate(949.6,389.0)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230494" target="_blank">long-linear alpha-D-glucan</a></text><title></title></g>
+<g id="node2942" class="node nodeHM pw_starch-degradation lid32914" transform="translate(1035.6,732.7)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32914" target="_blank">linear malto-oligosaccharide [(Glc)n]</a></text><title></title></g>
+<g id="node2940" class="node nodeHM pw_starch-degradation lid86" transform="translate(564.1,847.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86" target="_blank">maltose</a></text><title></title></g>
+<g id="node2338" class="node nodeHM pw_starch-degradation lid285" transform="translate(369.2,1035.7)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-Glc</a></text><title></title></g>
+<g id="node2932" class="node nodeHM pw_starch-degradation lid96" transform="translate(594.4,1421.0)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=96" target="_blank">beta-D-Glc</a></text><title></title></g>
+<g id="node2445" class="node nodeEN pw_starch-degradation" transform="translate(91.2,519.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.54" target="_blank">3.2.1.54</a></text><title>cyclomaltodextrinase</title></g>
+<g id="node2447" class="node nodeEN pw_starch-degradation" transform="translate(279.0,372.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.19" target="_blank">2.4.1.19</a></text><title>cyclomaltodextrin glucanotransferase</title></g>
+<g id="node2947" class="node nodeEN pw_starch-degradation" transform="translate(607.2,224.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1</a></text><title>alpha-amylase</title></g>
+<g id="node2945" class="node nodeEN pw_starch-degradation" transform="translate(949.6,134.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.41" target="_blank">3.2.1.41</a></text><title>pullulanase</title></g>
+<g id="node2943" class="node nodeEN pw_starch-degradation" transform="translate(1035.6,542.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.-" target="_blank">3.2.1.-</a></text><title>alpha-amylase</title></g>
+<g id="node2941" class="node nodeEN pw_starch-degradation" transform="translate(799.5,850.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.2" target="_blank">3.2.1.2</a></text><title>beta-amylase</title></g>
+<g id="node2334" class="node nodeEN pw_starch-degradation" transform="translate(566.0,1007.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.25" target="_blank">2.4.1.25</a></text><title>4-alpha-glucanotransferase; alpha-glucosidase</title></g>
+<g id="node2939" class="node nodeEN pw_starch-degradation" transform="translate(597.9,1103.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.20" target="_blank">3.2.1.20</a></text><title>4-alpha-glucanotransferase; alpha-glucosidase</title></g>
+<g id="node2337" class="node nodeEN pw_starch-degradation" transform="translate(245.8,915.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.54" target="_blank">3.2.1.54</a></text><title>cyclomaltodextrinase</title></g>
+<g id="node2340" class="node nodeEN pw_starch-degradation" transform="translate(737.6,389.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.-" target="_blank">3.2.1.-</a></text><title>hypothetical</title></g>
+<g id="node1447" class="node nodeEN pw_starch-degradation" transform="translate(417.4,732.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1</a></text><title>alpha-amylase</title></g>
+<g id="node2331" class="node nodeEN pw_starch-degradation" transform="translate(460.4,610.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1</a></text><title>alpha-amylase</title></g>
+<g id="node2335" class="node nodeEN pw_starch-degradation" transform="translate(474.5,1246.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.3" target="_blank">5.1.3.3</a></text><title>aldose 1-epimerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2445~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(49.7,596.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2945~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(979.8,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2943~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(1092.8,476.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2941~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(865.1,908.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2941~1" class="node nodeCM pw_starch-degradation lid152997" transform="translate(746.5,986.3)"><rect rx="5" height="30.0" width="262.7" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=152997" target="_blank">linear malto-oligosaccharide [(Glc)n-2]</a></text><title></title></g>
+<g id="node2334~0" class="node nodeCM pw_starch-degradation lid1326" transform="translate(550.1,906.7)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1326" target="_blank">maltodextrin</a></text><title></title></g>
+<g id="node2334~1" class="node nodeCM pw_starch-degradation lid1246" transform="translate(580.9,1072.7)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1246" target="_blank">glycogen</a></text><title></title></g>
+<g id="node2939~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(584.3,1038.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2337~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(174.3,865.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2340~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(601.8,265.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1447~0" class="node nodeCM pw_starch-degradation lid1" transform="translate(357.5,669.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>
+<text x="979.4" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring+neato)</text></svg>

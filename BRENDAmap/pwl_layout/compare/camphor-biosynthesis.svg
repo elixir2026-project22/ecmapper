@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1251" height="1228" viewBox="0 0 1251.1 1228.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="2353.7 11700.8 687.2 955.4" width="687" height="955" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="2353.7" y="11700.8" width="687.2" height="955.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_camphor-biosynthesis" class="pw pw7" x="2393.7" y="11756.3" width="607.2" height="859.9" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2577.4 11884.4 L 2685.2 11833.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2543.2 11916.4 L 2543.2 12010.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2861.5 11884.6 L 2753.5 11833.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2895.0 11916.4 L 2895.0 12010.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2543.2 12129.5 L 2543.2 12042.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2543.2 12161.5 L 2543.2 12265.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2895.0 12161.5 L 2895.0 12265.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2895.0 12129.5 L 2895.0 12042.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2543.2 12389.9 L 2543.2 12297.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2543.2 12421.9 L 2543.2 12539.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2895.0 12389.9 L 2895.0 12297.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2895.0 12421.9 L 2895.0 12539.6"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2509.6 12130.5 L 2482.1 12118.2"/>
+<path class="link" marker-end="url(#in)" d="M 2516.5 12161.5 L 2482.1 12182.2"/>
+<path class="link" marker-start="url(#in)" d="M 2862.0 12129.5 L 2840.3 12119.0"/>
+<path class="link" marker-end="url(#in)" d="M 2870.4 12161.5 L 2840.3 12181.1"/>
+<path class="link" marker-start="url(#in)" d="M 2515.0 12389.9 L 2484.9 12372.8"/>
+<path class="link" marker-end="url(#in)" d="M 2531.8 12421.9 L 2511.9 12450.0"/>
+<path class="link" marker-end="url(#in)" d="M 2531.8 12421.9 L 2511.9 12450.0"/>
+<path class="link" marker-start="url(#in)" d="M 2869.0 12389.9 L 2843.1 12374.0"/>
+<path class="link" marker-end="url(#in)" d="M 2872.4 12421.9 L 2832.5 12450.0"/>
+<path class="link" marker-end="url(#in)" d="M 2885.4 12421.9 L 2868.5 12450.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_camphor-biosynthesis" transform="translate(2697.3,11756.3)"><rect rx="10" height="31" width="207" x="-103.5" y="-15.5"/><text dominant-baseline="central">camphor biosynthesis</text></g>
+<g id="node982" class="node nodeHM pw_camphor-biosynthesis lid2387" transform="translate(2895.0,12555.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2387" target="_blank">(+)-camphor</a></text><title>(+)-camphor</title></g>
+<g id="node986" class="node nodeHM pw_camphor-biosynthesis lid48199" transform="translate(2895.0,12026.3)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=48199" target="_blank">(+)-bornyl diphosphate</a></text><title>(+)-bornyl diphosphate</title></g>
+<g id="node988" class="node nodeHM pw_camphor-biosynthesis lid10443" transform="translate(2895.0,12281.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10443" target="_blank">(+)-borneol</a></text><title>(+)-borneol</title></g>
+<g id="node994" class="node nodeHM pw_camphor-biosynthesis lid19816" transform="translate(2543.2,12555.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19816" target="_blank">(-)-camphor</a></text><title>(-)-camphor</title></g>
+<g id="node996" class="node nodeHM pw_camphor-biosynthesis lid8975" transform="translate(2543.2,12281.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8975" target="_blank">(-)-borneol</a></text><title>(-)-borneol</title></g>
+<g id="node1002" class="node nodeHM pw_camphor-biosynthesis lid175" transform="translate(2719.4,11817.9)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=175" target="_blank">geranyl diphosphate</a></text><title>geranyl diphosphate</title></g>
+<g id="node1004" class="node nodeHM pw_camphor-biosynthesis lid21359" transform="translate(2543.2,12026.3)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21359" target="_blank">(-)-bornyl diphosphate</a></text><title>(-)-bornyl diphosphate</title></g>
+<g id="node1001" class="node nodeEN pw_camphor-biosynthesis" transform="translate(2543.2,11900.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.22" target="_blank">5.5.1.22</a></text><title>(-)-bornyl diphosphate synthase</title></g>
+<g id="node984" class="node nodeEN pw_camphor-biosynthesis" transform="translate(2895.0,11900.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.8" target="_blank">5.5.1.8</a></text><title>(+)-bornyl diphosphate synthase</title></g>
+<g id="node995" class="node nodeEN pw_camphor-biosynthesis" transform="translate(2543.2,12145.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.-" target="_blank">3.1.3.-</a></text><title>(-)-bornyl diphosphate hydrolase</title></g>
+<g id="node987" class="node nodeEN pw_camphor-biosynthesis" transform="translate(2895.0,12145.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.-" target="_blank">3.1.3.-</a></text><title>(+)-bornyl-diphosphate diphosphatase</title></g>
+<g id="node993" class="node nodeEN pw_camphor-biosynthesis" transform="translate(2543.2,12405.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.227" target="_blank">1.1.1.227</a></text><title>(-)-borneol dehydrogenase</title></g>
+<g id="node981" class="node nodeEN pw_camphor-biosynthesis" transform="translate(2895.0,12405.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.198" target="_blank">1.1.1.198</a></text><title>(+)-borneol dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node979" class="node nodeCM pw_camphor-biosynthesis lid8" transform="translate(2809.9,12466.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node980" class="node nodeCM pw_camphor-biosynthesis lid7" transform="translate(2818.1,12358.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node983" class="node nodeCM pw_camphor-biosynthesis lid17" transform="translate(2818.1,12195.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node985" class="node nodeCM pw_camphor-biosynthesis lid1" transform="translate(2818.1,12108.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node989" class="node nodeCM pw_camphor-biosynthesis lid12" transform="translate(2858.9,12466.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node990" class="node nodeCM pw_camphor-biosynthesis lid12" transform="translate(2500.6,12466.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node991" class="node nodeCM pw_camphor-biosynthesis lid8" transform="translate(2451.5,12466.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node992" class="node nodeCM pw_camphor-biosynthesis lid7" transform="translate(2459.8,12358.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node997" class="node nodeCM pw_camphor-biosynthesis lid17" transform="translate(2459.8,12195.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node1003" class="node nodeCM pw_camphor-biosynthesis lid1" transform="translate(2459.8,12108.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="767.2" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 483.8 1188.0" width="484" height="1188" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="483.8" height="1188.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_camphor-biosynthesis" class="pw " x="0.0" y="0.0" width="403.8" height="1092.5" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 292.5 201.5 L 292.5 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 292.5 233.5 L 292.5 366.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 292.5 531.5 L 292.5 398.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 292.5 563.5 L 292.5 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 292.5 861.5 L 292.5 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 292.5 893.5 L 292.5 1026.5"/>
+<path class="link" marker-start="url(#in)" d="M 226.0 119.0 L 276.5 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 194.0 151.0 L 143.5 201.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 127.5 366.5 L 127.5 233.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 127.5 398.5 L 127.5 531.5"/>
+<path class="link" marker-start="url(#in)" d="M 127.5 696.5 L 127.5 563.5"/>
+<path class="link" marker-end="url(#in)" d="M 127.5 728.5 L 127.5 861.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 269.7 531.5 L 236.7 508.4"/>
+<path class="link" marker-end="url(#in)" d="M 269.7 563.5 L 236.7 586.6"/>
+<path class="link" marker-start="url(#in)" d="M 269.7 861.5 L 238.6 839.7"/>
+<path class="link" marker-end="url(#in)" d="M 257.4 889.6 L 227.4 899.9"/>
+<path class="link" marker-end="url(#in)" d="M 279.6 893.5 L 251.1 928.7"/>
+<path class="link" marker-start="url(#in)" d="M 104.7 366.5 L 71.7 343.4"/>
+<path class="link" marker-end="url(#in)" d="M 104.7 398.5 L 71.7 421.6"/>
+<path class="link" marker-start="url(#in)" d="M 104.7 696.5 L 73.6 674.7"/>
+<path class="link" marker-end="url(#in)" d="M 92.4 724.6 L 59.0 736.1"/>
+<path class="link" marker-end="url(#in)" d="M 114.6 728.5 L 86.1 763.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_camphor-biosynthesis" transform="translate(201.9,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">camphor biosynthesis</text></g>
+<g id="node1002" class="node nodeHM pw_camphor-biosynthesis lid175" transform="translate(292.5,52.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=175" target="_blank">geranyl diphosphate</a></text><title></title></g>
+<g id="node986" class="node nodeHM pw_camphor-biosynthesis lid48199" transform="translate(292.5,382.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=48199" target="_blank">(+)-bornyl diphosphate</a></text><title></title></g>
+<g id="node988" class="node nodeHM pw_camphor-biosynthesis lid10443" transform="translate(292.5,712.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10443" target="_blank">(+)-borneol</a></text><title></title></g>
+<g id="node982" class="node nodeHM pw_camphor-biosynthesis lid2387" transform="translate(292.5,1042.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2387" target="_blank">(+)-camphor</a></text><title></title></g>
+<g id="node1004" class="node nodeHM pw_camphor-biosynthesis lid21359" transform="translate(127.5,217.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21359" target="_blank">(-)-bornyl diphosphate</a></text><title></title></g>
+<g id="node996" class="node nodeHM pw_camphor-biosynthesis lid8975" transform="translate(127.5,547.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8975" target="_blank">(-)-borneol</a></text><title></title></g>
+<g id="node994" class="node nodeHM pw_camphor-biosynthesis lid19816" transform="translate(127.5,877.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19816" target="_blank">(-)-camphor</a></text><title></title></g>
+<g id="node984" class="node nodeEN pw_camphor-biosynthesis" transform="translate(292.5,217.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.8" target="_blank">5.5.1.8</a></text><title>(+)-bornyl diphosphate synthase</title></g>
+<g id="node987" class="node nodeEN pw_camphor-biosynthesis" transform="translate(292.5,547.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.-" target="_blank">3.1.3.-</a></text><title>(+)-bornyl-diphosphate diphosphatase</title></g>
+<g id="node981" class="node nodeEN pw_camphor-biosynthesis" transform="translate(292.5,877.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.198" target="_blank">1.1.1.198</a></text><title>(+)-borneol dehydrogenase</title></g>
+<g id="node1001" class="node nodeEN pw_camphor-biosynthesis" transform="translate(210.0,135.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.22" target="_blank">5.5.1.22</a></text><title>(-)-bornyl diphosphate synthase</title></g>
+<g id="node995" class="node nodeEN pw_camphor-biosynthesis" transform="translate(127.5,382.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.-" target="_blank">3.1.3.-</a></text><title>(-)-bornyl diphosphate hydrolase</title></g>
+<g id="node993" class="node nodeEN pw_camphor-biosynthesis" transform="translate(127.5,712.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.227" target="_blank">1.1.1.227</a></text><title>(-)-borneol dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node987~0" class="node nodeCM pw_camphor-biosynthesis lid1" transform="translate(221.0,497.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node987~1" class="node nodeCM pw_camphor-biosynthesis lid17" transform="translate(221.0,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node981~0" class="node nodeCM pw_camphor-biosynthesis lid7" transform="translate(219.7,826.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node981~1" class="node nodeCM pw_camphor-biosynthesis lid8" transform="translate(208.4,906.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node981~2" class="node nodeCM pw_camphor-biosynthesis lid12" transform="translate(238.6,944.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node995~0" class="node nodeCM pw_camphor-biosynthesis lid1" transform="translate(56.0,332.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node995~1" class="node nodeCM pw_camphor-biosynthesis lid17" transform="translate(56.0,432.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node993~0" class="node nodeCM pw_camphor-biosynthesis lid7" transform="translate(54.7,661.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node993~1" class="node nodeCM pw_camphor-biosynthesis lid12" transform="translate(46.5,740.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node993~2" class="node nodeCM pw_camphor-biosynthesis lid12" transform="translate(73.6,779.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>
+<text x="777.2" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

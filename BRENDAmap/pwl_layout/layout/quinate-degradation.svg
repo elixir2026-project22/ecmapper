@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1287.2 409.0" width="1287" height="409" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1287.2" height="409.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_quinate-degradation" class="pw " x="0.0" y="0.0" width="1167.2" height="273.5" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 205.5 124.1 L 104.3 124.1"/>
+<path class="link" marker-end="url(#in)" d="M 262.8 124.1 L 341.3 124.1"/>
+<path class="link" marker-start="url(#in)" d="M 859.0 124.1 L 793.5 124.1"/>
+<path class="link" marker-end="url(#in)" d="M 929.3 124.1 L 985.1 124.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 223.0 140.1 L 175.7 207.5"/>
+<path class="link" marker-end="url(#in)" d="M 245.4 140.1 L 274.0 180.9"/>
+<path class="link" marker-end="url(#in)" d="M 905.4 108.1 L 933.1 68.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_quinate-degradation" transform="translate(583.6,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">quinate degradation</text></g>
+<g id="node7582" class="node nodeHM pw_quinate-degradation lid2243" transform="translate(69.2,124.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2243" target="_blank">L-quinate</a></text><title></title></g>
+<g id="node12208" class="node nodeHM pw_quinate-degradation lid894" transform="translate(399.2,124.1)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=894" target="_blank">3-dehydroquinate</a></text><title></title></g>
+<g id="node12209" class="node nodeHM pw_quinate-degradation lid2260" transform="translate(729.2,124.1)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2260" target="_blank">3-dehydroshikimate</a></text><title></title></g>
+<g id="node12207" class="node nodeHM pw_quinate-degradation lid736" transform="translate(1059.2,124.1)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=736" target="_blank">3,4-dihydroxybenzoate</a></text><title></title></g>
+<g id="node7583" class="node nodeEN pw_quinate-degradation" transform="translate(234.2,124.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.8" target="_blank">1.1.5.8</a></text><title>quinate/shikimate dehydrogenase (quinone)</title></g>
+<g id="node7586" class="node nodeEN pw_quinate-degradation" transform="translate(894.2,124.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.118" target="_blank">4.2.1.118</a></text><title>3-dehydroshikimate dehydratase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7583~0" class="node nodeCM pw_quinate-degradation lid210" transform="translate(164.5,223.5)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=210" target="_blank">pyrroloquinoline quinone</a></text><title></title></g>
+<g id="node7583~1" class="node nodeCM pw_quinate-degradation lid98230" transform="translate(285.2,196.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=98230" target="_blank">PQQH</a></text><title></title></g>
+<g id="node7586~0" class="node nodeCM pw_quinate-degradation lid1" transform="translate(944.3,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

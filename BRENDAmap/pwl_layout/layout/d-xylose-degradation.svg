@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 878.5 1466.8" width="878" height="1467" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="878.5" height="1466.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_d-xylose-degradation" class="pw " x="0.0" y="0.0" width="758.5" height="1331.3" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 195.4 335.4 C 191.1 338.5 186.8 341.9 183.2 345.5 C 151.7 376.5 125.2 421.9 112.6 445.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 257.0 324.6 L 361.3 338.1"/>
+<path class="link" marker-end="url(#in)" d="M 202.2 381.0 L 124.4 444.4"/>
+<path class="link" marker-start="url(#in)" d="M 257.0 359.4 L 361.3 342.6"/>
+<path class="link" marker-start="url(#in)" d="M 377.0 482.2 L 377.0 356.1"/>
+<path class="link" marker-end="url(#in)" d="M 370.8 514.2 L 325.5 631.0"/>
+<path class="link" marker-start="url(#in)" d="M 238.0 740.6 L 305.4 663.0"/>
+<path class="link" marker-end="url(#in)" d="M 193.8 772.6 L 134.4 803.9"/>
+<path class="link" marker-end="url(#in)" d="M 104.7 656.1 L 104.1 803.9"/>
+<path class="link" marker-start="url(#in)" d="M 104.8 624.1 L 104.8 476.4"/>
+<path class="link" marker-start="url(#in)" d="M 188.2 976.4 L 112.7 835.9"/>
+<path class="link" marker-end="url(#in)" d="M 213.5 1008.4 L 302.9 1093.7"/>
+<path class="link" marker-start="url(#in)" d="M 433.9 1181.6 L 345.1 1125.7"/>
+<path class="link" marker-end="url(#in)" d="M 494.5 1197.6 L 518.4 1197.6"/>
+<path class="link" marker-start="url(#in)" d="M 532.4 338.5 L 392.8 339.9"/>
+<path class="link" marker-end="url(#in)" d="M 589.7 338.2 L 680.1 338.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 444.8 186.7 L 384.1 324.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 461.3 154.7 L 511.9 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 218.7 336.0 L 207.8 391.3"/>
+<path class="link" marker-end="url(#in)" d="M 225.0 304.0 L 235.9 248.7"/>
+<path class="link" marker-start="url(#in)" d="M 243.3 381.0 L 292.2 417.4"/>
+<path class="link" marker-end="url(#in)" d="M 225.2 381.0 L 246.0 478.7"/>
+<path class="link" marker-start="url(#in)" d="M 361.4 482.2 L 329.3 449.4"/>
+<path class="link" marker-end="url(#in)" d="M 341.9 497.2 L 271.6 495.3"/>
+<path class="link" marker-start="url(#in)" d="M 220.7 740.6 L 200.8 645.8"/>
+<path class="link" marker-start="url(#in)" d="M 140.0 636.2 L 181.7 631.5"/>
+<path class="link" marker-end="url(#in)" d="M 191.5 1008.4 L 174.6 1059.3"/>
+<path class="link" marker-end="url(#in)" d="M 464.1 1213.6 L 479.7 1265.3"/>
+<path class="link" marker-start="url(#in)" d="M 419.9 175.4 L 381.1 181.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_d-xylose-degradation" transform="translate(379.2,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">d-xylose degradation</text></g>
+<g id="node772" class="node nodeHM pw_d-xylose-degradation lid4516" transform="translate(104.8,460.4)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4516" target="_blank">D-xylono-1,5-lactone</a></text><title></title></g>
+<g id="node4047" class="node nodeHM pw_d-xylose-degradation lid115" transform="translate(377.0,340.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=115" target="_blank">Xyl</a></text><title></title></g>
+<g id="node7354" class="node nodeHM pw_d-xylose-degradation lid15700" transform="translate(319.3,647.0)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15700" target="_blank">D-xylono-1,4-lactone</a></text><title></title></g>
+<g id="node7356" class="node nodeHM pw_d-xylose-degradation lid5539" transform="translate(104.1,819.9)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5539" target="_blank">D-xylonate</a></text><title></title></g>
+<g id="node7350" class="node nodeHM pw_d-xylose-degradation lid19918" transform="translate(319.7,1109.7)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19918" target="_blank">2-dehydro-3-deoxy-D-arabinonate</a></text><title></title></g>
+<g id="node7363" class="node nodeHM pw_d-xylose-degradation lid3305" transform="translate(585.9,1197.6)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3305" target="_blank">2,5-dioxopentanoate</a></text><title></title></g>
+<g id="node1272" class="node nodeHM pw_d-xylose-degradation lid715" transform="translate(702.3,338.2)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=715" target="_blank">D-Xul</a></text><title></title></g>
+<g id="node3727" class="node nodeHM pw_d-xylose-degradation lid1423" transform="translate(521.3,52.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1423" target="_blank">Xylan</a></text><title></title></g>
+<g id="node7352" class="node nodeEN pw_d-xylose-degradation" transform="translate(221.8,320.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.175" target="_blank">1.1.1.175</a></text><title>D-xylose 1-dehydrogenase; D-xylose 1-dehydrogenase (NADP+, D-xylono-1,5-lactone-forming)</title></g>
+<g id="node7357" class="node nodeEN pw_d-xylose-degradation" transform="translate(221.8,365.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.179" target="_blank">1.1.1.179</a></text><title>D-xylose 1-dehydrogenase; D-xylose 1-dehydrogenase (NADP+, D-xylono-1,5-lactone-forming)</title></g>
+<g id="node771" class="node nodeEN pw_d-xylose-degradation" transform="translate(377.0,498.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.424" target="_blank">1.1.1.424</a></text><title>D-xylose 1-dehydrogenase (NADP+, D-xylono-1,4-lactone-forming)</title></g>
+<g id="node7355" class="node nodeEN pw_d-xylose-degradation" transform="translate(224.1,756.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.68" target="_blank">3.1.1.68</a></text><title>xylono-1,4-lactonase</title></g>
+<g id="node773" class="node nodeEN pw_d-xylose-degradation" transform="translate(104.8,640.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.110" target="_blank">3.1.1.110</a></text><title>xylono-1,5-lactonase</title></g>
+<g id="node7358" class="node nodeEN pw_d-xylose-degradation" transform="translate(196.8,992.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.82" target="_blank">4.2.1.82</a></text><title>xylonate dehydratase</title></g>
+<g id="node7361" class="node nodeEN pw_d-xylose-degradation" transform="translate(459.3,1197.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.141" target="_blank">4.2.1.141</a></text><title>2-dehydro-3-deoxy-D-arabinonate dehydratase</title></g>
+<g id="node4046" class="node nodeEN pw_d-xylose-degradation" transform="translate(561.1,338.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.5" target="_blank">5.3.1.5</a></text><title>Xylose isomerase</title></g>
+<g id="node3726" class="node nodeEN pw_d-xylose-degradation" transform="translate(451.9,170.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.37" target="_blank">3.2.1.37</a></text><title>endo-1,4-beta-xylanase;endo-1,3-beta-xylanase;xylan 1,4-beta-xylosidase;xylan 1,3-beta-xylosidase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7352~0" class="node nodeCM pw_d-xylose-degradation lid7" transform="translate(204.6,407.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node7352~1" class="node nodeCM pw_d-xylose-degradation lid8" transform="translate(239.0,232.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node7357~0" class="node nodeCM pw_d-xylose-degradation lid10" transform="translate(313.7,433.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7357~1" class="node nodeCM pw_d-xylose-degradation lid5" transform="translate(249.4,494.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7355~0" class="node nodeCM pw_d-xylose-degradation lid1" transform="translate(197.4,629.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7358~0" class="node nodeCM pw_d-xylose-degradation lid1" transform="translate(169.3,1075.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7361~0" class="node nodeCM pw_d-xylose-degradation lid1" transform="translate(484.5,1281.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3726~0" class="node nodeCM pw_d-xylose-degradation lid1" transform="translate(365.4,183.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2587" height="1165" viewBox="0 0 2586.7 1165.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="2908.0 10397.9 1353.9 428.5" width="1354" height="428" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="2908.0" y="10397.9" width="1353.9" height="428.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_dolichol-and-dolichyl-phosphate-biosynthesis" class="pw pw2" x="2948.0" y="10453.4" width="1273.9" height="333.0" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3340.6 10568.9 L 3443.4 10568.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3217.0 10568.9 L 3108.9 10568.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3868.1 10568.9 L 4006.0 10568.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3801.0 10568.9 L 3697.0 10568.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3289.3 10728.0 L 3429.7 10728.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3216.6 10728.0 L 3086.3 10728.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3715.1 10728.0 L 3851.0 10728.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3636.7 10728.0 L 3513.8 10728.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4098.9 10712.0 L 4098.9 10584.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4062.5 10728.0 L 3923.8 10728.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 3261.4 10552.9 L 3227.8 10522.1"/>
+<path class="link" marker-end="url(#in)" d="M 3297.7 10552.9 L 3334.1 10522.1"/>
+<path class="link" marker-start="url(#in)" d="M 3852.1 10552.9 L 3885.8 10522.1"/>
+<path class="link" marker-end="url(#in)" d="M 3820.8 10552.9 L 3794.5 10522.1"/>
+<path class="link" marker-start="url(#in)" d="M 3272.8 10712.0 L 3308.7 10683.0"/>
+<path class="link" marker-end="url(#in)" d="M 3233.8 10712.0 L 3199.2 10683.0"/>
+<path class="link" marker-start="url(#in)" d="M 3695.3 10712.0 L 3730.4 10683.0"/>
+<path class="link" marker-end="url(#in)" d="M 3656.8 10712.0 L 3622.0 10683.0"/>
+<path class="link" marker-start="url(#in)" d="M 4118.0 10712.0 L 4152.5 10683.0"/>
+<path class="link" marker-end="url(#in)" d="M 4076.3 10712.0 L 4035.2 10683.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(3585.0,10453.4)"><rect rx="10" height="31" width="406" x="-203.0" y="-15.5"/><text dominant-baseline="central">dolichol and dolichyl phosphate biosynthesis</text></g>
+<g id="node1295" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid1392" transform="translate(3041.5,10568.9)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1392" target="_blank">(2E,6E)-farnesyl-PP</a></text><title>(E,E)-farnesyl diphosphate</title></g>
+<g id="node8129" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid27262" transform="translate(3570.2,10568.9)"><rect height="30.0" width="251.6" x="-125.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27262" target="_blank">di-trans,poly-cis-polyprenyl diphosphate</a></text><title>di-trans,poly-cis-polyprenyl diphosphate</title></g>
+<g id="node8131" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid254203" transform="translate(4098.9,10568.9)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=254203" target="_blank">di-trans,poly-cis-polyprenol</a></text><title>di-trans,poly-cis-polyprenol</title></g>
+<g id="node8140" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid2271" transform="translate(3887.4,10728.0)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2271" target="_blank">dolichol</a></text><title>dolichol</title></g>
+<g id="node8141" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid621" transform="translate(3471.7,10728.0)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=621" target="_blank">dolichyl-P</a></text><title>dolichyl phosphate</title></g>
+<g id="node10677" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid4006" transform="translate(3041.5,10728.0)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4006" target="_blank">dolichyl-PP</a></text><title>dolichyl diphosphate</title></g>
+<g id="node8126" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(3278.8,10568.9)"><rect rx="15" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.87" target="_blank">2.5.1.87/2.5.1.88</a></text><title>ditrans,polycis-polyprenyl diphosphate synthase [(2E,6E)-farnesyl diphosphate specific];trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl diphosphate specific]</title></g>
+<g id="node8137" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(3834.6,10568.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.4.-" target="_blank">3.1.4.-</a></text><title>unknown enzyme</title></g>
+<g id="node10678" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(3252.9,10728.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.43" target="_blank">3.6.1.43</a></text><title>dolichyldiphosphatase</title></g>
+<g id="node8128" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(3675.9,10728.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.108" target="_blank">2.7.1.108</a></text><title>dolichol kinase</title></g>
+<g id="node8130" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(4098.9,10728.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.94" target="_blank">1.3.1.94</a></text><title>polyprenal reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8127" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid5" transform="translate(4171.6,10667.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node8132" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid113" transform="translate(3210.3,10506.1)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title>isopentenyl diphosphate</title></g>
+<g id="node8133" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid1" transform="translate(3903.3,10506.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node8134" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid17" transform="translate(3780.8,10506.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node8135" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid10" transform="translate(4012.5,10667.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node8136" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid60" transform="translate(3749.8,10667.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title>CTP</title></g>
+<g id="node8138" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid17" transform="translate(3353.0,10506.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node8139" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid212" transform="translate(3602.8,10667.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212" target="_blank">CDP</a></text><title>CDP</title></g>
+<g id="node10679" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid1" transform="translate(3328.6,10667.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10680" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid16" transform="translate(3180.1,10667.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1433.9" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1152.8 1125.0" width="1153" height="1125" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1152.8" height="1125.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_dolichol-and-dolichyl-phosphate-biosynthesis" class="pw " x="0.0" y="0.0" width="1072.8" height="1029.5" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 771.2 883.7 L 715.4 963.5"/>
+<path class="link" marker-end="url(#in)" d="M 793.7 851.7 L 863.2 753.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 935.2 596.7 L 881.5 721.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 942.1 564.7 L 942.1 433.6"/>
+<path class="link" marker-start="url(#in)" d="M 870.8 282.7 L 933.6 401.6"/>
+<path class="link" marker-end="url(#in)" d="M 846.6 250.7 L 741.7 144.4"/>
+<path class="link" marker-start="url(#in)" d="M 596.2 125.7 L 694.0 127.8"/>
+<path class="link" marker-end="url(#in)" d="M 525.9 124.4 L 443.2 123.2"/>
+<path class="link" marker-end="url(#in)" d="M 245.8 121.2 L 314.6 121.7"/>
+<path class="link" marker-start="url(#in)" d="M 182.0 120.9 L 117.3 120.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 721.3 867.6 L 719.3 867.6"/>
+<path class="link" marker-end="url(#in)" d="M 776.6 851.7 L 758.4 801.6"/>
+<path class="link" marker-start="url(#in)" d="M 913.4 592.9 L 877.4 608.3"/>
+<path class="link" marker-end="url(#in)" d="M 927.1 564.7 L 897.4 532.9"/>
+<path class="link" marker-start="url(#in)" d="M 894.3 265.7 L 930.7 264.5"/>
+<path class="link" marker-end="url(#in)" d="M 867.6 250.7 L 885.4 196.6"/>
+<path class="link" marker-start="url(#in)" d="M 572.7 108.9 L 600.8 70.3"/>
+<path class="link" marker-end="url(#in)" d="M 550.3 108.9 L 523.0 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 202.6 136.9 L 174.8 176.2"/>
+<path class="link" marker-end="url(#in)" d="M 225.0 136.9 L 251.7 175.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(536.4,0.0)"><rect rx="10" height="31" width="438" x="-218.8" y="-15.5"/><text dominant-baseline="central">dolichol and dolichyl phosphate biosynthesis</text></g>
+<g id="node1295" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid1392" transform="translate(704.3,979.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1392" target="_blank">(2E,6E)-farnesyl-PP</a></text><title></title></g>
+<g id="node8129" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid27262" transform="translate(874.6,737.4)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27262" target="_blank">di-trans,poly-cis-polyprenyl diphosphate</a></text><title></title></g>
+<g id="node8131" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid254203" transform="translate(942.1,417.6)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=254203" target="_blank">di-trans,poly-cis-polyprenol</a></text><title></title></g>
+<g id="node8140" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid2271" transform="translate(725.9,128.4)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2271" target="_blank">dolichol</a></text><title></title></g>
+<g id="node8141" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid621" transform="translate(378.9,122.2)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=621" target="_blank">dolichyl phosphate</a></text><title></title></g>
+<g id="node10677" class="node nodeHM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid4006" transform="translate(75.6,120.9)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4006" target="_blank">dolichyl-PP</a></text><title></title></g>
+<g id="node8126" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(782.3,867.7)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.87" target="_blank">2.5.1.87/2.5.1.88</a></text><title>ditrans,polycis-polyprenyl diphosphate synthase [(2E,6E)-farnesyl diphosphate specific];trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl diphosphate specific]</title></g>
+<g id="node8137" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(942.1,580.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.4.-" target="_blank">3.1.4.-</a></text><title>unknown enzyme</title></g>
+<g id="node8130" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(862.4,266.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.94" target="_blank">1.3.1.94</a></text><title>polyprenal reductase</title></g>
+<g id="node8128" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(561.0,124.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.108" target="_blank">2.7.1.108</a></text><title>dolichol kinase</title></g>
+<g id="node10678" class="node nodeEN pw_dolichol-and-dolichyl-phosphate-biosynthesis" transform="translate(213.9,120.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.43" target="_blank">3.6.1.43</a></text><title>dolichyldiphosphatase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8126~0" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid113" transform="translate(667.9,867.5)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node8126~1" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid17" transform="translate(752.6,785.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node8137~0" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid1" transform="translate(861.7,615.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8137~1" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid17" transform="translate(882.4,516.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node8130~0" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid5" transform="translate(952.9,263.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8130~1" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid10" transform="translate(890.7,180.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8128~0" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid60" transform="translate(612.4,54.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title></title></g>
+<g id="node8128~1" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid212" transform="translate(512.2,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212" target="_blank">CDP</a></text><title></title></g>
+<g id="node10678~0" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid1" transform="translate(163.5,192.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10678~1" class="node nodeCM pw_dolichol-and-dolichyl-phosphate-biosynthesis lid16" transform="translate(262.8,191.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>
+<text x="1443.9" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

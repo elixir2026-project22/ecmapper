@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 470.5 898.0" width="471" height="898" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="470.5" height="898.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_taurine-degradation" class="pw " x="0.0" y="0.0" width="350.5" height="762.5" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 194.4 531.5 L 194.4 398.5"/>
+<path class="link" marker-end="url(#in)" d="M 194.4 563.5 L 194.4 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 194.4 233.5 L 194.4 366.5"/>
+<path class="link" marker-end="url(#in)" d="M 194.4 201.5 L 194.4 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 156.0 534.3 L 127.5 524.5"/>
+<path class="link" marker-start="url(#in)" d="M 181.4 531.5 L 152.9 496.3"/>
+<path class="link" marker-end="url(#in)" d="M 232.8 549.5 L 265.9 551.2"/>
+<path class="link" marker-end="url(#in)" d="M 217.9 563.5 L 250.3 585.5"/>
+<path class="link" marker-end="url(#in)" d="M 201.0 563.5 L 224.4 619.5"/>
+<path class="link" marker-start="url(#in)" d="M 226.3 228.5 L 252.7 237.6"/>
+<path class="link" marker-start="url(#in)" d="M 207.3 233.5 L 236.4 269.4"/>
+<path class="link" marker-end="url(#in)" d="M 162.4 206.7 L 139.3 198.9"/>
+<path class="link" marker-end="url(#in)" d="M 181.5 201.5 L 152.2 164.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_taurine-degradation" transform="translate(175.3,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">taurine degradation</text></g>
+<g id="node7039" class="node nodeHM pw_taurine-degradation lid595" transform="translate(194.4,382.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=595" target="_blank">taurine</a></text><title></title></g>
+<g id="node7041" class="node nodeHM pw_taurine-degradation lid10986" transform="translate(194.4,712.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10986" target="_blank">aminoacetaldehyde</a></text><title></title></g>
+<g id="node1198" class="node nodeHM pw_taurine-degradation lid7288" transform="translate(194.4,52.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7288" target="_blank">sulfoacetaldehyde</a></text><title></title></g>
+<g id="node7040" class="node nodeEN pw_taurine-degradation" transform="translate(194.4,547.5)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.17" target="_blank">1.14.11.17</a></text><title>taurine dioxygenase</title></g>
+<g id="node3417" class="node nodeEN pw_taurine-degradation" transform="translate(194.4,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.99.2" target="_blank">1.4.99.2</a></text><title>taurine dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7040~0" class="node nodeCM pw_taurine-degradation lid34" transform="translate(111.8,519.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node7040~1" class="node nodeCM pw_taurine-degradation lid9" transform="translate(140.4,480.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7040~2" class="node nodeCM pw_taurine-degradation lid28" transform="translate(281.6,552.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node7040~3" class="node nodeCM pw_taurine-degradation lid58" transform="translate(273.9,601.5)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node7040~4" class="node nodeCM pw_taurine-degradation lid92" transform="translate(231.0,635.5)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92" target="_blank">sulfite</a></text><title></title></g>
+<g id="node3417~0" class="node nodeCM pw_taurine-degradation lid66" transform="translate(284.6,248.6)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node3417~1" class="node nodeCM pw_taurine-degradation lid1" transform="translate(249.3,285.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3417~2" class="node nodeCM pw_taurine-degradation lid77" transform="translate(91.8,182.9)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node3417~3" class="node nodeCM pw_taurine-degradation lid27" transform="translate(139.4,148.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1202" height="503" viewBox="0 0 1201.7 503.3"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10384.5 6546.5 566.1 326.2" width="566" height="326" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="10384.5" y="6546.5" width="566.1" height="326.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_oxidative-decarboxylation-of-pyruvate" class="pw pw1" x="10424.5" y="6602.0" width="486.1" height="230.8" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10564.6 6662.2 L 10564.6 6785.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10646.2 6646.2 L 10738.9 6646.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10738.9 6801.6 L 10606.6 6801.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 10775.2 6785.6 L 10775.2 6664.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 10535.4 6662.2 L 10498.4 6682.4"/>
+<path class="link" marker-start="url(#in)" d="M 10611.4 6662.2 L 10684.4 6687.1"/>
+<path class="link" marker-end="url(#in)" d="M 10555.3 6662.2 L 10513.4 6734.7"/>
+<path class="link" marker-end="url(#in)" d="M 10576.2 6662.2 L 10629.0 6734.9"/>
+<path class="link" marker-start="url(#in)" d="M 10799.7 6785.6 L 10852.1 6751.2"/>
+<path class="link" marker-start="url(#in)" d="M 10765.0 6785.6 L 10716.9 6710.7"/>
+<path class="link" marker-end="url(#in)" d="M 10811.6 6801.6 L 10848.6 6801.6"/>
+<path class="link" marker-end="url(#in)" d="M 10738.9 6787.9 L 10662.9 6759.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_oxidative-decarboxylation-of-pyruvate" transform="translate(10667.6,6602.0)"><rect rx="10" height="31" width="339" x="-169.5" y="-15.5"/><text dominant-baseline="central">oxidative decarboxylation of pyruvate</text></g>
+<g id="node1389" class="node nodeSM pw_oxidative-decarboxylation-of-pyruvate lid31" transform="translate(10775.2,6646.2)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>pyruvate</title></g>
+<g id="node8466" class="node nodeHM pw_oxidative-decarboxylation-of-pyruvate lid29" transform="translate(10564.6,6801.6)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">acetyl-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node8533" class="node nodeEN pw_oxidative-decarboxylation-of-pyruvate" transform="translate(10564.6,6646.2)"><rect rx="15" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.4" target="_blank">1.8.1.4/2.3.1.12/1.2.4.1</a></text><title>pyruvate dehydrogenase multienzyme complex</title></g>
+<g id="node11203" class="node nodeEN pw_oxidative-decarboxylation-of-pyruvate" transform="translate(10775.2,6801.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.51" target="_blank">1.2.1.51</a></text><title>pyruvate dehydrogenase (NADP+)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8464" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid28" transform="translate(10640.6,6750.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node8465" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid18" transform="translate(10706.6,6694.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node11194" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid7" transform="translate(10473.3,6696.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node11195" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid8" transform="translate(10504.1,6750.7)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node11204" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid10" transform="translate(10876.5,6735.2)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node11205" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid5" transform="translate(10876.5,6801.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="646.1" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 555.6 463.3" width="556" height="463" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="555.6" height="463.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_oxidative-decarboxylation-of-pyruvate" class="pw " x="0.0" y="0.0" width="475.6" height="367.8" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 293.2 217.7 L 377.7 194.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 175.9 217.7 L 84.9 192.9"/>
+<path class="link" marker-start="url(#in)" d="M 266.5 146.9 L 377.7 177.2"/>
+<path class="link" marker-end="url(#in)" d="M 202.6 146.9 L 84.9 179.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 242.1 217.7 L 256.0 188.2"/>
+<path class="link" marker-start="url(#in)" d="M 254.3 217.7 L 286.7 191.4"/>
+<path class="link" marker-end="url(#in)" d="M 229.0 249.7 L 211.1 301.8"/>
+<path class="link" marker-end="url(#in)" d="M 214.8 249.7 L 182.4 275.9"/>
+<path class="link" marker-start="url(#in)" d="M 239.9 122.2 L 257.9 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 254.5 122.2 L 287.5 95.8"/>
+<path class="link" marker-end="url(#in)" d="M 227.1 154.2 L 213.3 183.7"/>
+<path class="link" marker-end="url(#in)" d="M 214.6 154.2 L 181.6 180.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_oxidative-decarboxylation-of-pyruvate" transform="translate(237.8,0.0)"><rect rx="10" height="31" width="370" x="-184.8" y="-15.5"/><text dominant-baseline="central">oxidative decarboxylation of pyruvate</text></g>
+<g id="node1389" class="node nodeHM pw_oxidative-decarboxylation-of-pyruvate lid31" transform="translate(409.6,185.9)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node8466" class="node nodeHM pw_oxidative-decarboxylation-of-pyruvate lid29" transform="translate(59.4,185.9)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node8533" class="node nodeEN pw_oxidative-decarboxylation-of-pyruvate" transform="translate(234.5,233.7)"><rect rx="15" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.4" target="_blank">1.8.1.4/2.3.1.12/1.2.4.1</a></text><title>pyruvate dehydrogenase multienzyme complex; pyruvate dehydrogenase (NADP+)</title></g>
+<g id="node11203" class="node nodeEN pw_oxidative-decarboxylation-of-pyruvate" transform="translate(234.5,138.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.51" target="_blank">1.2.1.51</a></text><title>pyruvate dehydrogenase multienzyme complex; pyruvate dehydrogenase (NADP+)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8533~0" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid7" transform="translate(263.5,172.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node8533~1" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid18" transform="translate(302.4,178.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8533~2" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid8" transform="translate(205.6,317.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node8533~3" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid28" transform="translate(166.7,288.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11203~0" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid10" transform="translate(263.3,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11203~1" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid18" transform="translate(303.2,83.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node11203~2" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid5" transform="translate(205.8,199.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11203~3" class="node nodeCM pw_oxidative-decarboxylation-of-pyruvate lid28" transform="translate(165.9,193.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+</g></svg>
+<text x="656.1" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+neato)</text></svg>

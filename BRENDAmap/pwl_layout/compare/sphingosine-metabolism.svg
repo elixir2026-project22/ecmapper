@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3336" height="426" viewBox="0 0 3336.0 426.1"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="8024.7 8773.5 1714.5 347.9" width="1714" height="348" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="8024.7" y="8773.5" width="1714.5" height="347.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_sphingosine-metabolism" class="pw pw2" x="8064.7" y="8829.0" width="1634.5" height="252.4" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8701.0 8889.3 L 8783.4 8939.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8648.8 8889.3 L 8568.0 8939.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8378.8 8955.3 L 8497.3 8955.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8306.1 8955.3 L 8179.1 8955.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8982.6 8955.3 L 8865.9 8955.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9055.3 8955.3 L 9169.3 8955.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9473.9 8955.3 L 9601.9 8955.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9401.1 8955.3 L 9287.2 8955.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8699.5 9026.5 L 8784.9 8971.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8650.4 9026.5 L 8566.5 8971.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 8641.1 8873.3 L 8564.4 8873.3"/>
+<path class="link" marker-end="url(#in)" d="M 8708.2 8873.3 L 8790.3 8873.3"/>
+<path class="link" marker-start="url(#in)" d="M 8325.1 8971.3 L 8289.7 9003.9"/>
+<path class="link" marker-end="url(#in)" d="M 8361.3 8971.3 L 8399.7 9003.9"/>
+<path class="link" marker-end="url(#in)" d="M 9038.9 8971.3 L 9079.4 9003.9"/>
+<path class="link" marker-start="url(#in)" d="M 9416.6 8971.3 L 9374.0 9003.9"/>
+<path class="link" marker-end="url(#in)" d="M 9461.1 8971.3 L 9509.1 9003.9"/>
+<path class="link" marker-start="url(#in)" d="M 8638.3 9042.5 L 8564.4 9042.5"/>
+<path class="link" marker-end="url(#in)" d="M 8711.1 9042.5 L 8787.4 9042.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_sphingosine-metabolism" transform="translate(8882.0,8829.0)"><rect rx="10" height="31" width="227" x="-113.5" y="-15.5"/><text dominant-baseline="central">sphingosine metabolism</text></g>
+<g id="node8234" class="node nodeSM pw_sphingosine-metabolism lid7664" transform="translate(8142.7,8955.3)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7664" target="_blank">ceramide</a></text><title>a ceramide</title></g>
+<g id="node8252" class="node nodeHM pw_sphingosine-metabolism lid29419" transform="translate(9228.2,8955.3)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29419" target="_blank">(2E)-hexadecenal</a></text><title>2-trans-Hexadecenal</title></g>
+<g id="node8253" class="node nodeHM pw_sphingosine-metabolism lid567" transform="translate(8542.2,8955.3)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=567" target="_blank">sphingosine</a></text><title>sphingosine</title></g>
+<g id="node8256" class="node nodeHM pw_sphingosine-metabolism lid9801" transform="translate(8809.7,8955.3)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9801" target="_blank">sphingosine 1-P</a></text><title>sphingosine-1-phosphate</title></g>
+<g id="node8269" class="node nodeSM pw_sphingosine-metabolism lid15911" transform="translate(9646.8,8955.3)"><rect height="35.0" width="87.7" x="-43.9" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15911" target="_blank">hexadecanal</a></text><title>palmitaldehyde</title></g>
+<g id="node8255" class="node nodeEN pw_sphingosine-metabolism" transform="translate(8674.7,8873.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.4" target="_blank">3.1.3.4</a></text><title>phosphatidate phosphatase</title></g>
+<g id="node8266" class="node nodeEN pw_sphingosine-metabolism" transform="translate(8342.5,8955.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.23" target="_blank">3.5.1.23</a></text><title>ceramidase</title></g>
+<g id="node8247" class="node nodeEN pw_sphingosine-metabolism" transform="translate(9019.0,8955.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.27" target="_blank">4.1.2.27</a></text><title>Sphinganine-1-phosphate aldolase</title></g>
+<g id="node8268" class="node nodeEN pw_sphingosine-metabolism" transform="translate(9437.5,8955.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.27" target="_blank">1.3.1.27</a></text><title>2-hexadecenal reductase</title></g>
+<g id="node8260" class="node nodeEN pw_sphingosine-metabolism" transform="translate(8674.7,9042.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.91" target="_blank">2.7.1.91</a></text><title>sphingosine kinase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8248" class="node nodeCM pw_sphingosine-metabolism lid1" transform="translate(8542.2,8873.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node8250" class="node nodeCM pw_sphingosine-metabolism lid4" transform="translate(8542.2,9042.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node8251" class="node nodeCM pw_sphingosine-metabolism lid5603" transform="translate(9099.3,9019.9)"><rect rx="5" height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5603" target="_blank">Phosphorylethanolamine</a></text><title>Phosphorylethanolamine</title></g>
+<g id="node8254" class="node nodeCM pw_sphingosine-metabolism lid16" transform="translate(8809.7,8873.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node8257" class="node nodeCM pw_sphingosine-metabolism lid1" transform="translate(8272.4,9019.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node8262" class="node nodeCM pw_sphingosine-metabolism lid10" transform="translate(9532.6,9019.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node8264" class="node nodeCM pw_sphingosine-metabolism lid13" transform="translate(8809.7,9042.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node8265" class="node nodeCM pw_sphingosine-metabolism lid12465" transform="translate(8418.5,9019.9)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12465" target="_blank">carboxylate</a></text><title>carboxylate</title></g>
+<g id="node8267" class="node nodeCM pw_sphingosine-metabolism lid5" transform="translate(9353.0,9019.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1794.5" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1541.6 386.1" width="1542" height="386" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1541.6" height="386.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_sphingosine-metabolism" class="pw " x="0.0" y="0.0" width="1461.6" height="290.6" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 199.0 101.6 L 97.8 101.6"/>
+<path class="link" marker-end="url(#in)" d="M 262.8 101.6 L 354.3 101.6"/>
+<path class="link" marker-end="url(#in)" d="M 532.2 120.2 L 437.6 107.2"/>
+<path class="link" marker-start="url(#in)" d="M 589.6 120.2 L 671.3 109.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 529.0 156.0 L 435.0 117.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 592.8 156.0 L 686.8 117.6"/>
+<path class="link" marker-start="url(#in)" d="M 859.0 101.6 L 780.5 101.6"/>
+<path class="link" marker-end="url(#in)" d="M 922.8 101.6 L 998.1 101.6"/>
+<path class="link" marker-start="url(#in)" d="M 1189.0 101.6 L 1113.8 101.6"/>
+<path class="link" marker-end="url(#in)" d="M 1252.8 101.6 L 1344.3 101.6"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 219.7 117.6 L 192.0 157.1"/>
+<path class="link" marker-end="url(#in)" d="M 242.1 117.6 L 277.3 167.7"/>
+<path class="link" marker-start="url(#in)" d="M 572.1 108.1 L 599.8 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 549.7 140.1 L 522.9 178.3"/>
+<path class="link" marker-start="url(#in)" d="M 549.7 185.1 L 522.0 224.6"/>
+<path class="link" marker-end="url(#in)" d="M 572.1 153.1 L 599.8 113.5"/>
+<path class="link" marker-end="url(#in)" d="M 902.1 117.6 L 947.5 182.3"/>
+<path class="link" marker-start="url(#in)" d="M 1209.7 117.6 L 1180.2 159.8"/>
+<path class="link" marker-end="url(#in)" d="M 1232.1 117.6 L 1261.7 159.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_sphingosine-metabolism" transform="translate(730.8,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">sphingosine metabolism</text></g>
+<g id="node8234" class="node nodeHM pw_sphingosine-metabolism lid7664" transform="translate(65.9,101.6)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7664" target="_blank">ceramide</a></text><title></title></g>
+<g id="node8253" class="node nodeHM pw_sphingosine-metabolism lid567" transform="translate(395.9,101.6)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=567" target="_blank">sphingosine</a></text><title></title></g>
+<g id="node8256" class="node nodeHM pw_sphingosine-metabolism lid9801" transform="translate(725.9,101.6)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9801" target="_blank">sphingosine 1-P</a></text><title></title></g>
+<g id="node8252" class="node nodeHM pw_sphingosine-metabolism lid29419" transform="translate(1055.9,101.6)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29419" target="_blank">(2E)-hexadecenal</a></text><title></title></g>
+<g id="node8269" class="node nodeHM pw_sphingosine-metabolism lid15911" transform="translate(1385.9,101.6)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15911" target="_blank">hexadecanal</a></text><title></title></g>
+<g id="node8266" class="node nodeEN pw_sphingosine-metabolism" transform="translate(230.9,101.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.23" target="_blank">3.5.1.23</a></text><title>ceramidase</title></g>
+<g id="node8255" class="node nodeEN pw_sphingosine-metabolism" transform="translate(560.9,124.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.4" target="_blank">3.1.3.4</a></text><title>phosphatidate phosphatase; sphingosine kinase</title></g>
+<g id="node8260" class="node nodeEN pw_sphingosine-metabolism" transform="translate(560.9,169.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.91" target="_blank">2.7.1.91</a></text><title>phosphatidate phosphatase; sphingosine kinase</title></g>
+<g id="node8247" class="node nodeEN pw_sphingosine-metabolism" transform="translate(890.9,101.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.27" target="_blank">4.1.2.27</a></text><title>Sphinganine-1-phosphate aldolase</title></g>
+<g id="node8268" class="node nodeEN pw_sphingosine-metabolism" transform="translate(1220.9,101.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.27" target="_blank">1.3.1.27</a></text><title>2-hexadecenal reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8266~0" class="node nodeCM pw_sphingosine-metabolism lid1" transform="translate(180.8,173.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8266~1" class="node nodeCM pw_sphingosine-metabolism lid12465" transform="translate(288.5,183.7)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12465" target="_blank">carboxylate</a></text><title></title></g>
+<g id="node8255~0" class="node nodeCM pw_sphingosine-metabolism lid1" transform="translate(611.0,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8255~1" class="node nodeCM pw_sphingosine-metabolism lid16" transform="translate(511.7,194.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node8260~0" class="node nodeCM pw_sphingosine-metabolism lid4" transform="translate(510.8,240.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8260~1" class="node nodeCM pw_sphingosine-metabolism lid13" transform="translate(611.0,97.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node8247~0" class="node nodeCM pw_sphingosine-metabolism lid5603" transform="translate(958.7,198.3)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5603" target="_blank">Phosphorylethanolamine</a></text><title></title></g>
+<g id="node8268~0" class="node nodeCM pw_sphingosine-metabolism lid5" transform="translate(1169.0,175.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8268~1" class="node nodeCM pw_sphingosine-metabolism lid10" transform="translate(1272.9,175.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+</g></svg>
+<text x="1804.5" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

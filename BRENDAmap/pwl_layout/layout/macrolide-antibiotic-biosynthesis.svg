@@ -1,0 +1,318 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2118.7 3259.9" width="2119" height="3260" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2118.7" height="3259.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_macrolide-antibiotic-biosynthesis" class="pw " x="0.0" y="0.0" width="1998.7" height="3124.4" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1157.3 2531.9 L 1073.4 2531.9"/>
+<path class="link" marker-end="url(#in)" d="M 1240.6 2531.9 L 1324.7 2531.9"/>
+<path class="link" marker-start="url(#in)" d="M 1376.1 2693.0 L 1376.1 2547.9"/>
+<path class="link" marker-end="url(#in)" d="M 1376.1 2725.0 L 1376.1 2870.1"/>
+<path class="link" marker-end="url(#in)" d="M 1240.6 2886.1 L 1324.7 2886.1"/>
+<path class="link" marker-start="url(#in)" d="M 1157.3 2886.1 L 1073.4 2886.1"/>
+<path class="link" marker-end="url(#in)" d="M 1022.0 2725.0 L 1022.0 2870.1"/>
+<path class="link" marker-start="url(#in)" d="M 1022.0 2693.0 L 1022.0 2547.9"/>
+<path class="link" marker-start="url(#in)" d="M 1154.7 213.6 L 1154.7 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1154.7 245.6 L 1154.7 390.7"/>
+<path class="link" marker-start="url(#in)" d="M 1154.7 567.8 L 1154.7 422.7"/>
+<path class="link" marker-end="url(#in)" d="M 1154.7 599.8 L 1154.7 744.9"/>
+<path class="link" marker-start="url(#in)" d="M 1154.7 922.0 L 1154.7 776.9"/>
+<path class="link" marker-end="url(#in)" d="M 1154.7 954.0 L 1154.7 1099.1"/>
+<path class="link" marker-start="url(#in)" d="M 1154.7 1276.8 C 1154.7 1243.3 1154.7 1164.2 1154.7 1130.6"/>
+<path class="link" marker-end="url(#in)" d="M 1155.1 1307.6 C 1156.2 1341.1 1158.7 1420.2 1159.7 1453.8"/>
+<path class="link" marker-start="url(#in)" d="M 1155.2 1630.4 L 1159.7 1485.3"/>
+<path class="link" marker-end="url(#in)" d="M 1154.7 1662.4 L 1154.7 1807.5"/>
+<path class="link" marker-start="url(#in)" d="M 1154.7 1984.6 L 1154.7 1839.5"/>
+<path class="link" marker-end="url(#in)" d="M 1149.5 2016.6 L 1106.9 2149.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 450.9 2956.9 L 337.0 3058.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 480.7 2924.9 L 587.1 2781.7"/>
+<path class="link" marker-end="url(#in)" d="M 694.9 2564.1 C 675.9 2603.9 625.1 2710.7 606.2 2750.5"/>
+<path class="link" marker-start="url(#in)" d="M 705.9 2532.8 L 749.5 2350.3"/>
+<path class="link" marker-start="url(#in)" d="M 527.8 2510.1 C 573.7 2474.3 687.6 2385.5 733.5 2349.7"/>
+<path class="link" marker-end="url(#in)" d="M 486.0 2541.4 L 362.7 2630.2"/>
+<path class="link" marker-start="url(#in)" d="M 1647.5 2354.8 L 1573.2 2354.8"/>
+<path class="link" marker-end="url(#in)" d="M 1724.3 2354.8 L 1811.7 2354.8"/>
+<path class="link" marker-start="url(#in)" d="M 1653.9 2282.2 L 1540.8 2338.8"/>
+<path class="link" marker-end="url(#in)" d="M 1716.8 2250.8 C 1749.2 2234.6 1799.9 2209.3 1832.3 2193.1"/>
+<path class="link" marker-start="url(#in)" d="M 1655.1 2427.9 C 1622.7 2411.7 1572.0 2386.4 1539.6 2370.2"/>
+<path class="link" marker-end="url(#in)" d="M 1716.8 2458.8 C 1749.2 2475.0 1799.9 2500.3 1832.3 2516.5"/>
+<path class="link" marker-start="url(#in)" d="M 357.2 1844.4 L 357.2 1984.6"/>
+<path class="link" marker-end="url(#in)" d="M 357.2 1813.2 C 357.2 1778.9 357.2 1696.0 357.2 1661.7"/>
+<path class="link" marker-start="url(#in)" d="M 1750.5 1832.0 L 1881.4 1802.5"/>
+<path class="link" marker-start="url(#in)" d="M 1721.8 1824.5 C 1736.7 1789.3 1773.2 1702.8 1788.1 1667.6"/>
+<path class="link" marker-end="url(#in)" d="M 1693.1 1855.3 C 1656.9 1880.4 1585.8 1929.6 1549.7 1954.7"/>
+<path class="link" marker-start="url(#in)" d="M 925.8 1719.5 C 891.1 1672.5 787.1 1531.8 752.3 1484.7"/>
+<path class="link" marker-start="url(#in)" d="M 936.9 1718.9 L 932.2 1485.3"/>
+<path class="link" marker-end="url(#in)" d="M 923.6 1750.9 L 810.3 1883.5"/>
+<path class="link" marker-start="url(#in)" d="M 919.2 2095.5 L 806.6 1915.5"/>
+<path class="link" marker-start="url(#in)" d="M 964.3 2122.5 L 1050.7 2149.5"/>
+<path class="link" marker-end="url(#in)" d="M 916.5 2127.5 L 765.9 2318.3"/>
+<path class="link" marker-start="url(#in)" d="M 1401.6 2123.3 L 1514.3 1986.1"/>
+<path class="link" marker-start="url(#in)" d="M 1353.3 2142.5 L 1276.3 2149.5"/>
+<path class="link" marker-end="url(#in)" d="M 1397.4 2155.3 L 1499.9 2338.8"/>
+<path class="link" marker-start="url(#in)" d="M 458.0 2090.2 L 224.7 2240.5"/>
+<path class="link" marker-start="url(#in)" d="M 478.3 2058.7 C 458.7 1991.9 381.3 1728.6 361.7 1661.8"/>
+<path class="link" marker-end="url(#in)" d="M 518.0 2088.3 L 685.7 2155.2"/>
+<path class="link" marker-start="url(#in)" d="M 1013.4 2262.0 L 1087.2 2181.5"/>
+<path class="link" marker-start="url(#in)" d="M 963.6 2264.3 L 766.7 2187.2"/>
+<path class="link" marker-end="url(#in)" d="M 1000.2 2294.0 L 1020.5 2515.9"/>
+<path class="link" marker-start="url(#in)" d="M 310.9 1759.2 C 331.1 1707.3 397.6 1536.6 417.9 1484.5"/>
+<path class="link" marker-start="url(#in)" d="M 278.1 1758.9 C 235.3 1734.3 152.0 1686.5 109.1 1661.9"/>
+<path class="link" marker-end="url(#in)" d="M 308.5 1789.6 C 318.0 1830.7 344.1 1943.8 353.6 1985.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1198.1 2547.9 L 1195.2 2598.3"/>
+<path class="link" marker-start="url(#in)" d="M 1187.8 2547.9 L 1161.0 2586.1"/>
+<path class="link" marker-start="url(#in)" d="M 1161.3 2547.9 L 1132.5 2560.1"/>
+<path class="link" marker-end="url(#in)" d="M 1204.4 2515.9 L 1222.4 2462.2"/>
+<path class="link" marker-end="url(#in)" d="M 1219.0 2515.9 L 1251.9 2489.5"/>
+<path class="link" marker-start="url(#in)" d="M 1350.2 2693.0 L 1303.9 2664.3"/>
+<path class="link" marker-end="url(#in)" d="M 1398.9 2725.0 L 1454.0 2763.5"/>
+<path class="link" marker-start="url(#in)" d="M 1198.1 2902.1 L 1195.1 2960.6"/>
+<path class="link" marker-start="url(#in)" d="M 1187.8 2902.1 L 1161.0 2940.3"/>
+<path class="link" marker-start="url(#in)" d="M 1161.3 2902.1 L 1132.5 2914.3"/>
+<path class="link" marker-end="url(#in)" d="M 1204.7 2870.1 L 1224.0 2816.4"/>
+<path class="link" marker-end="url(#in)" d="M 1219.6 2870.1 L 1254.0 2843.3"/>
+<path class="link" marker-start="url(#in)" d="M 993.2 2693.0 L 952.7 2670.5"/>
+<path class="link" marker-end="url(#in)" d="M 1043.9 2725.0 L 1096.7 2763.5"/>
+<path class="link" marker-start="url(#in)" d="M 1177.5 213.6 L 1208.6 191.8"/>
+<path class="link" marker-end="url(#in)" d="M 1177.5 245.6 L 1210.5 268.7"/>
+<path class="link" marker-end="url(#in)" d="M 1177.5 599.8 L 1210.5 622.9"/>
+<path class="link" marker-start="url(#in)" d="M 1177.5 922.0 L 1210.5 898.9"/>
+<path class="link" marker-end="url(#in)" d="M 1177.5 954.0 L 1210.5 977.1"/>
+<path class="link" marker-start="url(#in)" d="M 1122.7 1281.7 L 1100.5 1274.5"/>
+<path class="link" marker-start="url(#in)" d="M 1141.3 1276.2 L 1091.2 1216.3"/>
+<path class="link" marker-end="url(#in)" d="M 1186.6 1284.3 L 1215.4 1277.1"/>
+<path class="link" marker-end="url(#in)" d="M 1186.6 1302.6 L 1222.0 1314.2"/>
+<path class="link" marker-end="url(#in)" d="M 1169.9 1308.2 L 1220.1 1360.6"/>
+<path class="link" marker-end="url(#in)" d="M 1155.0 1308.2 L 1156.2 1362.7"/>
+<path class="link" marker-start="url(#in)" d="M 1178.3 1630.4 L 1211.3 1608.0"/>
+<path class="link" marker-end="url(#in)" d="M 1176.8 1662.4 L 1209.7 1686.2"/>
+<path class="link" marker-start="url(#in)" d="M 1187.1 1984.6 L 1229.6 1963.7"/>
+<path class="link" marker-end="url(#in)" d="M 1171.4 2016.6 L 1226.8 2069.7"/>
+<path class="link" marker-start="url(#in)" d="M 483.4 2956.9 L 551.8 3032.0"/>
+<path class="link" marker-start="url(#in)" d="M 473.0 2956.9 L 483.7 2998.0"/>
+<path class="link" marker-start="url(#in)" d="M 463.0 2956.9 L 444.9 3005.9"/>
+<path class="link" marker-end="url(#in)" d="M 460.1 2924.9 L 411.4 2836.1"/>
+<path class="link" marker-end="url(#in)" d="M 469.8 2924.9 L 472.9 2870.1"/>
+<path class="link" marker-start="url(#in)" d="M 667.1 2532.8 L 611.7 2507.4"/>
+<path class="link" marker-start="url(#in)" d="M 693.4 2532.8 L 661.2 2473.4"/>
+<path class="link" marker-start="url(#in)" d="M 688.5 2532.8 L 636.6 2471.8"/>
+<path class="link" marker-end="url(#in)" d="M 730.7 2564.8 L 780.9 2592.9"/>
+<path class="link" marker-end="url(#in)" d="M 707.0 2564.8 L 726.1 2626.9"/>
+<path class="link" marker-start="url(#in)" d="M 497.7 2509.4 L 442.5 2425.3"/>
+<path class="link" marker-start="url(#in)" d="M 507.6 2509.4 L 505.7 2459.3"/>
+<path class="link" marker-start="url(#in)" d="M 535.4 2509.4 L 611.6 2464.5"/>
+<path class="link" marker-end="url(#in)" d="M 513.4 2541.4 L 545.7 2640.2"/>
+<path class="link" marker-end="url(#in)" d="M 504.3 2541.4 L 491.2 2594.2"/>
+<path class="link" marker-start="url(#in)" d="M 1685.2 2370.8 L 1679.6 2488.9"/>
+<path class="link" marker-start="url(#in)" d="M 1673.9 2370.8 L 1645.1 2409.0"/>
+<path class="link" marker-start="url(#in)" d="M 1648.3 2370.8 L 1619.5 2383.0"/>
+<path class="link" marker-end="url(#in)" d="M 1691.5 2338.8 L 1725.2 2240.7"/>
+<path class="link" marker-end="url(#in)" d="M 1701.9 2338.8 L 1738.1 2302.5"/>
+<path class="link" marker-start="url(#in)" d="M 1692.9 2282.2 L 1733.3 2374.7"/>
+<path class="link" marker-start="url(#in)" d="M 1679.3 2282.2 L 1670.1 2304.8"/>
+<path class="link" marker-start="url(#in)" d="M 1672.3 2282.2 L 1642.8 2316.9"/>
+<path class="link" marker-end="url(#in)" d="M 1683.8 2250.2 L 1670.0 2145.9"/>
+<path class="link" marker-end="url(#in)" d="M 1693.2 2250.2 L 1714.8 2202.7"/>
+<path class="link" marker-start="url(#in)" d="M 1676.9 2459.3 L 1627.9 2545.6"/>
+<path class="link" marker-start="url(#in)" d="M 1647.5 2457.4 L 1623.0 2466.3"/>
+<path class="link" marker-start="url(#in)" d="M 1647.5 2440.5 L 1612.9 2437.8"/>
+<path class="link" marker-end="url(#in)" d="M 1700.1 2427.3 L 1780.0 2336.8"/>
+<path class="link" marker-end="url(#in)" d="M 1724.3 2434.9 L 1755.5 2428.1"/>
+<path class="link" marker-start="url(#in)" d="M 395.6 1830.1 L 397.6 1830.2"/>
+<path class="link" marker-start="url(#in)" d="M 380.1 1844.4 L 415.0 1868.8"/>
+<path class="link" marker-start="url(#in)" d="M 364.0 1844.4 L 383.9 1891.3"/>
+<path class="link" marker-end="url(#in)" d="M 318.8 1822.5 L 331.2 1824.4"/>
+<path class="link" marker-end="url(#in)" d="M 372.3 1812.4 L 384.7 1799.1"/>
+<path class="link" marker-start="url(#in)" d="M 1710.2 1823.9 L 1692.9 1769.6"/>
+<path class="link" marker-start="url(#in)" d="M 1719.4 1823.9 L 1732.4 1772.8"/>
+<path class="link" marker-end="url(#in)" d="M 1734.2 1855.9 L 1765.6 1882.4"/>
+<path class="link" marker-end="url(#in)" d="M 1720.5 1855.9 L 1736.9 1907.1"/>
+<path class="link" marker-end="url(#in)" d="M 1711.3 1855.9 L 1697.9 1908.6"/>
+<path class="link" marker-end="url(#in)" d="M 1698.6 1855.9 L 1668.0 1885.2"/>
+<path class="link" marker-start="url(#in)" d="M 902.1 1719.1 L 876.8 1707.7"/>
+<path class="link" marker-start="url(#in)" d="M 926.5 1718.9 L 900.3 1679.6"/>
+<path class="link" marker-end="url(#in)" d="M 972.4 1730.2 L 1004.8 1725.8"/>
+<path class="link" marker-end="url(#in)" d="M 972.4 1750.8 L 1001.1 1763.8"/>
+<path class="link" marker-end="url(#in)" d="M 947.1 1750.9 L 972.1 1791.6"/>
+<path class="link" marker-end="url(#in)" d="M 937.7 1750.9 L 939.4 1806.2"/>
+<path class="link" marker-end="url(#in)" d="M 935.2 2127.5 L 956.5 2183.5"/>
+<path class="link" marker-end="url(#in)" d="M 1423.6 2139.8 L 1458.4 2140.4"/>
+<path class="link" marker-end="url(#in)" d="M 511.9 2058.2 L 541.9 2041.8"/>
+<path class="link" marker-end="url(#in)" d="M 1033.9 2289.7 L 1064.2 2299.8"/>
+<path class="link" marker-start="url(#in)" d="M 273.1 1771.1 L 237.1 1767.5"/>
+<path class="link" marker-start="url(#in)" d="M 284.4 1758.4 L 249.7 1731.5"/>
+<path class="link" marker-end="url(#in)" d="M 337.0 1758.6 L 364.1 1745.2"/>
+<path class="link" marker-end="url(#in)" d="M 337.0 1777.3 L 384.0 1781.7"/>
+<path class="link" marker-end="url(#in)" d="M 337.0 1784.8 L 350.6 1789.2"/>
+<path class="link" marker-end="url(#in)" d="M 310.5 1790.4 L 329.8 1846.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_macrolide-antibiotic-biosynthesis" transform="translate(999.3,0.0)"><rect rx="10" height="31" width="331" x="-165.4" y="-15.5"/><text dominant-baseline="central">macrolide antibiotic biosynthesis</text></g>
+<g id="node12606" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid7926" transform="translate(1022.0,2531.9)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7926" target="_blank">erythromycin D</a></text><title></title></g>
+<g id="node12609" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid28489" transform="translate(1376.1,2531.9)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28489" target="_blank">erythromycin C</a></text><title></title></g>
+<g id="node12616" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid41741" transform="translate(1376.1,2886.1)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41741" target="_blank">erythromycin A</a></text><title></title></g>
+<g id="node12618" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid41758" transform="translate(1022.0,2886.1)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41758" target="_blank">erythromycin B</a></text><title></title></g>
+<g id="node12579" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid107" transform="translate(1154.7,52.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title></title></g>
+<g id="node12578" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid9374" transform="translate(1154.7,406.7)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9374" target="_blank">dTDP-alpha-D-glucose</a></text><title></title></g>
+<g id="node12582" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid6388" transform="translate(1154.7,760.9)"><rect height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6388" target="_blank">dTDP-4-dehydro-6-deoxy-alpha-D-glucose</a></text><title></title></g>
+<g id="node12586" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid19647" transform="translate(1154.7,1115.1)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19647" target="_blank">dTDP-viosamine</a></text><title></title></g>
+<g id="node12590" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid176133" transform="translate(1160.2,1469.3)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=176133" target="_blank">dTDP-3-dehydro-4,6-deoxy-alpha-D-glucose</a></text><title></title></g>
+<g id="node12598" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid86884" transform="translate(1154.7,1823.5)"><rect height="30.0" width="308.1" x="-154.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86884" target="_blank">dTDP-3-amino-4,6-dideoxy-alpha-D-glucopyranose</a></text><title></title></g>
+<g id="node12601" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid85577" transform="translate(1101.8,2165.5)"><rect height="30.0" width="379.4" x="-189.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=85577" target="_blank">dTDP-3-dimethylamino-3,4,6-trideoxy-alpha-D-glucopyranose</a></text><title></title></g>
+<g id="node728" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid195771" transform="translate(319.0,3074.4)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195771" target="_blank">novapikromycin</a></text><title></title></g>
+<g id="node735" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid36646" transform="translate(598.9,2765.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36646" target="_blank">pikromycin</a></text><title></title></g>
+<g id="node755" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid10011" transform="translate(753.3,2334.3)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10011" target="_blank">narbomycin</a></text><title></title></g>
+<g id="node742" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid81746" transform="translate(340.5,2646.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=81746" target="_blank">neopikromycin</a></text><title></title></g>
+<g id="node12660" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid10342" transform="translate(1508.8,2354.8)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10342" target="_blank">10-deoxymethymycin</a></text><title></title></g>
+<g id="node12676" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid36645" transform="translate(1863.0,2354.8)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36645" target="_blank">novamethymycin</a></text><title></title></g>
+<g id="node12669" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid36643" transform="translate(1863.0,2177.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36643" target="_blank">methymycin</a></text><title></title></g>
+<g id="node12664" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid36644" transform="translate(1863.0,2531.9)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36644" target="_blank">neomethymycin</a></text><title></title></g>
+<g id="node12636" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid15586" transform="translate(357.2,2000.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15586" target="_blank">6-deoxyerythronolide B</a></text><title></title></g>
+<g id="node12631" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid29172" transform="translate(357.2,1646.4)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29172" target="_blank">erythronolide B</a></text><title></title></g>
+<g id="node12649" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid76" transform="translate(1923.0,1793.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node12655" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid19199" transform="translate(1794.6,1652.3)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19199" target="_blank">(2S)-methylmalonyl-CoA</a></text><title></title></g>
+<g id="node12657" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid15194" transform="translate(1527.4,1970.1)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15194" target="_blank">10-deoxymethynolide</a></text><title></title></g>
+<g id="node750" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid19199" transform="translate(740.9,1469.3)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19199" target="_blank">(2S)-methylmalonyl-CoA</a></text><title></title></g>
+<g id="node744" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid76" transform="translate(931.9,1469.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node752" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid167195" transform="translate(796.6,1899.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=167195" target="_blank">narbonolide</a></text><title></title></g>
+<g id="node12628" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid29171" transform="translate(199.9,2256.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29171" target="_blank">DTDP-beta-L-mycarose</a></text><title></title></g>
+<g id="node12603" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid19514" transform="translate(725.8,2171.2)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19514" target="_blank">3-alpha-mycarosylerythronolide B</a></text><title></title></g>
+<g id="node12645" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid19199" transform="translate(423.9,1469.3)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19199" target="_blank">(2S)-methylmalonyl-CoA</a></text><title></title></g>
+<g id="node12639" class="node nodeHM pw_macrolide-antibiotic-biosynthesis lid782" transform="translate(82.1,1646.4)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title></title></g>
+<g id="node12607" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1199.0,2531.9)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.154" target="_blank">1.14.13.154</a></text><title>erythromycin 12-hydroxylase</title></g>
+<g id="node12613" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1376.1,2709.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.254" target="_blank">2.1.1.254</a></text><title>erythromycin 3&#x27;&#x27;-O-methyltransferase</title></g>
+<g id="node12626" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1199.0,2886.1)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.154" target="_blank">1.14.13.154</a></text><title>erythromycin 12-hydroxylase</title></g>
+<g id="node12623" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1022.0,2709.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.254" target="_blank">2.1.1.254</a></text><title>erythromycin 3&#x27;&#x27;-O-methyltransferase</title></g>
+<g id="node12575" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1154.7,229.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.24" target="_blank">2.7.7.24</a></text><title>glucose-1-phosphate thymidylyltransferase</title></g>
+<g id="node12580" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1154.7,583.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.46" target="_blank">4.2.1.46</a></text><title>dTDP-glucose 4,6-dehydratase</title></g>
+<g id="node12583" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1154.7,938.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.33" target="_blank">2.6.1.33</a></text><title>dTDP-4-amino-4,6-dideoxy-D-glucose transaminase</title></g>
+<g id="node12587" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1154.7,1292.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.30" target="_blank">4.3.1.30</a></text><title>dTDP-4-amino-4,6-dideoxy-D-glucose ammonia-lyase</title></g>
+<g id="node12595" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1154.7,1646.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.106" target="_blank">2.6.1.106</a></text><title>dTDP-3-amino-3,4,6-trideoxy-alpha-D-glucose transaminase</title></g>
+<g id="node12599" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1154.7,2000.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.234" target="_blank">2.1.1.234</a></text><title>dTDP-3-amino-3,4,6-trideoxy-alpha-D-glucopyranose N,N-dimethyltransferase</title></g>
+<g id="node724" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(468.9,2940.9)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.33" target="_blank">1.14.15.33</a></text><title>pikromycin synthase</title></g>
+<g id="node731" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(702.1,2548.8)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.33" target="_blank">1.14.15.33</a></text><title>pikromycin synthase</title></g>
+<g id="node738" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(508.2,2525.4)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.33" target="_blank">1.14.15.33</a></text><title>pikromycin synthase</title></g>
+<g id="node12679" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1685.9,2354.8)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.33" target="_blank">1.14.15.33</a></text><title>pikromycin synthase</title></g>
+<g id="node12672" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1685.9,2266.2)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.33" target="_blank">1.14.15.33</a></text><title>pikromycin synthase</title></g>
+<g id="node12667" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1685.9,2443.3)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.33" target="_blank">1.14.15.33</a></text><title>pikromycin synthase</title></g>
+<g id="node12637" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(357.2,1828.4)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.35" target="_blank">1.14.15.35</a></text><title>6-deoxyerythronolide B hydroxylase</title></g>
+<g id="node12648" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1715.4,1839.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.239" target="_blank">2.3.1.239</a></text><title>10-deoxymethynolide synthase</title></g>
+<g id="node743" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(937.2,1734.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.240" target="_blank">2.3.1.240</a></text><title>narbonolide synthase</title></g>
+<g id="node753" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(929.2,2111.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.277" target="_blank">2.4.1.277</a></text><title>10-deoxymethynolide desosaminyltransferase</title></g>
+<g id="node12658" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(1388.4,2139.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.277" target="_blank">2.4.1.277</a></text><title>10-deoxymethynolide desosaminyltransferase</title></g>
+<g id="node12629" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(482.9,2074.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.328" target="_blank">2.4.1.328</a></text><title>erythronolide mycarosyltransferase</title></g>
+<g id="node12604" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(998.7,2278.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.278" target="_blank">2.4.1.278</a></text><title>3-alpha-mycarosylerythronolide B desosaminyl transferase</title></g>
+<g id="node12647" class="node nodeEN pw_macrolide-antibiotic-biosynthesis" transform="translate(305.0,1774.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.94" target="_blank">2.3.1.94</a></text><title>6-deoxyerythronolide-B synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node12607~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid5" transform="translate(1194.2,2614.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node12607~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(1149.8,2602.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12607~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(1120.1,2565.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12607~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid10" transform="translate(1227.7,2446.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node12607~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(1267.6,2476.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12613~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid24" transform="translate(1278.0,2648.3)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node12613~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid36" transform="translate(1476.8,2779.5)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node12626~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid5" transform="translate(1194.2,2976.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node12626~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(1149.8,2956.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12626~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(1120.1,2919.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12626~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid10" transform="translate(1229.8,2800.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node12626~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(1269.7,2831.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12623~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid24" transform="translate(923.9,2654.5)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node12623~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid36" transform="translate(1118.6,2779.5)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node12575~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid145" transform="translate(1227.5,178.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=145" target="_blank">dTTP</a></text><title></title></g>
+<g id="node12575~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid17" transform="translate(1226.2,279.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node12580~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(1226.2,633.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12583~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid41" transform="translate(1226.2,887.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node12583~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid34" transform="translate(1226.2,988.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node12587~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid77" transform="translate(1051.6,1258.5)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node12587~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid24" transform="translate(1077.8,1200.3)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node12587~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid66" transform="translate(1247.3,1269.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node12587~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid88" transform="translate(1237.7,1319.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node12587~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid943" transform="translate(1235.3,1376.6)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node12587~5" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid27" transform="translate(1156.5,1378.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node12595~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid41" transform="translate(1227.0,1597.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node12595~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid34" transform="translate(1225.4,1697.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node12599~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid24" transform="translate(1262.1,1947.7)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node12599~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid36" transform="translate(1243.5,2085.7)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node724~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202701" transform="translate(566.4,3048.0)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node724~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(487.9,3014.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node724~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(439.0,3021.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node724~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202698" transform="translate(402.6,2820.1)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node724~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(473.8,2854.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node731~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202701" transform="translate(576.7,2491.4)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node731~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(652.6,2457.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node731~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(624.1,2457.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node731~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202698" transform="translate(809.5,2608.9)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node731~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(731.0,2642.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node738~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202701" transform="translate(432.0,2409.3)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node738~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(505.1,2443.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node738~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202698" transform="translate(550.9,2656.2)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node738~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(487.2,2610.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12679~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202701" transform="translate(1678.8,2504.9)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12679~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(1633.1,2425.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12679~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(1607.0,2388.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12679~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202698" transform="translate(1730.7,2224.7)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12679~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(1753.8,2286.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12672~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202701" transform="translate(1740.3,2390.7)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12672~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(1663.5,2320.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12672~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(1630.3,2331.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12672~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202698" transform="translate(1667.8,2129.9)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12672~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(1722.1,2186.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12667~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202701" transform="translate(1618.9,2561.6)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12667~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(1610.5,2470.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12667~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(1600.4,2436.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12667~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202698" transform="translate(1794.1,2320.8)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12667~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(1771.3,2424.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12637~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202701" transform="translate(510.5,1835.5)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12637~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(427.4,1877.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12637~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid9" transform="translate(390.7,1907.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12637~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid202698" transform="translate(227.1,1808.4)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node12637~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(399.8,1783.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12648~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid5" transform="translate(1687.7,1753.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node12648~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(1736.5,1756.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12648~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid10" transform="translate(1784.5,1898.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node12648~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(1742.0,1923.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12648~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid18" transform="translate(1693.8,1924.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node12648~5" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid28" transform="translate(1652.2,1900.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node743~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid5" transform="translate(854.6,1697.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node743~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(889.6,1663.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node743~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid10" transform="translate(1027.0,1722.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node743~3" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid28" transform="translate(1016.9,1770.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node743~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid18" transform="translate(981.9,1807.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node743~5" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid1" transform="translate(939.8,1822.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node753~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid542" transform="translate(962.5,2199.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node12658~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid542" transform="translate(1477.4,2140.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node12629~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid542" transform="translate(560.8,2031.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node12604~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid542" transform="translate(1083.1,2306.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node12647~0" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid5" transform="translate(214.9,1765.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node12647~1" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid12" transform="translate(237.3,1721.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12647~2" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid10" transform="translate(386.3,1734.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node12647~4" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid28" transform="translate(366.3,1794.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node12647~5" class="node nodeCM pw_macrolide-antibiotic-biosynthesis lid18" transform="translate(335.3,1862.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3433" height="1557" viewBox="0 0 3432.9 1557.5"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="7082.9 3376.3 1610.4 639.3" width="1610" height="639" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="7082.9" y="3376.3" width="1610.4" height="639.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glycogen-metabolism" class="pw pw5" x="7122.9" y="3431.8" width="1530.4" height="543.8" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7215.9 3474.8 L 7437.9 3474.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7182.4 3490.8 L 7182.4 3643.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7835.8 3474.8 L 7911.1 3474.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7768.7 3474.8 L 7683.5 3474.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8570.6 3542.5 L 8570.6 3474.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8570.6 3574.5 L 8570.6 3643.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8037.7 3585.8 L 8095.8 3566.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8030.7 3617.8 L 8107.1 3646.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7937.8 3617.8 L 7850.9 3645.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7295.0 3659.4 L 7215.9 3659.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7367.8 3659.4 L 7429.9 3659.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7627.4 3643.4 L 7627.4 3490.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7660.9 3659.4 L 7761.2 3659.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7593.8 3659.4 L 7530.9 3659.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8397.2 3659.4 L 8528.6 3659.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8324.5 3659.4 L 8174.2 3659.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7927.9 3691.6 L 7850.9 3671.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8039.0 3691.6 L 8107.1 3670.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8033.6 3723.6 L 8095.8 3745.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7215.9 3765.5 L 7327.6 3765.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7182.4 3749.5 L 7182.4 3675.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7182.4 3781.5 L 7182.4 3886.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8570.6 3780.0 L 8570.6 3675.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8570.6 3812.0 L 8570.6 3926.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7398.8 3902.7 L 7480.0 3902.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7326.0 3902.7 L 7218.7 3902.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7881.4 3902.7 L 8016.2 3902.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7808.6 3902.7 L 7665.7 3902.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7844.9 3886.7 L 7844.4 3826.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8187.8 3902.7 L 8083.3 3902.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8260.6 3902.7 L 8347.4 3902.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 7203.7 3490.8 L 7229.2 3509.9"/>
+<path class="link" marker-start="url(#in)" d="M 8549.5 3542.5 L 8518.6 3519.2"/>
+<path class="link" marker-end="url(#in)" d="M 8547.0 3574.5 L 8519.7 3592.9"/>
+<path class="link" marker-start="url(#in)" d="M 7947.3 3585.8 L 7883.6 3561.0"/>
+<path class="link" marker-start="url(#in)" d="M 7314.4 3643.4 L 7292.8 3623.1"/>
+<path class="link" marker-end="url(#in)" d="M 7650.1 3675.4 L 7689.9 3703.5"/>
+<path class="link" marker-start="url(#in)" d="M 8343.6 3675.4 L 8315.3 3701.8"/>
+<path class="link" marker-end="url(#in)" d="M 8378.1 3675.4 L 8406.4 3701.8"/>
+<path class="link" marker-start="url(#in)" d="M 7950.8 3723.6 L 7883.6 3752.2"/>
+<path class="link" marker-start="url(#in)" d="M 7201.6 3781.5 L 7227.9 3803.3"/>
+<path class="link" marker-start="url(#in)" d="M 8542.1 3812.0 L 8516.9 3826.2"/>
+<path class="link" marker-end="url(#in)" d="M 8544.1 3780.0 L 8522.6 3767.0"/>
+<path class="link" marker-end="url(#in)" d="M 7349.6 3886.7 L 7319.5 3849.0"/>
+<path class="link" marker-end="url(#in)" d="M 7818.7 3886.7 L 7786.5 3867.1"/>
+<path class="link" marker-start="url(#in)" d="M 8249.2 3886.7 L 8278.5 3867.9"/>
+<path class="link" marker-end="url(#in)" d="M 8206.2 3886.7 L 8187.0 3869.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glycogen-metabolism" transform="translate(7888.0,3431.8)"><rect rx="10" height="31" width="200" x="-100.0" y="-15.5"/><text dominant-baseline="central">glycogen metabolism</text></g>
+<g id="node1226" class="node nodeHM pw_glycogen-metabolism lid107" transform="translate(8403.5,3902.7)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title>alpha-D-glucose 1-phosphate</title></g>
+<g id="node1227" class="node nodeHM pw_glycogen-metabolism lid467" transform="translate(8570.6,3942.1)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=467" target="_blank">D-glucono-1,5-lactone</a></text><title>D-glucono-1,5-lactone</title></g>
+<g id="node1582" class="node nodeHM pw_glycogen-metabolism lid285" transform="translate(8140.7,3761.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-Glc</a></text><title>alpha-D-glucose</title></g>
+<g id="node9347" class="node nodeHM pw_glycogen-metabolism lid5824" transform="translate(7844.3,3810.9)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5824" target="_blank">[(1-&gt;4)-alpha-D-glucosyl]n</a></text><title>[(1-&gt;4)-alpha-D-glucosyl]n</title></g>
+<g id="node9350" class="node nodeHM pw_glycogen-metabolism lid10035" transform="translate(7572.9,3902.7)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10035" target="_blank">[(1-&gt;4)-alpha-D-glucosyl]n+1</a></text><title>[(1-&gt;4)-alpha-D-glucosyl]n+1</title></g>
+<g id="node9352" class="node nodeHM pw_glycogen-metabolism lid8036" transform="translate(8049.8,3902.7)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8036" target="_blank">ADP-Glc</a></text><title>ADP-D-glucose</title></g>
+<g id="node9610" class="node nodeSM pw_glycogen-metabolism lid5970" transform="translate(7361.2,3765.5)"><rect height="35.0" width="65.1" x="-32.6" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5970" target="_blank">Glc 1-P</a></text><title>glucose-1-phosphate</title></g>
+<g id="node9614" class="node nodeHM pw_glycogen-metabolism lid506" transform="translate(7182.4,3902.7)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=506" target="_blank">glycogen</a></text><title>glycogen</title></g>
+<g id="node9615" class="node nodeHM pw_glycogen-metabolism lid269" transform="translate(7480.4,3659.4)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=269" target="_blank">maltotetraose</a></text><title>maltotetraose</title></g>
+<g id="node9616" class="node nodeHM pw_glycogen-metabolism lid188" transform="translate(7806.0,3659.4)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188" target="_blank">maltotriose</a></text><title>maltotriose</title></g>
+<g id="node9617" class="node nodeHM pw_glycogen-metabolism lid2735" transform="translate(7182.4,3659.4)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2735" target="_blank">Dextrin</a></text><title>Dextrin</title></g>
+<g id="node9619" class="node nodeHM pw_glycogen-metabolism lid2944" transform="translate(7967.2,3474.8)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2944" target="_blank">alpha-D-Glc 6-P</a></text><title>alpha-D-glucose 6-phosphate</title></g>
+<g id="node9621" class="node nodeHM pw_glycogen-metabolism lid107" transform="translate(7627.4,3474.8)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title>alpha-D-glucose 1-phosphate</title></g>
+<g id="node9624" class="node nodeHM pw_glycogen-metabolism lid285" transform="translate(8140.7,3552.3)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-Glc</a></text><title>alpha-D-glucose</title></g>
+<g id="node9625" class="node nodeHM pw_glycogen-metabolism lid86" transform="translate(8140.7,3659.4)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86" target="_blank">maltose</a></text><title>maltose</title></g>
+<g id="node9628" class="node nodeHM pw_glycogen-metabolism lid35" transform="translate(8570.6,3659.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">beta-D-Glc</a></text><title>D-Glucose</title></g>
+<g id="node9631" class="node nodeHM pw_glycogen-metabolism lid5528" transform="translate(8570.6,3458.8)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5528" target="_blank">beta-D-Glc 6-P</a></text><title>beta-D-glucose 6-phosphate</title></g>
+<g id="node9655" class="node nodeHM pw_glycogen-metabolism lid96" transform="translate(7479.9,3474.8)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=96" target="_blank">beta-D-Glc</a></text><title>beta-D-Glucose</title></g>
+<g id="node9657" class="node nodeEN pw_glycogen-metabolism" transform="translate(7182.4,3474.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.3" target="_blank">3.2.1.3</a></text><title>glucan 1,4-alpha-glucosidase</title></g>
+<g id="node9622" class="node nodeEN pw_glycogen-metabolism" transform="translate(7802.2,3474.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.2.2" target="_blank">5.4.2.2</a></text><title>phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)</title></g>
+<g id="node9632" class="node nodeEN pw_glycogen-metabolism" transform="translate(8570.6,3558.5)"><rect rx="15" height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.1" target="_blank">2.7.1.1/2.7.1.2</a></text><title>hexokinase;glucokinase</title></g>
+<g id="node11875" class="node nodeEN pw_glycogen-metabolism" transform="translate(7988.5,3601.8)"><rect rx="15" height="30.0" width="212.0" x="-106.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1/3.2.1.2/3.2.1.20/3.2.1.54</a></text><title>alpha-amylase;beta-amylase;alpha-glucosidase;cyclomaltodextrinase</title></g>
+<g id="node9612" class="node nodeEN pw_glycogen-metabolism" transform="translate(7331.4,3659.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.33" target="_blank">3.2.1.33</a></text><title>amylo-alpha-1,6-glucosidase</title></g>
+<g id="node9618" class="node nodeEN pw_glycogen-metabolism" transform="translate(7627.4,3659.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.1" target="_blank">2.4.1.1</a></text><title>glycogen phosphorylase</title></g>
+<g id="node9629" class="node nodeEN pw_glycogen-metabolism" transform="translate(8360.9,3659.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.25" target="_blank">2.4.1.25</a></text><title>4-alpha-glucanotransferase</title></g>
+<g id="node1584" class="node nodeEN pw_glycogen-metabolism" transform="translate(7988.5,3707.6)"><rect rx="15" height="30.0" width="240.3" x="-120.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.116" target="_blank">3.2.1.116/3.2.1.133/3.2.1.B8/3.2.1.B36</a></text><title>glucan 1,4-alpha-maltotriohydrolase;glucan 1,4-alpha-maltohydrolase;malto-alpha-amylase (reducing end);maltose-forming alpha-amylase</title></g>
+<g id="node9608" class="node nodeEN pw_glycogen-metabolism" transform="translate(7182.4,3765.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.1" target="_blank">2.4.1.1</a></text><title>glycogen phosphorylase</title></g>
+<g id="node8905" class="node nodeEN pw_glycogen-metabolism" transform="translate(8570.6,3796.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.2" target="_blank">1.1.5.2</a></text><title>glucose 1-dehydrogenase (PQQ, quinone)</title></g>
+<g id="node9348" class="node nodeEN pw_glycogen-metabolism" transform="translate(7362.4,3902.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.18" target="_blank">2.4.1.18</a></text><title>1,4-alpha-glucan branching enzyme</title></g>
+<g id="node9349" class="node nodeEN pw_glycogen-metabolism" transform="translate(7845.0,3902.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.21" target="_blank">2.4.1.21</a></text><title>starch synthase (glycosyl-transferring)</title></g>
+<g id="node9354" class="node nodeEN pw_glycogen-metabolism" transform="translate(8224.2,3902.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.27" target="_blank">2.7.7.27</a></text><title>glucose-1-phosphate adenylyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node766" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(7306.7,3833.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1583" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(7861.3,3761.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node8903" class="node nodeCM pw_glycogen-metabolism lid749" transform="translate(8497.5,3751.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=749" target="_blank">UQH2</a></text><title>ubiquinol</title></g>
+<g id="node8904" class="node nodeCM pw_glycogen-metabolism lid410" transform="translate(8497.5,3837.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=410" target="_blank">UQ</a></text><title>Ubiquinone</title></g>
+<g id="node9351" class="node nodeCM pw_glycogen-metabolism lid17" transform="translate(8169.0,3853.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node9356" class="node nodeCM pw_glycogen-metabolism lid4" transform="translate(8300.8,3853.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node9609" class="node nodeCM pw_glycogen-metabolism lid16" transform="translate(7247.1,3819.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node9611" class="node nodeCM pw_glycogen-metabolism lid13" transform="translate(7764.2,3853.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node9613" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(7275.9,3607.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9620" class="node nodeCM pw_glycogen-metabolism lid16" transform="translate(7709.3,3717.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node9623" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(7861.3,3552.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9626" class="node nodeCM pw_glycogen-metabolism lid86" transform="translate(8423.6,3717.8)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86" target="_blank">maltose</a></text><title>maltose</title></g>
+<g id="node9627" class="node nodeCM pw_glycogen-metabolism lid188" transform="translate(8298.1,3717.8)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188" target="_blank">maltotriose</a></text><title>maltotriose</title></g>
+<g id="node9630" class="node nodeCM pw_glycogen-metabolism lid4" transform="translate(8497.5,3503.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node9636" class="node nodeCM pw_glycogen-metabolism lid13" transform="translate(8497.5,3607.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node9659" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(7250.6,3525.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1690.4" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1742.5 1517.5" width="1743" height="1517" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1742.5" height="1517.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glycogen-metabolism" class="pw " x="0.0" y="0.0" width="1662.5" height="1422.0" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 670.5 889.7 L 711.4 876.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 628.2 916.2 L 520.7 1082.3"/>
+<path class="link" marker-start="url(#in)" d="M 410.6 1109.6 L 481.7 1101.6"/>
+<path class="link" marker-end="url(#in)" d="M 364.3 1096.9 L 217.1 963.2"/>
+<path class="link" marker-start="url(#in)" d="M 1040.0 1194.3 L 1119.1 1164.1"/>
+<path class="link" marker-end="url(#in)" d="M 976.1 1212.6 L 777.9 1249.8"/>
+<path class="link" marker-start="url(#in)" d="M 1084.5 876.6 L 1052.6 673.7"/>
+<path class="link" marker-end="url(#in)" d="M 1112.5 908.6 L 1154.6 935.1"/>
+<path class="link" marker-start="url(#in)" d="M 1467.5 558.3 L 1320.1 429.8"/>
+<path class="link" marker-end="url(#in)" d="M 1479.4 589.5 C 1470.4 611.0 1453.9 650.1 1444.8 671.7"/>
+<path class="link" marker-start="url(#in)" d="M 322.9 72.5 L 390.0 253.9"/>
+<path class="link" marker-end="url(#in)" d="M 262.4 55.1 L 213.7 53.8"/>
+<path class="link" marker-start="url(#in)" d="M 357.0 361.5 C 365.7 341.2 380.8 305.5 389.4 285.2"/>
+<path class="link" marker-end="url(#in)" d="M 321.8 378.9 L 182.1 389.4"/>
+<path class="link" marker-start="url(#in)" d="M 577.1 205.3 L 431.1 257.4"/>
+<path class="link" marker-end="url(#in)" d="M 613.7 209.9 L 637.6 291.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 626.5 542.8 L 572.4 575.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 766.2 530.0 L 829.5 531.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 652.5 510.8 L 643.1 323.6"/>
+<path class="link" marker-start="url(#in)" d="M 931.5 648.8 L 995.5 653.6"/>
+<path class="link" marker-start="url(#in)" d="M 898.3 630.6 L 875.6 549.0"/>
+<path class="link" marker-end="url(#in)" d="M 892.1 662.6 L 770.3 844.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 864.8 328.7 L 870.6 517.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 735.2 309.8 L 671.0 308.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 884.5 296.7 L 941.5 251.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 595.7 1285.6 L 517.7 1114.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 579.8 1317.6 L 524.2 1356.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 631.6 1292.4 L 714.1 1266.1"/>
+<path class="link" marker-start="url(#in)" d="M 1345.4 928.6 L 1507.5 1012.8"/>
+<path class="link" marker-start="url(#in)" d="M 1323.4 896.6 L 1429.6 703.1"/>
+<path class="link" marker-end="url(#in)" d="M 1304.1 928.6 L 1171.3 1132.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 636.1 884.2 L 627.8 829.9"/>
+<path class="link" marker-start="url(#in)" d="M 410.6 1096.9 L 442.5 1079.1"/>
+<path class="link" marker-end="url(#in)" d="M 989.3 1190.6 L 957.3 1163.3"/>
+<path class="link" marker-start="url(#in)" d="M 1453.9 569.5 L 1415.1 563.8"/>
+<path class="link" marker-end="url(#in)" d="M 1477.2 590.3 L 1452.9 635.1"/>
+<path class="link" marker-start="url(#in)" d="M 314.7 72.5 L 307.1 127.0"/>
+<path class="link" marker-end="url(#in)" d="M 262.4 68.1 L 247.3 71.4"/>
+<path class="link" marker-start="url(#in)" d="M 354.9 360.7 L 365.9 319.9"/>
+<path class="link" marker-end="url(#in)" d="M 324.4 360.7 L 293.9 342.0"/>
+<path class="link" marker-start="url(#in)" d="M 601.1 177.9 L 572.4 119.9"/>
+<path class="link" marker-end="url(#in)" d="M 624.3 177.9 L 658.5 142.0"/>
+<path class="link" marker-start="url(#in)" d="M 630.4 510.8 L 597.4 487.7"/>
+<path class="link" marker-end="url(#in)" d="M 907.9 662.6 L 923.9 712.3"/>
+<path class="link" marker-start="url(#in)" d="M 841.5 296.7 L 808.5 273.6"/>
+<path class="link" marker-start="url(#in)" d="M 580.1 1285.6 L 545.2 1261.2"/>
+<path class="link" marker-end="url(#in)" d="M 1316.4 928.6 L 1322.7 983.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glycogen-metabolism" transform="translate(831.3,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">glycogen metabolism</text></g>
+<g id="node9615" class="node nodeHM pw_glycogen-metabolism lid269" transform="translate(759.5,860.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=269" target="_blank">maltotetraose</a></text><title></title></g>
+<g id="node9617" class="node nodeHM pw_glycogen-metabolism lid2735" transform="translate(510.4,1098.3)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2735" target="_blank">Dextrin</a></text><title></title></g>
+<g id="node9655" class="node nodeHM pw_glycogen-metabolism lid96" transform="translate(199.5,947.2)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=96" target="_blank">beta-D-Glc</a></text><title></title></g>
+<g id="node9350" class="node nodeHM pw_glycogen-metabolism lid10035" transform="translate(1160.9,1148.1)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10035" target="_blank">[(1-&gt;4)-alpha-D-glucosyl]n+1</a></text><title></title></g>
+<g id="node9614" class="node nodeHM pw_glycogen-metabolism lid506" transform="translate(746.0,1255.8)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=506" target="_blank">glycogen</a></text><title></title></g>
+<g id="node9621" class="node nodeHM pw_glycogen-metabolism lid107" transform="translate(1050.1,657.7)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title></title></g>
+<g id="node9619" class="node nodeHM pw_glycogen-metabolism lid2944" transform="translate(1180.1,951.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2944" target="_blank">alpha-D-Glc 6-P</a></text><title></title></g>
+<g id="node1226" class="node nodeHM pw_glycogen-metabolism lid107" transform="translate(1301.7,413.8)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title></title></g>
+<g id="node9352" class="node nodeHM pw_glycogen-metabolism lid8036" transform="translate(1438.4,687.1)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8036" target="_blank">ADP-Glc</a></text><title></title></g>
+<g id="node9628" class="node nodeHM pw_glycogen-metabolism lid35" transform="translate(395.9,269.9)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node9631" class="node nodeHM pw_glycogen-metabolism lid5528" transform="translate(162.3,52.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5528" target="_blank">beta-D-Glc 6-P</a></text><title></title></g>
+<g id="node1227" class="node nodeHM pw_glycogen-metabolism lid467" transform="translate(108.0,395.0)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=467" target="_blank">D-glucono-1,5-lactone</a></text><title></title></g>
+<g id="node9625" class="node nodeHM pw_glycogen-metabolism lid86" transform="translate(642.3,307.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86" target="_blank">maltose</a></text><title></title></g>
+<g id="node9624" class="node nodeHM pw_glycogen-metabolism lid285" transform="translate(545.6,591.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-Glc</a></text><title></title></g>
+<g id="node9616" class="node nodeHM pw_glycogen-metabolism lid188" transform="translate(871.1,533.0)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188" target="_blank">maltotriose</a></text><title></title></g>
+<g id="node1582" class="node nodeHM pw_glycogen-metabolism lid285" transform="translate(961.7,235.6)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-Glc</a></text><title></title></g>
+<g id="node9610" class="node nodeHM pw_glycogen-metabolism lid5970" transform="translate(501.1,1372.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5970" target="_blank">Glc 1-P</a></text><title></title></g>
+<g id="node9347" class="node nodeHM pw_glycogen-metabolism lid5824" transform="translate(1538.3,1028.8)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5824" target="_blank">[(1-&gt;4)-alpha-D-glucosyl]n</a></text><title></title></g>
+<g id="node9612" class="node nodeEN pw_glycogen-metabolism" transform="translate(638.6,900.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.33" target="_blank">3.2.1.33</a></text><title>amylo-alpha-1,6-glucosidase</title></g>
+<g id="node9657" class="node nodeEN pw_glycogen-metabolism" transform="translate(381.9,1112.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.3" target="_blank">3.2.1.3</a></text><title>glucan 1,4-alpha-glucosidase</title></g>
+<g id="node9348" class="node nodeEN pw_glycogen-metabolism" transform="translate(1008.0,1206.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.18" target="_blank">2.4.1.18</a></text><title>1,4-alpha-glucan branching enzyme</title></g>
+<g id="node9622" class="node nodeEN pw_glycogen-metabolism" transform="translate(1087.0,892.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.2.2" target="_blank">5.4.2.2</a></text><title>phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)</title></g>
+<g id="node9354" class="node nodeEN pw_glycogen-metabolism" transform="translate(1485.8,574.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.27" target="_blank">2.7.7.27</a></text><title>glucose-1-phosphate adenylyltransferase</title></g>
+<g id="node9632" class="node nodeEN pw_glycogen-metabolism" transform="translate(317.0,56.5)"><rect rx="15" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.1" target="_blank">2.7.1.1/2.7.1.2</a></text><title>hexokinase;glucokinase</title></g>
+<g id="node8905" class="node nodeEN pw_glycogen-metabolism" transform="translate(350.5,376.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.2" target="_blank">1.1.5.2</a></text><title>glucose 1-dehydrogenase (PQQ, quinone)</title></g>
+<g id="node9629" class="node nodeEN pw_glycogen-metabolism" transform="translate(609.0,193.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.25" target="_blank">2.4.1.25</a></text><title>4-alpha-glucanotransferase</title></g>
+<g id="node11875" class="node nodeEN pw_glycogen-metabolism" transform="translate(653.3,526.8)"><rect rx="15" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.1" target="_blank">3.2.1.1/3.2.1.2/3.2.1.20/3.2.1.54</a></text><title>alpha-amylase;beta-amylase;alpha-glucosidase;cyclomaltodextrinase</title></g>
+<g id="node9618" class="node nodeEN pw_glycogen-metabolism" transform="translate(902.8,646.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.1" target="_blank">2.4.1.1</a></text><title>glycogen phosphorylase</title></g>
+<g id="node1584" class="node nodeEN pw_glycogen-metabolism" transform="translate(864.3,312.7)"><rect rx="15" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.116" target="_blank">3.2.1.116/3.2.1.133/3.2.1.B8/3.2.1.B36</a></text><title>glucan 1,4-alpha-maltotriohydrolase;glucan 1,4-alpha-maltohydrolase;malto-alpha-amylase (reducing end);maltose-forming alpha-amylase</title></g>
+<g id="node9608" class="node nodeEN pw_glycogen-metabolism" transform="translate(603.0,1301.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.1" target="_blank">2.4.1.1</a></text><title>glycogen phosphorylase</title></g>
+<g id="node9349" class="node nodeEN pw_glycogen-metabolism" transform="translate(1314.6,912.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.21" target="_blank">2.4.1.21</a></text><title>starch synthase (glycosyl-transferring)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9612~0" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(625.4,813.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9657~0" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(458.3,1070.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9348~0" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(941.5,1149.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9354~0" class="node nodeCM pw_glycogen-metabolism lid4" transform="translate(1399.4,561.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9354~1" class="node nodeCM pw_glycogen-metabolism lid17" transform="translate(1444.2,651.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node9632~0" class="node nodeCM pw_glycogen-metabolism lid4" transform="translate(304.9,143.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9632~1" class="node nodeCM pw_glycogen-metabolism lid13" transform="translate(231.5,74.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node8905~0" class="node nodeCM pw_glycogen-metabolism lid410" transform="translate(370.2,303.9)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=410" target="_blank">ubiquinone</a></text><title></title></g>
+<g id="node8905~1" class="node nodeCM pw_glycogen-metabolism lid749" transform="translate(267.8,326.0)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=749" target="_blank">ubiquinol</a></text><title></title></g>
+<g id="node9629~0" class="node nodeCM pw_glycogen-metabolism lid188" transform="translate(564.5,103.9)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=188" target="_blank">maltotriose</a></text><title></title></g>
+<g id="node9629~1" class="node nodeCM pw_glycogen-metabolism lid86" transform="translate(673.8,126.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86" target="_blank">maltose</a></text><title></title></g>
+<g id="node11875~0" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(581.7,476.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9618~0" class="node nodeCM pw_glycogen-metabolism lid16" transform="translate(929.0,728.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1584~0" class="node nodeCM pw_glycogen-metabolism lid1" transform="translate(792.8,262.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9608~0" class="node nodeCM pw_glycogen-metabolism lid16" transform="translate(532.7,1252.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node9349~0" class="node nodeCM pw_glycogen-metabolism lid13" transform="translate(1324.5,999.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+</g></svg>
+<text x="1700.4" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (fdp)</text></svg>

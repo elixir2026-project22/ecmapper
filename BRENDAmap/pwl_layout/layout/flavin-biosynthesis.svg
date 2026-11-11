@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1907.4 2475.7" width="1907" height="2476" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1907.4" height="2475.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_flavin-biosynthesis" class="pw " x="0.0" y="0.0" width="1787.4" height="2340.2" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 797.5 137.2 L 639.1 158.1"/>
+<path class="link" marker-end="url(#in)" d="M 861.4 141.8 L 966.9 171.0"/>
+<path class="link" marker-start="url(#in)" d="M 1183.1 294.2 L 1048.5 203.0"/>
+<path class="link" marker-end="url(#in)" d="M 1205.2 326.2 L 1190.0 488.1"/>
+<path class="link" marker-start="url(#in)" d="M 1171.6 708.1 L 1187.2 520.1"/>
+<path class="link" marker-end="url(#in)" d="M 1169.6 740.1 L 1161.8 938.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 941.4 854.4 L 1126.1 938.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 886.1 823.9 L 725.4 714.0"/>
+<path class="link" marker-start="url(#in)" d="M 542.3 742.2 L 644.3 714.0"/>
+<path class="link" marker-end="url(#in)" d="M 490.2 736.0 L 357.0 610.3"/>
+<path class="link" marker-end="url(#in)" d="M 271.9 463.9 L 331.7 578.3"/>
+<path class="link" marker-start="url(#in)" d="M 263.6 431.9 L 263.6 300.3"/>
+<path class="link" marker-end="url(#in)" d="M 408.3 176.1 L 285.0 268.3"/>
+<path class="link" marker-start="url(#in)" d="M 461.6 160.1 L 607.6 160.1"/>
+<path class="link" marker-start="url(#in)" d="M 1049.2 1063.6 L 1144.7 970.7"/>
+<path class="link" marker-end="url(#in)" d="M 1019.5 1095.6 L 932.9 1200.2"/>
+<path class="link" marker-start="url(#in)" d="M 401.1 1598.3 L 320.9 1643.9"/>
+<path class="link" marker-end="url(#in)" d="M 456.8 1566.3 L 575.0 1497.5"/>
+<path class="link" marker-start="url(#in)" d="M 1483.5 1437.9 L 1345.7 1438.3"/>
+<path class="link" marker-end="url(#in)" d="M 1547.3 1437.8 L 1611.2 1437.8"/>
+<path class="link" marker-start="url(#in)" d="M 1307.3 1648.4 C 1307.3 1607.1 1307.3 1494.8 1307.3 1453.7"/>
+<path class="link" marker-end="url(#in)" d="M 1307.3 1679.9 L 1307.3 1780.6"/>
+<path class="link" marker-start="url(#in)" d="M 1307.3 1593.9 L 1307.3 1454.4"/>
+<path class="link" marker-end="url(#in)" d="M 1307.3 1625.2 C 1307.3 1660.2 1307.3 1745.9 1307.3 1781.2"/>
+<path class="link" marker-start="url(#in)" d="M 1376.2 1976.5 L 1313.4 1812.6"/>
+<path class="link" marker-end="url(#in)" d="M 1393.1 2008.5 L 1470.7 2123.0"/>
+<path class="link" marker-start="url(#in)" d="M 1577.6 2189.1 L 1497.3 2147.2"/>
+<path class="link" marker-end="url(#in)" d="M 1640.2 2205.1 L 1709.0 2205.1"/>
+<path class="link" marker-start="url(#in)" d="M 1137.0 1245.3 L 1012.6 1327.8"/>
+<path class="link" marker-end="url(#in)" d="M 1161.1 1213.3 L 1161.1 970.7"/>
+<path class="link" marker-end="url(#in)" d="M 1172.3 1245.3 L 1296.1 1422.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 819.3 1343.8 L 865.8 1343.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 804.0 1327.8 L 903.0 1232.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 765.9 1359.8 L 624.0 1465.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 816.6 149.0 L 787.6 185.1"/>
+<path class="link" marker-end="url(#in)" d="M 835.8 117.0 L 855.2 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 852.7 117.0 L 884.7 95.0"/>
+<path class="link" marker-start="url(#in)" d="M 1215.1 294.2 L 1238.9 248.8"/>
+<path class="link" marker-end="url(#in)" d="M 1238.6 314.5 L 1277.5 319.7"/>
+<path class="link" marker-start="url(#in)" d="M 1150.1 708.1 L 1119.5 683.8"/>
+<path class="link" marker-end="url(#in)" d="M 1190.4 740.1 L 1221.1 764.5"/>
+<path class="link" marker-start="url(#in)" d="M 941.4 824.5 L 972.4 809.5"/>
+<path class="link" marker-end="url(#in)" d="M 907.8 823.9 L 902.1 767.4"/>
+<path class="link" marker-start="url(#in)" d="M 512.6 768.0 L 530.6 820.1"/>
+<path class="link" marker-end="url(#in)" d="M 487.4 768.0 L 456.9 792.6"/>
+<path class="link" marker-start="url(#in)" d="M 277.5 431.9 L 307.1 398.1"/>
+<path class="link" marker-end="url(#in)" d="M 298.7 461.5 L 322.4 470.7"/>
+<path class="link" marker-start="url(#in)" d="M 451.7 176.1 L 484.7 200.0"/>
+<path class="link" marker-end="url(#in)" d="M 425.1 176.1 L 410.7 226.6"/>
+<path class="link" marker-start="url(#in)" d="M 1067.9 1084.4 L 1103.6 1089.3"/>
+<path class="link" marker-end="url(#in)" d="M 1036.2 1095.6 L 1047.5 1147.4"/>
+<path class="link" marker-end="url(#in)" d="M 427.7 1566.3 L 421.6 1504.8"/>
+<path class="link" marker-start="url(#in)" d="M 1504.3 1453.8 L 1474.7 1496.1"/>
+<path class="link" marker-end="url(#in)" d="M 1526.7 1453.8 L 1556.3 1495.9"/>
+<path class="link" marker-start="url(#in)" d="M 1284.5 1647.9 L 1251.5 1624.8"/>
+<path class="link" marker-end="url(#in)" d="M 1330.2 1679.9 L 1363.2 1703.0"/>
+<path class="link" marker-start="url(#in)" d="M 1284.5 1593.9 L 1251.5 1570.8"/>
+<path class="link" marker-end="url(#in)" d="M 1330.2 1625.9 L 1363.2 1649.0"/>
+<path class="link" marker-start="url(#in)" d="M 1353.6 1988.5 L 1311.5 1982.5"/>
+<path class="link" marker-end="url(#in)" d="M 1373.8 2008.5 L 1349.8 2053.6"/>
+<path class="link" marker-start="url(#in)" d="M 1589.4 2221.1 L 1558.1 2247.6"/>
+<path class="link" marker-end="url(#in)" d="M 1614.2 2221.1 L 1633.7 2274.2"/>
+<path class="link" marker-end="url(#in)" d="M 819.3 1357.2 L 856.0 1372.6"/>
+<path class="link" marker-end="url(#in)" d="M 800.3 1359.8 L 829.5 1395.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_flavin-biosynthesis" transform="translate(893.7,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">flavin biosynthesis</text></g>
+<g id="node6338" class="node nodeHM pw_flavin-biosynthesis lid37" transform="translate(623.3,160.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node6344" class="node nodeHM pw_flavin-biosynthesis lid81591" transform="translate(1024.8,187.0)"><rect height="30.0" width="398.8" x="-199.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=81591" target="_blank">2,5-diamino-6-hydroxy-4-(5-phospho-D-ribosylamino)pyrimidine</a></text><title></title></g>
+<g id="node6343" class="node nodeHM pw_flavin-biosynthesis lid81596" transform="translate(1188.5,504.1)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=81596" target="_blank">5-amino-6-(5-phospho-D-ribosylamino)uracil</a></text><title></title></g>
+<g id="node6340" class="node nodeHM pw_flavin-biosynthesis lid160429" transform="translate(1161.1,954.7)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=160429" target="_blank">5-amino-6-(5-phospho-D-ribitylamino)uracil</a></text><title></title></g>
+<g id="node2737" class="node nodeHM pw_flavin-biosynthesis lid165126" transform="translate(702.0,698.0)"><rect height="30.0" width="392.3" x="-196.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=165126" target="_blank">2,5-diamino-6-(5-phospho-D-ribitylamino)pyrimidin-4(3H)-one</a></text><title></title></g>
+<g id="node2735" class="node nodeHM pw_flavin-biosynthesis lid81590" transform="translate(340.1,594.3)"><rect height="30.0" width="392.3" x="-196.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=81590" target="_blank">2,5-diamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one</a></text><title></title></g>
+<g id="node8123" class="node nodeHM pw_flavin-biosynthesis lid184463" transform="translate(263.6,284.3)"><rect height="30.0" width="457.1" x="-228.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=184463" target="_blank">2-amino-5-formylamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one</a></text><title></title></g>
+<g id="node6335" class="node nodeHM pw_flavin-biosynthesis lid76467" transform="translate(919.6,1216.2)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76467" target="_blank">5-amino-6-(D-ribitylamino)uracil</a></text><title></title></g>
+<g id="node6336" class="node nodeHM pw_flavin-biosynthesis lid443" transform="translate(292.8,1659.9)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=443" target="_blank">D-Rul 5-P</a></text><title></title></g>
+<g id="node6345" class="node nodeHM pw_flavin-biosynthesis lid71103" transform="translate(602.5,1481.5)"><rect height="30.0" width="301.6" x="-150.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=71103" target="_blank">(S)-2-hydroxy-3-oxobutyl dihydrogen phosphate</a></text><title></title></g>
+<g id="node6331" class="node nodeHM pw_flavin-biosynthesis lid351" transform="translate(1307.3,1438.4)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=351" target="_blank">riboflavin</a></text><title></title></g>
+<g id="node2895" class="node nodeHM pw_flavin-biosynthesis lid4863" transform="translate(1675.5,1437.8)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4863" target="_blank">reduced riboflavin</a></text><title></title></g>
+<g id="node6329" class="node nodeHM pw_flavin-biosynthesis lid56" transform="translate(1307.3,1796.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56" target="_blank">FMN</a></text><title></title></g>
+<g id="node4251" class="node nodeHM pw_flavin-biosynthesis lid20" transform="translate(1481.6,2139.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20" target="_blank">FAD</a></text><title></title></g>
+<g id="node10632" class="node nodeHM pw_flavin-biosynthesis lid256" transform="translate(1731.2,2205.1)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256" target="_blank">FADH2</a></text><title></title></g>
+<g id="node6333" class="node nodeHM pw_flavin-biosynthesis lid6039" transform="translate(988.5,1343.8)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6039" target="_blank">6,7-dimethyl-8-(1-D-ribityl)lumazine</a></text><title></title></g>
+<g id="node6337" class="node nodeEN pw_flavin-biosynthesis" transform="translate(829.5,133.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.25" target="_blank">3.5.4.25</a></text><title>GTP cyclohydrolase II</title></g>
+<g id="node6342" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1206.7,310.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.26" target="_blank">3.5.4.26</a></text><title>diaminohydroxyphosphoribosylaminopyrimidine deaminase</title></g>
+<g id="node6341" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1170.3,724.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.193" target="_blank">1.1.1.193</a></text><title>5-amino-6-(5-phosphoribosylamino)uracil reductase</title></g>
+<g id="node2736" class="node nodeEN pw_flavin-biosynthesis" transform="translate(909.4,839.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.26" target="_blank">3.5.4.26</a></text><title>diaminohydroxyphosphoribosylaminopyrimidine deaminase</title></g>
+<g id="node2734" class="node nodeEN pw_flavin-biosynthesis" transform="translate(507.1,752.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.302" target="_blank">1.1.1.302</a></text><title>2,5-diamino-6-(ribosylamino)-4(3H)-pyrimidinone 5&#x27;-phosphate reductase</title></g>
+<g id="node2738" class="node nodeEN pw_flavin-biosynthesis" transform="translate(263.6,447.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.102" target="_blank">3.5.1.102</a></text><title>2-amino-5-formylamino-6-ribosylaminopyrimidin-4(3H)-one 5&#x27;-monophosphate deformylase</title></g>
+<g id="node8122" class="node nodeEN pw_flavin-biosynthesis" transform="translate(429.7,160.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.29" target="_blank">3.5.4.29</a></text><title>GTP cyclohydrolase IIa</title></g>
+<g id="node6339" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1032.8,1079.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.104" target="_blank">3.1.3.104</a></text><title>5-amino-6-(5-phospho-D-ribitylamino)uracil phosphatase</title></g>
+<g id="node6346" class="node nodeEN pw_flavin-biosynthesis" transform="translate(429.3,1582.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.99.12" target="_blank">4.1.99.12</a></text><title>3,4-dihydroxy-2-butanone-4-phosphate synthase</title></g>
+<g id="node2894" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1515.4,1437.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.41" target="_blank">1.5.1.41</a></text><title>riboflavin reductase [NAD(P)H]</title></g>
+<g id="node8111" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1307.3,1663.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.161" target="_blank">2.7.1.161</a></text><title>CTP-dependent riboflavin kinase; riboflavin kinase</title></g>
+<g id="node6330" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1307.3,1609.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.26" target="_blank">2.7.1.26</a></text><title>CTP-dependent riboflavin kinase; riboflavin kinase</title></g>
+<g id="node6328" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1382.3,1992.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.2" target="_blank">2.7.7.2</a></text><title>FAD synthase</title></g>
+<g id="node10631" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1608.3,2205.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.30" target="_blank">1.5.1.30</a></text><title>flavin reductase (NADPH)</title></g>
+<g id="node6332" class="node nodeEN pw_flavin-biosynthesis" transform="translate(1161.1,1229.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.9" target="_blank">2.5.1.9</a></text><title>riboflavin synthase</title></g>
+<g id="node6334" class="node nodeEN pw_flavin-biosynthesis" transform="translate(787.4,1343.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.78" target="_blank">2.5.1.78</a></text><title>6,7-dimethyl-8-ribityllumazine synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6337~0" class="node nodeCM pw_flavin-biosynthesis lid1" transform="translate(774.7,201.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6337~1" class="node nodeCM pw_flavin-biosynthesis lid17" transform="translate(861.6,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6337~2" class="node nodeCM pw_flavin-biosynthesis lid120" transform="translate(908.0,79.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node6342~0" class="node nodeCM pw_flavin-biosynthesis lid1" transform="translate(1247.3,232.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6342~1" class="node nodeCM pw_flavin-biosynthesis lid27" transform="translate(1293.3,321.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node6341~0" class="node nodeCM pw_flavin-biosynthesis lid5" transform="translate(1099.3,667.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node6341~1" class="node nodeCM pw_flavin-biosynthesis lid10" transform="translate(1241.2,780.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2736~0" class="node nodeCM pw_flavin-biosynthesis lid1" transform="translate(988.1,801.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2736~1" class="node nodeCM pw_flavin-biosynthesis lid4224" transform="translate(900.5,751.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4224" target="_blank">NH4+</a></text><title></title></g>
+<g id="node2734~0" class="node nodeCM pw_flavin-biosynthesis lid8" transform="translate(536.1,836.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node2734~1" class="node nodeCM pw_flavin-biosynthesis lid7" transform="translate(438.0,808.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2738~0" class="node nodeCM pw_flavin-biosynthesis lid1" transform="translate(321.0,382.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2738~1" class="node nodeCM pw_flavin-biosynthesis lid120" transform="translate(351.1,481.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node8122~0" class="node nodeCM pw_flavin-biosynthesis lid1" transform="translate(500.4,211.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8122~1" class="node nodeCM pw_flavin-biosynthesis lid16" transform="translate(406.1,242.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6339~0" class="node nodeCM pw_flavin-biosynthesis lid1" transform="translate(1119.3,1091.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6339~1" class="node nodeCM pw_flavin-biosynthesis lid16" transform="translate(1051.0,1163.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6346~0" class="node nodeCM pw_flavin-biosynthesis lid120" transform="translate(420.0,1488.8)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node2894~0" class="node nodeCM pw_flavin-biosynthesis lid5" transform="translate(1463.6,1512.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2894~1" class="node nodeCM pw_flavin-biosynthesis lid10" transform="translate(1567.5,1511.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8111~0" class="node nodeCM pw_flavin-biosynthesis lid60" transform="translate(1235.8,1613.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title></title></g>
+<g id="node8111~1" class="node nodeCM pw_flavin-biosynthesis lid212" transform="translate(1378.9,1714.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212" target="_blank">CDP</a></text><title></title></g>
+<g id="node6330~0" class="node nodeCM pw_flavin-biosynthesis lid4" transform="translate(1235.8,1559.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6330~1" class="node nodeCM pw_flavin-biosynthesis lid13" transform="translate(1378.9,1660.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6328~0" class="node nodeCM pw_flavin-biosynthesis lid4" transform="translate(1295.8,1980.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6328~1" class="node nodeCM pw_flavin-biosynthesis lid17" transform="translate(1341.2,2069.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10631~0" class="node nodeCM pw_flavin-biosynthesis lid5" transform="translate(1539.1,2263.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10631~1" class="node nodeCM pw_flavin-biosynthesis lid10" transform="translate(1639.6,2290.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node6334~0" class="node nodeCM pw_flavin-biosynthesis lid16" transform="translate(868.5,1377.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6334~1" class="node nodeCM pw_flavin-biosynthesis lid1" transform="translate(842.4,1411.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

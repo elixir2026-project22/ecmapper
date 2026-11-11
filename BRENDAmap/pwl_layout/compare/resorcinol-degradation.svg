@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1850" height="898" viewBox="0 0 1850.1 898.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="23488.7 6841.3 762.6 412.1" width="763" height="412" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="23488.7" y="6841.3" width="762.6" height="412.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_resorcinol-degradation" class="pw pw6" x="23528.7" y="6896.8" width="682.6" height="316.6" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23865.5 6975.6 L 23865.5 7048.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23823.5 6959.6 L 23702.9 6959.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23638.3 7080.7 L 23638.3 7152.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23638.3 7048.7 L 23638.3 6975.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24082.3 7048.7 L 24082.3 6978.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24082.3 7080.7 L 24082.3 7154.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23910.4 7170.9 L 24012.1 7170.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23865.5 7154.9 L 23865.5 7080.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 23849.2 6975.6 L 23819.0 7005.3"/>
+<path class="link" marker-start="url(#in)" d="M 23622.3 7048.7 L 23591.5 7018.0"/>
+<path class="link" marker-start="url(#in)" d="M 23655.0 7048.7 L 23685.7 7019.3"/>
+<path class="link" marker-end="url(#in)" d="M 23621.6 7080.7 L 23592.2 7108.8"/>
+<path class="link" marker-end="url(#in)" d="M 23654.3 7080.7 L 23685.1 7111.5"/>
+<path class="link" marker-start="url(#in)" d="M 24098.6 7080.7 L 24129.8 7111.5"/>
+<path class="link" marker-end="url(#in)" d="M 24100.7 7048.7 L 24138.6 7015.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_resorcinol-degradation" transform="translate(23870.0,6896.8)"><rect rx="10" height="31" width="211" x="-105.5" y="-15.5"/><text dominant-baseline="central">resorcinol degradation</text></g>
+<g id="node7518" class="node nodeHM pw_resorcinol-degradation lid29564" transform="translate(24082.3,7170.9)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29564" target="_blank">4-oxohex-2-enedioate</a></text><title>4-oxohex-2-enedioate</title></g>
+<g id="node7520" class="node nodeHM pw_resorcinol-degradation lid90370" transform="translate(23638.3,6959.6)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90370" target="_blank">1,2,4-benzenetriol</a></text><title>1,2,4-benzenetriol</title></g>
+<g id="node7524" class="node nodeHM pw_resorcinol-degradation lid91462" transform="translate(23865.5,7064.7)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91462" target="_blank">3-hydroxy-cis,cis-muconate</a></text><title>3-hydroxy-cis,cis-muconate</title></g>
+<g id="node7530" class="node nodeSM pw_resorcinol-degradation lid2034" transform="translate(23638.3,7170.9)"><rect height="35.0" width="82.1" x="-41.0" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2034" target="_blank">resorcinol</a></text><title>resorcinol</title></g>
+<g id="node12212" class="node nodeSM pw_resorcinol-degradation lid2817" transform="translate(24082.3,6959.6)"><rect height="35.0" width="93.4" x="-46.7" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2817" target="_blank">3-oxoadipate</a></text><title>3-oxoadipate</title></g>
+<g id="node7529" class="node nodeEN pw_resorcinol-degradation" transform="translate(23865.5,6959.6)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.37" target="_blank">1.13.11.37</a></text><title>hydroxyquinol 1,2-dioxygenase</title></g>
+<g id="node7527" class="node nodeEN pw_resorcinol-degradation" transform="translate(23638.3,7064.7)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.220" target="_blank">1.14.13.220</a></text><title>resorcinol 4-hydroxylase (NADH)</title></g>
+<g id="node7521" class="node nodeEN pw_resorcinol-degradation" transform="translate(24082.3,7064.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.32" target="_blank">1.3.1.32</a></text><title>maleylacetate reductase</title></g>
+<g id="node7531" class="node nodeEN pw_resorcinol-degradation" transform="translate(23865.5,7170.9)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7519" class="node nodeCM pw_resorcinol-degradation lid7" transform="translate(23575.5,7124.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node7522" class="node nodeCM pw_resorcinol-degradation lid40" transform="translate(24146.0,7127.5)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node7523" class="node nodeCM pw_resorcinol-degradation lid9" transform="translate(23802.7,7021.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7525" class="node nodeCM pw_resorcinol-degradation lid1" transform="translate(23701.1,7127.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7526" class="node nodeCM pw_resorcinol-degradation lid8" transform="translate(23702.4,7003.3)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node7528" class="node nodeCM pw_resorcinol-degradation lid9" transform="translate(23575.5,7002.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7532" class="node nodeCM pw_resorcinol-degradation lid50" transform="translate(24157.0,6999.8)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="842.6" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1007.5 858.0" width="1008" height="858" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1007.5" height="858.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_resorcinol-degradation" class="pw " x="0.0" y="0.0" width="927.5" height="762.5" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 137.1 563.5 L 137.1 696.5"/>
+<path class="link" marker-end="url(#in)" d="M 137.1 531.5 L 137.1 398.5"/>
+<path class="link" marker-start="url(#in)" d="M 263.7 382.5 L 201.4 382.5"/>
+<path class="link" marker-end="url(#in)" d="M 340.5 382.5 L 376.9 382.5"/>
+<path class="link" marker-start="url(#in)" d="M 611.1 382.5 L 557.3 382.5"/>
+<path class="link" marker-end="url(#in)" d="M 653.1 382.5 L 726.3 382.5"/>
+<path class="link" marker-start="url(#in)" d="M 797.1 233.5 L 797.1 366.5"/>
+<path class="link" marker-end="url(#in)" d="M 797.1 201.5 L 797.1 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 178.7 561.8 L 202.3 569.9"/>
+<path class="link" marker-start="url(#in)" d="M 178.7 540.6 L 209.5 535.5"/>
+<path class="link" marker-end="url(#in)" d="M 95.5 533.2 L 71.9 525.1"/>
+<path class="link" marker-end="url(#in)" d="M 124.1 531.5 L 95.1 495.6"/>
+<path class="link" marker-start="url(#in)" d="M 293.6 398.5 L 230.5 517.4"/>
+<path class="link" marker-start="url(#in)" d="M 819.9 233.5 L 849.1 253.9"/>
+<path class="link" marker-end="url(#in)" d="M 819.9 201.5 L 849.1 181.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_resorcinol-degradation" transform="translate(463.8,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">resorcinol degradation</text></g>
+<g id="node7530" class="node nodeHM pw_resorcinol-degradation lid2034" transform="translate(137.1,712.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2034" target="_blank">resorcinol</a></text><title></title></g>
+<g id="node7520" class="node nodeHM pw_resorcinol-degradation lid90370" transform="translate(137.1,382.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90370" target="_blank">1,2,4-benzenetriol</a></text><title></title></g>
+<g id="node7524" class="node nodeHM pw_resorcinol-degradation lid91462" transform="translate(467.1,382.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91462" target="_blank">3-hydroxy-cis,cis-muconate</a></text><title></title></g>
+<g id="node7518" class="node nodeHM pw_resorcinol-degradation lid29564" transform="translate(797.1,382.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29564" target="_blank">4-oxohex-2-enedioate</a></text><title></title></g>
+<g id="node12212" class="node nodeHM pw_resorcinol-degradation lid2817" transform="translate(797.1,52.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2817" target="_blank">3-oxoadipate</a></text><title></title></g>
+<g id="node7527" class="node nodeEN pw_resorcinol-degradation" transform="translate(137.1,547.5)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.220" target="_blank">1.14.13.220</a></text><title>resorcinol 4-hydroxylase (NADH)</title></g>
+<g id="node7529" class="node nodeEN pw_resorcinol-degradation" transform="translate(302.1,382.5)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.37" target="_blank">1.13.11.37</a></text><title>hydroxyquinol 1,2-dioxygenase</title></g>
+<g id="node7531" class="node nodeEN pw_resorcinol-degradation" transform="translate(632.1,382.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node7521" class="node nodeEN pw_resorcinol-degradation" transform="translate(797.1,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.32" target="_blank">1.3.1.32</a></text><title>maleylacetate reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7527~0" class="node nodeCM pw_resorcinol-degradation lid8" transform="translate(221.2,576.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node7527~1" class="node nodeCM pw_resorcinol-degradation lid9" transform="translate(222.0,533.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7527~2" class="node nodeCM pw_resorcinol-degradation lid7" transform="translate(53.0,518.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node7527~3" class="node nodeCM pw_resorcinol-degradation lid1" transform="translate(82.1,479.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7521~0" class="node nodeCM pw_resorcinol-degradation lid5" transform="translate(871.3,269.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7521~1" class="node nodeCM pw_resorcinol-degradation lid10" transform="translate(871.3,165.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+</g></svg>
+<text x="852.6" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

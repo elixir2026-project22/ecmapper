@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1164" height="1426" viewBox="0 0 1163.6 1426.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="7451.6 4795.1 562.3 964.3" width="562" height="964" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="7451.6" y="4795.1" width="562.3" height="964.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_L-lactaldehyde-degradation" class="pw pw6" x="7491.6" y="4850.6" width="482.3" height="868.8" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7705.8 5039.0 L 7705.8 5120.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7705.8 5007.0 L 7705.8 4922.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7647.2 5248.3 L 7697.4 5152.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7646.5 5280.3 L 7698.1 5387.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7781.4 5248.3 L 7716.7 5152.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7782.3 5280.3 L 7715.8 5387.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7705.8 5548.7 L 7705.8 5635.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7705.8 5516.7 L 7705.8 5419.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 7678.1 5007.0 L 7654.7 4993.4"/>
+<path class="link" marker-end="url(#in)" d="M 7676.1 5039.0 L 7654.7 5050.4"/>
+<path class="link" marker-start="url(#in)" d="M 7658.3 5248.3 L 7698.2 5215.6"/>
+<path class="link" marker-start="url(#in)" d="M 7618.4 5248.3 L 7576.8 5215.6"/>
+<path class="link" marker-end="url(#in)" d="M 7662.6 5280.3 L 7696.7 5303.1"/>
+<path class="link" marker-end="url(#in)" d="M 7613.7 5280.3 L 7582.6 5300.1"/>
+<path class="link" marker-start="url(#in)" d="M 7807.8 5248.3 L 7839.5 5215.6"/>
+<path class="link" marker-start="url(#in)" d="M 7773.8 5248.3 L 7736.1 5215.6"/>
+<path class="link" marker-end="url(#in)" d="M 7768.7 5280.3 L 7735.5 5302.9"/>
+<path class="link" marker-end="url(#in)" d="M 7812.1 5280.3 L 7836.7 5300.1"/>
+<path class="link" marker-start="url(#in)" d="M 7681.6 5516.7 L 7629.1 5482.1"/>
+<path class="link" marker-end="url(#in)" d="M 7680.1 5548.7 L 7630.6 5579.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_L-lactaldehyde-degradation" transform="translate(7732.7,4850.6)"><rect rx="10" height="31" width="250" x="-125.0" y="-15.5"/><text dominant-baseline="central">L-lactaldehyde degradation</text></g>
+<g id="node9238" class="node nodeSM pw_L-lactaldehyde-degradation lid20321" transform="translate(7705.8,4904.3)"><rect height="35.0" width="138.6" x="-69.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20321" target="_blank">(S)-propane-1,2-diol</a></text><title>L-1,2-propanediol</title></g>
+<g id="node9250" class="node nodeHM pw_L-lactaldehyde-degradation lid403" transform="translate(7705.8,5403.4)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=403" target="_blank">L-lactate</a></text><title>L-lactate</title></g>
+<g id="node9267" class="node nodeSM pw_L-lactaldehyde-degradation lid31" transform="translate(7705.8,5653.7)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node12159" class="node nodeHM pw_L-lactaldehyde-degradation lid2968" transform="translate(7705.8,5136.8)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2968" target="_blank">L-lactaldehyde</a></text><title>L-lactaldehyde</title></g>
+<g id="node9261" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(7705.8,5023.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.77" target="_blank">1.1.1.77</a></text><title>lactaldehyde reductase</title></g>
+<g id="node2280" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(7638.8,5264.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.22" target="_blank">1.2.1.22</a></text><title>lactaldehyde dehydrogenase</title></g>
+<g id="node9269" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(7792.2,5264.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.22" target="_blank">1.2.1.22</a></text><title>lactaldehyde dehydrogenase</title></g>
+<g id="node9265" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(7705.8,5532.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.27" target="_blank">1.1.1.27</a></text><title>L-lactate dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2278" class="node nodeCM pw_L-lactaldehyde-degradation lid5" transform="translate(7557.6,5316.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node2279" class="node nodeCM pw_L-lactaldehyde-degradation lid10" transform="translate(7556.5,5199.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node9240" class="node nodeCM pw_L-lactaldehyde-degradation lid7" transform="translate(7629.6,5063.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node9252" class="node nodeCM pw_L-lactaldehyde-degradation lid8" transform="translate(7856.6,5316.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node9253" class="node nodeCM pw_L-lactaldehyde-degradation lid12937" transform="translate(7604.9,5466.1)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12937" target="_blank">oxidized electron acceptor</a></text><title>oxidized electron acceptor</title></g>
+<g id="node9255" class="node nodeCM pw_L-lactaldehyde-degradation lid1661" transform="translate(7604.9,5595.5)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title>reduced electron acceptor</title></g>
+<g id="node9257" class="node nodeCM pw_L-lactaldehyde-degradation lid12" transform="translate(7716.1,5316.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9258" class="node nodeCM pw_L-lactaldehyde-degradation lid1" transform="translate(7717.7,5199.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node9260" class="node nodeCM pw_L-lactaldehyde-degradation lid8" transform="translate(7629.6,4979.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node9271" class="node nodeCM pw_L-lactaldehyde-degradation lid7" transform="translate(7855.0,5199.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="642.3" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 521.3 1386.0" width="521" height="1386" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="521.3" height="1386.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_L-lactaldehyde-degradation" class="pw " x="0.0" y="0.0" width="441.3" height="1290.5" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 293.5 630.5 L 232.2 464.5"/>
+<path class="link" marker-end="url(#in)" d="M 293.5 662.5 L 232.2 828.5"/>
+<path class="link" marker-start="url(#in)" d="M 159.1 630.5 L 220.4 464.5"/>
+<path class="link" marker-end="url(#in)" d="M 159.1 662.5 L 220.4 828.5"/>
+<path class="link" marker-start="url(#in)" d="M 226.3 1026.5 L 226.3 860.5"/>
+<path class="link" marker-end="url(#in)" d="M 226.3 1058.5 L 226.3 1224.5"/>
+<path class="link" marker-start="url(#in)" d="M 226.3 266.5 L 226.3 432.5"/>
+<path class="link" marker-end="url(#in)" d="M 226.3 234.5 L 226.3 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 267.5 635.5 L 236.0 624.6"/>
+<path class="link" marker-start="url(#in)" d="M 286.5 630.5 L 257.4 594.6"/>
+<path class="link" marker-end="url(#in)" d="M 331.3 657.5 L 362.9 668.4"/>
+<path class="link" marker-end="url(#in)" d="M 277.3 662.5 L 219.7 704.1"/>
+<path class="link" marker-start="url(#in)" d="M 121.3 635.5 L 88.0 624.1"/>
+<path class="link" marker-start="url(#in)" d="M 174.7 630.5 L 228.7 590.3"/>
+<path class="link" marker-end="url(#in)" d="M 185.1 657.5 L 218.4 668.9"/>
+<path class="link" marker-end="url(#in)" d="M 166.2 662.5 L 194.7 697.7"/>
+<path class="link" marker-start="url(#in)" d="M 203.5 1026.5 L 147.1 987.0"/>
+<path class="link" marker-end="url(#in)" d="M 203.5 1058.5 L 148.4 1097.0"/>
+<path class="link" marker-start="url(#in)" d="M 203.5 266.5 L 172.4 288.3"/>
+<path class="link" marker-end="url(#in)" d="M 203.5 234.5 L 172.4 212.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_L-lactaldehyde-degradation" transform="translate(220.6,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">L-lactaldehyde degradation</text></g>
+<g id="node12159" class="node nodeHM pw_L-lactaldehyde-degradation lid2968" transform="translate(226.3,448.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2968" target="_blank">L-lactaldehyde</a></text><title></title></g>
+<g id="node9250" class="node nodeHM pw_L-lactaldehyde-degradation lid403" transform="translate(226.3,844.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=403" target="_blank">L-lactate</a></text><title></title></g>
+<g id="node9267" class="node nodeHM pw_L-lactaldehyde-degradation lid31" transform="translate(226.3,1240.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node9238" class="node nodeHM pw_L-lactaldehyde-degradation lid20321" transform="translate(226.3,52.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20321" target="_blank">(S)-propane-1,2-diol</a></text><title></title></g>
+<g id="node2280" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(299.4,646.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.22" target="_blank">1.2.1.22</a></text><title>lactaldehyde dehydrogenase; lactaldehyde dehydrogenase</title></g>
+<g id="node9269" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(153.2,646.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.22" target="_blank">1.2.1.22</a></text><title>lactaldehyde dehydrogenase; lactaldehyde dehydrogenase</title></g>
+<g id="node9265" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(226.3,1042.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.27" target="_blank">1.1.1.27</a></text><title>L-lactate dehydrogenase</title></g>
+<g id="node9261" class="node nodeEN pw_L-lactaldehyde-degradation" transform="translate(226.3,250.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.77" target="_blank">1.1.1.77</a></text><title>lactaldehyde reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2280~0" class="node nodeCM pw_L-lactaldehyde-degradation lid10" transform="translate(213.8,617.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2280~1" class="node nodeCM pw_L-lactaldehyde-degradation lid1" transform="translate(244.4,578.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2280~2" class="node nodeCM pw_L-lactaldehyde-degradation lid5" transform="translate(385.1,676.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2280~3" class="node nodeCM pw_L-lactaldehyde-degradation lid12" transform="translate(207.2,713.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9269~0" class="node nodeCM pw_L-lactaldehyde-degradation lid7" transform="translate(69.1,617.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node9269~2" class="node nodeCM pw_L-lactaldehyde-degradation lid8" transform="translate(237.4,675.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9265~0" class="node nodeCM pw_L-lactaldehyde-degradation lid374" transform="translate(124.2,971.0)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node9265~1" class="node nodeCM pw_L-lactaldehyde-degradation lid1661" transform="translate(125.6,1113.0)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node9261~0" class="node nodeCM pw_L-lactaldehyde-degradation lid8" transform="translate(153.4,301.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9261~1" class="node nodeCM pw_L-lactaldehyde-degradation lid7" transform="translate(153.4,199.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+</g></svg>
+<text x="652.3" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

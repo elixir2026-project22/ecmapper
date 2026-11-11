@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1709" height="1395" viewBox="0 0 1708.5 1395.2"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="2306.9 6835.0 635.8 1191.2" width="636" height="1191" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="2306.9" y="6835.0" width="635.8" height="1191.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_octane-oxidation" class="pw pw6" x="2346.9" y="6890.5" width="555.8" height="1095.7" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2496.4 7079.4 L 2564.3 7111.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2492.6 7047.4 L 2568.1 7006.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7047.4 L 2742.7 6954.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7079.4 L 2742.7 7176.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2710.8 7047.4 L 2629.7 7006.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2706.7 7079.4 L 2633.8 7111.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7303.0 L 2742.7 7208.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7335.0 L 2742.7 7429.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7588.5 L 2742.7 7680.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7556.5 L 2742.7 7461.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7810.1 L 2742.7 7717.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2742.7 7842.1 L 2742.7 7936.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2446.7 7079.4 L 2413.8 7111.8"/>
+<path class="link" marker-end="url(#in)" d="M 2448.5 7047.4 L 2411.9 7006.7"/>
+<path class="link" marker-start="url(#in)" d="M 2763.4 7047.4 L 2817.0 7005.8"/>
+<path class="link" marker-end="url(#in)" d="M 2766.0 7079.4 L 2814.1 7112.5"/>
+<path class="link" marker-start="url(#in)" d="M 2706.5 7335.0 L 2634.1 7366.9"/>
+<path class="link" marker-end="url(#in)" d="M 2706.4 7305.1 L 2639.7 7279.7"/>
+<path class="link" marker-start="url(#in)" d="M 2767.3 7556.5 L 2814.1 7525.9"/>
+<path class="link" marker-start="url(#in)" d="M 2716.0 7556.5 L 2677.6 7533.6"/>
+<path class="link" marker-end="url(#in)" d="M 2719.0 7588.5 L 2676.3 7617.2"/>
+<path class="link" marker-start="url(#in)" d="M 2768.4 7810.1 L 2814.1 7781.5"/>
+<path class="link" marker-start="url(#in)" d="M 2716.0 7810.1 L 2674.8 7785.3"/>
+<path class="link" marker-end="url(#in)" d="M 2761.0 7842.1 L 2818.1 7891.9"/>
+<path class="link" marker-end="url(#in)" d="M 2717.6 7842.1 L 2672.0 7871.1"/>
+<path class="link" marker-end="url(#in)" d="M 2776.3 7832.2 L 2814.1 7839.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_octane-oxidation" transform="translate(2624.8,6890.5)"><rect rx="10" height="31" width="159" x="-79.5" y="-15.5"/><text dominant-baseline="central">octane oxidation</text></g>
+<g id="node3444" class="node nodeHM pw_octane-oxidation lid1337" transform="translate(2597.8,7127.8)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1337" target="_blank">reduced rubredoxin</a></text><title>reduced rubredoxin</title></g>
+<g id="node3445" class="node nodeHM pw_octane-oxidation lid1837" transform="translate(2597.8,6990.7)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1837" target="_blank">oxidized rubredoxin</a></text><title>oxidized rubredoxin</title></g>
+<g id="node3448" class="node nodeHM pw_octane-oxidation lid6410" transform="translate(2742.7,7445.8)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6410" target="_blank">1-octanal</a></text><title>1-octanal</title></g>
+<g id="node3453" class="node nodeHM pw_octane-oxidation lid1241" transform="translate(2742.7,7192.2)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1241" target="_blank">Octanol</a></text><title>Octanol</title></g>
+<g id="node3456" class="node nodeHM pw_octane-oxidation lid32341" transform="translate(2742.7,6938.7)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32341" target="_blank">n-octane</a></text><title>n-octane</title></g>
+<g id="node7709" class="node nodeHM pw_octane-oxidation lid385" transform="translate(2742.7,7952.8)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=385" target="_blank">octanoyl-CoA</a></text><title>octanoyl-CoA</title></g>
+<g id="node12144" class="node nodeSM pw_octane-oxidation lid865" transform="translate(2742.7,7699.3)"><rect height="35.0" width="76.4" x="-38.2" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=865" target="_blank">octanoate</a></text><title>octanoate</title></g>
+<g id="node3458" class="node nodeEN pw_octane-oxidation" transform="translate(2462.9,7063.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.18.1.1" target="_blank">1.18.1.1</a></text><title>rubredoxin-NAD+ reductase</title></g>
+<g id="node3450" class="node nodeEN pw_octane-oxidation" transform="translate(2742.7,7063.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.3" target="_blank">1.14.15.3</a></text><title>alkane 1-monooxygenase</title></g>
+<g id="node3446" class="node nodeEN pw_octane-oxidation" transform="translate(2742.7,7319.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.-" target="_blank">1.1.99.-</a></text><title>octanol dehydrogenase</title></g>
+<g id="node3454" class="node nodeEN pw_octane-oxidation" transform="translate(2742.7,7572.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.3" target="_blank">1.2.1.3</a></text><title>aldehyde dehydrogenase (NAD+)</title></g>
+<g id="node7703" class="node nodeEN pw_octane-oxidation" transform="translate(2742.7,7826.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.3" target="_blank">6.2.1.3</a></text><title>long-chain-fatty-acid-CoA ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3443" class="node nodeCM pw_octane-oxidation lid8" transform="translate(2652.5,7633.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node3447" class="node nodeCM pw_octane-oxidation lid1661" transform="translate(2597.8,7263.7)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title>reduced electron acceptor</title></g>
+<g id="node3449" class="node nodeCM pw_octane-oxidation lid9" transform="translate(2836.4,6990.7)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node3451" class="node nodeCM pw_octane-oxidation lid7" transform="translate(2652.5,7518.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node3452" class="node nodeCM pw_octane-oxidation lid8" transform="translate(2397.5,7127.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node3455" class="node nodeCM pw_octane-oxidation lid1" transform="translate(2836.4,7127.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3457" class="node nodeCM pw_octane-oxidation lid12937" transform="translate(2597.8,7382.9)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12937" target="_blank">oxidized electron acceptor</a></text><title>oxidized electron acceptor</title></g>
+<g id="node3459" class="node nodeCM pw_octane-oxidation lid7" transform="translate(2397.5,6990.7)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node3460" class="node nodeCM pw_octane-oxidation lid1" transform="translate(2836.4,7511.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7704" class="node nodeCM pw_octane-oxidation lid4" transform="translate(2652.5,7772.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node7705" class="node nodeCM pw_octane-oxidation lid18" transform="translate(2836.4,7767.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node7706" class="node nodeCM pw_octane-oxidation lid30" transform="translate(2836.4,7907.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node7707" class="node nodeCM pw_octane-oxidation lid12" transform="translate(2652.5,7883.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node7708" class="node nodeCM pw_octane-oxidation lid17" transform="translate(2836.4,7843.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="715.8" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 992.7 1355.2" width="993" height="1355" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="992.7" height="1355.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_octane-oxidation" class="pw " x="0.0" y="0.0" width="912.7" height="1259.7" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 839.7 102.0 C 828.5 126.3 807.0 173.4 796.0 197.6"/>
+<path class="link" marker-end="url(#in)" d="M 814.8 86.5 L 783.7 86.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 303.9 388.7 L 414.4 317.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 264.6 420.7 L 155.3 540.7"/>
+<path class="link" marker-start="url(#in)" d="M 137.2 715.8 L 140.4 572.7"/>
+<path class="link" marker-end="url(#in)" d="M 136.6 747.8 L 134.0 887.6"/>
+<path class="link" marker-start="url(#in)" d="M 132.3 1052.6 L 133.6 919.6"/>
+<path class="link" marker-end="url(#in)" d="M 132.2 1084.6 L 132.2 1193.7"/>
+<path class="link" marker-start="url(#in)" d="M 642.1 228.8 L 702.8 340.6"/>
+<path class="link" marker-start="url(#in)" d="M 668.6 212.8 L 724.7 212.8"/>
+<path class="link" marker-end="url(#in)" d="M 643.9 196.8 L 705.7 102.5"/>
+<path class="link" marker-end="url(#in)" d="M 599.6 228.2 C 562.1 245.2 502.2 272.4 467.2 288.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 839.3 102.5 L 816.6 151.1"/>
+<path class="link" marker-end="url(#in)" d="M 814.8 74.3 L 777.1 59.8"/>
+<path class="link" marker-start="url(#in)" d="M 277.7 388.7 L 268.7 296.7"/>
+<path class="link" marker-end="url(#in)" d="M 247.3 396.7 L 221.5 390.1"/>
+<path class="link" marker-start="url(#in)" d="M 108.2 721.3 L 72.3 708.1"/>
+<path class="link" marker-start="url(#in)" d="M 124.4 715.8 L 95.7 678.8"/>
+<path class="link" marker-end="url(#in)" d="M 158.8 747.8 L 189.7 770.5"/>
+<path class="link" marker-start="url(#in)" d="M 103.5 1058.6 L 65.4 1045.2"/>
+<path class="link" marker-start="url(#in)" d="M 119.4 1052.6 L 90.4 1016.4"/>
+<path class="link" marker-end="url(#in)" d="M 160.9 1070.2 L 203.7 1072.7"/>
+<path class="link" marker-end="url(#in)" d="M 154.8 1084.6 L 189.7 1109.3"/>
+<path class="link" marker-end="url(#in)" d="M 138.9 1084.6 L 159.2 1133.2"/>
+<path class="link" marker-start="url(#in)" d="M 664.5 196.8 L 697.2 180.0"/>
+<path class="link" marker-end="url(#in)" d="M 602.4 228.8 L 571.5 244.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_octane-oxidation" transform="translate(456.3,0.0)"><rect rx="10" height="31" width="166" x="-82.8" y="-15.5"/><text dominant-baseline="central">octane oxidation</text></g>
+<g id="node3444" class="node nodeHM pw_octane-oxidation lid1337" transform="translate(789.0,212.8)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1337" target="_blank">reduced rubredoxin</a></text><title></title></g>
+<g id="node3445" class="node nodeHM pw_octane-oxidation lid1837" transform="translate(716.1,86.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1837" target="_blank">oxidized rubredoxin</a></text><title></title></g>
+<g id="node3453" class="node nodeHM pw_octane-oxidation lid1241" transform="translate(439.1,301.1)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1241" target="_blank">Octanol</a></text><title></title></g>
+<g id="node3448" class="node nodeHM pw_octane-oxidation lid6410" transform="translate(140.7,556.7)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6410" target="_blank">1-octanal</a></text><title></title></g>
+<g id="node12144" class="node nodeHM pw_octane-oxidation lid865" transform="translate(133.7,903.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=865" target="_blank">octanoate</a></text><title></title></g>
+<g id="node7709" class="node nodeHM pw_octane-oxidation lid385" transform="translate(132.2,1209.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=385" target="_blank">octanoyl-CoA</a></text><title></title></g>
+<g id="node3456" class="node nodeHM pw_octane-oxidation lid32341" transform="translate(711.5,356.6)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32341" target="_blank">n-octane</a></text><title></title></g>
+<g id="node3458" class="node nodeEN pw_octane-oxidation" transform="translate(846.8,86.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.18.1.1" target="_blank">1.18.1.1</a></text><title>rubredoxin-NAD+ reductase</title></g>
+<g id="node3446" class="node nodeEN pw_octane-oxidation" transform="translate(279.2,404.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.-" target="_blank">1.1.99.-</a></text><title>octanol dehydrogenase</title></g>
+<g id="node3454" class="node nodeEN pw_octane-oxidation" transform="translate(136.9,731.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.3" target="_blank">1.2.1.3</a></text><title>aldehyde dehydrogenase (NAD+)</title></g>
+<g id="node7703" class="node nodeEN pw_octane-oxidation" transform="translate(132.2,1068.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.3" target="_blank">6.2.1.3</a></text><title>long-chain-fatty-acid-CoA ligase</title></g>
+<g id="node3450" class="node nodeEN pw_octane-oxidation" transform="translate(633.4,212.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.15.3" target="_blank">1.14.15.3</a></text><title>alkane 1-monooxygenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3458~0" class="node nodeCM pw_octane-oxidation lid8" transform="translate(809.1,167.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3458~1" class="node nodeCM pw_octane-oxidation lid7" transform="translate(758.1,52.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3446~0" class="node nodeCM pw_octane-oxidation lid374" transform="translate(267.1,280.7)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node3446~1" class="node nodeCM pw_octane-oxidation lid1661" transform="translate(158.3,374.1)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node3454~0" class="node nodeCM pw_octane-oxidation lid7" transform="translate(53.3,701.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node3454~1" class="node nodeCM pw_octane-oxidation lid1" transform="translate(83.3,662.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3454~2" class="node nodeCM pw_octane-oxidation lid8" transform="translate(208.7,784.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node7703~0" class="node nodeCM pw_octane-oxidation lid4" transform="translate(49.7,1039.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node7703~1" class="node nodeCM pw_octane-oxidation lid18" transform="translate(77.5,1000.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node7703~2" class="node nodeCM pw_octane-oxidation lid30" transform="translate(219.4,1073.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node7703~3" class="node nodeCM pw_octane-oxidation lid12" transform="translate(202.2,1118.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7703~4" class="node nodeCM pw_octane-oxidation lid17" transform="translate(165.9,1149.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node3450~0" class="node nodeCM pw_octane-oxidation lid9" transform="translate(709.7,173.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node3450~1" class="node nodeCM pw_octane-oxidation lid1" transform="translate(555.8,252.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>
+<text x="725.8" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

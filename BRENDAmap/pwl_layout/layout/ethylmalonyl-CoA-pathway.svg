@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1636.3 1258.0" width="1636" height="1258" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1636.3" height="1258.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ethylmalonyl-CoA-pathway" class="pw " x="0.0" y="0.0" width="1516.3" height="1122.5" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 130.4 923.5 L 130.4 1056.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 130.4 891.5 L 130.4 758.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 130.4 593.5 L 130.4 726.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 130.4 561.5 L 130.4 428.5"/>
+<path class="link" marker-start="url(#in)" d="M 260.3 412.5 L 201.2 412.5"/>
+<path class="link" marker-end="url(#in)" d="M 330.6 412.5 L 396.1 412.5"/>
+<path class="link" marker-start="url(#in)" d="M 593.5 412.5 L 524.7 412.5"/>
+<path class="link" marker-end="url(#in)" d="M 657.3 412.5 L 722.9 412.5"/>
+<path class="link" marker-start="url(#in)" d="M 790.4 561.5 L 790.4 428.5"/>
+<path class="link" marker-end="url(#in)" d="M 790.4 593.5 L 790.4 726.5"/>
+<path class="link" marker-end="url(#in)" d="M 920.3 742.5 L 858.0 742.5"/>
+<path class="link" marker-start="url(#in)" d="M 990.6 742.5 L 1056.1 742.5"/>
+<path class="link" marker-start="url(#in)" d="M 790.4 262.7 C 790.4 294.2 790.4 365.9 790.4 397.3"/>
+<path class="link" marker-end="url(#in)" d="M 790.4 231.5 L 790.4 98.5"/>
+<path class="link" marker-start="url(#in)" d="M 1120.4 261.5 L 1120.4 128.5"/>
+<path class="link" marker-end="url(#in)" d="M 1120.4 293.5 L 1120.4 426.5"/>
+<path class="link" marker-start="url(#in)" d="M 1256.7 442.5 L 1155.6 442.5"/>
+<path class="link" marker-end="url(#in)" d="M 1314.1 442.5 L 1418.5 442.5"/>
+<path class="link" marker-start="url(#in)" d="M 923.5 82.5 L 861.2 82.5"/>
+<path class="link" marker-end="url(#in)" d="M 987.3 76.7 L 1072.3 61.2"/>
+<path class="link" marker-end="url(#in)" d="M 987.3 88.3 L 1082.0 105.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 162.3 918.5 L 193.9 929.4"/>
+<path class="link" marker-start="url(#in)" d="M 143.4 923.5 L 172.4 959.4"/>
+<path class="link" marker-end="url(#in)" d="M 107.6 891.5 L 78.4 871.1"/>
+<path class="link" marker-start="url(#in)" d="M 614.2 428.5 L 561.4 503.9"/>
+<path class="link" marker-end="url(#in)" d="M 636.6 396.5 L 696.8 310.5"/>
+<path class="link" marker-start="url(#in)" d="M 813.3 263.5 L 846.3 286.6"/>
+<path class="link" marker-start="url(#in)" d="M 1143.3 261.5 L 1173.1 240.6"/>
+<path class="link" marker-start="url(#in)" d="M 1279.9 458.5 L 1262.5 509.1"/>
+<path class="link" marker-start="url(#in)" d="M 1265.7 458.5 L 1231.3 486.4"/>
+<path class="link" marker-end="url(#in)" d="M 1290.9 426.5 L 1308.3 375.9"/>
+<path class="link" marker-end="url(#in)" d="M 1305.2 426.5 L 1337.6 400.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ethylmalonyl-CoA-pathway" transform="translate(758.2,0.0)"><rect rx="10" height="31" width="243" x="-121.6" y="-15.5"/><text dominant-baseline="central">ethylmalonyl-CoA pathway</text></g>
+<g id="node12225" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid406" transform="translate(130.4,1072.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=406" target="_blank">crotonyl-CoA</a></text><title></title></g>
+<g id="node11340" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid11948" transform="translate(130.4,742.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11948" target="_blank">(S)-ethylmalonyl-CoA</a></text><title></title></g>
+<g id="node11339" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid26007" transform="translate(130.4,412.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26007" target="_blank">(R)-ethylmalonyl-CoA</a></text><title></title></g>
+<g id="node11343" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid20916" transform="translate(460.4,412.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20916" target="_blank">methylsuccinyl-CoA</a></text><title></title></g>
+<g id="node11345" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid19810" transform="translate(790.4,412.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19810" target="_blank">2-methylfumaryl-CoA</a></text><title></title></g>
+<g id="node1975" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid90078" transform="translate(790.4,742.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90078" target="_blank">3-methylfumaryl-CoA</a></text><title></title></g>
+<g id="node1973" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid90061" transform="translate(1120.4,742.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90061" target="_blank">(S)-citramalyl-CoA</a></text><title></title></g>
+<g id="node11349" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid17524" transform="translate(790.4,82.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17524" target="_blank">beta-methylmalyl-CoA</a></text><title></title></g>
+<g id="node11351" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid101" transform="translate(1120.4,112.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101" target="_blank">glyoxylate</a></text><title></title></g>
+<g id="node11354" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid12124" transform="translate(1120.4,442.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12124" target="_blank">malyl-CoA</a></text><title></title></g>
+<g id="node11361" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid200" transform="translate(1450.4,442.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200" target="_blank">L-malate</a></text><title></title></g>
+<g id="node11350" class="node nodeHM pw_ethylmalonyl-CoA-pathway lid782" transform="translate(1120.4,52.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title></title></g>
+<g id="node11341" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(130.4,907.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.85" target="_blank">1.3.1.85</a></text><title>crotonyl-CoA carboxylase/reductase</title></g>
+<g id="node11346" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(130.4,577.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.99.1" target="_blank">5.1.99.1</a></text><title>methylmalonyl-CoA epimerase</title></g>
+<g id="node11342" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(295.4,412.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.63" target="_blank">5.4.99.63</a></text><title>ethylmalonyl-CoA mutase</title></g>
+<g id="node11344" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(625.4,412.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.12" target="_blank">1.3.8.12</a></text><title>(2S)-methylsuccinyl-CoA dehydrogenase</title></g>
+<g id="node1976" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(790.4,577.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.1.3" target="_blank">5.4.1.3</a></text><title>2-methylfumaryl-CoA isomerase</title></g>
+<g id="node1974" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(955.4,742.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.153" target="_blank">4.2.1.153</a></text><title>3-methylfumaryl-CoA hydratase</title></g>
+<g id="node11347" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(790.4,247.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.148" target="_blank">4.2.1.148</a></text><title>2-methylfumaryl-CoA hydratase</title></g>
+<g id="node11352" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(1120.4,277.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.24" target="_blank">4.1.3.24</a></text><title>malyl-CoA lyase</title></g>
+<g id="node11353" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(1285.4,442.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.9" target="_blank">6.2.1.9</a></text><title>malate-CoA ligase</title></g>
+<g id="node11348" class="node nodeEN pw_ethylmalonyl-CoA-pathway" transform="translate(955.4,82.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.24" target="_blank">4.1.3.24</a></text><title>malyl-CoA lyase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11341~0" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid5" transform="translate(216.1,937.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node11341~1" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid28" transform="translate(185.4,975.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11341~2" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid10" transform="translate(56.2,855.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11344~0" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid1601" transform="translate(550.2,519.9)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1601" target="_blank">electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node11344~1" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid2112" transform="translate(708.0,294.5)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2112" target="_blank">reduced electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node11347~0" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid1" transform="translate(862.0,297.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11352~0" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid29" transform="translate(1196.0,224.6)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node11353~0" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid13" transform="translate(1257.0,525.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node11353~1" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid16" transform="translate(1218.8,496.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node11353~2" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid4" transform="translate(1313.9,359.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11353~3" class="node nodeCM pw_ethylmalonyl-CoA-pathway lid18" transform="translate(1353.3,387.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+</g></svg>

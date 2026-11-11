@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2863.9 3186.5" width="2864" height="3186" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2863.9" height="3186.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_tyrosine-metabolism" class="pw " x="0.0" y="0.0" width="2743.9" height="3051.0" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1319.1 2113.2 L 1225.4 2038.0"/>
+<path class="link" marker-end="url(#in)" d="M 1370.9 2122.1 L 1497.8 2094.2"/>
+<path class="link" marker-start="url(#in)" d="M 1576.0 1905.6 L 1542.7 2069.1"/>
+<path class="link" marker-end="url(#in)" d="M 1581.9 1873.6 L 1607.8 1718.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1442.5 1500.3 L 1597.1 1686.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1409.3 1499.7 C 1384.8 1518.6 1343.2 1550.7 1318.6 1569.7"/>
+<path class="link" marker-start="url(#in)" d="M 1448.4 1688.6 L 1594.7 1701.0"/>
+<path class="link" marker-end="url(#in)" d="M 1397.8 1669.9 L 1317.3 1601.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1431.6 1775.0 L 1594.7 1708.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1394.6 1770.7 L 1306.9 1601.1"/>
+<path class="link" marker-end="url(#in)" d="M 1231.9 1767.3 L 1292.7 1601.1"/>
+<path class="link" marker-start="url(#in)" d="M 1224.6 1799.3 L 1206.8 2006.0"/>
+<path class="link" marker-start="url(#in)" d="M 1743.0 1861.5 L 1623.8 1718.4"/>
+<path class="link" marker-end="url(#in)" d="M 1765.4 1893.5 L 1849.8 2043.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1951.6 2212.6 L 1868.5 2075.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1970.7 2244.6 L 2048.0 2375.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2141.9 2533.5 L 2066.9 2407.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2161.2 2565.5 L 2235.8 2687.5"/>
+<path class="link" marker-start="url(#in)" d="M 2331.8 2837.2 L 2255.9 2719.5"/>
+<path class="link" marker-end="url(#in)" d="M 2352.5 2869.2 L 2427.7 2985.0"/>
+<path class="link" marker-start="url(#in)" d="M 1681.0 1552.1 L 1618.0 1686.4"/>
+<path class="link" marker-end="url(#in)" d="M 1696.6 1520.1 L 1769.1 1375.0"/>
+<path class="link" marker-start="url(#in)" d="M 1157.0 1500.3 L 1271.9 1569.1"/>
+<path class="link" marker-end="url(#in)" d="M 1120.3 1468.3 L 1015.2 1298.8"/>
+<path class="link" marker-start="url(#in)" d="M 1232.7 1399.6 L 1292.9 1569.1"/>
+<path class="link" marker-end="url(#in)" d="M 1225.8 1367.6 L 1210.0 1174.3"/>
+<path class="link" marker-start="url(#in)" d="M 1188.8 974.8 L 1206.9 1142.3"/>
+<path class="link" marker-end="url(#in)" d="M 1185.4 942.8 L 1168.9 782.6"/>
+<path class="link" marker-start="url(#in)" d="M 1149.9 594.6 L 1165.6 750.6"/>
+<path class="link" marker-end="url(#in)" d="M 1146.6 562.6 L 1130.9 409.0"/>
+<path class="link" marker-start="url(#in)" d="M 1071.9 1743.1 L 1275.6 1601.1"/>
+<path class="link" marker-end="url(#in)" d="M 1040.8 1775.1 L 974.5 1905.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 882.2 2122.5 L 959.7 1937.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 867.3 2154.5 L 794.4 2296.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1032.3 1592.3 L 1218.1 1587.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 962.0 1585.2 L 765.2 1539.8"/>
+<path class="link" marker-start="url(#in)" d="M 2132.6 1460.6 L 2012.4 1529.4"/>
+<path class="link" marker-end="url(#in)" d="M 2187.7 1428.6 L 2304.4 1359.9"/>
+<path class="link" marker-start="url(#in)" d="M 2473.1 1259.1 L 2358.2 1327.9"/>
+<path class="link" marker-end="url(#in)" d="M 2526.0 1227.1 L 2638.8 1158.3"/>
+<path class="link" marker-start="url(#in)" d="M 294.7 1910.9 L 391.9 1741.4"/>
+<path class="link" marker-end="url(#in)" d="M 314.6 1910.9 L 439.6 1842.2"/>
+<path class="link" marker-start="url(#in)" d="M 233.1 1323.4 L 110.8 1327.7"/>
+<path class="link" marker-end="url(#in)" d="M 292.0 1338.3 L 407.9 1407.1"/>
+<path class="link" marker-start="url(#in)" d="M 591.1 1608.6 L 676.0 1539.8"/>
+<path class="link" marker-start="url(#in)" d="M 563.1 1640.6 L 476.8 1810.2"/>
+<path class="link" marker-end="url(#in)" d="M 560.5 1608.6 L 445.6 1439.1"/>
+<path class="link" marker-end="url(#in)" d="M 544.3 1640.6 L 428.1 1709.4"/>
+<path class="link" marker-start="url(#in)" d="M 1840.4 1658.3 L 1944.6 1702.2"/>
+<path class="link" marker-start="url(#in)" d="M 1783.0 1654.2 L 1626.2 1698.0"/>
+<path class="link" marker-end="url(#in)" d="M 1839.1 1630.2 L 1957.0 1561.4"/>
+<path class="link" marker-start="url(#in)" d="M 1111.0 220.1 L 1127.6 377.0"/>
+<path class="link" marker-end="url(#in)" d="M 1121.9 188.1 L 1215.9 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1089.8 188.1 L 979.7 97.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1331.8 2113.2 L 1310.3 2065.5"/>
+<path class="link" marker-end="url(#in)" d="M 1355.4 2113.2 L 1385.8 2083.5"/>
+<path class="link" marker-start="url(#in)" d="M 1594.9 1905.6 L 1627.0 1938.3"/>
+<path class="link" marker-end="url(#in)" d="M 1550.4 1873.6 L 1522.6 1858.2"/>
+<path class="link" marker-end="url(#in)" d="M 1570.6 1873.6 L 1546.1 1827.9"/>
+<path class="link" marker-start="url(#in)" d="M 1452.5 1468.3 L 1485.5 1445.8"/>
+<path class="link" marker-end="url(#in)" d="M 1405.8 1500.3 L 1372.8 1522.9"/>
+<path class="link" marker-start="url(#in)" d="M 1439.8 1669.9 L 1471.9 1648.0"/>
+<path class="link" marker-end="url(#in)" d="M 1393.1 1701.9 L 1360.1 1724.5"/>
+<path class="link" marker-start="url(#in)" d="M 1426.3 1770.7 L 1459.3 1748.1"/>
+<path class="link" marker-end="url(#in)" d="M 1379.5 1802.7 L 1346.5 1825.3"/>
+<path class="link" marker-start="url(#in)" d="M 1194.1 1796.9 L 1163.0 1810.0"/>
+<path class="link" marker-end="url(#in)" d="M 1199.4 1767.3 L 1168.7 1748.9"/>
+<path class="link" marker-end="url(#in)" d="M 1194.1 1780.8 L 1141.2 1776.5"/>
+<path class="link" marker-end="url(#in)" d="M 1788.2 1877.6 L 1828.0 1877.7"/>
+<path class="link" marker-start="url(#in)" d="M 1932.6 2234.6 L 1891.5 2243.3"/>
+<path class="link" marker-start="url(#in)" d="M 1932.6 2218.1 L 1893.3 2203.7"/>
+<path class="link" marker-end="url(#in)" d="M 1990.0 2222.6 L 2029.4 2214.3"/>
+<path class="link" marker-end="url(#in)" d="M 1990.0 2239.1 L 2027.6 2252.9"/>
+<path class="link" marker-start="url(#in)" d="M 2158.5 2533.5 L 2181.0 2482.7"/>
+<path class="link" marker-end="url(#in)" d="M 2180.1 2551.5 L 2219.6 2554.2"/>
+<path class="link" marker-start="url(#in)" d="M 2348.6 2837.2 L 2370.9 2782.3"/>
+<path class="link" marker-end="url(#in)" d="M 2374.0 2854.4 L 2413.7 2855.8"/>
+<path class="link" marker-start="url(#in)" d="M 1697.5 1552.1 L 1722.2 1596.4"/>
+<path class="link" marker-end="url(#in)" d="M 1672.2 1520.1 L 1641.3 1489.8"/>
+<path class="link" marker-end="url(#in)" d="M 1685.0 1520.1 L 1672.3 1462.3"/>
+<path class="link" marker-start="url(#in)" d="M 1162.1 1470.9 L 1179.2 1463.7"/>
+<path class="link" marker-end="url(#in)" d="M 1134.4 1468.3 L 1154.0 1393.9"/>
+<path class="link" marker-end="url(#in)" d="M 1128.8 1468.3 L 1123.9 1413.3"/>
+<path class="link" marker-start="url(#in)" d="M 1219.5 1399.6 L 1199.2 1442.5"/>
+<path class="link" marker-end="url(#in)" d="M 1188.7 1380.4 L 1173.9 1379.2"/>
+<path class="link" marker-start="url(#in)" d="M 1168.6 974.8 L 1134.8 1004.3"/>
+<path class="link" marker-end="url(#in)" d="M 1080.8 1765.9 L 1109.8 1772.0"/>
+<path class="link" marker-start="url(#in)" d="M 907.4 2132.7 L 944.1 2126.1"/>
+<path class="link" marker-end="url(#in)" d="M 884.9 2154.5 L 911.0 2199.4"/>
+<path class="link" marker-start="url(#in)" d="M 1011.0 1577.3 L 1041.5 1541.9"/>
+<path class="link" marker-end="url(#in)" d="M 988.2 1577.3 L 962.7 1531.6"/>
+<path class="link" marker-start="url(#in)" d="M 2508.3 1259.1 L 2555.4 1347.0"/>
+<path class="link" marker-start="url(#in)" d="M 2498.7 1259.1 L 2495.1 1312.6"/>
+<path class="link" marker-start="url(#in)" d="M 2488.2 1259.1 L 2461.1 1296.6"/>
+<path class="link" marker-end="url(#in)" d="M 2496.3 1227.1 L 2474.3 1124.6"/>
+<path class="link" marker-end="url(#in)" d="M 2505.5 1227.1 L 2523.7 1176.9"/>
+<path class="link" marker-end="url(#in)" d="M 320.7 1927.7 L 357.2 1928.4"/>
+<path class="link" marker-start="url(#in)" d="M 246.3 1338.3 L 184.1 1391.3"/>
+<path class="link" marker-end="url(#in)" d="M 283.8 1306.3 L 355.9 1244.8"/>
+<path class="link" marker-start="url(#in)" d="M 1813.2 1662.2 L 1818.2 1717.2"/>
+<path class="link" marker-end="url(#in)" d="M 1805.5 1630.2 L 1786.3 1580.8"/>
+<path class="link" marker-end="url(#in)" d="M 1814.8 1630.2 L 1825.0 1576.4"/>
+<path class="link" marker-start="url(#in)" d="M 1138.0 219.9 L 1170.1 237.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_tyrosine-metabolism" transform="translate(1371.9,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">tyrosine metabolism</text></g>
+<g id="node12037" class="node nodeHM pw_tyrosine-metabolism lid353" transform="translate(1205.4,2022.0)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=353" target="_blank">prephenate</a></text><title></title></g>
+<g id="node12036" class="node nodeHM pw_tyrosine-metabolism lid883" transform="translate(1539.4,2085.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=883" target="_blank">L-arogenate</a></text><title></title></g>
+<g id="node4805" class="node nodeHM pw_tyrosine-metabolism lid109" transform="translate(1610.5,1702.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=109" target="_blank">Tyr</a></text><title></title></g>
+<g id="node5922" class="node nodeHM pw_tyrosine-metabolism lid423" transform="translate(1298.6,1585.1)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=423" target="_blank">4-hydroxyphenylpyruvate</a></text><title></title></g>
+<g id="node3299" class="node nodeHM pw_tyrosine-metabolism lid280" transform="translate(1858.9,2059.1)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=280" target="_blank">tyramine</a></text><title></title></g>
+<g id="node12481" class="node nodeHM pw_tyrosine-metabolism lid2132" transform="translate(2057.4,2391.4)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2132" target="_blank">(4-hydroxyphenyl)acetaldehyde</a></text><title></title></g>
+<g id="node12482" class="node nodeHM pw_tyrosine-metabolism lid45201" transform="translate(2245.6,2703.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45201" target="_blank">4-hydroxyphenylethanol</a></text><title></title></g>
+<g id="node12486" class="node nodeHM pw_tyrosine-metabolism lid91715" transform="translate(2438.1,3001.0)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91715" target="_blank">4-hydroxyphenylethyl beta-D-glucoside</a></text><title></title></g>
+<g id="node4764" class="node nodeHM pw_tyrosine-metabolism lid31" transform="translate(1777.0,1359.0)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node12038" class="node nodeHM pw_tyrosine-metabolism lid1708" transform="translate(1005.3,1282.8)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1708" target="_blank">4-hydroxyphenylacetate</a></text><title></title></g>
+<g id="node5939" class="node nodeHM pw_tyrosine-metabolism lid1826" transform="translate(1208.7,1158.3)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1826" target="_blank">homogentisate</a></text><title></title></g>
+<g id="node5942" class="node nodeHM pw_tyrosine-metabolism lid4768" transform="translate(1167.3,766.6)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4768" target="_blank">4-Maleylacetoacetate</a></text><title></title></g>
+<g id="node5944" class="node nodeHM pw_tyrosine-metabolism lid15554" transform="translate(1129.2,393.0)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15554" target="_blank">4-Fumarylacetoacetate</a></text><title></title></g>
+<g id="node4770" class="node nodeHM pw_tyrosine-metabolism lid2132" transform="translate(966.4,1921.2)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2132" target="_blank">(4-hydroxyphenyl)acetaldehyde</a></text><title></title></g>
+<g id="node4766" class="node nodeHM pw_tyrosine-metabolism lid29256" transform="translate(786.2,2312.2)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29256" target="_blank">4-(1-hydroxyethyl)phenol</a></text><title></title></g>
+<g id="node1384" class="node nodeHM pw_tyrosine-metabolism lid423" transform="translate(695.7,1523.8)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=423" target="_blank">4-hydroxyphenylpyruvate</a></text><title></title></g>
+<g id="node2596" class="node nodeHM pw_tyrosine-metabolism lid20766" transform="translate(1984.4,1545.4)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20766" target="_blank">L-tyrosyl-tRNATyr</a></text><title></title></g>
+<g id="node1948" class="node nodeHM pw_tyrosine-metabolism lid28799" transform="translate(2331.5,1343.9)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28799" target="_blank">cyclo(L-tyrosyl-L-tyrosyl)</a></text><title></title></g>
+<g id="node1946" class="node nodeHM pw_tyrosine-metabolism lid88404" transform="translate(2665.0,1142.3)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88404" target="_blank">mycocyclosin</a></text><title></title></g>
+<g id="node1156" class="node nodeHM pw_tyrosine-metabolism lid235295" transform="translate(401.1,1725.4)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=235295" target="_blank">(R)-3-(4-hydroxyphenyl)lactoyl-CoA</a></text><title></title></g>
+<g id="node1159" class="node nodeHM pw_tyrosine-metabolism lid237207" transform="translate(468.6,1826.2)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=237207" target="_blank">(E)-4-coumaroyl-CoA</a></text><title></title></g>
+<g id="node1162" class="node nodeHM pw_tyrosine-metabolism lid44694" transform="translate(72.4,1329.0)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44694" target="_blank">phloretate</a></text><title></title></g>
+<g id="node1158" class="node nodeHM pw_tyrosine-metabolism lid1215" transform="translate(434.8,1423.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1215" target="_blank">4-coumarate</a></text><title></title></g>
+<g id="node2597" class="node nodeHM pw_tyrosine-metabolism lid1307" transform="translate(1973.3,1714.3)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1307" target="_blank">tRNATyr</a></text><title></title></g>
+<g id="node5948" class="node nodeHM pw_tyrosine-metabolism lid419" transform="translate(1228.5,52.5)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=419" target="_blank">AcAc</a></text><title></title></g>
+<g id="node5947" class="node nodeHM pw_tyrosine-metabolism lid170" transform="translate(960.2,81.8)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170" target="_blank">fumarate</a></text><title></title></g>
+<g id="node5926" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1339.0,2129.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.79" target="_blank">2.6.1.79</a></text><title>glutamate-prephenate aminotransferase</title></g>
+<g id="node5929" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1579.2,1889.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.43" target="_blank">1.3.1.43</a></text><title>arogenate dehydrogenase</title></g>
+<g id="node5923" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1429.2,1484.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.5" target="_blank">2.6.1.5</a></text><title>tyrosine transaminase; phenylalanine(histidine) transaminase; tyrosine transaminase</title></g>
+<g id="node4775" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1416.5,1685.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.58" target="_blank">2.6.1.58</a></text><title>tyrosine transaminase; phenylalanine(histidine) transaminase; tyrosine transaminase</title></g>
+<g id="node5933" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1402.9,1786.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.5" target="_blank">2.6.1.5</a></text><title>tyrosine transaminase; phenylalanine(histidine) transaminase; tyrosine transaminase</title></g>
+<g id="node5918" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1226.0,1783.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.12" target="_blank">1.3.1.12</a></text><title>prephenate dehydrogenase</title></g>
+<g id="node3300" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1756.3,1877.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.25" target="_blank">4.1.1.25</a></text><title>Tyrosine decarboxylase</title></g>
+<g id="node12476" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1961.3,2228.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.4" target="_blank">1.4.3.4</a></text><title>monoamine oxidase</title></g>
+<g id="node12483" class="node nodeEN pw_tyrosine-metabolism" transform="translate(2151.4,2549.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.1" target="_blank">1.1.1.1</a></text><title>alcohol dehydrogenase</title></g>
+<g id="node12487" class="node nodeEN pw_tyrosine-metabolism" transform="translate(2342.1,2853.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.35" target="_blank">2.4.1.35</a></text><title>phenol beta-glucosyltransferase</title></g>
+<g id="node4765" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1688.6,1536.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.99.2" target="_blank">4.1.99.2</a></text><title>tyrosine phenol-lyase</title></g>
+<g id="node5949" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1130.2,1484.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.3.13" target="_blank">1.2.3.13</a></text><title>4-hydroxyphenylpyruvate oxidase</title></g>
+<g id="node5936" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1227.1,1383.6)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.27" target="_blank">1.13.11.27</a></text><title>4-hydroxyphenylpyruvate dioxygenase</title></g>
+<g id="node5940" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1187.0,958.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.5" target="_blank">1.13.11.5</a></text><title>homogentisate 1,2-dioxygenase</title></g>
+<g id="node5943" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1148.3,578.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.2.1.2" target="_blank">5.2.1.2</a></text><title>Maleylacetoacetate isomerase</title></g>
+<g id="node4772" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1048.9,1759.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.80" target="_blank">4.1.1.80</a></text><title>4-hydroxyphenylpyruvate decarboxylase</title></g>
+<g id="node4769" class="node nodeEN pw_tyrosine-metabolism" transform="translate(875.5,2138.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.21" target="_blank">1.1.1.21</a></text><title>aldose reductase</title></g>
+<g id="node1383" class="node nodeEN pw_tyrosine-metabolism" transform="translate(997.2,1593.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.110" target="_blank">1.1.1.110</a></text><title>aromatic 2-oxoacid reductase</title></g>
+<g id="node1949" class="node nodeEN pw_tyrosine-metabolism" transform="translate(2160.6,1444.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.21" target="_blank">2.3.2.21</a></text><title>cyclo(L-tyrosyl-L-tyrosyl) synthase</title></g>
+<g id="node1947" class="node nodeEN pw_tyrosine-metabolism" transform="translate(2499.8,1243.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.19.70" target="_blank">1.14.19.70</a></text><title>mycocyclosin synthase</title></g>
+<g id="node1160" class="node nodeEN pw_tyrosine-metabolism" transform="translate(285.6,1926.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.175" target="_blank">4.2.1.175</a></text><title>(R)-3-(aryl)lactoyl-CoA dehydratase</title></g>
+<g id="node1163" class="node nodeEN pw_tyrosine-metabolism" transform="translate(265.1,1322.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.15" target="_blank">1.3.8.15</a></text><title>3-(aryl)acrylate reductase</title></g>
+<g id="node1157" class="node nodeEN pw_tyrosine-metabolism" transform="translate(571.3,1624.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.17" target="_blank">2.8.3.17</a></text><title>3-(aryl)acryloyl-CoA:(R)-3-(aryl)lactate CoA-transferase</title></g>
+<g id="node2598" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1811.7,1646.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.1" target="_blank">6.1.1.1</a></text><title>Tyrosine-tRNA ligase</title></g>
+<g id="node5945" class="node nodeEN pw_tyrosine-metabolism" transform="translate(1109.3,204.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.2" target="_blank">3.7.1.2</a></text><title>fumarylacetoacetase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5926~0" class="node nodeCM pw_tyrosine-metabolism lid41" transform="translate(1303.0,2049.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5926~1" class="node nodeCM pw_tyrosine-metabolism lid34" transform="translate(1401.5,2068.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5929~0" class="node nodeCM pw_tyrosine-metabolism lid10" transform="translate(1642.7,1954.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5929~1" class="node nodeCM pw_tyrosine-metabolism lid5" transform="translate(1500.4,1845.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5929~2" class="node nodeCM pw_tyrosine-metabolism lid28" transform="translate(1537.6,1811.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5923~0" class="node nodeCM pw_tyrosine-metabolism lid41" transform="translate(1501.2,1435.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5923~1" class="node nodeCM pw_tyrosine-metabolism lid34" transform="translate(1357.1,1533.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node4775~0" class="node nodeCM pw_tyrosine-metabolism lid31" transform="translate(1495.2,1632.0)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node4775~1" class="node nodeCM pw_tyrosine-metabolism lid103" transform="translate(1344.4,1735.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node5933~0" class="node nodeCM pw_tyrosine-metabolism lid34" transform="translate(1475.0,1737.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5933~1" class="node nodeCM pw_tyrosine-metabolism lid41" transform="translate(1330.8,1836.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5918~0" class="node nodeCM pw_tyrosine-metabolism lid7" transform="translate(1144.1,1818.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5918~1" class="node nodeCM pw_tyrosine-metabolism lid8" transform="translate(1149.8,1737.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node3300~0" class="node nodeCM pw_tyrosine-metabolism lid28" transform="translate(1843.7,1877.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node12476~0" class="node nodeCM pw_tyrosine-metabolism lid1" transform="translate(1875.8,2246.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12476~1" class="node nodeCM pw_tyrosine-metabolism lid9" transform="translate(1880.8,2199.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12476~2" class="node nodeCM pw_tyrosine-metabolism lid22" transform="translate(2048.4,2210.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node12476~3" class="node nodeCM pw_tyrosine-metabolism lid27" transform="translate(2043.3,2258.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node12483~0" class="node nodeCM pw_tyrosine-metabolism lid5" transform="translate(2188.1,2466.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node12483~1" class="node nodeCM pw_tyrosine-metabolism lid10" transform="translate(2241.8,2555.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node12487~0" class="node nodeCM pw_tyrosine-metabolism lid64" transform="translate(2377.4,2766.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node12487~1" class="node nodeCM pw_tyrosine-metabolism lid26" transform="translate(2429.4,2856.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node4765~0" class="node nodeCM pw_tyrosine-metabolism lid1" transform="translate(1731.1,1612.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4765~1" class="node nodeCM pw_tyrosine-metabolism lid27" transform="translate(1625.6,1474.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node4765~2" class="node nodeCM pw_tyrosine-metabolism lid249" transform="translate(1668.7,1446.3)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=249" target="_blank">phenol</a></text><title></title></g>
+<g id="node5949~2" class="node nodeCM pw_tyrosine-metabolism lid1" transform="translate(1122.4,1397.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5936~0" class="node nodeCM pw_tyrosine-metabolism lid9" transform="translate(1191.7,1458.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5936~1" class="node nodeCM pw_tyrosine-metabolism lid28" transform="translate(1158.2,1377.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5940~0" class="node nodeCM pw_tyrosine-metabolism lid9" transform="translate(1122.3,1015.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node4772~0" class="node nodeCM pw_tyrosine-metabolism lid28" transform="translate(1125.5,1775.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4769~0" class="node nodeCM pw_tyrosine-metabolism lid8" transform="translate(963.1,2122.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4769~1" class="node nodeCM pw_tyrosine-metabolism lid7" transform="translate(920.4,2215.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node1383~0" class="node nodeCM pw_tyrosine-metabolism lid8" transform="translate(1055.3,1525.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node1383~1" class="node nodeCM pw_tyrosine-metabolism lid7" transform="translate(953.8,1515.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node1947~0" class="node nodeCM pw_tyrosine-metabolism lid202701" transform="translate(2563.9,1363.0)"><rect rx="5" height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202701" target="_blank">reduced ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1947~1" class="node nodeCM pw_tyrosine-metabolism lid12" transform="translate(2494.0,1328.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node1947~2" class="node nodeCM pw_tyrosine-metabolism lid9" transform="translate(2449.6,1312.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1947~3" class="node nodeCM pw_tyrosine-metabolism lid202698" transform="translate(2470.8,1108.6)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202698" target="_blank">oxidized ferredoxin [Fe-S] cluster</a></text><title></title></g>
+<g id="node1947~4" class="node nodeCM pw_tyrosine-metabolism lid1" transform="translate(2529.4,1160.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1160~0" class="node nodeCM pw_tyrosine-metabolism lid1" transform="translate(372.9,1928.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1163~0" class="node nodeCM pw_tyrosine-metabolism lid1601" transform="translate(165.3,1407.3)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1601" target="_blank">electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node1163~1" class="node nodeCM pw_tyrosine-metabolism lid2112" transform="translate(374.7,1228.8)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2112" target="_blank">reduced electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node2598~0" class="node nodeCM pw_tyrosine-metabolism lid4" transform="translate(1819.7,1733.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2598~1" class="node nodeCM pw_tyrosine-metabolism lid30" transform="translate(1780.1,1564.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node2598~2" class="node nodeCM pw_tyrosine-metabolism lid17" transform="translate(1828.0,1560.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node5945~0" class="node nodeCM pw_tyrosine-metabolism lid1" transform="translate(1185.8,246.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

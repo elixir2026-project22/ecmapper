@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1061.8 1888.0" width="1062" height="1888" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1061.8" height="1888.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_O-antigen-biosynthesis" class="pw " x="0.0" y="0.0" width="941.8" height="1752.5" style="opacity: 0.5; fill: rgb(221, 221, 221);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 470.9 201.5 L 470.9 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 470.9 233.5 L 470.9 366.5"/>
+<path class="link" marker-start="url(#in)" d="M 468.7 532.4 C 467.0 520.4 464.8 503.2 464.0 488.1 C 462.9 470.8 463.1 466.4 464.0 449.1 C 464.9 431.4 467.2 411.3 468.9 397.8"/>
+<path class="link" marker-end="url(#in)" d="M 470.9 563.5 L 470.9 696.5"/>
+<path class="link" marker-start="url(#in)" d="M 470.9 861.5 L 470.9 728.5"/>
+<path class="link" marker-end="url(#in)" d="M 470.9 893.5 L 470.9 1026.5"/>
+<path class="link" marker-start="url(#in)" d="M 470.9 1191.5 L 470.9 1058.5"/>
+<path class="link" marker-end="url(#in)" d="M 470.9 1223.5 L 470.9 1356.5"/>
+<path class="link" marker-start="url(#in)" d="M 470.9 1521.5 L 470.9 1388.5"/>
+<path class="link" marker-end="url(#in)" d="M 470.9 1553.5 L 470.9 1686.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 493.8 531.5 L 560.8 484.6"/>
+<path class="link" marker-end="url(#in)" d="M 493.8 563.5 L 526.8 586.6"/>
+<path class="link" marker-start="url(#in)" d="M 493.8 861.5 L 543.5 826.7"/>
+<path class="link" marker-end="url(#in)" d="M 493.8 893.5 L 526.8 916.6"/>
+<path class="link" marker-start="url(#in)" d="M 493.8 1191.5 L 538.2 1160.4"/>
+<path class="link" marker-end="url(#in)" d="M 493.8 1223.5 L 526.8 1246.6"/>
+<path class="link" marker-start="url(#in)" d="M 493.8 1521.5 L 543.5 1486.7"/>
+<path class="link" marker-end="url(#in)" d="M 493.8 1553.5 L 526.8 1576.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_O-antigen-biosynthesis" transform="translate(470.9,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">O-antigen biosynthesis</text></g>
+<g id="node11569" class="node nodeHM pw_O-antigen-biosynthesis lid6385" transform="translate(470.9,52.5)"><rect height="30.0" width="450.6" x="-225.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6385" target="_blank">N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-undecaprenol</a></text><title></title></g>
+<g id="node11571" class="node nodeHM pw_O-antigen-biosynthesis lid15359" transform="translate(470.9,382.5)"><rect height="30.0" width="463.6" x="-231.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15359" target="_blank">N-acetyl-alpha-D-galactosaminyl-diphospho-ditrans,octacis-undecaprenol</a></text><title></title></g>
+<g id="node11573" class="node nodeHM pw_O-antigen-biosynthesis lid28970" transform="translate(470.9,712.5)"><rect height="30.0" width="496.0" x="-248.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28970" target="_blank">alpha-D-GalNAc-(1-&gt;3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol</a></text><title></title></g>
+<g id="node11575" class="node nodeHM pw_O-antigen-biosynthesis lid28972" transform="translate(470.9,1042.5)"><rect height="30.0" width="612.6" x="-306.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28972" target="_blank">beta-D-Gal-(1-&gt;3)-alpha-D-GalNAc-(1-&gt;3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol</a></text><title></title></g>
+<g id="node11577" class="node nodeHM pw_O-antigen-biosynthesis lid28971" transform="translate(470.9,1372.5)"><rect height="30.0" width="735.8" x="-367.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28971" target="_blank">alpha-L-Fuc-(1-&gt;2)-beta-D-Gal-(1-&gt;3)-alpha-D-GalNAc-(1-&gt;3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol</a></text><title></title></g>
+<g id="node11579" class="node nodeHM pw_O-antigen-biosynthesis lid89273" transform="translate(470.9,1702.5)"><rect height="30.0" width="871.8" x="-435.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89273" target="_blank">alpha-D-Gal-(1-&gt;3)-(alpha-L-Fuc-(1-&gt;2))-beta-D-Gal-(1-&gt;3)-alpha-D-GalNAc-(1-&gt;3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol</a></text><title></title></g>
+<g id="node11570" class="node nodeEN pw_O-antigen-biosynthesis" transform="translate(470.9,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.3.26" target="_blank">5.1.3.26</a></text><title>N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-undecaprenol 4-epimerase</title></g>
+<g id="node11572" class="node nodeEN pw_O-antigen-biosynthesis" transform="translate(470.9,547.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.306" target="_blank">2.4.1.306</a></text><title>UDP-GalNAc:alpha-D-GalNAc-diphosphoundecaprenol alpha-1,3-N-acetylgalactosaminyltransferase</title></g>
+<g id="node11574" class="node nodeEN pw_O-antigen-biosynthesis" transform="translate(470.9,877.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.122" target="_blank">2.4.1.122</a></text><title>N-acetylgalactosaminide beta-1,3-galactosyltransferase</title></g>
+<g id="node11576" class="node nodeEN pw_O-antigen-biosynthesis" transform="translate(470.9,1207.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.308" target="_blank">2.4.1.308</a></text><title>GDP-Fuc:beta-D-Gal-1,3-alpha-D-GalNAc-1,3-alpha-GalNAc-diphosphoundecaprenol alpha-1,2-fucosyltransferase</title></g>
+<g id="node11578" class="node nodeEN pw_O-antigen-biosynthesis" transform="translate(470.9,1537.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.309" target="_blank">2.4.1.309</a></text><title>UDP-Gal:alpha-L-Fuc-1,2-beta-Gal-1,3-alpha-GalNAc-1,3-alpha-GalNAc-diphosphoundecaprenol alpha-1,3-galactosyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11572~0" class="node nodeCM pw_O-antigen-biosynthesis lid1010" transform="translate(583.6,468.6)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1010" target="_blank">UDP-N-acetyl-alpha-D-galactosamine</a></text><title></title></g>
+<g id="node11572~1" class="node nodeCM pw_O-antigen-biosynthesis lid26" transform="translate(542.5,597.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11574~0" class="node nodeCM pw_O-antigen-biosynthesis lid891" transform="translate(566.4,810.7)"><rect rx="5" height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=891" target="_blank">UDP-alpha-D-galactose</a></text><title></title></g>
+<g id="node11574~1" class="node nodeCM pw_O-antigen-biosynthesis lid26" transform="translate(542.5,927.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11576~0" class="node nodeCM pw_O-antigen-biosynthesis lid651" transform="translate(561.1,1144.4)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=651" target="_blank">GDP-beta-L-fucose</a></text><title></title></g>
+<g id="node11576~1" class="node nodeCM pw_O-antigen-biosynthesis lid53" transform="translate(542.5,1257.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node11578~0" class="node nodeCM pw_O-antigen-biosynthesis lid891" transform="translate(566.4,1470.7)"><rect rx="5" height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=891" target="_blank">UDP-alpha-D-galactose</a></text><title></title></g>
+<g id="node11578~1" class="node nodeCM pw_O-antigen-biosynthesis lid26" transform="translate(542.5,1587.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+</g></svg>

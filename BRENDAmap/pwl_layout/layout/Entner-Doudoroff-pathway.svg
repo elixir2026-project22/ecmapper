@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1921.3 1501.8" width="1921" height="1502" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1921.3" height="1501.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_Entner-Doudoroff-pathway" class="pw " x="0.0" y="0.0" width="1801.3" height="1366.3" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 476.9 448.5 L 429.4 448.5"/>
+<path class="link" marker-start="url(#in)" d="M 663.9 448.5 L 718.2 448.5"/>
+<path class="link" marker-start="url(#in)" d="M 918.4 587.3 L 829.7 464.5"/>
+<path class="link" marker-end="url(#in)" d="M 942.7 619.3 L 1040.6 742.1"/>
+<path class="link" marker-start="url(#in)" d="M 1220.9 986.7 C 1188.8 942.9 1096.6 817.1 1064.5 773.4"/>
+<path class="link" marker-end="url(#in)" d="M 1203.1 1017.5 C 1151.7 1044.8 1045.6 1101.4 994.3 1128.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1077.9 951.2 L 1055.4 774.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1069.5 983.2 L 975.6 1128.2"/>
+<path class="link" marker-start="url(#in)" d="M 945.8 918.2 L 1042.6 774.1"/>
+<path class="link" marker-end="url(#in)" d="M 937.3 950.2 L 962.9 1128.2"/>
+<path class="link" marker-start="url(#in)" d="M 825.0 887.3 C 874.2 859.5 977.1 801.3 1026.2 773.5"/>
+<path class="link" marker-end="url(#in)" d="M 808.3 918.3 C 838.6 961.9 924.4 1085.4 954.6 1128.8"/>
+<path class="link" marker-start="url(#in)" d="M 820.1 1214.1 L 932.0 1160.2"/>
+<path class="link" marker-end="url(#in)" d="M 753.6 1246.1 L 641.7 1300.0"/>
+<path class="link" marker-start="url(#in)" d="M 463.3 1246.1 L 575.2 1300.0"/>
+<path class="link" marker-end="url(#in)" d="M 396.9 1214.1 L 284.9 1160.2"/>
+<path class="link" marker-end="url(#in)" d="M 211.3 967.1 L 248.0 1128.2"/>
+<path class="link" marker-start="url(#in)" d="M 204.0 935.1 L 167.2 774.1"/>
+<path class="link" marker-start="url(#in)" d="M 295.5 504.5 L 391.5 457.7"/>
+<path class="link" marker-end="url(#in)" d="M 229.0 504.5 L 97.8 442.2"/>
+<path class="link" marker-end="url(#in)" d="M 255.9 536.5 L 170.2 742.1"/>
+<path class="link" marker-start="url(#in)" d="M 410.5 234.5 L 410.5 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 410.5 266.5 L 410.5 432.5"/>
+<path class="link" marker-start="url(#in)" d="M 1492.0 662.5 L 1589.1 828.5"/>
+<path class="link" marker-end="url(#in)" d="M 1492.0 630.5 L 1589.1 464.5"/>
+<path class="link" marker-start="url(#in)" d="M 1669.2 662.5 L 1604.7 828.5"/>
+<path class="link" marker-end="url(#in)" d="M 1669.2 630.5 L 1604.7 464.5"/>
+<path class="link" marker-start="url(#in)" d="M 1432.4 448.5 L 1524.4 448.5"/>
+<path class="link" marker-end="url(#in)" d="M 1368.5 448.5 L 1237.6 448.5"/>
+<path class="link" marker-start="url(#in)" d="M 1095.2 448.5 L 1167.3 448.5"/>
+<path class="link" marker-end="url(#in)" d="M 966.5 448.5 L 918.1 448.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 581.6 464.5 L 609.3 504.1"/>
+<path class="link" marker-end="url(#in)" d="M 559.2 464.5 L 531.5 504.1"/>
+<path class="link" marker-end="url(#in)" d="M 924.8 619.3 L 905.9 678.2"/>
+<path class="link" marker-start="url(#in)" d="M 1204.8 986.0 L 1178.4 970.6"/>
+<path class="link" marker-start="url(#in)" d="M 1224.6 986.0 L 1201.2 936.6"/>
+<path class="link" marker-end="url(#in)" d="M 1246.6 1018.0 L 1290.4 1066.4"/>
+<path class="link" marker-start="url(#in)" d="M 1054.1 951.2 L 1023.3 932.1"/>
+<path class="link" marker-start="url(#in)" d="M 1072.0 951.2 L 1049.2 904.8"/>
+<path class="link" marker-end="url(#in)" d="M 1094.4 983.2 L 1125.1 1017.2"/>
+<path class="link" marker-start="url(#in)" d="M 909.0 918.2 L 879.6 900.0"/>
+<path class="link" marker-start="url(#in)" d="M 927.3 918.2 L 905.0 871.8"/>
+<path class="link" marker-end="url(#in)" d="M 949.5 950.2 L 981.4 985.4"/>
+<path class="link" marker-start="url(#in)" d="M 771.6 886.8 L 742.1 868.7"/>
+<path class="link" marker-start="url(#in)" d="M 789.9 886.8 L 767.5 840.4"/>
+<path class="link" marker-end="url(#in)" d="M 812.1 918.8 L 845.0 955.2"/>
+<path class="link" marker-start="url(#in)" d="M 815.4 1246.1 L 847.3 1264.0"/>
+<path class="link" marker-end="url(#in)" d="M 784.2 1246.1 L 775.4 1300.3"/>
+<path class="link" marker-start="url(#in)" d="M 153.0 945.3 L 138.1 943.7"/>
+<path class="link" marker-start="url(#in)" d="M 187.2 935.1 L 154.6 909.5"/>
+<path class="link" marker-end="url(#in)" d="M 193.1 967.1 L 162.4 1001.1"/>
+<path class="link" marker-end="url(#in)" d="M 433.3 266.5 L 466.3 289.6"/>
+<path class="link" marker-start="url(#in)" d="M 1505.4 662.5 L 1534.6 682.9"/>
+<path class="link" marker-end="url(#in)" d="M 1459.7 630.5 L 1430.6 610.1"/>
+<path class="link" marker-start="url(#in)" d="M 1698.3 662.5 L 1729.4 684.3"/>
+<path class="link" marker-end="url(#in)" d="M 1652.6 630.5 L 1621.5 608.7"/>
+<path class="link" marker-start="url(#in)" d="M 1411.7 464.5 L 1439.4 504.1"/>
+<path class="link" marker-end="url(#in)" d="M 1019.7 464.5 L 992.0 504.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_Entner-Doudoroff-pathway" transform="translate(900.7,0.0)"><rect rx="10" height="31" width="243" x="-121.6" y="-15.5"/><text dominant-baseline="central">Entner Doudoroff pathway</text></g>
+<g id="node8435" class="node nodeHM pw_Entner-Doudoroff-pathway lid8212" transform="translate(410.5,448.5)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8212" target="_blank">KDPG</a></text><title></title></g>
+<g id="node10016" class="node nodeHM pw_Entner-Doudoroff-pathway lid1172" transform="translate(818.1,448.5)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1172" target="_blank">2-dehydro-3-deoxy-D-gluconate</a></text><title></title></g>
+<g id="node10020" class="node nodeHM pw_Entner-Doudoroff-pathway lid1125" transform="translate(1053.4,758.1)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1125" target="_blank">glyceraldehyde</a></text><title></title></g>
+<g id="node8723" class="node nodeHM pw_Entner-Doudoroff-pathway lid2454" transform="translate(965.3,1144.2)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2454" target="_blank">D-glycerate</a></text><title></title></g>
+<g id="node11369" class="node nodeHM pw_Entner-Doudoroff-pathway lid10090" transform="translate(608.5,1316.0)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10090" target="_blank">2-phospho-D-glycerate</a></text><title></title></g>
+<g id="node11368" class="node nodeHM pw_Entner-Doudoroff-pathway lid194" transform="translate(251.7,1144.2)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=194" target="_blank">3-phosphoglycerate</a></text><title></title></g>
+<g id="node11367" class="node nodeHM pw_Entner-Doudoroff-pathway lid147" transform="translate(163.6,758.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node8680" class="node nodeHM pw_Entner-Doudoroff-pathway lid31" transform="translate(65.9,427.0)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node12182" class="node nodeHM pw_Entner-Doudoroff-pathway lid43607" transform="translate(410.5,52.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43607" target="_blank">GA-6P</a></text><title></title></g>
+<g id="node11374" class="node nodeHM pw_Entner-Doudoroff-pathway lid35" transform="translate(1598.5,844.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node10003" class="node nodeHM pw_Entner-Doudoroff-pathway lid467" transform="translate(1598.5,448.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=467" target="_blank">D-glucono-1,5-lactone</a></text><title></title></g>
+<g id="node2276" class="node nodeHM pw_Entner-Doudoroff-pathway lid698" transform="translate(1202.5,448.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=698" target="_blank">gluconate</a></text><title></title></g>
+<g id="node11371" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(570.4,448.5)"><rect rx="15" height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.45" target="_blank">2.7.1.45/2.7.1.58/2.7.1.178</a></text><title>2-dehydro-3-deoxygluconokinase;2-dehydro-3-deoxygalactonokinase;2-dehydro-3-deoxyglucono/galactono-kinase</title></g>
+<g id="node10007" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(929.9,603.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.51" target="_blank">4.1.2.51</a></text><title>2-dehydro-3-deoxy-D-gluconate aldolase</title></g>
+<g id="node2957" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(1232.1,1002.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.99.8" target="_blank">1.2.99.8</a></text><title>glyceraldehyde dehydrogenase (FAD-containing); aldehyde dehydrogenase (NAD+); D-glyceraldehyde dehydrogenase (NADP+); aldehyde ferredoxin oxidoreductase</title></g>
+<g id="node10018" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(1079.9,967.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.3" target="_blank">1.2.1.3</a></text><title>glyceraldehyde dehydrogenase (FAD-containing); aldehyde dehydrogenase (NAD+); D-glyceraldehyde dehydrogenase (NADP+); aldehyde ferredoxin oxidoreductase</title></g>
+<g id="node11298" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(935.0,934.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.89" target="_blank">1.2.1.89</a></text><title>glyceraldehyde dehydrogenase (FAD-containing); aldehyde dehydrogenase (NAD+); D-glyceraldehyde dehydrogenase (NADP+); aldehyde ferredoxin oxidoreductase</title></g>
+<g id="node8287" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(797.6,902.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.5" target="_blank">1.2.7.5</a></text><title>glyceraldehyde dehydrogenase (FAD-containing); aldehyde dehydrogenase (NAD+); D-glyceraldehyde dehydrogenase (NADP+); aldehyde ferredoxin oxidoreductase</title></g>
+<g id="node8722" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(786.9,1230.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.165" target="_blank">2.7.1.165</a></text><title>glycerate 2-kinase</title></g>
+<g id="node11370" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(430.1,1230.1)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.2.11" target="_blank">5.4.2.11/5.4.2.12</a></text><title>phosphoglycerate mutase (2,3-diphosphoglycerate-dependent);phosphoglycerate mutase (2,3-diphosphoglycerate-independent)</title></g>
+<g id="node8726" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(207.6,951.1)"><rect rx="15" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.3" target="_blank">1.2.1.3/1.2.1.9</a></text><title>aldehyde dehydrogenase (NAD+);glyceraldehyde-3-phosphate dehydrogenase (NADP+)</title></g>
+<g id="node8437" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(262.6,520.5)"><rect rx="15" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.14" target="_blank">4.1.2.14/4.1.2.21/4.1.2.55</a></text><title>2-dehydro-3-deoxy-phosphogluconate aldolase;2-dehydro-3-deoxy-6-phosphogalactonate aldolase;2-dehydro-3-deoxy-phosphogluconate/2-dehydro-3-deoxy-6-phosphogalactonate aldolase</title></g>
+<g id="node8415" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(410.5,250.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.12" target="_blank">4.2.1.12</a></text><title>phosphogluconate dehydratase</title></g>
+<g id="node2753" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(1482.6,646.5)"><rect rx="15" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.119" target="_blank">1.1.1.119/1.1.1.360</a></text><title>glucose 1-dehydrogenase (NADP+);glucose/galactose 1-dehydrogenase; glucose 1-dehydrogenase (NAD+)</title></g>
+<g id="node10624" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(1675.5,646.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.118" target="_blank">1.1.1.118</a></text><title>glucose 1-dehydrogenase (NADP+);glucose/galactose 1-dehydrogenase; glucose 1-dehydrogenase (NAD+)</title></g>
+<g id="node10012" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(1400.5,448.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.17" target="_blank">3.1.1.17</a></text><title>gluconolactonase</title></g>
+<g id="node10002" class="node nodeEN pw_Entner-Doudoroff-pathway" transform="translate(1030.9,448.5)"><rect rx="15" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.39" target="_blank">4.2.1.39/4.2.1.140</a></text><title>gluconate dehydratase;gluconate/galactonate dehydratase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11371~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid4" transform="translate(620.5,520.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11371~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid13" transform="translate(520.3,520.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10007~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid31" transform="translate(900.8,694.2)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node2957~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid66" transform="translate(1151.0,954.6)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node2957~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(1193.6,920.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2957~2" class="node nodeCM pw_Entner-Doudoroff-pathway lid77" transform="translate(1304.9,1082.4)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node10018~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid7" transform="translate(1004.3,920.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10018~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(1041.4,888.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10018~2" class="node nodeCM pw_Entner-Doudoroff-pathway lid8" transform="translate(1139.6,1033.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node11298~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid10" transform="translate(857.4,886.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11298~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(897.3,855.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11298~2" class="node nodeCM pw_Entner-Doudoroff-pathway lid5" transform="translate(995.8,1001.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8287~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid289" transform="translate(719.9,855.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node8287~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(759.8,824.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8287~2" class="node nodeCM pw_Entner-Doudoroff-pathway lid265" transform="translate(859.5,971.2)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node8722~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid4" transform="translate(863.1,1272.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8722~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid13" transform="translate(772.8,1316.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node8726~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid7" transform="translate(119.2,941.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node8726~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(138.9,897.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8726~2" class="node nodeCM pw_Entner-Doudoroff-pathway lid8" transform="translate(147.9,1017.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node8415~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(482.0,300.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2753~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid10" transform="translate(1556.8,698.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2753~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid5" transform="translate(1408.4,594.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10624~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid7" transform="translate(1748.3,697.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10624~1" class="node nodeCM pw_Entner-Doudoroff-pathway lid8" transform="translate(1602.6,595.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10012~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(1450.6,520.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10002~0" class="node nodeCM pw_Entner-Doudoroff-pathway lid1" transform="translate(980.8,520.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

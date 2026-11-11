@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2029" height="1489" viewBox="0 0 2028.7 1489.3"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="8890.5 5708.5 794.6 655.7" width="795" height="656" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="8890.5" y="5708.5" width="794.6" height="655.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_acetoin-degradation" class="pw pw6" x="8930.5" y="5764.0" width="714.6" height="560.2" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9082.8 5859.0 L 9219.9 5928.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9096.3 5843.0 L 9150.2 5843.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9439.7 5843.0 L 9541.7 5843.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9372.5 5843.0 L 9279.5 5843.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9414.8 5960.9 L 9327.5 6157.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9389.4 5928.9 L 9247.3 5859.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9176.6 6081.6 L 9176.2 6157.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9186.6 6049.6 L 9241.3 5960.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9310.9 6049.6 L 9260.4 5960.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9319.9 6081.6 L 9319.4 6157.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9051.4 6176.4 L 9131.2 6176.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9015.0 6192.4 L 9015.0 6270.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9483.2 6176.4 L 9364.1 6176.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9517.0 6160.4 L 9517.8 6081.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9256.7 6250.0 L 9303.6 6194.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9231.1 6250.0 L 9189.9 6194.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 9282.3 6266.0 L 9506.7 6266.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 9051.5 5827.0 L 9051.5 5804.3"/>
+<path class="link" marker-end="url(#in)" d="M 9038.2 5859.0 L 9014.9 5887.1"/>
+<path class="link" marker-end="url(#in)" d="M 9080.0 5859.0 L 9130.2 5887.1"/>
+<path class="link" marker-start="url(#in)" d="M 9439.7 5827.1 L 9459.4 5817.8"/>
+<path class="link" marker-end="url(#in)" d="M 9374.7 5827.0 L 9361.0 5820.0"/>
+<path class="link" marker-end="url(#in)" d="M 9455.5 5944.9 L 9489.0 5944.9"/>
+<path class="link" marker-start="url(#in)" d="M 9147.0 6081.6 L 9131.4 6089.9"/>
+<path class="link" marker-end="url(#in)" d="M 9150.8 6049.6 L 9131.4 6037.6"/>
+<path class="link" marker-start="url(#in)" d="M 9289.4 6081.6 L 9272.7 6090.3"/>
+<path class="link" marker-end="url(#in)" d="M 9293.4 6049.6 L 9272.7 6037.1"/>
+<path class="link" marker-start="url(#in)" d="M 9000.8 6160.4 L 8978.4 6135.2"/>
+<path class="link" marker-end="url(#in)" d="M 9023.0 6160.4 L 9035.5 6135.2"/>
+<path class="link" marker-start="url(#in)" d="M 9533.2 6160.4 L 9558.5 6135.8"/>
+<path class="link" marker-end="url(#in)" d="M 9504.3 6160.4 L 9485.2 6135.8"/>
+<path class="link" marker-start="url(#in)" d="M 9203.9 6250.4 L 9176.6 6239.5"/>
+<path class="link" marker-start="url(#in)" d="M 9203.9 6281.3 L 9179.4 6290.8"/>
+<path class="link" marker-end="url(#in)" d="M 9282.3 6278.6 L 9325.6 6292.6"/>
+<path class="link" marker-end="url(#in)" d="M 9282.3 6253.1 L 9319.9 6240.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_acetoin-degradation" transform="translate(9287.8,5764.0)"><rect rx="10" height="31" width="187" x="-93.5" y="-15.5"/><text dominant-baseline="central">acetoin degradation</text></g>
+<g id="node2720" class="node nodeHM pw_acetoin-degradation lid44987" transform="translate(9517.9,6065.6)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44987" target="_blank">(R,R)-butane-2,3-diol</a></text><title>(R,R)-butane-2,3-diol</title></g>
+<g id="node8783" class="node nodeHM pw_acetoin-degradation lid90" transform="translate(9554.4,6266.0)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title>acetaldehyde</title></g>
+<g id="node9292" class="node nodeHM pw_acetoin-degradation lid10817" transform="translate(9214.9,5843.0)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10817" target="_blank">(S)-2-acetolactate</a></text><title>(S)-2-hydroxy-2-methyl-3-oxobutanoate</title></g>
+<g id="node9911" class="node nodeSM pw_acetoin-degradation lid8210" transform="translate(9176.1,6176.4)"><rect height="35.0" width="87.7" x="-43.9" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8210" target="_blank">(S)-acetoin</a></text><title>(S)-acetoin</title></g>
+<g id="node9917" class="node nodeHM pw_acetoin-degradation lid746" transform="translate(9251.2,5944.9)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=746" target="_blank">diacetyl</a></text><title>diacetyl</title></g>
+<g id="node11943" class="node nodeSM pw_acetoin-degradation lid4876" transform="translate(9319.3,6176.4)"><rect height="35.0" width="87.7" x="-43.9" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4876" target="_blank">(R)-acetoin</a></text><title>(R)-acetoin</title></g>
+<g id="node11945" class="node nodeHM pw_acetoin-degradation lid44987" transform="translate(9015.0,6286.6)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44987" target="_blank">(S,S)-butane-2,3-diol</a></text><title>(2S,3S)-butane-2,3-diol</title></g>
+<g id="node12023" class="node nodeSM pw_acetoin-degradation lid31" transform="translate(9578.0,5843.0)"><rect height="35.0" width="70.8" x="-35.4" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>pyruvate</title></g>
+<g id="node9294" class="node nodeEN pw_acetoin-degradation" transform="translate(9051.5,5843.0)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node9279" class="node nodeEN pw_acetoin-degradation" transform="translate(9406.1,5843.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.6" target="_blank">2.2.1.6</a></text><title>acetolactate synthase</title></g>
+<g id="node9906" class="node nodeEN pw_acetoin-degradation" transform="translate(9421.9,5944.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.5" target="_blank">4.1.1.5</a></text><title>Acetolactate decarboxylase</title></g>
+<g id="node2986" class="node nodeEN pw_acetoin-degradation" transform="translate(9176.7,6065.6)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.304" target="_blank">1.1.1.304</a></text><title>diacetyl reductase [(S)-acetoin forming]</title></g>
+<g id="node9913" class="node nodeEN pw_acetoin-degradation" transform="translate(9320.0,6065.6)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.303" target="_blank">1.1.1.303</a></text><title>diacetyl reductase [(R)-acetoin forming]</title></g>
+<g id="node11946" class="node nodeEN pw_acetoin-degradation" transform="translate(9015.0,6176.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.76" target="_blank">1.1.1.76</a></text><title>(S,S)-butanediol dehydrogenase</title></g>
+<g id="node2721" class="node nodeEN pw_acetoin-degradation" transform="translate(9516.8,6176.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.4" target="_blank">1.1.1.4</a></text><title>(R,R)-butanediol dehydrogenase</title></g>
+<g id="node8785" class="node nodeEN pw_acetoin-degradation" transform="translate(9243.1,6266.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.190" target="_blank">2.3.1.190</a></text><title>acetoin dehydrogenase system</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2341" class="node nodeCM pw_acetoin-degradation lid1661" transform="translate(9158.8,5903.1)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title>reduced electron acceptor</title></g>
+<g id="node2342" class="node nodeCM pw_acetoin-degradation lid12937" transform="translate(9051.5,5788.3)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12937" target="_blank">oxidized electron acceptor</a></text><title>oxidized electron acceptor</title></g>
+<g id="node2718" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(9574.9,6119.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node2719" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(9472.7,6119.8)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node2984" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(9106.4,6022.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node2985" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(9106.4,6103.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node8779" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(9154.4,6300.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node8780" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(9350.7,6300.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node8781" class="node nodeCM pw_acetoin-degradation lid18" transform="translate(9154.4,6230.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node8782" class="node nodeCM pw_acetoin-degradation lid29" transform="translate(9350.7,6230.7)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node9281" class="node nodeCM pw_acetoin-degradation lid28" transform="translate(9338.7,5808.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node9290" class="node nodeCM pw_acetoin-degradation lid28" transform="translate(9001.7,5903.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node9293" class="node nodeCM pw_acetoin-degradation lid12" transform="translate(9478.9,5808.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node9908" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(9247.6,6103.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node9909" class="node nodeCM pw_acetoin-degradation lid28" transform="translate(9511.2,5944.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node9915" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(9247.6,6022.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node11944" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(9043.4,6119.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node11947" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(8964.2,6119.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="874.6" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1154.1 1449.3" width="1154" height="1449" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1154.1" height="1449.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_acetoin-degradation" class="pw " x="0.0" y="0.0" width="1074.1" height="1353.8" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 780.2 124.1 L 934.1 124.1"/>
+<path class="link" marker-end="url(#in)" d="M 722.9 124.1 L 601.4 124.1"/>
+<path class="link" marker-start="url(#in)" d="M 537.0 322.6 L 537.0 140.1"/>
+<path class="link" marker-end="url(#in)" d="M 537.0 354.0 C 537.0 393.6 537.0 498.4 537.0 537.8"/>
+<path class="link" marker-end="url(#in)" d="M 722.9 553.1 L 578.7 553.1"/>
+<path class="link" marker-start="url(#in)" d="M 780.2 553.1 L 892.0 553.1"/>
+<path class="link" marker-start="url(#in)" d="M 537.0 430.8 C 537.0 376.8 537.0 194.0 537.0 139.6"/>
+<path class="link" marker-end="url(#in)" d="M 537.0 460.9 C 537.0 514.9 537.0 697.7 537.0 752.2"/>
+<path class="link" marker-start="url(#in)" d="M 537.0 676.3 L 537.0 751.6"/>
+<path class="link" marker-end="url(#in)" d="M 537.0 644.3 L 537.0 569.1"/>
+<path class="link" marker-start="url(#in)" d="M 537.0 966.1 L 537.0 783.6"/>
+<path class="link" marker-end="url(#in)" d="M 537.0 997.5 C 537.0 1037.1 537.0 1141.9 537.0 1181.3"/>
+<path class="link" marker-end="url(#in)" d="M 354.5 1196.6 L 495.4 1196.6"/>
+<path class="link" marker-start="url(#in)" d="M 290.6 1196.6 L 182.1 1196.6"/>
+<path class="link" marker-start="url(#in)" d="M 537.0 1105.3 L 537.0 1180.6"/>
+<path class="link" marker-start="url(#in)" d="M 537.0 1073.9 C 537.0 995.8 537.0 646.0 537.0 568.4"/>
+<path class="link" marker-end="url(#in)" d="M 537.0 1104.8 C 537.0 1144.4 537.0 1249.1 537.0 1288.6"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 762.7 108.1 L 789.5 69.8"/>
+<path class="link" marker-end="url(#in)" d="M 740.3 108.1 L 712.6 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 546.0 354.6 L 591.3 435.2"/>
+<path class="link" marker-start="url(#in)" d="M 722.9 564.4 L 628.9 601.7"/>
+<path class="link" marker-end="url(#in)" d="M 738.2 569.1 L 668.5 652.6"/>
+<path class="link" marker-start="url(#in)" d="M 516.0 431.1 L 457.8 390.3"/>
+<path class="link" marker-end="url(#in)" d="M 558.0 453.0 L 606.9 469.9"/>
+<path class="link" marker-end="url(#in)" d="M 558.0 447.6 L 584.6 449.9"/>
+<path class="link" marker-start="url(#in)" d="M 572.2 662.8 L 636.3 667.3"/>
+<path class="link" marker-end="url(#in)" d="M 559.9 644.3 L 591.0 622.6"/>
+<path class="link" marker-start="url(#in)" d="M 514.2 966.1 L 483.1 944.3"/>
+<path class="link" marker-end="url(#in)" d="M 513.9 998.1 L 491.6 1013.5"/>
+<path class="link" marker-start="url(#in)" d="M 311.3 1212.6 L 282.7 1253.4"/>
+<path class="link" marker-end="url(#in)" d="M 333.7 1212.6 L 362.4 1253.4"/>
+<path class="link" marker-start="url(#in)" d="M 501.9 1077.2 L 470.2 1066.3"/>
+<path class="link" marker-start="url(#in)" d="M 520.6 1073.3 L 489.0 1042.6"/>
+<path class="link" marker-end="url(#in)" d="M 572.2 1101.4 L 598.8 1110.6"/>
+<path class="link" marker-end="url(#in)" d="M 550.0 1105.3 L 580.1 1142.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_acetoin-degradation" transform="translate(537.0,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">acetoin degradation</text></g>
+<g id="node12023" class="node nodeHM pw_acetoin-degradation lid31" transform="translate(966.0,124.1)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node9292" class="node nodeHM pw_acetoin-degradation lid10817" transform="translate(537.0,124.1)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10817" target="_blank">(S)-2-acetolactate</a></text><title></title></g>
+<g id="node11943" class="node nodeHM pw_acetoin-degradation lid4876" transform="translate(537.0,553.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4876" target="_blank">(R)-acetoin</a></text><title></title></g>
+<g id="node2720" class="node nodeHM pw_acetoin-degradation lid44987" transform="translate(966.0,553.1)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44987" target="_blank">(S,S)-butane-2,3-diol</a></text><title></title></g>
+<g id="node9917" class="node nodeHM pw_acetoin-degradation lid746" transform="translate(537.0,767.6)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=746" target="_blank">diacetyl</a></text><title></title></g>
+<g id="node9911" class="node nodeHM pw_acetoin-degradation lid8210" transform="translate(537.0,1196.6)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8210" target="_blank">(S)-acetoin</a></text><title></title></g>
+<g id="node11945" class="node nodeHM pw_acetoin-degradation lid44987" transform="translate(108.0,1196.6)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44987" target="_blank">(S,S)-butane-2,3-diol</a></text><title></title></g>
+<g id="node8783" class="node nodeHM pw_acetoin-degradation lid90" transform="translate(537.0,1303.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title></title></g>
+<g id="node9279" class="node nodeEN pw_acetoin-degradation" transform="translate(751.5,124.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.6" target="_blank">2.2.1.6</a></text><title>acetolactate synthase</title></g>
+<g id="node9906" class="node nodeEN pw_acetoin-degradation" transform="translate(537.0,338.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.5" target="_blank">4.1.1.5</a></text><title>Acetolactate decarboxylase</title></g>
+<g id="node2721" class="node nodeEN pw_acetoin-degradation" transform="translate(751.5,553.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.4" target="_blank">1.1.1.4</a></text><title>(R,R)-butanediol dehydrogenase</title></g>
+<g id="node9294" class="node nodeEN pw_acetoin-degradation" transform="translate(537.0,445.8)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node9913" class="node nodeEN pw_acetoin-degradation" transform="translate(537.0,660.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.303" target="_blank">1.1.1.303</a></text><title>diacetyl reductase [(R)-acetoin forming]</title></g>
+<g id="node2986" class="node nodeEN pw_acetoin-degradation" transform="translate(537.0,982.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.304" target="_blank">1.1.1.304</a></text><title>diacetyl reductase [(S)-acetoin forming]</title></g>
+<g id="node11946" class="node nodeEN pw_acetoin-degradation" transform="translate(322.5,1196.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.76" target="_blank">1.1.1.76</a></text><title>(S,S)-butanediol dehydrogenase</title></g>
+<g id="node8785" class="node nodeEN pw_acetoin-degradation" transform="translate(537.0,1089.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.190" target="_blank">2.3.1.190</a></text><title>acetoin dehydrogenase system</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9279~0" class="node nodeCM pw_acetoin-degradation lid12" transform="translate(800.7,53.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node9279~1" class="node nodeCM pw_acetoin-degradation lid28" transform="translate(701.4,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node2721~0" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(609.9,609.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2721~1" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(655.2,668.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node9294~0" class="node nodeCM pw_acetoin-degradation lid374" transform="translate(435.0,374.3)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node9294~1" class="node nodeCM pw_acetoin-degradation lid1661" transform="translate(653.3,485.9)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node9294~2" class="node nodeCM pw_acetoin-degradation lid28" transform="translate(600.3,451.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node2986~0" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(464.2,931.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node2986~1" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(472.6,1026.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11946~0" class="node nodeCM pw_acetoin-degradation lid7" transform="translate(271.5,1269.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11946~1" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(373.6,1269.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node8785~0" class="node nodeCM pw_acetoin-degradation lid18" transform="translate(454.4,1060.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8785~2" class="node nodeCM pw_acetoin-degradation lid29" transform="translate(624.2,1119.3)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node8785~3" class="node nodeCM pw_acetoin-degradation lid8" transform="translate(593.0,1158.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>
+<text x="884.6" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

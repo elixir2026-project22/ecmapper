@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3779" height="408" viewBox="0 0 3778.9 407.8"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10940.5 12378.4 2105.5 340.0" width="2106" height="340" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="10940.5" y="12378.4" width="2105.5" height="340.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_5R-carbapenem-carboxylate-biosynthesis" class="pw pw7" x="10980.5" y="12433.9" width="2025.5" height="244.5" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11139.0 12553.7 L 11035.8 12553.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11206.1 12553.7 L 11320.9 12553.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11690.9 12553.7 L 11789.2 12553.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11612.4 12553.7 L 11512.3 12553.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12166.3 12553.7 L 12273.6 12553.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12099.2 12553.7 L 11986.2 12553.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12656.0 12553.7 L 12766.6 12553.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12577.6 12553.7 L 12481.9 12553.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 11157.9 12537.7 L 11126.2 12503.0"/>
+<path class="link" marker-end="url(#in)" d="M 11191.0 12537.7 L 11231.0 12503.0"/>
+<path class="link" marker-start="url(#in)" d="M 11666.5 12569.7 L 11705.8 12612.0"/>
+<path class="link" marker-start="url(#in)" d="M 11635.3 12569.7 L 11592.0 12612.0"/>
+<path class="link" marker-end="url(#in)" d="M 11668.2 12537.7 L 11704.1 12503.0"/>
+<path class="link" marker-end="url(#in)" d="M 11633.4 12537.7 L 11593.8 12503.0"/>
+<path class="link" marker-start="url(#in)" d="M 12144.4 12569.7 L 12175.3 12612.0"/>
+<path class="link" marker-end="url(#in)" d="M 12145.7 12537.7 L 12174.0 12503.0"/>
+<path class="link" marker-end="url(#in)" d="M 12116.2 12537.7 L 12080.4 12503.0"/>
+<path class="link" marker-start="url(#in)" d="M 12640.1 12537.7 L 12691.9 12502.3"/>
+<path class="link" marker-start="url(#in)" d="M 12636.3 12569.7 L 12688.0 12612.0"/>
+<path class="link" marker-start="url(#in)" d="M 12615.9 12537.7 L 12613.8 12503.0"/>
+<path class="link" marker-end="url(#in)" d="M 12594.0 12569.7 L 12530.5 12614.4"/>
+<path class="link" marker-end="url(#in)" d="M 12591.4 12537.7 L 12536.4 12503.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(11993.2,12433.9)"><rect rx="10" height="31" width="383" x="-191.5" y="-15.5"/><text dominant-baseline="central">(5R)-carbapenem carboxylate biosynthesis</text></g>
+<g id="node11787" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid3430" transform="translate(11416.6,12553.7)"><rect height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3430" target="_blank">(S)-1-pyrroline-5-carboxylate</a></text><title>(S)-1-pyrroline-5-carboxylate</title></g>
+<g id="node11793" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid2698" transform="translate(11887.7,12553.7)"><rect height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2698" target="_blank">(2S,5S)-5-carboxymethylproline</a></text><title>(2S,5S)-5-carboxymethylproline</title></g>
+<g id="node11798" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid15347" transform="translate(12377.8,12553.7)"><rect height="30.0" width="206.4" x="-103.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15347" target="_blank">(3S,5S)-carbapenam 3-carboxylate</a></text><title>(3S,5S)-carbapenam 3-carboxylate</title></g>
+<g id="node11800" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid15358" transform="translate(12870.8,12553.7)"><rect height="30.0" width="206.4" x="-103.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15358" target="_blank">(5R)-carbapen-2-em-3-carboxylate</a></text><title>(5R)-carbapenem-3-carboxylate</title></g>
+<g id="node12227" class="node nodeSM pw_5R-carbapenem-carboxylate-biosynthesis lid243" transform="translate(11013.5,12553.7)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=243" target="_blank">Pro</a></text><title>L-proline</title></g>
+<g id="node11784" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(11172.6,12553.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.5.2" target="_blank">1.5.5.2</a></text><title>proline dehydrogenase</title></g>
+<g id="node11788" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(11651.6,12553.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.226" target="_blank">2.3.1.226</a></text><title>carboxymethylproline synthase</title></g>
+<g id="node11794" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(12132.7,12553.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.6" target="_blank">6.3.3.6</a></text><title>carbapenam-3-carboxylate synthase</title></g>
+<g id="node11799" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(12616.8,12553.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.20.3" target="_blank">1.14.20.3</a></text><title>(5R)-carbapenem-3-carboxylate synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11785" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid1992" transform="translate(11111.5,12487.0)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title>a quinone</title></g>
+<g id="node11786" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid2695" transform="translate(11249.5,12487.0)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title>a quinol</title></g>
+<g id="node11789" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid76" transform="translate(11575.6,12487.0)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title>malonyl-CoA</title></g>
+<g id="node11790" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid1" transform="translate(11575.6,12628.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11791" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid28" transform="translate(11720.6,12487.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node11792" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid18" transform="translate(11720.6,12628.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node11795" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid4" transform="translate(12063.9,12487.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node11796" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid17" transform="translate(12187.0,12628.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node11797" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid30" transform="translate(12187.0,12487.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node11801" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid34" transform="translate(12511.1,12487.0)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2-oxoglutarate</a></text><title>2-oxoglutarate</title></g>
+<g id="node11802" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid9" transform="translate(12511.1,12628.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node11803" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid1" transform="translate(12612.9,12487.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11804" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid58" transform="translate(12707.5,12628.0)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title>succinate</title></g>
+<g id="node11805" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid28" transform="translate(12714.2,12487.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2185.5" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1593.4 367.8" width="1593" height="368" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1593.4" height="367.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_5R-carbapenem-carboxylate-biosynthesis" class="pw " x="0.0" y="0.0" width="1513.4" height="272.3" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 186.0 139.7 L 65.4 139.7"/>
+<path class="link" marker-end="url(#in)" d="M 243.4 139.7 L 299.2 139.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 509.6 139.7 L 460.2 139.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 579.9 139.7 L 606.5 139.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 846.0 139.7 L 812.9 139.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 903.4 139.7 L 930.0 139.7"/>
+<path class="link" marker-end="url(#in)" d="M 1169.6 139.7 L 1149.4 139.7"/>
+<path class="link" marker-start="url(#in)" d="M 1239.9 139.7 L 1260.0 139.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 203.5 123.7 L 170.2 76.2"/>
+<path class="link" marker-end="url(#in)" d="M 225.9 123.7 L 258.3 77.5"/>
+<path class="link" marker-start="url(#in)" d="M 539.2 155.7 L 521.8 206.3"/>
+<path class="link" marker-start="url(#in)" d="M 525.0 155.7 L 492.5 182.0"/>
+<path class="link" marker-end="url(#in)" d="M 549.3 123.7 L 563.7 73.1"/>
+<path class="link" marker-end="url(#in)" d="M 565.7 123.7 L 606.6 92.6"/>
+<path class="link" marker-start="url(#in)" d="M 863.5 155.7 L 835.8 195.3"/>
+<path class="link" marker-end="url(#in)" d="M 880.2 123.7 L 897.7 73.1"/>
+<path class="link" marker-end="url(#in)" d="M 894.5 123.7 L 926.9 97.5"/>
+<path class="link" marker-start="url(#in)" d="M 1205.4 123.7 L 1207.7 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1216.1 123.7 L 1249.9 76.2"/>
+<path class="link" marker-start="url(#in)" d="M 1239.9 124.8 L 1269.4 112.3"/>
+<path class="link" marker-end="url(#in)" d="M 1199.2 155.7 L 1182.3 204.8"/>
+<path class="link" marker-end="url(#in)" d="M 1185.0 155.7 L 1152.5 182.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(756.7,0.0)"><rect rx="10" height="31" width="399" x="-199.4" y="-15.5"/><text dominant-baseline="central">(5R)-carbapenem carboxylate biosynthesis</text></g>
+<g id="node12227" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid243" transform="translate(49.7,139.7)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=243" target="_blank">Pro</a></text><title></title></g>
+<g id="node11787" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid3430" transform="translate(379.7,139.7)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3430" target="_blank">pyrroline-5-carboxylate</a></text><title></title></g>
+<g id="node11793" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid2698" transform="translate(709.7,139.7)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2698" target="_blank">(2S,5S)-5-carboxymethylproline</a></text><title></title></g>
+<g id="node11798" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid15347" transform="translate(1039.7,139.7)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15347" target="_blank">(3S,5S)-carbapenam 3-carboxylate</a></text><title></title></g>
+<g id="node11800" class="node nodeHM pw_5R-carbapenem-carboxylate-biosynthesis lid15358" transform="translate(1369.7,139.7)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15358" target="_blank">(5R)-carbapen-2-em-3-carboxylate</a></text><title></title></g>
+<g id="node11784" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(214.7,139.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.5.2" target="_blank">1.5.5.2</a></text><title>proline dehydrogenase</title></g>
+<g id="node11788" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(544.7,139.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.226" target="_blank">2.3.1.226</a></text><title>carboxymethylproline synthase</title></g>
+<g id="node11794" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(874.7,139.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.6" target="_blank">6.3.3.6</a></text><title>carbapenam-3-carboxylate synthase</title></g>
+<g id="node11799" class="node nodeEN pw_5R-carbapenem-carboxylate-biosynthesis" transform="translate(1204.7,139.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.20.3" target="_blank">1.14.20.3</a></text><title>(5R)-carbapenem-3-carboxylate synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11784~0" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid1992" transform="translate(159.0,60.2)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node11784~1" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid2695" transform="translate(269.5,61.5)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title></title></g>
+<g id="node11788~0" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid18" transform="translate(516.3,222.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node11788~1" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid1" transform="translate(476.8,194.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11788~2" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid28" transform="translate(568.2,57.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11788~3" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid76" transform="translate(627.6,76.6)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node11794~0" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid17" transform="translate(824.6,211.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11794~1" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid30" transform="translate(903.2,57.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node11794~2" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid4" transform="translate(942.6,84.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11799~0" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid28" transform="translate(1208.4,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11799~1" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid58" transform="translate(1261.3,60.2)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node11799~2" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid1" transform="translate(1285.1,105.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11799~3" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid9" transform="translate(1176.8,220.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11799~4" class="node nodeCM pw_5R-carbapenem-carboxylate-biosynthesis lid34" transform="translate(1136.8,194.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+</g></svg>
+<text x="2195.5" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2214.0 1652.5" width="2214" height="1652" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2214.0" height="1652.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_fumitremorgin-biosynthesis" class="pw " x="0.0" y="0.0" width="2094.0" height="1517.0" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 575.1 1306.2 L 414.8 1174.2"/>
+<path class="link" marker-end="url(#in)" d="M 629.7 1323.3 L 750.3 1327.1"/>
+<path class="link" marker-start="url(#in)" d="M 986.0 1332.2 L 853.0 1329.7"/>
+<path class="link" marker-end="url(#in)" d="M 1069.2 1333.3 L 1169.3 1334.3"/>
+<path class="link" marker-start="url(#in)" d="M 1440.2 1335.0 L 1330.4 1335.0"/>
+<path class="link" marker-end="url(#in)" d="M 1502.5 1319.0 L 1633.0 1242.0"/>
+<path class="link" marker-start="url(#in)" d="M 1781.9 1076.7 L 1673.2 1210.0"/>
+<path class="link" marker-end="url(#in)" d="M 1794.8 1045.4 C 1794.5 1008.3 1793.7 913.9 1793.4 876.7"/>
+<path class="link" marker-start="url(#in)" d="M 1793.2 680.0 L 1793.2 845.3"/>
+<path class="link" marker-end="url(#in)" d="M 1774.7 648.0 L 1625.5 518.9"/>
+<path class="link" marker-start="url(#in)" d="M 1423.1 394.4 L 1579.9 486.9"/>
+<path class="link" marker-end="url(#in)" d="M 1366.1 362.4 L 1206.6 277.0"/>
+<path class="link" marker-start="url(#in)" d="M 994.4 261.1 C 1029.8 261.1 1083.1 261.1 1122.9 261.1"/>
+<path class="link" marker-end="url(#in)" d="M 926.4 245.0 L 779.0 166.7"/>
+<path class="link" marker-end="url(#in)" d="M 598.4 150.7 L 704.1 150.7"/>
+<path class="link" marker-start="url(#in)" d="M 540.2 134.7 L 445.0 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 170.0 1086.0 L 65.4 1134.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 227.4 1085.3 L 358.4 1142.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 183.0 1057.7 C 160.5 1036.0 119.4 996.4 97.3 975.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 569.2 1338.2 L 528.2 1364.0"/>
+<path class="link" marker-end="url(#in)" d="M 620.0 1306.2 L 652.8 1285.5"/>
+<path class="link" marker-start="url(#in)" d="M 1021.8 1348.9 L 985.1 1451.0"/>
+<path class="link" marker-start="url(#in)" d="M 1007.3 1348.9 L 972.7 1376.1"/>
+<path class="link" marker-end="url(#in)" d="M 1033.4 1316.9 L 1070.6 1213.4"/>
+<path class="link" marker-end="url(#in)" d="M 1047.9 1316.9 L 1080.5 1291.3"/>
+<path class="link" marker-start="url(#in)" d="M 1456.4 1319.0 L 1402.8 1273.8"/>
+<path class="link" marker-end="url(#in)" d="M 1481.2 1319.0 L 1511.8 1235.5"/>
+<path class="link" marker-start="url(#in)" d="M 1812.2 1076.7 L 1888.3 1147.1"/>
+<path class="link" marker-start="url(#in)" d="M 1801.5 1076.7 L 1816.3 1113.1"/>
+<path class="link" marker-end="url(#in)" d="M 1777.7 1044.7 L 1700.3 973.0"/>
+<path class="link" marker-end="url(#in)" d="M 1788.4 1044.7 L 1773.1 1007.0"/>
+<path class="link" marker-start="url(#in)" d="M 1834.9 653.9 L 1867.8 646.0"/>
+<path class="link" marker-start="url(#in)" d="M 1829.9 680.0 L 1859.3 692.8"/>
+<path class="link" marker-end="url(#in)" d="M 1751.6 673.9 L 1717.8 682.0"/>
+<path class="link" marker-end="url(#in)" d="M 1756.5 648.0 L 1728.9 635.9"/>
+<path class="link" marker-start="url(#in)" d="M 1429.2 362.4 L 1460.4 347.5"/>
+<path class="link" marker-end="url(#in)" d="M 1362.6 394.4 L 1332.9 408.7"/>
+<path class="link" marker-start="url(#in)" d="M 961.5 245.0 L 984.0 173.6"/>
+<path class="link" marker-start="url(#in)" d="M 975.2 245.0 L 1007.2 217.7"/>
+<path class="link" marker-start="url(#in)" d="M 994.9 255.3 L 1028.8 250.2"/>
+<path class="link" marker-end="url(#in)" d="M 957.6 277.0 L 961.9 340.4"/>
+<path class="link" marker-end="url(#in)" d="M 944.1 277.0 L 906.3 326.0"/>
+<path class="link" marker-end="url(#in)" d="M 921.4 277.0 L 892.7 290.1"/>
+<path class="link" marker-end="url(#in)" d="M 918.1 256.0 L 885.6 251.7"/>
+<path class="link" marker-start="url(#in)" d="M 543.0 166.7 L 510.4 192.4"/>
+<path class="link" marker-end="url(#in)" d="M 583.5 134.7 L 628.1 99.5"/>
+<path class="link" marker-start="url(#in)" d="M 175.9 1056.9 L 142.9 1033.8"/>
+<path class="link" marker-end="url(#in)" d="M 227.4 1074.4 L 270.2 1076.6"/>
+<path class="link" marker-end="url(#in)" d="M 221.6 1088.9 L 256.5 1113.3"/>
+<path class="link" marker-end="url(#in)" d="M 205.5 1088.9 L 225.4 1135.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_fumitremorgin-biosynthesis" transform="translate(1047.0,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">fumitremorgin biosynthesis</text></g>
+<g id="node11736" class="node nodeHM pw_fumitremorgin-biosynthesis lid6395" transform="translate(395.3,1158.2)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6395" target="_blank">brevianamide F</a></text><title></title></g>
+<g id="node11742" class="node nodeHM pw_fumitremorgin-biosynthesis lid19694" transform="translate(801.6,1328.8)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19694" target="_blank">tryprostatin B</a></text><title></title></g>
+<g id="node11752" class="node nodeHM pw_fumitremorgin-biosynthesis lid10404" transform="translate(1249.8,1335.0)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10404" target="_blank">6-hydroxytryprostatin B</a></text><title></title></g>
+<g id="node1688" class="node nodeHM pw_fumitremorgin-biosynthesis lid28978" transform="translate(1660.1,1226.0)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28978" target="_blank">tryprostatin A</a></text><title></title></g>
+<g id="node11751" class="node nodeHM pw_fumitremorgin-biosynthesis lid17703" transform="translate(1793.2,861.3)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17703" target="_blank">fumitremorgin C</a></text><title></title></g>
+<g id="node11763" class="node nodeHM pw_fumitremorgin-biosynthesis lid15352" transform="translate(1607.0,502.9)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15352" target="_blank">12alpha,13alpha-dihydroxyfumitremorgin C</a></text><title></title></g>
+<g id="node11767" class="node nodeHM pw_fumitremorgin-biosynthesis lid10414" transform="translate(1176.7,261.0)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10414" target="_blank">fumitremorgin B</a></text><title></title></g>
+<g id="node11769" class="node nodeHM pw_fumitremorgin-biosynthesis lid19695" transform="translate(748.9,150.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19695" target="_blank">verruculogen</a></text><title></title></g>
+<g id="node11778" class="node nodeHM pw_fumitremorgin-biosynthesis lid88402" transform="translate(421.9,52.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88402" target="_blank">fumitremorgin A</a></text><title></title></g>
+<g id="node1354" class="node nodeHM pw_fumitremorgin-biosynthesis lid119" transform="translate(49.7,1141.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=119" target="_blank">Trp</a></text><title></title></g>
+<g id="node1355" class="node nodeHM pw_fumitremorgin-biosynthesis lid243" transform="translate(82.1,960.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=243" target="_blank">Pro</a></text><title></title></g>
+<g id="node11741" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(594.6,1322.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.106" target="_blank">2.5.1.106</a></text><title>tryprostatin B synthase</title></g>
+<g id="node11746" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(1027.6,1332.9)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.118" target="_blank">1.14.14.118</a></text><title>tryprostatin B 6-hydroxylase</title></g>
+<g id="node11757" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(1475.4,1335.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.293" target="_blank">2.1.1.293</a></text><title>6-hydroxytryprostatin B O-methyltransferase</title></g>
+<g id="node11745" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(1794.9,1060.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.19.71" target="_blank">1.14.19.71</a></text><title>fumitremorgin C synthase</title></g>
+<g id="node11758" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(1793.2,664.0)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.119" target="_blank">1.14.14.119</a></text><title>fumitremorgin C monooxygenase</title></g>
+<g id="node11764" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(1395.9,378.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.110" target="_blank">2.5.1.110</a></text><title>12alpha,13alpha-dihydroxyfumitremorgin C prenyltransferase</title></g>
+<g id="node11768" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(956.5,261.0)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.38" target="_blank">1.14.11.38</a></text><title>verruculogen synthase</title></g>
+<g id="node11775" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(563.3,150.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.107" target="_blank">2.5.1.107</a></text><title>verruculogen prenyltransferase</title></g>
+<g id="node11735" class="node nodeEN pw_fumitremorgin-biosynthesis" transform="translate(198.7,1072.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.-" target="_blank">6.3.3.-</a></text><title>brevianamide F synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11741~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid157" transform="translate(502.9,1380.0)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl-PP</a></text><title></title></g>
+<g id="node11741~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid17" transform="translate(668.5,1275.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11746~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid1123" transform="translate(979.4,1467.0)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node11746~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid9" transform="translate(960.2,1386.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11746~2" class="node nodeCM pw_fumitremorgin-biosynthesis lid88270" transform="translate(1076.4,1197.4)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node11746~3" class="node nodeCM pw_fumitremorgin-biosynthesis lid1" transform="translate(1096.2,1278.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11757~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid24" transform="translate(1383.8,1257.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node11757~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid36" transform="translate(1517.7,1219.5)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node11745~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid1123" transform="translate(1905.6,1163.1)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node11745~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid9" transform="translate(1822.8,1129.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11745~2" class="node nodeCM pw_fumitremorgin-biosynthesis lid88270" transform="translate(1683.1,957.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node11745~3" class="node nodeCM pw_fumitremorgin-biosynthesis lid1" transform="translate(1766.6,991.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11758~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid1123" transform="translate(1934.1,630.0)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node11758~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid9" transform="translate(1871.8,698.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11758~2" class="node nodeCM pw_fumitremorgin-biosynthesis lid88270" transform="translate(1650.7,698.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node11758~3" class="node nodeCM pw_fumitremorgin-biosynthesis lid1" transform="translate(1713.1,629.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11764~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid157" transform="translate(1493.7,331.5)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl-PP</a></text><title></title></g>
+<g id="node11764~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid17" transform="translate(1317.2,416.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11768~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid77" transform="translate(989.0,157.6)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node11768~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid34" transform="translate(1022.9,204.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node11768~2" class="node nodeCM pw_fumitremorgin-biosynthesis lid9" transform="translate(1041.3,248.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node11768~3" class="node nodeCM pw_fumitremorgin-biosynthesis lid66" transform="translate(963.0,356.4)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node11768~4" class="node nodeCM pw_fumitremorgin-biosynthesis lid58" transform="translate(894.0,342.0)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node11768~5" class="node nodeCM pw_fumitremorgin-biosynthesis lid28" transform="translate(877.0,297.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11768~6" class="node nodeCM pw_fumitremorgin-biosynthesis lid1" transform="translate(869.9,249.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11775~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid17" transform="translate(494.7,204.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11775~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid157" transform="translate(648.4,83.5)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl-PP</a></text><title></title></g>
+<g id="node11735~0" class="node nodeCM pw_fumitremorgin-biosynthesis lid4" transform="translate(127.2,1022.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11735~1" class="node nodeCM pw_fumitremorgin-biosynthesis lid13" transform="translate(286.0,1077.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node11735~2" class="node nodeCM pw_fumitremorgin-biosynthesis lid16" transform="translate(269.0,1122.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node11735~3" class="node nodeCM pw_fumitremorgin-biosynthesis lid12" transform="translate(232.2,1151.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>

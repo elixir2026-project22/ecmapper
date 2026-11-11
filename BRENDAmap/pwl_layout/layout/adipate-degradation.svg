@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 384.7 1558.0" width="385" height="1558" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="384.7" height="1558.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_adipate-degradation" class="pw " x="0.0" y="0.0" width="264.7" height="1422.5" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 132.3 201.5 L 132.3 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 132.3 233.5 L 132.3 366.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 132.3 531.5 L 132.3 398.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 132.3 563.5 L 132.3 696.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 132.3 861.5 L 132.3 728.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 132.3 893.5 L 132.3 1026.5"/>
+<path class="link" marker-start="url(#in)" d="M 132.3 1191.5 L 132.3 1058.5"/>
+<path class="link" marker-end="url(#in)" d="M 132.3 1223.5 L 132.3 1356.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 100.4 206.5 L 65.5 194.5"/>
+<path class="link" marker-start="url(#in)" d="M 119.4 201.5 L 90.3 165.6"/>
+<path class="link" marker-end="url(#in)" d="M 164.3 228.5 L 199.2 240.5"/>
+<path class="link" marker-end="url(#in)" d="M 145.3 233.5 L 174.4 269.4"/>
+<path class="link" marker-start="url(#in)" d="M 155.2 531.5 L 188.2 508.4"/>
+<path class="link" marker-end="url(#in)" d="M 155.2 563.5 L 184.4 583.9"/>
+<path class="link" marker-start="url(#in)" d="M 155.2 861.5 L 188.2 838.4"/>
+<path class="link" marker-start="url(#in)" d="M 155.2 1191.5 L 186.3 1169.7"/>
+<path class="link" marker-end="url(#in)" d="M 155.2 1223.5 L 186.3 1245.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_adipate-degradation" transform="translate(132.3,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">adipate degradation</text></g>
+<g id="node1303" class="node nodeHM pw_adipate-degradation lid1712" transform="translate(132.3,52.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1712" target="_blank">adipate</a></text><title></title></g>
+<g id="node8574" class="node nodeHM pw_adipate-degradation lid4221" transform="translate(132.3,382.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4221" target="_blank">adipyl-CoA</a></text><title></title></g>
+<g id="node8576" class="node nodeHM pw_adipate-degradation lid190023" transform="translate(132.3,712.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=190023" target="_blank">2,3-didehydroadipoyl-CoA</a></text><title></title></g>
+<g id="node8578" class="node nodeHM pw_adipate-degradation lid155011" transform="translate(132.3,1042.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=155011" target="_blank">(3S)-3-hydroxyadipyl-CoA</a></text><title></title></g>
+<g id="node1304" class="node nodeHM pw_adipate-degradation lid9045" transform="translate(132.3,1372.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9045" target="_blank">3-oxoadipyl-CoA</a></text><title></title></g>
+<g id="node8582" class="node nodeEN pw_adipate-degradation" transform="translate(132.3,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.14" target="_blank">6.2.1.14</a></text><title>6-carboxyhexanoate-CoA ligase</title></g>
+<g id="node8572" class="node nodeEN pw_adipate-degradation" transform="translate(132.3,547.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.99.-" target="_blank">1.3.99.-</a></text><title>acyl-CoA dehydrogenase</title></g>
+<g id="node8570" class="node nodeEN pw_adipate-degradation" transform="translate(132.3,877.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.17" target="_blank">4.2.1.17</a></text><title>enoyl-CoA hydratase</title></g>
+<g id="node8584" class="node nodeEN pw_adipate-degradation" transform="translate(132.3,1207.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.35" target="_blank">1.1.1.35</a></text><title>3-hydroxyacyl-CoA dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8582~0" class="node nodeCM pw_adipate-degradation lid4" transform="translate(49.7,189.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8582~1" class="node nodeCM pw_adipate-degradation lid18" transform="translate(77.4,149.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8582~2" class="node nodeCM pw_adipate-degradation lid30" transform="translate(214.9,245.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node8582~3" class="node nodeCM pw_adipate-degradation lid17" transform="translate(187.3,285.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node8572~0" class="node nodeCM pw_adipate-degradation lid20" transform="translate(203.9,497.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20" target="_blank">FAD</a></text><title></title></g>
+<g id="node8572~1" class="node nodeCM pw_adipate-degradation lid256" transform="translate(206.6,599.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256" target="_blank">FADH2</a></text><title></title></g>
+<g id="node8570~0" class="node nodeCM pw_adipate-degradation lid1" transform="translate(203.9,827.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8584~0" class="node nodeCM pw_adipate-degradation lid7" transform="translate(205.2,1156.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node8584~1" class="node nodeCM pw_adipate-degradation lid8" transform="translate(205.2,1258.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>

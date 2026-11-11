@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2123.4 1366.0" width="2123" height="1366" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2123.4" height="1366.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_diterpene-phytoalexins-precursors-biosynthesis" class="pw " x="0.0" y="0.0" width="2003.4" height="1230.5" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1406.8 52.5 L 1260.3 52.5"/>
+<path class="link" marker-end="url(#in)" d="M 1477.1 52.5 L 1652.7 52.5"/>
+<path class="link" marker-start="url(#in)" d="M 1704.1 251.0 L 1704.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1704.1 283.0 L 1704.1 465.5"/>
+<path class="link" marker-start="url(#in)" d="M 1704.1 680.0 L 1704.1 497.5"/>
+<path class="link" marker-end="url(#in)" d="M 1704.1 712.0 L 1704.1 894.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1510.6 910.5 L 1597.7 910.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1468.6 910.5 L 1316.7 910.5"/>
+<path class="link" marker-start="url(#in)" d="M 1366.9 196.1 L 1200.6 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1408.6 228.1 L 1574.9 355.7"/>
+<path class="link" marker-start="url(#in)" d="M 1243.3 289.8 L 1184.0 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1251.7 321.2 C 1263.9 366.6 1299.3 498.7 1311.4 543.8"/>
+<path class="link" marker-start="url(#in)" d="M 1086.0 278.7 L 1173.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1072.8 310.7 L 985.7 521.0"/>
+<path class="link" marker-start="url(#in)" d="M 1162.8 628.9 C 1122.1 608.5 1050.5 572.7 1009.8 552.3"/>
+<path class="link" marker-end="url(#in)" d="M 1225.6 660.2 L 1376.1 735.5"/>
+<path class="link" marker-end="url(#in)" d="M 980.4 167.6 L 1152.0 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 925.0 199.6 L 753.3 298.7"/>
+<path class="link" marker-start="url(#in)" d="M 543.0 314.7 L 635.4 314.7"/>
+<path class="link" marker-end="url(#in)" d="M 479.2 314.7 L 386.9 314.7"/>
+<path class="link" marker-start="url(#in)" d="M 296.6 513.2 L 296.6 330.7"/>
+<path class="link" marker-end="url(#in)" d="M 296.6 544.7 C 296.6 584.2 296.6 689.0 296.6 728.4"/>
+<path class="link" marker-start="url(#in)" d="M 296.6 621.4 C 296.6 567.5 296.6 384.6 296.6 330.2"/>
+<path class="link" marker-end="url(#in)" d="M 296.6 651.6 C 296.6 705.5 296.6 888.3 296.6 942.8"/>
+<path class="link" marker-start="url(#in)" d="M 205.4 405.9 L 280.6 330.7"/>
+<path class="link" marker-end="url(#in)" d="M 173.4 437.9 L 98.1 513.2"/>
+<path class="link" marker-start="url(#in)" d="M 1235.2 751.5 L 1298.4 751.5"/>
+<path class="link" marker-end="url(#in)" d="M 1151.9 751.5 L 1024.0 751.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1109.5 950.6 C 1168.8 911.0 1326.0 806.2 1385.1 766.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1062.3 982.0 L 788.6 1164.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 1453.1 68.5 L 1480.8 108.1"/>
+<path class="link" marker-start="url(#in)" d="M 1665.7 255.7 L 1624.0 243.5"/>
+<path class="link" marker-start="url(#in)" d="M 1692.4 251.0 L 1661.9 209.5"/>
+<path class="link" marker-end="url(#in)" d="M 1742.5 278.4 L 1786.4 291.4"/>
+<path class="link" marker-end="url(#in)" d="M 1715.9 283.0 L 1747.3 325.4"/>
+<path class="link" marker-start="url(#in)" d="M 1665.7 684.7 L 1624.0 672.5"/>
+<path class="link" marker-start="url(#in)" d="M 1692.4 680.0 L 1661.9 638.5"/>
+<path class="link" marker-end="url(#in)" d="M 1742.5 707.4 L 1786.4 720.4"/>
+<path class="link" marker-end="url(#in)" d="M 1715.9 712.0 L 1747.3 754.4"/>
+<path class="link" marker-end="url(#in)" d="M 1387.0 228.1 L 1384.6 283.4"/>
+<path class="link" marker-end="url(#in)" d="M 1225.7 321.8 L 1174.6 359.1"/>
+<path class="link" marker-end="url(#in)" d="M 1096.2 310.7 L 1143.2 355.5"/>
+<path class="link" marker-start="url(#in)" d="M 1171.4 660.2 L 1114.1 701.5"/>
+<path class="link" marker-start="url(#in)" d="M 1189.8 660.2 L 1188.8 664.1"/>
+<path class="link" marker-end="url(#in)" d="M 1207.4 628.2 L 1282.6 541.0"/>
+<path class="link" marker-end="url(#in)" d="M 1232.0 640.0 L 1263.2 636.5"/>
+<path class="link" marker-end="url(#in)" d="M 264.7 521.8 L 220.3 511.6"/>
+<path class="link" marker-end="url(#in)" d="M 285.2 620.4 L 216.0 524.0"/>
+<path class="link" marker-end="url(#in)" d="M 192.2 437.9 L 201.7 492.0"/>
+<path class="link" marker-start="url(#in)" d="M 1198.5 735.5 L 1235.0 616.8"/>
+<path class="link" marker-start="url(#in)" d="M 1191.7 735.5 L 1186.9 696.1"/>
+<path class="link" marker-end="url(#in)" d="M 1187.6 767.5 L 1152.7 860.5"/>
+<path class="link" marker-end="url(#in)" d="M 1151.9 765.6 L 1141.4 769.2"/>
+<path class="link" marker-start="url(#in)" d="M 1073.7 950.0 L 1055.0 926.3"/>
+<path class="link" marker-start="url(#in)" d="M 1086.7 950.0 L 1089.2 824.5"/>
+<path class="link" marker-start="url(#in)" d="M 1096.6 950.0 L 1155.2 858.5"/>
+<path class="link" marker-end="url(#in)" d="M 1086.0 982.0 L 1084.7 1037.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1001.7,0.0)"><rect rx="10" height="31" width="457" x="-228.6" y="-15.5"/><text dominant-baseline="central">diterpene phytoalexins precursors biosynthesis</text></g>
+<g id="node11873" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid3716" transform="translate(1179.7,52.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3716" target="_blank">ent-copalyl diphosphate</a></text><title></title></g>
+<g id="node1610" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid15211" transform="translate(1704.1,52.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15211" target="_blank">ent-isokaurene</a></text><title></title></g>
+<g id="node1436" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid222693" transform="translate(1704.1,481.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=222693" target="_blank">ent-isokauren-2beta-ol</a></text><title></title></g>
+<g id="node1435" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid222694" transform="translate(1704.1,910.5)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=222694" target="_blank">ent-isokaurene-2beta,3beta-diol</a></text><title></title></g>
+<g id="node1606" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid212490" transform="translate(1275.1,910.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=212490" target="_blank">oryzalide A</a></text><title></title></g>
+<g id="node1616" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid63898" transform="translate(1595.8,371.7)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=63898" target="_blank">ent-pimara-8(14),15-diene</a></text><title></title></g>
+<g id="node1617" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid18341" transform="translate(1315.5,559.0)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18341" target="_blank">ent-cassa-12,15-diene</a></text><title></title></g>
+<g id="node1618" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid63897" transform="translate(979.1,537.0)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=63897" target="_blank">ent-sandaracopimaradiene</a></text><title></title></g>
+<g id="node1604" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid190611" transform="translate(1408.1,751.5)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=190611" target="_blank">ent-sandaracopimaradien-3beta-ol</a></text><title></title></g>
+<g id="node12142" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid231" transform="translate(725.6,314.7)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=231" target="_blank">geranylgeranyl diphosphate</a></text><title></title></g>
+<g id="node11874" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid7719" transform="translate(296.6,314.7)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7719" target="_blank">9alpha-copalyl diphosphate</a></text><title></title></g>
+<g id="node1624" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid63900" transform="translate(296.6,743.7)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=63900" target="_blank">stemod-13(17)-ene</a></text><title></title></g>
+<g id="node1626" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid14135" transform="translate(296.6,958.2)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=14135" target="_blank">9beta-pimara-7,15-diene</a></text><title></title></g>
+<g id="node1627" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid63899" transform="translate(82.1,529.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=63899" target="_blank">stemar-13-ene</a></text><title></title></g>
+<g id="node1594" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid192302" transform="translate(979.1,751.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192302" target="_blank">oryzalexin D</a></text><title></title></g>
+<g id="node1600" class="node nodeHM pw_diterpene-phytoalexins-precursors-biosynthesis lid190613" transform="translate(764.6,1180.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=190613" target="_blank">oryzalexin E</a></text><title></title></g>
+<g id="node1612" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1441.9,52.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.103" target="_blank">4.2.3.103</a></text><title>ent-isokaurene synthase</title></g>
+<g id="node1437" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1704.1,267.0)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.76" target="_blank">1.14.14.76</a></text><title>ent-isokaurene C2/C3-hydroxylase</title></g>
+<g id="node1434" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1704.1,696.0)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.76" target="_blank">1.14.14.76</a></text><title>ent-isokaurene C2/C3-hydroxylase</title></g>
+<g id="node1607" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1489.6,910.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title></title></g>
+<g id="node1619" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1387.7,212.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.30" target="_blank">4.2.3.30</a></text><title>ent-pimara-8(14),15-diene synthase</title></g>
+<g id="node1620" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1247.6,305.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.28" target="_blank">4.2.3.28</a></text><title>ent-cassa-12,15-diene synthase</title></g>
+<g id="node1621" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1079.4,294.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.29" target="_blank">4.2.3.29</a></text><title>ent-sandaracopimaradiene synthase</title></g>
+<g id="node1605" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1193.6,644.2)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.70" target="_blank">1.14.14.70</a></text><title>ent-sandaracopimaradiene 3-hydroxylase</title></g>
+<g id="node11872" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(952.7,183.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.13" target="_blank">5.5.1.13</a></text><title>ent-copalyl diphosphate synthase</title></g>
+<g id="node11871" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(511.1,314.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.14" target="_blank">5.5.1.14</a></text><title>syn-copalyl-diphosphate synthase</title></g>
+<g id="node1628" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(296.6,529.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.34" target="_blank">4.2.3.34</a></text><title>stemod-13(17)-ene synthase</title></g>
+<g id="node1629" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(296.6,636.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.35" target="_blank">4.2.3.35</a></text><title>syn-pimara-7,15-diene synthase</title></g>
+<g id="node1630" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(189.4,421.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.33" target="_blank">4.2.3.33</a></text><title>stemar-13-ene synthase</title></g>
+<g id="node1595" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1193.6,751.5)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.123" target="_blank">1.14.14.123</a></text><title>oryzalexin D synthase</title></g>
+<g id="node1601" class="node nodeEN pw_diterpene-phytoalexins-precursors-biosynthesis" transform="translate(1086.3,966.0)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.122" target="_blank">1.14.14.122</a></text><title>oryzalexin E synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1612~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid17" transform="translate(1492.0,124.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node1437~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1123" transform="translate(1569.4,227.5)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1437~1" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid9" transform="translate(1650.2,193.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1437~2" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid88270" transform="translate(1840.3,307.4)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1437~3" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1" transform="translate(1759.1,341.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1434~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1123" transform="translate(1569.4,656.5)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1434~1" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid9" transform="translate(1650.2,622.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1434~2" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid88270" transform="translate(1840.3,736.4)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1434~3" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1" transform="translate(1759.1,770.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1619~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid17" transform="translate(1383.9,299.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node1620~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid17" transform="translate(1158.9,370.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node1605~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1123" transform="translate(1091.9,717.5)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1605~2" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid88270" transform="translate(1296.4,525.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1605~3" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1" transform="translate(1278.9,634.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1628~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid17" transform="translate(204.5,508.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node1595~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1123" transform="translate(1239.9,600.8)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1595~1" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid9" transform="translate(1185.0,680.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1595~2" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid88270" transform="translate(1146.7,876.5)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1595~3" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1" transform="translate(1125.7,774.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1601~0" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid9" transform="translate(1042.6,910.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1601~1" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1123" transform="translate(1089.6,808.5)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1601~2" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid88270" transform="translate(1165.4,842.5)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node1601~3" class="node nodeCM pw_diterpene-phytoalexins-precursors-biosynthesis lid1" transform="translate(1084.3,1053.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

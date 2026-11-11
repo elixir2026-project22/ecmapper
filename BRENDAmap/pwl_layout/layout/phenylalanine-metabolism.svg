@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2299.2 2636.8" width="2299" height="2637" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2299.2" height="2636.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_phenylalanine-metabolism" class="pw " x="0.0" y="0.0" width="2179.2" height="2501.3" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1698.1 651.5 L 1605.9 599.7"/>
+<path class="link" marker-end="url(#in)" d="M 1726.7 683.5 L 1727.3 841.8"/>
+<path class="link" marker-start="url(#in)" d="M 1728.7 1069.2 L 1727.5 873.8"/>
+<path class="link" marker-end="url(#in)" d="M 1728.9 1101.2 L 1729.5 1208.5"/>
+<path class="link" marker-start="url(#in)" d="M 1444.3 1256.5 L 1713.9 1226.2"/>
+<path class="link" marker-end="url(#in)" d="M 1397.8 1244.1 L 1202.0 1030.2"/>
+<path class="link" marker-start="url(#in)" d="M 1481.3 1202.9 C 1541.3 1208.1 1670.5 1219.4 1714.5 1223.2"/>
+<path class="link" marker-end="url(#in)" d="M 1427.5 1184.1 L 1210.0 1030.2"/>
+<path class="link" marker-end="url(#in)" d="M 1339.3 811.4 L 1199.4 998.2"/>
+<path class="link" marker-start="url(#in)" d="M 1368.4 779.4 L 1560.3 599.7"/>
+<path class="link" marker-start="url(#in)" d="M 931.7 1228.1 L 1168.3 1030.2"/>
+<path class="link" marker-end="url(#in)" d="M 892.2 1260.1 L 671.5 1434.1"/>
+<path class="link" marker-start="url(#in)" d="M 448.6 1450.1 L 586.9 1450.1"/>
+<path class="link" marker-end="url(#in)" d="M 384.7 1465.0 L 262.0 1522.4"/>
+<path class="link" marker-start="url(#in)" d="M 550.6 1597.5 L 640.3 1466.1"/>
+<path class="link" marker-end="url(#in)" d="M 529.1 1629.5 L 456.0 1740.0"/>
+<path class="link" marker-start="url(#in)" d="M 1552.6 1560.6 L 1721.2 1240.5"/>
+<path class="link" marker-end="url(#in)" d="M 1535.6 1592.6 L 1432.7 1786.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1328.8 1980.3 L 1415.6 1818.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1312.6 2012.3 L 1252.9 2137.0"/>
+<path class="link" marker-start="url(#in)" d="M 1055.5 1013.4 L 1136.0 1013.9"/>
+<path class="link" marker-end="url(#in)" d="M 946.3 1013.1 L 891.5 1013.1"/>
+<path class="link" marker-start="url(#in)" d="M 1007.9 806.0 L 1173.6 998.2"/>
+<path class="link" marker-end="url(#in)" d="M 980.3 774.0 L 815.2 582.8"/>
+<path class="link" marker-start="url(#in)" d="M 1883.1 1291.0 L 1745.3 1231.3"/>
+<path class="link" marker-end="url(#in)" d="M 1946.9 1291.1 L 2059.7 1242.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1729.6 1499.6 L 1729.6 1240.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1737.4 1531.6 L 1798.1 1655.6"/>
+<path class="link" marker-start="url(#in)" d="M 1577.6 338.4 L 1579.5 198.7"/>
+<path class="link" marker-end="url(#in)" d="M 1577.4 370.4 L 1577.4 567.7"/>
+<path class="link" marker-start="url(#in)" d="M 297.0 527.0 L 397.2 456.3"/>
+<path class="link" marker-end="url(#in)" d="M 265.5 559.0 L 213.1 653.9"/>
+<path class="link" marker-start="url(#in)" d="M 498.6 68.5 L 498.6 193.5"/>
+<path class="link" marker-end="url(#in)" d="M 514.9 68.5 L 581.0 133.5"/>
+<path class="link" marker-start="url(#in)" d="M 2021.8 2005.4 L 2023.6 1808.3"/>
+<path class="link" marker-end="url(#in)" d="M 2021.7 2037.4 L 2021.7 2202.6"/>
+<path class="link" marker-end="url(#in)" d="M 1868.2 2346.4 L 2002.5 2234.6"/>
+<path class="link" marker-start="url(#in)" d="M 1820.8 2378.4 L 1736.6 2426.1"/>
+<path class="link" marker-start="url(#in)" d="M 613.4 380.0 L 785.3 550.8"/>
+<path class="link" marker-start="url(#in)" d="M 597.3 348.0 L 597.3 165.5"/>
+<path class="link" marker-end="url(#in)" d="M 565.3 377.7 L 457.1 424.3"/>
+<path class="link" marker-end="url(#in)" d="M 587.0 348.0 L 508.8 225.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1923.9 1535.1 C 1889.7 1480.3 1773.3 1294.5 1739.1 1239.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1939.4 1566.3 L 2017.8 1776.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1968.6 1550.3 L 2107.3 1550.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1734.5 651.5 L 1757.4 605.2"/>
+<path class="link" marker-end="url(#in)" d="M 1758.5 671.0 L 1797.7 675.4"/>
+<path class="link" marker-end="url(#in)" d="M 1760.8 1096.0 L 1795.9 1107.8"/>
+<path class="link" marker-end="url(#in)" d="M 1742.0 1101.2 L 1771.1 1136.7"/>
+<path class="link" marker-start="url(#in)" d="M 1443.7 1244.1 L 1484.6 1223.2"/>
+<path class="link" marker-end="url(#in)" d="M 1388.5 1276.1 L 1355.5 1298.2"/>
+<path class="link" marker-start="url(#in)" d="M 1463.6 1184.1 L 1492.9 1149.4"/>
+<path class="link" marker-start="url(#in)" d="M 1482.0 1189.8 L 1517.5 1178.3"/>
+<path class="link" marker-end="url(#in)" d="M 1319.3 781.7 L 1286.7 767.8"/>
+<path class="link" marker-end="url(#in)" d="M 1319.3 800.4 L 1280.7 806.4"/>
+<path class="link" marker-end="url(#in)" d="M 913.7 1260.1 L 917.6 1315.2"/>
+<path class="link" marker-start="url(#in)" d="M 418.9 1434.1 L 426.6 1377.9"/>
+<path class="link" marker-start="url(#in)" d="M 430.0 1434.1 L 459.3 1399.0"/>
+<path class="link" marker-end="url(#in)" d="M 424.1 1466.1 L 448.6 1518.4"/>
+<path class="link" marker-end="url(#in)" d="M 403.3 1466.1 L 374.2 1500.9"/>
+<path class="link" marker-start="url(#in)" d="M 522.8 1597.5 L 473.0 1550.4"/>
+<path class="link" marker-end="url(#in)" d="M 511.0 1614.1 L 469.7 1614.8"/>
+<path class="link" marker-start="url(#in)" d="M 1304.8 1980.3 L 1275.0 1949.4"/>
+<path class="link" marker-start="url(#in)" d="M 1316.9 1980.3 L 1305.5 1926.8"/>
+<path class="link" marker-end="url(#in)" d="M 1335.7 2012.3 L 1365.5 2043.1"/>
+<path class="link" marker-end="url(#in)" d="M 1323.7 2012.3 L 1335.0 2065.7"/>
+<path class="link" marker-start="url(#in)" d="M 1006.4 997.1 L 1024.5 943.6"/>
+<path class="link" marker-start="url(#in)" d="M 1021.1 997.1 L 1054.1 970.9"/>
+<path class="link" marker-end="url(#in)" d="M 995.4 1029.1 L 976.2 1085.1"/>
+<path class="link" marker-end="url(#in)" d="M 980.8 1029.1 L 948.6 1054.6"/>
+<path class="link" marker-start="url(#in)" d="M 1029.3 786.4 L 1063.7 782.9"/>
+<path class="link" marker-end="url(#in)" d="M 998.1 774.0 L 1011.9 719.7"/>
+<path class="link" marker-start="url(#in)" d="M 1909.6 1320.8 L 1892.5 1371.2"/>
+<path class="link" marker-start="url(#in)" d="M 1894.7 1320.8 L 1861.0 1347.4"/>
+<path class="link" marker-end="url(#in)" d="M 1920.6 1288.8 L 1938.3 1238.4"/>
+<path class="link" marker-end="url(#in)" d="M 1935.0 1288.8 L 1967.5 1262.8"/>
+<path class="link" marker-start="url(#in)" d="M 1697.7 1510.4 L 1659.1 1504.1"/>
+<path class="link" marker-start="url(#in)" d="M 1711.4 1499.6 L 1679.7 1471.8"/>
+<path class="link" marker-end="url(#in)" d="M 1761.5 1520.8 L 1800.1 1527.2"/>
+<path class="link" marker-end="url(#in)" d="M 1747.8 1531.6 L 1779.5 1559.5"/>
+<path class="link" marker-start="url(#in)" d="M 271.0 527.0 L 248.2 418.0"/>
+<path class="link" marker-end="url(#in)" d="M 242.4 538.7 L 240.4 538.4"/>
+<path class="link" marker-end="url(#in)" d="M 533.8 67.9 L 562.9 80.7"/>
+<path class="link" marker-end="url(#in)" d="M 1998.6 2037.4 L 1965.6 2060.3"/>
+<path class="link" marker-start="url(#in)" d="M 1849.2 2378.4 L 1849.7 2435.3"/>
+<path class="link" marker-end="url(#in)" d="M 1881.0 2373.7 L 1913.9 2385.4"/>
+<path class="link" marker-start="url(#in)" d="M 1898.3 1538.2 L 1864.9 1526.7"/>
+<path class="link" marker-start="url(#in)" d="M 1920.5 1534.3 L 1875.1 1478.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_phenylalanine-metabolism" transform="translate(1089.6,0.0)"><rect rx="10" height="31" width="243" x="-121.6" y="-15.5"/><text dominant-baseline="central">phenylalanine metabolism</text></g>
+<g id="node5901" class="node nodeHM pw_phenylalanine-metabolism lid353" transform="translate(1577.4,583.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=353" target="_blank">prephenate</a></text><title></title></g>
+<g id="node5913" class="node nodeHM pw_phenylalanine-metabolism lid883" transform="translate(1727.4,857.8)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=883" target="_blank">L-arogenate</a></text><title></title></g>
+<g id="node5909" class="node nodeHM pw_phenylalanine-metabolism lid203" transform="translate(1729.6,1224.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=203" target="_blank">Phe</a></text><title></title></g>
+<g id="node5905" class="node nodeHM pw_phenylalanine-metabolism lid198" transform="translate(1187.4,1014.2)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=198" target="_blank">phenylpyruvate</a></text><title></title></g>
+<g id="node4795" class="node nodeHM pw_phenylalanine-metabolism lid769" transform="translate(651.2,1450.1)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=769" target="_blank">phenylacetaldehyde</a></text><title></title></g>
+<g id="node4789" class="node nodeHM pw_phenylalanine-metabolism lid776" transform="translate(246.3,1529.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=776" target="_blank">Pac</a></text><title></title></g>
+<g id="node4782" class="node nodeHM pw_phenylalanine-metabolism lid1667" transform="translate(445.4,1756.0)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1667" target="_blank">2-phenylethanol</a></text><title></title></g>
+<g id="node11600" class="node nodeHM pw_phenylalanine-metabolism lid12227" transform="translate(1424.2,1802.3)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12227" target="_blank">D-beta-phenylalanine</a></text><title></title></g>
+<g id="node12113" class="node nodeHM pw_phenylalanine-metabolism lid41650" transform="translate(1245.3,2153.0)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41650" target="_blank">3-amino-3-phenylpropanoyl-CoA</a></text><title></title></g>
+<g id="node11186" class="node nodeHM pw_phenylalanine-metabolism lid1147" transform="translate(833.6,1013.1)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1147" target="_blank">phenylacetyl-CoA</a></text><title></title></g>
+<g id="node1379" class="node nodeHM pw_phenylalanine-metabolism lid5237" transform="translate(801.4,566.8)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5237" target="_blank">(R)-phenyllactate</a></text><title></title></g>
+<g id="node10688" class="node nodeHM pw_phenylalanine-metabolism lid8125" transform="translate(2097.1,1226.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8125" target="_blank">L-Phe-tRNAPhe</a></text><title></title></g>
+<g id="node4780" class="node nodeHM pw_phenylalanine-metabolism lid1232" transform="translate(1805.9,1671.6)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1232" target="_blank">D-Phe</a></text><title></title></g>
+<g id="node12030" class="node nodeHM pw_phenylalanine-metabolism lid204" transform="translate(1579.7,182.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=204" target="_blank">chorismate</a></text><title></title></g>
+<g id="node12028" class="node nodeHM pw_phenylalanine-metabolism lid6144" transform="translate(419.9,440.3)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6144" target="_blank">(E)-cinnamate</a></text><title></title></g>
+<g id="node12347" class="node nodeHM pw_phenylalanine-metabolism lid30591" transform="translate(204.2,669.9)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30591" target="_blank">PPPN</a></text><title></title></g>
+<g id="node1375" class="node nodeHM pw_phenylalanine-metabolism lid50413" transform="translate(498.6,209.5)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50413" target="_blank">(R)-phenyllactyl-CoA</a></text><title></title></g>
+<g id="node12027" class="node nodeHM pw_phenylalanine-metabolism lid16822" transform="translate(597.3,149.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16822" target="_blank">(E)-cinnamoyl-CoA</a></text><title></title></g>
+<g id="node4804" class="node nodeHM pw_phenylalanine-metabolism lid3853" transform="translate(2023.7,1792.3)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3853" target="_blank">4a-hydroxy-tetrahydrobiopterin</a></text><title></title></g>
+<g id="node4801" class="node nodeHM pw_phenylalanine-metabolism lid239173" transform="translate(2021.7,2218.6)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=239173" target="_blank">6,7-dihydrobiopterin</a></text><title></title></g>
+<g id="node12569" class="node nodeHM pw_phenylalanine-metabolism lid110471" transform="translate(1708.4,2442.1)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=110471" target="_blank">a 5,6,7,8-tetrahydropteridine</a></text><title></title></g>
+<g id="node12035" class="node nodeHM pw_phenylalanine-metabolism lid109" transform="translate(2123.0,1550.3)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=109" target="_blank">Tyr</a></text><title></title></g>
+<g id="node5910" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1726.6,667.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.79" target="_blank">2.6.1.79</a></text><title>glutamate-prephenate aminotransferase</title></g>
+<g id="node5914" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1728.8,1085.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.91" target="_blank">4.2.1.91</a></text><title>arogenate dehydratase</title></g>
+<g id="node4788" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1412.4,1260.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.58" target="_blank">2.6.1.58</a></text><title>phenylalanine(histidine) transaminase; aromatic-amino-acid transaminase</title></g>
+<g id="node5906" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1450.1,1200.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.57" target="_blank">2.6.1.57</a></text><title>phenylalanine(histidine) transaminase; aromatic-amino-acid transaminase</title></g>
+<g id="node5902" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1351.3,795.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.51" target="_blank">4.2.1.51</a></text><title>prephenate dehydratase</title></g>
+<g id="node4797" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(912.5,1244.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.43" target="_blank">4.1.1.43</a></text><title>Phenylpyruvate decarboxylase</title></g>
+<g id="node4794" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(416.6,1450.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.39" target="_blank">1.2.1.39</a></text><title>phenylacetaldehyde dehydrogenase</title></g>
+<g id="node4785" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(539.7,1613.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.1" target="_blank">1.1.1.1</a></text><title>alcohol dehydrogenase</title></g>
+<g id="node11599" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1544.2,1576.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.3.10" target="_blank">5.4.3.10</a></text><title>phenylalanine aminomutase (L-beta-phenylalanine forming)</title></g>
+<g id="node12114" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1320.3,1996.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.-" target="_blank">6.2.1.-</a></text><title></title></g>
+<g id="node11185" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1000.9,1013.1)"><rect rx="15" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.7" target="_blank">1.2.7.7/1.2.7.8</a></text><title>3-methyl-2-oxobutanoate dehydrogenase (ferredoxin);indolepyruvate ferredoxin oxidoreductase</title></g>
+<g id="node1380" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(994.1,790.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.110" target="_blank">1.1.1.110</a></text><title>aromatic 2-oxoacid reductase</title></g>
+<g id="node10687" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1915.0,1304.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.20" target="_blank">6.1.1.20</a></text><title>Phenylalanine-tRNA ligase</title></g>
+<g id="node4781" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1729.6,1515.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.1.11" target="_blank">5.1.1.11</a></text><title>Phenylalanine racemase (ATP-hydrolysing)</title></g>
+<g id="node4649" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1577.4,354.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.5" target="_blank">5.4.99.5</a></text><title>Chorismate mutase</title></g>
+<g id="node12345" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(274.3,543.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.15" target="_blank">1.3.8.15</a></text><title>3-(aryl)acrylate reductase</title></g>
+<g id="node12026" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(498.6,52.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.175" target="_blank">4.2.1.175</a></text><title>(R)-3-(aryl)lactoyl-CoA dehydratase</title></g>
+<g id="node4803" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(2021.7,2021.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.96" target="_blank">4.2.1.96</a></text><title>4a-hydroxytetrahydrobiopterin dehydratase</title></g>
+<g id="node4800" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1849.0,2362.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.34" target="_blank">1.5.1.34</a></text><title>6,7-dihydropteridine reductase</title></g>
+<g id="node1376" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(597.3,364.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.17" target="_blank">2.8.3.17</a></text><title>3-(aryl)acryloyl-CoA:(R)-3-(aryl)lactate CoA-transferase</title></g>
+<g id="node4808" class="node nodeEN pw_phenylalanine-metabolism" transform="translate(1933.5,1550.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.16.1" target="_blank">1.14.16.1</a></text><title>phenylalanine 4-monooxygenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5910~0" class="node nodeCM pw_phenylalanine-metabolism lid41" transform="translate(1765.3,589.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5910~1" class="node nodeCM pw_phenylalanine-metabolism lid34" transform="translate(1813.4,677.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5914~0" class="node nodeCM pw_phenylalanine-metabolism lid1" transform="translate(1811.6,1113.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5914~1" class="node nodeCM pw_phenylalanine-metabolism lid28" transform="translate(1784.2,1152.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4788~0" class="node nodeCM pw_phenylalanine-metabolism lid31" transform="translate(1515.9,1207.2)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node4788~1" class="node nodeCM pw_phenylalanine-metabolism lid103" transform="translate(1339.8,1308.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node5906~0" class="node nodeCM pw_phenylalanine-metabolism lid202" transform="translate(1506.5,1133.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=202" target="_blank">Glu</a></text><title></title></g>
+<g id="node5906~1" class="node nodeCM pw_phenylalanine-metabolism lid34" transform="translate(1533.2,1173.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5902~0" class="node nodeCM pw_phenylalanine-metabolism lid28" transform="translate(1271.0,761.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5902~1" class="node nodeCM pw_phenylalanine-metabolism lid1" transform="translate(1264.9,808.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4797~0" class="node nodeCM pw_phenylalanine-metabolism lid28" transform="translate(918.8,1331.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4794~0" class="node nodeCM pw_phenylalanine-metabolism lid7" transform="translate(428.8,1361.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node4794~1" class="node nodeCM pw_phenylalanine-metabolism lid1" transform="translate(472.6,1383.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4794~3" class="node nodeCM pw_phenylalanine-metabolism lid12" transform="translate(361.7,1515.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4785~0" class="node nodeCM pw_phenylalanine-metabolism lid8" transform="translate(456.1,1534.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4785~1" class="node nodeCM pw_phenylalanine-metabolism lid7" transform="translate(450.7,1615.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12114~0" class="node nodeCM pw_phenylalanine-metabolism lid4" transform="translate(1259.6,1933.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node12114~1" class="node nodeCM pw_phenylalanine-metabolism lid18" transform="translate(1302.1,1910.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node12114~2" class="node nodeCM pw_phenylalanine-metabolism lid30" transform="translate(1380.9,2059.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node12114~3" class="node nodeCM pw_phenylalanine-metabolism lid17" transform="translate(1338.4,2081.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11185~0" class="node nodeCM pw_phenylalanine-metabolism lid289" transform="translate(1029.9,927.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node11185~1" class="node nodeCM pw_phenylalanine-metabolism lid18" transform="translate(1069.8,958.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node11185~2" class="node nodeCM pw_phenylalanine-metabolism lid265" transform="translate(970.7,1101.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node11185~3" class="node nodeCM pw_phenylalanine-metabolism lid28" transform="translate(932.9,1067.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1380~0" class="node nodeCM pw_phenylalanine-metabolism lid8" transform="translate(1082.6,781.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node1380~1" class="node nodeCM pw_phenylalanine-metabolism lid7" transform="translate(1015.9,703.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node10687~0" class="node nodeCM pw_phenylalanine-metabolism lid4" transform="translate(1887.0,1387.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10687~1" class="node nodeCM pw_phenylalanine-metabolism lid1384" transform="translate(1840.6,1363.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1384" target="_blank">tRNAPhe</a></text><title></title></g>
+<g id="node10687~2" class="node nodeCM pw_phenylalanine-metabolism lid30" transform="translate(1944.0,1222.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10687~3" class="node nodeCM pw_phenylalanine-metabolism lid17" transform="translate(1983.2,1250.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node4781~0" class="node nodeCM pw_phenylalanine-metabolism lid4" transform="translate(1643.4,1501.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node4781~1" class="node nodeCM pw_phenylalanine-metabolism lid1" transform="translate(1664.0,1457.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4781~2" class="node nodeCM pw_phenylalanine-metabolism lid30" transform="translate(1815.8,1529.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node4781~3" class="node nodeCM pw_phenylalanine-metabolism lid17" transform="translate(1795.2,1573.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node12345~0" class="node nodeCM pw_phenylalanine-metabolism lid2112" transform="translate(244.9,402.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2112" target="_blank">reduced electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node12345~1" class="node nodeCM pw_phenylalanine-metabolism lid1601" transform="translate(137.2,524.3)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1601" target="_blank">electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node12026~0" class="node nodeCM pw_phenylalanine-metabolism lid1" transform="translate(578.6,87.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4803~0" class="node nodeCM pw_phenylalanine-metabolism lid1" transform="translate(1949.9,2071.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4800~0" class="node nodeCM pw_phenylalanine-metabolism lid8" transform="translate(1849.8,2451.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4800~1" class="node nodeCM pw_phenylalanine-metabolism lid7" transform="translate(1932.9,2392.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node4808~0" class="node nodeCM pw_phenylalanine-metabolism lid9" transform="translate(1852.4,1522.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node4808~1" class="node nodeCM pw_phenylalanine-metabolism lid252" transform="translate(1862.2,1462.3)"><rect rx="5" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=252" target="_blank">tetrahydrobiopterin</a></text><title></title></g>
+</g></svg>

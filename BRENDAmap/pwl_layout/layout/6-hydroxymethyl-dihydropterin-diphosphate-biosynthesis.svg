@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1286.5 1564.6" width="1287" height="1565" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1286.5" height="1564.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" class="pw " x="0.0" y="0.0" width="1166.5" height="1429.1" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 224.3 783.1 L 182.1 756.6"/>
+<path class="link" marker-end="url(#in)" d="M 281.8 811.9 L 364.4 845.2"/>
+<path class="link" marker-end="url(#in)" d="M 239.8 1040.4 L 389.5 877.2"/>
+<path class="link" marker-start="url(#in)" d="M 236.0 1072.4 L 333.7 1215.7"/>
+<path class="link" marker-end="url(#in)" d="M 411.5 1281.3 L 366.1 1247.7"/>
+<path class="link" marker-start="url(#in)" d="M 445.7 1313.3 L 485.2 1363.1"/>
+<path class="link" marker-start="url(#in)" d="M 710.5 1127.6 L 511.4 1363.1"/>
+<path class="link" marker-end="url(#in)" d="M 732.8 1095.6 L 848.7 885.0"/>
+<path class="link" marker-start="url(#in)" d="M 1013.6 804.8 L 896.5 853.0"/>
+<path class="link" marker-end="url(#in)" d="M 1045.5 775.7 L 1045.5 615.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 928.1 458.4 L 1032.2 583.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 886.1 442.4 L 684.5 442.4"/>
+<path class="link" marker-start="url(#in)" d="M 498.5 329.2 L 653.1 432.0"/>
+<path class="link" marker-end="url(#in)" d="M 442.5 328.1 L 383.0 355.7"/>
+<path class="link" marker-end="url(#in)" d="M 175.8 511.3 C 212.6 481.6 292.9 416.7 329.6 387.1"/>
+<path class="link" marker-start="url(#in)" d="M 156.6 542.7 L 156.6 724.6"/>
+<path class="link" marker-start="url(#in)" d="M 351.2 572.3 L 401.2 845.2"/>
+<path class="link" marker-end="url(#in)" d="M 348.3 540.9 C 348.4 506.1 348.5 421.6 348.6 387.0"/>
+<path class="link" marker-start="url(#in)" d="M 675.9 857.4 L 738.2 861.4"/>
+<path class="link" marker-end="url(#in)" d="M 612.0 856.2 L 491.2 859.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 540.4 605.5 L 412.7 845.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 561.9 573.5 L 655.8 458.4"/>
+<path class="link" marker-start="url(#in)" d="M 171.9 1160.4 C 238.0 1204.8 427.9 1332.2 482.8 1369.0"/>
+<path class="link" marker-end="url(#in)" d="M 149.3 1129.1 L 156.3 756.6"/>
+<path class="link" marker-start="url(#in)" d="M 348.6 152.5 L 348.6 355.7"/>
+<path class="link" marker-end="url(#in)" d="M 377.3 132.2 L 456.6 120.6"/>
+<path class="link" marker-start="url(#in)" d="M 727.5 206.3 C 691.8 183.9 625.7 142.5 589.8 120.0"/>
+<path class="link" marker-start="url(#in)" d="M 765.3 237.6 L 834.1 320.1"/>
+<path class="link" marker-end="url(#in)" d="M 787.1 206.4 L 850.5 179.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 221.0 815.1 L 189.2 832.7"/>
+<path class="link" marker-end="url(#in)" d="M 252.4 815.1 L 261.0 869.3"/>
+<path class="link" marker-end="url(#in)" d="M 226.8 1072.4 L 234.0 1139.6"/>
+<path class="link" marker-start="url(#in)" d="M 465.0 1291.1 L 503.1 1283.6"/>
+<path class="link" marker-end="url(#in)" d="M 401.8 1313.3 L 371.0 1329.1"/>
+<path class="link" marker-end="url(#in)" d="M 401.1 1294.6 L 368.2 1291.8"/>
+<path class="link" marker-start="url(#in)" d="M 729.7 1127.6 L 747.8 1177.8"/>
+<path class="link" marker-end="url(#in)" d="M 712.4 1095.6 L 680.6 1051.5"/>
+<path class="link" marker-end="url(#in)" d="M 722.9 1095.6 L 719.2 1040.4"/>
+<path class="link" marker-start="url(#in)" d="M 1051.4 807.7 L 1069.7 857.7"/>
+<path class="link" marker-start="url(#in)" d="M 940.1 426.4 L 972.9 405.6"/>
+<path class="link" marker-end="url(#in)" d="M 889.6 458.4 L 854.9 480.4"/>
+<path class="link" marker-end="url(#in)" d="M 461.0 329.2 L 410.3 389.7"/>
+<path class="link" marker-end="url(#in)" d="M 148.3 510.7 L 113.4 443.7"/>
+<path class="link" marker-end="url(#in)" d="M 318.8 540.3 L 282.4 520.5"/>
+<path class="link" marker-start="url(#in)" d="M 655.6 839.4 L 683.6 800.7"/>
+<path class="link" marker-start="url(#in)" d="M 520.2 590.9 L 477.4 592.9"/>
+<path class="link" marker-end="url(#in)" d="M 542.2 573.5 L 522.5 526.4"/>
+<path class="link" marker-start="url(#in)" d="M 180.9 1149.0 L 220.0 1153.7"/>
+<path class="link" marker-end="url(#in)" d="M 161.4 1129.1 L 179.0 1106.4"/>
+<path class="link" marker-start="url(#in)" d="M 320.0 134.5 L 277.2 131.5"/>
+<path class="link" marker-end="url(#in)" d="M 344.0 120.5 L 329.2 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 756.5 205.6 L 773.6 145.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(583.3,0.0)"><rect rx="10" height="31" width="535" x="-267.4" y="-15.5"/><text dominant-baseline="central">6-hydroxymethyl-dihydropterin diphosphate biosynthesis</text></g>
+<g id="node12241" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid27690" transform="translate(156.6,740.6)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27690" target="_blank">7,8-dihydroneopterin 3&#x27;-triphosphate</a></text><title></title></g>
+<g id="node2564" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid88310" transform="translate(404.2,861.2)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88310" target="_blank">7,8-dihydroneopterin 3&#x27;-P</a></text><title></title></g>
+<g id="node12239" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid81591" transform="translate(344.6,1231.7)"><rect height="30.0" width="398.8" x="-199.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=81591" target="_blank">2,5-diamino-6-hydroxy-4-(5-phospho-D-ribosylamino)pyrimidine</a></text><title></title></g>
+<g id="node1220" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid37" transform="translate(497.9,1379.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node2569" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid15296" transform="translate(857.6,869.0)"><rect height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15296" target="_blank">7,8-dihydroneopterin 2&#x27;,3&#x27;-cyclic P</a></text><title></title></g>
+<g id="node2567" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid88309" transform="translate(1045.5,599.6)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88309" target="_blank">7,8-dihydroneopterin 2&#x27;-P</a></text><title></title></g>
+<g id="node2562" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid3544" transform="translate(668.8,442.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3544" target="_blank">NPR</a></text><title></title></g>
+<g id="node2560" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid11187" transform="translate(348.6,371.7)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11187" target="_blank">6-hydroxymethyl-7,8-dihydropterin</a></text><title></title></g>
+<g id="node2558" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid4667" transform="translate(565.0,104.6)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4667" target="_blank">6-hydroxymethyl-7,8-dihydropterin-PP</a></text><title></title></g>
+<g id="node1219" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid28785" transform="translate(847.4,336.1)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28785" target="_blank">4-(beta-D-ribosyl)aniline 5&#x27;-P</a></text><title></title></g>
+<g id="node11332" class="node nodeHM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid88263" transform="translate(887.6,163.1)"><rect height="30.0" width="470.1" x="-235.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88263" target="_blank">N-[(7,8-dihydropterin-6-yl)methyl]-4-(beta-D-ribofuranosyl)aniline 5&#x27;-P</a></text><title></title></g>
+<g id="node11428" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(249.8,799.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.67" target="_blank">3.6.1.67</a></text><title>dihydroneopterin triphosphate diphosphatase</title></g>
+<g id="node12242" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(225.1,1056.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.160" target="_blank">4.2.1.160</a></text><title>2,5-diamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one isomerase/dehydratase</title></g>
+<g id="node12235" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(433.1,1297.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.25" target="_blank">3.5.4.25</a></text><title>GTP cyclohydrolase II</title></g>
+<g id="node2570" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(724.0,1111.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.39" target="_blank">3.5.4.39</a></text><title>GTP cyclohydrolase IV</title></g>
+<g id="node2568" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(1045.5,791.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.4.56" target="_blank">3.1.4.56</a></text><title>7,8-dihydroneopterin 2&#x27;,3&#x27;-cyclic phosphate phosphodiesterase</title></g>
+<g id="node2566" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(914.8,442.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.-" target="_blank">3.6.1.-</a></text><title>hypothetical</title></g>
+<g id="node2561" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(474.4,313.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.25" target="_blank">4.1.2.25</a></text><title>Dihydroneopterin aldolase</title></g>
+<g id="node12246" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(156.6,526.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.60" target="_blank">4.1.2.60</a></text><title>dihydroneopterin triphosphate aldolase</title></g>
+<g id="node12248" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(348.3,556.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.59" target="_blank">4.1.2.59</a></text><title>dihydroneopterin phosphate aldolase</title></g>
+<g id="node2565" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(643.9,855.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.4.56" target="_blank">3.1.4.56</a></text><title>7,8-dihydroneopterin 2&#x27;,3&#x27;-cyclic phosphate phosphodiesterase</title></g>
+<g id="node2563" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(548.9,589.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.-" target="_blank">3.6.1.-</a></text><title>hypothetical</title></g>
+<g id="node12245" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(149.0,1145.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.16" target="_blank">3.5.4.16</a></text><title>GTP cyclohydrolase I</title></g>
+<g id="node2559" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(348.6,136.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.6.3" target="_blank">2.7.6.3</a></text><title>2-amino-4-hydroxy-6-hydroxymethyldihydropteridine diphosphokinase</title></g>
+<g id="node11330" class="node nodeEN pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis" transform="translate(752.0,221.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.105" target="_blank">2.5.1.105</a></text><title>7,8-dihydropterin-6-yl-methyl-4-(beta-D-ribofuranosyl)aminobenzene 5&#x27;-phosphate synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11428~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(173.4,841.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11428~1" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid17" transform="translate(263.5,885.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node12242~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(235.8,1155.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12235~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(518.8,1280.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12235~1" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid17" transform="translate(355.3,1337.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node12235~2" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid120" transform="translate(339.6,1289.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node2570~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(753.6,1193.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2570~1" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid120" transform="translate(669.1,1035.5)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node2570~2" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid17" transform="translate(718.2,1024.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2568~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(1075.6,873.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2566~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(988.6,395.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2566~1" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid16" transform="translate(842.4,488.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node2561~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid604" transform="translate(396.9,405.7)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=604" target="_blank">glycolaldehyde</a></text><title></title></g>
+<g id="node12246~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid218005" transform="translate(105.1,427.7)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=218005" target="_blank">glycolaldehyde-PPP</a></text><title></title></g>
+<g id="node12248~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid44185" transform="translate(253.0,504.5)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44185" target="_blank">glycolaldehyde-P</a></text><title></title></g>
+<g id="node2565~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(695.3,784.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2563~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid1" transform="translate(461.6,593.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2563~1" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid16" transform="translate(515.8,510.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node12245~1" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid120" transform="translate(191.5,1090.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node2559~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid4" transform="translate(261.5,130.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2559~1" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid30" transform="translate(324.6,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node11330~0" class="node nodeCM pw_6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis lid17" transform="translate(778.2,129.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>

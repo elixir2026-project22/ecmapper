@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1629.3 2053.0" width="1629" height="2053" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1629.3" height="2053.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_serotonin-metabolism" class="pw " x="0.0" y="0.0" width="1509.3" height="1917.5" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 714.1 218.0 L 714.1 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 714.1 249.5 C 714.1 283.8 714.1 365.8 714.1 400.1"/>
+<path class="link" marker-start="url(#in)" d="M 714.1 581.0 L 714.1 431.5"/>
+<path class="link" marker-end="url(#in)" d="M 714.1 613.0 L 714.1 762.5"/>
+<path class="link" marker-start="url(#in)" d="M 714.1 944.0 L 714.1 794.5"/>
+<path class="link" marker-end="url(#in)" d="M 714.1 976.0 L 714.1 1125.5"/>
+<path class="link" marker-start="url(#in)" d="M 866.9 1065.1 L 746.1 1125.5"/>
+<path class="link" marker-end="url(#in)" d="M 924.3 1036.4 L 1045.1 976.0"/>
+<path class="link" marker-start="url(#in)" d="M 561.3 778.5 L 678.9 778.5"/>
+<path class="link" marker-end="url(#in)" d="M 503.9 778.5 L 467.3 778.5"/>
+<path class="link" marker-start="url(#in)" d="M 863.7 778.5 L 749.3 778.5"/>
+<path class="link" marker-end="url(#in)" d="M 927.5 778.5 L 1016.0 778.5"/>
+<path class="link" marker-start="url(#in)" d="M 1229.9 778.5 L 1138.2 778.5"/>
+<path class="link" marker-end="url(#in)" d="M 1287.3 778.5 L 1404.9 778.5"/>
+<path class="link" marker-start="url(#in)" d="M 462.9 1141.5 L 588.2 1141.5"/>
+<path class="link" marker-end="url(#in)" d="M 420.9 1141.5 L 305.2 1141.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 714.1 1307.0 L 714.1 1157.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 714.1 1339.0 L 714.1 1488.5"/>
+<path class="link" marker-start="url(#in)" d="M 714.1 1670.0 L 714.1 1520.5"/>
+<path class="link" marker-end="url(#in)" d="M 714.1 1702.0 L 714.1 1851.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 678.9 223.3 L 644.1 212.6"/>
+<path class="link" marker-start="url(#in)" d="M 702.0 218.0 L 672.2 178.6"/>
+<path class="link" marker-end="url(#in)" d="M 737.0 250.0 L 811.9 302.5"/>
+<path class="link" marker-end="url(#in)" d="M 737.0 613.0 L 769.9 636.1"/>
+<path class="link" marker-start="url(#in)" d="M 685.4 950.1 L 647.2 937.0"/>
+<path class="link" marker-start="url(#in)" d="M 701.1 944.0 L 672.6 908.8"/>
+<path class="link" marker-end="url(#in)" d="M 742.8 969.9 L 779.3 982.4"/>
+<path class="link" marker-end="url(#in)" d="M 727.1 976.0 L 756.1 1011.9"/>
+<path class="link" marker-start="url(#in)" d="M 897.7 1066.8 L 905.2 1123.0"/>
+<path class="link" marker-start="url(#in)" d="M 888.3 1066.8 L 866.7 1114.3"/>
+<path class="link" marker-end="url(#in)" d="M 898.0 1034.8 L 906.3 978.7"/>
+<path class="link" marker-start="url(#in)" d="M 545.8 762.5 L 590.8 708.1"/>
+<path class="link" marker-end="url(#in)" d="M 522.9 762.5 L 469.0 674.1"/>
+<path class="link" marker-start="url(#in)" d="M 884.4 762.5 L 853.9 719.0"/>
+<path class="link" marker-end="url(#in)" d="M 906.8 762.5 L 934.5 722.9"/>
+<path class="link" marker-start="url(#in)" d="M 1247.4 794.5 L 1201.1 860.6"/>
+<path class="link" marker-end="url(#in)" d="M 1269.8 762.5 L 1317.9 693.7"/>
+<path class="link" marker-start="url(#in)" d="M 453.1 1125.5 L 480.8 1085.9"/>
+<path class="link" marker-end="url(#in)" d="M 436.3 1157.5 L 418.9 1208.1"/>
+<path class="link" marker-end="url(#in)" d="M 422.1 1157.5 L 387.7 1185.4"/>
+<path class="link" marker-start="url(#in)" d="M 737.0 1307.0 L 768.0 1285.2"/>
+<path class="link" marker-end="url(#in)" d="M 737.0 1339.0 L 768.0 1360.8"/>
+<path class="link" marker-start="url(#in)" d="M 737.0 1670.0 L 778.7 1640.7"/>
+<path class="link" marker-end="url(#in)" d="M 737.0 1702.0 L 769.9 1725.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_serotonin-metabolism" transform="translate(754.6,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">serotonin metabolism</text></g>
+<g id="node12716" class="node nodeHM pw_serotonin-metabolism lid119" transform="translate(714.1,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=119" target="_blank">Trp</a></text><title></title></g>
+<g id="node12717" class="node nodeHM pw_serotonin-metabolism lid1372" transform="translate(714.1,415.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1372" target="_blank">5-hydroxy-L-tryptophan</a></text><title></title></g>
+<g id="node12723" class="node nodeHM pw_serotonin-metabolism lid437" transform="translate(714.1,778.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=437" target="_blank">serotonin</a></text><title></title></g>
+<g id="node12737" class="node nodeHM pw_serotonin-metabolism lid21742" transform="translate(714.1,1141.5)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21742" target="_blank">(5-hydroxy-1H-indol-3-yl)acetaldehyde</a></text><title></title></g>
+<g id="node12751" class="node nodeHM pw_serotonin-metabolism lid105128" transform="translate(1077.1,960.0)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=105128" target="_blank">5-hydroxyindol acetate</a></text><title></title></g>
+<g id="node12734" class="node nodeHM pw_serotonin-metabolism lid91337" transform="translate(351.1,778.5)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91337" target="_blank">3-(2-aminoethyl)-5-indoxyl sulfate</a></text><title></title></g>
+<g id="node12726" class="node nodeHM pw_serotonin-metabolism lid1450" transform="translate(1077.1,778.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1450" target="_blank">N-acetylserotonin</a></text><title></title></g>
+<g id="node12730" class="node nodeHM pw_serotonin-metabolism lid1536" transform="translate(1440.1,778.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1536" target="_blank">melatonin</a></text><title></title></g>
+<g id="node12742" class="node nodeHM pw_serotonin-metabolism lid258491" transform="translate(169.6,1141.5)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=258491" target="_blank">5-hydroxyindole thiazolidine carboxylate</a></text><title></title></g>
+<g id="node12748" class="node nodeHM pw_serotonin-metabolism lid6460" transform="translate(714.1,1504.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6460" target="_blank">5-hydroxytryptophol</a></text><title></title></g>
+<g id="node12756" class="node nodeHM pw_serotonin-metabolism lid126937" transform="translate(714.1,1867.5)"><rect height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=126937" target="_blank">5-hydroxytryptophol beta-D-glucuronide</a></text><title></title></g>
+<g id="node12720" class="node nodeEN pw_serotonin-metabolism" transform="translate(714.1,234.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.16.4" target="_blank">1.14.16.4</a></text><title>tryptophan 5-monooxygenase</title></g>
+<g id="node12722" class="node nodeEN pw_serotonin-metabolism" transform="translate(714.1,597.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.28" target="_blank">4.1.1.28</a></text><title>aromatic-L-amino-acid decarboxylase</title></g>
+<g id="node12741" class="node nodeEN pw_serotonin-metabolism" transform="translate(714.1,960.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.4" target="_blank">1.4.3.4</a></text><title>monoamine oxidase</title></g>
+<g id="node12749" class="node nodeEN pw_serotonin-metabolism" transform="translate(895.6,1050.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.3" target="_blank">1.2.1.3</a></text><title>aldehyde dehydrogenase (NAD+)</title></g>
+<g id="node12733" class="node nodeEN pw_serotonin-metabolism" transform="translate(532.6,778.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.2.1" target="_blank">2.8.2.1</a></text><title>aryl sulfotransferase</title></g>
+<g id="node12725" class="node nodeEN pw_serotonin-metabolism" transform="translate(895.6,778.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.87" target="_blank">2.3.1.87</a></text><title>aralkylamine N-acetyltransferase</title></g>
+<g id="node12729" class="node nodeEN pw_serotonin-metabolism" transform="translate(1258.6,778.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.4" target="_blank">2.1.1.4</a></text><title>acetylserotonin O-methyltransferase</title></g>
+<g id="node12744" class="node nodeEN pw_serotonin-metabolism" transform="translate(441.9,1141.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node12754" class="node nodeEN pw_serotonin-metabolism" transform="translate(714.1,1323.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.1" target="_blank">1.1.1.1</a></text><title>alcohol dehydrogenase</title></g>
+<g id="node12758" class="node nodeEN pw_serotonin-metabolism" transform="translate(714.1,1686.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.17" target="_blank">2.4.1.17</a></text><title>glucuronosyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node12720~0" class="node nodeCM pw_serotonin-metabolism lid110471" transform="translate(591.7,196.6)"><rect rx="5" height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=110471" target="_blank">a 5,6,7,8-tetrahydropteridine</a></text><title></title></g>
+<g id="node12720~1" class="node nodeCM pw_serotonin-metabolism lid9" transform="translate(660.1,162.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12720~2" class="node nodeCM pw_serotonin-metabolism lid239175" transform="translate(834.8,318.5)"><rect rx="5" height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=239175" target="_blank">a 4a-hydroxy-5,6,7,8-tetrahydropteridine</a></text><title></title></g>
+<g id="node12722~0" class="node nodeCM pw_serotonin-metabolism lid28" transform="translate(785.7,647.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node12741~0" class="node nodeCM pw_serotonin-metabolism lid1" transform="translate(631.5,931.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12741~1" class="node nodeCM pw_serotonin-metabolism lid9" transform="translate(660.1,893.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12741~2" class="node nodeCM pw_serotonin-metabolism lid22" transform="translate(798.2,989.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node12741~3" class="node nodeCM pw_serotonin-metabolism lid27" transform="translate(769.1,1027.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node12749~0" class="node nodeCM pw_serotonin-metabolism lid7" transform="translate(907.3,1139.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12749~1" class="node nodeCM pw_serotonin-metabolism lid1" transform="translate(859.5,1130.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12749~2" class="node nodeCM pw_serotonin-metabolism lid8" transform="translate(908.7,962.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12733~0" class="node nodeCM pw_serotonin-metabolism lid112" transform="translate(604.1,692.1)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=112" target="_blank">3&#x27;-phosphoadenylyl sulfate</a></text><title></title></g>
+<g id="node12733~1" class="node nodeCM pw_serotonin-metabolism lid68" transform="translate(459.3,658.1)"><rect rx="5" height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=68" target="_blank">adenosine 3&#x27;,5&#x27;-bisphosphate</a></text><title></title></g>
+<g id="node12725~0" class="node nodeCM pw_serotonin-metabolism lid29" transform="translate(842.7,703.0)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node12725~1" class="node nodeCM pw_serotonin-metabolism lid18" transform="translate(945.7,706.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node12729~0" class="node nodeCM pw_serotonin-metabolism lid24" transform="translate(1189.9,876.6)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node12729~1" class="node nodeCM pw_serotonin-metabolism lid36" transform="translate(1329.1,677.7)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node12744~0" class="node nodeCM pw_serotonin-metabolism lid74" transform="translate(492.0,1069.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title></title></g>
+<g id="node12744~1" class="node nodeCM pw_serotonin-metabolism lid1" transform="translate(413.4,1224.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12744~2" class="node nodeCM pw_serotonin-metabolism lid12" transform="translate(375.2,1195.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12754~0" class="node nodeCM pw_serotonin-metabolism lid8" transform="translate(787.0,1272.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node12754~1" class="node nodeCM pw_serotonin-metabolism lid7" transform="translate(787.0,1374.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node12758~0" class="node nodeCM pw_serotonin-metabolism lid226" transform="translate(801.6,1624.7)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=226" target="_blank">UDP-glucuronate</a></text><title></title></g>
+<g id="node12758~1" class="node nodeCM pw_serotonin-metabolism lid26" transform="translate(785.7,1736.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+</g></svg>

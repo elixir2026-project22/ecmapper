@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1452.0 1022.8" width="1452" height="1023" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1452.0" height="1022.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_cis-vaccenate-biosynthesis" class="pw " x="0.0" y="0.0" width="1332.0" height="887.3" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 135.5 735.9 L 90.5 821.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 153.0 703.9 L 216.4 592.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 225.5 438.5 L 225.5 560.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 236.8 406.5 L 314.9 295.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 434.3 154.8 L 340.1 263.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 480.1 139.6 L 500.2 140.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 745.7 144.4 L 713.1 144.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 816.0 144.8 L 866.1 144.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1109.2 253.4 C 1109.9 273.7 1114.2 309.6 1133.9 331.8 C 1137.0 335.4 1140.9 338.3 1145.1 340.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1141.1 226.1 L 1197.5 204.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1081.3 222.1 L 974.5 160.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 151.8 735.9 L 174.6 782.3"/>
+<path class="link" marker-end="url(#in)" d="M 136.0 703.9 L 109.6 650.3"/>
+<path class="link" marker-start="url(#in)" d="M 196.9 430.9 L 160.8 441.4"/>
+<path class="link" marker-end="url(#in)" d="M 213.8 406.5 L 183.7 365.5"/>
+<path class="link" marker-end="url(#in)" d="M 450.7 122.8 L 459.3 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 769.5 160.8 L 739.8 202.7"/>
+<path class="link" marker-end="url(#in)" d="M 792.2 128.8 L 821.9 86.9"/>
+<path class="link" marker-end="url(#in)" d="M 1141.1 249.1 L 1176.1 261.1"/>
+<path class="link" marker-end="url(#in)" d="M 1122.2 254.1 L 1156.3 296.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_cis-vaccenate-biosynthesis" transform="translate(666.0,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">cis-vaccenate biosynthesis</text></g>
+<g id="node9417" class="node nodeHM pw_cis-vaccenate-biosynthesis lid92943" transform="translate(82.1,837.3)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92943" target="_blank">cis-vaccenate</a></text><title></title></g>
+<g id="node9487" class="node nodeHM pw_cis-vaccenate-biosynthesis lid30690" transform="translate(225.5,576.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30690" target="_blank">Cis-vaccenoyl-ACP</a></text><title></title></g>
+<g id="node9477" class="node nodeHM pw_cis-vaccenate-biosynthesis lid191362" transform="translate(326.2,279.7)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191362" target="_blank">(2E)-vaccen-2-enoyl-ACP</a></text><title></title></g>
+<g id="node9469" class="node nodeHM pw_cis-vaccenate-biosynthesis lid191363" transform="translate(606.7,142.8)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191363" target="_blank">(R)-3-hydroxy-cis-vaccenoyl-ACP</a></text><title></title></g>
+<g id="node9481" class="node nodeHM pw_cis-vaccenate-biosynthesis lid191338" transform="translate(946.6,144.8)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191338" target="_blank">3-oxo-cis-vaccenoyl-ACP</a></text><title></title></g>
+<g id="node12048" class="node nodeHM pw_cis-vaccenate-biosynthesis lid811" transform="translate(1186.1,352.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=811" target="_blank">Malonyl-ACP</a></text><title></title></g>
+<g id="node9422" class="node nodeHM pw_cis-vaccenate-biosynthesis lid3103" transform="translate(1240.1,188.9)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3103" target="_blank">palmitoleoyl-ACP</a></text><title></title></g>
+<g id="node9483" class="node nodeEN pw_cis-vaccenate-biosynthesis" transform="translate(143.9,719.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.2.14" target="_blank">3.1.2.14</a></text><title>oleoyl-[acyl-carrier-protein] hydrolase</title></g>
+<g id="node9473" class="node nodeEN pw_cis-vaccenate-biosynthesis" transform="translate(225.5,422.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.9" target="_blank">1.3.1.9</a></text><title>enoyl-[acyl-carrier-protein] reductase (NADH)</title></g>
+<g id="node9467" class="node nodeEN pw_cis-vaccenate-biosynthesis" transform="translate(448.2,138.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.59" target="_blank">4.2.1.59</a></text><title>3-hydroxyacyl-[acyl-carrier-protein] dehydratase</title></g>
+<g id="node9450" class="node nodeEN pw_cis-vaccenate-biosynthesis" transform="translate(780.9,144.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.100" target="_blank">1.1.1.100</a></text><title>3-oxoacyl-[acyl-carrier-protein] reductase</title></g>
+<g id="node9465" class="node nodeEN pw_cis-vaccenate-biosynthesis" transform="translate(1109.2,238.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.41" target="_blank">2.3.1.41</a></text><title>beta-ketoacyl-[acyl-carrier-protein] synthase I</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node9483~0" class="node nodeCM pw_cis-vaccenate-biosynthesis lid1" transform="translate(182.4,798.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9483~1" class="node nodeCM pw_cis-vaccenate-biosynthesis lid2745" transform="translate(101.7,634.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node9473~0" class="node nodeCM pw_cis-vaccenate-biosynthesis lid5" transform="translate(138.6,447.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9473~1" class="node nodeCM pw_cis-vaccenate-biosynthesis lid10" transform="translate(172.0,349.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9467~0" class="node nodeCM pw_cis-vaccenate-biosynthesis lid1" transform="translate(461.8,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9450~0" class="node nodeCM pw_cis-vaccenate-biosynthesis lid5" transform="translate(728.5,218.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9450~1" class="node nodeCM pw_cis-vaccenate-biosynthesis lid10" transform="translate(833.3,70.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9465~0" class="node nodeCM pw_cis-vaccenate-biosynthesis lid28" transform="translate(1191.8,266.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node9465~1" class="node nodeCM pw_cis-vaccenate-biosynthesis lid2745" transform="translate(1169.3,312.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+</g></svg>

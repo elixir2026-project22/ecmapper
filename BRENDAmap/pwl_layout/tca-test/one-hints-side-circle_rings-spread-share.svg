@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1620.9 1601.1" width="1621" height="1601" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1620.9" height="1601.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_citric-acid-cycle" class="pw " x="0.0" y="0.0" width="1540.9" height="1505.6" style="opacity: 0.5; fill: #dedede;"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 785.5 228.2 L 671.3 228.2"/>
+<path class="link" marker-end="url(#in)" d="M 842.9 228.2 L 937.7 228.2"/>
+<path class="link" marker-start="url(#in)" d="M 1098.2 322.5 L 1004.9 244.2"/>
+<path class="link" marker-end="url(#in)" d="M 1136.3 354.5 L 1229.6 432.8"/>
+<path class="link" marker-start="url(#in)" d="M 1383.6 580.4 L 1265.1 464.8"/>
+<path class="link" marker-end="url(#in)" d="M 1392.4 612.4 L 1316.0 770.8"/>
+<path class="link" marker-start="url(#in)" d="M 1202.2 616.0 L 1244.2 464.8"/>
+<path class="link" marker-end="url(#in)" d="M 1209.2 648.0 L 1296.9 770.8"/>
+<path class="link" marker-start="url(#in)" d="M 1319.2 975.8 L 1309.2 802.8"/>
+<path class="link" marker-end="url(#in)" d="M 1288.3 1007.8 L 1168.5 1068.0"/>
+<path class="link" marker-start="url(#in)" d="M 1171.5 875.8 L 1292.6 797.0"/>
+<path class="link" marker-end="url(#in)" d="M 1146.1 907.8 L 1137.5 1068.0"/>
+<path class="link" marker-start="url(#in)" d="M 1053.2 1293.7 L 1130.3 1100.0"/>
+<path class="link" marker-end="url(#in)" d="M 1018.2 1296.4 L 848.5 1217.4"/>
+<path class="link" marker-end="url(#in)" d="M 983.0 1077.3 L 1091.8 1082.1"/>
+<path class="link" marker-start="url(#in)" d="M 933.7 1091.9 L 831.6 1185.4"/>
+<path class="link" marker-end="url(#in)" d="M 1017.0 1192.1 L 1119.0 1100.0"/>
+<path class="link" marker-start="url(#in)" d="M 970.6 1207.1 L 849.3 1202.7"/>
+<path class="link" marker-end="url(#in)" d="M 1051.9 1352.2 L 1131.6 1100.0"/>
+<path class="link" marker-start="url(#in)" d="M 1024.6 1352.2 L 836.5 1217.4"/>
+<path class="link" marker-start="url(#in)" d="M 657.8 1207.1 L 779.0 1202.7"/>
+<path class="link" marker-end="url(#in)" d="M 611.4 1192.1 L 509.4 1100.0"/>
+<path class="link" marker-start="url(#in)" d="M 694.5 1093.3 L 796.5 1185.4"/>
+<path class="link" marker-end="url(#in)" d="M 648.1 1078.3 L 523.6 1082.8"/>
+<path class="link" marker-start="url(#in)" d="M 415.1 951.4 L 482.4 1068.0"/>
+<path class="link" marker-end="url(#in)" d="M 396.6 919.4 L 329.3 802.8"/>
+<path class="link" marker-start="url(#in)" d="M 191.5 603.9 L 308.8 770.8"/>
+<path class="link" marker-end="url(#in)" d="M 203.2 571.9 L 356.7 464.8"/>
+<path class="link" marker-start="url(#in)" d="M 347.1 633.8 L 322.9 770.8"/>
+<path class="link" marker-end="url(#in)" d="M 352.7 601.8 L 376.9 464.8"/>
+<path class="link" marker-start="url(#in)" d="M 482.5 660.8 L 340.7 770.8"/>
+<path class="link" marker-end="url(#in)" d="M 493.1 628.8 L 389.8 464.8"/>
+<path class="link" marker-start="url(#in)" d="M 350.3 265.7 L 328.8 134.1"/>
+<path class="link" marker-end="url(#in)" d="M 384.9 286.5 L 672.2 329.0"/>
+<path class="link" marker-end="url(#in)" d="M 355.5 297.7 L 377.1 432.8"/>
+<path class="link" marker-start="url(#in)" d="M 539.8 313.6 L 672.2 329.7"/>
+<path class="link" marker-start="url(#in)" d="M 496.0 326.1 L 394.8 432.8"/>
+<path class="link" marker-end="url(#in)" d="M 536.8 294.1 L 616.9 244.2"/>
+<path class="link" marker-start="url(#in)" d="M 493.1 237.8 L 613.9 230.0"/>
+<path class="link" marker-end="url(#in)" d="M 443.5 223.9 L 344.0 134.1"/>
+<path class="link" marker-start="url(#in)" d="M 525.4 122.5 L 624.8 212.2"/>
+<path class="link" marker-end="url(#in)" d="M 475.7 108.5 L 380.8 114.6"/>
+<path class="link" marker-start="url(#in)" d="M 594.3 352.6 L 672.2 337.7"/>
+<path class="link" marker-start="url(#in)" d="M 484.9 384.6 L 405.9 432.8"/>
+<path class="link" marker-end="url(#in)" d="M 526.1 352.6 L 627.6 244.2"/>
+<path class="link" marker-start="url(#in)" d="M 562.0 783.6 L 692.8 348.8"/>
+<path class="link" marker-start="url(#in)" d="M 585.9 801.1 L 755.9 810.3"/>
+<path class="link" marker-end="url(#in)" d="M 528.5 798.0 L 352.0 788.5"/>
+<path class="link" marker-start="url(#in)" d="M 1039.2 711.8 L 1235.9 464.8"/>
+<path class="link" marker-end="url(#in)" d="M 997.8 738.3 L 832.7 798.4"/>
+<path class="link" marker-end="url(#in)" d="M 1019.3 743.8 L 821.4 1185.4"/>
+<path class="link" marker-start="url(#in)" d="M 261.2 853.5 L 78.7 671.0"/>
+<path class="link" marker-end="url(#in)" d="M 293.2 885.5 L 475.7 1068.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 825.4 212.2 L 853.1 172.6"/>
+<path class="link" marker-start="url(#in)" d="M 1088.6 346.2 L 1048.6 356.9"/>
+<path class="link" marker-start="url(#in)" d="M 1365.8 580.4 L 1338.4 567.6"/>
+<path class="link" marker-end="url(#in)" d="M 1464.4 606.5 L 1469.0 607.3"/>
+<path class="link" marker-end="url(#in)" d="M 1418.5 612.4 L 1450.3 640.0"/>
+<path class="link" marker-start="url(#in)" d="M 1165.8 617.1 L 1137.8 604.1"/>
+<path class="link" marker-end="url(#in)" d="M 1229.7 637.1 L 1265.0 642.7"/>
+<path class="link" marker-end="url(#in)" d="M 1216.2 648.0 L 1248.0 675.7"/>
+<path class="link" marker-start="url(#in)" d="M 1306.2 975.8 L 1274.6 939.4"/>
+<path class="link" marker-start="url(#in)" d="M 1317.6 975.8 L 1309.0 921.5"/>
+<path class="link" marker-end="url(#in)" d="M 1334.0 1007.8 L 1366.7 1045.4"/>
+<path class="link" marker-end="url(#in)" d="M 1322.7 1007.8 L 1331.3 1062.1"/>
+<path class="link" marker-start="url(#in)" d="M 1133.1 875.8 L 1102.5 840.6"/>
+<path class="link" marker-start="url(#in)" d="M 1144.4 875.8 L 1135.8 821.5"/>
+<path class="link" marker-end="url(#in)" d="M 1160.9 907.8 L 1191.4 943.0"/>
+<path class="link" marker-end="url(#in)" d="M 1149.5 907.8 L 1158.1 962.1"/>
+<path class="link" marker-start="url(#in)" d="M 1051.9 1293.7 L 1064.9 1252.2"/>
+<path class="link" marker-end="url(#in)" d="M 1042.6 1325.7 L 1023.5 1396.9"/>
+<path class="link" marker-start="url(#in)" d="M 946.8 1091.9 L 931.5 1149.0"/>
+<path class="link" marker-end="url(#in)" d="M 955.4 1059.9 L 971.1 1001.3"/>
+<path class="link" marker-start="url(#in)" d="M 999.5 1224.1 L 1000.3 1279.5"/>
+<path class="link" marker-start="url(#in)" d="M 997.1 1224.1 L 980.3 1347.1"/>
+<path class="link" marker-end="url(#in)" d="M 999.0 1192.1 L 998.0 1136.8"/>
+<path class="link" marker-end="url(#in)" d="M 1027.9 1205.6 L 1054.7 1203.3"/>
+<path class="link" marker-start="url(#in)" d="M 1047.2 1384.2 L 1048.1 1439.6"/>
+<path class="link" marker-start="url(#in)" d="M 1018.2 1366.1 L 993.8 1364.3"/>
+<path class="link" marker-end="url(#in)" d="M 1046.6 1352.2 L 1045.6 1291.7"/>
+<path class="link" marker-end="url(#in)" d="M 1048.8 1352.2 L 1065.3 1218.2"/>
+<path class="link" marker-start="url(#in)" d="M 652.0 1192.1 L 685.0 1169.0"/>
+<path class="link" marker-end="url(#in)" d="M 606.3 1224.1 L 577.1 1244.6"/>
+<path class="link" marker-start="url(#in)" d="M 699.6 1061.3 L 733.4 1037.6"/>
+<path class="link" marker-end="url(#in)" d="M 653.9 1093.3 L 612.1 1122.5"/>
+<path class="link" marker-start="url(#in)" d="M 434.6 937.9 L 477.2 941.6"/>
+<path class="link" marker-start="url(#in)" d="M 196.3 603.9 L 228.3 636.0"/>
+<path class="link" marker-end="url(#in)" d="M 164.3 571.9 L 132.2 539.8"/>
+<path class="link" marker-start="url(#in)" d="M 365.9 633.8 L 396.8 664.7"/>
+<path class="link" marker-end="url(#in)" d="M 333.9 601.8 L 303.0 570.9"/>
+<path class="link" marker-start="url(#in)" d="M 519.2 660.8 L 555.8 697.5"/>
+<path class="link" marker-end="url(#in)" d="M 487.2 628.8 L 443.6 585.3"/>
+<path class="link" marker-start="url(#in)" d="M 494.9 326.1 L 502.0 319.1"/>
+<path class="link" marker-start="url(#in)" d="M 482.4 320.6 L 463.1 327.6"/>
+<path class="link" marker-end="url(#in)" d="M 507.3 294.1 L 489.9 221.9"/>
+<path class="link" marker-end="url(#in)" d="M 511.1 294.1 L 510.9 256.5"/>
+<path class="link" marker-start="url(#in)" d="M 472.9 223.9 L 474.3 221.9"/>
+<path class="link" marker-start="url(#in)" d="M 493.1 240.3 L 495.1 240.3"/>
+<path class="link" marker-end="url(#in)" d="M 465.4 255.9 L 482.1 318.6"/>
+<path class="link" marker-end="url(#in)" d="M 459.4 255.9 L 452.5 316.1"/>
+<path class="link" marker-start="url(#in)" d="M 529.8 90.5 L 560.2 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 485.4 122.5 L 453.7 145.4"/>
+<path class="link" marker-start="url(#in)" d="M 517.7 384.6 L 537.8 433.4"/>
+<path class="link" marker-end="url(#in)" d="M 511.1 352.6 L 510.9 256.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_citric-acid-cycle" transform="translate(770.5,0.0)"><rect rx="10" height="31" width="175" x="-87.6" y="-15.5"/><text dominant-baseline="central">citric acid cycle</text></g>
+<g id="node8482" class="node nodeHM pw_citric-acid-cycle lid131" transform="translate(642.6,228.2)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=131" target="_blank">citrate</a></text><title></title></g>
+<g id="node8484" class="node nodeHM pw_citric-acid-cycle lid1230" transform="translate(985.8,228.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1230" target="_blank">cis-aconitate</a></text><title></title></g>
+<g id="node8558" class="node nodeHM pw_citric-acid-cycle lid279" transform="translate(1248.7,448.8)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=279" target="_blank">isocitrate</a></text><title></title></g>
+<g id="node8559" class="node nodeHM pw_citric-acid-cycle lid34" transform="translate(1308.3,786.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node8560" class="node nodeHM pw_citric-acid-cycle lid224" transform="translate(1136.7,1084.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node8561" class="node nodeHM pw_citric-acid-cycle lid58" transform="translate(814.2,1201.4)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node8554" class="node nodeHM pw_citric-acid-cycle lid170" transform="translate(491.7,1084.0)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170" target="_blank">fumarate</a></text><title></title></g>
+<g id="node8555" class="node nodeHM pw_citric-acid-cycle lid200" transform="translate(320.1,786.8)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200" target="_blank">L-malate</a></text><title></title></g>
+<g id="node8480" class="node nodeHM pw_citric-acid-cycle lid57" transform="translate(379.7,448.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57" target="_blank">oxaloacetate</a></text><title></title></g>
+<g id="node8833" class="node nodeHM pw_citric-acid-cycle lid7069" transform="translate(326.2,118.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7069" target="_blank">(3S)-citryl-CoA</a></text><title></title></g>
+<g id="node12044" class="node nodeHM pw_citric-acid-cycle lid29" transform="translate(697.6,332.8)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node8882" class="node nodeHM pw_citric-acid-cycle lid101" transform="translate(794.3,812.3)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101" target="_blank">glyoxylate</a></text><title></title></g>
+<g id="node10182" class="node nodeHM pw_citric-acid-cycle lid575" transform="translate(62.7,655.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=575" target="_blank">maleate</a></text><title></title></g>
+<g id="node8496" class="node nodeEN pw_citric-acid-cycle" transform="translate(814.2,228.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.3" target="_blank">4.2.1.3</a></text><title>aconitate hydratase</title></g>
+<g id="node8498" class="node nodeEN pw_citric-acid-cycle" transform="translate(1117.2,338.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.3" target="_blank">4.2.1.3</a></text><title>aconitate hydratase</title></g>
+<g id="node11921" class="node nodeEN pw_citric-acid-cycle" transform="translate(1400.1,596.4)"><rect rx="15" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.286" target="_blank">1.1.1.286/1.1.1.41</a></text><title>isocitrate-homoisocitrate dehydrogenase;isocitrate dehydrogenase (NAD+); isocitrate dehydrogenase (NADP+)</title></g>
+<g id="node8621" class="node nodeEN pw_citric-acid-cycle" transform="translate(1197.8,632.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.42" target="_blank">1.1.1.42</a></text><title>isocitrate-homoisocitrate dehydrogenase;isocitrate dehydrogenase (NAD+); isocitrate dehydrogenase (NADP+)</title></g>
+<g id="node11206" class="node nodeEN pw_citric-acid-cycle" transform="translate(1320.1,991.8)"><rect rx="15" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.3" target="_blank">1.2.7.3/1.2.7.11</a></text><title>2-oxoglutarate synthase;2-oxoacid oxidoreductase (ferredoxin); 2-oxoglutarate dehydrogenase system</title></g>
+<g id="node8486" class="node nodeEN pw_citric-acid-cycle" transform="translate(1147.0,891.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.105" target="_blank">1.2.1.105</a></text><title>2-oxoglutarate synthase;2-oxoacid oxidoreductase (ferredoxin); 2-oxoglutarate dehydrogenase system</title></g>
+<g id="node8836" class="node nodeEN pw_citric-acid-cycle" transform="translate(1046.9,1309.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.5" target="_blank">2.8.3.5</a></text><title>3-oxoacid CoA-transferase; succinyl-CoA:acetate CoA-transferase; Succinate-CoA ligase (ADP-forming); succinate-CoA ligase (GDP-forming)</title></g>
+<g id="node11235" class="node nodeEN pw_citric-acid-cycle" transform="translate(951.1,1075.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.18" target="_blank">2.8.3.18</a></text><title>3-oxoacid CoA-transferase; succinyl-CoA:acetate CoA-transferase; Succinate-CoA ligase (ADP-forming); succinate-CoA ligase (GDP-forming)</title></g>
+<g id="node8488" class="node nodeEN pw_citric-acid-cycle" transform="translate(999.2,1208.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.5" target="_blank">6.2.1.5</a></text><title>3-oxoacid CoA-transferase; succinyl-CoA:acetate CoA-transferase; Succinate-CoA ligase (ADP-forming); succinate-CoA ligase (GDP-forming)</title></g>
+<g id="node11932" class="node nodeEN pw_citric-acid-cycle" transform="translate(1046.9,1368.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.4" target="_blank">6.2.1.4</a></text><title>3-oxoacid CoA-transferase; succinyl-CoA:acetate CoA-transferase; Succinate-CoA ligase (ADP-forming); succinate-CoA ligase (GDP-forming)</title></g>
+<g id="node8828" class="node nodeEN pw_citric-acid-cycle" transform="translate(629.1,1208.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.1" target="_blank">1.3.5.1</a></text><title>succinate dehydrogenase; succinate dehydrogenase</title></g>
+<g id="node8490" class="node nodeEN pw_citric-acid-cycle" transform="translate(676.7,1077.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.5.1" target="_blank">1.3.5.1</a></text><title>succinate dehydrogenase; succinate dehydrogenase</title></g>
+<g id="node8492" class="node nodeEN pw_citric-acid-cycle" transform="translate(405.9,935.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.2" target="_blank">4.2.1.2</a></text><title>fumarate hydratase</title></g>
+<g id="node2741" class="node nodeEN pw_citric-acid-cycle" transform="translate(180.3,587.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.299" target="_blank">1.1.1.299</a></text><title>malate dehydrogenase [NAD(P)+]; malate dehydrogenase; malate dehydrogenase (quinone)</title></g>
+<g id="node8478" class="node nodeEN pw_citric-acid-cycle" transform="translate(349.9,617.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.37" target="_blank">1.1.1.37</a></text><title>malate dehydrogenase [NAD(P)+]; malate dehydrogenase; malate dehydrogenase (quinone)</title></g>
+<g id="node11929" class="node nodeEN pw_citric-acid-cycle" transform="translate(503.2,644.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.5.4" target="_blank">1.1.5.4</a></text><title>malate dehydrogenase [NAD(P)+]; malate dehydrogenase; malate dehydrogenase (quinone)</title></g>
+<g id="node8832" class="node nodeEN pw_citric-acid-cycle" transform="translate(353.0,281.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.34" target="_blank">4.1.3.34</a></text><title>citryl-CoA lyase</title></g>
+<g id="node11925" class="node nodeEN pw_citric-acid-cycle" transform="translate(511.1,310.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.3.8" target="_blank">2.3.3.8</a></text><title>ATP citrate synthase</title></g>
+<g id="node12230" class="node nodeEN pw_citric-acid-cycle" transform="translate(461.2,239.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.18" target="_blank">6.2.1.18</a></text><title>citrate-CoA ligase; citrate CoA-transferase</title></g>
+<g id="node8630" class="node nodeEN pw_citric-acid-cycle" transform="translate(507.6,106.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.10" target="_blank">2.8.3.10</a></text><title>citrate-CoA ligase; citrate CoA-transferase</title></g>
+<g id="node8494" class="node nodeEN pw_citric-acid-cycle" transform="translate(511.1,368.6)"><rect rx="15" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.3.1" target="_blank">2.3.3.1/2.3.3.3/2.3.3.16</a></text><title>citrate (Si)-synthase;citrate (Re)-synthase;citrate synthase (unknown stereospecificity)</title></g>
+<g id="node8880" class="node nodeEN pw_citric-acid-cycle" transform="translate(557.2,799.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.3.9" target="_blank">2.3.3.9</a></text><title>malate synthase</title></g>
+<g id="node8881" class="node nodeEN pw_citric-acid-cycle" transform="translate(1026.5,727.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.1" target="_blank">4.1.3.1</a></text><title>isocitrate lyase</title></g>
+<g id="node10181" class="node nodeEN pw_citric-acid-cycle" transform="translate(277.2,869.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.2.1.1" target="_blank">5.2.1.1</a></text><title>Maleate isomerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8496~0" class="node nodeCM pw_citric-acid-cycle lid1" transform="translate(864.3,156.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8498~0" class="node nodeCM pw_citric-acid-cycle lid1" transform="translate(1032.9,361.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11921~0" class="node nodeCM pw_citric-acid-cycle lid7" transform="translate(1319.4,558.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11921~1" class="node nodeCM pw_citric-acid-cycle lid8" transform="translate(1487.9,610.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node11921~2" class="node nodeCM pw_citric-acid-cycle lid28" transform="translate(1466.0,653.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node8621~0" class="node nodeCM pw_citric-acid-cycle lid10" transform="translate(1115.6,593.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node8621~1" class="node nodeCM pw_citric-acid-cycle lid5" transform="translate(1287.2,646.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8621~2" class="node nodeCM pw_citric-acid-cycle lid28" transform="translate(1263.7,689.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11206~0" class="node nodeCM pw_citric-acid-cycle lid289" transform="translate(1260.7,923.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node11206~1" class="node nodeCM pw_citric-acid-cycle lid18" transform="translate(1306.5,905.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node11206~2" class="node nodeCM pw_citric-acid-cycle lid265" transform="translate(1380.6,1061.4)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node11206~3" class="node nodeCM pw_citric-acid-cycle lid28" transform="translate(1333.8,1078.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node8486~0" class="node nodeCM pw_citric-acid-cycle lid7" transform="translate(1088.6,824.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node8486~1" class="node nodeCM pw_citric-acid-cycle lid18" transform="translate(1133.3,805.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8486~2" class="node nodeCM pw_citric-acid-cycle lid8" transform="translate(1205.3,959.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node8486~3" class="node nodeCM pw_citric-acid-cycle lid28" transform="translate(1160.6,978.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node8836~0" class="node nodeCM pw_citric-acid-cycle lid419" transform="translate(1069.9,1236.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=419" target="_blank">AcAc</a></text><title></title></g>
+<g id="node8836~1" class="node nodeCM pw_citric-acid-cycle lid187" transform="translate(1019.2,1412.9)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=187" target="_blank">acetoacetyl-CoA</a></text><title></title></g>
+<g id="node11235~0" class="node nodeCM pw_citric-acid-cycle lid29" transform="translate(927.3,1165.0)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node11235~1" class="node nodeCM pw_citric-acid-cycle lid47" transform="translate(975.4,985.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node8488~0" class="node nodeCM pw_citric-acid-cycle lid4" transform="translate(1000.5,1295.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8488~2" class="node nodeCM pw_citric-acid-cycle lid13" transform="translate(997.7,1120.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node11932~0" class="node nodeCM pw_citric-acid-cycle lid37" transform="translate(1048.4,1455.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node11932~1" class="node nodeCM pw_citric-acid-cycle lid18" transform="translate(978.1,1363.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node11932~2" class="node nodeCM pw_citric-acid-cycle lid53" transform="translate(1045.4,1275.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node11932~3" class="node nodeCM pw_citric-acid-cycle lid16" transform="translate(1067.2,1202.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node8828~0" class="node nodeCM pw_citric-acid-cycle lid20" transform="translate(700.7,1158.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20" target="_blank">FAD</a></text><title></title></g>
+<g id="node8828~1" class="node nodeCM pw_citric-acid-cycle lid256" transform="translate(554.9,1260.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256" target="_blank">FADH2</a></text><title></title></g>
+<g id="node8490~0" class="node nodeCM pw_citric-acid-cycle lid1992" transform="translate(756.3,1021.6)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node8490~1" class="node nodeCM pw_citric-acid-cycle lid32402" transform="translate(589.3,1138.5)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32402" target="_blank">reduced quinone</a></text><title></title></g>
+<g id="node8492~0" class="node nodeCM pw_citric-acid-cycle lid1" transform="translate(492.9,943.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2741~0" class="node nodeCM pw_citric-acid-cycle lid10" transform="translate(244.3,652.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2741~1" class="node nodeCM pw_citric-acid-cycle lid5" transform="translate(116.2,523.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8478~0" class="node nodeCM pw_citric-acid-cycle lid7" transform="translate(412.8,680.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node8478~1" class="node nodeCM pw_citric-acid-cycle lid8" transform="translate(287.0,554.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node11929~0" class="node nodeCM pw_citric-acid-cycle lid1992" transform="translate(571.8,713.5)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node11929~1" class="node nodeCM pw_citric-acid-cycle lid32402" transform="translate(427.6,569.3)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=32402" target="_blank">reduced quinone</a></text><title></title></g>
+<g id="node11925~0" class="node nodeCM pw_citric-acid-cycle lid13" transform="translate(486.3,334.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node11925~1" class="node nodeCM pw_citric-acid-cycle lid16" transform="translate(450.6,332.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node11925~2" class="node nodeCM pw_citric-acid-cycle lid4" transform="translate(486.0,205.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11925~3" class="node nodeCM pw_citric-acid-cycle lid18" transform="translate(510.8,240.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node8630~0" class="node nodeCM pw_citric-acid-cycle lid29" transform="translate(582.4,52.5)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node8630~1" class="node nodeCM pw_citric-acid-cycle lid47" transform="translate(431.5,161.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node8494~0" class="node nodeCM pw_citric-acid-cycle lid1" transform="translate(544.4,449.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

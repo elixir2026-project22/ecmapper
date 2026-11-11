@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1288.2 1064.4" width="1288" height="1064" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1288.2" height="1064.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_sulfate-reduction" class="pw " x="0.0" y="0.0" width="1168.2" height="928.9" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 784.9 108.6 L 891.2 257.4"/>
+<path class="link" marker-end="url(#in)" d="M 741.6 92.6 L 648.0 92.6"/>
+<path class="link" marker-start="url(#in)" d="M 713.4 293.9 L 570.1 108.6"/>
+<path class="link" marker-end="url(#in)" d="M 721.4 325.9 L 662.8 541.5"/>
+<path class="link" marker-end="url(#in)" d="M 666.6 757.9 C 665.0 718.4 660.7 612.7 659.1 572.9"/>
+<path class="link" marker-start="url(#in)" d="M 689.7 788.5 C 719.1 808.5 770.2 843.4 799.6 863.5"/>
+<path class="link" marker-end="url(#in)" d="M 934.5 795.8 L 843.8 862.9"/>
+<path class="link" marker-start="url(#in)" d="M 956.2 763.8 L 957.1 597.8"/>
+<path class="link" marker-start="url(#in)" d="M 955.1 424.6 L 957.0 565.8"/>
+<path class="link" marker-end="url(#in)" d="M 948.7 392.6 L 908.8 289.4"/>
+<path class="link" marker-start="url(#in)" d="M 1032.1 422.3 C 1016.6 455.3 979.9 533.4 964.4 566.5"/>
+<path class="link" marker-end="url(#in)" d="M 1022.9 391.1 L 919.0 289.4"/>
+<path class="link" marker-start="url(#in)" d="M 748.7 555.4 L 687.1 556.8"/>
+<path class="link" marker-end="url(#in)" d="M 806.1 559.1 L 941.5 579.4"/>
+<path class="link" marker-start="url(#in)" d="M 737.1 595.1 L 687.1 571.2"/>
+<path class="link" marker-end="url(#in)" d="M 794.4 604.7 L 941.5 584.0"/>
+<path class="link" marker-start="url(#in)" d="M 737.6 391.7 C 721.2 425.9 682.1 507.9 665.8 542.1"/>
+<path class="link" marker-end="url(#in)" d="M 768.6 360.8 C 798.4 341.4 849.3 308.1 879.1 288.7"/>
+<path class="link" marker-start="url(#in)" d="M 486.4 625.8 C 524.5 610.7 592.5 583.7 630.6 568.5"/>
+<path class="link" marker-end="url(#in)" d="M 440.1 620.8 L 311.6 510.1"/>
+<path class="link" marker-start="url(#in)" d="M 518.3 570.9 L 629.8 560.2"/>
+<path class="link" marker-end="url(#in)" d="M 461.0 562.2 L 311.6 502.8"/>
+<path class="link" marker-end="url(#in)" d="M 248.3 266.4 L 292.6 480.6"/>
+<path class="link" marker-start="url(#in)" d="M 254.4 266.4 L 306.9 355.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 167.9 510.0 L 280.2 498.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 156.4 497.3 L 295.9 387.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 163.6 380.8 C 193.2 406.7 252.8 458.9 280.8 483.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 178.0 366.6 L 290.8 370.8"/>
+<path class="link" marker-start="url(#in)" d="M 494.1 388.7 C 450.1 384.5 378.5 377.6 341.0 374.1"/>
+<path class="link" marker-end="url(#in)" d="M 543.9 408.3 L 646.2 541.5"/>
+<path class="link" marker-end="url(#in)" d="M 565.8 769.6 C 583.9 728.2 633.8 614.0 651.8 572.7"/>
+<path class="link" marker-start="url(#in)" d="M 527.2 790.3 L 275.1 832.7"/>
+<path class="link" marker-start="url(#in)" d="M 448.6 456.9 L 341.1 387.7"/>
+<path class="link" marker-end="url(#in)" d="M 506.9 488.2 C 542.2 504.4 597.2 529.5 630.4 544.6"/>
+<path class="link" marker-end="url(#in)" d="M 435.0 478.0 L 311.6 494.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 804.4 76.6 L 835.4 60.6"/>
+<path class="link" marker-end="url(#in)" d="M 756.5 108.6 L 725.7 137.7"/>
+<path class="link" marker-end="url(#in)" d="M 741.6 99.0 L 701.9 107.0"/>
+<path class="link" marker-start="url(#in)" d="M 697.1 297.8 L 663.9 283.9"/>
+<path class="link" marker-end="url(#in)" d="M 754.4 313.3 L 777.2 316.0"/>
+<path class="link" marker-end="url(#in)" d="M 741.7 325.9 L 809.6 394.2"/>
+<path class="link" marker-start="url(#in)" d="M 699.1 777.6 L 701.1 777.9"/>
+<path class="link" marker-end="url(#in)" d="M 635.3 784.8 L 586.4 802.9"/>
+<path class="link" marker-end="url(#in)" d="M 635.3 760.2 L 603.1 747.2"/>
+<path class="link" marker-start="url(#in)" d="M 946.7 763.8 L 921.2 720.5"/>
+<path class="link" marker-end="url(#in)" d="M 927.5 787.0 L 908.5 791.8"/>
+<path class="link" marker-start="url(#in)" d="M 983.5 422.0 L 1018.3 438.2"/>
+<path class="link" marker-end="url(#in)" d="M 926.2 395.3 L 891.4 379.1"/>
+<path class="link" marker-start="url(#in)" d="M 1068.0 420.4 L 1102.8 436.6"/>
+<path class="link" marker-end="url(#in)" d="M 1010.6 393.7 L 974.0 376.7"/>
+<path class="link" marker-start="url(#in)" d="M 772.0 570.8 L 753.4 626.8"/>
+<path class="link" marker-start="url(#in)" d="M 754.0 570.8 L 719.1 594.6"/>
+<path class="link" marker-end="url(#in)" d="M 790.6 538.8 L 820.9 502.3"/>
+<path class="link" marker-start="url(#in)" d="M 759.5 624.8 L 737.0 682.3"/>
+<path class="link" marker-start="url(#in)" d="M 738.0 624.8 L 697.0 648.3"/>
+<path class="link" marker-end="url(#in)" d="M 778.5 592.8 L 823.2 536.8"/>
+<path class="link" marker-start="url(#in)" d="M 754.3 392.2 L 780.5 437.0"/>
+<path class="link" marker-start="url(#in)" d="M 744.5 392.2 L 742.9 447.6"/>
+<path class="link" marker-end="url(#in)" d="M 741.5 360.2 L 726.8 291.9"/>
+<path class="link" marker-start="url(#in)" d="M 465.9 620.8 L 495.4 555.7"/>
+<path class="link" marker-start="url(#in)" d="M 487.0 620.8 L 520.8 601.7"/>
+<path class="link" marker-end="url(#in)" d="M 449.9 652.8 L 424.1 700.4"/>
+<path class="link" marker-end="url(#in)" d="M 450.5 620.8 L 403.7 528.6"/>
+<path class="link" marker-start="url(#in)" d="M 499.0 557.7 L 526.7 510.1"/>
+<path class="link" marker-start="url(#in)" d="M 518.0 557.7 L 551.8 538.5"/>
+<path class="link" marker-end="url(#in)" d="M 482.5 589.7 L 453.5 654.8"/>
+<path class="link" marker-end="url(#in)" d="M 465.0 557.7 L 411.3 522.8"/>
+<path class="link" marker-start="url(#in)" d="M 228.5 234.4 L 196.0 202.7"/>
+<path class="link" marker-start="url(#in)" d="M 152.4 529.3 L 184.4 560.6"/>
+<path class="link" marker-end="url(#in)" d="M 106.2 497.3 L 78.4 482.3"/>
+<path class="link" marker-end="url(#in)" d="M 131.9 497.3 L 102.6 380.9"/>
+<path class="link" marker-start="url(#in)" d="M 162.5 381.5 L 193.4 411.6"/>
+<path class="link" marker-end="url(#in)" d="M 116.3 349.5 L 86.7 333.5"/>
+<path class="link" marker-end="url(#in)" d="M 114.2 365.1 L 111.0 365.1"/>
+<path class="link" marker-start="url(#in)" d="M 534.3 376.3 L 543.3 322.1"/>
+<path class="link" marker-start="url(#in)" d="M 493.2 391.0 L 455.9 389.7"/>
+<path class="link" marker-start="url(#in)" d="M 527.2 771.8 L 492.3 757.5"/>
+<path class="link" marker-end="url(#in)" d="M 555.5 768.9 L 537.1 688.9"/>
+<path class="link" marker-end="url(#in)" d="M 564.6 768.9 L 580.5 722.9"/>
+<path class="link" marker-start="url(#in)" d="M 442.0 488.9 L 411.3 504.6"/>
+<path class="link" marker-start="url(#in)" d="M 467.7 456.9 L 449.1 405.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_sulfate-reduction" transform="translate(584.1,0.0)"><rect rx="10" height="31" width="175" x="-87.6" y="-15.5"/><text dominant-baseline="central">sulfate reduction</text></g>
+<g id="node4093" class="node nodeHM pw_sulfate-reduction lid425" transform="translate(902.6,273.4)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=425" target="_blank">adenosine 5&#x27;-phosphosulfate</a></text><title></title></g>
+<g id="node4095" class="node nodeHM pw_sulfate-reduction lid112" transform="translate(557.7,92.6)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=112" target="_blank">3&#x27;-phosphoadenylyl sulfate</a></text><title></title></g>
+<g id="node4089" class="node nodeHM pw_sulfate-reduction lid92" transform="translate(658.5,557.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=92" target="_blank">sulfite</a></text><title></title></g>
+<g id="node7032" class="node nodeHM pw_sulfate-reduction lid425" transform="translate(822.2,878.9)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=425" target="_blank">adenosine 5&#x27;-phosphosulfate</a></text><title></title></g>
+<g id="node4085" class="node nodeHM pw_sulfate-reduction lid160" transform="translate(957.2,581.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=160" target="_blank">SO4</a></text><title></title></g>
+<g id="node4076" class="node nodeHM pw_sulfate-reduction lid911" transform="translate(295.9,496.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=911" target="_blank">H2S</a></text><title></title></g>
+<g id="node10843" class="node nodeHM pw_sulfate-reduction lid871" transform="translate(316.3,371.7)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=871" target="_blank">sulfur</a></text><title></title></g>
+<g id="node7615" class="node nodeHM pw_sulfate-reduction lid7288" transform="translate(214.0,843.0)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7288" target="_blank">sulfoacetaldehyde</a></text><title></title></g>
+<g id="node4077" class="node nodeEN pw_sulfate-reduction" transform="translate(773.5,92.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.25" target="_blank">2.7.1.25</a></text><title>adenylyl-sulfate kinase</title></g>
+<g id="node4083" class="node nodeEN pw_sulfate-reduction" transform="translate(725.8,309.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.4.8" target="_blank">1.8.4.8</a></text><title>phosphoadenylyl-sulfate reductase (thioredoxin)</title></g>
+<g id="node7033" class="node nodeEN pw_sulfate-reduction" transform="translate(667.2,773.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.99.2" target="_blank">1.8.99.2</a></text><title>adenylyl-sulfate reductase</title></g>
+<g id="node7031" class="node nodeEN pw_sulfate-reduction" transform="translate(956.1,779.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.4" target="_blank">2.7.7.4</a></text><title>sulfate adenylyltransferase</title></g>
+<g id="node4086" class="node nodeEN pw_sulfate-reduction" transform="translate(954.8,408.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.4" target="_blank">2.7.7.4</a></text><title>sulfate adenylyltransferase; sulfate adenylyltransferase (ADP)</title></g>
+<g id="node11153" class="node nodeEN pw_sulfate-reduction" transform="translate(1039.3,407.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.5" target="_blank">2.7.7.5</a></text><title>sulfate adenylyltransferase; sulfate adenylyltransferase (ADP)</title></g>
+<g id="node7611" class="node nodeEN pw_sulfate-reduction" transform="translate(777.4,554.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.3.1" target="_blank">1.8.3.1</a></text><title>sulfite oxidase; sulfite dehydrogenase (cytochrome)</title></g>
+<g id="node7604" class="node nodeEN pw_sulfate-reduction" transform="translate(765.8,608.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.2.1" target="_blank">1.8.2.1</a></text><title>sulfite oxidase; sulfite dehydrogenase (cytochrome)</title></g>
+<g id="node10873" class="node nodeEN pw_sulfate-reduction" transform="translate(745.0,376.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.4.9" target="_blank">1.8.4.9</a></text><title>adenylyl-sulfate reductase (glutathione)</title></g>
+<g id="node10881" class="node nodeEN pw_sulfate-reduction" transform="translate(458.6,636.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.7.1" target="_blank">1.8.7.1</a></text><title>assimilatory sulfite reductase (ferredoxin); assimilatory sulfite reductase (NADPH)</title></g>
+<g id="node4082" class="node nodeEN pw_sulfate-reduction" transform="translate(489.7,573.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.2" target="_blank">1.8.1.2</a></text><title>assimilatory sulfite reductase (ferredoxin); assimilatory sulfite reductase (NADPH)</title></g>
+<g id="node11068" class="node nodeEN pw_sulfate-reduction" transform="translate(245.0,250.4)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.12.98.B1" target="_blank">1.12.98.B1</a></text><title>hydrogen:sulfur oxidoreductase; NAD(P)H sulfur oxidoreductase (CoA-dependent); NAD(P)H sulfur oxidoreductase (CoA-dependent)</title></g>
+<g id="node10865" class="node nodeEN pw_sulfate-reduction" transform="translate(136.0,513.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.18" target="_blank">1.8.1.18</a></text><title>hydrogen:sulfur oxidoreductase; NAD(P)H sulfur oxidoreductase (CoA-dependent); NAD(P)H sulfur oxidoreductase (CoA-dependent)</title></g>
+<g id="node69" class="node nodeEN pw_sulfate-reduction" transform="translate(146.1,365.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.1.18" target="_blank">1.8.1.18</a></text><title>hydrogen:sulfur oxidoreductase; NAD(P)H sulfur oxidoreductase (CoA-dependent); NAD(P)H sulfur oxidoreductase (CoA-dependent)</title></g>
+<g id="node10844" class="node nodeEN pw_sulfate-reduction" transform="translate(531.6,392.3)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.18" target="_blank">1.13.11.18</a></text><title>persulfide dioxygenase</title></g>
+<g id="node7613" class="node nodeEN pw_sulfate-reduction" transform="translate(559.1,784.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.3.15" target="_blank">2.3.3.15</a></text><title>sulfoacetaldehyde acetyltransferase</title></g>
+<g id="node10847" class="node nodeEN pw_sulfate-reduction" transform="translate(473.4,472.9)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.55" target="_blank">1.13.11.55</a></text><title>sulfur oxygenase/reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node4077~0" class="node nodeCM pw_sulfate-reduction lid4" transform="translate(851.1,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node4077~1" class="node nodeCM pw_sulfate-reduction lid13" transform="translate(710.0,152.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node4077~2" class="node nodeCM pw_sulfate-reduction lid12" transform="translate(689.4,109.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4083~0" class="node nodeCM pw_sulfate-reduction lid1120" transform="translate(625.8,267.9)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1120" target="_blank">red. thioredoxin</a></text><title></title></g>
+<g id="node4083~1" class="node nodeCM pw_sulfate-reduction lid1795" transform="translate(831.8,322.5)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1795" target="_blank">ox. thioredoxin</a></text><title></title></g>
+<g id="node4083~2" class="node nodeCM pw_sulfate-reduction lid68" transform="translate(825.4,410.2)"><rect rx="5" height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=68" target="_blank">adenosine 3&#x27;,5&#x27;-bisphosphate</a></text><title></title></g>
+<g id="node7033~0" class="node nodeCM pw_sulfate-reduction lid1661" transform="translate(788.1,790.2)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node7033~1" class="node nodeCM pw_sulfate-reduction lid374" transform="translate(543.0,818.9)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node7033~2" class="node nodeCM pw_sulfate-reduction lid30" transform="translate(587.4,740.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node7031~0" class="node nodeCM pw_sulfate-reduction lid4" transform="translate(911.7,704.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node7031~1" class="node nodeCM pw_sulfate-reduction lid17" transform="translate(892.8,795.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node4086~0" class="node nodeCM pw_sulfate-reduction lid4" transform="translate(1034.0,445.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node4086~1" class="node nodeCM pw_sulfate-reduction lid17" transform="translate(875.6,371.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11153~0" class="node nodeCM pw_sulfate-reduction lid13" transform="translate(1118.5,443.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node11153~1" class="node nodeCM pw_sulfate-reduction lid16" transform="translate(961.5,370.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node7611~0" class="node nodeCM pw_sulfate-reduction lid1" transform="translate(748.0,642.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7611~1" class="node nodeCM pw_sulfate-reduction lid9" transform="translate(706.6,603.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7611~2" class="node nodeCM pw_sulfate-reduction lid1126" transform="translate(834.1,486.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node7604~0" class="node nodeCM pw_sulfate-reduction lid1" transform="translate(730.7,698.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7604~1" class="node nodeCM pw_sulfate-reduction lid313" transform="translate(669.2,664.3)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=313" target="_blank">ferricytochrome c</a></text><title></title></g>
+<g id="node7604~2" class="node nodeCM pw_sulfate-reduction lid530" transform="translate(836.0,520.8)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=530" target="_blank">ferrocytochrome c</a></text><title></title></g>
+<g id="node10873~0" class="node nodeCM pw_sulfate-reduction lid973" transform="translate(789.9,453.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=973" target="_blank">GSSG</a></text><title></title></g>
+<g id="node10873~1" class="node nodeCM pw_sulfate-reduction lid30" transform="translate(742.4,463.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10873~2" class="node nodeCM pw_sulfate-reduction lid44" transform="translate(723.3,275.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44" target="_blank">GSH</a></text><title></title></g>
+<g id="node10881~0" class="node nodeCM pw_sulfate-reduction lid265" transform="translate(502.7,539.7)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node10881~1" class="node nodeCM pw_sulfate-reduction lid12" transform="translate(533.3,594.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10881~2" class="node nodeCM pw_sulfate-reduction lid289" transform="translate(415.4,716.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node4082~0" class="node nodeCM pw_sulfate-reduction lid5" transform="translate(536.0,494.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4082~1" class="node nodeCM pw_sulfate-reduction lid12" transform="translate(564.3,531.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4082~2" class="node nodeCM pw_sulfate-reduction lid10" transform="translate(446.4,670.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node11068~0" class="node nodeCM pw_sulfate-reduction lid361" transform="translate(183.6,190.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=361" target="_blank">H2</a></text><title></title></g>
+<g id="node10865~0" class="node nodeCM pw_sulfate-reduction lid10" transform="translate(200.8,576.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node10865~1" class="node nodeCM pw_sulfate-reduction lid5" transform="translate(56.2,470.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10865~2" class="node nodeCM pw_sulfate-reduction lid12" transform="translate(98.5,364.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node69~0" class="node nodeCM pw_sulfate-reduction lid7" transform="translate(209.8,427.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node69~1" class="node nodeCM pw_sulfate-reduction lid8" transform="translate(67.7,323.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node10844~0" class="node nodeCM pw_sulfate-reduction lid1" transform="translate(546.0,306.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10844~1" class="node nodeCM pw_sulfate-reduction lid9" transform="translate(443.4,389.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7613~0" class="node nodeCM pw_sulfate-reduction lid16" transform="translate(479.8,752.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node7613~1" class="node nodeCM pw_sulfate-reduction lid358" transform="translate(533.4,672.9)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=358" target="_blank">acetyl phosphate</a></text><title></title></g>
+<g id="node7613~2" class="node nodeCM pw_sulfate-reduction lid12" transform="translate(586.0,706.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10847~0" class="node nodeCM pw_sulfate-reduction lid1" transform="translate(395.6,512.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,524 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3985" height="4788" viewBox="0 0 3985.0 4788.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="13039.7 12385.2 1779.1 2742.8" width="1779" height="2743" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="13039.7" y="12385.2" width="1779.1" height="2742.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_kanamycin-biosynthesis" class="pw pw7" x="13079.7" y="12440.7" width="1699.1" height="2647.3" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13942.7 12577.7 L 13942.7 12509.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13942.7 12609.7 L 13942.7 12680.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13942.7 12790.4 L 13942.7 12712.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13942.7 12822.4 L 13942.7 12893.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13797.3 12987.1 L 13912.6 12925.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13794.0 13019.1 L 13915.9 13091.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14098.3 12987.1 L 13975.0 12925.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14101.9 13019.1 L 13971.4 13091.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13942.7 13190.8 L 13942.7 13123.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13942.7 13222.8 L 13942.7 13292.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13298.7 13288.9 L 13298.7 13394.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13298.7 13256.9 L 13298.7 13157.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13760.4 13308.2 L 13878.1 13308.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13721.2 13324.2 L 13721.2 13394.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14138.1 13308.2 L 14007.4 13308.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 13324.2 L 14177.3 13394.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13527.5 13410.4 L 13619.9 13410.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13454.8 13410.4 L 13391.6 13410.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 13493.9 L 14177.3 13426.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 13525.9 L 14177.3 13595.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13298.7 13544.0 L 13298.7 13426.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13298.7 13576.0 L 13298.7 13681.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13721.2 13545.8 L 13721.2 13426.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13721.2 13577.8 L 13721.2 13684.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14374.2 13611.7 L 14219.3 13611.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14452.6 13611.7 L 14590.7 13611.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 13715.1 L 14177.3 13779.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 13683.1 L 14177.3 13627.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13298.7 13836.2 L 13298.7 13713.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13298.7 13868.2 L 13298.7 13978.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 13897.6 L 14177.3 13978.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 13865.6 L 14177.3 13811.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13576.7 13994.6 L 13709.2 13994.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13492.7 13994.6 L 13371.8 13994.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14008.2 13994.6 L 14143.7 13994.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13929.7 13994.6 L 13798.9 13994.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14332.3 13994.6 L 14210.8 13994.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14410.7 13994.6 L 14524.7 13994.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 14094.5 L 14177.3 14165.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 14062.5 L 14177.3 14010.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 14275.4 L 14177.3 14329.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14177.3 14243.4 L 14177.3 14197.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13892.4 14329.4 L 13892.4 14241.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13892.4 14361.4 L 13892.4 14414.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13928.8 14345.4 L 14129.6 14345.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14384.4 14345.4 L 14224.9 14345.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14423.6 14361.4 L 14423.6 14422.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13892.4 14523.4 L 13892.4 14579.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 13892.4 14491.4 L 13892.4 14446.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14423.6 14526.2 L 14423.6 14454.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14423.6 14558.2 L 14423.6 14622.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14423.6 14698.6 L 14423.6 14654.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14423.6 14730.6 L 14423.6 14794.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14423.6 14882.4 L 14423.6 14826.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14423.6 14914.4 L 14423.6 14991.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 13981.9 12606.2 L 14021.6 12618.9"/>
+<path class="link" marker-start="url(#in)" d="M 13972.5 12790.4 L 14011.3 12769.5"/>
+<path class="link" marker-end="url(#in)" d="M 13981.9 12821.0 L 13998.1 12827.0"/>
+<path class="link" marker-start="url(#in)" d="M 13739.3 12987.1 L 13707.6 12968.9"/>
+<path class="link" marker-end="url(#in)" d="M 13728.0 13014.3 L 13638.3 13040.0"/>
+<path class="link" marker-end="url(#in)" d="M 13752.2 13019.1 L 13732.7 13040.0"/>
+<path class="link" marker-start="url(#in)" d="M 14159.4 12987.1 L 14193.2 12968.4"/>
+<path class="link" marker-end="url(#in)" d="M 14142.5 13019.1 L 14158.2 13040.0"/>
+<path class="link" marker-end="url(#in)" d="M 14165.2 13019.1 L 14225.8 13047.0"/>
+<path class="link" marker-start="url(#in)" d="M 13973.5 13190.8 L 14010.3 13171.7"/>
+<path class="link" marker-end="url(#in)" d="M 13975.6 13222.8 L 14008.2 13238.7"/>
+<path class="link" marker-start="url(#in)" d="M 13273.0 13288.9 L 13226.6 13317.8"/>
+<path class="link" marker-end="url(#in)" d="M 13269.5 13256.9 L 13223.2 13231.5"/>
+<path class="link" marker-start="url(#in)" d="M 13694.5 13292.2 L 13658.6 13270.7"/>
+<path class="link" marker-end="url(#in)" d="M 13744.9 13292.2 L 13778.3 13269.7"/>
+<path class="link" marker-start="url(#in)" d="M 14212.5 13292.2 L 14259.8 13270.7"/>
+<path class="link" marker-end="url(#in)" d="M 14216.5 13317.0 L 14272.8 13329.6"/>
+<path class="link" marker-start="url(#in)" d="M 13514.9 13394.4 L 13547.8 13372.2"/>
+<path class="link" marker-end="url(#in)" d="M 13475.0 13394.4 L 13452.6 13372.2"/>
+<path class="link" marker-start="url(#in)" d="M 14213.0 13493.9 L 14272.8 13467.1"/>
+<path class="link" marker-end="url(#in)" d="M 14216.5 13512.6 L 14261.5 13515.7"/>
+<path class="link" marker-start="url(#in)" d="M 13267.6 13544.0 L 13232.0 13525.8"/>
+<path class="link" marker-end="url(#in)" d="M 13279.7 13576.0 L 13219.9 13626.6"/>
+<path class="link" marker-start="url(#in)" d="M 13691.8 13545.8 L 13661.3 13529.2"/>
+<path class="link" marker-end="url(#in)" d="M 13690.3 13577.8 L 13654.2 13596.5"/>
+<path class="link" marker-start="url(#in)" d="M 14386.1 13595.7 L 14364.1 13582.9"/>
+<path class="link" marker-end="url(#in)" d="M 14441.0 13595.7 L 14468.4 13579.8"/>
+<path class="link" marker-start="url(#in)" d="M 14213.6 13685.9 L 14275.6 13663.5"/>
+<path class="link" marker-end="url(#in)" d="M 14213.6 13711.0 L 14270.0 13729.4"/>
+<path class="link" marker-start="url(#in)" d="M 13266.8 13836.2 L 13228.9 13817.2"/>
+<path class="link" marker-end="url(#in)" d="M 13276.0 13868.2 L 13223.6 13905.2"/>
+<path class="link" marker-end="url(#in)" d="M 13259.9 13868.2 L 13151.1 13913.2"/>
+<path class="link" marker-start="url(#in)" d="M 14213.6 13868.5 L 14250.8 13855.0"/>
+<path class="link" marker-end="url(#in)" d="M 14213.6 13885.9 L 14241.7 13889.1"/>
+<path class="link" marker-start="url(#in)" d="M 13556.3 13978.6 L 13580.9 13960.4"/>
+<path class="link" marker-start="url(#in)" d="M 13555.4 14010.6 L 13614.2 14056.0"/>
+<path class="link" marker-end="url(#in)" d="M 13533.9 14010.6 L 13531.7 14055.0"/>
+<path class="link" marker-end="url(#in)" d="M 13517.9 13978.6 L 13498.7 13960.4"/>
+<path class="link" marker-end="url(#in)" d="M 13517.0 14010.6 L 13468.0 14055.0"/>
+<path class="link" marker-start="url(#in)" d="M 13998.7 13978.6 L 14032.6 13960.4"/>
+<path class="link" marker-end="url(#in)" d="M 13946.1 13978.6 L 13919.4 13959.9"/>
+<path class="link" marker-start="url(#in)" d="M 14346.6 13978.6 L 14318.3 13960.4"/>
+<path class="link" marker-end="url(#in)" d="M 14387.0 13978.6 L 14404.7 13960.4"/>
+<path class="link" marker-start="url(#in)" d="M 14213.6 14069.1 L 14255.0 14058.4"/>
+<path class="link" marker-end="url(#in)" d="M 14212.0 14094.5 L 14272.8 14122.5"/>
+<path class="link" marker-start="url(#in)" d="M 14213.6 14247.0 L 14272.8 14226.8"/>
+<path class="link" marker-end="url(#in)" d="M 14213.6 14269.2 L 14275.6 14285.7"/>
+<path class="link" marker-end="url(#in)" d="M 13856.0 14345.4 L 13776.0 14345.4"/>
+<path class="link" marker-start="url(#in)" d="M 14462.8 14331.0 L 14502.1 14316.4"/>
+<path class="link" marker-end="url(#in)" d="M 14462.8 14356.7 L 14523.2 14374.1"/>
+<path class="link" marker-end="url(#in)" d="M 13925.9 14520.6 L 13962.1 14534.9"/>
+<path class="link" marker-start="url(#in)" d="M 14462.8 14528.4 L 14523.2 14507.2"/>
+<path class="link" marker-end="url(#in)" d="M 14462.8 14554.6 L 14511.9 14570.0"/>
+<path class="link" marker-start="url(#in)" d="M 14460.0 14701.8 L 14526.0 14678.7"/>
+<path class="link" marker-end="url(#in)" d="M 14460.0 14726.1 L 14520.4 14745.1"/>
+<path class="link" marker-start="url(#in)" d="M 14460.0 14882.5 L 14508.9 14861.1"/>
+<path class="link" marker-end="url(#in)" d="M 14460.0 14913.8 L 14507.7 14934.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_kanamycin-biosynthesis" transform="translate(13929.3,12440.7)"><rect rx="10" height="31" width="224" x="-112.0" y="-15.5"/><text dominant-baseline="central">kanamycin biosynthesis</text></g>
+<g id="node638" class="node nodeHM pw_kanamycin-biosynthesis lid28965" transform="translate(13298.7,13994.6)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28965" target="_blank">2&#x27;-dehydrokanamycin A</a></text><title>2&#x27;-dehydrokanamycin A</title></g>
+<g id="node647" class="node nodeHM pw_kanamycin-biosynthesis lid3078" transform="translate(13754.0,13994.6)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3078" target="_blank">kanamycin B</a></text><title>kanamycin B</title></g>
+<g id="node651" class="node nodeHM pw_kanamycin-biosynthesis lid256543" transform="translate(14634.5,13994.6)"><rect height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256543" target="_blank">3&#x27;&#x27;-deamino-3&#x27;&#x27;-hydroxykanamycin B</a></text><title>3&#x27;&#x27;-deamino-3&#x27;&#x27;-hydroxykanamycin B</title></g>
+<g id="node655" class="node nodeHM pw_kanamycin-biosynthesis lid15804" transform="translate(14635.5,13611.7)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15804" target="_blank">kanamycin C</a></text><title>kanamycin C</title></g>
+<g id="node657" class="node nodeHM pw_kanamycin-biosynthesis lid5585" transform="translate(14423.6,15007.1)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5585" target="_blank">neomycin C</a></text><title>neomycin C</title></g>
+<g id="node661" class="node nodeHM pw_kanamycin-biosynthesis lid41972" transform="translate(14423.6,14810.6)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41972" target="_blank">6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-oxoneomycin C</a></text><title>6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-oxoneomycin C</title></g>
+<g id="node667" class="node nodeHM pw_kanamycin-biosynthesis lid28621" transform="translate(14423.6,14638.2)"><rect height="30.0" width="223.3" x="-111.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28621" target="_blank">6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-hydroxyneomycin C</a></text><title>6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-hydroxyneomycin C</title></g>
+<g id="node671" class="node nodeHM pw_kanamycin-biosynthesis lid146478" transform="translate(14423.6,14438.0)"><rect height="30.0" width="291.1" x="-145.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=146478" target="_blank">2&#x27;&#x27;&#x27;-acetyl-6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-hydroxyneomycin C</a></text><title>2&#x27;&#x27;&#x27;-acetyl-6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-hydroxyneomycin C</title></g>
+<g id="node675" class="node nodeHM pw_kanamycin-biosynthesis lid789" transform="translate(13298.7,13697.9)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=789" target="_blank">kanamycin A</a></text><title>kanamycin A</title></g>
+<g id="node679" class="node nodeHM pw_kanamycin-biosynthesis lid256544" transform="translate(13298.7,13141.0)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256544" target="_blank">kanamycin D</a></text><title>kanamycin D</title></g>
+<g id="node683" class="node nodeHM pw_kanamycin-biosynthesis lid28629" transform="translate(13298.7,13410.4)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28629" target="_blank">2&#x27;-deamino-2&#x27;-hydroxyneamine</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine</title></g>
+<g id="node687" class="node nodeHM pw_kanamycin-biosynthesis lid89284" transform="translate(13721.2,13700.1)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89284" target="_blank">kanamycin X</a></text><title>kanamycin X</title></g>
+<g id="node691" class="node nodeHM pw_kanamycin-biosynthesis lid28497" transform="translate(13721.2,13410.4)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28497" target="_blank">2&#x27;-deamino-2&#x27;-hydroxyparomamine</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyparomamine</title></g>
+<g id="node695" class="node nodeHM pw_kanamycin-biosynthesis lid6576" transform="translate(14177.3,13611.7)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6576" target="_blank">paromamine</a></text><title>paromamine</title></g>
+<g id="node699" class="node nodeHM pw_kanamycin-biosynthesis lid23603" transform="translate(14177.3,13410.4)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=23603" target="_blank">2&#x27;-N-acetylparomamine</a></text><title>2&#x27;-N-acetylparomamine</title></g>
+<g id="node703" class="node nodeHM pw_kanamycin-biosynthesis lid3178" transform="translate(13942.7,13308.2)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3178" target="_blank">2-deoxystreptamine</a></text><title>2-deoxystreptamine</title></g>
+<g id="node712" class="node nodeHM pw_kanamycin-biosynthesis lid8758" transform="translate(13942.7,13107.9)"><rect height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8758" target="_blank">3-amino-2,3-dideoxy-scyllo-inosose</a></text><title>3-amino-2,3-dideoxy-scyllo-inosose</title></g>
+<g id="node715" class="node nodeHM pw_kanamycin-biosynthesis lid4151" transform="translate(13942.7,12909.8)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4151" target="_blank">2-deoxy-scyllo-inosamine</a></text><title>2-deoxy-scyllo-inosamine</title></g>
+<g id="node720" class="node nodeHM pw_kanamycin-biosynthesis lid86258" transform="translate(13942.7,12696.7)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86258" target="_blank">2-deoxy-L-scyllo-inosose</a></text><title>2-deoxy-L-scyllo-inosose</title></g>
+<g id="node721" class="node nodeHM pw_kanamycin-biosynthesis lid105" transform="translate(13942.7,12493.3)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=105" target="_blank">D-glucose 6-phosphate</a></text><title>D-glucose 6-phosphate</title></g>
+<g id="node12689" class="node nodeHM pw_kanamycin-biosynthesis lid41971" transform="translate(14177.3,13795.2)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41971" target="_blank">6&#x27;-dehydroparomamine</a></text><title>6&#x27;-dehydroparomamine</title></g>
+<g id="node12693" class="node nodeHM pw_kanamycin-biosynthesis lid1793" transform="translate(14177.3,13994.6)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1793" target="_blank">neamine</a></text><title>neamine</title></g>
+<g id="node12698" class="node nodeHM pw_kanamycin-biosynthesis lid28631" transform="translate(14177.3,14181.5)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28631" target="_blank">5&#x27;&#x27;-phosphoribostamycin</a></text><title>5&#x27;&#x27;-phosphoribostamycin</title></g>
+<g id="node12702" class="node nodeHM pw_kanamycin-biosynthesis lid1627" transform="translate(14177.2,14345.4)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1627" target="_blank">ribostamycin</a></text><title>ribostamycin</title></g>
+<g id="node12705" class="node nodeHM pw_kanamycin-biosynthesis lid169098" transform="translate(13892.4,14225.2)"><rect height="30.0" width="449.3" x="-224.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=169098" target="_blank">4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoyl-[BtrI acyl-carrier protein]</a></text><title>4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoyl-[BtrI acyl-carrier protein]</title></g>
+<g id="node12706" class="node nodeHM pw_kanamycin-biosynthesis lid28625" transform="translate(13892.4,14430.2)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28625" target="_blank">gamma-L-glutamyl-butirosin B</a></text><title>gamma-L-glutamyl-butirosin B</title></g>
+<g id="node12709" class="node nodeHM pw_kanamycin-biosynthesis lid86949" transform="translate(13892.4,14595.0)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86949" target="_blank">butirosin B</a></text><title>butirosin B\nbutirosin B</title></g>
+<g id="node717" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13942.7,12593.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.124" target="_blank">4.2.3.124</a></text><title>2-deoxy-scyllo-inosose synthase</title></g>
+<g id="node716" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13942.7,12806.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.100" target="_blank">2.6.1.100</a></text><title>L-glutamine:2-deoxy-scyllo-inosose aminotransferase</title></g>
+<g id="node708" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13767.2,13003.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.38" target="_blank">1.1.99.38</a></text><title>2-deoxy-scyllo-inosamine dehydrogenase (AdoMet-dependent)</title></g>
+<g id="node713" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14130.5,13003.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.329" target="_blank">1.1.1.329</a></text><title>2-deoxy-scyllo-inosamine dehydrogenase</title></g>
+<g id="node704" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13942.7,13206.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.101" target="_blank">2.6.1.101</a></text><title>L-glutamine:3-amino-2,3-dideoxy-scyllo-inosose aminotransferase</title></g>
+<g id="node680" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13298.7,13272.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node692" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13721.2,13308.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.284" target="_blank">2.4.1.284</a></text><title>2-deoxystreptamine glucosyltransferase</title></g>
+<g id="node700" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14177.3,13308.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.283" target="_blank">2.4.1.283</a></text><title>2-deoxystreptamine N-acetyl-D-glucosaminyltransferase</title></g>
+<g id="node684" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13491.1,13410.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.94" target="_blank">2.6.1.94</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine transaminase</title></g>
+<g id="node696" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14177.3,13509.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.112" target="_blank">3.5.1.112</a></text><title>2&#x27;-N-acetylparomamine deacetylase</title></g>
+<g id="node676" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13298.7,13560.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node688" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13721.2,13561.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node656" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14413.4,13611.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node12690" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14177.3,13699.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.3.43" target="_blank">1.1.3.43</a></text><title>paromamine 6&#x27;-oxidase</title></g>
+<g id="node637" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13298.7,13852.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.355" target="_blank">1.1.1.355</a></text><title>2&#x27;-dehydrokanamycin reductase</title></g>
+<g id="node12694" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14177.3,13881.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.93" target="_blank">2.6.1.93</a></text><title>neamine transaminase</title></g>
+<g id="node639" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13534.7,13994.6)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.37" target="_blank">1.14.11.37</a></text><title>kanamycin B dioxygenase</title></g>
+<g id="node648" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13969.0,13994.6)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node652" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14371.5,13994.6)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node12695" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14177.3,14078.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.49" target="_blank">2.4.2.49</a></text><title>neamine phosphoribosyltransferase</title></g>
+<g id="node12699" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14177.3,14259.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.88" target="_blank">3.1.3.88</a></text><title>5&#x27;&#x27;-phosphoribostamycin phosphatase</title></g>
+<g id="node12703" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13892.4,14345.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.19" target="_blank">2.3.2.19</a></text><title>ribostamycin:4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoyl-[BtrI acyl-carrier protein] 4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoate transferase</title></g>
+<g id="node672" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14423.6,14345.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.285" target="_blank">2.4.1.285</a></text><title>UDP-GlcNAc:ribostamycin N-acetylglucosaminyltransferase</title></g>
+<g id="node12707" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(13892.4,14507.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.6" target="_blank">4.3.2.6</a></text><title>gamma-L-glutamyl-butirosin B gamma-glutamyl cyclotransferase</title></g>
+<g id="node668" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14423.6,14542.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.113" target="_blank">3.5.1.113</a></text><title>2&#x27;&#x27;&#x27;-acetyl-6&#x27;&#x27;&#x27;-hydroxyneomycin C deacetylase</title></g>
+<g id="node662" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14423.6,14714.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.3.44" target="_blank">1.1.3.44</a></text><title>6&#x27;&#x27;&#x27;-hydroxyneomycin C oxidase</title></g>
+<g id="node658" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(14423.6,14898.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.95" target="_blank">2.6.1.95</a></text><title>neomycin C transaminase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node634" class="node nodeCM pw_kanamycin-biosynthesis lid10" transform="translate(13201.0,13803.2)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node635" class="node nodeCM pw_kanamycin-biosynthesis lid12" transform="translate(13131.6,13921.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node636" class="node nodeCM pw_kanamycin-biosynthesis lid5" transform="translate(13201.0,13921.2)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node640" class="node nodeCM pw_kanamycin-biosynthesis lid9" transform="translate(13633.6,14071.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node641" class="node nodeCM pw_kanamycin-biosynthesis lid28" transform="translate(13450.3,14071.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node642" class="node nodeCM pw_kanamycin-biosynthesis lid27" transform="translate(13531.0,14071.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node643" class="node nodeCM pw_kanamycin-biosynthesis lid58" transform="translate(13481.8,13944.4)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title>succinate</title></g>
+<g id="node644" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(13602.5,13944.4)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2-oxoglutarate</a></text><title>2-oxoglutarate</title></g>
+<g id="node645" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(14062.4,13944.4)"><rect rx="5" height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title>UDP-alpha-D-kanosamine</title></g>
+<g id="node646" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(13897.2,13944.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node649" class="node nodeCM pw_kanamycin-biosynthesis lid64" transform="translate(14293.4,13944.4)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-glucose</a></text><title>UDP-glucose</title></g>
+<g id="node650" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(14420.2,13944.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node653" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(14336.7,13566.9)"><rect rx="5" height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title>UDP-alpha-D-kanosamine</title></g>
+<g id="node654" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(14490.6,13566.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node659" class="node nodeCM pw_kanamycin-biosynthesis lid9" transform="translate(14545.5,14671.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node660" class="node nodeCM pw_kanamycin-biosynthesis lid22" transform="translate(14545.5,14753.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title>H2O2</title></g>
+<g id="node663" class="node nodeCM pw_kanamycin-biosynthesis lid41" transform="translate(14545.5,14845.1)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">L-glutamate</a></text><title>L-glutamate</title></g>
+<g id="node664" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(14545.5,14950.0)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2-oxoglutarate</a></text><title>2-oxoglutarate</title></g>
+<g id="node665" class="node nodeCM pw_kanamycin-biosynthesis lid1" transform="translate(14545.5,14499.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node666" class="node nodeCM pw_kanamycin-biosynthesis lid47" transform="translate(14545.5,14580.6)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>acetate</title></g>
+<g id="node669" class="node nodeCM pw_kanamycin-biosynthesis lid1424" transform="translate(14545.5,14300.4)"><rect rx="5" height="30.0" width="206.4" x="-103.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1424" target="_blank">UDP-N-acetyl-alpha-D-glucosamine</a></text><title>UDP-N-acetyl-alpha-D-glucosamine</title></g>
+<g id="node670" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(14545.5,14380.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node673" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(13201.0,13509.8)"><rect rx="5" height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title>UDP-alpha-D-kanosamine</title></g>
+<g id="node674" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(13201.0,13642.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node677" class="node nodeCM pw_kanamycin-biosynthesis lid64" transform="translate(13201.0,13333.8)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-glucose</a></text><title>UDP-glucose</title></g>
+<g id="node678" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(13201.0,13219.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node681" class="node nodeCM pw_kanamycin-biosynthesis lid41" transform="translate(13571.6,13356.2)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">L-glutamate</a></text><title>L-glutamate</title></g>
+<g id="node682" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(13436.5,13356.2)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2-oxoglutarate</a></text><title>2-oxoglutarate</title></g>
+<g id="node685" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(13631.9,13513.2)"><rect rx="5" height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title>UDP-alpha-D-kanosamine</title></g>
+<g id="node686" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(13631.9,13608.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node689" class="node nodeCM pw_kanamycin-biosynthesis lid364" transform="translate(13631.9,13254.7)"><rect rx="5" height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-alpha-D-glucose</a></text><title>UDP-alpha-D-glucose</title></g>
+<g id="node690" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(13800.6,13254.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node693" class="node nodeCM pw_kanamycin-biosynthesis lid1" transform="translate(14295.0,13457.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node694" class="node nodeCM pw_kanamycin-biosynthesis lid47" transform="translate(14295.0,13518.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>acetate</title></g>
+<g id="node697" class="node nodeCM pw_kanamycin-biosynthesis lid1424" transform="translate(14295.0,13254.7)"><rect rx="5" height="30.0" width="206.4" x="-103.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1424" target="_blank">UDP-N-acetyl-alpha-D-glucosamine</a></text><title>UDP-N-acetyl-alpha-D-glucosamine</title></g>
+<g id="node698" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(14295.0,13334.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node701" class="node nodeCM pw_kanamycin-biosynthesis lid102" transform="translate(14041.1,13155.7)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">L-glutamine</a></text><title>L-glutamine</title></g>
+<g id="node702" class="node nodeCM pw_kanamycin-biosynthesis lid881" transform="translate(14041.1,13254.7)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=881" target="_blank">2-oxoglutaramate</a></text><title>2-oxoglutaramate</title></g>
+<g id="node705" class="node nodeCM pw_kanamycin-biosynthesis lid24" transform="translate(13679.7,12952.9)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node706" class="node nodeCM pw_kanamycin-biosynthesis lid88" transform="translate(13717.7,13056.0)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">L-methionine</a></text><title>L-methionine</title></g>
+<g id="node707" class="node nodeCM pw_kanamycin-biosynthesis lid943" transform="translate(13582.4,13056.0)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title>5&#x27;-deoxyadenosine</title></g>
+<g id="node709" class="node nodeCM pw_kanamycin-biosynthesis lid10" transform="translate(14221.1,12952.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node710" class="node nodeCM pw_kanamycin-biosynthesis lid12" transform="translate(14245.2,13056.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node711" class="node nodeCM pw_kanamycin-biosynthesis lid5" transform="translate(14170.1,13056.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node714" class="node nodeCM pw_kanamycin-biosynthesis lid881" transform="translate(14041.1,12843.0)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=881" target="_blank">2-oxoglutaramate</a></text><title>2-oxoglutaramate</title></g>
+<g id="node718" class="node nodeCM pw_kanamycin-biosynthesis lid102" transform="translate(14041.1,12753.5)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">L-glutamine</a></text><title>L-glutamine</title></g>
+<g id="node719" class="node nodeCM pw_kanamycin-biosynthesis lid16" transform="translate(14041.1,12625.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node12687" class="node nodeCM pw_kanamycin-biosynthesis lid9" transform="translate(14295.0,13656.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node12688" class="node nodeCM pw_kanamycin-biosynthesis lid22" transform="translate(14295.0,13737.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title>H2O2</title></g>
+<g id="node12691" class="node nodeCM pw_kanamycin-biosynthesis lid41" transform="translate(14295.0,13839.0)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">L-glutamate</a></text><title>L-glutamate</title></g>
+<g id="node12692" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(14295.0,13895.4)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2-oxoglutarate</a></text><title>2-oxoglutarate</title></g>
+<g id="node12696" class="node nodeCM pw_kanamycin-biosynthesis lid158" transform="translate(14317.0,14042.4)"><rect rx="5" height="30.0" width="240.3" x="-120.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-phospho-alpha-D-ribose 1-diphosphate</a></text><title>5-phospho-alpha-D-ribose 1-diphosphate</title></g>
+<g id="node12697" class="node nodeCM pw_kanamycin-biosynthesis lid17" transform="translate(14295.0,14132.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node12700" class="node nodeCM pw_kanamycin-biosynthesis lid16" transform="translate(14295.0,14290.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node12701" class="node nodeCM pw_kanamycin-biosynthesis lid1" transform="translate(14295.0,14219.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node12704" class="node nodeCM pw_kanamycin-biosynthesis lid12197" transform="translate(13691.6,14345.4)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12197" target="_blank">BtrI acyl-carrier protein</a></text><title>BtrI acyl-carrier protein</title></g>
+<g id="node12708" class="node nodeCM pw_kanamycin-biosynthesis lid3609" transform="translate(14002.7,14550.9)"><rect rx="5" height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3609" target="_blank">5-oxo-L-proline</a></text><title>5-oxo-L-proline</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1859.1" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 2125.9 4748.0" width="2126" height="4748" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="2125.9" height="4748.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_kanamycin-biosynthesis" class="pw " x="0.0" y="0.0" width="2045.9" height="4652.5" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 879.2 1636.5 L 780.7 1636.5"/>
+<path class="link" marker-end="url(#in)" d="M 949.5 1636.5 L 1038.3 1636.5"/>
+<path class="link" marker-start="url(#in)" d="M 1250.5 1736.9 L 1134.4 1652.5"/>
+<path class="link" marker-end="url(#in)" d="M 1294.6 1768.9 L 1410.7 1853.3"/>
+<path class="link" marker-start="url(#in)" d="M 1488.7 2041.6 L 1438.0 1885.3"/>
+<path class="link" marker-end="url(#in)" d="M 1499.1 2073.6 L 1549.9 2229.9"/>
+<path class="link" marker-start="url(#in)" d="M 1499.1 2418.2 L 1549.9 2261.9"/>
+<path class="link" marker-end="url(#in)" d="M 1488.7 2450.2 L 1438.0 2606.5"/>
+<path class="link" marker-start="url(#in)" d="M 1294.6 2722.9 L 1410.7 2638.5"/>
+<path class="link" marker-end="url(#in)" d="M 1250.5 2754.9 L 1134.4 2839.3"/>
+<path class="link" marker-start="url(#in)" d="M 952.8 2855.3 L 1070.7 2855.3"/>
+<path class="link" marker-end="url(#in)" d="M 876.0 2855.3 L 790.4 2855.3"/>
+<path class="link" marker-end="url(#in)" d="M 578.2 2754.9 L 694.4 2839.3"/>
+<path class="link" marker-start="url(#in)" d="M 534.2 2722.9 L 418.0 2638.5"/>
+<path class="link" marker-end="url(#in)" d="M 340.0 2450.2 L 390.8 2606.5"/>
+<path class="link" marker-start="url(#in)" d="M 329.6 2418.2 L 278.8 2261.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 329.6 2073.6 L 278.8 2229.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 339.8 2042.2 C 351.3 2006.8 379.5 1920.0 391.0 1884.6"/>
+<path class="link" marker-end="url(#in)" d="M 534.2 1768.9 L 418.0 1853.3"/>
+<path class="link" marker-start="url(#in)" d="M 578.2 1736.9 L 694.4 1652.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 182.6 2063.9 L 265.6 2229.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 166.6 2031.9 L 83.6 1865.9"/>
+<path class="link" marker-start="url(#in)" d="M 487.0 2051.3 L 404.0 1885.3"/>
+<path class="link" marker-end="url(#in)" d="M 503.0 2083.3 L 586.0 2249.3"/>
+<path class="link" marker-start="url(#in)" d="M 1595.6 1869.3 L 1471.2 1869.3"/>
+<path class="link" marker-end="url(#in)" d="M 1665.9 1869.3 L 1787.1 1869.3"/>
+<path class="link" marker-start="url(#in)" d="M 1432.8 2804.5 L 1432.8 2638.5"/>
+<path class="link" marker-end="url(#in)" d="M 1432.8 2836.5 L 1432.8 3002.5"/>
+<path class="link" marker-start="url(#in)" d="M 1432.8 3200.5 L 1432.8 3034.5"/>
+<path class="link" marker-end="url(#in)" d="M 1432.8 3232.5 L 1432.8 3398.5"/>
+<path class="link" marker-start="url(#in)" d="M 1570.7 3414.5 L 1477.6 3414.5"/>
+<path class="link" marker-end="url(#in)" d="M 1641.0 3414.5 L 1695.3 3414.5"/>
+<path class="link" marker-start="url(#in)" d="M 1830.8 3596.5 L 1851.6 3430.5"/>
+<path class="link" marker-end="url(#in)" d="M 1828.8 3628.5 L 1828.8 3794.5"/>
+<path class="link" marker-start="url(#in)" d="M 1828.8 3992.5 L 1828.8 3826.5"/>
+<path class="link" marker-end="url(#in)" d="M 1828.8 4024.5 L 1828.8 4190.5"/>
+<path class="link" marker-start="url(#in)" d="M 1828.8 4388.5 L 1828.8 4222.5"/>
+<path class="link" marker-end="url(#in)" d="M 1828.8 4420.5 L 1828.8 4586.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1595.6 2622.5 L 1461.4 2622.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1665.9 2622.5 L 1712.6 2622.5"/>
+<path class="link" marker-start="url(#in)" d="M 716.4 234.5 L 716.4 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 716.4 266.5 L 716.4 432.5"/>
+<path class="link" marker-start="url(#in)" d="M 716.4 630.5 L 716.4 464.5"/>
+<path class="link" marker-end="url(#in)" d="M 716.4 662.5 L 716.4 828.5"/>
+<path class="link" marker-start="url(#in)" d="M 787.5 1027.3 C 773.1 990.4 736.7 896.7 722.3 859.8"/>
+<path class="link" marker-end="url(#in)" d="M 787.2 1058.5 L 722.6 1224.5"/>
+<path class="link" marker-start="url(#in)" d="M 645.3 1027.3 C 659.6 990.4 696.1 896.7 710.5 859.8"/>
+<path class="link" marker-end="url(#in)" d="M 645.6 1058.5 L 710.2 1224.5"/>
+<path class="link" marker-start="url(#in)" d="M 716.4 1422.5 L 716.4 1256.5"/>
+<path class="link" marker-end="url(#in)" d="M 716.4 1454.5 L 716.4 1620.5"/>
+<path class="link" marker-start="url(#in)" d="M 1432.8 3992.5 L 1432.8 3826.5"/>
+<path class="link" marker-end="url(#in)" d="M 1432.8 4024.5 L 1432.8 4190.5"/>
+<path class="link" marker-start="url(#in)" d="M 1243.0 3599.1 L 839.8 3430.5"/>
+<path class="link" marker-start="url(#in)" d="M 1287.7 3596.5 L 1420.0 3430.5"/>
+<path class="link" marker-end="url(#in)" d="M 1287.7 3628.5 L 1420.0 3794.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 903.2 1652.5 L 848.5 1730.5"/>
+<path class="link" marker-end="url(#in)" d="M 925.6 1620.5 L 953.3 1580.9"/>
+<path class="link" marker-start="url(#in)" d="M 1272.8 1736.9 L 1273.8 1681.5"/>
+<path class="link" marker-end="url(#in)" d="M 1307.7 1740.8 L 1332.6 1732.2"/>
+<path class="link" marker-start="url(#in)" d="M 1506.0 2041.6 L 1533.5 2005.1"/>
+<path class="link" marker-end="url(#in)" d="M 1525.9 2067.3 L 1560.1 2077.8"/>
+<path class="link" marker-start="url(#in)" d="M 1525.9 2424.4 L 1561.8 2413.5"/>
+<path class="link" marker-end="url(#in)" d="M 1506.0 2450.2 L 1534.5 2488.0"/>
+<path class="link" marker-start="url(#in)" d="M 1272.3 2722.9 L 1270.8 2636.8"/>
+<path class="link" marker-end="url(#in)" d="M 1237.4 2726.8 L 1205.7 2715.9"/>
+<path class="link" marker-start="url(#in)" d="M 919.9 2839.3 L 937.3 2788.7"/>
+<path class="link" marker-start="url(#in)" d="M 934.1 2839.3 L 968.5 2811.4"/>
+<path class="link" marker-end="url(#in)" d="M 913.7 2871.3 L 911.4 2926.5"/>
+<path class="link" marker-end="url(#in)" d="M 903.0 2871.3 L 869.2 2918.8"/>
+<path class="link" marker-end="url(#in)" d="M 876.7 2871.3 L 849.7 2882.7"/>
+<path class="link" marker-start="url(#in)" d="M 556.5 2722.9 L 557.5 2664.3"/>
+<path class="link" marker-end="url(#in)" d="M 579.0 2722.9 L 608.2 2702.5"/>
+<path class="link" marker-end="url(#in)" d="M 591.4 2737.0 L 629.3 2735.0"/>
+<path class="link" marker-start="url(#in)" d="M 346.9 2418.2 L 393.9 2355.8"/>
+<path class="link" marker-end="url(#in)" d="M 370.0 2444.9 L 402.6 2454.9"/>
+<path class="link" marker-start="url(#in)" d="M 302.9 2067.3 L 267.0 2078.3"/>
+<path class="link" marker-end="url(#in)" d="M 322.8 2041.6 L 294.3 2003.8"/>
+<path class="link" marker-start="url(#in)" d="M 591.4 1765.0 L 616.2 1773.6"/>
+<path class="link" marker-end="url(#in)" d="M 556.5 1768.9 L 557.4 1824.2"/>
+<path class="link" marker-start="url(#in)" d="M 166.0 2063.9 L 138.6 2114.4"/>
+<path class="link" marker-end="url(#in)" d="M 139.5 2042.7 L 103.9 2037.4"/>
+<path class="link" marker-start="url(#in)" d="M 459.9 2054.1 L 420.9 2039.6"/>
+<path class="link" marker-end="url(#in)" d="M 486.3 2083.3 L 462.1 2128.1"/>
+<path class="link" marker-start="url(#in)" d="M 1619.5 1853.3 L 1574.2 1788.5"/>
+<path class="link" marker-end="url(#in)" d="M 1642.0 1853.3 L 1669.7 1813.7"/>
+<path class="link" marker-start="url(#in)" d="M 1455.6 2804.5 L 1504.0 2770.6"/>
+<path class="link" marker-end="url(#in)" d="M 1455.6 2836.5 L 1488.6 2859.6"/>
+<path class="link" marker-start="url(#in)" d="M 1455.6 3200.5 L 1488.6 3177.4"/>
+<path class="link" marker-end="url(#in)" d="M 1455.6 3232.5 L 1490.5 3256.9"/>
+<path class="link" marker-start="url(#in)" d="M 1594.7 3430.5 L 1540.0 3508.5"/>
+<path class="link" marker-end="url(#in)" d="M 1617.1 3398.5 L 1644.8 3358.9"/>
+<path class="link" marker-start="url(#in)" d="M 1855.0 3596.5 L 1887.6 3576.6"/>
+<path class="link" marker-end="url(#in)" d="M 1848.8 3628.5 L 1882.0 3655.0"/>
+<path class="link" marker-start="url(#in)" d="M 1851.6 3992.5 L 1886.5 3968.1"/>
+<path class="link" marker-end="url(#in)" d="M 1851.6 4024.5 L 1882.7 4046.3"/>
+<path class="link" marker-start="url(#in)" d="M 1851.6 4388.5 L 1884.6 4365.4"/>
+<path class="link" marker-end="url(#in)" d="M 1851.6 4420.5 L 1884.6 4443.6"/>
+<path class="link" marker-start="url(#in)" d="M 1619.5 2606.5 L 1588.1 2561.6"/>
+<path class="link" marker-end="url(#in)" d="M 1642.0 2606.5 L 1669.7 2566.9"/>
+<path class="link" marker-end="url(#in)" d="M 739.2 266.5 L 774.1 290.9"/>
+<path class="link" marker-start="url(#in)" d="M 739.2 630.5 L 772.2 607.4"/>
+<path class="link" marker-end="url(#in)" d="M 739.2 662.5 L 782.3 692.7"/>
+<path class="link" marker-start="url(#in)" d="M 770.5 1026.5 L 718.1 989.8"/>
+<path class="link" marker-end="url(#in)" d="M 828.5 1054.3 L 849.7 1061.4"/>
+<path class="link" marker-end="url(#in)" d="M 806.1 1058.5 L 835.6 1095.4"/>
+<path class="link" marker-start="url(#in)" d="M 616.5 1026.5 L 587.4 1006.1"/>
+<path class="link" marker-end="url(#in)" d="M 674.5 1054.6 L 702.9 1064.4"/>
+<path class="link" marker-end="url(#in)" d="M 652.3 1058.5 L 680.9 1093.7"/>
+<path class="link" marker-start="url(#in)" d="M 739.2 1422.5 L 772.2 1399.4"/>
+<path class="link" marker-end="url(#in)" d="M 739.2 1454.5 L 782.3 1484.7"/>
+<path class="link" marker-end="url(#in)" d="M 1455.6 4024.5 L 1497.4 4053.8"/>
+<path class="link" marker-end="url(#in)" d="M 1306.9 3610.5 L 1310.7 3610.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_kanamycin-biosynthesis" transform="translate(1022.9,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">kanamycin biosynthesis</text></g>
+<g id="node703" class="node nodeHM pw_kanamycin-biosynthesis lid3178" transform="translate(716.4,1636.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3178" target="_blank">2-deoxystreptamine</a></text><title></title></g>
+<g id="node699" class="node nodeHM pw_kanamycin-biosynthesis lid23603" transform="translate(1112.4,1636.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=23603" target="_blank">2&#x27;-N-acetylparomamine</a></text><title></title></g>
+<g id="node695" class="node nodeHM pw_kanamycin-biosynthesis lid6576" transform="translate(1432.8,1869.3)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6576" target="_blank">paromamine</a></text><title></title></g>
+<g id="node12689" class="node nodeHM pw_kanamycin-biosynthesis lid41971" transform="translate(1555.1,2245.9)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41971" target="_blank">6&#x27;-dehydroparomamine</a></text><title></title></g>
+<g id="node12693" class="node nodeHM pw_kanamycin-biosynthesis lid1793" transform="translate(1432.8,2622.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1793" target="_blank">neamine</a></text><title></title></g>
+<g id="node647" class="node nodeHM pw_kanamycin-biosynthesis lid3078" transform="translate(1112.4,2855.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3078" target="_blank">kanamycin B</a></text><title></title></g>
+<g id="node638" class="node nodeHM pw_kanamycin-biosynthesis lid28965" transform="translate(716.4,2855.3)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28965" target="_blank">2&#x27;-dehydrokanamycin A</a></text><title></title></g>
+<g id="node675" class="node nodeHM pw_kanamycin-biosynthesis lid789" transform="translate(396.0,2622.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=789" target="_blank">kanamycin A</a></text><title></title></g>
+<g id="node683" class="node nodeHM pw_kanamycin-biosynthesis lid28629" transform="translate(273.6,2245.9)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28629" target="_blank">2&#x27;-deamino-2&#x27;-hydroxyneamine</a></text><title></title></g>
+<g id="node691" class="node nodeHM pw_kanamycin-biosynthesis lid28497" transform="translate(396.0,1869.3)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28497" target="_blank">2&#x27;-deamino-2&#x27;-hydroxyparomamine</a></text><title></title></g>
+<g id="node679" class="node nodeHM pw_kanamycin-biosynthesis lid256544" transform="translate(75.6,1849.9)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256544" target="_blank">kanamycin D</a></text><title></title></g>
+<g id="node687" class="node nodeHM pw_kanamycin-biosynthesis lid89284" transform="translate(594.0,2265.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89284" target="_blank">kanamycin X</a></text><title></title></g>
+<g id="node655" class="node nodeHM pw_kanamycin-biosynthesis lid15804" transform="translate(1828.8,1869.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15804" target="_blank">kanamycin C</a></text><title></title></g>
+<g id="node12698" class="node nodeHM pw_kanamycin-biosynthesis lid28631" transform="translate(1432.8,3018.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28631" target="_blank">5&#x27;&#x27;-phosphoribostamycin</a></text><title></title></g>
+<g id="node12702" class="node nodeHM pw_kanamycin-biosynthesis lid1627" transform="translate(1432.8,3414.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1627" target="_blank">ribostamycin</a></text><title></title></g>
+<g id="node671" class="node nodeHM pw_kanamycin-biosynthesis lid146478" transform="translate(1853.6,3414.5)"><rect height="30.0" width="314.6" x="-157.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=146478" target="_blank">2&#x27;&#x27;&#x27;-acetyl-6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-hydroxyneomycin C</a></text><title></title></g>
+<g id="node667" class="node nodeHM pw_kanamycin-biosynthesis lid28621" transform="translate(1828.8,3810.5)"><rect height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28621" target="_blank">6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-hydroxyneomycin C</a></text><title></title></g>
+<g id="node661" class="node nodeHM pw_kanamycin-biosynthesis lid41972" transform="translate(1828.8,4206.5)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41972" target="_blank">6&#x27;&#x27;&#x27;-deamino-6&#x27;&#x27;&#x27;-oxoneomycin C</a></text><title></title></g>
+<g id="node657" class="node nodeHM pw_kanamycin-biosynthesis lid5585" transform="translate(1828.8,4602.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5585" target="_blank">neomycin C</a></text><title></title></g>
+<g id="node651" class="node nodeHM pw_kanamycin-biosynthesis lid256543" transform="translate(1828.8,2622.5)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256543" target="_blank">3&#x27;&#x27;-deamino-3&#x27;&#x27;-hydroxykanamycin B</a></text><title></title></g>
+<g id="node721" class="node nodeHM pw_kanamycin-biosynthesis lid105" transform="translate(716.4,52.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=105" target="_blank">D-Glc 6-P</a></text><title></title></g>
+<g id="node720" class="node nodeHM pw_kanamycin-biosynthesis lid86258" transform="translate(716.4,448.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86258" target="_blank">2-deoxy-L-scyllo-inosose</a></text><title></title></g>
+<g id="node715" class="node nodeHM pw_kanamycin-biosynthesis lid4151" transform="translate(716.4,844.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4151" target="_blank">2-deoxy-scyllo-inosamine</a></text><title></title></g>
+<g id="node712" class="node nodeHM pw_kanamycin-biosynthesis lid8758" transform="translate(716.4,1240.5)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8758" target="_blank">3-amino-2,3-dideoxy-scyllo-inosose</a></text><title></title></g>
+<g id="node12706" class="node nodeHM pw_kanamycin-biosynthesis lid28625" transform="translate(1432.8,3810.5)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28625" target="_blank">gamma-L-glutamyl-butirosin B</a></text><title></title></g>
+<g id="node12709" class="node nodeHM pw_kanamycin-biosynthesis lid86949" transform="translate(1432.8,4206.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86949" target="_blank">butirosin B</a></text><title></title></g>
+<g id="node12705" class="node nodeHM pw_kanamycin-biosynthesis lid169098" transform="translate(801.6,3414.5)"><rect height="30.0" width="496.0" x="-248.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=169098" target="_blank">4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoyl-[BtrI acyl-carrier protein]</a></text><title></title></g>
+<g id="node700" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(914.4,1636.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.283" target="_blank">2.4.1.283</a></text><title>2-deoxystreptamine N-acetyl-D-glucosaminyltransferase</title></g>
+<g id="node696" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1272.6,1752.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.112" target="_blank">3.5.1.112</a></text><title>2&#x27;-N-acetylparomamine deacetylase</title></g>
+<g id="node12690" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1493.9,2057.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.3.43" target="_blank">1.1.3.43</a></text><title>paromamine 6&#x27;-oxidase</title></g>
+<g id="node12694" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1493.9,2434.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.93" target="_blank">2.6.1.93</a></text><title>neamine transaminase</title></g>
+<g id="node648" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1272.6,2738.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node639" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(914.4,2855.3)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.37" target="_blank">1.14.11.37</a></text><title>kanamycin B dioxygenase</title></g>
+<g id="node637" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(556.2,2738.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.355" target="_blank">1.1.1.355</a></text><title>2&#x27;-dehydrokanamycin reductase</title></g>
+<g id="node676" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(334.8,2434.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node684" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(334.8,2057.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.94" target="_blank">2.6.1.94</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine transaminase</title></g>
+<g id="node692" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(556.2,1752.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.284" target="_blank">2.4.1.284</a></text><title>2-deoxystreptamine glucosyltransferase</title></g>
+<g id="node680" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(174.6,2047.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node688" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(495.0,2067.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node656" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1630.8,1869.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node12695" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1432.8,2820.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.49" target="_blank">2.4.2.49</a></text><title>neamine phosphoribosyltransferase</title></g>
+<g id="node12699" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1432.8,3216.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.88" target="_blank">3.1.3.88</a></text><title>5&#x27;&#x27;-phosphoribostamycin phosphatase</title></g>
+<g id="node672" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1605.9,3414.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.285" target="_blank">2.4.1.285</a></text><title>UDP-GlcNAc:ribostamycin N-acetylglucosaminyltransferase</title></g>
+<g id="node668" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1828.8,3612.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.113" target="_blank">3.5.1.113</a></text><title>2&#x27;&#x27;&#x27;-acetyl-6&#x27;&#x27;&#x27;-hydroxyneomycin C deacetylase</title></g>
+<g id="node662" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1828.8,4008.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.3.44" target="_blank">1.1.3.44</a></text><title>6&#x27;&#x27;&#x27;-hydroxyneomycin C oxidase</title></g>
+<g id="node658" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1828.8,4404.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.95" target="_blank">2.6.1.95</a></text><title>neomycin C transaminase</title></g>
+<g id="node652" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1630.8,2622.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.301" target="_blank">2.4.1.301</a></text><title>2&#x27;-deamino-2&#x27;-hydroxyneamine 1-alpha-D-kanosaminyltransferase</title></g>
+<g id="node717" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(716.4,250.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.124" target="_blank">4.2.3.124</a></text><title>2-deoxy-scyllo-inosose synthase</title></g>
+<g id="node716" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(716.4,646.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.100" target="_blank">2.6.1.100</a></text><title>L-glutamine:2-deoxy-scyllo-inosose aminotransferase</title></g>
+<g id="node708" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(793.4,1042.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.38" target="_blank">1.1.99.38</a></text><title>2-deoxy-scyllo-inosamine dehydrogenase (AdoMet-dependent); 2-deoxy-scyllo-inosamine dehydrogenase</title></g>
+<g id="node713" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(639.4,1042.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.329" target="_blank">1.1.1.329</a></text><title>2-deoxy-scyllo-inosamine dehydrogenase (AdoMet-dependent); 2-deoxy-scyllo-inosamine dehydrogenase</title></g>
+<g id="node704" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(716.4,1438.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.101" target="_blank">2.6.1.101</a></text><title>L-glutamine:3-amino-2,3-dideoxy-scyllo-inosose aminotransferase</title></g>
+<g id="node12707" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1432.8,4008.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.6" target="_blank">4.3.2.6</a></text><title>gamma-L-glutamyl-butirosin B gamma-glutamyl cyclotransferase</title></g>
+<g id="node12703" class="node nodeEN pw_kanamycin-biosynthesis" transform="translate(1275.0,3612.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.19" target="_blank">2.3.2.19</a></text><title>ribostamycin:4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoyl-[BtrI acyl-carrier protein] 4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoate transferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node700~0" class="node nodeCM pw_kanamycin-biosynthesis lid1424" transform="translate(837.3,1746.5)"><rect rx="5" height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1424" target="_blank">UDP-N-acetyl-alpha-D-glucosamine</a></text><title></title></g>
+<g id="node700~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(964.5,1564.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node696~0" class="node nodeCM pw_kanamycin-biosynthesis lid1" transform="translate(1274.1,1665.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node696~1" class="node nodeCM pw_kanamycin-biosynthesis lid47" transform="translate(1361.3,1722.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node12690~0" class="node nodeCM pw_kanamycin-biosynthesis lid9" transform="translate(1545.5,1989.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node12690~1" class="node nodeCM pw_kanamycin-biosynthesis lid22" transform="translate(1579.0,2083.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node12694~0" class="node nodeCM pw_kanamycin-biosynthesis lid41" transform="translate(1577.5,2408.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node12694~1" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(1546.5,2504.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node648~0" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(1270.5,2620.8)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title></title></g>
+<g id="node648~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(1190.0,2710.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node639~0" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(942.8,2772.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node639~1" class="node nodeCM pw_kanamycin-biosynthesis lid9" transform="translate(981.0,2801.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node639~2" class="node nodeCM pw_kanamycin-biosynthesis lid27" transform="translate(910.7,2942.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node639~3" class="node nodeCM pw_kanamycin-biosynthesis lid58" transform="translate(857.8,2934.8)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node639~4" class="node nodeCM pw_kanamycin-biosynthesis lid28" transform="translate(834.0,2889.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node637~0" class="node nodeCM pw_kanamycin-biosynthesis lid10" transform="translate(557.8,2648.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node637~1" class="node nodeCM pw_kanamycin-biosynthesis lid5" transform="translate(630.4,2686.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node637~2" class="node nodeCM pw_kanamycin-biosynthesis lid12" transform="translate(641.8,2734.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node676~0" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(405.9,2339.8)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title></title></g>
+<g id="node676~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(418.4,2459.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node684~0" class="node nodeCM pw_kanamycin-biosynthesis lid41" transform="translate(251.3,2083.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node684~1" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(282.3,1987.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node692~0" class="node nodeCM pw_kanamycin-biosynthesis lid364" transform="translate(644.9,1783.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node692~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(557.7,1840.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node680~0" class="node nodeCM pw_kanamycin-biosynthesis lid64" transform="translate(130.0,2130.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node680~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(88.2,2035.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node688~0" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(378.1,2023.6)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title></title></g>
+<g id="node688~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(453.4,2144.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node656~0" class="node nodeCM pw_kanamycin-biosynthesis lid7947" transform="translate(1563.0,1772.5)"><rect rx="5" height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7947" target="_blank">UDP-alpha-D-kanosamine</a></text><title></title></g>
+<g id="node656~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(1680.9,1797.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node12695~0" class="node nodeCM pw_kanamycin-biosynthesis lid158" transform="translate(1526.9,2754.6)"><rect rx="5" height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title></title></g>
+<g id="node12695~1" class="node nodeCM pw_kanamycin-biosynthesis lid17" transform="translate(1504.3,2870.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node12699~0" class="node nodeCM pw_kanamycin-biosynthesis lid1" transform="translate(1504.3,3166.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12699~1" class="node nodeCM pw_kanamycin-biosynthesis lid16" transform="translate(1503.0,3265.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node672~0" class="node nodeCM pw_kanamycin-biosynthesis lid1424" transform="translate(1528.8,3524.5)"><rect rx="5" height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1424" target="_blank">UDP-N-acetyl-alpha-D-glucosamine</a></text><title></title></g>
+<g id="node672~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(1656.0,3342.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node668~0" class="node nodeCM pw_kanamycin-biosynthesis lid1" transform="translate(1903.3,3567.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node668~1" class="node nodeCM pw_kanamycin-biosynthesis lid47" transform="translate(1902.1,3671.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node662~0" class="node nodeCM pw_kanamycin-biosynthesis lid9" transform="translate(1899.0,3959.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node662~1" class="node nodeCM pw_kanamycin-biosynthesis lid22" transform="translate(1901.6,4059.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22" target="_blank">H2O2</a></text><title></title></g>
+<g id="node658~0" class="node nodeCM pw_kanamycin-biosynthesis lid41" transform="translate(1900.3,4354.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node658~1" class="node nodeCM pw_kanamycin-biosynthesis lid34" transform="translate(1900.3,4454.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node652~0" class="node nodeCM pw_kanamycin-biosynthesis lid64" transform="translate(1576.9,2545.6)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node652~1" class="node nodeCM pw_kanamycin-biosynthesis lid26" transform="translate(1680.9,2550.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node717~0" class="node nodeCM pw_kanamycin-biosynthesis lid16" transform="translate(786.6,299.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node716~0" class="node nodeCM pw_kanamycin-biosynthesis lid102" transform="translate(787.9,596.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node716~1" class="node nodeCM pw_kanamycin-biosynthesis lid881" transform="translate(805.2,708.7)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=881" target="_blank">2-Oxoglutaramate</a></text><title></title></g>
+<g id="node708~0" class="node nodeCM pw_kanamycin-biosynthesis lid24" transform="translate(695.3,973.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node708~1" class="node nodeCM pw_kanamycin-biosynthesis lid943" transform="translate(897.4,1077.4)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node708~2" class="node nodeCM pw_kanamycin-biosynthesis lid88" transform="translate(848.4,1111.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node713~0" class="node nodeCM pw_kanamycin-biosynthesis lid10" transform="translate(565.2,990.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node713~1" class="node nodeCM pw_kanamycin-biosynthesis lid5" transform="translate(725.1,1072.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node713~2" class="node nodeCM pw_kanamycin-biosynthesis lid12" transform="translate(693.3,1109.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node704~0" class="node nodeCM pw_kanamycin-biosynthesis lid102" transform="translate(787.9,1388.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node704~1" class="node nodeCM pw_kanamycin-biosynthesis lid881" transform="translate(805.2,1500.7)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=881" target="_blank">2-Oxoglutaramate</a></text><title></title></g>
+<g id="node12707~0" class="node nodeCM pw_kanamycin-biosynthesis lid3609" transform="translate(1520.2,4069.8)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3609" target="_blank">5-oxo-L-proline</a></text><title></title></g>
+<g id="node12703~0" class="node nodeCM pw_kanamycin-biosynthesis lid12197" transform="translate(1397.7,3604.9)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12197" target="_blank">BtrI acyl-carrier protein</a></text><title></title></g>
+</g></svg>
+<text x="1869.1" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

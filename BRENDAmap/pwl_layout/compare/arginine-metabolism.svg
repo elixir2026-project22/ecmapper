@@ -1,0 +1,633 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="4875" height="3506" viewBox="0 0 4874.9 3505.6"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="14968.6 8571.4 2204.9 1417.3" width="2205" height="1417" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="14968.6" y="8571.4" width="2204.9" height="1417.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_arginine-metabolism" class="pw pw3" x="15008.6" y="8626.9" width="2124.9" height="1321.8" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15510.4 8729.1 L 15636.1 8729.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15457.5 8745.1 L 15287.5 8909.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15975.2 8729.1 L 16149.8 8729.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15902.4 8729.1 L 15776.7 8729.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16665.4 8729.1 L 16902.3 8729.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16592.6 8729.1 L 16392.0 8729.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15271.0 8779.2 L 15271.0 8683.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15237.4 8795.2 L 15160.3 8795.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15271.0 8811.2 L 15271.0 8909.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16944.3 8842.0 L 16944.3 8903.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16944.3 8810.0 L 16944.3 8745.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16098.5 8918.9 L 16248.6 8919.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16031.4 8918.6 L 15932.9 8917.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16589.8 8919.2 L 16293.2 8919.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16668.2 8919.2 L 16910.8 8919.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15512.8 8925.9 L 15293.2 8925.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 8941.9 L 15546.4 9018.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15271.0 9049.6 L 15271.0 8941.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15271.0 9081.6 L 15271.0 9183.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15938.5 9127.6 L 15938.5 9213.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15966.2 9095.6 L 16248.6 8932.1"/>
+<path class="link" marker-start="url(#in)" d="M 15938.5 9095.6 L 15938.5 9032.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 9156.4 L 15546.4 9231.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 9124.4 L 15546.4 9050.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16660.5 9223.3 L 16777.5 9294.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16614.1 9191.3 L 16293.2 8936.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16774.2 9191.3 L 16293.2 8931.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16803.8 9223.3 L 16803.8 9294.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17002.9 9193.7 L 16293.2 8927.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17002.9 9223.3 L 16840.2 9294.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16237.1 9238.5 L 16268.9 8937.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16235.5 9270.5 L 16236.0 9367.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15271.0 9298.0 L 15271.0 9215.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15271.0 9330.0 L 15271.0 9423.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 9367.1 L 15546.4 9441.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 9335.1 L 15546.4 9263.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16664.2 9373.9 L 16768.5 9326.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16629.0 9405.9 L 16629.0 9467.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16958.0 9375.7 L 16841.7 9326.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16991.6 9405.9 L 16991.6 9507.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15881.4 9414.0 L 16256.3 8937.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15856.5 9446.0 L 15560.1 9831.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16024.6 9414.0 L 16261.7 8937.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15986.3 9446.0 L 15144.6 9890.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16425.0 9414.0 L 16276.7 8937.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16430.2 9446.0 L 16431.2 9535.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 9572.4 L 15546.4 9630.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 9540.4 L 15546.4 9473.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16629.0 9554.0 L 16629.0 9499.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16629.0 9586.0 L 16629.0 9641.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15323.4 9646.5 L 15187.4 9646.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15390.5 9646.5 L 15507.2 9646.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15745.6 9630.5 L 15551.7 9050.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15734.8 9662.5 L 15564.0 9831.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15714.6 9646.5 L 15585.6 9646.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16431.6 9641.1 L 16431.4 9567.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16465.2 9657.1 L 16561.5 9657.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16629.0 9727.8 L 16629.0 9673.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16629.0 9759.8 L 16629.0 9814.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.6 9762.5 L 15547.6 9831.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15546.4 9730.5 L 15546.4 9662.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15114.3 9791.5 L 15114.3 9890.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15114.3 9759.5 L 15114.3 9662.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15377.5 9847.0 L 15299.7 9847.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15450.3 9847.0 L 15525.6 9847.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 15490.0 8713.1 L 15520.8 8682.4"/>
+<path class="link" marker-end="url(#in)" d="M 15458.0 8713.1 L 15427.2 8682.4"/>
+<path class="link" marker-start="url(#in)" d="M 15954.8 8713.1 L 15985.5 8682.4"/>
+<path class="link" marker-start="url(#in)" d="M 15954.8 8745.1 L 15985.5 8775.9"/>
+<path class="link" marker-end="url(#in)" d="M 15922.8 8713.1 L 15892.0 8682.4"/>
+<path class="link" marker-end="url(#in)" d="M 15922.8 8745.1 L 15892.0 8775.9"/>
+<path class="link" marker-start="url(#in)" d="M 16645.0 8713.1 L 16675.7 8682.4"/>
+<path class="link" marker-end="url(#in)" d="M 16613.0 8713.1 L 16582.2 8682.4"/>
+<path class="link" marker-start="url(#in)" d="M 15281.3 8779.2 L 15303.0 8745.7"/>
+<path class="link" marker-start="url(#in)" d="M 15256.2 8779.2 L 15225.3 8745.7"/>
+<path class="link" marker-start="url(#in)" d="M 15297.0 8779.2 L 15355.1 8743.4"/>
+<path class="link" marker-end="url(#in)" d="M 15261.9 8811.2 L 15242.4 8845.7"/>
+<path class="link" marker-end="url(#in)" d="M 15250.3 8811.2 L 15205.7 8845.7"/>
+<path class="link" marker-start="url(#in)" d="M 16960.3 8842.0 L 16991.1 8872.8"/>
+<path class="link" marker-end="url(#in)" d="M 16960.3 8810.0 L 16991.1 8779.2"/>
+<path class="link" marker-end="url(#in)" d="M 16928.3 8810.0 L 16897.5 8779.2"/>
+<path class="link" marker-end="url(#in)" d="M 16091.5 8902.8 L 16125.8 8882.2"/>
+<path class="link" marker-start="url(#in)" d="M 16613.0 8903.2 L 16582.2 8872.5"/>
+<path class="link" marker-end="url(#in)" d="M 16668.2 8908.0 L 16712.7 8895.2"/>
+<path class="link" marker-end="url(#in)" d="M 16645.0 8903.2 L 16675.7 8872.5"/>
+<path class="link" marker-start="url(#in)" d="M 15562.2 8941.9 L 15592.8 8972.7"/>
+<path class="link" marker-end="url(#in)" d="M 15562.2 8909.9 L 15592.8 8879.1"/>
+<path class="link" marker-start="url(#in)" d="M 15289.0 9049.6 L 15318.7 9023.1"/>
+<path class="link" marker-end="url(#in)" d="M 15290.6 9081.6 L 15317.1 9103.2"/>
+<path class="link" marker-start="url(#in)" d="M 15916.1 9095.6 L 15875.5 9066.7"/>
+<path class="link" marker-end="url(#in)" d="M 15906.9 9127.6 L 15875.5 9143.5"/>
+<path class="link" marker-end="url(#in)" d="M 15969.7 9127.6 L 16000.1 9143.3"/>
+<path class="link" marker-start="url(#in)" d="M 15530.2 9124.4 L 15499.2 9093.7"/>
+<path class="link" marker-end="url(#in)" d="M 15530.2 9156.4 L 15499.2 9187.2"/>
+<path class="link" marker-start="url(#in)" d="M 16597.9 9207.3 L 16556.3 9207.3"/>
+<path class="link" marker-start="url(#in)" d="M 16634.2 9191.3 L 16634.2 9160.9"/>
+<path class="link" marker-end="url(#in)" d="M 16670.6 9207.3 L 16705.3 9207.3"/>
+<path class="link" marker-end="url(#in)" d="M 16634.2 9223.3 L 16634.2 9261.4"/>
+<path class="link" marker-start="url(#in)" d="M 16840.2 9195.7 L 16853.0 9191.6"/>
+<path class="link" marker-end="url(#in)" d="M 16840.2 9221.0 L 16867.1 9231.1"/>
+<path class="link" marker-start="url(#in)" d="M 17061.0 9191.3 L 17075.9 9180.4"/>
+<path class="link" marker-end="url(#in)" d="M 17059.9 9223.3 L 17077.1 9236.6"/>
+<path class="link" marker-start="url(#in)" d="M 16248.7 9238.5 L 16275.5 9206.1"/>
+<path class="link" marker-start="url(#in)" d="M 16222.1 9270.5 L 16200.7 9296.1"/>
+<path class="link" marker-start="url(#in)" d="M 16250.2 9270.5 L 16274.0 9296.1"/>
+<path class="link" marker-end="url(#in)" d="M 16223.4 9238.5 L 16199.3 9206.1"/>
+<path class="link" marker-start="url(#in)" d="M 15251.0 9298.0 L 15214.8 9269.1"/>
+<path class="link" marker-end="url(#in)" d="M 15293.1 9330.0 L 15317.3 9347.4"/>
+<path class="link" marker-end="url(#in)" d="M 15245.8 9330.0 L 15220.0 9346.4"/>
+<path class="link" marker-start="url(#in)" d="M 15530.2 9335.1 L 15499.2 9304.4"/>
+<path class="link" marker-start="url(#in)" d="M 15562.2 9335.1 L 15592.8 9304.4"/>
+<path class="link" marker-end="url(#in)" d="M 15530.2 9367.1 L 15499.2 9397.9"/>
+<path class="link" marker-end="url(#in)" d="M 15562.2 9367.1 L 15592.8 9397.9"/>
+<path class="link" marker-start="url(#in)" d="M 16608.1 9373.9 L 16585.6 9356.7"/>
+<path class="link" marker-end="url(#in)" d="M 16609.9 9405.9 L 16585.3 9426.6"/>
+<path class="link" marker-start="url(#in)" d="M 17025.2 9378.9 L 17060.5 9367.3"/>
+<path class="link" marker-end="url(#in)" d="M 17024.6 9405.9 L 17057.7 9421.9"/>
+<path class="link" marker-start="url(#in)" d="M 15853.9 9414.0 L 15819.4 9377.0"/>
+<path class="link" marker-end="url(#in)" d="M 15853.6 9446.0 L 15819.7 9481.6"/>
+<path class="link" marker-start="url(#in)" d="M 16036.8 9414.0 L 16083.6 9377.0"/>
+<path class="link" marker-end="url(#in)" d="M 16037.3 9446.0 L 16083.2 9481.6"/>
+<path class="link" marker-start="url(#in)" d="M 16418.0 9414.0 L 16392.1 9379.4"/>
+<path class="link" marker-end="url(#in)" d="M 16420.1 9446.0 L 16398.7 9480.6"/>
+<path class="link" marker-end="url(#in)" d="M 16441.4 9446.0 L 16466.1 9480.6"/>
+<path class="link" marker-start="url(#in)" d="M 15564.8 9540.4 L 15600.2 9509.6"/>
+<path class="link" marker-end="url(#in)" d="M 15564.8 9572.4 L 15600.2 9603.1"/>
+<path class="link" marker-start="url(#in)" d="M 16607.5 9554.0 L 16587.7 9539.3"/>
+<path class="link" marker-start="url(#in)" d="M 16650.5 9554.0 L 16670.2 9539.3"/>
+<path class="link" marker-end="url(#in)" d="M 16608.1 9586.0 L 16587.1 9602.1"/>
+<path class="link" marker-end="url(#in)" d="M 16649.9 9586.0 L 16672.3 9603.2"/>
+<path class="link" marker-start="url(#in)" d="M 15361.7 9662.5 L 15369.9 9690.3"/>
+<path class="link" marker-end="url(#in)" d="M 15345.5 9662.5 L 15324.9 9691.3"/>
+<path class="link" marker-start="url(#in)" d="M 15728.7 9630.5 L 15692.4 9604.4"/>
+<path class="link" marker-start="url(#in)" d="M 16415.6 9641.1 L 16384.8 9610.5"/>
+<path class="link" marker-end="url(#in)" d="M 16447.7 9673.1 L 16478.5 9703.8"/>
+<path class="link" marker-end="url(#in)" d="M 16415.7 9673.1 L 16384.9 9704.0"/>
+<path class="link" marker-start="url(#in)" d="M 16604.2 9727.8 L 16584.1 9714.9"/>
+<path class="link" marker-end="url(#in)" d="M 16605.9 9759.8 L 16589.2 9771.4"/>
+<path class="link" marker-start="url(#in)" d="M 15504.0 9730.5 L 15460.7 9714.1"/>
+<path class="link" marker-end="url(#in)" d="M 15504.8 9762.5 L 15472.0 9775.1"/>
+<path class="link" marker-start="url(#in)" d="M 15150.6 9760.2 L 15189.3 9744.0"/>
+<path class="link" marker-end="url(#in)" d="M 15150.6 9791.0 L 15178.0 9802.7"/>
+<path class="link" marker-end="url(#in)" d="M 15392.5 9831.0 L 15369.5 9813.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_arginine-metabolism" transform="translate(16071.1,8626.9)"><rect rx="10" height="31" width="191" x="-95.5" y="-15.5"/><text dominant-baseline="central">arginine metabolism</text></g>
+<g id="node1356" class="node nodeHM pw_arginine-metabolism lid10688" transform="translate(15865.4,8917.4)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10688" target="_blank">L-argininosuccinate</a></text><title>L-argininosuccinate</title></g>
+<g id="node1357" class="node nodeHM pw_arginine-metabolism lid938" transform="translate(15114.3,9906.0)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=938" target="_blank">L-citrulline</a></text><title>L-citrulline</title></g>
+<g id="node1358" class="node nodeHM pw_arginine-metabolism lid192" transform="translate(15547.8,9847.0)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192" target="_blank">Orn</a></text><title>L-ornithine</title></g>
+<g id="node1359" class="node nodeHM pw_arginine-metabolism lid243" transform="translate(15277.5,9847.0)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=243" target="_blank">Pro</a></text><title>L-proline</title></g>
+<g id="node1988" class="node nodeHM pw_arginine-metabolism lid89250" transform="translate(16236.1,9383.1)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89250" target="_blank">(3S)-3-hydroxy-L-arginine</a></text><title>(3S)-3-hydroxy-L-arginine</title></g>
+<g id="node4809" class="node nodeHM pw_arginine-metabolism lid8022" transform="translate(16991.6,9523.3)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8022" target="_blank">5-amino-2-oxopentanoate</a></text><title>5-amino-2-oxopentanoate</title></g>
+<g id="node4820" class="node nodeHM pw_arginine-metabolism lid91696" transform="translate(16431.4,9551.5)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91696" target="_blank">4-Guanidinobutyramide</a></text><title>4-Guanidinobutyramide</title></g>
+<g id="node4828" class="node nodeHM pw_arginine-metabolism lid597" transform="translate(16629.0,9830.6)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=597" target="_blank">4-aminobutanoate</a></text><title>4-aminobutanoate</title></g>
+<g id="node4832" class="node nodeHM pw_arginine-metabolism lid3442" transform="translate(16629.0,9657.1)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3442" target="_blank">4-Guanidinobutyrate</a></text><title>4-Guanidinobutyrate</title></g>
+<g id="node4838" class="node nodeHM pw_arginine-metabolism lid4209" transform="translate(16629.0,9483.0)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4209" target="_blank">4-Guanidinobutyraldehyde</a></text><title>4-Guanidinobutyraldehyde</title></g>
+<g id="node4886" class="node nodeHM pw_arginine-metabolism lid13822" transform="translate(15706.4,8729.1)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13822" target="_blank">N2-succinylglutamate</a></text><title>N-succinyl-L-glutamate</title></g>
+<g id="node4892" class="node nodeHM pw_arginine-metabolism lid101791" transform="translate(16270.9,8729.1)"><rect height="30.0" width="240.3" x="-120.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101791" target="_blank">N2-succinyl-L-glutamate 5-semialdehyde</a></text><title>N2-succinyl-L-glutamate 5-semialdehyde</title></g>
+<g id="node4896" class="node nodeHM pw_arginine-metabolism lid7255" transform="translate(16944.3,8729.1)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7255" target="_blank">N2-Suc-Orn</a></text><title>N2-succinyl-L-ornithine</title></g>
+<g id="node4901" class="node nodeHM pw_arginine-metabolism lid16126" transform="translate(16944.3,8919.2)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16126" target="_blank">suc-Arg</a></text><title>N2-succinyl-L-arginine</title></g>
+<g id="node4997" class="node nodeSM pw_arginine-metabolism lid123" transform="translate(16270.9,8919.2)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=123" target="_blank">Arg</a></text><title>L-Arginine</title></g>
+<g id="node5850" class="node nodeHM pw_arginine-metabolism lid543" transform="translate(15546.4,9034.4)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=543" target="_blank">N-Ac-Glu</a></text><title>N-acetyl-L-glutamate</title></g>
+<g id="node5854" class="node nodeHM pw_arginine-metabolism lid31672" transform="translate(15546.4,9247.4)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31672" target="_blank">N-acetyl-L-glutamyl 5-phosphate</a></text><title>N-acetyl-L-glutamyl 5-phosphate</title></g>
+<g id="node5859" class="node nodeHM pw_arginine-metabolism lid12610" transform="translate(15546.4,9457.6)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12610" target="_blank">N-Ac-Glu 5-semialdehyde</a></text><title>N-acetyl-L-glutamate 5-semialdehyde</title></g>
+<g id="node5863" class="node nodeHM pw_arginine-metabolism lid2570" transform="translate(15546.4,9646.5)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2570" target="_blank">N2-Ac-Orn</a></text><title>N2-acetyl-L-ornithine</title></g>
+<g id="node5879" class="node nodeHM pw_arginine-metabolism lid23424" transform="translate(15114.3,9646.5)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=23424" target="_blank">N-acetyl-L-citrulline</a></text><title>N-acetyl-L-citrulline</title></g>
+<g id="node5892" class="node nodeHM pw_arginine-metabolism lid7997" transform="translate(16803.8,9310.6)"><rect height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7997" target="_blank">2-oxo-5-guanidinopentanoate</a></text><title>2-oxo-5-guanidinopentanoate</title></g>
+<g id="node11026" class="node nodeHM pw_arginine-metabolism lid1827" transform="translate(15938.5,9229.7)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1827" target="_blank">L-arginyl-tRNAArg</a></text><title>L-arginyl-tRNAArg</title></g>
+<g id="node11027" class="node nodeHM pw_arginine-metabolism lid705" transform="translate(15938.5,9016.7)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=705" target="_blank">tRNAArg</a></text><title>tRNAArg</title></g>
+<g id="node12072" class="node nodeHM pw_arginine-metabolism lid41" transform="translate(15271.0,8925.9)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node12073" class="node nodeHM pw_arginine-metabolism lid9197" transform="translate(15271.0,9439.1)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9197" target="_blank">Glu 5-semialdehyde</a></text><title>L-glutamate 5-semialdehyde</title></g>
+<g id="node12075" class="node nodeHM pw_arginine-metabolism lid31670" transform="translate(15271.0,9199.5)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31670" target="_blank">L-glutamyl 5-phosphate</a></text><title>L-glutamyl 5-phosphate</title></g>
+<g id="node12076" class="node nodeHM pw_arginine-metabolism lid440" transform="translate(15092.8,8795.2)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=440" target="_blank">carbamoyl phosphate</a></text><title>carbamoyl phosphate</title></g>
+<g id="node12077" class="node nodeHM pw_arginine-metabolism lid102" transform="translate(15271.0,8667.5)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title>L-glutamine</title></g>
+<g id="node4885" class="node nodeEN pw_arginine-metabolism" transform="translate(15474.0,8729.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.96" target="_blank">3.5.1.96</a></text><title>succinylglutamate desuccinylase</title></g>
+<g id="node4891" class="node nodeEN pw_arginine-metabolism" transform="translate(15938.8,8729.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.71" target="_blank">1.2.1.71</a></text><title>succinylglutamate-semialdehyde dehydrogenase</title></g>
+<g id="node4895" class="node nodeEN pw_arginine-metabolism" transform="translate(16629.0,8729.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.81" target="_blank">2.6.1.81</a></text><title>succinylornithine transaminase</title></g>
+<g id="node5871" class="node nodeEN pw_arginine-metabolism" transform="translate(15271.0,8795.2)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.5.5" target="_blank">6.3.5.5</a></text><title>Carbamoyl-phosphate synthase (glutamine-hydrolysing)</title></g>
+<g id="node4900" class="node nodeEN pw_arginine-metabolism" transform="translate(16944.3,8826.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.23" target="_blank">3.5.3.23</a></text><title>N-succinylarginine dihydrolase</title></g>
+<g id="node5867" class="node nodeEN pw_arginine-metabolism" transform="translate(16064.9,8918.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.1" target="_blank">4.3.2.1</a></text><title>argininosuccinate lyase</title></g>
+<g id="node4905" class="node nodeEN pw_arginine-metabolism" transform="translate(16629.0,8919.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.109" target="_blank">2.3.1.109</a></text><title>arginine N-succinyltransferase</title></g>
+<g id="node5847" class="node nodeEN pw_arginine-metabolism" transform="translate(15546.4,8925.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.1" target="_blank">2.3.1.1</a></text><title>amino-acid N-acetyltransferase</title></g>
+<g id="node4914" class="node nodeEN pw_arginine-metabolism" transform="translate(15271.0,9065.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.11" target="_blank">2.7.2.11</a></text><title>glutamate 5-kinase</title></g>
+<g id="node11025" class="node nodeEN pw_arginine-metabolism" transform="translate(15938.5,9111.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.19" target="_blank">6.1.1.19</a></text><title>Arginine-tRNA ligase</title></g>
+<g id="node5851" class="node nodeEN pw_arginine-metabolism" transform="translate(15546.4,9140.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.8" target="_blank">2.7.2.8</a></text><title>acetylglutamate kinase</title></g>
+<g id="node5887" class="node nodeEN pw_arginine-metabolism" transform="translate(16634.2,9207.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.25" target="_blank">1.4.3.25</a></text><title>L-arginine oxidase</title></g>
+<g id="node4827" class="node nodeEN pw_arginine-metabolism" transform="translate(16803.8,9207.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.84" target="_blank">2.6.1.84</a></text><title>arginine-pyruvate transaminase</title></g>
+<g id="node4815" class="node nodeEN pw_arginine-metabolism" transform="translate(17039.2,9207.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.42" target="_blank">2.6.1.42</a></text><title>branched-chain-amino-acid transaminase</title></g>
+<g id="node1989" class="node nodeEN pw_arginine-metabolism" transform="translate(16235.4,9254.5)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.41" target="_blank">1.14.11.41</a></text><title>L-arginine hydroxylase</title></g>
+<g id="node12074" class="node nodeEN pw_arginine-metabolism" transform="translate(15271.0,9314.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.41" target="_blank">1.2.1.41</a></text><title>glutamate-5-semialdehyde dehydrogenase</title></g>
+<g id="node5855" class="node nodeEN pw_arginine-metabolism" transform="translate(15546.4,9351.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.38" target="_blank">1.2.1.38</a></text><title>N-acetyl-gamma-glutamyl-phosphate reductase</title></g>
+<g id="node4841" class="node nodeEN pw_arginine-metabolism" transform="translate(16629.0,9389.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.75" target="_blank">4.1.1.75</a></text><title>5-Guanidino-2-oxopentanoate decarboxylase</title></g>
+<g id="node4812" class="node nodeEN pw_arginine-metabolism" transform="translate(16991.6,9389.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central">?.?.?.?</text><title>2-ketoarginine ureohydrolase</title></g>
+<g id="node4908" class="node nodeEN pw_arginine-metabolism" transform="translate(15868.8,9430.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.1" target="_blank">3.5.3.1</a></text><title>arginase</title></g>
+<g id="node4996" class="node nodeEN pw_arginine-metabolism" transform="translate(16016.6,9430.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.6" target="_blank">3.5.3.6</a></text><title>arginine deiminase</title></g>
+<g id="node4824" class="node nodeEN pw_arginine-metabolism" transform="translate(16430.0,9430.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.12.1" target="_blank">1.13.12.1</a></text><title>arginine 2-monooxygenase</title></g>
+<g id="node5860" class="node nodeEN pw_arginine-metabolism" transform="translate(15546.4,9556.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.11" target="_blank">2.6.1.11</a></text><title>acetylornithine transaminase</title></g>
+<g id="node4837" class="node nodeEN pw_arginine-metabolism" transform="translate(16629.0,9570.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.54" target="_blank">1.2.1.54</a></text><title>gamma-guanidinobutyraldehyde dehydrogenase</title></g>
+<g id="node5877" class="node nodeEN pw_arginine-metabolism" transform="translate(15357.0,9646.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.3.9" target="_blank">2.1.3.9</a></text><title>N-acetylornithine carbamoyltransferase</title></g>
+<g id="node5869" class="node nodeEN pw_arginine-metabolism" transform="translate(15751.0,9646.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.35" target="_blank">2.3.1.35</a></text><title>glutamate N-acetyltransferase</title></g>
+<g id="node4819" class="node nodeEN pw_arginine-metabolism" transform="translate(16431.6,9657.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.4" target="_blank">3.5.1.4</a></text><title>amidase</title></g>
+<g id="node4831" class="node nodeEN pw_arginine-metabolism" transform="translate(16629.0,9743.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.7" target="_blank">3.5.3.7</a></text><title>guanidinobutyrase</title></g>
+<g id="node5864" class="node nodeEN pw_arginine-metabolism" transform="translate(15546.4,9746.5)"><rect rx="15" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.14" target="_blank">3.5.1.14/3.5.1.16</a></text><title>N-acyl-aliphatic-L-amino acid amidohydrolase\n;acetylornithine deacetylase</title></g>
+<g id="node5880" class="node nodeEN pw_arginine-metabolism" transform="translate(15114.3,9775.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.16" target="_blank">3.5.1.16</a></text><title>acetylornithine deacetylase</title></g>
+<g id="node5885" class="node nodeEN pw_arginine-metabolism" transform="translate(15413.9,9847.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.12" target="_blank">4.3.1.12</a></text><title>ornithine cyclodeaminase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1984" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(16288.8,9312.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node1985" class="node nodeCM pw_arginine-metabolism lid58" transform="translate(16187.3,9312.1)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title>succinate</title></g>
+<g id="node1986" class="node nodeCM pw_arginine-metabolism lid9" transform="translate(16187.3,9190.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node1987" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(16288.8,9190.1)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2-oxoglutarate</a></text><title>2-oxoglutarate</title></g>
+<g id="node2345" class="node nodeCM pw_arginine-metabolism lid440" transform="translate(15374.6,9706.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=440" target="_blank">CP</a></text><title>carbamoyl phosphate</title></g>
+<g id="node4810" class="node nodeCM pw_arginine-metabolism lid116" transform="translate(17082.8,9434.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">UREA</a></text><title>Urea</title></g>
+<g id="node4811" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(17082.8,9360.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4813" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(17097.7,9164.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node4814" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(17097.7,9252.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4816" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(16494.5,9719.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4817" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(16369.0,9720.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node4818" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(16368.7,9594.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4821" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(16477.5,9496.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4822" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(16388.7,9496.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4823" class="node nodeCM pw_arginine-metabolism lid9" transform="translate(16380.1,9363.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node4825" class="node nodeCM pw_arginine-metabolism lid103" transform="translate(16889.4,9239.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title>L-Alanine</title></g>
+<g id="node4826" class="node nodeCM pw_arginine-metabolism lid31" transform="translate(16889.4,9180.0)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node4829" class="node nodeCM pw_arginine-metabolism lid116" transform="translate(16566.2,9787.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">UREA</a></text><title>Urea</title></g>
+<g id="node4830" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(16561.8,9700.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4833" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(16691.7,9618.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4834" class="node nodeCM pw_arginine-metabolism lid8" transform="translate(16566.2,9618.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node4835" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(16691.7,9523.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4836" class="node nodeCM pw_arginine-metabolism lid7" transform="translate(16566.2,9523.3)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node4839" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(16566.2,9442.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4840" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(16566.2,9341.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4883" class="node nodeCM pw_arginine-metabolism lid58" transform="translate(15411.2,8666.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">Suc</a></text><title>Succinate</title></g>
+<g id="node4884" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(15536.8,8666.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4887" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(15876.0,8791.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4888" class="node nodeCM pw_arginine-metabolism lid8" transform="translate(15876.0,8666.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node4889" class="node nodeCM pw_arginine-metabolism lid7" transform="translate(16001.5,8791.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node4890" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(16001.5,8666.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4893" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(16691.7,8666.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node4894" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(16566.2,8666.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node4897" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(17007.1,8888.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4898" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(16881.5,8763.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node4899" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(17007.1,8763.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node4902" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(16691.7,8856.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node4903" class="node nodeCM pw_arginine-metabolism lid18" transform="translate(16734.9,8888.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node4904" class="node nodeCM pw_arginine-metabolism lid224" transform="translate(16566.2,8856.5)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title>succinyl-CoA</title></g>
+<g id="node4906" class="node nodeCM pw_arginine-metabolism lid116" transform="translate(15804.5,9497.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">UREA</a></text><title>Urea</title></g>
+<g id="node4907" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(15804.5,9361.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4909" class="node nodeCM pw_arginine-metabolism lid10" transform="translate(15194.8,9362.4)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node4910" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(15336.7,9361.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node4911" class="node nodeCM pw_arginine-metabolism lid13" transform="translate(15336.7,9119.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node4912" class="node nodeCM pw_arginine-metabolism lid4" transform="translate(15336.7,9007.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node4913" class="node nodeCM pw_arginine-metabolism lid5" transform="translate(15194.8,9253.1)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node4994" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(16103.8,9497.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node4995" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(16103.8,9361.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5848" class="node nodeCM pw_arginine-metabolism lid29" transform="translate(15608.6,8988.7)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node5849" class="node nodeCM pw_arginine-metabolism lid18" transform="translate(15608.6,8863.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node5852" class="node nodeCM pw_arginine-metabolism lid4" transform="translate(15483.1,9077.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node5853" class="node nodeCM pw_arginine-metabolism lid13" transform="translate(15483.1,9203.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node5856" class="node nodeCM pw_arginine-metabolism lid5" transform="translate(15608.6,9288.4)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title>NADPH</title></g>
+<g id="node5857" class="node nodeCM pw_arginine-metabolism lid10" transform="translate(15608.6,9413.9)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title>NADP+</title></g>
+<g id="node5858" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(15483.1,9413.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5861" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(15618.6,9493.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node5862" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(15618.6,9619.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node5865" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(15438.4,9705.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5866" class="node nodeCM pw_arginine-metabolism lid47" transform="translate(15438.4,9788.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>Acetate</title></g>
+<g id="node5868" class="node nodeCM pw_arginine-metabolism lid170" transform="translate(16148.0,8868.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170" target="_blank">FUM</a></text><title>Fumarate</title></g>
+<g id="node5870" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(15670.1,9588.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node5872" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(15377.4,8729.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5873" class="node nodeCM pw_arginine-metabolism lid4" transform="translate(15210.5,8729.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node5874" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(15233.3,8861.7)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5875" class="node nodeCM pw_arginine-metabolism lid195" transform="translate(15313.3,8729.7)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3-</a></text><title>HCO3-</title></g>
+<g id="node5876" class="node nodeCM pw_arginine-metabolism lid13" transform="translate(15185.0,8861.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node5878" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(15313.4,9707.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5881" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(15211.5,9734.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5882" class="node nodeCM pw_arginine-metabolism lid47" transform="translate(15211.5,9817.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>Acetate</title></g>
+<g id="node5886" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(15348.1,9797.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5888" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(16634.2,9144.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5889" class="node nodeCM pw_arginine-metabolism lid9" transform="translate(16536.9,9207.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node5890" class="node nodeCM pw_arginine-metabolism lid1126" transform="translate(16634.2,9277.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node5891" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(16727.6,9207.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node10505" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(15483.1,9288.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10983" class="node nodeCM pw_arginine-metabolism lid4" transform="translate(15853.2,9050.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node11002" class="node nodeCM pw_arginine-metabolism lid30" transform="translate(15853.2,9154.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node11003" class="node nodeCM pw_arginine-metabolism lid17" transform="translate(16022.4,9154.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2284.9" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 2590.0 3465.6" width="2590" height="3466" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="2590.0" height="3465.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_arginine-metabolism" class="pw " x="0.0" y="0.0" width="2510.0" height="3370.1" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1255.8 614.7 L 1432.4 614.2"/>
+<path class="link" marker-end="url(#in)" d="M 1191.9 614.8 L 957.5 614.8"/>
+<path class="link" marker-start="url(#in)" d="M 736.8 898.2 L 930.2 630.8"/>
+<path class="link" marker-end="url(#in)" d="M 725.0 930.2 L 720.4 1191.1"/>
+<path class="link" marker-start="url(#in)" d="M 443.7 1208.0 L 688.2 1207.2"/>
+<path class="link" marker-end="url(#in)" d="M 386.3 1208.1 L 321.2 1208.1"/>
+<path class="link" marker-start="url(#in)" d="M 140.4 1352.8 L 206.5 1224.1"/>
+<path class="link" marker-end="url(#in)" d="M 132.2 1384.8 L 132.2 1522.4"/>
+<path class="link" marker-start="url(#in)" d="M 317.0 1684.8 L 152.3 1554.4"/>
+<path class="link" marker-end="url(#in)" d="M 369.1 1702.2 L 507.6 1708.1"/>
+<path class="link" marker-start="url(#in)" d="M 695.6 1712.7 L 578.0 1710.3"/>
+<path class="link" marker-end="url(#in)" d="M 817.7 1714.0 L 924.5 1714.0"/>
+<path class="link" marker-end="url(#in)" d="M 1229.6 1901.2 L 955.9 1724.1"/>
+<path class="link" marker-start="url(#in)" d="M 1283.0 1930.6 L 1646.1 2100.5"/>
+<path class="link" marker-start="url(#in)" d="M 1668.2 1813.6 L 1662.1 2091.9"/>
+<path class="link" marker-end="url(#in)" d="M 1683.9 1781.6 L 1886.6 1571.7"/>
+<path class="link" marker-start="url(#in)" d="M 2068.0 1354.2 L 1915.2 1539.7"/>
+<path class="link" marker-end="url(#in)" d="M 2081.2 1322.2 L 2081.5 1136.4"/>
+<path class="link" marker-start="url(#in)" d="M 2081.5 922.7 L 2081.5 1104.4"/>
+<path class="link" marker-end="url(#in)" d="M 2069.6 890.7 L 1968.7 755.0"/>
+<path class="link" marker-start="url(#in)" d="M 1780.7 630.0 L 1930.9 723.0"/>
+<path class="link" marker-end="url(#in)" d="M 1722.9 614.0 L 1574.0 614.0"/>
+<path class="link" marker-start="url(#in)" d="M 704.4 1544.4 L 558.4 1693.6"/>
+<path class="link" marker-end="url(#in)" d="M 720.1 1512.4 L 720.1 1223.1"/>
+<path class="link" marker-end="url(#in)" d="M 739.1 1544.4 L 924.5 1700.7"/>
+<path class="link" marker-start="url(#in)" d="M 1773.1 2107.9 L 1677.5 2107.9"/>
+<path class="link" marker-end="url(#in)" d="M 1825.2 2123.1 C 1854.7 2145.5 1909.4 2187.0 1938.9 2209.4"/>
+<path class="link" marker-start="url(#in)" d="M 1743.7 2174.2 C 1724.3 2158.4 1694.6 2134.4 1676.8 2120.0"/>
+<path class="link" marker-end="url(#in)" d="M 1793.8 2195.1 C 1815.1 2198.9 1844.5 2204.1 1872.6 2209.2"/>
+<path class="link" marker-start="url(#in)" d="M 1748.6 2232.0 L 1673.0 2123.9"/>
+<path class="link" marker-end="url(#in)" d="M 1791.7 2244.3 L 1865.5 2235.6"/>
+<path class="link" marker-start="url(#in)" d="M 2102.6 2434.5 L 1970.0 2240.7"/>
+<path class="link" marker-end="url(#in)" d="M 2120.7 2466.5 L 2194.0 2630.3"/>
+<path class="link" marker-start="url(#in)" d="M 2201.1 2814.7 L 2201.1 2662.3"/>
+<path class="link" marker-end="url(#in)" d="M 2193.8 2846.7 L 2134.5 2975.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1955.1 2882.0 L 2102.0 2975.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1919.1 2850.0 L 1802.3 2676.2"/>
+<path class="link" marker-end="url(#in)" d="M 1669.6 2410.9 L 1783.7 2644.2"/>
+<path class="link" marker-start="url(#in)" d="M 1661.8 2379.5 C 1661.8 2329.5 1661.8 2172.6 1661.8 2123.0"/>
+<path class="link" marker-start="url(#in)" d="M 941.8 438.7 L 941.8 598.8"/>
+<path class="link" marker-end="url(#in)" d="M 948.3 406.7 L 1007.4 262.6"/>
+<path class="link" marker-start="url(#in)" d="M 1089.8 158.7 L 1027.7 230.6"/>
+<path class="link" marker-end="url(#in)" d="M 1135.5 142.7 L 1181.3 142.7"/>
+<path class="link" marker-start="url(#in)" d="M 543.1 1938.2 L 542.8 1725.6"/>
+<path class="link" marker-end="url(#in)" d="M 543.1 1970.2 L 543.1 2159.4"/>
+<path class="link" marker-start="url(#in)" d="M 708.8 2244.0 L 581.8 2191.4"/>
+<path class="link" marker-end="url(#in)" d="M 772.7 2256.9 L 943.2 2254.9"/>
+<path class="link" marker-end="url(#in)" d="M 1243.8 2254.4 L 1033.0 2254.4"/>
+<path class="link" marker-start="url(#in)" d="M 1300.5 2243.8 C 1377.2 2214.9 1588.9 2135.3 1646.9 2113.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1492.5 2282.1 L 1646.3 2123.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1470.4 2314.1 L 1409.8 2460.2"/>
+<path class="link" marker-start="url(#in)" d="M 837.2 1870.6 L 929.7 1730.0"/>
+<path class="link" marker-end="url(#in)" d="M 812.4 1902.6 L 742.1 1981.1"/>
+<path class="link" marker-start="url(#in)" d="M 2127.2 3161.5 L 2127.2 3007.5"/>
+<path class="link" marker-end="url(#in)" d="M 2134.8 3193.5 L 2187.9 3304.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2184.5 2226.4 L 2052.5 2225.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2226.5 2226.6 L 2314.9 2226.6"/>
+<path class="link" marker-start="url(#in)" d="M 1512.3 1870.1 L 1512.3 1734.0"/>
+<path class="link" marker-end="url(#in)" d="M 1523.1 1902.1 L 1651.0 2091.9"/>
+<path class="link" marker-start="url(#in)" d="M 699.1 439.7 L 581.4 371.1"/>
+<path class="link" marker-end="url(#in)" d="M 719.3 439.7 L 663.5 316.4"/>
+<path class="link" marker-end="url(#in)" d="M 748.2 471.7 L 926.1 603.2"/>
+<path class="link" marker-start="url(#in)" d="M 1817.7 1963.9 L 1677.5 2093.4"/>
+<path class="link" marker-start="url(#in)" d="M 1867.0 1947.9 L 1990.5 1947.9"/>
+<path class="link" marker-end="url(#in)" d="M 1857.7 1931.9 L 1963.6 1857.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1235.0 598.8 L 1262.7 559.2"/>
+<path class="link" marker-end="url(#in)" d="M 1212.6 598.8 L 1179.3 551.4"/>
+<path class="link" marker-start="url(#in)" d="M 714.3 898.2 L 684.1 854.2"/>
+<path class="link" marker-end="url(#in)" d="M 736.3 930.2 L 763.7 970.2"/>
+<path class="link" marker-start="url(#in)" d="M 426.1 1192.1 L 453.8 1152.5"/>
+<path class="link" marker-end="url(#in)" d="M 403.7 1192.1 L 376.0 1152.7"/>
+<path class="link" marker-start="url(#in)" d="M 107.5 1352.8 L 78.4 1333.9"/>
+<path class="link" marker-start="url(#in)" d="M 124.7 1352.8 L 103.4 1307.1"/>
+<path class="link" marker-end="url(#in)" d="M 156.8 1384.8 L 185.9 1403.8"/>
+<path class="link" marker-end="url(#in)" d="M 139.6 1384.8 L 160.9 1430.6"/>
+<path class="link" marker-start="url(#in)" d="M 333.7 1684.8 L 322.0 1631.5"/>
+<path class="link" marker-end="url(#in)" d="M 362.5 1684.8 L 395.3 1664.0"/>
+<path class="link" marker-start="url(#in)" d="M 745.2 1730.0 L 717.2 1769.0"/>
+<path class="link" marker-end="url(#in)" d="M 767.6 1730.0 L 798.7 1775.4"/>
+<path class="link" marker-start="url(#in)" d="M 1257.2 1933.2 L 1282.3 2072.9"/>
+<path class="link" marker-end="url(#in)" d="M 1225.7 1931.4 L 1193.6 1947.3"/>
+<path class="link" marker-start="url(#in)" d="M 1633.3 1804.7 L 1613.5 1808.7"/>
+<path class="link" marker-end="url(#in)" d="M 1651.0 1781.6 L 1619.8 1752.9"/>
+<path class="link" marker-end="url(#in)" d="M 1664.1 1781.6 L 1650.0 1730.9"/>
+<path class="link" marker-start="url(#in)" d="M 2091.4 1354.2 L 2118.0 1395.8"/>
+<path class="link" marker-end="url(#in)" d="M 2063.0 1322.2 L 2031.4 1294.3"/>
+<path class="link" marker-end="url(#in)" d="M 2076.4 1322.2 L 2061.0 1270.5"/>
+<path class="link" marker-start="url(#in)" d="M 2113.4 916.4 L 2149.4 927.3"/>
+<path class="link" marker-end="url(#in)" d="M 2093.5 890.7 L 2121.9 852.8"/>
+<path class="link" marker-start="url(#in)" d="M 1765.8 598.0 L 1794.2 556.6"/>
+<path class="link" marker-start="url(#in)" d="M 1786.8 600.1 L 1819.2 585.9"/>
+<path class="link" marker-end="url(#in)" d="M 1743.9 630.0 L 1715.5 671.4"/>
+<path class="link" marker-end="url(#in)" d="M 1722.9 628.0 L 1688.8 642.9"/>
+<path class="link" marker-start="url(#in)" d="M 721.7 1544.4 L 727.4 1599.3"/>
+<path class="link" marker-start="url(#in)" d="M 1786.8 2123.9 L 1763.1 2144.6"/>
+<path class="link" marker-start="url(#in)" d="M 1773.1 2117.8 L 1736.2 2129.3"/>
+<path class="link" marker-end="url(#in)" d="M 1821.0 2091.9 L 1846.0 2067.0"/>
+<path class="link" marker-end="url(#in)" d="M 1836.9 2099.4 L 1870.9 2090.3"/>
+<path class="link" marker-start="url(#in)" d="M 1738.6 2205.5 L 1707.3 2226.3"/>
+<path class="link" marker-end="url(#in)" d="M 1787.2 2173.5 L 1819.8 2152.2"/>
+<path class="link" marker-start="url(#in)" d="M 1735.7 2264.0 L 1702.7 2285.9"/>
+<path class="link" marker-end="url(#in)" d="M 1783.9 2232.0 L 1816.9 2210.2"/>
+<path class="link" marker-start="url(#in)" d="M 2081.6 2447.7 L 2040.6 2444.0"/>
+<path class="link" marker-end="url(#in)" d="M 2145.4 2453.4 L 2184.8 2456.9"/>
+<path class="link" marker-start="url(#in)" d="M 2174.6 2814.7 L 2143.9 2796.2"/>
+<path class="link" marker-start="url(#in)" d="M 2169.2 2834.1 L 2031.6 2848.6"/>
+<path class="link" marker-end="url(#in)" d="M 2227.7 2846.7 L 2258.4 2865.2"/>
+<path class="link" marker-end="url(#in)" d="M 2209.3 2846.7 L 2231.8 2891.1"/>
+<path class="link" marker-start="url(#in)" d="M 1958.6 2860.8 L 2000.1 2853.2"/>
+<path class="link" marker-end="url(#in)" d="M 1901.2 2880.3 L 1865.6 2897.9"/>
+<path class="link" marker-end="url(#in)" d="M 1901.2 2863.2 L 1858.7 2859.0"/>
+<path class="link" marker-start="url(#in)" d="M 1626.6 2387.7 L 1556.7 2373.4"/>
+<path class="link" marker-end="url(#in)" d="M 1697.0 2398.5 L 1733.0 2402.1"/>
+<path class="link" marker-end="url(#in)" d="M 1682.4 2410.9 L 1715.1 2436.2"/>
+<path class="link" marker-start="url(#in)" d="M 909.9 436.8 L 877.6 451.1"/>
+<path class="link" marker-end="url(#in)" d="M 909.9 408.7 L 848.4 381.8"/>
+<path class="link" marker-start="url(#in)" d="M 1099.7 158.7 L 1090.5 196.6"/>
+<path class="link" marker-end="url(#in)" d="M 1102.2 126.7 L 1096.9 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1111.7 126.7 L 1134.2 82.2"/>
+<path class="link" marker-start="url(#in)" d="M 566.0 1938.2 L 613.1 1905.1"/>
+<path class="link" marker-end="url(#in)" d="M 566.0 1970.2 L 600.9 1994.6"/>
+<path class="link" marker-start="url(#in)" d="M 733.3 2241.3 L 711.3 2194.1"/>
+<path class="link" marker-end="url(#in)" d="M 756.8 2241.3 L 791.1 2207.0"/>
+<path class="link" marker-start="url(#in)" d="M 1273.7 2238.4 L 1283.9 2104.9"/>
+<path class="link" marker-end="url(#in)" d="M 1265.8 2270.4 L 1245.4 2318.9"/>
+<path class="link" marker-start="url(#in)" d="M 1456.6 2282.1 L 1423.9 2256.5"/>
+<path class="link" marker-start="url(#in)" d="M 1471.1 2282.1 L 1449.1 2222.8"/>
+<path class="link" marker-start="url(#in)" d="M 1480.6 2282.1 L 1492.5 2228.7"/>
+<path class="link" marker-end="url(#in)" d="M 1491.8 2314.1 L 1531.7 2357.4"/>
+<path class="link" marker-end="url(#in)" d="M 794.8 1885.6 L 755.1 1884.3"/>
+<path class="link" marker-start="url(#in)" d="M 2098.5 3165.2 L 2062.6 3149.8"/>
+<path class="link" marker-end="url(#in)" d="M 2112.1 3193.5 L 2081.2 3226.3"/>
+<path class="link" marker-start="url(#in)" d="M 2194.4 2210.6 L 2166.8 2170.8"/>
+<path class="link" marker-end="url(#in)" d="M 2216.8 2210.6 L 2245.5 2169.9"/>
+<path class="link" marker-end="url(#in)" d="M 1541.0 1893.2 L 1573.0 1901.2"/>
+<path class="link" marker-start="url(#in)" d="M 755.2 456.2 L 846.2 457.8"/>
+<path class="link" marker-start="url(#in)" d="M 701.6 471.7 L 670.6 491.6"/>
+<path class="link" marker-start="url(#in)" d="M 697.9 456.0 L 654.9 456.6"/>
+<path class="link" marker-end="url(#in)" d="M 747.6 439.7 L 817.0 386.9"/>
+<path class="link" marker-end="url(#in)" d="M 755.2 447.1 L 796.2 434.8"/>
+<path class="link" marker-start="url(#in)" d="M 1840.9 1963.9 L 1854.8 2001.3"/>
+<path class="link" marker-end="url(#in)" d="M 1824.6 1931.9 L 1797.8 1890.6"/>
+<path class="link" marker-end="url(#in)" d="M 1834.8 1931.9 L 1833.7 1876.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_arginine-metabolism" transform="translate(1255.0,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">arginine metabolism</text></g>
+<g id="node4886" class="node nodeHM pw_arginine-metabolism lid13822" transform="translate(1503.2,614.0)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13822" target="_blank">N2-succinylglutamate</a></text><title></title></g>
+<g id="node12072" class="node nodeHM pw_arginine-metabolism lid41" transform="translate(941.8,614.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5850" class="node nodeHM pw_arginine-metabolism lid543" transform="translate(720.1,1207.1)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=543" target="_blank">N-Ac-Glu</a></text><title></title></g>
+<g id="node5854" class="node nodeHM pw_arginine-metabolism lid31672" transform="translate(214.7,1208.1)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31672" target="_blank">N-acetyl-L-glutamyl 5-phosphate</a></text><title></title></g>
+<g id="node5859" class="node nodeHM pw_arginine-metabolism lid12610" transform="translate(132.2,1538.4)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12610" target="_blank">N-Ac-Glu 5-semialdehyde</a></text><title></title></g>
+<g id="node5863" class="node nodeHM pw_arginine-metabolism lid2570" transform="translate(542.8,1709.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2570" target="_blank">N2-Ac-Orn</a></text><title></title></g>
+<g id="node1358" class="node nodeHM pw_arginine-metabolism lid192" transform="translate(940.2,1714.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192" target="_blank">Orn</a></text><title></title></g>
+<g id="node4997" class="node nodeHM pw_arginine-metabolism lid123" transform="translate(1661.8,2107.9)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=123" target="_blank">Arg</a></text><title></title></g>
+<g id="node4901" class="node nodeHM pw_arginine-metabolism lid16126" transform="translate(1902.1,1555.7)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16126" target="_blank">suc-Arg</a></text><title></title></g>
+<g id="node4896" class="node nodeHM pw_arginine-metabolism lid7255" transform="translate(2081.5,1120.4)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7255" target="_blank">N2-Suc-Orn</a></text><title></title></g>
+<g id="node4892" class="node nodeHM pw_arginine-metabolism lid101791" transform="translate(1956.8,739.0)"><rect height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101791" target="_blank">N2-succinyl-L-glutamate 5-semialdehyde</a></text><title></title></g>
+<g id="node5892" class="node nodeHM pw_arginine-metabolism lid7997" transform="translate(1959.0,2224.7)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7997" target="_blank">2-oxo-5-guanidinopentanoate</a></text><title></title></g>
+<g id="node4838" class="node nodeHM pw_arginine-metabolism lid4209" transform="translate(2201.1,2646.3)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4209" target="_blank">4-Guanidinobutyraldehyde</a></text><title></title></g>
+<g id="node4832" class="node nodeHM pw_arginine-metabolism lid3442" transform="translate(2127.2,2991.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3442" target="_blank">4-Guanidinobutyrate</a></text><title></title></g>
+<g id="node4820" class="node nodeHM pw_arginine-metabolism lid91696" transform="translate(1791.5,2660.2)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=91696" target="_blank">4-Guanidinobutyramide</a></text><title></title></g>
+<g id="node12075" class="node nodeHM pw_arginine-metabolism lid31670" transform="translate(1013.9,246.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31670" target="_blank">L-glutamyl 5-phosphate</a></text><title></title></g>
+<g id="node12073" class="node nodeHM pw_arginine-metabolism lid9197" transform="translate(1245.6,142.7)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9197" target="_blank">Glu 5-semialdehyde</a></text><title></title></g>
+<g id="node5879" class="node nodeHM pw_arginine-metabolism lid23424" transform="translate(543.1,2175.4)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=23424" target="_blank">N-acetyl-L-citrulline</a></text><title></title></g>
+<g id="node1357" class="node nodeHM pw_arginine-metabolism lid938" transform="translate(988.1,2254.4)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=938" target="_blank">L-citrulline</a></text><title></title></g>
+<g id="node1988" class="node nodeHM pw_arginine-metabolism lid89250" transform="translate(1403.2,2476.2)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=89250" target="_blank">(3S)-3-hydroxy-L-arginine</a></text><title></title></g>
+<g id="node1359" class="node nodeHM pw_arginine-metabolism lid243" transform="translate(727.8,1997.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=243" target="_blank">Pro</a></text><title></title></g>
+<g id="node4828" class="node nodeHM pw_arginine-metabolism lid597" transform="translate(2195.6,3320.1)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=597" target="_blank">4-aminobutanoate</a></text><title></title></g>
+<g id="node4809" class="node nodeHM pw_arginine-metabolism lid8022" transform="translate(2395.5,2226.6)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8022" target="_blank">5-amino-2-oxopentanoate</a></text><title></title></g>
+<g id="node1356" class="node nodeHM pw_arginine-metabolism lid10688" transform="translate(1512.3,1718.0)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10688" target="_blank">L-argininosuccinate</a></text><title></title></g>
+<g id="node12077" class="node nodeHM pw_arginine-metabolism lid102" transform="translate(565.7,362.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node12076" class="node nodeHM pw_arginine-metabolism lid440" transform="translate(656.2,300.4)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=440" target="_blank">carbamoyl phosphate</a></text><title></title></g>
+<g id="node11027" class="node nodeHM pw_arginine-metabolism lid705" transform="translate(2019.2,1947.9)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=705" target="_blank">tRNAArg</a></text><title></title></g>
+<g id="node11026" class="node nodeHM pw_arginine-metabolism lid1827" transform="translate(1986.2,1841.0)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1827" target="_blank">L-arginyl-tRNAArg</a></text><title></title></g>
+<g id="node4885" class="node nodeEN pw_arginine-metabolism" transform="translate(1223.8,614.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.96" target="_blank">3.5.1.96</a></text><title>succinylglutamate desuccinylase</title></g>
+<g id="node5847" class="node nodeEN pw_arginine-metabolism" transform="translate(725.3,914.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.1" target="_blank">2.3.1.1</a></text><title>amino-acid N-acetyltransferase</title></g>
+<g id="node5851" class="node nodeEN pw_arginine-metabolism" transform="translate(415.0,1208.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.8" target="_blank">2.7.2.8</a></text><title>acetylglutamate kinase</title></g>
+<g id="node5855" class="node nodeEN pw_arginine-metabolism" transform="translate(132.2,1368.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.38" target="_blank">1.2.1.38</a></text><title>N-acetyl-gamma-glutamyl-phosphate reductase</title></g>
+<g id="node5860" class="node nodeEN pw_arginine-metabolism" transform="translate(337.2,1700.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.11" target="_blank">2.6.1.11</a></text><title>acetylornithine transaminase</title></g>
+<g id="node5864" class="node nodeEN pw_arginine-metabolism" transform="translate(756.7,1714.0)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.14" target="_blank">3.5.1.14/3.5.1.16</a></text><title>N-acyl-aliphatic-L-amino acid amidohydrolase\n;acetylornithine deacetylase</title></g>
+<g id="node4908" class="node nodeEN pw_arginine-metabolism" transform="translate(1254.4,1917.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.1" target="_blank">3.5.3.1</a></text><title>arginase</title></g>
+<g id="node4905" class="node nodeEN pw_arginine-metabolism" transform="translate(1668.5,1797.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.109" target="_blank">2.3.1.109</a></text><title>arginine N-succinyltransferase</title></g>
+<g id="node4900" class="node nodeEN pw_arginine-metabolism" transform="translate(2081.2,1338.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.23" target="_blank">3.5.3.23</a></text><title>N-succinylarginine dihydrolase</title></g>
+<g id="node4895" class="node nodeEN pw_arginine-metabolism" transform="translate(2081.5,906.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.81" target="_blank">2.6.1.81</a></text><title>succinylornithine transaminase</title></g>
+<g id="node4891" class="node nodeEN pw_arginine-metabolism" transform="translate(1754.9,614.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.71" target="_blank">1.2.1.71</a></text><title>succinylglutamate-semialdehyde dehydrogenase</title></g>
+<g id="node5869" class="node nodeEN pw_arginine-metabolism" transform="translate(720.1,1528.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.35" target="_blank">2.3.1.35</a></text><title>glutamate N-acetyltransferase</title></g>
+<g id="node5887" class="node nodeEN pw_arginine-metabolism" transform="translate(1805.0,2107.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.25" target="_blank">1.4.3.25</a></text><title>L-arginine oxidase; arginine-pyruvate transaminase; branched-chain-amino-acid transaminase</title></g>
+<g id="node4827" class="node nodeEN pw_arginine-metabolism" transform="translate(1762.7,2189.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.84" target="_blank">2.6.1.84</a></text><title>L-arginine oxidase; arginine-pyruvate transaminase; branched-chain-amino-acid transaminase</title></g>
+<g id="node4815" class="node nodeEN pw_arginine-metabolism" transform="translate(1759.8,2248.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.42" target="_blank">2.6.1.42</a></text><title>L-arginine oxidase; arginine-pyruvate transaminase; branched-chain-amino-acid transaminase</title></g>
+<g id="node4841" class="node nodeEN pw_arginine-metabolism" transform="translate(2113.5,2450.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.75" target="_blank">4.1.1.75</a></text><title>5-Guanidino-2-oxopentanoate decarboxylase</title></g>
+<g id="node4837" class="node nodeEN pw_arginine-metabolism" transform="translate(2201.1,2830.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.54" target="_blank">1.2.1.54</a></text><title>gamma-guanidinobutyraldehyde dehydrogenase</title></g>
+<g id="node4819" class="node nodeEN pw_arginine-metabolism" transform="translate(1929.9,2866.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.4" target="_blank">3.5.1.4</a></text><title>amidase</title></g>
+<g id="node4824" class="node nodeEN pw_arginine-metabolism" transform="translate(1661.8,2394.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.12.1" target="_blank">1.13.12.1</a></text><title>arginine 2-monooxygenase</title></g>
+<g id="node4914" class="node nodeEN pw_arginine-metabolism" transform="translate(941.8,422.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.11" target="_blank">2.7.2.11</a></text><title>glutamate 5-kinase</title></g>
+<g id="node12074" class="node nodeEN pw_arginine-metabolism" transform="translate(1103.6,142.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.41" target="_blank">1.2.1.41</a></text><title>glutamate-5-semialdehyde dehydrogenase</title></g>
+<g id="node5877" class="node nodeEN pw_arginine-metabolism" transform="translate(543.1,1954.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.3.9" target="_blank">2.1.3.9</a></text><title>N-acetylornithine carbamoyltransferase</title></g>
+<g id="node5880" class="node nodeEN pw_arginine-metabolism" transform="translate(740.7,2257.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.16" target="_blank">3.5.1.16</a></text><title>acetylornithine deacetylase</title></g>
+<g id="node4996" class="node nodeEN pw_arginine-metabolism" transform="translate(1272.5,2254.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.6" target="_blank">3.5.3.6</a></text><title>arginine deiminase</title></g>
+<g id="node1989" class="node nodeEN pw_arginine-metabolism" transform="translate(1477.0,2298.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.11.41" target="_blank">1.14.11.41</a></text><title>L-arginine hydroxylase</title></g>
+<g id="node5885" class="node nodeEN pw_arginine-metabolism" transform="translate(826.7,1886.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.12" target="_blank">4.3.1.12</a></text><title>ornithine cyclodeaminase</title></g>
+<g id="node4831" class="node nodeEN pw_arginine-metabolism" transform="translate(2127.2,3177.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.7" target="_blank">3.5.3.7</a></text><title>guanidinobutyrase</title></g>
+<g id="node4812" class="node nodeEN pw_arginine-metabolism" transform="translate(2205.5,2226.6)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>2-ketoarginine ureohydrolase</title></g>
+<g id="node5867" class="node nodeEN pw_arginine-metabolism" transform="translate(1512.3,1886.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.1" target="_blank">4.3.2.1</a></text><title>argininosuccinate lyase</title></g>
+<g id="node5871" class="node nodeEN pw_arginine-metabolism" transform="translate(726.5,455.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.5.5" target="_blank">6.3.5.5</a></text><title>Carbamoyl-phosphate synthase (glutamine-hydrolysing)</title></g>
+<g id="node11025" class="node nodeEN pw_arginine-metabolism" transform="translate(1835.0,1947.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.19" target="_blank">6.1.1.19</a></text><title>Arginine-tRNA ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node4885~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(1273.8,543.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4885~1" class="node nodeCM pw_arginine-metabolism lid58" transform="translate(1168.0,535.4)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node5847~0" class="node nodeCM pw_arginine-metabolism lid29" transform="translate(673.1,838.2)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node5847~1" class="node nodeCM pw_arginine-metabolism lid18" transform="translate(774.7,986.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node5851~0" class="node nodeCM pw_arginine-metabolism lid4" transform="translate(465.0,1136.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5851~1" class="node nodeCM pw_arginine-metabolism lid13" transform="translate(364.7,1136.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node5855~0" class="node nodeCM pw_arginine-metabolism lid5" transform="translate(56.2,1319.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5855~1" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(96.0,1291.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5855~2" class="node nodeCM pw_arginine-metabolism lid10" transform="translate(208.1,1418.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5855~3" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(168.3,1446.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5860~0" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(318.5,1615.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5860~1" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(411.0,1654.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5864~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(705.8,1785.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5864~1" class="node nodeCM pw_arginine-metabolism lid47" transform="translate(809.6,1791.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node4908~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(1285.2,2088.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4908~1" class="node nodeCM pw_arginine-metabolism lid116" transform="translate(1174.6,1956.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node4905~0" class="node nodeCM pw_arginine-metabolism lid224" transform="translate(1568.6,1817.9)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node4905~1" class="node nodeCM pw_arginine-metabolism lid18" transform="translate(1604.1,1738.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node4905~2" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(1645.6,1714.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4900~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(2128.3,1411.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4900~1" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(2015.7,1280.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4900~2" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(2056.2,1254.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node4895~0" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(2165.1,932.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node4895~1" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(2133.9,836.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node4891~0" class="node nodeCM pw_arginine-metabolism lid7" transform="translate(1805.1,540.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node4891~1" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(1834.9,579.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4891~2" class="node nodeCM pw_arginine-metabolism lid8" transform="translate(1704.6,687.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4891~3" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(1676.3,648.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5869~0" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(729.1,1615.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5887~0" class="node nodeCM pw_arginine-metabolism lid9" transform="translate(1750.7,2155.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5887~1" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(1720.5,2134.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5887~2" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(1861.7,2051.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5887~3" class="node nodeCM pw_arginine-metabolism lid1126" transform="translate(1889.9,2085.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node4827~0" class="node nodeCM pw_arginine-metabolism lid31" transform="translate(1683.2,2242.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node4827~1" class="node nodeCM pw_arginine-metabolism lid103" transform="translate(1835.5,2141.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node4815~0" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(1687.0,2296.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node4815~1" class="node nodeCM pw_arginine-metabolism lid41" transform="translate(1832.6,2199.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node4841~0" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(2028.1,2442.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4841~1" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(2200.5,2458.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4837~0" class="node nodeCM pw_arginine-metabolism lid7" transform="translate(2124.9,2784.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node4837~2" class="node nodeCM pw_arginine-metabolism lid8" transform="translate(2277.3,2876.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node4837~3" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(2239.9,2907.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4819~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(2015.8,2850.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4819~1" class="node nodeCM pw_arginine-metabolism lid12" transform="translate(1853.1,2904.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node4819~2" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(1843.0,2857.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node4824~1" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(1748.7,2403.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4824~2" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(1730.8,2448.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4914~0" class="node nodeCM pw_arginine-metabolism lid4" transform="translate(861.9,458.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node4914~1" class="node nodeCM pw_arginine-metabolism lid13" transform="translate(832.7,374.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node12074~0" class="node nodeCM pw_arginine-metabolism lid5" transform="translate(1086.6,212.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node12074~1" class="node nodeCM pw_arginine-metabolism lid10" transform="translate(1095.5,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node12074~2" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(1142.3,66.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5877~0" class="node nodeCM pw_arginine-metabolism lid440" transform="translate(635.9,1889.1)"><rect rx="5" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=440" target="_blank">carbamoyl phosphate</a></text><title></title></g>
+<g id="node5877~1" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(613.4,2003.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5880~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(703.9,2178.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5880~1" class="node nodeCM pw_arginine-metabolism lid47" transform="translate(807.2,2191.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node4996~1" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(1238.7,2334.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node1989~0" class="node nodeCM pw_arginine-metabolism lid34" transform="translate(1408.2,2244.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node1989~1" class="node nodeCM pw_arginine-metabolism lid58" transform="translate(1443.2,2206.8)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node1989~2" class="node nodeCM pw_arginine-metabolism lid28" transform="translate(1496.0,2212.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node1989~3" class="node nodeCM pw_arginine-metabolism lid9" transform="translate(1544.2,2370.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5885~0" class="node nodeCM pw_arginine-metabolism lid27" transform="translate(739.4,1883.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node4831~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(2046.9,3143.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4831~1" class="node nodeCM pw_arginine-metabolism lid116" transform="translate(2066.2,3242.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node4812~0" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(2155.7,2154.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4812~1" class="node nodeCM pw_arginine-metabolism lid116" transform="translate(2256.8,2153.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node5867~0" class="node nodeCM pw_arginine-metabolism lid170" transform="translate(1605.0,1909.2)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170" target="_blank">fumarate</a></text><title></title></g>
+<g id="node5871~1" class="node nodeCM pw_arginine-metabolism lid195" transform="translate(651.7,503.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title></title></g>
+<g id="node5871~2" class="node nodeCM pw_arginine-metabolism lid1" transform="translate(639.2,456.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5871~4" class="node nodeCM pw_arginine-metabolism lid16" transform="translate(808.7,431.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node11025~0" class="node nodeCM pw_arginine-metabolism lid4" transform="translate(1860.7,2017.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11025~1" class="node nodeCM pw_arginine-metabolism lid30" transform="translate(1787.4,1874.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node11025~2" class="node nodeCM pw_arginine-metabolism lid17" transform="translate(1833.4,1860.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>
+<text x="2294.9" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

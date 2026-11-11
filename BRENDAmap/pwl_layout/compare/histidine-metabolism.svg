@@ -1,0 +1,657 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="7034" height="6857" viewBox="0 0 7034.3 6857.3"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="15407.2 6091.8 2069.2 1546.3" width="2069" height="1546" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="15407.2" y="6091.8" width="2069.2" height="1546.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_histidine-metabolism" class="pw pw3" x="15447.2" y="6147.3" width="1989.2" height="1450.8" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15769.1 6252.8 L 15895.0 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15702.0 6252.8 L 15577.9 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16231.5 6252.8 L 16360.3 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16158.8 6252.8 L 16035.6 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16691.1 6252.8 L 16819.9 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16618.4 6252.8 L 16489.6 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17150.7 6252.8 L 17276.7 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17078.0 6252.8 L 16949.2 6252.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15840.7 6403.6 L 15996.1 6403.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15773.6 6403.6 L 15631.7 6403.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16293.2 6403.6 L 16461.9 6403.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16220.5 6403.6 L 16051.9 6403.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16781.3 6403.6 L 16923.1 6403.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16708.5 6403.6 L 16517.7 6403.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17344.1 6387.6 L 17344.1 6268.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17307.8 6403.6 L 17188.0 6403.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16453.4 6544.3 L 16304.6 6544.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16489.8 6560.3 L 16489.8 6630.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16722.6 6560.3 L 16722.6 6602.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16759.0 6544.3 L 16835.7 6544.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16687.1 6560.3 L 16512.0 6639.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15595.4 6528.7 L 15595.4 6419.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15631.7 6544.7 L 15776.4 6544.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15987.6 6544.7 L 15837.9 6544.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16060.3 6544.6 L 16209.2 6544.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15816.7 6664.8 L 15817.4 6760.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15852.9 6648.8 L 16467.5 6649.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16943.5 6665.2 L 16943.5 6721.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16909.9 6649.2 L 16512.0 6649.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17325.9 6709.7 L 17325.9 6636.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17325.9 6741.7 L 17325.9 6820.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16489.8 6742.4 L 16489.8 6667.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16453.4 6773.2 L 16089.2 6921.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16154.1 6776.1 L 15902.0 6776.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16226.9 6760.7 L 16467.5 6658.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16943.5 6852.6 L 16943.5 6923.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16943.5 6820.6 L 16943.5 6753.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15597.9 6941.5 L 15597.9 7024.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15597.9 6909.5 L 15597.9 6792.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16489.8 6950.1 L 16489.8 7021.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16534.6 6934.6 L 16794.1 6937.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17325.9 6922.8 L 17325.9 6852.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17281.1 6938.8 L 17092.9 6938.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15817.7 6956.1 L 15818.9 7064.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15817.6 6924.1 L 15817.6 6792.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16050.0 7061.8 L 16050.0 7151.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16050.0 7029.8 L 16050.0 6953.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16723.6 7073.9 L 16724.3 7288.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16753.2 7041.9 L 16913.9 6955.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16489.8 7159.2 L 16489.8 7233.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16489.8 7127.2 L 16489.8 7053.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15597.9 7161.9 L 15597.9 7236.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15597.9 7129.9 L 15597.9 7056.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17236.4 7196.5 L 17237.4 7279.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17216.8 7164.5 L 16962.9 6955.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16996.0 7226.0 L 16996.0 7140.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16996.0 7258.0 L 16996.0 7341.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16050.0 7289.1 L 16050.0 7362.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16050.0 7257.1 L 16050.0 7183.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16448.5 7304.7 L 16304.0 7304.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16521.3 7304.7 L 16673.8 7304.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15597.9 7345.4 L 15597.9 7268.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15597.9 7377.4 L 15597.9 7473.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16256.4 7442.6 L 16256.4 7525.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16256.4 7410.6 L 16256.4 7320.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16474.9 7442.3 L 16278.6 7533.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16536.8 7410.6 L 16696.0 7320.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16996.0 7437.6 L 16996.0 7373.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16996.0 7469.6 L 16996.0 7528.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16050.0 7472.3 L 16050.0 7394.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16010.8 7488.5 L 15721.8 7489.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16726.7 7528.1 L 16724.5 7320.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16760.4 7544.1 L 16905.9 7544.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16693.3 7544.1 L 16278.6 7544.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 15716.4 6236.8 L 15685.2 6210.7"/>
+<path class="link" marker-end="url(#in)" d="M 15756.1 6236.8 L 15789.7 6210.7"/>
+<path class="link" marker-start="url(#in)" d="M 16172.3 6236.8 L 16134.6 6210.3"/>
+<path class="link" marker-end="url(#in)" d="M 16215.5 6236.8 L 16248.6 6210.7"/>
+<path class="link" marker-start="url(#in)" d="M 16635.0 6236.8 L 16602.8 6210.7"/>
+<path class="link" marker-end="url(#in)" d="M 16672.7 6236.8 L 16701.9 6210.7"/>
+<path class="link" marker-start="url(#in)" d="M 17093.3 6236.8 L 17059.0 6210.7"/>
+<path class="link" marker-start="url(#in)" d="M 15823.9 6387.6 L 15853.2 6359.7"/>
+<path class="link" marker-end="url(#in)" d="M 15790.4 6387.6 L 15761.2 6359.7"/>
+<path class="link" marker-end="url(#in)" d="M 16240.1 6387.6 L 16210.9 6359.7"/>
+<path class="link" marker-start="url(#in)" d="M 16766.4 6387.6 L 16803.9 6359.7"/>
+<path class="link" marker-end="url(#in)" d="M 16716.6 6419.6 L 16688.6 6435.4"/>
+<path class="link" marker-end="url(#in)" d="M 16722.3 6387.6 L 16682.5 6359.4"/>
+<path class="link" marker-start="url(#in)" d="M 16471.5 6560.3 L 16445.1 6583.6"/>
+<path class="link" marker-start="url(#in)" d="M 16470.3 6528.3 L 16446.4 6508.6"/>
+<path class="link" marker-end="url(#in)" d="M 16508.3 6528.3 L 16531.1 6508.6"/>
+<path class="link" marker-start="url(#in)" d="M 16698.9 6528.3 L 16668.2 6507.6"/>
+<path class="link" marker-end="url(#in)" d="M 16745.2 6560.3 L 16778.5 6583.8"/>
+<path class="link" marker-end="url(#in)" d="M 16746.8 6528.3 L 16778.5 6507.3"/>
+<path class="link" marker-start="url(#in)" d="M 15579.3 6528.7 L 15548.6 6497.9"/>
+<path class="link" marker-end="url(#in)" d="M 15579.4 6560.7 L 15548.6 6591.4"/>
+<path class="link" marker-start="url(#in)" d="M 16008.0 6560.7 L 15977.2 6591.4"/>
+<path class="link" marker-end="url(#in)" d="M 16040.0 6560.7 L 16070.7 6591.4"/>
+<path class="link" marker-start="url(#in)" d="M 15789.6 6632.8 L 15764.4 6617.9"/>
+<path class="link" marker-end="url(#in)" d="M 15786.2 6664.8 L 15747.4 6685.3"/>
+<path class="link" marker-end="url(#in)" d="M 16977.0 6649.2 L 17026.2 6649.2"/>
+<path class="link" marker-start="url(#in)" d="M 17309.9 6709.7 L 17279.2 6679.0"/>
+<path class="link" marker-end="url(#in)" d="M 17309.9 6741.7 L 17279.2 6772.5"/>
+<path class="link" marker-end="url(#in)" d="M 16526.1 6758.4 L 16580.7 6758.4"/>
+<path class="link" marker-start="url(#in)" d="M 16190.7 6760.1 L 16191.1 6712.7"/>
+<path class="link" marker-end="url(#in)" d="M 16160.9 6760.1 L 16103.4 6729.1"/>
+<path class="link" marker-start="url(#in)" d="M 16979.9 6820.8 L 17026.2 6800.8"/>
+<path class="link" marker-start="url(#in)" d="M 15582.2 6941.5 L 15552.2 6972.3"/>
+<path class="link" marker-end="url(#in)" d="M 15582.2 6909.5 L 15552.2 6878.7"/>
+<path class="link" marker-start="url(#in)" d="M 16507.5 6918.1 L 16536.8 6891.7"/>
+<path class="link" marker-end="url(#in)" d="M 16471.6 6918.1 L 16441.6 6891.7"/>
+<path class="link" marker-end="url(#in)" d="M 16472.6 6950.1 L 16440.5 6979.9"/>
+<path class="link" marker-start="url(#in)" d="M 17298.4 6954.8 L 17268.7 6972.1"/>
+<path class="link" marker-start="url(#in)" d="M 17303.3 6922.8 L 17271.5 6900.4"/>
+<path class="link" marker-start="url(#in)" d="M 15790.6 6924.1 L 15767.5 6910.4"/>
+<path class="link" marker-end="url(#in)" d="M 15789.2 6956.1 L 15768.8 6967.6"/>
+<path class="link" marker-start="url(#in)" d="M 16032.1 7029.8 L 16002.7 7003.6"/>
+<path class="link" marker-start="url(#in)" d="M 16068.8 7029.8 L 16099.5 7003.6"/>
+<path class="link" marker-end="url(#in)" d="M 16068.5 7061.8 L 16099.8 7088.9"/>
+<path class="link" marker-end="url(#in)" d="M 16032.4 7061.8 L 16002.4 7088.9"/>
+<path class="link" marker-start="url(#in)" d="M 16694.1 7041.9 L 16667.4 7027.5"/>
+<path class="link" marker-end="url(#in)" d="M 16696.8 7073.9 L 16664.6 7093.1"/>
+<path class="link" marker-start="url(#in)" d="M 16472.8 7127.2 L 16440.3 7096.4"/>
+<path class="link" marker-end="url(#in)" d="M 16506.3 7159.2 L 16538.1 7190.0"/>
+<path class="link" marker-end="url(#in)" d="M 16472.8 7159.2 L 16440.3 7190.0"/>
+<path class="link" marker-start="url(#in)" d="M 15583.3 7161.9 L 15551.1 7197.2"/>
+<path class="link" marker-end="url(#in)" d="M 15582.2 7129.9 L 15552.2 7099.1"/>
+<path class="link" marker-start="url(#in)" d="M 17261.2 7164.5 L 17309.3 7133.7"/>
+<path class="link" marker-start="url(#in)" d="M 17199.8 7180.2 L 17154.9 7179.8"/>
+<path class="link" marker-end="url(#in)" d="M 17259.8 7196.5 L 17310.8 7231.0"/>
+<path class="link" marker-start="url(#in)" d="M 17012.0 7258.0 L 17042.8 7288.8"/>
+<path class="link" marker-start="url(#in)" d="M 16033.4 7257.1 L 16001.4 7226.4"/>
+<path class="link" marker-start="url(#in)" d="M 16067.4 7257.1 L 16100.9 7226.4"/>
+<path class="link" marker-end="url(#in)" d="M 16033.4 7289.1 L 16001.4 7319.9"/>
+<path class="link" marker-start="url(#in)" d="M 16512.2 7320.7 L 16550.7 7343.3"/>
+<path class="link" marker-end="url(#in)" d="M 16456.0 7320.7 L 16413.9 7344.0"/>
+<path class="link" marker-start="url(#in)" d="M 15585.3 7377.4 L 15549.1 7423.3"/>
+<path class="link" marker-start="url(#in)" d="M 16238.8 7410.6 L 16208.6 7383.0"/>
+<path class="link" marker-end="url(#in)" d="M 16240.6 7442.6 L 16206.8 7477.1"/>
+<path class="link" marker-start="url(#in)" d="M 16542.0 7426.6 L 16611.3 7426.6"/>
+<path class="link" marker-end="url(#in)" d="M 16474.9 7426.6 L 16408.3 7426.6"/>
+<path class="link" marker-end="url(#in)" d="M 17016.2 7437.6 L 17038.5 7420.0"/>
+<path class="link" marker-start="url(#in)" d="M 16033.4 7472.3 L 16001.4 7441.6"/>
+<path class="link" marker-start="url(#in)" d="M 16067.4 7472.3 L 16100.9 7441.6"/>
+<path class="link" marker-end="url(#in)" d="M 16067.4 7504.3 L 16100.9 7535.1"/>
+<path class="link" marker-end="url(#in)" d="M 16033.4 7504.3 L 16001.4 7535.1"/>
+<path class="link" marker-start="url(#in)" d="M 16702.3 7528.1 L 16657.9 7499.2"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_histidine-metabolism" transform="translate(16441.8,6147.3)"><rect rx="10" height="31" width="195" x="-97.5" y="-15.5"/><text dominant-baseline="central">histidine metabolism</text></g>
+<g id="node1222" class="node nodeHM pw_histidine-metabolism lid97" transform="translate(15597.9,6776.1)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=97" target="_blank">L-aspartate</a></text><title>L-aspartate</title></g>
+<g id="node1223" class="node nodeHM pw_histidine-metabolism lid183" transform="translate(15538.7,6252.8)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title>D-ribose 5-phosphate</title></g>
+<g id="node5255" class="node nodeHM pw_histidine-metabolism lid605" transform="translate(16050.0,6937.6)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=605" target="_blank">Histamine</a></text><title>Histamine</title></g>
+<g id="node5367" class="node nodeSM pw_histidine-metabolism lid41" transform="translate(16256.4,7544.1)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node5375" class="node nodeSM pw_histidine-metabolism lid349" transform="translate(16489.8,6649.2)"><rect height="35.0" width="42.5" x="-21.3" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=349" target="_blank">His</a></text><title>L-Histidine</title></g>
+<g id="node5377" class="node nodeHM pw_histidine-metabolism lid11135" transform="translate(16256.9,6544.3)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11135" target="_blank">L-Histidinal</a></text><title>L-Histidinal</title></g>
+<g id="node5382" class="node nodeHM pw_histidine-metabolism lid2488" transform="translate(15807.2,6544.7)"><rect height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2488" target="_blank">His-ol</a></text><title>L-Histidinol</title></g>
+<g id="node5385" class="node nodeHM pw_histidine-metabolism lid1324" transform="translate(15595.4,6403.6)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1324" target="_blank">His-ol-P</a></text><title>L-Histidinol phosphate</title></g>
+<g id="node5387" class="node nodeHM pw_histidine-metabolism lid4478" transform="translate(16024.0,6403.6)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4478" target="_blank">IMACP</a></text><title>3-(Imidazol-4-yl)-2-oxopropyl phosphate</title></g>
+<g id="node5392" class="node nodeHM pw_histidine-metabolism lid6504" transform="translate(16489.8,6403.6)"><rect height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6504" target="_blank">EIG3P</a></text><title>D-erythro-1-(imidazol-4-yl)glycerol 3-phosphate</title></g>
+<g id="node5394" class="node nodeHM pw_histidine-metabolism lid102295" transform="translate(17055.5,6403.6)"><rect height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102295" target="_blank">Phosphoribulosyl-formimino-AICAR-phosphate</a></text><title>5-[(5-phospho-1-deoxyribulos-1-ylamino)methylideneamino]-1-(5-phosphoribosyl)imidazole-4-carboxamide</title></g>
+<g id="node5396" class="node nodeHM pw_histidine-metabolism lid47696" transform="translate(17344.2,6252.8)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47696" target="_blank">P-formimino-AICAR-P</a></text><title>1-(5-phosphoribosyl)-5-[(5-Phosphoribosylamino)methylideneamino]imidazole-4-carboxamide</title></g>
+<g id="node5399" class="node nodeHM pw_histidine-metabolism lid158" transform="translate(15965.3,6252.8)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title>5-phospho-alpha-D-ribose 1-diphosphate</title></g>
+<g id="node5403" class="node nodeHM pw_histidine-metabolism lid44706" transform="translate(16424.9,6252.8)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44706" target="_blank">phosphoribosyl-ATP</a></text><title>1-(5-phospho-beta-D-ribosyl)-ATP</title></g>
+<g id="node5405" class="node nodeHM pw_histidine-metabolism lid178269" transform="translate(16884.5,6252.8)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=178269" target="_blank">Phosphoribosyl-AMP</a></text><title>Phosphoribosyl-AMP</title></g>
+<g id="node5474" class="node nodeHM pw_histidine-metabolism lid2876" transform="translate(16943.5,6737.1)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2876" target="_blank">Urocanate</a></text><title>Urocanate</title></g>
+<g id="node5476" class="node nodeHM pw_histidine-metabolism lid114901" transform="translate(16943.5,6939.0)"><rect height="30.0" width="296.8" x="-148.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=114901" target="_blank">3-(5-oxo-4,5-dihydro-3H-imidazol-4-yl)propanoate</a></text><title>3-(5-oxo-4,5-dihydro-3H-imidazol-4-yl)propanoate</title></g>
+<g id="node5478" class="node nodeHM pw_histidine-metabolism lid2277" transform="translate(16724.3,7304.7)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2277" target="_blank">formimino-Glu</a></text><title>N-Formimino-L-glutamate</title></g>
+<g id="node5482" class="node nodeHM pw_histidine-metabolism lid8150" transform="translate(16256.4,7304.7)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8150" target="_blank">N-formyl-Glu</a></text><title>N-Formyl-L-glutamate</title></g>
+<g id="node5484" class="node nodeHM pw_histidine-metabolism lid182112" transform="translate(17237.6,7295.6)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182112" target="_blank">hydantoin-5-propionate</a></text><title>hydantoin-5-propionate</title></g>
+<g id="node5491" class="node nodeHM pw_histidine-metabolism lid12390" transform="translate(16996.0,7544.1)"><rect height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12390" target="_blank">5-formiminotetrahydrofolate</a></text><title>5-formiminotetrahydrofolate</title></g>
+<g id="node5499" class="node nodeHM pw_histidine-metabolism lid4544" transform="translate(15597.9,7040.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4544" target="_blank">formyl-Asp</a></text><title>N-Formyl-L-aspartate</title></g>
+<g id="node5500" class="node nodeHM pw_histidine-metabolism lid29593" transform="translate(15597.9,7489.9)"><rect height="30.0" width="245.9" x="-123.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29593" target="_blank">(5-hydroxy-1H-imidazol-4-yl)acetic acid</a></text><title>5-Hydroxy-4-imidazoleacetate</title></g>
+<g id="node5502" class="node nodeHM pw_histidine-metabolism lid30233" transform="translate(15597.9,7252.0)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30233" target="_blank">formimidoyl-Asp</a></text><title>N-Formimino-L-aspartate</title></g>
+<g id="node5505" class="node nodeHM pw_histidine-metabolism lid45590" transform="translate(16050.0,7378.9)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45590" target="_blank">Imidazole-4-acetate</a></text><title>Imidazole-4-acetate</title></g>
+<g id="node5506" class="node nodeHM pw_histidine-metabolism lid65026" transform="translate(16050.0,7167.4)"><rect height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=65026" target="_blank">(imidazol-4-yl)acetaldehyde</a></text><title>(imidazol-4-yl)acetaldehyde</title></g>
+<g id="node5659" class="node nodeHM pw_histidine-metabolism lid1085" transform="translate(16996.0,7357.2)"><rect height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1085" target="_blank">5,10-methenyltetrahydrofolate</a></text><title>5,10-methenyltetrahydrofolate</title></g>
+<g id="node5662" class="node nodeHM pw_histidine-metabolism lid536" transform="translate(16996.0,7124.0)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=536" target="_blank">10-formyltetrahydrofolate</a></text><title>10-formyltetrahydrofolate</title></g>
+<g id="node5666" class="node nodeHM pw_histidine-metabolism lid43279" transform="translate(15817.6,6776.1)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43279" target="_blank">3-(imidazol-5-yl)pyruvate</a></text><title>3-(imidazol-5-yl)pyruvate</title></g>
+<g id="node5670" class="node nodeHM pw_histidine-metabolism lid42815" transform="translate(15819.1,7080.2)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42815" target="_blank">(S)-3-(imidazol-5-yl)lactate</a></text><title>(S)-3-(imidazol-5-yl)lactate</title></g>
+<g id="node5681" class="node nodeHM pw_histidine-metabolism lid185784" transform="translate(17325.9,6836.6)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=185784" target="_blank">formyl-isoglutamine</a></text><title>formyl-isoglutamine</title></g>
+<g id="node5685" class="node nodeHM pw_histidine-metabolism lid93722" transform="translate(17325.9,6620.1)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=93722" target="_blank">Isoglutamine</a></text><title>Isoglutamine</title></g>
+<g id="node5690" class="node nodeHM pw_histidine-metabolism lid185785" transform="translate(16489.8,7037.4)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=185785" target="_blank">4-oxoglutamarate</a></text><title>4-oxoglutaramate</title></g>
+<g id="node5695" class="node nodeHM pw_histidine-metabolism lid34" transform="translate(16489.8,7249.0)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node11020" class="node nodeHM pw_histidine-metabolism lid10694" transform="translate(16900.3,6544.3)"><rect height="30.0" width="127.3" x="-63.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10694" target="_blank">L-histidyl-tRNAHis</a></text><title>L-histidyl-tRNAHis</title></g>
+<g id="node11021" class="node nodeHM pw_histidine-metabolism lid2422" transform="translate(16722.6,6618.7)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2422" target="_blank">tRNAHis</a></text><title>tRNAHis</title></g>
+<g id="node5398" class="node nodeEN pw_histidine-metabolism" transform="translate(15735.5,6252.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.6.1" target="_blank">2.7.6.1</a></text><title>ribose-phosphate diphosphokinase</title></g>
+<g id="node5402" class="node nodeEN pw_histidine-metabolism" transform="translate(16195.1,6252.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.17" target="_blank">2.4.2.17</a></text><title>ATP phosphoribosyltransferase</title></g>
+<g id="node5404" class="node nodeEN pw_histidine-metabolism" transform="translate(16654.7,6252.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.31" target="_blank">3.6.1.31</a></text><title>phosphoribosyl-ATP diphosphatase</title></g>
+<g id="node5408" class="node nodeEN pw_histidine-metabolism" transform="translate(17114.3,6252.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.19" target="_blank">3.5.4.19</a></text><title>phosphoribosyl-AMP cyclohydrolase</title></g>
+<g id="node5386" class="node nodeEN pw_histidine-metabolism" transform="translate(15807.2,6403.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.9" target="_blank">2.6.1.9</a></text><title>histidinol-phosphate transaminase</title></g>
+<g id="node5389" class="node nodeEN pw_histidine-metabolism" transform="translate(16256.9,6403.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.19" target="_blank">4.2.1.19</a></text><title>imidazoleglycerol-phosphate dehydratase</title></g>
+<g id="node5393" class="node nodeEN pw_histidine-metabolism" transform="translate(16744.9,6403.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.10" target="_blank">4.3.2.10</a></text><title>imidazole glycerol-phosphate synthase</title></g>
+<g id="node5395" class="node nodeEN pw_histidine-metabolism" transform="translate(17344.1,6403.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.16" target="_blank">5.3.1.16</a></text><title>1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide isomerase</title></g>
+<g id="node5376" class="node nodeEN pw_histidine-metabolism" transform="translate(16489.8,6544.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.23" target="_blank">1.1.1.23</a></text><title>histidinol dehydrogenase</title></g>
+<g id="node11019" class="node nodeEN pw_histidine-metabolism" transform="translate(16722.6,6544.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.21" target="_blank">6.1.1.21</a></text><title>Histidine-tRNA ligase</title></g>
+<g id="node5381" class="node nodeEN pw_histidine-metabolism" transform="translate(15595.4,6544.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.15" target="_blank">3.1.3.15</a></text><title>histidinol-phosphatase</title></g>
+<g id="node5378" class="node nodeEN pw_histidine-metabolism" transform="translate(16024.0,6544.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.23" target="_blank">1.1.1.23</a></text><title>histidinol dehydrogenase</title></g>
+<g id="node5671" class="node nodeEN pw_histidine-metabolism" transform="translate(15816.5,6648.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.58" target="_blank">2.6.1.58</a></text><title>phenylalanine(histidine) transaminase</title></g>
+<g id="node5473" class="node nodeEN pw_histidine-metabolism" transform="translate(16943.5,6649.2)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.3" target="_blank">4.3.1.3</a></text><title>histidine ammonia-lyase</title></g>
+<g id="node5682" class="node nodeEN pw_histidine-metabolism" transform="translate(17325.9,6725.7)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node5256" class="node nodeEN pw_histidine-metabolism" transform="translate(16489.8,6758.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.22" target="_blank">4.1.1.22</a></text><title>Histidine decarboxylase</title></g>
+<g id="node5663" class="node nodeEN pw_histidine-metabolism" transform="translate(16190.5,6776.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.38" target="_blank">2.6.1.38</a></text><title>histidine transaminase</title></g>
+<g id="node5475" class="node nodeEN pw_histidine-metabolism" transform="translate(16943.5,6836.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.49" target="_blank">4.2.1.49</a></text><title>Urocanate hydratase</title></g>
+<g id="node5498" class="node nodeEN pw_histidine-metabolism" transform="translate(15597.9,6925.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.8" target="_blank">3.5.1.8</a></text><title>formylaspartate deformylase</title></g>
+<g id="node5686" class="node nodeEN pw_histidine-metabolism" transform="translate(16489.8,6934.1)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node5678" class="node nodeEN pw_histidine-metabolism" transform="translate(17325.9,6938.8)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node5667" class="node nodeEN pw_histidine-metabolism" transform="translate(15817.6,6940.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.111" target="_blank">1.1.1.111</a></text><title>3-(imidazol-5-yl)lactate dehydrogenase</title></g>
+<g id="node5508" class="node nodeEN pw_histidine-metabolism" transform="translate(16050.0,7045.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.22" target="_blank">1.4.3.22</a></text><title>diamine oxidase</title></g>
+<g id="node5477" class="node nodeEN pw_histidine-metabolism" transform="translate(16723.6,7057.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.7" target="_blank">3.5.2.7</a></text><title>imidazolonepropionase</title></g>
+<g id="node5691" class="node nodeEN pw_histidine-metabolism" transform="translate(16489.8,7143.2)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node5501" class="node nodeEN pw_histidine-metabolism" transform="translate(15597.9,7145.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.5" target="_blank">3.5.3.5</a></text><title>formimidoylaspartate deiminase</title></g>
+<g id="node5485" class="node nodeEN pw_histidine-metabolism" transform="translate(17236.2,7180.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.3.-" target="_blank">1.17.3.-</a></text><title>4-imidazolone-5-propionate oxidase</title></g>
+<g id="node5660" class="node nodeEN pw_histidine-metabolism" transform="translate(16996.0,7242.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.9" target="_blank">3.5.4.9</a></text><title>methenyltetrahydrofolate cyclohydrolase</title></g>
+<g id="node5507" class="node nodeEN pw_histidine-metabolism" transform="translate(16050.0,7273.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.3" target="_blank">1.2.1.3</a></text><title>aldehyde dehydrogenase (NAD+)</title></g>
+<g id="node5481" class="node nodeEN pw_histidine-metabolism" transform="translate(16484.9,7304.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.13" target="_blank">3.5.3.13</a></text><title>formimidoylglutamate deiminase</title></g>
+<g id="node5504" class="node nodeEN pw_histidine-metabolism" transform="translate(15597.9,7361.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.-" target="_blank">3.5.2.-</a></text><title>3.5.2.-</title></g>
+<g id="node5483" class="node nodeEN pw_histidine-metabolism" transform="translate(16256.4,7426.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.68" target="_blank">3.5.1.68</a></text><title>N-formylglutamate deformylase</title></g>
+<g id="node5479" class="node nodeEN pw_histidine-metabolism" transform="translate(16508.5,7426.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.8" target="_blank">3.5.3.8</a></text><title>formimidoylglutamase</title></g>
+<g id="node5657" class="node nodeEN pw_histidine-metabolism" transform="translate(16996.0,7453.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.4" target="_blank">4.3.1.4</a></text><title>formimidoyltetrahydrofolate cyclodeaminase</title></g>
+<g id="node5503" class="node nodeEN pw_histidine-metabolism" transform="translate(16050.0,7488.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.5" target="_blank">1.14.13.5</a></text><title>imidazoleacetate 4-monooxygenase</title></g>
+<g id="node5480" class="node nodeEN pw_histidine-metabolism" transform="translate(16726.9,7544.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.2.5" target="_blank">2.1.2.5</a></text><title>glutamate formimidoyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5254" class="node nodeCM pw_histidine-metabolism lid28" transform="translate(16602.9,6758.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node5370" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16427.0,6492.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5371" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(16549.6,6492.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node5372" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(16426.9,6599.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node5373" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(16086.7,6607.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node5374" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(15961.2,6607.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node5379" class="node nodeCM pw_histidine-metabolism lid16" transform="translate(15532.6,6607.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5380" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(15532.6,6481.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5383" class="node nodeCM pw_histidine-metabolism lid41" transform="translate(15744.4,6343.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node5384" class="node nodeCM pw_histidine-metabolism lid34" transform="translate(15869.9,6343.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node5388" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16194.1,6343.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5390" class="node nodeCM pw_histidine-metabolism lid102" transform="translate(16825.4,6343.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title>L-glutamine</title></g>
+<g id="node5391" class="node nodeCM pw_histidine-metabolism lid41" transform="translate(16660.2,6343.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node5397" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(17037.9,6194.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5400" class="node nodeCM pw_histidine-metabolism lid4" transform="translate(15666.1,6194.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node5401" class="node nodeCM pw_histidine-metabolism lid30" transform="translate(15810.3,6194.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node5406" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16583.1,6194.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5407" class="node nodeCM pw_histidine-metabolism lid17" transform="translate(16719.8,6194.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node5486" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(17048.5,6649.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5487" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(17048.5,6791.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5488" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16645.2,7015.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5489" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16633.6,7426.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5490" class="node nodeCM pw_histidine-metabolism lid3075" transform="translate(16369.1,7426.6)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3075" target="_blank">formamide</a></text><title>Formamide</title></g>
+<g id="node5492" class="node nodeCM pw_histidine-metabolism lid207" transform="translate(16633.3,7483.2)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=207" target="_blank">(6S)-THFA</a></text><title>Tetrahydrofolate</title></g>
+<g id="node5493" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16572.9,7356.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5494" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(16391.7,7356.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5495" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(16191.1,7493.1)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node5496" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16191.1,7367.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5497" class="node nodeCM pw_histidine-metabolism lid9" transform="translate(17135.5,7179.7)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node5509" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16118.3,6987.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5510" class="node nodeCM pw_histidine-metabolism lid9" transform="translate(15984.8,6987.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node5511" class="node nodeCM pw_histidine-metabolism lid1126" transform="translate(15984.8,7104.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node5512" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(16118.3,7104.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5513" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(16118.3,7210.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node5514" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(15984.8,7335.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node5515" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(15984.8,7210.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5516" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(16118.3,7425.6)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node5517" class="node nodeCM pw_histidine-metabolism lid9" transform="translate(15984.8,7425.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node5518" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(16118.3,7551.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node5519" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(15984.8,7551.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5520" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(15536.5,7439.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5521" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(15536.5,7083.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5522" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(15536.5,7213.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5523" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(15536.5,6988.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5524" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(15536.5,6862.7)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node5653" class="node nodeCM pw_histidine-metabolism lid224862" transform="translate(16660.2,6451.4)"><rect rx="5" height="30.0" width="358.9" x="-179.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224862" target="_blank">5-amino-1-(5-phospho-beta-D-ribosyl)imidazole-4-carboxamide</a></text><title>5-amino-1-(5-phospho-beta-D-ribosyl)imidazole-4-carboxamide</title></g>
+<g id="node5654" class="node nodeCM pw_histidine-metabolism lid4" transform="translate(16112.4,6194.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node5655" class="node nodeCM pw_histidine-metabolism lid17" transform="translate(16268.9,6194.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node5656" class="node nodeCM pw_histidine-metabolism lid12" transform="translate(16645.2,7104.7)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node5658" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(17058.8,7404.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5661" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(17058.8,7304.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5664" class="node nodeCM pw_histidine-metabolism lid34" transform="translate(16191.2,6696.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title>2-oxoglutarate</title></g>
+<g id="node5665" class="node nodeCM pw_histidine-metabolism lid41" transform="translate(16081.1,6717.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node5668" class="node nodeCM pw_histidine-metabolism lid50" transform="translate(15740.5,6983.6)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+<g id="node5669" class="node nodeCM pw_histidine-metabolism lid40" transform="translate(15740.5,6894.4)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node5672" class="node nodeCM pw_histidine-metabolism lid31" transform="translate(15737.4,6601.9)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node5673" class="node nodeCM pw_histidine-metabolism lid103" transform="translate(15725.2,6697.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title>L-Alanine</title></g>
+<g id="node5676" class="node nodeCM pw_histidine-metabolism lid1661" transform="translate(17334.4,7117.7)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title>reduced electron acceptor</title></g>
+<g id="node5677" class="node nodeCM pw_histidine-metabolism lid12937" transform="translate(17334.4,7247.0)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12937" target="_blank">oxidized electron acceptor</a></text><title>oxidized electron acceptor</title></g>
+<g id="node5679" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(17249.2,6884.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5680" class="node nodeCM pw_histidine-metabolism lid12" transform="translate(17249.2,6983.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node5683" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(17263.2,6663.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5684" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(17263.2,6788.5)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node5687" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16554.6,6875.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5688" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(16423.4,6995.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5689" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(16423.4,6875.7)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node5692" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(16423.4,7080.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5693" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(16554.6,7206.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5694" class="node nodeCM pw_histidine-metabolism lid12" transform="translate(16423.4,7206.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node10985" class="node nodeCM pw_histidine-metabolism lid4" transform="translate(16645.9,6492.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node11006" class="node nodeCM pw_histidine-metabolism lid30" transform="translate(16800.8,6492.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node11007" class="node nodeCM pw_histidine-metabolism lid17" transform="translate(16800.7,6599.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="2149.2" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 4885.1 6817.3" width="4885" height="6817" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="4885.1" height="6817.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_histidine-metabolism" class="pw " x="0.0" y="0.0" width="4805.1" height="6721.8" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 2721.5 4503.3 L 2844.7 4520.7"/>
+<path class="link" marker-start="url(#in)" d="M 2657.7 4492.8 L 2497.3 4462.5"/>
+<path class="link" marker-end="url(#in)" d="M 2254.9 4417.0 L 2427.0 4449.3"/>
+<path class="link" marker-start="url(#in)" d="M 2197.5 4402.0 L 2003.2 4336.9"/>
+<path class="link" marker-start="url(#in)" d="M 3081.5 4341.0 C 3057.0 4379.8 2992.2 4482.4 2967.6 4521.4"/>
+<path class="link" marker-end="url(#in)" d="M 3099.6 4309.9 L 3199.6 4121.5"/>
+<path class="link" marker-start="url(#in)" d="M 3314.1 3922.0 L 3217.4 4089.5"/>
+<path class="link" marker-end="url(#in)" d="M 3335.0 3890.0 L 3440.9 3744.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2937.5 4375.4 L 2955.9 4520.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2938.8 4343.4 L 2978.5 4154.6"/>
+<path class="link" marker-start="url(#in)" d="M 3146.0 4609.7 L 2999.2 4552.7"/>
+<path class="link" marker-end="url(#in)" d="M 3203.3 4632.0 L 3354.6 4690.8"/>
+<path class="link" marker-start="url(#in)" d="M 2906.6 4744.7 L 2954.0 4552.7"/>
+<path class="link" marker-end="url(#in)" d="M 2901.4 4776.7 L 2885.9 4981.8"/>
+<path class="link" marker-start="url(#in)" d="M 2895.3 5214.8 L 2885.5 5013.8"/>
+<path class="link" marker-end="url(#in)" d="M 2898.5 5246.8 L 2927.8 5436.5"/>
+<path class="link" marker-start="url(#in)" d="M 3411.5 4947.7 L 3396.8 4722.8"/>
+<path class="link" marker-end="url(#in)" d="M 3425.3 4979.7 L 3548.2 5133.8"/>
+<path class="link" marker-start="url(#in)" d="M 3748.1 5106.8 L 3605.8 5139.5"/>
+<path class="link" marker-end="url(#in)" d="M 3777.0 5083.5 L 3740.4 4888.4"/>
+<path class="link" marker-end="url(#in)" d="M 3560.2 4827.0 L 3721.6 4868.4"/>
+<path class="link" marker-start="url(#in)" d="M 3512.3 4803.7 L 3415.0 4722.8"/>
+<path class="link" marker-start="url(#in)" d="M 1896.2 4559.7 L 1981.1 4347.7"/>
+<path class="link" marker-end="url(#in)" d="M 1876.8 4591.7 L 1747.1 4752.1"/>
+<path class="link" marker-start="url(#in)" d="M 1590.4 4924.1 L 1719.4 4784.1"/>
+<path class="link" marker-end="url(#in)" d="M 1560.2 4956.1 L 1434.5 5086.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1281.5 5244.0 L 1403.5 5118.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1250.7 5276.0 L 1132.5 5399.8"/>
+<path class="link" marker-start="url(#in)" d="M 987.8 5555.4 L 1102.4 5431.8"/>
+<path class="link" marker-end="url(#in)" d="M 958.5 5587.4 L 847.0 5711.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 709.7 5867.8 L 818.6 5743.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 682.1 5899.8 L 575.6 6024.8"/>
+<path class="link" marker-start="url(#in)" d="M 444.2 6182.3 L 548.7 6056.8"/>
+<path class="link" marker-end="url(#in)" d="M 417.8 6214.3 L 315.0 6340.1"/>
+<path class="link" marker-start="url(#in)" d="M 187.8 6497.9 L 289.1 6372.1"/>
+<path class="link" marker-end="url(#in)" d="M 162.2 6529.9 L 62.4 6655.8"/>
+<path class="link" marker-start="url(#in)" d="M 1839.2 4385.4 L 1971.8 4337.4"/>
+<path class="link" marker-end="url(#in)" d="M 1775.4 4388.8 L 1657.1 4358.3"/>
+<path class="link" marker-start="url(#in)" d="M 1826.1 4295.4 C 1868.2 4304.8 1941.1 4321.2 1972.5 4328.2"/>
+<path class="link" marker-end="url(#in)" d="M 1762.8 4297.0 L 1654.2 4326.3"/>
+<path class="link" marker-start="url(#in)" d="M 1416.0 4330.8 L 1507.9 4336.7"/>
+<path class="link" marker-end="url(#in)" d="M 1345.6 4327.1 L 1266.7 4323.8"/>
+<path class="link" marker-start="url(#in)" d="M 224.0 219.4 L 158.5 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 237.8 251.4 L 302.8 403.0"/>
+<path class="link" marker-start="url(#in)" d="M 381.7 586.8 L 316.5 435.0"/>
+<path class="link" marker-end="url(#in)" d="M 395.5 618.8 L 461.1 770.8"/>
+<path class="link" marker-start="url(#in)" d="M 540.5 955.1 L 474.9 802.8"/>
+<path class="link" marker-end="url(#in)" d="M 554.3 987.1 L 620.0 1139.7"/>
+<path class="link" marker-start="url(#in)" d="M 699.8 1324.6 L 633.8 1171.7"/>
+<path class="link" marker-end="url(#in)" d="M 713.6 1356.6 L 780.0 1509.8"/>
+<path class="link" marker-start="url(#in)" d="M 860.7 1695.4 L 793.9 1541.8"/>
+<path class="link" marker-end="url(#in)" d="M 874.6 1727.4 L 941.8 1881.4"/>
+<path class="link" marker-start="url(#in)" d="M 1023.7 2067.7 L 955.8 1913.4"/>
+<path class="link" marker-end="url(#in)" d="M 1037.5 2098.9 C 1053.0 2134.1 1091.0 2220.2 1106.5 2255.3"/>
+<path class="link" marker-start="url(#in)" d="M 1189.2 2442.3 L 1120.3 2286.6"/>
+<path class="link" marker-end="url(#in)" d="M 1203.4 2474.3 L 1273.1 2630.9"/>
+<path class="link" marker-end="url(#in)" d="M 1357.6 2820.7 L 1287.4 2662.9"/>
+<path class="link" marker-start="url(#in)" d="M 1371.9 2852.7 L 1442.6 3012.2"/>
+<path class="link" marker-start="url(#in)" d="M 1527.9 3206.3 L 1456.8 3044.2"/>
+<path class="link" marker-end="url(#in)" d="M 1541.7 3238.3 L 1612.3 3404.3"/>
+<path class="link" marker-start="url(#in)" d="M 1694.3 3608.9 L 1625.4 3436.3"/>
+<path class="link" marker-end="url(#in)" d="M 1706.5 3640.9 L 1773.3 3824.8"/>
+<path class="link" marker-start="url(#in)" d="M 1865.4 4057.6 L 1785.5 3856.8"/>
+<path class="link" marker-end="url(#in)" d="M 1879.0 4089.6 L 1980.4 4315.7"/>
+<path class="link" marker-start="url(#in)" d="M 4033.6 4512.0 L 3929.7 4532.2"/>
+<path class="link" marker-end="url(#in)" d="M 4091.0 4504.6 L 4173.6 4499.3"/>
+<path class="link" marker-start="url(#in)" d="M 4451.9 4495.0 L 4373.5 4494.0"/>
+<path class="link" marker-end="url(#in)" d="M 4509.3 4497.1 L 4597.1 4502.7"/>
+<path class="link" marker-start="url(#in)" d="M 2080.7 4151.3 L 2073.9 3964.5"/>
+<path class="link" marker-start="url(#in)" d="M 2072.1 4183.3 L 1996.7 4315.7"/>
+<path class="link" marker-end="url(#in)" d="M 2096.9 4151.3 L 2209.5 4036.3"/>
+<path class="link" marker-start="url(#in)" d="M 3614.0 4659.0 L 3443.8 4696.2"/>
+<path class="link" marker-end="url(#in)" d="M 3649.5 4668.7 L 3730.5 4856.4"/>
+<path class="link" marker-end="url(#in)" d="M 3671.3 4638.1 L 3815.9 4564.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2674.0 4514.8 L 2644.2 4545.4"/>
+<path class="link" marker-end="url(#in)" d="M 2245.0 4395.6 L 2277.1 4368.4"/>
+<path class="link" marker-start="url(#in)" d="M 3105.4 4341.9 L 3136.4 4376.7"/>
+<path class="link" marker-start="url(#in)" d="M 3093.2 4341.9 L 3102.4 4411.4"/>
+<path class="link" marker-start="url(#in)" d="M 3302.3 3906.8 L 3251.7 3908.5"/>
+<path class="link" marker-end="url(#in)" d="M 3316.8 3890.0 L 3294.6 3835.0"/>
+<path class="link" marker-start="url(#in)" d="M 2967.4 4369.1 L 2994.7 4377.4"/>
+<path class="link" marker-start="url(#in)" d="M 2946.9 4375.4 L 2973.9 4413.1"/>
+<path class="link" marker-end="url(#in)" d="M 2915.3 4343.4 L 2858.0 4297.9"/>
+<path class="link" marker-start="url(#in)" d="M 3150.7 4636.8 L 3117.8 4658.9"/>
+<path class="link" marker-end="url(#in)" d="M 3178.6 4636.8 L 3191.1 4688.1"/>
+<path class="link" marker-start="url(#in)" d="M 2886.1 4744.7 L 2855.5 4715.2"/>
+<path class="link" marker-end="url(#in)" d="M 2923.6 4771.6 L 2956.8 4788.8"/>
+<path class="link" marker-end="url(#in)" d="M 2911.7 4776.7 L 2937.2 4821.6"/>
+<path class="link" marker-start="url(#in)" d="M 2875.1 5219.0 L 2835.6 5196.8"/>
+<path class="link" marker-end="url(#in)" d="M 2917.1 5235.7 L 2965.4 5247.1"/>
+<path class="link" marker-end="url(#in)" d="M 2911.9 5246.8 L 2943.9 5279.1"/>
+<path class="link" marker-start="url(#in)" d="M 3423.6 4947.7 L 3451.1 4907.7"/>
+<path class="link" marker-end="url(#in)" d="M 3444.5 4972.0 L 3481.4 4981.6"/>
+<path class="link" marker-start="url(#in)" d="M 3786.7 5115.5 L 3806.9 5164.2"/>
+<path class="link" marker-end="url(#in)" d="M 3812.0 5098.1 L 3845.1 5096.6"/>
+<path class="link" marker-start="url(#in)" d="M 3516.1 4835.7 L 3477.5 4875.7"/>
+<path class="link" marker-end="url(#in)" d="M 3560.2 4803.7 L 3587.7 4788.4"/>
+<path class="link" marker-end="url(#in)" d="M 1897.2 4591.7 L 1919.1 4639.0"/>
+<path class="link" marker-start="url(#in)" d="M 1567.3 4924.1 L 1544.2 4880.2"/>
+<path class="link" marker-start="url(#in)" d="M 1576.9 4924.1 L 1581.0 4869.0"/>
+<path class="link" marker-end="url(#in)" d="M 1584.1 4956.1 L 1607.9 5001.5"/>
+<path class="link" marker-end="url(#in)" d="M 1574.5 4956.1 L 1570.2 5012.9"/>
+<path class="link" marker-start="url(#in)" d="M 1257.8 5244.0 L 1233.6 5196.8"/>
+<path class="link" marker-start="url(#in)" d="M 1267.3 5244.0 L 1272.0 5188.9"/>
+<path class="link" marker-end="url(#in)" d="M 1269.1 5276.0 L 1279.9 5331.3"/>
+<path class="link" marker-start="url(#in)" d="M 964.2 5555.4 L 939.1 5509.3"/>
+<path class="link" marker-start="url(#in)" d="M 973.9 5555.4 L 977.1 5501.8"/>
+<path class="link" marker-end="url(#in)" d="M 981.6 5587.4 L 1006.8 5633.5"/>
+<path class="link" marker-end="url(#in)" d="M 972.0 5587.4 L 968.7 5642.6"/>
+<path class="link" marker-start="url(#in)" d="M 724.4 5886.7 L 766.9 5891.0"/>
+<path class="link" marker-start="url(#in)" d="M 459.5 6200.6 L 502.2 6203.9"/>
+<path class="link" marker-end="url(#in)" d="M 435.3 6214.3 L 449.7 6266.5"/>
+<path class="link" marker-start="url(#in)" d="M 203.6 6515.7 L 246.4 6518.4"/>
+<path class="link" marker-end="url(#in)" d="M 179.6 6529.9 L 196.7 6588.0"/>
+<path class="link" marker-start="url(#in)" d="M 1818.0 4381.0 L 1849.9 4333.3"/>
+<path class="link" marker-end="url(#in)" d="M 1796.8 4413.0 L 1769.7 4453.9"/>
+<path class="link" marker-start="url(#in)" d="M 1805.3 4272.4 L 1832.3 4231.5"/>
+<path class="link" marker-end="url(#in)" d="M 1784.2 4304.4 L 1757.2 4345.3"/>
+<path class="link" marker-start="url(#in)" d="M 1393.3 4312.6 L 1424.1 4273.2"/>
+<path class="link" marker-end="url(#in)" d="M 1370.8 4312.6 L 1342.8 4267.7"/>
+<path class="link" marker-start="url(#in)" d="M 240.9 219.4 L 267.0 177.1"/>
+<path class="link" marker-end="url(#in)" d="M 259.7 241.4 L 300.8 249.9"/>
+<path class="link" marker-start="url(#in)" d="M 398.5 586.8 L 424.6 544.5"/>
+<path class="link" marker-end="url(#in)" d="M 420.5 609.5 L 458.4 617.3"/>
+<path class="link" marker-start="url(#in)" d="M 557.3 955.1 L 583.5 912.7"/>
+<path class="link" marker-end="url(#in)" d="M 579.4 977.7 L 617.3 985.5"/>
+<path class="link" marker-start="url(#in)" d="M 716.5 1324.6 L 742.6 1282.3"/>
+<path class="link" marker-start="url(#in)" d="M 998.8 2077.4 L 960.8 2069.8"/>
+<path class="link" marker-end="url(#in)" d="M 1062.6 2081.0 L 1102.1 2077.7"/>
+<path class="link" marker-end="url(#in)" d="M 1061.8 2099.7 L 1158.0 2149.2"/>
+<path class="link" marker-end="url(#in)" d="M 1186.7 2474.3 L 1160.9 2517.2"/>
+<path class="link" marker-start="url(#in)" d="M 1393.4 2842.3 L 1434.8 2850.3"/>
+<path class="link" marker-end="url(#in)" d="M 1374.4 2820.7 L 1400.2 2777.8"/>
+<path class="link" marker-start="url(#in)" d="M 1503.0 3215.7 L 1465.0 3207.9"/>
+<path class="link" marker-end="url(#in)" d="M 1566.8 3228.9 L 1606.4 3237.0"/>
+<path class="link" marker-start="url(#in)" d="M 1668.8 3616.9 L 1633.4 3608.0"/>
+<path class="link" marker-end="url(#in)" d="M 1689.8 3640.9 L 1661.6 3682.6"/>
+<path class="link" marker-start="url(#in)" d="M 1839.9 4075.8 L 1802.0 4078.4"/>
+<path class="link" marker-start="url(#in)" d="M 1841.7 4057.6 L 1810.4 4040.9"/>
+<path class="link" marker-end="url(#in)" d="M 1903.7 4080.3 L 1939.9 4088.0"/>
+<path class="link" marker-end="url(#in)" d="M 4076.9 4522.5 L 4106.6 4555.0"/>
+<path class="link" marker-start="url(#in)" d="M 4468.5 4511.3 L 4440.0 4548.9"/>
+<path class="link" marker-start="url(#in)" d="M 2080.3 4183.3 L 2077.0 4238.5"/>
+<path class="link" marker-end="url(#in)" d="M 2077.7 4151.3 L 2065.8 4098.1"/>
+<path class="link" marker-end="url(#in)" d="M 2086.9 4151.3 L 2104.6 4100.9"/>
+<path class="link" marker-start="url(#in)" d="M 3631.2 4668.7 L 3597.7 4715.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_histidine-metabolism" transform="translate(2402.5,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">histidine metabolism</text></g>
+<g id="node5476" class="node nodeHM pw_histidine-metabolism lid114901" transform="translate(2958.0,4536.7)"><rect height="30.0" width="321.0" x="-160.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=114901" target="_blank">3-(5-oxo-4,5-dihydro-3H-imidazol-4-yl)propanoate</a></text><title></title></g>
+<g id="node5474" class="node nodeHM pw_histidine-metabolism lid2876" transform="translate(2462.2,4455.8)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2876" target="_blank">Urocanate</a></text><title></title></g>
+<g id="node5375" class="node nodeHM pw_histidine-metabolism lid349" transform="translate(1987.5,4331.7)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=349" target="_blank">His</a></text><title></title></g>
+<g id="node5681" class="node nodeHM pw_histidine-metabolism lid185784" transform="translate(3208.1,4105.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=185784" target="_blank">formyl-isoglutamine</a></text><title></title></g>
+<g id="node5685" class="node nodeHM pw_histidine-metabolism lid93722" transform="translate(3452.5,3728.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=93722" target="_blank">Isoglutamine</a></text><title></title></g>
+<g id="node5484" class="node nodeHM pw_histidine-metabolism lid182112" transform="translate(2981.9,4138.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182112" target="_blank">hydantoin-5-propionate</a></text><title></title></g>
+<g id="node5478" class="node nodeHM pw_histidine-metabolism lid2277" transform="translate(3395.7,4706.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2277" target="_blank">formimino-Glu</a></text><title></title></g>
+<g id="node5690" class="node nodeHM pw_histidine-metabolism lid185785" transform="translate(2884.7,4997.8)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=185785" target="_blank">4-oxoglutamarate</a></text><title></title></g>
+<g id="node5695" class="node nodeHM pw_histidine-metabolism lid34" transform="translate(2930.2,5452.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5482" class="node nodeHM pw_histidine-metabolism lid8150" transform="translate(3561.0,5149.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8150" target="_blank">N-formyl-Glu</a></text><title></title></g>
+<g id="node5367" class="node nodeHM pw_histidine-metabolism lid41" transform="translate(3737.4,4872.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5255" class="node nodeHM pw_histidine-metabolism lid605" transform="translate(1734.1,4768.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=605" target="_blank">Histamine</a></text><title></title></g>
+<g id="node5506" class="node nodeHM pw_histidine-metabolism lid65026" transform="translate(1419.0,5102.4)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=65026" target="_blank">(imidazol-4-yl)acetaldehyde</a></text><title></title></g>
+<g id="node5505" class="node nodeHM pw_histidine-metabolism lid45590" transform="translate(1117.3,5415.8)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45590" target="_blank">Imidazole-4-acetate</a></text><title></title></g>
+<g id="node5500" class="node nodeHM pw_histidine-metabolism lid29593" transform="translate(832.6,5727.3)"><rect height="30.0" width="262.7" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29593" target="_blank">(5-hydroxy-1H-imidazol-4-yl)acetic acid</a></text><title></title></g>
+<g id="node5502" class="node nodeHM pw_histidine-metabolism lid30233" transform="translate(562.0,6040.8)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30233" target="_blank">formimidoyl-Asp</a></text><title></title></g>
+<g id="node5499" class="node nodeHM pw_histidine-metabolism lid4544" transform="translate(302.0,6356.1)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4544" target="_blank">formyl-Asp</a></text><title></title></g>
+<g id="node1222" class="node nodeHM pw_histidine-metabolism lid97" transform="translate(49.7,6671.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=97" target="_blank">Asp</a></text><title></title></g>
+<g id="node5666" class="node nodeHM pw_histidine-metabolism lid43279" transform="translate(1594.9,4342.3)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43279" target="_blank">3-(imidazol-5-yl)pyruvate</a></text><title></title></g>
+<g id="node5670" class="node nodeHM pw_histidine-metabolism lid42815" transform="translate(1170.0,4319.7)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42815" target="_blank">(S)-3-(imidazol-5-yl)lactate</a></text><title></title></g>
+<g id="node1223" class="node nodeHM pw_histidine-metabolism lid183" transform="translate(151.6,52.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183" target="_blank">D-Rib 5-P</a></text><title></title></g>
+<g id="node5399" class="node nodeHM pw_histidine-metabolism lid158" transform="translate(309.7,419.0)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=158" target="_blank">5-P-alpha-D-Rib 1-PP</a></text><title></title></g>
+<g id="node5403" class="node nodeHM pw_histidine-metabolism lid44706" transform="translate(468.0,786.8)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44706" target="_blank">phosphoribosyl-ATP</a></text><title></title></g>
+<g id="node5405" class="node nodeHM pw_histidine-metabolism lid178269" transform="translate(626.9,1155.7)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=178269" target="_blank">Phosphoribosyl-AMP</a></text><title></title></g>
+<g id="node5396" class="node nodeHM pw_histidine-metabolism lid47696" transform="translate(787.0,1525.8)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47696" target="_blank">P-formimino-AICAR-P</a></text><title></title></g>
+<g id="node5394" class="node nodeHM pw_histidine-metabolism lid102295" transform="translate(948.8,1897.4)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102295" target="_blank">Phosphoribulosyl-formimino-AICAR-phosphate</a></text><title></title></g>
+<g id="node5392" class="node nodeHM pw_histidine-metabolism lid6504" transform="translate(1113.2,2270.6)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6504" target="_blank">EIG3P</a></text><title></title></g>
+<g id="node5387" class="node nodeHM pw_histidine-metabolism lid4478" transform="translate(1280.2,2646.9)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4478" target="_blank">IMACP</a></text><title></title></g>
+<g id="node5385" class="node nodeHM pw_histidine-metabolism lid1324" transform="translate(1449.7,3028.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1324" target="_blank">His-ol-P</a></text><title></title></g>
+<g id="node5382" class="node nodeHM pw_histidine-metabolism lid2488" transform="translate(1619.1,3420.3)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2488" target="_blank">His-ol</a></text><title></title></g>
+<g id="node5377" class="node nodeHM pw_histidine-metabolism lid11135" transform="translate(1779.2,3840.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11135" target="_blank">L-Histidinal</a></text><title></title></g>
+<g id="node5491" class="node nodeHM pw_histidine-metabolism lid12390" transform="translate(3847.3,4548.2)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12390" target="_blank">5-formiminotetrahydrofolate</a></text><title></title></g>
+<g id="node5659" class="node nodeHM pw_histidine-metabolism lid1085" transform="translate(4273.6,4492.8)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1085" target="_blank">5,10-methenyltetrahydrofolate</a></text><title></title></g>
+<g id="node5662" class="node nodeHM pw_histidine-metabolism lid536" transform="translate(4684.1,4508.2)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=536" target="_blank">10-formyltetrahydrofolate</a></text><title></title></g>
+<g id="node11021" class="node nodeHM pw_histidine-metabolism lid2422" transform="translate(2073.3,3948.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2422" target="_blank">tRNAHis</a></text><title></title></g>
+<g id="node11020" class="node nodeHM pw_histidine-metabolism lid10694" transform="translate(2225.2,4020.3)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10694" target="_blank">L-histidyl-tRNAHis</a></text><title></title></g>
+<g id="node5475" class="node nodeEN pw_histidine-metabolism" transform="translate(2689.6,4498.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.49" target="_blank">4.2.1.49</a></text><title>Urocanate hydratase</title></g>
+<g id="node5473" class="node nodeEN pw_histidine-metabolism" transform="translate(2226.2,4411.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.3" target="_blank">4.3.1.3</a></text><title>histidine ammonia-lyase</title></g>
+<g id="node5678" class="node nodeEN pw_histidine-metabolism" transform="translate(3091.1,4325.9)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node5682" class="node nodeEN pw_histidine-metabolism" transform="translate(3323.3,3906.0)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node5485" class="node nodeEN pw_histidine-metabolism" transform="translate(2935.4,4359.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.3.-" target="_blank">1.17.3.-</a></text><title>4-imidazolone-5-propionate oxidase</title></g>
+<g id="node5477" class="node nodeEN pw_histidine-metabolism" transform="translate(3174.7,4620.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.7" target="_blank">3.5.2.7</a></text><title>imidazolonepropionase</title></g>
+<g id="node5686" class="node nodeEN pw_histidine-metabolism" transform="translate(2902.6,4760.7)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node5691" class="node nodeEN pw_histidine-metabolism" transform="translate(2896.1,5230.8)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node5481" class="node nodeEN pw_histidine-metabolism" transform="translate(3412.6,4963.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.13" target="_blank">3.5.3.13</a></text><title>formimidoylglutamate deiminase</title></g>
+<g id="node5483" class="node nodeEN pw_histidine-metabolism" transform="translate(3780.0,5099.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.68" target="_blank">3.5.1.68</a></text><title>N-formylglutamate deformylase</title></g>
+<g id="node5479" class="node nodeEN pw_histidine-metabolism" transform="translate(3531.6,4819.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.8" target="_blank">3.5.3.8</a></text><title>formimidoylglutamase</title></g>
+<g id="node5256" class="node nodeEN pw_histidine-metabolism" transform="translate(1889.8,4575.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.22" target="_blank">4.1.1.22</a></text><title>Histidine decarboxylase</title></g>
+<g id="node5508" class="node nodeEN pw_histidine-metabolism" transform="translate(1575.7,4940.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.22" target="_blank">1.4.3.22</a></text><title>diamine oxidase</title></g>
+<g id="node5507" class="node nodeEN pw_histidine-metabolism" transform="translate(1265.9,5260.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.3" target="_blank">1.2.1.3</a></text><title>aldehyde dehydrogenase (NAD+)</title></g>
+<g id="node5503" class="node nodeEN pw_histidine-metabolism" transform="translate(972.9,5571.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.5" target="_blank">1.14.13.5</a></text><title>imidazoleacetate 4-monooxygenase</title></g>
+<g id="node5504" class="node nodeEN pw_histidine-metabolism" transform="translate(695.7,5883.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.-" target="_blank">3.5.2.-</a></text><title>3.5.2.-</title></g>
+<g id="node5501" class="node nodeEN pw_histidine-metabolism" transform="translate(430.8,6198.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.5" target="_blank">3.5.3.5</a></text><title>formimidoylaspartate deiminase</title></g>
+<g id="node5498" class="node nodeEN pw_histidine-metabolism" transform="translate(174.9,6513.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.8" target="_blank">3.5.1.8</a></text><title>formylaspartate deformylase</title></g>
+<g id="node5671" class="node nodeEN pw_histidine-metabolism" transform="translate(1807.3,4397.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.58" target="_blank">2.6.1.58</a></text><title>phenylalanine(histidine) transaminase; histidine transaminase</title></g>
+<g id="node5663" class="node nodeEN pw_histidine-metabolism" transform="translate(1794.7,4288.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.38" target="_blank">2.6.1.38</a></text><title>phenylalanine(histidine) transaminase; histidine transaminase</title></g>
+<g id="node5667" class="node nodeEN pw_histidine-metabolism" transform="translate(1380.8,4328.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.111" target="_blank">1.1.1.111</a></text><title>3-(imidazol-5-yl)lactate dehydrogenase</title></g>
+<g id="node5398" class="node nodeEN pw_histidine-metabolism" transform="translate(231.0,235.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.6.1" target="_blank">2.7.6.1</a></text><title>ribose-phosphate diphosphokinase</title></g>
+<g id="node5402" class="node nodeEN pw_histidine-metabolism" transform="translate(388.6,602.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.17" target="_blank">2.4.2.17</a></text><title>ATP phosphoribosyltransferase</title></g>
+<g id="node5404" class="node nodeEN pw_histidine-metabolism" transform="translate(547.4,971.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.31" target="_blank">3.6.1.31</a></text><title>phosphoribosyl-ATP diphosphatase</title></g>
+<g id="node5408" class="node nodeEN pw_histidine-metabolism" transform="translate(706.7,1340.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.19" target="_blank">3.5.4.19</a></text><title>phosphoribosyl-AMP cyclohydrolase</title></g>
+<g id="node5395" class="node nodeEN pw_histidine-metabolism" transform="translate(867.6,1711.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.16" target="_blank">5.3.1.16</a></text><title>1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide isomerase</title></g>
+<g id="node5393" class="node nodeEN pw_histidine-metabolism" transform="translate(1030.7,2083.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.10" target="_blank">4.3.2.10</a></text><title>imidazole glycerol-phosphate synthase</title></g>
+<g id="node5389" class="node nodeEN pw_histidine-metabolism" transform="translate(1196.3,2458.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.19" target="_blank">4.2.1.19</a></text><title>imidazoleglycerol-phosphate dehydratase</title></g>
+<g id="node5386" class="node nodeEN pw_histidine-metabolism" transform="translate(1364.8,2836.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.9" target="_blank">2.6.1.9</a></text><title>histidinol-phosphate transaminase</title></g>
+<g id="node5381" class="node nodeEN pw_histidine-metabolism" transform="translate(1534.9,3222.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.15" target="_blank">3.1.3.15</a></text><title>histidinol-phosphatase</title></g>
+<g id="node5378" class="node nodeEN pw_histidine-metabolism" transform="translate(1700.7,3624.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.23" target="_blank">1.1.1.23</a></text><title>histidinol dehydrogenase</title></g>
+<g id="node5376" class="node nodeEN pw_histidine-metabolism" transform="translate(1871.8,4073.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.23" target="_blank">1.1.1.23</a></text><title>histidinol dehydrogenase</title></g>
+<g id="node5657" class="node nodeEN pw_histidine-metabolism" transform="translate(4062.3,4506.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.4" target="_blank">4.3.1.4</a></text><title>formimidoyltetrahydrofolate cyclodeaminase</title></g>
+<g id="node5660" class="node nodeEN pw_histidine-metabolism" transform="translate(4480.6,4495.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.9" target="_blank">3.5.4.9</a></text><title>methenyltetrahydrofolate cyclohydrolase</title></g>
+<g id="node11019" class="node nodeEN pw_histidine-metabolism" transform="translate(2081.2,4167.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.21" target="_blank">6.1.1.21</a></text><title>Histidine-tRNA ligase</title></g>
+<g id="node5480" class="node nodeEN pw_histidine-metabolism" transform="translate(3642.6,4652.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.2.5" target="_blank">2.1.2.5</a></text><title>glutamate formimidoyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5475~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(2628.6,4561.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5473~0" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(2292.8,4355.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5678~0" class="node nodeCM pw_histidine-metabolism lid12" transform="translate(3148.9,4390.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5678~1" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(3104.6,4427.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5682~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(3236.0,3909.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5682~1" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(3288.1,3819.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node5485~0" class="node nodeCM pw_histidine-metabolism lid1661" transform="translate(3047.4,4393.4)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node5485~1" class="node nodeCM pw_histidine-metabolism lid9" transform="translate(2985.3,4429.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5485~2" class="node nodeCM pw_histidine-metabolism lid374" transform="translate(2837.8,4281.9)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node5477~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(3102.0,4669.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5477~1" class="node nodeCM pw_histidine-metabolism lid12" transform="translate(3195.1,4704.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5686~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(2839.8,4700.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5686~1" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(2985.5,4803.6)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node5686~2" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(2946.3,4837.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5691~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(2819.9,5188.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5691~1" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(2981.1,5250.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5691~2" class="node nodeCM pw_histidine-metabolism lid12" transform="translate(2956.4,5291.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5481~1" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(3497.1,4985.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5483~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(3813.5,5180.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5483~1" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(3873.8,5095.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node5479~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(3462.1,4891.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5479~1" class="node nodeCM pw_histidine-metabolism lid3075" transform="translate(3616.4,4772.4)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3075" target="_blank">formamide</a></text><title></title></g>
+<g id="node5256~0" class="node nodeCM pw_histidine-metabolism lid28" transform="translate(1926.5,4655.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5508~0" class="node nodeCM pw_histidine-metabolism lid9" transform="translate(1535.8,4864.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5508~1" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(1582.2,4853.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5508~2" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(1616.3,5017.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5508~3" class="node nodeCM pw_histidine-metabolism lid1126" transform="translate(1569.0,5028.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node5507~0" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(1225.4,5180.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5507~1" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(1273.4,5172.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5507~2" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(1283.0,5347.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5503~0" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(930.4,5493.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5503~1" class="node nodeCM pw_histidine-metabolism lid9" transform="translate(978.1,5485.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5503~2" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(1015.5,5649.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5503~3" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(967.7,5658.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5504~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(782.6,5892.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5501~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(517.9,6205.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5501~1" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(454.2,6282.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5498~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(262.1,6519.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5498~1" class="node nodeCM pw_histidine-metabolism lid120" transform="translate(201.4,6604.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node5671~0" class="node nodeCM pw_histidine-metabolism lid31" transform="translate(1860.6,4317.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node5671~1" class="node nodeCM pw_histidine-metabolism lid103" transform="translate(1759.2,4469.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node5663~0" class="node nodeCM pw_histidine-metabolism lid34" transform="translate(1842.9,4215.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5663~1" class="node nodeCM pw_histidine-metabolism lid41" transform="translate(1746.6,4361.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5667~0" class="node nodeCM pw_histidine-metabolism lid5" transform="translate(1436.6,4257.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5667~1" class="node nodeCM pw_histidine-metabolism lid10" transform="translate(1332.8,4251.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5398~0" class="node nodeCM pw_histidine-metabolism lid4" transform="translate(276.9,161.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5398~1" class="node nodeCM pw_histidine-metabolism lid30" transform="translate(316.5,253.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node5402~0" class="node nodeCM pw_histidine-metabolism lid4" transform="translate(434.5,528.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5402~1" class="node nodeCM pw_histidine-metabolism lid17" transform="translate(474.1,620.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node5404~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(593.3,896.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5404~1" class="node nodeCM pw_histidine-metabolism lid17" transform="translate(633.0,988.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node5408~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(752.5,1266.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5393~0" class="node nodeCM pw_histidine-metabolism lid102" transform="translate(945.0,2066.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node5393~1" class="node nodeCM pw_histidine-metabolism lid41" transform="translate(1117.8,2076.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5393~2" class="node nodeCM pw_histidine-metabolism lid224862" transform="translate(1189.1,2165.2)"><rect rx="5" height="30.0" width="392.3" x="-196.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224862" target="_blank">5-amino-1-(5-phospho-beta-D-ribosyl)imidazole-4-carboxamide</a></text><title></title></g>
+<g id="node5389~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(1151.2,2533.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5386~0" class="node nodeCM pw_histidine-metabolism lid34" transform="translate(1450.5,2853.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5386~1" class="node nodeCM pw_histidine-metabolism lid41" transform="translate(1409.8,2761.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5381~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(1449.3,3204.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5381~1" class="node nodeCM pw_histidine-metabolism lid16" transform="translate(1618.8,3239.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5378~0" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(1614.4,3603.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5378~1" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(1650.7,3698.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5376~0" class="node nodeCM pw_histidine-metabolism lid7" transform="translate(1783.0,4079.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5376~1" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(1794.6,4032.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5376~2" class="node nodeCM pw_histidine-metabolism lid8" transform="translate(1958.8,4092.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5657~0" class="node nodeCM pw_histidine-metabolism lid27" transform="translate(4121.2,4571.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5660~0" class="node nodeCM pw_histidine-metabolism lid1" transform="translate(4427.8,4564.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11019~0" class="node nodeCM pw_histidine-metabolism lid4" transform="translate(2076.0,4254.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11019~1" class="node nodeCM pw_histidine-metabolism lid30" transform="translate(2062.2,4082.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node11019~2" class="node nodeCM pw_histidine-metabolism lid17" transform="translate(2110.3,4084.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node5480~0" class="node nodeCM pw_histidine-metabolism lid207" transform="translate(3586.3,4731.7)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=207" target="_blank">(6S)-THFA</a></text><title></title></g>
+</g></svg>
+<text x="2159.2" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (kamada_kawai)</text></svg>

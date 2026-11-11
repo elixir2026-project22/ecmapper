@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2206.4 2510.0" width="2206" height="2510" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2206.4" height="2510.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ginsenoside-metabolism" class="pw " x="0.0" y="0.0" width="2086.4" height="2374.5" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 969.9 1444.9 L 1051.7 1286.9"/>
+<path class="link" marker-end="url(#in)" d="M 952.0 1476.9 L 872.1 1610.7"/>
+<path class="link" marker-start="url(#in)" d="M 744.1 1642.3 L 808.0 1633.9"/>
+<path class="link" marker-end="url(#in)" d="M 673.7 1650.3 L 603.4 1657.1"/>
+<path class="link" marker-end="url(#in)" d="M 415.8 1644.2 L 500.7 1655.3"/>
+<path class="link" marker-start="url(#in)" d="M 345.5 1644.1 L 256.2 1655.5"/>
+<path class="link" marker-start="url(#in)" d="M 415.8 1679.9 L 500.7 1668.8"/>
+<path class="link" marker-end="url(#in)" d="M 345.5 1680.1 L 256.2 1668.6"/>
+<path class="link" marker-start="url(#in)" d="M 207.8 1486.0 C 207.2 1521.9 205.7 1610.7 205.1 1646.7"/>
+<path class="link" marker-end="url(#in)" d="M 217.1 1454.7 L 271.8 1358.6"/>
+<path class="link" marker-end="url(#in)" d="M 209.8 1531.7 L 205.4 1646.1"/>
+<path class="link" marker-start="url(#in)" d="M 216.7 1500.3 C 230.1 1467.4 261.5 1390.4 274.8 1357.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 395.1 1249.0 C 369.7 1269.7 324.9 1306.5 299.6 1327.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 445.7 1241.0 L 498.5 1253.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 374.1 1294.6 L 312.0 1326.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 440.2 1275.6 L 498.5 1270.7"/>
+<path class="link" marker-end="url(#in)" d="M 763.3 1270.2 L 607.7 1267.2"/>
+<path class="link" marker-start="url(#in)" d="M 833.6 1270.9 L 1005.4 1270.9"/>
+<path class="link" marker-start="url(#in)" d="M 552.1 1428.0 L 553.0 1282.1"/>
+<path class="link" marker-end="url(#in)" d="M 552.0 1460.0 L 552.0 1646.1"/>
+<path class="link" marker-start="url(#in)" d="M 203.9 1810.9 L 204.7 1678.1"/>
+<path class="link" marker-end="url(#in)" d="M 203.3 1842.3 C 202.3 1871.5 200.2 1934.4 199.1 1963.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 127.8 1819.0 C 143.8 1786.4 181.1 1710.4 197.2 1677.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 128.9 1850.3 L 190.0 1963.1"/>
+<path class="link" marker-end="url(#in)" d="M 203.7 1856.4 C 203.9 1817.6 204.5 1716.3 204.7 1677.5"/>
+<path class="link" marker-start="url(#in)" d="M 202.9 1887.2 C 201.9 1907.6 200.3 1943.4 199.3 1963.8"/>
+<path class="link" marker-start="url(#in)" d="M 196.5 2159.8 L 198.4 1995.1"/>
+<path class="link" marker-end="url(#in)" d="M 196.3 2191.8 L 196.3 2308.5"/>
+<path class="link" marker-start="url(#in)" d="M 1226.7 1391.5 L 1082.1 1286.9"/>
+<path class="link" marker-end="url(#in)" d="M 1279.8 1423.5 L 1456.1 1514.6"/>
+<path class="link" marker-start="url(#in)" d="M 1615.6 1613.7 L 1511.8 1546.6"/>
+<path class="link" marker-end="url(#in)" d="M 1658.8 1645.7 L 1774.8 1746.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1898.8 1827.9 L 1818.9 1778.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1924.5 1859.9 L 1924.5 1941.4"/>
+<path class="link" marker-start="url(#in)" d="M 1843.7 1877.3 L 1800.3 1778.0"/>
+<path class="link" marker-end="url(#in)" d="M 1869.1 1909.3 L 1906.1 1941.4"/>
+<path class="link" marker-start="url(#in)" d="M 1495.1 1668.0 L 1488.0 1546.6"/>
+<path class="link" marker-end="url(#in)" d="M 1496.6 1700.0 L 1500.1 1817.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1500.6 1956.9 L 1500.6 1849.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1508.7 1988.9 L 1559.0 2087.7"/>
+<path class="link" marker-end="url(#in)" d="M 1060.0 1112.4 C 1060.0 1145.5 1060.0 1222.9 1060.0 1255.7"/>
+<path class="link" marker-start="url(#in)" d="M 1066.8 1081.0 L 1132.9 926.4"/>
+<path class="link" marker-end="url(#in)" d="M 1205.4 771.0 L 1147.3 894.4"/>
+<path class="link" marker-start="url(#in)" d="M 1223.3 739.0 L 1300.1 620.9"/>
+<path class="link" marker-start="url(#in)" d="M 1439.6 604.0 L 1426.6 604.0"/>
+<path class="link" marker-end="url(#in)" d="M 1509.9 603.7 L 1572.7 603.7"/>
+<path class="link" marker-start="url(#in)" d="M 1729.7 548.1 L 1647.5 587.7"/>
+<path class="link" marker-end="url(#in)" d="M 1782.4 516.1 L 1865.5 447.6"/>
+<path class="link" marker-start="url(#in)" d="M 1884.9 319.6 L 1884.9 415.6"/>
+<path class="link" marker-end="url(#in)" d="M 1865.8 287.6 L 1809.6 240.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1704.5 157.7 L 1769.9 208.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1670.0 125.7 L 1620.4 68.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 954.8 1444.9 L 893.6 1301.5"/>
+<path class="link" marker-end="url(#in)" d="M 926.4 1464.6 L 890.4 1468.3"/>
+<path class="link" marker-start="url(#in)" d="M 723.0 1662.9 L 756.9 1701.2"/>
+<path class="link" marker-end="url(#in)" d="M 700.2 1662.9 L 675.9 1707.7"/>
+<path class="link" marker-start="url(#in)" d="M 345.5 1632.7 L 314.0 1626.6"/>
+<path class="link" marker-end="url(#in)" d="M 391.8 1623.6 L 425.1 1576.0"/>
+<path class="link" marker-start="url(#in)" d="M 391.5 1668.6 L 423.5 1621.6"/>
+<path class="link" marker-end="url(#in)" d="M 371.2 1700.6 L 311.9 1801.2"/>
+<path class="link" marker-start="url(#in)" d="M 217.5 1486.7 L 288.8 1607.6"/>
+<path class="link" marker-end="url(#in)" d="M 193.8 1454.7 L 157.8 1414.1"/>
+<path class="link" marker-start="url(#in)" d="M 194.9 1499.7 L 157.7 1461.5"/>
+<path class="link" marker-end="url(#in)" d="M 224.6 1531.7 L 254.2 1565.0"/>
+<path class="link" marker-start="url(#in)" d="M 408.2 1249.6 L 390.5 1300.0"/>
+<path class="link" marker-end="url(#in)" d="M 419.4 1217.6 L 440.3 1158.0"/>
+<path class="link" marker-start="url(#in)" d="M 408.2 1294.6 L 421.5 1362.6"/>
+<path class="link" marker-end="url(#in)" d="M 410.7 1262.6 L 428.4 1212.1"/>
+<path class="link" marker-start="url(#in)" d="M 833.6 1276.7 L 858.1 1280.8"/>
+<path class="link" marker-end="url(#in)" d="M 787.5 1254.9 L 760.0 1214.8"/>
+<path class="link" marker-start="url(#in)" d="M 520.9 1428.0 L 453.4 1393.3"/>
+<path class="link" marker-end="url(#in)" d="M 574.7 1460.0 L 607.7 1483.2"/>
+<path class="link" marker-start="url(#in)" d="M 183.8 1810.9 L 148.1 1782.3"/>
+<path class="link" marker-end="url(#in)" d="M 239.0 1823.4 L 286.7 1818.8"/>
+<path class="link" marker-start="url(#in)" d="M 98.4 1818.3 L 65.4 1794.3"/>
+<path class="link" marker-end="url(#in)" d="M 137.8 1850.3 L 181.2 1889.9"/>
+<path class="link" marker-start="url(#in)" d="M 225.5 1887.9 L 258.5 1911.9"/>
+<path class="link" marker-end="url(#in)" d="M 186.1 1855.9 L 142.7 1816.3"/>
+<path class="link" marker-start="url(#in)" d="M 173.8 2159.8 L 140.8 2136.4"/>
+<path class="link" marker-end="url(#in)" d="M 218.8 2191.8 L 252.9 2216.0"/>
+<path class="link" marker-start="url(#in)" d="M 1229.5 1423.5 L 1158.5 1482.5"/>
+<path class="link" marker-start="url(#in)" d="M 1207.2 1413.1 L 1176.3 1417.3"/>
+<path class="link" marker-end="url(#in)" d="M 1268.1 1391.5 L 1340.4 1331.5"/>
+<path class="link" marker-end="url(#in)" d="M 1290.5 1401.9 L 1319.7 1397.9"/>
+<path class="link" marker-start="url(#in)" d="M 1603.4 1645.7 L 1590.6 1651.3"/>
+<path class="link" marker-end="url(#in)" d="M 1634.1 1645.7 L 1609.7 1707.9"/>
+<path class="link" marker-end="url(#in)" d="M 1959.6 1834.5 L 1993.2 1825.6"/>
+<path class="link" marker-end="url(#in)" d="M 1959.6 1854.7 L 1982.1 1861.6"/>
+<path class="link" marker-start="url(#in)" d="M 1783.2 1892.0 L 1781.2 1892.0"/>
+<path class="link" marker-end="url(#in)" d="M 1918.3 1894.6 L 1922.3 1894.7"/>
+<path class="link" marker-start="url(#in)" d="M 1508.9 1668.0 L 1529.2 1642.8"/>
+<path class="link" marker-end="url(#in)" d="M 1531.2 1697.0 L 1587.8 1718.1"/>
+<path class="link" marker-start="url(#in)" d="M 1514.6 1956.9 L 1562.2 1902.4"/>
+<path class="link" marker-end="url(#in)" d="M 1529.3 1984.0 L 1564.6 1997.7"/>
+<path class="link" marker-start="url(#in)" d="M 1026.8 1081.0 L 971.7 1054.4"/>
+<path class="link" marker-start="url(#in)" d="M 1053.4 1081.0 L 1028.3 1020.4"/>
+<path class="link" marker-end="url(#in)" d="M 1092.9 1113.0 L 1149.9 1140.6"/>
+<path class="link" marker-end="url(#in)" d="M 1066.6 1113.0 L 1092.3 1174.6"/>
+<path class="link" marker-start="url(#in)" d="M 1248.1 751.4 L 1284.1 747.8"/>
+<path class="link" marker-start="url(#in)" d="M 1766.8 548.1 L 1792.3 654.7"/>
+<path class="link" marker-start="url(#in)" d="M 1757.6 548.1 L 1741.1 597.4"/>
+<path class="link" marker-end="url(#in)" d="M 1759.1 516.1 L 1733.3 408.0"/>
+<path class="link" marker-end="url(#in)" d="M 1768.3 516.1 L 1785.4 465.3"/>
+<path class="link" marker-start="url(#in)" d="M 1920.1 310.1 L 1948.5 315.4"/>
+<path class="link" marker-end="url(#in)" d="M 1849.8 297.1 L 1814.7 290.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ginsenoside-metabolism" transform="translate(1043.2,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">ginsenoside metabolism</text></g>
+<g id="node2109" class="node nodeHM pw_ginsenoside-metabolism lid19767" transform="translate(1060.0,1270.9)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19767" target="_blank">protopanaxadiol</a></text><title></title></g>
+<g id="node11985" class="node nodeHM pw_ginsenoside-metabolism lid78801" transform="translate(862.6,1626.7)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=78801" target="_blank">ginsenoside C-K</a></text><title></title></g>
+<g id="node11989" class="node nodeHM pw_ginsenoside-metabolism lid12093" transform="translate(552.0,1662.1)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12093" target="_blank">ginsenoside F2</a></text><title></title></g>
+<g id="node2105" class="node nodeHM pw_ginsenoside-metabolism lid3556" transform="translate(204.8,1662.1)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3556" target="_blank">ginsenoside Rd</a></text><title></title></g>
+<g id="node11993" class="node nodeHM pw_ginsenoside-metabolism lid10261" transform="translate(280.9,1342.6)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10261" target="_blank">ginsenoside Rg3</a></text><title></title></g>
+<g id="node11995" class="node nodeHM pw_ginsenoside-metabolism lid78769" transform="translate(553.1,1266.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=78769" target="_blank">ginsenoside Rh2</a></text><title></title></g>
+<g id="node2103" class="node nodeHM pw_ginsenoside-metabolism lid3919" transform="translate(198.6,1979.1)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3919" target="_blank">ginsenoside Rb1</a></text><title></title></g>
+<g id="node2083" class="node nodeHM pw_ginsenoside-metabolism lid78719" transform="translate(196.3,2324.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=78719" target="_blank">gypenoside XVII</a></text><title></title></g>
+<g id="node2101" class="node nodeHM pw_ginsenoside-metabolism lid19725" transform="translate(1487.1,1530.6)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19725" target="_blank">protopanaxatriol</a></text><title></title></g>
+<g id="node11966" class="node nodeHM pw_ginsenoside-metabolism lid42359" transform="translate(1793.3,1762.0)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42359" target="_blank">ginsenoside F1</a></text><title></title></g>
+<g id="node2099" class="node nodeHM pw_ginsenoside-metabolism lid8698" transform="translate(1924.5,1957.4)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8698" target="_blank">ginsenoside Rg1</a></text><title></title></g>
+<g id="node11976" class="node nodeHM pw_ginsenoside-metabolism lid11912" transform="translate(1500.6,1833.9)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11912" target="_blank">ginsenoside Rh1</a></text><title></title></g>
+<g id="node11980" class="node nodeHM pw_ginsenoside-metabolism lid28873" transform="translate(1567.1,2103.7)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28873" target="_blank">ginsenoside Rg2</a></text><title></title></g>
+<g id="node2113" class="node nodeHM pw_ginsenoside-metabolism lid138544" transform="translate(1139.7,910.4)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=138544" target="_blank">dammarenediol II</a></text><title></title></g>
+<g id="node2122" class="node nodeHM pw_ginsenoside-metabolism lid1906" transform="translate(1310.4,604.9)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1906" target="_blank">(3S)-2,3-epoxy-2,3-dihydrosqualene</a></text><title></title></g>
+<g id="node2114" class="node nodeHM pw_ginsenoside-metabolism lid2919" transform="translate(1614.3,603.7)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2919" target="_blank">beta-amyrin</a></text><title></title></g>
+<g id="node2110" class="node nodeHM pw_ginsenoside-metabolism lid200991" transform="translate(1884.9,431.6)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=200991" target="_blank">oleanolate</a></text><title></title></g>
+<g id="node2107" class="node nodeHM pw_ginsenoside-metabolism lid230376" transform="translate(1790.5,224.7)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230376" target="_blank">oleanolate 3-O-beta-D-glucoside</a></text><title></title></g>
+<g id="node1442" class="node nodeHM pw_ginsenoside-metabolism lid42558" transform="translate(1606.5,52.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42558" target="_blank">ginsenoside Ro</a></text><title></title></g>
+<g id="node2106" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(961.6,1460.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.363" target="_blank">2.4.1.363</a></text><title>ginsenoside 20-O-glucosyltransferase</title></g>
+<g id="node11986" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(708.9,1646.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.364" target="_blank">2.4.1.364</a></text><title>protopanaxadiol-type ginsenoside 3-O-glucosyltransferase</title></g>
+<g id="node2082" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(380.6,1639.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.191" target="_blank">3.2.1.191</a></text><title>ginsenosidase type III; protopanaxadiol-type ginsenoside-3-O-glucoside 2&#x27;&#x27;-O-glucosyltransferase</title></g>
+<g id="node11990" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(380.6,1684.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.365" target="_blank">2.4.1.365</a></text><title>ginsenosidase type III; protopanaxadiol-type ginsenoside-3-O-glucoside 2&#x27;&#x27;-O-glucosyltransferase</title></g>
+<g id="node2074" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(208.0,1470.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.192" target="_blank">3.2.1.192</a></text><title>ginsenoside Rb1 beta-glucosidase; ginsenoside 20-O-glucosyltransferase</title></g>
+<g id="node1269" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(210.4,1515.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.363" target="_blank">2.4.1.363</a></text><title>ginsenoside Rb1 beta-glucosidase; ginsenoside 20-O-glucosyltransferase</title></g>
+<g id="node2073" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(413.8,1233.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21" target="_blank">3.2.1.21</a></text><title>beta-glucosidase; protopanaxadiol-type ginsenoside-3-O-glucoside 2&#x27;&#x27;-O-glucosyltransferase</title></g>
+<g id="node11996" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(405.1,1278.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.365" target="_blank">2.4.1.365</a></text><title>beta-glucosidase; protopanaxadiol-type ginsenoside-3-O-glucoside 2&#x27;&#x27;-O-glucosyltransferase</title></g>
+<g id="node11994" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(798.5,1270.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.364" target="_blank">2.4.1.364</a></text><title>protopanaxadiol-type ginsenoside 3-O-glucosyltransferase</title></g>
+<g id="node1266" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(552.0,1444.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.363" target="_blank">2.4.1.363</a></text><title>ginsenoside 20-O-glucosyltransferase</title></g>
+<g id="node2104" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(203.8,1826.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.314" target="_blank">2.4.1.314</a></text><title>ginsenoside Rd glucosyltransferase; 20-O-multi-glycoside ginsenosidase; ginsenoside Rb1 beta-glucosidase</title></g>
+<g id="node2085" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(120.3,1834.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.195" target="_blank">3.2.1.195</a></text><title>ginsenoside Rd glucosyltransferase; 20-O-multi-glycoside ginsenosidase; ginsenoside Rb1 beta-glucosidase</title></g>
+<g id="node2075" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(203.6,1871.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.192" target="_blank">3.2.1.192</a></text><title>ginsenoside Rd glucosyltransferase; 20-O-multi-glycoside ginsenosidase; ginsenoside Rb1 beta-glucosidase</title></g>
+<g id="node2084" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(196.3,2175.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.191" target="_blank">3.2.1.191</a></text><title>ginsenosidase type III</title></g>
+<g id="node2102" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1248.8,1407.5)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.121" target="_blank">1.14.14.121</a></text><title>protopanaxadiol 6-hydroxylase</title></g>
+<g id="node11967" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1640.3,1629.7)"><rect rx="15" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.363" target="_blank">2.4.1.363/2.4.1.366</a></text><title>ginsenoside 20-O-glucosyltransferase;ginsenoside F1 6-O-glucosyltransferase</title></g>
+<g id="node11974" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1924.5,1843.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.194" target="_blank">3.2.1.194</a></text><title>ginsenosidase type IV; ginsenoside F1 6-O-glucosyltransferase;ginsenoside 6-O-glucosyltransferase</title></g>
+<g id="node2100" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1850.7,1893.3)"><rect rx="15" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.366" target="_blank">2.4.1.366/2.4.1.367</a></text><title>ginsenosidase type IV; ginsenoside F1 6-O-glucosyltransferase;ginsenoside 6-O-glucosyltransferase</title></g>
+<g id="node11977" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1496.1,1684.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.367" target="_blank">2.4.1.367</a></text><title>ginsenoside 6-O-glucosyltransferase</title></g>
+<g id="node11981" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1500.6,1972.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-" target="_blank">2.4.1.-</a></text><title>unknown</title></g>
+<g id="node2111" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1060.0,1097.0)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.120" target="_blank">1.14.14.120</a></text><title>dammarenediol 12-hydroxylase</title></g>
+<g id="node2115" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1212.9,755.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.125" target="_blank">4.2.1.125</a></text><title>dammarenediol II synthase</title></g>
+<g id="node2116" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1474.8,603.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.39" target="_blank">5.4.99.39</a></text><title>beta-amyrin synthase</title></g>
+<g id="node2112" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1763.0,532.1)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.126" target="_blank">1.14.14.126</a></text><title>beta-amyrin 28-monooxygenase</title></g>
+<g id="node2108" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1884.9,303.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.368" target="_blank">2.4.1.368</a></text><title>oleanolate 3-O-glucosyltransferase</title></g>
+<g id="node1443" class="node nodeEN pw_ginsenoside-metabolism" transform="translate(1683.9,141.7)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>unknown</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2106~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(874.7,1470.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11986~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(771.1,1717.2)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11986~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(667.2,1723.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node2082~1" class="node nodeCM pw_ginsenoside-metabolism lid35" transform="translate(436.3,1560.0)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node11990~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(434.4,1605.6)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11990~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(302.5,1817.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node2074~0" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(298.3,1623.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2074~1" class="node nodeCM pw_ginsenoside-metabolism lid35" transform="translate(143.6,1398.1)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node1269~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(142.2,1445.5)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node1269~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(268.4,1581.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node2073~0" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(384.9,1316.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2073~1" class="node nodeCM pw_ginsenoside-metabolism lid35" transform="translate(445.9,1142.0)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node11996~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(424.7,1378.6)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11996~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(434.0,1196.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11994~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(886.8,1285.5)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11994~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(749.1,1198.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node1266~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(623.5,1494.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node2104~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(128.0,1766.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node2085~0" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(49.7,1782.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2085~1" class="node nodeCM pw_ginsenoside-metabolism lid35" transform="translate(198.7,1905.9)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node2075~0" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(274.2,1923.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2075~1" class="node nodeCM pw_ginsenoside-metabolism lid35" transform="translate(125.2,1800.3)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node2084~0" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(125.1,2125.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2084~1" class="node nodeCM pw_ginsenoside-metabolism lid35" transform="translate(275.4,2232.0)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node2102~0" class="node nodeCM pw_ginsenoside-metabolism lid1123" transform="translate(1139.2,1498.5)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node2102~1" class="node nodeCM pw_ginsenoside-metabolism lid9" transform="translate(1163.9,1419.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2102~2" class="node nodeCM pw_ginsenoside-metabolism lid88270" transform="translate(1359.7,1315.5)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node2102~3" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(1335.4,1395.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11967~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(1561.9,1663.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11967~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(1603.5,1723.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11974~0" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(2008.9,1821.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11974~1" class="node nodeCM pw_ginsenoside-metabolism lid35" transform="translate(2017.3,1872.5)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35" target="_blank">D-glucose</a></text><title></title></g>
+<g id="node2100~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(1752.5,1891.5)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node2100~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(1938.1,1895.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11977~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(1542.1,1626.8)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11981~0" class="node nodeCM pw_ginsenoside-metabolism lid11552" transform="translate(1576.2,1886.4)"><rect rx="5" height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11552" target="_blank">dTDP-beta-L-rhamnose</a></text><title></title></g>
+<g id="node11981~1" class="node nodeCM pw_ginsenoside-metabolism lid542" transform="translate(1583.6,2005.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=542" target="_blank">dTDP</a></text><title></title></g>
+<g id="node2111~0" class="node nodeCM pw_ginsenoside-metabolism lid1123" transform="translate(938.5,1038.4)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node2111~1" class="node nodeCM pw_ginsenoside-metabolism lid9" transform="translate(1021.7,1004.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2111~2" class="node nodeCM pw_ginsenoside-metabolism lid88270" transform="translate(1182.8,1156.6)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node2111~3" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(1099.0,1190.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2115~0" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(1299.8,746.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2112~0" class="node nodeCM pw_ginsenoside-metabolism lid1123" transform="translate(1796.1,670.7)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node2112~1" class="node nodeCM pw_ginsenoside-metabolism lid9" transform="translate(1735.7,613.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node2112~2" class="node nodeCM pw_ginsenoside-metabolism lid88270" transform="translate(1729.5,392.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node2112~3" class="node nodeCM pw_ginsenoside-metabolism lid1" transform="translate(1790.8,449.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2108~0" class="node nodeCM pw_ginsenoside-metabolism lid364" transform="translate(1977.2,320.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=364" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node2108~1" class="node nodeCM pw_ginsenoside-metabolism lid26" transform="translate(1799.0,287.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+</g></svg>

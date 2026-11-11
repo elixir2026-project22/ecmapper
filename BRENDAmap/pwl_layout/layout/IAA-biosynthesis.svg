@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 815.3 780.7" width="815" height="781" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="815.3" height="780.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_IAA-biosynthesis" class="pw " x="0.0" y="0.0" width="695.3" height="645.2" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 161.8 379.8 L 65.4 380.7"/>
+<path class="link" marker-end="url(#in)" d="M 232.1 379.5 L 351.3 379.5"/>
+<path class="link" marker-start="url(#in)" d="M 488.8 471.4 L 425.7 395.5"/>
+<path class="link" marker-end="url(#in)" d="M 517.1 503.4 L 588.4 579.2"/>
+<path class="link" marker-start="url(#in)" d="M 423.6 171.8 L 495.7 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 412.4 203.8 L 412.4 363.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 185.8 395.5 L 159.1 433.9"/>
+<path class="link" marker-end="url(#in)" d="M 202.4 363.5 L 219.7 312.8"/>
+<path class="link" marker-end="url(#in)" d="M 216.6 363.5 L 248.9 337.1"/>
+<path class="link" marker-start="url(#in)" d="M 505.9 471.4 L 518.6 418.4"/>
+<path class="link" marker-end="url(#in)" d="M 530.8 484.1 L 573.2 479.2"/>
+<path class="link" marker-start="url(#in)" d="M 399.5 171.8 L 370.4 135.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_IAA-biosynthesis" transform="translate(347.6,0.0)"><rect rx="10" height="31" width="166" x="-82.8" y="-15.5"/><text dominant-baseline="central">IAA biosynthesis</text></g>
+<g id="node1314" class="node nodeHM pw_IAA-biosynthesis lid119" transform="translate(49.7,380.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=119" target="_blank">Trp</a></text><title></title></g>
+<g id="node7745" class="node nodeHM pw_IAA-biosynthesis lid4257" transform="translate(412.4,379.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4257" target="_blank">3-indoleacetamide</a></text><title></title></g>
+<g id="node1313" class="node nodeHM pw_IAA-biosynthesis lid3639" transform="translate(603.5,595.2)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3639" target="_blank">indole-3-acetate</a></text><title></title></g>
+<g id="node7757" class="node nodeHM pw_IAA-biosynthesis lid3396" transform="translate(506.8,52.5)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3396" target="_blank">indole-3-acetonitrile</a></text><title></title></g>
+<g id="node7746" class="node nodeEN pw_IAA-biosynthesis" transform="translate(197.0,379.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.12.3" target="_blank">1.13.12.3</a></text><title>tryptophan 2-monooxygenase</title></g>
+<g id="node7758" class="node nodeEN pw_IAA-biosynthesis" transform="translate(502.1,487.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.4" target="_blank">3.5.1.4</a></text><title>amidase</title></g>
+<g id="node7756" class="node nodeEN pw_IAA-biosynthesis" transform="translate(412.4,187.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.84" target="_blank">4.2.1.84</a></text><title>nitrile hydratase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7746~0" class="node nodeCM pw_IAA-biosynthesis lid9" transform="translate(148.0,449.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7746~1" class="node nodeCM pw_IAA-biosynthesis lid1" transform="translate(225.1,296.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7746~2" class="node nodeCM pw_IAA-biosynthesis lid28" transform="translate(264.6,324.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node7758~0" class="node nodeCM pw_IAA-biosynthesis lid1" transform="translate(522.4,402.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7758~1" class="node nodeCM pw_IAA-biosynthesis lid27" transform="translate(588.9,477.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node7756~0" class="node nodeCM pw_IAA-biosynthesis lid1" transform="translate(357.5,119.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

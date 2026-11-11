@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1809.2 1917.1" width="1809" height="1917" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1809.2" height="1917.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_methanogenesis-from-CO2" class="pw " x="0.0" y="0.0" width="1689.2" height="1781.6" style="opacity: 0.5; fill: rgb(255, 201, 102);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 599.6 959.0 L 601.6 1082.6"/>
+<path class="link" marker-end="url(#in)" d="M 621.3 927.0 L 848.3 761.6"/>
+<path class="link" marker-end="url(#in)" d="M 1248.9 68.0 C 1223.0 94.4 1170.5 148.0 1144.8 174.2"/>
+<path class="link" marker-start="url(#in)" d="M 1268.6 67.7 C 1279.1 102.6 1304.9 187.8 1315.5 222.9"/>
+<path class="link" marker-start="url(#in)" d="M 1015.3 1160.4 L 1148.9 978.9"/>
+<path class="link" marker-end="url(#in)" d="M 975.8 1192.4 L 896.6 1238.2"/>
+<path class="link" marker-start="url(#in)" d="M 691.4 1496.8 C 684.9 1450.9 665.8 1315.2 659.3 1269.5"/>
+<path class="link" marker-start="url(#in)" d="M 704.4 1496.1 L 858.0 1270.2"/>
+<path class="link" marker-end="url(#in)" d="M 699.2 1528.1 L 761.4 1705.1"/>
+<path class="link" marker-end="url(#in)" d="M 664.8 1509.1 L 518.7 1493.5"/>
+<path class="link" marker-start="url(#in)" d="M 348.8 1345.0 L 427.9 1468.9"/>
+<path class="link" marker-start="url(#in)" d="M 354.2 1313.0 L 453.8 1211.4"/>
+<path class="link" marker-end="url(#in)" d="M 356.2 1313.5 C 404.2 1271.6 536.4 1155.9 584.2 1114.0"/>
+<path class="link" marker-start="url(#in)" d="M 1128.1 756.1 L 1158.2 946.9"/>
+<path class="link" marker-start="url(#in)" d="M 1121.1 724.1 L 1064.2 518.7"/>
+<path class="link" marker-end="url(#in)" d="M 1141.3 724.1 L 1261.7 602.1"/>
+<path class="link" marker-end="url(#in)" d="M 1093.6 740.7 L 1022.1 742.3"/>
+<path class="link" marker-start="url(#in)" d="M 1201.2 368.5 L 1305.5 254.2"/>
+<path class="link" marker-start="url(#in)" d="M 1169.5 400.5 L 1076.9 486.7"/>
+<path class="link" marker-end="url(#in)" d="M 1182.0 368.5 L 1134.6 205.3"/>
+<path class="link" marker-end="url(#in)" d="M 1193.8 400.5 L 1270.3 570.1"/>
+<path class="link" marker-start="url(#in)" d="M 1161.4 509.5 L 1094.9 505.1"/>
+<path class="link" marker-end="url(#in)" d="M 1214.0 527.9 L 1260.1 570.1"/>
+<path class="link" marker-start="url(#in)" d="M 1077.6 702.1 L 1155.6 946.9"/>
+<path class="link" marker-start="url(#in)" d="M 1071.3 670.1 L 1060.8 518.7"/>
+<path class="link" marker-end="url(#in)" d="M 1104.4 670.5 L 1244.7 602.1"/>
+<path class="link" marker-end="url(#in)" d="M 1040.5 695.4 L 924.6 729.6"/>
+<path class="link" marker-start="url(#in)" d="M 908.9 965.9 L 878.6 949.7"/>
+<path class="link" marker-start="url(#in)" d="M 934.5 966.8 C 922.1 924.2 887.1 803.7 874.7 760.9"/>
+<path class="link" marker-end="url(#in)" d="M 974.0 978.9 L 1034.8 973.7"/>
+<path class="link" marker-start="url(#in)" d="M 574.2 1521.4 C 552.2 1515.5 522.0 1507.4 495.7 1500.4"/>
+<path class="link" marker-end="url(#in)" d="M 606.7 1545.7 L 616.7 1651.1"/>
+<path class="link" marker-end="url(#in)" d="M 325.4 1626.4 L 425.4 1500.9"/>
+<path class="link" marker-start="url(#in)" d="M 280.8 1645.6 L 201.5 1653.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 270.2 1517.2 L 357.6 1500.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 222.1 1539.3 C 199.5 1565.8 153.4 1620.1 130.8 1646.7"/>
+<path class="link" marker-start="url(#in)" d="M 1048.9 892.9 L 994.3 817.7"/>
+<path class="link" marker-end="url(#in)" d="M 1090.2 924.9 L 1131.0 946.9"/>
+<path class="link" marker-start="url(#in)" d="M 1469.7 653.4 L 1597.9 663.7"/>
+<path class="link" marker-end="url(#in)" d="M 1399.3 636.2 L 1315.9 601.9"/>
+<path class="link" marker-start="url(#in)" d="M 381.3 1047.1 L 351.1 923.5"/>
+<path class="link" marker-start="url(#in)" d="M 372.2 1047.1 L 271.8 923.5"/>
+<path class="link" marker-end="url(#in)" d="M 395.4 1079.1 L 459.3 1179.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 567.5 941.8 L 526.2 940.2"/>
+<path class="link" marker-end="url(#in)" d="M 594.3 927.0 L 577.9 875.8"/>
+<path class="link" marker-start="url(#in)" d="M 1270.0 68.5 L 1301.8 153.2"/>
+<path class="link" marker-end="url(#in)" d="M 1245.3 68.5 L 1189.3 116.5"/>
+<path class="link" marker-start="url(#in)" d="M 1035.5 1182.0 L 1062.3 1186.8"/>
+<path class="link" marker-end="url(#in)" d="M 1005.9 1192.4 L 1017.9 1272.2"/>
+<path class="link" marker-end="url(#in)" d="M 331.6 1313.0 L 304.8 1251.5"/>
+<path class="link" marker-start="url(#in)" d="M 1172.8 527.9 L 1138.0 551.5"/>
+<path class="link" marker-end="url(#in)" d="M 963.6 965.9 L 998.4 943.4"/>
+<path class="link" marker-start="url(#in)" d="M 573.3 1545.1 L 542.2 1560.0"/>
+<path class="link" marker-start="url(#in)" d="M 573.3 1526.2 L 534.1 1521.8"/>
+<path class="link" marker-end="url(#in)" d="M 629.6 1513.7 L 668.2 1488.4"/>
+<path class="link" marker-end="url(#in)" d="M 637.1 1535.9 L 677.9 1543.7"/>
+<path class="link" marker-start="url(#in)" d="M 315.5 1658.4 L 325.5 1715.6"/>
+<path class="link" marker-start="url(#in)" d="M 306.2 1658.4 L 287.0 1705.9"/>
+<path class="link" marker-end="url(#in)" d="M 314.4 1626.4 L 320.6 1568.3"/>
+<path class="link" marker-start="url(#in)" d="M 236.8 1508.0 L 246.4 1417.7"/>
+<path class="link" marker-end="url(#in)" d="M 232.6 1540.0 L 224.4 1592.4"/>
+<path class="link" marker-start="url(#in)" d="M 1025.3 916.9 L 992.7 924.3"/>
+<path class="link" marker-end="url(#in)" d="M 1058.5 924.9 L 1051.6 980.9"/>
+<path class="link" marker-start="url(#in)" d="M 1452.2 634.6 L 1488.8 601.5"/>
+<path class="link" marker-end="url(#in)" d="M 1428.0 634.6 L 1408.1 585.7"/>
+<path class="link" marker-start="url(#in)" d="M 353.3 1060.3 L 318.8 1057.3"/>
+<path class="link" marker-end="url(#in)" d="M 417.1 1056.8 L 451.9 1050.0"/>
+<path class="link" marker-end="url(#in)" d="M 417.1 1078.8 L 432.8 1086.6"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_methanogenesis-from-CO2" transform="translate(844.6,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">methanogenesis from CO2</text></g>
+<g id="node3577" class="node nodeHM pw_methanogenesis-from-CO2 lid23500" transform="translate(601.8,1098.6)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=23500" target="_blank">5-formyl-5,6,7,8-tetrahydromethanopterin</a></text><title></title></g>
+<g id="node3565" class="node nodeHM pw_methanogenesis-from-CO2 lid5114" transform="translate(870.3,745.6)"><rect height="30.0" width="301.6" x="-150.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5114" target="_blank">5,10-methenyl-5,6,7,8-tetrahydromethanopterin</a></text><title></title></g>
+<g id="node11063" class="node nodeHM pw_methanogenesis-from-CO2 lid1992" transform="translate(1130.0,189.3)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1992" target="_blank">a quinone</a></text><title></title></g>
+<g id="node11064" class="node nodeHM pw_methanogenesis-from-CO2 lid2695" transform="translate(1320.1,238.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2695" target="_blank">a quinol</a></text><title></title></g>
+<g id="node3567" class="node nodeHM pw_methanogenesis-from-CO2 lid4488" transform="translate(1160.7,962.9)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4488" target="_blank">5,10-Methylenetetrahydromethanopterin</a></text><title></title></g>
+<g id="node3559" class="node nodeHM pw_methanogenesis-from-CO2 lid20046" transform="translate(868.8,1254.2)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20046" target="_blank">5-methyl-5,6,7,8-tetrahydromethanopterin</a></text><title></title></g>
+<g id="node12186" class="node nodeHM pw_methanogenesis-from-CO2 lid1614" transform="translate(657.2,1254.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1614" target="_blank">CoM</a></text><title></title></g>
+<g id="node3557" class="node nodeHM pw_methanogenesis-from-CO2 lid3879" transform="translate(767.0,1721.1)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3879" target="_blank">methyl-CoM</a></text><title></title></g>
+<g id="node3578" class="node nodeHM pw_methanogenesis-from-CO2 lid9357" transform="translate(438.2,1484.9)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9357" target="_blank">tetrahydromethanopterin</a></text><title></title></g>
+<g id="node3572" class="node nodeHM pw_methanogenesis-from-CO2 lid2405" transform="translate(469.5,1195.4)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2405" target="_blank">formylmethanofuran</a></text><title></title></g>
+<g id="node3575" class="node nodeHM pw_methanogenesis-from-CO2 lid1665" transform="translate(1059.7,502.7)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1665" target="_blank">F420 (ox)</a></text><title></title></g>
+<g id="node3562" class="node nodeHM pw_methanogenesis-from-CO2 lid1244" transform="translate(1277.5,586.1)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1244" target="_blank">F420 (red)</a></text><title></title></g>
+<g id="node3579" class="node nodeHM pw_methanogenesis-from-CO2 lid361" transform="translate(866.1,943.0)"><rect height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=361" target="_blank">H2</a></text><title></title></g>
+<g id="node10939" class="node nodeHM pw_methanogenesis-from-CO2 lid26840" transform="translate(618.2,1667.1)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26840" target="_blank">5,6,7,8-tetrahydrosarcinapterin</a></text><title></title></g>
+<g id="node2220" class="node nodeHM pw_methanogenesis-from-CO2 lid47544" transform="translate(117.8,1662.0)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47544" target="_blank">7,8-dihydromethanopterin</a></text><title></title></g>
+<g id="node11484" class="node nodeHM pw_methanogenesis-from-CO2 lid3445" transform="translate(982.7,801.7)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3445" target="_blank">5,6,7,8-tetrahydromethanopterin</a></text><title></title></g>
+<g id="node11304" class="node nodeHM pw_methanogenesis-from-CO2 lid120" transform="translate(1626.5,666.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node3570" class="node nodeHM pw_methanogenesis-from-CO2 lid8139" transform="translate(347.1,907.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8139" target="_blank">methanofuran</a></text><title></title></g>
+<g id="node11209" class="node nodeHM pw_methanogenesis-from-CO2 lid28" transform="translate(258.8,907.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3582" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(599.4,943.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.27" target="_blank">3.5.4.27</a></text><title>methenyltetrahydromethanopterin cyclohydrolase</title></g>
+<g id="node11065" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1264.0,52.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.B7" target="_blank">1.1.99.B7</a></text><title>menaquinol-acceptor oxidoreductase</title></g>
+<g id="node3561" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1003.5,1176.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.98.2" target="_blank">1.5.98.2</a></text><title>5,10-methylenetetrahydromethanopterin reductase</title></g>
+<g id="node3558" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(693.5,1512.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.2.1.4" target="_blank">7.2.1.4</a></text><title>tetrahydromethanopterin S-methyltransferase</title></g>
+<g id="node3566" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(338.5,1329.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.101" target="_blank">2.3.1.101</a></text><title>formylmethanofuran-tetrahydromethanopterin N-formyltransferase</title></g>
+<g id="node11308" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1125.5,740.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.98.1" target="_blank">1.5.98.1</a></text><title>methylenetetrahydromethanopterin dehydrogenase</title></g>
+<g id="node11062" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1186.6,384.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.98.4" target="_blank">1.1.98.4</a></text><title>F420H2:quinone oxidoreductase</title></g>
+<g id="node8066" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1196.5,511.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.12.98.1" target="_blank">1.12.98.1</a></text><title>coenzyme F420 hydrogenase</title></g>
+<g id="node3571" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1072.5,686.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.98.1" target="_blank">1.5.98.1</a></text><title>methylenetetrahydromethanopterin dehydrogenase</title></g>
+<g id="node3580" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(938.9,981.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.12.98.2" target="_blank">1.12.98.2</a></text><title>5,10-methenyltetrahydromethanopterin hydrogenase</title></g>
+<g id="node10938" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(605.2,1529.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.33" target="_blank">6.3.2.33</a></text><title>tetrahydrosarcinapterin synthase</title></g>
+<g id="node2219" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(312.7,1642.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.1.47" target="_blank">1.5.1.47</a></text><title>dihydromethanopterin reductase [NAD(P)+]; dihydromethanopterin reductase (acceptor)</title></g>
+<g id="node2218" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(235.1,1524.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.99.15" target="_blank">1.5.99.15</a></text><title>dihydromethanopterin reductase [NAD(P)+]; dihydromethanopterin reductase (acceptor)</title></g>
+<g id="node11483" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1060.5,908.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.147" target="_blank">4.2.1.147</a></text><title>5,6,7,8-tetrahydromethanopterin hydro-lyase</title></g>
+<g id="node11305" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(1434.5,650.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.98.3" target="_blank">1.17.98.3</a></text><title>formate dehydrogenase (coenzyme F420)</title></g>
+<g id="node3574" class="node nodeEN pw_methanogenesis-from-CO2" transform="translate(385.2,1063.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.12" target="_blank">1.2.7.12</a></text><title>Formylmethanofuran dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3582~0" class="node nodeCM pw_methanogenesis-from-CO2 lid12" transform="translate(513.7,939.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3582~1" class="node nodeCM pw_methanogenesis-from-CO2 lid1" transform="translate(572.8,859.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11065~0" class="node nodeCM pw_methanogenesis-from-CO2 lid374" transform="translate(1307.8,169.2)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node11065~1" class="node nodeCM pw_methanogenesis-from-CO2 lid1661" transform="translate(1170.6,132.5)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node3561~0" class="node nodeCM pw_methanogenesis-from-CO2 lid1244" transform="translate(1100.7,1193.6)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1244" target="_blank">F420 (red)</a></text><title></title></g>
+<g id="node3561~1" class="node nodeCM pw_methanogenesis-from-CO2 lid1665" transform="translate(1020.3,1288.2)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1665" target="_blank">F420 (ox)</a></text><title></title></g>
+<g id="node3566~0" class="node nodeCM pw_methanogenesis-from-CO2 lid8139" transform="translate(297.9,1235.5)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8139" target="_blank">methanofuran</a></text><title></title></g>
+<g id="node8066~0" class="node nodeCM pw_methanogenesis-from-CO2 lid361" transform="translate(1125.5,559.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=361" target="_blank">H2</a></text><title></title></g>
+<g id="node3580~0" class="node nodeCM pw_methanogenesis-from-CO2 lid12" transform="translate(1010.8,935.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10938~0" class="node nodeCM pw_methanogenesis-from-CO2 lid4" transform="translate(526.5,1567.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10938~1" class="node nodeCM pw_methanogenesis-from-CO2 lid41" transform="translate(518.4,1520.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10938~2" class="node nodeCM pw_methanogenesis-from-CO2 lid13" transform="translate(684.0,1478.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10938~3" class="node nodeCM pw_methanogenesis-from-CO2 lid16" transform="translate(690.4,1546.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node2219~0" class="node nodeCM pw_methanogenesis-from-CO2 lid5" transform="translate(328.3,1731.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2219~1" class="node nodeCM pw_methanogenesis-from-CO2 lid12" transform="translate(280.5,1721.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2219~2" class="node nodeCM pw_methanogenesis-from-CO2 lid10" transform="translate(322.3,1552.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2218~0" class="node nodeCM pw_methanogenesis-from-CO2 lid1661" transform="translate(248.1,1401.7)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1661" target="_blank">reduced electron acceptor</a></text><title></title></g>
+<g id="node2218~1" class="node nodeCM pw_methanogenesis-from-CO2 lid374" transform="translate(221.9,1608.4)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=374" target="_blank">oxidized electron acceptor</a></text><title></title></g>
+<g id="node11483~0" class="node nodeCM pw_methanogenesis-from-CO2 lid130" transform="translate(973.7,928.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title></title></g>
+<g id="node11483~1" class="node nodeCM pw_methanogenesis-from-CO2 lid1" transform="translate(1049.6,996.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11305~0" class="node nodeCM pw_methanogenesis-from-CO2 lid1665" transform="translate(1506.5,585.5)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1665" target="_blank">F420 (ox)</a></text><title></title></g>
+<g id="node11305~1" class="node nodeCM pw_methanogenesis-from-CO2 lid28" transform="translate(1401.6,569.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3574~0" class="node nodeCM pw_methanogenesis-from-CO2 lid265" transform="translate(293.3,1055.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node3574~1" class="node nodeCM pw_methanogenesis-from-CO2 lid289" transform="translate(474.1,1045.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node3574~2" class="node nodeCM pw_methanogenesis-from-CO2 lid1" transform="translate(448.5,1094.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

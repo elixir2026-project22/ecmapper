@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1232.1 444.0" width="1232" height="444" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1232.1" height="444.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_aerobactin-biosynthesis" class="pw " x="0.0" y="0.0" width="1112.1" height="308.5" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 176.3 138.2 L 65.4 138.2"/>
+<path class="link" marker-end="url(#in)" d="M 253.1 138.2 L 328.4 138.2"/>
+<path class="link" marker-start="url(#in)" d="M 509.6 138.2 L 431.1 138.2"/>
+<path class="link" marker-end="url(#in)" d="M 579.9 138.2 L 609.8 138.2"/>
+<path class="link" marker-start="url(#in)" d="M 842.8 138.2 L 809.7 138.2"/>
+<path class="link" marker-end="url(#in)" d="M 906.6 138.2 L 1001.3 138.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 209.2 154.2 L 190.7 207.8"/>
+<path class="link" marker-start="url(#in)" d="M 195.0 154.2 L 160.6 182.0"/>
+<path class="link" marker-end="url(#in)" d="M 220.1 122.2 L 238.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 234.7 122.2 L 267.7 95.8"/>
+<path class="link" marker-start="url(#in)" d="M 533.5 154.2 L 503.0 197.7"/>
+<path class="link" marker-end="url(#in)" d="M 555.9 154.2 L 583.6 193.7"/>
+<path class="link" marker-start="url(#in)" d="M 873.9 154.2 L 871.0 208.5"/>
+<path class="link" marker-start="url(#in)" d="M 863.6 154.2 L 802.3 242.5"/>
+<path class="link" marker-start="url(#in)" d="M 842.8 151.7 L 810.0 165.6"/>
+<path class="link" marker-end="url(#in)" d="M 880.2 122.2 L 897.7 71.6"/>
+<path class="link" marker-end="url(#in)" d="M 894.5 122.2 L 928.9 94.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_aerobactin-biosynthesis" transform="translate(556.1,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">aerobactin biosynthesis</text></g>
+<g id="node12204" class="node nodeHM pw_aerobactin-biosynthesis lid134" transform="translate(49.7,138.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=134" target="_blank">Lys</a></text><title></title></g>
+<g id="node7320" class="node nodeHM pw_aerobactin-biosynthesis lid20428" transform="translate(379.7,138.2)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20428" target="_blank">N6-hydroxy-Lys</a></text><title></title></g>
+<g id="node7331" class="node nodeHM pw_aerobactin-biosynthesis lid12815" transform="translate(709.7,138.2)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12815" target="_blank">N6-acetyl-N6-hydroxy-L-lysine</a></text><title></title></g>
+<g id="node7335" class="node nodeHM pw_aerobactin-biosynthesis lid21811" transform="translate(1039.7,138.2)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21811" target="_blank">aerobactin</a></text><title></title></g>
+<g id="node7327" class="node nodeEN pw_aerobactin-biosynthesis" transform="translate(214.7,138.2)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.59" target="_blank">1.14.13.59</a></text><title>L-lysine N6-monooxygenase (NADPH)</title></g>
+<g id="node7332" class="node nodeEN pw_aerobactin-biosynthesis" transform="translate(544.7,138.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.102" target="_blank">2.3.1.102</a></text><title>N6-hydroxylysine N-acetyltransferase</title></g>
+<g id="node7330" class="node nodeEN pw_aerobactin-biosynthesis" transform="translate(874.7,138.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.39" target="_blank">6.3.2.39</a></text><title>aerobactin synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7327~0" class="node nodeCM pw_aerobactin-biosynthesis lid5" transform="translate(185.2,223.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node7327~1" class="node nodeCM pw_aerobactin-biosynthesis lid9" transform="translate(148.1,192.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7327~2" class="node nodeCM pw_aerobactin-biosynthesis lid10" transform="translate(243.5,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node7327~3" class="node nodeCM pw_aerobactin-biosynthesis lid1" transform="translate(283.4,83.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7332~0" class="node nodeCM pw_aerobactin-biosynthesis lid29" transform="translate(491.8,213.7)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node7332~1" class="node nodeCM pw_aerobactin-biosynthesis lid18" transform="translate(594.8,209.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node7330~0" class="node nodeCM pw_aerobactin-biosynthesis lid4" transform="translate(870.1,224.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node7330~1" class="node nodeCM pw_aerobactin-biosynthesis lid19623" transform="translate(791.2,258.5)"><rect rx="5" height="30.0" width="262.7" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19623" target="_blank">N2-citryl-N6-acetyl-N6-hydroxy-L-lysine</a></text><title></title></g>
+<g id="node7330~2" class="node nodeCM pw_aerobactin-biosynthesis lid1" transform="translate(794.3,172.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7330~3" class="node nodeCM pw_aerobactin-biosynthesis lid13" transform="translate(903.2,55.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node7330~4" class="node nodeCM pw_aerobactin-biosynthesis lid16" transform="translate(941.4,84.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>

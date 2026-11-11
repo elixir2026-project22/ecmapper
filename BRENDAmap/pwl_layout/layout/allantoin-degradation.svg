@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2475.0 859.1" width="2475" height="859" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2475.0" height="859.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_allantoin-degradation" class="pw " x="0.0" y="0.0" width="2355.0" height="723.6" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 158.8 594.7 L 78.4 625.1"/>
+<path class="link" marker-end="url(#in)" d="M 216.2 572.9 L 309.7 537.1"/>
+<path class="link" marker-start="url(#in)" d="M 475.4 452.0 L 380.2 505.1"/>
+<path class="link" marker-end="url(#in)" d="M 533.0 420.0 L 656.5 351.8"/>
+<path class="link" marker-start="url(#in)" d="M 838.6 294.9 L 745.3 319.8"/>
+<path class="link" marker-end="url(#in)" d="M 902.4 290.5 L 1025.0 306.3"/>
+<path class="link" marker-start="url(#in)" d="M 1250.8 314.6 L 1121.2 313.1"/>
+<path class="link" marker-end="url(#in)" d="M 1308.2 315.1 L 1481.0 316.0"/>
+<path class="link" marker-start="url(#in)" d="M 1519.4 472.7 L 1519.4 332.2"/>
+<path class="link" marker-end="url(#in)" d="M 1547.5 503.5 C 1572.8 516.8 1610.0 536.4 1635.7 550.0"/>
+<path class="link" marker-start="url(#in)" d="M 1814.6 565.4 L 1726.1 565.4"/>
+<path class="link" marker-end="url(#in)" d="M 1858.7 549.4 L 1959.3 417.8"/>
+<path class="link" marker-start="url(#in)" d="M 2121.4 401.8 L 2039.1 401.8"/>
+<path class="link" marker-end="url(#in)" d="M 2178.7 415.1 L 2248.4 447.7"/>
+<path class="link" marker-start="url(#in)" d="M 1719.6 316.2 L 1557.8 316.2"/>
+<path class="link" marker-end="url(#in)" d="M 1777.0 327.2 L 1929.8 385.8"/>
+<path class="link" marker-start="url(#in)" d="M 2067.7 219.5 L 1980.0 385.8"/>
+<path class="link" marker-end="url(#in)" d="M 2086.3 187.5 L 2161.8 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 2149.8 526.5 L 1994.4 417.8"/>
+<path class="link" marker-end="url(#in)" d="M 2194.2 527.1 C 2213.5 513.2 2241.9 492.9 2261.2 479.0"/>
+<path class="link" marker-end="url(#in)" d="M 2185.5 558.5 L 2265.1 657.6"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 188.0 599.8 L 189.7 653.5"/>
+<path class="link" marker-start="url(#in)" d="M 178.2 599.8 L 152.9 643.4"/>
+<path class="link" marker-end="url(#in)" d="M 191.5 567.8 L 205.2 513.6"/>
+<path class="link" marker-start="url(#in)" d="M 472.1 420.4 L 441.2 405.4"/>
+<path class="link" marker-end="url(#in)" d="M 506.2 420.0 L 510.8 385.8"/>
+<path class="link" marker-start="url(#in)" d="M 857.8 270.3 L 829.7 234.9"/>
+<path class="link" marker-end="url(#in)" d="M 880.3 270.3 L 906.4 227.9"/>
+<path class="link" marker-start="url(#in)" d="M 1268.5 299.0 L 1241.0 259.0"/>
+<path class="link" marker-end="url(#in)" d="M 1290.9 299.0 L 1317.8 261.1"/>
+<path class="link" marker-start="url(#in)" d="M 1490.7 494.4 L 1447.8 502.9"/>
+<path class="link" marker-start="url(#in)" d="M 1490.7 477.8 L 1453.4 463.7"/>
+<path class="link" marker-end="url(#in)" d="M 1548.1 482.9 L 1589.3 474.7"/>
+<path class="link" marker-end="url(#in)" d="M 1548.1 499.5 L 1585.4 513.6"/>
+<path class="link" marker-start="url(#in)" d="M 1844.5 581.4 L 1837.9 636.1"/>
+<path class="link" marker-end="url(#in)" d="M 1863.7 581.4 L 1894.7 610.3"/>
+<path class="link" marker-end="url(#in)" d="M 1878.4 571.5 L 1918.2 579.2"/>
+<path class="link" marker-end="url(#in)" d="M 2157.1 417.8 L 2178.8 467.2"/>
+<path class="link" marker-start="url(#in)" d="M 1731.9 332.2 L 1701.5 361.8"/>
+<path class="link" marker-end="url(#in)" d="M 1755.5 332.2 L 1777.7 381.3"/>
+<path class="link" marker-start="url(#in)" d="M 2041.0 206.7 L 2006.5 209.8"/>
+<path class="link" marker-end="url(#in)" d="M 2068.7 187.5 L 2045.9 139.0"/>
+<path class="link" marker-start="url(#in)" d="M 2140.8 558.5 L 2110.3 573.8"/>
+<path class="link" marker-end="url(#in)" d="M 2204.6 526.5 L 2235.1 511.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_allantoin-degradation" transform="translate(1177.5,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">allantoin degradation</text></g>
+<g id="node12989" class="node nodeHM pw_allantoin-degradation lid710" transform="translate(56.2,633.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=710" target="_blank">urate</a></text><title></title></g>
+<g id="node7310" class="node nodeHM pw_allantoin-degradation lid2901" transform="translate(351.6,521.1)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2901" target="_blank">5-hydroxyisourate</a></text><title></title></g>
+<g id="node7312" class="node nodeHM pw_allantoin-degradation lid13389" transform="translate(685.5,335.8)"><rect height="30.0" width="418.2" x="-209.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13389" target="_blank">5-hydroxy-2-oxo-4-ureido-2,5-dihydro-1H-imidazole-5-carboxylate</a></text><title></title></g>
+<g id="node6978" class="node nodeHM pw_allantoin-degradation lid3029" transform="translate(1073.1,312.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3029" target="_blank">(S)-allantoin</a></text><title></title></g>
+<g id="node6976" class="node nodeHM pw_allantoin-degradation lid2334" transform="translate(1519.4,316.2)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2334" target="_blank">allantoate</a></text><title></title></g>
+<g id="node6982" class="node nodeHM pw_allantoin-degradation lid39639" transform="translate(1665.0,565.4)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=39639" target="_blank">(S)-ureidoglycine</a></text><title></title></g>
+<g id="node6991" class="node nodeHM pw_allantoin-degradation lid1342" transform="translate(1971.6,401.8)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1342" target="_blank">(S)-Ureidoglycolate</a></text><title></title></g>
+<g id="node7550" class="node nodeHM pw_allantoin-degradation lid101" transform="translate(2282.6,463.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101" target="_blank">glyoxylate</a></text><title></title></g>
+<g id="node11434" class="node nodeHM pw_allantoin-degradation lid30305" transform="translate(2172.0,52.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30305" target="_blank">oxalurate</a></text><title></title></g>
+<g id="node7548" class="node nodeHM pw_allantoin-degradation lid28" transform="translate(2278.0,673.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node7309" class="node nodeEN pw_allantoin-degradation" transform="translate(187.5,583.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.7.3.3" target="_blank">1.7.3.3</a></text><title>factor-independent urate hydroxylase</title></g>
+<g id="node7311" class="node nodeEN pw_allantoin-degradation" transform="translate(504.0,436.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.17" target="_blank">3.5.2.17</a></text><title>hydroxyisourate hydrolase</title></g>
+<g id="node7048" class="node nodeEN pw_allantoin-degradation" transform="translate(870.5,286.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.97" target="_blank">4.1.1.97</a></text><title>2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase</title></g>
+<g id="node6980" class="node nodeEN pw_allantoin-degradation" transform="translate(1279.5,315.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.5" target="_blank">3.5.2.5</a></text><title>allantoinase</title></g>
+<g id="node6985" class="node nodeEN pw_allantoin-degradation" transform="translate(1519.4,488.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.9" target="_blank">3.5.3.9</a></text><title>allantoate deiminase</title></g>
+<g id="node6988" class="node nodeEN pw_allantoin-degradation" transform="translate(1846.5,565.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.26" target="_blank">3.5.3.26</a></text><title>(S)-ureidoglycine aminohydrolase</title></g>
+<g id="node12994" class="node nodeEN pw_allantoin-degradation" transform="translate(2150.0,401.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.2.3" target="_blank">4.3.2.3</a></text><title>ureidoglycolate lyase</title></g>
+<g id="node12991" class="node nodeEN pw_allantoin-degradation" transform="translate(1748.3,316.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.4" target="_blank">3.5.3.4</a></text><title>allantoicase</title></g>
+<g id="node11431" class="node nodeEN pw_allantoin-degradation" transform="translate(2076.2,203.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.350" target="_blank">1.1.1.350</a></text><title>ureidoglycolate dehydrogenase (NAD+)</title></g>
+<g id="node7551" class="node nodeEN pw_allantoin-degradation" transform="translate(2172.7,542.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.116" target="_blank">3.5.1.116</a></text><title>ureidoglycolate amidohydrolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7309~0" class="node nodeCM pw_allantoin-degradation lid9" transform="translate(190.2,669.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7309~1" class="node nodeCM pw_allantoin-degradation lid1" transform="translate(143.6,659.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7309~2" class="node nodeCM pw_allantoin-degradation lid1126" transform="translate(209.3,497.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node7311~0" class="node nodeCM pw_allantoin-degradation lid1" transform="translate(425.5,397.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7311~1" class="node nodeCM pw_allantoin-degradation lid12" transform="translate(512.9,369.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7048~0" class="node nodeCM pw_allantoin-degradation lid12" transform="translate(817.2,219.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7048~1" class="node nodeCM pw_allantoin-degradation lid28" transform="translate(916.2,211.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node6980~0" class="node nodeCM pw_allantoin-degradation lid1" transform="translate(1230.0,243.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6980~1" class="node nodeCM pw_allantoin-degradation lid12" transform="translate(1329.2,245.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6985~0" class="node nodeCM pw_allantoin-degradation lid12" transform="translate(1435.3,505.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6985~1" class="node nodeCM pw_allantoin-degradation lid1" transform="translate(1437.7,457.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6985~2" class="node nodeCM pw_allantoin-degradation lid27" transform="translate(1605.1,471.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node6985~3" class="node nodeCM pw_allantoin-degradation lid28" transform="translate(1601.1,519.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node6988~0" class="node nodeCM pw_allantoin-degradation lid1" transform="translate(1836.0,652.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6988~1" class="node nodeCM pw_allantoin-degradation lid27" transform="translate(1910.5,624.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node6988~2" class="node nodeCM pw_allantoin-degradation lid12" transform="translate(1930.7,581.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node12994~0" class="node nodeCM pw_allantoin-degradation lid116" transform="translate(2185.9,483.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node12991~0" class="node nodeCM pw_allantoin-degradation lid1" transform="translate(1685.7,377.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node12991~1" class="node nodeCM pw_allantoin-degradation lid116" transform="translate(1784.9,397.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node11431~0" class="node nodeCM pw_allantoin-degradation lid7" transform="translate(1987.5,211.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11431~1" class="node nodeCM pw_allantoin-degradation lid8" transform="translate(2038.4,123.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node7551~0" class="node nodeCM pw_allantoin-degradation lid1" transform="translate(2094.6,581.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7551~1" class="node nodeCM pw_allantoin-degradation lid27" transform="translate(2250.8,503.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3153" height="1698" viewBox="0 0 3153.5 1697.9"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="4290.7 6321.5 1546.9 617.7" width="1547" height="618" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="4290.7" y="6321.5" width="1546.9" height="617.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_benzoyl-CoA-degradation" class="pw pw6" x="4330.7" y="6377.0" width="1466.9" height="522.2" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4735.7 6476.8 L 4835.0 6477.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4657.3 6476.8 L 4546.7 6476.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5035.6 6477.4 L 4924.7 6477.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5102.7 6477.5 L 5236.2 6477.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5581.6 6477.9 L 5455.9 6477.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5620.7 6493.9 L 5620.2 6547.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5347.0 6547.6 L 5346.3 6493.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5310.8 6563.6 L 5029.2 6563.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5619.8 6629.0 L 5620.0 6579.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5619.5 6661.0 L 5618.9 6718.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4933.6 6706.3 L 4933.5 6579.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4933.7 6738.3 L 4933.8 6823.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5390.8 6736.0 L 5508.8 6735.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5318.0 6736.2 L 5224.8 6736.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5547.9 6841.4 L 5420.1 6841.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5615.0 6841.4 L 5685.8 6841.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5150.5 6826.5 L 5151.5 6752.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 5189.5 6842.3 L 5296.5 6841.6"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 5056.3 6461.5 L 5024.8 6422.4"/>
+<path class="link" marker-start="url(#in)" d="M 5035.6 6491.8 L 5000.1 6507.0"/>
+<path class="link" marker-start="url(#in)" d="M 5035.6 6463.1 L 4996.6 6446.5"/>
+<path class="link" marker-end="url(#in)" d="M 5084.1 6461.5 L 5119.9 6423.2"/>
+<path class="link" marker-end="url(#in)" d="M 5102.7 6490.2 L 5149.2 6507.9"/>
+<path class="link" marker-end="url(#in)" d="M 5102.7 6464.9 L 5151.3 6446.8"/>
+<path class="link" marker-start="url(#in)" d="M 5602.6 6461.9 L 5577.8 6440.1"/>
+<path class="link" marker-start="url(#in)" d="M 5310.8 6578.1 L 5241.8 6605.7"/>
+<path class="link" marker-end="url(#in)" d="M 5378.1 6579.6 L 5424.6 6603.8"/>
+<path class="link" marker-start="url(#in)" d="M 5649.1 6629.0 L 5684.5 6609.8"/>
+<path class="link" marker-end="url(#in)" d="M 5647.8 6661.0 L 5684.5 6681.9"/>
+<path class="link" marker-start="url(#in)" d="M 4897.3 6730.4 L 4801.4 6751.9"/>
+<path class="link" marker-end="url(#in)" d="M 4897.3 6711.3 L 4775.2 6674.3"/>
+<path class="link" marker-start="url(#in)" d="M 5378.8 6720.2 L 5408.9 6700.4"/>
+<path class="link" marker-start="url(#in)" d="M 5561.3 6825.5 L 5536.3 6805.6"/>
+<path class="link" marker-end="url(#in)" d="M 5594.0 6825.5 L 5610.0 6805.2"/>
+<path class="link" marker-start="url(#in)" d="M 5128.7 6826.5 L 5098.8 6804.4"/>
+<path class="link" marker-end="url(#in)" d="M 5167.9 6826.5 L 5192.4 6804.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_benzoyl-CoA-degradation" transform="translate(5064.1,6377.0)"><rect rx="10" height="31" width="233" x="-116.5" y="-15.5"/><text dominant-baseline="central">benzoyl-CoA degradation</text></g>
+<g id="node1970" class="node nodeHM pw_benzoyl-CoA-degradation lid10824" transform="translate(4453.9,6477.0)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10824" target="_blank">2,4,6-trihydroxybenzophenone</a></text><title>2,4,6-trihydroxybenzophenone</title></g>
+<g id="node2493" class="node nodeHM pw_benzoyl-CoA-degradation lid656" transform="translate(5733.5,6840.9)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=656" target="_blank">glutaryl-CoA</a></text><title>glutaryl-CoA</title></g>
+<g id="node2495" class="node nodeHM pw_benzoyl-CoA-degradation lid46970" transform="translate(5358.3,6841.2)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=46970" target="_blank">3-oxopimeloyl-CoA</a></text><title>3-oxopimeloyl-CoA</title></g>
+<g id="node2497" class="node nodeHM pw_benzoyl-CoA-degradation lid16319" transform="translate(5151.7,6736.2)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16319" target="_blank">3-hydroxypimeloyl-CoA</a></text><title>3-hydroxypimeloyl-CoA</title></g>
+<g id="node2499" class="node nodeHM pw_benzoyl-CoA-degradation lid182184" transform="translate(5618.7,6734.9)"><rect height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182184" target="_blank">6-oxocyclohex-1-ene-1-carboxyl-CoA</a></text><title>6-oxocyclohex-1-ene-1-carboxyl-CoA</title></g>
+<g id="node2501" class="node nodeHM pw_benzoyl-CoA-degradation lid46996" transform="translate(5620.0,6563.6)"><rect height="30.0" width="223.3" x="-111.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=46996" target="_blank">6-hydroxycyclohex-1-enecarbonyl-CoA</a></text><title>6-hydroxycyclohex-1-enecarbonyl-CoA</title></g>
+<g id="node2503" class="node nodeHM pw_benzoyl-CoA-degradation lid4800" transform="translate(5346.0,6477.9)"><rect height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4800" target="_blank">cyclohexa-1,5-diene-1-carbonyl-CoA</a></text><title>cyclohexa-1,5-diene-1-carbonyl-CoA</title></g>
+<g id="node2520" class="node nodeHM pw_benzoyl-CoA-degradation lid394" transform="translate(4879.8,6477.2)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=394" target="_blank">benzoyl-CoA</a></text><title>benzoyl-CoA</title></g>
+<g id="node11435" class="node nodeHM pw_benzoyl-CoA-degradation lid8395" transform="translate(4933.5,6563.6)"><rect height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8395" target="_blank">cyclohex-1-ene-1-carbonyl-CoA</a></text><title>cyclohex-1-ene-1-carbonyl-CoA</title></g>
+<g id="node11439" class="node nodeHM pw_benzoyl-CoA-degradation lid42525" transform="translate(4933.9,6839.4)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42525" target="_blank">cyclohexane-1-carbonyl-CoA</a></text><title>cyclohexane-1-carbonyl-CoA</title></g>
+<g id="node1971" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(4696.5,6476.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.220" target="_blank">2.3.1.220</a></text><title>2,4,6-trihydroxybenzophenone synthase</title></g>
+<g id="node2504" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(5069.1,6477.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.7.8" target="_blank">1.3.7.8</a></text><title>benzoyl-CoA reductase</title></g>
+<g id="node2502" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(5620.8,6477.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.100" target="_blank">4.2.1.100</a></text><title>cyclohexa-1,5-dienecarbonyl-CoA hydratase</title></g>
+<g id="node11436" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(5347.2,6563.6)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.10" target="_blank">1.3.8.10</a></text><title>cyclohex-1-ene-1-carbonyl-CoA dehydrogenase</title></g>
+<g id="node2500" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(5619.7,6645.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.368" target="_blank">1.1.1.368</a></text><title>6-hydroxycyclohex-1-ene-1-carbonyl-CoA dehydrogenase</title></g>
+<g id="node11440" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(4933.6,6722.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.11" target="_blank">1.3.8.11</a></text><title>cyclohexane-1-carbonyl-CoA dehydrogenase (electron-transfer flavoprotein)</title></g>
+<g id="node2498" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(5354.4,6736.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.21" target="_blank">3.7.1.21</a></text><title>6-oxocyclohex-1-ene-1-carbonyl-CoA hydratase</title></g>
+<g id="node2494" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(5581.4,6841.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.-" target="_blank">2.3.1.-</a></text><title>hypothetical</title></g>
+<g id="node2496" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(5150.3,6842.5)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.259" target="_blank">1.1.1.259</a></text><title>3-hydroxypimeloyl-CoA dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2479" class="node nodeCM pw_benzoyl-CoA-degradation lid29" transform="translate(5622.6,6789.2)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title>acetyl-CoA</title></g>
+<g id="node2480" class="node nodeCM pw_benzoyl-CoA-degradation lid18" transform="translate(5516.1,6789.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node2481" class="node nodeCM pw_benzoyl-CoA-degradation lid7" transform="translate(5077.3,6788.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node2482" class="node nodeCM pw_benzoyl-CoA-degradation lid7" transform="translate(5709.6,6596.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node2483" class="node nodeCM pw_benzoyl-CoA-degradation lid8" transform="translate(5709.6,6696.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node2484" class="node nodeCM pw_benzoyl-CoA-degradation lid8" transform="translate(5210.0,6788.4)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node2485" class="node nodeCM pw_benzoyl-CoA-degradation lid1" transform="translate(5559.5,6424.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2486" class="node nodeCM pw_benzoyl-CoA-degradation lid1" transform="translate(4974.3,6437.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2487" class="node nodeCM pw_benzoyl-CoA-degradation lid1" transform="translate(5431.1,6685.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node2488" class="node nodeCM pw_benzoyl-CoA-degradation lid16" transform="translate(5170.7,6439.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node2489" class="node nodeCM pw_benzoyl-CoA-degradation lid13" transform="translate(5171.5,6516.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node2490" class="node nodeCM pw_benzoyl-CoA-degradation lid4" transform="translate(4977.9,6516.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node2491" class="node nodeCM pw_benzoyl-CoA-degradation lid289" transform="translate(5134.9,6407.2)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title>oxidized ferredoxin</title></g>
+<g id="node2492" class="node nodeCM pw_benzoyl-CoA-degradation lid265" transform="translate(5011.9,6406.4)"><rect rx="5" height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title>reduced ferredoxin</title></g>
+<g id="node11437" class="node nodeCM pw_benzoyl-CoA-degradation lid2297" transform="translate(5201.7,6621.7)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+<g id="node11438" class="node nodeCM pw_benzoyl-CoA-degradation lid3252" transform="translate(5455.5,6619.8)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node11441" class="node nodeCM pw_benzoyl-CoA-degradation lid3252" transform="translate(4722.4,6658.3)"><rect rx="5" height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3252" target="_blank">reduced electron-transferring flavoprotein</a></text><title>reduced electron-transferring flavoprotein</title></g>
+<g id="node11442" class="node nodeCM pw_benzoyl-CoA-degradation lid2297" transform="translate(4730.0,6767.9)"><rect rx="5" height="30.0" width="217.7" x="-108.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title>electron-transferring flavoprotein</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1626.9" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1526.5 1657.9" width="1527" height="1658" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1526.5" height="1657.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_benzoyl-CoA-degradation" class="pw " x="0.0" y="0.0" width="1446.5" height="1562.4" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 269.1 754.7 L 204.8 806.9"/>
+<path class="link" marker-end="url(#in)" d="M 306.8 722.7 L 394.1 645.1"/>
+<path class="link" marker-start="url(#in)" d="M 525.3 519.9 L 428.7 613.1"/>
+<path class="link" marker-end="url(#in)" d="M 560.0 487.9 L 654.0 404.8"/>
+<path class="link" marker-start="url(#in)" d="M 833.6 390.3 L 788.3 389.9"/>
+<path class="link" marker-end="url(#in)" d="M 903.9 390.7 L 920.4 390.7"/>
+<path class="link" marker-start="url(#in)" d="M 1152.8 533.3 L 1052.5 406.7"/>
+<path class="link" marker-end="url(#in)" d="M 1164.9 565.3 L 1160.3 693.9"/>
+<path class="link" marker-start="url(#in)" d="M 1161.5 858.8 L 1160.0 725.9"/>
+<path class="link" marker-end="url(#in)" d="M 1162.0 890.8 L 1164.7 1023.8"/>
+<path class="link" marker-start="url(#in)" d="M 1166.5 1187.0 L 1165.2 1055.8"/>
+<path class="link" marker-end="url(#in)" d="M 1166.7 1219.0 L 1166.7 1335.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1258.1 1451.0 L 1181.4 1367.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1301.5 1480.8 L 1334.2 1496.4"/>
+<path class="link" marker-end="url(#in)" d="M 559.6 241.6 L 659.9 372.8"/>
+<path class="link" marker-start="url(#in)" d="M 523.9 209.6 L 430.6 146.3"/>
+<path class="link" marker-start="url(#in)" d="M 302.6 68.5 L 380.0 114.3"/>
+<path class="link" marker-end="url(#in)" d="M 240.4 52.5 L 227.4 52.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 256.9 730.4 L 217.4 720.2"/>
+<path class="link" marker-end="url(#in)" d="M 287.2 722.7 L 275.9 604.9"/>
+<path class="link" marker-start="url(#in)" d="M 543.8 519.9 L 558.6 647.1"/>
+<path class="link" marker-end="url(#in)" d="M 573.8 511.3 L 619.8 521.9"/>
+<path class="link" marker-start="url(#in)" d="M 857.7 374.7 L 830.1 334.9"/>
+<path class="link" marker-start="url(#in)" d="M 1176.4 533.3 L 1204.8 491.8"/>
+<path class="link" marker-end="url(#in)" d="M 1200.6 558.3 L 1232.7 566.5"/>
+<path class="link" marker-start="url(#in)" d="M 1138.0 858.8 L 1105.1 836.5"/>
+<path class="link" marker-start="url(#in)" d="M 1189.3 1187.0 L 1220.3 1165.0"/>
+<path class="link" marker-end="url(#in)" d="M 1189.8 1219.0 L 1220.9 1240.5"/>
+<path class="link" marker-start="url(#in)" d="M 1273.9 1451.0 L 1277.4 1395.9"/>
+<path class="link" marker-end="url(#in)" d="M 1301.5 1458.6 L 1335.9 1448.6"/>
+<path class="link" marker-start="url(#in)" d="M 530.1 241.6 L 497.0 272.2"/>
+<path class="link" marker-start="url(#in)" d="M 518.7 231.0 L 477.3 238.9"/>
+<path class="link" marker-start="url(#in)" d="M 518.7 214.4 L 481.7 200.0"/>
+<path class="link" marker-end="url(#in)" d="M 564.7 209.6 L 596.6 180.2"/>
+<path class="link" marker-end="url(#in)" d="M 576.1 220.2 L 617.5 212.3"/>
+<path class="link" marker-end="url(#in)" d="M 576.1 236.8 L 614.8 251.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_benzoyl-CoA-degradation" transform="translate(723.3,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">benzoyl-CoA degradation</text></g>
+<g id="node11439" class="node nodeHM pw_benzoyl-CoA-degradation lid42525" transform="translate(185.1,822.9)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=42525" target="_blank">cyclohexane-1-carbonyl-CoA</a></text><title></title></g>
+<g id="node11435" class="node nodeHM pw_benzoyl-CoA-degradation lid8395" transform="translate(412.2,629.1)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8395" target="_blank">cyclohex-1-ene-1-carbonyl-CoA</a></text><title></title></g>
+<g id="node2503" class="node nodeHM pw_benzoyl-CoA-degradation lid4800" transform="translate(672.1,388.8)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4800" target="_blank">cyclohexa-1,5-diene-1-carbonyl-CoA</a></text><title></title></g>
+<g id="node2501" class="node nodeHM pw_benzoyl-CoA-degradation lid46996" transform="translate(1039.8,390.7)"><rect height="30.0" width="236.8" x="-118.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=46996" target="_blank">6-hydroxycyclohex-1-enecarbonyl-CoA</a></text><title></title></g>
+<g id="node2499" class="node nodeHM pw_benzoyl-CoA-degradation lid182184" transform="translate(1159.8,709.9)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182184" target="_blank">6-oxocyclohex-1-ene-1-carboxyl-CoA</a></text><title></title></g>
+<g id="node2497" class="node nodeHM pw_benzoyl-CoA-degradation lid16319" transform="translate(1165.0,1039.8)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16319" target="_blank">3-hydroxypimeloyl-CoA</a></text><title></title></g>
+<g id="node2495" class="node nodeHM pw_benzoyl-CoA-degradation lid46970" transform="translate(1166.7,1351.6)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=46970" target="_blank">3-oxopimeloyl-CoA</a></text><title></title></g>
+<g id="node2493" class="node nodeHM pw_benzoyl-CoA-degradation lid656" transform="translate(1367.7,1512.4)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=656" target="_blank">glutaryl-CoA</a></text><title></title></g>
+<g id="node2520" class="node nodeHM pw_benzoyl-CoA-degradation lid394" transform="translate(407.1,130.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=394" target="_blank">benzoyl-CoA</a></text><title></title></g>
+<g id="node1970" class="node nodeHM pw_benzoyl-CoA-degradation lid10824" transform="translate(130.7,52.5)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10824" target="_blank">2,4,6-trihydroxybenzophenone</a></text><title></title></g>
+<g id="node11440" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(288.8,738.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.11" target="_blank">1.3.8.11</a></text><title>cyclohexane-1-carbonyl-CoA dehydrogenase (electron-transfer flavoprotein)</title></g>
+<g id="node11436" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(541.9,503.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.10" target="_blank">1.3.8.10</a></text><title>cyclohex-1-ene-1-carbonyl-CoA dehydrogenase</title></g>
+<g id="node2502" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(868.8,390.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.100" target="_blank">4.2.1.100</a></text><title>cyclohexa-1,5-dienecarbonyl-CoA hydratase</title></g>
+<g id="node2500" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(1165.5,549.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.368" target="_blank">1.1.1.368</a></text><title>6-hydroxycyclohex-1-ene-1-carbonyl-CoA dehydrogenase</title></g>
+<g id="node2498" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(1161.7,874.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.7.1.21" target="_blank">3.7.1.21</a></text><title>6-oxocyclohex-1-ene-1-carbonyl-CoA hydratase</title></g>
+<g id="node2496" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(1166.7,1203.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.259" target="_blank">1.1.1.259</a></text><title>3-hydroxypimeloyl-CoA dehydrogenase</title></g>
+<g id="node2494" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(1272.8,1467.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.-" target="_blank">2.3.1.-</a></text><title>hypothetical</title></g>
+<g id="node2504" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(547.4,225.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.7.8" target="_blank">1.3.7.8</a></text><title>benzoyl-CoA reductase</title></g>
+<g id="node1971" class="node nodeEN pw_benzoyl-CoA-degradation" transform="translate(275.6,52.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.220" target="_blank">2.3.1.220</a></text><title>2,4,6-trihydroxybenzophenone synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11440~0" class="node nodeCM pw_benzoyl-CoA-degradation lid2297" transform="translate(155.6,704.2)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node11440~1" class="node nodeCM pw_benzoyl-CoA-degradation lid1892" transform="translate(274.4,588.9)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node11436~0" class="node nodeCM pw_benzoyl-CoA-degradation lid2297" transform="translate(560.4,663.1)"><rect rx="5" height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2297" target="_blank">electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node11436~1" class="node nodeCM pw_benzoyl-CoA-degradation lid1892" transform="translate(689.0,537.9)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1892" target="_blank">reduced electron-transferring flavoprotein</a></text><title></title></g>
+<g id="node2502~0" class="node nodeCM pw_benzoyl-CoA-degradation lid1" transform="translate(819.0,318.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2500~0" class="node nodeCM pw_benzoyl-CoA-degradation lid7" transform="translate(1215.8,475.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2500~1" class="node nodeCM pw_benzoyl-CoA-degradation lid8" transform="translate(1251.7,571.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node2498~0" class="node nodeCM pw_benzoyl-CoA-degradation lid1" transform="translate(1089.3,825.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2496~0" class="node nodeCM pw_benzoyl-CoA-degradation lid7" transform="translate(1239.3,1151.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node2496~1" class="node nodeCM pw_benzoyl-CoA-degradation lid8" transform="translate(1239.8,1253.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node2494~0" class="node nodeCM pw_benzoyl-CoA-degradation lid18" transform="translate(1278.4,1379.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node2494~1" class="node nodeCM pw_benzoyl-CoA-degradation lid29" transform="translate(1361.3,1441.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node2504~0" class="node nodeCM pw_benzoyl-CoA-degradation lid265" transform="translate(479.7,288.2)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node2504~1" class="node nodeCM pw_benzoyl-CoA-degradation lid4" transform="translate(461.6,241.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2504~2" class="node nodeCM pw_benzoyl-CoA-degradation lid1" transform="translate(466.0,193.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2504~3" class="node nodeCM pw_benzoyl-CoA-degradation lid289" transform="translate(614.0,164.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node2504~4" class="node nodeCM pw_benzoyl-CoA-degradation lid13" transform="translate(633.2,209.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2504~5" class="node nodeCM pw_benzoyl-CoA-degradation lid16" transform="translate(627.3,256.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>
+<text x="1636.9" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

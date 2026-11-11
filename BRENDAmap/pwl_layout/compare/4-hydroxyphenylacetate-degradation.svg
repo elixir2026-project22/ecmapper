@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3521" height="813" viewBox="0 0 3521.4 812.8"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="21516.8 3398.1 1712.8 595.8" width="1713" height="596" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="21516.8" y="3398.1" width="1712.8" height="595.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_4-hydroxyphenylacetate-degradation" class="pw pw6" x="21556.8" y="3453.6" width="1632.8" height="500.3" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22452.6 3572.5 L 22658.1 3583.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22374.2 3572.7 L 22191.4 3583.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 21923.6 3588.4 L 22039.5 3588.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 21850.8 3588.4 L 21729.1 3588.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22973.3 3588.4 L 22832.5 3588.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23015.3 3604.4 L 23015.3 3740.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22452.6 3614.7 L 22658.1 3596.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22374.2 3614.3 L 22191.4 3596.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22002.4 3756.5 L 22172.9 3756.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 21929.6 3756.5 L 21777.1 3756.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22579.5 3756.5 L 22386.9 3756.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22652.2 3756.5 L 22871.6 3756.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 21712.2 3900.1 L 21845.1 3900.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 21675.8 3884.1 L 21675.8 3772.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22245.1 3900.1 L 22386.6 3900.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22178.0 3900.1 L 22042.2 3900.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22711.0 3900.1 L 22572.4 3900.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 22783.8 3900.1 L 22939.4 3900.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 22374.2 3557.8 L 22311.4 3537.7"/>
+<path class="link" marker-start="url(#in)" d="M 22396.6 3554.4 L 22364.3 3523.6"/>
+<path class="link" marker-end="url(#in)" d="M 22428.5 3554.4 L 22457.7 3523.6"/>
+<path class="link" marker-end="url(#in)" d="M 22452.6 3565.9 L 22560.3 3553.6"/>
+<path class="link" marker-end="url(#in)" d="M 22452.6 3556.1 L 22501.0 3538.5"/>
+<path class="link" marker-end="url(#in)" d="M 21906.3 3604.4 L 21931.7 3625.8"/>
+<path class="link" marker-start="url(#in)" d="M 22992.5 3604.4 L 22958.8 3628.1"/>
+<path class="link" marker-end="url(#in)" d="M 23039.1 3604.4 L 23075.2 3628.7"/>
+<path class="link" marker-start="url(#in)" d="M 22397.0 3634.2 L 22367.3 3663.1"/>
+<path class="link" marker-start="url(#in)" d="M 22374.2 3626.0 L 22319.2 3637.0"/>
+<path class="link" marker-end="url(#in)" d="M 22429.9 3634.2 L 22458.1 3661.6"/>
+<path class="link" marker-end="url(#in)" d="M 22452.6 3628.5 L 22498.9 3640.7"/>
+<path class="link" marker-start="url(#in)" d="M 22648.2 3772.5 L 22685.0 3790.6"/>
+<path class="link" marker-start="url(#in)" d="M 22640.9 3740.5 L 22687.8 3710.5"/>
+<path class="link" marker-end="url(#in)" d="M 22582.0 3772.5 L 22542.5 3791.2"/>
+<path class="link" marker-start="url(#in)" d="M 21697.2 3884.1 L 21732.4 3857.8"/>
+<path class="link" marker-end="url(#in)" d="M 21656.2 3884.1 L 21625.9 3859.3"/>
+<path class="link" marker-start="url(#in)" d="M 22192.1 3884.1 L 22161.8 3859.3"/>
+<path class="link" marker-end="url(#in)" d="M 22779.7 3884.1 L 22829.7 3859.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_4-hydroxyphenylacetate-degradation" transform="translate(22373.2,3453.6)"><rect rx="10" height="31" width="330" x="-165.0" y="-15.5"/><text dominant-baseline="central">4-hydroxyphenylacetate degradation</text></g>
+<g id="node2392" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid3180" transform="translate(21675.8,3588.4)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3180" target="_blank">4-methylphenol</a></text><title>4-methylphenol</title></g>
+<g id="node5953" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid1708" transform="translate(22115.5,3588.4)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1708" target="_blank">4-hydroxyphenylacetate</a></text><title>4-hydroxyphenylacetate</title></g>
+<g id="node6787" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid135501" transform="translate(21943.7,3900.1)"><rect height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=135501" target="_blank">2-hydroxyhepta-2,4-dienedioate</a></text><title>2-hydroxyhepta-2,4-dienedioate</title></g>
+<g id="node6791" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid43135" transform="translate(23015.3,3756.5)"><rect height="30.0" width="285.5" x="-142.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43135" target="_blank">2-hydroxy-5-carboxymethylmuconate semialdehyde</a></text><title>2-hydroxy-5-carboxymethylmuconate semialdehyde</title></g>
+<g id="node6794" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid30613" transform="translate(21675.8,3756.5)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30613" target="_blank">5-carboxy-2-oxohept-3-enedioate</a></text><title>5-carboxy-2-oxohept-3-enedioate</title></g>
+<g id="node6796" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid9071" transform="translate(22279.9,3756.5)"><rect height="30.0" width="212.0" x="-106.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9071" target="_blank">5-carboxymethyl-2-hydroxymuconate</a></text><title>5-carboxymethyl-2-hydroxymuconate</title></g>
+<g id="node6797" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid838" transform="translate(22745.3,3588.4)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=838" target="_blank">3,4-dihydroxyphenylacetate</a></text><title>3,4-dihydroxyphenylacetate</title></g>
+<g id="node6809" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid528" transform="translate(23015.3,3900.1)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=528" target="_blank">succinate semialdehyde</a></text><title>succinate semialdehyde</title></g>
+<g id="node6810" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid186626" transform="translate(22479.5,3900.1)"><rect height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186626" target="_blank">4-hydroxy-2-oxoheptanedioate</a></text><title>2-oxo-4-hydroxyhepta-1,7-dioate</title></g>
+<g id="node6804" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(22413.4,3570.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.9" target="_blank">1.14.14.9</a></text><title>4-hydroxyphenylacetate 3-monooxygenase</title></g>
+<g id="node2393" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(21887.2,3588.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.83" target="_blank">4.1.1.83</a></text><title>4-hydroxyphenylacetate decarboxylase</title></g>
+<g id="node6792" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(23015.3,3588.4)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.15" target="_blank">1.13.11.15</a></text><title>3,4-dihydroxyphenylacetate 2,3-dioxygenase</title></g>
+<g id="node8068" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(22413.4,3618.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.9" target="_blank">1.14.14.9</a></text><title>4-hydroxyphenylacetate 3-monooxygenase</title></g>
+<g id="node6789" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(21966.0,3756.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.3.10" target="_blank">5.3.3.10</a></text><title>5-carboxymethyl-2-hydroxymuconate DELTA-isomerase</title></g>
+<g id="node6795" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(22615.9,3756.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.60" target="_blank">1.2.1.60</a></text><title>5-carboxymethyl-2-hydroxymuconic-semialdehyde dehydrogenase</title></g>
+<g id="node6798" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(21675.8,3900.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.68" target="_blank">4.1.1.68</a></text><title>5-Oxopent-3-ene-1,2,5-tricarboxylate decarboxylase</title></g>
+<g id="node6799" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(22211.6,3900.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.-" target="_blank">4.2.1.-</a></text><title>2-hydroxyhepta-2,4-dienedioate hydratase</title></g>
+<g id="node6807" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(22747.4,3900.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.52" target="_blank">4.1.2.52</a></text><title>4-hydroxy-2-oxoheptanedioate aldolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2391" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid28" transform="translate(21950.8,3641.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node6783" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid256" transform="translate(22347.5,3507.6)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256" target="_blank">FADH2</a></text><title>FADH2</title></g>
+<g id="node6784" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid12" transform="translate(23094.6,3641.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6785" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid9" transform="translate(22292.0,3531.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node6786" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid20" transform="translate(22582.5,3551.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20" target="_blank">FAD</a></text><title>FAD</title></g>
+<g id="node6788" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid12" transform="translate(21751.8,3843.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6790" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid12" transform="translate(22520.5,3531.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node6793" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(22710.1,3696.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6800" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid9" transform="translate(22939.4,3641.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node6801" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid7" transform="translate(22710.1,3803.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6802" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid28" transform="translate(21606.3,3843.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node6803" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(22472.8,3507.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6805" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid8" transform="translate(22517.4,3803.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node6806" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(22142.3,3843.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6808" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid31" transform="translate(22862.0,3843.3)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node8069" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid9" transform="translate(22299.7,3640.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node8070" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid7" transform="translate(22524.0,3647.3)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node8071" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid8" transform="translate(22350.8,3679.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node8072" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(22474.6,3677.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1792.8" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1728.6 772.8" width="1729" height="773" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1728.6" height="772.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_4-hydroxyphenylacetate-degradation" class="pw " x="0.0" y="0.0" width="1648.6" height="677.3" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 594.7 453.8 L 507.0 477.7"/>
+<path class="link" marker-end="url(#in)" d="M 665.0 453.8 L 752.7 477.7"/>
+<path class="link" marker-start="url(#in)" d="M 594.7 533.6 L 507.0 509.7"/>
+<path class="link" marker-end="url(#in)" d="M 665.0 533.6 L 752.7 509.7"/>
+<path class="link" marker-start="url(#in)" d="M 931.7 493.7 L 901.6 493.7"/>
+<path class="link" marker-end="url(#in)" d="M 1008.5 493.7 L 1042.1 493.7"/>
+<path class="link" marker-start="url(#in)" d="M 1024.8 417.1 L 1161.1 477.7"/>
+<path class="link" marker-end="url(#in)" d="M 960.9 387.0 L 843.4 328.2"/>
+<path class="link" marker-start="url(#in)" d="M 661.8 312.2 L 698.4 312.2"/>
+<path class="link" marker-end="url(#in)" d="M 597.9 312.2 L 554.8 312.2"/>
+<path class="link" marker-start="url(#in)" d="M 597.9 237.4 L 480.4 296.2"/>
+<path class="link" marker-end="url(#in)" d="M 661.8 205.5 L 779.4 146.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 964.2 130.7 L 914.6 130.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1021.5 130.7 L 1077.6 130.7"/>
+<path class="link" marker-start="url(#in)" d="M 1323.9 130.7 L 1271.1 130.7"/>
+<path class="link" marker-end="url(#in)" d="M 1387.8 130.7 L 1460.1 130.7"/>
+<path class="link" marker-start="url(#in)" d="M 298.8 493.7 L 371.1 493.7"/>
+<path class="link" marker-end="url(#in)" d="M 234.9 493.7 L 136.7 493.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 622.6 460.2 L 607.6 493.2"/>
+<path class="link" marker-start="url(#in)" d="M 610.1 460.2 L 575.7 488.0"/>
+<path class="link" marker-end="url(#in)" d="M 630.7 428.2 L 633.6 373.0"/>
+<path class="link" marker-end="url(#in)" d="M 641.1 428.2 L 668.8 388.6"/>
+<path class="link" marker-end="url(#in)" d="M 665.0 429.3 L 696.3 416.0"/>
+<path class="link" marker-start="url(#in)" d="M 624.4 559.2 L 606.4 611.3"/>
+<path class="link" marker-start="url(#in)" d="M 610.1 559.2 L 575.7 587.0"/>
+<path class="link" marker-end="url(#in)" d="M 637.0 527.2 L 651.7 494.2"/>
+<path class="link" marker-end="url(#in)" d="M 649.6 527.2 L 682.0 500.9"/>
+<path class="link" marker-start="url(#in)" d="M 958.9 509.7 L 932.1 547.9"/>
+<path class="link" marker-end="url(#in)" d="M 981.3 509.7 L 1008.0 547.9"/>
+<path class="link" marker-start="url(#in)" d="M 1008.4 386.9 L 1039.3 355.2"/>
+<path class="link" marker-start="url(#in)" d="M 1024.8 395.1 L 1062.0 386.0"/>
+<path class="link" marker-end="url(#in)" d="M 964.9 418.9 L 934.6 436.3"/>
+<path class="link" marker-start="url(#in)" d="M 600.3 205.4 L 566.9 187.4"/>
+<path class="link" marker-end="url(#in)" d="M 632.2 205.4 L 640.3 151.0"/>
+<path class="link" marker-start="url(#in)" d="M 981.7 114.7 L 954.0 75.1"/>
+<path class="link" marker-end="url(#in)" d="M 1367.1 114.7 L 1399.4 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 255.7 509.7 L 228.0 549.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_4-hydroxyphenylacetate-degradation" transform="translate(824.3,0.0)"><rect rx="10" height="31" width="340" x="-170.2" y="-15.5"/><text dominant-baseline="central">4-hydroxyphenylacetate degradation</text></g>
+<g id="node5953" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid1708" transform="translate(448.4,493.7)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1708" target="_blank">4-hydroxyphenylacetate</a></text><title></title></g>
+<g id="node6797" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid838" transform="translate(811.4,493.7)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=838" target="_blank">3,4-dihydroxyphenylacetate</a></text><title></title></g>
+<g id="node6791" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid43135" transform="translate(1197.2,493.7)"><rect height="30.0" width="308.1" x="-154.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43135" target="_blank">2-hydroxy-5-carboxymethylmuconate semialdehyde</a></text><title></title></g>
+<g id="node6796" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid9071" transform="translate(811.4,312.2)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9071" target="_blank">5-carboxymethyl-2-hydroxymuconate</a></text><title></title></g>
+<g id="node6794" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid30613" transform="translate(448.4,312.2)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30613" target="_blank">5-carboxy-2-oxohept-3-enedioate</a></text><title></title></g>
+<g id="node6787" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid135501" transform="translate(811.4,130.7)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=135501" target="_blank">2-hydroxyhepta-2,4-dienedioate</a></text><title></title></g>
+<g id="node6810" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid186626" transform="translate(1174.4,130.7)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186626" target="_blank">4-hydroxy-2-oxoheptanedioate</a></text><title></title></g>
+<g id="node6809" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid528" transform="translate(1537.4,130.7)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=528" target="_blank">succinate semialdehyde</a></text><title></title></g>
+<g id="node2392" class="node nodeHM pw_4-hydroxyphenylacetate-degradation lid3180" transform="translate(85.4,493.7)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3180" target="_blank">4-methylphenol</a></text><title></title></g>
+<g id="node6804" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(629.9,444.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.9" target="_blank">1.14.14.9</a></text><title>4-hydroxyphenylacetate 3-monooxygenase; 4-hydroxyphenylacetate 3-monooxygenase</title></g>
+<g id="node8068" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(629.9,543.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.9" target="_blank">1.14.14.9</a></text><title>4-hydroxyphenylacetate 3-monooxygenase; 4-hydroxyphenylacetate 3-monooxygenase</title></g>
+<g id="node6792" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(970.1,493.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.15" target="_blank">1.13.11.15</a></text><title>3,4-dihydroxyphenylacetate 2,3-dioxygenase</title></g>
+<g id="node6795" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(992.9,402.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.60" target="_blank">1.2.1.60</a></text><title>5-carboxymethyl-2-hydroxymuconic-semialdehyde dehydrogenase</title></g>
+<g id="node6789" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(629.9,312.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.3.10" target="_blank">5.3.3.10</a></text><title>5-carboxymethyl-2-hydroxymuconate DELTA-isomerase</title></g>
+<g id="node6798" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(629.9,221.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.68" target="_blank">4.1.1.68</a></text><title>5-Oxopent-3-ene-1,2,5-tricarboxylate decarboxylase</title></g>
+<g id="node6799" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(992.9,130.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.-" target="_blank">4.2.1.-</a></text><title>2-hydroxyhepta-2,4-dienedioate hydratase</title></g>
+<g id="node6807" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(1355.9,130.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.52" target="_blank">4.1.2.52</a></text><title>4-hydroxy-2-oxoheptanedioate aldolase</title></g>
+<g id="node2393" class="node nodeEN pw_4-hydroxyphenylacetate-degradation" transform="translate(266.9,493.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.83" target="_blank">4.1.1.83</a></text><title>4-hydroxyphenylacetate decarboxylase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6804~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid256" transform="translate(600.4,509.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=256" target="_blank">FADH2</a></text><title></title></g>
+<g id="node6804~1" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid9" transform="translate(563.2,498.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node6804~2" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid20" transform="translate(634.4,357.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20" target="_blank">FAD</a></text><title></title></g>
+<g id="node6804~3" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(680.0,372.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6804~4" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid12" transform="translate(708.8,410.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8068~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid8" transform="translate(600.9,627.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node8068~1" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid9" transform="translate(563.2,597.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node8068~2" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid7" transform="translate(658.8,478.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node8068~3" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(697.8,488.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6792~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid9" transform="translate(920.9,563.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node6792~1" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid12" transform="translate(1019.2,563.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6795~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid7" transform="translate(1054.9,339.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node6795~1" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(1077.7,382.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6795~2" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid8" transform="translate(915.6,447.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node6798~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid12" transform="translate(554.5,180.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6798~1" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid28" transform="translate(642.7,135.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node6799~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid1" transform="translate(942.8,59.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6807~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid31" transform="translate(1410.6,52.5)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node2393~0" class="node nodeCM pw_4-hydroxyphenylacetate-degradation lid28" transform="translate(216.8,565.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+</g></svg>
+<text x="1802.8" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 747.7 881.5" width="748" height="882" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="747.7" height="881.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_vitamin-K-epoxide-cycle" class="pw " x="0.0" y="0.0" width="627.7" height="746.0" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 299.4 282.4 C 299.4 322.0 299.4 426.8 299.4 466.2"/>
+<path class="link" marker-end="url(#in)" d="M 299.4 251.6 C 299.4 212.0 299.4 107.2 299.4 67.8"/>
+<path class="link" marker-start="url(#in)" d="M 299.4 359.2 C 299.4 305.2 299.4 122.4 299.4 67.9"/>
+<path class="link" marker-end="url(#in)" d="M 299.4 389.3 C 299.4 443.3 299.4 626.1 299.4 680.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 235.2 604.1 C 249.4 624.5 274.4 660.3 288.7 680.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 235.2 573.4 C 249.4 553.0 274.4 517.2 288.7 496.8"/>
+<path class="link" marker-start="url(#in)" d="M 366.8 604.8 L 311.2 680.0"/>
+<path class="link" marker-end="url(#in)" d="M 367.2 573.4 C 352.2 553.0 325.8 517.2 310.7 496.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 331.3 276.8 L 372.8 289.6"/>
+<path class="link" marker-start="url(#in)" d="M 311.5 283.0 L 342.2 323.6"/>
+<path class="link" marker-end="url(#in)" d="M 276.5 251.0 L 198.9 196.7"/>
+<path class="link" marker-start="url(#in)" d="M 267.5 363.3 L 232.5 351.2"/>
+<path class="link" marker-start="url(#in)" d="M 282.0 358.2 L 237.3 317.0"/>
+<path class="link" marker-end="url(#in)" d="M 331.3 375.9 L 346.6 376.7"/>
+<path class="link" marker-end="url(#in)" d="M 322.2 390.2 L 355.2 413.4"/>
+<path class="link" marker-end="url(#in)" d="M 306.7 390.2 L 325.6 431.5"/>
+<path class="link" marker-start="url(#in)" d="M 253.1 598.6 L 287.9 610.6"/>
+<path class="link" marker-start="url(#in)" d="M 237.4 604.8 L 265.9 640.0"/>
+<path class="link" marker-end="url(#in)" d="M 195.7 573.6 L 172.4 561.2"/>
+<path class="link" marker-start="url(#in)" d="M 401.4 604.8 L 464.5 648.9"/>
+<path class="link" marker-end="url(#in)" d="M 351.7 572.8 L 282.2 531.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_vitamin-K-epoxide-cycle" transform="translate(313.9,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">vitamin K-epoxide cycle</text></g>
+<g id="node471" class="node nodeHM pw_vitamin-K-epoxide-cycle lid6015" transform="translate(299.4,481.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6015" target="_blank">phylloquinone</a></text><title></title></g>
+<g id="node463" class="node nodeHM pw_vitamin-K-epoxide-cycle lid12294" transform="translate(299.4,52.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12294" target="_blank">2,3-epoxyphylloquinone</a></text><title></title></g>
+<g id="node473" class="node nodeHM pw_vitamin-K-epoxide-cycle lid101733" transform="translate(299.4,696.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101733" target="_blank">phylloquinol</a></text><title></title></g>
+<g id="node465" class="node nodeEN pw_vitamin-K-epoxide-cycle" transform="translate(299.4,267.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.4.4" target="_blank">1.17.4.4</a></text><title>vitamin-K-epoxide reductase (warfarin-sensitive)</title></g>
+<g id="node461" class="node nodeEN pw_vitamin-K-epoxide-cycle" transform="translate(299.4,374.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.90" target="_blank">4.1.1.90</a></text><title>peptidyl-glutamate 4-carboxylase</title></g>
+<g id="node469" class="node nodeEN pw_vitamin-K-epoxide-cycle" transform="translate(224.4,588.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.6.5.2" target="_blank">1.6.5.2</a></text><title>NAD(P)H dehydrogenase (quinone); vitamin-K-epoxide reductase (warfarin-sensitive)</title></g>
+<g id="node474" class="node nodeEN pw_vitamin-K-epoxide-cycle" transform="translate(378.6,588.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.4.4" target="_blank">1.17.4.4</a></text><title>NAD(P)H dehydrogenase (quinone); vitamin-K-epoxide reductase (warfarin-sensitive)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node465~0" class="node nodeCM pw_vitamin-K-epoxide-cycle lid228424" transform="translate(424.9,305.6)"><rect rx="5" height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=228424" target="_blank">a protein with a disulfide bond</a></text><title></title></g>
+<g id="node465~1" class="node nodeCM pw_vitamin-K-epoxide-cycle lid1" transform="translate(354.4,339.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node465~2" class="node nodeCM pw_vitamin-K-epoxide-cycle lid228425" transform="translate(176.1,180.7)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=228425" target="_blank">a protein with reduced L-cysteine residues</a></text><title></title></g>
+<g id="node461~0" class="node nodeCM pw_vitamin-K-epoxide-cycle lid1" transform="translate(216.8,345.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node461~1" class="node nodeCM pw_vitamin-K-epoxide-cycle lid152145" transform="translate(219.9,301.0)"><rect rx="5" height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=152145" target="_blank">peptidyl-4-carboxyglutamate</a></text><title></title></g>
+<g id="node461~2" class="node nodeCM pw_vitamin-K-epoxide-cycle lid152158" transform="translate(410.9,380.1)"><rect rx="5" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=152158" target="_blank">peptidyl-glutamate</a></text><title></title></g>
+<g id="node461~3" class="node nodeCM pw_vitamin-K-epoxide-cycle lid28" transform="translate(371.0,424.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node461~4" class="node nodeCM pw_vitamin-K-epoxide-cycle lid9" transform="translate(332.9,447.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node469~0" class="node nodeCM pw_vitamin-K-epoxide-cycle lid5" transform="translate(310.1,618.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node469~1" class="node nodeCM pw_vitamin-K-epoxide-cycle lid12" transform="translate(278.4,655.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node469~2" class="node nodeCM pw_vitamin-K-epoxide-cycle lid10" transform="translate(150.2,549.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node474~0" class="node nodeCM pw_vitamin-K-epoxide-cycle lid228424" transform="translate(487.3,664.9)"><rect rx="5" height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=228424" target="_blank">a protein with a disulfide bond</a></text><title></title></g>
+<g id="node474~1" class="node nodeCM pw_vitamin-K-epoxide-cycle lid228425" transform="translate(255.3,515.5)"><rect rx="5" height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=228425" target="_blank">a protein with reduced L-cysteine residues</a></text><title></title></g>
+</g></svg>

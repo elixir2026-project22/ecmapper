@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 3033.5 3773.0" width="3034" height="3773" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="3033.5" height="3773.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_isoprenoid-biosynthesis" class="pw " x="0.0" y="0.0" width="2913.5" height="3637.5" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 760.9 2372.0 C 794.2 2351.8 852.1 2316.5 885.3 2296.3"/>
+<path class="link" marker-end="url(#in)" d="M 703.5 2401.9 L 595.8 2450.6"/>
+<path class="link" marker-start="url(#in)" d="M 702.0 2234.7 L 838.4 2264.9"/>
+<path class="link" marker-end="url(#in)" d="M 638.2 2224.5 L 533.1 2214.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 290.6 2196.1 L 346.1 2199.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 220.3 2194.0 L 123.8 2194.0"/>
+<path class="link" marker-end="url(#in)" d="M 776.4 2067.7 L 900.4 2264.9"/>
+<path class="link" marker-start="url(#in)" d="M 757.7 2035.7 L 656.5 1849.1"/>
+<path class="link" marker-end="url(#in)" d="M 565.0 1653.2 L 640.5 1817.1"/>
+<path class="link" marker-start="url(#in)" d="M 549.6 1621.2 L 487.9 1498.2"/>
+<path class="link" marker-start="url(#in)" d="M 909.1 2095.0 L 910.3 2264.9"/>
+<path class="link" marker-end="url(#in)" d="M 909.0 2063.0 L 909.0 1942.8"/>
+<path class="link" marker-start="url(#in)" d="M 1035.6 2089.8 C 1010.6 2127.8 945.7 2227.1 920.6 2265.5"/>
+<path class="link" marker-end="url(#in)" d="M 1050.6 2058.5 L 1106.4 1884.3"/>
+<path class="link" marker-start="url(#in)" d="M 1123.2 2156.7 L 937.9 2264.9"/>
+<path class="link" marker-end="url(#in)" d="M 1170.0 2124.7 L 1277.3 2035.8"/>
+<path class="link" marker-end="url(#in)" d="M 1108.7 2290.9 L 1000.7 2285.5"/>
+<path class="link" marker-start="url(#in)" d="M 1172.5 2292.5 L 1265.3 2292.5"/>
+<path class="link" marker-end="url(#in)" d="M 1079.1 2615.6 L 918.5 2296.9"/>
+<path class="link" marker-start="url(#in)" d="M 1095.0 2647.6 L 1257.3 2977.5"/>
+<path class="link" marker-start="url(#in)" d="M 846.1 2442.1 L 904.1 2296.9"/>
+<path class="link" marker-end="url(#in)" d="M 825.5 2474.1 L 737.2 2574.1"/>
+<path class="link" marker-start="url(#in)" d="M 1266.9 3154.3 L 1265.3 3009.5"/>
+<path class="link" marker-end="url(#in)" d="M 1267.5 3186.3 L 1271.4 3321.3"/>
+<path class="link" marker-start="url(#in)" d="M 1140.5 3187.5 L 1254.9 3009.5"/>
+<path class="link" marker-end="url(#in)" d="M 1123.2 3219.5 L 1056.8 3370.2"/>
+<path class="link" marker-start="url(#in)" d="M 1074.7 3092.0 L 1234.2 3009.5"/>
+<path class="link" marker-end="url(#in)" d="M 1027.8 3124.0 L 932.5 3219.2"/>
+<path class="link" marker-end="url(#in)" d="M 1506.4 2994.9 L 1332.7 2993.9"/>
+<path class="link" marker-start="url(#in)" d="M 1570.3 2995.1 L 1806.7 2995.1"/>
+<path class="link" marker-start="url(#in)" d="M 1875.5 3216.8 L 1874.4 3011.1"/>
+<path class="link" marker-end="url(#in)" d="M 1875.6 3248.8 L 1875.6 3388.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2029.6 3168.1 L 1888.7 3011.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2061.5 3200.1 L 2188.6 3316.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2337.3 3456.3 L 2223.1 3348.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2370.0 3488.3 L 2452.0 3571.5"/>
+<path class="link" marker-start="url(#in)" d="M 2052.9 2826.9 L 2206.5 2711.4"/>
+<path class="link" marker-end="url(#in)" d="M 2015.1 2858.9 L 1890.8 2979.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2466.9 526.6 L 2369.6 399.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2489.5 558.6 L 2594.9 722.0"/>
+<path class="link" marker-start="url(#in)" d="M 2605.2 931.1 L 2605.2 754.0"/>
+<path class="link" marker-end="url(#in)" d="M 2617.0 963.1 L 2749.3 1143.2"/>
+<path class="link" marker-start="url(#in)" d="M 2768.4 1357.5 L 2761.7 1175.2"/>
+<path class="link" marker-end="url(#in)" d="M 2768.8 1389.5 L 2766.8 1578.1"/>
+<path class="link" marker-start="url(#in)" d="M 2762.6 1797.9 L 2766.3 1610.1"/>
+<path class="link" marker-end="url(#in)" d="M 2762.1 1829.9 L 2760.3 2011.6"/>
+<path class="link" marker-start="url(#in)" d="M 2760.1 2210.6 L 2760.1 2043.6"/>
+<path class="link" marker-end="url(#in)" d="M 2746.6 2242.6 L 2621.0 2390.7"/>
+<path class="link" marker-start="url(#in)" d="M 2280.6 196.2 L 2280.6 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 2261.1 196.2 L 2172.3 123.3"/>
+<path class="link" marker-end="url(#in)" d="M 2287.8 228.2 L 2350.2 367.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2446.6 2559.0 C 2480.4 2527.1 2557.4 2454.1 2591.1 2422.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2450.6 2558.5 L 2484.3 2532.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2403.5 2590.5 L 2254.5 2679.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 711.6 2371.5 L 649.2 2329.6"/>
+<path class="link" marker-start="url(#in)" d="M 685.6 2211.6 L 727.8 2168.1"/>
+<path class="link" marker-end="url(#in)" d="M 663.7 2243.6 L 639.8 2303.0"/>
+<path class="link" marker-start="url(#in)" d="M 261.5 2178.0 L 280.4 2128.3"/>
+<path class="link" marker-start="url(#in)" d="M 276.5 2178.0 L 309.3 2153.1"/>
+<path class="link" marker-start="url(#in)" d="M 734.4 2049.2 L 695.0 2046.0"/>
+<path class="link" marker-end="url(#in)" d="M 798.3 2054.3 L 837.7 2057.5"/>
+<path class="link" marker-start="url(#in)" d="M 522.5 1631.4 L 487.2 1625.5"/>
+<path class="link" marker-end="url(#in)" d="M 592.8 1643.0 L 628.1 1648.9"/>
+<path class="link" marker-start="url(#in)" d="M 935.4 2095.0 L 942.0 2099.0"/>
+<path class="link" marker-end="url(#in)" d="M 932.5 2063.0 L 964.6 2041.1"/>
+<path class="link" marker-start="url(#in)" d="M 1015.0 2090.5 L 998.9 2099.0"/>
+<path class="link" marker-end="url(#in)" d="M 1036.8 2058.5 L 1011.8 2012.4"/>
+<path class="link" marker-start="url(#in)" d="M 1150.4 2156.7 L 1149.5 2212.1"/>
+<path class="link" marker-end="url(#in)" d="M 1150.9 2124.7 L 1151.8 2069.4"/>
+<path class="link" marker-start="url(#in)" d="M 1152.5 2276.5 L 1182.8 2235.9"/>
+<path class="link" marker-end="url(#in)" d="M 1128.6 2308.5 L 1098.4 2349.2"/>
+<path class="link" marker-start="url(#in)" d="M 1119.1 2636.4 L 1139.8 2639.5"/>
+<path class="link" marker-end="url(#in)" d="M 1055.3 2620.2 L 953.6 2583.9"/>
+<path class="link" marker-start="url(#in)" d="M 833.2 2442.1 L 803.7 2369.5"/>
+<path class="link" marker-end="url(#in)" d="M 852.7 2474.1 L 924.8 2562.3"/>
+<path class="link" marker-start="url(#in)" d="M 1289.0 3154.3 L 1330.1 3124.3"/>
+<path class="link" marker-end="url(#in)" d="M 1290.9 3186.3 L 1323.8 3208.4"/>
+<path class="link" marker-start="url(#in)" d="M 1118.2 3187.5 L 1095.8 3158.0"/>
+<path class="link" marker-end="url(#in)" d="M 1098.3 3207.2 L 1062.9 3211.2"/>
+<path class="link" marker-start="url(#in)" d="M 1043.9 3092.0 L 1044.2 3018.8"/>
+<path class="link" marker-end="url(#in)" d="M 1011.9 3096.2 L 977.6 3083.6"/>
+<path class="link" marker-start="url(#in)" d="M 1549.6 2979.1 L 1587.7 2925.1"/>
+<path class="link" marker-end="url(#in)" d="M 1527.2 2979.1 L 1499.6 2939.4"/>
+<path class="link" marker-start="url(#in)" d="M 1897.5 3216.8 L 1936.7 3188.2"/>
+<path class="link" marker-end="url(#in)" d="M 1898.6 3248.8 L 1931.6 3271.8"/>
+<path class="link" marker-end="url(#in)" d="M 2075.9 3168.8 L 2107.0 3153.9"/>
+<path class="link" marker-end="url(#in)" d="M 2075.9 3187.7 L 2115.0 3192.1"/>
+<path class="link" marker-start="url(#in)" d="M 2319.1 3479.0 L 2285.8 3485.3"/>
+<path class="link" marker-end="url(#in)" d="M 2386.1 3456.3 L 2414.8 3441.9"/>
+<path class="link" marker-end="url(#in)" d="M 2389.4 3475.6 L 2427.2 3479.1"/>
+<path class="link" marker-start="url(#in)" d="M 2030.2 2826.9 L 2023.4 2754.1"/>
+<path class="link" marker-end="url(#in)" d="M 2033.1 2858.9 L 2038.2 2913.9"/>
+<path class="link" marker-start="url(#in)" d="M 2485.0 526.6 L 2504.4 473.5"/>
+<path class="link" marker-end="url(#in)" d="M 2514.3 542.7 L 2547.6 542.7"/>
+<path class="link" marker-start="url(#in)" d="M 2616.3 931.1 L 2643.9 891.3"/>
+<path class="link" marker-end="url(#in)" d="M 2637.2 955.5 L 2674.0 965.2"/>
+<path class="link" marker-start="url(#in)" d="M 2791.2 1357.5 L 2824.2 1333.8"/>
+<path class="link" marker-end="url(#in)" d="M 2792.5 1389.5 L 2825.5 1412.0"/>
+<path class="link" marker-end="url(#in)" d="M 2784.4 1829.9 L 2817.4 1853.7"/>
+<path class="link" marker-start="url(#in)" d="M 2749.7 2210.6 L 2720.2 2165.3"/>
+<path class="link" marker-end="url(#in)" d="M 2778.6 2242.6 L 2810.1 2269.9"/>
+<path class="link" marker-end="url(#in)" d="M 2765.0 2242.6 L 2780.8 2294.1"/>
+<path class="link" marker-end="url(#in)" d="M 2309.3 217.3 L 2350.9 224.7"/>
+<path class="link" marker-start="url(#in)" d="M 2407.4 2558.5 L 2378.3 2538.0"/>
+<path class="link" marker-end="url(#in)" d="M 2462.2 2585.4 L 2493.7 2596.3"/>
+<path class="link" marker-end="url(#in)" d="M 2443.2 2590.5 L 2472.3 2626.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_isoprenoid-biosynthesis" transform="translate(1456.8,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">isoprenoid biosynthesis</text></g>
+<g id="node9323" class="node nodeHM pw_isoprenoid-biosynthesis lid231" transform="translate(910.5,2280.9)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=231" target="_blank">geranylgeranyl diphosphate</a></text><title></title></g>
+<g id="node3530" class="node nodeHM pw_isoprenoid-biosynthesis lid9247" transform="translate(560.5,2466.6)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9247" target="_blank">prephytoene-PP</a></text><title></title></g>
+<g id="node11129" class="node nodeHM pw_isoprenoid-biosynthesis lid14947" transform="translate(439.6,2205.2)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=14947" target="_blank">geranylfarnesyl diphosphate</a></text><title></title></g>
+<g id="node11675" class="node nodeHM pw_isoprenoid-biosynthesis lid193509" transform="translate(78.9,2194.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=193509" target="_blank">ophiobolin F</a></text><title></title></g>
+<g id="node2844" class="node nodeHM pw_isoprenoid-biosynthesis lid7651" transform="translate(647.9,1833.1)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7651" target="_blank">geranylgeranyl phosphate</a></text><title></title></g>
+<g id="node2846" class="node nodeHM pw_isoprenoid-biosynthesis lid3000" transform="translate(479.8,1482.2)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3000" target="_blank">geranylgeraniol</a></text><title></title></g>
+<g id="node2971" class="node nodeHM pw_isoprenoid-biosynthesis lid5639" transform="translate(909.0,1926.8)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5639" target="_blank">all-trans-nonaprenyl diphosphate</a></text><title></title></g>
+<g id="node2847" class="node nodeHM pw_isoprenoid-biosynthesis lid7038" transform="translate(1111.5,1868.3)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7038" target="_blank">tritrans,heptacis-undecaprenyl diphosphate</a></text><title></title></g>
+<g id="node2008" class="node nodeHM pw_isoprenoid-biosynthesis lid192309" transform="translate(1296.6,2019.8)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=192309" target="_blank">cyclooctat-9-en-7-ol</a></text><title></title></g>
+<g id="node2681" class="node nodeHM pw_isoprenoid-biosynthesis lid3092" transform="translate(1300.4,2292.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3092" target="_blank">phytyl-PP</a></text><title></title></g>
+<g id="node6703" class="node nodeHM pw_isoprenoid-biosynthesis lid1392" transform="translate(1265.1,2993.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1392" target="_blank">(2E,6E)-farnesyl-PP</a></text><title></title></g>
+<g id="node10129" class="node nodeHM pw_isoprenoid-biosynthesis lid8042" transform="translate(723.1,2590.1)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8042" target="_blank">all-trans-hexaprenyl-PP</a></text><title></title></g>
+<g id="node2977" class="node nodeHM pw_isoprenoid-biosynthesis lid5639" transform="translate(1271.8,3337.3)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5639" target="_blank">all-trans-nonaprenyl diphosphate</a></text><title></title></g>
+<g id="node6782" class="node nodeHM pw_isoprenoid-biosynthesis lid9828" transform="translate(1049.8,3386.2)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9828" target="_blank">decaprenyl-PP</a></text><title></title></g>
+<g id="node6777" class="node nodeHM pw_isoprenoid-biosynthesis lid8041" transform="translate(916.5,3235.2)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8041" target="_blank">all-trans-heptaprenyl diphosphate</a></text><title></title></g>
+<g id="node6708" class="node nodeHM pw_isoprenoid-biosynthesis lid175" transform="translate(1874.3,2995.1)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=175" target="_blank">geranyl diphosphate</a></text><title></title></g>
+<g id="node2975" class="node nodeHM pw_isoprenoid-biosynthesis lid5639" transform="translate(1875.6,3404.0)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5639" target="_blank">all-trans-nonaprenyl diphosphate</a></text><title></title></g>
+<g id="node11648" class="node nodeHM pw_isoprenoid-biosynthesis lid987" transform="translate(2206.2,3332.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=987" target="_blank">geraniol</a></text><title></title></g>
+<g id="node11650" class="node nodeHM pw_isoprenoid-biosynthesis lid4013" transform="translate(2467.8,3587.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4013" target="_blank">geranial</a></text><title></title></g>
+<g id="node1301" class="node nodeHM pw_isoprenoid-biosynthesis lid157" transform="translate(2227.7,2695.4)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=157" target="_blank">dimethylallyl-PP</a></text><title></title></g>
+<g id="node9367" class="node nodeHM pw_isoprenoid-biosynthesis lid1263" transform="translate(2357.3,383.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1263" target="_blank">1-deoxy-Xyl 5-P</a></text><title></title></g>
+<g id="node9377" class="node nodeHM pw_isoprenoid-biosynthesis lid2166" transform="translate(2605.2,738.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2166" target="_blank">2C-ME4P</a></text><title></title></g>
+<g id="node9381" class="node nodeHM pw_isoprenoid-biosynthesis lid7443" transform="translate(2761.1,1159.2)"><rect height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7443" target="_blank">4-CDP-2-C-methyl-D-erythritol</a></text><title></title></g>
+<g id="node4072" class="node nodeHM pw_isoprenoid-biosynthesis lid6725" transform="translate(2766.6,1594.1)"><rect height="30.0" width="223.8" x="-111.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6725" target="_blank">4-CDP-2-C-methyl-D-erythritol 2-P</a></text><title></title></g>
+<g id="node4070" class="node nodeHM pw_isoprenoid-biosynthesis lid5699" transform="translate(2760.1,2027.6)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5699" target="_blank">2Me-E-cy-PPi</a></text><title></title></g>
+<g id="node4068" class="node nodeHM pw_isoprenoid-biosynthesis lid5379" transform="translate(2607.4,2406.7)"><rect height="30.0" width="314.6" x="-157.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5379" target="_blank">(E)-4-hydroxy-3-methylbut-2-en-1-yl diphosphate</a></text><title></title></g>
+<g id="node4058" class="node nodeHM pw_isoprenoid-biosynthesis lid147" transform="translate(2280.6,52.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=147" target="_blank">GAP</a></text><title></title></g>
+<g id="node4057" class="node nodeHM pw_isoprenoid-biosynthesis lid31" transform="translate(2152.8,107.3)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node1300" class="node nodeHM pw_isoprenoid-biosynthesis lid113" transform="translate(2504.7,2516.0)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node10174" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(735.4,2387.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.32" target="_blank">2.5.1.32</a></text><title>15-cis-phytoene synthase</title></g>
+<g id="node11128" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(670.1,2227.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.81" target="_blank">2.5.1.81</a></text><title>geranylfarnesyl diphosphate synthase</title></g>
+<g id="node11674" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(255.4,2194.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.145" target="_blank">4.2.3.145</a></text><title>ophiobolin F synthase</title></g>
+<g id="node2843" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(766.3,2051.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.4.B4" target="_blank">2.7.4.B4</a></text><title>geranylgeranyl phosphate kinase</title></g>
+<g id="node2845" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(557.6,1637.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.B19" target="_blank">2.7.1.B19</a></text><title>geranylgeraniol kinase</title></g>
+<g id="node2974" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(909.0,2079.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.85" target="_blank">2.5.1.85</a></text><title>all-trans-nonaprenyl diphosphate synthase [geranylgeranyl-diphosphate specific]</title></g>
+<g id="node2848" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1045.5,2074.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.89" target="_blank">2.5.1.89</a></text><title>tritrans,polycis-undecaprenyl diphosphate synthase [geranylgeranyl-diphosphate specific]</title></g>
+<g id="node2009" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1150.7,2140.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.146" target="_blank">4.2.3.146</a></text><title>cyclooctat-9-en-7-ol synthase</title></g>
+<g id="node2682" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1140.6,2292.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.83" target="_blank">1.3.1.83</a></text><title>geranylgeranyl diphosphate reductase</title></g>
+<g id="node4075" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1087.2,2631.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.29" target="_blank">2.5.1.29</a></text><title>geranylgeranyl diphosphate synthase</title></g>
+<g id="node10139" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(839.7,2458.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.82" target="_blank">2.5.1.82</a></text><title>hexaprenyl diphosphate synthase [geranylgeranyl-diphosphate specific]</title></g>
+<g id="node2978" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1267.0,3170.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.B14" target="_blank">2.5.1.B14</a></text><title>(2E,6E)-farnesyl-diphosphate all-trans-nonaprenyl diphosphate synthase</title></g>
+<g id="node6779" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1130.3,3203.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.91" target="_blank">2.5.1.91</a></text><title>all-trans-decaprenyl-diphosphate synthase</title></g>
+<g id="node10159" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1043.8,3108.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.30" target="_blank">2.5.1.30</a></text><title>heptaprenyl diphosphate synthase</title></g>
+<g id="node6706" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1538.4,2995.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.10" target="_blank">2.5.1.10</a></text><title>(2E,6E)-farnesyl diphosphate synthase</title></g>
+<g id="node2976" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(1875.6,3232.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.84" target="_blank">2.5.1.84</a></text><title>all-trans-nonaprenyl diphosphate synthase [geranyl-diphosphate specific]</title></g>
+<g id="node11647" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2043.9,3184.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.7.11" target="_blank">3.1.7.11</a></text><title>geranyl diphosphate diphosphatase</title></g>
+<g id="node11649" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2354.3,3472.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.347" target="_blank">1.1.1.347</a></text><title>geraniol dehydrogenase (NAD+)</title></g>
+<g id="node6705" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2031.7,2842.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.1" target="_blank">2.5.1.1</a></text><title>dimethylallyltranstransferase</title></g>
+<g id="node9371" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2479.2,542.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.267" target="_blank">1.1.1.267</a></text><title>1-deoxy-D-xylulose-5-phosphate reductoisomerase</title></g>
+<g id="node9379" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2605.2,947.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.60" target="_blank">2.7.7.60</a></text><title>2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase</title></g>
+<g id="node9319" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2769.0,1373.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.148" target="_blank">2.7.1.148</a></text><title>4-(cytidine 5&#x27;-diphospho)-2-C-methyl-D-erythritol kinase</title></g>
+<g id="node4071" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2762.3,1813.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.6.1.12" target="_blank">4.6.1.12</a></text><title>2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase</title></g>
+<g id="node4069" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2760.1,2226.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.7.1" target="_blank">1.17.7.1</a></text><title>(E)-4-hydroxy-3-methylbut-2-enyl-diphosphate synthase (ferredoxin)</title></g>
+<g id="node9369" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2280.6,212.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.2.1.7" target="_blank">2.2.1.7</a></text><title>1-deoxy-D-xylulose-5-phosphate synthase</title></g>
+<g id="node4067" class="node nodeEN pw_isoprenoid-biosynthesis" transform="translate(2430.3,2574.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.17.7.4" target="_blank">1.17.7.4</a></text><title>4-hydroxy-3-methylbut-2-en-1-yl diphosphate reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10174~0" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(633.4,2319.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11128~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(743.3,2152.1)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node11674~0" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(286.4,2112.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11674~1" class="node nodeCM pw_isoprenoid-biosynthesis lid1" transform="translate(325.0,2141.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2843~0" class="node nodeCM pw_isoprenoid-biosynthesis lid4" transform="translate(679.3,2044.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2843~1" class="node nodeCM pw_isoprenoid-biosynthesis lid13" transform="translate(853.4,2058.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2845~0" class="node nodeCM pw_isoprenoid-biosynthesis lid4" transform="translate(471.4,1622.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2845~1" class="node nodeCM pw_isoprenoid-biosynthesis lid13" transform="translate(643.8,1651.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2974~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(980.3,2030.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2848~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(968.5,2115.0)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node2848~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(1003.1,1996.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2009~0" class="node nodeCM pw_isoprenoid-biosynthesis lid1" transform="translate(1149.2,2228.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2009~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(1152.1,2053.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2682~0" class="node nodeCM pw_isoprenoid-biosynthesis lid10" transform="translate(1194.7,2219.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2682~1" class="node nodeCM pw_isoprenoid-biosynthesis lid5" transform="translate(1086.4,2365.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4075~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(1191.2,2647.2)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node10139~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(797.3,2353.5)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node10139~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(937.8,2578.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2978~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(1352.0,3108.3)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node2978~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(1339.6,3219.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6779~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(1083.7,3142.0)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node6779~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(1047.1,3213.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10159~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(1044.3,3002.8)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node10159~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(961.9,3077.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6706~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(1598.9,2909.1)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node6706~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(1488.4,2923.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node2976~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(1958.7,3172.2)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node2976~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(1947.3,3282.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11647~0" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(2122.8,3146.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11647~1" class="node nodeCM pw_isoprenoid-biosynthesis lid1" transform="translate(2130.7,3193.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11649~0" class="node nodeCM pw_isoprenoid-biosynthesis lid8" transform="translate(2266.8,3488.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node11649~1" class="node nodeCM pw_isoprenoid-biosynthesis lid7" transform="translate(2433.7,3432.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node11649~2" class="node nodeCM pw_isoprenoid-biosynthesis lid12" transform="translate(2439.6,3480.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6705~0" class="node nodeCM pw_isoprenoid-biosynthesis lid113" transform="translate(2021.9,2738.1)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node6705~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(2039.7,2929.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node9371~0" class="node nodeCM pw_isoprenoid-biosynthesis lid5" transform="translate(2510.2,457.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node9371~1" class="node nodeCM pw_isoprenoid-biosynthesis lid10" transform="translate(2569.8,542.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node9379~0" class="node nodeCM pw_isoprenoid-biosynthesis lid60" transform="translate(2655.0,875.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=60" target="_blank">CTP</a></text><title></title></g>
+<g id="node9379~1" class="node nodeCM pw_isoprenoid-biosynthesis lid17" transform="translate(2689.7,969.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node9319~0" class="node nodeCM pw_isoprenoid-biosynthesis lid4" transform="translate(2839.9,1322.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node9319~1" class="node nodeCM pw_isoprenoid-biosynthesis lid13" transform="translate(2841.2,1422.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node4071~0" class="node nodeCM pw_isoprenoid-biosynthesis lid100" transform="translate(2833.1,1865.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title></title></g>
+<g id="node4069~0" class="node nodeCM pw_isoprenoid-biosynthesis lid265" transform="translate(2709.8,2149.3)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node4069~1" class="node nodeCM pw_isoprenoid-biosynthesis lid289" transform="translate(2828.6,2285.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node4069~2" class="node nodeCM pw_isoprenoid-biosynthesis lid1" transform="translate(2785.7,2310.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node9369~0" class="node nodeCM pw_isoprenoid-biosynthesis lid28" transform="translate(2366.6,227.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node4067~0" class="node nodeCM pw_isoprenoid-biosynthesis lid5" transform="translate(2356.1,2522.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node4067~1" class="node nodeCM pw_isoprenoid-biosynthesis lid10" transform="translate(2515.9,2604.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node4067~2" class="node nodeCM pw_isoprenoid-biosynthesis lid1" transform="translate(2485.2,2642.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+</g></svg>

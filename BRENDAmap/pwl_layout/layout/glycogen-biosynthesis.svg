@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 1322.8 509.9" width="1323" height="510" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="1322.8" height="509.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glycogen-biosynthesis" class="pw " x="0.0" y="0.0" width="1202.8" height="374.4" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 948.8 247.5 L 988.4 247.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 878.4 247.5 L 838.8 247.5"/>
+<path class="link" marker-start="url(#in)" d="M 615.5 247.5 L 658.4 247.5"/>
+<path class="link" marker-end="url(#in)" d="M 551.7 247.5 L 515.3 247.5"/>
+<path class="link" marker-start="url(#in)" d="M 285.5 247.5 L 321.9 247.5"/>
+<path class="link" marker-end="url(#in)" d="M 221.7 247.5 L 120.5 247.5"/>
+<path class="link" marker-start="url(#in)" d="M 554.9 52.5 L 473.2 52.5"/>
+<path class="link" marker-end="url(#in)" d="M 612.3 52.5 L 719.9 52.5"/>
+<path class="link" marker-start="url(#in)" d="M 282.3 52.5 L 364.0 52.5"/>
+<path class="link" marker-end="url(#in)" d="M 224.9 52.5 L 143.2 52.5"/>
+<path class="link" marker-start="url(#in)" d="M 890.1 149.0 L 772.1 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 878.4 153.8 L 787.0 124.7"/>
+<path class="link" marker-end="url(#in)" d="M 945.6 181.0 L 1046.6 231.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 924.8 263.5 L 956.2 308.4"/>
+<path class="link" marker-end="url(#in)" d="M 902.4 263.5 L 874.7 303.1"/>
+<path class="link" marker-start="url(#in)" d="M 594.8 263.5 L 626.2 308.4"/>
+<path class="link" marker-end="url(#in)" d="M 572.4 263.5 L 544.7 303.1"/>
+<path class="link" marker-start="url(#in)" d="M 572.4 68.5 L 544.7 108.1"/>
+<path class="link" marker-end="url(#in)" d="M 594.8 68.5 L 622.5 108.1"/>
+<path class="link" marker-end="url(#in)" d="M 943.1 149.0 L 974.7 131.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glycogen-biosynthesis" transform="translate(601.4,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">glycogen biosynthesis</text></g>
+<g id="node11105" class="node nodeHM pw_glycogen-biosynthesis lid61118" transform="translate(1078.6,247.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=61118" target="_blank">alpha-D-glucosylglycogenin</a></text><title></title></g>
+<g id="node11110" class="node nodeHM pw_glycogen-biosynthesis lid5824" transform="translate(748.6,247.5)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5824" target="_blank">[(1-&gt;4)-alpha-D-glucosyl]n</a></text><title></title></g>
+<g id="node11114" class="node nodeHM pw_glycogen-biosynthesis lid10035" transform="translate(418.6,247.5)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10035" target="_blank">[(1-&gt;4)-alpha-D-glucosyl]n+1</a></text><title></title></g>
+<g id="node11116" class="node nodeHM pw_glycogen-biosynthesis lid1246" transform="translate(88.6,247.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1246" target="_blank">glycogen</a></text><title></title></g>
+<g id="node11098" class="node nodeHM pw_glycogen-biosynthesis lid107" transform="translate(418.6,52.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title></title></g>
+<g id="node11100" class="node nodeHM pw_glycogen-biosynthesis lid64" transform="translate(748.6,52.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node1228" class="node nodeHM pw_glycogen-biosynthesis lid2944" transform="translate(88.6,52.5)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2944" target="_blank">alpha-D-Glc 6-P</a></text><title></title></g>
+<g id="node11101" class="node nodeHM pw_glycogen-biosynthesis lid8301" transform="translate(748.6,112.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8301" target="_blank">glycogenin</a></text><title></title></g>
+<g id="node11109" class="node nodeEN pw_glycogen-biosynthesis" transform="translate(913.6,247.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.186" target="_blank">2.4.1.186</a></text><title>glycogenin glucosyltransferase</title></g>
+<g id="node11113" class="node nodeEN pw_glycogen-biosynthesis" transform="translate(583.6,247.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.11" target="_blank">2.4.1.11</a></text><title>glycogen(starch) synthase</title></g>
+<g id="node11115" class="node nodeEN pw_glycogen-biosynthesis" transform="translate(253.6,247.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.18" target="_blank">2.4.1.18</a></text><title>1,4-alpha-glucan branching enzyme</title></g>
+<g id="node11099" class="node nodeEN pw_glycogen-biosynthesis" transform="translate(583.6,52.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.9" target="_blank">2.7.7.9</a></text><title>UTP-glucose-1-phosphate uridylyltransferase</title></g>
+<g id="node11097" class="node nodeEN pw_glycogen-biosynthesis" transform="translate(253.6,52.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.2.5" target="_blank">5.4.2.5</a></text><title>phosphoglucomutase (glucose-cofactor)</title></g>
+<g id="node11102" class="node nodeEN pw_glycogen-biosynthesis" transform="translate(913.6,165.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.186" target="_blank">2.4.1.186</a></text><title>glycogenin glucosyltransferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node11109~0" class="node nodeCM pw_glycogen-biosynthesis lid64" transform="translate(967.4,324.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11109~1" class="node nodeCM pw_glycogen-biosynthesis lid26" transform="translate(863.5,319.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11113~0" class="node nodeCM pw_glycogen-biosynthesis lid64" transform="translate(637.4,324.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node11113~1" class="node nodeCM pw_glycogen-biosynthesis lid26" transform="translate(533.5,319.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node11099~0" class="node nodeCM pw_glycogen-biosynthesis lid65" transform="translate(533.5,124.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=65" target="_blank">UTP</a></text><title></title></g>
+<g id="node11099~1" class="node nodeCM pw_glycogen-biosynthesis lid17" transform="translate(633.7,124.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node11102~0" class="node nodeCM pw_glycogen-biosynthesis lid26" transform="translate(990.4,123.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+</g></svg>

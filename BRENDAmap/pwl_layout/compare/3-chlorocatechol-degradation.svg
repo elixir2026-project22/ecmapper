@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3015" height="527" viewBox="0 0 3014.7 526.7"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="23451.1 6576.4 1298.3 326.1" width="1298" height="326" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="23451.1" y="6576.4" width="1298.3" height="326.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_3-chlorocatechol-degradation" class="pw pw7" x="23491.1" y="6631.9" width="1218.3" height="230.6" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23817.8 6714.0 L 23893.5 6714.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23739.4 6714.0 L 23638.3 6714.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24210.7 6714.0 L 24303.4 6714.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24143.6 6714.0 L 24062.3 6714.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24542.2 6714.0 L 24449.6 6714.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24575.9 6730.0 L 24576.5 6807.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23836.0 6823.1 L 23983.4 6823.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 23763.2 6823.1 L 23627.0 6823.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24296.7 6823.1 L 24449.8 6823.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 24223.9 6823.1 L 24084.5 6823.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 23754.9 6698.0 L 23722.2 6676.0"/>
+<path class="link" marker-end="url(#in)" d="M 24599.4 6698.0 L 24628.9 6678.0"/>
+<path class="link" marker-start="url(#in)" d="M 23828.8 6807.1 L 23866.5 6786.4"/>
+<path class="link" marker-end="url(#in)" d="M 23773.2 6807.1 L 23739.1 6786.4"/>
+<path class="link" marker-start="url(#in)" d="M 24286.7 6807.1 L 24325.0 6783.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_3-chlorocatechol-degradation" transform="translate(24100.2,6631.9)"><rect rx="10" height="31" width="268" x="-134.0" y="-15.5"/><text dominant-baseline="central">3-chlorocatechol degradation</text></g>
+<g id="node10790" class="node nodeHM pw_3-chlorocatechol-degradation lid9021" transform="translate(24034.0,6823.1)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9021" target="_blank">maleylacetate</a></text><title>2-maleylacetate</title></g>
+<g id="node10792" class="node nodeHM pw_3-chlorocatechol-degradation lid5246" transform="translate(24576.6,6823.1)"><rect height="30.0" width="251.6" x="-125.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5246" target="_blank">trans-4-carboxymethylenebut-2-en-4-olide</a></text><title>trans-4-carboxymethylenebut-2-en-4-olide</title></g>
+<g id="node10794" class="node nodeHM pw_3-chlorocatechol-degradation lid29589" transform="translate(24376.5,6714.0)"><rect height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29589" target="_blank">5-chloromuconolactone</a></text><title>5-chloromuconolactone</title></g>
+<g id="node10795" class="node nodeHM pw_3-chlorocatechol-degradation lid1707" transform="translate(23579.3,6714.0)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1707" target="_blank">3-chlorocatechol</a></text><title>3-chlorocatechol</title></g>
+<g id="node10797" class="node nodeHM pw_3-chlorocatechol-degradation lid2005" transform="translate(23977.9,6714.0)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2005" target="_blank">2-chloro-cis,cis-muconate</a></text><title>2-chloro-cis,cis-muconate</title></g>
+<g id="node12213" class="node nodeSM pw_3-chlorocatechol-degradation lid2817" transform="translate(23579.3,6823.1)"><rect height="35.0" width="93.4" x="-46.7" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2817" target="_blank">3-oxoadipate</a></text><title>3-oxoadipate</title></g>
+<g id="node10796" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(23778.6,6714.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.1" target="_blank">1.13.11.1</a></text><title>catechol 1,2-dioxygenase</title></g>
+<g id="node10798" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(24177.2,6714.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.7" target="_blank">5.5.1.7</a></text><title>chloromuconate cycloisomerase</title></g>
+<g id="node10793" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(24575.8,6714.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.7" target="_blank">5.5.1.7</a></text><title>Chloromuconate cycloisomerase</title></g>
+<g id="node10789" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(23799.6,6823.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.32" target="_blank">1.3.1.32</a></text><title>maleylacetate reductase</title></g>
+<g id="node10791" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(24260.3,6823.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.45" target="_blank">3.1.1.45</a></text><title>carboxymethylenebutenolidase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10799" class="node nodeCM pw_3-chlorocatechol-degradation lid9" transform="translate(23702.8,6662.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node10800" class="node nodeCM pw_3-chlorocatechol-degradation lid298" transform="translate(24651.2,6662.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=298" target="_blank">Cl-</a></text><title>chloride</title></g>
+<g id="node10801" class="node nodeCM pw_3-chlorocatechol-degradation lid1" transform="translate(24347.3,6770.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10802" class="node nodeCM pw_3-chlorocatechol-degradation lid40" transform="translate(23895.7,6770.4)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40" target="_blank">NAD(P)H</a></text><title>NAD(P)H</title></g>
+<g id="node10803" class="node nodeCM pw_3-chlorocatechol-degradation lid50" transform="translate(23712.7,6770.4)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=50" target="_blank">NAD(P)+</a></text><title>NAD(P)+</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1378.3" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1636.4 486.7" width="1636" height="487" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1636.4" height="486.7" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_3-chlorocatechol-degradation" class="pw " x="0.0" y="0.0" width="1556.4" height="391.2" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 271.2 341.2 L 149.7 341.2"/>
+<path class="link" marker-end="url(#in)" d="M 341.5 341.2 L 433.8 341.2"/>
+<path class="link" marker-start="url(#in)" d="M 706.7 341.2 L 607.8 341.2"/>
+<path class="link" marker-end="url(#in)" d="M 764.0 341.2 L 875.8 341.2"/>
+<path class="link" marker-start="url(#in)" d="M 1127.7 341.2 L 1023.9 341.2"/>
+<path class="link" marker-end="url(#in)" d="M 1185.0 341.2 L 1251.2 341.2"/>
+<path class="link" marker-start="url(#in)" d="M 1195.7 249.1 C 1237.9 269.4 1312.4 305.3 1354.9 325.8"/>
+<path class="link" marker-end="url(#in)" d="M 1132.4 218.0 L 981.8 142.7"/>
+<path class="link" marker-start="url(#in)" d="M 767.3 126.7 L 901.7 126.7"/>
+<path class="link" marker-end="url(#in)" d="M 703.4 126.7 L 565.7 126.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 295.1 325.2 L 268.4 287.0"/>
+<path class="link" marker-end="url(#in)" d="M 1167.6 325.2 L 1195.3 285.7"/>
+<path class="link" marker-start="url(#in)" d="M 1193.4 218.0 L 1225.1 200.5"/>
+<path class="link" marker-start="url(#in)" d="M 746.5 110.7 L 776.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 724.1 110.7 L 694.6 68.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_3-chlorocatechol-degradation" transform="translate(778.2,0.0)"><rect rx="10" height="31" width="282" x="-141.1" y="-15.5"/><text dominant-baseline="central">3-chlorocatechol degradation</text></g>
+<g id="node10795" class="node nodeHM pw_3-chlorocatechol-degradation lid1707" transform="translate(91.8,341.2)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1707" target="_blank">3-chlorocatechol</a></text><title></title></g>
+<g id="node10797" class="node nodeHM pw_3-chlorocatechol-degradation lid2005" transform="translate(520.8,341.2)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2005" target="_blank">2-chloro-cis,cis-muconate</a></text><title></title></g>
+<g id="node10794" class="node nodeHM pw_3-chlorocatechol-degradation lid29589" transform="translate(949.8,341.2)"><rect height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29589" target="_blank">5-chloromuconolactone</a></text><title></title></g>
+<g id="node10792" class="node nodeHM pw_3-chlorocatechol-degradation lid5246" transform="translate(1386.8,341.2)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5246" target="_blank">trans-4-carboxymethylenebut-2-en-4-olide</a></text><title></title></g>
+<g id="node10790" class="node nodeHM pw_3-chlorocatechol-degradation lid9021" transform="translate(949.8,126.7)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9021" target="_blank">maleylacetate</a></text><title></title></g>
+<g id="node12213" class="node nodeHM pw_3-chlorocatechol-degradation lid2817" transform="translate(520.8,126.7)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2817" target="_blank">3-oxoadipate</a></text><title></title></g>
+<g id="node10796" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(306.3,341.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.1" target="_blank">1.13.11.1</a></text><title>catechol 1,2-dioxygenase</title></g>
+<g id="node10798" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(735.3,341.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.7" target="_blank">5.5.1.7</a></text><title>chloromuconate cycloisomerase</title></g>
+<g id="node10793" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(1156.4,341.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.7" target="_blank">5.5.1.7</a></text><title>Chloromuconate cycloisomerase</title></g>
+<g id="node10791" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(1164.3,234.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.1.45" target="_blank">3.1.1.45</a></text><title>carboxymethylenebutenolidase</title></g>
+<g id="node10789" class="node nodeEN pw_3-chlorocatechol-degradation" transform="translate(735.3,126.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.32" target="_blank">1.3.1.32</a></text><title>maleylacetate reductase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10796~0" class="node nodeCM pw_3-chlorocatechol-degradation lid9" transform="translate(257.2,271.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node10793~0" class="node nodeCM pw_3-chlorocatechol-degradation lid298" transform="translate(1206.5,269.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=298" target="_blank">Cl-</a></text><title></title></g>
+<g id="node10791~0" class="node nodeCM pw_3-chlorocatechol-degradation lid1" transform="translate(1240.9,191.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10789~0" class="node nodeCM pw_3-chlorocatechol-degradation lid5" transform="translate(787.3,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node10789~1" class="node nodeCM pw_3-chlorocatechol-degradation lid10" transform="translate(683.4,52.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+</g></svg>
+<text x="1388.3" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

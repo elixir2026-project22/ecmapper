@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 4273.3 5119.4" width="4273" height="5119" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="4273.3" height="5119.4" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_peptidoglycan-biosynthesis" class="pw " x="0.0" y="0.0" width="4153.3" height="4983.9" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1804.1 3393.4 L 1706.3 3295.6"/>
+<path class="link" marker-end="url(#in)" d="M 1851.9 3425.4 L 2016.1 3507.8"/>
+<path class="link" marker-start="url(#in)" d="M 2253.0 3098.8 C 2276.4 3130.4 2329.9 3202.4 2353.3 3233.9"/>
+<path class="link" marker-start="url(#in)" d="M 2210.5 3068.4 C 2165.8 3046.6 2083.8 3006.6 2038.8 2984.6"/>
+<path class="link" marker-end="url(#in)" d="M 2246.2 3067.5 L 2318.5 2813.9"/>
+<path class="link" marker-start="url(#in)" d="M 1774.3 3067.5 L 1690.8 2870.8"/>
+<path class="link" marker-start="url(#in)" d="M 1774.0 3099.0 C 1757.0 3135.6 1714.4 3227.7 1697.4 3264.3"/>
+<path class="link" marker-end="url(#in)" d="M 1809.8 3069.0 L 1975.6 2985.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2293.4 3393.4 L 2356.7 3265.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2253.6 3424.8 L 2081.3 3507.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2294.1 3425.4 L 2399.4 3622.2"/>
+<path class="link" marker-end="url(#in)" d="M 2554.6 3270.5 L 2406.3 3253.8"/>
+<path class="link" marker-start="url(#in)" d="M 2612.0 3260.0 L 2748.0 3195.0"/>
+<path class="link" marker-start="url(#in)" d="M 2535.7 3150.7 L 2392.4 3233.1"/>
+<path class="link" marker-end="url(#in)" d="M 2598.7 3143.2 L 2748.0 3179.1"/>
+<path class="link" marker-start="url(#in)" d="M 2401.8 2607.3 L 2329.7 2781.9"/>
+<path class="link" marker-end="url(#in)" d="M 2415.7 2575.3 L 2489.8 2411.8"/>
+<path class="link" marker-start="url(#in)" d="M 2578.6 2222.1 L 2504.5 2379.8"/>
+<path class="link" marker-end="url(#in)" d="M 2593.6 2190.1 L 2666.4 2035.7"/>
+<path class="link" marker-start="url(#in)" d="M 2752.9 1850.8 L 2681.4 2003.7"/>
+<path class="link" marker-end="url(#in)" d="M 2768.0 1818.8 L 2839.4 1667.9"/>
+<path class="link" marker-start="url(#in)" d="M 2927.9 1486.8 L 2854.8 1635.9"/>
+<path class="link" marker-end="url(#in)" d="M 2943.9 1454.8 L 3019.0 1308.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3113.1 1132.1 L 3035.8 1276.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3130.9 1100.1 L 3212.1 959.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3318.8 791.5 L 3231.6 927.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3340.7 759.5 L 3434.1 630.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3555.2 473.0 L 3458.0 598.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3582.5 441.0 L 3688.2 327.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3831.3 192.4 L 3720.3 295.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3868.5 160.4 L 3983.2 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 2555.0 4340.6 L 2609.4 4502.0"/>
+<path class="link" marker-end="url(#in)" d="M 2545.4 4308.6 L 2523.9 4226.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2976.3 3965.4 L 2818.1 3883.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3036.0 3997.4 L 3185.2 4079.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1091.0 2947.6 L 964.2 2837.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1126.0 2979.6 L 1252.7 3102.0"/>
+<path class="link" marker-start="url(#in)" d="M 253.6 3858.2 L 110.8 3858.2"/>
+<path class="link" marker-end="url(#in)" d="M 309.7 3842.2 L 450.8 3759.8"/>
+<path class="link" marker-start="url(#in)" d="M 635.6 3645.4 L 503.8 3727.8"/>
+<path class="link" marker-end="url(#in)" d="M 693.1 3629.4 L 841.5 3629.4"/>
+<path class="link" marker-start="url(#in)" d="M 1061.1 3578.4 L 918.3 3618.6"/>
+<path class="link" marker-end="url(#in)" d="M 1106.8 3554.3 L 1244.6 3425.4"/>
+<path class="link" marker-start="url(#in)" d="M 2688.4 4721.1 L 2605.9 4917.9"/>
+<path class="link" marker-start="url(#in)" d="M 2722.1 4721.1 L 2861.1 4803.5"/>
+<path class="link" marker-end="url(#in)" d="M 2688.2 4689.1 L 2621.7 4534.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2553.1 3768.1 C 2547.8 3838.2 2526.1 4125.4 2520.9 4195.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2533.8 3736.6 L 2428.4 3654.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2585.3 3767.8 C 2629.7 3789.6 2711.2 3829.6 2755.9 3851.6"/>
+<path class="link" marker-start="url(#in)" d="M 1381.1 3277.8 L 1280.5 3134.0"/>
+<path class="link" marker-start="url(#in)" d="M 1374.9 3309.1 C 1349.9 3331.3 1304.1 3371.9 1279.1 3394.0"/>
+<path class="link" marker-end="url(#in)" d="M 1420.9 3292.4 L 1619.5 3283.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1798.6 3425.4 L 1765.7 3449.9"/>
+<path class="link" marker-start="url(#in)" d="M 1788.1 3412.0 L 1776.3 3413.0"/>
+<path class="link" marker-end="url(#in)" d="M 1841.5 3393.4 L 1874.4 3368.9"/>
+<path class="link" marker-end="url(#in)" d="M 1852.0 3406.8 L 1893.0 3403.4"/>
+<path class="link" marker-start="url(#in)" d="M 2251.3 3099.5 L 2277.2 3142.3"/>
+<path class="link" marker-end="url(#in)" d="M 2210.0 3067.5 L 2179.4 3052.1"/>
+<path class="link" marker-end="url(#in)" d="M 2232.0 3067.5 L 2206.9 3026.2"/>
+<path class="link" marker-end="url(#in)" d="M 2241.9 3067.5 L 2242.6 3013.8"/>
+<path class="link" marker-start="url(#in)" d="M 1775.9 3099.5 L 1759.4 3150.6"/>
+<path class="link" marker-end="url(#in)" d="M 1781.7 3067.5 L 1783.6 3012.2"/>
+<path class="link" marker-end="url(#in)" d="M 1791.9 3067.5 L 1818.3 3028.4"/>
+<path class="link" marker-start="url(#in)" d="M 2262.7 3393.4 L 2229.7 3370.3"/>
+<path class="link" marker-end="url(#in)" d="M 2317.4 3420.4 L 2352.4 3432.4"/>
+<path class="link" marker-end="url(#in)" d="M 2298.5 3425.4 L 2327.0 3460.6"/>
+<path class="link" marker-start="url(#in)" d="M 2591.1 3257.7 L 2613.7 3211.2"/>
+<path class="link" marker-end="url(#in)" d="M 2580.5 3289.7 L 2571.0 3343.8"/>
+<path class="link" marker-end="url(#in)" d="M 2568.9 3289.7 L 2538.5 3323.6"/>
+<path class="link" marker-start="url(#in)" d="M 2555.8 3150.7 L 2533.1 3197.3"/>
+<path class="link" marker-start="url(#in)" d="M 2376.5 2599.7 L 2340.5 2609.3"/>
+<path class="link" marker-end="url(#in)" d="M 2398.6 2575.3 L 2372.5 2532.9"/>
+<path class="link" marker-start="url(#in)" d="M 2550.9 2212.2 L 2527.2 2216.3"/>
+<path class="link" marker-end="url(#in)" d="M 2569.6 2190.1 L 2539.2 2160.5"/>
+<path class="link" marker-end="url(#in)" d="M 2582.1 2190.1 L 2569.5 2138.9"/>
+<path class="link" marker-start="url(#in)" d="M 2790.3 1850.8 L 2821.7 1867.7"/>
+<path class="link" marker-start="url(#in)" d="M 2769.6 1850.8 L 2794.7 1894.6"/>
+<path class="link" marker-start="url(#in)" d="M 2759.8 1850.8 L 2757.7 1906.1"/>
+<path class="link" marker-end="url(#in)" d="M 2730.6 1818.8 L 2699.1 1802.0"/>
+<path class="link" marker-end="url(#in)" d="M 2751.3 1818.8 L 2726.2 1775.0"/>
+<path class="link" marker-end="url(#in)" d="M 2761.0 1818.8 L 2763.1 1765.1"/>
+<path class="link" marker-start="url(#in)" d="M 2944.4 1486.8 L 2974.8 1543.1"/>
+<path class="link" marker-end="url(#in)" d="M 2967.7 1466.1 L 3004.8 1460.7"/>
+<path class="link" marker-start="url(#in)" d="M 3129.4 1132.1 L 3157.8 1190.3"/>
+<path class="link" marker-end="url(#in)" d="M 3113.9 1100.1 L 3090.5 1052.1"/>
+<path class="link" marker-start="url(#in)" d="M 3297.2 775.9 L 3270.4 776.3"/>
+<path class="link" marker-end="url(#in)" d="M 3323.1 759.5 L 3303.7 708.3"/>
+<path class="link" marker-end="url(#in)" d="M 3558.3 441.0 L 3509.3 356.1"/>
+<path class="link" marker-end="url(#in)" d="M 3568.0 441.0 L 3569.3 390.1"/>
+<path class="link" marker-start="url(#in)" d="M 3850.2 192.4 L 3855.8 247.3"/>
+<path class="link" marker-end="url(#in)" d="M 3839.4 160.4 L 3787.6 69.2"/>
+<path class="link" marker-end="url(#in)" d="M 3851.4 160.4 L 3861.7 103.2"/>
+<path class="link" marker-start="url(#in)" d="M 2581.5 4334.9 L 2617.0 4346.3"/>
+<path class="link" marker-end="url(#in)" d="M 2517.6 4314.4 L 2480.4 4302.4"/>
+<path class="link" marker-start="url(#in)" d="M 2975.4 3997.4 L 2950.6 4009.9"/>
+<path class="link" marker-end="url(#in)" d="M 3024.3 3965.4 L 3055.4 3936.6"/>
+<path class="link" marker-end="url(#in)" d="M 3042.2 3974.7 L 3078.8 3967.7"/>
+<path class="link" marker-start="url(#in)" d="M 276.7 3874.2 L 259.1 3924.7"/>
+<path class="link" marker-end="url(#in)" d="M 301.9 3874.2 L 336.2 3902.3"/>
+<path class="link" marker-start="url(#in)" d="M 655.3 3645.4 L 637.4 3693.8"/>
+<path class="link" marker-end="url(#in)" d="M 680.9 3645.4 L 711.8 3670.5"/>
+<path class="link" marker-start="url(#in)" d="M 1092.8 3586.3 L 1103.2 3640.1"/>
+<path class="link" marker-start="url(#in)" d="M 1083.6 3586.3 L 1064.5 3635.9"/>
+<path class="link" marker-end="url(#in)" d="M 1086.7 3554.3 L 1076.3 3500.6"/>
+<path class="link" marker-end="url(#in)" d="M 1095.9 3554.3 L 1114.4 3506.3"/>
+<path class="link" marker-end="url(#in)" d="M 2663.2 4696.4 L 2626.5 4686.4"/>
+<path class="link" marker-end="url(#in)" d="M 2577.2 3768.6 L 2610.1 3791.7"/>
+<path class="link" marker-start="url(#in)" d="M 1380.1 3309.8 L 1351.6 3347.4"/>
+<path class="link" marker-end="url(#in)" d="M 1398.4 3277.8 L 1417.6 3228.3"/>
+<path class="link" marker-end="url(#in)" d="M 1413.6 3277.8 L 1448.4 3251.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_peptidoglycan-biosynthesis" transform="translate(2076.7,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">peptidoglycan biosynthesis</text></g>
+<g id="node6733" class="node nodeHM pw_peptidoglycan-biosynthesis lid5254" transform="translate(1690.3,3279.6)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5254" target="_blank">UDP-MurNAc-Ala-D-Glu</a></text><title></title></g>
+<g id="node6747" class="node nodeHM pw_peptidoglycan-biosynthesis lid179802" transform="translate(2048.0,3523.8)"><rect height="30.0" width="502.5" x="-251.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=179802" target="_blank">UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminoheptanedioate</a></text><title></title></g>
+<g id="node6749" class="node nodeHM pw_peptidoglycan-biosynthesis lid7320" transform="translate(2364.6,3249.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7320" target="_blank">D-Ala-D-Ala</a></text><title></title></g>
+<g id="node3401" class="node nodeHM pw_peptidoglycan-biosynthesis lid47578" transform="translate(2007.2,2969.1)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47578" target="_blank">UDP-MurNAc-Ala-gamma-D-Glu-Lys</a></text><title></title></g>
+<g id="node8208" class="node nodeHM pw_peptidoglycan-biosynthesis lid186669" transform="translate(2323.1,2797.9)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186669" target="_blank">UDP-MurNAc-Ala-gamma-D-Glu-Lys-D-Ala-D-Ala</a></text><title></title></g>
+<g id="node3402" class="node nodeHM pw_peptidoglycan-biosynthesis lid134" transform="translate(1684.0,2854.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=134" target="_blank">Lys</a></text><title></title></g>
+<g id="node6751" class="node nodeHM pw_peptidoglycan-biosynthesis lid182323" transform="translate(2408.0,3638.2)"><rect height="30.0" width="502.5" x="-251.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182323" target="_blank">UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminoheptanedioate</a></text><title></title></g>
+<g id="node6750" class="node nodeHM pw_peptidoglycan-biosynthesis lid164" transform="translate(2770.2,3184.4)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=164" target="_blank">D-Ala</a></text><title></title></g>
+<g id="node3045" class="node nodeHM pw_peptidoglycan-biosynthesis lid9597" transform="translate(2497.0,2395.8)"><rect height="30.0" width="457.1" x="-228.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9597" target="_blank">Mur2Ac(oyl-L-Ala-gamma-D-Glu-L-Lys-D-Ala-D-Ala)-diphosphoundecaprenol</a></text><title></title></g>
+<g id="node3043" class="node nodeHM pw_peptidoglycan-biosynthesis lid33429" transform="translate(2673.9,2019.7)"><rect height="30.0" width="547.8" x="-273.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=33429" target="_blank">GlcNAc-(1-&gt;4)-Mur2Ac(oyl-L-Ala-gamma-D-Glu-L-Lys-D-Ala-D-Ala)-diphosphoundecaprenol</a></text><title></title></g>
+<g id="node3041" class="node nodeHM pw_peptidoglycan-biosynthesis lid230431" transform="translate(2847.0,1651.9)"><rect height="30.0" width="612.6" x="-306.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=230431" target="_blank">GlcNAc-(1-&gt;4)-MurNAc(oyl-L-Ala-gamma-D-isoglutaminyl-L-Lys-D-Ala-D-Ala)-diphosphoundecaprenol</a></text><title></title></g>
+<g id="node3039" class="node nodeHM pw_peptidoglycan-biosynthesis lid101753" transform="translate(3027.2,1292.2)"><rect height="30.0" width="664.5" x="-332.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101753" target="_blank">MurNAc-L-Ala-D-isoglutaminyl-L-Lys-(N6-Gly)-D-Ala-D-Ala-diphospho-ditrans,octacis-undecaprenyl-GlcNAc</a></text><title></title></g>
+<g id="node3037" class="node nodeHM pw_peptidoglycan-biosynthesis lid101754" transform="translate(3221.3,943.0)"><rect height="30.0" width="690.4" x="-345.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=101754" target="_blank">MurNAc-L-Ala-D-isoglutaminyl-L-Lys-(N6-tri-Gly)-D-Ala-D-Ala-diphospho-ditrans,octacis-undecaprenyl-GlcNAc</a></text><title></title></g>
+<g id="node3035" class="node nodeHM pw_peptidoglycan-biosynthesis lid182204" transform="translate(3445.6,614.1)"><rect height="30.0" width="703.4" x="-351.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=182204" target="_blank">MurNAc-L-Ala-D-isoglutaminyl-L-Lys-(N6-penta-Gly)-D-Ala-D-Ala-diphospho-ditrans,octacis-undecaprenyl-GlcNAc</a></text><title></title></g>
+<g id="node3033" class="node nodeHM pw_peptidoglycan-biosynthesis lid181664" transform="translate(3703.2,311.7)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=181664" target="_blank">peptidoglycan dimer</a></text><title></title></g>
+<g id="node3031" class="node nodeHM pw_peptidoglycan-biosynthesis lid191357" transform="translate(4003.2,52.5)"><rect height="30.0" width="230.3" x="-115.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=191357" target="_blank">peptidoglycan with D,D cross-links</a></text><title></title></g>
+<g id="node6769" class="node nodeHM pw_peptidoglycan-biosynthesis lid40190" transform="translate(2614.8,4518.0)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40190" target="_blank">ditrans,octacis-undecaprenyl-PP</a></text><title></title></g>
+<g id="node6761" class="node nodeHM pw_peptidoglycan-biosynthesis lid154482" transform="translate(2519.7,4210.2)"><rect height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=154482" target="_blank">ditrans,octacis-undecaprenyl-P</a></text><title></title></g>
+<g id="node6765" class="node nodeHM pw_peptidoglycan-biosynthesis lid189765" transform="translate(2787.4,3867.0)"><rect height="30.0" width="664.5" x="-332.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189765" target="_blank">N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimelyl-D-alanyl-D-alanine-diphosphoundecaprenol</a></text><title></title></g>
+<g id="node6767" class="node nodeHM pw_peptidoglycan-biosynthesis lid189764" transform="translate(3214.2,4095.8)"><rect height="30.0" width="794.1" x="-397.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=189764" target="_blank">N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimelyl-D-alanyl-D-alanine-diphosphoundecaprenyl-N-acetylglucosamine</a></text><title></title></g>
+<g id="node6744" class="node nodeHM pw_peptidoglycan-biosynthesis lid41" transform="translate(948.5,2824.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node6742" class="node nodeHM pw_peptidoglycan-biosynthesis lid344" transform="translate(1269.3,3118.0)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=344" target="_blank">D-Glu</a></text><title></title></g>
+<g id="node1274" class="node nodeHM pw_peptidoglycan-biosynthesis lid17973" transform="translate(72.4,3858.2)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17973" target="_blank">UDP-GlcNAc</a></text><title></title></g>
+<g id="node6737" class="node nodeHM pw_peptidoglycan-biosynthesis lid95304" transform="translate(478.2,3743.8)"><rect height="30.0" width="301.6" x="-150.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=95304" target="_blank">UDP-N-acetyl-3-(1-carboxyvinyl)-D-glucosamine</a></text><title></title></g>
+<g id="node6738" class="node nodeHM pw_peptidoglycan-biosynthesis lid170010" transform="translate(879.9,3629.4)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170010" target="_blank">UDP-MurNAc</a></text><title></title></g>
+<g id="node6732" class="node nodeHM pw_peptidoglycan-biosynthesis lid30955" transform="translate(1261.7,3409.4)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30955" target="_blank">UDP-MurNAc-Ala</a></text><title></title></g>
+<g id="node12010" class="node nodeHM pw_peptidoglycan-biosynthesis lid113" transform="translate(2599.1,4933.9)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=113" target="_blank">isopentenyl-PP</a></text><title></title></g>
+<g id="node1297" class="node nodeHM pw_peptidoglycan-biosynthesis lid1392" transform="translate(2888.1,4819.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1392" target="_blank">(2E,6E)-farnesyl-PP</a></text><title></title></g>
+<g id="node6729" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(1820.0,3409.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.13" target="_blank">6.3.2.13</a></text><title>UDP-N-acetylmuramoyl-L-alanyl-D-glutamate-2,6-diaminopimelate ligase</title></g>
+<g id="node8207" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2241.6,3083.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.10" target="_blank">6.3.2.10</a></text><title>UDP-N-acetylmuramoyl-tripeptide-D-alanyl-D-alanine ligase</title></g>
+<g id="node3406" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(1781.1,3083.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.7" target="_blank">6.3.2.7</a></text><title>UDP-N-acetylmuramoyl-L-alanyl-D-glutamate-L-lysine ligase</title></g>
+<g id="node6754" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2285.5,3409.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.10" target="_blank">6.3.2.10</a></text><title>UDP-N-acetylmuramoyl-tripeptide-D-alanyl-D-alanine ligase</title></g>
+<g id="node6753" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2583.3,3273.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.4" target="_blank">6.3.2.4</a></text><title>D-Alanine-D-alanine ligase; D-Ala-D-Ala dipeptidase</title></g>
+<g id="node3408" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2563.5,3134.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.13.22" target="_blank">3.4.13.22</a></text><title>D-Alanine-D-alanine ligase; D-Ala-D-Ala dipeptidase</title></g>
+<g id="node8209" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2408.4,2591.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.13" target="_blank">2.7.8.13</a></text><title>phospho-N-acetylmuramoyl-pentapeptide-transferase</title></g>
+<g id="node3044" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2586.1,2206.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227" target="_blank">2.4.1.227</a></text><title>undecaprenyldiphospho-muramoylpentapeptide beta-N-acetylglucosaminyltransferase</title></g>
+<g id="node3042" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2760.4,1834.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.5.13" target="_blank">6.3.5.13</a></text><title>lipid II isoglutaminyl synthase (glutamine-hydrolysing)</title></g>
+<g id="node3040" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2935.7,1470.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.16" target="_blank">2.3.2.16</a></text><title>lipid II:glycine glycyltransferase</title></g>
+<g id="node3038" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(3121.7,1116.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.17" target="_blank">2.3.2.17</a></text><title>N-acetylmuramoyl-L-alanyl-D-glutamyl-L-lysyl-(N6-glycyl)-D-alanyl-D-alanine-diphosphoundecaprenyl-N-acetylglucosamine:glycine glycyltransferase</title></g>
+<g id="node3036" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(3329.1,775.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.2.18" target="_blank">2.3.2.18</a></text><title>N-acetylmuramoyl-L-alanyl-D-glutamyl-L-lysyl-(N6-triglycine)-D-alanyl-D-alanine-diphosphoundecaprenyl-N-acetylglucosamine:glycine glycyltransferase</title></g>
+<g id="node3034" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(3567.6,457.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.129" target="_blank">2.4.1.129</a></text><title>peptidoglycan glycosyltransferase</title></g>
+<g id="node3032" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(3848.5,176.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.4.16.4" target="_blank">3.4.16.4</a></text><title>serine-type D-Ala-D-Ala carboxypeptidase</title></g>
+<g id="node6770" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2549.6,4324.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.27" target="_blank">3.6.1.27</a></text><title>undecaprenyl-diphosphate phosphatase</title></g>
+<g id="node6768" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(3007.1,3981.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.227" target="_blank">2.4.1.227</a></text><title>undecaprenyldiphospho-muramoylpentapeptide beta-N-acetylglucosaminyltransferase</title></g>
+<g id="node6743" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(1109.4,2963.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.1.3" target="_blank">5.1.1.3</a></text><title>Glutamate racemase</title></g>
+<g id="node6736" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(282.3,3858.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.7" target="_blank">2.5.1.7</a></text><title>UDP-N-acetylglucosamine 1-carboxyvinyltransferase</title></g>
+<g id="node6727" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(661.2,3629.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.98" target="_blank">1.3.1.98</a></text><title>UDP-N-acetylmuramate dehydrogenase</title></g>
+<g id="node6739" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(1089.7,3570.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.8" target="_blank">6.3.2.8</a></text><title>UDP-N-acetylmuramate-L-alanine ligase</title></g>
+<g id="node12009" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2695.1,4705.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.31" target="_blank">2.5.1.31</a></text><title>ditrans,polycis-undecaprenyl-diphosphate synthase [(2E,6E)-farnesyl-diphosphate specific]</title></g>
+<g id="node6762" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(2554.3,3752.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.13" target="_blank">2.7.8.13</a></text><title>phospho-N-acetylmuramoyl-pentapeptide-transferase</title></g>
+<g id="node6723" class="node nodeEN pw_peptidoglycan-biosynthesis" transform="translate(1392.3,3293.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.9" target="_blank">6.3.2.9</a></text><title>UDP-N-acetylmuramoyl-L-alanine-D-glutamate ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6729~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(1750.0,3461.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6729~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid1400" transform="translate(1705.5,3418.8)"><rect rx="5" height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1400" target="_blank">meso-diaminopimelate</a></text><title></title></g>
+<g id="node6729~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(1890.1,3357.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6729~3" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(1905.5,3402.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node8207~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(2286.9,3158.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node8207~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(2163.7,3044.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node8207~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid12" transform="translate(2197.2,3010.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node8207~3" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(2242.8,2997.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node3406~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(1754.2,3166.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3406~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(1784.1,2996.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3406~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(1829.0,3012.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6754~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(2213.9,3359.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6754~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(2368.1,3437.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6754~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(2339.5,3476.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6753~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(2621.5,3195.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6753~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(2568.2,3359.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6753~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(2526.0,3337.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node3408~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid1" transform="translate(2525.3,3213.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node8209~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid154482" transform="translate(2280.0,2625.3)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=154482" target="_blank">ditrans,octacis-undecaprenyl-P</a></text><title></title></g>
+<g id="node8209~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid133" transform="translate(2362.7,2516.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=133" target="_blank">UMP</a></text><title></title></g>
+<g id="node3044~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid17973" transform="translate(2488.8,2223.0)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17973" target="_blank">UDP-GlcNAc</a></text><title></title></g>
+<g id="node3044~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid26" transform="translate(2523.4,2145.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node3044~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid12" transform="translate(2565.6,2122.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3042~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(2837.4,1876.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3042~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid102" transform="translate(2803.8,1910.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node3042~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid1" transform="translate(2757.1,1922.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3042~3" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(2683.4,1793.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3042~4" class="node nodeCM pw_peptidoglycan-biosynthesis lid41" transform="translate(2717.0,1759.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node3042~5" class="node nodeCM pw_peptidoglycan-biosynthesis lid12" transform="translate(2763.7,1749.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3040~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid47264" transform="translate(2983.4,1559.1)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47264" target="_blank">glycyl-tRNA</a></text><title></title></g>
+<g id="node3040~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid362" transform="translate(3023.8,1457.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=362" target="_blank">tRNA</a></text><title></title></g>
+<g id="node3038~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid47264" transform="translate(3165.5,1206.3)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47264" target="_blank">glycyl-tRNA</a></text><title></title></g>
+<g id="node3038~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid362" transform="translate(3082.7,1036.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=362" target="_blank">tRNA</a></text><title></title></g>
+<g id="node3036~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid47264" transform="translate(3228.8,776.8)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47264" target="_blank">glycyl-tRNA</a></text><title></title></g>
+<g id="node3036~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid362" transform="translate(3297.7,692.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=362" target="_blank">tRNA</a></text><title></title></g>
+<g id="node3034~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid40190" transform="translate(3500.1,340.1)"><rect rx="5" height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40190" target="_blank">ditrans,octacis-undecaprenyl-PP</a></text><title></title></g>
+<g id="node3034~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid12" transform="translate(3569.7,374.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3032~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid1" transform="translate(3857.4,263.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3032~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid40190" transform="translate(3778.6,53.2)"><rect rx="5" height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=40190" target="_blank">ditrans,octacis-undecaprenyl-PP</a></text><title></title></g>
+<g id="node3032~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid164" transform="translate(3864.5,87.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=164" target="_blank">D-Ala</a></text><title></title></g>
+<g id="node6770~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid1" transform="translate(2632.7,4351.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6770~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(2467.9,4298.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6768~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid17973" transform="translate(2919.0,4025.9)"><rect rx="5" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17973" target="_blank">UDP-GlcNAc</a></text><title></title></g>
+<g id="node6768~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid26" transform="translate(3071.1,3922.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node6768~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid12" transform="translate(3091.3,3965.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6736~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid51" transform="translate(253.5,3940.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=51" target="_blank">PEP</a></text><title></title></g>
+<g id="node6736~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(348.7,3912.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6727~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid5" transform="translate(631.5,3709.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node6727~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid10" transform="translate(731.5,3686.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node6739~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(1106.3,3656.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6739~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid103" transform="translate(1058.4,3651.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node6739~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(1073.2,3484.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6739~3" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(1120.5,3490.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node12009~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid17" transform="translate(2610.8,4682.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node6762~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid133" transform="translate(2625.9,3802.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=133" target="_blank">UMP</a></text><title></title></g>
+<g id="node6723~0" class="node nodeCM pw_peptidoglycan-biosynthesis lid4" transform="translate(1339.5,3363.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6723~1" class="node nodeCM pw_peptidoglycan-biosynthesis lid13" transform="translate(1423.8,3212.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6723~2" class="node nodeCM pw_peptidoglycan-biosynthesis lid16" transform="translate(1460.9,3242.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>

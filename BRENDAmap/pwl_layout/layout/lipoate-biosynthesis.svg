@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 541.9 1888.0" width="542" height="1888" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="541.9" height="1888.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_lipoate-biosynthesis" class="pw " x="0.0" y="0.0" width="421.9" height="1752.5" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 240.1 201.5 L 240.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 240.1 233.5 L 240.1 366.5"/>
+<path class="link" marker-start="url(#in)" d="M 194.1 1553.5 L 194.1 1686.5"/>
+<path class="link" marker-end="url(#in)" d="M 194.1 1521.5 L 194.1 1388.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 194.1 1223.5 L 194.1 1356.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 194.1 1191.5 L 194.1 1058.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 194.1 893.5 L 194.1 1026.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 194.2 862.3 C 194.2 830.8 194.2 759.1 194.2 727.7"/>
+<path class="link" marker-start="url(#in)" d="M 254.0 531.5 L 241.6 398.5"/>
+<path class="link" marker-end="url(#in)" d="M 264.4 563.5 L 338.6 696.5"/>
+<path class="link" marker-end="url(#in)" d="M 249.5 563.5 L 200.1 696.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 208.1 206.5 L 173.2 194.5"/>
+<path class="link" marker-start="url(#in)" d="M 227.1 201.5 L 192.9 159.3"/>
+<path class="link" marker-end="url(#in)" d="M 272.0 228.5 L 306.9 240.5"/>
+<path class="link" marker-end="url(#in)" d="M 253.0 233.5 L 282.1 269.4"/>
+<path class="link" marker-start="url(#in)" d="M 217.0 1553.5 L 250.0 1576.6"/>
+<path class="link" marker-end="url(#in)" d="M 171.3 1521.5 L 138.3 1498.4"/>
+<path class="link" marker-start="url(#in)" d="M 217.0 1223.5 L 248.2 1245.3"/>
+<path class="link" marker-end="url(#in)" d="M 171.3 1191.5 L 138.3 1168.4"/>
+<path class="link" marker-start="url(#in)" d="M 222.8 887.2 L 260.1 899.8"/>
+<path class="link" marker-start="url(#in)" d="M 207.0 893.5 L 239.3 933.8"/>
+<path class="link" marker-end="url(#in)" d="M 165.5 867.6 L 127.3 854.5"/>
+<path class="link" marker-end="url(#in)" d="M 181.2 861.5 L 130.7 799.2"/>
+<path class="link" marker-start="url(#in)" d="M 227.4 531.5 L 202.0 517.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_lipoate-biosynthesis" transform="translate(211.0,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">lipoate biosynthesis</text></g>
+<g id="node3860" class="node nodeHM pw_lipoate-biosynthesis lid865" transform="translate(240.1,52.5)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=865" target="_blank">octanoate</a></text><title></title></g>
+<g id="node3859" class="node nodeHM pw_lipoate-biosynthesis lid2861" transform="translate(240.1,382.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2861" target="_blank">octanoyl-ACP</a></text><title></title></g>
+<g id="node7859" class="node nodeHM pw_lipoate-biosynthesis lid3823" transform="translate(194.1,1702.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3823" target="_blank">lipoate</a></text><title></title></g>
+<g id="node7861" class="node nodeHM pw_lipoate-biosynthesis lid57971" transform="translate(194.1,1372.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57971" target="_blank">lipoyl-AMP</a></text><title></title></g>
+<g id="node3853" class="node nodeHM pw_lipoate-biosynthesis lid9803" transform="translate(194.1,1042.5)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9803" target="_blank">protein N6-(lipoyl)lysine</a></text><title></title></g>
+<g id="node3855" class="node nodeHM pw_lipoate-biosynthesis lid11614" transform="translate(194.1,712.5)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11614" target="_blank">protein N6-(octanoyl)lysine</a></text><title></title></g>
+<g id="node12143" class="node nodeHM pw_lipoate-biosynthesis lid2745" transform="translate(347.5,712.5)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3857" class="node nodeEN pw_lipoate-biosynthesis" transform="translate(240.1,217.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.2.1.20" target="_blank">6.2.1.20</a></text><title>Long-chain-fatty-acid-[acyl-carrier-protein] ligase</title></g>
+<g id="node7860" class="node nodeEN pw_lipoate-biosynthesis" transform="translate(194.1,1537.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.20" target="_blank">6.3.1.20</a></text><title>lipoate-protein ligase</title></g>
+<g id="node7862" class="node nodeEN pw_lipoate-biosynthesis" transform="translate(194.1,1207.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.20" target="_blank">6.3.1.20</a></text><title>lipoate-protein ligase</title></g>
+<g id="node3863" class="node nodeEN pw_lipoate-biosynthesis" transform="translate(194.1,877.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.1.8" target="_blank">2.8.1.8</a></text><title>lipoyl synthase</title></g>
+<g id="node3858" class="node nodeEN pw_lipoate-biosynthesis" transform="translate(255.5,547.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.181" target="_blank">2.3.1.181</a></text><title>lipoyl(octanoyl) transferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3857~0" class="node nodeCM pw_lipoate-biosynthesis lid4" transform="translate(157.5,189.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3857~1" class="node nodeCM pw_lipoate-biosynthesis lid2745" transform="translate(180.0,143.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3857~2" class="node nodeCM pw_lipoate-biosynthesis lid30" transform="translate(322.7,245.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node3857~3" class="node nodeCM pw_lipoate-biosynthesis lid17" transform="translate(295.0,285.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node7860~0" class="node nodeCM pw_lipoate-biosynthesis lid4" transform="translate(265.7,1587.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node7860~1" class="node nodeCM pw_lipoate-biosynthesis lid17" transform="translate(122.6,1487.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node7862~0" class="node nodeCM pw_lipoate-biosynthesis lid1208" transform="translate(271.0,1261.3)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1208" target="_blank">protein</a></text><title></title></g>
+<g id="node7862~1" class="node nodeCM pw_lipoate-biosynthesis lid30" transform="translate(122.6,1157.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node3863~0" class="node nodeCM pw_lipoate-biosynthesis lid24" transform="translate(307.4,915.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node3863~1" class="node nodeCM pw_lipoate-biosynthesis lid871" transform="translate(252.2,949.8)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=871" target="_blank">sulfur</a></text><title></title></g>
+<g id="node3863~2" class="node nodeCM pw_lipoate-biosynthesis lid88" transform="translate(111.5,849.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node3863~3" class="node nodeCM pw_lipoate-biosynthesis lid58151" transform="translate(117.8,783.2)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58151" target="_blank">5&#x27;-deoxyadenosyl radical</a></text><title></title></g>
+<g id="node3858~0" class="node nodeCM pw_lipoate-biosynthesis lid1208" transform="translate(173.9,501.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1208" target="_blank">protein</a></text><title></title></g>
+</g></svg>

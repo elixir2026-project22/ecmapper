@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2053.5 1231.5" width="2053" height="1232" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2053.5" height="1231.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_biotin-biosynthesis" class="pw " x="0.0" y="0.0" width="1933.5" height="1096.0" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 1570.9 991.3 C 1597.9 1002.5 1636.8 1018.7 1665.3 1030.6"/>
+<path class="link" marker-start="url(#in)" d="M 1541.3 962.2 L 1557.3 816.9"/>
+<path class="link" marker-start="url(#in)" d="M 1723.0 887.4 L 1704.4 1030.0"/>
+<path class="link" marker-end="url(#in)" d="M 1693.1 857.8 L 1596.7 816.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1475.3 653.6 L 1549.9 784.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1466.2 621.6 L 1466.2 478.2"/>
+<path class="link" marker-start="url(#in)" d="M 436.0 290.4 L 350.6 335.7"/>
+<path class="link" marker-end="url(#in)" d="M 497.8 258.4 L 578.1 217.7"/>
+<path class="link" marker-start="url(#in)" d="M 730.8 155.9 L 652.0 185.7"/>
+<path class="link" marker-end="url(#in)" d="M 788.2 146.4 L 866.1 150.2"/>
+<path class="link" marker-start="url(#in)" d="M 1046.4 155.5 L 955.9 153.4"/>
+<path class="link" marker-end="url(#in)" d="M 1103.7 156.1 L 1210.6 156.1"/>
+<path class="link" marker-start="url(#in)" d="M 139.5 407.2 L 65.4 407.2"/>
+<path class="link" marker-start="url(#in)" d="M 159.5 423.2 L 99.8 503.5"/>
+<path class="link" marker-end="url(#in)" d="M 203.4 395.3 L 277.5 367.7"/>
+<path class="link" marker-start="url(#in)" d="M 1363.3 271.9 L 1253.6 172.1"/>
+<path class="link" marker-start="url(#in)" d="M 1401.4 271.9 L 1460.5 225.8"/>
+<path class="link" marker-end="url(#in)" d="M 1388.7 303.9 L 1458.4 446.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1507.6 984.6 L 1469.6 992.2"/>
+<path class="link" marker-start="url(#in)" d="M 1507.6 966.1 L 1475.2 953.9"/>
+<path class="link" marker-end="url(#in)" d="M 1571.4 971.8 L 1609.4 964.2"/>
+<path class="link" marker-end="url(#in)" d="M 1571.4 990.2 L 1607.2 1003.8"/>
+<path class="link" marker-start="url(#in)" d="M 1757.0 874.0 L 1791.5 876.8"/>
+<path class="link" marker-end="url(#in)" d="M 1693.1 868.7 L 1666.7 866.6"/>
+<path class="link" marker-start="url(#in)" d="M 464.0 290.4 L 452.5 377.1"/>
+<path class="link" marker-end="url(#in)" d="M 496.8 290.4 L 563.2 325.1"/>
+<path class="link" marker-start="url(#in)" d="M 756.8 161.0 L 747.5 215.1"/>
+<path class="link" marker-start="url(#in)" d="M 745.2 161.0 L 715.6 194.2"/>
+<path class="link" marker-end="url(#in)" d="M 757.7 129.0 L 751.7 74.2"/>
+<path class="link" marker-end="url(#in)" d="M 767.2 129.0 L 789.0 83.8"/>
+<path class="link" marker-end="url(#in)" d="M 784.8 129.0 L 819.5 107.1"/>
+<path class="link" marker-start="url(#in)" d="M 1074.0 172.1 L 1070.2 232.2"/>
+<path class="link" marker-start="url(#in)" d="M 1064.3 172.1 L 1035.8 214.7"/>
+<path class="link" marker-start="url(#in)" d="M 1046.4 166.6 L 1007.9 180.7"/>
+<path class="link" marker-end="url(#in)" d="M 1080.8 140.1 L 1106.4 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1095.3 140.1 L 1127.9 114.4"/>
+<path class="link" marker-end="url(#in)" d="M 169.9 391.2 L 163.9 328.1"/>
+<path class="link" marker-end="url(#in)" d="M 179.8 391.2 L 203.7 345.4"/>
+<path class="link" marker-start="url(#in)" d="M 1349.0 280.0 L 1311.8 270.8"/>
+<path class="link" marker-end="url(#in)" d="M 1412.8 286.8 L 1452.5 285.3"/>
+<path class="link" marker-end="url(#in)" d="M 1408.7 303.9 L 1440.9 322.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_biotin-biosynthesis" transform="translate(966.7,0.0)"><rect rx="10" height="31" width="195" x="-97.3" y="-15.5"/><text dominant-baseline="central">biotin biosynthesis</text></g>
+<g id="node3538" class="node nodeHM pw_biotin-biosynthesis lid221294" transform="translate(1702.3,1046.0)"><rect height="30.0" width="392.3" x="-196.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=221294" target="_blank">[biotin carboxyl-carrier protein]-carboxybiotin-N6-L-lysine</a></text><title></title></g>
+<g id="node3543" class="node nodeHM pw_biotin-biosynthesis lid221293" transform="translate(1559.0,800.9)"><rect height="30.0" width="347.0" x="-173.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=221293" target="_blank">[biotin carboxyl-carrier protein]-biotin-N6-L-lysine</a></text><title></title></g>
+<g id="node3551" class="node nodeHM pw_biotin-biosynthesis lid221296" transform="translate(1466.2,462.2)"><rect height="30.0" width="359.9" x="-180.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=221296" target="_blank">[biotin carboxyl-carrier protein]-N6-biotinyl-L-lysine</a></text><title></title></g>
+<g id="node6429" class="node nodeHM pw_biotin-biosynthesis lid1494" transform="translate(320.4,351.7)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1494" target="_blank">8-NH2-7-oxononanoate</a></text><title></title></g>
+<g id="node6432" class="node nodeHM pw_biotin-biosynthesis lid3792" transform="translate(609.8,201.7)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3792" target="_blank">7,8-diaminononanoate</a></text><title></title></g>
+<g id="node6434" class="node nodeHM pw_biotin-biosynthesis lid2553" transform="translate(911.0,152.4)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2553" target="_blank">dethiobiotin</a></text><title></title></g>
+<g id="node6435" class="node nodeHM pw_biotin-biosynthesis lid143" transform="translate(1236.0,156.1)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=143" target="_blank">biotin</a></text><title></title></g>
+<g id="node12206" class="node nodeHM pw_biotin-biosynthesis lid103" transform="translate(49.7,407.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node6427" class="node nodeHM pw_biotin-biosynthesis lid82552" transform="translate(87.9,519.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=82552" target="_blank">Pimelyl-ACP</a></text><title></title></g>
+<g id="node3548" class="node nodeHM pw_biotin-biosynthesis lid221295" transform="translate(1481.0,209.8)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=221295" target="_blank">[biotin carboxyl-carrier protein]-L-lysine</a></text><title></title></g>
+<g id="node3550" class="node nodeEN pw_biotin-biosynthesis" transform="translate(1539.5,978.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.4.14" target="_blank">6.3.4.14</a></text><title>Biotin carboxylase; acetyl-CoA carboxytransferase</title></g>
+<g id="node3537" class="node nodeEN pw_biotin-biosynthesis" transform="translate(1725.0,871.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.3.15" target="_blank">2.1.3.15</a></text><title>Biotin carboxylase; acetyl-CoA carboxytransferase</title></g>
+<g id="node3544" class="node nodeEN pw_biotin-biosynthesis" transform="translate(1466.2,637.6)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node6431" class="node nodeEN pw_biotin-biosynthesis" transform="translate(466.2,274.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.62" target="_blank">2.6.1.62</a></text><title>adenosylmethionine-8-amino-7-oxononanoate transaminase</title></g>
+<g id="node6433" class="node nodeEN pw_biotin-biosynthesis" transform="translate(759.5,145.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.3.3" target="_blank">6.3.3.3</a></text><title>Dethiobiotin synthase</title></g>
+<g id="node6430" class="node nodeEN pw_biotin-biosynthesis" transform="translate(1075.1,156.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.1.6" target="_blank">2.8.1.6</a></text><title>biotin synthase</title></g>
+<g id="node6428" class="node nodeEN pw_biotin-biosynthesis" transform="translate(171.5,407.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.47" target="_blank">2.3.1.47</a></text><title>8-amino-7-oxononanoate synthase</title></g>
+<g id="node3546" class="node nodeEN pw_biotin-biosynthesis" transform="translate(1380.9,287.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.4.15" target="_blank">6.3.4.15</a></text><title>biotin-[biotin carboxyl-carrier protein] ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3550~0" class="node nodeCM pw_biotin-biosynthesis lid4" transform="translate(1453.8,995.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3550~1" class="node nodeCM pw_biotin-biosynthesis lid195" transform="translate(1456.3,946.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195" target="_blank">HCO3</a></text><title></title></g>
+<g id="node3550~2" class="node nodeCM pw_biotin-biosynthesis lid13" transform="translate(1625.2,961.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3550~3" class="node nodeCM pw_biotin-biosynthesis lid16" transform="translate(1619.7,1008.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node3537~0" class="node nodeCM pw_biotin-biosynthesis lid29" transform="translate(1817.0,878.9)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node3537~1" class="node nodeCM pw_biotin-biosynthesis lid76" transform="translate(1625.1,863.2)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=76" target="_blank">malonyl-CoA</a></text><title></title></g>
+<g id="node6431~0" class="node nodeCM pw_biotin-biosynthesis lid24" transform="translate(450.3,393.1)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node6431~1" class="node nodeCM pw_biotin-biosynthesis lid10769" transform="translate(593.8,341.1)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10769" target="_blank">S-adenosyl-4-methylthio-2-oxobutanoate</a></text><title></title></g>
+<g id="node6433~0" class="node nodeCM pw_biotin-biosynthesis lid4" transform="translate(744.8,231.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6433~1" class="node nodeCM pw_biotin-biosynthesis lid28" transform="translate(701.4,210.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node6433~2" class="node nodeCM pw_biotin-biosynthesis lid13" transform="translate(749.9,58.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6433~3" class="node nodeCM pw_biotin-biosynthesis lid12" transform="translate(796.7,67.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6433~4" class="node nodeCM pw_biotin-biosynthesis lid16" transform="translate(832.0,99.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node6430~0" class="node nodeCM pw_biotin-biosynthesis lid871" transform="translate(1069.2,248.2)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=871" target="_blank">sulfur</a></text><title></title></g>
+<g id="node6430~1" class="node nodeCM pw_biotin-biosynthesis lid12" transform="translate(1025.1,230.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6430~2" class="node nodeCM pw_biotin-biosynthesis lid24" transform="translate(964.3,196.7)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node6430~3" class="node nodeCM pw_biotin-biosynthesis lid943" transform="translate(1112.1,52.5)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node6430~4" class="node nodeCM pw_biotin-biosynthesis lid88" transform="translate(1143.6,101.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node6428~0" class="node nodeCM pw_biotin-biosynthesis lid2745" transform="translate(162.4,312.1)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node6428~1" class="node nodeCM pw_biotin-biosynthesis lid28" transform="translate(212.1,329.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node3546~0" class="node nodeCM pw_biotin-biosynthesis lid4" transform="translate(1296.1,266.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3546~1" class="node nodeCM pw_biotin-biosynthesis lid30" transform="translate(1468.2,284.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node3546~2" class="node nodeCM pw_biotin-biosynthesis lid17" transform="translate(1456.6,331.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>

@@ -423,14 +423,17 @@ python -m ecmapper.pwl layout BRENDAmap/pwl OUT \
 - `metrics.csv` and `summary.md`.
 
 All 193 subsystems take about 3 minutes. [`BRENDAmap/pwl_layout`](BRENDAmap/pwl_layout)
-has the summary, the metrics and six examples:
+has the output of the latest run:
 
-- glycolysis;
-- citric acid cycle;
-- urea cycle;
-- palmitate biosynthesis;
-- methionine metabolism;
-- isoprenoid biosynthesis.
+- `summary.md` and `metrics.csv`;
+- `layout/` and `compare/`, for all 193 subsystems;
+- `tca-test/`: the citric acid cycle test of the later steps, with SVG and PNG
+  files:
+  - original against generated layouts: `full`, `no-cofactors` and
+    `no-cofactors-no-AcCoA`;
+  - `citric-acid-cycle-before` and `-share`: the first version against the one
+    with all later steps;
+  - `one-hints-*`: hint layouts with single steps switched on.
 
 ### Procedure
 

@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2895.8 2255.9" width="2896" height="2256" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2895.8" height="2255.9" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_threonine-metabolism" class="pw " x="0.0" y="0.0" width="2775.8" height="2120.4" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 1497.2 1123.3 L 1347.8 1114.7"/>
+<path class="link" marker-start="url(#in)" d="M 1554.6 1139.6 L 1672.5 1199.9"/>
+<path class="link" marker-end="url(#in)" d="M 1845.5 1290.8 L 1734.0 1231.9"/>
+<path class="link" marker-start="url(#in)" d="M 1907.6 1306.6 L 2018.8 1305.9"/>
+<path class="link" marker-start="url(#in)" d="M 1300.6 1200.0 L 1326.2 1129.8"/>
+<path class="link" marker-end="url(#in)" d="M 1290.2 1232.0 L 1247.9 1381.8"/>
+<path class="link" marker-start="url(#in)" d="M 1392.3 952.3 L 1338.0 1097.8"/>
+<path class="link" marker-end="url(#in)" d="M 1401.4 920.3 L 1431.1 764.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1379.8 1291.4 C 1370.0 1255.1 1345.8 1165.1 1336.1 1129.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1383.7 1322.9 L 1382.0 1474.4"/>
+<path class="link" marker-start="url(#in)" d="M 1357.2 1654.7 L 1379.4 1506.4"/>
+<path class="link" marker-end="url(#in)" d="M 1352.0 1686.7 L 1327.8 1824.9"/>
+<path class="link" marker-start="url(#in)" d="M 1168.6 1188.7 C 1211.1 1169.2 1285.6 1135.0 1317.2 1120.6"/>
+<path class="link" marker-end="url(#in)" d="M 1106.6 1219.0 L 985.0 1282.5"/>
+<path class="link" marker-start="url(#in)" d="M 868.4 1420.4 L 950.9 1310.1"/>
+<path class="link" marker-end="url(#in)" d="M 824.6 1434.0 L 709.8 1425.4"/>
+<path class="link" marker-start="url(#in)" d="M 813.1 1294.9 L 940.6 1294.3"/>
+<path class="link" marker-end="url(#in)" d="M 766.1 1311.1 L 676.8 1405.8"/>
+<path class="link" marker-start="url(#in)" d="M 542.9 1496.7 L 636.3 1437.8"/>
+<path class="link" marker-end="url(#in)" d="M 482.4 1524.8 L 385.5 1558.1"/>
+<path class="link" marker-end="url(#in)" d="M 250.1 1602.5 L 347.5 1570.8"/>
+<path class="link" marker-start="url(#in)" d="M 192.5 1628.9 L 98.1 1687.8"/>
+<path class="link" marker-start="url(#in)" d="M 2155.8 1173.5 L 2069.1 1289.7"/>
+<path class="link" marker-end="url(#in)" d="M 2183.1 1141.5 L 2274.7 1046.5"/>
+<path class="link" marker-start="url(#in)" d="M 2163.4 1430.7 L 2070.8 1321.7"/>
+<path class="link" marker-end="url(#in)" d="M 2201.6 1462.7 L 2312.9 1535.2"/>
+<path class="link" marker-start="url(#in)" d="M 2473.8 1476.2 L 2366.6 1535.2"/>
+<path class="link" marker-end="url(#in)" d="M 2531.4 1444.2 L 2636.1 1385.4"/>
+<path class="link" marker-start="url(#in)" d="M 2380.2 1691.7 L 2342.3 1567.2"/>
+<path class="link" marker-end="url(#in)" d="M 2395.1 1723.7 L 2465.3 1836.0"/>
+<path class="link" marker-end="url(#in)" d="M 2573.0 1956.4 L 2490.2 1868.0"/>
+<path class="link" marker-start="url(#in)" d="M 2608.9 1988.4 L 2700.7 2058.4"/>
+<path class="link" marker-start="url(#in)" d="M 1559.5 673.6 L 1460.9 732.5"/>
+<path class="link" marker-end="url(#in)" d="M 1601.3 641.6 L 1687.8 550.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1377.4 581.5 L 1428.7 732.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1370.2 549.5 L 1354.3 402.9"/>
+<path class="link" marker-start="url(#in)" d="M 1345.7 232.7 L 1351.8 370.9"/>
+<path class="link" marker-end="url(#in)" d="M 1344.4 200.7 L 1340.3 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 967.4 750.5 L 1070.0 828.0"/>
+<path class="link" marker-end="url(#in)" d="M 927.4 718.5 L 834.7 639.7"/>
+<path class="link" marker-start="url(#in)" d="M 1223.5 1010.0 L 1316.3 1098.7"/>
+<path class="link" marker-end="url(#in)" d="M 1178.1 994.2 L 1066.9 994.7"/>
+<path class="link" marker-end="url(#in)" d="M 1194.4 978.0 L 1103.5 860.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1545.2 1109.0 L 1577.5 1082.3"/>
+<path class="link" marker-end="url(#in)" d="M 1506.6 1141.0 L 1472.4 1169.3"/>
+<path class="link" marker-start="url(#in)" d="M 1881.8 1322.8 L 1900.6 1372.5"/>
+<path class="link" marker-end="url(#in)" d="M 1865.2 1322.8 L 1838.3 1363.8"/>
+<path class="link" marker-end="url(#in)" d="M 1843.8 1321.5 L 1810.3 1336.9"/>
+<path class="link" marker-start="url(#in)" d="M 1273.0 1200.0 L 1240.1 1175.7"/>
+<path class="link" marker-start="url(#in)" d="M 1288.4 1200.0 L 1266.5 1144.7"/>
+<path class="link" marker-end="url(#in)" d="M 1316.5 1232.0 L 1349.4 1256.2"/>
+<path class="link" marker-end="url(#in)" d="M 1301.1 1232.0 L 1320.6 1281.1"/>
+<path class="link" marker-start="url(#in)" d="M 1411.4 952.3 L 1441.6 989.1"/>
+<path class="link" marker-end="url(#in)" d="M 1433.5 923.9 L 1463.3 913.4"/>
+<path class="link" marker-end="url(#in)" d="M 1415.8 1313.3 L 1453.8 1321.0"/>
+<path class="link" marker-end="url(#in)" d="M 1400.8 1322.9 L 1431.6 1352.1"/>
+<path class="link" marker-end="url(#in)" d="M 1108.3 1187.0 L 1076.5 1169.4"/>
+<path class="link" marker-start="url(#in)" d="M 859.9 1420.4 L 871.3 1366.9"/>
+<path class="link" marker-end="url(#in)" d="M 853.1 1452.4 L 840.3 1512.2"/>
+<path class="link" marker-start="url(#in)" d="M 780.0 1279.1 L 776.0 1220.7"/>
+<path class="link" marker-start="url(#in)" d="M 807.9 1311.1 L 859.0 1341.5"/>
+<path class="link" marker-end="url(#in)" d="M 782.3 1311.1 L 786.4 1371.1"/>
+<path class="link" marker-end="url(#in)" d="M 772.6 1311.1 L 748.6 1356.2"/>
+<path class="link" marker-start="url(#in)" d="M 520.1 1496.7 L 528.6 1444.1"/>
+<path class="link" marker-end="url(#in)" d="M 514.9 1528.7 L 506.2 1582.9"/>
+<path class="link" marker-start="url(#in)" d="M 190.1 1596.9 L 158.0 1578.7"/>
+<path class="link" marker-end="url(#in)" d="M 220.9 1596.9 L 230.1 1542.8"/>
+<path class="link" marker-start="url(#in)" d="M 2135.8 1154.6 L 2101.3 1151.4"/>
+<path class="link" marker-end="url(#in)" d="M 2163.5 1141.5 L 2149.6 1089.1"/>
+<path class="link" marker-start="url(#in)" d="M 2148.3 1453.7 L 2111.2 1462.8"/>
+<path class="link" marker-end="url(#in)" d="M 2205.7 1439.7 L 2242.8 1430.6"/>
+<path class="link" marker-start="url(#in)" d="M 2501.3 1476.2 L 2495.6 1531.1"/>
+<path class="link" marker-end="url(#in)" d="M 2534.9 1475.8 L 2565.8 1490.8"/>
+<path class="link" marker-start="url(#in)" d="M 2353.1 1710.9 L 2317.1 1714.4"/>
+<path class="link" marker-start="url(#in)" d="M 2353.1 1691.9 L 2320.7 1675.8"/>
+<path class="link" marker-end="url(#in)" d="M 2417.0 1713.6 L 2452.0 1720.0"/>
+<path class="link" marker-start="url(#in)" d="M 2585.9 1988.4 L 2579.1 2043.1"/>
+<path class="link" marker-end="url(#in)" d="M 2559.3 1979.0 L 2518.5 1988.2"/>
+<path class="link" marker-start="url(#in)" d="M 1554.3 648.2 L 1518.2 637.6"/>
+<path class="link" marker-end="url(#in)" d="M 1585.2 641.6 L 1581.5 581.6"/>
+<path class="link" marker-start="url(#in)" d="M 1393.0 574.1 L 1438.8 592.8"/>
+<path class="link" marker-end="url(#in)" d="M 1386.5 549.5 L 1416.2 516.8"/>
+<path class="link" marker-start="url(#in)" d="M 1376.9 226.3 L 1414.5 237.7"/>
+<path class="link" marker-start="url(#in)" d="M 1358.9 232.7 L 1388.5 266.4"/>
+<path class="link" marker-end="url(#in)" d="M 1313.0 216.2 L 1274.9 215.7"/>
+<path class="link" marker-end="url(#in)" d="M 1320.1 200.7 L 1287.3 179.5"/>
+<path class="link" marker-end="url(#in)" d="M 1337.4 200.7 L 1316.0 155.1"/>
+<path class="link" marker-start="url(#in)" d="M 971.5 718.5 L 1002.5 698.9"/>
+<path class="link" marker-start="url(#in)" d="M 978.2 734.3 L 1017.9 734.1"/>
+<path class="link" marker-end="url(#in)" d="M 947.3 718.5 L 950.9 661.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_threonine-metabolism" transform="translate(1387.9,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">threonine metabolism</text></g>
+<g id="node5251" class="node nodeHM pw_threonine-metabolism lid250" transform="translate(1332.0,1113.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=250" target="_blank">Thr</a></text><title></title></g>
+<g id="node5549" class="node nodeHM pw_threonine-metabolism lid3655" transform="translate(1703.8,1215.9)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3655" target="_blank">O-phospho-homoSer</a></text><title></title></g>
+<g id="node5552" class="node nodeHM pw_threonine-metabolism lid345" transform="translate(2057.2,1305.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=345" target="_blank">homoserine</a></text><title></title></g>
+<g id="node10694" class="node nodeHM pw_threonine-metabolism lid44342" transform="translate(1243.3,1397.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44342" target="_blank">L-Thr-tRNAThr</a></text><title></title></g>
+<g id="node5027" class="node nodeHM pw_threonine-metabolism lid43066" transform="translate(1434.2,748.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43066" target="_blank">2-amino-3-oxobutanoate</a></text><title></title></g>
+<g id="node11666" class="node nodeHM pw_threonine-metabolism lid28976" transform="translate(1381.8,1490.4)"><rect height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28976" target="_blank">L-threonylcarbamoyladenylate</a></text><title></title></g>
+<g id="node11668" class="node nodeHM pw_threonine-metabolism lid19812" transform="translate(1325.0,1840.9)"><rect height="30.0" width="262.7" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19812" target="_blank">N6-L-threonylcarbamoyladenine37 in tRNA</a></text><title></title></g>
+<g id="node5747" class="node nodeHM pw_threonine-metabolism lid390" transform="translate(962.8,1294.1)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=390" target="_blank">2OBUT</a></text><title></title></g>
+<g id="node5751" class="node nodeHM pw_threonine-metabolism lid782" transform="translate(661.7,1421.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=782" target="_blank">propanoyl-CoA</a></text><title></title></g>
+<g id="node5755" class="node nodeHM pw_threonine-metabolism lid10758" transform="translate(366.5,1564.6)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10758" target="_blank">PPAP</a></text><title></title></g>
+<g id="node12222" class="node nodeHM pw_threonine-metabolism lid949" transform="translate(72.4,1703.8)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=949" target="_blank">propanoate</a></text><title></title></g>
+<g id="node3231" class="node nodeHM pw_threonine-metabolism lid948" transform="translate(2290.1,1030.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=948" target="_blank">O-Ac-homoSer</a></text><title></title></g>
+<g id="node5248" class="node nodeHM pw_threonine-metabolism lid573" transform="translate(2337.5,1551.2)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=573" target="_blank">Asp 4-semialdehyde</a></text><title></title></g>
+<g id="node8108" class="node nodeHM pw_threonine-metabolism lid2561" transform="translate(2664.5,1369.4)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2561" target="_blank">L-2,4-diaminobutanoate</a></text><title></title></g>
+<g id="node5244" class="node nodeHM pw_threonine-metabolism lid6542" transform="translate(2475.3,1852.0)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6542" target="_blank">4-phospho-Asp</a></text><title></title></g>
+<g id="node5675" class="node nodeHM pw_threonine-metabolism lid97" transform="translate(2716.4,2070.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=97" target="_blank">Asp</a></text><title></title></g>
+<g id="node5023" class="node nodeHM pw_threonine-metabolism lid72" transform="translate(1702.9,534.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node5019" class="node nodeHM pw_threonine-metabolism lid8045" transform="translate(1352.5,386.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8045" target="_blank">aminoacetone</a></text><title></title></g>
+<g id="node5012" class="node nodeHM pw_threonine-metabolism lid322" transform="translate(1339.8,52.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=322" target="_blank">methylglyoxal</a></text><title></title></g>
+<g id="node5250" class="node nodeHM pw_threonine-metabolism lid90" transform="translate(1091.2,844.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=90" target="_blank">acetaldehyde</a></text><title></title></g>
+<g id="node5007" class="node nodeHM pw_threonine-metabolism lid29" transform="translate(815.9,623.7)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node1203" class="node nodeHM pw_threonine-metabolism lid72" transform="translate(1051.2,994.8)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node5547" class="node nodeEN pw_threonine-metabolism" transform="translate(1525.9,1125.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.1" target="_blank">4.2.3.1</a></text><title>threonine synthase</title></g>
+<g id="node5551" class="node nodeEN pw_threonine-metabolism" transform="translate(1875.7,1306.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.39" target="_blank">2.7.1.39</a></text><title>homoserine kinase</title></g>
+<g id="node10693" class="node nodeEN pw_threonine-metabolism" transform="translate(1294.8,1216.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.3" target="_blank">6.1.1.3</a></text><title>Threonine-tRNA ligase</title></g>
+<g id="node5759" class="node nodeEN pw_threonine-metabolism" transform="translate(1398.3,936.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.103" target="_blank">1.1.1.103</a></text><title>L-threonine 3-dehydrogenase</title></g>
+<g id="node11665" class="node nodeEN pw_threonine-metabolism" transform="translate(1383.9,1306.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.87" target="_blank">2.7.7.87</a></text><title>L-threonylcarbamoyladenylate synthase</title></g>
+<g id="node11667" class="node nodeEN pw_threonine-metabolism" transform="translate(1354.8,1670.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.234" target="_blank">2.3.1.234</a></text><title>N6-L-threonylcarbamoyladenine synthase</title></g>
+<g id="node5745" class="node nodeEN pw_threonine-metabolism" transform="translate(1137.3,1203.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.19" target="_blank">4.3.1.19</a></text><title>threonine ammonia-lyase</title></g>
+<g id="node5748" class="node nodeEN pw_threonine-metabolism" transform="translate(856.5,1436.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.54" target="_blank">2.3.1.54</a></text><title>formate C-acetyltransferase; 2-oxoacid oxidoreductase (ferredoxin)</title></g>
+<g id="node10732" class="node nodeEN pw_threonine-metabolism" transform="translate(781.1,1295.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.7.11" target="_blank">1.2.7.11</a></text><title>formate C-acetyltransferase; 2-oxoacid oxidoreductase (ferredoxin)</title></g>
+<g id="node5752" class="node nodeEN pw_threonine-metabolism" transform="translate(517.5,1512.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.222" target="_blank">2.3.1.222</a></text><title>phosphate propanoyltransferase</title></g>
+<g id="node5756" class="node nodeEN pw_threonine-metabolism" transform="translate(218.2,1612.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.15" target="_blank">2.7.2.15</a></text><title>propionate kinase</title></g>
+<g id="node3234" class="node nodeEN pw_threonine-metabolism" transform="translate(2167.7,1157.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.31" target="_blank">2.3.1.31</a></text><title>homoserine O-acetyltransferase</title></g>
+<g id="node5249" class="node nodeEN pw_threonine-metabolism" transform="translate(2177.0,1446.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.3" target="_blank">1.1.1.3</a></text><title>homoserine dehydrogenase</title></g>
+<g id="node8107" class="node nodeEN pw_threonine-metabolism" transform="translate(2502.9,1460.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.76" target="_blank">2.6.1.76</a></text><title>diaminobutyrate-2-oxoglutarate transaminase</title></g>
+<g id="node5245" class="node nodeEN pw_threonine-metabolism" transform="translate(2385.1,1707.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.11" target="_blank">1.2.1.11</a></text><title>aspartate-semialdehyde dehydrogenase</title></g>
+<g id="node5240" class="node nodeEN pw_threonine-metabolism" transform="translate(2588.0,1972.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.2.4" target="_blank">2.7.2.4</a></text><title>aspartate kinase</title></g>
+<g id="node5026" class="node nodeEN pw_threonine-metabolism" transform="translate(1586.2,657.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.29" target="_blank">2.3.1.29</a></text><title>glycine C-acetyltransferase</title></g>
+<g id="node5022" class="node nodeEN pw_threonine-metabolism" transform="translate(1372.0,565.5)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node5018" class="node nodeEN pw_threonine-metabolism" transform="translate(1344.9,216.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.21" target="_blank">1.4.3.21</a></text><title>primary-amine oxidase</title></g>
+<g id="node5011" class="node nodeEN pw_threonine-metabolism" transform="translate(946.2,734.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.10" target="_blank">1.2.1.10</a></text><title>acetaldehyde dehydrogenase (acetylating)</title></g>
+<g id="node5252" class="node nodeEN pw_threonine-metabolism" transform="translate(1206.8,994.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.5" target="_blank">4.1.2.5</a></text><title>L-threonine aldolase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5547~0" class="node nodeCM pw_threonine-metabolism lid1" transform="translate(1593.2,1069.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5547~1" class="node nodeCM pw_threonine-metabolism lid16" transform="translate(1459.9,1179.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5551~0" class="node nodeCM pw_threonine-metabolism lid4" transform="translate(1906.7,1388.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5551~1" class="node nodeCM pw_threonine-metabolism lid13" transform="translate(1827.8,1379.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node5551~2" class="node nodeCM pw_threonine-metabolism lid12" transform="translate(1797.9,1342.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node10693~0" class="node nodeCM pw_threonine-metabolism lid4" transform="translate(1224.4,1164.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10693~1" class="node nodeCM pw_threonine-metabolism lid2766" transform="translate(1260.1,1128.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2766" target="_blank">tRNAThr</a></text><title></title></g>
+<g id="node10693~2" class="node nodeCM pw_threonine-metabolism lid30" transform="translate(1365.1,1267.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node10693~3" class="node nodeCM pw_threonine-metabolism lid17" transform="translate(1327.0,1297.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node5759~0" class="node nodeCM pw_threonine-metabolism lid7" transform="translate(1454.8,1005.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5759~1" class="node nodeCM pw_threonine-metabolism lid8" transform="translate(1482.2,906.8)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node11665~0" class="node nodeCM pw_threonine-metabolism lid1" transform="translate(1469.5,1324.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11665~1" class="node nodeCM pw_threonine-metabolism lid4" transform="translate(1447.3,1367.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5745~0" class="node nodeCM pw_threonine-metabolism lid27" transform="translate(1060.8,1160.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5748~1" class="node nodeCM pw_threonine-metabolism lid120" transform="translate(836.9,1528.2)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node10732~0" class="node nodeCM pw_threonine-metabolism lid289" transform="translate(774.9,1204.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node10732~1" class="node nodeCM pw_threonine-metabolism lid18" transform="translate(874.7,1350.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node10732~2" class="node nodeCM pw_threonine-metabolism lid265" transform="translate(787.5,1387.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node10732~3" class="node nodeCM pw_threonine-metabolism lid28" transform="translate(740.1,1372.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5752~0" class="node nodeCM pw_threonine-metabolism lid16" transform="translate(531.2,1428.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5752~1" class="node nodeCM pw_threonine-metabolism lid18" transform="translate(503.6,1598.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node5756~0" class="node nodeCM pw_threonine-metabolism lid4" transform="translate(142.3,1569.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5756~1" class="node nodeCM pw_threonine-metabolism lid13" transform="translate(232.9,1526.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3234~0" class="node nodeCM pw_threonine-metabolism lid29" transform="translate(2075.8,1149.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node3234~1" class="node nodeCM pw_threonine-metabolism lid18" transform="translate(2145.4,1073.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node5249~0" class="node nodeCM pw_threonine-metabolism lid10" transform="translate(2089.0,1468.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5249~1" class="node nodeCM pw_threonine-metabolism lid5" transform="translate(2265.0,1425.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node8107~0" class="node nodeCM pw_threonine-metabolism lid41" transform="translate(2493.9,1547.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node8107~1" class="node nodeCM pw_threonine-metabolism lid34" transform="translate(2581.5,1498.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5245~0" class="node nodeCM pw_threonine-metabolism lid10" transform="translate(2294.9,1716.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5245~1" class="node nodeCM pw_threonine-metabolism lid16" transform="translate(2308.3,1669.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5245~2" class="node nodeCM pw_threonine-metabolism lid5" transform="translate(2474.2,1724.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5240~0" class="node nodeCM pw_threonine-metabolism lid4" transform="translate(2577.1,2059.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5240~1" class="node nodeCM pw_threonine-metabolism lid13" transform="translate(2502.8,1991.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node5026~0" class="node nodeCM pw_threonine-metabolism lid18" transform="translate(1502.4,632.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node5026~1" class="node nodeCM pw_threonine-metabolism lid29" transform="translate(1580.5,565.6)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node5022~0" class="node nodeCM pw_threonine-metabolism lid12" transform="translate(1451.3,598.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5022~1" class="node nodeCM pw_threonine-metabolism lid28" transform="translate(1430.7,500.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5018~0" class="node nodeCM pw_threonine-metabolism lid9" transform="translate(1427.0,241.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5018~1" class="node nodeCM pw_threonine-metabolism lid1" transform="translate(1402.5,282.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5018~2" class="node nodeCM pw_threonine-metabolism lid1126" transform="translate(1256.0,215.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node5018~3" class="node nodeCM pw_threonine-metabolism lid27" transform="translate(1271.5,169.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5018~4" class="node nodeCM pw_threonine-metabolism lid12" transform="translate(1308.5,139.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5011~0" class="node nodeCM pw_threonine-metabolism lid7" transform="translate(1021.4,686.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5011~1" class="node nodeCM pw_threonine-metabolism lid18" transform="translate(1033.6,734.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node5011~2" class="node nodeCM pw_threonine-metabolism lid8" transform="translate(951.9,645.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>

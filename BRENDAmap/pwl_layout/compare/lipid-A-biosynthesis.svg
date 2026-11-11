@@ -1,0 +1,440 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="7687" height="2627" viewBox="0 0 7687.0 2627.2"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="689.5 5274.4 4139.1 1083.3" width="4139" height="1083" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="689.5" y="5274.4" width="4139.1" height="1083.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_lipid-A-biosynthesis" class="pw pw2" x="729.5" y="5329.9" width="4059.1" height="987.8" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1877.3 5416.3 L 2217.1 5416.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1838.1 5432.3 L 1838.1 5567.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2835.0 5432.3 L 2835.9 5567.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2874.1 5416.3 L 3359.2 5416.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3115.2 5486.6 L 3359.2 5428.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3076.0 5511.9 L 3076.0 5611.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3412.5 5566.8 L 3412.5 5432.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3412.5 5598.8 L 3412.5 5736.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1160.4 5599.4 L 1160.4 5736.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1160.4 5567.4 L 1160.4 5433.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2406.0 5599.4 L 2406.0 5736.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2406.0 5567.4 L 2406.0 5432.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3779.6 5600.2 L 3779.6 5736.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3779.4 5568.2 L 3778.3 5432.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4019.8 5752.1 L 3903.5 5752.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4098.2 5752.1 L 4237.1 5752.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4487.6 5752.1 L 4343.7 5752.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4526.8 5768.1 L 4526.8 5897.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1838.1 5736.7 L 1838.1 5599.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1838.1 5768.7 L 1838.1 5897.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2836.0 5769.4 L 2836.0 5897.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2836.0 5737.4 L 2836.0 5599.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3076.0 5737.4 L 3076.0 5643.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3052.1 5769.4 L 2859.9 5897.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1160.4 5929.9 L 1160.4 6066.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1160.4 5897.9 L 1160.4 5768.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2406.0 5929.9 L 2406.0 6066.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2406.0 5897.9 L 2406.0 5768.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3412.5 5930.1 L 3412.5 6066.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3412.5 5898.1 L 3412.5 5768.7"/>
+<path class="link" marker-start="url(#in)" d="M 3451.7 5914.1 L 3559.3 5914.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1838.1 6066.3 L 1838.1 5929.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1838.1 6098.3 L 1838.1 6228.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2836.0 6066.3 L 2836.0 5929.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2836.0 6098.3 L 2836.0 6228.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4386.2 6066.3 L 4512.0 5929.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4386.8 6098.3 L 4511.4 6228.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4332.3 6082.3 L 4121.8 6082.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4674.6 6066.3 L 4542.3 5929.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 4673.9 6098.3 L 4542.9 6228.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3774.9 6082.3 L 3981.2 6082.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3696.5 6082.3 L 3451.7 6082.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1196.8 6244.1 L 1530.5 6244.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1160.4 6228.1 L 1160.4 6098.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2445.2 6244.1 L 2777.0 6244.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2406.0 6228.1 L 2406.0 6098.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1857.3 5400.3 L 1892.4 5371.1"/>
+<path class="link" marker-end="url(#in)" d="M 1856.5 5432.3 L 1890.5 5461.8"/>
+<path class="link" marker-start="url(#in)" d="M 2795.7 5404.6 L 2767.2 5396.0"/>
+<path class="link" marker-end="url(#in)" d="M 2795.7 5429.9 L 2750.2 5445.7"/>
+<path class="link" marker-start="url(#in)" d="M 3037.2 5479.9 L 2995.2 5462.5"/>
+<path class="link" marker-end="url(#in)" d="M 3036.8 5509.4 L 2992.8 5524.6"/>
+<path class="link" marker-start="url(#in)" d="M 3430.9 5598.8 L 3479.9 5641.4"/>
+<path class="link" marker-end="url(#in)" d="M 3434.6 5566.8 L 3476.2 5536.6"/>
+<path class="link" marker-start="url(#in)" d="M 1189.3 5599.4 L 1244.7 5630.2"/>
+<path class="link" marker-end="url(#in)" d="M 1189.3 5567.4 L 1251.3 5533.0"/>
+<path class="link" marker-end="url(#in)" d="M 1144.4 5567.4 L 1113.7 5536.6"/>
+<path class="link" marker-start="url(#in)" d="M 2422.0 5599.4 L 2452.8 5630.2"/>
+<path class="link" marker-end="url(#in)" d="M 2422.0 5567.4 L 2452.8 5536.6"/>
+<path class="link" marker-start="url(#in)" d="M 3818.8 5571.5 L 3896.2 5546.6"/>
+<path class="link" marker-end="url(#in)" d="M 3818.8 5591.5 L 3901.0 5606.9"/>
+<path class="link" marker-start="url(#in)" d="M 4034.4 5736.1 L 3986.0 5704.5"/>
+<path class="link" marker-start="url(#in)" d="M 4066.8 5736.1 L 4081.5 5706.0"/>
+<path class="link" marker-start="url(#in)" d="M 4499.8 5736.1 L 4439.5 5700.3"/>
+<path class="link" marker-start="url(#in)" d="M 4502.7 5768.1 L 4445.2 5806.4"/>
+<path class="link" marker-start="url(#in)" d="M 1822.1 5736.7 L 1791.4 5706.0"/>
+<path class="link" marker-end="url(#in)" d="M 1822.1 5768.7 L 1791.3 5799.5"/>
+<path class="link" marker-start="url(#in)" d="M 2875.2 5737.6 L 2918.9 5720.0"/>
+<path class="link" marker-end="url(#in)" d="M 2875.2 5766.5 L 2936.3 5787.0"/>
+<path class="link" marker-start="url(#in)" d="M 3038.0 5737.4 L 2996.6 5720.0"/>
+<path class="link" marker-end="url(#in)" d="M 3036.8 5767.1 L 2980.8 5786.7"/>
+<path class="link" marker-start="url(#in)" d="M 1145.3 5929.9 L 1112.7 5964.5"/>
+<path class="link" marker-end="url(#in)" d="M 1144.4 5897.9 L 1113.7 5867.1"/>
+<path class="link" marker-end="url(#in)" d="M 1176.4 5897.9 L 1207.2 5867.1"/>
+<path class="link" marker-start="url(#in)" d="M 2422.0 5929.9 L 2452.8 5960.7"/>
+<path class="link" marker-end="url(#in)" d="M 2422.0 5897.9 L 2452.8 5867.1"/>
+<path class="link" marker-end="url(#in)" d="M 3434.3 5898.1 L 3476.5 5867.1"/>
+<path class="link" marker-start="url(#in)" d="M 1822.1 6066.3 L 1791.4 6035.6"/>
+<path class="link" marker-end="url(#in)" d="M 1822.1 6098.3 L 1791.4 6129.1"/>
+<path class="link" marker-start="url(#in)" d="M 2821.1 6066.3 L 2754.5 5995.1"/>
+<path class="link" marker-end="url(#in)" d="M 2820.0 6098.3 L 2789.2 6129.1"/>
+<path class="link" marker-end="url(#in)" d="M 4347.6 6066.3 L 4303.9 6036.9"/>
+<path class="link" marker-end="url(#in)" d="M 4347.0 6098.3 L 4299.8 6129.3"/>
+<path class="link" marker-start="url(#in)" d="M 4653.7 6069.3 L 4618.3 6056.6"/>
+<path class="link" marker-end="url(#in)" d="M 4654.0 6098.3 L 4621.7 6112.6"/>
+<path class="link" marker-start="url(#in)" d="M 3751.7 6066.3 L 3782.4 6035.6"/>
+<path class="link" marker-end="url(#in)" d="M 3719.7 6066.3 L 3688.9 6035.6"/>
+<path class="link" marker-start="url(#in)" d="M 1141.5 6260.1 L 1116.5 6281.3"/>
+<path class="link" marker-end="url(#in)" d="M 1144.4 6228.1 L 1113.7 6197.3"/>
+<path class="link" marker-start="url(#in)" d="M 2441.7 6260.1 L 2464.3 6270.3"/>
+<path class="link" marker-end="url(#in)" d="M 2390.0 6228.1 L 2352.5 6190.6"/>
+<path class="link" marker-end="url(#in)" d="M 2421.4 6228.1 L 2457.1 6191.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_lipid-A-biosynthesis" transform="translate(2759.0,5329.9)"><rect rx="10" height="31" width="184" x="-92.0" y="-15.5"/><text dominant-baseline="central">lipid A biosynthesis</text></g>
+<g id="node1273" class="node nodeHM pw_lipid-A-biosynthesis lid17973" transform="translate(3778.2,5416.3)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17973" target="_blank">UDP-GlcNAc</a></text><title>UDP-alpha-N-acetyl-D-glucosamine</title></g>
+<g id="node2069" class="node nodeHM pw_lipid-A-biosynthesis lid195410" transform="translate(3076.0,5627.0)"><rect height="30.0" width="353.2" x="-176.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195410" target="_blank">alpha-Kdo-(2-&gt;4)-alpha-Kdo-(2-&gt;6)-(palmitoleoyl)-lipid IVA</a></text><title>alpha-Kdo-(2-&gt;4)-alpha-Kdo-(2-&gt;6)-(palmitoleoyl)-lipid IVA</title></g>
+<g id="node3896" class="node nodeHM pw_lipid-A-biosynthesis lid8231" transform="translate(3609.8,5914.1)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8231" target="_blank">CMP-alpha-Kdo</a></text><title>CMP-3-deoxy-D-manno-octulosonate</title></g>
+<g id="node3898" class="node nodeHM pw_lipid-A-biosynthesis lid183517" transform="translate(3412.5,5752.7)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183517" target="_blank">Kdo-lipid IVA</a></text><title>alpha-Kdo-(2-&gt;6)-lipid IVA</title></g>
+<g id="node3904" class="node nodeHM pw_lipid-A-biosynthesis lid183519" transform="translate(3412.5,5416.3)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183519" target="_blank">Kdo2-lipid IVA</a></text><title>alpha-Kdo-(2-&gt;4)-alpha-Kdo-(2-&gt;6)-lipid IVA</title></g>
+<g id="node3906" class="node nodeHM pw_lipid-A-biosynthesis lid186628" transform="translate(2836.0,5583.4)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186628" target="_blank">KDO2-(lauroyl)-lipid IVA</a></text><title>dodecanoyl-Kdo2-lipid IVA</title></g>
+<g id="node3941" class="node nodeHM pw_lipid-A-biosynthesis lid186629" transform="translate(1160.4,5417.9)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186629" target="_blank">lipid A-core</a></text><title>lipid A-core</title></g>
+<g id="node3946" class="node nodeHM pw_lipid-A-biosynthesis lid186643" transform="translate(1160.4,5752.7)"><rect height="30.0" width="788.3" x="-394.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186643" target="_blank">galactosyl-(1,6)-[glucosyl-(1,2)-glucosyl-(1,3)]-glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title>galactosyl-(1,6)-[glucosyl-(1,2)-glucosyl-(1,3)]-glucosyl-(1,3)-[heptosyl-(1,7)]-heptosyl-(1,3)-heptosyl-KDO2-lipid A-bisphosphate</title></g>
+<g id="node3953" class="node nodeHM pw_lipid-A-biosynthesis lid186644" transform="translate(1160.4,6082.3)"><rect height="30.0" width="692.2" x="-346.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186644" target="_blank">galactosyl-(1,6)-[glucosyl-(1,3)]-glucosyl-(1,3)-[heptosyl-1,7]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title>galactosyl-(1,6)-[glucosyl-(1,3)]-glucosyl-(1,3)-[heptosyl-1,7]-heptosyl-(1,3)-heptosyl-KDO2-lipid A-bisphosphate</title></g>
+<g id="node3957" class="node nodeHM pw_lipid-A-biosynthesis lid186645" transform="translate(1838.1,6244.1)"><rect height="30.0" width="613.1" x="-306.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186645" target="_blank">galactosyl-(1,6)-glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyll-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title>galactosyl-(1,6)-glucosyl-(1,3)-[heptosyl-(1,7)]-heptosyll-(1,3)-heptosyl-KDO2-lipid A-bisphosphate</title></g>
+<g id="node3965" class="node nodeHM pw_lipid-A-biosynthesis lid186646" transform="translate(1838.1,5913.9)"><rect height="30.0" width="511.4" x="-255.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186646" target="_blank">glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title>glucosyl-(1,3)-[heptosyl-(1,7)]-heptosyl-(1,3)-heptosyl-KDO2-lipid A-bisphosphate</title></g>
+<g id="node3967" class="node nodeHM pw_lipid-A-biosynthesis lid186632" transform="translate(1838.1,5583.4)"><rect height="30.0" width="511.4" x="-255.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186632" target="_blank">glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title>glucosyl-(1,3)-[heptosyl-(1,7)]-heptosyl-(1,3)-heptosyl-KDO2-lipid A-phosphate</title></g>
+<g id="node3969" class="node nodeHM pw_lipid-A-biosynthesis lid186630" transform="translate(2406.1,5416.3)"><rect height="30.0" width="375.9" x="-187.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186630" target="_blank">Glc-(1-&gt;3)-heptosyl-(1-&gt;3)-phosphoheptosyl-(1-&gt;5)-KDO2-lipid A</a></text><title>an L-glycero-beta-D-manno-heptoyl-(1-&gt;3)-4-O-phospho-L-glycero-beta-D-manno-heptosyl-(1-&gt;5)-[3-deoxy-alpha-D-manno-oct-2-ulopyranosyl-(2-&gt;4)]-3-deoxy-alpha-D-manno-oct-2-ulopyranosyl-(2-&gt;6)-[lipid A]</title></g>
+<g id="node3978" class="node nodeHM pw_lipid-A-biosynthesis lid186633" transform="translate(2406.0,5752.7)"><rect height="30.0" width="375.9" x="-187.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186633" target="_blank">Glc-(1-&gt;3)-heptosyl-(1-&gt;3)-phosphoheptosyl-(1-&gt;5)-KDO2-lipid A</a></text><title>an L-glycero-beta-D-manno-heptosyl-(1-&gt;3)-L-glycero-beta-D-manno-heptosyl-(1-&gt;5)-[3-deoxy-alpha-D-manno-oct-2-ulopyranosyl-(2-&gt;4)]-3-deoxy-alpha-D-manno-oct-2-ulopyranosyl-(2-&gt;6)-[lipid A]</title></g>
+<g id="node3980" class="node nodeHM pw_lipid-A-biosynthesis lid186631" transform="translate(2406.0,6082.3)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186631" target="_blank">hep-(1,3)-hep-KDO2-lipid A</a></text><title>an alpha-Hep-(1-&gt;3)-alpha-Hep-(1-&gt;5)-[alpha-Kdo-(2-&gt;4)]-alpha-Kdo-(2-&gt;6)-[lipid A]</title></g>
+<g id="node3982" class="node nodeHM pw_lipid-A-biosynthesis lid186627" transform="translate(2836.0,6244.1)"><rect height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186627" target="_blank">hep-KDO2-lipid A</a></text><title>an alpha-Hep-(1-&gt;5)-[alpha-Kdo-(2-&gt;4)]-alpha-Kdo-(2-&gt;6)-[lipid A]</title></g>
+<g id="node3984" class="node nodeHM pw_lipid-A-biosynthesis lid34756" transform="translate(2836.0,5913.9)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34756" target="_blank">(KDO)2-lipid A</a></text><title>KdO2-lipid A</title></g>
+<g id="node3990" class="node nodeHM pw_lipid-A-biosynthesis lid107532" transform="translate(3412.5,6082.3)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107532" target="_blank">lipid IVA</a></text><title>lipid IV(A)</title></g>
+<g id="node3993" class="node nodeHM pw_lipid-A-biosynthesis lid183513" transform="translate(4051.5,6082.3)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183513" target="_blank">lipid A disaccharide</a></text><title>lipid A disaccharide</title></g>
+<g id="node3995" class="node nodeHM pw_lipid-A-biosynthesis lid45067" transform="translate(4526.8,6244.1)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45067" target="_blank">lipid X</a></text><title>2,3-bis(3-hydroxytetradecanoyl)-beta-D-glucosaminyl 1-phosphate</title></g>
+<g id="node3997" class="node nodeHM pw_lipid-A-biosynthesis lid45962" transform="translate(4526.8,5913.9)"><rect height="30.0" width="245.9" x="-123.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45962" target="_blank">UDP-2,3-bis(3-hydroxytetradecanoyl)GlcN</a></text><title>UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine</title></g>
+<g id="node4001" class="node nodeHM pw_lipid-A-biosynthesis lid186625" transform="translate(4290.4,5752.1)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186625" target="_blank">UDP-3-Myr-GlcN</a></text><title>UDP-3-O-(3-hydroxytetradecanoyl)glucosamine</title></g>
+<g id="node4005" class="node nodeHM pw_lipid-A-biosynthesis lid30931" transform="translate(3779.6,5752.1)"><rect height="30.0" width="245.9" x="-123.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30931" target="_blank">UDP-3-O-((R)-3-hydroxymyristoyl)-GlcNAc</a></text><title>UDP-3-O-(3-hydroxytetradecanoyl)-N-acetylglucosamine</title></g>
+<g id="node3968" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1838.1,5416.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.25" target="_blank">2.4.99.25</a></text><title>lipopolysaccharide heptosyltransferase III</title></g>
+<g id="node3905" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2834.9,5416.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.241" target="_blank">2.3.1.241</a></text><title>Kdo2-lipid IVA acyltransferase</title></g>
+<g id="node2070" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3076.0,5495.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.242" target="_blank">2.3.1.242</a></text><title>Kdo2-lipid IVA palmitoleoyltransferase</title></g>
+<g id="node3899" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3412.5,5582.8)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.13" target="_blank">2.4.99.13</a></text><title>(KDO)-lipid IVA 3-deoxy-D-manno-octulosonic acid transferase</title></g>
+<g id="node3945" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1160.4,5583.4)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-" target="_blank">2.4.1.-</a></text><title>heptosyl transferse IV</title></g>
+<g id="node3970" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2406.0,5583.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.235" target="_blank">2.7.1.235</a></text><title>lipopolysaccharide core heptose(I) kinase</title></g>
+<g id="node4008" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3779.6,5584.2)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.129" target="_blank">2.3.1.129</a></text><title>acyl-[acyl-carrier-protein]-UDP-N-acetylglucosamine O-acyltransferase</title></g>
+<g id="node4004" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(4059.0,5752.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.108" target="_blank">3.5.1.108</a></text><title>UDP-3-O-acyl-N-acetylglucosamine deacetylase</title></g>
+<g id="node4000" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(4526.8,5752.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.191" target="_blank">2.3.1.191</a></text><title>UDP-3-O-(3-hydroxyacyl)glucosamine N-acyltransferase</title></g>
+<g id="node3966" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1838.1,5752.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.-" target="_blank">2.7.1.-</a></text><title>lipopolysaccharide core biosynthesis protein</title></g>
+<g id="node3907" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2836.0,5753.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.243" target="_blank">2.3.1.243</a></text><title>acyl-Kdo2-lipid IVA acyltransferase</title></g>
+<g id="node2068" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3076.0,5753.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.243" target="_blank">2.3.1.243</a></text><title>acyl-Kdo2-lipid IVA acyltransferase</title></g>
+<g id="node3950" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1160.4,5913.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.58" target="_blank">2.4.1.58</a></text><title>lipopolysaccharide glucosyltransferase I</title></g>
+<g id="node3979" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2406.0,5913.9)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-" target="_blank">2.4.1.-</a></text><title>lipopolysaccharide glucosyltransferase I</title></g>
+<g id="node3897" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3412.5,5914.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.12" target="_blank">2.4.99.12</a></text><title>lipid IVA 3-deoxy-D-manno-octulosonic acid transferase</title></g>
+<g id="node3964" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1838.1,6082.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-" target="_blank">2.4.1.-</a></text><title>lipopolysaccharide 3-alpha-galactosyltransferase</title></g>
+<g id="node3983" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2836.0,6082.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.23" target="_blank">2.4.99.23</a></text><title>lipopolysaccharide heptosyltransferase I</title></g>
+<g id="node3994" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(4371.5,6082.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.182" target="_blank">2.4.1.182</a></text><title>lipid-A-disaccharide synthase</title></g>
+<g id="node3996" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(4690.1,6082.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.54" target="_blank">3.6.1.54</a></text><title>UDP-2,3-diacylglucosamine diphosphatase</title></g>
+<g id="node3991" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3735.7,6082.3)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.130" target="_blank">2.7.1.130</a></text><title>tetraacyldisaccharide 4&#x27;-kinase</title></g>
+<g id="node3954" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1160.4,6244.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.73" target="_blank">2.4.1.73</a></text><title>lipopolysaccharide glucosyltransferase II</title></g>
+<g id="node3981" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2406.0,6244.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.24" target="_blank">2.4.99.24</a></text><title>lipopolysaccharide heptosyltransferase II</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node2066" class="node nodeCM pw_lipid-A-biosynthesis lid3103" transform="translate(2956.4,5446.5)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3103" target="_blank">palmitoleoyl-ACP</a></text><title>palmitoleoyl-[acyl-carrier protein]</title></g>
+<g id="node2067" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(2956.4,5537.2)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title>holo-[acyl-carrier protein]</title></g>
+<g id="node3893" class="node nodeCM pw_lipid-A-biosynthesis lid100" transform="translate(3498.3,5520.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title>CMP</title></g>
+<g id="node3894" class="node nodeCM pw_lipid-A-biosynthesis lid8231" transform="translate(3498.3,5657.4)"><rect rx="5" height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8231" target="_blank">CMP-alpha-Kdo</a></text><title>CMP-3-deoxy-D-manno-octulosonate</title></g>
+<g id="node3895" class="node nodeCM pw_lipid-A-biosynthesis lid100" transform="translate(3498.3,5851.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title>CMP</title></g>
+<g id="node3900" class="node nodeCM pw_lipid-A-biosynthesis lid3855" transform="translate(2713.8,5380.1)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3855" target="_blank">Dodecanoyl-ACP</a></text><title>dodecanoyl-[acyl-carrier protein]</title></g>
+<g id="node3901" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(2713.8,5458.4)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title>holo-[acyl-carrier protein]</title></g>
+<g id="node3902" class="node nodeCM pw_lipid-A-biosynthesis lid13529" transform="translate(2958.6,5704.0)"><rect rx="5" height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13529" target="_blank">myristoyl-ACP</a></text><title>myristoleoyl-[acyl-carrier protein]</title></g>
+<g id="node3903" class="node nodeCM pw_lipid-A-biosynthesis lid1134" transform="translate(2958.6,5794.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1134" target="_blank">ACP</a></text><title>acyl-carrier protein</title></g>
+<g id="node3942" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(1097.7,5520.6)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3943" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1273.6,5520.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3944" class="node nodeCM pw_lipid-A-biosynthesis lid45283" transform="translate(1273.6,5646.2)"><rect rx="5" height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45283" target="_blank">ADP-L-glycero-D-manno-heptose</a></text><title>ADP-L-glycero-D-manno-heptose</title></g>
+<g id="node3947" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(1097.7,5851.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node3948" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(1223.2,5851.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3949" class="node nodeCM pw_lipid-A-biosynthesis lid64" transform="translate(1097.7,5980.5)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title>UDP-glucose</title></g>
+<g id="node3951" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(1097.7,6181.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node3952" class="node nodeCM pw_lipid-A-biosynthesis lid64" transform="translate(1097.7,6297.3)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title>UDP-glucose</title></g>
+<g id="node3955" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(1775.4,6145.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node3956" class="node nodeCM pw_lipid-A-biosynthesis lid1336" transform="translate(1775.4,6019.6)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1336" target="_blank">UDP-Gal</a></text><title>UDP-D-galactose</title></g>
+<g id="node3958" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1775.3,5815.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3959" class="node nodeCM pw_lipid-A-biosynthesis lid4" transform="translate(1775.4,5690.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3960" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1908.8,5477.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3961" class="node nodeCM pw_lipid-A-biosynthesis lid45283" transform="translate(1911.6,5355.1)"><rect rx="5" height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45283" target="_blank">ADP-L-glycero-D-manno-heptose</a></text><title>ADP-L-glycero-D-manno-heptose</title></g>
+<g id="node3962" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(2468.8,5520.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3963" class="node nodeCM pw_lipid-A-biosynthesis lid4" transform="translate(2468.8,5646.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3971" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(2468.8,5851.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node3972" class="node nodeCM pw_lipid-A-biosynthesis lid64" transform="translate(2468.8,5976.7)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title>UDP-glucose</title></g>
+<g id="node3973" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(2472.5,6175.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3974" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(2336.5,6174.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3975" class="node nodeCM pw_lipid-A-biosynthesis lid45283" transform="translate(2499.9,6286.3)"><rect rx="5" height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45283" target="_blank">ADP-L-glycero-D-manno-heptose</a></text><title>ADP-L-glycero-D-manno-heptose</title></g>
+<g id="node3976" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(2773.2,6145.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3977" class="node nodeCM pw_lipid-A-biosynthesis lid45283" transform="translate(2739.5,5979.1)"><rect rx="5" height="30.0" width="189.4" x="-94.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45283" target="_blank">ADP-L-glycero-D-manno-heptose</a></text><title>ADP-L-glycero-D-manno-heptose</title></g>
+<g id="node3985" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(4280.4,6142.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node3986" class="node nodeCM pw_lipid-A-biosynthesis lid133" transform="translate(4599.5,6122.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=133" target="_blank">UMP</a></text><title>UMP</title></g>
+<g id="node3987" class="node nodeCM pw_lipid-A-biosynthesis lid1" transform="translate(4596.0,6048.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node3988" class="node nodeCM pw_lipid-A-biosynthesis lid4" transform="translate(3798.4,6019.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node3989" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(3672.9,6019.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node3992" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(4281.6,6022.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title>UDP</title></g>
+<g id="node3998" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(4421.1,5822.4)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title>holo-[acyl-carrier protein]</title></g>
+<g id="node3999" class="node nodeCM pw_lipid-A-biosynthesis lid2623" transform="translate(4412.5,5684.3)"><rect rx="5" height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2623" target="_blank">(3R)-3-hydroxymyristoyl-ACP</a></text><title>(3R)-3-hydroxymyristoyl-[acyl-carrier protein]</title></g>
+<g id="node4002" class="node nodeCM pw_lipid-A-biosynthesis lid47" transform="translate(4089.3,5690.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title>Acetate</title></g>
+<g id="node4003" class="node nodeCM pw_lipid-A-biosynthesis lid1" transform="translate(3963.8,5690.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4006" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(3937.4,5613.7)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title>holo-[acyl-carrier protein]</title></g>
+<g id="node4007" class="node nodeCM pw_lipid-A-biosynthesis lid2623" transform="translate(3945.8,5530.6)"><rect rx="5" height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2623" target="_blank">(3R)-3-hydroxymyristoyl-ACP</a></text><title>(3R)-3-hydroxymyristoyl-[acyl-carrier protein]</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="4219.1" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 3467.9 2587.2" width="3468" height="2587" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="3467.9" height="2587.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_lipid-A-biosynthesis" class="pw " x="0.0" y="0.0" width="3387.9" height="2491.7" style="opacity: 0.5; fill: rgb(254, 245, 167);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 2297.7 248.5 L 2407.1 248.5"/>
+<path class="link" marker-end="url(#in)" d="M 2227.3 248.5 L 2151.7 248.5"/>
+<path class="link" marker-start="url(#in)" d="M 2066.6 428.4 L 2067.8 264.5"/>
+<path class="link" marker-end="url(#in)" d="M 2066.5 460.4 L 2066.5 624.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2227.3 664.4 L 2117.9 648.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2297.7 659.2 L 2404.9 627.2"/>
+<path class="link" marker-end="url(#in)" d="M 2458.5 459.9 C 2458.5 491.6 2458.5 564.1 2458.5 595.9"/>
+<path class="link" marker-start="url(#in)" d="M 2458.5 428.4 L 2458.5 264.5"/>
+<path class="link" marker-start="url(#in)" d="M 2066.5 820.4 L 2066.5 656.4"/>
+<path class="link" marker-end="url(#in)" d="M 2066.5 852.4 L 2066.5 1016.4"/>
+<path class="link" marker-start="url(#in)" d="M 1905.7 1032.4 L 2008.7 1032.4"/>
+<path class="link" marker-end="url(#in)" d="M 1835.4 1032.4 L 1764.8 1032.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1674.6 852.4 L 1674.6 1016.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1674.6 820.4 L 1674.6 656.4"/>
+<path class="link" marker-start="url(#in)" d="M 1674.6 460.4 L 1674.6 624.4"/>
+<path class="link" marker-end="url(#in)" d="M 1674.5 428.4 L 1673.3 264.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1510.4 166.5 L 1641.4 232.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1446.6 134.5 L 1314.6 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1192.6 232.5 L 1274.6 68.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1176.6 264.5 L 1094.7 428.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1106.3 624.4 L 1088.4 460.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1106.8 656.4 L 1095.0 820.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 922.6 919.0 L 1060.6 852.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 858.8 950.3 L 726.7 1016.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 598.2 852.4 L 686.1 1016.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 580.4 820.4 L 486.6 656.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 497.0 460.4 L 479.1 624.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 498.7 428.4 L 498.7 264.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2458.5 527.1 C 2458.5 476.3 2458.5 314.3 2458.5 263.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2458.5 557.9 C 2458.5 608.7 2458.5 770.6 2458.5 821.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3227.5 1728.8 L 3313.1 1484.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 3196.5 1728.8 L 2483.9 1279.9"/>
+<path class="link" marker-start="url(#in)" d="M 1086.7 1310.3 L 1086.7 1244.3"/>
+<path class="link" marker-end="url(#in)" d="M 1083.5 1342.3 L 1070.6 1408.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1266.9 1424.3 L 1199.8 1424.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1337.3 1424.3 L 1427.2 1424.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1737.4 1424.3 L 1530.0 1424.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1794.7 1440.3 L 2826.2 2185.6"/>
+<path class="link" marker-start="url(#in)" d="M 3001.3 2348.6 L 2865.0 2217.6"/>
+<path class="link" marker-end="url(#in)" d="M 3046.1 2348.6 L 3195.0 2263.7"/>
+<path class="link" marker-start="url(#in)" d="M 3245.9 1173.0 L 2310.6 1024.4"/>
+<path class="link" marker-start="url(#in)" d="M 3283.1 1194.6 L 3316.6 1452.6"/>
+<path class="link" marker-end="url(#in)" d="M 3245.9 1163.9 L 2496.9 852.4"/>
+<path class="link" marker-start="url(#in)" d="M 3068.9 2075.8 L 2876.4 2185.6"/>
+<path class="link" marker-start="url(#in)" d="M 3107.7 2075.8 L 3212.4 2231.7"/>
+<path class="link" marker-end="url(#in)" d="M 3084.1 2043.8 L 2471.3 1279.9"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2273.7 232.5 L 2311.6 178.3"/>
+<path class="link" marker-end="url(#in)" d="M 2251.3 264.5 L 2218.9 310.7"/>
+<path class="link" marker-start="url(#in)" d="M 2089.5 428.4 L 2128.5 401.3"/>
+<path class="link" marker-end="url(#in)" d="M 2091.4 460.4 L 2206.8 534.6"/>
+<path class="link" marker-start="url(#in)" d="M 2249.4 653.7 L 2210.0 605.5"/>
+<path class="link" marker-end="url(#in)" d="M 2257.4 653.7 L 2227.6 560.7"/>
+<path class="link" marker-start="url(#in)" d="M 2435.6 428.4 L 2392.5 398.3"/>
+<path class="link" marker-end="url(#in)" d="M 2478.1 460.4 L 2517.0 492.1"/>
+<path class="link" marker-start="url(#in)" d="M 2044.9 852.4 L 1966.5 910.3"/>
+<path class="link" marker-end="url(#in)" d="M 2043.7 852.4 L 2010.7 875.5"/>
+<path class="link" marker-start="url(#in)" d="M 1881.8 1016.4 L 1933.6 942.3"/>
+<path class="link" marker-end="url(#in)" d="M 1865.0 1048.4 L 1847.6 1099.0"/>
+<path class="link" marker-end="url(#in)" d="M 1850.8 1048.4 L 1816.4 1076.2"/>
+<path class="link" marker-start="url(#in)" d="M 1697.4 852.4 L 1728.6 874.2"/>
+<path class="link" marker-end="url(#in)" d="M 1697.4 820.4 L 1730.4 797.3"/>
+<path class="link" marker-start="url(#in)" d="M 1697.6 460.4 L 1730.6 483.4"/>
+<path class="link" marker-end="url(#in)" d="M 1697.3 428.4 L 1730.2 405.2"/>
+<path class="link" marker-start="url(#in)" d="M 1508.3 134.5 L 1562.9 105.0"/>
+<path class="link" marker-end="url(#in)" d="M 1449.0 166.5 L 1417.4 183.5"/>
+<path class="link" marker-start="url(#in)" d="M 1176.0 232.5 L 1151.7 187.7"/>
+<path class="link" marker-end="url(#in)" d="M 1156.0 252.7 L 1114.0 259.0"/>
+<path class="link" marker-start="url(#in)" d="M 1084.2 624.4 L 1053.9 604.0"/>
+<path class="link" marker-end="url(#in)" d="M 1086.0 656.4 L 1053.1 680.4"/>
+<path class="link" marker-start="url(#in)" d="M 894.3 918.4 L 901.5 886.4"/>
+<path class="link" marker-end="url(#in)" d="M 887.3 950.4 L 880.6 982.4"/>
+<path class="link" marker-start="url(#in)" d="M 621.5 839.7 L 654.2 843.2"/>
+<path class="link" marker-end="url(#in)" d="M 557.7 842.0 L 519.3 848.8"/>
+<path class="link" marker-end="url(#in)" d="M 557.7 823.5 L 522.6 809.3"/>
+<path class="link" marker-start="url(#in)" d="M 519.1 460.4 L 580.2 508.4"/>
+<path class="link" marker-end="url(#in)" d="M 470.1 432.8 L 433.5 417.9"/>
+<path class="link" marker-end="url(#in)" d="M 487.2 428.4 L 460.1 391.0"/>
+<path class="link" marker-start="url(#in)" d="M 2478.4 526.4 L 2523.8 490.1"/>
+<path class="link" marker-end="url(#in)" d="M 2491.4 558.4 L 2514.3 569.5"/>
+<path class="link" marker-start="url(#in)" d="M 3228.3 1760.8 L 3247.8 1810.1"/>
+<path class="link" marker-end="url(#in)" d="M 3203.9 1760.8 L 3172.3 1788.9"/>
+<path class="link" marker-start="url(#in)" d="M 1115.1 1310.3 L 1168.2 1280.3"/>
+<path class="link" marker-end="url(#in)" d="M 1105.3 1342.3 L 1140.5 1372.4"/>
+<path class="link" marker-start="url(#in)" d="M 1296.8 1408.3 L 1279.9 1357.7"/>
+<path class="link" marker-start="url(#in)" d="M 1282.1 1408.3 L 1248.2 1381.2"/>
+<path class="link" marker-start="url(#in)" d="M 1754.4 1440.3 L 1696.0 1491.8"/>
+<path class="link" marker-start="url(#in)" d="M 1737.4 1430.1 L 1710.3 1434.6"/>
+<path class="link" marker-start="url(#in)" d="M 3003.6 2380.6 L 2973.9 2413.5"/>
+<path class="link" marker-end="url(#in)" d="M 3026.5 2380.6 L 3050.5 2425.7"/>
+<path class="link" marker-end="url(#in)" d="M 3245.9 1181.2 L 3209.7 1183.9"/>
+<path class="link" marker-end="url(#in)" d="M 3061.8 2067.3 L 3027.2 2074.7"/>
+<path class="link" marker-end="url(#in)" d="M 3061.8 2047.0 L 3028.9 2035.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_lipid-A-biosynthesis" transform="translate(1693.9,0.0)"><rect rx="10" height="31" width="204" x="-102.2" y="-15.5"/><text dominant-baseline="central">lipid A biosynthesis</text></g>
+<g id="node3904" class="node nodeHM pw_lipid-A-biosynthesis lid183519" transform="translate(2458.5,248.5)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183519" target="_blank">Kdo2-lipid IVA</a></text><title></title></g>
+<g id="node3906" class="node nodeHM pw_lipid-A-biosynthesis lid186628" transform="translate(2067.9,248.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186628" target="_blank">KDO2-(lauroyl)-lipid IVA</a></text><title></title></g>
+<g id="node3984" class="node nodeHM pw_lipid-A-biosynthesis lid34756" transform="translate(2066.5,640.4)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34756" target="_blank">(KDO)2-lipid A</a></text><title></title></g>
+<g id="node2069" class="node nodeHM pw_lipid-A-biosynthesis lid195410" transform="translate(2458.5,611.2)"><rect height="30.0" width="385.8" x="-192.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=195410" target="_blank">alpha-Kdo-(2-&gt;4)-alpha-Kdo-(2-&gt;6)-(palmitoleoyl)-lipid IVA</a></text><title></title></g>
+<g id="node3982" class="node nodeHM pw_lipid-A-biosynthesis lid186627" transform="translate(2066.5,1032.4)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186627" target="_blank">hep-KDO2-lipid A</a></text><title></title></g>
+<g id="node3980" class="node nodeHM pw_lipid-A-biosynthesis lid186631" transform="translate(1674.6,1032.4)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186631" target="_blank">hep-(1,3)-hep-KDO2-lipid A</a></text><title></title></g>
+<g id="node3978" class="node nodeHM pw_lipid-A-biosynthesis lid186633" transform="translate(1674.6,640.4)"><rect height="30.0" width="411.8" x="-205.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186633" target="_blank">Glc-(1-&gt;3)-heptosyl-(1-&gt;3)-phosphoheptosyl-(1-&gt;5)-KDO2-lipid A</a></text><title></title></g>
+<g id="node3969" class="node nodeHM pw_lipid-A-biosynthesis lid186630" transform="translate(1673.2,248.5)"><rect height="30.0" width="411.8" x="-205.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186630" target="_blank">Glc-(1-&gt;3)-heptosyl-(1-&gt;3)-phosphoheptosyl-(1-&gt;5)-KDO2-lipid A</a></text><title></title></g>
+<g id="node3967" class="node nodeHM pw_lipid-A-biosynthesis lid186632" transform="translate(1282.6,52.5)"><rect height="30.0" width="567.3" x="-283.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186632" target="_blank">glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title></title></g>
+<g id="node3965" class="node nodeHM pw_lipid-A-biosynthesis lid186646" transform="translate(1086.7,444.4)"><rect height="30.0" width="567.3" x="-283.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186646" target="_blank">glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title></title></g>
+<g id="node3957" class="node nodeHM pw_lipid-A-biosynthesis lid186645" transform="translate(1093.8,836.4)"><rect height="30.0" width="683.9" x="-342.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186645" target="_blank">galactosyl-(1,6)-glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyll-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title></title></g>
+<g id="node3953" class="node nodeHM pw_lipid-A-biosynthesis lid186644" transform="translate(694.7,1032.4)"><rect height="30.0" width="774.6" x="-387.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186644" target="_blank">galactosyl-(1,6)-[glucosyl-(1,3)]-glucosyl-(1,3)-[heptosyl-1,7]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title></title></g>
+<g id="node3946" class="node nodeHM pw_lipid-A-biosynthesis lid186643" transform="translate(477.4,640.4)"><rect height="30.0" width="884.8" x="-442.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186643" target="_blank">galactosyl-(1,6)-[glucosyl-(1,2)-glucosyl-(1,3)]-glucosyl-(1,3)-[heptosyl-(1,7)]-4-phosphoheptosyl-(1,3)-4-phosphoheptosyl-KDO2-lipid A</a></text><title></title></g>
+<g id="node3941" class="node nodeHM pw_lipid-A-biosynthesis lid186629" transform="translate(498.7,248.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186629" target="_blank">lipid A-core</a></text><title></title></g>
+<g id="node3898" class="node nodeHM pw_lipid-A-biosynthesis lid183517" transform="translate(2458.5,836.4)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183517" target="_blank">Kdo-lipid IVA</a></text><title></title></g>
+<g id="node3990" class="node nodeHM pw_lipid-A-biosynthesis lid107532" transform="translate(3318.7,1468.6)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107532" target="_blank">lipid IVA</a></text><title></title></g>
+<g id="node3993" class="node nodeHM pw_lipid-A-biosynthesis lid183513" transform="translate(2458.5,1263.9)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=183513" target="_blank">lipid A disaccharide</a></text><title></title></g>
+<g id="node1273" class="node nodeHM pw_lipid-A-biosynthesis lid17973" transform="translate(1086.7,1228.3)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17973" target="_blank">UDP-GlcNAc</a></text><title></title></g>
+<g id="node4005" class="node nodeHM pw_lipid-A-biosynthesis lid30931" transform="translate(1067.4,1424.3)"><rect height="30.0" width="262.7" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30931" target="_blank">UDP-3-O-((R)-3-hydroxymyristoyl)-GlcNAc</a></text><title></title></g>
+<g id="node4001" class="node nodeHM pw_lipid-A-biosynthesis lid186625" transform="translate(1478.6,1424.3)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186625" target="_blank">UDP-3-Myr-GlcN</a></text><title></title></g>
+<g id="node3997" class="node nodeHM pw_lipid-A-biosynthesis lid45962" transform="translate(2848.4,2201.6)"><rect height="30.0" width="262.7" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45962" target="_blank">UDP-2,3-bis(3-hydroxytetradecanoyl)GlcN</a></text><title></title></g>
+<g id="node3995" class="node nodeHM pw_lipid-A-biosynthesis lid45067" transform="translate(3223.1,2247.7)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45067" target="_blank">lipid X</a></text><title></title></g>
+<g id="node3896" class="node nodeHM pw_lipid-A-biosynthesis lid8231" transform="translate(2262.5,1016.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8231" target="_blank">CMP-alpha-Kdo</a></text><title></title></g>
+<g id="node3905" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2262.5,248.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.241" target="_blank">2.3.1.241</a></text><title>Kdo2-lipid IVA acyltransferase</title></g>
+<g id="node3907" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2066.5,444.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.243" target="_blank">2.3.1.243</a></text><title>acyl-Kdo2-lipid IVA acyltransferase</title></g>
+<g id="node2068" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2262.5,669.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.243" target="_blank">2.3.1.243</a></text><title>acyl-Kdo2-lipid IVA acyltransferase</title></g>
+<g id="node2070" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2458.5,444.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.242" target="_blank">2.3.1.242</a></text><title>Kdo2-lipid IVA palmitoleoyltransferase</title></g>
+<g id="node3983" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2066.5,836.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.23" target="_blank">2.4.99.23</a></text><title>lipopolysaccharide heptosyltransferase I</title></g>
+<g id="node3981" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1870.5,1032.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.24" target="_blank">2.4.99.24</a></text><title>lipopolysaccharide heptosyltransferase II</title></g>
+<g id="node3979" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1674.6,836.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-" target="_blank">2.4.1.-</a></text><title>lipopolysaccharide glucosyltransferase I</title></g>
+<g id="node3970" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1674.6,444.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.235" target="_blank">2.7.1.235</a></text><title>lipopolysaccharide core heptose(I) kinase</title></g>
+<g id="node3968" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1478.6,150.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.25" target="_blank">2.4.99.25</a></text><title>lipopolysaccharide heptosyltransferase III</title></g>
+<g id="node3966" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1184.6,248.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.-" target="_blank">2.7.1.-</a></text><title>lipopolysaccharide core biosynthesis protein</title></g>
+<g id="node3964" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1108.0,640.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-" target="_blank">2.4.1.-</a></text><title>lipopolysaccharide 3-alpha-galactosyltransferase</title></g>
+<g id="node3954" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(890.7,934.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.73" target="_blank">2.4.1.73</a></text><title>lipopolysaccharide glucosyltransferase II</title></g>
+<g id="node3950" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(589.6,836.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.58" target="_blank">2.4.1.58</a></text><title>lipopolysaccharide glucosyltransferase I</title></g>
+<g id="node3945" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(498.7,444.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.-" target="_blank">2.4.1.-</a></text><title>heptosyl transferse IV</title></g>
+<g id="node3899" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(2458.5,542.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.13" target="_blank">2.4.99.13</a></text><title>(KDO)-lipid IVA 3-deoxy-D-manno-octulosonic acid transferase</title></g>
+<g id="node3991" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3221.9,1744.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.130" target="_blank">2.7.1.130</a></text><title>tetraacyldisaccharide 4&#x27;-kinase</title></g>
+<g id="node4008" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1086.7,1326.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.129" target="_blank">2.3.1.129</a></text><title>acyl-[acyl-carrier-protein]-UDP-N-acetylglucosamine O-acyltransferase</title></g>
+<g id="node4004" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1302.1,1424.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.108" target="_blank">3.5.1.108</a></text><title>UDP-3-O-acyl-N-acetylglucosamine deacetylase</title></g>
+<g id="node4000" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(1772.6,1424.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.191" target="_blank">2.3.1.191</a></text><title>UDP-3-O-(3-hydroxyacyl)glucosamine N-acyltransferase</title></g>
+<g id="node3996" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3018.0,2364.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.54" target="_blank">3.6.1.54</a></text><title>UDP-2,3-diacylglucosamine diphosphatase</title></g>
+<g id="node3897" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3281.1,1178.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.99.12" target="_blank">2.4.99.12</a></text><title>lipid IVA 3-deoxy-D-manno-octulosonic acid transferase</title></g>
+<g id="node3994" class="node nodeEN pw_lipid-A-biosynthesis" transform="translate(3097.0,2059.8)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.182" target="_blank">2.4.1.182</a></text><title>lipid-A-disaccharide synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node3905~0" class="node nodeCM pw_lipid-A-biosynthesis lid3855" transform="translate(2322.8,162.3)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3855" target="_blank">Dodecanoyl-ACP</a></text><title></title></g>
+<g id="node3905~1" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(2207.7,326.7)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3907~0" class="node nodeCM pw_lipid-A-biosynthesis lid13529" transform="translate(2151.6,385.3)"><rect rx="5" height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13529" target="_blank">myristoyl-ACP</a></text><title></title></g>
+<g id="node2068~0" class="node nodeCM pw_lipid-A-biosynthesis lid13529" transform="translate(2196.9,589.5)"><rect rx="5" height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13529" target="_blank">myristoyl-ACP</a></text><title></title></g>
+<g id="node2068~1" class="node nodeCM pw_lipid-A-biosynthesis lid551" transform="translate(2222.5,544.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=551" target="_blank">ACP</a></text><title></title></g>
+<g id="node2070~0" class="node nodeCM pw_lipid-A-biosynthesis lid3103" transform="translate(2369.6,382.3)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3103" target="_blank">palmitoleoyl-ACP</a></text><title></title></g>
+<g id="node2070~1" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(2536.7,508.1)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3983~1" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1995.0,886.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3981~0" class="node nodeCM pw_lipid-A-biosynthesis lid45283" transform="translate(1944.8,926.3)"><rect rx="5" height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45283" target="_blank">ADP-L-glycero-D-manno-heptose</a></text><title></title></g>
+<g id="node3981~1" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1842.1,1115.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3981~2" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(1803.9,1086.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3979~0" class="node nodeCM pw_lipid-A-biosynthesis lid64" transform="translate(1751.4,890.2)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node3979~1" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(1746.1,786.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node3970~0" class="node nodeCM pw_lipid-A-biosynthesis lid4" transform="translate(1746.3,494.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3970~1" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1746.0,394.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3968~0" class="node nodeCM pw_lipid-A-biosynthesis lid45283" transform="translate(1592.6,89.0)"><rect rx="5" height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45283" target="_blank">ADP-L-glycero-D-manno-heptose</a></text><title></title></g>
+<g id="node3968~1" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1401.7,192.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3966~0" class="node nodeCM pw_lipid-A-biosynthesis lid4" transform="translate(1143.0,171.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3966~1" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(1098.2,261.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3964~0" class="node nodeCM pw_lipid-A-biosynthesis lid1336" transform="translate(1030.2,588.0)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1336" target="_blank">UDP-Gal</a></text><title></title></g>
+<g id="node3964~1" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(1037.4,691.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node3954~0" class="node nodeCM pw_lipid-A-biosynthesis lid64" transform="translate(905.1,870.4)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node3954~1" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(877.3,998.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node3950~0" class="node nodeCM pw_lipid-A-biosynthesis lid64" transform="translate(682.9,846.2)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=64" target="_blank">UDP-Glc</a></text><title></title></g>
+<g id="node3950~1" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(503.5,851.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node3950~2" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(510.1,804.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3945~0" class="node nodeCM pw_lipid-A-biosynthesis lid45283" transform="translate(600.6,524.4)"><rect rx="5" height="30.0" width="197.9" x="-99.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=45283" target="_blank">ADP-L-glycero-D-manno-heptose</a></text><title></title></g>
+<g id="node3945~1" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(417.8,411.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node3945~2" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(448.5,375.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node3899~0" class="node nodeCM pw_lipid-A-biosynthesis lid8231" transform="translate(2543.7,474.1)"><rect rx="5" height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8231" target="_blank">CMP-alpha-Kdo</a></text><title></title></g>
+<g id="node3899~1" class="node nodeCM pw_lipid-A-biosynthesis lid100" transform="translate(2530.0,577.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title></title></g>
+<g id="node3991~0" class="node nodeCM pw_lipid-A-biosynthesis lid4" transform="translate(3254.1,1826.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node3991~1" class="node nodeCM pw_lipid-A-biosynthesis lid13" transform="translate(3156.6,1802.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node4008~0" class="node nodeCM pw_lipid-A-biosynthesis lid2623" transform="translate(1196.6,1264.3)"><rect rx="5" height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2623" target="_blank">(3R)-3-hydroxymyristoyl-ACP</a></text><title></title></g>
+<g id="node4008~1" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(1159.1,1388.4)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node4004~0" class="node nodeCM pw_lipid-A-biosynthesis lid1" transform="translate(1274.6,1341.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node4004~1" class="node nodeCM pw_lipid-A-biosynthesis lid47" transform="translate(1228.2,1365.2)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node4000~0" class="node nodeCM pw_lipid-A-biosynthesis lid2623" transform="translate(1677.9,1507.8)"><rect rx="5" height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2623" target="_blank">(3R)-3-hydroxymyristoyl-ACP</a></text><title></title></g>
+<g id="node4000~1" class="node nodeCM pw_lipid-A-biosynthesis lid2745" transform="translate(1678.4,1439.9)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2745" target="_blank">Holo-ACP</a></text><title></title></g>
+<g id="node3996~0" class="node nodeCM pw_lipid-A-biosynthesis lid1" transform="translate(2959.5,2429.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node3996~1" class="node nodeCM pw_lipid-A-biosynthesis lid133" transform="translate(3059.0,2441.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=133" target="_blank">UMP</a></text><title></title></g>
+<g id="node3897~0" class="node nodeCM pw_lipid-A-biosynthesis lid100" transform="translate(3194.0,1185.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=100" target="_blank">CMP</a></text><title></title></g>
+<g id="node3994~0" class="node nodeCM pw_lipid-A-biosynthesis lid26" transform="translate(3011.5,2078.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=26" target="_blank">UDP</a></text><title></title></g>
+<g id="node3994~1" class="node nodeCM pw_lipid-A-biosynthesis lid12" transform="translate(3016.4,2030.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+</g></svg>
+<text x="4229.1" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+neato)</text></svg>

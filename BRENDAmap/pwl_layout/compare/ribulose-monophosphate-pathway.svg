@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1386" height="452" viewBox="0 0 1385.9 452.5"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="14767.2 7260.2 678.0 382.0" width="678" height="382" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="14767.2" y="7260.2" width="678.0" height="382.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ribulose-monophosphate-pathway" class="pw pw4" x="14807.2" y="7315.7" width="598.0" height="286.5" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15067.7 7427.3 L 15171.9 7427.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 14994.9 7427.3 L 14912.0 7427.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15239.7 7535.8 L 15146.6 7535.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 15276.1 7519.8 L 15276.1 7443.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 15057.0 7411.3 L 15084.1 7394.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ribulose-monophosphate-pathway" transform="translate(15106.2,7315.7)"><rect rx="10" height="31" width="308" x="-154.0" y="-15.5"/><text dominant-baseline="central">ribulose monophosphate pathway</text></g>
+<g id="node1224" class="node nodeHM pw_ribulose-monophosphate-pathway lid87" transform="translate(15113.0,7535.8)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87" target="_blank">Fru 6-P</a></text><title>D-fructose 6-phosphate</title></g>
+<g id="node8216" class="node nodeHM pw_ribulose-monophosphate-pathway lid18730" transform="translate(15276.1,7427.3)"><rect height="30.0" width="206.4" x="-103.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18730" target="_blank">D-arabino-3-hexulose 6-phosphate</a></text><title>D-arabino-3-hexulose 6-phosphate</title></g>
+<g id="node8334" class="node nodeHM pw_ribulose-monophosphate-pathway lid443" transform="translate(14872.8,7427.3)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=443" target="_blank">D-Rul 5-P</a></text><title>D-ribulose 5-phosphate</title></g>
+<g id="node8336" class="node nodeEN pw_ribulose-monophosphate-pathway" transform="translate(15031.3,7427.3)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.43" target="_blank">4.1.2.43</a></text><title>3-hexulose-6-phosphate synthase</title></g>
+<g id="node8217" class="node nodeEN pw_ribulose-monophosphate-pathway" transform="translate(15276.1,7535.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.27" target="_blank">5.3.1.27</a></text><title>6-phospho-3-hexuloisomerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8339" class="node nodeCM pw_ribulose-monophosphate-pathway lid130" transform="translate(15109.2,7378.9)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title>formaldehyde</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="758.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 627.9 412.5" width="628" height="412" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="627.9" height="412.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_ribulose-monophosphate-pathway" class="pw " x="0.0" y="0.0" width="547.9" height="317.0" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 251.7 267.0 L 104.3 267.0"/>
+<path class="link" marker-end="url(#in)" d="M 315.6 267.0 L 482.4 267.0"/>
+<path class="link" marker-start="url(#in)" d="M 315.6 175.7 L 482.4 259.1"/>
+<path class="link" marker-end="url(#in)" d="M 251.7 143.8 L 97.8 66.8"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 272.5 251.0 L 243.8 210.1"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_ribulose-monophosphate-pathway" transform="translate(273.9,0.0)"><rect rx="10" height="31" width="302" x="-150.8" y="-15.5"/><text dominant-baseline="central">ribulose monophosphate pathway</text></g>
+<g id="node8334" class="node nodeHM pw_ribulose-monophosphate-pathway lid443" transform="translate(69.2,267.0)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=443" target="_blank">D-Rul 5-P</a></text><title></title></g>
+<g id="node8216" class="node nodeHM pw_ribulose-monophosphate-pathway lid18730" transform="translate(498.2,267.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18730" target="_blank">H6P</a></text><title></title></g>
+<g id="node1224" class="node nodeHM pw_ribulose-monophosphate-pathway lid87" transform="translate(69.2,52.5)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87" target="_blank">Fru 6-P</a></text><title></title></g>
+<g id="node8336" class="node nodeEN pw_ribulose-monophosphate-pathway" transform="translate(283.7,267.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.2.43" target="_blank">4.1.2.43</a></text><title>3-hexulose-6-phosphate synthase</title></g>
+<g id="node8217" class="node nodeEN pw_ribulose-monophosphate-pathway" transform="translate(283.7,159.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.27" target="_blank">5.3.1.27</a></text><title>6-phospho-3-hexuloisomerase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node8336~0" class="node nodeCM pw_ribulose-monophosphate-pathway lid130" transform="translate(232.6,194.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title></title></g>
+</g></svg>
+<text x="768.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

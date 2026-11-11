@@ -1,0 +1,435 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 3911.0 3753.2" width="3911" height="3753" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="3911.0" height="3753.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_Monoterpenoid-biosynthesis" class="pw " x="0.0" y="0.0" width="3791.0" height="3617.7" style="opacity: 0.5; fill: rgb(164, 211, 238);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 2431.2 1849.6 L 2241.6 1579.5"/>
+<path class="link" marker-end="url(#in)" d="M 2452.2 1881.6 L 2668.2 2234.3"/>
+<path class="link" marker-start="url(#in)" d="M 2684.9 2074.4 L 2678.6 2234.3"/>
+<path class="link" marker-end="url(#in)" d="M 2685.6 2042.4 L 2685.6 1854.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2869.8 1763.8 L 2725.1 1822.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2905.0 1733.6 L 2905.0 1584.7"/>
+<path class="link" marker-end="url(#in)" d="M 2638.7 1514.5 L 2876.3 1562.8"/>
+<path class="link" marker-start="url(#in)" d="M 2575.7 1512.6 C 2514.9 1521.6 2379.3 1541.6 2297.2 1553.7"/>
+<path class="link" marker-start="url(#in)" d="M 2442.3 1657.7 L 2266.4 1579.5"/>
+<path class="link" marker-end="url(#in)" d="M 2494.5 1687.9 L 2665.3 1822.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2790.6 3104.7 L 2685.0 2916.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2799.5 3136.7 L 2798.9 3300.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2806.1 3463.3 L 2799.6 3332.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2771.7 3480.6 L 2721.1 3482.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2597.6 3443.2 L 2626.4 3469.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2580.5 3411.2 L 2582.0 3305.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2582.2 3120.9 L 2582.2 3273.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 2589.6 3088.9 L 2668.6 2916.9"/>
+<path class="link" marker-start="url(#in)" d="M 2016.9 1504.0 L 2173.0 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 1946.6 1494.2 L 1833.6 1494.2"/>
+<path class="link" marker-start="url(#in)" d="M 2033.2 1385.5 L 2212.7 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 1983.5 1369.5 L 1887.6 1369.5"/>
+<path class="link" marker-start="url(#in)" d="M 1984.4 1270.2 L 2217.0 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 1951.1 1238.2 L 1754.1 1080.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1554.7 906.1 L 1716.0 1048.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1520.9 874.1 L 1385.1 734.8"/>
+<path class="link" marker-start="url(#in)" d="M 1249.0 596.7 L 1353.7 702.8"/>
+<path class="link" marker-end="url(#in)" d="M 1217.3 564.7 L 1145.1 492.3"/>
+<path class="link" marker-start="url(#in)" d="M 2105.1 1283.6 L 2223.2 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 2086.2 1251.6 L 1996.2 1128.3"/>
+<path class="link" marker-start="url(#in)" d="M 2225.8 1153.6 C 2226.5 1220.0 2229.5 1481.8 2230.2 1548.2"/>
+<path class="link" marker-end="url(#in)" d="M 2216.0 1122.2 L 2063.3 866.5"/>
+<path class="link" marker-start="url(#in)" d="M 2041.4 608.9 L 2052.9 834.5"/>
+<path class="link" marker-end="url(#in)" d="M 2039.8 576.9 L 2030.4 381.3"/>
+<path class="link" marker-start="url(#in)" d="M 2024.6 209.8 L 2029.1 349.3"/>
+<path class="link" marker-end="url(#in)" d="M 2024.1 177.8 L 2024.1 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 2232.2 1245.0 L 2230.5 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 2232.3 1213.7 C 2232.3 1178.0 2232.3 1089.5 2232.3 1053.7"/>
+<path class="link" marker-start="url(#in)" d="M 2405.5 1146.2 C 2377.3 1213.5 2264.9 1481.4 2236.8 1548.3"/>
+<path class="link" marker-end="url(#in)" d="M 2420.5 1115.5 C 2447.1 1068.0 2528.0 923.5 2554.7 875.8"/>
+<path class="link" marker-start="url(#in)" d="M 2674.2 636.5 L 2571.3 844.3"/>
+<path class="link" marker-end="url(#in)" d="M 2688.8 604.5 L 2758.3 438.7"/>
+<path class="link" marker-start="url(#in)" d="M 2830.7 272.6 L 2772.0 406.7"/>
+<path class="link" marker-end="url(#in)" d="M 2845.4 240.6 L 2897.2 133.2"/>
+<path class="link" marker-start="url(#in)" d="M 2335.1 1260.1 L 2235.9 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 2348.1 1228.8 C 2365.0 1194.3 2405.7 1110.9 2422.5 1076.3"/>
+<path class="link" marker-start="url(#in)" d="M 2380.5 1333.3 L 2240.8 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 2410.3 1301.3 L 2526.4 1205.3"/>
+<path class="link" marker-start="url(#in)" d="M 2479.7 1359.9 L 2250.0 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 2526.9 1327.9 L 2637.3 1263.8"/>
+<path class="link" marker-start="url(#in)" d="M 2467.5 1488.6 L 2281.0 1547.5"/>
+<path class="link" marker-end="url(#in)" d="M 2533.8 1461.5 L 2681.3 1385.5"/>
+<path class="link" marker-start="url(#in)" d="M 2384.6 1544.1 L 2297.9 1555.0"/>
+<path class="link" marker-end="url(#in)" d="M 2478.7 1552.0 L 2595.8 1615.1"/>
+<path class="link" marker-start="url(#in)" d="M 2148.5 1652.6 L 2215.7 1579.5"/>
+<path class="link" marker-end="url(#in)" d="M 2127.7 1684.6 L 2071.6 1829.3"/>
+<path class="link" marker-start="url(#in)" d="M 2237.1 1686.7 L 2231.3 1579.5"/>
+<path class="link" marker-end="url(#in)" d="M 2237.5 1718.7 L 2233.2 1875.0"/>
+<path class="link" marker-start="url(#in)" d="M 2017.4 1766.6 C 2059.5 1726.5 2172.3 1619.0 2214.3 1578.9"/>
+<path class="link" marker-end="url(#in)" d="M 1987.5 1797.9 L 1750.5 2073.0"/>
+<path class="link" marker-start="url(#in)" d="M 2029.9 1579.4 L 2162.8 1568.9"/>
+<path class="link" marker-end="url(#in)" d="M 1959.6 1582.2 L 1858.5 1582.2"/>
+<path class="link" marker-start="url(#in)" d="M 3186.2 1585.4 L 2933.6 1570.4"/>
+<path class="link" marker-end="url(#in)" d="M 3263.0 1589.1 L 3427.4 1595.3"/>
+<path class="link" marker-start="url(#in)" d="M 3605.1 1597.1 L 3523.7 1597.1"/>
+<path class="link" marker-end="url(#in)" d="M 3651.2 1612.5 C 3666.2 1633.6 3692.9 1671.3 3707.8 1692.3"/>
+<path class="link" marker-start="url(#in)" d="M 3587.2 1691.5 L 3494.5 1613.1"/>
+<path class="link" marker-end="url(#in)" d="M 3641.3 1707.5 L 3680.2 1707.5"/>
+<path class="link" marker-start="url(#in)" d="M 2676.1 2571.1 L 2677.9 2266.3"/>
+<path class="link" marker-end="url(#in)" d="M 2676.0 2603.1 L 2676.0 2884.9"/>
+<path class="link" marker-start="url(#in)" d="M 1736.7 2333.2 C 1736.7 2287.0 1736.7 2150.5 1736.7 2104.4"/>
+<path class="link" marker-end="url(#in)" d="M 1728.7 2363.8 C 1706.1 2406.5 1642.1 2527.3 1619.4 2570.3"/>
+<path class="link" marker-start="url(#in)" d="M 1533.0 2775.0 L 1604.6 2601.6"/>
+<path class="link" marker-end="url(#in)" d="M 1519.4 2807.0 L 1467.2 2926.4"/>
+<path class="link" marker-start="url(#in)" d="M 1578.4 2206.8 C 1612.7 2181.3 1681.4 2130.2 1715.9 2104.5"/>
+<path class="link" marker-end="url(#in)" d="M 1535.6 2238.0 L 1386.3 2345.3"/>
+<path class="link" marker-start="url(#in)" d="M 1214.2 2369.7 L 1280.3 2366.0"/>
+<path class="link" marker-end="url(#in)" d="M 1143.9 2372.6 L 1067.0 2374.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 860.6 2376.8 L 931.9 2376.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 815.5 2360.8 L 705.0 2226.8"/>
+<path class="link" marker-start="url(#in)" d="M 593.3 2050.5 L 682.0 2194.8"/>
+<path class="link" marker-end="url(#in)" d="M 577.4 2018.5 L 520.2 1869.4"/>
+<path class="link" marker-start="url(#in)" d="M 395.4 1976.7 L 498.6 1869.4"/>
+<path class="link" marker-end="url(#in)" d="M 368.2 2008.7 L 303.0 2096.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 513.5 1597.5 L 514.0 1837.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 513.4 1565.5 L 511.8 1356.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 387.8 1189.5 C 413.8 1221.2 473.2 1293.5 499.1 1325.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 354.0 1158.1 L 260.9 1087.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 286.9 1853.9 L 469.1 1853.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 223.0 1854.0 L 143.2 1854.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 425.9 1341.2 L 466.8 1340.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 355.6 1341.5 L 315.6 1341.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 510.7 1144.9 L 511.6 1324.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 510.6 1112.9 L 510.6 997.7"/>
+<path class="link" marker-start="url(#in)" d="M 2536.3 2412.8 L 2664.0 2266.3"/>
+<path class="link" marker-end="url(#in)" d="M 2522.4 2444.8 L 2522.4 2566.1"/>
+<path class="link" marker-start="url(#in)" d="M 2815.9 2335.4 L 2703.9 2266.3"/>
+<path class="link" marker-end="url(#in)" d="M 2857.6 2366.8 C 2883.6 2392.3 2935.2 2442.7 2961.2 2468.1"/>
+<path class="link" marker-start="url(#in)" d="M 2794.5 2394.6 C 2770.0 2364.2 2715.2 2296.4 2690.5 2265.8"/>
+<path class="link" marker-end="url(#in)" d="M 2842.1 2425.1 L 2944.9 2469.6"/>
+<path class="link" marker-start="url(#in)" d="M 3134.3 2591.3 L 3000.2 2499.4"/>
+<path class="link" marker-end="url(#in)" d="M 3180.9 2623.3 L 3279.6 2691.2"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 2448.9 1849.6 L 2468.6 1800.5"/>
+<path class="link" marker-end="url(#in)" d="M 2500.3 1867.5 L 2514.0 1868.0"/>
+<path class="link" marker-end="url(#in)" d="M 2940.1 1752.1 L 2976.4 1754.7"/>
+<path class="link" marker-end="url(#in)" d="M 2618.2 1492.0 L 2646.0 1452.9"/>
+<path class="link" marker-start="url(#in)" d="M 2473.1 1655.9 L 2469.4 1600.7"/>
+<path class="link" marker-end="url(#in)" d="M 2506.1 1657.8 L 2538.3 1643.5"/>
+<path class="link" marker-start="url(#in)" d="M 2764.4 3109.0 L 2735.9 3099.4"/>
+<path class="link" marker-end="url(#in)" d="M 2788.0 3136.7 L 2700.9 3257.5"/>
+<path class="link" marker-start="url(#in)" d="M 2842.0 3483.9 L 2874.5 3488.1"/>
+<path class="link" marker-end="url(#in)" d="M 2810.4 3495.3 L 2823.0 3551.7"/>
+<path class="link" marker-start="url(#in)" d="M 2615.4 3437.1 L 2644.4 3445.4"/>
+<path class="link" marker-end="url(#in)" d="M 2591.6 3411.2 L 2678.0 3289.5"/>
+<path class="link" marker-start="url(#in)" d="M 2547.1 3118.7 L 2520.1 3129.3"/>
+<path class="link" marker-end="url(#in)" d="M 2568.1 3088.9 L 2536.4 3053.0"/>
+<path class="link" marker-end="url(#in)" d="M 1973.6 1478.2 L 1949.2 1430.0"/>
+<path class="link" marker-start="url(#in)" d="M 2044.1 1353.5 L 2076.0 1335.7"/>
+<path class="link" marker-end="url(#in)" d="M 1988.7 1385.5 L 1956.8 1404.6"/>
+<path class="link" marker-start="url(#in)" d="M 1565.2 884.2 L 1606.4 875.8"/>
+<path class="link" marker-end="url(#in)" d="M 1538.9 874.1 L 1546.9 819.6"/>
+<path class="link" marker-start="url(#in)" d="M 1230.4 596.7 L 1220.3 652.2"/>
+<path class="link" marker-end="url(#in)" d="M 1204.6 585.6 L 1164.5 592.5"/>
+<path class="link" marker-start="url(#in)" d="M 2096.3 1283.6 L 2093.4 1311.0"/>
+<path class="link" marker-end="url(#in)" d="M 2105.9 1251.6 L 2128.1 1206.8"/>
+<path class="link" marker-start="url(#in)" d="M 2214.2 1154.2 L 2103.1 1311.0"/>
+<path class="link" marker-end="url(#in)" d="M 2239.5 1122.2 L 2269.1 1088.4"/>
+<path class="link" marker-start="url(#in)" d="M 2078.9 602.7 L 2114.4 611.7"/>
+<path class="link" marker-start="url(#in)" d="M 2053.9 608.9 L 2085.3 646.7"/>
+<path class="link" marker-end="url(#in)" d="M 2002.1 583.1 L 1964.4 573.4"/>
+<path class="link" marker-end="url(#in)" d="M 2027.1 576.9 L 1995.7 539.4"/>
+<path class="link" marker-start="url(#in)" d="M 2062.5 204.5 L 2102.3 215.6"/>
+<path class="link" marker-start="url(#in)" d="M 2036.4 209.8 L 2067.0 249.6"/>
+<path class="link" marker-end="url(#in)" d="M 1985.7 182.9 L 1943.7 171.1"/>
+<path class="link" marker-end="url(#in)" d="M 2011.8 177.8 L 1980.3 137.1"/>
+<path class="link" marker-end="url(#in)" d="M 2258.9 1213.0 L 2299.3 1188.6"/>
+<path class="link" marker-end="url(#in)" d="M 2401.9 1114.8 L 2374.3 1070.9"/>
+<path class="link" marker-start="url(#in)" d="M 2697.4 636.5 L 2769.7 712.3"/>
+<path class="link" marker-start="url(#in)" d="M 2686.7 636.5 L 2698.6 678.3"/>
+<path class="link" marker-end="url(#in)" d="M 2666.8 604.5 L 2593.3 527.3"/>
+<path class="link" marker-end="url(#in)" d="M 2677.5 604.5 L 2665.2 561.3"/>
+<path class="link" marker-start="url(#in)" d="M 2847.1 272.6 L 2873.4 317.3"/>
+<path class="link" marker-end="url(#in)" d="M 2872.9 250.1 L 2906.3 244.0"/>
+<path class="link" marker-end="url(#in)" d="M 2327.7 1228.1 L 2294.6 1187.1"/>
+<path class="link" marker-end="url(#in)" d="M 2387.6 1301.3 L 2371.9 1226.1"/>
+<path class="link" marker-end="url(#in)" d="M 2534.5 1356.0 L 2566.2 1366.9"/>
+<path class="link" marker-end="url(#in)" d="M 2506.4 1461.5 L 2518.7 1408.4"/>
+<path class="link" marker-end="url(#in)" d="M 2459.6 1520.0 L 2499.8 1459.5"/>
+<path class="link" marker-start="url(#in)" d="M 2165.8 1666.0 L 2205.2 1662.7"/>
+<path class="link" marker-end="url(#in)" d="M 2142.8 1684.6 L 2161.3 1717.6"/>
+<path class="link" marker-end="url(#in)" d="M 2220.4 1718.7 L 2182.5 1753.3"/>
+<path class="link" marker-end="url(#in)" d="M 2004.2 1797.9 L 2016.2 1863.3"/>
+<path class="link" marker-start="url(#in)" d="M 2007.1 1598.2 L 2035.8 1635.4"/>
+<path class="link" marker-end="url(#in)" d="M 1984.6 1598.2 L 1958.1 1639.9"/>
+<path class="link" marker-start="url(#in)" d="M 3218.2 1603.7 L 3178.0 1703.9"/>
+<path class="link" marker-start="url(#in)" d="M 3202.7 1603.7 L 3167.8 1629.1"/>
+<path class="link" marker-end="url(#in)" d="M 3231.0 1571.7 L 3271.8 1470.0"/>
+<path class="link" marker-end="url(#in)" d="M 3246.5 1571.7 L 3279.4 1547.6"/>
+<path class="link" marker-start="url(#in)" d="M 3613.2 1613.1 L 3582.7 1631.2"/>
+<path class="link" marker-end="url(#in)" d="M 3667.4 1581.1 L 3697.9 1563.1"/>
+<path class="link" marker-start="url(#in)" d="M 3579.0 1723.5 L 3550.3 1740.5"/>
+<path class="link" marker-end="url(#in)" d="M 3633.2 1691.5 L 3661.9 1674.5"/>
+<path class="link" marker-start="url(#in)" d="M 2714.4 2576.0 L 2755.8 2563.9"/>
+<path class="link" marker-start="url(#in)" d="M 2687.8 2571.1 L 2718.3 2529.9"/>
+<path class="link" marker-end="url(#in)" d="M 2714.4 2598.6 L 2758.5 2611.8"/>
+<path class="link" marker-end="url(#in)" d="M 2687.7 2603.1 L 2719.0 2645.8"/>
+<path class="link" marker-start="url(#in)" d="M 1712.3 2332.7 L 1677.4 2309.9"/>
+<path class="link" marker-start="url(#in)" d="M 1730.8 2332.7 L 1682.9 2204.0"/>
+<path class="link" marker-end="url(#in)" d="M 1698.3 2348.7 L 1665.4 2348.8"/>
+<path class="link" marker-end="url(#in)" d="M 1720.3 2364.7 L 1682.5 2401.5"/>
+<path class="link" marker-start="url(#in)" d="M 1561.6 2783.5 L 1592.8 2776.8"/>
+<path class="link" marker-end="url(#in)" d="M 1536.5 2807.0 L 1564.5 2851.8"/>
+<path class="link" marker-start="url(#in)" d="M 1553.0 2206.0 L 1520.9 2101.9"/>
+<path class="link" marker-start="url(#in)" d="M 1579.4 2238.0 L 1652.5 2292.4"/>
+<path class="link" marker-end="url(#in)" d="M 1562.2 2238.0 L 1596.2 2366.8"/>
+<path class="link" marker-end="url(#in)" d="M 1553.7 2238.0 L 1539.8 2290.5"/>
+<path class="link" marker-start="url(#in)" d="M 1191.3 2387.6 L 1220.9 2426.3"/>
+<path class="link" marker-end="url(#in)" d="M 1168.8 2387.6 L 1141.4 2430.6"/>
+<path class="link" marker-start="url(#in)" d="M 830.5 2392.8 L 837.3 2450.8"/>
+<path class="link" marker-end="url(#in)" d="M 796.8 2392.8 L 769.9 2406.3"/>
+<path class="link" marker-start="url(#in)" d="M 369.0 1976.7 L 319.0 1904.0"/>
+<path class="link" marker-start="url(#in)" d="M 380.6 1976.7 L 381.9 1938.0"/>
+<path class="link" marker-end="url(#in)" d="M 392.5 2008.7 L 464.4 2101.0"/>
+<path class="link" marker-end="url(#in)" d="M 379.6 2008.7 L 378.0 2064.0"/>
+<path class="link" marker-start="url(#in)" d="M 536.6 1597.5 L 565.7 1617.7"/>
+<path class="link" marker-end="url(#in)" d="M 536.1 1565.5 L 565.3 1544.9"/>
+<path class="link" marker-start="url(#in)" d="M 366.5 1190.1 L 346.7 1226.5"/>
+<path class="link" marker-start="url(#in)" d="M 376.9 1190.1 L 383.4 1248.2"/>
+<path class="link" marker-end="url(#in)" d="M 342.8 1190.1 L 312.6 1205.1"/>
+<path class="link" marker-end="url(#in)" d="M 333.5 1170.0 L 304.0 1167.1"/>
+<path class="link" marker-start="url(#in)" d="M 266.2 1870.0 L 295.8 1912.2"/>
+<path class="link" marker-end="url(#in)" d="M 243.8 1870.0 L 214.3 1912.3"/>
+<path class="link" marker-start="url(#in)" d="M 401.8 1325.5 L 431.3 1283.1"/>
+<path class="link" marker-end="url(#in)" d="M 377.9 1325.5 L 351.3 1292.5"/>
+<path class="link" marker-start="url(#in)" d="M 489.3 1144.9 L 462.3 1165.1"/>
+<path class="link" marker-end="url(#in)" d="M 487.6 1112.9 L 458.4 1092.6"/>
+<path class="link" marker-start="url(#in)" d="M 2806.7 2361.4 L 2777.4 2369.7"/>
+<path class="link" marker-end="url(#in)" d="M 2877.0 2340.7 L 2906.2 2331.7"/>
+<path class="link" marker-start="url(#in)" d="M 2771.7 2420.7 L 2740.8 2430.2"/>
+<path class="link" marker-end="url(#in)" d="M 2842.1 2399.8 L 2873.0 2390.9"/>
+<path class="link" marker-start="url(#in)" d="M 3136.0 2623.3 L 3105.1 2646.3"/>
+<path class="link" marker-start="url(#in)" d="M 3125.7 2609.9 L 3086.3 2613.0"/>
+<path class="link" marker-end="url(#in)" d="M 3157.8 2623.3 L 3158.3 2680.3"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_Monoterpenoid-biosynthesis" transform="translate(1895.5,0.0)"><rect rx="10" height="31" width="263" x="-131.4" y="-15.5"/><text dominant-baseline="central">Monoterpenoid biosynthesis</text></g>
+<g id="node13281" class="node nodeHM pw_Monoterpenoid-biosynthesis lid175" transform="translate(2230.4,1563.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=175" target="_blank">geranyl diphosphate</a></text><title></title></g>
+<g id="node13116" class="node nodeHM pw_Monoterpenoid-biosynthesis lid987" transform="translate(2678.0,2250.3)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=987" target="_blank">geraniol</a></text><title></title></g>
+<g id="node13127" class="node nodeHM pw_Monoterpenoid-biosynthesis lid17837" transform="translate(2685.6,1838.4)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17837" target="_blank">(3S)-linalool</a></text><title></title></g>
+<g id="node13133" class="node nodeHM pw_Monoterpenoid-biosynthesis lid6090" transform="translate(2905.0,1568.7)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6090" target="_blank">myrcene</a></text><title></title></g>
+<g id="node13108" class="node nodeHM pw_Monoterpenoid-biosynthesis lid15206" transform="translate(2676.0,2900.9)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15206" target="_blank">(6E)-8-hydroxygeraniol</a></text><title></title></g>
+<g id="node13110" class="node nodeHM pw_Monoterpenoid-biosynthesis lid86216" transform="translate(2798.8,3316.3)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86216" target="_blank">(6E)-8-hydroxygeranial</a></text><title></title></g>
+<g id="node13119" class="node nodeHM pw_Monoterpenoid-biosynthesis lid15206" transform="translate(2643.8,3485.7)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=15206" target="_blank">(6E)-8-hydroxygeraniol</a></text><title></title></g>
+<g id="node13132" class="node nodeHM pw_Monoterpenoid-biosynthesis lid86218" transform="translate(2582.2,3289.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=86218" target="_blank">(6E)-8-oxogeraniol</a></text><title></title></g>
+<g id="node13126" class="node nodeHM pw_Monoterpenoid-biosynthesis lid9683" transform="translate(1775.7,1494.2)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9683" target="_blank">(E)-beta-ocimene</a></text><title></title></g>
+<g id="node13252" class="node nodeHM pw_Monoterpenoid-biosynthesis lid20510" transform="translate(1829.7,1369.5)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=20510" target="_blank">sabinene hydrate</a></text><title></title></g>
+<g id="node13267" class="node nodeHM pw_Monoterpenoid-biosynthesis lid48199" transform="translate(1734.2,1064.1)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=48199" target="_blank">(+)-bornyl diphosphate</a></text><title></title></g>
+<g id="node13271" class="node nodeHM pw_Monoterpenoid-biosynthesis lid10443" transform="translate(1369.5,718.8)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10443" target="_blank">(+)-borneol</a></text><title></title></g>
+<g id="node13273" class="node nodeHM pw_Monoterpenoid-biosynthesis lid2387" transform="translate(1129.1,476.3)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2387" target="_blank">(+)-camphor</a></text><title></title></g>
+<g id="node13128" class="node nodeHM pw_Monoterpenoid-biosynthesis lid9852" transform="translate(1984.5,1112.3)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9852" target="_blank">geranyl phosphate</a></text><title></title></g>
+<g id="node13113" class="node nodeHM pw_Monoterpenoid-biosynthesis lid57985" transform="translate(2053.7,850.5)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57985" target="_blank">(3R)-linalool</a></text><title></title></g>
+<g id="node13114" class="node nodeHM pw_Monoterpenoid-biosynthesis lid28524" transform="translate(2029.6,365.3)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28524" target="_blank">(6E)-8-hydroxylinalool</a></text><title></title></g>
+<g id="node13123" class="node nodeHM pw_Monoterpenoid-biosynthesis lid28525" transform="translate(2024.1,52.5)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28525" target="_blank">(6E)-8-oxolinalool</a></text><title></title></g>
+<g id="node13125" class="node nodeHM pw_Monoterpenoid-biosynthesis lid3861" transform="translate(2232.3,1038.4)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3861" target="_blank">(-)-alpha-pinene</a></text><title></title></g>
+<g id="node13278" class="node nodeHM pw_Monoterpenoid-biosynthesis lid6927" transform="translate(2563.4,860.3)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6927" target="_blank">(R)-limonene</a></text><title></title></g>
+<g id="node13224" class="node nodeHM pw_Monoterpenoid-biosynthesis lid21912" transform="translate(2765.0,422.7)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21912" target="_blank">(+)-trans-carveol</a></text><title></title></g>
+<g id="node13097" class="node nodeHM pw_Monoterpenoid-biosynthesis lid13102" transform="translate(2904.9,117.2)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13102" target="_blank">(S)-carvone</a></text><title></title></g>
+<g id="node13262" class="node nodeHM pw_Monoterpenoid-biosynthesis lid28483" transform="translate(2430.0,1060.9)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28483" target="_blank">(+)-car-3-ene</a></text><title></title></g>
+<g id="node13121" class="node nodeHM pw_Monoterpenoid-biosynthesis lid4307" transform="translate(2545.8,1189.3)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4307" target="_blank">(-)-beta-pinene</a></text><title></title></g>
+<g id="node13261" class="node nodeHM pw_Monoterpenoid-biosynthesis lid28521" transform="translate(2664.8,1247.8)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28521" target="_blank">(-)-camphene</a></text><title></title></g>
+<g id="node13118" class="node nodeHM pw_Monoterpenoid-biosynthesis lid11859" transform="translate(2712.4,1369.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11859" target="_blank">terpinolene</a></text><title></title></g>
+<g id="node13256" class="node nodeHM pw_Monoterpenoid-biosynthesis lid19555" transform="translate(2625.5,1631.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=19555" target="_blank">(+)-camphene</a></text><title></title></g>
+<g id="node13248" class="node nodeHM pw_Monoterpenoid-biosynthesis lid12264" transform="translate(2065.4,1845.3)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12264" target="_blank">(-)-endo-fenchol</a></text><title></title></g>
+<g id="node13135" class="node nodeHM pw_Monoterpenoid-biosynthesis lid36617" transform="translate(2232.7,1891.0)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36617" target="_blank">(Z)-beta-ocimene</a></text><title></title></g>
+<g id="node13124" class="node nodeHM pw_Monoterpenoid-biosynthesis lid10170" transform="translate(1736.7,2089.0)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10170" target="_blank">(S)-limonene</a></text><title></title></g>
+<g id="node13120" class="node nodeHM pw_Monoterpenoid-biosynthesis lid3570" transform="translate(1816.9,1582.2)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3570" target="_blank">1,8-cineole</a></text><title></title></g>
+<g id="node13112" class="node nodeHM pw_Monoterpenoid-biosynthesis lid199279" transform="translate(3475.6,1597.1)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=199279" target="_blank">(R)-ipsdienol</a></text><title></title></g>
+<g id="node13130" class="node nodeHM pw_Monoterpenoid-biosynthesis lid196599" transform="translate(3718.6,1707.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=196599" target="_blank">ipsdienone</a></text><title></title></g>
+<g id="node13115" class="node nodeHM pw_Monoterpenoid-biosynthesis lid10440" transform="translate(1611.2,2585.6)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10440" target="_blank">(-)-trans-carveol</a></text><title></title></g>
+<g id="node13117" class="node nodeHM pw_Monoterpenoid-biosynthesis lid6400" transform="translate(1460.2,2942.4)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6400" target="_blank">(-)-carvone</a></text><title></title></g>
+<g id="node13091" class="node nodeHM pw_Monoterpenoid-biosynthesis lid10441" transform="translate(1364.0,2361.3)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10441" target="_blank">(-)-trans-isopiperitenol</a></text><title></title></g>
+<g id="node13087" class="node nodeHM pw_Monoterpenoid-biosynthesis lid10438" transform="translate(999.4,2376.8)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10438" target="_blank">(-)-isopiperitenone</a></text><title></title></g>
+<g id="node13228" class="node nodeHM pw_Monoterpenoid-biosynthesis lid65025" transform="translate(691.8,2210.8)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=65025" target="_blank">(+)-cis-isopulegone</a></text><title></title></g>
+<g id="node13229" class="node nodeHM pw_Monoterpenoid-biosynthesis lid8701" transform="translate(514.0,1853.4)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8701" target="_blank">(+)-pulegone</a></text><title></title></g>
+<g id="node13225" class="node nodeHM pw_Monoterpenoid-biosynthesis lid18357" transform="translate(291.2,2112.9)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18357" target="_blank">(+)-menthofuran</a></text><title></title></g>
+<g id="node13230" class="node nodeHM pw_Monoterpenoid-biosynthesis lid3955" transform="translate(511.7,1340.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3955" target="_blank">(-)-menthone</a></text><title></title></g>
+<g id="node13226" class="node nodeHM pw_Monoterpenoid-biosynthesis lid145161" transform="translate(239.7,1071.7)"><rect height="30.0" width="295.1" x="-147.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=145161" target="_blank">(4R,7S)-7-isopropyl-4-methyl-2-oxo-oxepanone</a></text><title></title></g>
+<g id="node13227" class="node nodeHM pw_Monoterpenoid-biosynthesis lid11084" transform="translate(88.6,1854.0)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=11084" target="_blank">(+)-isomenthone</a></text><title></title></g>
+<g id="node13223" class="node nodeHM pw_Monoterpenoid-biosynthesis lid10439" transform="translate(274.0,1341.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10439" target="_blank">(-)-menthol</a></text><title></title></g>
+<g id="node13222" class="node nodeHM pw_Monoterpenoid-biosynthesis lid10445" transform="translate(510.6,981.7)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10445" target="_blank">(+)-neomenthol</a></text><title></title></g>
+<g id="node13122" class="node nodeHM pw_Monoterpenoid-biosynthesis lid2852" transform="translate(2522.4,2582.1)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2852" target="_blank">linalool</a></text><title></title></g>
+<g id="node13131" class="node nodeHM pw_Monoterpenoid-biosynthesis lid4013" transform="translate(2976.8,2483.4)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4013" target="_blank">geranial</a></text><title></title></g>
+<g id="node13129" class="node nodeHM pw_Monoterpenoid-biosynthesis lid87556" transform="translate(3302.9,2707.2)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=87556" target="_blank">geranate</a></text><title></title></g>
+<g id="node13152" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2442.4,1865.6)"><rect rx="15" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.7.11" target="_blank">3.1.7.11/3.1.7.3</a></text><title>geranyl diphosphate diphosphatase;monoterpenyl-diphosphatase</title></g>
+<g id="node13154" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2685.6,2058.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.4.4" target="_blank">5.4.4.4</a></text><title>geraniol isomerase</title></g>
+<g id="node13147" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2905.0,1749.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.127" target="_blank">4.2.1.127</a></text><title>linalool dehydratase</title></g>
+<g id="node13145" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2606.8,1508.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.15" target="_blank">4.2.3.15</a></text><title>myrcene synthase</title></g>
+<g id="node13144" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2474.2,1671.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.25" target="_blank">4.2.3.25</a></text><title>S-linalool synthase</title></g>
+<g id="node13106" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2799.6,3120.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.324" target="_blank">1.1.1.324</a></text><title>8-hydroxygeraniol dehydrogenase</title></g>
+<g id="node13166" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2806.9,3479.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.324" target="_blank">1.1.1.324</a></text><title>8-hydroxygeraniol dehydrogenase</title></g>
+<g id="node13171" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2580.2,3427.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.324" target="_blank">1.1.1.324</a></text><title>8-hydroxygeraniol dehydrogenase</title></g>
+<g id="node13169" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2582.2,3104.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.324" target="_blank">1.1.1.324</a></text><title>8-hydroxygeraniol dehydrogenase</title></g>
+<g id="node13140" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1981.7,1494.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.106" target="_blank">4.2.3.106</a></text><title>(E)-beta-ocimene synthase</title></g>
+<g id="node13253" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2015.4,1369.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.11" target="_blank">4.2.3.11</a></text><title>sabinene-hydrate synthase</title></g>
+<g id="node13264" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1971.0,1254.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.5.1.8" target="_blank">5.5.1.8</a></text><title>(+)-bornyl diphosphate synthase</title></g>
+<g id="node13266" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1536.5,890.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.7.3" target="_blank">3.1.7.3</a></text><title>monoterpenyl-diphosphatase</title></g>
+<g id="node13270" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1233.3,580.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.198" target="_blank">1.1.198</a></text><title>(+)-borneol dehydrogenase</title></g>
+<g id="node13138" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2097.9,1267.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.6.1.68" target="_blank">3.6.1.68</a></text><title>geranyl diphosphate phosphohydrolase</title></g>
+<g id="node13146" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2225.6,1138.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.26" target="_blank">4.2.3.26</a></text><title>R-linalool synthase</title></g>
+<g id="node13159" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2040.5,592.9)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.84" target="_blank">1.14.14.84</a></text><title>linalool 8-monooxygenase</title></g>
+<g id="node13158" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2024.1,193.8)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.84" target="_blank">1.14.14.84</a></text><title>linalool 8-monooxygenase</title></g>
+<g id="node13142" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2232.3,1229.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.119" target="_blank">4.2.3.119</a></text><title>(-)-alpha-pinene synthase</title></g>
+<g id="node13276" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2412.0,1130.8)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.20" target="_blank">4.2.3.20/4.2.3.15</a></text><title>(R)-limonene synthase;myrcene synthase</title></g>
+<g id="node13277" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2682.1,620.5)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.53" target="_blank">1.14.14.53</a></text><title>(R)-limonene 6-monooxygenase</title></g>
+<g id="node13086" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2837.7,256.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.275" target="_blank">1.1.1.275</a></text><title>(+)-trans-carveol dehydrogenase</title></g>
+<g id="node13263" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2340.7,1244.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.107" target="_blank">4.2.3.107</a></text><title>(+)-car-3-ene synthase</title></g>
+<g id="node13150" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2391.0,1317.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.120" target="_blank">4.2.3.120</a></text><title>(-)-beta-pinene synthase</title></g>
+<g id="node13258" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2499.3,1343.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.117" target="_blank">4.2.3.117</a></text><title>(-)-camphene synthase</title></g>
+<g id="node13151" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2502.7,1477.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.113" target="_blank">4.2.3.113</a></text><title>terpinolene synthase</title></g>
+<g id="node13257" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2449.0,1536.0)"><rect rx="15" height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.116" target="_blank">4.2.3.116/4.2.3.20</a></text><title>(+)-camphene;(R)-limonene synthase</title></g>
+<g id="node13249" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2133.8,1668.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.10" target="_blank">4.2.3.10</a></text><title>(-)-endo-fenchol synthase</title></g>
+<g id="node13163" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2237.9,1702.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.B69" target="_blank">4.2.3.B69</a></text><title>(Z)-beta-ocimene synthase</title></g>
+<g id="node13155" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2001.3,1781.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.16" target="_blank">4.2.3.16</a></text><title>(4S)-limonene synthase</title></g>
+<g id="node13153" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1994.8,1582.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.3.108" target="_blank">4.2.3.108</a></text><title>1,8-cineole synthase</title></g>
+<g id="node13157" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(3224.6,1587.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.31" target="_blank">1.14.14.31</a></text><title>ipsdienol synthase</title></g>
+<g id="node13143" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(3640.3,1597.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.386" target="_blank">1.1.1.386</a></text><title>ipsdienol dehydrogenase; ipsdienol dehydrogenase</title></g>
+<g id="node13202" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(3606.1,1707.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.386" target="_blank">1.1.1.386</a></text><title>ipsdienol dehydrogenase; ipsdienol dehydrogenase</title></g>
+<g id="node13162" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2676.0,2587.1)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.83" target="_blank">1.14.14.83</a></text><title>geraniol 8-hydroxylase</title></g>
+<g id="node13148" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1736.7,2348.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.51" target="_blank">1.14.14.51</a></text><title>(S)-limonene 6-monooxygenase</title></g>
+<g id="node13149" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1526.4,2791.0)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.243" target="_blank">1.1.1.243</a></text><title>carveol dehydrogenase</title></g>
+<g id="node13096" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1557.9,2222.0)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.99" target="_blank">1.14.14.99</a></text><title>(S)-limonene 3-monooxygenase</title></g>
+<g id="node13090" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(1179.0,2371.6)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.223" target="_blank">1.1.1.223</a></text><title>isopiperitenol dehydrogenase</title></g>
+<g id="node13080" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(828.7,2376.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.82" target="_blank">1.3.1.82</a></text><title>(-)-isopiperitenone reductase</title></g>
+<g id="node13082" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(583.5,2034.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.3.1" target="_blank">5.3.3.1</a></text><title>steroid DELTA-isomerase</title></g>
+<g id="node13085" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(380.0,1992.7)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.14.143" target="_blank">1.14.14.143</a></text><title>(+)-menthofuran synthase</title></g>
+<g id="node13098" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(513.5,1581.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.81" target="_blank">1.3.1.81</a></text><title>(+)-pulegone reductase</title></g>
+<g id="node13081" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(375.2,1174.1)"><rect rx="15" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.13.105" target="_blank">1.14.13.105</a></text><title>monocyclic monoterpene ketone monooxygenase</title></g>
+<g id="node13232" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(255.0,1854.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.1.81" target="_blank">1.3.1.81</a></text><title>(+)-pulegone reductase</title></g>
+<g id="node13084" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(390.7,1341.5)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.207" target="_blank">1.1.1.207</a></text><title>(-)-menthol dehydrogenase</title></g>
+<g id="node13083" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(510.6,1128.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.208" target="_blank">1.1.1.208</a></text><title>(+)-neomenthol dehydrogenase</title></g>
+<g id="node13141" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2522.4,2428.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.4.8" target="_blank">5.4.4.8</a></text><title>linalool isomerase</title></g>
+<g id="node13160" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2841.8,2351.4)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.183" target="_blank">1.1.1.183</a></text><title>geraniol dehydrogenase (NADP+); geraniol dehydrogenase (NAD+)</title></g>
+<g id="node13156" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(2806.9,2409.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.347" target="_blank">1.1.1.347</a></text><title>geraniol dehydrogenase (NADP+); geraniol dehydrogenase (NAD+)</title></g>
+<g id="node13161" class="node nodeEN pw_Monoterpenoid-biosynthesis" transform="translate(3157.6,2607.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.86" target="_blank">1.2.1.86</a></text><title>geranial dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node13152~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2475.0,1784.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13152~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2529.7,1868.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13147~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2992.1,1755.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13145~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2657.4,1436.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13144~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2468.3,1584.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13144~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2554.1,1636.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13106~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(2713.7,3092.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13106~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(2689.3,3273.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13166~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(2896.7,3491.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13166~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(2826.5,3567.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13171~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(2666.6,3451.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13169~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(2497.9,3138.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13169~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(2522.3,3037.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13140~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(1941.1,1414.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13266~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(1622.1,872.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13266~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(1549.3,803.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13270~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid7" transform="translate(1217.4,668.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node13270~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid8" transform="translate(1145.6,595.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node13138~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2091.7,1327.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13138~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid16" transform="translate(2136.1,1190.8)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node13146~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2283.0,1072.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13159~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(2177.4,627.7)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13159~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(2097.7,661.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13159~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid88270" transform="translate(1902.2,557.4)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13159~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(1982.3,523.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13158~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(2159.6,231.6)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13158~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(2079.3,265.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13158~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid88270" transform="translate(1887.1,155.1)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13158~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(1968.0,121.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13142~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2315.1,1179.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13276~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2364.2,1054.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13277~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(2785.0,728.3)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13277~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(2703.2,694.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13277~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid88270" transform="translate(2578.0,511.3)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13277~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2660.6,545.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13086~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid7" transform="translate(2882.7,333.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node13086~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid8" transform="translate(2925.2,240.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node13263~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2281.6,1171.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13150~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2368.6,1210.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13258~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2581.9,1372.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13151~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2522.4,1392.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13257~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2510.4,1443.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13249~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2220.9,1661.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13249~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2170.3,1733.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13163~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2166.7,1767.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13155~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(2019.2,1879.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13153~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2048.1,1651.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13153~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid17" transform="translate(1948.0,1655.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node13157~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(3171.6,1719.9)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13157~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(3155.4,1638.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13157~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid88270" transform="translate(3278.2,1454.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13157~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(3295.1,1536.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13143~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid7" transform="translate(3563.7,1642.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node13143~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid8" transform="translate(3716.9,1551.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node13202~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(3528.1,1753.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13202~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(3684.1,1661.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13162~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(2810.8,2547.9)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13162~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(2730.1,2513.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13162~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid88270" transform="translate(2812.0,2627.8)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13162~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(2730.7,2661.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13148~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(1676.9,2188.0)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13148~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(1649.7,2348.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13148~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(1666.8,2416.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13149~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(1615.0,2772.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13149~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(1574.5,2867.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13096~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(1515.9,2085.9)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13096~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(1665.0,2301.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13096~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid88270" transform="translate(1600.4,2382.8)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13096~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(1535.5,2306.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13090~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid7" transform="translate(1233.1,2442.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node13090~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid8" transform="translate(1131.2,2446.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node13080~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(839.2,2466.8)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13080~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(747.7,2417.4)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13085~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1123" transform="translate(308.0,1888.0)"><rect rx="5" height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1123" target="_blank">[reduced NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13085~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(382.5,1922.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13085~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid88270" transform="translate(476.9,2117.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88270" target="_blank">[oxidized NADPH-hemoprotein reductase]</a></text><title></title></g>
+<g id="node13085~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(377.5,2080.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13098~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(587.9,1633.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13098~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(587.5,1529.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13081~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid9" transform="translate(338.0,1242.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node13081~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(385.2,1264.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13081~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(296.9,1212.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13081~3" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(288.2,1165.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13232~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(307.0,1928.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13232~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(203.1,1928.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13084~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(442.4,1267.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13084~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(338.5,1276.5)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13083~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(441.0,1181.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13083~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(436.2,1077.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13160~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid10" transform="translate(2755.2,2375.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node13160~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid5" transform="translate(2928.4,2324.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node13156~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid7" transform="translate(2721.8,2436.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node13156~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid8" transform="translate(2892.0,2385.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node13161~0" class="node nodeCM pw_Monoterpenoid-biosynthesis lid7" transform="translate(3086.1,2660.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node13161~1" class="node nodeCM pw_Monoterpenoid-biosynthesis lid1" transform="translate(3070.6,2614.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node13161~2" class="node nodeCM pw_Monoterpenoid-biosynthesis lid8" transform="translate(3158.5,2696.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 973.4 639.6" width="973" height="640" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="973.4" height="639.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_aminopropanol-phosphate-biosynthesis" class="pw " x="0.0" y="0.0" width="853.4" height="504.1" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 571.1 289.1 L 457.0 289.1"/>
+<path class="link" marker-end="url(#in)" d="M 641.4 289.1 L 723.2 289.1"/>
+<path class="link" marker-start="url(#in)" d="M 638.2 222.5 L 739.3 273.1"/>
+<path class="link" marker-end="url(#in)" d="M 574.4 190.6 L 473.3 140.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 297.3 124.1 L 331.6 124.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 255.3 124.1 L 188.6 124.1"/>
+<path class="link" marker-start="url(#in)" d="M 111.3 273.1 L 111.3 140.1"/>
+<path class="link" marker-end="url(#in)" d="M 111.3 305.1 L 111.3 438.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 595.1 305.1 L 567.4 344.6"/>
+<path class="link" marker-end="url(#in)" d="M 617.5 305.1 L 645.2 344.6"/>
+<path class="link" marker-end="url(#in)" d="M 576.7 222.6 L 545.2 239.6"/>
+<path class="link" marker-start="url(#in)" d="M 287.5 108.1 L 315.2 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 270.8 140.1 L 253.3 190.7"/>
+<path class="link" marker-end="url(#in)" d="M 256.5 140.1 L 222.1 167.9"/>
+<path class="link" marker-start="url(#in)" d="M 134.1 273.1 L 165.2 251.3"/>
+<path class="link" marker-end="url(#in)" d="M 134.1 305.1 L 165.2 326.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_aminopropanol-phosphate-biosynthesis" transform="translate(426.7,0.0)"><rect rx="10" height="31" width="360" x="-180.0" y="-15.5"/><text dominant-baseline="central">aminopropanol phosphate biosynthesis</text></g>
+<g id="node6950" class="node nodeHM pw_aminopropanol-phosphate-biosynthesis lid250" transform="translate(441.3,289.1)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=250" target="_blank">Thr</a></text><title></title></g>
+<g id="node6948" class="node nodeHM pw_aminopropanol-phosphate-biosynthesis lid4927" transform="translate(771.3,289.1)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4927" target="_blank">O-phospho-Thr</a></text><title></title></g>
+<g id="node6943" class="node nodeHM pw_aminopropanol-phosphate-biosynthesis lid22041" transform="translate(441.3,124.1)"><rect height="30.0" width="217.4" x="-108.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=22041" target="_blank">(R)-1-aminopropan-2-yl phosphate</a></text><title></title></g>
+<g id="node6936" class="node nodeHM pw_aminopropanol-phosphate-biosynthesis lid9299" transform="translate(111.3,124.1)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9299" target="_blank">(R)-1-aminopropan-2-ol</a></text><title></title></g>
+<g id="node12205" class="node nodeHM pw_aminopropanol-phosphate-biosynthesis lid8045" transform="translate(111.3,454.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8045" target="_blank">aminoacetone</a></text><title></title></g>
+<g id="node6944" class="node nodeEN pw_aminopropanol-phosphate-biosynthesis" transform="translate(606.3,289.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.177" target="_blank">2.7.1.177</a></text><title>L-threonine kinase</title></g>
+<g id="node6946" class="node nodeEN pw_aminopropanol-phosphate-biosynthesis" transform="translate(606.3,206.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.81" target="_blank">4.1.1.81</a></text><title>threonine-phosphate decarboxylase</title></g>
+<g id="node6939" class="node nodeEN pw_aminopropanol-phosphate-biosynthesis" transform="translate(276.3,124.1)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>hypothetical reaction</title></g>
+<g id="node6937" class="node nodeEN pw_aminopropanol-phosphate-biosynthesis" transform="translate(111.3,289.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.75" target="_blank">1.1.1.75</a></text><title>(R)-aminopropanol dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node6944~0" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid4" transform="translate(556.2,360.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6944~1" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid13" transform="translate(656.4,360.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6946~0" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid28" transform="translate(529.5,248.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node6939~0" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid4" transform="translate(326.4,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node6939~1" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid13" transform="translate(247.8,206.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node6939~2" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid12" transform="translate(209.6,178.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node6937~0" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid7" transform="translate(184.2,238.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node6937~1" class="node nodeCM pw_aminopropanol-phosphate-biosynthesis lid8" transform="translate(184.2,340.1)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+</g></svg>

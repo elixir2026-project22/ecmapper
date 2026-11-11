@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2634" height="981" viewBox="0 0 2633.8 980.6"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="11792.3 4779.5 952.3 616.0" width="952" height="616" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="11792.3" y="4779.5" width="952.3" height="616.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_factor-420-biosynthesis" class="pw pw4" x="11832.3" y="4835.0" width="872.3" height="520.5" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12337.0 4926.1 L 12377.4 4926.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12264.3 4926.1 L 12170.9 4926.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12300.6 4942.1 L 12300.3 5053.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12546.6 4943.0 L 12546.6 4991.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12510.2 4926.7 L 12467.1 4926.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12038.4 5022.9 L 12038.4 4942.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12038.4 5054.9 L 12038.4 5123.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12546.6 5102.8 L 12546.6 5147.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12546.6 5070.8 L 12546.6 5023.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11988.4 5230.5 L 12083.5 5230.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 11955.0 5246.6 L 11955.4 5292.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12301.5 5214.7 L 12300.4 5085.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12265.2 5230.5 L 12178.9 5230.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12546.6 5255.1 L 12546.6 5293.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 12546.6 5223.1 L 12546.6 5179.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 12322.0 4910.1 L 12342.5 4894.8"/>
+<path class="link" marker-start="url(#in)" d="M 12577.5 4911.0 L 12627.3 4885.2"/>
+<path class="link" marker-start="url(#in)" d="M 12583.0 4921.7 L 12627.3 4915.2"/>
+<path class="link" marker-end="url(#in)" d="M 12573.2 4943.0 L 12630.1 4977.3"/>
+<path class="link" marker-end="url(#in)" d="M 12583.0 4935.4 L 12627.3 4945.6"/>
+<path class="link" marker-start="url(#in)" d="M 12007.0 5054.9 L 11966.3 5075.6"/>
+<path class="link" marker-end="url(#in)" d="M 12021.1 5022.9 L 11983.9 4988.4"/>
+<path class="link" marker-end="url(#in)" d="M 12056.0 5022.9 L 12092.7 4989.6"/>
+<path class="link" marker-end="url(#in)" d="M 12002.0 5030.6 L 11943.1 5017.1"/>
+<path class="link" marker-start="url(#in)" d="M 12575.0 5070.8 L 12627.3 5041.3"/>
+<path class="link" marker-start="url(#in)" d="M 12583.0 5079.7 L 12627.3 5071.0"/>
+<path class="link" marker-end="url(#in)" d="M 12575.8 5102.8 L 12630.1 5132.6"/>
+<path class="link" marker-end="url(#in)" d="M 12583.0 5093.4 L 12627.3 5101.4"/>
+<path class="link" marker-start="url(#in)" d="M 11927.0 5214.6 L 11899.0 5198.5"/>
+<path class="link" marker-end="url(#in)" d="M 11984.8 5214.6 L 12018.5 5196.6"/>
+<path class="link" marker-start="url(#in)" d="M 12271.9 5246.7 L 12247.4 5259.9"/>
+<path class="link" marker-end="url(#in)" d="M 12314.2 5214.7 L 12333.1 5190.8"/>
+<path class="link" marker-start="url(#in)" d="M 12583.0 5233.9 L 12627.3 5227.5"/>
+<path class="link" marker-start="url(#in)" d="M 12575.8 5223.1 L 12627.3 5194.9"/>
+<path class="link" marker-end="url(#in)" d="M 12571.0 5255.1 L 12630.1 5293.8"/>
+<path class="link" marker-end="url(#in)" d="M 12583.0 5248.5 L 12627.3 5259.8"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_factor-420-biosynthesis" transform="translate(12268.5,4835.0)"><rect rx="10" height="31" width="216" x="-108.0" y="-15.5"/><text dominant-baseline="central">factor 420 biosynthesis</text></g>
+<g id="node10907" class="node nodeHM pw_factor-420-biosynthesis lid403" transform="translate(11955.6,5308.1)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=403" target="_blank">L-lactate</a></text><title>L-lactate</title></g>
+<g id="node10909" class="node nodeHM pw_factor-420-biosynthesis lid14715" transform="translate(12131.2,5229.8)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=14715" target="_blank">(2S)-2-P-LAC</a></text><title>(2S)-2-phospholactate</title></g>
+<g id="node10911" class="node nodeHM pw_factor-420-biosynthesis lid82530" transform="translate(12300.3,5069.2)"><rect height="30.0" width="229.0" x="-114.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=82530" target="_blank">(2S)-lactyl-2-diphospho-5&#x27;-guanosine</a></text><title>(2S)-lactyl-2-diphospho-5&#x27;-guanosine</title></g>
+<g id="node10912" class="node nodeHM pw_factor-420-biosynthesis lid222472" transform="translate(12038.4,5139.6)"><rect height="30.0" width="387.1" x="-193.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=222472" target="_blank">5-amino-5-(4-hydroxybenzyl)-6-(D-ribitylimino)-5,6-dihydrouracil</a></text><title>5-amino-5-(4-hydroxybenzyl)-6-(D-ribitylimino)-5,6-dihydrouracil</title></g>
+<g id="node10914" class="node nodeHM pw_factor-420-biosynthesis lid10039" transform="translate(12038.4,4926.1)"><rect height="30.0" width="262.9" x="-131.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10039" target="_blank">7,8-didemethyl-8-hydroxy-5-deazariboflavin</a></text><title>7,8-didemethyl-8-hydroxy-5-deazariboflavin</title></g>
+<g id="node10916" class="node nodeHM pw_factor-420-biosynthesis lid7824" transform="translate(12422.2,4926.1)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7824" target="_blank">F420-0 (ox)</a></text><title>coenzyme F420-0</title></g>
+<g id="node10927" class="node nodeHM pw_factor-420-biosynthesis lid12005" transform="translate(12546.6,5007.7)"><rect height="30.0" width="59.5" x="-29.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12005" target="_blank">F420-1</a></text><title>coenzyme F420-1</title></g>
+<g id="node10929" class="node nodeHM pw_factor-420-biosynthesis lid8815" transform="translate(12546.6,5163.7)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8815" target="_blank">gamma-F420-2</a></text><title>coenzyme gamma-F420-2</title></g>
+<g id="node10949" class="node nodeHM pw_factor-420-biosynthesis lid39374" transform="translate(12546.6,5309.6)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=39374" target="_blank">alpha-F420-3</a></text><title>coenzyme alpha-F420-3</title></g>
+<g id="node10915" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(12300.6,4926.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.28" target="_blank">2.7.8.28</a></text><title>2-phospho-L-lactate transferase</title></g>
+<g id="node10926" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(12546.6,4927.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.31" target="_blank">6.3.2.31</a></text><title>coenzyme F420-0:L-glutamate ligase</title></g>
+<g id="node10913" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(12038.4,5038.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.32" target="_blank">4.3.1.32</a></text><title>7,8-didemethyl-8-hydroxy-5-deazariboflavin synthase</title></g>
+<g id="node10928" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(12546.6,5086.8)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.34" target="_blank">6.3.2.34</a></text><title>coenzyme F420-1:gamma-L-glutamate ligase</title></g>
+<g id="node10908" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(11954.9,5230.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central">?.?.?.?</text><title>unknown</title></g>
+<g id="node10910" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(12301.6,5230.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.68" target="_blank">2.7.7.68</a></text><title>2-phospho-L-lactate guanylyltransferase</title></g>
+<g id="node10948" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(12546.6,5239.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.32" target="_blank">6.3.2.32</a></text><title>coenzyme gamma-F420-2:alpha-L-glutamate ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10917" class="node nodeCM pw_factor-420-biosynthesis lid24" transform="translate(11934.9,5091.6)"><rect rx="5" height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node10918" class="node nodeCM pw_factor-420-biosynthesis lid943" transform="translate(12110.4,4973.6)"><rect rx="5" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title>5&#x27;-deoxyadenosine</title></g>
+<g id="node10919" class="node nodeCM pw_factor-420-biosynthesis lid27" transform="translate(11966.6,4972.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node10920" class="node nodeCM pw_factor-420-biosynthesis lid88" transform="translate(11920.9,5012.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title>L-methionine</title></g>
+<g id="node10921" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(11876.7,5185.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title>GTP</title></g>
+<g id="node10922" class="node nodeCM pw_factor-420-biosynthesis lid53" transform="translate(12040.8,5184.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title>GDP</title></g>
+<g id="node10923" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(12225.2,5271.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title>GTP</title></g>
+<g id="node10924" class="node nodeCM pw_factor-420-biosynthesis lid17" transform="translate(12345.7,5174.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node10925" class="node nodeCM pw_factor-420-biosynthesis lid162" transform="translate(12363.9,4878.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=162" target="_blank">GMP</a></text><title>GMP</title></g>
+<g id="node10930" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(12649.5,5066.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title>GTP</title></g>
+<g id="node10931" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(12649.5,4911.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title>GTP</title></g>
+<g id="node10932" class="node nodeCM pw_factor-420-biosynthesis lid41" transform="translate(12649.5,5028.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node10933" class="node nodeCM pw_factor-420-biosynthesis lid41" transform="translate(12649.5,4873.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node10934" class="node nodeCM pw_factor-420-biosynthesis lid53" transform="translate(12649.5,5105.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title>GDP</title></g>
+<g id="node10935" class="node nodeCM pw_factor-420-biosynthesis lid53" transform="translate(12649.5,4950.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title>GDP</title></g>
+<g id="node10936" class="node nodeCM pw_factor-420-biosynthesis lid16" transform="translate(12649.5,4989.1)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node10937" class="node nodeCM pw_factor-420-biosynthesis lid16" transform="translate(12649.5,5143.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node10941" class="node nodeCM pw_factor-420-biosynthesis lid41" transform="translate(12649.5,5182.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title>L-glutamate</title></g>
+<g id="node10942" class="node nodeCM pw_factor-420-biosynthesis lid16" transform="translate(12649.5,5306.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node10944" class="node nodeCM pw_factor-420-biosynthesis lid4" transform="translate(12649.5,5224.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10947" class="node nodeCM pw_factor-420-biosynthesis lid13" transform="translate(12649.5,5265.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1032.3" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1601.5 940.6" width="1601" height="941" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1601.5" height="940.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_factor-420-biosynthesis" class="pw " x="0.0" y="0.0" width="1521.5" height="845.1" style="opacity: 0.5; fill: rgb(148, 215, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 213.2 300.1 L 104.3 300.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 255.2 300.1 L 354.3 300.1"/>
+<path class="link" marker-start="url(#in)" d="M 531.0 300.1 L 444.0 300.1"/>
+<path class="link" marker-end="url(#in)" d="M 594.8 300.1 L 607.8 300.1"/>
+<path class="link" marker-start="url(#in)" d="M 729.2 541.1 L 729.2 674.1"/>
+<path class="link" marker-end="url(#in)" d="M 729.2 509.1 L 729.2 376.1"/>
+<path class="link" marker-start="url(#in)" d="M 1192.2 135.1 L 1100.8 135.1"/>
+<path class="link" marker-end="url(#in)" d="M 1256.1 135.1 L 1363.7 135.1"/>
+<path class="link" marker-start="url(#in)" d="M 1389.2 284.1 L 1389.2 151.1"/>
+<path class="link" marker-end="url(#in)" d="M 1389.2 316.1 L 1389.2 449.1"/>
+<path class="link" marker-start="url(#in)" d="M 1389.2 614.1 L 1389.2 481.1"/>
+<path class="link" marker-end="url(#in)" d="M 1389.2 646.1 L 1389.2 779.1"/>
+<path class="link" marker-start="url(#in)" d="M 874.3 248.0 C 842.5 272.5 780.9 320.1 749.1 344.7"/>
+<path class="link" marker-start="url(#in)" d="M 862.2 245.8 L 769.2 284.1"/>
+<path class="link" marker-end="url(#in)" d="M 921.2 216.6 L 1032.1 151.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 223.0 284.1 L 195.3 244.5"/>
+<path class="link" marker-end="url(#in)" d="M 245.4 284.1 L 273.1 244.5"/>
+<path class="link" marker-start="url(#in)" d="M 551.7 316.1 L 524.0 355.7"/>
+<path class="link" marker-end="url(#in)" d="M 574.1 284.1 L 601.8 244.5"/>
+<path class="link" marker-start="url(#in)" d="M 752.0 541.1 L 804.4 577.8"/>
+<path class="link" marker-end="url(#in)" d="M 697.2 523.4 L 657.6 521.4"/>
+<path class="link" marker-end="url(#in)" d="M 702.8 509.1 L 665.4 486.3"/>
+<path class="link" marker-end="url(#in)" d="M 723.0 509.1 L 701.2 452.3"/>
+<path class="link" marker-start="url(#in)" d="M 1218.7 151.1 L 1201.2 201.7"/>
+<path class="link" marker-start="url(#in)" d="M 1204.4 151.1 L 1172.0 177.3"/>
+<path class="link" marker-end="url(#in)" d="M 1229.7 119.1 L 1247.1 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1243.9 119.1 L 1278.3 91.2"/>
+<path class="link" marker-start="url(#in)" d="M 1421.1 289.1 L 1456.0 277.1"/>
+<path class="link" marker-start="url(#in)" d="M 1402.1 284.1 L 1431.2 248.2"/>
+<path class="link" marker-end="url(#in)" d="M 1421.1 311.1 L 1456.0 323.1"/>
+<path class="link" marker-end="url(#in)" d="M 1402.1 316.1 L 1430.6 351.3"/>
+<path class="link" marker-start="url(#in)" d="M 1421.1 619.1 L 1456.0 607.1"/>
+<path class="link" marker-start="url(#in)" d="M 1402.1 614.1 L 1431.2 578.2"/>
+<path class="link" marker-end="url(#in)" d="M 1421.1 641.1 L 1456.0 653.1"/>
+<path class="link" marker-end="url(#in)" d="M 1402.1 646.1 L 1430.6 681.3"/>
+<path class="link" marker-end="url(#in)" d="M 895.4 216.6 L 899.6 161.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_factor-420-biosynthesis" transform="translate(760.7,0.0)"><rect rx="10" height="31" width="234" x="-116.8" y="-15.5"/><text dominant-baseline="central">factor 420 biosynthesis</text></g>
+<g id="node10907" class="node nodeHM pw_factor-420-biosynthesis lid403" transform="translate(69.2,300.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=403" target="_blank">L-lactate</a></text><title></title></g>
+<g id="node10909" class="node nodeHM pw_factor-420-biosynthesis lid14715" transform="translate(399.2,300.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=14715" target="_blank">(2S)-2-P-LAC</a></text><title></title></g>
+<g id="node10911" class="node nodeHM pw_factor-420-biosynthesis lid82530" transform="translate(730.4,300.1)"><rect height="30.0" width="243.3" x="-121.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=82530" target="_blank">(2S)-lactyl-2-diphospho-5&#x27;-guanosine</a></text><title></title></g>
+<g id="node10912" class="node nodeHM pw_factor-420-biosynthesis lid222472" transform="translate(729.2,690.1)"><rect height="30.0" width="424.7" x="-212.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=222472" target="_blank">5-amino-5-(4-hydroxybenzyl)-6-(D-ribitylimino)-5,6-dihydrouracil</a></text><title></title></g>
+<g id="node10914" class="node nodeHM pw_factor-420-biosynthesis lid10039" transform="translate(729.2,360.1)"><rect height="30.0" width="282.2" x="-141.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10039" target="_blank">7,8-didemethyl-8-hydroxy-5-deazariboflavin</a></text><title></title></g>
+<g id="node10916" class="node nodeHM pw_factor-420-biosynthesis lid7824" transform="translate(1059.2,135.1)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7824" target="_blank">F420-0 (ox)</a></text><title></title></g>
+<g id="node10927" class="node nodeHM pw_factor-420-biosynthesis lid12005" transform="translate(1389.2,135.1)"><rect height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12005" target="_blank">F420-1</a></text><title></title></g>
+<g id="node10929" class="node nodeHM pw_factor-420-biosynthesis lid8815" transform="translate(1389.2,465.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8815" target="_blank">gamma-F420-2</a></text><title></title></g>
+<g id="node10949" class="node nodeHM pw_factor-420-biosynthesis lid39374" transform="translate(1389.2,795.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=39374" target="_blank">alpha-F420-3</a></text><title></title></g>
+<g id="node10908" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(234.2,300.1)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>unknown</title></g>
+<g id="node10910" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(562.9,300.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.7.68" target="_blank">2.7.7.68</a></text><title>2-phospho-L-lactate guanylyltransferase</title></g>
+<g id="node10913" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(729.2,525.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.32" target="_blank">4.3.1.32</a></text><title>7,8-didemethyl-8-hydroxy-5-deazariboflavin synthase</title></g>
+<g id="node10926" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(1224.2,135.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.31" target="_blank">6.3.2.31</a></text><title>coenzyme F420-0:L-glutamate ligase</title></g>
+<g id="node10928" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(1389.2,300.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.34" target="_blank">6.3.2.34</a></text><title>coenzyme F420-1:gamma-L-glutamate ligase</title></g>
+<g id="node10948" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(1389.2,630.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.2.32" target="_blank">6.3.2.32</a></text><title>coenzyme gamma-F420-2:alpha-L-glutamate ligase</title></g>
+<g id="node10915" class="node nodeEN pw_factor-420-biosynthesis" transform="translate(894.2,232.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.8.28" target="_blank">2.7.8.28</a></text><title>2-phospho-L-lactate transferase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node10908~0" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(184.1,228.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node10908~1" class="node nodeCM pw_factor-420-biosynthesis lid53" transform="translate(284.3,228.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node10910~0" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(512.8,371.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node10910~1" class="node nodeCM pw_factor-420-biosynthesis lid17" transform="translate(613.0,228.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node10913~0" class="node nodeCM pw_factor-420-biosynthesis lid24" transform="translate(827.3,593.8)"><rect rx="5" height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node10913~1" class="node nodeCM pw_factor-420-biosynthesis lid27" transform="translate(641.9,520.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node10913~2" class="node nodeCM pw_factor-420-biosynthesis lid943" transform="translate(639.0,470.3)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=943" target="_blank">5&#x27;-deoxyadenosine</a></text><title></title></g>
+<g id="node10913~3" class="node nodeCM pw_factor-420-biosynthesis lid88" transform="translate(695.0,436.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node10926~0" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(1195.7,217.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node10926~1" class="node nodeCM pw_factor-420-biosynthesis lid41" transform="translate(1156.3,190.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10926~2" class="node nodeCM pw_factor-420-biosynthesis lid53" transform="translate(1252.6,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node10926~3" class="node nodeCM pw_factor-420-biosynthesis lid16" transform="translate(1290.8,81.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10928~0" class="node nodeCM pw_factor-420-biosynthesis lid37" transform="translate(1471.8,271.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=37" target="_blank">GTP</a></text><title></title></g>
+<g id="node10928~1" class="node nodeCM pw_factor-420-biosynthesis lid41" transform="translate(1444.1,232.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10928~2" class="node nodeCM pw_factor-420-biosynthesis lid53" transform="translate(1471.8,328.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=53" target="_blank">GDP</a></text><title></title></g>
+<g id="node10928~3" class="node nodeCM pw_factor-420-biosynthesis lid16" transform="translate(1443.1,366.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10948~0" class="node nodeCM pw_factor-420-biosynthesis lid4" transform="translate(1471.8,601.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node10948~1" class="node nodeCM pw_factor-420-biosynthesis lid41" transform="translate(1444.1,562.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node10948~2" class="node nodeCM pw_factor-420-biosynthesis lid13" transform="translate(1471.8,658.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node10948~3" class="node nodeCM pw_factor-420-biosynthesis lid16" transform="translate(1443.1,696.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node10915~0" class="node nodeCM pw_factor-420-biosynthesis lid162" transform="translate(900.8,145.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=162" target="_blank">GMP</a></text><title></title></g>
+</g></svg>
+<text x="1042.3" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints)</text></svg>

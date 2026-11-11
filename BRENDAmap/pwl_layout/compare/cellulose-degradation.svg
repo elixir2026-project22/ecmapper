@@ -1,0 +1,307 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3049" height="1589" viewBox="0 0 3049.0 1589.1"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="7510.8 2443.2 1322.0 688.6" width="1322" height="689" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="7510.8" y="2443.2" width="1322.0" height="688.6" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_cellulose-degradation" class="pw pw5" x="7550.8" y="2498.7" width="1242.0" height="593.1" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7733.1 2560.1 L 8186.3 2560.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7731.7 2576.1 L 8184.8 2754.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7691.1 2576.1 L 7691.1 2645.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8670.3 2560.1 L 8264.7 2560.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8706.6 2576.1 L 8706.6 3032.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8045.4 2605.3 L 8186.3 2569.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8026.4 2631.9 L 8202.5 2754.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7993.2 2631.9 L 7932.3 2727.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8225.5 2637.0 L 8225.5 2578.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8225.5 2669.0 L 8225.5 2754.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8535.7 2665.4 L 8272.7 2754.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8572.1 2669.1 L 8572.1 2995.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8535.7 2643.3 L 8264.7 2570.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7691.1 2726.7 L 7691.1 2677.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7691.1 2758.7 L 7691.1 2807.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8039.8 2840.1 L 8182.8 2786.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8039.8 2866.8 L 8183.4 2918.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8003.4 2869.7 L 8003.4 3032.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8129.7 2837.7 L 8202.7 2786.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8130.6 2869.7 L 8201.7 2917.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8240.2 2837.7 L 8229.0 2786.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8240.1 2869.7 L 8229.1 2917.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8345.8 2837.7 L 8254.1 2786.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8344.6 2869.7 L 8255.3 2917.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8447.5 2841.2 L 8273.2 2785.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8447.5 2865.7 L 8267.5 2920.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8611.8 2875.4 L 8267.5 2927.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8653.4 2885.9 L 8701.4 3032.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7911.8 2883.2 L 8183.4 2926.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7833.4 2876.9 L 7767.0 2876.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8449.2 2927.2 L 8267.5 2932.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8501.9 2942.2 L 8555.8 2995.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8463.5 2942.2 L 8406.6 2983.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7691.1 2947.9 L 7691.1 2892.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7691.1 2979.9 L 7691.1 3032.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7819.2 3048.7 L 7738.7 3048.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7873.4 3032.7 L 7902.2 3002.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 7897.6 3048.7 L 7958.5 3048.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8225.5 3032.7 L 8225.5 2949.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8261.9 3048.7 L 8653.3 3048.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 8261.9 3044.8 L 8527.2 3016.0"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 7733.1 2552.0 L 7806.3 2537.8"/>
+<path class="link" marker-start="url(#in)" d="M 7649.0 2545.0 L 7626.4 2536.8"/>
+<path class="link" marker-end="url(#in)" d="M 7670.1 2576.1 L 7627.9 2608.4"/>
+<path class="link" marker-end="url(#in)" d="M 7733.1 2567.0 L 7829.6 2582.8"/>
+<path class="link" marker-start="url(#in)" d="M 8721.3 2576.1 L 8739.6 2596.2"/>
+<path class="link" marker-start="url(#in)" d="M 7978.7 2599.9 L 7890.0 2542.4"/>
+<path class="link" marker-start="url(#in)" d="M 8005.7 2599.9 L 8013.0 2548.2"/>
+<path class="link" marker-end="url(#in)" d="M 7961.4 2607.6 L 7902.4 2596.0"/>
+<path class="link" marker-end="url(#in)" d="M 8045.4 2621.6 L 8093.9 2628.1"/>
+<path class="link" marker-start="url(#in)" d="M 8259.0 2641.2 L 8286.8 2631.4"/>
+<path class="link" marker-start="url(#in)" d="M 8608.4 2638.2 L 8625.5 2631.2"/>
+<path class="link" marker-start="url(#in)" d="M 7656.8 2726.7 L 7629.2 2713.8"/>
+<path class="link" marker-start="url(#in)" d="M 8009.3 2837.7 L 8018.0 2814.0"/>
+<path class="link" marker-start="url(#in)" d="M 8143.3 2861.1 L 8155.0 2863.5"/>
+<path class="link" marker-start="url(#in)" d="M 8210.2 2861.0 L 8199.5 2863.3"/>
+<path class="link" marker-start="url(#in)" d="M 8384.1 2837.7 L 8413.8 2788.8"/>
+<path class="link" marker-start="url(#in)" d="M 8474.2 2837.7 L 8436.0 2788.8"/>
+<path class="link" marker-start="url(#in)" d="M 8648.4 2853.9 L 8649.0 2812.4"/>
+<path class="link" marker-start="url(#in)" d="M 7864.7 2860.9 L 7848.7 2828.2"/>
+<path class="link" marker-end="url(#in)" d="M 7890.7 2892.9 L 7912.0 2911.7"/>
+<path class="link" marker-start="url(#in)" d="M 8449.2 2934.4 L 8325.6 2962.5"/>
+<path class="link" marker-start="url(#in)" d="M 7646.2 2948.8 L 7629.2 2943.1"/>
+<path class="link" marker-start="url(#in)" d="M 7836.6 3032.7 L 7776.4 2988.6"/>
+<path class="link" marker-start="url(#in)" d="M 8241.3 3032.7 L 8290.4 2982.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_cellulose-degradation" transform="translate(8171.8,2498.7)"><rect rx="10" height="31" width="201" x="-100.5" y="-15.5"/><text dominant-baseline="central">cellulose degradation</text></g>
+<g id="node1229" class="node nodeHM pw_cellulose-degradation lid285" transform="translate(8384.4,2999.3)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-glucose</a></text><title>alpha-D-glucose</title></g>
+<g id="node1399" class="node nodeHM pw_cellulose-degradation lid218462" transform="translate(7691.1,2823.3)"><rect height="30.0" width="234.6" x="-117.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=218462" target="_blank">C1/C4-oxidized cello-oligosaccharides</a></text><title>C1/C4-oxidized cello-oligosaccharides</title></g>
+<g id="node1487" class="node nodeHM pw_cellulose-degradation lid107" transform="translate(8572.1,3011.2)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">a-D-Glc-1-P</a></text><title>alpha-D-glucose 1-phosphate</title></g>
+<g id="node1501" class="node nodeHM pw_cellulose-degradation lid107" transform="translate(8003.4,3048.7)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">a-D-Glc-1-P</a></text><title>alpha-D-glucose 1-phosphate</title></g>
+<g id="node1502" class="node nodeHM pw_cellulose-degradation lid698" transform="translate(7917.2,2986.0)"><rect height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=698" target="_blank">D-gluconate</a></text><title>D-gluconate</title></g>
+<g id="node1506" class="node nodeHM pw_cellulose-degradation lid8966" transform="translate(7691.1,3048.7)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8966" target="_blank">cellobionate</a></text><title>4-O-beta-D-glucopyranosyl-D-gluconate</title></g>
+<g id="node1508" class="node nodeHM pw_cellulose-degradation lid210693" transform="translate(7922.1,2743.1)"><rect height="30.0" width="325.0" x="-162.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=210693" target="_blank">4-dehydro-beta-D-glucosyl-[(1-&gt;4)-beta-D-glucosyl]n-1</a></text><title>4-dehydro-beta-D-glucosyl-[(1-&gt;4)-beta-D-glucosyl]n-1</title></g>
+<g id="node1513" class="node nodeHM pw_cellulose-degradation lid4796" transform="translate(7691.1,2876.9)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4796" target="_blank">cellobiono-1,5-lactone</a></text><title>cellobiono-1,5-lactone</title></g>
+<g id="node1514" class="node nodeHM pw_cellulose-degradation lid211352" transform="translate(7691.1,2661.0)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=211352" target="_blank">cellooligosaccharide-C1-lactone</a></text><title>cellooligosaccharide-C1-lactone</title></g>
+<g id="node1515" class="node nodeHM pw_cellulose-degradation lid767" transform="translate(8225.5,2770.5)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=767" target="_blank">cellodextrin</a></text><title>cellodextrin</title></g>
+<g id="node1516" class="node nodeHM pw_cellulose-degradation lid96" transform="translate(8706.6,3048.7)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=96" target="_blank">beta-D-glucose</a></text><title>beta-D-glucose</title></g>
+<g id="node10158" class="node nodeHM pw_cellulose-degradation lid82" transform="translate(8225.5,2933.6)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=82" target="_blank">cellobiose</a></text><title>cellobiose</title></g>
+<g id="node10161" class="node nodeSM pw_cellulose-degradation lid2725" transform="translate(8225.5,2560.1)"><rect height="35.0" width="76.4" x="-38.2" y="-17.5"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2725" target="_blank">cellulose</a></text><title>Cellulose</title></g>
+<g id="node1518" class="node nodeEN pw_cellulose-degradation" transform="translate(7691.1,2560.1)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.54" target="_blank">1.14.99.54</a></text><title>lytic cellulose monooxygenase (C1-hydroxylating)</title></g>
+<g id="node1522" class="node nodeEN pw_cellulose-degradation" transform="translate(8706.6,2560.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74" target="_blank">3.2.1.74</a></text><title>glucan 1,4-beta-glucosidase</title></g>
+<g id="node1520" class="node nodeEN pw_cellulose-degradation" transform="translate(8003.4,2615.9)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.56" target="_blank">1.14.99.56</a></text><title>lytic cellulose monooxygenase (C4-dehydrogenating)</title></g>
+<g id="node10091" class="node nodeEN pw_cellulose-degradation" transform="translate(8225.5,2653.0)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.4" target="_blank">3.2.1.4</a></text><title>cellulase</title></g>
+<g id="node11941" class="node nodeEN pw_cellulose-degradation" transform="translate(8572.1,2653.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.49" target="_blank">2.4.1.49</a></text><title>cellodextrin phosphorylase</title></g>
+<g id="node1400" class="node nodeEN pw_cellulose-degradation" transform="translate(7691.1,2742.7)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node1495" class="node nodeEN pw_cellulose-degradation" transform="translate(8003.4,2853.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.49" target="_blank">2.4.1.49</a></text><title>cellodextrin phosphorylase</title></g>
+<g id="node1500" class="node nodeEN pw_cellulose-degradation" transform="translate(8106.9,2853.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21" target="_blank">3.2.1.21</a></text><title>beta-glucosidase</title></g>
+<g id="node1499" class="node nodeEN pw_cellulose-degradation" transform="translate(8243.7,2853.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.4" target="_blank">3.2.1.4</a></text><title>cellulase</title></g>
+<g id="node1497" class="node nodeEN pw_cellulose-degradation" transform="translate(8374.4,2853.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.91" target="_blank">3.2.1.91</a></text><title>cellulose 1,4-beta-cellobiosidase (non-reducing end)</title></g>
+<g id="node1496" class="node nodeEN pw_cellulose-degradation" transform="translate(8486.7,2853.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.176" target="_blank">3.2.1.176</a></text><title>cellulose 1,4-beta-cellobiosidase (reducing end)</title></g>
+<g id="node10092" class="node nodeEN pw_cellulose-degradation" transform="translate(8648.2,2869.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21" target="_blank">3.2.1.21</a></text><title>beta-glucosidase</title></g>
+<g id="node1492" class="node nodeEN pw_cellulose-degradation" transform="translate(7872.6,2876.9)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.18" target="_blank">1.1.99.18</a></text><title>cellobiose dehydrogenase (acceptor)</title></g>
+<g id="node1488" class="node nodeEN pw_cellulose-degradation" transform="translate(8485.6,2926.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.49" target="_blank">2.4.1.49</a></text><title>cellodextrin phosphorylase</title></g>
+<g id="node1507" class="node nodeEN pw_cellulose-degradation" transform="translate(7691.1,2963.9)"><rect rx="15" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=spontaneous" target="_blank">spontaneous</a></text><title>spontaneous reaction</title></g>
+<g id="node1504" class="node nodeEN pw_cellulose-degradation" transform="translate(7858.4,3048.7)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.321" target="_blank">2.4.1.321</a></text><title>cellobionic acid phosphorylase</title></g>
+<g id="node1486" class="node nodeEN pw_cellulose-degradation" transform="translate(8225.5,3048.7)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.20" target="_blank">2.4.1.20</a></text><title>cellobiose phosphorylase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1398" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(7607.0,2703.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1489" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(8306.2,2966.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node1490" class="node nodeCM pw_cellulose-degradation lid77" transform="translate(7930.1,2927.7)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title>reduced acceptor</title></g>
+<g id="node1491" class="node nodeCM pw_cellulose-degradation lid66" transform="translate(7840.9,2812.2)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title>acceptor</title></g>
+<g id="node1493" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(8023.9,2798.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node1494" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(8423.5,2772.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1498" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(8177.2,2868.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1503" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(7757.0,2974.3)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node1505" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(7607.0,2935.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1509" class="node nodeCM pw_cellulose-degradation lid9" transform="translate(8015.2,2532.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node1510" class="node nodeCM pw_cellulose-degradation lid9" transform="translate(7607.0,2529.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node1511" class="node nodeCM pw_cellulose-degradation lid77" transform="translate(7865.3,2526.4)"><rect rx="5" height="30.0" width="116.0" x="-58.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title>reduced acceptor</title></g>
+<g id="node1512" class="node nodeCM pw_cellulose-degradation lid66" transform="translate(7866.0,2588.8)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title>acceptor</title></g>
+<g id="node1517" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(7607.0,2624.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1519" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(8116.1,2631.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node1521" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(8754.2,2612.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10090" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(8309.1,2623.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node10160" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(8649.2,2796.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11942" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(8644.9,2623.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1402.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1647.0 1549.1" width="1647" height="1549" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1647.0" height="1549.1" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_cellulose-degradation" class="pw " x="0.0" y="0.0" width="1567.0" height="1453.6" style="opacity: 0.5; fill: rgb(50, 145, 173);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 991.2 955.4 L 938.8 803.5"/>
+<path class="link" marker-end="url(#in)" d="M 989.2 987.4 L 913.2 1149.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 881.1 999.2 C 891.3 957.9 919.2 844.5 929.4 803.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 880.4 1030.4 L 902.7 1149.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 900.3 939.2 L 929.8 803.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 897.5 970.6 C 899.1 1009.5 903.4 1110.9 905.0 1149.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 830.1 880.7 L 915.5 803.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 817.7 911.9 C 834.1 959.0 883.9 1102.5 900.4 1149.9"/>
+<path class="link" marker-start="url(#in)" d="M 1013.3 1297.7 C 990.3 1269.4 941.3 1209.0 918.2 1180.6"/>
+<path class="link" marker-end="url(#in)" d="M 1056.9 1298.1 C 1114.0 1271.0 1234.8 1213.6 1292.8 1186.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1414.7 922.2 L 1331.1 1154.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1404.3 890.2 L 1238.4 725.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1073.4 597.9 C 1106.0 622.4 1169.2 669.9 1201.8 694.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1053.4 566.6 L 1058.8 353.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1044.0 598.0 C 1021.8 636.1 964.4 734.2 942.2 772.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1083.1 709.7 C 1111.9 709.7 1156.9 709.7 1187.8 709.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1030.1 725.7 L 958.3 771.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1186.2 883.3 L 1218.9 725.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1151.0 885.0 L 969.0 803.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1188.0 915.3 L 1245.3 1096.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 750.0 947.0 C 788.0 914.0 877.6 835.9 915.7 802.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 746.2 978.2 L 892.1 1149.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 700.6 968.0 L 518.0 1001.3"/>
+<path class="link" marker-start="url(#in)" d="M 1082.5 1202.2 L 944.1 1173.3"/>
+<path class="link" marker-end="url(#in)" d="M 1136.9 1192.9 L 1227.9 1128.0"/>
+<path class="link" marker-end="url(#in)" d="M 1146.3 1203.1 L 1287.0 1177.5"/>
+<path class="link" marker-start="url(#in)" d="M 1059.2 163.4 L 1059.2 321.2"/>
+<path class="link" marker-end="url(#in)" d="M 1041.5 131.4 L 971.9 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 760.0 1257.7 L 880.5 1181.2"/>
+<path class="link" marker-end="url(#in)" d="M 711.4 1289.7 L 568.8 1387.6"/>
+<path class="link" marker-start="url(#in)" d="M 382.7 1403.6 L 468.2 1403.6"/>
+<path class="link" marker-end="url(#in)" d="M 340.8 1387.6 L 260.5 1326.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1159.0 665.2 L 1199.5 693.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1166.4 633.2 L 1325.2 548.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1113.8 664.5 C 1074.8 691.1 995.0 745.5 955.9 772.1"/>
+<path class="link" marker-start="url(#in)" d="M 1105.3 1315.4 C 1063.5 1284.0 968.3 1212.3 926.3 1180.7"/>
+<path class="link" marker-end="url(#in)" d="M 1157.5 1326.1 L 1298.8 1305.6"/>
+<path class="link" marker-end="url(#in)" d="M 1134.7 1314.7 L 1241.2 1128.0"/>
+<path class="link" marker-start="url(#in)" d="M 239.6 1150.2 L 239.6 1294.2"/>
+<path class="link" marker-end="url(#in)" d="M 204.4 1134.2 L 104.3 1134.2"/>
+<path class="link" marker-end="url(#in)" d="M 268.7 1118.2 L 434.3 1027.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 977.1 955.4 L 944.7 929.0"/>
+<path class="link" marker-start="url(#in)" d="M 885.8 998.4 L 920.6 932.2"/>
+<path class="link" marker-start="url(#in)" d="M 910.0 939.2 L 915.8 932.2"/>
+<path class="link" marker-start="url(#in)" d="M 847.6 902.6 L 913.3 913.6"/>
+<path class="link" marker-start="url(#in)" d="M 1014.8 1297.0 L 987.4 1256.8"/>
+<path class="link" marker-start="url(#in)" d="M 1452.4 919.4 L 1485.5 933.0"/>
+<path class="link" marker-start="url(#in)" d="M 1014.6 569.9 L 998.8 564.6"/>
+<path class="link" marker-start="url(#in)" d="M 1040.3 566.6 L 1011.5 530.3"/>
+<path class="link" marker-end="url(#in)" d="M 1091.4 596.4 L 1111.4 603.6"/>
+<path class="link" marker-end="url(#in)" d="M 1059.4 598.6 L 1073.8 634.6"/>
+<path class="link" marker-start="url(#in)" d="M 1074.3 725.7 L 1106.4 752.7"/>
+<path class="link" marker-start="url(#in)" d="M 1160.1 883.3 L 1125.2 858.9"/>
+<path class="link" marker-start="url(#in)" d="M 709.7 946.2 L 674.8 921.8"/>
+<path class="link" marker-start="url(#in)" d="M 1105.2 1224.9 L 1081.3 1266.0"/>
+<path class="link" marker-start="url(#in)" d="M 1080.2 152.9 L 1128.0 165.5"/>
+<path class="link" marker-start="url(#in)" d="M 735.1 1257.7 L 736.8 1194.3"/>
+<path class="link" marker-end="url(#in)" d="M 734.3 1289.7 L 732.3 1366.1"/>
+<path class="link" marker-start="url(#in)" d="M 382.2 1387.6 L 414.8 1362.1"/>
+<path class="link" marker-start="url(#in)" d="M 1097.9 637.0 L 1084.1 632.6"/>
+<path class="link" marker-start="url(#in)" d="M 1129.2 633.2 L 1113.0 597.1"/>
+<path class="link" marker-end="url(#in)" d="M 1139.6 633.2 L 1140.0 631.1"/>
+<path class="link" marker-end="url(#in)" d="M 1144.1 665.2 L 1161.6 701.1"/>
+<path class="link" marker-start="url(#in)" d="M 1111.7 1346.7 L 1081.9 1381.1"/>
+<path class="link" marker-start="url(#in)" d="M 257.7 1150.2 L 291.4 1179.9"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_cellulose-degradation" transform="translate(783.5,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">cellulose degradation</text></g>
+<g id="node1515" class="node nodeHM pw_cellulose-degradation lid767" transform="translate(933.2,787.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=767" target="_blank">cellodextrin</a></text><title></title></g>
+<g id="node10158" class="node nodeHM pw_cellulose-degradation lid82" transform="translate(905.7,1165.2)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=82" target="_blank">cellobiose</a></text><title></title></g>
+<g id="node1516" class="node nodeHM pw_cellulose-degradation lid96" transform="translate(1325.4,1170.5)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=96" target="_blank">beta-D-Glc</a></text><title></title></g>
+<g id="node10161" class="node nodeHM pw_cellulose-degradation lid2725" transform="translate(1222.3,709.7)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2725" target="_blank">cellulose</a></text><title></title></g>
+<g id="node1514" class="node nodeHM pw_cellulose-degradation lid211352" transform="translate(1059.2,337.2)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=211352" target="_blank">cellooligosaccharide-C1-lactone</a></text><title></title></g>
+<g id="node1487" class="node nodeHM pw_cellulose-degradation lid107" transform="translate(1250.4,1112.0)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title></title></g>
+<g id="node1501" class="node nodeHM pw_cellulose-degradation lid107" transform="translate(463.4,1011.3)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=107" target="_blank">alpha-D-Glc 1-P</a></text><title></title></g>
+<g id="node1399" class="node nodeHM pw_cellulose-degradation lid218462" transform="translate(954.2,52.5)"><rect height="30.0" width="249.8" x="-124.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=218462" target="_blank">C1/C4-oxidized cello-oligosaccharides</a></text><title></title></g>
+<g id="node1513" class="node nodeHM pw_cellulose-degradation lid4796" transform="translate(545.5,1403.6)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4796" target="_blank">cellobiono-1,5-lactone</a></text><title></title></g>
+<g id="node1506" class="node nodeHM pw_cellulose-degradation lid8966" transform="translate(239.6,1310.2)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8966" target="_blank">cellobionate</a></text><title></title></g>
+<g id="node1508" class="node nodeHM pw_cellulose-degradation lid210693" transform="translate(1355.3,532.9)"><rect height="30.0" width="353.4" x="-176.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=210693" target="_blank">4-dehydro-beta-D-glucosyl-[(1-&gt;4)-beta-D-glucosyl]n-1</a></text><title></title></g>
+<g id="node1229" class="node nodeHM pw_cellulose-degradation lid285" transform="translate(1340.4,1299.5)"><rect height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=285" target="_blank">alpha-D-Glc</a></text><title></title></g>
+<g id="node1502" class="node nodeHM pw_cellulose-degradation lid698" transform="translate(69.2,1134.2)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=698" target="_blank">gluconate</a></text><title></title></g>
+<g id="node1500" class="node nodeEN pw_cellulose-degradation" transform="translate(996.7,971.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21" target="_blank">3.2.1.21</a></text><title>beta-glucosidase; cellulase; cellulose 1,4-beta-cellobiosidase (non-reducing end); cellulose 1,4-beta-cellobiosidase (reducing end)</title></g>
+<g id="node1499" class="node nodeEN pw_cellulose-degradation" transform="translate(877.4,1014.4)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.4" target="_blank">3.2.1.4</a></text><title>beta-glucosidase; cellulase; cellulose 1,4-beta-cellobiosidase (non-reducing end); cellulose 1,4-beta-cellobiosidase (reducing end)</title></g>
+<g id="node1497" class="node nodeEN pw_cellulose-degradation" transform="translate(896.8,955.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.91" target="_blank">3.2.1.91</a></text><title>beta-glucosidase; cellulase; cellulose 1,4-beta-cellobiosidase (non-reducing end); cellulose 1,4-beta-cellobiosidase (reducing end)</title></g>
+<g id="node1496" class="node nodeEN pw_cellulose-degradation" transform="translate(812.4,896.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.176" target="_blank">3.2.1.176</a></text><title>beta-glucosidase; cellulase; cellulose 1,4-beta-cellobiosidase (non-reducing end); cellulose 1,4-beta-cellobiosidase (reducing end)</title></g>
+<g id="node10092" class="node nodeEN pw_cellulose-degradation" transform="translate(1025.7,1313.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.21" target="_blank">3.2.1.21</a></text><title>beta-glucosidase</title></g>
+<g id="node1522" class="node nodeEN pw_cellulose-degradation" transform="translate(1420.5,906.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.74" target="_blank">3.2.1.74</a></text><title>glucan 1,4-beta-glucosidase</title></g>
+<g id="node1518" class="node nodeEN pw_cellulose-degradation" transform="translate(1053.0,582.6)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.54" target="_blank">1.14.99.54</a></text><title>lytic cellulose monooxygenase (C1-hydroxylating)</title></g>
+<g id="node10091" class="node nodeEN pw_cellulose-degradation" transform="translate(1055.1,709.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.1.4" target="_blank">3.2.1.4</a></text><title>cellulase</title></g>
+<g id="node11941" class="node nodeEN pw_cellulose-degradation" transform="translate(1182.9,899.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.49" target="_blank">2.4.1.49</a></text><title>cellodextrin phosphorylase</title></g>
+<g id="node1495" class="node nodeEN pw_cellulose-degradation" transform="translate(732.6,962.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.49" target="_blank">2.4.1.49</a></text><title>cellodextrin phosphorylase</title></g>
+<g id="node1486" class="node nodeEN pw_cellulose-degradation" transform="translate(1114.4,1208.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.20" target="_blank">2.4.1.20</a></text><title>cellobiose phosphorylase</title></g>
+<g id="node1400" class="node nodeEN pw_cellulose-degradation" transform="translate(1059.2,147.4)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node1492" class="node nodeEN pw_cellulose-degradation" transform="translate(734.7,1273.7)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.18" target="_blank">1.1.99.18</a></text><title>cellobiose dehydrogenase (acceptor)</title></g>
+<g id="node1507" class="node nodeEN pw_cellulose-degradation" transform="translate(361.7,1403.6)"><rect rx="15" height="30.0" width="40.0" x="-20.0" y="-15.0"/><text dominant-baseline="central">?</text><title>spontaneous reaction</title></g>
+<g id="node1520" class="node nodeEN pw_cellulose-degradation" transform="translate(1136.3,649.2)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.14.99.56" target="_blank">1.14.99.56</a></text><title>lytic cellulose monooxygenase (C4-dehydrogenating)</title></g>
+<g id="node1488" class="node nodeEN pw_cellulose-degradation" transform="translate(1125.6,1330.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.49" target="_blank">2.4.1.49</a></text><title>cellodextrin phosphorylase</title></g>
+<g id="node1504" class="node nodeEN pw_cellulose-degradation" transform="translate(239.6,1134.2)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.1.321" target="_blank">2.4.1.321</a></text><title>cellobionic acid phosphorylase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node1496~0" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(929.0,916.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10092~0" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(976.5,1240.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1522~0" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(1501.2,939.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1518~0" class="node nodeCM pw_cellulose-degradation lid77" transform="translate(950.5,548.6)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node1518~1" class="node nodeCM pw_cellulose-degradation lid9" transform="translate(999.1,514.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1518~2" class="node nodeCM pw_cellulose-degradation lid66" transform="translate(1143.3,615.1)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node1518~3" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(1080.2,650.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node10091~0" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(1122.1,765.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11941~0" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(1112.7,850.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1495~0" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(662.3,913.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1486~0" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(1072.1,1282.0)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1400~0" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(1143.7,169.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1492~0" class="node nodeCM pw_cellulose-degradation lid66" transform="translate(737.2,1178.3)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=66" target="_blank">acceptor</a></text><title></title></g>
+<g id="node1492~1" class="node nodeCM pw_cellulose-degradation lid77" transform="translate(731.9,1382.1)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node1507~0" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(430.5,1349.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1520~0" class="node nodeCM pw_cellulose-degradation lid77" transform="translate(1033.8,616.6)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node1520~1" class="node nodeCM pw_cellulose-degradation lid9" transform="translate(1105.9,581.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node1520~3" class="node nodeCM pw_cellulose-degradation lid1" transform="translate(1169.4,717.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node1488~0" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(1069.4,1395.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node1504~0" class="node nodeCM pw_cellulose-degradation lid16" transform="translate(303.9,1190.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+</g></svg>
+<text x="1412.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring+neato)</text></svg>

@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2284" height="1492" viewBox="0 0 2283.9 1491.5"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="16065.4 7621.1 1102.9 982.8" width="1103" height="983" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="16065.4" y="7621.1" width="1102.9" height="982.8" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_creatinine-degradation" class="pw pw6" x="16105.4" y="7676.6" width="1022.9" height="887.3" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16279.2 7781.9 L 16358.5 7739.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16249.4 7813.9 L 16249.4 7894.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16523.2 7813.9 L 16523.2 7894.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16494.2 7781.9 L 16417.3 7739.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16249.4 8036.1 L 16249.4 8125.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16256.2 8036.1 L 16393.5 8357.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16249.4 8004.1 L 16249.4 7926.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16523.2 8036.1 L 16523.2 8115.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16523.2 8004.1 L 16523.2 7926.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16508.5 8256.0 L 16415.0 8357.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16523.2 8224.0 L 16523.2 8147.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16210.2 8389.7 L 16210.2 8482.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16243.7 8373.7 L 16361.1 8373.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16745.9 8373.5 L 16890.8 8372.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16678.8 8373.7 L 16439.5 8373.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16366.7 8498.1 L 16232.4 8498.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 16400.3 8482.1 L 16400.3 8389.7"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 16539.5 7781.9 L 16574.6 7747.4"/>
+<path class="link" marker-end="url(#in)" d="M 16539.5 7813.9 L 16574.6 7848.5"/>
+<path class="link" marker-start="url(#in)" d="M 16233.1 8004.1 L 16201.9 7973.3"/>
+<path class="link" marker-start="url(#in)" d="M 16507.2 8004.1 L 16476.4 7973.3"/>
+<path class="link" marker-start="url(#in)" d="M 16539.2 8004.1 L 16570.0 7973.3"/>
+<path class="link" marker-end="url(#in)" d="M 16559.6 8030.8 L 16604.8 8044.1"/>
+<path class="link" marker-end="url(#in)" d="M 16508.1 8036.1 L 16475.5 8070.7"/>
+<path class="link" marker-end="url(#in)" d="M 16538.3 8036.1 L 16570.9 8070.7"/>
+<path class="link" marker-start="url(#in)" d="M 16500.7 8224.0 L 16470.7 8202.6"/>
+<path class="link" marker-start="url(#in)" d="M 16545.1 8224.0 L 16571.5 8204.7"/>
+<path class="link" marker-end="url(#in)" d="M 16559.6 8254.1 L 16571.2 8258.6"/>
+<path class="link" marker-end="url(#in)" d="M 16486.8 8253.7 L 16473.5 8258.8"/>
+<path class="link" marker-start="url(#in)" d="M 16226.3 8357.7 L 16257.9 8326.5"/>
+<path class="link" marker-start="url(#in)" d="M 16194.4 8357.7 L 16163.7 8326.5"/>
+<path class="link" marker-end="url(#in)" d="M 16226.6 8389.7 L 16257.7 8420.0"/>
+<path class="link" marker-end="url(#in)" d="M 16194.2 8389.7 L 16164.0 8420.0"/>
+<path class="link" marker-start="url(#in)" d="M 16745.9 8386.8 L 16794.3 8405.6"/>
+<path class="link" marker-start="url(#in)" d="M 16742.0 8357.7 L 16788.6 8332.6"/>
+<path class="link" marker-end="url(#in)" d="M 16678.8 8387.6 L 16635.2 8405.6"/>
+<path class="link" marker-end="url(#in)" d="M 16685.5 8357.7 L 16643.5 8332.6"/>
+<path class="link" marker-start="url(#in)" d="M 16433.9 8489.5 L 16483.6 8476.7"/>
+<path class="link" marker-start="url(#in)" d="M 16370.4 8482.1 L 16352.6 8472.6"/>
+<path class="link" marker-end="url(#in)" d="M 16433.9 8506.8 L 16484.6 8520.1"/>
+<path class="link" marker-end="url(#in)" d="M 16370.8 8514.1 L 16355.4 8522.5"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_creatinine-degradation" transform="translate(16616.8,7676.6)"><rect rx="10" height="31" width="209" x="-104.5" y="-15.5"/><text dominant-baseline="central">creatinine degradation</text></g>
+<g id="node7405" class="node nodeHM pw_creatinine-degradation lid594" transform="translate(16400.3,8373.7)"><rect height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=594" target="_blank">sarcosine</a></text><title>sarcosine</title></g>
+<g id="node7408" class="node nodeHM pw_creatinine-degradation lid433" transform="translate(16249.4,7910.9)"><rect height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=433" target="_blank">Creatine</a></text><title>Creatine</title></g>
+<g id="node7413" class="node nodeHM pw_creatinine-degradation lid2015" transform="translate(16388.3,7723.4)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2015" target="_blank">creatinine</a></text><title>creatinine</title></g>
+<g id="node7425" class="node nodeHM pw_creatinine-degradation lid8149" transform="translate(16523.2,8131.4)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8149" target="_blank">N-carbamoylsarcosine</a></text><title>N-carbamoylsarcosine</title></g>
+<g id="node7428" class="node nodeHM pw_creatinine-degradation lid12616" transform="translate(16523.2,7910.9)"><rect height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12616" target="_blank">N-methylhydantoin</a></text><title>N-methylhydantoin</title></g>
+<g id="node12219" class="node nodeHM pw_creatinine-degradation lid1240" transform="translate(16958.2,8372.0)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1240" target="_blank">N,N-dimethylglycine</a></text><title>N,N-dimethylglycine</title></g>
+<g id="node12220" class="node nodeHM pw_creatinine-degradation lid72" transform="translate(16210.2,8498.1)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title>glycine</title></g>
+<g id="node12221" class="node nodeHM pw_creatinine-degradation lid116" transform="translate(16249.4,8141.9)"><rect height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title>urea</title></g>
+<g id="node7407" class="node nodeEN pw_creatinine-degradation" transform="translate(16249.4,7797.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.10" target="_blank">3.5.2.10</a></text><title>creatininase</title></g>
+<g id="node7420" class="node nodeEN pw_creatinine-degradation" transform="translate(16523.2,7797.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.21" target="_blank">3.5.4.21</a></text><title>creatinine deaminase</title></g>
+<g id="node7418" class="node nodeEN pw_creatinine-degradation" transform="translate(16249.4,8020.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.3" target="_blank">3.5.3.3</a></text><title>creatinase</title></g>
+<g id="node7429" class="node nodeEN pw_creatinine-degradation" transform="translate(16523.2,8020.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.14" target="_blank">3.5.2.14</a></text><title>N-methylhydantoinase (ATP-hydrolysing)</title></g>
+<g id="node7431" class="node nodeEN pw_creatinine-degradation" transform="translate(16523.2,8240.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.59" target="_blank">3.5.1.59</a></text><title>N-carbamoylsarcosine amidase</title></g>
+<g id="node7414" class="node nodeEN pw_creatinine-degradation" transform="translate(16210.2,8373.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.3.1" target="_blank">1.5.3.1</a></text><title>sarcosine oxidase (formaldehyde-forming)</title></g>
+<g id="node7574" class="node nodeEN pw_creatinine-degradation" transform="translate(16712.3,8373.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.8.4" target="_blank">1.5.8.4</a></text><title>dimethylglycine dehydrogenase</title></g>
+<g id="node7416" class="node nodeEN pw_creatinine-degradation" transform="translate(16400.3,8498.1)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.8.3" target="_blank">1.5.8.3</a></text><title>sarcosine dehydrogenase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7404" class="node nodeCM pw_creatinine-degradation lid1126" transform="translate(16148.0,8436.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node7406" class="node nodeCM pw_creatinine-degradation lid2112" transform="translate(16546.0,8536.1)"><rect rx="5" height="30.0" width="240.3" x="-120.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2112" target="_blank">reduced electron-transfer flavoprotein</a></text><title>reduced electron-transfer flavoprotein</title></g>
+<g id="node7409" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(16148.0,8310.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7410" class="node nodeCM pw_creatinine-degradation lid130" transform="translate(16274.1,8436.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title>formaldehyde</title></g>
+<g id="node7411" class="node nodeCM pw_creatinine-degradation lid9" transform="translate(16274.1,8310.5)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node7412" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(16185.7,7957.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7415" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(16330.3,8460.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7417" class="node nodeCM pw_creatinine-degradation lid130" transform="translate(16330.3,8536.1)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title>formaldehyde</title></g>
+<g id="node7419" class="node nodeCM pw_creatinine-degradation lid1601" transform="translate(16546.0,8460.7)"><rect rx="5" height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1601" target="_blank">electron-transfer flavoprotein</a></text><title>electron-transfer flavoprotein</title></g>
+<g id="node7421" class="node nodeCM pw_creatinine-degradation lid27" transform="translate(16590.9,7864.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node7422" class="node nodeCM pw_creatinine-degradation lid4" transform="translate(16586.0,7957.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node7423" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(16460.4,7957.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7424" class="node nodeCM pw_creatinine-degradation lid12" transform="translate(16624.2,8049.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node7426" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(16590.9,7731.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7427" class="node nodeCM pw_creatinine-degradation lid13" transform="translate(16586.0,8086.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node7430" class="node nodeCM pw_creatinine-degradation lid16" transform="translate(16460.4,8086.7)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node7432" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(16593.4,8188.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node7433" class="node nodeCM pw_creatinine-degradation lid12" transform="translate(16451.2,8188.7)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+<g id="node7434" class="node nodeCM pw_creatinine-degradation lid28" transform="translate(16451.2,8267.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node7435" class="node nodeCM pw_creatinine-degradation lid27" transform="translate(16593.4,8267.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node7572" class="node nodeCM pw_creatinine-degradation lid5495" transform="translate(16818.3,8316.6)"><rect rx="5" height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5495" target="_blank">5,6,7,8-tetrahydrofolate</a></text><title>5,6,7,8-tetrahydrofolate</title></g>
+<g id="node7573" class="node nodeCM pw_creatinine-degradation lid401" transform="translate(16616.7,8316.6)"><rect rx="5" height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=401" target="_blank">5,10-methylenetetrahydrofolate</a></text><title>5,10-methylenetetrahydrofolate</title></g>
+<g id="node7575" class="node nodeCM pw_creatinine-degradation lid1601" transform="translate(16835.4,8421.6)"><rect rx="5" height="30.0" width="195.1" x="-97.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1601" target="_blank">electron-transfer flavoprotein</a></text><title>electron-transfer flavoprotein</title></g>
+<g id="node7576" class="node nodeCM pw_creatinine-degradation lid2112" transform="translate(16596.6,8421.6)"><rect rx="5" height="30.0" width="240.3" x="-120.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2112" target="_blank">reduced electron-transfer flavoprotein</a></text><title>reduced electron-transfer flavoprotein</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">BRENDA map</text>
+<svg x="1182.9" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 1101.0 1451.5" width="1101" height="1452" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="1101.0" height="1451.5" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_creatinine-degradation" class="pw " x="0.0" y="0.0" width="1021.0" height="1356.0" style="opacity: 0.5; fill: rgb(73, 125, 191);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 72.4 477.3 L 72.2 643.3"/>
+<path class="link" marker-start="url(#in)" d="M 72.4 445.3 L 72.4 288.7"/>
+<path class="link" marker-start="url(#in)" d="M 203.0 153.6 L 90.0 256.7"/>
+<path class="link" marker-end="url(#in)" d="M 252.5 137.6 L 345.5 137.6"/>
+<path class="link" marker-start="url(#in)" d="M 554.0 222.0 C 521.2 203.3 466.2 171.8 433.5 153.0"/>
+<path class="link" marker-end="url(#in)" d="M 580.5 253.4 L 577.0 414.9"/>
+<path class="link" marker-start="url(#in)" d="M 574.6 644.8 L 576.5 446.9"/>
+<path class="link" marker-end="url(#in)" d="M 574.4 676.8 L 573.5 853.1"/>
+<path class="link" marker-start="url(#in)" d="M 240.2 853.1 L 86.0 675.3"/>
+<path class="link" marker-end="url(#in)" d="M 226.0 879.4 C 195.8 890.5 148.7 907.9 123.1 917.4"/>
+<path class="link" marker-end="url(#in)" d="M 282.8 869.1 L 538.2 869.1"/>
+<path class="link" marker-start="url(#in)" d="M 477.9 1057.1 L 565.2 885.1"/>
+<path class="link" marker-end="url(#in)" d="M 469.8 1089.1 L 469.8 1202.4"/>
+<path class="link" marker-start="url(#in)" d="M 771.7 945.0 L 851.9 945.0"/>
+<path class="link" marker-end="url(#in)" d="M 714.4 932.2 L 608.5 884.8"/>
+<path class="link" marker-start="url(#in)" d="M 573.4 1124.3 C 573.4 1076.8 573.4 932.3 573.4 884.5"/>
+<path class="link" marker-end="url(#in)" d="M 582.7 1155.0 C 601.9 1186.7 645.7 1259.0 664.9 1290.7"/>
+<path class="link" marker-end="url(#in)" d="M 552.3 1155.6 L 485.5 1206.4"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 195.9 121.6 L 163.0 100.3"/>
+<path class="link" marker-end="url(#in)" d="M 224.2 121.6 L 236.5 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 548.9 243.7 L 510.8 251.1"/>
+<path class="link" marker-start="url(#in)" d="M 548.9 225.2 L 514.9 212.2"/>
+<path class="link" marker-end="url(#in)" d="M 612.1 221.4 L 642.9 205.6"/>
+<path class="link" marker-end="url(#in)" d="M 612.7 240.1 L 653.8 243.7"/>
+<path class="link" marker-end="url(#in)" d="M 602.1 253.4 L 636.9 279.5"/>
+<path class="link" marker-start="url(#in)" d="M 542.5 649.6 L 506.1 636.7"/>
+<path class="link" marker-start="url(#in)" d="M 561.7 644.8 L 532.7 608.5"/>
+<path class="link" marker-end="url(#in)" d="M 606.4 672.1 L 641.1 684.3"/>
+<path class="link" marker-end="url(#in)" d="M 587.2 676.8 L 616.2 713.1"/>
+<path class="link" marker-start="url(#in)" d="M 225.4 875.9 L 184.8 885.5"/>
+<path class="link" marker-start="url(#in)" d="M 447.4 1057.1 L 385.5 1013.0"/>
+<path class="link" marker-start="url(#in)" d="M 498.5 1072.2 L 502.9 1072.0"/>
+<path class="link" marker-end="url(#in)" d="M 498.5 1072.4 L 538.9 1071.4"/>
+<path class="link" marker-end="url(#in)" d="M 476.4 1089.1 L 497.2 1139.4"/>
+<path class="link" marker-start="url(#in)" d="M 752.8 929.0 L 801.6 849.1"/>
+<path class="link" marker-start="url(#in)" d="M 771.7 930.7 L 819.6 906.6"/>
+<path class="link" marker-end="url(#in)" d="M 733.3 961.0 L 677.8 1052.0"/>
+<path class="link" marker-end="url(#in)" d="M 714.4 959.4 L 657.8 987.8"/>
+<path class="link" marker-start="url(#in)" d="M 544.7 1129.6 L 504.9 1115.8"/>
+<path class="link" marker-start="url(#in)" d="M 560.5 1123.6 L 531.5 1087.5"/>
+<path class="link" marker-end="url(#in)" d="M 544.7 1146.1 L 522.8 1151.1"/>
+<path class="link" marker-end="url(#in)" d="M 586.2 1155.6 L 616.3 1193.0"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_creatinine-degradation" transform="translate(510.5,0.0)"><rect rx="10" height="31" width="224" x="-111.9" y="-15.5"/><text dominant-baseline="central">creatinine degradation</text></g>
+<g id="node7408" class="node nodeHM pw_creatinine-degradation lid433" transform="translate(72.1,659.3)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=433" target="_blank">Creatine</a></text><title></title></g>
+<g id="node7413" class="node nodeHM pw_creatinine-degradation lid2015" transform="translate(72.4,272.7)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2015" target="_blank">creatinine</a></text><title></title></g>
+<g id="node7428" class="node nodeHM pw_creatinine-degradation lid12616" transform="translate(406.6,137.6)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12616" target="_blank">N-methylhydantoin</a></text><title></title></g>
+<g id="node7425" class="node nodeHM pw_creatinine-degradation lid8149" transform="translate(576.6,430.9)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8149" target="_blank">N-carbamoylsarcosine</a></text><title></title></g>
+<g id="node7405" class="node nodeHM pw_creatinine-degradation lid594" transform="translate(573.4,869.1)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=594" target="_blank">sarcosine</a></text><title></title></g>
+<g id="node12221" class="node nodeHM pw_creatinine-degradation lid116" transform="translate(105.0,924.0)"><rect height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=116" target="_blank">urea</a></text><title></title></g>
+<g id="node12220" class="node nodeHM pw_creatinine-degradation lid72" transform="translate(469.8,1218.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node12219" class="node nodeHM pw_creatinine-degradation lid1240" transform="translate(919.5,945.0)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1240" target="_blank">N,N-dimethylglycine</a></text><title></title></g>
+<g id="node5023" class="node nodeHM pw_creatinine-degradation lid72" transform="translate(674.2,1306.0)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=72" target="_blank">Gly</a></text><title></title></g>
+<g id="node7407" class="node nodeEN pw_creatinine-degradation" transform="translate(72.4,461.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.10" target="_blank">3.5.2.10</a></text><title>creatininase</title></g>
+<g id="node7420" class="node nodeEN pw_creatinine-degradation" transform="translate(220.5,137.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.4.21" target="_blank">3.5.4.21</a></text><title>creatinine deaminase</title></g>
+<g id="node7429" class="node nodeEN pw_creatinine-degradation" transform="translate(580.8,237.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.2.14" target="_blank">3.5.2.14</a></text><title>N-methylhydantoinase (ATP-hydrolysing)</title></g>
+<g id="node7431" class="node nodeEN pw_creatinine-degradation" transform="translate(574.5,660.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.59" target="_blank">3.5.1.59</a></text><title>N-carbamoylsarcosine amidase</title></g>
+<g id="node7418" class="node nodeEN pw_creatinine-degradation" transform="translate(254.1,869.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.3.3" target="_blank">3.5.3.3</a></text><title>creatinase</title></g>
+<g id="node7416" class="node nodeEN pw_creatinine-degradation" transform="translate(469.8,1073.1)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.8.3" target="_blank">1.5.8.3</a></text><title>sarcosine dehydrogenase</title></g>
+<g id="node7574" class="node nodeEN pw_creatinine-degradation" transform="translate(743.0,945.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.8.4" target="_blank">1.5.8.4</a></text><title>dimethylglycine dehydrogenase</title></g>
+<g id="node7414" class="node nodeEN pw_creatinine-degradation" transform="translate(573.4,1139.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.5.3.1" target="_blank">1.5.3.1</a></text><title>sarcosine oxidase (formaldehyde-forming)</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node7420~0" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(147.3,90.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7420~1" class="node nodeCM pw_creatinine-degradation lid27" transform="translate(240.2,52.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node7429~0" class="node nodeCM pw_creatinine-degradation lid4" transform="translate(495.1,254.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node7429~1" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(499.2,206.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7429~2" class="node nodeCM pw_creatinine-degradation lid13" transform="translate(658.6,197.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node7429~3" class="node nodeCM pw_creatinine-degradation lid12" transform="translate(666.2,244.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7429~4" class="node nodeCM pw_creatinine-degradation lid16" transform="translate(649.4,288.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node7431~0" class="node nodeCM pw_creatinine-degradation lid12" transform="translate(493.6,632.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node7431~1" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(520.0,592.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7431~2" class="node nodeCM pw_creatinine-degradation lid27" transform="translate(656.8,689.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node7431~3" class="node nodeCM pw_creatinine-degradation lid28" transform="translate(628.9,729.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node7418~0" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(169.1,889.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7416~0" class="node nodeCM pw_creatinine-degradation lid1601" transform="translate(363.1,997.0)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1601" target="_blank">electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node7416~2" class="node nodeCM pw_creatinine-degradation lid2112" transform="translate(668.0,1068.0)"><rect rx="5" height="30.0" width="256.2" x="-128.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=2112" target="_blank">reduced electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node7574~0" class="node nodeCM pw_creatinine-degradation lid1601" transform="translate(811.3,833.1)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1601" target="_blank">electron-transfer flavoprotein</a></text><title></title></g>
+<g id="node7574~1" class="node nodeCM pw_creatinine-degradation lid5495" transform="translate(851.6,890.6)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5495" target="_blank">5,6,7,8-tetrahydrofolate</a></text><title></title></g>
+<g id="node7574~3" class="node nodeCM pw_creatinine-degradation lid401" transform="translate(625.8,1003.8)"><rect rx="5" height="30.0" width="204.4" x="-102.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=401" target="_blank">5,10-methylenetetrahydrofolate</a></text><title></title></g>
+<g id="node7414~0" class="node nodeCM pw_creatinine-degradation lid9" transform="translate(492.4,1111.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node7414~1" class="node nodeCM pw_creatinine-degradation lid1" transform="translate(518.6,1071.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node7414~2" class="node nodeCM pw_creatinine-degradation lid130" transform="translate(503.8,1155.4)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=130" target="_blank">CH2O</a></text><title></title></g>
+<g id="node7414~3" class="node nodeCM pw_creatinine-degradation lid1126" transform="translate(629.1,1209.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+</g></svg>
+<text x="1192.9" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">from PWL (hints+spring)</text></svg>

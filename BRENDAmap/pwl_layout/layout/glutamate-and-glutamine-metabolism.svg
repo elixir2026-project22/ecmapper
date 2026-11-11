@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-60.0 -75.5 2903.2 2812.2" width="2903" height="2812" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-60.0" y="-75.5" width="2903.2" height="2812.2" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_glutamate-and-glutamine-metabolism" class="pw " x="0.0" y="0.0" width="2783.2" height="2676.7" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-end="url(#in)" d="M 1440.7 501.0 L 1439.9 358.6"/>
+<path class="link" marker-start="url(#in)" d="M 1452.7 532.5 C 1478.4 565.7 1538.2 643.3 1563.8 676.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1439.8 560.2 C 1439.8 518.0 1439.8 400.2 1439.8 357.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1457.9 590.9 C 1484.8 613.9 1535.2 656.9 1560.4 678.5"/>
+<path class="link" marker-start="url(#in)" d="M 1697.8 570.5 C 1671.0 597.0 1616.7 650.8 1590.4 676.7"/>
+<path class="link" marker-end="url(#in)" d="M 1714.9 539.9 C 1716.2 526.3 1718.2 506.5 1719.5 493.0"/>
+<path class="link" marker-start="url(#in)" d="M 1782.2 589.6 C 1732.4 614.1 1629.4 664.9 1590.7 684.0"/>
+<path class="link" marker-end="url(#in)" d="M 1796.2 560.5 C 1779.5 542.1 1751.5 511.3 1734.9 492.9"/>
+<path class="link" marker-start="url(#in)" d="M 1693.6 691.3 L 1591.3 691.4"/>
+<path class="link" marker-end="url(#in)" d="M 1725.2 675.9 C 1724.2 636.5 1722.2 532.2 1721.2 492.9"/>
+<path class="link" marker-end="url(#in)" d="M 1690.8 628.9 C 1660.8 645.1 1614.4 670.3 1590.5 683.2"/>
+<path class="link" marker-start="url(#in)" d="M 1719.0 598.3 C 1719.4 572.2 1720.2 519.4 1720.8 493.2"/>
+<path class="link" marker-start="url(#in)" d="M 1719.6 231.7 L 1720.9 461.7"/>
+<path class="link" marker-end="url(#in)" d="M 1719.5 199.7 L 1719.5 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 1557.1 126.3 L 1684.3 68.5"/>
+<path class="link" marker-end="url(#in)" d="M 1521.4 155.3 L 1446.8 326.6"/>
+<path class="link" marker-start="url(#in)" d="M 1568.9 520.3 C 1542.5 484.0 1477.0 393.9 1450.9 357.9"/>
+<path class="link" marker-start="url(#in)" d="M 1611.4 522.9 C 1640.7 510.8 1683.4 493.2 1705.9 484.0"/>
+<path class="link" marker-end="url(#in)" d="M 1579.7 551.8 L 1576.0 675.4"/>
+<path class="link" marker-start="url(#in)" d="M 1581.4 434.2 C 1580.2 482.2 1577.0 628.4 1575.9 676.1"/>
+<path class="link" marker-end="url(#in)" d="M 1553.7 403.7 C 1524.0 387.8 1478.2 363.2 1454.7 350.6"/>
+<path class="link" marker-end="url(#in)" d="M 1609.9 430.7 C 1639.0 443.0 1683.2 461.7 1706.2 471.4"/>
+<path class="link" marker-start="url(#in)" d="M 1564.7 461.9 C 1537.2 435.6 1481.7 382.6 1455.0 357.0"/>
+<path class="link" marker-start="url(#in)" d="M 1612.0 477.4 C 1641.2 477.5 1683.5 477.6 1705.9 477.7"/>
+<path class="link" marker-end="url(#in)" d="M 1580.5 492.7 C 1579.5 532.2 1576.9 636.8 1575.9 676.2"/>
+<path class="link" marker-start="url(#in)" d="M 1139.0 342.5 L 1424.1 342.5"/>
+<path class="link" marker-end="url(#in)" d="M 1075.1 342.4 L 897.3 342.4"/>
+<path class="link" marker-start="url(#in)" d="M 599.9 446.3 L 786.1 358.4"/>
+<path class="link" marker-end="url(#in)" d="M 552.4 477.3 L 389.8 645.0"/>
+<path class="link" marker-start="url(#in)" d="M 200.3 898.3 L 362.6 677.0"/>
+<path class="link" marker-end="url(#in)" d="M 188.7 930.3 L 190.7 1178.6"/>
+<path class="link" marker-start="url(#in)" d="M 194.0 1467.8 L 191.0 1210.6"/>
+<path class="link" marker-end="url(#in)" d="M 194.2 1499.8 L 195.7 1747.7"/>
+<path class="link" marker-start="url(#in)" d="M 195.8 2009.9 L 195.8 1779.7"/>
+<path class="link" marker-end="url(#in)" d="M 207.2 2041.9 L 350.3 2243.1"/>
+<path class="link" marker-start="url(#in)" d="M 363.3 2446.2 L 361.9 2275.1"/>
+<path class="link" marker-end="url(#in)" d="M 363.5 2478.2 L 363.5 2610.7"/>
+<path class="link" marker-start="url(#in)" d="M 1860.4 981.0 L 1591.3 707.4"/>
+<path class="link" marker-end="url(#in)" d="M 1891.4 1013.0 L 2113.5 1246.9"/>
+<path class="link" marker-start="url(#in)" d="M 2349.9 1421.3 L 2151.0 1278.9"/>
+<path class="link" marker-end="url(#in)" d="M 2372.6 1453.3 L 2378.6 1684.2"/>
+<path class="link" marker-start="url(#in)" d="M 2250.8 1450.3 L 2139.1 1278.9"/>
+<path class="link" marker-end="url(#in)" d="M 2269.3 1482.3 L 2371.0 1684.2"/>
+<path class="link" marker-start="url(#in)" d="M 2622.1 1698.9 C 2575.2 1699.1 2486.1 1699.6 2429.8 1699.9"/>
+<path class="link" marker-end="url(#in)" d="M 2651.4 1714.7 L 2640.1 1805.9"/>
+<path class="link" marker-start="url(#in)" d="M 2521.6 1700.2 L 2430.4 1700.2"/>
+<path class="link" marker-end="url(#in)" d="M 2564.1 1715.6 C 2580.4 1739.0 2611.2 1783.2 2627.4 1806.5"/>
+<path class="link" marker-start="url(#in)" d="M 2504.4 1805.9 L 2398.0 1716.2"/>
+<path class="link" marker-end="url(#in)" d="M 2555.3 1821.9 L 2603.0 1821.9"/>
+<path class="link" marker-start="url(#in)" d="M 1571.1 1005.7 L 1575.3 707.4"/>
+<path class="link" marker-end="url(#in)" d="M 1570.7 1037.7 L 1567.7 1276.4"/>
+<path class="link" marker-start="url(#in)" d="M 1566.0 1509.5 L 1567.4 1308.4"/>
+<path class="link" marker-end="url(#in)" d="M 1565.8 1541.5 L 1565.8 1681.6"/>
+<path class="link" marker-start="url(#in)" d="M 2379.6 1894.1 L 2385.2 2039.9"/>
+<path class="link" marker-end="url(#in)" d="M 2379.0 1862.1 L 2379.0 1716.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1363.3 684.5 L 1559.8 690.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1305.9 683.5 L 1150.8 683.5"/>
+<path class="link" marker-end="url(#in)" d="M 1388.0 919.7 L 1562.4 707.4"/>
+<path class="link" marker-start="url(#in)" d="M 1360.2 951.7 L 1188.7 1139.1"/>
+<path class="link" marker-start="url(#in)" d="M 1022.6 1370.8 L 1162.9 1171.1"/>
+<path class="link" marker-end="url(#in)" d="M 1011.8 1402.8 L 1017.9 1610.4"/>
+<path class="link" marker-start="url(#in)" d="M 1030.5 1847.8 L 1019.2 1642.4"/>
+<path class="link" marker-end="url(#in)" d="M 1032.2 1879.8 L 1041.9 2065.4"/>
+<path class="link" marker-start="url(#in)" d="M 1047.9 2262.9 L 1043.2 2097.4"/>
+<path class="link" marker-end="url(#in)" d="M 1048.3 2294.9 L 1048.3 2426.9"/>
+<path class="link" marker-start="url(#in)" d="M 1911.7 693.8 C 1836.0 693.3 1645.4 691.9 1590.5 691.5"/>
+<path class="link" marker-start="url(#in)" d="M 1974.9 694.0 L 2110.5 694.0"/>
+<path class="link" marker-end="url(#in)" d="M 1972.1 678.0 L 2106.1 604.5"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1469.4 516.3 L 1508.3 515.4"/>
+<path class="link" marker-start="url(#in)" d="M 1469.4 529.1 L 1500.9 542.5"/>
+<path class="link" marker-end="url(#in)" d="M 1452.6 501.0 L 1497.0 441.0"/>
+<path class="link" marker-end="url(#in)" d="M 1412.7 501.0 L 1380.6 482.6"/>
+<path class="link" marker-start="url(#in)" d="M 1385.2 577.6 L 1371.5 578.2"/>
+<path class="link" marker-start="url(#in)" d="M 1411.8 559.5 L 1379.7 541.1"/>
+<path class="link" marker-end="url(#in)" d="M 1494.4 580.1 L 1508.2 581.2"/>
+<path class="link" marker-end="url(#in)" d="M 1467.8 591.5 L 1500.0 609.8"/>
+<path class="link" marker-start="url(#in)" d="M 1725.3 571.2 L 1753.7 609.2"/>
+<path class="link" marker-start="url(#in)" d="M 1733.4 571.2 L 1825.4 644.9"/>
+<path class="link" marker-end="url(#in)" d="M 1700.1 539.2 L 1670.4 503.3"/>
+<path class="link" marker-end="url(#in)" d="M 1709.2 539.2 L 1695.0 485.7"/>
+<path class="link" marker-start="url(#in)" d="M 1816.2 591.8 L 1835.1 641.5"/>
+<path class="link" marker-end="url(#in)" d="M 1804.1 559.8 L 1785.3 510.1"/>
+<path class="link" marker-start="url(#in)" d="M 1757.4 682.0 L 1825.4 662.1"/>
+<path class="link" marker-end="url(#in)" d="M 1713.0 675.3 L 1684.8 639.3"/>
+<path class="link" marker-start="url(#in)" d="M 1704.4 597.7 L 1680.8 571.3"/>
+<path class="link" marker-start="url(#in)" d="M 1718.4 597.7 L 1716.9 529.1"/>
+<path class="link" marker-end="url(#in)" d="M 1741.2 629.7 L 1772.5 652.0"/>
+<path class="link" marker-end="url(#in)" d="M 1728.9 629.7 L 1761.7 681.2"/>
+<path class="link" marker-end="url(#in)" d="M 1715.9 629.7 L 1701.9 709.3"/>
+<path class="link" marker-start="url(#in)" d="M 1742.5 231.7 L 1774.9 254.1"/>
+<path class="link" marker-end="url(#in)" d="M 1742.2 199.7 L 1775.2 176.4"/>
+<path class="link" marker-start="url(#in)" d="M 1525.3 123.3 L 1514.8 69.6"/>
+<path class="link" marker-end="url(#in)" d="M 1531.5 155.3 L 1542.0 209.1"/>
+<path class="link" marker-start="url(#in)" d="M 1558.7 519.8 L 1528.2 497.0"/>
+<path class="link" marker-end="url(#in)" d="M 1602.1 551.8 L 1631.5 573.3"/>
+<path class="link" marker-start="url(#in)" d="M 1610.4 432.5 L 1631.9 442.7"/>
+<path class="link" marker-end="url(#in)" d="M 1559.7 402.8 L 1529.2 380.6"/>
+<path class="link" marker-start="url(#in)" d="M 1558.9 461.3 L 1527.9 438.8"/>
+<path class="link" marker-end="url(#in)" d="M 1606.2 493.3 L 1631.4 509.3"/>
+<path class="link" marker-start="url(#in)" d="M 1118.3 326.4 L 1146.9 285.6"/>
+<path class="link" marker-end="url(#in)" d="M 1095.9 358.4 L 1067.2 399.3"/>
+<path class="link" marker-start="url(#in)" d="M 567.8 445.3 L 567.2 385.1"/>
+<path class="link" marker-end="url(#in)" d="M 536.0 450.0 L 508.1 440.2"/>
+<path class="link" marker-end="url(#in)" d="M 153.4 924.4 L 120.3 933.9"/>
+<path class="link" marker-start="url(#in)" d="M 170.9 1467.8 L 136.0 1443.8"/>
+<path class="link" marker-end="url(#in)" d="M 171.7 1499.8 L 138.7 1523.3"/>
+<path class="link" marker-start="url(#in)" d="M 167.1 2017.4 L 145.9 2011.2"/>
+<path class="link" marker-end="url(#in)" d="M 184.0 2041.9 L 142.2 2098.4"/>
+<path class="link" marker-start="url(#in)" d="M 340.4 2446.2 L 309.4 2424.7"/>
+<path class="link" marker-end="url(#in)" d="M 340.8 2478.2 L 310.8 2499.4"/>
+<path class="link" marker-start="url(#in)" d="M 1844.3 1002.1 L 1804.0 1008.5"/>
+<path class="link" marker-end="url(#in)" d="M 1873.1 1013.0 L 1862.7 1066.8"/>
+<path class="link" marker-start="url(#in)" d="M 2340.3 1434.4 L 2300.9 1430.8"/>
+<path class="link" marker-end="url(#in)" d="M 2404.1 1440.2 L 2443.5 1443.8"/>
+<path class="link" marker-start="url(#in)" d="M 2229.3 1463.4 L 2198.1 1460.5"/>
+<path class="link" marker-end="url(#in)" d="M 2293.2 1469.2 L 2332.5 1472.8"/>
+<path class="link" marker-start="url(#in)" d="M 2642.4 1714.7 L 2593.0 1786.2"/>
+<path class="link" marker-start="url(#in)" d="M 2621.5 1712.1 L 2584.3 1727.6"/>
+<path class="link" marker-end="url(#in)" d="M 2669.0 1682.7 L 2699.9 1650.9"/>
+<path class="link" marker-end="url(#in)" d="M 2685.3 1690.9 L 2724.2 1681.3"/>
+<path class="link" marker-start="url(#in)" d="M 2538.0 1716.2 L 2506.0 1749.2"/>
+<path class="link" marker-start="url(#in)" d="M 2521.6 1708.0 L 2484.4 1717.2"/>
+<path class="link" marker-end="url(#in)" d="M 2568.1 1684.2 L 2602.1 1646.7"/>
+<path class="link" marker-end="url(#in)" d="M 2585.5 1686.6 L 2624.3 1670.1"/>
+<path class="link" marker-start="url(#in)" d="M 2507.8 1837.9 L 2475.8 1870.9"/>
+<path class="link" marker-start="url(#in)" d="M 2491.4 1829.7 L 2454.2 1838.9"/>
+<path class="link" marker-end="url(#in)" d="M 2541.0 1805.9 L 2565.0 1784.2"/>
+<path class="link" marker-end="url(#in)" d="M 2555.3 1810.6 L 2607.0 1792.3"/>
+<path class="link" marker-start="url(#in)" d="M 1594.4 1005.7 L 1631.6 980.3"/>
+<path class="link" marker-end="url(#in)" d="M 1593.1 1037.7 L 1626.0 1061.4"/>
+<path class="link" marker-end="url(#in)" d="M 1594.5 1535.5 L 1632.6 1548.8"/>
+<path class="link" marker-end="url(#in)" d="M 1578.7 1541.5 L 1607.0 1576.8"/>
+<path class="link" marker-start="url(#in)" d="M 2402.8 1894.1 L 2432.0 1913.7"/>
+<path class="link" marker-end="url(#in)" d="M 2343.9 1866.7 L 2315.0 1857.4"/>
+<path class="link" marker-end="url(#in)" d="M 2365.6 1862.1 L 2336.3 1827.3"/>
+<path class="link" marker-end="url(#in)" d="M 982.6 1395.4 L 943.4 1407.2"/>
+<path class="link" marker-start="url(#in)" d="M 1005.7 1847.8 L 973.0 1827.4"/>
+<path class="link" marker-end="url(#in)" d="M 1026.2 2294.9 L 993.1 2318.8"/>
+<path class="link" marker-start="url(#in)" d="M 1938.9 710.0 L 1925.3 762.6"/>
+<path class="link" marker-end="url(#in)" d="M 1942.6 678.0 L 1941.1 622.7"/>
+<path class="link" marker-end="url(#in)" d="M 1952.4 678.0 L 1977.9 634.7"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_glutamate-and-glutamine-metabolism" transform="translate(1391.6,0.0)"><rect rx="10" height="31" width="340" x="-170.2" y="-15.5"/><text dominant-baseline="central">glutamate and glutamine metabolism</text></g>
+<g id="node7734" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid34" transform="translate(1439.8,342.6)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5611" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid41" transform="translate(1575.5,691.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node5365" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid102" transform="translate(1721.0,477.7)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=102" target="_blank">Gln</a></text><title></title></g>
+<g id="node5319" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid881" transform="translate(1719.5,52.5)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=881" target="_blank">2-Oxoglutaramate</a></text><title></title></g>
+<g id="node5638" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid5078" transform="translate(820.1,342.4)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5078" target="_blank">(R)-2-hydroxyglutarate</a></text><title></title></g>
+<g id="node5166" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid52055" transform="translate(374.3,661.0)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=52055" target="_blank">(R)-2-hydroxyglutaryl-CoA</a></text><title></title></g>
+<g id="node5163" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid3204" transform="translate(190.8,1194.6)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3204" target="_blank">Glutaconyl-CoA</a></text><title></title></g>
+<g id="node5159" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid3806" transform="translate(195.8,1763.7)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3806" target="_blank">crotonoyl-CoA</a></text><title></title></g>
+<g id="node5155" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid270" transform="translate(361.7,2259.1)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=270" target="_blank">butanoyl-CoA</a></text><title></title></g>
+<g id="node5151" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid462" transform="translate(363.5,2626.7)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=462" target="_blank">butanoate</a></text><title></title></g>
+<g id="node5616" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid597" transform="translate(2128.7,1262.9)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=597" target="_blank">4-aminobutanoate</a></text><title></title></g>
+<g id="node5618" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid6454" transform="translate(2379.0,1700.2)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6454" target="_blank">4-oxobutanoate</a></text><title></title></g>
+<g id="node5631" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid58" transform="translate(2638.1,1821.9)"><rect height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node5173" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid97" transform="translate(1567.5,1292.4)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=97" target="_blank">Asp</a></text><title></title></g>
+<g id="node5169" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid170" transform="translate(1565.8,1697.6)"><rect height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=170" target="_blank">fumarate</a></text><title></title></g>
+<g id="node5634" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid4210" transform="translate(2385.9,2055.9)"><rect height="30.0" width="126.6" x="-63.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4210" target="_blank">4-hydroxybutanoate</a></text><title></title></g>
+<g id="node5345" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid344" transform="translate(1128.6,683.5)"><rect height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=344" target="_blank">D-Glu</a></text><title></title></g>
+<g id="node5149" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid4538" transform="translate(1174.1,1155.1)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4538" target="_blank">L-threo-3-Me-Asp</a></text><title></title></g>
+<g id="node5146" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid3214" transform="translate(1018.4,1626.4)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3214" target="_blank">mesaconate</a></text><title></title></g>
+<g id="node5143" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid176183" transform="translate(1042.7,2081.4)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=176183" target="_blank">(3S)-citramalate</a></text><title></title></g>
+<g id="node5141" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid47" transform="translate(1048.3,2442.9)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node11015" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid21901" transform="translate(2139.2,694.0)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=21901" target="_blank">tRNAGlx</a></text><title></title></g>
+<g id="node11014" class="node nodeHM pw_glutamate-and-glutamine-metabolism lid63048" transform="translate(2135.2,588.5)"><rect height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=63048" target="_blank">glutamyl-tRNAGlx</a></text><title></title></g>
+<g id="node5410" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1440.7,517.0)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.2" target="_blank">1.4.1.2</a></text><title>glutamate dehydrogenase; glutamate dehydrogenase [NAD(P)+];glutamate dehydrogenase (NADP+)</title></g>
+<g id="node5409" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1439.8,575.5)"><rect rx="15" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.3" target="_blank">1.4.1.3/1.4.1.4</a></text><title>glutamate dehydrogenase; glutamate dehydrogenase [NAD(P)+];glutamate dehydrogenase (NADP+)</title></g>
+<g id="node5364" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1713.4,555.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.1.2" target="_blank">6.3.1.2</a></text><title>glutamine synthetase; glutaminase; glutamin-(asparagin-)ase; glutaminyl-tRNA synthase (glutamine-hydrolysing)</title></g>
+<g id="node5363" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1810.2,575.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.2" target="_blank">3.5.1.2</a></text><title>glutamine synthetase; glutaminase; glutamin-(asparagin-)ase; glutaminyl-tRNA synthase (glutamine-hydrolysing)</title></g>
+<g id="node5362" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1725.5,691.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.38" target="_blank">3.5.1.38</a></text><title>glutamine synthetase; glutaminase; glutamin-(asparagin-)ase; glutaminyl-tRNA synthase (glutamine-hydrolysing)</title></g>
+<g id="node2631" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1718.7,613.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.3.5.7" target="_blank">6.3.5.7</a></text><title>glutamine synthetase; glutaminase; glutamin-(asparagin-)ase; glutaminyl-tRNA synthase (glutamine-hydrolysing)</title></g>
+<g id="node5318" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1719.5,215.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.15" target="_blank">2.6.1.15</a></text><title>glutamine-pyruvate transaminase</title></g>
+<g id="node5317" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1528.4,139.3)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.5.1.3" target="_blank">3.5.1.3</a></text><title>omega-amidase</title></g>
+<g id="node5369" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1580.1,535.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.13" target="_blank">1.4.1.13</a></text><title>glutamate synthase (NADPH)</title></g>
+<g id="node5366" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1581.8,418.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.7.1" target="_blank">1.4.7.1</a></text><title>glutamate synthase (ferredoxin)</title></g>
+<g id="node5368" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1580.9,477.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.1.14" target="_blank">1.4.1.14</a></text><title>glutamate synthase (NADH)</title></g>
+<g id="node5635" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1107.1,342.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.99.2" target="_blank">1.1.99.2</a></text><title>L-2-hydroxyglutarate dehydrogenase</title></g>
+<g id="node5639" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(567.9,461.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.12" target="_blank">2.8.3.12</a></text><title>glutaconate CoA-transferase</title></g>
+<g id="node5165" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(188.6,914.3)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.167" target="_blank">4.2.1.167</a></text><title>(R)-2-hydroxyglutaryl-CoA dehydratase</title></g>
+<g id="node5162" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(194.1,1483.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=7.2.4.5" target="_blank">7.2.4.5</a></text><title>glutaconyl-CoA decarboxylase</title></g>
+<g id="node5158" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(195.8,2025.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.3.8.1" target="_blank">1.3.8.1</a></text><title>short-chain acyl-CoA dehydrogenase</title></g>
+<g id="node5154" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(363.5,2462.2)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.8.3.8" target="_blank">2.8.3.8</a></text><title>acetate CoA-transferase</title></g>
+<g id="node5615" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1876.2,997.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.15" target="_blank">4.1.1.15</a></text><title>Glutamate decarboxylase</title></g>
+<g id="node5617" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(2372.2,1437.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.19" target="_blank">2.6.1.19</a></text><title>4-aminobutyrate-2-oxoglutarate transaminase; 4-aminobutyrate-2-oxoglutarate transaminase</title></g>
+<g id="node3399" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(2261.2,1466.3)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.19" target="_blank">2.6.1.19</a></text><title>4-aminobutyrate-2-oxoglutarate transaminase; 4-aminobutyrate-2-oxoglutarate transaminase</title></g>
+<g id="node5620" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(2653.4,1698.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.24" target="_blank">1.2.1.24</a></text><title>succinate-semialdehyde dehydrogenase (NAD+); succinate-semialdehyde dehydrogenase [NAD(P)+]; succinate-semialdehyde dehydrogenase (NADP+)</title></g>
+<g id="node5139" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(2553.5,1700.2)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.16" target="_blank">1.2.1.16</a></text><title>succinate-semialdehyde dehydrogenase (NAD+); succinate-semialdehyde dehydrogenase [NAD(P)+]; succinate-semialdehyde dehydrogenase (NADP+)</title></g>
+<g id="node2862" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(2523.3,1821.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.2.1.79" target="_blank">1.2.1.79</a></text><title>succinate-semialdehyde dehydrogenase (NAD+); succinate-semialdehyde dehydrogenase [NAD(P)+]; succinate-semialdehyde dehydrogenase (NADP+)</title></g>
+<g id="node5612" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1570.9,1021.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.1" target="_blank">2.6.1.1</a></text><title>aspartate transaminase</title></g>
+<g id="node5172" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1565.8,1525.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.1" target="_blank">4.3.1.1</a></text><title>aspartate ammonia-lyase</title></g>
+<g id="node5619" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(2379.0,1878.1)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.B47" target="_blank">1.1.1.B47</a></text><title>succinate semialdehyde reductase (NADPH)</title></g>
+<g id="node5346" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1334.6,683.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.1.1.3" target="_blank">5.1.1.3</a></text><title>Glutamate racemase</title></g>
+<g id="node5150" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1374.9,935.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.4.99.1" target="_blank">5.4.99.1</a></text><title>Methylaspartate mutase</title></g>
+<g id="node5148" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1011.3,1386.8)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.3.1.2" target="_blank">4.3.1.2</a></text><title>methylaspartate ammonia-lyase</title></g>
+<g id="node5145" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1031.4,1863.8)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.34" target="_blank">4.2.1.34</a></text><title>(S)-2-Methylmalate dehydratase</title></g>
+<g id="node5142" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1048.3,2278.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.3.22" target="_blank">4.1.3.22</a></text><title>citramalate lyase</title></g>
+<g id="node11013" class="node nodeEN pw_glutamate-and-glutamine-metabolism" transform="translate(1943.0,694.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.24" target="_blank">6.1.1.24</a></text><title>glutamate-tRNAGln ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5410~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid7" transform="translate(1527.2,515.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5410~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(1516.6,549.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5410~3" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid27" transform="translate(1364.9,473.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5409~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid5" transform="translate(1349.3,579.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5409~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(1364.0,532.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5409~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid10" transform="translate(1530.4,583.1)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5409~3" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid27" transform="translate(1515.7,618.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5364~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid4" transform="translate(1765.7,625.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5364~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid13" transform="translate(1657.2,487.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node5364~3" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid16" transform="translate(1690.8,469.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5363~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(1779.2,494.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5362~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid27" transform="translate(1841.1,657.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5362~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(1672.3,623.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2631~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid4" transform="translate(1666.4,555.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2631~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid150165" transform="translate(1716.5,513.1)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=150165" target="_blank">Glu-tRNAGln</a></text><title></title></g>
+<g id="node2631~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid13" transform="translate(1788.3,663.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node2631~3" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid16" transform="translate(1771.9,697.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node2631~4" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid9593" transform="translate(1699.1,725.3)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9593" target="_blank">Gln-tRNAGln</a></text><title></title></g>
+<g id="node5318~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid31" transform="translate(1797.9,270.1)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node5318~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid103" transform="translate(1790.9,165.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node5317~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(1511.7,53.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5317~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid27" transform="translate(1545.1,225.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5369~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid5" transform="translate(1506.8,481.0)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5369~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid10" transform="translate(1653.4,589.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5366~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid289" transform="translate(1654.1,453.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=289" target="_blank">Fd_ox</a></text><title></title></g>
+<g id="node5366~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid265" transform="translate(1507.2,364.6)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=265" target="_blank">Fd_red</a></text><title></title></g>
+<g id="node5368~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid8" transform="translate(1508.9,425.0)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5368~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid7" transform="translate(1650.3,521.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5635~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid8" transform="translate(1158.1,269.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5635~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid7" transform="translate(1056.0,415.3)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5639~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid29" transform="translate(567.1,369.1)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node5639~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid47" transform="translate(479.5,430.1)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node5165~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(104.6,938.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5162~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid12" transform="translate(123.5,1435.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5162~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid28" transform="translate(123.0,1534.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5158~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid77" transform="translate(91.8,1995.2)"><rect rx="5" height="30.0" width="113.7" x="-56.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=77" target="_blank">reduced acceptor</a></text><title></title></g>
+<g id="node5158~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1387" transform="translate(130.4,2114.4)"><rect rx="5" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1387" target="_blank">oxidized acceptor</a></text><title></title></g>
+<g id="node5154~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid47" transform="translate(286.3,2408.7)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=47" target="_blank">acetate</a></text><title></title></g>
+<g id="node5154~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid29" transform="translate(288.2,2515.4)"><rect rx="5" height="30.0" width="48.9" x="-24.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29" target="_blank">Ac-CoA</a></text><title></title></g>
+<g id="node5615~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid12" transform="translate(1791.5,1010.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5615~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid28" transform="translate(1859.6,1082.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5617~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid34" transform="translate(2285.2,1429.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5617~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid41" transform="translate(2459.2,1445.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=41" target="_blank">Glu</a></text><title></title></g>
+<g id="node3399~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid31" transform="translate(2166.2,1457.6)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node3399~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid103" transform="translate(2348.2,1474.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=103" target="_blank">Ala</a></text><title></title></g>
+<g id="node5620~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid7" transform="translate(2582.0,1802.2)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5620~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(2568.6,1734.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5620~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid8" transform="translate(2715.4,1634.9)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5620~3" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid12" transform="translate(2736.7,1678.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5139~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid10" transform="translate(2490.4,1765.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5139~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(2468.7,1721.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5139~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid5" transform="translate(2616.6,1630.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5139~3" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid12" transform="translate(2636.8,1664.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node2862~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid10" transform="translate(2460.2,1886.9)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node2862~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(2438.5,1842.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node2862~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid5" transform="translate(2582.8,1768.2)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node2862~3" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid12" transform="translate(2619.4,1787.9)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5612~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid57" transform="translate(1655.1,964.3)"><rect rx="5" height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=57" target="_blank">oxaloacetate</a></text><title></title></g>
+<g id="node5612~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid34" transform="translate(1641.7,1072.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=34" target="_blank">2OG</a></text><title></title></g>
+<g id="node5172~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid27" transform="translate(1648.3,1554.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5172~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid12" transform="translate(1619.5,1592.3)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5619~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid10" transform="translate(2454.2,1928.6)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=10" target="_blank">NADP+</a></text><title></title></g>
+<g id="node5619~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid5" transform="translate(2292.8,1850.3)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5" target="_blank">NADPH</a></text><title></title></g>
+<g id="node5619~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid12" transform="translate(2323.8,1812.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node5148~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid27" transform="translate(927.6,1411.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5145~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid1" transform="translate(957.3,1817.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5142~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid31" transform="translate(971.0,2334.8)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node11013~0" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid4" transform="translate(1921.2,778.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node11013~1" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid30" transform="translate(1940.6,606.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node11013~2" class="node nodeCM pw_glutamate-and-glutamine-metabolism lid17" transform="translate(1987.3,618.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>
