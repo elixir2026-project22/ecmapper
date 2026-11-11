@@ -26,11 +26,15 @@ products; cofactor dots (secondary metabolites) are placed automatically beside 
 
 ## Interconnecting subsystems (global arrangement)
 
-One connected map in a biologically plausible flow, linked through FEW shared hub metabolites, with few crossings.
-- Merge only important metabolites (default list: glucose, G6P, F6P, G3P, PEP, pyruvate, acetyl-CoA, acetaldehyde, oxaloacetate,
+One connected map in a biologically plausible flow, linked through the metabolites the subsystems share, with few crossings.
+Rearrange whole subsystems so that shared metabolites are neighbours; the draft positions are only a hint.
+- Merge the shared non-cofactor metabolites, at least the default hubs (default list: glucose, G6P, F6P, G3P, PEP, pyruvate, acetyl-CoA, acetaldehyde, oxaloacetate,
   6-phosphogluconate; analogous hubs in other maps). Never merge cofactors (ATP, ADP, NAD(H), NADP(H), CoA, H2O, Pi, CO2, O2,
   quinones ...). Only primary nodes of the SAME metabolite can be merged. Use the id of the first node as `keep`.
-- If a merge would force a line longer than ~2500 units or several new crossings, do not merge it.
+- If a merge would force a line longer than ~2500 units or several new crossings even after rearranging, do not merge it.
+- The same reaction drawn in several subsystems: merge its metabolites into the host pathway (the copy becomes a lane).
+- Planarity: if two merged links would close a cycle whose chords interleave (PEP->OAA and malate->pyruvate around the TCA
+  ring), keep one copy (e.g. an anaplerotic malate next to pyruvate) instead of accepting a crossing.
 - Central carbon metabolism default: glycolysis as the central vertical column; pyruvate -> acetyl-CoA below it; TCA ring below that
   (so glycolysis is above TCA); pentose phosphate pathway on one side of upper glycolysis, with the Entner-Doudoroff pathway
   branching at 6-phosphogluconate; the PEP/pyruvate/oxaloacetate block on the side between glycolysis and TCA; fermentations beside

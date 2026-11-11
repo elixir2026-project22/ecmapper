@@ -44,8 +44,8 @@ TOLERANCE = 1e-3
 #: the condensed subsystems of the last start, in OUT_DIR
 CACHE = "gui_cache.pkl"
 #: the options of :mod:`..run` the drawings of the subsystems depend on (steps 1-4)
-DRAWING_OPTIONS = ["keep_subsets", "aside_coverage", "aside_min_matched", "min_anchored", "no_completion", "relayout",
-                   "circle", "relayout_margin", "compactness", "pack", "split"]
+DRAWING_OPTIONS = ["keep_subsets", "keep_borrowed", "aside_coverage", "aside_min_matched", "min_anchored",
+                   "no_completion", "relayout", "circle", "relayout_margin", "compactness", "pack", "split"]
 
 
 USAGE = "give MODEL [OUT_DIR] or PREP.pkl BRENDA_map_reactions.json BRENDA_map.svg OUT_DIR (or nothing: a dialog)"

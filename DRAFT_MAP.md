@@ -38,8 +38,9 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | Option | Default | |
 |---|---|---|
 | `--keep-subsets` | | keep subsystems whose model reactions are a proper subset of another subsystem's (rule A, step 1) |
-| `--aside-coverage F` | 0.9 | set aside subsystems of which ≥ F of the model reactions are in other subsystems (rules B, C); 1: only fully covered ones, > 1: off |
-| `--aside-min-matched F` | 0 (off) | set aside subsystems in which < F of the enzyme nodes have model reactions (rule D) |
+| `--keep-borrowed` | | keep subsystems whose model reactions are all drawn in other subsystems that have model reactions of their own (rule B, step 1) |
+| `--aside-coverage F` | 0.9 | set aside subsystems of which ≥ F of the model reactions are in other subsystems (rules C, D); 1: only fully covered ones, > 1: off |
+| `--aside-min-matched F` | 0 (off) | set aside subsystems in which < F of the enzyme nodes have model reactions (rule E) |
 | `--relayout` | `spring,fdp,dot,neato` | layouts tried in step 3b (see 1.3); `none`: keep the positions of step 3 |
 | `--relayout-margin` | 0.25 | step 3b: `dot` and `neato` (which change the BRENDA drawing) need at least this fraction fewer crossings |
 | `--circle IDS` | | step 3b: comma-separated BRENDA subsystem IDs whose cycle of main metabolites is drawn on a circle (see 1.3), e.g. `citric-acid-cycle` |
@@ -128,21 +129,35 @@ SVG) whose both ends are main metabolites of enzyme nodes with model reactions, 
 
 The BRENDA map draws some steps in several subsystems, so some subsystems only repeat model reactions that are
 drawn elsewhere (e.g. "photosynthesis" repeats the Calvin cycle steps of glycolysis and the pentose phosphate
-pathway). With the model reactions of a subsystem being those of its enzyme nodes after step 1:
+pathway, "C4 and CAM carbon fixation" the anaplerotic steps of gluconeogenesis). With the model reactions of a
+subsystem being those of its enzyme nodes after step 1, and a reaction being a subsystem's *own* if no other
+remaining subsystem draws it:
 
 | Rule | Subsystems | Action | Option |
 |---|---|---|---|
 | A | model reactions are a proper subset of those of one other subsystem | removed | `--keep-subsets` turns it off |
-| B | all model reactions are also in the other remaining subsystems | set aside | `--aside-coverage 1` (only B) |
-| C | ≥ 90% of the model reactions are also in the other remaining subsystems | set aside | `--aside-coverage 0.9` |
-| D | < F of the enzyme nodes have model reactions | set aside | `--aside-min-matched F`, off by default |
+| B | all model reactions are also in other remaining subsystems that have model reactions of their own | removed | `--keep-borrowed` turns it off |
+| C | all model reactions are also in the other remaining subsystems | set aside | `--aside-coverage 1` (only C) |
+| D | ≥ 90% of the model reactions are also in the other remaining subsystems | set aside | `--aside-coverage 0.9` |
+| E | < F of the enzyme nodes have model reactions | set aside | `--aside-min-matched F`, off by default |
 
-B and C go through the subsystems from the smallest (fewest model reactions; ties by ID) and compare each with the
+Rule B asks of each reaction that a subsystem shares with others whether it has a home elsewhere: a subsystem whose
+reactions are all borrowed from subsystems that have reactions of their own adds nothing and is removed, whereas a
+subsystem with one reaction of its own (e.g. photosynthesis in a plant model, with RuBisCO) stays. For e_coli_core,
+photosynthesis (10 reactions, all in glycolysis, gluconeogenesis and the pentose phosphate pathway) and C4 and CAM
+carbon fixation (6 reactions, all in gluconeogenesis, glycolysis, the citric acid cycle and alanine metabolism) are
+removed, while acetyl-CoA biosynthesis (PDH, drawn also in the oxidative decarboxylation of pyruvate, which has no
+other reaction) is only set aside by rule C. Rule B goes through the subsystems from the smallest (fewest model
+reactions; ties by ID) and removes one at a time, as the reactions of a removed subsystem may become the own
+reactions of another one; the result lists for each removed subsystem the subsystems with own reactions that draw
+its reactions (`drawn_in`).
+
+C and D go through the subsystems from the smallest and compare each with the
 subsystems not yet set aside, so of two subsystems with the same reactions one stays. The set-aside subsystems are
 drawn on a separate map, from which they can be copied back. A model reaction drawn only in set-aside subsystems (rule
-C) is a candidate of the completion (step 3) and may be added to the main map.
+D) is a candidate of the completion (step 3) and may be added to the main map.
 
-Rule D is off because the fraction of matched enzyme nodes does not tell redundant subsystems from real ones: the
+Rule E is off because the fraction of matched enzyme nodes does not tell redundant subsystems from real ones: the
 BRENDA subsystems are generic, so for iML1515 tryptophan (16%) and lysine metabolism (18%) have lower fractions than
 photosynthesis (50%).
 
@@ -160,10 +175,11 @@ reaction contains the metabolite with a common key (KEGG compound, normalised na
 - Subsystem: the one with most of the reaction's drawn main metabolites; ties: the subsystem of the reaction's best
   `related` node (same EC number or reaction ID, other metabolites), the BRENDA subsystem in which most model
   reactions of the same model subsystem are drawn, the nearest subsystem.
-- Position: the removed `related` node of the map if there is one in that subsystem, otherwise between the drawn
-  metabolites (free place by spiral search). Main metabolites drawn only in other subsystems get a new node, linked
-  to the nearest drawn node (an inter-pathway link); metabolites not on the map get a new node; cofactors get
-  cofactor nodes. Arrows follow the model's reversibility.
+- Position: the original place of the best `related` node in that subsystem (removed in step 2, or still on the map
+  because another model reaction matches it: then next to it), otherwise between the drawn metabolites (free place
+  by spiral search). Main metabolites drawn only in other subsystems get a new node, linked to the nearest drawn
+  node (an inter-pathway link); metabolites not on the map get a new node; cofactors get cofactor nodes. Arrows
+  follow the model's reversibility.
 - Variants (same drawn nodes, reaction or new metabolite IDs equal apart from digits, e.g. chain lengths
   `PLIPA2E160pp`, `PLIPA2E161pp`) share one node labelled `PLIPA2E160pp (+1)`.
 
@@ -317,11 +333,15 @@ Input: iML1515 from BiGG, matched with vicinity search `propagate`: 714 of 2,375
 
 Redundant subsystems (1.1): rule A removed 11 subsystems with 1–2 model reactions each (e.g. CDP-diacylglycerol
 biosynthesis ⊂ lipid metabolism, glycogen biosynthesis ⊂ degradation of hexoses, ornithine metabolism ⊂ acetate
-fermentation, tropane alkaloid biosynthesis ⊂ polyamine pathway). Rule B set aside acetyl-CoA biosynthesis (the same
-reaction as the oxidative decarboxylation of pyruvate, PDH), butanoate fermentation, aerobic toluene degradation,
-C4 and CAM carbon fixation and the methylaspartate cycle; rule C photosynthesis (12 of 13 reactions in glycolysis,
-gluconeogenesis and the pentose phosphate pathway; the 13th, `FBA3`, is added by the completion, see 4). The
-[set-aside map](BRENDAmap/draft_map_iML1515/set_aside.svg) has these 6 subsystems with 38 model reactions:
+fermentation, tropane alkaloid biosynthesis ⊂ polyamine pathway). Rule B removed butanoate fermentation, aerobic
+toluene degradation, C4 and CAM carbon fixation and the methylaspartate cycle, whose 3–11 reactions are all drawn in
+subsystems with reactions of their own (the methylaspartate cycle's in the citric acid cycle, propionate
+fermentation, alanine metabolism and the CO2 fixation in Crenarchaeota). Rule C set aside acetyl-CoA biosynthesis
+(the same reaction as the oxidative decarboxylation of pyruvate, PDH, which has no other reaction); rule D
+photosynthesis (12 of 13 reactions in glycolysis, gluconeogenesis and the pentose phosphate pathway; the 13th, `FBA3`,
+is added by the completion, see 4). The [set-aside map](BRENDAmap/draft_map_iML1515/set_aside.svg) in
+`BRENDAmap/draft_map_iML1515` is from before rule B and has these 2 subsystems and the 4 removed by rule B, 6
+subsystems with 38 model reactions:
 
 ![Set-aside subsystems of iML1515](BRENDAmap/draft_map_iML1515/figures/set_aside.png)
 
@@ -331,9 +351,9 @@ gluconeogenesis and the pentose phosphate pathway; the 13th, `FBA3`, is added by
 |---|---|---|---|---|---|---|
 | BRENDA map | 193 | 2,848 | 2,818 | 6,257 | – | 234 |
 | step 1, subsystems with model reactions | 115 | 1,943 | 1,876 | 4,138 | 714 | 161 |
-| step 1, rules A–C (6 set aside) | 104 | 1,841 | 1,759 | 3,910 | 714 | 151 |
-| step 2 | 104 | 800 | 941 | 1,603 | 714 | 109 |
-| step 3 | 104 | 1,073 | 1,196 | 1,969 | 1,010 | 205 |
+| step 1, rules A–D (2 set aside) | 100 | 1,768 | 1,687 | 3,751 | 714 | 149 |
+| step 2 (before rule B: 104 subsystems, 6 set aside) | 104 | 800 | 941 | 1,603 | 714 | 109 |
+| step 3 (before rule B) | 104 | 1,073 | 1,196 | 1,969 | 1,010 | 205 |
 | step 5 (hubs ≥ 6), without the set-aside subsystems | 98 | 1,033 | 1,144 | 1,891 | 1,010 | 150 |
 
 Step 3 added 297 of 791 candidate reactions on 273 enzyme nodes, 159 nodes of metabolites not on the map and 96
@@ -367,7 +387,7 @@ Step 4 (sum over the subsystems; in parentheses without step 3b):
 | crossings of all links (incl. cofactors) | 383 (1,466) | 490, +28% (1,803) |
 
 Coverage: 2,712 reactions = 337 boundary + 768 transporters + 1,607 others; the draft map shows 1,010 of the 1,607
-(63%; 713 from the map, 297 added; the same reactions as without rules A–C). By model subsystem e.g. citric acid cycle 14/14, pentose phosphate pathway 12/12,
+(63%; 713 from the map, 297 added; the same reactions as without rules A–D). By model subsystem e.g. citric acid cycle 14/14, pentose phosphate pathway 12/12,
 glycolysis/gluconeogenesis 20/23, histidine 10/10, cysteine 12/14; glycerophospholipid metabolism 74/246 (chain-length
 variants), murein recycling 8/33, murein biosynthesis 0/15, "Transport, Inner Membrane" 1/23.
 
@@ -381,7 +401,7 @@ fumarate 6/3, succinyl-CoA 6/3, acetaldehyde 6/1 — 55 of 205 links.
 
 Inter-pathway link crossings / link–box crossings / area ÷ Σ box area; seed 1, 200,000 moves
 ([arrangement_experiments.json](BRENDAmap/draft_map_iML1515/arrangement_experiments.json); its `fin_hub*` entries are
-the runs with 4 seeds, `x`: with left–right mirroring). These comparisons were made before rules A–C, with all 115
+the runs with 4 seeds, `x`: with left–right mirroring). These comparisons were made before rules A–D, with all 115
 subsystems:
 
 | hubs disconnected | links | original order, compacted | **annealed** | annealed, mirrored (x, y) | arrange, then condense | Graphviz neato | Graphviz fdp | ELK layered | ELK stress |
@@ -394,12 +414,12 @@ subsystems:
 The Graphviz columns use Graphviz's default edge lengths; `--extra graphviz` sets them from the box sizes, which gives 406 / 145 / 2.32 (neato) and 950 / 701 / 2.65 (fdp) for hubs ≥ 6. Over 4 seeds (hubs ≥ 6): 148–173
 crossings without mirroring, 121–138 with left–right mirroring.
 
-Final map (98 subsystems after rules A–C, step 3b): hubs ≥ 6, no mirroring, seed 2: **141 crossings (−84% vs. 878
+Final map (98 subsystems after rules A–D, step 3b): hubs ≥ 6, no mirroring, seed 2: **141 crossings (−84% vs. 878
 in the original order), 79 link–box crossings (−71% vs. 272), area 1.86 × Σ box areas (original order: 2.28), 14,100 ×
 10,640 units**. Seeds 1–4 gave 141–204 crossings and 79–113 link–box crossings; seed 2 has the lowest annealing cost.
 Without step 3b, the same settings gave 192 crossings, 105 link–box crossings and 16,270 × 9,850 units. Before the room
 for model reactions (1.4) was added, seed 3 gave 162 crossings, 83 link–box crossings and 13,820 × 9,950 units; with all
-115 subsystems (no rules A–C, no step 3b) 149 crossings, 87 link–box crossings and 15,870 × 9,350 units.
+115 subsystems (no rules A–D, no step 3b) 149 crossings, 87 link–box crossings and 15,870 × 9,350 units.
 
 | Original arrangement, compacted | Draft map: glycolysis, pentose phosphate and Entner–Doudoroff pathways |
 |---|---|

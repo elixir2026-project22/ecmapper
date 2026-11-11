@@ -28,7 +28,10 @@ _REF = r'^(\d{1,9}|@[A-Za-z][A-Za-z0-9_]{0,30})$'     # node id of the map, or @
 _BIGG = r'^[A-Za-z0-9_.\-()]{1,60}$'
 _C = LIMITS['coord']
 # what the patterns ask for, in the error messages (models write e.g. BiGG ids where node ids belong)
-_FORMATS = {_REF: 'a node id of analysis.md (digits, e.g. "1234", not a BiGG id) or an @alias of "splits"',
+_ALIAS = r'^@[A-Za-z][A-Za-z0-9_]{0,30}$'
+_FORMATS = {_REF: 'a node id of analysis.md (digits, e.g. "1234", not a BiGG id) or an @alias of "splits" (@, a letter, '
+                  'then letters, digits or _, e.g. "@pg3_b")',
+            _ALIAS: '@, a letter, then letters, digits or _ (e.g. "@pg3_b", not "@3pg_b")',
             r'^\d{1,9}$': 'an id of analysis.md (digits, e.g. "1234", not a BiGG id)',
             _ZONE: 'a name of letters, digits, spaces and .,()/+:\'_-', _BIGG: 'a BiGG id',
             _TEXT: 'one line without < and >', _NOTES: 'text without < and >',
@@ -75,7 +78,7 @@ SCHEMA = {
                                      'reactions': {'type': 'array', 'maxItems': 3000, 'items': {'type': 'string', 'pattern': r'^\d{1,9}$'}},
                                      'description': {'type': 'string', 'maxLength': 300, 'pattern': _TEXT}}},
         'split': {'type': 'object', 'additionalProperties': False, 'required': ['alias', 'node', 'reaction'],
-                  'properties': {'alias': {'type': 'string', 'pattern': r'^@[A-Za-z][A-Za-z0-9_]{0,30}$'},
+                  'properties': {'alias': {'type': 'string', 'pattern': _ALIAS},
                                  'node': {'type': 'string', 'pattern': r'^\d{1,9}$'},
                                  'reaction': {'type': 'string', 'pattern': r'^\d{1,9}$'}}},
         'merge': {'type': 'object', 'additionalProperties': False, 'required': ['keep', 'dups'],

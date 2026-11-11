@@ -23,8 +23,9 @@ Input: a *draft* Escher map (auto-generated, with a poor layout, subsystems scat
 Output: a new Escher JSON of the **same reactions** (same ids, stoichiometry, reversibility) in which
 
 1. every subsystem is laid out **by hand** the way a textbook/biochemist would draw it,
-2. the subsystems are arranged in a **biologically plausible flow** and interconnected through a **few** shared
-   key metabolites (hub nodes), with as few crossings as possible,
+2. the subsystems are arranged in a **biologically plausible flow** and interconnected through the metabolites they
+   share (hub nodes) wherever this is possible without crossings; the draft's positions are only a starting hint -
+   move, mirror or rotate whole subsystems to bring shared metabolites together,
 3. all segments are smooth **Bezier curves** (gentle, no overlapping hooks),
 4. reaction labels are not hidden behind lines,
 5. disconnected pieces are **packed** into free space so the overall rectangle is as small as possible.
@@ -74,9 +75,18 @@ write `OUT_DIR/ABORTED.md` explaining which reactions and why, and stop (this is
 
 1. **Subsystems**: use the title labels / suggested subsystems of `analysis.md`; one zone per subsystem. If the map has
    no title labels, name each component after its dominant reactions/pathway (use your biochemical knowledge).
-2. **Global arrangement**: apply section 5 rules. Draw it as a small ASCII sketch with approximate coordinates.
-3. **Hub merges**: the exact list of `merges` entries (from `merge_candidates`, section 5 rule M).
-4. **Per subsystem**: node coordinates (primary nodes only) and, per reaction, the `side`, `shift`, `axis`/`mid` or
+2. **Connectivity plan** (decide this before the arrangement):
+   - a table: shared metabolite (from `merge_candidates`) -> merge / copy + one-line reason (section 5 rule M);
+   - duplicate reactions across subsystems (`duplicate_reaction_bigg_ids`, `parallel_reaction_families` with members in
+     different components; maps such as BRENDA draw the same reaction in several subsystems): merge their metabolites
+     into the host pathway, where the copy becomes a lane or a stacked row and keeps its zone colour. Example: PFL
+     (ethanol fermentation) and the two PDH reactions (oxidative decarboxylation of pyruvate, acetyl CoA biosynthesis) on
+     one stacked pyruvate -> acetyl-CoA lane; the gluconeogenic PEP / pyruvate merged into the glycolytic ones;
+   - small components of one subsystem: join them with each other first, then attach the block to its hub.
+3. **Global arrangement**: apply section 5 rules so that the merge partners of item 2 are neighbours. Draw it as a small
+   ASCII sketch with approximate coordinates.
+4. **Hub merges**: the exact list of `merges` entries (from `merge_candidates`, section 5 rule M).
+5. **Per subsystem**: node coordinates (primary nodes only) and, per reaction, the `side`, `shift`, `axis`/`mid` or
    `arc` you intend, following the recipes in `docs/GUIDE.md` section 4.
 
 ### Step D - Write the spec
@@ -97,15 +107,20 @@ python run.py build --input INPUT_MAP --spec specs/MAP_NAME.layout.json --out OU
 - `SPEC ERROR` -> the message lists every unplaced reaction/primary node; fix them all in one edit.
 - Otherwise read `OUT_DIR/build_N/qa_report.md`. Compute the score
 
-  `score = 1000*validation_errors + crossings + 3*labels_on_lines + 6*labels_on_nodes + 4*label_overlaps + 10*close_nodes`
+  `score = 1000*validation_errors + crossings + 3*labels_on_lines + 6*labels_on_nodes + 4*label_overlaps + 10*close_nodes
+           + 20*extra_components`
+
+  where `extra_components` counts the packed pieces (`Packing` section of `qa_report.md`) that share a non-cofactor
+  metabolite with the main component and are not justified as a deliberate copy in `DECISIONS.md`.
 
   and keep a table `build_N -> score` in `DECISIONS.md`. Edit the spec to reduce the *named* offenders
   (`worst_crossing_pairs`, `labels_on_lines_list`, ... - remedies in `docs/GUIDE.md` section 8) and rebuild.
   Keep the best build. **Stop** when all targets hold, or after 8 builds (then take the best), or when two
-  consecutive builds do not improve the score.
+  consecutive builds do not improve the score. If the score stalls with crossings > 0, try one alternative
+  arrangement (swap or mirror neighbouring subsystems) before splitting nodes.
 
   Targets: `validation_errors = 0`; `labels_on_nodes = 0`; `label_label_overlaps <= 2`; `primary_nodes_closer_than_70 = 0`;
-  `labels_on_lines <= max(6, 7% of reactions)`; `crossings <= 0.35 x number of reactions`.
+  `labels_on_lines <= max(6, 7% of reactions)`; `crossings <= 0.1 x number of reactions`; `extra_components = 0`.
   (Reference for the bundled example with 91 reactions: crossings 26, labels_on_lines 5, all others 0.)
 - After the layout has converged, try `--curv 0.3` and `--curv 0.45` with the final spec (cheap) and keep the curvature
   with the lowest score; ties go to **0.6**.
@@ -127,7 +142,8 @@ and make sure it prints `errors: 0`.
 
 The metrics in `qa_report.md` are the only judge: crossings between reactions, labels lying on lines, labels on
 other nodes, overlapping labels, nodes too close, bounding-box area. Every edit must have a reason taken from the
-named offenders. Do not rearrange a subsystem that has no offenders just because you "feel" it could be nicer.
+named offenders or from the connectivity plan. Do not rearrange a subsystem only because you "feel" it could be
+nicer - but moving subsystems to realise the connectivity plan or to remove named offenders is expected.
 
 ## 5. Decision rules for ambiguity
 
@@ -138,17 +154,28 @@ named offenders. Do not rearrange a subsystem that has no offenders just because
   is above TCA; pentose phosphate pathway on one side of upper glycolysis (branching at G6P, returning F6P and G3P
   through the transketolase/transaldolase boxes) with the Entner-Doudoroff pathway branching at 6-phosphogluconate;
   the PEP/pyruvate/oxaloacetate/malate block on the side between glycolysis and TCA; fermentations beside
-  pyruvate/acetyl-CoA/acetaldehyde; respiratory chain / ATP hub separate (they get packed).
+  pyruvate/acetyl-CoA/acetaldehyde; respiratory chain / ATP hub separate (they get packed). Details that worked:
+  lactate, acetate and ethanol as rows leaving pyruvate / acetyl-CoA to one side; the anaplerotic reactions on the
+  other side, PPC/PPCK curving around to the oxaloacetate of the TCA ring.
   **Other maps**: the largest linear pathway becomes the central vertical column; cycles become rings placed after
-  the pathway that feeds them; branch pathways hang to the side of the metabolite they start from; modules that share
-  no key metabolite are left unconnected and will be packed. Keep the main component roughly as wide as tall (aspect
+  the pathway that feeds them; branch pathways hang to the side of the metabolite they start from; modules connect
+  where they share a metabolite (connectivity plan); only modules that share no non-cofactor metabolite are left
+  unconnected and packed. Keep the main component roughly as wide as tall (aspect
   between 0.7 and 1.4); keep >= 300 units between nodes and >= 600 between subsystems.
 - **Rule M (which metabolites to merge)**: from `merge_candidates` take (a) every entry flagged `default hub` that
-  appears in >= 2 different subsystems, plus (b) at most 4 further non-cofactor metabolites that appear in >= 2
-  subsystems and are used by >= 3 reactions in total. Never merge cofactors (ATP/ADP/AMP/NAD(H)/NADP(H)/CoA/FAD(H2)/
+  appears in >= 2 different subsystems, plus (b) every further non-cofactor metabolite that appears in >= 2
+  subsystems, unless the length limit or the planarity check below rules it out. Never merge cofactors (ATP/ADP/AMP/NAD(H)/NADP(H)/CoA/FAD(H2)/
   H2O/Pi/PPi/CO2/O2/NH4/quinones/flavodoxin...). If merging a candidate would force a line longer than ~2500 units
-  or more than 3 new crossings, do not merge it - keep the copy and rely on the exit label. Use a `splits` entry when one
+  or more than 3 new crossings **after rearranging the subsystems** (never judge this against the draft's
+  positions), do not merge it - keep the copy and rely on the exit label. Keep copies for biomass-like reactions
+  with very many substrates. Use a `splits` entry when one
   metabolite is needed at two places of the same subsystem.
+- **Planarity check**: if merges would close a cycle with chords (typical: PEP and pyruvate on the glycolysis column,
+  oxaloacetate and malate on the TCA ring, PPC from PEP to oxaloacetate and ME from malate to pyruvate), write down
+  the cyclic order of the nodes along the boundary. If two chords interleave, a crossing is unavoidable: keep exactly
+  one copy (e.g. an anaplerotic malate next to pyruvate) and write the decision into `DECISIONS.md`.
+- **Hub sides**: a reaction of a column puts its cofactors on the side opposite to where merged links enter the
+  column; a reverse lane at a hub (PPS next to PYK) goes on the side away from the merged links that leave the hub.
 - **Parallel reactions** (`duplicate_reaction_bigg_ids`, `parallel_reaction_families`): lanes 110-150 apart; variants
   with different cofactor pairs stacked on one lane (recipe in the guide).
 - **Reaction direction**: never flip stoichiometry; reversible reactions show arrowheads on both ends.
@@ -172,7 +199,7 @@ named offenders. Do not rearrange a subsystem that has no offenders just because
 ## 7. Final message (the only text you return, <= 25 lines, no questions)
 
 State: map name and reaction count; subsystems found; which metabolites were merged and which candidates were
-deliberately not merged; node count before -> after (nodes increase because of duplicates); chosen curvature;
+deliberately not merged; number of connected components before -> after; node count before -> after (nodes increase because of duplicates); chosen curvature;
 bounding-box area before -> after packing and final size; the final metrics against the targets; the known weak
 spots (name the reactions from the metrics); that validation errors = 0 and that the map was **not** loaded in Escher;
 and the paths of the deliverables.

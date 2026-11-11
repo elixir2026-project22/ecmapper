@@ -653,3 +653,14 @@ def test_webchat(tmp_path):
     chat.add_results([ToolResult("4.1", "a render", [b"PNG"])])
     assert "1 image(s)" in chat.pending[-1] and chat.images == []
     assert Agent(chat, job.tools()).run("Go on.") == "stopped"  # the transport stopped (no reply)
+
+
+def test_webchat_unfinished(tmp_path):
+    """A reply without calls and end line (a full chat answers with nothing) gets one reminder, not the end."""
+    job = LayoutJob(fake_toolkit(tmp_path), tmp_path / "work", "Central", "", [], {}, lambda path: "accepted")
+    transport = FakeTransport(["Reasoning Process", '{"tool": "list_files", "input": {"path": "."}}\n@@END N@@',
+                               "Thinking", "Still thinking"])
+    chat = WebChat(Connection("w", kind=WEBCHAT, transport="clipboard"), job.system_prompt(), job.tools(), transport)
+    assert Agent(chat, job.tools()).run("Lay out this map.") == "done"
+    assert webchat.UNFINISHED in transport.messages[1] and "[call 2.1: list_files]" in transport.messages[2]
+    assert webchat.UNFINISHED in transport.messages[3] and len(transport.messages) == 4  # once in a row, then done

@@ -8,7 +8,7 @@ line :func:`tail` and the model ends its reply with the line :func:`end_line`,
 so a transport that reads the page knows where the reply is and when it is
 complete (:func:`reply_of`). A transport carries the messages:
 ``exchange(message, number, images, stop)`` returns the reply, with its end
-line if it is complete (None: stopped),
+line if it is complete (None: stopped; a reply without calls and end line gets :data:`UNFINISHED` once),
 and has `images` (True: it can send images);
 the GUI has one that drives a browser and one for copying by hand
 (:mod:`..gui.webchat`).
@@ -111,6 +111,11 @@ CUT_OFF = ("your reply was cut off in this call (the chat's limit of the length 
            "replies short and write a long file in parts (write_file, then write_file with \"append\": true, one part "
            "per reply)")
 
+#: sent once when a reply has neither calls nor its end line (a full chat answers with nothing)
+UNFINISHED = ("Your last reply had no tool calls and did not end with its end line. If you are not done, go on with "
+              "your next calls (keep replies short; read only what you need). If you are done, give your final answer "
+              "and end it with the end line.")
+
 
 def parse(reply: str, number: int, complete: bool = True) -> tuple[str, list[ToolCall]]:
     """The text of a reply (without its calls) and the calls in it (IDs N.1, N.2, …). A call that is not valid JSON
@@ -176,6 +181,7 @@ class WebChat(Chat):
         self.images: list[bytes] = []
         self.names: dict[str, str] = {}  # call ID -> tool
         self.history: list[tuple[str, str]] = []
+        self.reminded = False  # the last reply had neither calls nor its end line (:data:`UNFINISHED` was sent)
 
     def intro(self) -> str:
         tools = "\n".join(f"- {t.name}: {t.description}\n  input (JSON schema): {json.dumps(t.schema)}"
@@ -215,6 +221,12 @@ class WebChat(Chat):
         if text and on_text is not None:
             on_text(text)
         broken = any(c.error for c in calls)  # the reply as it came, for the transcript
+        if not calls and not complete and not self.reminded:
+            # no calls and no end line (taken by hand): an empty answer of a full chat or a reply that stopped early
+            self.reminded = True
+            self.pending.append(f"=== ecmapper ===\n{UNFINISHED}")
+            return Turn(text, [], "pause")
+        self.reminded = False
         return Turn(text, calls, "tool_use" if calls else "end", detail=reply if broken else "")
 
 

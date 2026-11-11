@@ -137,8 +137,8 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
     on_map = {rid for rid, m in data["matches"].items() if m["status"] == "on map"}
     assert {"PYK", "PGI"} <= on_map
     out = tmp_path / "out"
-    # all subsystems with model reactions (rules A-D in test_draft_map_redundant)
-    run_draft_map(prep, out, "--keep-subsets", "--aside-coverage", "2")
+    # all subsystems with model reactions (rules A-E in test_drop_redundant_subsystems)
+    run_draft_map(prep, out, "--keep-subsets", "--keep-borrowed", "--aside-coverage", "2")
 
     stats = json.loads((out / "stats.json").read_text())
     nodes = {
@@ -469,18 +469,46 @@ def test_command_line():
     assert again[:4] == argv[:4] and "--iterations" not in again
 
 
+def test_borrowed_subsystems():
+    """Rule B: subsystems whose reactions all have a home in subsystems with reactions of their own."""
+    f = {k: frozenset(v) for k, v in {
+        "glycolysis": ["FBA", "PGK", "TPI", "ENO"],  # ENO: its own
+        "ppp": ["RPE", "TKT", "GND"],  # GND: its own
+        "gluconeogenesis": ["PPC", "ME2", "PPS"],  # PPS: its own
+        "photosynthesis": ["FBA", "PGK", "TPI", "RPE", "TKT", "PPC", "ME2"],  # all borrowed from the three above
+        "c4": ["PPC", "ME2", "PYK"],  # PYK: its own
+        "pdh1": ["PDH"],  # twins without own reactions: neither is borrowed
+        "pdh2": ["PDH"],
+        "plant": ["FBA", "RBPC"],  # RBPC: its own, stays although FBA is glycolysis'
+    }.items()}
+    assert core.borrowed_subsystems(f) == [("photosynthesis", ["c4", "gluconeogenesis", "glycolysis", "plant", "ppp"])]
+    f["glycolysis"] = f["glycolysis"] | {"PYK"}
+    # now c4 is the smallest borrowed subsystem; photosynthesis follows
+    assert core.borrowed_subsystems(f) == [("c4", ["gluconeogenesis", "glycolysis"]),
+                                           ("photosynthesis", ["gluconeogenesis", "glycolysis", "plant", "ppp"])]
+    # a chain: x borrows from y only once z (a subset of y, borrowed from y and w) is gone
+    g = {k: frozenset(v) for k, v in {"w": ["R4", "R5"], "x": ["R1", "R2"], "y": ["R1", "R2", "R3"],
+                                      "z": ["R3", "R4"]}.items()}
+    assert core.borrowed_subsystems(g) == []  # y has no own reaction while x and z are there
+    del g["z"]
+    assert core.borrowed_subsystems(g) == [("x", ["y"])]
+    assert core.borrowed_subsystems({"a": frozenset(), "b": frozenset(["R1"])}) == []
+
+
 def test_drop_redundant_subsystems():
-    """A: proper subsets are removed; B, C: (mostly) covered subsystems and D: few matched nodes are set aside."""
+    """A: proper subsets and B: borrowed subsystems are removed; C, D: (mostly) covered subsystems and E: few
+    matched nodes are set aside."""
     dm = DraftMap()
     content = {
-        "big": ["R1", "R2", "R3"],
+        "big": ["R1", "R2", "R3", "R4"],
         "subset": ["R1", "R2"],  # A: proper subset of big
-        "equal1": ["R30"],  # equal sets: the first (by name) is set aside (B), the other stays
+        "equal1": ["R30"],  # equal sets: the first (by name) is set aside (C), the other stays
         "equal2": ["R30"],
-        "mixed": ["R1", "R50", *(f"R{i}" for i in range(5, 14))],  # 10 of 11 in big and other (C)
+        "mixed": ["R1", "R50", *(f"R{i}" for i in range(5, 14))],  # 10 of 11 in big and other (D)
         "other": [*(f"R{i}" for i in range(5, 14)), "R40", "R41"],
         "spread": ["R3", "R41", "R60"],  # 2 of 3 elsewhere: stays with coverage 0.9
-        "sparse": ["R20"],  # one of five enzyme nodes matched (D)
+        "borrowed": ["R2", "R41"],  # B: in big, other and spread, which have reactions of their own (R4, R40, R60)
+        "sparse": ["R20"],  # one of five enzyme nodes matched (E)
     }
     for k, rs in content.items():
         dm.subsystems[k] = Subsystem(k, k, "pw1", "#fff", 0, 0, 100, 100)
@@ -489,15 +517,20 @@ def test_drop_redundant_subsystems():
     for i in range(4):
         dm.nodes[f"sparse_{i}"] = Node(f"sparse_{i}", "enzyme", "sparse", 0, 0, 60, 30, "")
     result = core.drop_redundant_subsystems(dm, coverage=0.9, min_matched=0.25)
-    assert [d["subsystem"] for d in result["dropped"]] == ["subset"]
-    assert "subset" not in dm.subsystems and not dm.members("subset")
-    assert {a["subsystem"]: a["rule"] for a in result["set_aside"]} == {"equal1": "B", "mixed": "C", "sparse": "D"}
+    assert [(d["subsystem"], d["rule"]) for d in result["dropped"]] == [("subset", "A"), ("borrowed", "B")]
+    assert result["dropped"][0]["subset_of"] == "big"
+    assert result["dropped"][1]["drawn_in"] == ["big", "other", "spread"]
+    assert not {"subset", "borrowed"} & set(dm.subsystems) and not dm.members("subset") and not dm.members("borrowed")
+    assert {a["subsystem"]: a["rule"] for a in result["set_aside"]} == {"equal1": "C", "mixed": "D", "sparse": "E"}
     assert {k for k, s in dm.subsystems.items() if not s.aside} == {"big", "equal2", "spread", "other"}
     # no rules
     dm2 = DraftMap()
-    dm2.subsystems = {k: Subsystem(k, k, "pw1", "#fff", 0, 0, 100, 100) for k in ("a", "b")}
-    dm2.nodes = {k: Node(k, "enzyme", k, 0, 0, 60, 30, "", reactions=["R1"]) for k in ("a", "b")}
-    assert core.drop_redundant_subsystems(dm2, drop_subsets=False, coverage=2.0) == dict(dropped=[], set_aside=[])
+    dm2.subsystems = {k: Subsystem(k, k, "pw1", "#fff", 0, 0, 100, 100) for k in ("a", "b", "c")}
+    dm2.nodes = {k: Node(k, "enzyme", k, 0, 0, 60, 30, "", reactions=rs)
+                 for k, rs in (("a", ["R1"]), ("b", ["R1", "R2"]), ("c", ["R2"]))}
+    assert core.drop_redundant_subsystems(dm2, drop_subsets=False, coverage=2.0,
+                                          drop_borrowed=False) == dict(dropped=[], set_aside=[])
+    assert set(dm2.subsystems) == {"a", "b", "c"}
 
 
 def test_draft_map_set_aside(sources, model, tmp_path):  # noqa: F811
@@ -514,7 +547,7 @@ def test_draft_map_set_aside(sources, model, tmp_path):  # noqa: F811
         side = pickle.load(f)
     assert set(side.subsystems) == aside and not aside & set(main.subsystems)
     assert not {d["subsystem"] for d in stats["redundant_subsystems"]["dropped"]} & (set(main.subsystems) | aside)
-    # every reaction of a set-aside subsystem is also on the draft map (rule B)
+    # every reaction of a set-aside subsystem is also on the draft map (rule C)
     assert {r for n in side.nodes.values() for r in n.reactions} <= {r for n in main.nodes.values() for r in n.reactions}
     _, body = json.loads((out / "set_aside.escher.json").read_text())
     assert {r["bigg_id"] for r in body["reactions"].values()} == {r for n in side.nodes.values() for r in n.reactions}

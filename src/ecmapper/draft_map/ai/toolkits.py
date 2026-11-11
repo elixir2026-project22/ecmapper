@@ -53,7 +53,10 @@ ESCHER_HANDLAYOUT_KIT = dict(
           "Before writing the spec read toolkit/escher_handlayout/agent/prompts/format_reference.md and "
           "toolkit/docs/GUIDE.md: the spec places metabolite nodes (not reactions) by the numeric node ids of "
           "analysis/analysis.md (strings of digits such as \"66\", never BiGG ids such as \"pyr_c\"); reactions "
-          "too have numeric ids there (only small_titles take a BiGG id). Keep PLAN.md and DECISIONS.md short (tables and lists, no prose). "
+          "too have numeric ids there (only small_titles take a BiGG id). Everything you read stays in the chat, "
+          "which has a limit: instead of reading the worked example completely (Step B), read its first 200 lines "
+          "(its node ids are of another map), and do not read the schema or the toolkit's .py files (GUIDE.md and "
+          "format_reference.md describe the spec; check-spec explains what is wrong). Keep PLAN.md and DECISIONS.md short (tables and lists, no prose). "
           "The deliverables are the files of the work folder; the final map is the best build's *_handlayout.json: "
           "submit that file. The map's subsystems (the title labels) are the zone proposals. The other documents "
           f"(docs/GUIDE.md, schema/, specs/, examples/) are readable as {TOOLKIT}/....",
