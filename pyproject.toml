@@ -20,7 +20,8 @@ dev = ["pytest"]
 # draft maps from the BRENDA map (ecmapper.draft_map); networkx and pygraphviz (2.0 and later ship Graphviz) for the
 # layouts of step 3b
 draft-map = ["numpy", "scipy", "numba", "networkx", "pygraphviz>=2.0", "openpyxl"]
-# PWL descriptions of the BRENDA map (python -m ecmapper.pwl generate); the parser itself needs nothing
+# PWL descriptions of the BRENDA map (python -m ecmapper.pwl generate); the parser itself needs nothing; the
+# layouts (python -m ecmapper.pwl layout) need draft-map as well (scipy, pygraphviz)
 pwl = ["numpy", "networkx"]
 # the GUI for the assignment of the subsystems to the maps (ecmapper.draft_map.gui), with draft-map; needs a Qt binding
 # (PyQt6, PySide6 or PyQt5, e.g. from conda-forge)

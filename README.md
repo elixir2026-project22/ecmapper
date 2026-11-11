@@ -401,6 +401,12 @@ python -m ecmapper.pwl generate BRENDAmap/BRENDA_map_reactions.json BRENDAmap/pw
 python -m ecmapper.pwl motifs BRENDAmap/pwl/subsystems/citric-acid-cycle.pwl
 ```
 
+`python -m ecmapper.pwl layout BRENDAmap/pwl OUT` draws the subsystems again
+from their PWL files in the style of the BRENDA map. It replays the drawing
+hints and refines them with networkx and Graphviz; this needs the `draft-map`
+extra. With `--brenda-json`, it compares the drawings with the originals
+(results in [BRENDAmap/pwl_layout](BRENDAmap/pwl_layout)).
+
 See [PWL.md](PWL.md) for the language, the method and the results.
 
 ## Limitations

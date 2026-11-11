@@ -250,6 +250,13 @@ class _Turtle:
             h = _dir4(d)
         nodes = chain.nodes
         steps = [STEP / 2 if (nodes[k].open or nodes[k + 1].open) else STEP for k in range(len(dirs))]
+        if chain.wrap and chain.wrap[0] == "serpentine":
+            # a turn back in a wrapped chain goes to the next row (the drawn step was mostly sideways)
+            row = _rot(self.head0, "R")
+            for k, link in enumerate(chain.links):
+                if link.turn == "B":
+                    dirs[k] = row
+                    steps[k] = STEP * 0.45
         if first_step is not None and steps:
             steps[0] = first_step
         anchor = next((k for k, node in enumerate(nodes) if self._touches([node])), 0)

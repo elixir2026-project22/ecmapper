@@ -1,0 +1,584 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="4299" height="2342" viewBox="0 0 4298.7 2342.0"><rect width="100%" height="100%" fill="white"/><svg x="0.0" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="17138.5 7609.4 2159.1 1552.3" width="2159" height="1552" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="17138.5" y="7609.4" width="2159.1" height="1552.3" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_methionine-metabolism" class="pw pw3" x="17178.5" y="7664.9" width="2079.1" height="1456.8" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17991.9 7716.9 L 17811.1 7716.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18048.2 7732.9 L 18112.3 7784.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18291.9 7716.9 L 18432.9 7716.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18231.9 7732.9 L 18155.8 7784.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17390.4 7814.4 L 17336.2 7776.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17412.9 7846.4 L 17412.9 7954.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17412.9 7814.4 L 17412.9 7721.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18055.1 7900.7 L 18115.7 7959.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18056.3 7868.7 L 18114.4 7816.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18230.6 7874.1 L 18153.5 7816.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18229.4 7906.1 L 18154.7 7959.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17609.9 7926.1 L 17609.9 7809.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17609.9 7958.1 L 17609.9 8073.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17585.6 7926.1 L 17542.1 7897.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18558.8 7991.3 L 18558.8 8181.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18525.2 7975.3 L 18216.6 7975.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17863.5 8081.1 L 18094.4 8178.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17838.3 8081.1 L 18119.6 8438.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17880.3 8049.1 L 18077.6 7991.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17844.2 8049.1 L 18113.7 7816.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18866.0 8102.4 L 18154.4 8444.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18860.1 8071.7 L 18175.1 7816.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18132.2 8076.9 L 18132.2 7991.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18132.2 8108.9 L 18132.2 8178.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17412.9 8078.4 L 17412.9 7986.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17449.3 8093.6 L 17553.7 8091.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17609.9 8179.4 L 17609.9 8105.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17646.3 8195.3 L 18078.9 8194.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18300.2 8197.1 L 18185.5 8195.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18372.9 8197.5 L 18477.2 8197.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17907.5 8332.6 L 17907.5 8378.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17937.0 8300.6 L 18102.6 8210.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17907.5 8300.6 L 17907.5 8238.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17933.5 8332.6 L 18109.9 8441.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18132.2 8303.5 L 18132.2 8210.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18132.2 8335.5 L 18132.2 8438.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18267.0 8303.5 L 18152.1 8210.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18268.6 8335.5 L 18150.5 8438.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17834.7 8467.0 L 17836.0 8769.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17871.0 8451.5 L 18109.9 8454.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18932.0 8455.3 L 18154.4 8454.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18945.2 8439.3 L 18152.5 7816.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17410.7 8475.1 L 17533.5 8474.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17374.3 8491.2 L 17374.3 8563.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17966.4 8609.5 L 17847.9 8769.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17996.0 8577.5 L 18114.4 8470.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18107.6 8609.5 L 17860.7 8769.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18132.2 8577.5 L 18132.2 8470.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18303.9 8577.5 L 18154.4 8470.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18326.3 8609.5 L 18326.3 8678.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18505.5 8609.5 L 18505.5 8678.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18469.1 8580.0 L 18154.4 8463.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18708.6 8585.3 L 18154.4 8459.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18744.9 8609.5 L 18744.6 8678.8"/>
+<path class="link" marker-start="url(#in)" d="M 18769.5 8577.5 L 18803.2 8555.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17374.3 8667.0 L 17374.3 8595.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17374.3 8699.0 L 17374.3 8769.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17582.6 8785.1 L 17475.7 8785.4"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17618.9 8768.9 L 17617.9 8490.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18403.9 8785.8 L 18558.8 8785.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18133.4 8785.8 L 17926.1 8785.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18896.9 8785.9 L 19044.7 8786.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18829.8 8785.8 L 18699.4 8785.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17374.3 8866.2 L 17374.3 8801.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17374.3 8898.2 L 17374.3 8962.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17878.9 8930.5 L 18122.6 8930.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17836.8 8914.5 L 17836.2 8801.8"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18633.7 8946.5 L 18633.7 9059.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18597.3 8930.5 L 18393.1 8930.5"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17374.3 9059.1 L 17374.3 8994.7"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 17413.5 9075.1 L 17707.1 9075.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18160.1 9075.1 L 17960.7 9075.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 18232.9 9075.1 L 18441.9 9075.1"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-end="url(#in)" d="M 17993.2 7732.9 L 17968.3 7744.3"/>
+<path class="link" marker-end="url(#in)" d="M 18291.9 7732.7 L 18332.9 7750.6"/>
+<path class="link" marker-end="url(#in)" d="M 17387.6 7846.4 L 17362.9 7862.0"/>
+<path class="link" marker-start="url(#in)" d="M 18005.0 7869.6 L 17968.8 7853.3"/>
+<path class="link" marker-end="url(#in)" d="M 18007.9 7900.7 L 17963.9 7923.6"/>
+<path class="link" marker-start="url(#in)" d="M 18215.5 7888.4 L 18176.1 7886.6"/>
+<path class="link" marker-end="url(#in)" d="M 18270.7 7906.1 L 18294.5 7926.4"/>
+<path class="link" marker-end="url(#in)" d="M 17639.8 7926.1 L 17678.4 7905.4"/>
+<path class="link" marker-start="url(#in)" d="M 18558.1 7959.3 L 18556.9 7930.1"/>
+<path class="link" marker-end="url(#in)" d="M 18592.3 7961.6 L 18611.8 7953.7"/>
+<path class="link" marker-start="url(#in)" d="M 18875.8 8070.4 L 18836.8 8043.9"/>
+<path class="link" marker-end="url(#in)" d="M 18899.3 8102.4 L 18899.3 8169.0"/>
+<path class="link" marker-end="url(#in)" d="M 18878.1 8102.4 L 18835.8 8134.3"/>
+<path class="link" marker-start="url(#in)" d="M 18160.8 8076.9 L 18180.7 8065.7"/>
+<path class="link" marker-end="url(#in)" d="M 18095.8 8078.1 L 18077.8 8070.8"/>
+<path class="link" marker-start="url(#in)" d="M 17385.4 8078.4 L 17362.9 8065.3"/>
+<path class="link" marker-end="url(#in)" d="M 17395.4 8110.4 L 17358.1 8144.5"/>
+<path class="link" marker-start="url(#in)" d="M 17583.0 8179.4 L 17558.8 8164.9"/>
+<path class="link" marker-end="url(#in)" d="M 17587.2 8211.4 L 17558.8 8231.5"/>
+<path class="link" marker-end="url(#in)" d="M 17637.1 8211.4 L 17670.7 8231.2"/>
+<path class="link" marker-end="url(#in)" d="M 18342.8 8181.5 L 18363.0 8130.0"/>
+<path class="link" marker-start="url(#in)" d="M 18095.8 8307.1 L 18086.2 8303.8"/>
+<path class="link" marker-end="url(#in)" d="M 18096.1 8335.5 L 18071.5 8346.4"/>
+<path class="link" marker-start="url(#in)" d="M 18323.3 8320.2 L 18374.5 8321.1"/>
+<path class="link" marker-start="url(#in)" d="M 18323.3 8308.6 L 18401.8 8285.1"/>
+<path class="link" marker-start="url(#in)" d="M 17856.0 8467.0 L 17886.8 8490.0"/>
+<path class="link" marker-end="url(#in)" d="M 17824.5 8467.0 L 17808.0 8492.9"/>
+<path class="link" marker-start="url(#in)" d="M 18950.5 8471.3 L 18921.8 8501.9"/>
+<path class="link" marker-start="url(#in)" d="M 18981.1 8471.3 L 19010.7 8501.9"/>
+<path class="link" marker-end="url(#in)" d="M 18983.4 8439.3 L 19008.4 8416.9"/>
+<path class="link" marker-end="url(#in)" d="M 18948.3 8439.3 L 18924.0 8416.9"/>
+<path class="link" marker-start="url(#in)" d="M 17357.1 8459.2 L 17324.9 8429.2"/>
+<path class="link" marker-end="url(#in)" d="M 17357.1 8491.2 L 17324.9 8521.2"/>
+<path class="link" marker-start="url(#in)" d="M 17944.7 8592.2 L 17894.9 8590.1"/>
+<path class="link" marker-start="url(#in)" d="M 17950.4 8577.5 L 17923.0 8561.8"/>
+<path class="link" marker-end="url(#in)" d="M 17973.7 8577.5 L 17968.0 8557.2"/>
+<path class="link" marker-end="url(#in)" d="M 17945.0 8609.5 L 17895.0 8633.6"/>
+<path class="link" marker-start="url(#in)" d="M 18139.1 8609.5 L 18174.0 8690.7"/>
+<path class="link" marker-end="url(#in)" d="M 18120.6 8609.5 L 18062.0 8690.7"/>
+<path class="link" marker-start="url(#in)" d="M 18289.9 8580.2 L 18236.8 8560.7"/>
+<path class="link" marker-end="url(#in)" d="M 18289.9 8596.4 L 18240.0 8600.3"/>
+<path class="link" marker-end="url(#in)" d="M 18303.4 8609.5 L 18263.3 8637.6"/>
+<path class="link" marker-start="url(#in)" d="M 18529.0 8609.5 L 18556.5 8628.3"/>
+<path class="link" marker-end="url(#in)" d="M 18476.7 8609.5 L 18442.9 8628.3"/>
+<path class="link" marker-start="url(#in)" d="M 18722.4 8577.5 L 18691.3 8555.4"/>
+<path class="link" marker-end="url(#in)" d="M 18713.2 8609.5 L 18691.3 8620.5"/>
+<path class="link" marker-end="url(#in)" d="M 18779.6 8609.5 L 18805.5 8621.5"/>
+<path class="link" marker-start="url(#in)" d="M 17357.3 8667.0 L 17324.7 8636.3"/>
+<path class="link" marker-end="url(#in)" d="M 17356.9 8699.0 L 17325.1 8728.4"/>
+<path class="link" marker-start="url(#in)" d="M 17608.3 8800.9 L 17583.8 8837.8"/>
+<path class="link" marker-end="url(#in)" d="M 17630.7 8800.9 L 17656.6 8836.5"/>
+<path class="link" marker-end="url(#in)" d="M 18268.9 8801.8 L 18269.5 8841.0"/>
+<path class="link" marker-start="url(#in)" d="M 18847.6 8801.8 L 18816.3 8833.7"/>
+<path class="link" marker-end="url(#in)" d="M 18879.7 8801.8 L 18909.7 8831.0"/>
+<path class="link" marker-start="url(#in)" d="M 17855.2 8946.5 L 17891.7 8978.2"/>
+<path class="link" marker-end="url(#in)" d="M 17820.9 8946.5 L 17789.3 8978.2"/>
+<path class="link" marker-start="url(#in)" d="M 18649.6 8914.5 L 18680.4 8883.7"/>
+<path class="link" marker-end="url(#in)" d="M 18617.7 8914.5 L 18586.9 8883.7"/>
+<path class="link" marker-end="url(#in)" d="M 17335.1 9076.2 L 17288.7 9077.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_methionine-metabolism" transform="translate(18218.0,7664.9)"><rect rx="10" height="31" width="217" x="-108.5" y="-15.5"/><text dominant-baseline="central">methionine metabolism</text></g>
+<g id="node2599" class="node nodeHM pw_methionine-metabolism lid622" transform="translate(18827.8,8539.6)"><rect height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=622" target="_blank">tRNAMet</a></text><title>tRNAMet</title></g>
+<g id="node2600" class="node nodeHM pw_methionine-metabolism lid44326" transform="translate(18744.5,8694.8)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44326" target="_blank">L-methionyl-tRNAMet</a></text><title>L-methionyl-tRNAMet</title></g>
+<g id="node5002" class="node nodeHM pw_methionine-metabolism lid74" transform="translate(17519.8,7882.7)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title>L-cysteine</title></g>
+<g id="node5194" class="node nodeHM pw_methionine-metabolism lid24" transform="translate(18132.2,7800.3)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title>S-adenosyl-L-methionine</title></g>
+<g id="node5195" class="node nodeHM pw_methionine-metabolism lid36" transform="translate(18132.2,7975.3)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title>S-adenosyl-L-homocysteine</title></g>
+<g id="node5197" class="node nodeHM pw_methionine-metabolism lid1240" transform="translate(17907.5,8222.7)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1240" target="_blank">N,N-dimethylglycine</a></text><title>N,N-dimethylglycine</title></g>
+<g id="node5208" class="node nodeHM pw_methionine-metabolism lid305" transform="translate(18132.2,8194.9)"><rect height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=305" target="_blank">L-homocysteine</a></text><title>L-homocysteine</title></g>
+<g id="node5212" class="node nodeHM pw_methionine-metabolism lid585" transform="translate(17609.9,8089.9)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=585" target="_blank">L-cystathionine</a></text><title>L-Cystathionine</title></g>
+<g id="node5215" class="node nodeHM pw_methionine-metabolism lid224" transform="translate(17412.9,7705.1)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title>succinyl-CoA</title></g>
+<g id="node5216" class="node nodeHM pw_methionine-metabolism lid927" transform="translate(17412.9,7970.7)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=927" target="_blank">O-succinyl-L-homoserine</a></text><title>O-succinyl-L-homoserine</title></g>
+<g id="node5218" class="node nodeHM pw_methionine-metabolism lid1558" transform="translate(18326.3,8694.8)"><rect height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1558" target="_blank">Methanethiol</a></text><title>Methanethiol</title></g>
+<g id="node5219" class="node nodeHM pw_methionine-metabolism lid88" transform="translate(18132.2,8454.7)"><rect height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title>L-methionine</title></g>
+<g id="node5569" class="node nodeHM pw_methionine-metabolism lid4211" transform="translate(17836.1,8785.8)"><rect height="30.0" width="178.1" x="-89.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4211" target="_blank">4-Methylthio-2-oxobutanoate</a></text><title>4-methylthio-2-oxobutanoate</title></g>
+<g id="node5578" class="node nodeHM pw_methionine-metabolism lid5381" transform="translate(18257.8,8930.5)"><rect height="30.0" width="268.5" x="-134.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5381" target="_blank">1,2-dihydroxy-5-(methylthio)pent-1-en-3-one</a></text><title>1,2-dihydroxy-5-(methylthio)pent-1-en-3-one</title></g>
+<g id="node5582" class="node nodeHM pw_methionine-metabolism lid35289" transform="translate(18633.7,9075.1)"><rect height="30.0" width="381.5" x="-190.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35289" target="_blank">(1Z)-2-hydroxy-5-(methylsulfanyl)-3-oxopent-1-en-1-yl phosphate</a></text><title>2-hydroxy-5-(methylthio)-3-oxopent-1-enyl phosphate</title></g>
+<g id="node5583" class="node nodeHM pw_methionine-metabolism lid17836" transform="translate(17833.9,9075.1)"><rect height="30.0" width="251.6" x="-125.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17836" target="_blank">5-(methylthio)-2,3-dioxopentyl phosphate</a></text><title>5-(methylthio)-2,3-dioxopentyl phosphate</title></g>
+<g id="node5588" class="node nodeHM pw_methionine-metabolism lid13824" transform="translate(17374.3,8978.7)"><rect height="30.0" width="155.5" x="-77.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13824" target="_blank">S-methyl-5-thio-Rul 1-P</a></text><title>S-methyl-5-thio-D-ribulose 1-phosphate</title></g>
+<g id="node5591" class="node nodeHM pw_methionine-metabolism lid9834" transform="translate(17374.3,8785.8)"><rect height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9834" target="_blank">S-methyl-5-thio-alpha-D-Rib 1-P</a></text><title>S-methyl-5-thio-alpha-D-ribose 1-phosphate</title></g>
+<g id="node5593" class="node nodeHM pw_methionine-metabolism lid17566" transform="translate(17374.3,8579.1)"><rect height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17566" target="_blank">S-methyl-5-thio-Rib</a></text><title>S-methyl-5-thio-D-ribose</title></g>
+<g id="node5597" class="node nodeHM pw_methionine-metabolism lid1578" transform="translate(17617.9,8474.3)"><rect height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node5779" class="node nodeHM pw_methionine-metabolism lid131010" transform="translate(18629.1,8785.8)"><rect height="30.0" width="138.6" x="-69.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=131010" target="_blank">3-methylthiopropanal</a></text><title>3-methylthiopropanal</title></g>
+<g id="node5783" class="node nodeHM pw_methionine-metabolism lid110176" transform="translate(19120.7,8786.5)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=110176" target="_blank">3-(methylthio)propanol</a></text><title>3-(methylthio)propanol</title></g>
+<g id="node6920" class="node nodeHM pw_methionine-metabolism lid7282" transform="translate(18558.8,8197.4)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7282" target="_blank">S-ribosyl-L-homocysteine</a></text><title>S-ribosyl-L-homocysteine</title></g>
+<g id="node10870" class="node nodeHM pw_methionine-metabolism lid8608" transform="translate(18505.5,8694.8)"><rect height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8608" target="_blank">L-methionine (R)-sulfoxide</a></text><title>L-methionine (R)-sulfoxide</title></g>
+<g id="node11118" class="node nodeHM pw_methionine-metabolism lid6050" transform="translate(17760.6,7716.9)"><rect height="30.0" width="99.0" x="-49.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6050" target="_blank">nicotianamine</a></text><title>nicotianamine</title></g>
+<g id="node12084" class="node nodeHM pw_methionine-metabolism lid1431" transform="translate(18514.5,7716.9)"><rect height="30.0" width="161.2" x="-80.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title>S-adenosylmethioninamine</title></g>
+<g id="node12088" class="node nodeHM pw_methionine-metabolism lid3655" transform="translate(17609.9,7793.1)"><rect height="30.0" width="149.9" x="-74.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3655" target="_blank">O-phospho-L-homoserine</a></text><title>O-phospho-L-homoserine</title></g>
+<g id="node12089" class="node nodeHM pw_methionine-metabolism lid345" transform="translate(17313.7,7760.0)"><rect height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=345" target="_blank">homoserine</a></text><title>L-Homoserine</title></g>
+<g id="node12218" class="node nodeHM pw_methionine-metabolism lid1974" transform="translate(17907.5,8394.3)"><rect height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1974" target="_blank">glycine betaine</a></text><title>glycine betaine</title></g>
+<g id="node11117" class="node nodeEN pw_methionine-metabolism" transform="translate(18028.3,7716.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.43" target="_blank">2.5.1.43</a></text><title>nicotianamine synthase</title></g>
+<g id="node5600" class="node nodeEN pw_methionine-metabolism" transform="translate(18255.5,7716.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.50" target="_blank">4.1.1.50</a></text><title>adenosylmethionine decarboxylase</title></g>
+<g id="node5217" class="node nodeEN pw_methionine-metabolism" transform="translate(17412.9,7830.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.46" target="_blank">2.3.1.46</a></text><title>homoserine O-succinyltransferase</title></g>
+<g id="node6918" class="node nodeEN pw_methionine-metabolism" transform="translate(18038.6,7884.7)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.-" target="_blank">2.1.1.-</a></text><title>unknown</title></g>
+<g id="node5188" class="node nodeEN pw_methionine-metabolism" transform="translate(18251.9,7890.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.37" target="_blank">2.1.1.37</a></text><title>DNA (cytosine-5-)-methyltransferase</title></g>
+<g id="node5003" class="node nodeEN pw_methionine-metabolism" transform="translate(17609.9,7942.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.48" target="_blank">2.5.1.48</a></text><title>cystathionine gamma-synthase</title></g>
+<g id="node6919" class="node nodeEN pw_methionine-metabolism" transform="translate(18558.8,7975.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.9" target="_blank">3.2.2.9</a></text><title>adenosylhomocysteine nucleosidase</title></g>
+<g id="node5196" class="node nodeEN pw_methionine-metabolism" transform="translate(17825.7,8065.1)"><rect rx="15" height="30.0" width="121.6" x="-60.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.10" target="_blank">2.1.1.10/2.1.1.13</a></text><title>homocysteine S-methyltransferase;methionine synthase</title></g>
+<g id="node11132" class="node nodeEN pw_methionine-metabolism" transform="translate(18899.3,8086.4)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.B21" target="_blank">2.5.1.B21</a></text><title>S-adenosyl-L-methionine hydroxide adenosyltransferase</title></g>
+<g id="node5000" class="node nodeEN pw_methionine-metabolism" transform="translate(18132.2,8092.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.13.2.1" target="_blank">3.13.2.1</a></text><title>adenosylhomocysteinase</title></g>
+<g id="node5213" class="node nodeEN pw_methionine-metabolism" transform="translate(17412.9,8094.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.48" target="_blank">2.5.1.48</a></text><title>cystathionine gamma-synthase</title></g>
+<g id="node5209" class="node nodeEN pw_methionine-metabolism" transform="translate(17609.9,8195.4)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+<g id="node6923" class="node nodeEN pw_methionine-metabolism" transform="translate(18336.5,8197.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.21" target="_blank">4.4.1.21</a></text><title>S-ribosylhomocysteine lyase</title></g>
+<g id="node5198" class="node nodeEN pw_methionine-metabolism" transform="translate(17907.5,8316.6)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.5" target="_blank">2.1.1.5</a></text><title>betaine-homocysteine S-methyltransferase</title></g>
+<g id="node5201" class="node nodeEN pw_methionine-metabolism" transform="translate(18132.2,8319.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.13" target="_blank">2.1.1.13</a></text><title>methionine synthase</title></g>
+<g id="node5204" class="node nodeEN pw_methionine-metabolism" transform="translate(18286.9,8319.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.14" target="_blank">2.1.1.14</a></text><title>5-methyltetrahydropteroyltriglutamate-homocysteine S-methyltransferase</title></g>
+<g id="node5568" class="node nodeEN pw_methionine-metabolism" transform="translate(17834.6,8451.0)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.57" target="_blank">2.6.1.57</a></text><title>aromatic-amino-acid transaminase</title></g>
+<g id="node5193" class="node nodeEN pw_methionine-metabolism" transform="translate(18965.5,8455.3)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.6" target="_blank">2.5.1.6</a></text><title>methionine adenosyltransferase</title></g>
+<g id="node5596" class="node nodeEN pw_methionine-metabolism" transform="translate(17374.3,8475.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.16" target="_blank">3.2.2.16</a></text><title>methylthioadenosine nucleosidase</title></g>
+<g id="node5572" class="node nodeEN pw_methionine-metabolism" transform="translate(17978.2,8593.5)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.2" target="_blank">1.4.3.2</a></text><title>L-amino-acid oxidase</title></g>
+<g id="node5784" class="node nodeEN pw_methionine-metabolism" transform="translate(18132.2,8593.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.88" target="_blank">2.6.1.88</a></text><title>methionine transaminase</title></g>
+<g id="node5185" class="node nodeEN pw_methionine-metabolism" transform="translate(18326.3,8593.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.11" target="_blank">4.4.1.11</a></text><title>methionine gamma-lyase</title></g>
+<g id="node10869" class="node nodeEN pw_methionine-metabolism" transform="translate(18505.5,8593.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.4.12" target="_blank">1.8.4.12</a></text><title>peptide-methionine (R)-S-oxide reductase</title></g>
+<g id="node2601" class="node nodeEN pw_methionine-metabolism" transform="translate(18744.9,8593.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.10" target="_blank">6.1.1.10</a></text><title>Methionine-tRNA ligase</title></g>
+<g id="node5592" class="node nodeEN pw_methionine-metabolism" transform="translate(17374.3,8683.0)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.100" target="_blank">2.7.1.100</a></text><title>S-methyl-5-thioribose kinase</title></g>
+<g id="node5605" class="node nodeEN pw_methionine-metabolism" transform="translate(17619.0,8784.9)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.28" target="_blank">2.4.2.28</a></text><title>S-methyl-5&#x27;-thioadenosine phosphorylase</title></g>
+<g id="node5777" class="node nodeEN pw_methionine-metabolism" transform="translate(18268.6,8785.8)"><rect rx="15" height="30.0" width="268.5" x="-134.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.80" target="_blank">4.1.1.80/4.1.1.72/4.1.1.74/4.1.1.43/4.1.1.1</a></text><title>4-hydroxyphenylpyruvate decarboxylase;branched-chain-2-oxoacid decarboxylase;indolepyruvate decarboxylase;phenylpyruvate decarboxylase;pyruvate decarboxylase</title></g>
+<g id="node5780" class="node nodeEN pw_methionine-metabolism" transform="translate(18863.3,8785.8)"><rect rx="15" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.1" target="_blank">1.1.1.1</a></text><title>alcohol dehydrogenase</title></g>
+<g id="node5590" class="node nodeEN pw_methionine-metabolism" transform="translate(17374.3,8882.2)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.23" target="_blank">5.3.1.23</a></text><title>S-methyl-5-thioribose-1-phosphate isomerase</title></g>
+<g id="node5577" class="node nodeEN pw_methionine-metabolism" transform="translate(17836.9,8930.5)"><rect rx="15" height="30.0" width="82.1" x="-41.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.54" target="_blank">1.13.11.54</a></text><title>acireductone dioxygenase [iron(II)-requiring]</title></g>
+<g id="node5581" class="node nodeEN pw_methionine-metabolism" transform="translate(18633.7,8930.5)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.77" target="_blank">3.1.3.77</a></text><title>acireductone synthase</title></g>
+<g id="node5587" class="node nodeEN pw_methionine-metabolism" transform="translate(17374.3,9075.1)"><rect rx="15" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.109" target="_blank">4.2.1.109</a></text><title>methylthioribulose 1-phosphate dehydratase</title></g>
+<g id="node5584" class="node nodeEN pw_methionine-metabolism" transform="translate(18196.5,9075.1)"><rect rx="15" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.77" target="_blank">3.1.3.77</a></text><title>acireductone synthase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node4998" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(18203.0,8053.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node4999" class="node nodeCM pw_methionine-metabolism lid122" transform="translate(18038.6,8054.8)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=122" target="_blank">adenosine</a></text><title>adenosine</title></g>
+<g id="node5001" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(17697.8,7894.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5182" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(18214.6,8552.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5183" class="node nodeCM pw_methionine-metabolism lid390" transform="translate(18212.1,8602.5)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=390" target="_blank">2OBUT</a></text><title>2-Oxobutanoate</title></g>
+<g id="node5184" class="node nodeCM pw_methionine-metabolism lid27" transform="translate(18241.0,8653.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5186" class="node nodeCM pw_methionine-metabolism lid293" transform="translate(18153.9,7885.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=293" target="_blank">DNA</a></text><title>DNA</title></g>
+<g id="node5187" class="node nodeCM pw_methionine-metabolism lid29973" transform="translate(18313.2,7942.4)"><rect rx="5" height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29973" target="_blank">DNA containing 5-methylcytosine</a></text><title>DNA containing 5-methylcytosine</title></g>
+<g id="node5189" class="node nodeCM pw_methionine-metabolism lid17" transform="translate(18906.7,8400.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node5190" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(19026.2,8400.9)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5191" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(19026.2,8517.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5192" class="node nodeCM pw_methionine-metabolism lid4" transform="translate(18906.7,8517.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node5199" class="node nodeCM pw_methionine-metabolism lid235324" transform="translate(18049.2,8356.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=235324" target="_blank">THF</a></text><title>tetrahydrofolate</title></g>
+<g id="node5200" class="node nodeCM pw_methionine-metabolism lid235325" transform="translate(18039.2,8287.8)"><rect rx="5" height="30.0" width="93.4" x="-46.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=235325" target="_blank">5-methyl-THF</a></text><title>5-methyltetrahydrofolate</title></g>
+<g id="node5202" class="node nodeCM pw_methionine-metabolism lid43560" transform="translate(18455.3,8269.1)"><rect rx="5" height="30.0" width="200.7" x="-100.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43560" target="_blank">5-Me-tetrahydropteroyl-(L-Glu)3</a></text><title>5-Methyltetrahydropteroyltri-L-glutamate</title></g>
+<g id="node5203" class="node nodeCM pw_methionine-metabolism lid44870" transform="translate(18504.1,8323.4)"><rect rx="5" height="30.0" width="257.2" x="-128.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44870" target="_blank">5,6,7,8-tetrahydropteroyl-tri-L-glutamate</a></text><title>tetrahydropteroyltri-L-glutamate</title></g>
+<g id="node5205" class="node nodeCM pw_methionine-metabolism lid31" transform="translate(17697.8,8247.2)"><rect rx="5" height="30.0" width="70.8" x="-35.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title>Pyruvate</title></g>
+<g id="node5206" class="node nodeCM pw_methionine-metabolism lid27" transform="translate(17536.5,8247.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5207" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(17536.5,8151.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5210" class="node nodeCM pw_methionine-metabolism lid58" transform="translate(17340.6,8160.5)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">Suc</a></text><title>Succinate</title></g>
+<g id="node5211" class="node nodeCM pw_methionine-metabolism lid74" transform="translate(17340.6,8052.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title>L-cysteine</title></g>
+<g id="node5214" class="node nodeCM pw_methionine-metabolism lid18" transform="translate(17340.6,7876.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title>CoA</title></g>
+<g id="node5570" class="node nodeCM pw_methionine-metabolism lid9381" transform="translate(18180.9,8706.7)"><rect rx="5" height="30.0" width="132.9" x="-66.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9381" target="_blank">a 2-oxo carboxylate</a></text><title>a 2-oxo acid</title></g>
+<g id="node5571" class="node nodeCM pw_methionine-metabolism lid3867" transform="translate(18050.4,8706.7)"><rect rx="5" height="30.0" width="110.3" x="-55.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3867" target="_blank">an L-amino acid</a></text><title>an L-amino acid</title></g>
+<g id="node5573" class="node nodeCM pw_methionine-metabolism lid27" transform="translate(17872.8,8644.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title>NH3</title></g>
+<g id="node5574" class="node nodeCM pw_methionine-metabolism lid1126" transform="translate(17963.5,8541.2)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title>hydrogen peroxide</title></g>
+<g id="node5575" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(17900.8,8549.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5576" class="node nodeCM pw_methionine-metabolism lid9" transform="translate(17875.4,8589.4)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node5579" class="node nodeCM pw_methionine-metabolism lid120" transform="translate(17773.3,8994.2)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title>formate</title></g>
+<g id="node5580" class="node nodeCM pw_methionine-metabolism lid9" transform="translate(17910.0,8994.2)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title>O2</title></g>
+<g id="node5585" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(18570.9,8867.7)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5586" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(18696.4,8867.7)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5589" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(17266.4,9078.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5594" class="node nodeCM pw_methionine-metabolism lid13" transform="translate(17307.7,8744.4)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title>ADP</title></g>
+<g id="node5595" class="node nodeCM pw_methionine-metabolism lid4" transform="translate(17307.7,8620.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node5601" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(17307.7,8413.2)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node5602" class="node nodeCM pw_methionine-metabolism lid144" transform="translate(17307.7,8537.2)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=144" target="_blank">adenine</a></text><title>adenine</title></g>
+<g id="node5604" class="node nodeCM pw_methionine-metabolism lid28" transform="translate(18355.2,7760.3)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node5606" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(17573.2,8853.8)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title>phosphate</title></g>
+<g id="node5607" class="node nodeCM pw_methionine-metabolism lid144" transform="translate(17668.3,8852.5)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=144" target="_blank">adenine</a></text><title>adenine</title></g>
+<g id="node5775" class="node nodeCM pw_methionine-metabolism lid198" transform="translate(17908.2,8506.0)"><rect rx="5" height="30.0" width="104.7" x="-52.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=198" target="_blank">phenylpyruvate</a></text><title>phenylpyruvate</title></g>
+<g id="node5776" class="node nodeCM pw_methionine-metabolism lid104" transform="translate(17797.8,8508.9)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=104" target="_blank">Phe</a></text><title>L-Phenylalanine</title></g>
+<g id="node5778" class="node nodeCM pw_methionine-metabolism lid28" transform="translate(18269.7,8857.0)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title>CO2</title></g>
+<g id="node5781" class="node nodeCM pw_methionine-metabolism lid8" transform="translate(18800.6,8849.7)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title>NADH</title></g>
+<g id="node5782" class="node nodeCM pw_methionine-metabolism lid7" transform="translate(18926.1,8847.0)"><rect rx="5" height="30.0" width="48.2" x="-24.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title>NAD+</title></g>
+<g id="node6921" class="node nodeCM pw_methionine-metabolism lid186624" transform="translate(17933.2,7939.6)"><rect rx="5" height="30.0" width="172.5" x="-86.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186624" target="_blank">methylated methyl acceptor</a></text><title>methylated methyl acceptor</title></g>
+<g id="node6922" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(18556.2,7914.1)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node6924" class="node nodeCM pw_methionine-metabolism lid144" transform="translate(18645.3,7940.0)"><rect rx="5" height="30.0" width="65.1" x="-32.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=144" target="_blank">adenine</a></text><title>adenine</title></g>
+<g id="node6925" class="node nodeCM pw_methionine-metabolism lid186623" transform="translate(17933.2,7837.3)"><rect rx="5" height="30.0" width="183.8" x="-91.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186623" target="_blank">demethylated methyl acceptor</a></text><title>a demethylated methyl acceptor</title></g>
+<g id="node6926" class="node nodeCM pw_methionine-metabolism lid56624" transform="translate(18369.3,8114.0)"><rect rx="5" height="30.0" width="53.8" x="-26.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56624" target="_blank">DHPTD</a></text><title>4,5-dihydroxy-2,3-pentanedione</title></g>
+<g id="node10871" class="node nodeCM pw_methionine-metabolism lid121" transform="translate(18580.0,8644.3)"><rect rx="5" height="30.0" width="87.7" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=121" target="_blank">thioredoxin</a></text><title>thioredoxin</title></g>
+<g id="node10872" class="node nodeCM pw_methionine-metabolism lid476" transform="translate(18414.1,8644.3)"><rect rx="5" height="30.0" width="144.2" x="-72.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=476" target="_blank">thioredoxin disulfide</a></text><title>thioredoxin disulfide</title></g>
+<g id="node10979" class="node nodeCM pw_methionine-metabolism lid4" transform="translate(18669.0,8539.6)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title>ATP</title></g>
+<g id="node10994" class="node nodeCM pw_methionine-metabolism lid30" transform="translate(18669.0,8631.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title>AMP</title></g>
+<g id="node10995" class="node nodeCM pw_methionine-metabolism lid17" transform="translate(18827.8,8631.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title>diphosphate</title></g>
+<g id="node11119" class="node nodeCM pw_methionine-metabolism lid1578" transform="translate(17933.2,7760.3)"><rect rx="5" height="30.0" width="166.8" x="-83.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title>S-methyl-5&#x27;-thioadenosine</title></g>
+<g id="node11133" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(18814.6,8028.8)"><rect rx="5" height="30.0" width="42.5" x="-21.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title>H2O</title></g>
+<g id="node11134" class="node nodeCM pw_methionine-metabolism lid122" transform="translate(18814.6,8150.3)"><rect rx="5" height="30.0" width="76.4" x="-38.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=122" target="_blank">adenosine</a></text><title>adenosine</title></g>
+<g id="node11135" class="node nodeCM pw_methionine-metabolism lid12" transform="translate(18899.3,8185.0)"><rect rx="5" height="30.0" width="36.9" x="-18.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title>H+</title></g>
+</g></svg>
+<text x="10.0" y="28" style="font: bold 22px Arial, sans-serif">BRENDA map</text>
+<svg x="2239.1" y="40" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-40.0 -55.5 2059.6 2302.0" width="2060" height="2302" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+<style>
+polygon.pw, rect.pw{stroke:none;}
+text{font-family:Liberation Sans, Arial, Helvetica, sans-serif;text-anchor:middle;}
+path.link{stroke-width:2;stroke:black;fill:none;}
+path.inter-pw-link{stroke:rgb(90,90,90);stroke-width:4;stroke-dasharray:14 8;opacity:0.55;}
+path.inter-pw-link.added{stroke:rgb(150,60,170);}
+rect{stroke-linejoin:bevel;}
+g.nodeEN rect{fill:rgb(139, 179, 255);stroke:rgb(97, 125, 179);}
+g.nodeEN text{font-size:12px;}
+g.nodeSM rect, g.nodeHM rect{fill:rgb(255, 183, 139);stroke:rgb(179, 128, 97);}
+g.nodeSM text, g.nodeHM text{font-size:12px;}
+g.nodePathwayTitle rect{fill:rgb(255, 255, 255);stroke:rgb(179, 179, 179);}
+g.nodePathwayTitle text{font-size:18px;font-weight:bolder;}
+g.nodeCM rect{fill:rgb(212, 207, 114);stroke:rgb(148, 145, 80);}
+g.nodeCM text{font-size:12px;}
+g.nodeEN.ecm-on-map rect{fill:rgb(110, 200, 100);stroke:rgb(50, 130, 45);stroke-width:3;}
+g.nodeEN.ecm-vicinity rect{fill:rgb(80, 200, 200);stroke:rgb(30, 120, 130);stroke-width:3;}
+g.nodeEN.ecm-added rect{fill:rgb(205, 160, 230);stroke:rgb(130, 60, 160);stroke-width:3;stroke-dasharray:6 3;}
+g.ecm-added-met rect{stroke-dasharray:5 3;stroke-width:2;}
+g.hub rect{stroke:rgb(190, 40, 40);stroke-width:3;}
+text.rxn{font-size:9px;fill:rgb(40,40,40);}
+text.ref{font-size:11px;font-style:italic;fill:rgb(130,50,160);}
+a{fill:inherit;}
+</style>
+<defs><marker style="fill: black;" orient="auto-start-reverse" markerUnits="userSpaceOnUse" markerHeight="10" markerWidth="10" refY="0" refX="8" viewBox="0 -5 10 10" id="in"><path d="M0,-5L10,0L0,5"/></marker></defs>
+<rect x="-40.0" y="-55.5" width="2059.6" height="2302.0" style="fill:white"/>
+<g class="pw-con" id="pw-con">
+<g class="pw-sub"><rect id="pw_methionine-metabolism" class="pw " x="0.0" y="0.0" width="1979.6" height="2206.5" style="opacity: 0.5; fill: rgb(212, 239, 178);"/></g>
+</g>
+<g class="all-link" id="all-link">
+<path class="link" marker-start="url(#in)" d="M 1304.0 916.4 C 1304.4 888.8 1305.0 831.3 1305.4 803.8"/>
+<path class="link" marker-end="url(#in)" d="M 1303.8 947.0 C 1303.8 978.5 1303.6 1050.4 1303.6 1081.9"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1299.0 961.3 C 1300.3 926.0 1303.6 839.3 1305.0 804.0"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1299.1 992.7 L 1302.9 1081.2"/>
+<path class="link" marker-start="url(#in)" d="M 1372.7 875.5 L 1317.9 804.6"/>
+<path class="link" marker-start="url(#in)" d="M 1404.8 875.5 L 1464.6 826.9"/>
+<path class="link" marker-end="url(#in)" d="M 1413.8 891.5 L 1458.6 891.5"/>
+<path class="link" marker-end="url(#in)" d="M 1379.0 906.9 C 1363.8 945.2 1324.8 1043.7 1309.6 1081.8"/>
+<path class="link" marker-start="url(#in)" d="M 1085.3 931.4 L 1072.3 931.3"/>
+<path class="link" marker-start="url(#in)" d="M 1163.4 916.6 C 1194.1 889.0 1258.1 831.3 1288.6 803.8"/>
+<path class="link" marker-end="url(#in)" d="M 1146.2 916.5 C 1145.8 882.8 1144.7 803.1 1144.3 769.6"/>
+<path class="link" marker-end="url(#in)" d="M 1160.9 947.2 C 1190.8 978.6 1259.2 1050.5 1289.1 1081.9"/>
+<path class="link" marker-start="url(#in)" d="M 600.5 356.4 L 505.7 349.4"/>
+<path class="link" marker-end="url(#in)" d="M 664.4 358.7 L 794.6 358.7"/>
+<path class="link" marker-start="url(#in)" d="M 1031.8 564.1 L 863.4 374.7"/>
+<path class="link" marker-end="url(#in)" d="M 1065.1 595.4 C 1113.1 634.0 1238.4 734.7 1286.4 773.3"/>
+<path class="link" marker-end="url(#in)" d="M 1215.7 707.7 L 1287.8 772.6"/>
+<path class="link" marker-start="url(#in)" d="M 1184.2 707.7 L 1157.9 738.3"/>
+<path class="link" marker-start="url(#in)" d="M 1214.0 605.2 C 1199.2 636.7 1165.8 708.0 1151.2 739.2"/>
+<path class="link" marker-end="url(#in)" d="M 1242.4 573.7 L 1297.0 532.4"/>
+<path class="link" marker-start="url(#in)" d="M 1307.3 611.9 C 1309.7 590.7 1314.0 552.8 1316.4 531.7"/>
+<path class="link" marker-end="url(#in)" d="M 1305.5 643.4 L 1305.5 772.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1022.8 799.0 L 1100.6 770.3"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 993.7 824.9 C 993.3 848.1 992.5 892.1 992.0 915.3"/>
+<path class="link" marker-end="url(#in)" d="M 1050.4 838.6 L 1126.3 770.3"/>
+<path class="link" marker-start="url(#in)" d="M 1024.3 869.9 C 1017.2 883.1 1007.1 902.0 1000.0 915.2"/>
+<path class="link" marker-start="url(#in)" d="M 860.8 930.5 L 911.3 930.5"/>
+<path class="link" marker-end="url(#in)" d="M 806.1 914.5 L 732.2 862.8"/>
+<path class="link" marker-start="url(#in)" d="M 832.9 1037.5 L 968.0 946.5"/>
+<path class="link" marker-end="url(#in)" d="M 777.2 1053.5 L 758.7 1053.5"/>
+<path class="link" marker-start="url(#in)" d="M 1117.5 1050.9 L 1008.5 946.5"/>
+<path class="link" marker-end="url(#in)" d="M 1169.3 1073.2 L 1287.8 1094.4"/>
+<path class="link" marker-end="url(#in)" d="M 1102.4 1095.9 L 1002.5 946.5"/>
+<path class="link" marker-start="url(#in)" d="M 1141.2 1109.7 C 1182.2 1106.5 1256.9 1100.8 1288.6 1098.3"/>
+<path class="link" marker-start="url(#in)" d="M 1185.7 1274.5 C 1209.7 1238.3 1269.5 1148.4 1293.4 1112.4"/>
+<path class="link" marker-end="url(#in)" d="M 1164.3 1305.4 C 1146.2 1330.4 1110.6 1379.5 1092.5 1404.5"/>
+<path class="link" marker-start="url(#in)" d="M 1299.6 1291.9 C 1300.4 1253.0 1302.5 1151.5 1303.2 1112.6"/>
+<path class="link" marker-end="url(#in)" d="M 1307.7 1322.8 C 1328.2 1360.2 1380.1 1455.3 1400.5 1492.7"/>
+<path class="link" marker-start="url(#in)" d="M 1399.9 1299.2 C 1380.9 1259.3 1329.8 1152.3 1310.8 1112.4"/>
+<path class="link" marker-end="url(#in)" d="M 1407.3 1329.6 C 1407.7 1365.8 1408.5 1456.5 1408.8 1492.8"/>
+<path class="link" marker-start="url(#in)" d="M 1303.6 1337.2 C 1303.6 1291.9 1303.6 1158.2 1303.6 1112.6"/>
+<path class="link" marker-end="url(#in)" d="M 1313.8 1367.6 C 1334.1 1397.5 1378.7 1463.4 1398.8 1493.1"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1409.0 1701.7 L 1409.0 1524.2"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1417.6 1733.7 L 1506.7 1898.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1586.7 2042.7 L 1524.2 1930.6"/>
+<path class="link" marker-start="url(#in)" marker-end="url(#in)" d="M 1607.0 2074.7 L 1653.9 2140.5"/>
+<path class="link" marker-end="url(#in)" d="M 350.8 1200.9 L 436.5 1265.9"/>
+<path class="link" marker-start="url(#in)" d="M 301.4 1168.9 L 245.9 1137.6"/>
+<path class="link" marker-start="url(#in)" d="M 117.6 1121.6 L 130.6 1121.6"/>
+<path class="link" marker-end="url(#in)" d="M 98.4 1136.8 C 112.7 1153.9 135.8 1181.5 150.1 1198.5"/>
+<path class="link" marker-start="url(#in)" d="M 262.6 1265.9 L 193.6 1229.8"/>
+<path class="link" marker-end="url(#in)" d="M 328.4 1281.9 L 351.2 1281.9"/>
+<path class="link" marker-start="url(#in)" d="M 648.8 1434.1 L 477.8 1297.9"/>
+<path class="link" marker-end="url(#in)" d="M 700.8 1451.4 L 818.2 1456.4"/>
+<path class="link" marker-start="url(#in)" d="M 1109.6 1464.1 L 979.2 1461.5"/>
+<path class="link" marker-end="url(#in)" d="M 1179.9 1464.6 L 1268.0 1464.1"/>
+<path class="link" marker-start="url(#in)" d="M 1564.6 1564.0 C 1529.1 1541.7 1463.9 1501.0 1428.3 1478.7"/>
+<path class="link" marker-end="url(#in)" d="M 1614.3 1595.4 L 1710.4 1656.7"/>
+<path class="link" marker-start="url(#in)" d="M 1768.8 1712.9 L 1748.8 1688.7"/>
+<path class="link" marker-end="url(#in)" d="M 1750.1 1741.0 L 1706.0 1757.9"/>
+<path class="link" marker-start="url(#in)" d="M 1542.3 1643.1 C 1568.5 1671.2 1623.9 1730.7 1649.9 1758.7"/>
+<path class="link" marker-end="url(#in)" d="M 1512.1 1611.7 L 1424.9 1524.2"/>
+<path class="link" marker-start="url(#in)" d="M 1503.1 1194.4 L 1564.2 1217.4"/>
+<path class="link" marker-end="url(#in)" d="M 1439.7 1166.4 L 1319.3 1105.2"/>
+<path class="link" marker-start="url(#in)" d="M 222.5 327.5 L 150.9 242.5"/>
+<path class="link" marker-start="url(#in)" d="M 204.0 341.2 L 147.1 337.0"/>
+<path class="link" marker-end="url(#in)" d="M 267.9 343.5 L 344.7 343.5"/>
+<path class="link" marker-start="url(#in)" d="M 849.2 179.6 L 849.0 68.5"/>
+<path class="link" marker-start="url(#in)" d="M 838.5 179.6 L 794.2 113.5"/>
+<path class="link" marker-end="url(#in)" d="M 849.2 211.6 L 849.2 342.7"/>
+<path class="link" marker-start="url(#in)" d="M 1512.3 1100.1 L 1319.3 1097.4"/>
+<path class="link" marker-start="url(#in)" d="M 1576.2 1100.6 L 1666.6 1100.6"/>
+<path class="link" marker-end="url(#in)" d="M 1576.2 1087.8 L 1654.5 1056.3"/>
+</g>
+<g class="all-linkCof" id="all-linkCof">
+<path class="link" marker-start="url(#in)" d="M 1288.5 915.7 L 1220.2 844.5"/>
+<path class="link" marker-end="url(#in)" d="M 1326.4 947.7 L 1360.5 971.9"/>
+<path class="link" marker-start="url(#in)" d="M 1266.5 963.9 L 1170.9 925.6"/>
+<path class="link" marker-start="url(#in)" d="M 1286.8 960.7 L 1227.2 878.5"/>
+<path class="link" marker-start="url(#in)" d="M 620.4 374.7 L 591.9 412.4"/>
+<path class="link" marker-end="url(#in)" d="M 644.5 342.7 L 678.9 297.2"/>
+<path class="link" marker-start="url(#in)" d="M 1014.1 586.7 L 976.2 594.6"/>
+<path class="link" marker-end="url(#in)" d="M 1075.1 564.1 L 1107.7 546.2"/>
+<path class="link" marker-end="url(#in)" d="M 1078.0 577.2 L 1109.3 574.4"/>
+<path class="link" marker-start="url(#in)" d="M 1166.0 706.0 L 1149.8 713.3"/>
+<path class="link" marker-end="url(#in)" d="M 1212.4 675.7 L 1272.6 609.4"/>
+<path class="link" marker-start="url(#in)" d="M 1192.6 594.9 L 1149.6 602.7"/>
+<path class="link" marker-end="url(#in)" d="M 1215.8 573.7 L 1196.4 516.9"/>
+<path class="link" marker-end="url(#in)" d="M 1273.6 640.1 L 1251.2 648.9"/>
+<path class="link" marker-start="url(#in)" d="M 990.0 793.6 L 966.8 701.6"/>
+<path class="link" marker-end="url(#in)" d="M 993.8 825.6 L 993.3 859.6"/>
+<path class="link" marker-start="url(#in)" d="M 1035.6 870.6 L 1050.8 948.5"/>
+<path class="link" marker-end="url(#in)" d="M 1028.7 838.6 L 1003.9 736.3"/>
+<path class="link" marker-end="url(#in)" d="M 811.6 946.5 L 750.0 1003.5"/>
+<path class="link" marker-end="url(#in)" d="M 792.0 1037.5 L 752.2 1000.2"/>
+<path class="link" marker-start="url(#in)" d="M 1103.5 1082.9 L 1074.2 1098.1"/>
+<path class="link" marker-end="url(#in)" d="M 1151.4 1050.9 L 1184.5 1020.1"/>
+<path class="link" marker-end="url(#in)" d="M 1169.3 1060.8 L 1204.8 1054.6"/>
+<path class="link" marker-start="url(#in)" d="M 1133.0 1095.9 L 1171.3 1065.1"/>
+<path class="link" marker-start="url(#in)" d="M 1141.8 1106.3 L 1183.2 1098.4"/>
+<path class="link" marker-end="url(#in)" d="M 1095.9 1127.9 L 1062.8 1158.6"/>
+<path class="link" marker-end="url(#in)" d="M 1084.4 1117.2 L 1040.8 1125.4"/>
+<path class="link" marker-start="url(#in)" d="M 1169.4 1274.0 L 1150.8 1224.1"/>
+<path class="link" marker-end="url(#in)" d="M 1143.5 1281.1 L 1110.3 1271.9"/>
+<path class="link" marker-end="url(#in)" d="M 1143.5 1299.4 L 1107.3 1310.1"/>
+<path class="link" marker-start="url(#in)" d="M 1268.7 1291.4 L 1231.5 1272.0"/>
+<path class="link" marker-end="url(#in)" d="M 1331.2 1323.4 L 1365.4 1340.6"/>
+<path class="link" marker-start="url(#in)" d="M 1378.5 1311.2 L 1358.2 1309.0"/>
+<path class="link" marker-start="url(#in)" d="M 1382.4 1298.5 L 1352.8 1279.3"/>
+<path class="link" marker-end="url(#in)" d="M 1435.9 1316.8 L 1476.9 1320.1"/>
+<path class="link" marker-end="url(#in)" d="M 1428.7 1330.5 L 1461.6 1354.9"/>
+<path class="link" marker-start="url(#in)" d="M 1271.6 1343.8 L 1257.3 1340.0"/>
+<path class="link" marker-end="url(#in)" d="M 1335.5 1364.4 L 1361.0 1374.0"/>
+<path class="link" marker-end="url(#in)" d="M 1395.4 1733.7 L 1366.0 1768.3"/>
+<path class="link" marker-start="url(#in)" d="M 1566.9 2057.1 L 1525.7 2054.8"/>
+<path class="link" marker-end="url(#in)" d="M 1588.8 2074.7 L 1567.4 2124.5"/>
+<path class="link" marker-start="url(#in)" d="M 297.8 1197.4 L 262.3 1211.2"/>
+<path class="link" marker-end="url(#in)" d="M 361.6 1172.5 L 388.5 1162.1"/>
+<path class="link" marker-start="url(#in)" d="M 78.5 1105.6 L 57.0 1058.0"/>
+<path class="link" marker-end="url(#in)" d="M 96.3 1137.6 L 113.7 1163.8"/>
+<path class="link" marker-start="url(#in)" d="M 275.4 1297.9 L 244.0 1326.2"/>
+<path class="link" marker-end="url(#in)" d="M 299.7 1297.9 L 319.5 1346.9"/>
+<path class="link" marker-end="url(#in)" d="M 1155.8 1480.9 L 1183.3 1520.8"/>
+<path class="link" marker-start="url(#in)" d="M 1776.8 1712.9 L 1757.7 1654.7"/>
+<path class="link" marker-end="url(#in)" d="M 1750.1 1728.7 L 1708.7 1728.5"/>
+<path class="link" marker-start="url(#in)" d="M 1523.1 1643.7 L 1515.8 1667.7"/>
+<path class="link" marker-end="url(#in)" d="M 1489.6 1633.7 L 1464.0 1637.6"/>
+<path class="link" marker-start="url(#in)" d="M 1474.3 1198.4 L 1487.0 1264.9"/>
+<path class="link" marker-end="url(#in)" d="M 1440.9 1198.4 L 1401.5 1219.2"/>
+<path class="link" marker-end="url(#in)" d="M 253.0 327.5 L 283.9 298.5"/>
+<path class="link" marker-end="url(#in)" d="M 878.8 211.6 L 912.1 229.6"/>
+<path class="link" marker-start="url(#in)" d="M 1539.7 1116.6 L 1525.4 1167.5"/>
+<path class="link" marker-end="url(#in)" d="M 1544.9 1084.6 L 1547.1 1029.3"/>
+<path class="link" marker-end="url(#in)" d="M 1555.1 1084.6 L 1582.5 1044.4"/>
+</g>
+<g class="all-node" id="all-node">
+<g class="node nodePathwayTitle pw_methionine-metabolism" transform="translate(989.8,0.0)"><rect rx="10" height="31" width="214" x="-107.1" y="-15.5"/><text dominant-baseline="central">methionine metabolism</text></g>
+<g id="node5208" class="node nodeHM pw_methionine-metabolism lid305" transform="translate(1305.5,788.6)"><rect height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=305" target="_blank">L-homocysteine</a></text><title></title></g>
+<g id="node5219" class="node nodeHM pw_methionine-metabolism lid88" transform="translate(1303.6,1097.2)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=88" target="_blank">Met</a></text><title></title></g>
+<g id="node12218" class="node nodeHM pw_methionine-metabolism lid1974" transform="translate(1484.2,810.9)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1974" target="_blank">glycine betaine</a></text><title></title></g>
+<g id="node5197" class="node nodeHM pw_methionine-metabolism lid1240" transform="translate(1526.2,891.5)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1240" target="_blank">N,N-dimethylglycine</a></text><title></title></g>
+<g id="node5194" class="node nodeHM pw_methionine-metabolism lid24" transform="translate(991.8,930.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=24" target="_blank">S-adenosyl-L-methionine</a></text><title></title></g>
+<g id="node5195" class="node nodeHM pw_methionine-metabolism lid36" transform="translate(1144.1,754.3)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=36" target="_blank">S-adenosyl-L-homocysteine</a></text><title></title></g>
+<g id="node5216" class="node nodeHM pw_methionine-metabolism lid927" transform="translate(425.2,343.5)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=927" target="_blank">O-succinyl-L-homoserine</a></text><title></title></g>
+<g id="node5212" class="node nodeHM pw_methionine-metabolism lid585" transform="translate(849.2,358.7)"><rect height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=585" target="_blank">L-cystathionine</a></text><title></title></g>
+<g id="node6920" class="node nodeHM pw_methionine-metabolism lid7282" transform="translate(1318.2,516.4)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7282" target="_blank">S-ribosyl-L-homocysteine</a></text><title></title></g>
+<g id="node11118" class="node nodeHM pw_methionine-metabolism lid6050" transform="translate(709.3,846.8)"><rect height="30.0" width="94.2" x="-47.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=6050" target="_blank">nicotianamine</a></text><title></title></g>
+<g id="node12084" class="node nodeHM pw_methionine-metabolism lid1431" transform="translate(674.9,1053.5)"><rect height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1431" target="_blank">S-adenosylmethioninamine</a></text><title></title></g>
+<g id="node5218" class="node nodeHM pw_methionine-metabolism lid1558" transform="translate(1081.4,1419.9)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1558" target="_blank">Methanethiol</a></text><title></title></g>
+<g id="node5569" class="node nodeHM pw_methionine-metabolism lid4211" transform="translate(1409.0,1508.2)"><rect height="30.0" width="185.0" x="-92.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4211" target="_blank">4-Methylthio-2-oxobutanoate</a></text><title></title></g>
+<g id="node5779" class="node nodeHM pw_methionine-metabolism lid131010" transform="translate(1515.3,1914.6)"><rect height="30.0" width="139.6" x="-69.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=131010" target="_blank">3-methylthiopropanal</a></text><title></title></g>
+<g id="node5783" class="node nodeHM pw_methionine-metabolism lid110176" transform="translate(1665.4,2156.5)"><rect height="30.0" width="152.6" x="-76.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=110176" target="_blank">3-(methylthio)propanol</a></text><title></title></g>
+<g id="node5591" class="node nodeHM pw_methionine-metabolism lid9834" transform="translate(457.7,1281.9)"><rect height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9834" target="_blank">S-methyl-5-thio-alpha-D-Rib 1-P</a></text><title></title></g>
+<g id="node5597" class="node nodeHM pw_methionine-metabolism lid1578" transform="translate(217.6,1121.6)"><rect height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node5593" class="node nodeHM pw_methionine-metabolism lid17566" transform="translate(163.0,1213.8)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17566" target="_blank">S-methyl-5-thio-Rib</a></text><title></title></g>
+<g id="node5588" class="node nodeHM pw_methionine-metabolism lid13824" transform="translate(898.7,1459.8)"><rect height="30.0" width="159.0" x="-79.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13824" target="_blank">S-methyl-5-thio-Rul 1-P</a></text><title></title></g>
+<g id="node5583" class="node nodeHM pw_methionine-metabolism lid17836" transform="translate(1403.6,1463.2)"><rect height="30.0" width="269.2" x="-134.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17836" target="_blank">5-(methylthio)-2,3-dioxopentyl phosphate</a></text><title></title></g>
+<g id="node5582" class="node nodeHM pw_methionine-metabolism lid35289" transform="translate(1735.5,1672.7)"><rect height="30.0" width="418.2" x="-209.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=35289" target="_blank">(1Z)-2-hydroxy-5-(methylsulfanyl)-3-oxopent-1-en-1-yl phosphate</a></text><title></title></g>
+<g id="node5578" class="node nodeHM pw_methionine-metabolism lid5381" transform="translate(1664.0,1773.9)"><rect height="30.0" width="288.6" x="-144.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=5381" target="_blank">1,2-dihydroxy-5-(methylthio)pent-1-en-3-one</a></text><title></title></g>
+<g id="node10870" class="node nodeHM pw_methionine-metabolism lid8608" transform="translate(1606.6,1233.4)"><rect height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8608" target="_blank">L-methionine (R)-sulfoxide</a></text><title></title></g>
+<g id="node5215" class="node nodeHM pw_methionine-metabolism lid224" transform="translate(137.4,226.5)"><rect height="30.0" width="87.8" x="-43.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=224" target="_blank">succinyl-CoA</a></text><title></title></g>
+<g id="node12089" class="node nodeHM pw_methionine-metabolism lid345" transform="translate(108.7,334.2)"><rect height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=345" target="_blank">homoserine</a></text><title></title></g>
+<g id="node12088" class="node nodeHM pw_methionine-metabolism lid3655" transform="translate(849.0,52.5)"><rect height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3655" target="_blank">O-phospho-homoSer</a></text><title></title></g>
+<g id="node5002" class="node nodeHM pw_methionine-metabolism lid74" transform="translate(783.5,97.5)"><rect height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title></title></g>
+<g id="node2599" class="node nodeHM pw_methionine-metabolism lid622" transform="translate(1695.3,1100.6)"><rect height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=622" target="_blank">tRNAMet</a></text><title></title></g>
+<g id="node2600" class="node nodeHM pw_methionine-metabolism lid44326" transform="translate(1694.4,1040.3)"><rect height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44326" target="_blank">L-methionyl-tRNAMet</a></text><title></title></g>
+<g id="node5201" class="node nodeEN pw_methionine-metabolism" transform="translate(1303.9,931.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.13" target="_blank">2.1.1.13</a></text><title>methionine synthase; 5-methyltetrahydropteroyltriglutamate-homocysteine S-methyltransferase</title></g>
+<g id="node5204" class="node nodeEN pw_methionine-metabolism" transform="translate(1298.4,976.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.14" target="_blank">2.1.1.14</a></text><title>methionine synthase; 5-methyltetrahydropteroyltriglutamate-homocysteine S-methyltransferase</title></g>
+<g id="node5198" class="node nodeEN pw_methionine-metabolism" transform="translate(1385.1,891.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.5" target="_blank">2.1.1.5</a></text><title>betaine-homocysteine S-methyltransferase</title></g>
+<g id="node5196" class="node nodeEN pw_methionine-metabolism" transform="translate(1146.4,931.9)"><rect rx="15" height="30.0" width="120.2" x="-60.1" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.10" target="_blank">2.1.1.10/2.1.1.13</a></text><title>homocysteine S-methyltransferase;methionine synthase</title></g>
+<g id="node5213" class="node nodeEN pw_methionine-metabolism" transform="translate(632.4,358.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.48" target="_blank">2.5.1.48</a></text><title>cystathionine gamma-synthase</title></g>
+<g id="node5209" class="node nodeEN pw_methionine-metabolism" transform="translate(1046.1,580.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.13" target="_blank">4.4.1.13</a></text><title>cysteine-S-conjugate beta-lyase</title></g>
+<g id="node5000" class="node nodeEN pw_methionine-metabolism" transform="translate(1197.9,691.7)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.13.2.1" target="_blank">3.13.2.1</a></text><title>adenosylhomocysteinase</title></g>
+<g id="node6919" class="node nodeEN pw_methionine-metabolism" transform="translate(1221.3,589.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.9" target="_blank">3.2.2.9</a></text><title>adenosylhomocysteine nucleosidase</title></g>
+<g id="node6923" class="node nodeEN pw_methionine-metabolism" transform="translate(1305.5,627.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.21" target="_blank">4.4.1.21</a></text><title>S-ribosylhomocysteine lyase</title></g>
+<g id="node6918" class="node nodeEN pw_methionine-metabolism" transform="translate(994.1,809.6)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.-" target="_blank">2.1.1.-</a></text><title>unknown; DNA (cytosine-5-)-methyltransferase</title></g>
+<g id="node5188" class="node nodeEN pw_methionine-metabolism" transform="translate(1032.5,854.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.1.1.37" target="_blank">2.1.1.37</a></text><title>unknown; DNA (cytosine-5-)-methyltransferase</title></g>
+<g id="node11117" class="node nodeEN pw_methionine-metabolism" transform="translate(828.9,930.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.43" target="_blank">2.5.1.43</a></text><title>nicotianamine synthase</title></g>
+<g id="node5600" class="node nodeEN pw_methionine-metabolism" transform="translate(809.1,1053.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.50" target="_blank">4.1.1.50</a></text><title>adenosylmethionine decarboxylase</title></g>
+<g id="node11132" class="node nodeEN pw_methionine-metabolism" transform="translate(1134.2,1066.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.B21" target="_blank">2.5.1.B21</a></text><title>S-adenosyl-L-methionine hydroxide adenosyltransferase; methionine adenosyltransferase</title></g>
+<g id="node5193" class="node nodeEN pw_methionine-metabolism" transform="translate(1113.1,1111.9)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.6" target="_blank">2.5.1.6</a></text><title>S-adenosyl-L-methionine hydroxide adenosyltransferase; methionine adenosyltransferase</title></g>
+<g id="node5185" class="node nodeEN pw_methionine-metabolism" transform="translate(1175.4,1290.0)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.4.1.11" target="_blank">4.4.1.11</a></text><title>methionine gamma-lyase</title></g>
+<g id="node5568" class="node nodeEN pw_methionine-metabolism" transform="translate(1299.3,1307.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.57" target="_blank">2.6.1.57</a></text><title>aromatic-amino-acid transaminase; L-amino-acid oxidase; methionine transaminase</title></g>
+<g id="node5572" class="node nodeEN pw_methionine-metabolism" transform="translate(1407.2,1314.5)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.4.3.2" target="_blank">1.4.3.2</a></text><title>aromatic-amino-acid transaminase; L-amino-acid oxidase; methionine transaminase</title></g>
+<g id="node5784" class="node nodeEN pw_methionine-metabolism" transform="translate(1303.6,1352.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.6.1.88" target="_blank">2.6.1.88</a></text><title>aromatic-amino-acid transaminase; L-amino-acid oxidase; methionine transaminase</title></g>
+<g id="node5777" class="node nodeEN pw_methionine-metabolism" transform="translate(1409.0,1717.7)"><rect rx="15" height="30.0" width="288.6" x="-144.3" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.1.1.80" target="_blank">4.1.1.80/4.1.1.72/4.1.1.74/4.1.1.43/4.1.1.1</a></text><title>4-hydroxyphenylpyruvate decarboxylase;branched-chain-2-oxoacid decarboxylase;indolepyruvate decarboxylase;phenylpyruvate decarboxylase;pyruvate decarboxylase</title></g>
+<g id="node5780" class="node nodeEN pw_methionine-metabolism" transform="translate(1595.6,2058.7)"><rect rx="15" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.1.1.1" target="_blank">1.1.1.1</a></text><title>alcohol dehydrogenase</title></g>
+<g id="node5605" class="node nodeEN pw_methionine-metabolism" transform="translate(329.7,1184.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.4.2.28" target="_blank">2.4.2.28</a></text><title>S-methyl-5&#x27;-thioadenosine phosphorylase</title></g>
+<g id="node5596" class="node nodeEN pw_methionine-metabolism" transform="translate(85.7,1121.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.2.2.16" target="_blank">3.2.2.16</a></text><title>methylthioadenosine nucleosidase</title></g>
+<g id="node5592" class="node nodeEN pw_methionine-metabolism" transform="translate(293.2,1281.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.7.1.100" target="_blank">2.7.1.100</a></text><title>S-methyl-5-thioribose kinase</title></g>
+<g id="node5590" class="node nodeEN pw_methionine-metabolism" transform="translate(668.8,1450.1)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=5.3.1.23" target="_blank">5.3.1.23</a></text><title>S-methyl-5-thioribose-1-phosphate isomerase</title></g>
+<g id="node5587" class="node nodeEN pw_methionine-metabolism" transform="translate(1144.7,1464.9)"><rect rx="15" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=4.2.1.109" target="_blank">4.2.1.109</a></text><title>methylthioribulose 1-phosphate dehydratase</title></g>
+<g id="node5584" class="node nodeEN pw_methionine-metabolism" transform="translate(1589.2,1579.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.77" target="_blank">3.1.3.77</a></text><title>acireductone synthase</title></g>
+<g id="node5581" class="node nodeEN pw_methionine-metabolism" transform="translate(1782.0,1728.9)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=3.1.3.77" target="_blank">3.1.3.77</a></text><title>acireductone synthase</title></g>
+<g id="node5577" class="node nodeEN pw_methionine-metabolism" transform="translate(1528.0,1627.7)"><rect rx="15" height="30.0" width="74.8" x="-37.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.13.11.54" target="_blank">1.13.11.54</a></text><title>acireductone dioxygenase [iron(II)-requiring]</title></g>
+<g id="node10869" class="node nodeEN pw_methionine-metabolism" transform="translate(1471.2,1182.4)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=1.8.4.12" target="_blank">1.8.4.12</a></text><title>peptide-methionine (R)-S-oxide reductase</title></g>
+<g id="node5217" class="node nodeEN pw_methionine-metabolism" transform="translate(236.0,343.5)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.3.1.46" target="_blank">2.3.1.46</a></text><title>homoserine O-succinyltransferase</title></g>
+<g id="node5003" class="node nodeEN pw_methionine-metabolism" transform="translate(849.2,195.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=2.5.1.48" target="_blank">2.5.1.48</a></text><title>cystathionine gamma-synthase</title></g>
+<g id="node2601" class="node nodeEN pw_methionine-metabolism" transform="translate(1544.2,1100.6)"><rect rx="15" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/enzyme.php?ecno=6.1.1.10" target="_blank">6.1.1.10</a></text><title>Methionine-tRNA ligase</title></g>
+</g><g class="all-nodeCof" id="all-nodeCof">
+<g id="node5201~0" class="node nodeCM pw_methionine-metabolism lid1373" transform="translate(1204.9,828.5)"><rect rx="5" height="30.0" width="165.5" x="-82.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1373" target="_blank">5-methyltetrahydrofolate</a></text><title></title></g>
+<g id="node5201~1" class="node nodeCM pw_methionine-metabolism lid207" transform="translate(1383.0,987.9)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=207" target="_blank">(6S)-THFA</a></text><title></title></g>
+<g id="node5204~0" class="node nodeCM pw_methionine-metabolism lid44870" transform="translate(1131.1,909.6)"><rect rx="5" height="30.0" width="275.7" x="-137.8" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=44870" target="_blank">5,6,7,8-tetrahydropteroyl-tri-L-glutamate</a></text><title></title></g>
+<g id="node5204~1" class="node nodeCM pw_methionine-metabolism lid43560" transform="translate(1215.5,862.5)"><rect rx="5" height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=43560" target="_blank">5-Me-tetrahydropteroyl-(L-Glu)3</a></text><title></title></g>
+<g id="node5213~0" class="node nodeCM pw_methionine-metabolism lid74" transform="translate(579.8,428.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=74" target="_blank">Cys</a></text><title></title></g>
+<g id="node5213~1" class="node nodeCM pw_methionine-metabolism lid58" transform="translate(690.9,281.2)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=58" target="_blank">succinate</a></text><title></title></g>
+<g id="node5209~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(960.5,597.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5209~1" class="node nodeCM pw_methionine-metabolism lid27" transform="translate(1123.4,537.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5209~2" class="node nodeCM pw_methionine-metabolism lid31" transform="translate(1141.2,571.5)"><rect rx="5" height="30.0" width="61.8" x="-30.9" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=31" target="_blank">pyruvate</a></text><title></title></g>
+<g id="node5000~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1134.0,720.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5000~1" class="node nodeCM pw_methionine-metabolism lid122" transform="translate(1287.1,593.4)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=122" target="_blank">adenosine</a></text><title></title></g>
+<g id="node6919~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1133.9,605.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node6919~1" class="node nodeCM pw_methionine-metabolism lid144" transform="translate(1191.0,500.9)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=144" target="_blank">adenine</a></text><title></title></g>
+<g id="node6923~0" class="node nodeCM pw_methionine-metabolism lid56624" transform="translate(1229.0,657.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=56624" target="_blank">DHPTD</a></text><title></title></g>
+<g id="node6918~0" class="node nodeCM pw_methionine-metabolism lid186623" transform="translate(962.8,685.6)"><rect rx="5" height="30.0" width="191.4" x="-95.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186623" target="_blank">demethylated methyl acceptor</a></text><title></title></g>
+<g id="node6918~1" class="node nodeCM pw_methionine-metabolism lid186624" transform="translate(993.1,875.6)"><rect rx="5" height="30.0" width="178.5" x="-89.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=186624" target="_blank">methylated methyl acceptor</a></text><title></title></g>
+<g id="node5188~0" class="node nodeCM pw_methionine-metabolism lid293" transform="translate(1053.9,964.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=293" target="_blank">DNA</a></text><title></title></g>
+<g id="node5188~1" class="node nodeCM pw_methionine-metabolism lid29973" transform="translate(1000.1,720.3)"><rect rx="5" height="30.0" width="210.9" x="-105.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=29973" target="_blank">DNA containing 5-methylcytosine</a></text><title></title></g>
+<g id="node11117~0" class="node nodeCM pw_methionine-metabolism lid1578" transform="translate(732.7,1019.5)"><rect rx="5" height="30.0" width="172.0" x="-86.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1578" target="_blank">S-methyl-5&#x27;-thioadenosine</a></text><title></title></g>
+<g id="node5600~0" class="node nodeCM pw_methionine-metabolism lid28" transform="translate(736.5,985.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node11132~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1058.5,1106.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node11132~1" class="node nodeCM pw_methionine-metabolism lid12" transform="translate(1197.0,1008.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=12" target="_blank">H+</a></text><title></title></g>
+<g id="node11132~2" class="node nodeCM pw_methionine-metabolism lid122" transform="translate(1239.9,1048.5)"><rect rx="5" height="30.0" width="68.3" x="-34.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=122" target="_blank">adenosine</a></text><title></title></g>
+<g id="node5193~0" class="node nodeCM pw_methionine-metabolism lid4" transform="translate(1187.1,1052.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5193~1" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1198.9,1095.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5193~2" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(1050.3,1170.2)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5193~3" class="node nodeCM pw_methionine-metabolism lid17" transform="translate(1025.1,1128.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+<g id="node5185~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1144.9,1208.1)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5185~1" class="node nodeCM pw_methionine-metabolism lid390" transform="translate(1088.1,1265.7)"><rect rx="5" height="30.0" width="42.4" x="-21.2" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=390" target="_blank">2OBUT</a></text><title></title></g>
+<g id="node5185~2" class="node nodeCM pw_methionine-metabolism lid27" transform="translate(1091.6,1314.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5568~0" class="node nodeCM pw_methionine-metabolism lid198" transform="translate(1200.9,1256.0)"><rect rx="5" height="30.0" width="100.7" x="-50.4" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=198" target="_blank">phenylpyruvate</a></text><title></title></g>
+<g id="node5568~1" class="node nodeCM pw_methionine-metabolism lid104" transform="translate(1381.1,1348.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=104" target="_blank">Phe</a></text><title></title></g>
+<g id="node5572~0" class="node nodeCM pw_methionine-metabolism lid9" transform="translate(1345.7,1307.6)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5572~1" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1337.1,1269.2)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5572~2" class="node nodeCM pw_methionine-metabolism lid1126" transform="translate(1495.9,1321.6)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1126" target="_blank">H2O2</a></text><title></title></g>
+<g id="node5572~3" class="node nodeCM pw_methionine-metabolism lid27" transform="translate(1477.3,1366.6)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=27" target="_blank">NH3</a></text><title></title></g>
+<g id="node5784~0" class="node nodeCM pw_methionine-metabolism lid9381" transform="translate(1197.5,1324.0)"><rect rx="5" height="30.0" width="133.1" x="-66.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9381" target="_blank">a 2-oxo carboxylate</a></text><title></title></g>
+<g id="node5784~1" class="node nodeCM pw_methionine-metabolism lid3867" transform="translate(1403.5,1390.0)"><rect rx="5" height="30.0" width="107.2" x="-53.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=3867" target="_blank">an L-amino acid</a></text><title></title></g>
+<g id="node5777~0" class="node nodeCM pw_methionine-metabolism lid28" transform="translate(1352.4,1784.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=28" target="_blank">CO2</a></text><title></title></g>
+<g id="node5780~0" class="node nodeCM pw_methionine-metabolism lid8" transform="translate(1506.8,2053.7)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=8" target="_blank">NADH</a></text><title></title></g>
+<g id="node5780~1" class="node nodeCM pw_methionine-metabolism lid7" transform="translate(1560.6,2140.5)"><rect rx="5" height="30.0" width="35.9" x="-18.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=7" target="_blank">NAD+</a></text><title></title></g>
+<g id="node5605~0" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(249.8,1216.1)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5605~1" class="node nodeCM pw_methionine-metabolism lid144" transform="translate(417.1,1150.9)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=144" target="_blank">adenine</a></text><title></title></g>
+<g id="node5596~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(49.7,1042.0)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5596~1" class="node nodeCM pw_methionine-metabolism lid144" transform="translate(124.4,1179.8)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=144" target="_blank">adenine</a></text><title></title></g>
+<g id="node5592~0" class="node nodeCM pw_methionine-metabolism lid4" transform="translate(228.3,1340.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node5592~1" class="node nodeCM pw_methionine-metabolism lid13" transform="translate(325.9,1362.9)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=13" target="_blank">ADP</a></text><title></title></g>
+<g id="node5587~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1194.4,1536.8)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5581~0" class="node nodeCM pw_methionine-metabolism lid1" transform="translate(1752.5,1638.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=1" target="_blank">H2O</a></text><title></title></g>
+<g id="node5581~1" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(1696.3,1728.5)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node5577~0" class="node nodeCM pw_methionine-metabolism lid9" transform="translate(1510.9,1683.7)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=9" target="_blank">O2</a></text><title></title></g>
+<g id="node5577~1" class="node nodeCM pw_methionine-metabolism lid120" transform="translate(1435.3,1642.1)"><rect rx="5" height="30.0" width="55.4" x="-27.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=120" target="_blank">formate</a></text><title></title></g>
+<g id="node10869~0" class="node nodeCM pw_methionine-metabolism lid121" transform="translate(1490.0,1280.9)"><rect rx="5" height="30.0" width="81.3" x="-40.6" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=121" target="_blank">thioredoxin</a></text><title></title></g>
+<g id="node10869~1" class="node nodeCM pw_methionine-metabolism lid476" transform="translate(1371.1,1235.2)"><rect rx="5" height="30.0" width="146.1" x="-73.0" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=476" target="_blank">thioredoxin disulfide</a></text><title></title></g>
+<g id="node5217~0" class="node nodeCM pw_methionine-metabolism lid18" transform="translate(299.7,283.7)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=18" target="_blank">CoA</a></text><title></title></g>
+<g id="node5003~0" class="node nodeCM pw_methionine-metabolism lid16" transform="translate(924.6,236.4)"><rect rx="5" height="30.0" width="23.0" x="-11.5" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=16" target="_blank">Pi</a></text><title></title></g>
+<g id="node2601~0" class="node nodeCM pw_methionine-metabolism lid4" transform="translate(1520.9,1183.5)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=4" target="_blank">ATP</a></text><title></title></g>
+<g id="node2601~1" class="node nodeCM pw_methionine-metabolism lid30" transform="translate(1547.7,1013.3)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=30" target="_blank">AMP</a></text><title></title></g>
+<g id="node2601~2" class="node nodeCM pw_methionine-metabolism lid17" transform="translate(1593.4,1028.4)"><rect rx="5" height="30.0" width="29.4" x="-14.7" y="-15.0"/><text dominant-baseline="central"><a href="https://www.brenda-enzymes.org/ligand.php?brenda_ligand_id=17" target="_blank">PPi</a></text><title></title></g>
+</g></svg>
+<text x="2249.1" y="28" style="font: bold 22px Arial, sans-serif">from PWL (hints+spring)</text></svg>

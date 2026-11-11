@@ -403,6 +403,147 @@ found:
 - a reversed direction;
 - a deleted reaction.
 
+## Layouts from PWL
+
+`python -m ecmapper.pwl layout` draws PWL subsystems in the style of the BRENDA
+map. It uses networkx and Graphviz layout algorithms and the `draft_map`
+renderer. With `--brenda-json` it also compares the drawings with the
+originals. The code is in `src/ecmapper/pwl/layout.py` and `compare.py`, and the
+`draft-map` extra is required (scipy, pygraphviz).
+
+```bash
+python -m ecmapper.pwl layout BRENDAmap/pwl OUT \
+    --brenda-json BRENDAmap/BRENDA_map_reactions.json --brenda-svg BRENDAmap/BRENDA_map.svg
+```
+
+`OUT` gets:
+
+- `layout/<id>.svg`: the chosen layout of each subsystem;
+- `compare/<id>.svg`: the original and the chosen layout side by side;
+- `metrics.csv` and `summary.md`.
+
+All 193 subsystems take about 3 minutes. [`BRENDAmap/pwl_layout`](BRENDAmap/pwl_layout)
+has the summary, the metrics and six examples:
+
+- glycolysis;
+- citric acid cycle;
+- urea cycle;
+- palmitate biosynthesis;
+- methionine metabolism;
+- isoprenoid biosynthesis.
+
+### Procedure
+
+1. **Converting PWL to a draft map.** `to_draftmap` creates:
+   - one enzyme node per reaction;
+   - one metabolite node per drawn compound (`token#n`), with the BRENDA node ID
+     from `node_index.json`;
+   - one cofactor node per cofactor of a reaction.
+
+   Arrows follow the direction; reactions with an unknown direction get
+   double-headed arrows, as on the BRENDA map. Box sizes follow the labels, as on
+   the map.
+2. **Hint layout** (`hints`). The drawing hints are replayed as a turtle walk:
+   - **Steps.** Each chain, ring run and spoke starts with the `flow` heading. A
+     link turns the heading by its turn letter and takes one step (330 units, the
+     median distance of two metabolites of a reaction on the map). A chain is
+     walked forwards and backwards from its first node that is already drawn.
+     A statement is drawn only once it touches the drawn part: reactions with
+     several metabolites, which the generator writes last, often join two chains.
+   - **Groups and fans.** Groups `(A + B)` lie across the step. The reactions of
+     a fan lie side by side.
+   - **Stars.** Spokes are spread over `arc` degrees in `order`, far enough apart
+     for their number.
+   - **Rings.** A ring is walked like a chain unless the walk hits itself. Turn
+     letters know only four directions, so a ring drawn as a diamond collapses;
+     its metabolites then go on a circle in the ring's sense.
+   - **Wrap.** In a chain with `wrap serpentine`, a turn back moves to the next
+     row.
+   - **Taken places.** If a place is taken, the node goes to the free point of a
+     half-step grid around it whose link crosses the fewest links drawn so far.
+   - **Enzymes** go between the substrate and product sides.
+3. **Refinement with Graphviz and networkx:**
+
+   | Layout | What it does |
+   |---|---|
+   | `hints+neato` | Graphviz `neato` with every node pinned except the ends of crossing links, so crossings are resolved locally and the rest keeps its shape. A round is kept only if it removes crossings. |
+   | `hints+spring` | networkx `spring_layout` started from the hint layout (25 iterations); links within 20° of horizontal or vertical are then straightened. |
+   | `hints+spring+neato` | Both. |
+
+4. **Baselines** that use only the graph and `flow`:
+   - Graphviz `dot` (ranks along the flow), `neato`, `fdp`, `sfdp`;
+   - networkx `kamada_kawai_layout` and `spring_layout`;
+   - `circle` (`draft_map.relayout.circle_layout`), for subsystems with a cycle of
+     at least 5 metabolites.
+5. **Finishing every layout:**
+   - it is scaled to the BRENDA spacing;
+   - overlaps are pushed apart;
+   - cofactors go next to their enzyme: on the side given by `^L`/`^R`, consumed
+     ones upstream, produced ones downstream.
+6. **Choice.** The hint-based layout with the fewest main crossings (then
+   overlaps) is drawn. A baseline replaces it only if it has at most half as
+   many main crossings and no overlapping nodes. Edges that still pass through
+   nodes are routed around them (`draft_map.routes`).
+
+### Comparison with the original drawings
+
+Nodes are matched by BRENDA node ID; cofactors are not compared. The metrics
+allow any translation, scale, rotation and reflection:
+
+| Metric | Meaning |
+|---|---|
+| Procrustes disparity | 0 = same shape |
+| directions | Share of enzyme–metabolite links pointing the same of the four directions, best of the 8 symmetries of the square |
+| neighbours | Shared 3 nearest neighbours |
+| orthogonal | Share of axis-aligned links |
+
+All 193 subsystems (medians; crossings are totals):
+
+| layout | Procrustes | directions | neighbours | orthogonal | main crossings | all crossings | chosen |
+|---|---|---|---|---|---|---|---|
+| hints | 0.236 | 0.741 | 0.633 | 0.619 | 543 | 2,386 | 73 |
+| hints+neato | 0.229 | 0.739 | 0.634 | 0.609 | 329 | 1,831 | 20 |
+| hints+spring | 0.336 | 0.611 | 0.667 | 0.471 | 241 | 1,240 | 70 |
+| hints+spring+neato | 0.336 | 0.611 | 0.667 | 0.447 | 173 | 1,076 | 11 |
+| dot | 0.613 | 0.500 | 0.485 | 0.643 | 517 | 4,767 | 0 |
+| neato | 0.518 | 0.474 | 0.667 | 0.170 | 120 | 553 | 9 |
+| fdp | 0.595 | 0.415 | 0.559 | 0.200 | 457 | 1,211 | 1 |
+| sfdp | 0.548 | 0.462 | 0.620 | 0.256 | 320 | 1,279 | 0 |
+| kamada_kawai | 0.533 | 0.462 | 0.643 | 0.185 | 311 | 1,147 | 6 |
+| spring | 0.528 | 0.472 | 0.667 | 0.191 | 134 | 1,192 | 3 |
+| circle (56 subsystems) | 0.490 | 0.395 | 0.517 | 0.231 | 344 | 1,646 | 0 |
+| **chosen** | **0.299** | **0.645** | **0.667** | **0.500** | **105** | **882** | |
+| original | 0 | 1 | 1 | 0.889 | 69 | 141 | |
+
+Findings:
+
+- **Similarity.** The hint layouts are much closer to the originals than any
+  general-purpose layout: median Procrustes 0.23–0.34, against 0.49–0.61. The
+  link directions agree for 74% of the links, against 40–50%.
+- **Crossings.** The hint layout alone has many crossings (543). The pinned
+  `neato` untangling removes 40% of them without changing the shape;
+  `spring` removes more but loosens the shape.
+- **The chosen layouts** have 105 main crossings, as few as Graphviz `neato`
+  (120, the best general-purpose layout) and close to the originals (69). Their
+  shape is far more similar (0.30 against 0.52).
+- **Orthogonality.** The originals are orthogonal (89% of the links are
+  axis-aligned). The hint layouts reach 62%, the general-purpose layouts 17–26%
+  (`dot`, at 64%, has 517 crossings).
+
+### Limitations
+
+- **Lost geometry.** Turn letters know only four directions, and the steps of
+  one subsystem all have the same length. Diagonal and long links of the original
+  are lost. Rings drawn as diamonds become circles (urea cycle); a branch that was
+  drawn far away may be drawn next to its neighbours.
+- **Spacing.** One step length is used for all subsystems; compactly drawn
+  subsystems (glycolysis) come out larger than on the map.
+- **Large subsystems with many hubs** (purine, lysine, methionine metabolism)
+  keep crossings. The best layouts there are the refined ones, with a Procrustes
+  disparity of 0.4–0.5.
+- **Cofactors** are placed by rule. Their crossings (all crossings: 882 against
+  141) are mostly cofactor links in crowded places.
+
 ## Limitations
 
 - **Directions** are only as good as BRENDA's natural-substrate equations and
