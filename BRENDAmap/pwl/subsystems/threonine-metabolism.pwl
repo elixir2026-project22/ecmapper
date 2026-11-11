@@ -1,0 +1,96 @@
+pwl 2.0;
+subsystem threonine-metabolism 'threonine metabolism' {
+  // BRENDA subsystem: 21 reactions (19 with direction), 22 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OBUT brenda:390 kegg:C00109;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2_amino_3_oxobutanoate '2-amino-3-oxobutanoate' brenda:43066 kegg:C03214;
+  compound 4_phospho_Asp '4-phospho-Asp' brenda:6542 kegg:C03082;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound Asp brenda:97 kegg:C00049;
+  compound Asp_4_semialdehyde 'Asp 4-semialdehyde' brenda:573 kegg:C00441;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound Glu brenda:41 kegg:C00025;
+  compound Gly brenda:72 kegg:C00037;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound L_2_4_diaminobutanoate 'L-2,4-diaminobutanoate' brenda:2561 kegg:C03283;
+  compound L_Thr_tRNAThr 'L-Thr-tRNAThr' brenda:44342 kegg:C02992;
+  compound L_threonylcarbamoyladenylate 'L-threonylcarbamoyladenylate' brenda:28976 kegg:C20641;
+  compound N6_L_threonylcarbamoyladenine37_in_tRNA 'N6-L-threonylcarbamoyladenine37 in tRNA' brenda:19812;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound O2 brenda:9 brenda:1180;
+  compound O_Ac_homoSer 'O-Ac-homoSer' brenda:948 kegg:C01077;
+  compound O_phospho_homoSer 'O-phospho-homoSer' brenda:3655 kegg:C01102;
+  compound PPAP brenda:10758 kegg:C02876;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound Thr brenda:250 kegg:C00188;
+  compound acetaldehyde brenda:90 kegg:C00084;
+  compound aminoacetone brenda:8045 kegg:C01888;
+  compound formate brenda:120 kegg:C00058;
+  compound homoserine brenda:345 kegg:C00263;
+  compound methylglyoxal brenda:322 kegg:C00546;
+  compound propanoate brenda:949 kegg:C00163;
+  compound propanoyl_CoA 'propanoyl-CoA' brenda:782 kegg:C00100;
+  compound tRNAThr brenda:2766 kegg:C01651;
+  port Asp_4_semialdehyde side R to lysine-metabolism;
+  port Asp_4_semialdehyde side U to grixazone-biosynthesis;
+  port Gly side L to glycine-metabolism;
+  port Gly#2 side R to creatinine-degradation;
+  port L_2_4_diaminobutanoate side R to polyamine-pathway;
+  port O_phospho_homoSer side R to methionine-metabolism;
+  port aminoacetone side U to aminopropanol-phosphate-biosynthesis;
+  port homoserine side R to methionine-metabolism;
+  port propanoate side L to alanine-metabolism;
+
+  star Thr arc 120 order cw {
+    <-[node5547: 4.2.3.1 | -H2O, +Pi {br=BR16083, ev=cof+eq}]- O_phospho_homoSer  // threonine synthase
+      <-B[node5551: 2.7.1.39 | ATP>ADP, +H ^L {br=BR47776, ev=cof+eq}]- homoserine;  // homoserine kinase
+    -[node10693: 6.1.1.3 | ATP>AMP, -tRNAThr, +PPi {br=BR54, ev=cof+eq}]-> L_Thr_tRNAThr;  // Threonine-tRNA ligase
+    -[node5759: 1.1.1.103 | NAD>NADH ^R {br=BR29169, ev=cof+eq}]-> 2_amino_3_oxobutanoate;  // L-threonine 3-dehydrogenase
+    -R[node11665: 2.7.7.87 | +H2O, +ATP {br=BR50680, ev=conflict}]- L_threonylcarbamoyladenylate  // L-threonylcarbamoyladenylate synthase
+      -[node11667: 2.3.1.234 {br=BR50967, ev=eq}]-> N6_L_threonylcarbamoyladenine37_in_tRNA;  // N6-L-threonylcarbamoyladenine synthase
+    -R[node5745: 4.3.1.19 | +NH3 ^R {br=BR22834, ev=cof+eq}]-> 2OBUT  // threonine ammonia-lyase
+      -[node5748: 2.3.1.54 | -CoA, +formate {br=BS321064, ev=cof+eq, match=kegg} || node10732: 1.2.7.11 | Fd_ox>Fd_red, -CoA, +CO2 {br=BS189350, ev=cof+eq, match=kegg}]-> propanoyl_CoA  // formate C-acetyltransferase; 2-oxoacid oxidoreductase (ferredoxin)
+      -R[node5752: 2.3.1.222 | -Pi, +CoA {br=BR50416, ev=cof+eq}]-> PPAP  // phosphate propanoyltransferase
+      <-[node5756: 2.7.2.15 | ATP>ADP ^L {br=BR48584, ev=cof+eq}]- propanoate;  // propionate kinase
+  }
+
+  homoserine
+    -[node3234: 2.3.1.31 | Ac_CoA>CoA ^L {br=BR44031, ev=cof+eq}]-> O_Ac_homoSer;  // homoserine O-acetyltransferase
+
+  homoserine
+    -R[node5249: 1.1.1.3 | NADP>NADPH {br=BR26051, ev=cof+eq}]-> Asp_4_semialdehyde  // homoserine dehydrogenase
+    -[node8107: 2.6.1.76 | Glu>2OG ^R {br=BR29484, ev=cof-eq}]-> L_2_4_diaminobutanoate;  // diaminobutyrate-2-oxoglutarate transaminase
+
+  Asp_4_semialdehyde
+    -B[node5245: 1.2.1.11 | NADP>NADPH, -Pi {br=BR36772, ev=cof+eq}]-> 4_phospho_Asp  // aspartate-semialdehyde dehydrogenase
+    <-R[node5240: 2.7.2.4 | ATP>ADP ^L {br=BR47827, ev=cof+eq, match=kegg}]- Asp;  // aspartate kinase
+
+  2_amino_3_oxobutanoate
+    -R[node5026: 2.3.1.29 | CoA>Ac_CoA ^L {br=BS320782, ev=cof-eq}]-> Gly#2;  // glycine C-acetyltransferase
+
+  2_amino_3_oxobutanoate
+    -[node5022: ~? | -H, +CO2 ^R]- aminoacetone  // spontaneous reaction
+    -R[node5018: 1.4.3.21 | -O2, -H2O, +H2O2, +NH3, +H {br=BS407108, ev=cof+eq}]-> methylglyoxal;  // primary-amine oxidase
+
+  acetaldehyde
+    -R[node5011: 1.2.1.10 | NAD>NADH, -CoA ^R {br=BR36771, ev=cof+eq}]-> Ac_CoA;  // acetaldehyde dehydrogenase (acetylating)
+
+  Thr -[node5252: 4.1.2.5 {br=BR373, ev=eq}]-> (Gly + acetaldehyde);  // L-threonine aldolase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { Ac_CoA CoA } forward { node3234 } backward { node5026 };
+}

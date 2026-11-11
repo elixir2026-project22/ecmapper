@@ -1,0 +1,33 @@
+pwl 2.0;
+subsystem lipoate-biosynthesis 'lipoate biosynthesis' {
+  // BRENDA subsystem: 5 reactions (3 with direction), 7 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 5_deoxyadenosyl_radical '5\'-deoxyadenosyl radical' brenda:58151;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Holo_ACP 'Holo-ACP' brenda:2745 kegg:C00229;
+  compound Met brenda:88 kegg:C00073;
+  compound PPi brenda:17 kegg:C00013;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound lipoate brenda:3823 kegg:C00725;
+  compound lipoyl_AMP 'lipoyl-AMP' brenda:57971 kegg:C16238;
+  compound octanoate brenda:865 kegg:C06423;
+  compound octanoyl_ACP 'octanoyl-ACP' brenda:2861 kegg:C05752;
+  compound protein brenda:1208 kegg:C00017;
+  compound protein_N6_lipoyl_lysine 'protein N6-(lipoyl)lysine' brenda:9803 kegg:C16237;
+  compound protein_N6_octanoyl_lysine 'protein N6-(octanoyl)lysine' brenda:11614 kegg:C16236;
+  compound sulfur brenda:871 kegg:C00087;
+  port Holo_ACP side R to lipid-metabolism;
+  port octanoate side D to octane-oxidation;
+
+  octanoate
+    -[node3857: 6.2.1.20 | ATP>AMP, -Holo_ACP, +PPi {br=BS215, ev=cof+eq}]-> octanoyl_ACP;  // Long-chain-fatty-acid-[acyl-carrier-protein] ligase
+
+  lipoate
+    -B[node7860: 6.3.1.20 | -ATP, +PPi {br=BR48678, ev=cof+eq}]-> lipoyl_AMP  // lipoate-protein ligase
+    -[node7862: 6.3.1.20 | -protein, +AMP]- protein_N6_lipoyl_lysine  // lipoate-protein ligase
+    -[node3863: 2.8.1.8 | -S_adenosyl_L_methionine, -sulfur, +Met, +5_deoxyadenosyl_radical]- protein_N6_octanoyl_lysine;  // lipoyl synthase
+
+  octanoyl_ACP -[node3858: 2.3.1.181 | -protein {br=BR48667, ev=cof+eq, match=single}]-> (Holo_ACP + protein_N6_octanoyl_lysine);  // lipoyl(octanoyl) transferase
+}

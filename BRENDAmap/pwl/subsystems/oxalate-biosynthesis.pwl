@@ -1,0 +1,14 @@
+pwl 2.0;
+subsystem oxalate-biosynthesis 'oxalate biosynthesis' {
+  // BRENDA subsystem: 1 reactions (1 with direction), 2 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound H2O brenda:1 kegg:C00001;
+  compound acetate brenda:47 kegg:C00033;
+  compound oxalate brenda:185 kegg:C00209;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  port oxaloacetate side L to citric-acid-cycle;
+
+  oxaloacetate
+    -[node977: 3.7.1.1 | -H2O, +acetate ^L {br=BR22818, ev=cof+eq}]-> oxalate;  // oxaloacetase
+}

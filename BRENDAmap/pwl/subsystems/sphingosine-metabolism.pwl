@@ -1,0 +1,25 @@
+pwl 2.0;
+subsystem sphingosine-metabolism 'sphingosine metabolism' {
+  // BRENDA subsystem: 5 reactions (4 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2E_hexadecenal '(2E)-hexadecenal' brenda:29419 kegg:C06123;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Phosphorylethanolamine brenda:5603;
+  compound Pi brenda:16 kegg:C00009;
+  compound carboxylate brenda:12465 kegg:C00060;
+  compound ceramide brenda:7664 kegg:C00195;
+  compound hexadecanal brenda:15911 kegg:C00517;
+  compound sphingosine brenda:567 kegg:C00319;
+  compound sphingosine_1_P 'sphingosine 1-P' brenda:9801 kegg:C06124;
+
+  ceramide
+    -[node8266: 3.5.1.23 | -H2O, +carboxylate ^R {br=BR19241, ev=cof+eq}]-> sphingosine  // ceramidase
+    -[node8255: <- 3.1.3.4 | -H2O, +Pi {br=BS380760, ev=cof+eq} || node8260: 2.7.1.91 | ATP>ADP]- sphingosine_1_P  // phosphatidate phosphatase; sphingosine kinase
+    -[node8247: 4.1.2.27 | +Phosphorylethanolamine ^R {br=BS416810, ev=eq, match=similar}]-> 2E_hexadecenal  // Sphinganine-1-phosphate aldolase
+    -[node8268: 1.3.1.27 | NADPH>NADP ^R {br=BR36808, ev=cof-eq}]-> hexadecanal;  // 2-hexadecenal reductase
+}

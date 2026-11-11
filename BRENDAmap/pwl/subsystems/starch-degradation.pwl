@@ -1,0 +1,37 @@
+pwl 2.0;
+subsystem starch-degradation 'starch degradation' {
+  // BRENDA subsystem: 13 reactions (5 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound H2O brenda:1 kegg:C00001;
+  compound alpha_D_Glc 'alpha-D-Glc' brenda:285 kegg:C00267;
+  compound beta_D_Glc 'beta-D-Glc' brenda:96 kegg:C00221;
+  compound cyclodextrin brenda:3112 kegg:C00973;
+  compound glycogen brenda:1246;
+  compound large_branched_glucan 'large-branched glucan' brenda:230496;
+  compound linear_malto_oligosaccharide_Glc_n 'linear malto-oligosaccharide [(Glc)n]' brenda:32914;
+  compound linear_malto_oligosaccharide_Glc_n_2 'linear malto-oligosaccharide [(Glc)n-2]' brenda:152997;
+  compound long_linear_alpha_D_glucan 'long-linear alpha-D-glucan' brenda:230494;
+  compound maltodextrin brenda:1326 kegg:C01935;
+  compound maltose brenda:86 kegg:C00208;
+  compound starch brenda:214 kegg:C00369;
+
+  // ring: cycle of the drawing (8 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    maltodextrin
+      -B[node2445: 3.2.1.54 | -H2O ^L]- cyclodextrin  // cyclomaltodextrinase
+      -R[node2447: 2.4.1.19 {br=BS389790, ev=eq, match=kegg}]-> starch  // cyclomaltodextrin glucanotransferase
+      -[node2947: 3.2.1.1 | -H2O ^L]- large_branched_glucan  // alpha-amylase
+      -R[node2945: 3.2.1.41 | -H2O ^L]- long_linear_alpha_D_glucan  // pullulanase
+      -[node2943: 3.2.1.- | -H2O ^L]- linear_malto_oligosaccharide_Glc_n  // alpha-amylase
+      -[node2941: 3.2.1.2 | -H2O, +linear_malto_oligosaccharide_Glc_n_2 ^L]- maltose  // beta-amylase
+      -R[node2334: -> 2.4.1.25 | -maltodextrin, +glycogen {br=BS434689, ev=cof+eq} || node2939: 3.2.1.20 | -H2O]- alpha_D_Glc;  // 4-alpha-glucanotransferase; alpha-glucosidase
+    react [node2337: 3.2.1.54 | -H2O] {maltodextrin, maltose, alpha_D_Glc};  // cyclomaltodextrinase
+    chord starch -[node2340: 3.2.1.- | -H2O ^L]- long_linear_alpha_D_glucan;  // hypothetical
+    chord 3*starch -[node1447: 3.2.1.1 | -2*H2O {br=BS380764, ev=cof+eq, match=single}]-> (3*maltodextrin + maltose + alpha_D_Glc);  // alpha-amylase
+    chord 2*starch -[node2331: 3.2.1.1 | -H2O {br=BS380765, ev=cof+eq, match=single}]-> (2*maltodextrin + maltose);  // alpha-amylase
+  }
+
+  alpha_D_Glc
+    <-L[node2335: 5.1.3.3 {br=BR197, ev=eq, rev=eq}]-> beta_D_Glc;  // aldose 1-epimerase
+}

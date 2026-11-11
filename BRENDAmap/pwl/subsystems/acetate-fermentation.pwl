@@ -1,0 +1,38 @@
+pwl 2.0;
+subsystem acetate-fermentation 'acetate fermentation' {
+  // BRENDA subsystem: 9 reactions (9 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound acetaldehyde brenda:90 kegg:C00084;
+  compound acetate brenda:47 kegg:C00033;
+  compound acetyl_phosphate 'acetyl phosphate' brenda:358 kegg:C00227;
+  compound ferricytochrome_b1 'ferricytochrome b1' brenda:44128 kegg:C00995;
+  compound ferrocytochrome_b1 'ferrocytochrome b1' brenda:44129 kegg:C00998;
+  compound pyruvate brenda:31 kegg:C00022;
+  port acetaldehyde side R to ethanol-fermentation;
+  port acetate side L to phenylmercury-acetate-degradation;
+
+  acetaldehyde
+    -[node8667: 1.2.1.4 | NADP>NADPH, -H2O {br=BS231682, ev=cof+eq}]-> acetate  // aldehyde dehydrogenase (NADP+)
+    -R[node8885: -> 6.2.1.1 | ATP>AMP, -CoA, +PPi {br=BR60, ev=cof+eq} || node10291: <- 3.1.2.20 | -H2O, +CoA {br=BR11726, ev=cof+eq}]- Ac_CoA  // acetate-CoA ligase; acyl-CoA hydrolase
+    -R[node9428: 2.3.1.8 | -Pi, +CoA ^L {br=BR44082, ev=cof+eq}]-> acetyl_phosphate  // phosphate acetyltransferase
+    -B[node2927: 3.6.1.7 | -H2O, +Pi {br=BS165360, ev=cof+eq} || node9429: 2.7.2.1 | ADP>ATP {br=BR47820, ev=cof-eq}]-> acetate  // acylphosphatase; acetate kinase
+    <-R[node8641: 1.2.5.1 | -H2O, -ferricytochrome_b1, +CO2, +ferrocytochrome_b1 {br=BR49235, ev=cof+eq}]- pyruvate  // pyruvate dehydrogenase (quinone)
+    -B[node9458: 1.2.1.51 | NADP>NADPH, -CoA, +CO2 {br=BR29410, ev=cof+eq} || node9412: 1.2.7.1 | Fd_ox>Fd_red, -CoA, +CO2 {br=BR29433, ev=cof+eq}]-> Ac_CoA;  // pyruvate dehydrogenase (NADP+); pyruvate synthase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { Ac_CoA acetyl_phosphate acetate };
+  motif substrate_cycle { Ac_CoA acetate } forward { node10291 } backward { node8885 };
+}

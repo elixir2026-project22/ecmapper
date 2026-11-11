@@ -1,0 +1,136 @@
+pwl 2.0;
+subsystem vitamin-B12-metabolism 'vitamin B12 metabolism' {
+  // BRENDA subsystem: 39 reactions (30 with direction), 38 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound CO2 brenda:28 kegg:C00011;
+  compound Co2 'Co2+' brenda:23 kegg:C00175;
+  compound Cobyrinate brenda:9454 kegg:C05773;
+  compound DMBZID brenda:4770 kegg:C03114;
+  compound Deamido_NMN 'Deamido-NMN' brenda:5194;
+  compound E4P brenda:500 kegg:C00279;
+  compound FMN brenda:56 kegg:C00061;
+  compound FMNH2 brenda:335 kegg:C01847;
+  compound GMP brenda:162 kegg:C00144;
+  compound GTP brenda:37 kegg:C00044;
+  compound Gln brenda:102 kegg:C00064;
+  compound Glu brenda:41 kegg:C00025;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound PPPi brenda:940 kegg:C00536;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_1_aminopropan_2_ol '(R)-1-aminopropan-2-ol' brenda:9299;
+  compound R_1_aminopropan_2_yl_phosphate '(R)-1-aminopropan-2-yl phosphate' brenda:22041 kegg:C04122;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound a_reduced_flavoprotein 'a reduced flavoprotein' brenda:8960;
+  compound acetaldehyde brenda:90 kegg:C00084;
+  compound acetate brenda:47 kegg:C00033;
+  compound adenosyl_cobinamide 'adenosyl cobinamide' brenda:4955 kegg:C06508;
+  compound adenosylcob_III_yrinic_acid_a_c_diamide 'adenosylcob(III)yrinic acid a,c-diamide' brenda:125254 kegg:C06506;
+  compound adenosylcobalamin brenda:578 kegg:C00194;
+  compound adenosylcobinamide_GDP 'adenosylcobinamide-GDP' brenda:5737 kegg:C06510;
+  compound adenosylcobinamide_phosphate 'adenosylcobinamide phosphate' brenda:22961;
+  compound adenosylcobyric_acid 'adenosylcobyric acid' brenda:3720 kegg:C06507;
+  compound alpha_ribazole 'alpha-ribazole' brenda:8342 kegg:C05775;
+  compound alpha_ribazole_5_P 'alpha-ribazole 5-P' brenda:9638 kegg:C04778;
+  compound an_oxidized_flavoprotein 'an oxidized flavoprotein' brenda:8961;
+  compound cob_II_yrinic_acid_a_c_diamide 'cob(II)yrinic acid a,c-diamide' brenda:7514 kegg:C06504;
+  compound cobalt_factor_III 'cobalt-factor III' brenda:22101 kegg:C17401;
+  compound cobalt_precorrin_3 'cobalt-precorrin-3' brenda:125750 kegg:C11539;
+  compound cobalt_precorrin_4 'cobalt-precorrin-4' brenda:13787 kegg:C11540;
+  compound cobalt_precorrin_5A 'cobalt-precorrin-5A' brenda:38560 kegg:C16242;
+  compound cobalt_precorrin_5B 'cobalt-precorrin-5B' brenda:72197 kegg:C16243;
+  compound cobalt_precorrin_6A 'cobalt-precorrin-6A' brenda:38561 kegg:C11542;
+  compound cobalt_precorrin_6B 'cobalt-precorrin-6B' brenda:38562 kegg:C11543;
+  compound cobalt_precorrin_7 'cobalt-precorrin-7' brenda:38563 kegg:C16244;
+  compound cobalt_precorrin_8X 'cobalt-precorrin-8X' brenda:22024 kegg:C11545;
+  compound cobalt_sirohydrochlorin 'cobalt-sirohydrochlorin' brenda:33128 kegg:C11538;
+  compound corrinoid_adenosyltransferase '[corrinoid adenosyltransferase]' brenda:224940;
+  compound corrinoid_adenosyltransferase_cob_II_yrinic_acid_a_c_diamide '[corrinoid adenosyltransferase]-cob(II)yrinic acid a,c-diamide' brenda:224944;
+  compound corrinoid_adenosyltransferase_cob_I_yrinic_acid_a_c_diamide '[corrinoid adenosyltransferase]-cob(I)yrinic acid a,c-diamide' brenda:224942;
+  compound denosylcobinamide_phosphate 'denosylcobinamide phosphate' brenda:4956 kegg:C06509;
+  compound dialuric_acid 'dialuric acid' brenda:227683;
+  compound hydrogenobyrinate brenda:10668 kegg:C06399;
+  compound hydrogenobyrinic_acid_a_c_diamide 'hydrogenobyrinic acid a,c-diamide' brenda:7210 kegg:C06503;
+  compound nicotinate brenda:1029 kegg:C00253;
+  compound oxidized_electron_acceptor 'oxidized electron acceptor' brenda:374 brenda:12937;
+  compound precorrin_2 'precorrin-2' brenda:6581 kegg:C02463;
+  compound precorrin_3A 'precorrin-3A' brenda:12662 kegg:C05772;
+  compound precorrin_3B 'precorrin-3B' brenda:12903 kegg:C06406;
+  compound precorrin_4 'precorrin-4' brenda:15928 kegg:C06407;
+  compound precorrin_5 'precorrin-5' brenda:16887 kegg:C06416;
+  compound precorrin_6A 'precorrin-6A' brenda:22033 kegg:C06320;
+  compound precorrin_6B 'precorrin-6B' brenda:23206 kegg:C06319;
+  compound precorrin_8x 'precorrin-8x' brenda:9246 kegg:C06408;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+  compound sirohydrochlorin brenda:5216 kegg:C05778;
+  compound unknown_substance 'unknown substance' brenda:152174;
+  port R_1_aminopropan_2_yl_phosphate side D to aminopropanol-phosphate-biosynthesis;
+  port precorrin_2 side L to heme-metabolism;
+
+  // ring: cycle of the drawing (23 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    precorrin_2
+      -[node7650: 2.1.1.130 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine, +H {br=BR1453, ev=cof+eq}]-> precorrin_3A  // Precorrin-2 C20-methyltransferase
+      -[node7637: 1.14.13.83 | NADH>NAD, -O2, -H, +H2O {br=BR47982, ev=cof+eq}]-> precorrin_3B  // precorrin-3B synthase
+      -[node7643: 2.1.1.131 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine, +H {br=BR1454, ev=cof+eq}]-> precorrin_4  // Precorrin-3B C17-methyltransferase
+      -B[node7644: 2.1.1.133 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine, +H {br=BR6348, ev=cof+eq}]-> precorrin_5  // Precorrin-4 C11-methyltransferase
+      -[node7659: 2.1.1.152 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine, -H2O, +H, +acetate {br=BR47993, ev=cof+eq}]-> precorrin_6A  // precorrin-6A synthase (deacetylating)
+      -B[node7667: 1.3.1.54 | NADPH>NADP ^R {br=BR1202, ev=cof-eq}]-> precorrin_6B  // precorrin-6A reductase
+      -[node7666: 2.1.1.132 | 2*S_adenosyl_L_methionine>2*S_adenosyl_L_homocysteine, +H, +CO2 {br=BR1455, ev=cof+eq}]-> precorrin_8x  // precorrin-6B C5,15-methyltransferase (decarboxylating)
+      -R[node7676: 5.4.99.61 | -H ^R {br=BR16, ev=eq}]-> hydrogenobyrinate  // Precorrin-8X methylmutase
+      -R[node7679: 6.3.5.9 | 2*Gln>2*Glu, 2*ATP>2*ADP, -2*H2O, +H, +2*Pi {br=BR48014, ev=cof+eq}]-> hydrogenobyrinic_acid_a_c_diamide  // hydrogenobyrinic acid a,c-diamide synthase (glutamine-hydrolysing)
+      -[node7688: 6.6.1.2 | ATP>ADP, -H2O, -Co2, +H, +Pi {br=BR48015, ev=cof+eq}]-> cob_II_yrinic_acid_a_c_diamide  // cobaltochelatase
+      <-[node6567: 6.3.5.11 | 2*ATP>2*ADP, 2*Gln>2*Glu, -2*H2O, +2*Pi, +H {br=BR49510, ev=cof+eq, match=kegg}]- Cobyrinate  // cobyrinate A,C-diamide synthase
+      <-B[node6553: 5.4.99.60 | +H ^R {br=BR51009, ev=eq}]- cobalt_precorrin_8X  // cobalt-precorrin-8 methylmutase
+      <-[node6546: 2.1.1.289 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR50788, ev=cof+eq}]- cobalt_precorrin_7  // cobalt-precorrin-7 (C5)-methyltransferase
+      -[node6556: 2.1.1.196 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine, +H, +CO2 {br=BR49386, ev=conflict}]- cobalt_precorrin_6B  // cobalt-precorrin-6B (C15)-methyltransferase [decarboxylating]
+      <-[node6545: 1.3.1.106 | NADH>NAD ^R {br=BR50935, ev=cof-eq}]- cobalt_precorrin_6A  // cobalt-precorrin-6A reductase
+      <-[node6563: 2.1.1.195 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR49385, ev=cof+eq}]- cobalt_precorrin_5B  // cobalt-precorrin-5B (C1)-methyltransferase
+      -B[node6541: 3.7.1.12 | -H2O, -acetaldehyde, +2*H {br=BR49393, ev=conflict}]- cobalt_precorrin_5A  // cobalt-precorrin 5A hydrolase
+      -[node6515: 2.1.1.271 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine, +H]- cobalt_precorrin_4  // cobalt-precorrin-4 methyltransferase
+      <-[node6513: 2.1.1.131 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L {br=BS375288, ev=cof+eq, match=single}]- cobalt_precorrin_3  // precorrin-3B C17-methyltransferase
+      -[node2415: ? | reduced_electron_acceptor>oxidized_electron_acceptor ^L]- cobalt_factor_III  // cobalt-precorrin 3 synthase
+      <-B[node6519: 2.1.1.151 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine, +H {br=BR47994, ev=cof+eq, match=kegg}]- cobalt_sirohydrochlorin  // cobalt-factor II C20-methyltransferase
+      -[node6520: 4.99.1.3 | -2*H, -Co2 ^R {br=BR48008, ev=conflict}]- sirohydrochlorin  // sirohydrochlorin cobaltochelatase
+      <-[node2412: 1.3.1.76 | NAD>NADH ^R {br=BR47985, ev=cof+eq}]- precorrin_2;  // precorrin-2 dehydrogenase
+  }
+
+  // ring: cycle of the drawing (12 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    denosylcobinamide_phosphate
+      -B[node4127: 2.7.7.62 | -H, -GTP, +PPi ^R]- adenosylcobinamide_GDP;  // adenosylcobinamide-phosphate guanylyltransferase
+    adenosylcobinamide_phosphate
+      -B[node4134: 3.1.3.73 | -H2O, +Pi ^R {br=BR49541, ev=cof+eq, match=kegg}]-> adenosylcobalamin;  // adenosylcobalamin/alpha-ribazole phosphatase
+    alpha_ribazole
+      <-B[node7696: 3.1.3.73 | -H2O, +Pi ^L {br=BR47999, ev=cof+eq}]- alpha_ribazole_5_P  // adenosylcobalamin/alpha-ribazole phosphatase
+      <-[node4135: 2.4.2.21 | -Deamido_NMN, +H, +nicotinate {br=BR44272, ev=cof+eq}]- DMBZID  // nicotinate-nucleotide-dimethylbenzimidazole phosphoribosyltransferase
+      <-[node2423: 1.13.11.79 | -O2, +E4P, +dialuric_acid {br=BR49224, ev=cof+eq} || node7699: 1.13.11.79 | -O2, +unknown_substance, +E4P {br=BR49224, ev=cof+eq}]- FMNH2;  // aerobic 5,6-dimethylbenzimidazole synthase; aerobic 5,6-dimethylbenzimidazole synthase
+    corrinoid_adenosyltransferase_cob_II_yrinic_acid_a_c_diamide
+      -[node4155: 2.5.1.17 | -a_reduced_flavoprotein, +an_oxidized_flavoprotein ^R {br=BR52460, ev=cof+eq}]-> corrinoid_adenosyltransferase_cob_I_yrinic_acid_a_c_diamide  // corrinoid adenosyltransferase
+      -[node12565: 2.5.1.17 | -2*ATP, +2*PPPi, +2*corrinoid_adenosyltransferase ^R {br=BR52461, ev=cof+eq}]-> adenosylcob_III_yrinic_acid_a_c_diamide  // corrinoid adenosyltransferase
+      -R[node4154: 6.3.5.10 | 4*ATP>4*ADP, 4*Gln>4*Glu, -4*H2O, +4*Pi, +H {br=BR48011, ev=cof+eq, match=kegg}]-> adenosylcobyric_acid;  // adenosylcobyric acid synthase (glutamine-hydrolysing)
+    react [node4164: 6.3.1.10 | ATP>ADP, +Pi, +H] {denosylcobinamide_phosphate, adenosylcobyric_acid, R_1_aminopropan_2_yl_phosphate};  // adenosylcobinamide-phosphate synthase
+    (adenosylcobinamide_GDP + alpha_ribazole_5_P) -[node2997: 2.7.8.26 | +GMP {br=BS370846, ev=cof+eq}]-> adenosylcobinamide_phosphate;  // adenosylcobinamide-GDP ribazoletransferase
+    (adenosylcobinamide_GDP + alpha_ribazole) -[node4122: 2.7.8.26 | +GMP {br=BR47998, ev=cof+eq}]-> adenosylcobalamin;  // adenosylcobinamide-GDP ribazoletransferase
+    react [node4156: 2.5.1.17 | -2*corrinoid_adenosyltransferase] {2*cob_II_yrinic_acid_a_c_diamide, 2*corrinoid_adenosyltransferase_cob_II_yrinic_acid_a_c_diamide, FMNH2};  // corrinoid adenosyltransferase
+  }
+
+  adenosylcobinamide_phosphate
+    -[node7544: 2.7.1.156 | ATP>ADP ^R]- adenosyl_cobinamide  // adenosylcobinamide kinase
+    -[node8119: 3.5.1.90 | -H2O, +R_1_aminopropan_2_ol ^R {br=BR48301, ev=cof+eq}]-> adenosylcobyric_acid;  // adenosylcobinamide hydrolase
+
+  FMN
+    -[node2420: 1.5.1.39 | NADPH>NADP ^L {br=BR36899, ev=cof-eq}]-> FMNH2;  // FMN reductase [NAD(P)H]
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { NAD NADH } forward { node2412 } backward { node6545 node7637 };
+}

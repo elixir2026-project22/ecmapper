@@ -1,0 +1,104 @@
+pwl 2.0;
+subsystem isoprenoid-biosynthesis 'isoprenoid biosynthesis' {
+  // BRENDA subsystem: 26 reactions (21 with direction), 29 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 1_deoxy_Xyl_5_P '1-deoxy-Xyl 5-P' brenda:1263 kegg:C11437;
+  compound 2C_ME4P '2C-ME4P' brenda:2166 kegg:C11434;
+  compound 2E_6E_farnesyl_PP '(2E,6E)-farnesyl-PP' brenda:1392;
+  compound 2Me_E_cy_PPi '2Me-E-cy-PPi' brenda:5699 kegg:C11453;
+  compound 4_CDP_2_C_methyl_D_erythritol '4-CDP-2-C-methyl-D-erythritol' brenda:7443 kegg:C11435;
+  compound 4_CDP_2_C_methyl_D_erythritol_2_P '4-CDP-2-C-methyl-D-erythritol 2-P' brenda:6725 kegg:C11436;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound CMP brenda:100 kegg:C00055;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CTP brenda:60 kegg:C00063;
+  compound E_4_hydroxy_3_methylbut_2_en_1_yl_diphosphate '(E)-4-hydroxy-3-methylbut-2-en-1-yl diphosphate' brenda:5379 kegg:C11811;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound GAP brenda:147 kegg:C00118;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PPi brenda:17 kegg:C00013;
+  compound all_trans_heptaprenyl_diphosphate 'all-trans-heptaprenyl diphosphate' brenda:8041 kegg:C04216;
+  compound all_trans_hexaprenyl_PP 'all-trans-hexaprenyl-PP' brenda:8042 kegg:C01230;
+  compound all_trans_nonaprenyl_diphosphate 'all-trans-nonaprenyl diphosphate' brenda:5639 kegg:C04145;
+  compound cyclooctat_9_en_7_ol 'cyclooctat-9-en-7-ol' brenda:192309 kegg:C20834;
+  compound decaprenyl_PP 'decaprenyl-PP' brenda:9828;
+  compound dimethylallyl_PP 'dimethylallyl-PP' brenda:157;
+  compound geranial brenda:4013 kegg:C01499;
+  compound geraniol brenda:987 kegg:C01500;
+  compound geranyl_diphosphate 'geranyl diphosphate' brenda:175 brenda:46074 kegg:C00341;
+  compound geranylfarnesyl_diphosphate 'geranylfarnesyl diphosphate' brenda:14947 kegg:C04217;
+  compound geranylgeraniol brenda:3000 kegg:C09094;
+  compound geranylgeranyl_diphosphate 'geranylgeranyl diphosphate' brenda:231 kegg:C00353;
+  compound geranylgeranyl_phosphate 'geranylgeranyl phosphate' brenda:7651;
+  compound isopentenyl_PP 'isopentenyl-PP' brenda:113 kegg:C00129;
+  compound ophiobolin_F 'ophiobolin F' brenda:193509 kegg:C16818;
+  compound phytyl_PP 'phytyl-PP' brenda:3092 kegg:C05427;
+  compound prephytoene_PP 'prephytoene-PP' brenda:9247 kegg:C03427;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound tritrans_heptacis_undecaprenyl_diphosphate 'tritrans,heptacis-undecaprenyl diphosphate' brenda:7038 kegg:C19852;
+  port 2E_6E_farnesyl_PP side D to C30-carotenoid-biosynthesis;
+  port 2E_6E_farnesyl_PP side D to dolichol-and-dolichyl-phosphate-biosynthesis;
+  port 2E_6E_farnesyl_PP side D to sesquiterpene-lactone-biosynthesis;
+  port 2E_6E_farnesyl_PP side R to cholesterol-biosynthesis;
+  port 2E_6E_farnesyl_PP side U to peptidoglycan-biosynthesis;
+  port GAP side R to lipid-metabolism;
+  port dimethylallyl_PP side R to mevalonate-metabolism;
+  port geranylgeranyl_diphosphate side D to diterpene-phytoalexins-precursors-biosynthesis;
+  port geranylgeranyl_diphosphate side U to lipid-metabolism;
+  port isopentenyl_PP side R to mevalonate-metabolism;
+  port prephytoene_PP side L to carotenoid-biosynthesis;
+
+  star geranylgeranyl_diphosphate arc 270 order cw {
+    -R[node10174: 2.5.1.32 | +PPi ^R {br=BR47500, ev=cof+eq}]-> prephytoene_PP;  // 15-cis-phytoene synthase
+    -B[node11128: 2.5.1.81 | -isopentenyl_PP, +PPi {br=BR48628, ev=cof+eq}]-> geranylfarnesyl_diphosphate  // geranylfarnesyl diphosphate synthase
+      -[node11674: 4.2.3.145 | -PPi, -H2O {br=BR51059, ev=conflict}]- ophiobolin_F;  // ophiobolin F synthase
+    <-B[node2843: 2.7.4.B4 | ATP>ADP {br=BR50488, ev=cof+eq}]- geranylgeranyl_phosphate  // geranylgeranyl phosphate kinase
+      <-[node2845: 2.7.1.B19 | ATP>ADP {br=BR50486, ev=cof+eq}]- geranylgeraniol;  // geranylgeraniol kinase
+    -L[node2974: 2.5.1.85 | -5*isopentenyl_PP, +5*PPi ^R {br=BR49315, ev=cof+eq}]-> all_trans_nonaprenyl_diphosphate;  // all-trans-nonaprenyl diphosphate synthase [geranylgeranyl-diphosphate specific]
+    -L[node2848: 2.5.1.89 | -7*isopentenyl_PP, +7*PPi ^L {br=BR49320, ev=cof+eq}]-> tritrans_heptacis_undecaprenyl_diphosphate;  // tritrans,polycis-undecaprenyl diphosphate synthase [geranylgeranyl-diphosphate specific]
+    -L[node2009: 4.2.3.146 | -H2O, +PPi {br=BR51060, ev=cof+eq}]-> cyclooctat_9_en_7_ol;  // cyclooctat-9-en-7-ol synthase
+    <-[node2682: 1.3.1.83 | 3*NADP>3*NADPH {br=BR49043, ev=cof+eq}]- phytyl_PP;  // geranylgeranyl diphosphate reductase
+    <-[node4075: 2.5.1.29 | -isopentenyl_PP, +PPi {br=BR47565, ev=cof+eq}]- 2E_6E_farnesyl_PP;  // geranylgeranyl diphosphate synthase
+    -R[node10139: 2.5.1.82 | -2*isopentenyl_PP, +2*PPi {br=BR49312, ev=cof+eq}]-> all_trans_hexaprenyl_PP;  // hexaprenyl diphosphate synthase [geranylgeranyl-diphosphate specific]
+  }
+
+  2E_6E_farnesyl_PP
+    -[node2978: 2.5.1.B14 | -6*isopentenyl_PP, +6*PPi ^L {br=BR49316, ev=cof+eq}]-> all_trans_nonaprenyl_diphosphate#3;  // (2E,6E)-farnesyl-diphosphate all-trans-nonaprenyl diphosphate synthase
+
+  2E_6E_farnesyl_PP
+    -[node6779: 2.5.1.91 | -7*isopentenyl_PP, +7*PPi ^R {br=BR49323, ev=cof+eq}]-> decaprenyl_PP;  // all-trans-decaprenyl-diphosphate synthase
+
+  2E_6E_farnesyl_PP
+    -[node10159: 2.5.1.30 | -4*isopentenyl_PP, +4*PPi ^R {br=BR47476, ev=cof+eq}]-> all_trans_heptaprenyl_diphosphate;  // heptaprenyl diphosphate synthase
+
+  2E_6E_farnesyl_PP
+    <-R[node6706: 2.5.1.10 | -isopentenyl_PP, +PPi ^R {br=BR47562, ev=cof+eq}]- geranyl_diphosphate  // (2E,6E)-farnesyl diphosphate synthase
+    -L[node2976: 2.5.1.84 | -7*isopentenyl_PP, +7*PPi ^L {br=BR49314, ev=cof+eq}]-> all_trans_nonaprenyl_diphosphate#2;  // all-trans-nonaprenyl diphosphate synthase [geranyl-diphosphate specific]
+
+  geranyl_diphosphate
+    -R[node11647: 3.1.7.11 | +PPi, +H2O {br=BR50059, ev=conflict}]- geraniol  // geranyl diphosphate diphosphatase
+    -L[node11649: 1.1.1.347 | NADH>NAD, +H {br=BR50498, ev=conflict}]- geranial;  // geraniol dehydrogenase (NAD+)
+
+  dimethylallyl_PP
+    -[node6705: 2.5.1.1 | -isopentenyl_PP, +PPi {br=BR47563, ev=cof+eq}]-> geranyl_diphosphate;  // dimethylallyltranstransferase
+
+  1_deoxy_Xyl_5_P
+    -[node9371: 1.1.1.267 | NADPH>NADP ^L]- 2C_ME4P  // 1-deoxy-D-xylulose-5-phosphate reductoisomerase
+    -[node9379: 2.7.7.60 | -CTP, +PPi ^L {br=BR36947, ev=cof+eq}]-> 4_CDP_2_C_methyl_D_erythritol  // 2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase
+    -[node9319: 2.7.1.148 | ATP>ADP ^L {br=BR33803, ev=cof+eq}]-> 4_CDP_2_C_methyl_D_erythritol_2_P  // 4-(cytidine 5'-diphospho)-2-C-methyl-D-erythritol kinase
+    -[node4071: 4.6.1.12 | +CMP ^L {br=BR26153, ev=cof+eq}]-> 2Me_E_cy_PPi  // 2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase
+    -[node4069: 1.17.7.1 | Fd_red>Fd_ox, +H2O {br=BR47612, ev=cof-eq}]-> E_4_hydroxy_3_methylbut_2_en_1_yl_diphosphate;  // (E)-4-hydroxy-3-methylbut-2-enyl-diphosphate synthase (ferredoxin)
+
+  (GAP + pyruvate) -[node9369: 2.2.1.7 | +CO2 {br=BR37092, ev=cof+eq}]-> 1_deoxy_Xyl_5_P;  // 1-deoxy-D-xylulose-5-phosphate synthase
+  react [node4067: 1.17.7.4 | NADPH>NADP, +H2O] {E_4_hydroxy_3_methylbut_2_en_1_yl_diphosphate, isopentenyl_PP, dimethylallyl_PP};  // 4-hydroxy-3-methylbut-2-en-1-yl diphosphate reductase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { NADP NADPH } forward { node2682 } backward { node4067 node9371 };
+}

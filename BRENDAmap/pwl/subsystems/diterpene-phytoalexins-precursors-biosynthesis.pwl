@@ -1,0 +1,56 @@
+pwl 2.0;
+subsystem diterpene-phytoalexins-precursors-biosynthesis 'diterpene phytoalexins precursors biosynthesis' {
+  // BRENDA subsystem: 15 reactions (13 with direction), 16 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 9alpha_copalyl_diphosphate '9alpha-copalyl diphosphate' brenda:7719 kegg:C11902;
+  compound 9beta_pimara_7_15_diene '9beta-pimara-7,15-diene' brenda:14135 kegg:C18225;
+  compound H2O brenda:1 kegg:C00001;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound ent_cassa_12_15_diene 'ent-cassa-12,15-diene' brenda:18341 kegg:C18226;
+  compound ent_copalyl_diphosphate 'ent-copalyl diphosphate' brenda:3716 kegg:C06089;
+  compound ent_isokauren_2beta_ol 'ent-isokauren-2beta-ol' brenda:222693 kegg:C20146;
+  compound ent_isokaurene 'ent-isokaurene' brenda:15211 kegg:C20145;
+  compound ent_isokaurene_2beta_3beta_diol 'ent-isokaurene-2beta,3beta-diol' brenda:222694 kegg:C21831;
+  compound ent_pimara_8_14_15_diene 'ent-pimara-8(14),15-diene' brenda:63898 kegg:C18228;
+  compound ent_sandaracopimaradien_3beta_ol 'ent-sandaracopimaradien-3beta-ol' brenda:190611 kegg:C21560;
+  compound ent_sandaracopimaradiene 'ent-sandaracopimaradiene' brenda:63897 kegg:C11877;
+  compound geranylgeranyl_diphosphate 'geranylgeranyl diphosphate' brenda:231 kegg:C00353;
+  compound oryzalexin_D 'oryzalexin D' brenda:192302 kegg:C21562;
+  compound oryzalexin_E 'oryzalexin E' brenda:190613 kegg:C21561;
+  compound oryzalide_A 'oryzalide A' brenda:212490;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound stemar_13_ene 'stemar-13-ene' brenda:63899 kegg:C18223;
+  compound stemod_13_17_ene 'stemod-13(17)-ene' brenda:63900 kegg:C18224;
+  port geranylgeranyl_diphosphate side U to isoprenoid-biosynthesis;
+
+  star ent_copalyl_diphosphate arc 150 order cw {
+    -[node1612: 4.2.3.103 | +PPi ^R {br=BR49997, ev=cof+eq}]-> ent_isokaurene  // ent-isokaurene synthase
+      -R[node1437: 1.14.14.76 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR52394, ev=cof+eq}]-> ent_isokauren_2beta_ol  // ent-isokaurene C2/C3-hydroxylase
+      -[node1434: 1.14.14.76 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR52395, ev=cof+eq}]-> ent_isokaurene_2beta_3beta_diol  // ent-isokaurene C2/C3-hydroxylase
+      -R[node1607: ?]- oryzalide_A;  // 
+    -R[node1619: 4.2.3.30 | +PPi ^R {br=BR48890, ev=cof+eq}]-> ent_pimara_8_14_15_diene;  // ent-pimara-8(14),15-diene synthase
+    -R[node1620: 4.2.3.28 | +PPi ^R {br=BR48888, ev=cof+eq}]-> ent_cassa_12_15_diene;  // ent-cassa-12,15-diene synthase
+    -B[node1621: 4.2.3.29 | +PPi ^L {br=BR48889, ev=cof+eq}]-> ent_sandaracopimaradiene  // ent-sandaracopimaradiene synthase
+      -L[node1605: 1.14.14.70 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR51029, ev=cof+eq}]-> ent_sandaracopimaradien_3beta_ol;  // ent-sandaracopimaradiene 3-hydroxylase
+    <-B[node11872: 5.5.1.13 {br=BR44349, ev=eq, match=single}]- geranylgeranyl_diphosphate  // ent-copalyl diphosphate synthase
+      -[node11871: 5.5.1.14 {br=BR40507, ev=eq, match=single}]-> 9alpha_copalyl_diphosphate;  // syn-copalyl-diphosphate synthase
+  }
+
+  9alpha_copalyl_diphosphate
+    -R[node1628: 4.2.3.34 | +PPi ^L {br=BR48894, ev=cof+eq}]-> stemod_13_17_ene;  // stemod-13(17)-ene synthase
+
+  9alpha_copalyl_diphosphate
+    -R[node1629: 4.2.3.35 | +PPi ^L {br=BR48895, ev=cof+eq}]-> 9beta_pimara_7_15_diene;  // syn-pimara-7,15-diene synthase
+
+  9alpha_copalyl_diphosphate
+    -R[node1630: 4.2.3.33 | +PPi ^L {br=BR48893, ev=cof+eq}]-> stemar_13_ene;  // stemar-13-ene synthase
+
+  ent_sandaracopimaradien_3beta_ol
+    -R[node1595: 1.14.14.123 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR51031, ev=cof+eq}]-> oryzalexin_D;  // oryzalexin D synthase
+
+  ent_sandaracopimaradien_3beta_ol
+    -R[node1601: 1.14.14.122 | -O2, -reduced_NADPH_hemoprotein_reductase, -oxidized_NADPH_hemoprotein_reductase, +H2O {br=BR51030, ev=conflict}]- oryzalexin_E;  // oryzalexin E synthase
+}

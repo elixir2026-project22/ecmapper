@@ -1,0 +1,41 @@
+pwl 2.0;
+subsystem selenocysteine-biosynthesis 'selenocysteine biosynthesis' {
+  // BRENDA subsystem: 7 reactions (7 with direction), 10 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ala brenda:103 kegg:C00041;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_selenocysteine 'L-selenocysteine' brenda:1237 kegg:C05688;
+  compound L_selenocysteinyl_tRNAsec 'L-selenocysteinyl-tRNAsec' brenda:12932 kegg:C06482;
+  compound L_seryl_tRNASec 'L-seryl-tRNASec' brenda:4086 kegg:C06481;
+  compound Met brenda:88 kegg:C00073;
+  compound O_phospho_L_seryl_tRNASec 'O-phospho-L-seryl-tRNASec' brenda:6326;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound Se_Pi 'Se-Pi' brenda:4899 kegg:C05172;
+  compound Se_methyl_L_selenocysteine 'Se-methyl-L-selenocysteine' brenda:6054 kegg:C05689;
+  compound Ser brenda:95 kegg:C00065;
+  compound acceptor brenda:66 brenda:3161;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  compound selenide brenda:5614 kegg:C01528;
+  compound tRNASec brenda:17535 kegg:C16636;
+  port Ala side D to alanine-metabolism;
+  port Ser side U to serine-metabolism;
+
+  L_seryl_tRNASec
+    -[node11146: 2.7.1.164 | ATP>ADP ^L {br=BR49063, ev=cof+eq}]-> O_phospho_L_seryl_tRNASec;  // O-phosphoseryl-tRNASec kinase
+
+  selenide
+    -B[node9299: 2.7.9.3 | ATP>AMP, -H2O, +Pi {br=BR48098, ev=cof+eq}]-> Se_Pi;  // selenide, water dikinase
+
+  L_selenocysteine
+    -B[node1919: 2.1.1.280 | -L_selenocysteine, +Met ^R {br=BR49053, ev=cof+eq}]-> Se_methyl_L_selenocysteine;  // selenocysteine Se-methyltransferase
+
+  (Se_Pi + L_seryl_tRNASec) -[node9307: 2.9.1.1 | +Pi, +H2O {br=BR2406, ev=cof+eq}]-> L_selenocysteinyl_tRNAsec;  // L-Seryl-tRNASec selenium transferase
+  (Ser + tRNASec) -[node9318: 6.1.1.11 | ATP>AMP, +PPi {br=BS368858, ev=cof+eq}]-> L_seryl_tRNASec;  // Serine-tRNA ligase
+  L_selenocysteine -[node10390: 4.4.1.16 | reduced_acceptor>acceptor {br=BR48362, ev=cof+eq}]-> (selenide + Ala);  // selenocysteine lyase
+  (Se_Pi + O_phospho_L_seryl_tRNASec) -[node2453: 2.9.1.2 | +2*Pi {br=BR49066, ev=cof+eq}]-> L_selenocysteinyl_tRNAsec;  // O-phospho-L-seryl-tRNASec:L-selenocysteinyl-tRNA synthase
+}

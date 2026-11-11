@@ -1,0 +1,30 @@
+pwl 2.0;
+subsystem 5R-carbapenem-carboxylate-biosynthesis '(5R)-carbapenem carboxylate biosynthesis' {
+  // BRENDA subsystem: 4 reactions (2 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2S_5S_5_carboxymethylproline '(2S,5S)-5-carboxymethylproline' brenda:2698 kegg:C17366;
+  compound 3S_5S_carbapenam_3_carboxylate '(3S,5S)-carbapenam 3-carboxylate' brenda:15347 kegg:C17367;
+  compound 5R_carbapen_2_em_3_carboxylate '(5R)-carbapen-2-em-3-carboxylate' brenda:15358 kegg:C06669;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H2O brenda:1 kegg:C00001;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pro brenda:243 kegg:C00148;
+  compound a_quinol 'a quinol' brenda:2695;
+  compound a_quinone 'a quinone' brenda:1992;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound pyrroline_5_carboxylate 'pyrroline-5-carboxylate' brenda:3430 kegg:C03912;
+  compound succinate brenda:58 kegg:C00042;
+  port Pro side R to proline-metabolism;
+
+  Pro
+    -[node11784: 1.5.5.2 | -a_quinone, +a_quinol ^L {br=BR36918, ev=cof+eq}]-> pyrroline_5_carboxylate  // proline dehydrogenase
+    -[node11788: 2.3.1.226 | -CoA, -H2O, +CO2, +malonyl_CoA {br=BR50641, ev=conflict}]- 2S_5S_5_carboxymethylproline  // carboxymethylproline synthase
+    -[node11794: 6.3.3.6 | -PPi, +AMP, +ATP {br=BR50731, ev=conflict}]- 3S_5S_carbapenam_3_carboxylate  // carbapenam-3-carboxylate synthase
+    <-[node11799: 1.14.20.3 | -CO2, -succinate, -H2O, +O2, +2OG {br=BR50588, ev=cof-eq}]- 5R_carbapen_2_em_3_carboxylate;  // (5R)-carbapenem-3-carboxylate synthase
+}

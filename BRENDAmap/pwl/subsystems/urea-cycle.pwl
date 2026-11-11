@@ -1,0 +1,51 @@
+pwl 2.0;
+subsystem urea-cycle 'urea cycle' {
+  // BRENDA subsystem: 10 reactions (9 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Arg brenda:123 kegg:C00062;
+  compound Asp brenda:97 kegg:C00049;
+  compound CO2 brenda:28 kegg:C00011;
+  compound H2O brenda:1 kegg:C00001;
+  compound HCO3 brenda:195 kegg:C00288;
+  compound L_argininosuccinate 'L-argininosuccinate' brenda:10688 kegg:C03406;
+  compound L_citrulline 'L-citrulline' brenda:938 kegg:C00327;
+  compound NH3 brenda:27;
+  compound Orn brenda:192 kegg:C00077;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound allophanate brenda:8043 kegg:C01010;
+  compound carbamoyl_phosphate 'carbamoyl phosphate' brenda:440 kegg:C00169;
+  compound fumarate brenda:170 kegg:C00122;
+  compound urea brenda:116 kegg:C00086;
+  port L_argininosuccinate side U to arginine-metabolism;
+  port L_citrulline side L to arginine-metabolism;
+  port Orn side L to arginine-metabolism;
+  port Orn side L to proline-metabolism;
+  port Orn side R to polyamine-pathway;
+  port carbamoyl_phosphate side U to arginine-metabolism;
+  port urea side U to creatinine-degradation;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    Orn
+      <-L[node4993: 3.5.1.20 | -H2O, +CO2, +NH3 {br=BR19238, ev=cof+eq}]- L_citrulline  // citrullinase
+      -[node5843: 6.3.4.5 | ATP>AMP, -Asp, +PPi {br=BR142, ev=cof+eq, match=kegg}]-> L_argininosuccinate  // Argininosuccinate synthase
+      -B[node4981: 4.3.2.1 | +fumarate ^R {br=BR3431, ev=cof+eq, match=kegg}]-> Arg;  // argininosuccinate lyase
+    Arg -[node4979: 3.5.3.1 | -H2O {br=BR19260, ev=cof+eq}]-> (urea + Orn);  // arginase
+    chord (Orn + carbamoyl_phosphate) -[node5838: 2.1.3.3 | +Pi {br=BR43950, ev=cof+eq}]-> L_citrulline;  // ornithine carbamoyltransferase
+  }
+
+  carbamoyl_phosphate
+    -L[node5884: <- 2.7.2.2 | ATP>ADP, -HCO3, +H2O {br=BR47825, ev=cof+eq} || node5830: 6.3.4.16 | ATP>ADP, -H2O, -CO2, +Pi]- NH3#2;  // carbamate kinase; Carbamoyl-phosphate synthase (ammonia)
+
+  urea
+    -L[node3480: 6.3.4.6 | ATP>ADP, -HCO3, +Pi {br=BR143, ev=cof+eq, match=kegg}]-> allophanate  // Urea carboxylase
+    -[node3484: 3.5.1.54 | -H2O, +2*CO2 ^L {br=BR22698, ev=cof+eq, match=kegg}]-> NH3  // allophanate hydrolase
+    <-B[node7741: 3.5.1.5 | -H2O, +CO2 ^R {br=BR22694, ev=cof+eq}]- urea;  // urease
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { Arg Orn L_citrulline L_argininosuccinate };
+}

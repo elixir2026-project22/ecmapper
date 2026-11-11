@@ -1,0 +1,106 @@
+pwl 2.0;
+subsystem kanamycin-biosynthesis 'kanamycin biosynthesis' {
+  // BRENDA subsystem: 27 reactions (24 with direction), 27 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2_N_acetylparomamine '2\'-N-acetylparomamine' brenda:23603 kegg:C17582;
+  compound 2_Oxoglutaramate '2-Oxoglutaramate' brenda:881 kegg:C00940;
+  compound 2_acetyl_6_deamino_6_hydroxyneomycin_C '2\'\'\'-acetyl-6\'\'\'-deamino-6\'\'\'-hydroxyneomycin C' brenda:146478;
+  compound 2_deamino_2_hydroxyneamine '2\'-deamino-2\'-hydroxyneamine' brenda:28629 kegg:C20350;
+  compound 2_deamino_2_hydroxyparomamine '2\'-deamino-2\'-hydroxyparomamine' brenda:28497 kegg:C20353;
+  compound 2_dehydrokanamycin_A '2\'-dehydrokanamycin A' brenda:28965 kegg:C20509;
+  compound 2_deoxy_L_scyllo_inosose '2-deoxy-L-scyllo-inosose' brenda:86258 kegg:C17209;
+  compound 2_deoxy_scyllo_inosamine '2-deoxy-scyllo-inosamine' brenda:4151 kegg:C17580;
+  compound 2_deoxystreptamine '2-deoxystreptamine' brenda:3178 kegg:C02627;
+  compound 3_amino_2_3_dideoxy_scyllo_inosose '3-amino-2,3-dideoxy-scyllo-inosose' brenda:8758 kegg:C17581;
+  compound 3_deamino_3_hydroxykanamycin_B '3\'\'-deamino-3\'\'-hydroxykanamycin B' brenda:256543 kegg:C21254;
+  compound 4_gamma_L_glutamylamino_S_2_hydroxybutanoyl_BtrI_acyl_carrier_protein '4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoyl-[BtrI acyl-carrier protein]' brenda:169098;
+  compound 5_P_alpha_D_Rib_1_PP '5-P-alpha-D-Rib 1-PP' brenda:158 kegg:C00119;
+  compound 5_deoxyadenosine '5\'-deoxyadenosine' brenda:943 kegg:C05198;
+  compound 5_oxo_L_proline '5-oxo-L-proline' brenda:3609 kegg:C01879;
+  compound 5_phosphoribostamycin '5\'\'-phosphoribostamycin' brenda:28631 kegg:C18004;
+  compound 6_deamino_6_hydroxyneomycin_C '6\'\'\'-deamino-6\'\'\'-hydroxyneomycin C' brenda:28621 kegg:C17588;
+  compound 6_deamino_6_oxoneomycin_C '6\'\'\'-deamino-6\'\'\'-oxoneomycin C' brenda:41972 kegg:C17589;
+  compound 6_dehydroparomamine '6\'-dehydroparomamine' brenda:41971 kegg:C17583;
+  compound BtrI_acyl_carrier_protein 'BtrI acyl-carrier protein' brenda:12197;
+  compound CO2 brenda:28 kegg:C00011;
+  compound D_Glc_6_P 'D-Glc 6-P' brenda:105 kegg:C00092;
+  compound Gln brenda:102 kegg:C00064;
+  compound Glu brenda:41 kegg:C00025;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2_L22 'H2O2' brenda:22 kegg:C00027;
+  compound Met brenda:88 kegg:C00073;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc 'UDP-Glc' brenda:64 kegg:C00029;
+  compound UDP_Glc_L364 'UDP-Glc' brenda:364 kegg:C00029;
+  compound UDP_N_acetyl_alpha_D_glucosamine 'UDP-N-acetyl-alpha-D-glucosamine' brenda:1424 kegg:C00043;
+  compound UDP_alpha_D_kanosamine 'UDP-alpha-D-kanosamine' brenda:7947 kegg:C12211;
+  compound acetate brenda:47 kegg:C00033;
+  compound butirosin_B 'butirosin B' brenda:86949 kegg:C17586;
+  compound gamma_L_glutamyl_butirosin_B 'gamma-L-glutamyl-butirosin B' brenda:28625 kegg:C18005;
+  compound kanamycin_A 'kanamycin A' brenda:789 kegg:C01822;
+  compound kanamycin_B 'kanamycin B' brenda:3078 kegg:C00825;
+  compound kanamycin_C 'kanamycin C' brenda:15804 kegg:C01823;
+  compound kanamycin_D 'kanamycin D' brenda:256544 kegg:C21253;
+  compound kanamycin_X 'kanamycin X' brenda:89284 kegg:C20614;
+  compound neamine brenda:1793 kegg:C01441;
+  compound neomycin_C 'neomycin C' brenda:5585 kegg:C15652;
+  compound paromamine brenda:6576 kegg:C01743;
+  compound ribostamycin brenda:1627 kegg:C01759;
+  compound succinate brenda:58 kegg:C00042;
+
+  // ring: cycle of the drawing (10 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    2_deoxystreptamine
+      -L[node700: 2.4.1.283 | UDP_N_acetyl_alpha_D_glucosamine>UDP {br=BR50179, ev=cof+eq}]-> 2_N_acetylparomamine  // 2-deoxystreptamine N-acetyl-D-glucosaminyltransferase
+      -R[node696: 3.5.1.112 | -H2O, +acetate ^L {br=BR50322, ev=cof+eq}]-> paromamine  // 2'-N-acetylparomamine deacetylase
+      -[node12690: 1.1.3.43 | -O2, +H2O2_L22 ^L {br=BR50143, ev=cof+eq}]-> 6_dehydroparomamine  // paromamine 6'-oxidase
+      -[node12694: 2.6.1.93 | -Glu, +2OG ^L {br=BR50192, ev=cof-eq}]-> neamine  // neamine transaminase
+      -R[node648: 2.4.1.301 | UDP_alpha_D_kanosamine>UDP ^R {br=BR50648, ev=cof+eq}]-> kanamycin_B  // 2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase
+      -[node639: 1.14.11.37 | -2OG, -O2, +NH3, +succinate, +CO2 {br=BR50514, ev=cof+eq}]-> 2_dehydrokanamycin_A  // kanamycin B dioxygenase
+      <-R[node637: 1.1.1.355 | NADP>NADPH, +H ^L {br=BR50592, ev=cof+eq}]- kanamycin_A  // 2'-dehydrokanamycin reductase
+      <-[node676: 2.4.1.301 | UDP_alpha_D_kanosamine>UDP ^L {br=BR50647, ev=cof+eq}]- 2_deamino_2_hydroxyneamine  // 2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase
+      -R[node684: 2.6.1.94 | -Glu, +2OG ^L]- 2_deamino_2_hydroxyparomamine  // 2'-deamino-2'-hydroxyneamine transaminase
+      <-[node692: 2.4.1.284 | UDP_Glc_L364>UDP ^L {br=BR50180, ev=cof+eq}]- 2_deoxystreptamine;  // 2-deoxystreptamine glucosyltransferase
+  }
+
+  2_deamino_2_hydroxyneamine
+    -B[node680: 2.4.1.301 | UDP_Glc>UDP ^L]- kanamycin_D;  // 2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase
+
+  2_deamino_2_hydroxyparomamine
+    -[node688: 2.4.1.301 | UDP_alpha_D_kanosamine>UDP ^R {br=BR50650, ev=cof+eq}]-> kanamycin_X;  // 2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase
+
+  paromamine
+    -L[node656: 2.4.1.301 | UDP_alpha_D_kanosamine>UDP ^L {br=BR50649, ev=cof+eq}]-> kanamycin_C;  // 2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase
+
+  neamine
+    -[node12695: 2.4.2.49 | -5_P_alpha_D_Rib_1_PP, +PPi ^L {br=BR50426, ev=cof+eq}]-> 5_phosphoribostamycin  // neamine phosphoribosyltransferase
+    -[node12699: 3.1.3.88 | -H2O, +Pi ^L {br=BR50198, ev=cof+eq}]-> ribostamycin  // 5''-phosphoribostamycin phosphatase
+    -L[node672: 2.4.1.285 | UDP_N_acetyl_alpha_D_glucosamine>UDP {br=BR50181, ev=cof+eq, match=single}]-> 2_acetyl_6_deamino_6_hydroxyneomycin_C  // UDP-GlcNAc:ribostamycin N-acetylglucosaminyltransferase
+    -R[node668: 3.5.1.113 | -H2O, +acetate ^L {br=BR50323, ev=cof+eq}]-> 6_deamino_6_hydroxyneomycin_C  // 2'''-acetyl-6'''-hydroxyneomycin C deacetylase
+    -[node662: 1.1.3.44 | -O2, +H2O2_L22 ^L {br=BR50144, ev=cof+eq}]-> 6_deamino_6_oxoneomycin_C  // 6'''-hydroxyneomycin C oxidase
+    -[node658: 2.6.1.95 | -Glu, +2OG ^L {br=BR50194, ev=cof-eq}]-> neomycin_C;  // neomycin C transaminase
+
+  neamine
+    -L[node652: 2.4.1.301 | UDP_Glc>UDP ^L]- 3_deamino_3_hydroxykanamycin_B;  // 2'-deamino-2'-hydroxyneamine 1-alpha-D-kanosaminyltransferase
+
+  D_Glc_6_P
+    -[node717: 4.2.3.124 | +Pi ^L {br=BR50122, ev=cof+eq}]-> 2_deoxy_L_scyllo_inosose  // 2-deoxy-scyllo-inosose synthase
+    -[node716: 2.6.1.100 | -Gln, +2_Oxoglutaramate ^L {br=BR50432, ev=cof+eq}]-> 2_deoxy_scyllo_inosamine  // L-glutamine:2-deoxy-scyllo-inosose aminotransferase
+    -[node708: 1.1.99.38 | -S_adenosyl_L_methionine, +5_deoxyadenosine, +Met {br=BR50146, ev=cof+eq} || node713: 1.1.1.329 | NADP>NADPH, +H {br=BR50138, ev=cof+eq}]-> 3_amino_2_3_dideoxy_scyllo_inosose  // 2-deoxy-scyllo-inosamine dehydrogenase (AdoMet-dependent); 2-deoxy-scyllo-inosamine dehydrogenase
+    -[node704: 2.6.1.101 | -Gln, +2_Oxoglutaramate ^L {br=BR50433, ev=cof+eq}]-> 2_deoxystreptamine;  // L-glutamine:3-amino-2,3-dideoxy-scyllo-inosose aminotransferase
+
+  gamma_L_glutamyl_butirosin_B
+    -[node12707: 4.3.2.6 | +5_oxo_L_proline ^L {br=BR50209, ev=cof+eq}]-> butirosin_B;  // gamma-L-glutamyl-butirosin B gamma-glutamyl cyclotransferase
+
+  (4_gamma_L_glutamylamino_S_2_hydroxybutanoyl_BtrI_acyl_carrier_protein + ribostamycin) -[node12703: 2.3.2.19 | +BtrI_acyl_carrier_protein {br=BR50177, ev=cof+eq}]-> gamma_L_glutamyl_butirosin_B;  // ribostamycin:4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoyl-[BtrI acyl-carrier protein] 4-(gamma-L-glutamylamino)-(S)-2-hydroxybutanoate transferase
+}

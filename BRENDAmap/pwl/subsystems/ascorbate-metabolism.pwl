@@ -1,0 +1,104 @@
+pwl 2.0;
+subsystem ascorbate-metabolism 'ascorbate metabolism' {
+  // BRENDA subsystem: 32 reactions (20 with direction), 27 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_dehydro_L_sorbose '1-dehydro-L-sorbose' brenda:13189 kegg:C19679;
+  compound 2_3_dioxo_L_gulonate '2,3-dioxo-L-gulonate' brenda:29193 kegg:C04575;
+  compound 2_dehydro_L_gulonolactone '2-dehydro-L-gulonolactone' brenda:182172;
+  compound 3_dehydro_L_gulonate '3-dehydro-L-gulonate' brenda:10503 kegg:C00618;
+  compound 3_dehydro_L_gulonate_6_P '3-dehydro-L-gulonate 6-P' brenda:1458 kegg:C14899;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound CO2 brenda:28 kegg:C00011;
+  compound D_Sorbitol 'D-Sorbitol' brenda:627 kegg:C00794;
+  compound D_galacturonate 'D-galacturonate' brenda:1752 kegg:C00333;
+  compound D_galacturonate_1P 'D-galacturonate 1P' brenda:173111;
+  compound GDP brenda:53 kegg:C00035;
+  compound GDP_Man 'GDP-Man' brenda:3633 kegg:C00096;
+  compound GDP_galactose 'GDP-galactose' brenda:23601 kegg:C02280;
+  compound GDP_gulose 'GDP-gulose' brenda:129053 kegg:C15925;
+  compound GlcA brenda:339;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound H2O2_L22 'H2O2' brenda:22 kegg:C00027;
+  compound L_Xul_5_P 'L-Xul 5-P' brenda:10703 kegg:C03291;
+  compound L_ascorbate 'L-ascorbate' brenda:548 kegg:C00072;
+  compound L_ascorbate_6_P 'L-ascorbate 6-P' brenda:189762 kegg:C16186;
+  compound L_dehydroascorbate 'L-dehydroascorbate' brenda:8124 kegg:C05422;
+  compound L_galactonate 'L-galactonate' brenda:4596 kegg:C15930;
+  compound L_galactono_1_4_lactone 'L-galactono-1,4-lactone' brenda:1302 kegg:C01115;
+  compound L_galactose 'L-galactose' brenda:1926 kegg:C01825;
+  compound L_galactose_1P 'L-galactose 1P' brenda:9543 kegg:C15926;
+  compound L_gulonate 'L-gulonate' brenda:1757 kegg:C00800;
+  compound L_gulono_1_4_lactone 'L-gulono-1,4-lactone' brenda:2342 kegg:C01040;
+  compound L_gulose 'L-gulose' brenda:7666 kegg:C15923;
+  compound L_gulose_1P 'L-gulose 1P' brenda:250304;
+  compound L_sorbose 'L-sorbose' brenda:685 kegg:C00247;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound Pi brenda:16 kegg:C00009;
+  compound Protein_Npi_phosphohistidine 'Protein Npi-phosphohistidine' brenda:179595;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_alpha_D_glucuronate 'UDP-alpha-D-glucuronate' brenda:995 kegg:C00167;
+  compound UDP_galacturonate 'UDP-galacturonate' brenda:40097 kegg:C00617;
+  compound ferricytochrome_c 'ferricytochrome c' brenda:313 kegg:C00125;
+  compound ferrocytochrome_c 'ferrocytochrome c' brenda:530 kegg:C00126;
+  compound oxidized_electron_acceptor 'oxidized electron acceptor' brenda:374 brenda:12937;
+  compound protein_histidine 'protein histidine' brenda:12829 kegg:C00615;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+
+  // ring: cycle of the drawing (10 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    GDP_Man
+      -[node11488: 5.1.3.18 {br=BR193, ev=eq}]-> GDP_galactose  // GDP-mannose 3,5-epimerase
+      -[node11490: 2.7.7.69 | -Pi, +GDP ^R {br=BR49007, ev=eq}]-> L_galactose_1P  // GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase
+      -[node11494: 3.1.3.93 | -H2O, +Pi ^R {br=BR50987, ev=cof+eq}]-> L_galactose  // L-galactose 1-phosphate phosphatase
+      -[node11498: 1.1.1.316 | NAD>NADH ^R {br=BR49634, ev=cof+eq}]-> L_galactono_1_4_lactone  // L-galactose 1-dehydrogenase
+      -[node11502: 1.3.2.3 | -2*ferricytochrome_c, +2*ferrocytochrome_c ^R {br=BR36836, ev=cof+eq}]-> L_ascorbate  // L-galactonolactone dehydrogenase
+      -B[node11514: 1.3.2.3 | -ferricytochrome_c, +ferrocytochrome_c || node11527: <- 1.1.3.8 | -O2, +H2O2 {br=BS424857, ev=cof+eq} || node11543: ? | oxidized_electron_acceptor>reduced_electron_acceptor]- L_gulono_1_4_lactone  // L-galactonolactone dehydrogenase; L-gulonolactone oxidase; L-galactono-gamma-lactone dehydrogenase
+      -[node11512: 1.1.1.- | NAD>NADH ^R]- L_gulose  // L-gulose 1-dehydrogenase
+      -[node11510: 3.1.3.- | -H2O, +Pi ^R]- L_gulose_1P  // L-gulose 1-phosphate phosphatase
+      -[node11508: 2.7.7.69 | -Pi, +GDP ^R]- GDP_gulose  // GDP-L-galactose/GDP-D-glucose: hexose 1-phosphate guanylyltransferase
+      <-[node11506: 5.1.3.18 {br=BR53090, ev=eq}]- GDP_Man;  // GDP-mannose 3,5-epimerase
+  }
+
+  // ring: cycle of the drawing (8 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    L_gulono_1_4_lactone
+      -B[node11538: 3.1.1.- | +H2O ^R]- L_galactonate  // galactonolactonase
+      <-[node11537: 1.1.1.365 | NADPH>NADP ^R {br=BS424745, ev=cof+eq}]- D_galacturonate  // D-galacturonate reductase
+      -[node11534: ? | -H2O, +Pi ^R]- D_galacturonate_1P  // unknown enzyme
+      -[node11532: ?]- UDP_galacturonate  // hypothetical
+      <-[node11530: 5.1.3.6 {br=BR200, ev=eq}]- UDP_alpha_D_glucuronate  // UDP-glucuronate 4-epimerase
+      -B[node11517: 3.2.1.- | -H2O, +UDP ^R]- GlcA  // UDP glucuronidase
+      -[node11520: 1.1.1.19 | NADPH>NADP ^R {br=BR29243, ev=cof-eq}]-> L_gulonate  // glucuronate reductase
+      -[node11519: 3.1.1.17 | +H2O ^R {br=BS401264, ev=cof-eq}]-> L_gulono_1_4_lactone;  // gluconolactonase
+  }
+
+  // ring: cycle of the drawing (6 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    L_ascorbate
+      -B[node10056: 2.7.1.194 | -Protein_Npi_phosphohistidine, +protein_histidine ^R {br=BR51601, ev=cof+eq}]-> L_ascorbate_6_P  // protein-Npi-phosphohistidine-L-ascorbate phosphotransferase
+      -[node9552: 3.1.1.- | -H2O ^R]- 3_dehydro_L_gulonate_6_P  // l-ascorbate-6-phosphate lactonase
+      -B[node11558: ? | ATP>ADP ^L]- 3_dehydro_L_gulonate  // 3-keto-L-gulonate kinase
+      -[node11556: 1.1.1.130 | NADH>NAD ^L {br=BR29197-a, ev=eq}]-> 2_3_dioxo_L_gulonate  // 3-dehydro-L-gulonate 2-dehydrogenase
+      <-[node11554: ~? | -H2O ^L {br=BR52869, ev=cof+eq}]- L_dehydroascorbate  // spontaneous reaction
+      <-[node11550: 1.11.1.11 | -H2O2_L22, +L_ascorbate, +2*H2O {br=BR49641, ev=cof+eq} || node11549: ~? {br=BR52870, ev=eq}]- L_ascorbate;  // L-ascorbate peroxidase; spontaneous reaction
+  }
+
+  3_dehydro_L_gulonate_6_P
+    -B[node9554: 4.1.1.85 | -H, +CO2 ^R {br=BR48551, ev=cof+eq}]-> L_Xul_5_P;  // 3-dehydro-L-gulonate-6-phosphate decarboxylase
+
+  D_Sorbitol
+    -[node9540: 1.1.99.21 | oxidized_electron_acceptor>reduced_electron_acceptor ^L {br=BR36751, ev=cof+eq}]-> L_sorbose  // D-sorbitol dehydrogenase (acceptor)
+    -[node9531: 1.1.99.32 | oxidized_electron_acceptor>reduced_electron_acceptor ^L {br=BR48862, ev=cof+eq}]-> 1_dehydro_L_sorbose  // L-sorbose 1-dehydrogenase
+    -[node9533: ~? {br=BR52874, ev=eq}]-> 2_dehydro_L_gulonolactone  // spontaneous reaction
+    -[node9551: ? | oxidized_electron_acceptor>reduced_electron_acceptor ^L]- L_ascorbate;  // l-sorbosone dehydrogenase 1
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { NAD NADH } forward { node11498 node11512 } backward { node11556 };
+}

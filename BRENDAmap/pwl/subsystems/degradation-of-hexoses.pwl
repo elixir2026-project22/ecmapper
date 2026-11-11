@@ -1,0 +1,89 @@
+pwl 2.0;
+subsystem degradation-of-hexoses 'degradation of hexoses' {
+  // BRENDA subsystem: 22 reactions (21 with direction), 23 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_4_didehydro_3_deoxy_L_rhamnonate '2,4-didehydro-3-deoxy-L-rhamnonate' brenda:207256 kegg:C20781;
+  compound 2_dehydro_3_deoxy_L_rhamnoate '2-dehydro-3-deoxy-L-rhamnoate' brenda:4609 kegg:C03979;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound DHAP brenda:278 kegg:C00111;
+  compound D_Glc_6_P 'D-Glc 6-P' brenda:105 kegg:C00092;
+  compound FBP brenda:6523;
+  compound Fru_1_P 'Fru 1-P' brenda:671 kegg:C01094;
+  compound Gal brenda:910 kegg:C01582;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_Fcl 'L-Fcl' brenda:10692 kegg:C01721;
+  compound L_Fuc 'L-Fuc' brenda:717 kegg:C01019;
+  compound L_fuculose_1_phosphate 'L-fuculose 1-phosphate' brenda:1925 kegg:C01099;
+  compound L_lactaldehyde 'L-lactaldehyde' brenda:2968 kegg:C00424;
+  compound L_rhamnonate 'L-rhamnonate' brenda:5171 kegg:C01934;
+  compound L_rhamnono_1_4_lactone 'L-rhamnono-1,4-lactone' brenda:44332 kegg:C02991;
+  compound L_rhamnose 'L-rhamnose' brenda:703;
+  compound L_rhamnulose 'L-rhamnulose' brenda:7224 kegg:C00861;
+  compound L_rhamnulose_1_phosphate 'L-rhamnulose-1-phosphate' brenda:3348 kegg:C01131;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PPi brenda:17 kegg:C00013;
+  compound UDP_Glc 'UDP-Glc' brenda:64 kegg:C00029;
+  compound UDP_alpha_D_galactose 'UDP-alpha-D-galactose' brenda:891;
+  compound UTP brenda:65 kegg:C00075;
+  compound alpha_D_Glc_1_P 'alpha-D-Glc 1-P' brenda:107 kegg:C00103;
+  compound alpha_D_galactose_1_phosphate 'alpha-D-galactose 1-phosphate' brenda:493 kegg:C00446;
+  compound an_alcohol 'an alcohol' brenda:4599;
+  compound an_alpha_L_fucoside 'an alpha-L-fucoside' brenda:98395;
+  compound lactate brenda:669;
+  compound pyruvate brenda:31 kegg:C00022;
+  port D_Glc_6_P side R to glycolysis;
+  port FBP side R to glycolysis;
+  port Gal side U to metabolism-of-disaccharids;
+  port L_lactaldehyde side L to L-lactaldehyde-degradation;
+  port alpha_D_Glc_1_P side L to dTDPLrhamnose-biosynthesis;
+  port alpha_D_Glc_1_P side U to glycogen-metabolism;
+
+  // ring: cycle of the drawing (9 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    L_rhamnulose_1_phosphate
+      <-[node9675: 2.7.1.5 | ATP>ADP ^L {br=BR47784, ev=cof+eq}]- L_rhamnulose  // rhamnulokinase
+      <-[node9666: 5.3.1.14 {br=BR223, ev=eq}]- L_rhamnose  // L-Rhamnose isomerase
+      -B[node11565: 1.1.1.173 | NAD>NADH || node11566: -> 1.1.1.378 | NADP>NADPH {br=BR51099, ev=cof+eq} || node2289: -> 1.1.1.377 | NADP>NADPH {br=BR51099, ev=cof+eq}]- L_rhamnono_1_4_lactone  // L-rhamnose 1-dehydrogenase; L-rhamnose 1-dehydrogenase [NAD(P)+]; L-rhamnose 1-dehydrogenase (NADP+)
+      -[node2293: 3.1.1.65 | -H2O, +H ^R {br=BR47927, ev=cof+eq}]-> L_rhamnonate  // L-rhamnono-1,4-lactonase
+      -[node2291: 4.2.1.90 | +H2O ^R {br=BR48339, ev=cof+eq}]-> 2_dehydro_3_deoxy_L_rhamnoate;  // L-rhamnonate dehydratase
+    2_dehydro_3_deoxy_L_rhamnoate -[node2284: 4.1.2.53 {br=BR50712, ev=eq}]-> (L_lactaldehyde + pyruvate);  // 2-keto-3-deoxy-L-rhamnonate aldolase
+    L_fuculose_1_phosphate -[node9376: 4.1.2.17 {br=BR348, ev=eq, match=kegg}]-> (DHAP + L_lactaldehyde);  // L-Fuculose-phosphate aldolase
+    L_rhamnulose_1_phosphate -[node9684: 4.1.2.19 {br=BR350, ev=eq, match=kegg}]-> (DHAP + L_lactaldehyde);  // Rhamnulose-1-phosphate aldolase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    alpha_D_Glc_1_P
+      -B[node8908: 2.7.7.9 | -UTP, +PPi ^L {br=BR47905, ev=cof+eq}]-> UDP_Glc  // UTP-glucose-1-phosphate uridylyltransferase
+      -R[node9764: 5.1.3.2 {br=BR195, ev=eq}]-> UDP_alpha_D_galactose  // UDP-glucose 4-epimerase
+      <-R[node8273: 2.7.7.10 | -UTP, +PPi ^L {br=BR47859, ev=cof+eq}]- alpha_D_galactose_1_phosphate;  // UTP-hexose-1-phosphate uridylyltransferase
+    (alpha_D_galactose_1_phosphate + UDP_Glc) -[node9760: 2.7.7.12 {br=BR47861, ev=eq}]-> (UDP_alpha_D_galactose + alpha_D_Glc_1_P);  // UDP-glucose-hexose-1-phosphate uridylyltransferase
+  }
+
+  2_dehydro_3_deoxy_L_rhamnoate
+    -L[node12251: 1.1.1.401 | NAD>NADH ^R {br=BR51641, ev=cof+eq}]-> 2_4_didehydro_3_deoxy_L_rhamnonate;  // 2-dehydro-3-deoxy-L-rhamnonate dehydrogenase (NAD+)
+
+  alpha_D_Glc_1_P
+    -[node9765: 5.4.2.2/5.4.2.8 {br=BR18, ev=eq}]-> D_Glc_6_P;  // phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent);phosphomannomutase
+
+  an_alpha_L_fucoside
+    -B[node2931: 3.2.1.51 | -H2O, +an_alcohol ^L {br=BR22667, ev=cof+eq}]-> L_Fuc  // alpha-L-fucosidase
+    -[node9380: 5.3.1.25 {br=BR232, ev=eq}]-> L_Fcl  // L-Fucose isomerase
+    -[node9328: 2.7.1.51 | ATP>ADP ^R {br=BR47425, ev=cof+eq}]-> L_fuculose_1_phosphate;  // L-fuculokinase
+
+  Gal
+    -B[node9758: 2.7.1.6 | ATP>ADP ^L {br=BS357670, ev=cof+eq}]-> alpha_D_galactose_1_phosphate;  // galactokinase
+
+  Fru_1_P
+    -R[node9801: 2.7.1.56 | ATP>ADP ^L {br=BR47787, ev=cof+eq}]-> FBP;  // 1-phosphofructokinase
+
+  2_4_didehydro_3_deoxy_L_rhamnonate -[node12256: 3.7.1.26 | -H2O {br=BR53051, ev=cof+eq}]-> (lactate + pyruvate);  // 2,4-didehydro-3-deoxy-L-rhamnonate hydrolase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif shunt { alpha_D_galactose_1_phosphate UDP_alpha_D_galactose } bypasses { alpha_D_galactose_1_phosphate alpha_D_Glc_1_P UDP_Glc UDP_alpha_D_galactose };
+}

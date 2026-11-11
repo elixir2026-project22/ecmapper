@@ -1,0 +1,76 @@
+pwl 2.0;
+subsystem arachidonate-biosynthesis 'arachidonate biosynthesis' {
+  // BRENDA subsystem: 19 reactions (7 with direction), 20 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 18_hydroxyoleoyl_CoA '18-hydroxyoleoyl-CoA' brenda:202572 kegg:C21005;
+  compound 2E_8Z_11Z_14Z_icosatetraenoyl_CoA '(2E,8Z,11Z,14Z)-icosatetraenoyl-CoA';
+  compound 2E_octadec_2_enoyl_acp '(2E)-octadec-2-enoyl-[acp]' brenda:191250;
+  compound 3R_3_hydroxystearoyl_ACP '(3R)-3-hydroxystearoyl-ACP' brenda:191261 kegg:C16220;
+  compound 3R_hydroxydihomo_gamma_linolenoyl_CoA '(3R)-hydroxydihomo gamma-linolenoyl-CoA' brenda:284076;
+  compound 3_oxodihomo_gamma_linolenoyl_CoA '3-oxodihomo gamma-linolenoyl-CoA' brenda:250303;
+  compound 3_oxostearoyl_ACP '3-oxostearoyl-ACP' brenda:131217 kegg:C16219;
+  compound ACP brenda:551 brenda:1134 kegg:C00229;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound a_1_gamma_linolenoyl_2_acyl_glycerolipid 'a 1-gamma-linolenoyl-2-acyl-[glycerolipid]' brenda:202624;
+  compound a_1_linoleoyl_2_acyl_glycerolipid 'a 1-linoleoyl-2-acyl-[glycerolipid]' brenda:202626;
+  compound a_1_oleoyl_2_acyl_glycerolipid 'a 1-oleoyl-2-acyl-[glycerolipid]' brenda:202627;
+  compound arachidonate brenda:619 kegg:C00219;
+  compound dihomo_gamma_linolenate 'dihomo-gamma-linolenate' brenda:148685 kegg:C03242;
+  compound dihomo_gamma_linolenoyl_CoA 'dihomo-gamma-linolenoyl-CoA' brenda:150163;
+  compound ferricytochrome_b5 'ferricytochrome b5' brenda:1034 kegg:C00996;
+  compound ferrocytochrome_b5 'ferrocytochrome b5' brenda:1129 kegg:C00999;
+  compound gamma_linolenoyl_CoA 'gamma-linolenoyl-CoA' brenda:20275 kegg:C03035;
+  compound glycerolipid brenda:99168;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound oleate brenda:488 kegg:C00712;
+  compound oleoyl_ACP 'oleoyl-ACP' brenda:1933 kegg:C01203;
+  compound oleoyl_CoA 'oleoyl-CoA' brenda:281 kegg:C00510;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound oxidized_ferredoxin_Fe_S_cluster 'oxidized ferredoxin [Fe-S] cluster' brenda:202698 kegg:C00139;
+  compound palmitate brenda:517 kegg:C00249;
+  compound palmitoleoyl_ACP 'palmitoleoyl-ACP' brenda:1598 kegg:C05764;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound reduced_ferredoxin_Fe_S_cluster 'reduced ferredoxin [Fe-S] cluster' brenda:202701 kegg:C00138;
+  compound stearoyl_ACP 'stearoyl-ACP' brenda:1770 kegg:C04088;
+  port arachidonate side R to arachidonic-acid-metabolism;
+  port palmitate side R to ceramide-biosynthesis;
+
+  palmitate
+    -[node8526: 3.1.2.14 | -ACP, +H2O ^L]- palmitoleoyl_ACP  // oleoyl-[acyl-carrier-protein] hydrolase
+    -[node8536: 2.3.1.41 | malonyl_CoA>CoA, +CO2]- 3_oxostearoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -[node8549: 1.1.1.100 | NADPH>NADP, -H]- 3R_3_hydroxystearoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -B[node7796: 4.2.1.59 | +H2O ^R]- 2E_octadec_2_enoyl_acp  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node7799: 1.3.1.9 | NADH>NAD, -H]- stearoyl_ACP  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -[node7804: 1.14.19.2 | Fd_red>Fd_ox, -O2, +H2O {br=BR40398, ev=cof+eq}]-> oleoyl_ACP  // stearoyl-[acyl-carrier-protein] 9-desaturase
+    -[node7806: 3.1.2.14 | -H2O, +ACP {br=BR10674, ev=cof+eq}]-> oleate  // oleoyl-[acyl-carrier-protein] hydrolase
+    -B[node7814: 6.2.1.3 | ATP>AMP, -CoA, +H, +PPi {br=BS279, ev=cof+eq}]-> oleoyl_CoA  // long-chain-fatty-acid-CoA ligase
+    -[node1915: 1.14.14.129 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR51355, ev=cof+eq}]-> 18_hydroxyoleoyl_CoA;  // long-chain acyl-CoA omega-monooxygenase
+
+  oleoyl_CoA
+    -[node7816: 2.3.1.23 | -glycerolipid, +CoA ^R]- a_1_oleoyl_2_acyl_glycerolipid  // 1-acylglycerophosphocholine O-acyltransferase
+    -[node8720: 1.14.19.45 | 2*reduced_ferredoxin_Fe_S_cluster>2*oxidized_ferredoxin_Fe_S_cluster, -O2, +2*H2O {br=BR51510, ev=cof+eq}]-> a_1_linoleoyl_2_acyl_glycerolipid  // sn-1 oleoyl-lipid 12-desaturase
+    -B[node8711: 1.14.19.46 | 2*reduced_ferredoxin_Fe_S_cluster>2*oxidized_ferredoxin_Fe_S_cluster, -O2, +2*H2O {br=BR51511, ev=cof+eq}]-> a_1_gamma_linolenoyl_2_acyl_glycerolipid  // sn-1 linoleoyl-lipid 6-desaturase
+    -[node7825: 2.3.1.23 | -CoA, +glycerolipid ^L]- gamma_linolenoyl_CoA  // 1-acylglycerophosphocholine O-acyltransferase
+    -[node1261: 2.3.1.- | malonyl_CoA>CoA, +CO2]- 3_oxodihomo_gamma_linolenoyl_CoA  // unknown enzyme
+    -B[node1256: 1.1.1.330 | NADPH>NADP]- 3R_hydroxydihomo_gamma_linolenoyl_CoA  // very-long-chain 3-oxoacyl-CoA reductase
+    -[node1252: 4.2.1.134 | +H2O ^L]- 2E_8Z_11Z_14Z_icosatetraenoyl_CoA  // very-long-chain (3R)-3-hydroxyacyl-CoA dehydratase
+    -[node1248: 1.3.1.93 | NADPH>NADP ^R]- dihomo_gamma_linolenoyl_CoA  // very-long-chain enoyl-CoA reductase
+    -B[node1242: 6.2.1.3 | AMP>ATP, -PPi, +CoA]- dihomo_gamma_linolenate  // long-chain-fatty-acid-CoA ligase
+    -[node7827: 1.14.19.30 | -H, -O2, -ferrocytochrome_b5, +ferricytochrome_b5, +H2O {br=BS432765, ev=cof+eq}]-> arachidonate;  // acyl-lipid (8-3)-desaturase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { AMP ATP } forward { node1242 } backward { node7814 };
+}

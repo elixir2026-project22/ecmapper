@@ -1,0 +1,47 @@
+pwl 2.0;
+subsystem ethylmalonyl-CoA-pathway 'ethylmalonyl-CoA pathway' {
+  // BRENDA subsystem: 10 reactions (8 with direction), 12 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_methylfumaryl_CoA '2-methylfumaryl-CoA' brenda:19810 kegg:C06028;
+  compound 3_methylfumaryl_CoA '3-methylfumaryl-CoA' brenda:90078 kegg:C18323;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_malate 'L-malate' brenda:200 brenda:247;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_ethylmalonyl_CoA '(R)-ethylmalonyl-CoA' brenda:26007 kegg:C18026;
+  compound S_citramalyl_CoA '(S)-citramalyl-CoA' brenda:90061;
+  compound S_ethylmalonyl_CoA '(S)-ethylmalonyl-CoA' brenda:11948 kegg:C18026;
+  compound beta_methylmalyl_CoA 'beta-methylmalyl-CoA' brenda:17524 kegg:C06027;
+  compound crotonyl_CoA 'crotonyl-CoA' brenda:406 kegg:C00877;
+  compound electron_transfer_flavoprotein 'electron-transfer flavoprotein' brenda:1601 kegg:C04253;
+  compound glyoxylate brenda:101 kegg:C00048;
+  compound malyl_CoA 'malyl-CoA' brenda:12124 kegg:C04348;
+  compound methylsuccinyl_CoA 'methylsuccinyl-CoA' brenda:20916 kegg:C18324;
+  compound propanoyl_CoA 'propanoyl-CoA' brenda:782 kegg:C00100;
+  compound reduced_electron_transfer_flavoprotein 'reduced electron-transfer flavoprotein' brenda:2112 kegg:C04570;
+  port crotonyl_CoA side D to CO2-fixation-in-Crenarchaeota;
+
+  crotonyl_CoA
+    -L[node11341: 1.3.1.85 | NADPH>NADP, -CO2]- S_ethylmalonyl_CoA  // crotonyl-CoA carboxylase/reductase
+    -[node11346: 5.1.99.1]- R_ethylmalonyl_CoA  // methylmalonyl-CoA epimerase
+    -R[node11342: 5.4.99.63 {br=BR49022, ev=eq}]-> methylsuccinyl_CoA  // ethylmalonyl-CoA mutase
+    -[node11344: 1.3.8.12 | -electron_transfer_flavoprotein, +reduced_electron_transfer_flavoprotein {br=BR51215, ev=cof+eq}]-> 2_methylfumaryl_CoA  // (2S)-methylsuccinyl-CoA dehydrogenase
+    -R[node1976: 5.4.1.3 {br=BR51008, ev=eq}]-> 3_methylfumaryl_CoA  // 2-methylfumaryl-CoA isomerase
+    <-L[node1974: 4.2.1.153 {br=BR51057, ev=eq}]- S_citramalyl_CoA;  // 3-methylfumaryl-CoA hydratase
+
+  2_methylfumaryl_CoA
+    -L[node11347: 4.2.1.148 | -H2O ^R {br=BR51001, ev=cof-eq, match=kegg}]-> beta_methylmalyl_CoA;  // 2-methylfumaryl-CoA hydratase
+
+  glyoxylate
+    -R[node11352: 4.1.3.24 | -Ac_CoA ^L {br=BR3371, ev=cof-eq}]-> malyl_CoA  // malyl-CoA lyase
+    -L[node11353: 6.2.1.9 | ADP>ATP, -Pi, +CoA {br=BS428301, ev=cof-eq}]-> L_malate;  // malate-CoA ligase
+
+  beta_methylmalyl_CoA -[node11348: 4.1.3.24 {br=BR50832, ev=eq, match=kegg}]-> (propanoyl_CoA + glyoxylate);  // malyl-CoA lyase
+}

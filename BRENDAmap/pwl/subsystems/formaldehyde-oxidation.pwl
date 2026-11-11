@@ -1,0 +1,23 @@
+pwl 2.0;
+subsystem formaldehyde-oxidation 'formaldehyde oxidation' {
+  // BRENDA subsystem: 3 reactions (3 with direction), 4 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound CH2O brenda:130 kegg:C00067;
+  compound GSH brenda:44 kegg:C00051;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound S_formylglutathione 'S-formylglutathione' brenda:1656 kegg:C01031;
+  compound S_hydroxymethylglutathione 'S-hydroxymethylglutathione' brenda:8583 kegg:C14180;
+  compound formate brenda:120 kegg:C00058;
+  port CH2O side L to methane-metabolism;
+  port formate side D to reductive-acetyl-coenzyme-A-pathway;
+
+  S_hydroxymethylglutathione
+    -[node9406: 1.1.1.284 | NADP>NADPH ^L {br=BR48484, ev=cof+eq}]-> S_formylglutathione  // S-(hydroxymethyl)glutathione dehydrogenase
+    -[node9385: 3.1.2.12 | -H2O, +GSH ^R {br=BR10672, ev=cof+eq}]-> formate;  // S-formylglutathione hydrolase
+
+  S_hydroxymethylglutathione
+    -[node9388: 4.4.1.22 | +GSH ^L {br=BR48540, ev=cof+eq}]-> CH2O;  // S-(hydroxymethyl)glutathione synthase
+}

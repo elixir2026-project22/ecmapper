@@ -1,0 +1,27 @@
+pwl 2.0;
+subsystem cis-vaccenate-biosynthesis 'cis-vaccenate biosynthesis' {
+  // BRENDA subsystem: 5 reactions (0 with direction), 7 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2E_vaccen_2_enoyl_ACP '(2E)-vaccen-2-enoyl-ACP' brenda:191362;
+  compound 3_oxo_cis_vaccenoyl_ACP '3-oxo-cis-vaccenoyl-ACP' brenda:191338;
+  compound CO2 brenda:28 kegg:C00011;
+  compound Cis_vaccenoyl_ACP 'Cis-vaccenoyl-ACP' brenda:30690;
+  compound H2O brenda:1 kegg:C00001;
+  compound Holo_ACP 'Holo-ACP' brenda:2745 kegg:C00229;
+  compound Malonyl_ACP 'Malonyl-ACP' brenda:811;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound R_3_hydroxy_cis_vaccenoyl_ACP '(R)-3-hydroxy-cis-vaccenoyl-ACP' brenda:191363;
+  compound cis_vaccenate 'cis-vaccenate' brenda:92943 kegg:C21944;
+  compound palmitoleoyl_ACP_L3103 'palmitoleoyl-ACP' brenda:3103;
+  port Malonyl_ACP side L to lipid-metabolism;
+
+  cis_vaccenate
+    -[node9483: 3.1.2.14 | -H2O, +Holo_ACP]- Cis_vaccenoyl_ACP  // oleoyl-[acyl-carrier-protein] hydrolase
+    -B[node9473: 1.3.1.9 | NADPH>NADP ^L]- 2E_vaccen_2_enoyl_ACP  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -B[node9467: 4.2.1.59 | +H2O ^L]- R_3_hydroxy_cis_vaccenoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node9450: 1.1.1.100 | NADPH>NADP]- 3_oxo_cis_vaccenoyl_ACP;  // 3-oxoacyl-[acyl-carrier-protein] reductase
+
+  react [node9465: 2.3.1.41 | +CO2, +Holo_ACP] {Malonyl_ACP, palmitoleoyl_ACP_L3103, 3_oxo_cis_vaccenoyl_ACP};  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+}

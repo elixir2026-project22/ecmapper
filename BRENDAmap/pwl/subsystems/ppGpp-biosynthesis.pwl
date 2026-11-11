@@ -1,0 +1,26 @@
+pwl 2.0;
+subsystem ppGpp-biosynthesis 'ppGpp biosynthesis' {
+  // BRENDA subsystem: 4 reactions (4 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound GDP brenda:53 kegg:C00035;
+  compound GTP brenda:37 kegg:C00044;
+  compound H2O brenda:1 kegg:C00001;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound ppGpp brenda:46041 kegg:C01228;
+  compound pppGpp brenda:10664 kegg:C04494;
+  port GTP side D to flavin-biosynthesis;
+
+  GTP
+    -[node6811: 2.7.6.5 | ATP>AMP ^R {br=BR47857, ev=cof+eq}]-> pppGpp  // GTP diphosphokinase
+    -L[node6815: 3.6.1.40 | -H2O, +Pi {br=BR29528, ev=cof+eq, match=kegg}]-> ppGpp  // guanosine-5'-triphosphate,3'-diphosphate phosphatase
+    -R[node6823: 3.1.7.2 | -H2O, +PPi ^R {br=BR15976, ev=cof+eq}]-> GDP#2;  // guanosine-3',5'-bis(diphosphate) 3'-diphosphatase
+
+  GDP
+    -[node6817: 2.7.6.5 | ATP>AMP ^R {br=BS358319, ev=cof+eq, match=kegg}]-> ppGpp;  // GTP diphosphokinase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { GDP ppGpp } forward { node6817 } backward { node6823 };
+}

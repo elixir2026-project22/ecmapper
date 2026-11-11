@@ -1,0 +1,105 @@
+pwl 2.0;
+subsystem polyamine-pathway 'polyamine pathway' {
+  // BRENDA subsystem: 27 reactions (25 with direction), 24 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 3_APA '3-APA' brenda:5485 kegg:C05665;
+  compound 4_aminobutanoate '4-aminobutanoate' brenda:597 kegg:C00334;
+  compound 4_gamma_glutamylamino_butanoate '4-(gamma-glutamylamino)butanoate' brenda:127712;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound Arg brenda:123 kegg:C00062;
+  compound Asp_4_semialdehyde 'Asp 4-semialdehyde' brenda:573 kegg:C00441;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound L_2_4_diaminobutanoate 'L-2,4-diaminobutanoate' brenda:2561 kegg:C03283;
+  compound N1_3_aminopropyl_agmatine 'N1-(3-aminopropyl)agmatine' brenda:170005 kegg:C20560;
+  compound N1_acetylspermidine 'N1-acetylspermidine' brenda:1932 kegg:C00612;
+  compound N1_acetylspermine 'N1-acetylspermine' brenda:1108 kegg:C02567;
+  compound N4_aminopropylspermidine 'N4-aminopropylspermidine' brenda:195064 kegg:C21009;
+  compound N4_bis_3_aminopropyl_spermidine 'N4-bis(3-aminopropyl)spermidine' brenda:194275 kegg:C21010;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound N_carbamoylputrescine 'N-carbamoylputrescine' brenda:4032 kegg:C00436;
+  compound O2 brenda:9 brenda:1180;
+  compound Orn brenda:192 kegg:C00077;
+  compound Pi brenda:16 kegg:C00009;
+  compound Put brenda:155 kegg:C00134;
+  compound S_adenosylmethioninamine 'S-adenosylmethioninamine' brenda:1431 kegg:C01137;
+  compound S_methyl_5_thioadenosine 'S-methyl-5\'-thioadenosine' brenda:1578 kegg:C00170;
+  compound agmatine brenda:505 kegg:C00179;
+  compound caldopentamine brenda:194273 kegg:C21100;
+  compound carboxynorspermidine brenda:5063 kegg:C18174;
+  compound carboxyspermidine brenda:7915 kegg:C18172;
+  compound gamma_L_glutamylputrescine 'gamma-L-glutamylputrescine' brenda:35036 kegg:C15699;
+  compound gamma_glutamyl_gamma_aminobutyraldehyde 'gamma-glutamyl-gamma-aminobutyraldehyde' brenda:62549 kegg:C15700;
+  compound norspermidine brenda:7488 kegg:C03375;
+  compound norspermine brenda:4120 kegg:C21004;
+  compound propane_1_3_diamine 'propane-1,3-diamine' brenda:721 kegg:C00986;
+  compound spermidine brenda:148 kegg:C00315;
+  compound spermine brenda:197 kegg:C00750;
+  compound sym_norspermidine 'sym-norspermidine' brenda:10788;
+  compound urea brenda:116 kegg:C00086;
+  port 4_aminobutanoate side L to glutamate-and-glutamine-metabolism;
+  port Arg side L to arginine-metabolism;
+  port L_2_4_diaminobutanoate side L to threonine-metabolism;
+  port Orn side L to urea-cycle;
+
+  // ring: cycle of the drawing (6 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    agmatine
+      -B[node4875: 3.5.3.12 | -H2O, +NH3 ^R {br=BR22722, ev=cof+eq}]-> N_carbamoylputrescine  // agmatine deiminase
+      -B[node4871: 3.5.1.53 | -H2O, +NH3, +CO2 {br=BR22697, ev=cof+eq}]-> Put  // N-carbamoylputrescine amidase
+      -R[node2909: 1.5.1.43 | NADPH>NADP, -Asp_4_semialdehyde {br=BR50244, ev=cof-eq}]-> carboxyspermidine  // carboxynorspermidine synthase
+      -L[node2907: 4.1.1.96 | +CO2 ^L {br=BR50202, ev=cof+eq}]-> spermidine  // carboxynorspermidine decarboxylase
+      <-[node11044: 3.5.3.24 | -H2O, +urea ^L {br=BR50461, ev=cof+eq, match=kegg}]- N1_3_aminopropyl_agmatine  // N1-aminopropylagmatine ureohydrolase
+      <-B[node11041: 2.5.1.104 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine ^R {br=BR50430, ev=cof+eq}]- agmatine;  // N1-aminopropylagmatine synthase
+    chord agmatine -R[node4879: 3.5.3.11 | -H2O, +urea ^R {br=BR26108, ev=cof+eq}]-> Put;  // agmatinase
+    chord Put -[node5598: 2.5.1.16 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine ^L {br=BR47664, ev=cof+eq}]-> spermidine;  // spermidine synthase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    spermidine
+      -[node11191: 2.5.1.22/2.5.1.104 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine {br=BR44280, ev=cof+eq}]-> spermine  // spermine synthase\n;N1-aminopropylagmatine synthase
+      -R[node5181: 2.3.1.57 | Ac_CoA>CoA ^L {br=BS321086, ev=cof+eq}]-> N1_acetylspermine  // diamine N-acetyltransferase
+      -R[node2983: 1.5.3.13/1.5.3.17 | -O2, -H2O, +3_APA, +H2O2 {br=BS259328, ev=cof+eq}]-> N1_acetylspermidine  // N1-acetylpolyamine oxidase;non-specific polyamine oxidase
+      <-R[node5180: 2.3.1.57 | Ac_CoA>CoA ^L {br=BS321083, ev=cof+eq}]- spermidine;  // diamine N-acetyltransferase
+  }
+
+  spermidine
+    -B[node11180: 2.5.1.128 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine {br=BR51124, ev=cof+eq}]-> N4_aminopropylspermidine  // N4-bis(aminopropyl)spermidine synthase
+    -L[node11192: 2.5.1.128 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine ^R {br=BR51125, ev=cof+eq}]-> N4_bis_3_aminopropyl_spermidine;  // N4-bis(aminopropyl)spermidine synthase
+
+  Arg
+    -[node4882: 4.1.1.19 | +CO2 ^L {br=BR279, ev=cof+eq}]-> agmatine;  // Arginine decarboxylase
+
+  Put
+    -B[node4022: 6.3.1.11 | ATP>ADP, -Glu, +Pi {br=BR48542, ev=cof+eq}]-> gamma_L_glutamylputrescine  // glutamate-putrescine ligase
+    -L[node4024: 1.4.3.B1 | -O2, -H2O, +NH3, +H2O2]- gamma_glutamyl_gamma_aminobutyraldehyde  // gamma-glutamylputrescine oxidase
+    -[node13573: 1.2.1.99 | NAD>NADH, -H2O || node4020: -> 1.2.1.99 | NADP>NADPH, -H2O {br=BR49659, ev=cof+eq, match=single}]- 4_gamma_glutamylamino_butanoate  // 4-(gamma-glutamylamino)butanal dehydrogenase; 4-(gamma-glutamylamino)butanal dehydrogenase
+    -[node4011: 3.5.1.94 | -H2O, +Glu ^L {br=BR48700, ev=cof+eq}]-> 4_aminobutanoate;  // gamma-glutamyl-gamma-aminobutyrate hydrolase
+
+  Orn
+    -R[node5608: 4.1.1.17 | +CO2 ^L {br=BR277, ev=cof+eq}]-> Put;  // ornithine decarboxylase
+
+  L_2_4_diaminobutanoate
+    -R[node2924: 4.1.1.86 | +CO2 ^L {br=BR48691, ev=cof+eq}]-> propane_1_3_diamine  // diaminobutyrate decarboxylase
+    -[node2923: 1.5.1.43 | NADPH>NADP, -Asp_4_semialdehyde, +H2O ^L {br=BR49680, ev=cof+eq}]-> carboxynorspermidine  // carboxynorspermidine synthase
+    -[node2920: 4.1.1.96 | +CO2 ^L {br=BR50201, ev=cof+eq, match=kegg}]-> norspermidine  // carboxynorspermidine decarboxylase
+    -[node11172: 2.5.1.126 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine ^L {br=BR51119, ev=cof+eq}]-> norspermine  // norspermine synthase
+    -[node11174: 2.5.1.127 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine ^L {br=BR51120, ev=cof+eq}]-> caldopentamine;  // caldopentamine synthase
+
+  propane_1_3_diamine
+    -B[node2913: 2.5.1.23 | -S_adenosylmethioninamine, +S_methyl_5_thioadenosine {br=BR47539, ev=cof+eq, match=single}]-> sym_norspermidine;  // sym-norspermidine synthase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif shunt { spermidine N1_acetylspermidine } bypasses { spermidine spermine N1_acetylspermine N1_acetylspermidine };
+  motif carrier { NADP NADPH } forward { node4020 } backward { node2909 node2923 };
+}

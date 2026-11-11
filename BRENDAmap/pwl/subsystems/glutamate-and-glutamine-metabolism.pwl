@@ -1,0 +1,106 @@
+pwl 2.0;
+subsystem glutamate-and-glutamine-metabolism 'glutamate and glutamine metabolism' {
+  // BRENDA subsystem: 32 reactions (31 with direction), 23 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2_Oxoglutaramate '2-Oxoglutaramate' brenda:881 kegg:C00940;
+  compound 3S_citramalate '(3S)-citramalate' brenda:176183;
+  compound 4_aminobutanoate '4-aminobutanoate' brenda:597 kegg:C00334;
+  compound 4_hydroxybutanoate '4-hydroxybutanoate' brenda:4210 kegg:C00989;
+  compound 4_oxobutanoate '4-oxobutanoate' brenda:6454 kegg:C00232;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound Ala brenda:103 kegg:C00041;
+  compound Asp brenda:97 kegg:C00049;
+  compound CO2 brenda:28 kegg:C00011;
+  compound D_Glu 'D-Glu' brenda:344 kegg:C00217;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound Gln brenda:102 kegg:C00064;
+  compound Gln_tRNAGln 'Gln-tRNAGln' brenda:9593 kegg:C02282;
+  compound Glu brenda:41 kegg:C00025;
+  compound Glu_tRNAGln 'Glu-tRNAGln' brenda:150165 kegg:C06112;
+  compound Glutaconyl_CoA 'Glutaconyl-CoA' brenda:3204 kegg:C02411;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_threo_3_Me_Asp 'L-threo-3-Me-Asp' brenda:4538 kegg:C03618;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_2_hydroxyglutarate '(R)-2-hydroxyglutarate' brenda:5078;
+  compound R_2_hydroxyglutaryl_CoA '(R)-2-hydroxyglutaryl-CoA' brenda:52055 kegg:C03058;
+  compound acetate brenda:47 kegg:C00033;
+  compound butanoate brenda:462 brenda:683 kegg:C00246;
+  compound butanoyl_CoA 'butanoyl-CoA' brenda:270 brenda:802 kegg:C00136;
+  compound crotonoyl_CoA 'crotonoyl-CoA' brenda:3806 kegg:C00877;
+  compound fumarate brenda:170 kegg:C00122;
+  compound glutamyl_tRNAGlx 'glutamyl-tRNAGlx' brenda:63048;
+  compound mesaconate brenda:3214 kegg:C01732;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  compound oxidized_acceptor 'oxidized acceptor' brenda:1387;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  compound succinate brenda:58 kegg:C00042;
+  compound tRNAGlx brenda:21901;
+  port 2OG side U to citric-acid-cycle;
+  port 4_aminobutanoate side R to polyamine-pathway;
+  port Gln side U to arginine-metabolism;
+  port Glu side R to isoleucine-metabolism;
+  port Glu side R to proline-metabolism;
+  port Glu side U to arginine-metabolism;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    2OG
+      -R[node5410: <- 1.4.1.2 | NAD>NADH, -H2O, +NH3 {br=BR36868, ev=cof+eq} || node5409: 1.4.1.3/1.4.1.4 | NADPH>NADP, -H2O, +NH3 {br=BR36869, ev=conflict}]- Glu  // glutamate dehydrogenase; glutamate dehydrogenase [NAD(P)+];glutamate dehydrogenase (NADP+)
+      -L[node5364: -> 6.3.1.2 | ATP>ADP, -NH3, +Pi {br=BR6443, ev=cof+eq} || node5363: -> 3.5.1.2 | -NH3, +H2O {br=BR22683, ev=cof-eq} || node5362: -> 3.5.1.38 | -NH3, +H2O {br=BR22683, ev=cof-eq} || node2631: <- 6.3.5.7 | ATP>ADP, -Glu_tRNAGln, +Pi, +Gln_tRNAGln {br=BR44353, ev=cof+eq}]- Gln  // glutamine synthetase; glutaminase; glutamin-(asparagin-)ase; glutaminyl-tRNA synthase (glutamine-hydrolysing)
+      -L[node5318: 2.6.1.15 | pyruvate>Ala ^R {br=BR47673, ev=cof+eq}]-> 2_Oxoglutaramate  // glutamine-pyruvate transaminase
+      -L[node5317: 3.5.1.3 | -H2O, +NH3 {br=BR50321, ev=cof+eq}]-> 2OG;  // omega-amidase
+    chord (2OG + Gln) -[node5369: 1.4.1.13 | NADPH>NADP {br=BR36861, ev=cof-eq}]-> 2*Glu;  // glutamate synthase (NADPH)
+    chord 2*Glu -[node5366: 1.4.7.1 | Fd_ox>Fd_red {br=BR36886, ev=cof+eq}]-> (2OG + Gln);  // glutamate synthase (ferredoxin)
+    chord (2OG + Gln) -[node5368: 1.4.1.14 | NADH>NAD {br=BR36862, ev=cof-eq}]-> 2*Glu;  // glutamate synthase (NADH)
+  }
+
+  2OG
+    -B[node5635: 1.1.99.2 | NADH>NAD {br=BR51640, ev=cof-eq}]-> R_2_hydroxyglutarate  // L-2-hydroxyglutarate dehydrogenase
+    -L[node5639: 2.8.3.12 | -Ac_CoA, +acetate ^R {br=BS360577, ev=cof+eq, match=single}]-> R_2_hydroxyglutaryl_CoA  // glutaconate CoA-transferase
+    -[node5165: 4.2.1.167 | +H2O ^R {br=BR51549, ev=cof+eq}]-> Glutaconyl_CoA  // (R)-2-hydroxyglutaryl-CoA dehydratase
+    -[node5162: 7.2.4.5 | -H, +CO2 ^R {br=BR48314, ev=cof+eq, match=kegg}]-> crotonoyl_CoA  // glutaconyl-CoA decarboxylase
+    -[node5158: 1.3.8.1 | reduced_acceptor>oxidized_acceptor ^R {br=BS370908, ev=cof+eq, match=kegg}]-> butanoyl_CoA  // short-chain acyl-CoA dehydrogenase
+    -[node5154: 2.8.3.8 | -acetate, +Ac_CoA ^R {br=BS358809, ev=cof+eq}]-> butanoate;  // acetate CoA-transferase
+
+  Glu
+    -[node5615: 4.1.1.15 | -H, +CO2 ^R {br=BR275, ev=cof+eq}]-> 4_aminobutanoate  // Glutamate decarboxylase
+    -R[node5617: 2.6.1.19 | 2OG>Glu {br=BR47437, ev=cof+eq, match=kegg} || node3399: 2.6.1.19 | pyruvate>Ala {br=BR50304, ev=cof+eq, match=kegg}]-> 4_oxobutanoate  // 4-aminobutyrate-2-oxoglutarate transaminase; 4-aminobutyrate-2-oxoglutarate transaminase
+    -[node5620: 1.2.1.24 | NAD>NADH, -H2O, +H {br=BR29388-a, ev=cof+eq, match=kegg} || node5139: 1.2.1.16 | NADP>NADPH, -H2O, +H {br=BR29388, ev=cof+eq, match=kegg} || node2862: 1.2.1.79 | NADP>NADPH, -H2O, +H {br=BR29388, ev=cof+eq, match=kegg}]-> succinate;  // succinate-semialdehyde dehydrogenase (NAD+); succinate-semialdehyde dehydrogenase [NAD(P)+]; succinate-semialdehyde dehydrogenase (NADP+)
+
+  Glu
+    -R[node5612: 2.6.1.1 | -oxaloacetate, +2OG ^L {br=BR47671, ev=cof-eq}]-> Asp  // aspartate transaminase
+    -[node5172: 4.3.1.1 | +NH3, +H {br=BR481, ev=cof+eq}]-> fumarate;  // aspartate ammonia-lyase
+
+  4_hydroxybutanoate
+    -[node5619: 1.1.1.B47 | NADP>NADPH, +H {br=BR51069, ev=cof+eq, match=kegg}]-> 4_oxobutanoate;  // succinate semialdehyde reductase (NADPH)
+
+  Glu
+    <-B[node5346: 5.1.1.3 {br=BR171, ev=eq, rev=eq}]-> D_Glu;  // Glutamate racemase
+
+  Glu
+    <-R[node5150: 5.4.99.1 {br=BR33, ev=eq}]- L_threo_3_Me_Asp  // Methylaspartate mutase
+    -[node5148: 4.3.1.2 | +NH3 ^R {br=BR487, ev=cof+eq}]-> mesaconate  // methylaspartate ammonia-lyase
+    -[node5145: 4.2.1.34 | -H2O ^R {br=BR414, ev=cof-eq, match=single}]-> 3S_citramalate  // (S)-2-Methylmalate dehydratase
+    -[node5142: 4.1.3.22 | +pyruvate ^R {br=BR3370, ev=cof+eq, match=single}]-> acetate;  // citramalate lyase
+
+  (Glu + tRNAGlx) -[node11013: 6.1.1.24 | ATP>AMP, +PPi {br=BR44350, ev=cof+eq}]-> glutamyl_tRNAGlx;  // glutamate-tRNAGln ligase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { 2OG Gln Glu } forward { node5369 node5368 } backward { node5366 };
+  motif substrate_cycle { Gln Glu } forward { node2631 } backward { node5364 node5363 node5362 };
+  motif carrier { NAD NADH } forward { node5410 node5620 } backward { node5368 node5635 };
+  motif carrier { NADP NADPH } forward { node2862 node5139 node5619 } backward { node5369 node5409 };
+}

@@ -1,0 +1,26 @@
+pwl 2.0;
+subsystem enterobactin-biosynthesis 'enterobactin biosynthesis' {
+  // BRENDA subsystem: 4 reactions (4 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2S_3S_2_3_dihydroxy_2_3_dihydrobenzoate '(2S,3S)-2,3-dihydroxy-2,3-dihydrobenzoate' brenda:101750;
+  compound 2_3_dHB '2,3-dHB' brenda:1367 kegg:C00196;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound PPi brenda:17 kegg:C00013;
+  compound Ser brenda:95 kegg:C00065;
+  compound chorismate brenda:204 kegg:C00251;
+  compound enterochelin brenda:183497 kegg:C05821;
+  compound isochorismate brenda:1280 kegg:C00885;
+  compound pyruvate brenda:31 kegg:C00022;
+  port chorismate side L to chorismate-metabolism;
+
+  chorismate
+    -[node4105: 5.4.4.2 {br=BR44348, ev=eq}]-> isochorismate  // Isochorismate synthase
+    -[node4115: 3.3.2.1 | -H2O, +pyruvate ^R {br=BR32614, ev=cof+eq}]-> 2S_3S_2_3_dihydroxy_2_3_dihydrobenzoate  // isochorismatase
+    -[node4116: 1.3.1.28 | NAD>NADH ^R {br=BR36809, ev=cof+eq, match=single}]-> 2_3_dHB  // 2,3-dihydro-2,3-dihydroxybenzoate dehydrogenase
+    -[node4109: 6.3.2.14 | 6*ATP>6*AMP, -3*Ser, +6*PPi {br=BR106, ev=cof+eq, match=kegg}]-> enterochelin;  // enterobactin synthase
+}

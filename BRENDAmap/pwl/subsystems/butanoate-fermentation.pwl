@@ -1,0 +1,39 @@
+pwl 2.0;
+subsystem butanoate-fermentation 'butanoate fermentation' {
+  // BRENDA subsystem: 9 reactions (7 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_3_OH_butanoyl_CoA '(R)-3-OH-butanoyl-CoA' brenda:44983;
+  compound R_3_hydroxybutanoate_n '[(R)-3-hydroxybutanoate]n' brenda:8726;
+  compound R_3_hydroxybutanoate_nplus1 '[(R)-3-hydroxybutanoate](n+1)' brenda:38022;
+  compound acetate brenda:47 kegg:C00033;
+  compound acetoacetyl_CoA 'acetoacetyl-CoA' brenda:187 kegg:C00332;
+  compound butanoate brenda:462 brenda:683 kegg:C00246;
+  compound butanoyl_CoA 'butanoyl-CoA' brenda:270 brenda:802 kegg:C00136;
+  compound butyryl_phosphate 'butyryl phosphate' brenda:20172;
+  compound crotonoyl_CoA 'crotonoyl-CoA' brenda:3806 kegg:C00877;
+  compound oxidized_electron_transferring_flavoprotein 'oxidized electron-transferring flavoprotein' brenda:99538;
+  compound reduced_electron_transferring_flavoprotein 'reduced electron-transferring flavoprotein' brenda:1892 brenda:3252 kegg:C04570;
+  port Ac_CoA side R to oxidative-decarboxylation-of-pyruvate;
+
+  Ac_CoA
+    -[node9476: 2.3.1.9 | +CoA ^L {br=BR44092, ev=cof+eq}]-> acetoacetyl_CoA  // acetyl-CoA C-acetyltransferase
+    -L[node10373: <- 1.1.1.157 | NADP>NADPH {br=BS188074, ev=cof-eq, match=single} || node9474: 1.1.1.36 | NADPH>NADP]- R_3_OH_butanoyl_CoA  // 3-hydroxybutyryl-CoA dehydrogenase; acetoacetyl-CoA reductase
+    -[node9446: 4.2.1.55 | +H2O ^L {br=BR433, ev=cof+eq}]-> crotonoyl_CoA  // 3-Hydroxybutyryl-CoA dehydratase
+    -R[node9449: 1.3.8.1 | oxidized_electron_transferring_flavoprotein>reduced_electron_transferring_flavoprotein ^R]- butanoyl_CoA  // short-chain acyl-CoA dehydrogenase
+    -R[node9441: 2.3.1.19 | -Pi, +CoA ^R {br=BR44017, ev=cof+eq, match=single}]-> butyryl_phosphate  // phosphate butyryltransferase
+    -[node9454: 2.7.2.7 | ADP>ATP ^R {br=BR47829, ev=cof-eq, match=single}]-> butanoate  // butyrate kinase
+    <-B[node11229: 2.8.3.8 | -acetate, +Ac_CoA ^R {br=BS358809, ev=cof+eq}]- butanoyl_CoA;  // acetate CoA-transferase
+
+  (R_3_hydroxybutanoate_n + R_3_OH_butanoyl_CoA) -[node2639: 2.3.1.304 | +CoA {br=BR48953, ev=cof+eq}]-> R_3_hydroxybutanoate_nplus1;  // poly[(R)-3-hydroxyalkanoate] polymerase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { NADP NADPH } forward { node10373 } backward { node9474 };
+}

@@ -1,0 +1,25 @@
+pwl 2.0;
+subsystem taurine-degradation 'taurine degradation' {
+  // BRENDA subsystem: 2 reactions (2 with direction), 3 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2OG brenda:34 kegg:C00026;
+  compound CO2 brenda:28 kegg:C00011;
+  compound H2O brenda:1 kegg:C00001;
+  compound NH3 brenda:27;
+  compound O2 brenda:9 brenda:1180;
+  compound acceptor brenda:66 brenda:3161;
+  compound aminoacetaldehyde brenda:10986 kegg:C06735;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  compound succinate brenda:58 kegg:C00042;
+  compound sulfite brenda:92 kegg:C00094;
+  compound sulfoacetaldehyde brenda:7288 kegg:C00593;
+  compound taurine brenda:595 kegg:C00245;
+  port sulfoacetaldehyde side L to sulfate-reduction;
+
+  taurine
+    -[node7040: 1.14.11.17 | -2OG, -O2, +CO2, +succinate, +sulfite {br=BR29133, ev=cof+eq}]-> aminoacetaldehyde;  // taurine dioxygenase
+
+  taurine
+    -B[node3417: 1.4.99.2 | acceptor>reduced_acceptor, -H2O, +NH3 {br=BR37055, ev=cof+eq, match=kegg}]-> sulfoacetaldehyde;  // taurine dehydrogenase
+}

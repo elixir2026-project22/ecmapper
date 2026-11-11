@@ -1,0 +1,58 @@
+pwl 2.0;
+subsystem C4-and-CAM-carbon-fixation 'C4 and CAM-carbon fixation' {
+  // BRENDA subsystem: 14 reactions (13 with direction), 13 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ala brenda:103 kegg:C00041;
+  compound Asp brenda:97 kegg:C00049;
+  compound CO2 brenda:28 kegg:C00011;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_malate 'L-malate' brenda:200 brenda:247;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PEP brenda:51 kegg:C00074;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  compound pyruvate brenda:31 kegg:C00022;
+
+  // ring: cycle of the drawing (8 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    L_malate
+      -[node10423: 1.1.1.40 | NADP>NADPH, +CO2 {br=BR29303, ev=cof+eq}]-> pyruvate  // malate dehydrogenase (oxaloacetate-decarboxylating) (NADP+)
+      <-[node10456: 2.6.1.2 | Glu>2OG ^L {br=BR47397, ev=cof-eq, rev=map}]-> Ala  // alanine transaminase
+      <-[node10457: 2.6.1.2 | 2OG>Glu ^L {br=BR47397, ev=cof+eq, rev=map}]-> pyruvate#2  // alanine transaminase
+      <-B[node10447: 1.1.1.39 | NAD>NADH, +CO2 {br=BR29301, ev=cof+eq}]- L_malate#3  // malate dehydrogenase (decarboxylating)
+      <-[node10444: 1.1.1.37 | NADH>NAD ^L {br=BR29300, ev=cof-eq}]- oxaloacetate#3  // malate dehydrogenase
+      <-[node10452: 2.6.1.1 | 2OG>Glu ^L {br=BR47671, ev=cof+eq, rev=map}]-> Asp  // aspartate transaminase
+      <-[node10440: 2.6.1.1 | Glu>2OG ^L {br=BR47671, ev=cof-eq, rev=map}]-> oxaloacetate#2  // aspartate transaminase
+      -B[node10422: 1.1.1.82 | NADPH>NADP ^L {br=BR29342, ev=cof-eq}]-> L_malate;  // malate dehydrogenase (NADP+)
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    PEP
+      -[node10408: 4.1.1.31 | -CO2, -H2O, +Pi]- oxaloacetate  // phosphoenolpyruvate carboxylase
+      -R[node10414: 1.1.1.37 | NADH>NAD ^R {br=BR29300, ev=cof-eq}]-> L_malate#2  // malate dehydrogenase
+      -R[node10409: 1.1.1.40 | NADP>NADPH, +CO2 {br=BR29303, ev=cof+eq}]-> pyruvate#3  // malate dehydrogenase (oxaloacetate-decarboxylating) (NADP+)
+      -R[node10400: 2.7.9.1 | ATP>AMP, -Pi, +PPi {br=BR48096, ev=cof+eq}]-> PEP;  // pyruvate, phosphate dikinase
+  }
+
+  oxaloacetate#3
+    -[node10434: 4.1.1.49 | ATP>ADP, +CO2 {br=BR308, ev=cof+eq}]-> PEP#2  // phosphoenolpyruvate carboxykinase (ATP)
+    -[node10448: 2.7.1.40 | ADP>ATP ^L {br=BR47778, ev=cof-eq}]-> pyruvate#2;  // pyruvate kinase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { PEP pyruvate } forward { node10448 } backward { node10400 };
+  motif shunt { oxaloacetate PEP } bypasses { oxaloacetate L_malate pyruvate PEP };
+  motif carrier { 2OG Glu } forward { node10452 node10457 } backward { node10440 node10456 };
+  motif carrier { ADP ATP } forward { node10448 } backward { node10434 };
+  motif carrier { NAD NADH } forward { node10447 } backward { node10414 node10444 };
+  motif carrier { NADP NADPH } forward { node10409 node10423 } backward { node10422 };
+}

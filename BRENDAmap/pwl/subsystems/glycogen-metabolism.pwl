@@ -1,0 +1,66 @@
+pwl 2.0;
+subsystem glycogen-metabolism 'glycogen metabolism' {
+  // BRENDA subsystem: 13 reactions (9 with direction), 18 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_4_alpha_D_glucosyl_n '[(1->4)-alpha-D-glucosyl]n' brenda:5824 kegg:C00718;
+  compound 1_4_alpha_D_glucosyl_nplus1 '[(1->4)-alpha-D-glucosyl]n+1' brenda:10035 kegg:C00718;
+  compound ADP brenda:13 kegg:C00008;
+  compound ADP_Glc 'ADP-Glc' brenda:8036;
+  compound ATP brenda:4 kegg:C00002;
+  compound D_glucono_1_5_lactone 'D-glucono-1,5-lactone' brenda:467 kegg:C00198;
+  compound D_glucose 'D-glucose' brenda:35 brenda:1969 kegg:C00031;
+  compound Dextrin brenda:2735 kegg:C00721;
+  compound Glc_1_P 'Glc 1-P' brenda:5970;
+  compound H2O brenda:1 kegg:C00001;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound alpha_D_Glc 'alpha-D-Glc' brenda:285 kegg:C00267;
+  compound alpha_D_Glc_1_P 'alpha-D-Glc 1-P' brenda:107 kegg:C00103;
+  compound alpha_D_Glc_6_P 'alpha-D-Glc 6-P' brenda:2944 kegg:C00668;
+  compound beta_D_Glc 'beta-D-Glc' brenda:96 kegg:C00221;
+  compound beta_D_Glc_6_P 'beta-D-Glc 6-P' brenda:5528 kegg:C01172;
+  compound glycogen_L506 'glycogen' brenda:506;
+  compound maltose brenda:86 kegg:C00208;
+  compound maltotetraose brenda:269 kegg:C02052;
+  compound maltotriose brenda:188 kegg:C01835;
+  compound ubiquinol brenda:749 kegg:C00390;
+  compound ubiquinone brenda:410 kegg:C00399;
+  port ADP_Glc side R to metabolism-of-disaccharids;
+  port D_glucono_1_5_lactone side R to Entner-Doudoroff-pathway;
+  port D_glucose side R to metabolism-of-disaccharids;
+  port Glc_1_P side R to metabolism-of-disaccharids;
+  port alpha_D_Glc_1_P side R to metabolism-of-disaccharids;
+  port alpha_D_Glc_1_P#2 side D to degradation-of-hexoses;
+  port alpha_D_Glc_6_P side R to metabolism-of-disaccharids;
+  port beta_D_Glc side R to cellulose-degradation;
+  port maltose side R to metabolism-of-disaccharids;
+
+  maltotetraose
+    -B[node9612: 3.2.1.33 | -H2O ^R]- Dextrin  // amylo-alpha-1,6-glucosidase
+    -B[node9657: 3.2.1.3 | -6*H2O ^R {br=BS370930, ev=cof+eq}]-> beta_D_Glc;  // glucan 1,4-alpha-glucosidase
+
+  1_4_alpha_D_glucosyl_nplus1
+    -B[node9348: 2.4.1.18 | +H2O ^R {br=BR47414, ev=cof+eq, match=single}]-> glycogen_L506;  // 1,4-alpha-glucan branching enzyme
+
+  alpha_D_Glc_1_P
+    -[node9622: 5.4.2.2 {br=BS1161, ev=eq}]-> alpha_D_Glc_6_P;  // phosphoglucomutase (alpha-D-glucose-1,6-bisphosphate-dependent)
+
+  alpha_D_Glc_1_P#2
+    -B[node9354: 2.7.7.27 | -ATP, +PPi ^R {br=BR47873, ev=cof+eq}]-> ADP_Glc;  // glucose-1-phosphate adenylyltransferase
+
+  D_glucose
+    -L[node9632: 2.7.1.1/2.7.1.2 | ATP>ADP ^L {br=BR47759, ev=cof+eq}]-> beta_D_Glc_6_P;  // hexokinase;glucokinase
+
+  D_glucose
+    -R[node8905: 1.1.5.2 | -ubiquinone, +ubiquinol ^R {br=BR47599, ev=cof+eq}]-> D_glucono_1_5_lactone;  // glucose 1-dehydrogenase (PQQ, quinone)
+
+  D_glucose
+    -B[node9629: 2.4.1.25 | -maltotriose, +maltose ^L {br=BS322536, ev=cof-eq}]-> maltose;  // 4-alpha-glucanotransferase
+
+  react [node11875: 3.2.1.1/3.2.1.2/3.2.1.20/3.2.1.54 | -H2O] {alpha_D_Glc, maltotriose, maltose};  // alpha-amylase;beta-amylase;alpha-glucosidase;cyclomaltodextrinase
+  (alpha_D_Glc_1_P + maltotriose) -[node9618: 2.4.1.1 | +Pi {br=BS377142, ev=cof+eq}]-> maltotetraose;  // glycogen phosphorylase
+  react [node1584: 3.2.1.116/3.2.1.133/3.2.1.B8/3.2.1.B36 | -H2O] {maltotriose, maltose, alpha_D_Glc#2};  // glucan 1,4-alpha-maltotriohydrolase;glucan 1,4-alpha-maltohydrolase;malto-alpha-amylase (reducing end);maltose-forming alpha-amylase
+  react [node9608: 2.4.1.1 | -Pi] {Dextrin, Glc_1_P, glycogen_L506};  // glycogen phosphorylase
+  (1_4_alpha_D_glucosyl_n + ADP_Glc) -[node9349: 2.4.1.21 | +ADP {br=BR44194, ev=cof+eq}]-> 1_4_alpha_D_glucosyl_nplus1;  // starch synthase (glycosyl-transferring)
+}

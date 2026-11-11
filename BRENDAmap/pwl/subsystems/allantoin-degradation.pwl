@@ -1,0 +1,40 @@
+pwl 2.0;
+subsystem allantoin-degradation 'allantoin degradation' {
+  // BRENDA subsystem: 10 reactions (10 with direction), 10 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 5_hydroxy_2_oxo_4_ureido_2_5_dihydro_1H_imidazole_5_carboxylate '5-hydroxy-2-oxo-4-ureido-2,5-dihydro-1H-imidazole-5-carboxylate' brenda:13389 kegg:C12248;
+  compound 5_hydroxyisourate '5-hydroxyisourate' brenda:2901 kegg:C11821;
+  compound CO2 brenda:28 kegg:C00011;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NH3 brenda:27;
+  compound O2 brenda:9 brenda:1180;
+  compound S_Ureidoglycolate '(S)-Ureidoglycolate' brenda:1342 kegg:C00603;
+  compound S_allantoin '(S)-allantoin' brenda:3029;
+  compound S_ureidoglycine '(S)-ureidoglycine' brenda:39639 kegg:C02091;
+  compound allantoate brenda:2334 kegg:C00499;
+  compound glyoxylate brenda:101 kegg:C00048;
+  compound oxalurate brenda:30305 kegg:C00802;
+  compound urate brenda:710 kegg:C00366;
+  compound urea brenda:116 kegg:C00086;
+  port urate side L to purine-metabolism;
+
+  urate
+    -[node7309: 1.7.3.3 | -O2, -H2O, +H2O2 {br=BR36977, ev=cof+eq}]-> 5_hydroxyisourate  // factor-independent urate hydroxylase
+    -[node7311: 3.5.2.17 | -H2O, +H ^L {br=BR48000, ev=cof+eq}]-> 5_hydroxy_2_oxo_4_ureido_2_5_dihydro_1H_imidazole_5_carboxylate  // hydroxyisourate hydrolase
+    -[node7048: 4.1.1.97 | -H, +CO2 ^L {br=BR50998, ev=cof+eq}]-> S_allantoin  // 2-oxo-4-hydroxy-4-carboxy-5-ureidoimidazoline decarboxylase
+    -[node6980: 3.5.2.5 | -H2O, +H ^L {br=BR26107, ev=cof+eq}]-> allantoate  // allantoinase
+    -[node6985: 3.5.3.9 | -H, -H2O, +NH3, +CO2 {br=BR26110, ev=cof+eq}]-> S_ureidoglycine  // allantoate deiminase
+    -[node6988: 3.5.3.26 | -H2O, +NH3, +H ^R {br=BR50460, ev=cof+eq, match=single}]-> S_Ureidoglycolate  // (S)-ureidoglycine aminohydrolase
+    -[node12994: 4.3.2.3 | +urea ^R {br=BR3433, ev=cof+eq}]-> glyoxylate;  // ureidoglycolate lyase
+
+  allantoate
+    -[node12991: 3.5.3.4 | -H2O, +urea ^R {br=BR19262, ev=cof+eq}]-> S_Ureidoglycolate  // allantoicase
+    -[node11431: 1.1.1.350 | NAD>NADH ^L {br=BR29219-a, ev=eq, match=kegg}]-> oxalurate;  // ureidoglycolate dehydrogenase (NAD+)
+
+  S_Ureidoglycolate -[node7551: 3.5.1.116 | -H2O, +2*NH3 {br=BR29521, ev=cof+eq}]-> (glyoxylate + CO2);  // ureidoglycolate amidohydrolase
+}

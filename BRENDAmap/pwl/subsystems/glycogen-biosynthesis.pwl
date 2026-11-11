@@ -1,0 +1,30 @@
+pwl 2.0;
+subsystem glycogen-biosynthesis 'glycogen biosynthesis' {
+  // BRENDA subsystem: 6 reactions (5 with direction), 8 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_4_alpha_D_glucosyl_n '[(1->4)-alpha-D-glucosyl]n' brenda:5824 kegg:C00718;
+  compound 1_4_alpha_D_glucosyl_nplus1 '[(1->4)-alpha-D-glucosyl]n+1' brenda:10035 kegg:C00718;
+  compound PPi brenda:17 kegg:C00013;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc 'UDP-Glc' brenda:64 kegg:C00029;
+  compound UTP brenda:65 kegg:C00075;
+  compound alpha_D_Glc_1_P 'alpha-D-Glc 1-P' brenda:107 kegg:C00103;
+  compound alpha_D_Glc_6_P 'alpha-D-Glc 6-P' brenda:2944 kegg:C00668;
+  compound alpha_D_glucosylglycogenin 'alpha-D-glucosylglycogenin' brenda:61118 kegg:C02687;
+  compound glycogen brenda:1246;
+  compound glycogenin brenda:8301 kegg:C01702;
+
+  alpha_D_glucosylglycogenin
+    -B[node11109: 2.4.1.186 | UDP_Glc>UDP ^L]- 1_4_alpha_D_glucosyl_n  // glycogenin glucosyltransferase
+    -[node11113: 2.4.1.11 | UDP_Glc>UDP ^L {br=BR44139, ev=cof+eq}]-> 1_4_alpha_D_glucosyl_nplus1  // glycogen(starch) synthase
+    -[node11115: 2.4.1.18 {br=BS322548, ev=eq}]-> glycogen;  // 1,4-alpha-glucan branching enzyme
+
+  alpha_D_Glc_1_P
+    -[node11099: 2.7.7.9 | -UTP, +PPi ^R {br=BR47905, ev=cof+eq}]-> UDP_Glc;  // UTP-glucose-1-phosphate uridylyltransferase
+
+  alpha_D_Glc_1_P
+    -B[node11097: 5.4.2.5 {br=BS1161, ev=eq}]-> alpha_D_Glc_6_P;  // phosphoglucomutase (glucose-cofactor)
+
+  (UDP_Glc + glycogenin) -[node11102: 2.4.1.186 | +UDP {br=BR47521, ev=cof+eq}]-> alpha_D_glucosylglycogenin;  // glycogenin glucosyltransferase
+}

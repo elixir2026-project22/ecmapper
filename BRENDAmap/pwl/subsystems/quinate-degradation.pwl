@@ -1,0 +1,22 @@
+pwl 2.0;
+subsystem quinate-degradation 'quinate degradation' {
+  // BRENDA subsystem: 2 reactions (2 with direction), 4 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 3_4_dihydroxybenzoate '3,4-dihydroxybenzoate' brenda:736 kegg:C00230;
+  compound 3_dehydroquinate '3-dehydroquinate' brenda:894 kegg:C00944;
+  compound 3_dehydroshikimate '3-dehydroshikimate' brenda:2260 kegg:C02637;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_quinate 'L-quinate' brenda:2243 kegg:C00296;
+  compound PQQH brenda:98230 kegg:C01359;
+  compound pyrroloquinoline_quinone 'pyrroloquinoline quinone' brenda:210 kegg:C00113;
+  port 3_4_dihydroxybenzoate side D to 4-hydroxymandelate-degradation;
+  port 3_dehydroquinate side L to chorismate-metabolism;
+  port 3_dehydroshikimate side L to chorismate-metabolism;
+
+  L_quinate
+    -L[node7583: 1.1.5.8 | -pyrroloquinoline_quinone, +PQQH ^R {br=BS371141, ev=cof+eq}]-> 3_dehydroquinate;  // quinate/shikimate dehydrogenase (quinone)
+
+  3_dehydroshikimate
+    -L[node7586: 4.2.1.118 | +H2O ^L {br=BR49127, ev=cof+eq}]-> 3_4_dihydroxybenzoate;  // 3-dehydroshikimate dehydratase
+}

@@ -1,0 +1,24 @@
+pwl 2.0;
+subsystem oxidative-decarboxylation-of-pyruvate 'oxidative decarboxylation of pyruvate' {
+  // BRENDA subsystem: 2 reactions (1 with direction), 2 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound pyruvate brenda:31 kegg:C00022;
+  port Ac_CoA side D to citric-acid-cycle;
+  port Ac_CoA side D to methylaspartate-cycle;
+  port Ac_CoA side L to butanoate-fermentation;
+  port Ac_CoA side L to lipid-metabolism;
+  port Ac_CoA side L to mevalonate-metabolism;
+  port Ac_CoA side R to cysteine-metabolism;
+  port pyruvate side L to glycolysis;
+
+  pyruvate
+    -R[node8533: 1.8.1.4/2.3.1.12/1.2.4.1 | NAD>NADH, -CoA, +CO2 || node11203: -> 1.2.1.51 | NADP>NADPH, -CoA, +CO2 {br=BR29410, ev=cof+eq}]- Ac_CoA;  // pyruvate dehydrogenase multienzyme complex; pyruvate dehydrogenase (NADP+)
+}

@@ -1,0 +1,39 @@
+pwl 2.0;
+subsystem d-xylose-degradation 'd-xylose degradation' {
+  // BRENDA subsystem: 9 reactions (7 with direction), 8 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_5_dioxopentanoate '2,5-dioxopentanoate' brenda:3305 kegg:C00433;
+  compound 2_dehydro_3_deoxy_D_arabinonate '2-dehydro-3-deoxy-D-arabinonate' brenda:19918 kegg:C03826;
+  compound D_Xul 'D-Xul' brenda:715 kegg:C00310;
+  compound D_xylonate 'D-xylonate' brenda:5539 kegg:C00502;
+  compound D_xylono_1_4_lactone 'D-xylono-1,4-lactone' brenda:15700 kegg:C02753;
+  compound D_xylono_1_5_lactone 'D-xylono-1,5-lactone' brenda:4516 kegg:C02266;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Xyl brenda:115 kegg:C00181;
+  compound Xylan brenda:1423 kegg:C00707;
+  port D_Xul side R to degradation-of-sugar-alcohols;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    D_xylono_1_5_lactone
+      -[node7352: 1.1.1.175 | NAD>NADH || node7357: <- 1.1.1.179 | NADP>NADPH {br=BR29238, ev=cof+eq}]- Xyl  // D-xylose 1-dehydrogenase; D-xylose 1-dehydrogenase (NADP+, D-xylono-1,5-lactone-forming)
+      -B[node771: 1.1.1.424 | NADP>NADPH ^R {br=BR53097, ev=cof+eq}]-> D_xylono_1_4_lactone  // D-xylose 1-dehydrogenase (NADP+, D-xylono-1,4-lactone-forming)
+      -[node7355: 3.1.1.68 | -H2O ^R {br=BR47929, ev=cof+eq}]-> D_xylonate  // xylono-1,4-lactonase
+      <-B[node773: 3.1.1.110 | -H2O ^L {br=BR52929, ev=cof+eq}]- D_xylono_1_5_lactone;  // xylono-1,5-lactonase
+  }
+
+  D_xylonate
+    -[node7358: 4.2.1.82 | +H2O ^R {br=BR48370, ev=cof+eq}]-> 2_dehydro_3_deoxy_D_arabinonate  // xylonate dehydratase
+    -[node7361: 4.2.1.141 | +H2O ^R {br=BR50477, ev=cof+eq}]-> 2_5_dioxopentanoate;  // 2-dehydro-3-deoxy-D-arabinonate dehydratase
+
+  Xyl
+    -[node4046: 5.3.1.5 {br=BR236, ev=eq, match=single}]-> D_Xul;  // Xylose isomerase
+
+  Xyl
+    -[node3726: 3.2.1.37 | -H2O ^L]- Xylan;  // endo-1,4-beta-xylanase;endo-1,3-beta-xylanase;xylan 1,4-beta-xylosidase;xylan 1,3-beta-xylosidase
+}

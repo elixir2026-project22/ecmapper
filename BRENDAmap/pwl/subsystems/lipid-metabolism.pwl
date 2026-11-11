@@ -1,0 +1,252 @@
+pwl 2.0;
+subsystem lipid-metabolism 'lipid metabolism' {
+  // BRENDA subsystem: 80 reactions (46 with direction), 72 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1L_myo_inositol_1_phosphate '1L-myo-inositol 1-phosphate' brenda:5892 kegg:C04006;
+  compound 1_2_diacyl_sn_glycerol '1,2-diacyl-sn-glycerol' brenda:2063;
+  compound 1_2_diphytanyl_sn_glycero_3_O_6_O_beta_D_glucosyl_beta_D_glucoside '1,2-diphytanyl-sn-glycero-3-O-(6-O-beta-D-glucosyl)-beta-D-glucoside' brenda:88229;
+  compound 1_acyl_sn_glycerol '1-acyl-sn-glycerol' brenda:182064 kegg:C01885;
+  compound 1_acylglycerophosphocholine '1-acylglycerophosphocholine' brenda:7966 kegg:C04230;
+  compound 1_archaetidyl_1D_myo_inositol_3_phosphate '1-archaetidyl-1D-myo-inositol 3-phosphate' brenda:28783 kegg:C20642;
+  compound 1_archaetidyl_D_myo_inositol '1-archaetidyl-D-myo-inositol' brenda:189727;
+  compound 1_phytanyl_1D_myo_inositol '1-phytanyl-1D-myo-inositol' brenda:192248;
+  compound 2E_5Z_dodeca_3_5_dienoyl_ACP '(2E,5Z)-dodeca-3,5-dienoyl-[ACP]' brenda:189062;
+  compound 2E_dec_2_enoyl_ACP '(2E)-dec-2-enoyl-ACP' brenda:191248;
+  compound 2_3_bis_O_geranylgeranyl_sn_glycero_1_phospho_L_serine '2,3-bis-O-(geranylgeranyl)-sn-glycero-1-phospho-L-serine' brenda:88232 kegg:C20466;
+  compound 2_3_bis_O_geranylgeranyl_sn_glycerol_1_phosphate '2,3-bis-O-(geranylgeranyl)-sn-glycerol 1-phosphate' brenda:90793 kegg:C04638;
+  compound 2_3_bis_O_phytanyl_sn_glycerol_1_phosphate '2,3-bis-(O-phytanyl)-sn-glycerol 1-phosphate' brenda:88389 kegg:C20518;
+  compound 2_4_trans_hexadienoyl_CoA '2,4-trans-hexadienoyl-CoA' brenda:56287;
+  compound 2_acyl_sn_glycerol '2-acyl-sn-glycerol' brenda:91125 kegg:C02112;
+  compound 2_trans_hexadecenoyl_CoA '2-trans-hexadecenoyl-CoA' brenda:12322;
+  compound 2_trans_hexenoyl_CoA '2-trans-hexenoyl-CoA' brenda:12323;
+  compound 3R_3_hydroxyacyl_ACP '(3R)-3-hydroxyacyl-ACP' brenda:68685;
+  compound 3R_3_hydroxydecanoyl_ACP '(3R)-3-hydroxydecanoyl-ACP' brenda:44952 kegg:C04619;
+  compound 3R_5Z_3_hydroxydodec_5_enoyl_ACP '(3R,5Z)-3-hydroxydodec-5-enoyl-[ACP]' brenda:189063;
+  compound 3Z_dec_3_enoyl_ACP '(3Z)-dec-3-enoyl-ACP' brenda:191341 kegg:C04180;
+  compound 3_oxoacyl_ACP '3-oxoacyl-ACP' brenda:24571;
+  compound 3_oxohexanoyl_CoA '3-oxohexanoyl-CoA' brenda:6444 kegg:C05269;
+  compound 3_trans_Hexadecenoyl_CoA '3-trans-Hexadecenoyl-CoA' brenda:91551;
+  compound 3_trans_hexenoyl_CoA '3-trans-hexenoyl-CoA' brenda:2819;
+  compound 4_phosphopantetheine '4\'-phosphopantetheine' brenda:1273 kegg:C01134;
+  compound 5Z_3_oxododec_5_enoyl_ACP '(5Z)-3-oxododec-5-enoyl-ACP' brenda:191342;
+  compound 5Z_dodec_5_enoyl_ACP '(5Z)-dodec-5-enoyl-[ACP]' brenda:186387;
+  compound ACP brenda:551 brenda:1134 kegg:C00229;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CDP_2_3_bis_O_geranylgeranyl_sn_glycerol 'CDP-2,3-bis-O-(geranylgeranyl)-sn-glycerol' brenda:34562 kegg:C18059;
+  compound CDP_archaeol 'CDP-archaeol' brenda:88249 kegg:C20627;
+  compound CMP brenda:100 kegg:C00055;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CTP brenda:60 kegg:C00063;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound CoA_4_phosphopantetheine 'CoA-[4\'-phosphopantetheine]' brenda:6985;
+  compound DHAP brenda:278 kegg:C00111;
+  compound GAP brenda:147 kegg:C00118;
+  compound GDP brenda:53 kegg:C00035;
+  compound GTP brenda:37 kegg:C00044;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound HCO3 brenda:195 kegg:C00288;
+  compound Holo_ACP 'Holo-ACP' brenda:2745 kegg:C00229;
+  compound Malonyl_ACP 'Malonyl-ACP' brenda:811;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_3_hydroxybutyryl_CoA '(R)-3-hydroxybutyryl-CoA' brenda:3281 kegg:C05116;
+  compound S_3_hydroxyhexanoyl_CoA '(S)-3-hydroxyhexanoyl-CoA' brenda:31676 kegg:C05268;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound Ser brenda:95 kegg:C00065;
+  compound Triacylglycerol brenda:2226 kegg:C00422;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc 'UDP-Glc' brenda:64 kegg:C00029;
+  compound a_carboxylate 'a carboxylate' brenda:941;
+  compound acceptor brenda:66 brenda:3161;
+  compound acetoacetyl_ACP 'acetoacetyl-ACP' brenda:7137 kegg:C05744;
+  compound acetoacetyl_CoA 'acetoacetyl-CoA' brenda:187 kegg:C00332;
+  compound acetyl_ACP 'acetyl-ACP' brenda:3373 kegg:C03939;
+  compound adenosine_3_5_bisphosphate 'adenosine 3\',5\'-bisphosphate' brenda:68 kegg:C00054;
+  compound apo_ACP 'apo-ACP' brenda:2886 kegg:C03688;
+  compound archaeol brenda:88247 kegg:C13863;
+  compound archaetidylethanolamine brenda:189724;
+  compound archaetidylglycerol brenda:189725;
+  compound archaetidylglycerophosphate brenda:189726;
+  compound archaetidylserine brenda:113000;
+  compound butanoate brenda:462 brenda:683 kegg:C00246;
+  compound butanoyl_CoA 'butanoyl-CoA' brenda:270 brenda:802 kegg:C00136;
+  compound carboxylate brenda:12465 kegg:C00060;
+  compound fatty_acid 'fatty acid' brenda:833 kegg:C00162;
+  compound fatty_acyl_ACP 'fatty acyl-ACP' brenda:15538 kegg:C00173;
+  compound geranylgeranyl_diphosphate 'geranylgeranyl diphosphate' brenda:231 kegg:C00353;
+  compound glyceraldehyde brenda:1125 kegg:C02154;
+  compound glycerol brenda:135 kegg:C00116;
+  compound glycerol_1_phosphate 'glycerol 1-phosphate' brenda:3472 kegg:C03189;
+  compound hexanoate brenda:1061 kegg:C01585;
+  compound hexanoyl_CoA 'hexanoyl-CoA' brenda:395 kegg:C05270;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound monoglucosylarchaeol brenda:88228;
+  compound myo_Ins 'myo-Ins' brenda:454 kegg:C00137;
+  compound oxidized_electron_transfer_flavoprotein 'oxidized electron transfer flavoprotein' brenda:5709 kegg:C04253;
+  compound palmitate brenda:517 kegg:C00249;
+  compound palmitoleate brenda:2281 kegg:C08362;
+  compound palmitoleoyl_CoA 'palmitoleoyl-CoA' brenda:1303 kegg:C21072;
+  compound palmitoyl_CoA 'palmitoyl-CoA' brenda:128 kegg:C00154;
+  compound phosphatidylcholine brenda:215 kegg:C00157;
+  compound phospholipid_cyclopropane_fatty_acid 'phospholipid cyclopropane fatty acid' brenda:44702 kegg:C04340;
+  compound phospholipid_olefinic_fatty_acid 'phospholipid olefinic fatty acid' brenda:15919 kegg:C01229;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  compound reduced_electron_transferring_flavoprotein 'reduced electron-transferring flavoprotein' brenda:1892 brenda:3252 kegg:C04570;
+  compound saturated_archaetidylserine 'saturated archaetidylserine' brenda:170190 kegg:C20628;
+  compound sn_3_O_geranylgeranyl_glyceryl_1_phosphate 'sn-3-O-(geranylgeranyl)glyceryl 1-phosphate' brenda:97155;
+  compound sn_glycerol_3_phosphate 'sn-glycerol 3-phosphate' brenda:422 kegg:C00093;
+  compound trans_2_3_dehydroacyl_ACP 'trans-2,3-dehydroacyl-ACP' brenda:12836 kegg:C00693;
+  compound trans_2_butenoyl_CoA 'trans-2-butenoyl-CoA' brenda:44890 kegg:C00877;
+  compound trans_trans_2_4_hexadecadienoyl_CoA 'trans-trans-2,4-hexadecadienoyl-CoA' brenda:123377;
+  compound unsaturated_CDP_archaeol 'unsaturated CDP-archaeol' brenda:184189;
+  port 1_2_diacyl_sn_glycerol side R to sulfolipid-biosynthesis;
+  port Ac_CoA side R to oxidative-decarboxylation-of-pyruvate;
+  port DHAP side R to glycolysis;
+  port GAP side L to isoprenoid-biosynthesis;
+  port Holo_ACP side L to lipoate-biosynthesis;
+  port Malonyl_ACP side R to cis-vaccenate-biosynthesis;
+  port acetoacetyl_ACP side L to palmitate-biosynthesis;
+  port geranylgeranyl_diphosphate side D to isoprenoid-biosynthesis;
+  port glycerol side U to degradation-of-sugar-alcohols;
+  port phosphatidylcholine side U to phosphatidylethanolamine-bioynthesis;
+
+  // ring: cycle of the drawing (5 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    3_oxoacyl_ACP
+      -B[node9077: 1.1.1.100 | NADPH>NADP ^R {br=BR29166, ev=cof-eq}]-> 3R_3_hydroxyacyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+      -R[node9084: 4.2.1.59 | +H2O ^R]- trans_2_3_dehydroacyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+      -R[node9094: -> 1.3.1.9 | NADH>NAD {br=BR36835, ev=cof-eq, match=similar} || node9065: 1.3.1.10/1.3.1.39/1.3.1.104 | NADPH>NADP]- fatty_acyl_ACP;  // enoyl-[acyl-carrier-protein] reductase (NADH); enoyl-[acyl-carrier-protein] reductase (NADPH, Si-specific);enoyl-[acyl-carrier-protein] reductase (NADPH, Re-specific);enoyl-[acyl-carrier-protein] reductase (NADPH)
+    react [node10286: 2.3.1.41/2.3.1.179 | +CO2, +ACP] {fatty_acyl_ACP, Malonyl_ACP, 3_oxoacyl_ACP};  // beta-ketoacyl-[acyl-carrier-protein] synthase I;beta-ketoacyl-[acyl-carrier-protein] synthase II
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    S_3_hydroxyhexanoyl_CoA
+      -R[node9137: 1.1.1.35 | NAD>NADH ^R {br=BS188067, ev=cof+eq}]-> 3_oxohexanoyl_CoA  // 3-hydroxyacyl-CoA dehydrogenase
+      -[node9123: 2.3.1.16 | CoA>Ac_CoA ^R]- butanoyl_CoA  // acetyl-CoA C-acyltransferase
+      -B[node1539: 1.3.8.7 | acceptor>reduced_acceptor || node1560: 1.3.3.6 | -O2, +H2O2 || node1563: <- 1.3.8.1 | -reduced_electron_transferring_flavoprotein, +oxidized_electron_transfer_flavoprotein {br=BS370162, ev=cof+eq}]- trans_2_butenoyl_CoA  // medium-chain acyl-CoA dehydrogenase; acyl-CoA oxidase; short-chain acyl-CoA dehydrogenase
+      -L[node9110: 4.2.1.17 | -H2O ^R]- S_3_hydroxyhexanoyl_CoA;  // enoyl-CoA hydratase
+  }
+
+  butanoyl_CoA
+    -R[node1574: <- 6.2.1.1/6.2.1.2/6.2.1.3/6.2.1.17/6.2.1.30/6.2.1.36/6.2.1.44 | ATP>AMP, -CoA, +PPi {br=BS143, ev=cof+eq} || node1526: 2.3.1.16/3.1.2.1/3.1.2.2/3.1.2.20 | -H2O, +CoA || node11896: 6.2.1.10 | GTP>GDP, -CoA, +Pi || node11897: 6.2.1.5/6.2.1.9/6.2.1.13/6.2.1.B11 | ADP>ATP, -Pi, +CoA]- butanoate;  // acetate-CoA ligase ligase;medium-chain acyl-CoA ligase;long-chain-fatty-acid-CoA ligase;propionate-CoA ligase;phenylacetate-CoA ligase;3-hydroxypropionyl-CoA synthase;3-(methylthio)propionyl-CoA ligase; acetyl-CoA C-acyltransferase;acetyl-CoA hydrolase;palmitoyl-CoA hydrolase ligase;acyl-CoA hydrolase; carboxylic acid-CoA ligase (GDP-forming); succinate-CoA ligase (ADP-forming);malate-CoA ligase;acetate-CoA ligase (ADP-forming);carboxylic acid-CoA ligase (NDP-forming)
+
+  Malonyl_ACP
+    -L[node10307: 2.3.1.180 | Ac_CoA>CoA, +CO2 {br=BR48666, ev=cof+eq, match=similar}]-> acetoacetyl_ACP;  // beta-ketoacyl-[acyl-carrier-protein] synthase III
+
+  Malonyl_ACP
+    -R[node10326: 4.1.1.87 | +CO2 ^L]- acetyl_ACP  // malonyl-[malonate decarboxylase] decarboxylase
+    <-L[node10329: 2.3.1.38 | -Holo_ACP, +CoA ^L {br=BR44038, ev=cof+eq}]- Ac_CoA  // [acyl-carrier-protein] S-acetyltransferase
+    -L[node10283: 6.4.1.2 | ATP>ADP, -HCO3, +Pi {br=BR6444, ev=cof+eq}]-> malonyl_CoA;  // acetyl-CoA carboxylase
+
+  hexanoate
+    -L[node11937: 6.2.1.1/6.2.1.2/6.2.1.3/6.2.1.12/6.2.1.44 | ATP>AMP, -CoA, +PPi || node1530: 2.3.1.16/3.1.2.1/3.1.2.2/3.1.2.20 | -H2O, +CoA]- hexanoyl_CoA  // acetate-CoA ligase ligase;medium-chain acyl-CoA ligase;long-chain-fatty-acid-CoA ligase;4-coumarate-CoA ligase;3-(methylthio)propionyl-CoA ligase; acetyl-CoA C-acyltransferase;acetyl-CoA hydrolase;palmitoyl-CoA hydrolase ligase;acyl-CoA hydrolase
+    -[node9083: 1.3.3.6 | -O2, +H2O2 || node11366: 1.3.8.7 | acceptor>reduced_acceptor]- 2_trans_hexenoyl_CoA  // acyl-CoA oxidase; medium-chain acyl-CoA dehydrogenase
+    -[node11938: 4.2.1.17 | -H2O {br=BS2101, ev=cof+eq} || node11939: 4.2.1.74 | -H2O {br=BS2101, ev=cof+eq}]-> S_3_hydroxyhexanoyl_CoA;  // enoyl-CoA hydratase; medium-chain-enoyl-CoA hydratase
+
+  2_4_trans_hexadienoyl_CoA
+    -R[node9074: 1.3.1.34 | NADPH>NADP ^R]- 3_trans_hexenoyl_CoA  // 2,4-dienoyl-CoA reductase [(2E)-enoyl-CoA-producing]
+    -[node9113: 5.3.3.8 {br=BS1110, ev=eq}]-> 2_trans_hexenoyl_CoA;  // DELTA3-DELTA2-enoyl-CoA isomerase
+
+  trans_2_butenoyl_CoA
+    <-L[node1566: 1.1.1.36 | +H2O {br=BS370747, ev=cof+eq} || node11894: 3.3.2.12 | +H2O {br=BS370747, ev=cof+eq}]- R_3_hydroxybutyryl_CoA  // acetoacetyl-CoA reductase; oxepin-CoA hydrolase
+    -[node1575: 1.1.1.36 | NADPH>NADP ^L {br=BS394976, ev=cof+eq, match=single}]-> acetoacetyl_CoA;  // acetoacetyl-CoA reductase
+
+  glycerol
+    -[node3723: 1.1.1.2 | NADPH>NADP || node3315: 1.1.1.21 | NAD>NADH]- glyceraldehyde;  // alcohol dehydrogenase (NADP+); aldose reductase
+
+  apo_ACP
+    -[node8902: <- 3.1.4.14 | -H2O, +4_phosphopantetheine {br=BR15954, ev=cof+eq} || node8897: -> 2.7.8.7 | -CoA_4_phosphopantetheine, +adenosine_3_5_bisphosphate {br=BR48095, ev=cof+eq}]- Holo_ACP;  // [acyl-carrier-protein] phosphodiesterase; holo-[acyl-carrier-protein] synthase
+
+  2_3_bis_O_geranylgeranyl_sn_glycerol_1_phosphate
+    -[node10709: 2.7.7.67 | -CTP, +PPi ^L {br=BR48395, ev=cof+eq}]-> CDP_2_3_bis_O_geranylgeranyl_sn_glycerol  // CDP-2,3-bis-(O-geranylgeranyl)-sn-glycerol synthase
+    -[node10716: 2.7.8.38 | -Ser, +CMP ^L {br=BR50441, ev=cof+eq}]-> 2_3_bis_O_geranylgeranyl_sn_glycero_1_phospho_L_serine;  // archaetidylserine synthase
+
+  2_3_bis_O_geranylgeranyl_sn_glycerol_1_phosphate
+    -[node10705: 1.3.1.101 | 8*NADPH>8*NADP {br=BR50484, ev=cof-eq} || node2876: 1.3.7.11 | reduced_acceptor>acceptor {br=BS419240, ev=cof+eq}]-> 2_3_bis_O_phytanyl_sn_glycerol_1_phosphate  // 2,3-bis-O-geranylgeranyl-sn-glycerol 1-phosphate reductase [NAD(P)H]; 2,3-bis-O-geranylgeranyl-sn-glycero-phospholipid reductase
+    -[node10708: 2.7.7.67 | -CTP, +PPi ^L]- CDP_archaeol  // CDP-2,3-bis-(O-geranylgeranyl)-sn-glycerol synthase
+    -[node10717: 2.7.8.38 | -Ser, +CMP ^L {br=BR50560, ev=cof+eq}]-> saturated_archaetidylserine;  // archaetidylserine synthase
+
+  2_3_bis_O_geranylgeranyl_sn_glycerol_1_phosphate
+    -R[node8805: 2.7.7.39 | -CTP, +PPi ^R {br=BR48395, ev=cof+eq}]-> CDP_2_3_bis_O_geranylgeranyl_sn_glycerol#2  // glycerol-3-phosphate cytidylyltransferase
+    -L[node8800: 2.7.8.38 | -Ser, +CMP, +H {br=BR50441, ev=cof+eq, match=single}]-> archaetidylserine  // archaetidylserine synthase
+    -R[node8798: ? | +CO2 ^R]- archaetidylethanolamine;  // phosphatidylserine decarboxylase
+
+  CDP_2_3_bis_O_geranylgeranyl_sn_glycerol#2
+    -R[node8819: 2.7.8.- | -myo_Ins, +H, +CMP ^L]- 1_archaetidyl_D_myo_inositol;  // CDP-diacylglycerol-inositol 3-phosphatidyltransferase
+
+  CDP_archaeol
+    -[node10724: 2.7.8.39 | -1L_myo_inositol_1_phosphate, +CMP ^R {br=BR50489, ev=cof+eq}]-> 1_archaetidyl_1D_myo_inositol_3_phosphate  // archaetidylinositol phosphate synthase
+    -R[node10728: 3.1.3.B14 | -H2O, +Pi ^R {br=BR50490, ev=cof+eq, match=single}]-> 1_phytanyl_1D_myo_inositol;  // archaetidylinositol phosphate phosphatase
+
+  sn_glycerol_3_phosphate
+    -R[node2748: 1.1.1.177 | NADP>NADPH, +H {br=BR29236, ev=cof+eq}]-> GAP;  // glycerol-3-phosphate 1-dehydrogenase (NADP+)
+
+  archaetidylglycerol
+    -[node8822: 3.1.3.- | -H2O, +Pi ^L]- archaetidylglycerophosphate;  // phosphatidylglycerophosphatase
+
+  phosphatidylcholine
+    -R[node2439: 3.1.1.4 | -H2O, +carboxylate ^R {br=BR15900, ev=cof+eq}]-> 1_acylglycerophosphocholine;  // phospholipase A2
+
+  DHAP
+    -R[node8790: 1.1.1.261 | NADPH>NADP ^R {br=BR29350, ev=cof-eq, match=single}]-> glycerol_1_phosphate;  // sn-glycerol-1-phosphate dehydrogenase
+
+  archaeol
+    -[node10738: 2.4.1.B50 | UDP_Glc>UDP ^R {br=BR50424, ev=cof+eq}]-> monoglucosylarchaeol  // monoglucosylarchaeol synthase
+    -[node10740: 2.4.1.B51 | UDP_Glc>UDP ^R {br=BR50425, ev=cof+eq, match=single}]-> 1_2_diphytanyl_sn_glycero_3_O_6_O_beta_D_glucosyl_beta_D_glucoside;  // diglucosylarchaeol synthase
+
+  Triacylglycerol
+    -B[node10343: 3.1.1.3 | -H2O, +carboxylate {br=BR10653, ev=cof+eq} || node2866: 3.1.1.79 | -H2O, +carboxylate {br=BR10653, ev=cof+eq}]-> 1_2_diacyl_sn_glycerol  // triacylglycerol lipase; hormone-sensitive lipase
+    -[node10333: 3.1.1.3 | -H2O, +a_carboxylate || node2867: -> 3.1.1.79 | -H2O, +a_carboxylate {br=BR48141, ev=cof+eq, match=single}]- 2_acyl_sn_glycerol  // triacylglycerol lipase; hormone-sensitive lipase
+    -[node10337: ~? {br=BR52872, ev=eq}]-> 1_acyl_sn_glycerol  // spontaneous reaction
+    -[node10339: 3.1.1.23 | -H2O, +fatty_acid ^R {br=BS360684, ev=cof+eq}]-> glycerol#2  // acylglycerol lipase
+    <-B[node2865: 3.1.1.79 | -H2O, +a_carboxylate ^R {br=BR48143, ev=cof+eq}]- 2_acyl_sn_glycerol;  // hormone-sensitive lipase
+
+  3_trans_Hexadecenoyl_CoA
+    -R[node1549: 5.3.3.8]- 2_trans_hexadecenoyl_CoA  // DELTA3-DELTA2-enoyl-CoA isomerase
+    -[node1543: 1.3.3.6 | -O2, +H2O2 || node11909: -> 1.3.1.8/1.3.1.38/1.3.1.93 | NADPH>NADP {br=BS258627, ev=cof+eq} || node11906: 1.3.1.44 | NADH>NAD || node1545: <- 1.3.8.7/1.3.8.8/1.3.8.9 | acceptor>reduced_acceptor {br=BS258817, ev=cof+eq}]- palmitoyl_CoA  // acyl-CoA oxidase; acyl-CoA dehydrogenase (NADP+);trans-2-enoyl-CoA reductase (NADPH);very-long-chain enoyl-CoA reductase; trans-2-enoyl-CoA reductase (NAD+); medium-chain acyl-CoA dehydrogenase;long-chain acyl-CoA dehydrogenase;very-long-chain acyl-CoA dehydrogenase
+    -[node1555: 1.13.12.7/6.2.1.3/6.2.1.12/6.2.1.B3 | ATP>AMP, -CoA, +PPi || node1523: -> 2.3.1.16/3.1.1.1/3.1.2.1/3.1.2.2/3.1.2.20/3.1.2.22 | -H2O, +CoA {br=BR48147, ev=cof+eq}]- palmitate;  // firefly luciferase;long-chain-fatty-acid-CoA ligase;4-coumarate-CoA ligase;OPC-8:CoA ligase; acetyl-CoA C-acyltransferase;carboxylesterase;acetyl-CoA hydrolase;palmitoyl-CoA hydrolase;acyl-CoA hydrolase;palmitoyl[protein] hydrolase
+
+  palmitoleate
+    -R[node1535: 6.2.1.3 | ATP>AMP, -CoA, +PPi {br=BS295, ev=cof+eq}]-> palmitoleoyl_CoA  // long-chain-fatty-acid-CoA ligase
+    -R[node11914: 1.14.19.1 | NADH>NAD, -O2, +H2O]- palmitoyl_CoA;  // stearoyl-CoA 9-desaturase
+
+  trans_trans_2_4_hexadecadienoyl_CoA
+    -R[node11910: 1.3.1.34 | NADPH>NADP ^L {br=BS371193, ev=cof+eq}]-> 2_trans_hexadecenoyl_CoA;  // 2,4-dienoyl-CoA reductase [(2E)-enoyl-CoA-producing]
+
+  phospholipid_olefinic_fatty_acid
+    -R[node10172: 2.1.1.79 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR43921, ev=cof+eq}]-> phospholipid_cyclopropane_fatty_acid;  // cyclopropane-fatty-acyl-phospholipid synthase
+
+  3R_3_hydroxydecanoyl_ACP
+    -R[node9058: 4.2.1.59 | +H2O ^R {br=BS2050, ev=cof+eq, match=single}]-> 2E_dec_2_enoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node9051: 5.3.3.14]- 3Z_dec_3_enoyl_ACP  // trans-2-decenoyl-[acyl-carrier protein] isomerase
+    -[node9067: 2.3.1.41 | -Malonyl_ACP, +Holo_ACP, +CO2]- 5Z_3_oxododec_5_enoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -[node9059: 1.1.1.100 | NADPH>NADP ^R]- 3R_5Z_3_hydroxydodec_5_enoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node10327: 4.2.1.59 | +H2O ^R]- 2E_5Z_dodeca_3_5_dienoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node10321: 1.3.1.9 | NADH>NAD ^R]- 5Z_dodec_5_enoyl_ACP;  // enoyl-[acyl-carrier-protein] reductase (NADH)
+
+  (Malonyl_ACP + malonyl_CoA) -[node10300: 2.3.1.39 | -Holo_ACP, +CoA {br=BR44039, ev=cof+eq}]-> _;  // [acyl-carrier-protein] S-malonyltransferase
+  (geranylgeranyl_diphosphate + glycerol_1_phosphate) -[node8804: 2.5.1.41 | +PPi {br=BR47545, ev=cof+eq, match=similar}]-> sn_3_O_geranylgeranyl_glyceryl_1_phosphate;  // phosphoglycerol geranylgeranyltransferase
+  react [node8818: 2.7.8.- | +CMP, +H] {glycerol_1_phosphate, unsaturated_CDP_archaeol, archaetidylglycerophosphate};  // archaetidylglycerol synthaseInferred by computational analysis
+  (geranylgeranyl_diphosphate + sn_3_O_geranylgeranyl_glyceryl_1_phosphate) -[node8810: 2.5.1.42 | +PPi {br=BR47546, ev=cof+eq, match=single}]-> 2_3_bis_O_geranylgeranyl_sn_glycerol_1_phosphate;  // geranylgeranylglycerol-phosphate geranylgeranyltransferase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { 2_trans_hexadecenoyl_CoA palmitoyl_CoA } forward { node11909 } backward { node1545 };
+  motif substrate_cycle { Holo_ACP apo_ACP } forward { node8902 } backward { node8897 };
+  motif carrier { ADP ATP } forward { node11897 } backward { node10283 };
+  motif carrier { Ac_CoA CoA } forward { node10307 } backward { node9123 };
+  motif carrier { NAD NADH } forward { node3315 node9137 } backward { node10321 node11906 node11914 node9094 };
+  motif carrier { NADP NADPH } forward { node2748 } backward { node10705 node11909 node11910 node1575 node3723 node8790 node9059 node9065 node9074 node9077 };
+  motif carrier { acceptor reduced_acceptor } forward { node11366 node1539 node1545 } backward { node2876 };
+}

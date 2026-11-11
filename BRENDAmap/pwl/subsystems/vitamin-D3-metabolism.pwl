@@ -1,0 +1,22 @@
+pwl 2.0;
+subsystem vitamin-D3-metabolism 'vitamin D3 metabolism' {
+  // BRENDA subsystem: 4 reactions (3 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 7_dehydrocholesterol '7-dehydrocholesterol' brenda:5120 kegg:C01164;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound calcidiol brenda:15672 kegg:C01561;
+  compound calcitriol brenda:12463 kegg:C01673;
+  compound previtamin_D3 'previtamin D3' brenda:189170 kegg:C07711;
+  compound vitamin_D3 'vitamin D3' brenda:21236 kegg:C05443;
+  port 7_dehydrocholesterol side R to cholesterol-biosynthesis;
+
+  7_dehydrocholesterol
+    -[node9392: ~? {br=BR52876, ev=eq}]-> previtamin_D3  // spontaneous reaction
+    -[node9400: ~? {br=BR52875, ev=eq}]-> vitamin_D3  // spontaneous reaction
+    -B[node9396: 1.14.14.24 | NADPH>NADP, -O2, +H2O {br=BS402537, ev=cof+eq, match=kegg}]-> calcidiol  // vitamin D 25-hydroxylase
+    -[node9431: 1.14.15.18 | NADPH>NADP, -O2, +H2O]- calcitriol;  // calcidiol 1-monooxygenase
+}

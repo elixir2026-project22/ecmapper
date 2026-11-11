@@ -1,0 +1,41 @@
+pwl 2.0;
+subsystem dTDPLrhamnose-biosynthesis 'dTDPLrhamnose biosynthesis' {
+  // BRENDA subsystem: 13 reactions (10 with direction), 14 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PPi brenda:17 kegg:C00013;
+  compound alpha_D_Glc_1_P 'alpha-D-Glc 1-P' brenda:107 kegg:C00103;
+  compound dTDP_3_4_didehydro_2_6_dideoxy_alpha_D_glucose 'dTDP-3,4-didehydro-2,6-dideoxy-alpha-D-glucose' brenda:197911 kegg:C06620;
+  compound dTDP_3_amino_3_4_6_trideoxy_alpha_D_glucose 'dTDP-3-amino-3,4,6-trideoxy-alpha-D-glucose' brenda:19512 kegg:C11910;
+  compound dTDP_3_dehydro_4_6_deoxy_alpha_D_glucose 'dTDP-3-dehydro-4,6-deoxy-alpha-D-glucose' brenda:176133;
+  compound dTDP_4_dehydro_2_6_dideoxy_alpha_D_glucose 'dTDP-4-dehydro-2,6-dideoxy-alpha-D-glucose' brenda:85560 kegg:C11922;
+  compound dTDP_4_dehydro_6_deoxy_Gal 'dTDP-4-dehydro-6-deoxy-Gal' brenda:3071 kegg:C11907;
+  compound dTDP_4_dehydro_6_deoxy_L_mannose 'dTDP-4-dehydro-6-deoxy-L-mannose' brenda:44099;
+  compound dTDP_4_dehydro_6_deoxy_alpha_D_gulose 'dTDP-4-dehydro-6-deoxy-alpha-D-gulose' brenda:89412 kegg:C11926;
+  compound dTDP_6_deoxy_alpha_D_allose 'dTDP-6-deoxy-alpha-D-allose' brenda:42529 kegg:C11912;
+  compound dTDP_Glc 'dTDP-Glc' brenda:903 kegg:C00842;
+  compound dTDP_L_rhamnose 'dTDP-L-rhamnose' brenda:10649 kegg:C03319;
+  compound dTDP_alpha_D_fucopyranose 'dTDP-alpha-D-fucopyranose' brenda:9565 brenda:101769;
+  compound dTDP_viosamine 'dTDP-viosamine' brenda:19647 kegg:C04268;
+  compound dTTP brenda:145 kegg:C00459;
+  port alpha_D_Glc_1_P side R to degradation-of-hexoses;
+
+  star dTDP_4_dehydro_6_deoxy_Gal arc 180 order cw {
+    <-B[node10141: 4.2.1.46 | +H2O ^L {br=BR425, ev=cof+eq}]- dTDP_Glc  // dTDP-glucose 4,6-dehydratase
+      <-R[node9970: 2.7.7.24 | -dTTP, +PPi ^R {br=BR47871, ev=cof+eq}]- alpha_D_Glc_1_P;  // glucose-1-phosphate thymidylyltransferase
+    -L[node11615: 5.1.3.27 {br=BR50724, ev=eq}]-> dTDP_4_dehydro_6_deoxy_alpha_D_gulose  // dTDP-4-dehydro-6-deoxy-D-glucose 3-epimerase
+      -[node11617: 1.1.1.364 | -NADP, -NADPH {br=BR50819, ev=conflict}]- dTDP_6_deoxy_alpha_D_allose;  // dTDP-4-dehydro-6-deoxy-alpha-D-gulose 4-ketoreductase
+    <-[node11637: 2.6.1.33 {br=BR47685, ev=eq}]- dTDP_viosamine  // dTDP-4-amino-4,6-dideoxy-D-glucose transaminase
+      -[node11639: 4.3.1.30 {br=BR49954, ev=eq, match=similar}]-> dTDP_3_dehydro_4_6_deoxy_alpha_D_glucose  // dTDP-4-amino-4,6-dideoxy-D-glucose ammonia-lyase
+      <-[node11641: 2.6.1.106 {br=BR49904, ev=eq}]- dTDP_3_amino_3_4_6_trideoxy_alpha_D_glucose;  // dTDP-3-amino-3,4,6-trideoxy-alpha-D-glucose transaminase
+    <-[node11627: 1.1.1.266 {br=BR26046, ev=eq}]- dTDP_alpha_D_fucopyranose  // dTDP-4-dehydro-6-deoxyglucose reductase
+      -[node11629: 5.4.99.59]- dTDP_alpha_D_fucopyranose#2;  // dTDP-fucopyranose mutase
+    -[node9966: 5.1.3.13 {br=BR188, ev=eq, match=single}]-> dTDP_4_dehydro_6_deoxy_L_mannose  // dTDP-4-dehydrorhamnose 3,5-epimerase
+      -[node9959: 1.1.1.133 | NADPH>NADP ^L {br=BR29200, ev=cof-eq, match=single}]-> dTDP_L_rhamnose;  // dTDP-4-dehydrorhamnose reductase
+    -[node11621: 4.2.1.159 {br=BR51535, ev=eq}]-> dTDP_3_4_didehydro_2_6_dideoxy_alpha_D_glucose  // dTDP-4-dehydro-6-deoxy-alpha-D-glucopyranose 2,3-dehydratase
+      -[node11622: 1.1.1.384 | +NADP, +NADPH ^L {br=BR51206, ev=conflict}]- dTDP_4_dehydro_2_6_dideoxy_alpha_D_glucose;  // dTDP-3,4-didehydro-2,6-dideoxy-alpha-D-glucose 3-reductase
+  }
+}

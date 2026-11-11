@@ -1,0 +1,56 @@
+pwl 2.0;
+subsystem curcuminoid-biosynthesis 'curcuminoid biosynthesis' {
+  // BRENDA subsystem: 13 reactions (8 with direction), 12 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 4_coumarate '4-coumarate' brenda:1215 brenda:19540 kegg:C00811;
+  compound 4_coumaroyl_CoA '4-coumaroyl-CoA' brenda:448 kegg:C00223;
+  compound 4_coumaroyl_acetyl_CoA '(4-coumaroyl)acetyl-CoA' brenda:12224 kegg:C17740;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound E_cinnamate '(E)-cinnamate' brenda:6144;
+  compound H2O brenda:1 kegg:C00001;
+  compound NH3 brenda:27;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Phe_L104 'Phe' brenda:104 kegg:C00079;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound bisdemethoxycurcumin brenda:6260 kegg:C17743;
+  compound caffeoyl_CoA 'caffeoyl-CoA' brenda:537 kegg:C00323;
+  compound curcumin brenda:696 kegg:C10443;
+  compound demethoxycurcumin brenda:13941 kegg:C17742;
+  compound feruloyl_CoA 'feruloyl-CoA' brenda:427 kegg:C00406;
+  compound feruloylacetyl_CoA 'feruloylacetyl-CoA' brenda:15297 kegg:C17741;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound oxidized_electron_acceptor 'oxidized electron acceptor' brenda:374 brenda:12937;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+  compound trans_caffeate 'trans-caffeate' brenda:426 brenda:30476;
+  compound trans_feruloyl_CoA 'trans-feruloyl-CoA' brenda:47517 kegg:C00406;
+
+  // ring: cycle of the drawing (9 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    4_coumarate
+      -[node13547: 1.14.14.9/1.14.18.1/1.14.99.15 | reduced_electron_acceptor>oxidized_electron_acceptor, -O2, +H2O {br=BS428032, ev=cof+eq}]-> trans_caffeate  // 4-hydroxyphenylacetate 3-monooxygenase;tyrosinase;4-methoxybenzoate monooxygenase (O-demethylating)
+      -[node13551: 6.2.1.12/6.2.1.27 | ATP>AMP, -CoA, +PPi]- caffeoyl_CoA  // 4-coumarate-CoA ligase;4-hydroxybenzoate-CoA ligase
+      -R[node13446: 2.1.1.104 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L {br=BR43863, ev=cof+eq}]-> feruloyl_CoA  // caffeoyl-CoA O-methyltransferase
+      -R[node13442: 2.3.1.218 | malonyl_CoA>CoA, +CO2 {br=BR50410, ev=cof+eq}]-> feruloylacetyl_CoA  // phenylpropanoylacetyl-CoA synthase
+      -L[node13437: 2.3.1.219 | -4_coumaroyl_CoA, +CO2, +CoA]- demethoxycurcumin  // demethoxycurcumin synthase
+      <-R[node13456: 2.3.1.217/2.3.1.219 | -trans_feruloyl_CoA, -H2O, +2*CoA, +CO2 {br=BS421743, ev=cof+eq}]- 4_coumaroyl_acetyl_CoA  // curcumin synthase;demethoxycurcumin synthase
+      -[node13453: 2.3.1.219 | -4_coumaroyl_CoA, -H2O, +CO2, +CoA]- bisdemethoxycurcumin  // demethoxycurcumin synthase
+      <-R[node13418: 2.3.1.211 | malonyl_CoA>3*CoA, -H2O, +2*CO2 {br=BR50403, ev=cof+eq}]- 4_coumaroyl_CoA  // bisdemethoxycurcumin synthase
+      <-[node13470: 6.2.1.12 | ATP>AMP, -CoA, +PPi {br=BR63, ev=cof+eq}]- 4_coumarate;  // 4-coumarate-CoA ligase
+    chord 4_coumaroyl_CoA -[node13464: 2.3.1.218 | malonyl_CoA>CoA, +CO2 {br=BR50411, ev=cof+eq}]-> 4_coumaroyl_acetyl_CoA;  // phenylpropanoylacetyl-CoA synthase
+  }
+
+  4_coumarate
+    -L[node13426: 1.14.14.91 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O]- E_cinnamate  // trans-cinnamate 4-monooxygenase
+    -[node13420: 4.3.1.23/4.3.1.24/4.3.1.25/4.3.1.31 | +NH3 ^R]- Phe_L104;  // tyrosine ammonia-lyase;phenylalanine ammonia-lyase;phenylalanine/tyrosine ammonia-lyase;L-tryptophan ammonia lyase
+
+  feruloylacetyl_CoA
+    -B[node13433: 2.3.1.217 | -trans_feruloyl_CoA, -H2O, +CO2, +2*CoA {br=BR50409, ev=cof+eq}]-> curcumin;  // curcumin synthase
+}

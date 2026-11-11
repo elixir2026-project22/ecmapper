@@ -1,0 +1,71 @@
+pwl 2.0;
+subsystem carnitine-metabolism 'carnitine metabolism' {
+  // BRENDA subsystem: 16 reactions (10 with direction), 17 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 3_OH_N6_trimethyl_Lys '3-OH-N6-trimethyl-Lys' brenda:43323;
+  compound 3_dehydrocarnitine '3-dehydrocarnitine' brenda:3598 kegg:C02636;
+  compound 4_trimethylammoniobutanal '4-trimethylammoniobutanal' brenda:43474 kegg:C01149;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound D_carnitine 'D-carnitine' brenda:29217;
+  compound Gly brenda:72 kegg:C00037;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_Car 'L-Car' brenda:331 kegg:C00318;
+  compound L_acylcarnitine 'L-acylcarnitine' brenda:93778;
+  compound L_carnitinyl_CoA 'L-carnitinyl-CoA' brenda:191256 kegg:C20750;
+  compound N6_trimethyl_Lys 'N6-trimethyl-Lys' brenda:15874 kegg:C03793;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound acyl_CoA 'acyl-CoA' brenda:492 kegg:C00040;
+  compound crotonobetainyl_CoA 'crotonobetainyl-CoA' brenda:191255 kegg:C20748;
+  compound electron_transfer_flavoprotein 'electron-transfer flavoprotein' brenda:1601 kegg:C04253;
+  compound gamma_butyrobetaine 'gamma-butyrobetaine' brenda:4523 kegg:C01181;
+  compound gamma_butyrobetainyl_CoA 'gamma-butyrobetainyl-CoA' brenda:83250 kegg:C20749;
+  compound glycine_betaine 'glycine betaine' brenda:1974 kegg:C00719;
+  compound histone_L_Lys 'histone L-Lys' brenda:46756 kegg:C02415;
+  compound histone_N6_N6_N6_trimethyl_L_lysine 'histone N6,N6,N6-trimethyl-L-lysine' brenda:191359;
+  compound histone_N6_N6_dimethyl_L_Lys 'histone N6,N6-dimethyl-L-Lys' brenda:191360;
+  compound histone_N6_methyl_L_lysine 'histone N6-methyl-L-lysine' brenda:44228 kegg:C03702;
+  compound reduced_electron_transfer_flavoprotein 'reduced electron-transfer flavoprotein' brenda:2112 kegg:C04570;
+  compound succinate brenda:58 kegg:C00042;
+  compound trimethylaminoacetone brenda:191254;
+  port glycine_betaine side L to glycine-betaine-biosynthesis;
+
+  histone_L_Lys
+    -L[node3008: 2.1.1.354/2.1.1.355/2.1.1.362 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR43899, ev=cof+eq, match=similar}]-> histone_N6_methyl_L_lysine  // [histone H3]-lysine4 N-trimethyltransferase;[histone H3]-lysine9 N-trimethyltransferase;[histone H4]-N-methyl-L-lysine20 N-methyltransferase
+    -R[node3010: 2.1.1.354/2.1.1.355/2.1.1.362 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine]- histone_N6_N6_dimethyl_L_Lys  // [histone H3]-lysine4 N-trimethyltransferase;[histone H3]-lysine9 N-trimethyltransferase;[histone H4]-N-methyl-L-lysine20 N-methyltransferase
+    -R[node3012: 2.1.1.354/2.1.1.355 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L]- histone_N6_N6_N6_trimethyl_L_lysine;  // [histone H3]-lysine4 N-trimethyltransferase;[histone H3]-lysine9 N-methyltransferase
+
+  N6_trimethyl_Lys
+    -B[node3166: 1.14.11.8 | -O2, -2OG, +CO2, +succinate {br=BR586, ev=cof+eq}]-> 3_OH_N6_trimethyl_Lys  // trimethyllysine dioxygenase
+    -B[node3170: ? | +Gly ^L]- 4_trimethylammoniobutanal  // unknown enzyme
+    -[node3167: 1.2.1.47 | NAD>NADH, -H2O, +2*H {br=BR29407, ev=cof+eq, match=kegg}]-> gamma_butyrobetaine  // 4-trimethylammoniobutyraldehyde dehydrogenase
+    -[node3173: 1.14.11.1 | -O2, -2OG, +CO2, +succinate]- L_Car  // gamma-butyrobetaine dioxygenase
+    -R[node8177: 1.1.1.108 | NAD>NADH {br=BS369941, ev=cof+eq}]-> 3_dehydrocarnitine  // carnitine 3-dehydrogenase
+    -B[node8167: 1.1.1.254 | NADH>NAD {br=BR923, ev=cof-eq}]-> D_carnitine;  // (S)-carnitine 3-dehydrogenase
+
+  3_dehydrocarnitine
+    -R[node8187: ? | -H, +CO2 ^R]- trimethylaminoacetone  // hypothetical reaction
+    -[node8181: ? | -NAD, -H2O, +H, +H, +CO2]- glycine_betaine;  // hypothetical reaction
+
+  L_Car
+    -L[node8203: 2.3.1.21 | -acyl_CoA, +CoA ^R {br=BS320449, ev=cof+eq}]-> L_acylcarnitine;  // carnitine O-palmitoyltransferase
+
+  L_Car
+    -B[node8191: 6.2.1.48 | ATP>AMP, -CoA, +PPi {br=BR51632, ev=cof+eq}]-> L_carnitinyl_CoA  // carnitine-CoA ligase
+    -L[node8189: 4.2.1.149 | +H2O ^L {br=BR51002, ev=cof+eq, match=kegg}]-> crotonobetainyl_CoA  // crotonobetainyl-CoA hydratase
+    -R[node8183: 1.3.8.13 | -reduced_electron_transfer_flavoprotein, +electron_transfer_flavoprotein ^L {br=BR51924, ev=cof-eq}]-> gamma_butyrobetainyl_CoA  // crotonobetainyl-CoA reductase
+    -R[node8188: 2.8.3.21 | -L_Car, +gamma_butyrobetaine ^R {br=BR50972, ev=cof+eq, match=kegg}]-> L_carnitinyl_CoA;  // L-carnitine CoA-transferase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { L_carnitinyl_CoA crotonobetainyl_CoA gamma_butyrobetainyl_CoA };
+  motif carrier { NAD NADH } forward { node3167 node8177 } backward { node8167 };
+}

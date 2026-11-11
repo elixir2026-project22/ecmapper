@@ -1,0 +1,53 @@
+pwl 2.0;
+subsystem taxol-biosynthesis 'taxol biosynthesis' {
+  // BRENDA subsystem: 12 reactions (9 with direction), 14 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 10_deacetyl_2_debenzoylbaccatin_III '10-deacetyl-2-debenzoylbaccatin III' brenda:49651 kegg:C11899;
+  compound 10_deacetylbaccatin_III '10-deacetylbaccatin III' brenda:5317 kegg:C11700;
+  compound 10beta_14beta_dihydroxytaxa_4_20_11_dien_5alpha_yl_acetate '10beta,14beta-dihydroxytaxa-4(20),11-dien-5alpha-yl acetate' brenda:167615 kegg:C20151;
+  compound 10beta_hydroxytaxa_4_20_11_dien_5alpha_yl_acetate '10beta-hydroxytaxa-4(20),11-dien-5alpha-yl acetate' brenda:16750 kegg:C11898;
+  compound 3_N_debenzoyl_2_deoxytaxol '3\'-N-debenzoyl-2\'-deoxytaxol' brenda:237425 kegg:C16523;
+  compound 3_N_debenzoyltaxol '3\'-N-debenzoyltaxol' brenda:85572 kegg:C16524;
+  compound 3_amino_3_phenylpropanoyl_CoA '3-amino-3-phenylpropanoyl-CoA' brenda:41650;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound baccatin_III 'baccatin III' brenda:11190 kegg:C11900;
+  compound benzoyl_CoA 'benzoyl-CoA' brenda:394 kegg:C00512;
+  compound geranylgeranyl_diphosphate 'geranylgeranyl diphosphate' brenda:231 kegg:C00353;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound taxa_4_11_diene 'taxa-4,11-diene' brenda:9605 kegg:C11894;
+  compound taxa_4_20_11_dien_5alpha_13alpha_diol 'taxa-4(20),11-dien-5alpha,13alpha-diol' brenda:50297;
+  compound taxa_4_20_11_dien_5alpha_ol 'taxa-4(20),11-dien-5alpha-ol' brenda:6160 kegg:C11895;
+  compound taxa_4_20_11_dien_5alpha_yl_acetate 'taxa-4(20),11-dien-5alpha-yl acetate' brenda:21896 kegg:C11896;
+  compound taxol brenda:16457;
+  port 3_amino_3_phenylpropanoyl_CoA side R to phenylalanine-metabolism;
+
+  geranylgeranyl_diphosphate
+    -[node1341: 4.2.3.17 | +PPi ^L {br=BR44341, ev=cof+eq}]-> taxa_4_11_diene  // taxadiene synthase
+    -[node1337: 1.14.14.176 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR40524, ev=cof+eq}]-> taxa_4_20_11_dien_5alpha_ol  // taxadiene 5alpha-hydroxylase
+    -[node1330: 2.3.1.162 | -Ac_CoA, +CoA ^L {br=BR44011, ev=cof+eq}]-> taxa_4_20_11_dien_5alpha_yl_acetate  // taxadien-5alpha-ol O-acetyltransferase
+    -[node1326: 1.14.14.105 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR40410, ev=cof+eq}]-> 10beta_hydroxytaxa_4_20_11_dien_5alpha_yl_acetate  // taxane 10beta-hydroxylase
+    -L[node12131: 1.14.13.146 | NADPH>NADP, -O2, -H, +H2O {br=BR49981, ev=cof+eq}]-> 10beta_14beta_dihydroxytaxa_4_20_11_dien_5alpha_yl_acetate;  // taxoid 14beta-hydroxylase
+
+  taxa_4_20_11_dien_5alpha_ol
+    -L[node12135: 1.14.14.106 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR40518, ev=cof+eq}]-> taxa_4_20_11_dien_5alpha_13alpha_diol;  // taxane 13alpha-hydroxylase
+
+  10beta_hydroxytaxa_4_20_11_dien_5alpha_yl_acetate
+    -[node1310: ?]- 10_deacetyl_2_debenzoylbaccatin_III  // hypothetical multistep reaction
+    -[node1307: 2.3.1.166 | -benzoyl_CoA, +CoA ^L {br=BR40586, ev=cof+eq}]-> 10_deacetylbaccatin_III  // 2alpha-hydroxytaxane 2-O-benzoyltransferase
+    -[node12101: 2.3.1.167 | -Ac_CoA, +CoA ^L {br=BR44014, ev=cof+eq}]-> baccatin_III;  // 10-deacetylbaccatin III 10-O-acetyltransferase
+
+  3_N_debenzoyl_2_deoxytaxol
+    -[node12118: 1.14.14.- | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O]- 3_N_debenzoyltaxol  // beta-phenylalanoyl baccatin III-2'-hydroxylase
+    -[node12121: 2.3.1.- | -benzoyl_CoA, +CoA ^L]- taxol;  // 3'-N-debenzoyl-2'-deoxytaxol N-benzoyltransferase
+
+  (baccatin_III + 3_amino_3_phenylpropanoyl_CoA) -[node12106: 2.3.1.B16 | +CoA {br=BR49890, ev=cof+eq}]-> 3_N_debenzoyl_2_deoxytaxol;  // taxoid C-13 O-phenylpropanoyltransferase
+}

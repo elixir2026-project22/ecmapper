@@ -1,0 +1,29 @@
+pwl 2.0;
+subsystem dolichol-and-dolichyl-phosphate-biosynthesis 'dolichol and dolichyl phosphate biosynthesis' {
+  // BRENDA subsystem: 5 reactions (4 with direction), 6 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2E_6E_farnesyl_PP '(2E,6E)-farnesyl-PP' brenda:1392;
+  compound CDP brenda:212 kegg:C00112;
+  compound CTP brenda:60 kegg:C00063;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound di_trans_poly_cis_polyprenol 'di-trans,poly-cis-polyprenol' brenda:254203 kegg:C06081;
+  compound di_trans_poly_cis_polyprenyl_diphosphate 'di-trans,poly-cis-polyprenyl diphosphate' brenda:27262 kegg:C05859;
+  compound dolichol brenda:2271 kegg:C00381;
+  compound dolichyl_PP 'dolichyl-PP' brenda:4006 kegg:C00621;
+  compound dolichyl_phosphate 'dolichyl phosphate' brenda:621;
+  compound isopentenyl_PP 'isopentenyl-PP' brenda:113 kegg:C00129;
+  port 2E_6E_farnesyl_PP side U to isoprenoid-biosynthesis;
+  port dolichyl_phosphate side D to dolichyl-diphosphooligosaccharide-biosynthesis;
+
+  2E_6E_farnesyl_PP
+    -[node8126: 2.5.1.87/2.5.1.88 | -n*isopentenyl_PP, +n*PPi ^L {br=BS406958, ev=cof+eq}]-> di_trans_poly_cis_polyprenyl_diphosphate  // ditrans,polycis-polyprenyl diphosphate synthase [(2E,6E)-farnesyl diphosphate specific];trans,polycis-polyprenyl diphosphate synthase [(2Z,6E)-farnesyl diphosphate specific]
+    -[node8137: 3.1.4.- | -H2O, +PPi ^L]- di_trans_poly_cis_polyprenol  // unknown enzyme
+    -B[node8130: 1.3.1.94 | NADPH>NADP ^R {br=BR50150, ev=cof-eq, match=kegg}]-> dolichol  // polyprenal reductase
+    -[node8128: 2.7.1.108 | CTP>CDP ^R {br=BR47722, ev=cof+eq}]-> dolichyl_phosphate  // dolichol kinase
+    <-[node10678: 3.6.1.43 | -H2O, +Pi ^R {br=BR29529, ev=cof+eq}]- dolichyl_PP;  // dolichyldiphosphatase
+}

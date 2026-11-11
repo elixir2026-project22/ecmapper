@@ -1,0 +1,43 @@
+pwl 2.0;
+subsystem suberin-monomers-biosynthesis 'suberin monomers biosynthesis' {
+  // BRENDA subsystem: 8 reactions (6 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 4_coumarate '4-coumarate' brenda:1215 brenda:19540 kegg:C00811;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound E_cinnamate '(E)-cinnamate' brenda:6144;
+  compound H2O brenda:1 kegg:C00001;
+  compound NH3 brenda:27;
+  compound N_feruloyltyramine 'N-feruloyltyramine' brenda:96877 kegg:C02717;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Phe brenda:203;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound ferulate brenda:1047 kegg:C01494;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound trans_caffeate 'trans-caffeate' brenda:426 brenda:30476;
+  compound trans_caffeoyl_CoA 'trans-caffeoyl-CoA' brenda:230448;
+  compound trans_feruloyl_CoA 'trans-feruloyl-CoA' brenda:47517 kegg:C00406;
+  compound tyramine brenda:280 kegg:C00483;
+  port Phe side D to phenylalanine-metabolism;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    trans_caffeate
+      -L[node7775: 6.2.1.12 | ATP>AMP, -CoA, +PPi {br=BS26, ev=cof+eq}]-> trans_caffeoyl_CoA  // 4-coumarate-CoA ligase
+      -B[node11282: 2.1.1.104 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine {br=BR43863, ev=cof+eq}]-> trans_feruloyl_CoA  // caffeoyl-CoA O-methyltransferase
+      <-[node7782: 6.2.1.34 | ATP>AMP, -CoA, +PPi {br=BR29119, ev=cof+eq}]- ferulate  // trans-feruloyl-CoA synthase
+      -B[node7781: 2.1.1.68 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine]- trans_caffeate;  // caffeate O-methyltransferase
+  }
+
+  Phe
+    -[node7764: 4.3.1.24/4.3.1.25 | +NH3 ^R {br=BR3427, ev=cof+eq, match=single}]-> E_cinnamate  // phenylalanine ammonia-lyase;phenylalanine/tyrosine ammonia-lyase
+    -[node7765: 1.14.14.91 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR33713, ev=cof+eq}]-> 4_coumarate  // trans-cinnamate 4-monooxygenase
+    -[node7768: 1.14.14.96 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O]- trans_caffeate;  // 5-O-(4-coumaroyl)-D-quinate 3'-monooxygenase
+
+  (trans_feruloyl_CoA + tyramine) -[node7777: 2.3.1.110 | +CoA {br=BR43975, ev=cof+eq}]-> N_feruloyltyramine;  // tyramine N-feruloyltransferase
+}

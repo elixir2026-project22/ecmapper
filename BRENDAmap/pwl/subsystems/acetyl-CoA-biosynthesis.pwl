@@ -1,0 +1,52 @@
+pwl 2.0;
+subsystem acetyl-CoA-biosynthesis 'acetyl CoA biosynthesis' {
+  // BRENDA subsystem: 10 reactions (10 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Pi brenda:16 kegg:C00009;
+  compound acetate brenda:47 kegg:C00033;
+  compound enzyme_N6_S_acetyldihydrolipoyl_lysine 'enzyme N6-(S-acetyldihydrolipoyl)lysine' brenda:58125 kegg:C16255;
+  compound enzyme_N6_dihydrolipoyl_lysine 'enzyme N6-(dihydrolipoyl)lysine' brenda:16932 kegg:C15973;
+  compound enzyme_N6_lipoyl_lysine 'enzyme N6-(lipoyl)lysine' brenda:190050 kegg:C15972;
+  compound malonate brenda:392 kegg:C00383;
+  compound malonate_semialdehyde 'malonate semialdehyde' brenda:2969 kegg:C00222;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound pyruvate brenda:31 kegg:C00022;
+  port malonyl_CoA side L to elloramycin-biosynthesis;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    malonyl_CoA
+      -[node5289: 4.1.1.9 | +CO2 ^L {br=BR340, ev=cof+eq}]-> Ac_CoA  // Malonyl-CoA decarboxylase
+      <-[node5290: 1.2.1.18 | NAD>NADH, -CoA, +CO2 {br=BR29389-a, ev=cof+eq, match=kegg}]- malonate_semialdehyde  // malonate-semialdehyde dehydrogenase (acetylating)
+      -B[node5291: 1.2.1.15 | NADP>NADPH, -H2O {br=BR33729, ev=cof+eq, match=kegg}]-> malonate;  // malonate-semialdehyde dehydrogenase
+    (malonate + Ac_CoA) -[node5287: 2.8.3.3 | +acetate {br=BR48129, ev=cof+eq}]-> malonyl_CoA;  // malonate CoA-transferase
+  }
+
+  Ac_CoA
+    -B[node3292: 6.2.1.13 | ADP>ATP, -Pi, +CoA {br=BR64, ev=cof-eq} || node11055: 3.1.2.1 | -H2O, +CoA {br=BR11726, ev=cof+eq}]-> acetate;  // Acetate-CoA ligase (ADP-forming); acetyl-CoA hydrolase
+
+  pyruvate
+    -L[node763: 1.2.1.104 | NAD>NADH, -CoA, +CO2 {br=BR53165, ev=cof+eq}]-> Ac_CoA;  // pyruvate dehydrogenase system
+
+  enzyme_N6_lipoyl_lysine
+    -B[node7853: 1.8.1.4 | NADH>NAD {br=BR36970, ev=cof-eq, match=similar}]-> enzyme_N6_dihydrolipoyl_lysine;  // dihydrolipoyl dehydrogenase
+
+  (Ac_CoA + enzyme_N6_dihydrolipoyl_lysine) -[node7849: 2.3.1.12 | +CoA {br=BR43982, ev=cof+eq}]-> enzyme_N6_S_acetyldihydrolipoyl_lysine;  // dihydrolipoyllysine-residue acetyltransferase
+  enzyme_N6_S_acetyldihydrolipoyl_lysine -[node7851: 1.2.4.1 | -CO2 {br=BR33749, ev=cof-eq, match=single}]-> (enzyme_N6_lipoyl_lysine + pyruvate);  // pyruvate dehydrogenase (acetyl-transferring)
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { Ac_CoA enzyme_N6_S_acetyldihydrolipoyl_lysine pyruvate };
+  motif cycle { enzyme_N6_S_acetyldihydrolipoyl_lysine enzyme_N6_lipoyl_lysine enzyme_N6_dihydrolipoyl_lysine };
+  motif shunt { malonate_semialdehyde Ac_CoA } bypasses { malonate_semialdehyde malonate malonyl_CoA Ac_CoA };
+  motif carrier { NAD NADH } forward { node5290 node763 } backward { node7853 };
+}

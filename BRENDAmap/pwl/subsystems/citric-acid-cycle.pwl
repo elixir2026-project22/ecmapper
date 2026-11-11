@@ -1,0 +1,84 @@
+pwl 2.0;
+subsystem citric-acid-cycle 'citric acid cycle' {
+  // BRENDA subsystem: 24 reactions (24 with direction), 13 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 3S_citryl_CoA '(3S)-citryl-CoA' brenda:7069 kegg:C00566;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound AcAc brenda:419 kegg:C00164;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound FAD brenda:20 kegg:C00016;
+  compound FADH2 brenda:256 kegg:C01352;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound GDP brenda:53 kegg:C00035;
+  compound GTP brenda:37 kegg:C00044;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_malate 'L-malate' brenda:200 brenda:247;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Pi brenda:16 kegg:C00009;
+  compound a_quinone 'a quinone' brenda:1992;
+  compound acetate brenda:47 kegg:C00033;
+  compound acetoacetyl_CoA 'acetoacetyl-CoA' brenda:187 kegg:C00332;
+  compound cis_aconitate 'cis-aconitate' brenda:1230 kegg:C00417;
+  compound citrate brenda:131 kegg:C00158;
+  compound fumarate brenda:170 kegg:C00122;
+  compound glyoxylate brenda:101 kegg:C00048;
+  compound isocitrate brenda:279 kegg:C00311;
+  compound maleate brenda:575 kegg:C01384;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  compound reduced_quinone 'reduced quinone' brenda:32402 kegg:C15603;
+  compound succinate brenda:58 kegg:C00042;
+  compound succinyl_CoA 'succinyl-CoA' brenda:224 kegg:C00091;
+  port 2OG side D to glutamate-and-glutamine-metabolism;
+  port Ac_CoA side U to oxidative-decarboxylation-of-pyruvate;
+  port L_malate side R to alanine-metabolism;
+  port L_malate side U to gluconeogenesis;
+  port fumarate side D to propionate-fermentation;
+  port oxaloacetate side D to gallate-degradation;
+  port oxaloacetate side D to propionate-fermentation;
+  port oxaloacetate side R to oxalate-biosynthesis;
+  port oxaloacetate side U to anapleurotic-synthesis-of-oxalacetate;
+  port oxaloacetate side U to gluconeogenesis;
+  port succinate side D to propionate-fermentation;
+  port succinyl_CoA side D to phenylacetate-degradation-aerobic;
+  port succinyl_CoA side L to propionate-fermentation;
+  port succinyl_CoA side R to methionine-metabolism;
+
+  // ring: cycle of the drawing (11 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    citrate
+      -[node8496: 4.2.1.3 | +H2O ^L {br=BR419, ev=cof+eq}]-> cis_aconitate  // aconitate hydratase
+      -R[node8498: 4.2.1.3 | -H2O ^R {br=BS18708, ev=cof-eq}]-> isocitrate  // aconitate hydratase
+      -[node11921: 1.1.1.286/1.1.1.41 | NAD>NADH, +CO2 {br=BR29304, ev=cof+eq} || node8621: 1.1.1.42 | NADP>NADPH, +CO2 {br=BR29305, ev=cof+eq}]-> 2OG  // isocitrate-homoisocitrate dehydrogenase;isocitrate dehydrogenase (NAD+); isocitrate dehydrogenase (NADP+)
+      -[node11206: 1.2.7.3/1.2.7.11 | 2*Fd_ox>2*Fd_red, -CoA, +CO2 {br=BR50765, ev=cof+eq} || node8486: 1.2.1.105 | NAD>NADH, -CoA, +CO2 {br=BR53166, ev=cof+eq}]-> succinyl_CoA  // 2-oxoglutarate synthase;2-oxoacid oxidoreductase (ferredoxin); 2-oxoglutarate dehydrogenase system
+      -R[node8836: -> 2.8.3.5 | -AcAc, +acetoacetyl_CoA {br=BS360598, ev=cof+eq} || node11235: <- 2.8.3.18 | -Ac_CoA, +acetate {br=BR50544, ev=cof-eq} || node8488: <- 6.2.1.5 | ATP>ADP, -CoA, +Pi {br=BR88, ev=cof+eq} || node11932: <- 6.2.1.4 | GTP>GDP, -CoA, +Pi {br=BR87, ev=cof+eq}]- succinate  // 3-oxoacid CoA-transferase; succinyl-CoA:acetate CoA-transferase; Succinate-CoA ligase (ADP-forming); succinate-CoA ligase (GDP-forming)
+      -[node8828: 1.3.5.1 | FAD>FADH2 {br=BS413615, ev=cof+eq} || node8490: 1.3.5.1 | a_quinone>reduced_quinone {br=BR49374, ev=cof+eq}]-> fumarate  // succinate dehydrogenase; succinate dehydrogenase
+      -R[node8492: 4.2.1.2 | -H2O ^R {br=BR3389, ev=cof-eq}]-> L_malate  // fumarate hydratase
+      -[node2741: 1.1.1.299 | NADP>NADPH {br=BR29342, ev=cof+eq} || node8478: 1.1.1.37 | NAD>NADH {br=BR29300, ev=cof+eq} || node11929: 1.1.5.4 | a_quinone>reduced_quinone {br=BR49054, ev=cof+eq}]-> oxaloacetate;  // malate dehydrogenase [NAD(P)+]; malate dehydrogenase; malate dehydrogenase (quinone)
+    3S_citryl_CoA -[node8832: 4.1.3.34 {br=BR3376, ev=eq}]-> (Ac_CoA + oxaloacetate);  // citryl-CoA lyase
+    (Ac_CoA + oxaloacetate) -[node11925: 2.3.3.8 | ADP>ATP, -Pi, +CoA {br=BR44130, ev=cof+eq}]-> citrate;  // ATP citrate synthase
+    chord citrate -B[node12230: 6.2.1.18 | ATP>ADP, -CoA, +Pi {br=BR69, ev=cof+eq} || node8630: 2.8.3.10 | -Ac_CoA, +acetate {br=BR47921, ev=cof+eq}]-> 3S_citryl_CoA;  // citrate-CoA ligase; citrate CoA-transferase
+    chord (Ac_CoA + oxaloacetate) -[node8494: 2.3.3.1/2.3.3.3/2.3.3.16 | -H2O, +CoA {br=BR44118, ev=cof+eq}]-> citrate;  // citrate (Si)-synthase;citrate (Re)-synthase;citrate synthase (unknown stereospecificity)
+    chord (Ac_CoA + glyoxylate) -[node8880: 2.3.3.9 {br=BR47548, ev=eq}]-> L_malate;  // malate synthase
+    chord isocitrate -[node8881: 4.1.3.1 {br=BS380792, ev=eq}]-> (glyoxylate + succinate);  // isocitrate lyase
+  }
+
+  maleate
+    -R[node10181: 5.2.1.1 {br=BR208, ev=eq}]-> fumarate;  // Maleate isomerase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { 2OG succinyl_CoA succinate fumarate L_malate oxaloacetate citrate cis_aconitate isocitrate };
+  motif cycle { L_malate oxaloacetate citrate cis_aconitate isocitrate glyoxylate };
+  motif cycle { 3S_citryl_CoA oxaloacetate citrate };
+  motif substrate_cycle { succinate succinyl_CoA } forward { node11235 node8488 node11932 } backward { node8836 };
+  motif shunt { citrate 3S_citryl_CoA oxaloacetate } bypasses { citrate cis_aconitate isocitrate glyoxylate L_malate oxaloacetate };
+  motif shunt { isocitrate succinate } bypasses { isocitrate 2OG succinyl_CoA succinate };
+  motif carrier { ADP ATP } forward { node11925 } backward { node12230 node8488 };
+}

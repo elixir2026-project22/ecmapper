@@ -1,0 +1,71 @@
+pwl 2.0;
+subsystem ginsenoside-metabolism 'ginsenoside metabolism' {
+  // BRENDA subsystem: 26 reactions (20 with direction), 19 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 3S_2_3_epoxy_2_3_dihydrosqualene '(3S)-2,3-epoxy-2,3-dihydrosqualene' brenda:1906 kegg:C01054;
+  compound D_glucose 'D-glucose' brenda:35 brenda:1969 kegg:C00031;
+  compound H2O brenda:1 kegg:C00001;
+  compound O2 brenda:9 brenda:1180;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc_L364 'UDP-Glc' brenda:364 kegg:C00029;
+  compound beta_amyrin 'beta-amyrin' brenda:2919 kegg:C08616;
+  compound dTDP brenda:542 kegg:C00363;
+  compound dTDP_beta_L_rhamnose 'dTDP-beta-L-rhamnose' brenda:11552 kegg:C03319;
+  compound dammarenediol_II 'dammarenediol II' brenda:138544 kegg:C19829;
+  compound ginsenoside_C_K 'ginsenoside C-K' brenda:78801 kegg:C22127;
+  compound ginsenoside_F1 'ginsenoside F1' brenda:42359 kegg:C20780;
+  compound ginsenoside_F2 'ginsenoside F2' brenda:12093 kegg:C20779;
+  compound ginsenoside_Rb1 'ginsenoside Rb1' brenda:3919 kegg:C20713;
+  compound ginsenoside_Rd 'ginsenoside Rd' brenda:3556 kegg:C20725;
+  compound ginsenoside_Rg1 'ginsenoside Rg1' brenda:8698 kegg:C08946;
+  compound ginsenoside_Rg2 'ginsenoside Rg2' brenda:28873;
+  compound ginsenoside_Rg3 'ginsenoside Rg3' brenda:10261 kegg:C20778;
+  compound ginsenoside_Rh1 'ginsenoside Rh1' brenda:11912 kegg:C22129;
+  compound ginsenoside_Rh2 'ginsenoside Rh2' brenda:78769;
+  compound ginsenoside_Ro 'ginsenoside Ro' brenda:42558 kegg:C17543;
+  compound gypenoside_XVII 'gypenoside XVII' brenda:78719 kegg:C20736;
+  compound oleanolate brenda:200991 kegg:C17148;
+  compound oleanolate_3_O_beta_D_glucoside 'oleanolate 3-O-beta-D-glucoside' brenda:230376 kegg:C22130;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound protopanaxadiol brenda:19767 kegg:C20715;
+  compound protopanaxatriol brenda:19725 kegg:C20716;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+
+  // ring: cycle of the drawing (6 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    protopanaxadiol
+      -[node2106: 2.4.1.363 | UDP_Glc_L364>UDP ^R {br=BR52739, ev=cof+eq}]-> ginsenoside_C_K  // ginsenoside 20-O-glucosyltransferase
+      -[node11986: 2.4.1.364 | UDP_Glc_L364>UDP ^L {br=BR52741, ev=cof+eq}]-> ginsenoside_F2  // protopanaxadiol-type ginsenoside 3-O-glucosyltransferase
+      -[node2082: <- 3.2.1.191 | -H2O, +D_glucose {br=BS423611, ev=cof+eq} || node11990: -> 2.4.1.365 | UDP_Glc_L364>UDP {br=BR52743, ev=cof+eq}]- ginsenoside_Rd  // ginsenosidase type III; protopanaxadiol-type ginsenoside-3-O-glucoside 2''-O-glucosyltransferase
+      -B[node2074: -> 3.2.1.192 | -H2O, +D_glucose {br=BR50700, ev=cof+eq, match=single} || node1269: <- 2.4.1.363 | UDP_Glc_L364>UDP {br=BS448222, ev=cof+eq}]- ginsenoside_Rg3  // ginsenoside Rb1 beta-glucosidase; ginsenoside 20-O-glucosyltransferase
+      -[node2073: 3.2.1.21 | -H2O, +D_glucose || node11996: 2.4.1.365 | UDP_Glc_L364>UDP]- ginsenoside_Rh2  // beta-glucosidase; protopanaxadiol-type ginsenoside-3-O-glucoside 2''-O-glucosyltransferase
+      <-[node11994: 2.4.1.364 | UDP_Glc_L364>UDP ^R {br=BR52740, ev=cof+eq}]- protopanaxadiol;  // protopanaxadiol-type ginsenoside 3-O-glucosyltransferase
+    chord ginsenoside_Rh2 -L[node1266: 2.4.1.363 | UDP_Glc_L364>UDP {br=BS448223, ev=cof+eq}]-> ginsenoside_F2;  // ginsenoside 20-O-glucosyltransferase
+  }
+
+  ginsenoside_Rd
+    -[node2104: -> 2.4.1.314 | UDP_Glc_L364>UDP {br=BR50801, ev=cof+eq} || node2085: 3.2.1.195 | -H2O, +D_glucose || node2075: <- 3.2.1.192 | -H2O, +D_glucose {br=BR50699, ev=cof+eq}]- ginsenoside_Rb1  // ginsenoside Rd glucosyltransferase; 20-O-multi-glycoside ginsenosidase; ginsenoside Rb1 beta-glucosidase
+    -L[node2084: 3.2.1.191 | -H2O, +D_glucose {br=BS423597, ev=cof+eq}]-> gypenoside_XVII;  // ginsenosidase type III
+
+  protopanaxadiol
+    -L[node2102: 1.14.14.121 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR50787, ev=cof+eq}]-> protopanaxatriol  // protopanaxadiol 6-hydroxylase
+    -R[node11967: 2.4.1.363/2.4.1.366 | UDP_Glc_L364>UDP ^R {br=BS448197, ev=cof+eq}]-> ginsenoside_F1  // ginsenoside 20-O-glucosyltransferase;ginsenoside F1 6-O-glucosyltransferase
+    -[node11974: 3.2.1.194 | +H2O, +D_glucose {br=BS423616, ev=conflict} || node2100: -> 2.4.1.366/2.4.1.367 | UDP_Glc_L364>UDP {br=BR52744, ev=cof+eq}]- ginsenoside_Rg1;  // ginsenosidase type IV; ginsenoside F1 6-O-glucosyltransferase;ginsenoside 6-O-glucosyltransferase
+
+  protopanaxatriol
+    -[node11977: 2.4.1.367 | UDP_Glc_L364>UDP ^L {br=BR52745, ev=cof+eq}]-> ginsenoside_Rh1  // ginsenoside 6-O-glucosyltransferase
+    -[node11981: 2.4.1.- | dTDP_beta_L_rhamnose>dTDP ^L]- ginsenoside_Rg2;  // unknown
+
+  protopanaxadiol
+    <-R[node2111: 1.14.14.120 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR50786, ev=cof+eq}]- dammarenediol_II  // dammarenediol 12-hydroxylase
+    <-R[node2115: 4.2.1.125 | -H2O ^L {br=BR48943, ev=cof-eq}]- 3S_2_3_epoxy_2_3_dihydrosqualene  // dammarenediol II synthase
+    -R[node2116: 5.4.99.39 {br=BR48944, ev=eq}]-> beta_amyrin  // beta-amyrin synthase
+    -[node2112: 1.14.14.126 | 3*reduced_NADPH_hemoprotein_reductase>3*oxidized_NADPH_hemoprotein_reductase, -3*O2, +4*H2O {br=BR51297, ev=cof+eq}]-> oleanolate  // beta-amyrin 28-monooxygenase
+    -B[node2108: 2.4.1.368 | UDP_Glc_L364>UDP {br=BR52747, ev=cof+eq}]-> oleanolate_3_O_beta_D_glucoside  // oleanolate 3-O-glucosyltransferase
+    -[node1443: ?]- ginsenoside_Ro;  // unknown
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { ginsenoside_F2 ginsenoside_Rd } forward { node11990 } backward { node2082 };
+  motif substrate_cycle { ginsenoside_Rb1 ginsenoside_Rd } forward { node2075 } backward { node2104 };
+  motif substrate_cycle { ginsenoside_Rd ginsenoside_Rg3 } forward { node2074 } backward { node1269 };
+}

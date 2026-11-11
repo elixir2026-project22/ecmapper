@@ -1,0 +1,30 @@
+pwl 2.0;
+subsystem toluene-degradation 'toluene degradation' {
+  // BRENDA subsystem: 6 reactions (3 with direction), 7 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_carboxymethyl_3_hydroxyphenylpropionyl_CoA '2-carboxymethyl-3-hydroxyphenylpropionyl-CoA' brenda:190843;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound E_2_benzylidenesuccinyl_CoA '(E)-2-benzylidenesuccinyl-CoA' brenda:32766 kegg:C09818;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound R_2_benzylsuccinyl_CoA '(R)-2-benzylsuccinyl-CoA' brenda:8458 kegg:C09817;
+  compound benzoyl_CoA 'benzoyl-CoA' brenda:394 kegg:C00512;
+  compound benzylsuccinate brenda:16344 kegg:C09816;
+  compound electron_transferring_flavoprotein 'electron-transferring flavoprotein' brenda:2297 kegg:C04253;
+  compound fumarate brenda:170 kegg:C00122;
+  compound reduced_electron_transferring_flavoprotein 'reduced electron-transferring flavoprotein' brenda:1892 brenda:3252 kegg:C04570;
+  compound succinate brenda:58 kegg:C00042;
+  compound succinyl_CoA 'succinyl-CoA' brenda:224 kegg:C00091;
+  compound toluene brenda:1335 kegg:C01455;
+  port benzoyl_CoA side L to benzoyl-CoA-degradation;
+
+  toluene
+    -[node2531: 4.1.99.11 | -fumarate ^L {br=BR22822, ev=cof-eq}]-> benzylsuccinate  // benzylsuccinate synthase
+    -[node2529: 2.8.3.15 | -succinyl_CoA, +succinate ^L {br=BR47454, ev=cof+eq, match=kegg}]-> R_2_benzylsuccinyl_CoA  // succinyl-CoA:(R)-benzylsuccinate CoA-transferase
+    -R[node2527: 1.3.8.3 | -electron_transferring_flavoprotein, +reduced_electron_transferring_flavoprotein ^R {br=BR47377, ev=cof+eq}]-> E_2_benzylidenesuccinyl_CoA  // (R)-benzylsuccinyl-CoA dehydrogenase
+    -R[node2525: 4.2.1.- | -H2O ^L]- 2_carboxymethyl_3_hydroxyphenylpropionyl_CoA  // 2-carboxymethyl-3-hydroxyphenylpropanoyl-CoA dehydratase
+    -[node2523: 1.1.1.- | NAD>NADH]- R_2_benzylsuccinyl_CoA#2  // 3-hydroxyacyl-CoA dehydrogenase
+    -B[node2521: 2.3.1.- | -CoA, +succinyl_CoA ^L]- benzoyl_CoA;  // benzoylsuccinyl-CoA thiolase
+}

@@ -1,0 +1,72 @@
+pwl 2.0;
+subsystem methylaspartate-cycle 'methylaspartate cycle' {
+  // BRENDA subsystem: 19 reactions (16 with direction), 22 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2R_3S_2_methylmalyl_CoA '(2R,3S)-2-methylmalyl-CoA' brenda:19809 kegg:C06027;
+  compound 2_methylfumaryl_CoA '2-methylfumaryl-CoA' brenda:19810 kegg:C06028;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound HCO3 brenda:195 kegg:C00288;
+  compound L_malate 'L-malate' brenda:200 brenda:247;
+  compound L_threo_3_Me_Asp 'L-threo-3-Me-Asp' brenda:4538 kegg:C03618;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_methylmalonyl_CoA '(R)-methylmalonyl-CoA' brenda:21229;
+  compound S_methylmalonyl_CoA '(S)-methylmalonyl-CoA' brenda:2455;
+  compound a_quinol 'a quinol' brenda:2695;
+  compound a_quinone 'a quinone' brenda:1992;
+  compound cis_aconitate 'cis-aconitate' brenda:1230 kegg:C00417;
+  compound citrate brenda:131 kegg:C00158;
+  compound fumarate brenda:170 kegg:C00122;
+  compound glyoxylate brenda:101 kegg:C00048;
+  compound isocitrate brenda:279 kegg:C00311;
+  compound malyl_CoA 'malyl-CoA' brenda:12124 kegg:C04348;
+  compound mesaconate brenda:3214 kegg:C01732;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  compound propanoyl_CoA 'propanoyl-CoA' brenda:782 kegg:C00100;
+  compound succinate brenda:58 kegg:C00042;
+  compound succinyl_CoA 'succinyl-CoA' brenda:224 kegg:C00091;
+  port Ac_CoA side U to oxidative-decarboxylation-of-pyruvate;
+
+  // ring: cycle of the drawing (17 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    citrate
+      -L[node12261: 4.2.1.3 | +H2O ^R {br=BR419, ev=cof+eq}]-> cis_aconitate  // aconitate hydratase
+      -R[node12316: 4.2.1.3 | -H2O ^R]- isocitrate  // aconitate hydratase
+      -[node12260: 1.1.1.42 | NADP>NADPH, +CO2 {br=BR29305, ev=cof+eq}]-> 2OG  // isocitrate dehydrogenase (NADP+)
+      -[node12267: 1.4.1.2 | NADH>NAD, -NH3, +H2O]- Glu  // glutamate dehydrogenase
+      <-[node12269: 5.4.99.1 {br=BR33, ev=eq}]- L_threo_3_Me_Asp  // methylaspartate mutase
+      -R[node12274: 4.3.1.2 | +NH3 ^R {br=BR487, ev=cof+eq}]-> mesaconate  // methylaspartate ammonia-lyase
+      -[node12320: 2.8.3.26 | -succinyl_CoA, +succinate ^R {br=BR52650, ev=cof+eq}]-> 2_methylfumaryl_CoA  // succinyl-CoA:mesaconate CoA transferase
+      -[node12262: 4.2.1.148 | -H2O ^R {br=BR51001, ev=cof-eq}]-> 2R_3S_2_methylmalyl_CoA;  // 2-methylfumaryl-CoA hydratase
+    S_methylmalonyl_CoA
+      -B[node12296: 5.1.99.1]- R_methylmalonyl_CoA  // methylmalonyl-CoA epimerase
+      -[node12311: 5.4.99.2 {br=BR249, ev=eq}]-> succinyl_CoA  // methylmalonyl-CoA mutase
+      -[node12302: 6.2.1.5 | ADP>ATP, -Pi, +CoA {br=BR88, ev=cof-eq}]-> succinate  // succinate-CoA ligase (ADP-forming)
+      -R[node12304: 1.3.5.1 | -a_quinone, +a_quinol {br=BR49374, ev=cof+eq}]-> fumarate  // succinate dehydrogenase
+      -[node12270: 4.2.1.2 | -H2O ^R {br=BR3389, ev=cof-eq}]-> L_malate  // fumarate hydratase
+      -[node12290: 1.1.1.37 | NAD>NADH ^R {br=BR29300, ev=cof+eq}]-> oxaloacetate;  // malate dehydrogenase
+    (Ac_CoA + oxaloacetate) -[node12303: 2.3.3.1/2.3.3.16 | -H2O, +CoA {br=BR44118, ev=cof+eq}]-> citrate;  // citrate (Si)-synthase/citrate synthase (unknown stereospecificity)
+    2R_3S_2_methylmalyl_CoA -[node12259: 4.1.3.24 {br=BR50832, ev=eq}]-> (glyoxylate + propanoyl_CoA);  // malyl-CoA lyase
+    (HCO3 + propanoyl_CoA) -[node12295: 6.4.1.3 | ATP>ADP, +Pi {br=BR155, ev=cof+eq}]-> S_methylmalonyl_CoA;  // propionyl-CoA carboxylase
+  }
+
+  malyl_CoA
+    -B[node12310: 3.1.2.30 | -H2O, +CoA ^L {br=BR50984, ev=cof+eq}]-> L_malate;  // (3S)-malyl-CoA thioesterase
+
+  malyl_CoA -[node12294: 4.1.3.24 {br=BR3371, ev=eq}]-> (Ac_CoA#2 + glyoxylate);  // malyl-CoA lyase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { ADP ATP } forward { node12302 } backward { node12295 };
+  motif carrier { NAD NADH } forward { node12290 } backward { node12267 };
+}

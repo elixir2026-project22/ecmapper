@@ -1,0 +1,229 @@
+pwl 2.0;
+subsystem tryptophan-metabolism 'tryptophan metabolism' {
+  // BRENDA subsystem: 67 reactions (55 with direction), 56 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_2_aminophenyl_decane_1_3_dione '1-(2-aminophenyl)decane-1,3-dione' brenda:212585 kegg:C21490;
+  compound 1_2_carboxyphenylamino_1_deoxy_D_ribulose_5_phosphate '1-(2-carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate' brenda:185783 kegg:C01302;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2_Aminomuconate_semialdehyde '2-Aminomuconate semialdehyde' brenda:43094 kegg:C03824;
+  compound 2_amino_3_carboxymuconate_6_semialdehyde '2-amino-3-carboxymuconate-6-semialdehyde' brenda:34327;
+  compound 2_aminobenzoylacetate '2-aminobenzoylacetate' brenda:210561 kegg:C21453;
+  compound 2_aminobenzoylacetyl_CoA '2-aminobenzoylacetyl-CoA' brenda:212395 kegg:C21452;
+  compound 2_aminomuconate '2-aminomuconate' brenda:7093 kegg:C02220;
+  compound 2_heptyl_3_hydroxy_4_1H_quinolone '2-heptyl-3-hydroxy-4(1H)-quinolone' brenda:19758 kegg:C11848;
+  compound 2_heptyl_4_quinolone '2-heptyl-4-quinolone' brenda:219180 kegg:C20643;
+  compound 2_oxoadipate '2-oxoadipate' brenda:1184 kegg:C00322;
+  compound 2_oxopent_4_enoate '2-oxopent-4-enoate' brenda:5101 kegg:C00596;
+  compound 3E_2_oxohex_3_enedioate '(3E)-2-oxohex-3-enedioate' brenda:28632;
+  compound 3_1H_indol_3_yl_propanoate '3-(1H-indol-3-yl)propanoate' brenda:239167 kegg:C22236;
+  compound 3_Hydroxybutyryl_CoA '3-Hydroxybutyryl-CoA' brenda:2190 kegg:C05116;
+  compound 3_hydroxy_kynurenine '3-hydroxy-kynurenine' brenda:29488 kegg:C02794;
+  compound 3_hydroxyanthranilate '3-hydroxyanthranilate' brenda:1369 kegg:C00632;
+  compound 3_indol_3_yl_acrylate '3-(indol-3-yl)acrylate' brenda:237213 kegg:C21283;
+  compound 3_indol_3_yl_acryloyl_CoA '3-(indol-3-yl)acryloyl-CoA' brenda:235294 kegg:C22207;
+  compound 4_2_aminophenyl_2_4_dioxobutanoate '4-(2-aminophenyl)-2,4-dioxobutanoate' brenda:4483 kegg:C01252;
+  compound 4_hydroxy_2_1H_quinolone '4-hydroxy-2(1H)-quinolone' brenda:42500 kegg:C16716;
+  compound 4_oxalocrotonate '4-oxalocrotonate' brenda:6453 kegg:C03453;
+  compound 5_P_alpha_D_Rib_1_PP '5-P-alpha-D-Rib 1-PP' brenda:158 kegg:C00119;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound Ala brenda:103 kegg:C00041;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound E_glutaconyl_CoA '(E)-glutaconyl-CoA' brenda:10074 kegg:C02411;
+  compound FAD brenda:20 kegg:C00016;
+  compound FADH2 brenda:256 kegg:C01352;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound GAP brenda:147 kegg:C00118;
+  compound Gln brenda:102 kegg:C00064;
+  compound Glu brenda:41 kegg:C00025;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound L_cysteinyl_PqsC_protein 'L-cysteinyl-[PqsC protein]' brenda:214247;
+  compound L_cysteinyl_PqsD_protein 'L-cysteinyl-[PqsD protein]' brenda:214248;
+  compound L_tryptophyl_tRNATrp 'L-tryptophyl-tRNATrp' brenda:55316;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound N_5_Phospho_D_ribosyl_anthranilate 'N-(5-Phospho-D-ribosyl)-anthranilate' brenda:30206 kegg:C04302;
+  compound N_formylkynurenine 'N-formylkynurenine' brenda:44512 kegg:C02700;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Phe_L104 'Phe' brenda:104 kegg:C00079;
+  compound R_3_indol_3_yl_lactoyl_CoA '(R)-3-(indol-3-yl)lactoyl-CoA' brenda:235293 kegg:C22206;
+  compound R_indol_3_yl_lactate '(R)-(indol-3-yl)lactate' brenda:228363 kegg:C22006;
+  compound S_2_Indol_3_yl_acetyl_CoA 'S-2-(Indol-3-yl)acetyl-CoA' brenda:51913 kegg:C15489;
+  compound S_anthraniloyl_L_cysteinyl_PqsD_protein 'S-anthraniloyl-L-cysteinyl-[PqsD protein]' brenda:214270;
+  compound S_octanoyl_L_cysteinyl_PqsC_protein 'S-octanoyl-L-cysteinyl-[PqsC protein]' brenda:214271;
+  compound Ser brenda:95 kegg:C00065;
+  compound Trp brenda:119 kegg:C00078;
+  compound acetoacetyl_CoA 'acetoacetyl-CoA' brenda:187 kegg:C00332;
+  compound anthranilate brenda:474 kegg:C00108;
+  compound anthraniloyl_CoA 'anthraniloyl-CoA' brenda:6397 kegg:C02247;
+  compound chorismate brenda:204 kegg:C00251;
+  compound crotonoyl_CoA 'crotonoyl-CoA' brenda:3806 kegg:C00877;
+  compound cyclopeptine brenda:171699 kegg:C20579;
+  compound electron_transfer_flavoprotein 'electron-transfer flavoprotein' brenda:1601 kegg:C04253;
+  compound formate brenda:120 kegg:C00058;
+  compound glutaryl_CoA 'glutaryl-CoA' brenda:656 kegg:C00527;
+  compound indol_3_ethanol 'indol-3-ethanol' brenda:20311 kegg:C00955;
+  compound indol_3_glycol 'indol-3-glycol' brenda:188734;
+  compound indol_3_ketol 'indol-3-ketol' brenda:188735;
+  compound indol_3_yl_pyruvate '(indol-3-yl)pyruvate' brenda:4748 kegg:C00331;
+  compound indole brenda:472 kegg:C00463;
+  compound indole_3_acetate 'indole-3-acetate' brenda:3639 kegg:C00954;
+  compound indole_3_glycerol_phosphate 'indole-3-glycerol phosphate' brenda:12560 kegg:C03506;
+  compound indole_3_glycol_aldehyde 'indole-3-glycol aldehyde' brenda:91482 kegg:C03230;
+  compound indole_3_glycolate 'indole-3-glycolate' brenda:191364;
+  compound indole_3_glyoxal 'indole-3-glyoxal' brenda:191594;
+  compound indole_3_glyoxylate 'indole-3-glyoxylate' brenda:187565;
+  compound indole_acetaldehyde 'indole acetaldehyde' brenda:6538 kegg:C00637;
+  compound kynurenate brenda:4824 kegg:C01717;
+  compound kynurenine brenda:2201 kegg:C01718;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound octanoyl_CoA 'octanoyl-CoA' brenda:385 kegg:C01944;
+  compound oxidized_electron_acceptor 'oxidized electron acceptor' brenda:374 brenda:12937;
+  compound oxidized_electron_transferring_flavoprotein 'oxidized electron-transferring flavoprotein' brenda:99538;
+  compound phenylpyruvate brenda:198 kegg:C00166;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+  compound reduced_electron_transfer_flavoprotein 'reduced electron-transfer flavoprotein' brenda:2112 kegg:C04570;
+  compound reduced_electron_transferring_flavoprotein 'reduced electron-transferring flavoprotein' brenda:1892 brenda:3252 kegg:C04570;
+  compound tRNATrp brenda:877 kegg:C01652;
+  compound tryptamine brenda:363 kegg:C00398;
+  port 2_oxopent_4_enoate side L to 3-phenylpropionate-degradation;
+  port Trp side L to fumitremorgin-biosynthesis;
+  port Trp side L to violacein-biosynthesis;
+  port Trp side U to IAA-biosynthesis;
+  port chorismate side U to chorismate-metabolism;
+  port indole_3_acetate side U to IAA-biosynthesis;
+  port indole_3_glycerol_phosphate side L to benzoxazinoid-glucosides-biosynthesis;
+  port octanoyl_CoA side L to octane-oxidation;
+
+  // ring: cycle of the drawing (8 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    indole_acetaldehyde
+      -R[node6002: 1.2.3.7 | -O2, -H2O, +H2O2 {br=BR36791, ev=cof+eq, match=single} || node4702: 1.2.1.5 | NAD>NADH, -H2O, +H {br=BS231578, ev=cof+eq, match=kegg}]-> indole_3_acetate  // indole-3-acetaldehyde oxidase; aldehyde dehydrogenase [NAD(P)+]
+      -[node4696: 1.13.99.- | reduced_electron_acceptor>oxidized_electron_acceptor, -O2, +H2O]- indole_3_glycolate  // tryptophan 2'-dioxygenase
+      -L[node4691: 1.1.99.- | oxidized_electron_acceptor>reduced_electron_acceptor ^R]- indole_3_glyoxylate  // tryptophan 2'-dioxygenase
+      -[node4685: 1.2.1.- | oxidized_electron_acceptor>reduced_electron_acceptor, -H2O, +H ^R]- indole_3_glyoxal  // aldehyde dehydrogenase [NAD(P)+]
+      -[node4678: 1.1.1.- | NADH>NAD, -H ^R]- indol_3_ketol  // alcohol dehydrogenase
+      -[node4665: ? | oxidized_electron_acceptor>reduced_electron_acceptor ^R]- indol_3_glycol  // indole-3-ketol side chain oxidase
+      -L[node4669: 1.13.99.- | reduced_electron_acceptor>oxidized_electron_acceptor, -O2, +H2O]- indol_3_ethanol  // indole-3-ethanol:oxygen 2-oxidoreductase
+      -L[node6008: <- 1.1.1.190 | NADH>NAD, -H {br=BR29244, ev=cof-eq, match=similar} || node4673: -> 1.1.1.191 | NADP>NADPH, +H {br=BR29245, ev=cof+eq, match=similar}]- indole_acetaldehyde;  // indole-3-acetaldehyde reductase (NADH); indole-3-acetaldehyde reductase (NADPH)
+  }
+
+  // ring: cycle of the drawing (10 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    1_2_carboxyphenylamino_1_deoxy_D_ribulose_5_phosphate
+      -[node5965: 4.1.1.48 | +CO2, +H2O ^L {br=BR307, ev=cof+eq, match=kegg}]-> indole_3_glycerol_phosphate  // indole-3-glycerol-phosphate synthase
+      -[node5969: 4.2.1.20 | +GAP ^R {br=BR48765, ev=cof+eq, match=kegg}]-> indole  // tryptophan synthase
+      -B[node5972: -> 4.2.1.20 | -Ser, +H2O {br=BR49621, ev=cof+eq} || node4760: <- 4.1.99.1 | -H2O, +NH3, +pyruvate {br=BR6438, ev=cof+eq}]- Trp  // tryptophan synthase; tryptophanase
+      -[node5975: 1.13.11.11/1.13.11.52 | -O2 ^R {br=BR37070, ev=cof+eq}]-> N_formylkynurenine  // tryptophan 2,3-dioxygenase;indoleamine 2,3-dioxygenase
+      -[node5978: 3.5.1.9 | -H2O, +formate {br=BR22715, ev=cof+eq}]-> kynurenine  // arylformamidase
+      -[node4756: 1.14.13.9 | NADPH>NADP, -O2, +H2O {br=BS386517, ev=cof+eq}]-> 3_hydroxy_kynurenine  // kynurenine 3-monooxygenase
+      -L[node4750: 3.7.1.3 | -H2O, +Ala ^R {br=BS190196, ev=cof+eq}]-> 3_hydroxyanthranilate  // kynureninase
+      <-B[node2379: 1.14.14.8 | FADH2>FAD, -O2, +H2O {br=BR49368, ev=cof+eq}]- anthranilate  // anthranilate 3-monooxygenase (FAD)
+      -R[node5959: 2.4.2.18 | -5_P_alpha_D_Rib_1_PP, +PPi ^L {br=BR47560, ev=cof-eq}]-> N_5_Phospho_D_ribosyl_anthranilate  // anthranilate phosphoribosyltransferase
+      -L[node5963: 5.3.1.24 {br=BR48377, ev=eq}]-> 1_2_carboxyphenylamino_1_deoxy_D_ribulose_5_phosphate;  // phosphoribosylanthranilate isomerase
+    chord kynurenine -L[node5982: 3.7.1.3 | -H2O, +Ala ^R {br=BR29549, ev=cof+eq}]-> anthranilate;  // kynureninase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    Trp
+      -B[node5993: 4.1.1.28 | -H, +CO2 {br=BR52265, ev=cof+eq}]-> tryptamine  // aromatic-L-amino-acid decarboxylase
+      -B[node5997: 1.4.3.4 | -O2, -H2O, +NH3, +H2O2 {br=BS260300, ev=cof+eq, match=single}]-> indole_acetaldehyde  // monoamine oxidase
+      -[node4688: 1.13.99.- | reduced_electron_acceptor>oxidized_electron_acceptor, -O2, +H2O]- indole_3_glycol_aldehyde  // tryptophan 2'-dioxygenase
+      <-L[node4711: 1.13.99.3 | -O2, +NH3, +CO2 {br=BR40460, ev=cof+eq, match=kegg}]- Trp;  // tryptophan 2'-dioxygenase
+    chord Trp -R[node4706: 1.13.99.- | -O2, -H, +CO2, +NH3, +H2O]- indole_acetaldehyde;  // tryptophan 2'-dioxygenase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    R_3_indol_3_yl_lactoyl_CoA
+      -B[node1169: 4.2.1.175 | +H2O ^L {br=BR52949, ev=cof+eq}]-> 3_indol_3_yl_acryloyl_CoA;  // (R)-3-(aryl)lactoyl-CoA dehydratase
+    (3_indol_3_yl_acryloyl_CoA + R_indol_3_yl_lactate) -[node1173: 2.8.3.17 {br=BR52902, ev=eq, match=kegg}]-> (3_indol_3_yl_acrylate + R_3_indol_3_yl_lactoyl_CoA);  // 3-(aryl)acryloyl-CoA:(R)-3-(aryl)lactate CoA-transferase
+  }
+
+  3_hydroxyanthranilate
+    -R[node4746: 1.13.11.6 | -O2 ^L {br=BR40468, ev=cof+eq, match=single}]-> 2_amino_3_carboxymuconate_6_semialdehyde  // 3-hydroxyanthranilate 3,4-dioxygenase
+    -R[node4743: 4.1.1.45 | +CO2 ^R {br=BR304, ev=cof+eq, match=single}]-> 2_Aminomuconate_semialdehyde  // Aminocarboxymuconate-semialdehyde decarboxylase
+    -R[node4740: 1.2.1.32 | NAD>NADH, -H2O, +H {br=BR36778, ev=cof+eq, match=kegg}]-> 2_aminomuconate  // aminomuconate-semialdehyde dehydrogenase
+    -[node6011: 3.5.99.5 | -H2O, +NH3 ^R {br=BS116425, ev=cof+eq, match=single}]-> 4_oxalocrotonate  // 2-aminomuconate deaminase
+    -[node6015: 4.1.1.77 | +CO2 ^R {br=BS1617, ev=cof+eq}]-> 2_oxopent_4_enoate;  // 2-oxo-3-hexenedioate decarboxylase
+
+  2_aminomuconate
+    -B[node12156: 3.5.99.5 | -H2O, +NH3 {br=BR19267, ev=cof+eq}]-> 3E_2_oxohex_3_enedioate  // 2-aminomuconate deaminase
+    -L[node4734: 1.1.1.- | NADH>NAD, -H2O, -H]- 2_oxoadipate  // unknown
+    -[node4939: 1.2.1.- | NAD>NADH, -CoA, +CO2]- glutaryl_CoA  // unknown enzyme
+    -L[node4729: 1.3.8.6 | -electron_transfer_flavoprotein, +reduced_electron_transfer_flavoprotein {br=BR50093, ev=cof+eq}]-> E_glutaconyl_CoA  // glutaryl-CoA dehydrogenase (ETF)
+    -[node4725: 1.3.8.6 | +CO2 ^R {br=BR50094, ev=cof+eq, match=kegg}]-> crotonoyl_CoA  // glutaryl-CoA dehydrogenase (ETF)
+    -[node4720: 4.2.1.150 | -H2O {br=BS18665, ev=cof-eq, match=single} || node4722: 4.2.1.55 | -H2O {br=BS18665, ev=cof-eq, match=single}]-> 3_Hydroxybutyryl_CoA  // short-chain-enoyl-CoA hydratase; 3-Hydroxybutyryl-CoA dehydratase
+    -[node4718: 1.1.1.35 | NAD>NADH ^R {br=BS187430, ev=cof+eq}]-> acetoacetyl_CoA  // 3-hydroxyacyl-CoA dehydrogenase
+    -[node4714: 2.3.1.9 | -CoA ^R {br=BR44092, ev=cof-eq}]-> Ac_CoA;  // acetyl-CoA C-acetyltransferase
+
+  glutaryl_CoA
+    -[node8100: 1.3.8.6 | oxidized_electron_transferring_flavoprotein>reduced_electron_transferring_flavoprotein, +CO2 {br=BR36856, ev=cof+eq, match=kegg}]-> crotonoyl_CoA;  // glutaryl-CoA dehydrogenase (ETF)
+
+  kynurenine
+    -R[node11136: 2.6.1.7 | 2OG>Glu ^R {br=BR47389, ev=cof+eq}]-> 4_2_aminophenyl_2_4_dioxobutanoate  // kynurenine-oxoglutarate transaminase
+    -[node2373: ~? | +H2O, +H {br=BR52896, ev=cof+eq}]-> kynurenate;  // spontaneous reaction
+
+  indole_3_glycolate
+    -[node10508: 1.2.1.- | -H2O, -oxidized_electron_acceptor, -reduced_electron_acceptor, +H]- indole_3_glycol_aldehyde  // aldehyde dehydrogenase [NAD(P)+]
+    -R[node4681: ? | +H ^R]- indole_3_glyoxal;  // idole-3-glyoxale side chain oxidase
+
+  Trp
+    -[node5985: 2.6.1.27 | 2OG>Glu {br=BR47678, ev=cof+eq} || node2366: 2.6.1.99 | pyruvate>Ala {br=BR50308, ev=cof+eq, match=kegg} || node4662: 2.6.1.28 | -phenylpyruvate, +Phe_L104 {br=BR47679, ev=cof+eq}]-> indol_3_yl_pyruvate  // tryptophan transaminase; L-tryptophan-pyruvate aminotransferase; tryptophan-phenylpyruvate transaminase
+    -[node8086: 1.2.7.8 | 2*Fd_ox>2*Fd_red, -CoA, +CO2, +2*H {br=BR48035, ev=cof+eq}]-> S_2_Indol_3_yl_acetyl_CoA;  // indolepyruvate ferredoxin oxidoreductase
+
+  3_indol_3_yl_acrylate
+    -[node1166: 1.3.8.15 | -reduced_electron_transfer_flavoprotein, +electron_transfer_flavoprotein {br=BR52972, ev=cof-eq}]-> 3_1H_indol_3_yl_propanoate;  // 3-(aryl)acrylate reductase
+
+  indol_3_yl_pyruvate
+    -[node5989: 1.1.1.110 | NADH>NAD, -H ^L {br=BR29176, ev=cof-eq}]-> R_indol_3_yl_lactate;  // aromatic 2-oxoacid reductase
+
+  indol_3_yl_pyruvate
+    -B[node4664: 4.1.1.74 | +CO2 ^L {br=BR335, ev=cof+eq, match=kegg}]-> indole_acetaldehyde;  // Indolepyruvate decarboxylase
+
+  anthranilate
+    -L[node11593: 6.3.2.40 {br=BR50555, ev=eq}]-> cyclopeptine;  // cyclopeptine synthase
+
+  anthranilate
+    -B[node12094: 6.2.1.32 | ATP>AMP, -CoA, +PPi {br=BR48384, ev=cof+eq}]-> anthraniloyl_CoA  // anthranilate-CoA ligase
+    -L[node12097: 2.3.1.262 | -L_cysteinyl_PqsD_protein, +CoA ^R {br=BR51963, ev=cof+eq}]-> S_anthraniloyl_L_cysteinyl_PqsD_protein  // anthraniloyl-CoA anthraniloyltransferase
+    -[node1320: 2.3.1.262 | -malonyl_CoA, +L_cysteinyl_PqsD_protein, +CO2 {br=BR51964, ev=cof+eq}]-> 2_aminobenzoylacetyl_CoA  // anthraniloyl-CoA anthraniloyltransferase
+    -[node1316: ~? | +CoA ^R {br=BR53010, ev=cof+eq}]-> 4_hydroxy_2_1H_quinolone;  // spontaneous reaction
+
+  2_aminobenzoylacetyl_CoA
+    -B[node967: 3.1.2.32 | -H2O, +CoA ^L {br=BR51771, ev=cof+eq}]-> 2_aminobenzoylacetate;  // 2-aminobenzoylacetyl-CoA thioesterase
+
+  chorismate
+    -R[node5954: 4.1.3.27 | Gln>Glu, +pyruvate {br=BR3373, ev=cof+eq}]-> anthranilate;  // anthranilate synthase
+
+  octanoyl_CoA
+    -R[node963: 2.3.1.230 | -L_cysteinyl_PqsC_protein, +CoA ^L {br=BR50797, ev=cof+eq}]-> S_octanoyl_L_cysteinyl_PqsC_protein;  // 2-heptyl-4(1H)-quinolone synthase
+
+  1_2_aminophenyl_decane_1_3_dione
+    -R[node954: 2.3.1.230 | +H2O ^L {br=BR51959, ev=cof+eq}]-> 2_heptyl_4_quinolone  // 2-heptyl-4(1H)-quinolone synthase
+    -[node947: 1.14.13.182 | NADH>NAD, -H, -O2, +H2O {br=BR50587, ev=cof+eq, match=kegg}]-> 2_heptyl_3_hydroxy_4_1H_quinolone;  // 2-heptyl-3-hydroxy-4(1H)-quinolone synthase
+
+  (tRNATrp + Trp) -[node11022: 6.1.1.2 | ATP>AMP, -H, +PPi {br=BR50, ev=cof+eq}]-> L_tryptophyl_tRNATrp;  // Tryptophan-tRNA ligase
+  (S_octanoyl_L_cysteinyl_PqsC_protein + 2_aminobenzoylacetate) -[node959: 2.3.1.230 | +L_cysteinyl_PqsC_protein, +CO2 {br=BR51958, ev=cof+eq}]-> 1_2_aminophenyl_decane_1_3_dione;  // 2-heptyl-4(1H)-quinolone synthase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { 1_2_carboxyphenylamino_1_deoxy_D_ribulose_5_phosphate indole_3_glycerol_phosphate indole Trp N_formylkynurenine kynurenine anthranilate N_5_Phospho_D_ribosyl_anthranilate };
+  motif substrate_cycle { Trp indole } forward { node4760 } backward { node5972 };
+  motif substrate_cycle { indol_3_ethanol indole_acetaldehyde } forward { node4673 } backward { node6008 };
+  motif shunt { anthranilate 3_hydroxyanthranilate } bypasses { anthranilate N_5_Phospho_D_ribosyl_anthranilate 1_2_carboxyphenylamino_1_deoxy_D_ribulose_5_phosphate indole_3_glycerol_phosphate indole Trp N_formylkynurenine kynurenine 3_hydroxy_kynurenine 3_hydroxyanthranilate };
+  motif shunt { R_indol_3_yl_lactate 3_indol_3_yl_acrylate } bypasses { R_indol_3_yl_lactate R_3_indol_3_yl_lactoyl_CoA 3_indol_3_yl_acryloyl_CoA 3_indol_3_yl_acrylate };
+  motif carrier { NAD NADH } forward { node4702 node4718 node4740 node4939 } backward { node4678 node4734 node5989 node6008 node947 };
+  motif carrier { NADP NADPH } forward { node4673 } backward { node4756 };
+  motif carrier { oxidized_electron_acceptor reduced_electron_acceptor } forward { node4665 node4685 node4691 } backward { node4669 node4688 node4696 };
+}

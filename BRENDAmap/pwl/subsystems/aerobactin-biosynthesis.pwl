@@ -1,0 +1,26 @@
+pwl 2.0;
+subsystem aerobactin-biosynthesis 'aerobactin biosynthesis' {
+  // BRENDA subsystem: 3 reactions (3 with direction), 4 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H2O brenda:1 kegg:C00001;
+  compound Lys brenda:134 kegg:C00047;
+  compound N2_citryl_N6_acetyl_N6_hydroxy_L_lysine 'N2-citryl-N6-acetyl-N6-hydroxy-L-lysine' brenda:19623 kegg:C20333;
+  compound N6_acetyl_N6_hydroxy_L_lysine 'N6-acetyl-N6-hydroxy-L-lysine' brenda:12815 kegg:C03955;
+  compound N6_hydroxy_Lys 'N6-hydroxy-Lys' brenda:20428 kegg:C01028;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound Pi brenda:16 kegg:C00009;
+  compound aerobactin brenda:21811 kegg:C05554;
+  port Lys side R to lysine-metabolism;
+
+  Lys
+    -[node7327: 1.14.13.59 | NADPH>NADP, -O2, +H2O {br=BR22599, ev=cof+eq}]-> N6_hydroxy_Lys  // L-lysine N6-monooxygenase (NADPH)
+    -[node7332: 2.3.1.102 | Ac_CoA>CoA ^R {br=BR43966, ev=cof+eq}]-> N6_acetyl_N6_hydroxy_L_lysine  // N6-hydroxylysine N-acetyltransferase
+    -[node7330: 6.3.2.39 | ATP>ADP, -N2_citryl_N6_acetyl_N6_hydroxy_L_lysine, -H2O, +Pi {br=BR50215, ev=cof+eq}]-> aerobactin;  // aerobactin synthase
+}

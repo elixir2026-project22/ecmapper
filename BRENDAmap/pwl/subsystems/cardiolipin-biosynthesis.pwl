@@ -1,0 +1,33 @@
+pwl 2.0;
+subsystem cardiolipin-biosynthesis 'cardiolipin biosynthesis' {
+  // BRENDA subsystem: 5 reactions (4 with direction), 7 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound CDP_diacylglycerol 'CDP-diacylglycerol' brenda:1248 kegg:C00269;
+  compound CMP brenda:100 kegg:C00055;
+  compound H2O brenda:1 kegg:C00001;
+  compound PE brenda:513 kegg:C00350;
+  compound PG brenda:681 kegg:C00344;
+  compound PGP brenda:5202 kegg:C03892;
+  compound Pi brenda:16 kegg:C00009;
+  compound cardiolipin brenda:813 kegg:C05980;
+  compound ethanolamine brenda:456 kegg:C00189;
+  compound glycerol brenda:135 kegg:C00116;
+  compound sn_glycerol_3_phosphate 'sn-glycerol 3-phosphate' brenda:422 kegg:C00093;
+  port CDP_diacylglycerol side L to CDP-diacylglycerol-biosynthesis;
+  port PE side R to phosphatidylethanolamine-bioynthesis;
+  port glycerol side L to degradation-of-sugar-alcohols;
+  port sn_glycerol_3_phosphate side L to degradation-of-sugar-alcohols;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    PGP
+      -B[node9910: 3.1.3.27 | -H2O, +Pi ^R {br=BR11741, ev=cof+eq}]-> PG;  // phosphatidylglycerophosphatase
+    (PE + PG) -[node1402: 2.7.8.B11 | +ethanolamine {br=BR51130, ev=cof+eq, match=similar}]-> cardiolipin;  // cardiolipin synthase C
+    (PG + CDP_diacylglycerol) -[node11443: 2.7.8.41 | +CMP {br=BR51131, ev=cof+eq, match=similar}]-> cardiolipin;  // cardiolipin synthase (CMP-forming)
+    (sn_glycerol_3_phosphate + CDP_diacylglycerol) -[node9852: 2.7.8.5 | +CMP {br=BS358731, ev=cof+eq, match=kegg}]-> PGP;  // CDP-diacylglycerol-glycerol-3-phosphate 1-phosphatidyltransferase
+    react [node9914: 2.7.8.B10] {glycerol, cardiolipin, PG};  // cardiolipin synthase A
+  }
+  // motifs (detected from the reactions above, see PWL.md)
+  motif shunt { CDP_diacylglycerol cardiolipin } bypasses { CDP_diacylglycerol PGP PG cardiolipin };
+}

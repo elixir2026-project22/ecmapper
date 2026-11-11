@@ -1,0 +1,45 @@
+pwl 2.0;
+subsystem daunorubicin-biosynthesis 'daunorubicin biosynthesis' {
+  // BRENDA subsystem: 11 reactions (5 with direction), 10 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 10_carboxy_13_deoxycarminomycin '10-carboxy-13-deoxycarminomycin' brenda:172661 kegg:C12427;
+  compound 13_deoxycarminomycin '13-deoxycarminomycin' brenda:28934 kegg:C12428;
+  compound 13_deoxydaunorubicin '13-deoxydaunorubicin' brenda:15348 kegg:C12429;
+  compound 13_dihydrocarminomycin '13-dihydrocarminomycin' brenda:19732 kegg:C12431;
+  compound 13_dihydrodaunorubicin '13-dihydrodaunorubicin' brenda:15349;
+  compound CO2 brenda:28 kegg:C00011;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound aklavinone brenda:4454 kegg:C12424;
+  compound carminomycin brenda:16195 kegg:C12432;
+  compound dTDP brenda:542 kegg:C00363;
+  compound dTDP_L_daunosamine 'dTDP-L-daunosamine' brenda:42642;
+  compound daunorubicin brenda:1532 kegg:C01907;
+  compound epsilon_rhodomycinone 'epsilon-rhodomycinone' brenda:28973 kegg:C12425;
+  compound methanol brenda:83 kegg:C00132;
+  compound rhodomycinone_D 'rhodomycinone D' brenda:212480;
+  port aklavinone side L to aclacinomycin-biosynthesis;
+
+  // ring: cycle of the drawing (6 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    13_deoxycarminomycin
+      -[node1776: 2.1.1.292 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L {br=BS424026, ev=cof+eq}]-> 13_deoxydaunorubicin  // carminomycin 4-O-methyltransferase
+      -R[node1772: 1.14.13.181 | -O2, -NADPH, -NADP, -H2O {br=BR50584, ev=conflict}]- 13_dihydrodaunorubicin  // 13-deoxydaunorubicin hydroxylase
+      -L[node1757: 1.14.13.181 | NADPH>NADP, -O2, +2*H2O {br=BR50585, ev=cof+eq}]-> daunorubicin  // 13-deoxydaunorubicin hydroxylase
+      <-B[node1749: 2.1.1.292 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR50635, ev=cof+eq}]- carminomycin  // carminomycin 4-O-methyltransferase
+      -[node1751: 1.14.13.181 | NADPH>NADP, +O2, +H2O]- 13_dihydrocarminomycin  // 13-deoxydaunorubicin hydroxylase
+      <-R[node1766: 1.14.13.181 | NADPH>NADP, -O2, +H2O {br=BS421769, ev=cof+eq}]- 13_deoxycarminomycin;  // 13-deoxydaunorubicin hydroxylase
+    chord 13_dihydrocarminomycin -[node1760: 2.1.1.292 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L]- 13_dihydrodaunorubicin;  // carminomycin 4-O-methyltransferase
+  }
+
+  aklavinone
+    -R[node1793: 1.14.13.180 | NADPH>NADP, -O2, +H2O {br=BR50586, ev=cof+eq}]-> epsilon_rhodomycinone  // aklavinone 12-hydroxylase
+    -L[node1787: 2.4.1.- | dTDP_L_daunosamine>dTDP ^L]- rhodomycinone_D  // dTDP-daunosamine transferase
+    -L[node1783: 3.1.1.- | -H2O, -methanol]- 10_carboxy_13_deoxycarminomycin  // rhodomycinone D methylesterase
+    -R[node1779: 4.1.1.- | +CO2 ^L]- 13_deoxycarminomycin;  //
+}

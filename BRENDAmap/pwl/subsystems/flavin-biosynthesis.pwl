@@ -1,0 +1,66 @@
+pwl 2.0;
+subsystem flavin-biosynthesis 'flavin biosynthesis' {
+  // BRENDA subsystem: 16 reactions (14 with direction), 16 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_5_diamino_6_5_phospho_D_ribitylamino_pyrimidin_4_3H_one '2,5-diamino-6-(5-phospho-D-ribitylamino)pyrimidin-4(3H)-one' brenda:165126 kegg:C18910;
+  compound 2_5_diamino_6_5_phospho_D_ribosylamino_pyrimidin_4_3H_one '2,5-diamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one' brenda:81590 kegg:C01304;
+  compound 2_5_diamino_6_hydroxy_4_5_phospho_D_ribosylamino_pyrimidine '2,5-diamino-6-hydroxy-4-(5-phospho-D-ribosylamino)pyrimidine' brenda:81591;
+  compound 2_amino_5_formylamino_6_5_phospho_D_ribosylamino_pyrimidin_4_3H_one '2-amino-5-formylamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one' brenda:184463 kegg:C15563;
+  compound 5_amino_6_5_phospho_D_ribitylamino_uracil '5-amino-6-(5-phospho-D-ribitylamino)uracil' brenda:160429 kegg:C04454;
+  compound 5_amino_6_5_phospho_D_ribosylamino_uracil '5-amino-6-(5-phospho-D-ribosylamino)uracil' brenda:81596;
+  compound 5_amino_6_D_ribitylamino_uracil '5-amino-6-(D-ribitylamino)uracil' brenda:76467 kegg:C04732;
+  compound 6_7_dimethyl_8_1_D_ribityl_lumazine '6,7-dimethyl-8-(1-D-ribityl)lumazine' brenda:6039;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound CDP brenda:212 kegg:C00112;
+  compound CTP brenda:60 kegg:C00063;
+  compound D_Rul_5_P 'D-Rul 5-P' brenda:443 kegg:C00199;
+  compound FAD brenda:20 kegg:C00016;
+  compound FADH2 brenda:256 kegg:C01352;
+  compound FMN brenda:56 kegg:C00061;
+  compound GTP brenda:37 kegg:C00044;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound NH4 'NH4+' brenda:4224;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound S_2_hydroxy_3_oxobutyl_dihydrogen_phosphate '(S)-2-hydroxy-3-oxobutyl dihydrogen phosphate' brenda:71103;
+  compound formate brenda:120 kegg:C00058;
+  compound reduced_riboflavin 'reduced riboflavin' brenda:4863 kegg:C01007;
+  compound riboflavin brenda:351 kegg:C00255;
+  port GTP side U to ppGpp-biosynthesis;
+
+  // ring: cycle of the drawing (7 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    GTP
+      -[node6337: 3.5.4.25 | -4*H2O, +PPi, +formate {br=BR26117, ev=cof+eq}]-> 2_5_diamino_6_hydroxy_4_5_phospho_D_ribosylamino_pyrimidine  // GTP cyclohydrolase II
+      -[node6342: 3.5.4.26 | -H2O, +NH3 ^L {br=BR26118, ev=cof+eq}]-> 5_amino_6_5_phospho_D_ribosylamino_uracil  // diaminohydroxyphosphoribosylaminopyrimidine deaminase
+      -[node6341: 1.1.1.193 | NADPH>NADP {br=BR29246, ev=cof-eq}]-> 5_amino_6_5_phospho_D_ribitylamino_uracil  // 5-amino-6-(5-phosphoribosylamino)uracil reductase
+      -B[node2736: 3.5.4.26 | -H2O, +NH4 ^R]- 2_5_diamino_6_5_phospho_D_ribitylamino_pyrimidin_4_3H_one  // diaminohydroxyphosphoribosylaminopyrimidine deaminase
+      -L[node2734: 1.1.1.302 | NADH>NAD ^L {br=BR49150-a, ev=eq}]-> 2_5_diamino_6_5_phospho_D_ribosylamino_pyrimidin_4_3H_one  // 2,5-diamino-6-(ribosylamino)-4(3H)-pyrimidinone 5'-phosphate reductase
+      <-R[node2738: 3.5.1.102 | -H2O, +formate ^L {br=BR49204, ev=cof+eq}]- 2_amino_5_formylamino_6_5_phospho_D_ribosylamino_pyrimidin_4_3H_one  // 2-amino-5-formylamino-6-ribosylaminopyrimidin-4(3H)-one 5'-monophosphate deformylase
+      <-R[node8122: 3.5.4.29 | -3*H2O, +2*Pi ^L {br=BR47585, ev=cof+eq}]- GTP;  // GTP cyclohydrolase IIa
+  }
+
+  5_amino_6_5_phospho_D_ribitylamino_uracil
+    -R[node6339: 3.1.3.104 | -H2O, +Pi ^L {br=BR51773, ev=cof+eq}]-> 5_amino_6_D_ribitylamino_uracil;  // 5-amino-6-(5-phospho-D-ribitylamino)uracil phosphatase
+
+  D_Rul_5_P
+    -[node6346: 4.1.99.12 | +formate ^L {br=BR48836, ev=cof+eq, match=single}]-> S_2_hydroxy_3_oxobutyl_dihydrogen_phosphate;  // 3,4-dihydroxy-2-butanone-4-phosphate synthase
+
+  riboflavin
+    -[node2894: 1.5.1.41 | NADPH>NADP ^R {br=BR36901, ev=cof-eq}]-> reduced_riboflavin;  // riboflavin reductase [NAD(P)H]
+
+  riboflavin
+    -B[node8111: 2.7.1.161 | CTP>CDP {br=BR48885, ev=cof+eq} || node6330: 2.7.1.26 | ATP>ADP {br=BR47765, ev=cof+eq}]-> FMN  // CTP-dependent riboflavin kinase; riboflavin kinase
+    -B[node6328: 2.7.7.2 | -ATP, +PPi ^R {br=BR47867, ev=cof+eq}]-> FAD  // FAD synthase
+    -[node10631: 1.5.1.30 | NADPH>NADP ^R {br=BR50246, ev=cof-eq}]-> FADH2;  // flavin reductase (NADPH)
+
+  2*6_7_dimethyl_8_1_D_ribityl_lumazine -[node6332: 2.5.1.9 {br=BR47473, ev=eq, match=single}]-> (5_amino_6_5_phospho_D_ribitylamino_uracil + riboflavin);  // riboflavin synthase
+  react [node6334: 2.5.1.78 | +Pi, +2*H2O] {6_7_dimethyl_8_1_D_ribityl_lumazine, 5_amino_6_D_ribitylamino_uracil, S_2_hydroxy_3_oxobutyl_dihydrogen_phosphate};  // 6,7-dimethyl-8-ribityllumazine synthase
+}

@@ -1,0 +1,51 @@
+pwl 2.0;
+subsystem reductive-acetyl-coenzyme-A-pathway 'reductive acetyl coenzyme A pathway' {
+  // BRENDA subsystem: 11 reactions (9 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 10_formyltetrahydrofolate '10-formyltetrahydrofolate' brenda:536 kegg:C00234;
+  compound 5_10_methenyltetrahydrofolate '5,10-methenyltetrahydrofolate' brenda:1085 kegg:C00445;
+  compound 5_10_methylenetetrahydrofolate '5,10-methylenetetrahydrofolate' brenda:401 kegg:C00143;
+  compound 5_methyltetrahydrofolate '5-methyltetrahydrofolate' brenda:1373 brenda:235325 kegg:C00440;
+  compound 6S_THFA '(6S)-THFA' brenda:207 brenda:235324 kegg:C00101;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO brenda:3261 kegg:C00237;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Co_I_corrinoid_Fe_S_protein '[Co(I) corrinoid Fe-S protein]' brenda:10400;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Pi brenda:16 kegg:C00009;
+  compound a_reduced_hydrogenase 'a [reduced hydrogenase]' brenda:252716;
+  compound an_oxidized_hydrogenase 'an [oxidized hydrogenase]' brenda:252719;
+  compound electron_acceptor 'electron acceptor' brenda:991;
+  compound formate brenda:120 kegg:C00058;
+  compound methyl_Co_III_corrinoid_Fe_S_protein '[methyl-Co(III) corrinoid Fe-S protein]' brenda:19649;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+  port formate side U to formaldehyde-oxidation;
+
+  // ring: cycle of the drawing (5 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    6S_THFA
+      -L[node11225: 2.1.1.258 | -Co_I_corrinoid_Fe_S_protein, +methyl_Co_III_corrinoid_Fe_S_protein ^L {br=BR50170, ev=eq}]-> 5_methyltetrahydrofolate  // 5-methyltetrahydrofolate-corrinoid/iron-sulfur protein Co-methyltransferase
+      <-R[node11216: 1.5.7.1 | Fd_red>Fd_ox ^L {br=BR48613, ev=cof-eq}]- 5_10_methylenetetrahydrofolate  // methylenetetrahydrofolate reductase (ferredoxin)
+      <-R[node11212: 1.5.1.5 | NADPH>NADP ^R {br=BR36902, ev=cof-eq}]- 5_10_methenyltetrahydrofolate  // methylenetetrahydrofolate dehydrogenase (NADP+)
+      -R[node4426: 3.5.4.9 | -H2O ^L {br=BR22746, ev=cof+eq}]-> 10_formyltetrahydrofolate;  // methenyltetrahydrofolate cyclohydrolase
+    (formate + 6S_THFA) -[node4423: 6.3.4.3 | ATP>ADP, +Pi {br=BR140, ev=cof+eq}]-> 10_formyltetrahydrofolate;  // formate-tetrahydrofolate ligase
+  }
+
+  Ac_CoA
+    -L[node66: 2.3.1.169 | -methyl_Co_III_corrinoid_Fe_S_protein, -CoA, +Co_I_corrinoid_Fe_S_protein]- CO  // CO-methylating acetyl-CoA synthase
+    -B[node2685: 1.2.7.4 | 2*Fd_ox>2*Fd_red, +H2O {br=BR36793, ev=conflict} || node8093: -> 1.2.7.4 | -electron_acceptor, -H2O, +reduced_electron_acceptor {br=BS370135, ev=cof+eq}]- CO2  // anaerobic carbon monoxide dehydrogenase; anaerobic carbon monoxide dehydrogenase
+    -L[node10804: <- 1.17.98.4 | -an_oxidized_hydrogenase, +a_reduced_hydrogenase {br=BR49158, ev=cof+eq} || node2383: -> 1.17.1.10 | NADPH>NADP {br=BR29403, ev=cof-eq} || node8919: <- 1.17.1.9 | NAD>NADH {br=BR29391, ev=cof+eq}]- formate;  // formate dehydrogenase (hydrogenase); formate dehydrogenase (NADP+); formate dehydrogenase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { CO2 formate } forward { node2383 } backward { node10804 node8919 };
+  motif carrier { Fd_ox Fd_red } forward { node2685 } backward { node11216 };
+}

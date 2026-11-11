@@ -1,0 +1,31 @@
+pwl 2.0;
+subsystem folate-polyglutamylation 'folate polyglutamylation' {
+  // BRENDA subsystem: 5 reactions (0 with direction), 7 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 10_formyl_5_6_7_8_tetrahydropteroyl_gamma_Glu_n '10-formyl-5,6,7,8-tetrahydropteroyl-[gamma-Glu]n' brenda:191337;
+  compound 10_formyl_5_6_7_8_tetrahydropteroyl_gamma_Glu_nplus1 '10-formyl-5,6,7,8-tetrahydropteroyl-[gamma-Glu]n+1' brenda:191335;
+  compound 5_10_methylene_5_6_7_8_tetrahydropteroyl_gamma_Glu_n '5,10-methylene-5,6,7,8-tetrahydropteroyl-[gamma-Glu]n' brenda:189155;
+  compound 5_10_methylene_5_6_7_8_tetrahydropteroyl_gamma_Glu_nplus1 '5,10-methylene-5,6,7,8-tetrahydropteroyl-[gamma-Glu]n+1' brenda:191336;
+  compound 5_6_7_8_tetrahydropteroyl_gamma_Glu_n '5,6,7,8-tetrahydropteroyl-[gamma-Glu]n' brenda:191350;
+  compound 5_6_7_8_tetrahydropteroyl_gamma_Glu_nplus1 '5,6,7,8-tetrahydropteroyl-[gamma-Glu]n+1' brenda:191339;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Glu brenda:41 kegg:C00025;
+  compound Gly brenda:72 kegg:C00037;
+  compound H2O brenda:1 kegg:C00001;
+  compound Pi brenda:16 kegg:C00009;
+  compound Ser brenda:95 kegg:C00065;
+  compound formate brenda:120 kegg:C00058;
+  compound tetrahydropteroyl_Glu_n 'tetrahydropteroyl-(Glu)n' brenda:97211;
+  port tetrahydropteroyl_Glu_n side D to tetrahydrofolate-metabolism;
+
+  5_6_7_8_tetrahydropteroyl_gamma_Glu_nplus1
+    -R[node9726: 6.3.2.17 | ATP>ADP, -Glu, +Pi]- 5_6_7_8_tetrahydropteroyl_gamma_Glu_n;  // tetrahydrofolate synthase
+
+  10_formyl_5_6_7_8_tetrahydropteroyl_gamma_Glu_nplus1
+    -L[node9503: 6.3.2.17 | ATP>ADP, -Glu, +Pi]- 10_formyl_5_6_7_8_tetrahydropteroyl_gamma_Glu_n  // tetrahydrofolate synthase
+    -[node9723: 6.3.4.3 | ATP>ADP, -formate, +Pi]- tetrahydropteroyl_Glu_n  // formate-tetrahydrofolate ligase
+    -B[node9722: 2.1.2.1 | -Ser, +H2O, +Gly]- 5_10_methylene_5_6_7_8_tetrahydropteroyl_gamma_Glu_n  // glycine hydroxymethyltransferase
+    -[node9530: 6.3.2.17 | ATP>ADP, -Glu, +Pi]- 5_10_methylene_5_6_7_8_tetrahydropteroyl_gamma_Glu_nplus1;  // tetrahydrofolate synthase
+}

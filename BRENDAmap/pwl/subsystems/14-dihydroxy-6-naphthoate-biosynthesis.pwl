@@ -1,0 +1,33 @@
+pwl 2.0;
+subsystem 14-dihydroxy-6-naphthoate-biosynthesis '1,4-dihydroxy-6-naphthoate biosynthesis' {
+  // BRENDA subsystem: 7 reactions (4 with direction), 7 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_4_dihydroxy_6_naphthoate '1,4-dihydroxy-6-naphthoate' brenda:222669 kegg:C17018;
+  compound 3_1_carboxyvinyl_oxy_benzoate '3-[(1-carboxyvinyl)oxy]benzoate' brenda:29166 kegg:C20772;
+  compound 5_deoxyadenosine '5\'-deoxyadenosine' brenda:943 kegg:C05198;
+  compound 6_amino_6_deoxyfutalosine '6-amino-6-deoxyfutalosine' brenda:6387 kegg:C20773;
+  compound H2O brenda:1 kegg:C00001;
+  compound HCO3 brenda:195 kegg:C00288;
+  compound Hyp brenda:211 kegg:C00262;
+  compound Met brenda:88 kegg:C00073;
+  compound NH3 brenda:27;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound adenine brenda:144 kegg:C00147;
+  compound chorismate brenda:204 kegg:C00251;
+  compound cyclic_DHFL 'cyclic DHFL' brenda:90095;
+  compound dehypoxanthine_futalosine 'dehypoxanthine futalosine' brenda:14393 kegg:C17010;
+  compound futalosine brenda:14392 kegg:C16999;
+  port chorismate side R to chorismate-metabolism;
+
+  chorismate
+    -R[node11724: 4.2.1.151 | +H2O ^L {br=BR51004, ev=cof+eq}]-> 3_1_carboxyvinyl_oxy_benzoate  // chorismate dehydratase
+    -L[node1737: 2.5.1.120 | -S_adenosyl_L_methionine, -H2O, +Met, +HCO3 {br=BR50963, ev=cof+eq}]-> 6_amino_6_deoxyfutalosine  // aminodeoxyfutalosine synthase
+    -[node1731: 3.5.4.40 | -H2O, +NH3 ^L {br=BR50991, ev=cof+eq}]-> futalosine  // aminodeoxyfutalosine deaminase
+    -[node11727: 3.2.2.26 | +Hyp, +H2O ^L {br=BR48967, ev=conflict}]- dehypoxanthine_futalosine  // futalosine hydrolase
+    -B[node11731: 1.21.98.1 | -5_deoxyadenosine, -Met, -S_adenosyl_L_methionine {br=BR50934, ev=conflict}]- cyclic_DHFL  // cyclic dehypoxanthinyl futalosine synthase
+    -[node1726: ?]- 1_4_dihydroxy_6_naphthoate;  // 1,4-dihydroxy-6-naphthoate synthase
+
+  6_amino_6_deoxyfutalosine
+    -[node1724: 3.2.2.30 | -H2O, +adenine ^L {br=BR50990, ev=cof+eq}]-> dehypoxanthine_futalosine;  // aminodeoxyfutalosine nucleosidase
+}

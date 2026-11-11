@@ -1,0 +1,62 @@
+pwl 2.0;
+subsystem pentose-phosphate-pathway 'pentose phosphate pathway' {
+  // BRENDA subsystem: 16 reactions (14 with direction), 14 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 6PGlclactone brenda:180115;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound CH2O brenda:130 kegg:C00067;
+  compound CO2 brenda:28 kegg:C00011;
+  compound D_Glc_6_P 'D-Glc 6-P' brenda:105 kegg:C00092;
+  compound D_Rib_5_P 'D-Rib 5-P' brenda:183 kegg:C00117;
+  compound D_Rul_5_P 'D-Rul 5-P' brenda:443 kegg:C00199;
+  compound D_Xul_5_P 'D-Xul 5-P' brenda:644 kegg:C00231;
+  compound D_glucose 'D-glucose' brenda:35 brenda:1969 kegg:C00031;
+  compound D_sedoheptulose_1_7_PP 'D-sedoheptulose 1,7-PP' brenda:20229 kegg:C00447;
+  compound E4P brenda:500 kegg:C00279;
+  compound Fru_6_P 'Fru 6-P' brenda:87 kegg:C00085;
+  compound GAP brenda:147 kegg:C00118;
+  compound GA_6P 'GA-6P' brenda:43607;
+  compound H2O brenda:1 kegg:C00001;
+  compound H6P brenda:18730 kegg:C06019;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Pi brenda:16 kegg:C00009;
+  compound S7P brenda:3626 kegg:C05382;
+  port D_Glc_6_P side L to glycolysis;
+  port D_Rib_5_P side R to histidine-metabolism;
+  port Fru_6_P side L to glycolysis;
+  port GAP side L to glycolysis;
+  port GA_6P side D to Entner-Doudoroff-pathway;
+  port GA_6P side L to ketogluconate-metabolism;
+
+  // ring: cycle of the drawing (9 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    D_Rib_5_P
+      -B[node8517: 5.3.1.6 {br=BR237, ev=eq}]-> D_Rul_5_P  // Ribose-5-phosphate isomerase
+      -[node10271: 4.1.2.43 | -CH2O ^R {br=BR48972, ev=cof-eq, match=kegg}]-> H6P  // 3-hexulose-6-phosphate synthase
+      -[node10278: 5.3.1.27 {br=BR48975, ev=eq, match=kegg}]-> Fru_6_P;  // 6-phospho-3-hexuloisomerase
+    (S7P + GAP#2) -[node8518: 2.2.1.2 {br=BR43958, ev=eq}]-> (Fru_6_P + E4P);  // transaldolase
+    (S7P + GAP#2) -[node8515: 2.2.1.1 {br=BR43957, ev=eq}]-> (D_Rib_5_P + D_Xul_5_P);  // transketolase
+    (D_Xul_5_P + E4P) -[node8524: 2.2.1.1 {br=BS320170, ev=eq}]-> (Fru_6_P + GAP);  // transketolase
+    chord D_Rul_5_P -R[node8516: 5.1.3.1 {br=BR184, ev=eq}]-> D_Xul_5_P;  // ribulose-phosphate 3-epimerase
+  }
+
+  D_glucose
+    -L[node13568: 2.7.1.147 | ADP>AMP || node13565: -> 2.7.1.1 | ATP>ADP {br=BR47759, ev=cof+eq}]- D_Glc_6_P  // ADP-specific glucose/glucosamine kinase; hexokinase
+    -R[node8507: -> 1.1.1.49/1.1.1.363 | NADP>NADPH {br=BR29312, ev=cof+eq, match=single} || node11406: 1.1.1.363/1.1.1.388 | NAD>NADH]- 6PGlclactone  // glucose-6-phosphate dehydrogenase (NADP+);glucose-6-phosphate dehydrogenase [NAD(P)+]; glucose-6-phosphate dehydrogenase [NAD(P)+];glucose-6-phosphate dehydrogenase (NAD+)
+    -[node8503: 3.1.1.31 | -H2O ^L {br=BR10654, ev=cof+eq, match=single}]-> GA_6P  // 6-phosphogluconolactonase
+    -[node1972: 1.1.1.351 | NADP>NADPH, +CO2 {br=BR29307, ev=cof+eq} || node8510: 1.1.1.44 | NADP>NADPH, +CO2 {br=BR29307, ev=cof+eq} || node11480: 1.1.1.343 | NAD>NADH, +CO2 {br=BR50378, ev=cof+eq}]-> D_Rul_5_P;  // phosphogluconate dehydrogenase [NAD(P)+-dependent, decarboxylating]; phosphogluconate dehydrogenase (NADP+-dependent, decarboxylating); phosphogluconate dehydrogenase (NAD+-dependent, decarboxylating)
+
+  D_sedoheptulose_1_7_PP
+    -[node10247: 3.1.3.11 | -H2O, +Pi ^L {br=BR15940, ev=cof+eq}]-> S7P;  // fructose-bisphosphatase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { D_Rib_5_P D_Rul_5_P D_Xul_5_P GAP };
+  motif shunt { S7P D_Rib_5_P } bypasses { S7P D_Xul_5_P GAP D_Rib_5_P };
+  motif shunt { S7P D_Xul_5_P } bypasses { S7P D_Rib_5_P D_Rul_5_P D_Xul_5_P };
+  motif shunt { S7P E4P } bypasses { S7P D_Xul_5_P GAP E4P };
+}

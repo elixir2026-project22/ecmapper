@@ -1,0 +1,66 @@
+pwl 2.0;
+subsystem chorismate-metabolism 'chorismate metabolism' {
+  // BRENDA subsystem: 15 reactions (14 with direction), 15 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2_3_dioxopropyl_phosphate '2,3-dioxopropyl phosphate' brenda:185335 kegg:C16849;
+  compound 2_amino_3_7_dideoxy_D_threo_hept_6_ulosonate '2-amino-3,7-dideoxy-D-threo-hept-6-ulosonate' brenda:17676 kegg:C16850;
+  compound 2_dehydro_3_deoxy_D_arabino_heptonate_7_phosphate '2-dehydro-3-deoxy-D-arabino-heptonate 7-phosphate' brenda:95722 kegg:C04691;
+  compound 3_dehydroquinate '3-dehydroquinate' brenda:894 kegg:C00944;
+  compound 3_dehydroshikimate '3-dehydroshikimate' brenda:2260 kegg:C02637;
+  compound 3_phosphoshikimate '3-phosphoshikimate' brenda:2096 kegg:C03175;
+  compound 5_O_1_carboxyvinyl_3_phosphoshikimate '5-O-(1-carboxyvinyl)-3-phosphoshikimate' brenda:20642 kegg:C01269;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Asp_4_semialdehyde 'Asp 4-semialdehyde' brenda:573 kegg:C00441;
+  compound DHAP brenda:278 kegg:C00111;
+  compound DKFP brenda:191340;
+  compound E4P brenda:500 kegg:C00279;
+  compound FBP brenda:6523;
+  compound GAP brenda:147 kegg:C00118;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_lactaldehyde 'L-lactaldehyde' brenda:2968 kegg:C00424;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound PEP brenda:51 kegg:C00074;
+  compound Pi brenda:16 kegg:C00009;
+  compound chorismate brenda:204 kegg:C00251;
+  compound enolaldehyde brenda:185333;
+  compound methylglyoxal brenda:322 kegg:C00546;
+  compound shikimate brenda:352 kegg:C00493;
+  port 3_dehydroquinate side R to quinate-degradation;
+  port 3_dehydroshikimate side R to quinate-degradation;
+  port E4P side L to vitamin-B6-metabolism;
+  port chorismate side D to phenylalanine-metabolism;
+  port chorismate side D to tryptophan-metabolism;
+  port chorismate side D to ubiquinone-biosynthesis;
+  port chorismate side L to 14-dihydroxy-6-naphthoate-biosynthesis;
+  port chorismate side R to enterobactin-biosynthesis;
+  port chorismate side R to vitamin-K-metabolism;
+  port methylglyoxal side R to methylglyoxal-degradation;
+
+  E4P
+    -B[node6040: 2.5.1.54 | -H2O, -PEP, +Pi {br=BR47668, ev=cof+eq, match=kegg}]-> 2_dehydro_3_deoxy_D_arabino_heptonate_7_phosphate  // 3-deoxy-7-phosphoheptulonate synthase
+    <-R[node6045: 4.2.3.4 | -Pi ^L {br=BR16093, ev=cof-eq, match=kegg}]- 3_dehydroquinate  // 3-dehydroquinate synthase
+    -R[node6018: 4.2.1.10 | +H2O ^L {br=BR401, ev=cof+eq}]-> 3_dehydroshikimate  // 3-dehydroquinate dehydratase
+    -[node6024: 1.1.1.282 | NADPH>NADP {br=BR29283, ev=cof-eq} || node6021: 1.1.1.25 | NADPH>NADP {br=BR29283, ev=cof-eq}]-> shikimate  // quinate/shikimate dehydrogenase [NAD(P)+]; shikimate dehydrogenase (NADP+)
+    -[node6028: 2.7.1.71 | ATP>ADP, +H {br=BR47798, ev=cof+eq}]-> 3_phosphoshikimate  // shikimate kinase
+    -[node6033: 2.5.1.19 | -PEP, +Pi ^R {br=BR47516, ev=cof+eq}]-> 5_O_1_carboxyvinyl_3_phosphoshikimate  // 3-phosphoshikimate 1-carboxyvinyltransferase
+    -[node6037: 4.2.3.5 | +Pi ^R {br=BR16094, ev=cof+eq}]-> chorismate;  // chorismate synthase
+
+  DKFP
+    -B[node4625: 2.2.1.10 | -Asp_4_semialdehyde, +2_3_dioxopropyl_phosphate ^R {br=BR50116, ev=cof+eq, match=single}]-> 2_amino_3_7_dideoxy_D_threo_hept_6_ulosonate  // 2-amino-3,7-dideoxy-D-threo-hept-6-ulosonate synthase
+    -L[node4621: 1.4.1.24 | NAD>NADH, -H2O, +NH3, +H {br=BR50242, ev=cof+eq}]-> 3_dehydroquinate;  // 3-dehydroquinate synthase II
+
+  L_lactaldehyde
+    -[node1951: 1.1.1.283 {br=BR48480, ev=eq, match=kegg}]-> methylglyoxal  // methylglyoxal reductase (NADPH)
+    -[node3297: 4.2.3.3 | -Pi ^R {br=BR16092, ev=cof-eq, match=kegg}]-> DHAP  // methylglyoxal synthase
+    -B[node4633: 4.2.3.- | +Pi ^R]- enolaldehyde  // methylglyoxal synthase
+    -[node4631: ~? | -H ^R {br=BR52893, ev=cof+eq}]-> methylglyoxal;  // spontaneous reaction
+
+  methylglyoxal -[node4628: 2.2.1.11 | -FBP {br=BR50117, ev=cof+eq, match=single}]-> (DKFP + GAP);  // 6-deoxy-5-ketofructose 1-phosphate synthase
+}

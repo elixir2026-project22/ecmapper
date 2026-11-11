@@ -1,0 +1,47 @@
+pwl 2.0;
+subsystem ketogluconate-metabolism 'ketogluconate metabolism' {
+  // BRENDA subsystem: 12 reactions (11 with direction), 8 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_5_didehydro_D_gluconate '2,5-didehydro-D-gluconate' brenda:1741 kegg:C02780;
+  compound 2_dehydro_D_gluconate '2-dehydro-D-gluconate' brenda:2930 kegg:C06473;
+  compound 2_keto_D_gulonate '2-keto-D-gulonate' brenda:104586;
+  compound 2_keto_L_gulonate '2-keto-L-gulonate' brenda:12310 kegg:C15673;
+  compound 5_dehydro_D_gluconate '5-dehydro-D-gluconate' brenda:5500 kegg:C01062;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound FAD brenda:20 kegg:C00016;
+  compound FADH2 brenda:256 kegg:C01352;
+  compound GA_6P 'GA-6P' brenda:43607;
+  compound L_idonate 'L-idonate' brenda:5565 kegg:C00770;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound gluconate brenda:698 kegg:C00257;
+  compound oxidized_electron_acceptor 'oxidized electron acceptor' brenda:374 brenda:12937;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+  port GA_6P side R to pentose-phosphate-pathway;
+
+  // ring: cycle of the drawing (6 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    2_5_didehydro_D_gluconate
+      -R[node2026: 1.1.1.346 | NADPH>NADP ^L {br=BR50380, ev=cof-eq, match=single}]-> 2_keto_L_gulonate  // 2,5-didehydrogluconate reductase (2-dehydro-L-gulonate-forming)
+      -[node4037: 1.1.1.215 | NADPH>NADP ^L {br=BS187798, ev=cof-eq, match=single}]-> L_idonate  // gluconate 2-dehydrogenase
+      -[node4039: 1.1.1.264 | NADP>NADPH {br=BR26044, ev=cof+eq} || node2024: 1.1.1.366 | NAD>NADH {br=BR26044-a, ev=eq}]-> 5_dehydro_D_gluconate  // L-idonate 5-dehydrogenase; L-idonate 5-dehydrogenase (NAD+)
+      -L[node9721: 1.1.1.69 | NADPH>NADP ^R {br=BR36720, ev=cof-eq}]-> gluconate  // gluconate 5-dehydrogenase
+      -L[node7559: 1.1.99.3 | FAD>FADH2 ^R {br=BS370913, ev=cof+eq}]-> 2_dehydro_D_gluconate  // gluconate 2-dehydrogenase (acceptor)
+      -L[node11544: 1.1.1.274 | NADP>NADPH {br=BR40530, ev=cof+eq} || node11545: 1.1.99.4 | oxidized_electron_acceptor>reduced_electron_acceptor {br=BR36753, ev=cof+eq}]-> 2_5_didehydro_D_gluconate;  // 2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming); dehydrogluconate dehydrogenase
+    chord 2_5_didehydro_D_gluconate -R[node9715: 1.1.1.215 | NADPH>NADP ^L]- 5_dehydro_D_gluconate;  // gluconate 2-dehydrogenase
+  }
+
+  2_5_didehydro_D_gluconate
+    -R[node4034: 1.1.1.274 | NADPH>NADP ^R {br=BR40530, ev=cof-eq, match=single}]-> 2_keto_D_gulonate  // 2,5-didehydrogluconate reductase (2-dehydro-D-gluconate-forming)
+    -[node4029: 1.1.1.215 | NADPH>NADP ^R {br=BR29257, ev=cof-eq, match=single}]-> gluconate  // gluconate 2-dehydrogenase
+    -L[node4030: 2.7.1.12 | ATP>ADP ^L {br=BR47733, ev=cof+eq}]-> GA_6P;  // gluconokinase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { 2_5_didehydro_D_gluconate 2_keto_L_gulonate L_idonate 5_dehydro_D_gluconate gluconate 2_dehydro_D_gluconate };
+  motif cycle { 2_5_didehydro_D_gluconate 2_keto_D_gulonate gluconate 2_dehydro_D_gluconate };
+  motif shunt { 2_5_didehydro_D_gluconate 2_keto_D_gulonate gluconate } bypasses { 2_5_didehydro_D_gluconate 2_keto_L_gulonate L_idonate 5_dehydro_D_gluconate gluconate };
+  motif carrier { NADP NADPH } forward { node11544 node4039 } backward { node2026 node4029 node4034 node4037 node9715 node9721 };
+}

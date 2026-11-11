@@ -1,0 +1,22 @@
+pwl 2.0;
+subsystem thyroid-hormone-biosynthesis 'thyroid hormone biosynthesis' {
+  // BRENDA subsystem: 4 reactions (4 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2_L22 'H2O2' brenda:22 kegg:C00027;
+  compound iodide brenda:636 kegg:C00708;
+  compound thyroglobulin_3_5_3_triiodo_L_thyronine '[thyroglobulin]-3,5,3\'-triiodo-L-thyronine' brenda:169566 kegg:C16730;
+  compound thyroglobulin_3_5_diiodo_L_tyrosine '[thyroglobulin]-3,5-diiodo-L-tyrosine' brenda:42053 kegg:C16731;
+  compound thyroglobulin_3_iodo_L_tyrosine '[thyroglobulin]-3-iodo-L-tyrosine' brenda:42054 kegg:C16732;
+  compound thyroglobulin_L_thyroxine '[thyroglobulin]-L-thyroxine' brenda:169567 kegg:C16729;
+  compound thyroglobulin_L_tyrosine '[thyroglobulin]-L-tyrosine' brenda:169568 kegg:C16733;
+  compound thyroglobulin_aminoacrylate '[thyroglobulin]-aminoacrylate' brenda:87567 kegg:C16734;
+
+  thyroglobulin_L_tyrosine
+    -[node12888: 1.11.1.8 | -iodide, -H2O2_L22, +2*H2O {br=BR50222, ev=cof+eq}]-> thyroglobulin_3_iodo_L_tyrosine  // iodide peroxidase
+    -[node12893: 1.11.1.8 | -iodide, -H2O2_L22, +2*H2O {br=BR50223, ev=cof+eq}]-> thyroglobulin_3_5_diiodo_L_tyrosine  // iodide peroxidase
+    -[node12898: 1.11.1.8 | -H2O2_L22, +2*H2O, +thyroglobulin_aminoacrylate {br=BR50224, ev=cof+eq}]-> thyroglobulin_L_thyroxine;  // iodide peroxidase
+
+  (thyroglobulin_3_iodo_L_tyrosine + thyroglobulin_3_5_diiodo_L_tyrosine) -[node12903: 1.11.1.8 | -H2O2_L22, +2*H2O, +thyroglobulin_aminoacrylate {br=BR50225, ev=cof+eq}]-> thyroglobulin_3_5_3_triiodo_L_thyronine;  // iodide peroxidase
+}

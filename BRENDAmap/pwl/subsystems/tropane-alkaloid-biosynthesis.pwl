@@ -1,0 +1,57 @@
+pwl 2.0;
+subsystem tropane-alkaloid-biosynthesis 'tropane alkaloid biosynthesis' {
+  // BRENDA subsystem: 13 reactions (6 with direction), 15 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_methylpyrrolinium '1-methylpyrrolinium' brenda:284071 kegg:C06178;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 4_1_methyl_2_pyrrolidinyl_3_oxobutanoate '4-(1-methyl-2-pyrrolidinyl)-3-oxobutanoate' brenda:284074 kegg:C22421;
+  compound 4_methylamino_butanal '4-(methylamino)butanal' brenda:171231 kegg:C10974;
+  compound 6S_hydroxyhyoscyamine '(6S)-hydroxyhyoscyamine' brenda:30518 kegg:C03325;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2_L22 'H2O2' brenda:22 kegg:C00027;
+  compound L_hyoscyamine 'L-hyoscyamine' brenda:10695 kegg:C02046;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound N_methylputrescine 'N-methylputrescine' brenda:1931 kegg:C02723;
+  compound O2 brenda:9 brenda:1180;
+  compound O_acetyltropine 'O-acetyltropine' brenda:141564;
+  compound Orn brenda:192 kegg:C00077;
+  compound Put brenda:155 kegg:C00134;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound atropine brenda:4789 kegg:C01479;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound pseudotropine brenda:6587 kegg:C02066;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound scopolamine brenda:5612 kegg:C01851;
+  compound succinate brenda:58 kegg:C00042;
+  compound tropic_acid 'tropic acid' brenda:44908 kegg:C01456;
+  compound tropinone brenda:1567 brenda:3848;
+
+  Orn
+    -[node13556: 4.1.1.17/4.1.1.19 | +CO2 ^L {br=BR277, ev=cof+eq}]-> Put  // ornithine decarboxylase;arginine decarboxylase
+    -[node13514: 2.1.1.53 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L {br=BR43902, ev=cof+eq}]-> N_methylputrescine  // putrescine N-methyltransferase
+    -[node13509: 1.4.3.22 | -H2O, -O2, +NH3, +H2O2_L22 {br=BS394920, ev=cof+eq}]-> 4_methylamino_butanal  // diamine oxidase
+    -R[node13492: ? | +H2O ^L]- 1_methylpyrrolinium  // 
+    -R[node13498: 2.3.1.- | malonyl_CoA>CoA, -H2O, +CO2]- 4_1_methyl_2_pyrrolidinyl_3_oxobutanoate  // 
+    -[node13544: 1.14.13.- | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O, +CO2]- tropinone  // 
+    -[node13491: 1.1.1.206/1.1.1.236/1.1.1.334 | NADPH>NADP ^R]- pseudotropine  // tropinone reductase I:tropinone reductase II;methylecgonone reductase
+    -L[node13487: 2.3.1.186 | -Ac_CoA, +CoA ^L]- O_acetyltropine#2;  // pseudotropine acyltransferase
+
+  tropinone
+    -[node13493: 1.1.1.206 | NADPH>NADP ^L]- tropinone#2  // tropinone reductase I
+    -[node13483: 2.3.1.185 | -Ac_CoA, +CoA ^L {br=BS391138, ev=cof+eq}]-> O_acetyltropine;  // tropine acyltransferase
+
+  tropinone#2
+    -R[node13479: 3.1.1.10 | -tropic_acid, +H2O ^L {br=BR15898, ev=cof-eq}]-> atropine;  // tropinesterase
+
+  L_hyoscyamine
+    -[node13525: 1.14.11.11 | -2OG, -O2, +succinate, +CO2 ^L {br=BR40457, ev=cof+eq}]-> 6S_hydroxyhyoscyamine  // hyoscyamine (6S)-dioxygenase
+    -[node13531: 1.14.11.11/1.14.20.13 | -2OG, -O2, +succinate, +CO2 ^L]- scopolamine;  // styrene monooxygenase;6beta-hydroxyhyoscyamine epoxidase
+}

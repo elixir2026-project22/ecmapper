@@ -1,0 +1,57 @@
+pwl 2.0;
+subsystem morphine-biosynthesis 'morphine biosynthesis' {
+  // BRENDA subsystem: 13 reactions (13 with direction), 13 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_2_dehydroreticuline '1,2-dehydroreticuline' brenda:15434 kegg:C06167;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 7_O_acetylsalutaridinol '7-O-acetylsalutaridinol' brenda:45245 kegg:C05322;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CH2O brenda:130 kegg:C00067;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound R_reticuline '(R)-reticuline' brenda:5080;
+  compound S_reticuline '(S)-reticuline' brenda:2631;
+  compound acetate brenda:47 kegg:C00033;
+  compound codeine brenda:2401 kegg:C06174;
+  compound codeinone brenda:7169 kegg:C06171;
+  compound morphine brenda:1050 kegg:C01516;
+  compound morphinone brenda:10713 kegg:C01735;
+  compound neopinone brenda:75895 kegg:C06172;
+  compound oripavine brenda:9237 kegg:C06175;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound salutaridine brenda:1802 kegg:C05179;
+  compound salutaridinol brenda:6053 kegg:C05220;
+  compound succinate brenda:58 kegg:C00042;
+  compound thebaine brenda:4569 kegg:C06173;
+  port S_reticuline side R to S-reticuline-biosynthesis;
+
+  // ring: cycle of the drawing (7 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    neopinone
+      -R[node625: ~? {br=BR53336, ev=eq}]-> codeinone  // spontaneous reaction
+      -L[node624: 1.1.1.247 | NADPH>NADP, -H ^L {br=BR916, ev=cof-eq}]-> codeine  // codeinone reductase (NADPH)
+      -[node614: 1.14.11.32 | -2OG, -O2, +succinate, +CO2, +CH2O {br=BR49146, ev=cof+eq}]-> morphine  // codeine 3-O-demethylase
+      -[node598: 1.1.1.218 | NADP>NADPH, +H ^L {br=BR29259, ev=cof+eq}]-> morphinone  // morphine 6-dehydrogenase
+      <-B[node605: 1.14.11.31 | -2OG, -O2, +succinate, +CO2, +CH2O {br=BS402808, ev=cof+eq}]- oripavine  // thebaine 6-O-demethylase
+      <-[node606: 1.14.11.32 | -2OG, -O2, +succinate, +CO2, +CH2O {br=BS406754, ev=cof+eq}]- thebaine  // codeine 3-O-demethylase
+      -[node627: 1.14.11.31 | -2OG, -O2, +succinate, +CO2, +CH2O {br=BR49145, ev=cof+eq}]-> neopinone;  // thebaine 6-O-demethylase
+  }
+
+  S_reticuline
+    -[node12762: 1.14.19.54 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +2*H2O {br=BR52350, ev=cof+eq}]-> 1_2_dehydroreticuline  // 1,2-dehydroreticuline synthase
+    -[node12776: 1.5.1.27 | NADPH>NADP, -H ^L {br=BR1298, ev=cof-eq, match=kegg}]-> R_reticuline  // 1,2-dehydroreticulinium reductase (NADPH)
+    -[node12782: 1.14.19.67 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +2*H2O {br=BR36966, ev=cof+eq}]-> salutaridine  // salutaridine synthase
+    -[node12787: 1.1.1.248 | NADPH>NADP, -H ^L {br=BR917, ev=cof-eq}]-> salutaridinol  // salutaridine reductase (NADPH)
+    -B[node12791: 2.3.1.150 | -Ac_CoA, +CoA ^L {br=BR1626, ev=cof+eq}]-> 7_O_acetylsalutaridinol  // salutaridinol 7-O-acetyltransferase
+    -[node12794: 4.2.99.24 | +acetate ^L {br=BR52702, ev=cof+eq, match=kegg}]-> thebaine;  // thebaine synthase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif shunt { thebaine oripavine morphinone } bypasses { thebaine neopinone codeinone codeine morphine morphinone };
+  motif carrier { NADP NADPH } forward { node598 } backward { node12776 node12787 node624 };
+}

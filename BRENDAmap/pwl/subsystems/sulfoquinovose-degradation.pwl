@@ -1,0 +1,25 @@
+pwl 2.0;
+subsystem sulfoquinovose-degradation 'sulfoquinovose degradation' {
+  // BRENDA subsystem: 4 reactions (4 with direction), 6 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_3_dihydroxypropane_1_sulfonate '2,3-dihydroxypropane-1-sulfonate' brenda:195018;
+  compound 3_sulfolactaldehyde '3-sulfolactaldehyde' brenda:198281;
+  compound 6_deoxy_6_sulfo_D_fructose '6-deoxy-6-sulfo-D-fructose' brenda:193498 kegg:C20830;
+  compound 6_deoxy_6_sulfo_D_fructose_1_phosphate '6-deoxy-6-sulfo-D-fructose 1-phosphate' brenda:193499 kegg:C20831;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound DHAP brenda:278 kegg:C00111;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound sulfoquinovose brenda:193510 kegg:C20829;
+
+  sulfoquinovose
+    -R[node2044: 5.3.1.31 {br=BR51061, ev=eq, match=single}]-> 6_deoxy_6_sulfo_D_fructose  // sulfoquinovose isomerase
+    -[node2042: 2.7.1.184 | ATP>ADP ^R {br=BR51047, ev=cof+eq}]-> 6_deoxy_6_sulfo_D_fructose_1_phosphate;  // sulfofructose kinase
+
+  3_sulfolactaldehyde
+    -L[node2035: 1.1.1.373 | NADH>NAD ^R {br=BR51022, ev=cof-eq, match=single}]-> 2_3_dihydroxypropane_1_sulfonate;  // sulfolactaldehyde 3-reductase
+
+  6_deoxy_6_sulfo_D_fructose_1_phosphate -[node2040: 4.1.2.57 {br=BR51055, ev=eq, match=single}]-> (3_sulfolactaldehyde + DHAP);  // sulfofructosephosphate aldolase
+}

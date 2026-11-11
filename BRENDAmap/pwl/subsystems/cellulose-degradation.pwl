@@ -1,0 +1,51 @@
+pwl 2.0;
+subsystem cellulose-degradation 'cellulose degradation' {
+  // BRENDA subsystem: 17 reactions (8 with direction), 13 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 4_dehydro_beta_D_glucosyl_1_4_beta_D_glucosyl_n_1 '4-dehydro-beta-D-glucosyl-[(1->4)-beta-D-glucosyl]n-1' brenda:210693 kegg:C21628;
+  compound C1_C4_oxidized_cello_oligosaccharides 'C1/C4-oxidized cello-oligosaccharides' brenda:218462;
+  compound H2O brenda:1 kegg:C00001;
+  compound O2 brenda:9 brenda:1180;
+  compound Pi brenda:16 kegg:C00009;
+  compound acceptor brenda:66 brenda:3161;
+  compound alpha_D_Glc 'alpha-D-Glc' brenda:285 kegg:C00267;
+  compound alpha_D_Glc_1_P 'alpha-D-Glc 1-P' brenda:107 kegg:C00103;
+  compound beta_D_Glc 'beta-D-Glc' brenda:96 kegg:C00221;
+  compound cellobionate brenda:8966 kegg:C20888;
+  compound cellobiono_1_5_lactone 'cellobiono-1,5-lactone' brenda:4796 kegg:C01093;
+  compound cellobiose brenda:82 kegg:C00185;
+  compound cellodextrin brenda:767 kegg:C01898;
+  compound cellooligosaccharide_C1_lactone 'cellooligosaccharide-C1-lactone' brenda:211352;
+  compound cellulose brenda:2725 kegg:C00760;
+  compound gluconate brenda:698 kegg:C00257;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  port beta_D_Glc side L to glycogen-metabolism;
+
+  // ring: cycle of the drawing (5 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    cellodextrin
+      -R[node1500: -> 3.2.1.21 | -H2O {br=BS372661, ev=cof+eq, match=similar} || node1499: 3.2.1.4 | -H2O || node1497: 3.2.1.91 | -H2O || node1496: 3.2.1.176 | -H2O]- cellobiose  // beta-glucosidase; cellulase; cellulose 1,4-beta-cellobiosidase (non-reducing end); cellulose 1,4-beta-cellobiosidase (reducing end)
+      -L[node10092: 3.2.1.21 | -H2O ^L {br=BS189636, ev=cof+eq}]-> beta_D_Glc  // beta-glucosidase
+      -L[node1522: 3.2.1.74 | -H2O ^R]- cellulose;  // glucan 1,4-beta-glucosidase
+    react [node1518: 1.14.99.54 | reduced_acceptor>acceptor, -O2, +H2O] {cellulose, cellooligosaccharide_C1_lactone, cellodextrin};  // lytic cellulose monooxygenase (C1-hydroxylating)
+    chord cellulose -R[node10091: 3.2.1.4 | -H2O ^L]- cellodextrin;  // cellulase
+    react [node11941: 2.4.1.49 | -Pi] {cellulose, cellodextrin, alpha_D_Glc_1_P};  // cellodextrin phosphorylase
+    react [node1495: 2.4.1.49 | -Pi] {cellodextrin, cellobiose, alpha_D_Glc_1_P#2};  // cellodextrin phosphorylase
+    chord cellobiose -[node1486: 2.4.1.20 | -Pi {br=BR47499, ev=cof+eq}]-> (alpha_D_Glc_1_P + beta_D_Glc);  // cellobiose phosphorylase
+  }
+
+  cellooligosaccharide_C1_lactone
+    -R[node1400: ~? | -H2O ^R {br=BR52898, ev=cof+eq}]-> C1_C4_oxidized_cello_oligosaccharides;  // spontaneous reaction
+
+  cellobiose
+    -B[node1492: 1.1.99.18 | acceptor>reduced_acceptor {br=BR29371, ev=cof+eq}]-> cellobiono_1_5_lactone  // cellobiose dehydrogenase (acceptor)
+    -L[node1507: ~? | -H2O ^R {br=BR52897, ev=cof+eq}]-> cellobionate;  // spontaneous reaction
+
+  react [node1520: 1.14.99.56 | reduced_acceptor>acceptor, -O2, +H2O] {cellulose, 4_dehydro_beta_D_glucosyl_1_4_beta_D_glucosyl_n_1, cellodextrin};  // lytic cellulose monooxygenase (C4-dehydrogenating)
+  cellobiose -[node1488: 2.4.1.49 | -Pi {br=BS376461, ev=cof+eq}]-> (alpha_D_Glc + alpha_D_Glc_1_P);  // cellodextrin phosphorylase
+  cellobionate -[node1504: 2.4.1.321 | -Pi {br=BR50874, ev=cof+eq}]-> (gluconate + alpha_D_Glc_1_P#2);  // cellobionic acid phosphorylase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif shunt { cellobiose alpha_D_Glc_1_P } bypasses { cellobiose cellobiono_1_5_lactone cellobionate alpha_D_Glc_1_P };
+  motif carrier { acceptor reduced_acceptor } forward { node1492 } backward { node1518 node1520 };
+}

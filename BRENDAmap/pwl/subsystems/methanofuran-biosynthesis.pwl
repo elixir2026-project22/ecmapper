@@ -1,0 +1,37 @@
+pwl 2.0;
+subsystem methanofuran-biosynthesis 'methanofuran biosynthesis' {
+  // BRENDA subsystem: 7 reactions (5 with direction), 10 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 4_4_2_aminoethyl_phenoxy_methyl_2_furanmethanamine_GLU '4-[[4-(2-aminoethyl)phenoxy]-methyl]-2-furanmethanamine-GLU' brenda:202552;
+  compound 5_aminomethyl_3_furanmethanol_P '5-(aminomethyl)-3-furanmethanol-P' brenda:197903 kegg:C21068;
+  compound 5_aminomethyl_3_furanmethanol_PP '5-(aminomethyl)-3-furanmethanol-PP' brenda:204297 kegg:C21069;
+  compound 5_formylfuran_3_yl_methyl_P '(5-formylfuran-3-yl)methyl-P' brenda:199293 kegg:C20954;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ala brenda:103 kegg:C00041;
+  compound GAP brenda:147 kegg:C00118;
+  compound Glu brenda:41 kegg:C00025;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound Methanofuran_b 'Methanofuran b' brenda:225959;
+  compound Methanofuran_d 'Methanofuran d' brenda:204302;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound g_GLU_tyramine 'g-GLU-tyramine' brenda:196625 kegg:C20926;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound tyramine brenda:280 kegg:C00483;
+  port tyramine side L to tyrosine-metabolism;
+
+  GAP
+    -B[node2186: 4.2.3.153 | +Pi, +2*H2O {br=BR51310, ev=cof+eq}]-> 5_formylfuran_3_yl_methyl_P  // (5-formylfuran-3-yl)methyl phosphate synthase
+    -[node2194: 2.6.1.108 | Ala>pyruvate ^R {br=BR51409, ev=cof+eq, match=kegg}]-> 5_aminomethyl_3_furanmethanol_P  // (5-formylfuran-3-yl)methyl phosphate transaminase
+    -B[node2196: 2.7.4.31 | ATP>ADP ^R {br=BR51466, ev=cof+eq, match=kegg}]-> 5_aminomethyl_3_furanmethanol_PP;  // [5-(aminomethyl)furan-3-yl]methyl phosphate kinase
+
+  Methanofuran_b
+    -B[node2190: ? | -Glu, +H2O ^L]- 4_4_2_aminoethyl_phenoxy_methyl_2_furanmethanamine_GLU  // unknown
+    -B[node2189: ? | -Glu, +H2O ^L]- Methanofuran_d;  // unknown
+
+  (tyramine + Glu) -[node2212: 6.3.4.24 | ATP>ADP, +H, +Pi {br=BR51200, ev=cof+eq}]-> g_GLU_tyramine;  // tyramine-L-glutamate ligase
+  (5_aminomethyl_3_furanmethanol_PP + g_GLU_tyramine) -[node2211: 2.5.1.131 | +PPi {br=BR51529, ev=cof+eq, match=single}]-> 4_4_2_aminoethyl_phenoxy_methyl_2_furanmethanamine_GLU;  // (4-{4-[2-(gamma-L-glutamylamino)ethyl]phenoxymethyl}furan-2-yl)methanamine synthase
+}

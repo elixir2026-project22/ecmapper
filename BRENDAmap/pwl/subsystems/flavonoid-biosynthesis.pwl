@@ -1,0 +1,174 @@
+pwl 2.0;
+subsystem flavonoid-biosynthesis 'flavonoid biosynthesis' {
+  // BRENDA subsystem: 55 reactions (47 with direction), 46 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2R_3R_plus_dihydrokaempferol '(2R,3R)-(+)-dihydrokaempferol' brenda:123401;
+  compound 2R_3S_4S_cis_3_4_leucopelargonidin '(2R,3S,4S)-cis-3,4-leucopelargonidin' brenda:124135;
+  compound 2R_3S_catechin '(2R,3S)-catechin' brenda:11219 kegg:C06562;
+  compound 2S_eriodictyol '(2S)-eriodictyol' brenda:7953;
+  compound 2S_naringenin '(2S)-naringenin' brenda:2699 kegg:C00509;
+  compound 2S_sakuranetin '(2S)-sakuranetin' brenda:84076 kegg:C09833;
+  compound 2_4_5_7_tetrahydroxyisoflavanone '2,4\',5,7-tetrahydroxyisoflavanone' brenda:88391 kegg:C12631;
+  compound 2_4_7_trihydroxyisoflavanone '2,4\',7-trihydroxyisoflavanone' brenda:16754 kegg:C15567;
+  compound 2_7_dihydroxy_4_methoxyisoflavanone '2,7-dihydroxy-4\'-methoxyisoflavanone' brenda:8430 kegg:C16190;
+  compound 2_O_methylisoliquiritigenin '2\'-O-methylisoliquiritigenin' brenda:50472 kegg:C15531;
+  compound 3_O_methyltaxifolin '3\'-O-methyltaxifolin' brenda:262978;
+  compound 4_coumarate '4-coumarate' brenda:1215 brenda:19540 kegg:C00811;
+  compound 4_coumaroyl_CoA '4-coumaroyl-CoA' brenda:448 kegg:C00223;
+  compound 4_hydroxy_7_methoxyisoflavone '4\'-hydroxy-7-methoxyisoflavone' brenda:164006 kegg:C12125;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc 'UDP-Glc' brenda:64 kegg:C00029;
+  compound UDP_beta_L_rhamnose 'UDP-beta-L-rhamnose' brenda:124535 kegg:C02199;
+  compound a_2R_3R_flavan_3_ol 'a (2R,3R)-flavan-3-ol' brenda:212304;
+  compound a_4S_2_3_dehydroflavan_3_4_diol 'a (4S)- 2,3-dehydroflavan-3,4-diol' brenda:212595;
+  compound a_flavonol 'a flavonol' brenda:10912;
+  compound a_flavonol_3_O_alpha_L_rhamnosyl_1_6_beta_D_glucoside 'a flavonol 3-O-[alpha-L-rhamnosyl-(1->6)-beta-D-glucoside]' brenda:202637;
+  compound a_flavonol_3_O_beta_D_glucoside 'a flavonol 3-O-beta-D-glucoside' brenda:23208;
+  compound an_anthocyanidin 'an anthocyanidin' brenda:17658;
+  compound an_anthocyanidin_3_O_beta_D_glucoside 'an anthocyanidin-3-O-beta-D-glucoside' brenda:127273;
+  compound apigenin brenda:515 kegg:C01477;
+  compound beta_D_Glc 'beta-D-Glc' brenda:96 kegg:C00221;
+  compound cis_3_4_leucocyanidin 'cis-3,4-leucocyanidin' brenda:20194;
+  compound daidzein brenda:848 kegg:C10208;
+  compound daidzein_7_O_beta_D_glucopyranoside 'daidzein 7-O-beta-D-glucopyranoside' brenda:23180;
+  compound daidzein_7_O_glucoside_6_O_malonylester 'daidzein 7-O-glucoside 6\'\'-O-malonylester' brenda:110811;
+  compound dihydromyricetin brenda:7400 kegg:C02906;
+  compound dihydroquercetin brenda:1502 kegg:C01617;
+  compound dimethylallyl_PP 'dimethylallyl-PP' brenda:157;
+  compound formononetin brenda:2655 kegg:C00858;
+  compound genistein brenda:377 kegg:C06563;
+  compound homoeriodictyol brenda:20299 kegg:C09756;
+  compound isoliquiritigenin brenda:2341 kegg:C08650;
+  compound isorhamnetin brenda:1977 kegg:C10084;
+  compound laricitrin brenda:191022 kegg:C12633;
+  compound liquiritigenin brenda:2882 kegg:C09762;
+  compound luteolin brenda:436 kegg:C01514;
+  compound malonyl_CoA 'malonyl-CoA' brenda:76 kegg:C00083;
+  compound myricetin brenda:484 kegg:C10107;
+  compound naringenin_chalcone 'naringenin chalcone' brenda:5584 kegg:C06561;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound pentahydroxyflavanone brenda:101792 kegg:C05911;
+  compound quercetin brenda:137;
+  compound quercetin_3_O_glucoside 'quercetin 3-O-glucoside' brenda:4048 kegg:C05623;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound sophoraflavanone_B 'sophoraflavanone B' brenda:36257 kegg:C18023;
+  compound succinate brenda:58 kegg:C00042;
+  compound syringetin brenda:32962 kegg:C11620;
+  compound trans_resveratrol 'trans-resveratrol' brenda:11594 kegg:C03582;
+
+  // ring: cycle of the drawing (5 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    dihydroquercetin
+      -B[node92: 1.14.14.81 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BS442378, ev=cof+eq}]-> dihydromyricetin  // flavanoid 3',5'-hydroxylase
+      <-B[node138: 1.14.14.81 | 2*reduced_NADPH_hemoprotein_reductase>2*oxidized_NADPH_hemoprotein_reductase, -2*O2, +2*H2O {br=BS386445, ev=cof+eq, match=single}]- 2R_3R_plus_dihydrokaempferol  // flavanoid 3',5'-hydroxylase
+      <-R[node13036: 1.14.11.9 | -O2, -2OG, +CO2, +succinate {br=BS288657, ev=cof+eq, match=single}]- 2S_naringenin  // flavanone 3-dioxygenase
+      -L[node206: 1.14.14.82 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BS288543, ev=cof+eq}]-> 2S_eriodictyol  // flavonoid 3'-monooxygenase
+      -L[node13054: 1.14.11.9 | -O2, -2OG, +CO2, +succinate {br=BS288658, ev=cof+eq}]-> dihydroquercetin;  // flavanone 3-dioxygenase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    dihydroquercetin
+      -[node88: 1.14.20.6 | -O2, -2OG, +succinate, +H2O, +CO2 {br=BS373098, ev=cof+eq}]-> quercetin  // flavonol synthase
+      -R[node13058: 1.14.14.82 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O]- quercetin#2  // flavonoid 3'-monooxygenase
+      <-R[node13064: 1.14.20.6 | -O2, -2OG, +CO2, +succinate {br=BS371221, ev=cof+eq}]- 2R_3R_plus_dihydrokaempferol  // flavonol synthase
+      -B[node188: 1.14.14.82 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BS288544, ev=cof+eq, match=single} || node97: 1.14.14.81 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BS288544, ev=cof+eq, match=single}]-> dihydroquercetin;  // flavonoid 3'-monooxygenase; flavanoid 3',5'-hydroxylase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    2_4_7_trihydroxyisoflavanone
+      -[node13012: 2.1.1.212 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR49705, ev=cof+eq}]-> 2_7_dihydroxy_4_methoxyisoflavanone  // 2,7,4'-trihydroxyisoflavanone 4'-O-methyltransferase
+      -R[node13017: 4.2.1.105 | +H2O ^L {br=BS378892, ev=cof+eq}]-> formononetin  // 2-hydroxyisoflavanone dehydratase
+      <-R[node13019: 2.1.1.46 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L {br=BS289634, ev=cof+eq}]- daidzein  // isoflavone 4'-O-methyltransferase
+      <-R[node248: 4.2.1.105 | +H2O ^R {br=BR48537, ev=cof+eq}]- 2_4_7_trihydroxyisoflavanone;  // 2-hydroxyisoflavanone dehydratase
+  }
+
+  star 2S_naringenin arc 180 order cw {
+    -B[node236: 1.14.14.87 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR50515, ev=cof+eq}]-> 2_4_5_7_tetrahydroxyisoflavanone;  // 2-hydroxyisoflavanone synthase
+    <-[node276: 5.5.1.6 {br=BS380128, ev=eq}]- naringenin_chalcone  // chalcone isomerase
+      <-[node13009: 2.3.1.74 | 3*malonyl_CoA>4*CoA, +3*CO2 {br=BR44076, ev=cof+eq}]- 4_coumaroyl_CoA;  // chalcone synthase
+    -R[node226: 1.14.20.4/1.14.20.5 | -O2, -2OG, +succinate, +CO2, +H2O {br=BS371268, ev=cof+eq} || node220: 1.14.19.76 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +2*H2O {br=BS446316, ev=cof+eq}]-> apigenin  // anthocyanidin synthase;flavone synthase I; flavone synthase II
+      -[node13048: 1.14.14.82 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BS288545, ev=cof+eq}]-> luteolin#2;  // flavonoid 3'-monooxygenase
+    -R[node13042: 2.5.1.70 | -dimethylallyl_PP, +PPi ^R {br=BR48848, ev=cof+eq}]-> sophoraflavanone_B;  // naringenin 8-dimethylallyltransferase
+    -R[node239: 2.1.1.232 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR49706, ev=cof+eq}]-> 2S_sakuranetin;  // naringenin 7-O-methyltransferase
+    -B[node218: 1.14.14.81 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O]- pentahydroxyflavanone;  // flavanoid 3',5'-hydroxylase
+    -B[node213: 1.14.14.87 | -H2O, -O2, +oxidized_NADPH_hemoprotein_reductase, +reduced_NADPH_hemoprotein_reductase]- genistein;  // 2-hydroxyisoflavanone synthase
+  }
+
+  dihydromyricetin
+    -L[node127: 1.14.20.6 | -O2, -2OG, +succinate, +H2O, +CO2 {br=BS388539, ev=cof+eq}]-> myricetin  // flavonol synthase
+    -[node124: 2.1.1.267 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BS380273, ev=cof+eq, match=kegg}]-> laricitrin  // flavonoid 3',5'-methyltransferase
+    -[node120: 2.1.1.267 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BS424031, ev=cof+eq, match=single}]-> syringetin;  // flavonoid 3',5'-methyltransferase
+
+  2R_3R_plus_dihydrokaempferol
+    -L[node190: 1.1.1.219 | NADPH>NADP, -H ^L {br=BS230655, ev=cof+eq}]-> 2R_3S_4S_cis_3_4_leucopelargonidin;  // dihydroflavonol 4-reductase
+
+  dihydroquercetin
+    -L[node180: 1.1.1.219 | NADPH>NADP, -H {br=BS230654, ev=cof+eq, match=kegg}]-> cis_3_4_leucocyanidin  // dihydroflavonol 4-reductase
+    -R[node162: 1.14.20.4 | -O2, -2OG, +2*H2O, +CO2, +succinate {br=BR29135, ev=cof+eq, match=single}]-> an_anthocyanidin  // anthocyanidin synthase
+    -[node152: 1.3.1.77 | 2*NADPH>2*NADP, -H {br=BR48501, ev=cof-eq, match=single} || node150: 1.3.1.77 | 2*NADH>2*NAD, -H {br=BR48501_WOP, ev=cof-eq, match=single}]-> a_2R_3R_flavan_3_ol;  // anthocyanidin reductase [(2R,3R)-flavan-3-ol-forming]; anthocyanidin reductase [(2R,3R)-flavan-3-ol-forming]
+
+  quercetin
+    -[node13069: 2.4.1.91 | UDP_Glc>UDP ^L {br=BS323087, ev=cof+eq}]-> quercetin_3_O_glucoside;  // flavonol 3-O-glucosyltransferase
+
+  cis_3_4_leucocyanidin
+    -[node161: 1.14.20.4 | -O2, -2OG, +succinate, +H2O, +CO2 {br=BR51931, ev=cof+eq, match=single}]-> a_4S_2_3_dehydroflavan_3_4_diol  // anthocyanidin synthase
+    -L[node154: 1.14.20.4 | +H2O ^R {br=BR51932, ev=cof+eq}]-> an_anthocyanidin  // anthocyanidin synthase
+    -[node143: 2.4.1.115 | UDP_Glc>UDP ^R {br=BR44145, ev=cof+eq}]-> an_anthocyanidin_3_O_beta_D_glucoside;  // anthocyanidin 3-O-glucosyltransferase
+
+  cis_3_4_leucocyanidin
+    -B[node175: <- 1.17.1.3 | NADP>NADPH, -H2O, +H {br=BR47371, ev=cof+eq, match=single} || node173: 1.17.1.3 | NADH>NAD, -H, +H2O]- 2R_3S_catechin;  // leucoanthocyanidin reductase; leucoanthocyanidin reductase
+
+  2S_eriodictyol
+    -R[node195: 1.14.20.5 | -O2, -2OG, +H2O, +succinate, +CO2 {br=BS386857, ev=cof+eq}]-> luteolin;  // flavone synthase I
+
+  2S_eriodictyol
+    -[node116: 2.1.1.104 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine || node112: -> 2.1.1.267 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine {br=BS433717, ev=cof+eq}]- homoeriodictyol  // caffeoyl-CoA O-methyltransferase; flavonoid 3',5'-methyltransferase
+    -[node111: 1.14.11.9 | -O2, -2OG, +succinate, +CO2]- 3_O_methyltaxifolin  // flavanone 3-dioxygenase
+    -[node105: 1.14.20.6 | -O2, -2OG, +succinate, +CO2, +H2O]- isorhamnetin;  // flavonol synthase
+
+  daidzein
+    -B[node243: 2.1.1.150 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BS413574, ev=cof+eq, match=single}]-> 4_hydroxy_7_methoxyisoflavone;  // isoflavone 7-O-methyltransferase
+
+  daidzein
+    -R[node13025: <- 3.2.1.62 | -H2O, +beta_D_Glc {br=BS140029, ev=cof+eq} || node13028: -> 2.4.1.170 | UDP_Glc>UDP {br=BS322258, ev=cof+eq, match=single}]- daidzein_7_O_beta_D_glucopyranoside  // glycosylceramidase; isoflavone 7-O-glucosyltransferase
+    -[node13032: 2.3.1.115 | malonyl_CoA>CoA ^R {br=BS320328, ev=cof+eq, match=single}]-> daidzein_7_O_glucoside_6_O_malonylester;  // isoflavone-7-O-beta-glucoside 6''-O-malonyltransferase
+
+  4_coumaroyl_CoA
+    -[node265: 2.3.1.170 | NADPH>NADP, 3*malonyl_CoA>4*CoA, -H, +3*CO2, +H2O {br=BR48507, ev=cof+eq}]-> isoliquiritigenin  // 6'-deoxychalcone synthase
+    -L[node258: 2.1.1.154 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR48505, ev=cof+eq}]-> 2_O_methylisoliquiritigenin;  // isoliquiritigenin 2'-O-methyltransferase
+
+  isoliquiritigenin
+    -R[node256: 5.5.1.6]- liquiritigenin  // chalcone isomerase
+    -[node250: 1.14.14.87 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR49825, ev=cof+eq}]-> 2_4_7_trihydroxyisoflavanone;  // 2-hydroxyisoflavanone synthase
+
+  4_coumaroyl_CoA
+    -L[node273: 2.3.1.95 | 3*malonyl_CoA>4*CoA, +4*CO2 {br=BR44098, ev=cof+eq}]-> trans_resveratrol;  // trihydroxystilbene synthase
+
+  4_coumarate
+    -L[node13000: 6.2.1.12 | ATP>AMP, -CoA, +PPi {br=BR63, ev=cof+eq}]-> 4_coumaroyl_CoA;  // 4-coumarate-CoA ligase
+
+  a_flavonol
+    -R[node13074: 2.4.1.91 | UDP_Glc>UDP ^L {br=BR44260, ev=cof+eq}]-> a_flavonol_3_O_beta_D_glucoside  // flavonol 3-O-glucosyltransferase
+    -[node13077: 2.4.1.159 | UDP_beta_L_rhamnose>UDP ^L {br=BR44164, ev=cof+eq}]-> a_flavonol_3_O_alpha_L_rhamnosyl_1_6_beta_D_glucoside;  // flavonol-3-O-glucoside L-rhamnosyltransferase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { daidzein daidzein_7_O_beta_D_glucopyranoside } forward { node13028 } backward { node13025 };
+  motif carrier { NADP NADPH } forward { node175 } backward { node152 node180 node190 node265 };
+}

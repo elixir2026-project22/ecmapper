@@ -1,0 +1,50 @@
+pwl 2.0;
+subsystem dolichyl-diphosphooligosaccharide-biosynthesis 'dolichyl-diphosphooligosaccharide biosynthesis' {
+  // BRENDA subsystem: 15 reactions (13 with direction), 16 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound GDP brenda:53 kegg:C00035;
+  compound GDP_Man 'GDP-Man' brenda:3633 kegg:C00096;
+  compound Glc2Man3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol 'Glc2Man3[Man2[Man2]Man]ManGlcNAc2-diphosphodolichol' brenda:230365;
+  compound Glc3Man3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol 'Glc3Man3[Man2[Man2]Man]ManGlcNAc2-diphosphodolichol' brenda:230364;
+  compound GlcMan3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol 'GlcMan3[Man2[Man2]Man]ManGlcNAc2-diphosphodolichol' brenda:230366;
+  compound Man3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol 'Man3[Man2[Man2]Man]ManGlcNAc2-diphosphodolichol' brenda:230367;
+  compound Man3_Man2_ManGlcNAc2_diphosphodolichol 'Man3[Man2]ManGlcNAc2-diphosphodolichol' brenda:230370;
+  compound Man3_Man2_Man_Man_ManGlcNAc2_diphosphodolichol 'Man3[Man2[Man]Man]ManGlcNAc2-diphosphodolichol' brenda:230368;
+  compound Man3_Man3_ManGlcNAc2_diphosphodolichol 'Man3[Man3]ManGlcNAc2-diphosphodolichol' brenda:230369;
+  compound Man3_Man_ManGlcNAc2_diphosphodolichol 'Man3[Man]ManGlcNAc2-diphosphodolichol' brenda:230372;
+  compound N_acetyl_alpha_D_glucosaminyl_diphosphodolichol 'N-acetyl-alpha-D-glucosaminyl-diphosphodolichol' brenda:219189;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_GlcNAc 'UDP-GlcNAc' brenda:17973;
+  compound UDP_Glc_L364 'UDP-Glc' brenda:364 kegg:C00029;
+  compound UMP brenda:133 kegg:C00105;
+  compound alpha_D_Man_1_3_alpha_D_Man_1_6_beta_D_Man_1_4_beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol 'alpha-D-Man-(1->3)-[alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-alpha-D-GlcNAc-diphosphodolichol' brenda:219193;
+  compound alpha_D_Man_1_3_beta_D_Man_1_4_beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol 'alpha-D-Man-(1->3)-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-alpha-D-GlcNAc-diphosphodolichol' brenda:219186;
+  compound beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol 'beta-D-GlcNAc-(1->4)-alpha-D-GlcNAc-diphosphodolichol' brenda:230375;
+  compound beta_D_Man_1_4_beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol 'beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-alpha-D-GlcNAc-diphosphodolichol' brenda:219185;
+  compound dolichyl_beta_D_glucosyl_phosphate 'dolichyl beta-D-glucosyl phosphate' brenda:8099 kegg:C01246;
+  compound dolichyl_beta_D_mannosyl_phosphate 'dolichyl beta-D-mannosyl phosphate' brenda:8272 kegg:C03862;
+  compound dolichyl_phosphate 'dolichyl phosphate' brenda:621;
+  port dolichyl_phosphate side U to dolichol-and-dolichyl-phosphate-biosynthesis;
+
+  dolichyl_phosphate
+    -[node8147: 2.7.8.15 | -UDP_GlcNAc, +UMP ^L {br=BR48090, ev=cof+eq}]-> N_acetyl_alpha_D_glucosaminyl_diphosphodolichol  // UDP-N-acetylglucosamine-dolichyl-phosphate N-acetylglucosaminephosphotransferase
+    -[node8142: 2.4.1.141 | UDP_GlcNAc>UDP ^L {br=BR47648, ev=cof+eq, match=single}]-> beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol  // N-acetylglucosaminyldiphosphodolichol N-acetylglucosaminyltransferase
+    -[node8157: 2.4.1.142 | GDP_Man>GDP ^L]- beta_D_Man_1_4_beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol  // chitobiosyldiphosphodolichol beta-mannosyltransferase
+    -[node8230: 2.4.1.132 | GDP_Man>GDP ^L {br=BR47399, ev=cof+eq}]-> alpha_D_Man_1_3_beta_D_Man_1_4_beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol  // GDP-Man:Man1GlcNAc2-PP-dolichol alpha-1,3-mannosyltransferase
+    -[node8159: 2.4.1.257 | GDP_Man>GDP ^L {br=BR49456, ev=cof+eq}]-> alpha_D_Man_1_3_alpha_D_Man_1_6_beta_D_Man_1_4_beta_D_GlcNAc_1_4_alpha_D_GlcNAc_diphosphodolichol  // GDP-Man:Man2GlcNAc2-PP-dolichol alpha-1,6-mannosyltransferase
+    -B[node3217: 2.4.1.131 | 2*GDP_Man>2*GDP ^L {br=BR47552, ev=cof+eq}]-> Man3_Man_ManGlcNAc2_diphosphodolichol  // GDP-Man:Man3GlcNAc2-PP-dolichol alpha-1,2-mannosyltransferase
+    -[node10360: 2.4.1.258 | -dolichyl_beta_D_mannosyl_phosphate, +dolichyl_phosphate ^L {br=BR49457, ev=cof+eq}]-> Man3_Man2_ManGlcNAc2_diphosphodolichol  // dolichyl-P-Man:Man5GlcNAc2-PP-dolichol alpha-1,3-mannosyltransferase
+    -[node3222: 2.4.1.259 | -dolichyl_beta_D_mannosyl_phosphate, +dolichyl_phosphate ^L {br=BR49458, ev=cof+eq}]-> Man3_Man3_ManGlcNAc2_diphosphodolichol  // dolichyl-P-Man:Man6GlcNAc2-PP-dolichol alpha-1,2-mannosyltransferase
+    -[node3212: 2.4.1.260 | -dolichyl_beta_D_mannosyl_phosphate, +dolichyl_phosphate ^L]- Man3_Man2_Man_Man_ManGlcNAc2_diphosphodolichol  // dolichyl-P-Man:Man7GlcNAc2-PP-dolichol alpha-1,6-mannosyltransferase
+    -B[node10355: 2.4.1.261 | -dolichyl_beta_D_mannosyl_phosphate, +dolichyl_phosphate ^R {br=BR49460, ev=cof+eq}]-> Man3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol  // dolichyl-P-Man:Man8GlcNAc2-PP-dolichol alpha-1,2-mannosyltransferase
+    -[node3209: 2.4.1.267 | -dolichyl_beta_D_glucosyl_phosphate, +dolichyl_phosphate ^R {br=BR49461, ev=cof+eq}]-> GlcMan3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol  // dolichyl-P-Glc:Man9GlcNAc2-PP-dolichol alpha-1,3-glucosyltransferase
+    -[node3204: 2.4.1.265 | -dolichyl_beta_D_glucosyl_phosphate, +dolichyl_phosphate ^R {br=BR49462, ev=cof+eq, match=single}]-> Glc2Man3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol  // dolichyl-P-Glc:Glc1Man9GlcNAc2-PP-dolichol alpha-1,3-glucosyltransferase
+    -[node10351: 2.4.1.256 | -dolichyl_beta_D_glucosyl_phosphate, +dolichyl_phosphate ^R {br=BR49463, ev=cof+eq, match=single}]-> Glc3Man3_Man2_Man2_Man_ManGlcNAc2_diphosphodolichol;  // dolichyl-P-Glc:Glc2Man9GlcNAc2-PP-dolichol alpha-1,2-glucosyltransferase
+
+  dolichyl_phosphate
+    -R[node8281: 2.4.1.117 | UDP_Glc_L364>UDP ^L {br=BR44147, ev=cof+eq}]-> dolichyl_beta_D_glucosyl_phosphate;  // dolichyl-phosphate beta-glucosyltransferase
+
+  dolichyl_phosphate
+    -B[node8150: 2.4.1.83 | GDP_Man>GDP ^L {br=BR44254, ev=cof+eq}]-> dolichyl_beta_D_mannosyl_phosphate;  // dolichyl-phosphate beta-D-mannosyltransferase
+}

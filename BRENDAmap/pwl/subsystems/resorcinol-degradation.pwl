@@ -1,0 +1,24 @@
+pwl 2.0;
+subsystem resorcinol-degradation 'resorcinol degradation' {
+  // BRENDA subsystem: 4 reactions (4 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_2_4_benzenetriol '1,2,4-benzenetriol' brenda:90370 kegg:C02814;
+  compound 3_hydroxy_cis_cis_muconate '3-hydroxy-cis,cis-muconate' brenda:91462 kegg:C03676;
+  compound 3_oxoadipate '3-oxoadipate' brenda:2817 kegg:C00846;
+  compound 4_oxohex_2_enedioate '4-oxohex-2-enedioate' brenda:29564 kegg:C02222;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound resorcinol brenda:2034 kegg:C01751;
+  port 3_oxoadipate side U to 4-hydroxymandelate-degradation;
+
+  resorcinol
+    -L[node7527: 1.14.13.220 | NADH>NAD, -O2, +H2O {br=BR51695, ev=cof+eq, match=kegg}]-> 1_2_4_benzenetriol  // resorcinol 4-hydroxylase (NADH)
+    -R[node7529: 1.13.11.37 | -O2 ^R {br=BS370270, ev=cof+eq, match=kegg}]-> 3_hydroxy_cis_cis_muconate  // hydroxyquinol 1,2-dioxygenase
+    -[node7531: ~? {br=BR52878, ev=eq}]-> 4_oxohex_2_enedioate  // spontaneous reaction
+    -L[node7521: 1.3.1.32 | NADPH>NADP ^R {br=BR36814, ev=cof-eq, match=kegg}]-> 3_oxoadipate;  // maleylacetate reductase
+}

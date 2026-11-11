@@ -1,0 +1,125 @@
+pwl 2.0;
+subsystem arginine-metabolism 'arginine metabolism' {
+  // BRENDA subsystem: 31 reactions (28 with direction), 28 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2_oxo_5_guanidinopentanoate '2-oxo-5-guanidinopentanoate' brenda:7997 kegg:C03771;
+  compound 3S_3_hydroxy_L_arginine '(3S)-3-hydroxy-L-arginine' brenda:89250 kegg:C18473;
+  compound 4_Guanidinobutyraldehyde '4-Guanidinobutyraldehyde' brenda:4209;
+  compound 4_Guanidinobutyramide '4-Guanidinobutyramide' brenda:91696;
+  compound 4_Guanidinobutyrate '4-Guanidinobutyrate' brenda:3442 kegg:C01035;
+  compound 4_aminobutanoate '4-aminobutanoate' brenda:597 kegg:C00334;
+  compound 5_amino_2_oxopentanoate '5-amino-2-oxopentanoate' brenda:8022 kegg:C01110;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound Ala brenda:103 kegg:C00041;
+  compound Arg brenda:123 kegg:C00062;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Gln brenda:102 kegg:C00064;
+  compound Glu brenda:41 kegg:C00025;
+  compound Glu_5_semialdehyde 'Glu 5-semialdehyde' brenda:9197 kegg:C01165;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound HCO3 brenda:195 kegg:C00288;
+  compound L_argininosuccinate 'L-argininosuccinate' brenda:10688 kegg:C03406;
+  compound L_arginyl_tRNAArg 'L-arginyl-tRNAArg' brenda:1827 kegg:C02163;
+  compound L_citrulline 'L-citrulline' brenda:938 kegg:C00327;
+  compound L_glutamyl_5_phosphate 'L-glutamyl 5-phosphate' brenda:31670 kegg:C03287;
+  compound N2_Ac_Orn 'N2-Ac-Orn' brenda:2570 kegg:C00437;
+  compound N2_Suc_Orn 'N2-Suc-Orn' brenda:7255 kegg:C03415;
+  compound N2_succinyl_L_glutamate_5_semialdehyde 'N2-succinyl-L-glutamate 5-semialdehyde' brenda:101791;
+  compound N2_succinylglutamate 'N2-succinylglutamate' brenda:13822 kegg:C05931;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound N_Ac_Glu 'N-Ac-Glu' brenda:543 kegg:C00624;
+  compound N_Ac_Glu_5_semialdehyde 'N-Ac-Glu 5-semialdehyde' brenda:12610 kegg:C01250;
+  compound N_acetyl_L_citrulline 'N-acetyl-L-citrulline' brenda:23424 kegg:C15532;
+  compound N_acetyl_L_glutamyl_5_phosphate 'N-acetyl-L-glutamyl 5-phosphate' brenda:31672 kegg:C04133;
+  compound O2 brenda:9 brenda:1180;
+  compound Orn brenda:192 kegg:C00077;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound Pro brenda:243 kegg:C00148;
+  compound acetate brenda:47 kegg:C00033;
+  compound carbamoyl_phosphate 'carbamoyl phosphate' brenda:440 kegg:C00169;
+  compound fumarate brenda:170 kegg:C00122;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound suc_Arg 'suc-Arg' brenda:16126 kegg:C03296;
+  compound succinate brenda:58 kegg:C00042;
+  compound succinyl_CoA 'succinyl-CoA' brenda:224 kegg:C00091;
+  compound tRNAArg brenda:705 kegg:C01636;
+  compound urea brenda:116 kegg:C00086;
+  port Arg side R to D-cycloserine-biosynthesis;
+  port Arg side R to polyamine-pathway;
+  port Gln side D to glutamate-and-glutamine-metabolism;
+  port Glu side D to glutamate-and-glutamine-metabolism;
+  port Glu_5_semialdehyde side D to proline-metabolism;
+  port L_argininosuccinate side D to urea-cycle;
+  port L_citrulline side R to urea-cycle;
+  port Orn side R to urea-cycle;
+  port Pro side D to proline-metabolism;
+  port carbamoyl_phosphate side D to urea-cycle;
+
+  // ring: cycle of the drawing (11 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    N2_succinylglutamate
+      -B[node4885: 3.5.1.96 | -H2O, +succinate ^R {br=BR48702, ev=cof+eq}]-> Glu  // succinylglutamate desuccinylase
+      -B[node5847: 2.3.1.1 | Ac_CoA>CoA {br=BR43962, ev=cof+eq}]-> N_Ac_Glu  // amino-acid N-acetyltransferase
+      -R[node5851: 2.7.2.8 | ATP>ADP ^R {br=BR47830, ev=cof+eq}]-> N_acetyl_L_glutamyl_5_phosphate  // acetylglutamate kinase
+      -[node5855: 1.2.1.38 | NADPH>NADP, -H, +Pi {br=BR36780, ev=cof-eq}]-> N_Ac_Glu_5_semialdehyde  // N-acetyl-gamma-glutamyl-phosphate reductase
+      -[node5860: 2.6.1.11 | Glu>2OG ^L {br=BR48055, ev=cof-eq}]-> N2_Ac_Orn  // acetylornithine transaminase
+      -[node5864: 3.5.1.14/3.5.1.16 | -H2O, +acetate ^R {br=BR19236, ev=cof+eq}]-> Orn  // N-acyl-aliphatic-L-amino acid amidohydrolase\n;acetylornithine deacetylase
+      <-B[node4908: 3.5.3.1 | -H2O, +urea ^L {br=BR19260, ev=cof+eq}]- Arg  // arginase
+      -R[node4905: 2.3.1.109 | succinyl_CoA>CoA, +H ^L {br=BR43973, ev=cof+eq}]-> suc_Arg  // arginine N-succinyltransferase
+      -L[node4900: 3.5.3.23 | -2*H2O, +CO2, +2*NH3 {br=BR48703, ev=cof+eq}]-> N2_Suc_Orn  // N-succinylarginine dihydrolase
+      -L[node4895: 2.6.1.81 | 2OG>Glu ^R {br=BR48672, ev=cof+eq, match=single}]-> N2_succinyl_L_glutamate_5_semialdehyde  // succinylornithine transaminase
+      -[node4891: 1.2.1.71 | NAD>NADH, -H2O, +H {br=BR48653, ev=cof+eq, match=single}]-> N2_succinylglutamate;  // succinylglutamate-semialdehyde dehydrogenase
+    chord N2_Ac_Orn -[node5869: 2.3.1.35 | -Glu {br=BR44035, ev=cof+eq}]-> (N_Ac_Glu + Orn);  // glutamate N-acetyltransferase
+  }
+
+  // ring: cycle of the drawing (5 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    Arg
+      -[node5887: 1.4.3.25 | -O2, -H2O, +NH3, +H2O2 {br=BR51927, ev=cof+eq, match=kegg} || node4827: 2.6.1.84 | pyruvate>Ala {br=BR48810, ev=cof+eq, match=kegg} || node4815: 2.6.1.42 | 2OG>Glu {br=BS356596, ev=cof+eq}]-> 2_oxo_5_guanidinopentanoate  // L-arginine oxidase; arginine-pyruvate transaminase; branched-chain-amino-acid transaminase
+      -B[node4841: 4.1.1.75 | -H, +CO2 {br=BR336, ev=cof+eq, match=single}]-> 4_Guanidinobutyraldehyde  // 5-Guanidino-2-oxopentanoate decarboxylase
+      -L[node4837: 1.2.1.54 | NAD>NADH, -H2O, +H {br=BR29413, ev=cof+eq, match=single}]-> 4_Guanidinobutyrate  // gamma-guanidinobutyraldehyde dehydrogenase
+      -R[node4819: 3.5.1.4 | -H2O, +H, +NH3]- 4_Guanidinobutyramide  // amidase
+      <-R[node4824: 1.13.12.1 | -O2, +H2O, +CO2 {br=BR40466, ev=cof+eq, match=single}]- Arg;  // arginine 2-monooxygenase
+  }
+
+  Glu
+    -R[node4914: 2.7.2.11 | ATP>ADP ^L {br=BR47821, ev=cof+eq, match=kegg}]-> L_glutamyl_5_phosphate  // glutamate 5-kinase
+    -[node12074: 1.2.1.41 | NADPH>NADP, +Pi {br=BR36782, ev=cof+eq}]-> Glu_5_semialdehyde;  // glutamate-5-semialdehyde dehydrogenase
+
+  N2_Ac_Orn
+    -B[node5877: 2.1.3.9 | -carbamoyl_phosphate, +Pi ^L {br=BR48711, ev=cof+eq}]-> N_acetyl_L_citrulline  // N-acetylornithine carbamoyltransferase
+    -L[node5880: 3.5.1.16 | -H2O, +acetate ^L {br=BR48939, ev=cof+eq}]-> L_citrulline  // acetylornithine deacetylase
+    <-L[node4996: 3.5.3.6 | -H2O, +NH3 {br=BR22730, ev=cof+eq}]- Arg  // arginine deiminase
+    -R[node1989: 1.14.11.41 | -2OG, -succinate, -CO2, +O2 {br=BR50571, ev=conflict}]- 3S_3_hydroxy_L_arginine;  // L-arginine hydroxylase
+
+  Orn
+    -B[node5885: 4.3.1.12 | +NH3 ^R {br=BR3424, ev=cof+eq}]-> Pro;  // ornithine cyclodeaminase
+
+  4_Guanidinobutyrate
+    -R[node4831: 3.5.3.7 | -H2O, +urea ^R {br=BR22731, ev=cof+eq, match=kegg}]-> 4_aminobutanoate;  // guanidinobutyrase
+
+  2_oxo_5_guanidinopentanoate
+    -R[node4812: ? | -H2O, +urea ^L]- 5_amino_2_oxopentanoate;  // 2-ketoarginine ureohydrolase
+
+  L_argininosuccinate
+    -[node5867: 4.3.2.1 | +fumarate ^L {br=BR3431, ev=cof+eq, match=kegg}]-> Arg;  // argininosuccinate lyase
+
+  Gln -[node5871: 6.3.5.5 | 2*ATP>2*ADP, -HCO3, -H2O, +Pi {br=BR152, ev=cof+eq}]-> (carbamoyl_phosphate + Glu);  // Carbamoyl-phosphate synthase (glutamine-hydrolysing)
+  (Arg + tRNAArg) -[node11025: 6.1.1.19 | ATP>AMP, +PPi {br=BR49, ev=cof+eq}]-> L_arginyl_tRNAArg;  // Arginine-tRNA ligase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { N2_Ac_Orn N_Ac_Glu N_acetyl_L_glutamyl_5_phosphate N_Ac_Glu_5_semialdehyde };
+  motif carrier { 2OG Glu } forward { node4815 node4895 } backward { node5860 };
+}

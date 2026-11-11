@@ -1,0 +1,33 @@
+pwl 2.0;
+subsystem pantothenate-biosynthesis 'pantothenate biosynthesis' {
+  // BRENDA subsystem: 6 reactions (6 with direction), 6 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_dehydropantoate '2-dehydropantoate' brenda:7987 kegg:C00966;
+  compound 3_methyl_2_oxobutanoate '3-methyl-2-oxobutanoate' brenda:829 kegg:C00141;
+  compound 4_P_pantothenate '4\'-P-pantothenate' brenda:4183 brenda:145796 kegg:C03492;
+  compound 5_10_methylenetetrahydrofolate '5,10-methylenetetrahydrofolate' brenda:401 kegg:C00143;
+  compound 6S_THFA '(6S)-THFA' brenda:207 brenda:235324 kegg:C00101;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound H2O brenda:1 kegg:C00001;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_4_phosphopantoate '(R)-4-phosphopantoate' brenda:81584 kegg:C18911;
+  compound R_pantoate '(R)-pantoate' brenda:2629 kegg:C00522;
+  compound R_pantothenate '(R)-pantothenate' brenda:2630 kegg:C00864;
+  compound beta_Ala 'beta-Ala' brenda:494 kegg:C00099;
+  port R_pantothenate side L to coenzyme-A-metabolism;
+
+  3_methyl_2_oxobutanoate
+    -[node6894: 2.1.2.11 | -5_10_methylenetetrahydrofolate, -H2O, +6S_THFA ^L {br=BR43940, ev=cof+eq}]-> 2_dehydropantoate  // 3-methyl-2-oxobutanoate hydroxymethyltransferase
+    -[node7538: 1.1.1.169 | NADPH>NADP ^L {br=BR29231, ev=cof-eq}]-> R_pantoate  // 2-dehydropantoate 2-reductase
+    -[node11295: 6.3.2.44 | ATP>ADP, -beta_Ala, +Pi {br=BR50564, ev=cof+eq} || node6888: 6.3.2.1 | ATP>AMP, -beta_Ala, +PPi {br=BR101, ev=cof+eq}]-> R_pantothenate;  // pantoate-beta-alanine ligase (ADP-forming); pantoate-beta-alanine ligase (AMP-forming)
+
+  R_pantoate
+    -[node10892: 2.7.1.169 | ATP>ADP ^L {br=BR49258, ev=cof+eq}]-> R_4_phosphopantoate  // pantoate kinase
+    -[node10894: 6.3.2.36 | ATP>AMP, -beta_Ala, +PPi {br=BR49268, ev=cof+eq}]-> 4_P_pantothenate;  // 4-phosphopantoate-beta-alanine ligase
+}

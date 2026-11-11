@@ -1,0 +1,44 @@
+pwl 2.0;
+subsystem aspartate-and-asparagine-metabolism 'aspartate and asparagine metabolism' {
+  // BRENDA subsystem: 10 reactions (9 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2_oxosuccinamate '2-oxosuccinamate' brenda:2391 kegg:C02362;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Asn brenda:266 kegg:C00152;
+  compound Asp brenda:97 kegg:C00049;
+  compound Asp_tRNAAsx 'Asp-tRNAAsx' brenda:63047;
+  compound Gln brenda:102 kegg:C00064;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_asparaginyl_tRNAAsn 'L-asparaginyl-tRNAAsn' brenda:20331 kegg:C03402;
+  compound L_aspartyl_tRNAAsp 'L-aspartyl-tRNAAsp' brenda:15815 kegg:C02984;
+  compound NH3 brenda:27;
+  compound PPi brenda:17 kegg:C00013;
+  compound a_2_oxo_carboxylate 'a 2-oxo carboxylate' brenda:5860;
+  compound an_amino_acid 'an amino acid' brenda:16228;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  compound tRNAAsn brenda:1690 kegg:C01637;
+  compound tRNAAsp brenda:785 kegg:C01638;
+  compound tRNAAsx brenda:50325;
+  port oxaloacetate side R to alanine-metabolism;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    Asp
+      -B[node5465: 3.5.1.38 | -NH3, +H2O {br=BR22679, ev=cof-eq} || node5466: 3.5.1.1 | -NH3, +H2O {br=BR22679, ev=cof-eq} || node5467: 6.3.5.4 | Gln>Glu, ATP>AMP, -H2O, +PPi {br=BR151, ev=cof+eq} || node5468: 6.3.1.1 | ATP>AMP, -NH3, +PPi {br=BR93, ev=cof+eq}]-> Asn  // glutamin-(asparagin-)ase; asparaginase; Asparagine synthase (glutamine-hydrolysing); Aspartate-ammonia ligase
+      -B[node5281: 2.6.1.14 | -a_2_oxo_carboxylate, +an_amino_acid {br=BR47456, ev=cof+eq}]-> 2_oxosuccinamate  // asparagine-oxo-acid transaminase
+      -[node5279: 3.5.1.3 | -H2O, +NH3 {br=BS189843, ev=cof+eq, match=kegg}]-> oxaloacetate  // omega-amidase
+      -B[node5738: 2.6.1.1 | Glu>2OG {br=BR47671, ev=cof-eq}]-> Asp;  // aspartate transaminase
+  }
+
+  Asp
+    -R[node10681: 6.1.1.23 | ATP>AMP, -tRNAAsx, +PPi {br=BR40509, ev=cof+eq}]-> Asp_tRNAAsx;  // aspartate-tRNAAsn ligase
+
+  (tRNAAsn + Asn) -[node11016: 6.1.1.22 | ATP>AMP, +PPi {br=BR53, ev=cof+eq}]-> L_asparaginyl_tRNAAsn;  // Asparagine-tRNA ligase
+  react [node11034: 6.1.1.12 | ATP>AMP, +PPi] {L_aspartyl_tRNAAsp, tRNAAsp, Asp};  // Aspartate-tRNA ligase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { 2_oxosuccinamate oxaloacetate Asp Asn };
+}

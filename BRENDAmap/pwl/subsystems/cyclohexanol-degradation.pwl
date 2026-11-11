@@ -1,0 +1,29 @@
+pwl 2.0;
+subsystem cyclohexanol-degradation 'cyclohexanol degradation' {
+  // BRENDA subsystem: 5 reactions (4 with direction), 6 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 6_hydroxyhexanoate '6-hydroxyhexanoate' brenda:46997 kegg:C06103;
+  compound 6_oxohexanoate '6-oxohexanoate' brenda:7135 kegg:C06102;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound adipate brenda:1712 kegg:C06104;
+  compound cyclohexanol brenda:873 kegg:C00854;
+  compound cyclohexanone brenda:1299 kegg:C00414;
+  compound hexano_6_lactone 'hexano-6-lactone' brenda:35029 kegg:C01880;
+  port adipate side U to adipate-degradation;
+
+  cyclohexanol
+    -[node8675: 1.1.1.245 | NAD>NADH ^R {br=BR29281, ev=cof+eq}]-> cyclohexanone  // cyclohexanol dehydrogenase
+    -[node8653: 1.14.13.22 | NADPH>NADP, -O2, +H2O {br=BR40431, ev=cof+eq}]-> hexano_6_lactone  // cyclohexanone monooxygenase
+    -[node8676: 3.1.1.- | -H2O, +H ^R]- 6_hydroxyhexanoate  // 6-hexanolide hydrolase
+    -[node8656: 1.1.1.258 | NAD>NADH ^R {br=BR26043, ev=cof+eq}]-> 6_oxohexanoate  // 6-hydroxyhexanoate dehydrogenase
+    -[node8659: 1.2.1.63 | NADP>NADPH, -H2O {br=BR29419, ev=cof+eq}]-> adipate;  // 6-oxohexanoate dehydrogenase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { NADP NADPH } forward { node8659 } backward { node8653 };
+}

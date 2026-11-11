@@ -368,6 +368,41 @@ See [DRAFT_MAP.md](DRAFT_MAP.md) for the method, the options, a comparison
 of layout tools and the results for iML1515
 ([BRENDAmap/draft_map_iML1515](BRENDAmap/draft_map_iML1515)).
 
+## Text descriptions of the subsystems (PWL)
+
+`ecmapper.pwl` reads and writes PWL 2.0, a text format for metabolic
+subsystems. Each file holds both the drawing (heading, turns, rings, fans)
+and the biochemistry:
+
+- compounds with BRENDA ligand and KEGG IDs;
+- substrate and product sides of every reaction, with a direction and the
+  evidence for it;
+- cofactors and compartments;
+- motifs such as cycles, substrate cycles, shunts and carrier cycles.
+
+[BRENDAmap/pwl](BRENDAmap/pwl) has the 193 subsystems of the BRENDA map. The
+sides and directions come from the BRENDA equations in BKMS-react and the
+drawn cofactor arrows. The parser has no dependencies; the generator needs
+numpy and networkx.
+
+```bash
+python -m pip install -e "./ecmapper[pwl]"
+```
+
+```bash
+cd ecmapper
+```
+
+```bash
+python -m ecmapper.pwl generate BRENDAmap/BRENDA_map_reactions.json BRENDAmap/pwl   # writes and checks
+```
+
+```bash
+python -m ecmapper.pwl motifs BRENDAmap/pwl/subsystems/citric-acid-cycle.pwl
+```
+
+See [PWL.md](PWL.md) for the language, the method and the results.
+
 ## Limitations
 
 - The BiGGr namespace does not contain all legacy BiGG reactions, e.g. many
@@ -402,3 +437,5 @@ pytest -m network    # download the real files and map e_coli_core
 
 `tests/test_draft_map.py` is skipped without the `draft-map` dependencies
 (`pip install -e "./ecmapper[dev,draft-map]"`).
+The generator tests in `tests/test_pwl.py` are skipped without numpy and networkx
+(`pip install -e "./ecmapper[dev,pwl]"`).

@@ -1,0 +1,51 @@
+pwl 2.0;
+subsystem Entner-Doudoroff-pathway 'Entner Doudoroff pathway' {
+  // BRENDA subsystem: 15 reactions (14 with direction), 12 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_dehydro_3_deoxy_D_gluconate '2-dehydro-3-deoxy-D-gluconate' brenda:1172 kegg:C00204;
+  compound 2_phospho_D_glycerate '2-phospho-D-glycerate' brenda:10090 kegg:C00631;
+  compound 3_phosphoglycerate '3-phosphoglycerate' brenda:194;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound D_glucono_1_5_lactone 'D-glucono-1,5-lactone' brenda:467 kegg:C00198;
+  compound D_glucose 'D-glucose' brenda:35 brenda:1969 kegg:C00031;
+  compound D_glycerate 'D-glycerate' brenda:2454 kegg:C00258;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound GAP brenda:147 kegg:C00118;
+  compound GA_6P 'GA-6P' brenda:43607;
+  compound H2O brenda:1 kegg:C00001;
+  compound KDPG brenda:8212 kegg:C04442;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound acceptor brenda:66 brenda:3161;
+  compound gluconate brenda:698 kegg:C00257;
+  compound glyceraldehyde brenda:1125 kegg:C02154;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  port D_glucono_1_5_lactone side L to glycogen-metabolism;
+  port GA_6P side U to pentose-phosphate-pathway;
+
+  // ring: cycle of the drawing (7 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    KDPG
+      <-[node11371: 2.7.1.45/2.7.1.58/2.7.1.178 | ATP>ADP ^L {br=BR47415, ev=cof+eq}]- 2_dehydro_3_deoxy_D_gluconate  // 2-dehydro-3-deoxygluconokinase;2-dehydro-3-deoxygalactonokinase;2-dehydro-3-deoxyglucono/galactono-kinase
+      -R[node10007: 4.1.2.51 | +pyruvate ^R {br=BR50471, ev=cof+eq}]-> glyceraldehyde  // 2-dehydro-3-deoxy-D-gluconate aldolase
+      -[node2957: -> 1.2.99.8 | acceptor>reduced_acceptor, -H2O {br=BR50390, ev=cof+eq} || node10018: 1.2.1.3 | NAD>NADH, -H2O || node11298: -> 1.2.1.89 | NADP>NADPH, -H2O {br=BR50850, ev=cof+eq} || node8287: -> 1.2.7.5 | Fd_ox>Fd_red, -H2O {br=BS359393, ev=cof+eq}]- D_glycerate  // glyceraldehyde dehydrogenase (FAD-containing); aldehyde dehydrogenase (NAD+); D-glyceraldehyde dehydrogenase (NADP+); aldehyde ferredoxin oxidoreductase
+      -R[node8722: 2.7.1.165 | ATP>ADP ^L {br=BR48991, ev=cof+eq}]-> 2_phospho_D_glycerate  // glycerate 2-kinase
+      -R[node11370: 5.4.2.11/5.4.2.12 {br=BR17, ev=eq}]-> 3_phosphoglycerate  // phosphoglycerate mutase (2,3-diphosphoglycerate-dependent);phosphoglycerate mutase (2,3-diphosphoglycerate-independent)
+      <-[node8726: 1.2.1.3/1.2.1.9 | NAD>NADH, -H2O ^R {br=BS231511, ev=cof+eq}]- GAP;  // aldehyde dehydrogenase (NAD+);glyceraldehyde-3-phosphate dehydrogenase (NADP+)
+    KDPG -[node8437: 4.1.2.14/4.1.2.21/4.1.2.55 {br=BR345, ev=eq}]-> (pyruvate + GAP);  // 2-dehydro-3-deoxy-phosphogluconate aldolase;2-dehydro-3-deoxy-6-phosphogalactonate aldolase;2-dehydro-3-deoxy-phosphogluconate/2-dehydro-3-deoxy-6-phosphogalactonate aldolase
+  }
+
+  GA_6P
+    -R[node8415: 4.2.1.12 | +H2O ^L {br=BR3385, ev=cof+eq}]-> KDPG;  // phosphogluconate dehydratase
+
+  D_glucose
+    -L[node2753: 1.1.1.119/1.1.1.360 | NADP>NADPH {br=BR29184, ev=cof+eq} || node10624: 1.1.1.118 | NAD>NADH {br=BR29183, ev=cof+eq}]-> D_glucono_1_5_lactone  // glucose 1-dehydrogenase (NADP+);glucose/galactose 1-dehydrogenase; glucose 1-dehydrogenase (NAD+)
+    -L[node10012: 3.1.1.17 | -H2O ^L {br=BR10647, ev=cof+eq}]-> gluconate  // gluconolactonase
+    -[node10002: 4.2.1.39/4.2.1.140 | +H2O ^L {br=BR418, ev=cof+eq}]-> 2_dehydro_3_deoxy_D_gluconate;  // gluconate dehydratase;gluconate/galactonate dehydratase
+}

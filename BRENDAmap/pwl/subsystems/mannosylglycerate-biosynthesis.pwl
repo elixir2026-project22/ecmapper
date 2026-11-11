@@ -1,0 +1,21 @@
+pwl 2.0;
+subsystem mannosylglycerate-biosynthesis 'mannosylglycerate biosynthesis' {
+  // BRENDA subsystem: 2 reactions (2 with direction), 4 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2_alpha_D_mannosyl_3_phosphoglycerate '2-(alpha-D-mannosyl)-3-phosphoglycerate' brenda:32033 kegg:C11516;
+  compound 2_alpha_Man_D_glycerate '2-alpha-Man-D-glycerate' brenda:153655;
+  compound 3_phosphoglycerate '3-phosphoglycerate' brenda:194;
+  compound GDP brenda:53 kegg:C00035;
+  compound GDP_Man 'GDP-Man' brenda:3633 kegg:C00096;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound Pi brenda:16 kegg:C00009;
+  port 3_phosphoglycerate side R to glycolysis;
+  port GDP_Man side L to d-mannose-degradation;
+
+  2_alpha_D_mannosyl_3_phosphoglycerate
+    -[node8872: 3.1.3.70 | -H2O, +Pi ^L {br=BR36950, ev=cof+eq, match=similar}]-> 2_alpha_Man_D_glycerate;  // mannosyl-3-phosphoglycerate phosphatase
+
+  (3_phosphoglycerate + GDP_Man) -[node8879: 2.4.1.217 | +H, +GDP {br=BR36938, ev=cof+eq}]-> 2_alpha_D_mannosyl_3_phosphoglycerate;  // mannosyl-3-phosphoglycerate synthase
+}

@@ -1,0 +1,36 @@
+pwl 2.0;
+subsystem D-cycloserine-biosynthesis 'D-cycloserine biosynthesis' {
+  // BRENDA subsystem: 5 reactions (4 with direction), 7 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2OG brenda:34 kegg:C00026;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_Ser 'Ac-Ser' brenda:680 kegg:C00979;
+  compound Arg brenda:123 kegg:C00062;
+  compound CO2 brenda:28 kegg:C00011;
+  compound D_cycloserine 'D-cycloserine' brenda:874 kegg:C08057;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_hydroxyarginine 'L-hydroxyarginine' brenda:2523;
+  compound NH3 brenda:27;
+  compound O2 brenda:9 brenda:1180;
+  compound O_ureido_D_serine 'O-ureido-D-serine' brenda:10418 kegg:C20651;
+  compound O_ureido_L_serine 'O-ureido-L-serine' brenda:15356 kegg:C20639;
+  compound Orn brenda:192 kegg:C00077;
+  compound Pi brenda:16 kegg:C00009;
+  compound acetate brenda:47 kegg:C00033;
+  compound hydroxyurea brenda:850 kegg:C07044;
+  compound succinate brenda:58 kegg:C00042;
+  port Ac_Ser side L to cysteine-metabolism;
+  port Arg side L to arginine-metabolism;
+
+  hydroxyurea
+    -B[node1710: 3.5.3.25 | -Orn, +H2O ^R {br=BR50707, ev=cof-eq}]-> L_hydroxyarginine  // Nomega-hydroxy-L-arginine amidinohydrolase
+    -[node1716: 1.14.11.- | -2OG, +CO2, +O2, +succinate]- Arg;  // L-arginine N-omega-oxidase
+
+  D_cycloserine
+    -B[node1701: 6.3.3.5 | ADP>ATP, -NH3, -CO2, -Pi, +H2O {br=BR50730, ev=cof-eq}]-> O_ureido_D_serine  // O-ureido-D-serine cyclo-ligase
+    <-[node1703: 5.1.1.19 {br=BR50722, ev=eq, rev=eq}]-> O_ureido_L_serine;  // O-ureido-serine racemase
+
+  (hydroxyurea + Ac_Ser) -[node1706: 2.6.99.3 | +acetate {br=BR50676, ev=cof+eq}]-> O_ureido_L_serine;  // O-ureido-L-serine synthase
+}

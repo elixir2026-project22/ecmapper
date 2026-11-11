@@ -1,0 +1,30 @@
+pwl 2.0;
+subsystem sulfopterin-metabolism 'sulfopterin metabolism' {
+  // BRENDA subsystem: 7 reactions (1 with direction), 8 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_oxopentyl_amino_4_oxopyrimidine '2,5-diamino-6-(5\'-triphosphoryl-3\',4\'-trihydroxy-2\'-oxopentyl)-amino-4-oxopyrimidine' brenda:182183 kegg:C06148;
+  compound 2_5_diaminopyrimidine_nucleoside_triphosphate '2,5-diaminopyrimidine nucleoside triphosphate' brenda:189991 kegg:C05923;
+  compound 6_Pyruvoyltetrahydropterin '6-Pyruvoyltetrahydropterin' brenda:6471 kegg:C03684;
+  compound GTP brenda:37 kegg:C00044;
+  compound H2NTP brenda:4130;
+  compound H2O brenda:1 kegg:C00001;
+  compound NPR brenda:3544 kegg:C04874;
+  compound PPPi brenda:940 kegg:C00536;
+  compound Pi brenda:16 kegg:C00009;
+  compound formamidopyrimidine_nucleoside_triphosphate 'formamidopyrimidine nucleoside triphosphate' brenda:182109 kegg:C05922;
+  compound formate brenda:120 kegg:C00058;
+  compound neopterin brenda:21656 kegg:C05926;
+  port GTP side R to purine-metabolism;
+
+  GTP
+    -[node9157: 3.5.4.16 | -H2O ^R]- formamidopyrimidine_nucleoside_triphosphate  // GTP cyclohydrolase I
+    -[node9155: 3.5.4.16 | -H2O, +formate ^R]- 2_5_diaminopyrimidine_nucleoside_triphosphate  // GTP cyclohydrolase I
+    -[node9139: 3.5.4.16]- 2_5_diamino_6_5_triphosphoryl_3_4_trihydroxy_2_oxopentyl_amino_4_oxopyrimidine  // GTP cyclohydrolase I
+    -B[node9143: 3.5.4.16]- H2NTP  // GTP cyclohydrolase I
+    -[node10365: 4.2.3.12 | +PPPi ^L {br=BR48350, ev=cof+eq, match=single}]-> 6_Pyruvoyltetrahydropterin;  // 6-pyruvoyltetrahydropterin synthase
+
+  H2NTP
+    -[node9144: 3.1.3.1 | -H2O, +Pi ^L]- NPR  // alkaline phosphatase
+    -[node9140: ?]- neopterin;  // unknown enzyme
+}

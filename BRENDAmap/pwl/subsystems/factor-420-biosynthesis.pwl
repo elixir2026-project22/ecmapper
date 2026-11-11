@@ -1,0 +1,41 @@
+pwl 2.0;
+subsystem factor-420-biosynthesis 'factor 420 biosynthesis' {
+  // BRENDA subsystem: 7 reactions (6 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2S_2_P_LAC '(2S)-2-P-LAC' brenda:14715 kegg:C19156;
+  compound 2S_lactyl_2_diphospho_5_guanosine '(2S)-lactyl-2-diphospho-5\'-guanosine' brenda:82530 kegg:C19155;
+  compound 5_amino_5_4_hydroxybenzyl_6_D_ribitylimino_5_6_dihydrouracil '5-amino-5-(4-hydroxybenzyl)-6-(D-ribitylimino)-5,6-dihydrouracil' brenda:222472 kegg:C21971;
+  compound 5_deoxyadenosine '5\'-deoxyadenosine' brenda:943 kegg:C05198;
+  compound 7_8_didemethyl_8_hydroxy_5_deazariboflavin '7,8-didemethyl-8-hydroxy-5-deazariboflavin' brenda:10039 kegg:C19154;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound F420_0_ox 'F420-0 (ox)' brenda:7824 kegg:C19153;
+  compound F420_1 'F420-1' brenda:12005 kegg:C19152;
+  compound GDP brenda:53 kegg:C00035;
+  compound GMP brenda:162 kegg:C00144;
+  compound GTP brenda:37 kegg:C00044;
+  compound Glu brenda:41 kegg:C00025;
+  compound L_lactate 'L-lactate' brenda:403 kegg:C00186;
+  compound Met brenda:88 kegg:C00073;
+  compound NH3 brenda:27;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound alpha_F420_3 'alpha-F420-3' brenda:39374 kegg:C19151;
+  compound gamma_F420_2 'gamma-F420-2' brenda:8815 kegg:C00876;
+
+  L_lactate
+    -[node10908: ? | GTP>GDP ^L]- 2S_2_P_LAC  // unknown
+    -[node10910: 2.7.7.68 | -GTP, +PPi {br=BR49188, ev=cof+eq}]-> 2S_lactyl_2_diphospho_5_guanosine;  // 2-phospho-L-lactate guanylyltransferase
+
+  5_amino_5_4_hydroxybenzyl_6_D_ribitylimino_5_6_dihydrouracil
+    -L[node10913: 4.3.1.32 | -S_adenosyl_L_methionine, +NH3, +5_deoxyadenosine, +Met {br=BR52491, ev=cof+eq}]-> 7_8_didemethyl_8_hydroxy_5_deazariboflavin;  // 7,8-didemethyl-8-hydroxy-5-deazariboflavin synthase
+
+  F420_0_ox
+    -[node10926: 6.3.2.31 | GTP>GDP, -Glu, +Pi {br=BR49210, ev=cof+eq}]-> F420_1  // coenzyme F420-0:L-glutamate ligase
+    -R[node10928: 6.3.2.34 | GTP>GDP, -Glu, +Pi ^L {br=BR49214, ev=cof+eq}]-> gamma_F420_2  // coenzyme F420-1:gamma-L-glutamate ligase
+    -[node10948: 6.3.2.32 | ATP>ADP, -Glu, +Pi ^L {br=BR49211, ev=cof+eq}]-> alpha_F420_3;  // coenzyme gamma-F420-2:alpha-L-glutamate ligase
+
+  (7_8_didemethyl_8_hydroxy_5_deazariboflavin + 2S_lactyl_2_diphospho_5_guanosine) -[node10915: 2.7.8.28 | +GMP {br=BR49191, ev=cof+eq}]-> F420_0_ox;  // 2-phospho-L-lactate transferase
+}

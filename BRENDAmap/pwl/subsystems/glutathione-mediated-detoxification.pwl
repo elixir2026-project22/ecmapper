@@ -1,0 +1,55 @@
+pwl 2.0;
+subsystem glutathione-mediated-detoxification 'glutathione-mediated detoxification' {
+  // BRENDA subsystem: 11 reactions (8 with direction), 12 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2_aminoprop_2_enoate '2-aminoprop-2-enoate' brenda:90067 kegg:C02218;
+  compound 2_iminopropanoate '2-iminopropanoate' brenda:29163 kegg:C20904;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound GSH brenda:44 kegg:C00051;
+  compound Glu brenda:41 kegg:C00025;
+  compound Gly brenda:72 kegg:C00037;
+  compound H2O brenda:1 kegg:C00001;
+  compound HX brenda:20904 kegg:C00462;
+  compound NH3 brenda:27;
+  compound Pi brenda:16 kegg:C00009;
+  compound RX brenda:31084 kegg:C01322;
+  compound R_S_glutathione 'R-S-glutathione' brenda:47549 kegg:C02320;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound a_gamma_glutamyl_L_cysteine_S_conjugate 'a [gamma-glutamyl-L-cysteine]-S-conjugate' brenda:258628;
+  compound a_methyl_thioether 'a methyl thioether' brenda:162454;
+  compound an_L_cysteine_S_conjugate 'an L-cysteine-S-conjugate' brenda:47556;
+  compound an_L_cysteinylglycine_S_conjugate 'an (L-cysteinylglycine)-S-conjugate' brenda:230352;
+  compound an_N_acetyl_L_cysteine_S_conjugate 'an N-acetyl-L-cysteine-S-conjugate' brenda:89411;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound thiol brenda:7366 kegg:C00145;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    R_S_glutathione#2
+      -[node13310: 3.4.17.25 | -H2O, +Gly ^L {br=BR53375, ev=cof+eq, match=single}]-> a_gamma_glutamyl_L_cysteine_S_conjugate  // glutathione-S-conjugate glycine hydrolase
+      -[node13305: 3.4.13.- | -H2O, +Glu ^L]- an_L_cysteine_S_conjugate  // 
+      -B[node13338: 3.4.13.23 | -H2O, +Gly ^L]- an_L_cysteinylglycine_S_conjugate  // cysteinylglycine-S-conjugate dipeptidase
+      <-[node13304: 3.4.19.13/2.3.2.2 | -H2O, +Glu ^L {br=BR52698, ev=cof+eq, match=single}]- R_S_glutathione#2;  // glutathione gamma-glutamate hydrolase;gamma-glutamyltransferase
+  }
+
+  RX
+    -[node13317: 2.5.1.18 | -GSH, +HX ^R {br=BR47501, ev=cof+eq}]-> R_S_glutathione  // glutathione transferase
+    -[node13314: 7.6.2.2/7.6.2.3 | ATP>ADP, -H2O, +Pi ^R]- R_S_glutathione#2;  // ABC-type Cd2+ transporter;ABC-type glutathione-S-conjugate transporter
+
+  an_L_cysteine_S_conjugate
+    -[node13323: 2.3.1.80 | -Ac_CoA, +CoA ^R {br=BR44083, ev=cof+eq}]-> an_N_acetyl_L_cysteine_S_conjugate;  // cysteine-S-conjugate N-acetyltransferase
+
+  2_aminoprop_2_enoate
+    -[node64: 4.4.1.13 {br=BR50834, ev=eq}]-> 2_iminopropanoate  // cysteine-S-conjugate beta-lyase
+    <-[node63: 4.4.1.13 | -H2O, +NH3 ^R {br=BR50834, ev=eq, match=single}]- pyruvate;  // cysteine-S-conjugate beta-lyase
+
+  thiol
+    -[node13312: 2.1.1.9 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L {br=BR40585, ev=cof+eq, match=single}]-> a_methyl_thioether;  // thiol S-methyltransferase
+
+  an_L_cysteine_S_conjugate -[node13322: 4.4.1.13 {br=BR51159, ev=eq, match=single}]-> (2_aminoprop_2_enoate + thiol);  // cysteine-S-conjugate beta-lyase
+}

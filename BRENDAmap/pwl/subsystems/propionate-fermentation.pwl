@@ -1,0 +1,51 @@
+pwl 2.0;
+subsystem propionate-fermentation 'propionate fermentation' {
+  // BRENDA subsystem: 11 reactions (8 with direction), 11 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2R_3S_2_methylisocitrate '(2R,3S)-2-methylisocitrate' brenda:8544 kegg:C04593;
+  compound 2S_3S_2_methylcitrate '(2S,3S)-2-methylcitrate' brenda:58076 kegg:C02225;
+  compound 2_methyl_cis_aconitate '2-methyl-cis-aconitate' brenda:153691 kegg:C04225;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound H2O brenda:1 kegg:C00001;
+  compound R_methylmalonyl_CoA '(R)-methylmalonyl-CoA' brenda:21229;
+  compound S_methylmalonyl_CoA '(S)-methylmalonyl-CoA' brenda:2455;
+  compound fumarate brenda:170 kegg:C00122;
+  compound menaquinol brenda:3003 kegg:C05819;
+  compound menaquinone brenda:2295 kegg:C00828;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  compound propanoate brenda:949 kegg:C00163;
+  compound propanoyl_CoA 'propanoyl-CoA' brenda:782 kegg:C00100;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound succinate brenda:58 kegg:C00042;
+  compound succinyl_CoA 'succinyl-CoA' brenda:224 kegg:C00091;
+  port fumarate side U to citric-acid-cycle;
+  port oxaloacetate side U to citric-acid-cycle;
+  port propanoyl_CoA side L to aclacinomycin-biosynthesis;
+  port succinate side U to citric-acid-cycle;
+  port succinyl_CoA side R to citric-acid-cycle;
+
+  // ring: cycle of the drawing (7 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    propanoyl_CoA
+      <-[node9390: 6.4.1.3 | +CO2 ^R {br=BS410118, ev=cof+eq, match=kegg}]- S_methylmalonyl_CoA;  // propionyl-CoA carboxylase
+    2S_3S_2_methylcitrate
+      -L[node9938: 4.2.1.79 | +H2O ^R {br=BR456, ev=cof+eq, match=kegg}]-> 2_methyl_cis_aconitate  // 2-Methylcitrate dehydratase
+      -[node9897: 4.2.1.99 | -H2O ^R {br=BR471, ev=cof-eq}]-> 2R_3S_2_methylisocitrate  // 2-methylisocitrate dehydratase
+      -R[node9904: 4.1.3.30 | +pyruvate ^R {br=BR390, ev=cof+eq}]-> succinate;  // Methylisocitrate lyase
+    react [node9935: 2.8.3.18] {succinyl_CoA, succinate, propanoate, propanoyl_CoA};  // succinyl-CoA:acetate CoA-transferase
+    S_methylmalonyl_CoA -[node9927: 2.1.3.1 | -pyruvate {br=BR43948, ev=cof+eq}]-> (propanoyl_CoA + oxaloacetate);  // methylmalonyl-CoA carboxytransferase
+    (propanoyl_CoA + oxaloacetate) -[node9901: 2.3.3.5 | -H2O, +CoA {br=BR44127, ev=cof+eq, match=kegg}]-> 2S_3S_2_methylcitrate;  // 2-methylcitrate synthase
+  }
+
+  S_methylmalonyl_CoA
+    -B[node9751: 5.1.99.1]- R_methylmalonyl_CoA  // Methylmalonyl-CoA epimerase
+    -R[node9937: 5.4.99.2 {br=BR249, ev=eq}]-> succinyl_CoA;  // Methylmalonyl-CoA mutase
+
+  R_methylmalonyl_CoA
+    -[node12067: 4.1.1.9/4.1.1.94 | +CO2 ^L {br=BS1620, ev=cof+eq, match=kegg}]-> propanoyl_CoA;  // malonyl-CoA decarboxylase;ethylmalonyl-CoA decarboxylase
+
+  succinate
+    -R[node9931: 1.3.5.1 | -menaquinone, +menaquinol ^R]- fumarate;  // succinate dehydrogenase
+}

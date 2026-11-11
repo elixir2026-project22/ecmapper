@@ -1,0 +1,24 @@
+pwl 2.0;
+subsystem grixazone-biosynthesis 'grixazone biosynthesis' {
+  // BRENDA subsystem: 3 reactions (3 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_amino_4_5_dihydroxy_6_oxo_7_phosphooxy_heptanoate '2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate' brenda:90065 kegg:C20644;
+  compound 3_amino_4_hydroxybenzoate '3-amino-4-hydroxybenzoate' brenda:12334 kegg:C12115;
+  compound Asp_4_semialdehyde 'Asp 4-semialdehyde' brenda:573 kegg:C00441;
+  compound CO2 brenda:28 kegg:C00011;
+  compound H2O brenda:1 kegg:C00001;
+  compound N_acetyl_L_cysteine 'N-acetyl-L-cysteine' brenda:2415 kegg:C06809;
+  compound O2 brenda:9 brenda:1180;
+  compound Pi_L174005 'Pi' brenda:174005;
+  compound glycerone_phosphate 'glycerone phosphate' brenda:482 kegg:C00111;
+  compound grixazone_B 'grixazone B' brenda:193483 kegg:C20799;
+  port Asp_4_semialdehyde side D to threonine-metabolism;
+  port glycerone_phosphate side L to glycolysis;
+
+  2_amino_4_5_dihydroxy_6_oxo_7_phosphooxy_heptanoate
+    -[node11838: 4.1.99.20 | +2*H2O, +Pi_L174005 {br=BR50715, ev=cof+eq}]-> 3_amino_4_hydroxybenzoate  // 3-amino-4-hydroxybenzoate synthase
+    -[node11842: 1.10.3.15 | -2*O2, -N_acetyl_L_cysteine, +CO2, +4*H2O {br=BR51024, ev=cof+eq}]-> grixazone_B;  // grixazone synthase
+
+  2_amino_4_5_dihydroxy_6_oxo_7_phosphooxy_heptanoate -[node11836: 4.1.2.56 {br=BR50999, ev=eq}]-> (glycerone_phosphate + Asp_4_semialdehyde);  // 2-amino-4,5-dihydroxy-6-oxo-7-(phosphooxy)heptanoate synthase
+}

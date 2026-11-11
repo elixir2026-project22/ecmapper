@@ -1,0 +1,40 @@
+pwl 2.0;
+subsystem d-mannose-degradation 'd-mannose degradation' {
+  // BRENDA subsystem: 9 reactions (7 with direction), 8 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1_3_alpha_D_mannobiose '1,3-alpha-D-mannobiose' brenda:139634;
+  compound 2OG brenda:34 kegg:C00026;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound Fru_6_P 'Fru 6-P' brenda:87 kegg:C00085;
+  compound GDP brenda:53 kegg:C00035;
+  compound GDP_4_dehydro_6_deoxy_D_mannose 'GDP-4-dehydro-6-deoxy-D-mannose' brenda:4524 kegg:C01222;
+  compound GDP_Man 'GDP-Man' brenda:3633 kegg:C00096;
+  compound GDP_alpha_D_perosamine 'GDP-alpha-D-perosamine' brenda:89354 kegg:C20638;
+  compound GMP brenda:162 kegg:C00144;
+  compound GTP brenda:37 kegg:C00044;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound Man brenda:993 kegg:C00936;
+  compound Man_6_P 'Man 6-P' brenda:700 kegg:C00275;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound alpha_Man_1_P 'alpha-Man 1-P' brenda:638 kegg:C00636;
+  port Fru_6_P side R to glycolysis;
+  port GDP_Man side L to alginate-biosynthesis;
+  port GDP_Man side R to mannosylglycerate-biosynthesis;
+
+  1_3_alpha_D_mannobiose
+    -[node10395: 3.2.1.24 | -H2O ^R]- Man  // alpha-mannosidase
+    -[node9052: 2.7.1.7 | ATP>ADP ^L {br=BR47797, ev=cof+eq}]-> Man_6_P  // mannokinase
+    -B[node10466: 5.3.1.8 {br=BR239, ev=eq}]-> Fru_6_P;  // Mannose-6-phosphate isomerase
+
+  Man_6_P
+    <-B[node9173: 5.4.2.8 {br=BR24, ev=eq}]- alpha_Man_1_P  // phosphomannomutase
+    -[node9169: <- 3.6.1.9 | -H2O, +GMP {br=BS430207, ev=cof+eq} || node8270: -> 2.7.7.22 | -GDP, +Pi {br=BR47869, ev=cof+eq} || node9066: -> 2.7.7.13 | -GTP, +PPi {br=BR47862, ev=cof+eq}]- GDP_Man  // nucleotide diphosphatase; mannose-1-phosphate guanylyltransferase (GDP); mannose-1-phosphate guanylyltransferase
+    -R[node10362: 4.2.1.47 | +H2O ^L {br=BR426, ev=cof+eq, match=kegg}]-> GDP_4_dehydro_6_deoxy_D_mannose  // GDP-mannose 4,6-dehydratase
+    -R[node11643: 2.6.1.102 | -2OG, -Glu ^R {br=BR50674, ev=conflict, match=kegg}]- GDP_alpha_D_perosamine;  // GDP-perosamine synthase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { GDP_Man alpha_Man_1_P } forward { node9169 } backward { node8270 node9066 };
+}

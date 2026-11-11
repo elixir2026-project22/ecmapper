@@ -1,0 +1,43 @@
+pwl 2.0;
+subsystem gluconeogenesis 'gluconeogenesis' {
+  // BRENDA subsystem: 9 reactions (6 with direction), 6 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Asp brenda:97 kegg:C00049;
+  compound CO2 brenda:28 kegg:C00011;
+  compound D_4_hydroxy_2_oxoglutarate 'D-4-hydroxy-2-oxoglutarate' brenda:31669 kegg:C05946;
+  compound GDP brenda:53 kegg:C00035;
+  compound GTP brenda:37 kegg:C00044;
+  compound H2O brenda:1 kegg:C00001;
+  compound L_erythro_4_hydroxyglutamate 'L-erythro-4-hydroxyglutamate' brenda:182121 kegg:C05947;
+  compound L_malate 'L-malate' brenda:200 brenda:247;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound PEP brenda:51 kegg:C00074;
+  compound Pi brenda:16 kegg:C00009;
+  compound glyoxylate brenda:101 kegg:C00048;
+  compound oxaloacetate brenda:57 kegg:C00036;
+  compound pyruvate brenda:31 kegg:C00022;
+  port L_malate side D to citric-acid-cycle;
+  port PEP side D to glycolysis;
+  port oxaloacetate side D to citric-acid-cycle;
+  port pyruvate side L to glycolysis;
+
+  // ring: cycle of the drawing (5 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    D_4_hydroxy_2_oxoglutarate
+      -R[node10379: 4.1.3.16/4.1.3.42 | -glyoxylate ^L]- pyruvate  // 4-Hydroxy-2-oxoglutarate aldolase;(4S)-4-hydroxy-2-oxoglutarate aldolase
+      -R[node8467: 2.7.9.2 | ATP>AMP, -H2O, +Pi {br=BR48097, ev=cof+eq}]-> PEP  // pyruvate, water dikinase
+      -B[node9145: <- 4.1.1.32 | GTP>GDP, +CO2 {br=BR291, ev=cof+eq} || node8470: <- 4.1.1.49 | ATP>ADP, +CO2 {br=BR308, ev=cof+eq} || node8471: 4.1.1.31 | -Pi, +H2O, +CO2]- oxaloacetate;  // phosphoenolpyruvate carboxykinase (GTP); phosphoenolpyruvate carboxykinase (ATP); phosphoenolpyruvate carboxylase
+    react [node10378: 2.6.1.1 | -Asp] {L_erythro_4_hydroxyglutamate, oxaloacetate, D_4_hydroxy_2_oxoglutarate};  // aspartate transaminase
+    chord oxaloacetate -R[node9164: 4.1.1.112 | +CO2 ^R {br=BR289, ev=cof+eq}]-> pyruvate;  // oxaloacetate decarboxylase
+  }
+
+  L_malate
+    -R[node8468: 1.1.1.38 | NAD>NADH, +CO2 {br=BR29301, ev=cof+eq} || node8469: 1.1.1.40 | NADP>NADPH, +CO2 {br=BR29303, ev=cof+eq}]-> pyruvate;  // malate dehydrogenase (oxaloacetate-decarboxylating); malate dehydrogenase (oxaloacetate-decarboxylating) (NADP+)
+}

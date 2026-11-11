@@ -1,0 +1,19 @@
+pwl 2.0;
+subsystem sulfolipid-biosynthesis 'sulfolipid biosynthesis' {
+  // BRENDA subsystem: 2 reactions (1 with direction), 4 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 1_2_diacyl_3_sulfoquinovosyl_sn_glycerol '1,2-diacyl-3-sulfoquinovosyl-sn-glycerol' brenda:97196 kegg:C13508;
+  compound 1_2_diacyl_sn_glycerol '1,2-diacyl-sn-glycerol' brenda:2063;
+  compound H2O brenda:1 kegg:C00001;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc 'UDP-Glc' brenda:64 kegg:C00029;
+  compound UDP_alpha_D_sulfoquinovopyranose 'UDP-alpha-D-sulfoquinovopyranose' brenda:79333;
+  compound sulfite brenda:92 kegg:C00094;
+  port 1_2_diacyl_sn_glycerol side L to lipid-metabolism;
+
+  UDP_Glc
+    -[node2964: 3.13.1.1 | -sulfite, +H2O ^L {br=BR36952, ev=cof-eq}]-> UDP_alpha_D_sulfoquinovopyranose;  // UDP-sulfoquinovose synthase
+
+  react [node2962: 2.4.1.- | +UDP] {UDP_alpha_D_sulfoquinovopyranose, 1_2_diacyl_sn_glycerol, 1_2_diacyl_3_sulfoquinovosyl_sn_glycerol};  // UDP-sulfoquinovose:DAG sulfoquinovosyltransferase
+}

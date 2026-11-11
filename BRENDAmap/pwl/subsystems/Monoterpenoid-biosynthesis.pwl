@@ -1,0 +1,146 @@
+pwl 2.0;
+subsystem Monoterpenoid-biosynthesis 'Monoterpenoid biosynthesis' {
+  // BRENDA subsystem: 51 reactions (44 with direction), 47 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 1_8_cineole '1,8-cineole' brenda:3570 kegg:C09844;
+  compound 3R_linalool '(3R)-linalool' brenda:57985 kegg:C11388;
+  compound 3S_linalool '(3S)-linalool' brenda:17837 kegg:C11389;
+  compound 4R_7S_7_isopropyl_4_methyl_2_oxo_oxepanone '(4R,7S)-7-isopropyl-4-methyl-2-oxo-oxepanone' brenda:145161 kegg:C18027;
+  compound 6E_8_hydroxygeranial '(6E)-8-hydroxygeranial' brenda:86216 kegg:C20222;
+  compound 6E_8_hydroxygeraniol '(6E)-8-hydroxygeraniol' brenda:15206 brenda:19556;
+  compound 6E_8_hydroxylinalool '(6E)-8-hydroxylinalool' brenda:28524 kegg:C04433;
+  compound 6E_8_oxogeraniol '(6E)-8-oxogeraniol' brenda:86218 kegg:C20223;
+  compound 6E_8_oxolinalool '(6E)-8-oxolinalool' brenda:28525 kegg:C20221;
+  compound E_beta_ocimene '(E)-beta-ocimene' brenda:9683 kegg:C09873;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound R_ipsdienol '(R)-ipsdienol' brenda:199279 kegg:C20943;
+  compound R_limonene '(R)-limonene' brenda:6927;
+  compound S_carvone '(S)-carvone' brenda:13102;
+  compound S_limonene '(S)-limonene' brenda:10170;
+  compound Z_beta_ocimene '(Z)-beta-ocimene' brenda:36617;
+  compound alpha_pinene '(-)-alpha-pinene' brenda:3861;
+  compound beta_pinene '(-)-beta-pinene' brenda:4307;
+  compound camphene '(-)-camphene' brenda:28521;
+  compound carvone '(-)-carvone' brenda:6400;
+  compound endo_fenchol '(-)-endo-fenchol' brenda:12264 kegg:C02344;
+  compound geranate brenda:87556 kegg:C16461;
+  compound geranial brenda:4013 kegg:C01499;
+  compound geraniol brenda:987 kegg:C01500;
+  compound geranyl_diphosphate 'geranyl diphosphate' brenda:175 brenda:46074 kegg:C00341;
+  compound geranyl_phosphate 'geranyl phosphate' brenda:9852 kegg:C21203;
+  compound ipsdienone brenda:196599 kegg:C20944;
+  compound isopiperitenone '(-)-isopiperitenone' brenda:10438;
+  compound linalool brenda:2852;
+  compound menthol '(-)-menthol' brenda:10439 kegg:C00400;
+  compound menthone '(-)-menthone' brenda:3955 kegg:C00843;
+  compound myrcene brenda:6090 kegg:C06074;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound plus_borneol '(+)-borneol' brenda:10443 kegg:C01765;
+  compound plus_bornyl_diphosphate '(+)-bornyl diphosphate' brenda:48199 kegg:C03190;
+  compound plus_camphene '(+)-camphene' brenda:19555 kegg:C06304;
+  compound plus_camphor '(+)-camphor' brenda:2387 kegg:C00808;
+  compound plus_car_3_ene '(+)-car-3-ene' brenda:28483 kegg:C11382;
+  compound plus_cis_isopulegone '(+)-cis-isopulegone' brenda:65025 kegg:C11951;
+  compound plus_isomenthone '(+)-isomenthone' brenda:11084 kegg:C11952;
+  compound plus_menthofuran '(+)-menthofuran' brenda:18357 kegg:C18025;
+  compound plus_neomenthol '(+)-neomenthol' brenda:10445 kegg:C00553;
+  compound plus_pulegone '(+)-pulegone' brenda:8701 kegg:C09893;
+  compound plus_trans_carveol '(+)-trans-carveol' brenda:21912 kegg:C11409;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound sabinene_hydrate 'sabinene hydrate' brenda:20510 kegg:C02462;
+  compound terpinolene brenda:11859 kegg:C06075;
+  compound trans_carveol '(-)-trans-carveol' brenda:10440 kegg:C00964;
+  compound trans_isopiperitenol '(-)-trans-isopiperitenol' brenda:10441 kegg:C01123;
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    geranyl_diphosphate
+      -[node13152: 3.1.7.11/3.1.7.3 | -H2O, +PPi ^L {br=BR50059, ev=cof+eq}]-> geraniol  // geranyl diphosphate diphosphatase;monoterpenyl-diphosphatase
+      -L[node13154: 5.4.4.4 {br=BR49509, ev=eq}]-> 3S_linalool  // geraniol isomerase
+      <-L[node13147: 4.2.1.127 | +H2O ^R {br=BR49504, ev=cof+eq, rev=eq}]-> myrcene  // linalool dehydratase
+      <-L[node13145: 4.2.3.15 | +PPi ^L {br=BR22830, ev=cof+eq}]- geranyl_diphosphate;  // myrcene synthase
+    chord geranyl_diphosphate -L[node13144: 4.2.3.25 | -H2O, +PPi ^L {br=BR48697, ev=cof+eq}]-> 3S_linalool;  // S-linalool synthase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    6E_8_hydroxygeraniol
+      <-L[node13106: 1.1.1.324 | NADP>NADPH ^R {br=BR50015, ev=cof+eq, rev=map}]-> 6E_8_hydroxygeranial  // 8-hydroxygeraniol dehydrogenase
+      <-R[node13166: 1.1.1.324 | NADP>NADPH ^L {br=BR50017, ev=cof+eq, rev=map}]-> 6E_8_hydroxygeraniol#2  // 8-hydroxygeraniol dehydrogenase
+      <-R[node13171: 1.1.1.324 | NADP>NADPH ^R {br=BR50018, ev=cof+eq, rev=map}]-> 6E_8_oxogeraniol  // 8-hydroxygeraniol dehydrogenase
+      <-R[node13169: 1.1.1.324 | NADP>NADPH ^L {br=BR50016, ev=cof+eq, rev=map}]-> 6E_8_hydroxygeraniol;  // 8-hydroxygeraniol dehydrogenase
+  }
+
+  star geranyl_diphosphate arc 300 order cw {
+    -R[node13140: 4.2.3.106 | +PPi ^R {br=BR49951, ev=cof+eq}]-> E_beta_ocimene;  // (E)-beta-ocimene synthase
+    -R[node13253: 4.2.3.11 | -H2O, +PPi {br=BR48349, ev=cof+eq}]-> sabinene_hydrate;  // sabinene-hydrate synthase
+    -R[node13264: 5.5.1.8 {br=BR266, ev=eq}]-> plus_bornyl_diphosphate  // (+)-bornyl diphosphate synthase
+      -[node13266: 3.1.7.3 | -H2O, +PPi ^R]- plus_borneol  // monoterpenyl-diphosphatase
+      -L[node13270: 1.1.198 | NAD>NADH ^L {br=BR29247, ev=cof+eq}]-> plus_camphor;  // (+)-borneol dehydrogenase
+    -B[node13138: 3.6.1.68 | -H2O, +Pi ^R {br=BR51531, ev=cof+eq}]-> geranyl_phosphate;  // geranyl diphosphate phosphohydrolase
+    -B[node13146: 4.2.3.26 | -H2O, +PPi ^R {br=BR48698, ev=cof+eq}]-> 3R_linalool  // R-linalool synthase
+      -[node13159: 1.14.14.84 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR50024, ev=cof+eq}]-> 6E_8_hydroxylinalool  // linalool 8-monooxygenase
+      -[node13158: 1.14.14.84 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +2*H2O {br=BR50025, ev=cof+eq}]-> 6E_8_oxolinalool;  // linalool 8-monooxygenase
+    -B[node13142: 4.2.3.119 | +PPi ^R {br=BR50082, ev=cof+eq}]-> alpha_pinene;  // (-)-alpha-pinene synthase
+    -L[node13276: 4.2.3.20/4.2.3.15 | +PPi ^L {br=BR47586, ev=cof+eq}]-> R_limonene  // (R)-limonene synthase;myrcene synthase
+      -L[node13277: 1.14.14.53 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR47606, ev=cof+eq}]-> plus_trans_carveol  // (R)-limonene 6-monooxygenase
+      -[node13086: 1.1.1.275 | NAD>NADH ^R {br=BR47616, ev=cof+eq, match=kegg}]-> S_carvone;  // (+)-trans-carveol dehydrogenase
+    -L[node13263: 4.2.3.107 | +PPi ^L {br=BR49952, ev=cof+eq}]-> plus_car_3_ene;  // (+)-car-3-ene synthase
+    -L[node13150: 4.2.3.120 | +PPi ^L {br=BR50083, ev=cof+eq}]-> beta_pinene;  // (-)-beta-pinene synthase
+    -L[node13258: 4.2.3.117 | +PPi ^R {br=BR50080, ev=cof+eq}]-> camphene;  // (-)-camphene synthase
+    -[node13151: 4.2.3.113 | +PPi ^L {br=BR49953, ev=cof+eq}]-> terpinolene;  // terpinolene synthase
+    -[node13257: 4.2.3.116/4.2.3.20 | +PPi ^L {br=BR50079, ev=cof+eq}]-> plus_camphene;  // (+)-camphene;(R)-limonene synthase
+    -[node13249: 4.2.3.10 | -H2O, +PPi ^L {br=BR48348, ev=cof+eq}]-> endo_fenchol;  // (-)-endo-fenchol synthase
+    -[node13163: 4.2.3.B69 | +PPi ^R {br=BR52642, ev=cof+eq}]-> Z_beta_ocimene;  // (Z)-beta-ocimene synthase
+    -R[node13155: 4.2.3.16 | +PPi ^L {br=BR22831, ev=cof+eq}]-> S_limonene;  // (4S)-limonene synthase
+    -R[node13153: 4.2.3.108 | -H2O, +PPi ^L {br=BR50071, ev=cof+eq}]-> 1_8_cineole;  // 1,8-cineole synthase
+  }
+
+  myrcene
+    -L[node13157: 1.14.14.31 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR51495, ev=cof+eq}]-> R_ipsdienol  // ipsdienol synthase
+    -R[node13143: 1.1.1.386 | NAD>NADH {br=BR51210_WOP, ev=cof+eq} || node13202: 1.1.1.386 | NADP>NADPH {br=BR51210, ev=cof+eq}]-> ipsdienone;  // ipsdienol dehydrogenase; ipsdienol dehydrogenase
+
+  geraniol
+    -[node13162: 1.14.14.83 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O ^L {br=BR50026, ev=cof+eq}]-> 6E_8_hydroxygeraniol;  // geraniol 8-hydroxylase
+
+  S_limonene
+    -[node13148: 1.14.14.51 | -O2, -reduced_NADPH_hemoprotein_reductase, +H2O, +H2O ^R {br=BR36764, ev=cof+eq}]-> trans_carveol  // (S)-limonene 6-monooxygenase
+    -R[node13149: 1.1.1.243 | NADP>NADPH ^L {br=BR29279, ev=cof+eq}]-> carvone;  // carveol dehydrogenase
+
+  S_limonene
+    -R[node13096: 1.14.14.99 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR36763, ev=cof+eq}]-> trans_isopiperitenol  // (S)-limonene 3-monooxygenase
+    -R[node13090: 1.1.1.223 | NAD>NADH ^L {br=BR29264, ev=cof+eq}]-> isopiperitenone  // isopiperitenol dehydrogenase
+    -[node13080: 1.3.1.82 | NADPH>NADP ^L]- plus_cis_isopulegone  // (-)-isopiperitenone reductase
+    -[node13082: 5.3.3.1 {br=BS461730, ev=eq}]-> plus_pulegone  // steroid DELTA-isomerase
+    -R[node13085: 1.14.14.143 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR48926, ev=cof+eq}]-> plus_menthofuran;  // (+)-menthofuran synthase
+
+  plus_pulegone
+    -B[node13098: 1.3.1.81 | NADPH>NADP ^R]- menthone  // (+)-pulegone reductase
+    -[node13081: 1.14.13.105 | -O2, -NADPH, +H2O, +H2O ^L]- 4R_7S_7_isopropyl_4_methyl_2_oxo_oxepanone;  // monocyclic monoterpene ketone monooxygenase
+
+  plus_pulegone
+    -B[node13232: 1.3.1.81 | NADPH>NADP ^L]- plus_isomenthone;  // (+)-pulegone reductase
+
+  menthone
+    -L[node13084: 1.1.1.207 | NADPH>NADP ^R]- menthol;  // (-)-menthol dehydrogenase
+
+  menthone
+    -L[node13083: 1.1.1.208 | NADPH>NADP ^L]- plus_neomenthol;  // (+)-neomenthol dehydrogenase
+
+  geraniol
+    -R[node13141: 5.4.4.8 {br=BS410839, ev=eq}]-> linalool;  // linalool isomerase
+
+  geraniol
+    -R[node13160: 1.1.1.183 | NADP>NADPH {br=BR29240, ev=cof+eq} || node13156: 1.1.1.347 | NAD>NADH {br=BR50498, ev=cof+eq}]-> geranial  // geraniol dehydrogenase (NADP+); geraniol dehydrogenase (NAD+)
+    -[node13161: 1.2.1.86 | NAD>NADH, -H2O ^R {br=BR50237, ev=cof+eq}]-> geranate;  // geranial dehydrogenase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { NADP NADPH } forward { node13106 node13149 node13160 node13166 node13169 node13171 node13202 } backward { node13080 node13083 node13084 node13098 node13232 };
+}

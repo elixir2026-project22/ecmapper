@@ -1,0 +1,31 @@
+pwl 2.0;
+subsystem methane-metabolism 'methane metabolism' {
+  // BRENDA subsystem: 6 reactions (6 with direction), 9 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound CH2O brenda:130 kegg:C00067;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound NH3 brenda:27;
+  compound N_Me_Glu 'N-Me-Glu' brenda:3829 kegg:C01046;
+  compound O2 brenda:9 brenda:1180;
+  compound dimethylamine brenda:1680 kegg:C00543;
+  compound electron_transferring_flavoprotein 'electron-transferring flavoprotein' brenda:2297 kegg:C04253;
+  compound methanol brenda:83 kegg:C00132;
+  compound methylamine brenda:324 kegg:C00218;
+  compound oxidized_electron_acceptor 'oxidized electron acceptor' brenda:374 brenda:12937;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  compound reduced_electron_transferring_flavoprotein 'reduced electron-transferring flavoprotein' brenda:1892 brenda:3252 kegg:C04570;
+  compound trimethylamine brenda:734 kegg:C00565;
+  port CH2O side R to formaldehyde-oxidation;
+
+  CH2O
+    -B[node8696: 1.5.99.5 | -reduced_acceptor, -Glu, +H2O, +oxidized_electron_acceptor {br=BR40352, ev=cof-eq}]-> N_Me_Glu  // methylglutamate dehydrogenase
+    -[node8698: 2.1.1.21 | -NH3, +Glu ^L {br=BR43888, ev=cof-eq}]-> methylamine  // methylamine-glutamate N-methyltransferase
+    -L[node8700: 1.5.8.1 | -reduced_electron_transferring_flavoprotein, -CH2O, +H2O, +electron_transferring_flavoprotein {br=BR36967, ev=cof-eq}]-> dimethylamine  // dimethylamine dehydrogenase
+    -[node8699: 1.5.8.2 | -reduced_electron_transferring_flavoprotein, -CH2O, +electron_transferring_flavoprotein, +H2O {br=BR36968, ev=cof-eq}]-> trimethylamine;  // trimethylamine dehydrogenase
+
+  methanol -[node10813: 1.1.3.13 | -O2 {br=BS188877, ev=cof+eq, match=kegg}]-> (CH2O + H2O2);  // alcohol oxidase
+  2*H2O2 -[node10816: 1.11.1.21 {br=BR40494, ev=eq}]-> (O2 + 2*H2O);  // catalase-peroxidase
+}

@@ -1,0 +1,271 @@
+pwl 2.0;
+subsystem purine-metabolism 'purine metabolism' {
+  // BRENDA subsystem: 103 reactions (88 with direction), 72 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compartment side1 'side 1';
+  compartment side2 'side 2';
+  compound 10_formyltetrahydrofolate '10-formyltetrahydrofolate' brenda:536 kegg:C00234;
+  compound 2_dAdo '2\'-dAdo' brenda:357 kegg:C00559;
+  compound 2_deoxy_Rib_1_P '2-deoxy-Rib 1-P' brenda:33002;
+  compound 2_deoxy_Rib_5_P '2-deoxy-Rib 5-P' brenda:1398;
+  compound 2_deoxyguanosine '2\'-deoxyguanosine' brenda:504 kegg:C00330;
+  compound 2_deoxyinosine '2\'-deoxyinosine' brenda:2187 kegg:C05512;
+  compound 3_5_cGMP '3\',5\'-cGMP' brenda:12325 kegg:C00942;
+  compound 3_phospho_D_glycerate '3-phospho-D-glycerate' brenda:201 kegg:C00197;
+  compound 4_aminoimidazole '4-aminoimidazole' brenda:29530 kegg:C05239;
+  compound 4_imidazolone '4-imidazolone' brenda:184566 kegg:C06195;
+  compound 5_10_methenyltetrahydrofolate '5,10-methenyltetrahydrofolate' brenda:1085 kegg:C00445;
+  compound 5_10_methylenetetrahydrofolate '5,10-methylenetetrahydrofolate' brenda:401 kegg:C00143;
+  compound 5_P_alpha_D_Rib_1_PP '5-P-alpha-D-Rib 1-PP' brenda:158 kegg:C00119;
+  compound 5_Phosphoribosyl_N_formylglycinamidine '5\'-Phosphoribosyl-N-formylglycinamidine' brenda:182088 kegg:C04640;
+  compound 5_Ureido_4_imidazole_carboxylate '5-Ureido-4-imidazole carboxylate' brenda:182092 kegg:C05515;
+  compound 5_amino_1_5_phospho_D_ribosyl_imidazole '5-amino-1-(5-phospho-D-ribosyl)imidazole' brenda:5283 kegg:C03373;
+  compound 5_amino_1_5_phospho_D_ribosyl_imidazole_4_carboxylate '5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate' brenda:2596 kegg:C04751;
+  compound 5_amino_4_imidazole_carboxylate '5-amino-4-imidazole carboxylate' brenda:182089 kegg:C05516;
+  compound 5_carboxyamino_1_5_phospho_D_ribosyl_imidazole '5-carboxyamino-1-(5-phospho-D-ribosyl)imidazole' brenda:8626 kegg:C15667;
+  compound 5_formiminotetrahydrofolate '5-formiminotetrahydrofolate' brenda:12390 kegg:C00664;
+  compound 6S_THFA '(6S)-THFA' brenda:207 brenda:235324 kegg:C00101;
+  compound 6_8_Dihydroxypurine '6,8-Dihydroxypurine' brenda:10549;
+  compound 7_methylxanthine '7-methylxanthine' brenda:2307 kegg:C16353;
+  compound 8_hydroxypurine '8-hydroxypurine' brenda:48773;
+  compound ADP brenda:13 kegg:C00008;
+  compound ADP_Rib 'ADP-Rib' brenda:402 kegg:C00301;
+  compound AICAR brenda:20029 kegg:C04677;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound Ap4A brenda:1417 kegg:C01260;
+  compound Asp brenda:97 kegg:C00049;
+  compound CH2O brenda:130 kegg:C00067;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound D_Rib_5_P 'D-Rib 5-P' brenda:183 kegg:C00117;
+  compound D_ribose 'D-ribose' brenda:292 brenda:16502;
+  compound Faicar brenda:15566 kegg:C04734;
+  compound Fd_ox brenda:289 kegg:C00139;
+  compound Fd_red brenda:265 kegg:C00138;
+  compound GAP brenda:147 kegg:C00118;
+  compound GDP brenda:53 kegg:C00035;
+  compound GMP brenda:162 kegg:C00144;
+  compound GTP brenda:37 kegg:C00044;
+  compound Gln brenda:102 kegg:C00064;
+  compound Glu brenda:41 kegg:C00025;
+  compound Gly brenda:72 kegg:C00037;
+  compound Gua brenda:199 kegg:C00242;
+  compound Guo brenda:296 kegg:C00387;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound HCO3 brenda:195 kegg:C00288;
+  compound Hyp brenda:211 kegg:C00262;
+  compound IMP brenda:232 kegg:C00130;
+  compound INS brenda:167 kegg:C00294;
+  compound N1_5_phospho_D_ribosyl_glycinamide 'N1-(5-phospho-D-ribosyl)glycinamide' brenda:16124 kegg:C03838;
+  compound N2_formyl_N1_5_phospho_D_ribosyl_glycinamide 'N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide' brenda:29573 kegg:C04376;
+  compound N6_1_2_dicarboxyethyl_AMP 'N6-(1,2-dicarboxyethyl)-AMP' brenda:97325 kegg:C03794;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound N_formimino_glycine 'N-formimino-glycine' brenda:130542 kegg:C02718;
+  compound O2 brenda:9 brenda:1180;
+  compound PPPi brenda:940 kegg:C00536;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound RibN_5_P 'RibN 5-P' brenda:15580 kegg:C03090;
+  compound Rul_1_5_PP 'Rul 1,5-PP' brenda:490 brenda:4373 kegg:C01182;
+  compound S_2_5_amino_1_5_phospho_D_ribosyl_imidazole_4_carboxamido_succinate '(S)-2-[5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate' brenda:179789 kegg:C04823;
+  compound Ser brenda:95 kegg:C00065;
+  compound XMP brenda:1007 kegg:C00655;
+  compound Xao brenda:1222 kegg:C01762;
+  compound acetaldehyde brenda:90 kegg:C00084;
+  compound acetate brenda:47 kegg:C00033;
+  compound acetyl_phosphate 'acetyl phosphate' brenda:358 kegg:C00227;
+  compound adenine brenda:144 kegg:C00147;
+  compound adenosine brenda:122 kegg:C00212;
+  compound alpha_D_Rib_1_5_PP 'alpha-D-Rib 1,5-PP' brenda:6393 kegg:C01151;
+  compound alpha_D_Rib_1_P 'alpha-D-Rib 1-P' brenda:752 kegg:C00620;
+  compound caffeine brenda:882 kegg:C07481;
+  compound dADP brenda:731 kegg:C00206;
+  compound dAMP brenda:716 kegg:C00360;
+  compound dATP brenda:140 kegg:C00131;
+  compound dGDP brenda:11033 kegg:C00361;
+  compound dGMP brenda:729 kegg:C00362;
+  compound dGTP brenda:219 kegg:C00286;
+  compound formate brenda:120 kegg:C00058;
+  compound fumarate brenda:170 kegg:C00122;
+  compound ox_thioredoxin 'ox. thioredoxin' brenda:1795 kegg:C00343;
+  compound oxidized_electron_donor 'oxidized electron donor' brenda:1546;
+  compound oxidized_glutaredoxin_like_protein 'oxidized glutaredoxin-like protein' brenda:189771;
+  compound paraxanthine brenda:2761 kegg:C13747;
+  compound purine brenda:2218 kegg:C15587;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound red_thioredoxin 'red. thioredoxin' brenda:1120 kegg:C00342;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+  compound reduced_glutaredoxin_like_protein 'reduced glutaredoxin-like protein' brenda:189770;
+  compound theobromine brenda:3927 kegg:C07480;
+  compound thioredoxin brenda:121 kegg:C00342;
+  compound thioredoxin_disulfide 'thioredoxin disulfide' brenda:476 kegg:C00343;
+  compound urate brenda:710 kegg:C00366;
+  compound xanthine brenda:234 kegg:C00385;
+  port 2_deoxy_Rib_1_P side R to pyrimidine-metabolism;
+  port 5_P_alpha_D_Rib_1_PP side L to histidine-metabolism;
+  port 5_amino_1_5_phospho_D_ribosyl_imidazole side L to vitamin-B1-metabolism;
+  port CoA side R to coenzyme-A-metabolism;
+  port GTP side L to 6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis;
+  port GTP side L to molybdenum-cofactor-biosynthesis;
+  port GTP side L to sulfopterin-metabolism;
+  port GTP side L to tetrahydrofolate-metabolism;
+  port urate side R to allantoin-degradation;
+
+  // ring: cycle of the drawing (24 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    2_deoxyguanosine
+      <-B[node8973: 3.1.5.1 | -H2O, +PPPi ^R {br=BR15965, ev=cof+eq, match=kegg}]- dGTP  // dGTPase
+      <-L[node10501: 1.17.4.2 | -red_thioredoxin, +H2O, +ox_thioredoxin {br=BS287788, ev=cof+eq}]- GTP  // ribonucleoside-triphosphate reductase (thioredoxin)
+      <-L[node10380: 4.6.1.1 | -PPi ^R {br=BR3451, ev=cof-eq}]- 3_5_cGMP  // adenylate cyclase
+      -[node7867: 3.1.4.17 | -H2O ^R]- GMP  // 3',5'-cyclic-nucleotide phosphodiesterase
+      -R[node4500: -> 3.1.3.5 | -H2O, +Pi {br=BS401104, ev=cof+eq, match=kegg} || node6221: <- 2.7.1.73 | ATP>ADP {br=BS353783, ev=cof+eq, match=kegg}]- Guo  // 5'-nucleotidase; inosine kinase
+      -[node4496: 3.2.2.1 | -H2O, +D_ribose {br=BS214500, ev=cof+eq} || node4350: 2.4.2.1/2.4.2.15 | -Pi, +alpha_D_Rib_1_P {br=BR44271, ev=cof+eq}]-> Gua  // purine nucleosidase; purine-nucleoside phosphorylase;guanosine phosphorylase
+      -L[node4492: 3.5.4.3 | -H2O, +NH3 ^R {br=BR22740, ev=cof+eq}]-> xanthine  // guanine deaminase
+      -R[node4488: 1.17.1.4 | NAD>NADH, -H2O ^L {br=BR48027, ev=cof+eq}]-> urate  // xanthine dehydrogenase
+      <-L[node4451: 1.17.1.4 | NAD>NADH, -H2O {br=BS359316, ev=cof+eq}]- 6_8_Dihydroxypurine  // xanthine dehydrogenase
+      -[node4455: ? | -H2O ^L]- 8_hydroxypurine  // xanthine dehydrogenase
+      <-B[node4458: 1.17.1.4 | NAD>NADH, -H2O {br=BS359321, ev=cof+eq}]- purine  // xanthine dehydrogenase
+      -[node4393: ? | -oxidized_electron_donor, -H2O, +reduced_electron_acceptor]- Hyp  // purine hydroxylase
+      <-B[node4347: 3.5.4.2 | -H2O, +NH3 ^L {br=BR19264, ev=cof+eq}]- adenine  // adenine deaminase
+      -L[node6209: -> 2.4.2.1 | -alpha_D_Rib_1_P, +Pi {br=BS323170, ev=cof-eq} || node6231: <- 3.2.2.7 | -H2O, +D_ribose {br=BR16044, ev=cof+eq}]- adenosine  // purine-nucleoside phosphorylase; adenosine nucleosidase
+      -[node6227: -> 2.7.1.20 | ATP>ADP, +H {br=BR47760, ev=cof+eq} || node6224: <- 3.1.3.5 | -H2O, +Pi {br=BS399878, ev=cof+eq, match=single}]- AMP  // adenosine kinase; 5'-nucleotidase
+      -R[node4562: 2.7.4.3 | -ATP ^L {br=BR47850, ev=cof+eq}]-> ADP  // adenylate kinase
+      -[node10621: 7.1.2.1 | -H@side1, -H2O, +Pi, +H@side2]- ATP  // P-type H+-exporting transporter
+      -L[node4549: 1.17.4.2 | -red_thioredoxin, +ox_thioredoxin, +H2O {br=BS287787, ev=cof+eq} || node455: 1.1.98.6 | -formate, +CO2, +H2O {br=BS439175, ev=cof+eq}]-> dATP  // ribonucleoside-triphosphate reductase (thioredoxin); ribonucleoside-triphosphate reductase (formate)
+      <-L[node4553: 2.7.4.6 | ATP>ADP ^R {br=BS358239, ev=cof+eq}]- dADP  // nucleoside-diphosphate kinase
+      -[node4386: 2.7.4.11 | ADP>ATP ^R {br=BR48070, ev=cof-eq}]-> dAMP  // (deoxy)adenylate kinase
+      -[node4382: 2.7.1.74/2.7.1.76/2.7.1.145 | ADP>ATP, -H ^R {br=BR47802, ev=cof-eq}]-> 2_dAdo  // deoxycytidine kinase;2'-deoxyadenosine kinase;deoxynucleoside kinase
+      -[node4377: 3.5.4.4 | -H2O, +NH3 ^R {br=BS141041, ev=cof+eq}]-> 2_deoxyinosine  // adenosine deaminase
+      -[node4373: 2.4.2.1 | -Pi, +Hyp ^R {br=BS323151, ev=cof-eq, match=kegg}]-> 2_deoxy_Rib_1_P  // purine-nucleoside phosphorylase
+      <-[node3398: 2.4.2.1 | -Pi, +Gua ^L {br=BS323208, ev=cof+eq, match=kegg}]- 2_deoxyguanosine;  // purine-nucleoside phosphorylase
+    chord 2_dAdo -B[node4370: 2.4.2.1 | -Pi, +adenine ^R {br=BS323171, ev=cof-eq, match=kegg}]-> 2_deoxy_Rib_1_P;  // purine-nucleoside phosphorylase
+    chord Hyp -R[node4453: 1.17.1.4 | -2*H2O ^R {br=BS359315, ev=cof+eq}]-> 6_8_Dihydroxypurine;  // xanthine dehydrogenase
+    chord dADP -R[node4558: <- 1.17.4.1 | -red_thioredoxin, +ox_thioredoxin, +H2O {br=BS287791, ev=cof+eq} || node4309: 1.17.4.1 | reduced_glutaredoxin_like_protein>oxidized_glutaredoxin_like_protein, +H2O]- ADP;  // ribonucleoside-diphosphate reductase; ribonucleoside-diphosphate reductase
+    chord adenine -L[node6206: 2.4.2.7 | -5_P_alpha_D_Rib_1_PP, +PPi ^R {br=BR47515, ev=cof-eq}]-> AMP;  // adenine phosphoribosyltransferase
+    chord Gua -L[node6218: 2.4.2.8 | -5_P_alpha_D_Rib_1_PP, +PPi ^R {br=BS354829, ev=cof+eq}]-> GMP;  // hypoxanthine phosphoribosyltransferase
+    chord AMP -[node11309: 2.4.2.57 | -Pi {br=BR50875, ev=cof+eq}]-> (alpha_D_Rib_1_5_PP + adenine);  // AMP phosphorylase
+    chord AMP -[node6204: 3.2.2.4 | -H2O {br=BR19230, ev=cof+eq}]-> (adenine + D_Rib_5_P);  // AMP nucleosidase
+  }
+
+  // ring: cycle of the drawing (7 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    GMP
+      -[node7841: 1.7.1.7 | NADPH>NADP, +NH3 {br=BR36982, ev=cof-eq}]-> IMP  // GMP reductase
+      -R[node6211: <- 2.7.1.73 | ATP>ADP {br=BR47800, ev=cof+eq} || node4480: 3.1.3.5 | -H2O, -Pi {br=BR51619, ev=conflict}]- INS  // inosine kinase; 5'-nucleotidase
+      -[node4352: 2.4.2.1 | -Pi, +alpha_D_Rib_1_P {br=BS323149, ev=cof+eq} || node4476: 3.2.2.2 | -H2O, +D_ribose {br=BR16042, ev=cof+eq}]-> Hyp  // purine-nucleoside phosphorylase; inosine nucleosidase
+      -R[node4472: 1.17.1.4 | NAD>NADH, -H2O {br=BS359314, ev=cof+eq}]-> xanthine  // xanthine dehydrogenase
+      -R[node4361: 2.4.2.1 | +alpha_D_Rib_1_P, +Pi {br=BS323174, ev=conflict} || node3396: <- 3.2.2.1 | -H2O, +D_ribose {br=BS214506, ev=cof+eq}]- Xao  // purine-nucleoside phosphorylase; purine nucleosidase
+      <-[node4468: 3.1.3.5 | -H2O, +Pi ^R {br=BS383410, ev=cof+eq}]- XMP  // 5'-nucleotidase
+      -L[node6155: 6.3.5.2 | ATP>AMP, Gln>Glu, -H2O, +PPi {br=BR149, ev=cof+eq}]-> GMP;  // GMP synthase (glutamine-hydrolysing)
+    chord Hyp -L[node6214: 2.4.2.8 | -5_P_alpha_D_Rib_1_PP, +PPi ^L {br=BR47537, ev=cof-eq}]-> IMP;  // hypoxanthine phosphoribosyltransferase
+    chord IMP -B[node6149: 1.1.1.205 | NAD>NADH, -H2O {br=BR33666, ev=cof+eq}]-> XMP;  // IMP dehydrogenase
+    chord xanthine -L[node6215: 2.4.2.22 | -5_P_alpha_D_Rib_1_PP, +PPi ^R {br=BR47505, ev=cof-eq}]-> XMP;  // xanthine phosphoribosyltransferase
+  }
+
+  // ring: cycle of the drawing (9 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    5_formiminotetrahydrofolate
+      -B[node4429: 4.3.1.4 | +NH3 ^L {br=BR3426, ev=cof+eq, match=kegg}]-> 5_10_methenyltetrahydrofolate  // formimidoyltetrahydrofolate cyclodeaminase
+      -[node4419: 1.5.1.5 | NADPH>NADP ^L {br=BR36902, ev=cof-eq}]-> 5_10_methylenetetrahydrofolate  // methylenetetrahydrofolate dehydrogenase (NADP+)
+      -B[node4415: 2.1.2.1 | -H2O, -Gly, +6S_THFA {br=BR40573, ev=cof+eq}]-> Ser  // glycine hydroxymethyltransferase
+      -B[node4410: 4.3.1.17 | +NH3 ^R {br=BR22832, ev=cof+eq}]-> pyruvate;  // L-Serine ammonia-lyase
+    Ac_CoA
+      -[node4402: 2.3.1.8 | -Pi, +CoA ^L {br=BR44082, ev=cof+eq}]-> acetyl_phosphate  // phosphate acetyltransferase
+      <-[node4391: 1.21.4.2 | -Pi, -thioredoxin, +thioredoxin_disulfide, +NH3, +H2O {br=BR47373, ev=cof-eq}]- Gly;  // glycine reductase
+    N_formimino_glycine -[node4433: 2.1.2.4 | -6S_THFA {br=BR43943, ev=cof-eq, match=kegg}]-> (5_formiminotetrahydrofolate + Gly);  // glycine formimidoyltransferase
+    (CoA + pyruvate) -[node4407: 1.2.7.1 | Fd_ox>Fd_red, +CO2, +2*H {br=BR29433, ev=cof+eq}]-> Ac_CoA;  // pyruvate synthase
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    paraxanthine
+      -B[node11609: 1.14.13.179 | NADH>NAD, -O2, +H2O, +CH2O]- caffeine  // methylxanthine N3-demethylase
+      -B[node11606: 1.14.13.178 | NADPH>NADP, -O2, +H2O, +CH2O {br=BR50577, ev=cof+eq}]-> theobromine  // methylxanthine N1-demethylase
+      -[node11608: 1.14.13.179 | NADH>NAD, -O2, +H2O, +CH2O {br=BR50580-a, ev=cof+eq}]-> 7_methylxanthine  // methylxanthine N3-demethylase
+      <-B[node11611: 1.14.13.178 | NADPH>NADP, -O2, +H2O, +CH2O {br=BR50579, ev=cof+eq}]- paraxanthine;  // methylxanthine N1-demethylase
+  }
+
+  acetyl_phosphate
+    -[node4398: 2.7.2.1 | ADP>ATP ^L {br=BR47820, ev=cof-eq}]-> acetate;  // acetate kinase
+
+  7_methylxanthine
+    -L[node11602: 1.14.13.128 | -NADP, -NADPH, -H2O {br=BR49432, ev=conflict}]- xanthine  // 7-methylxanthine demethylase
+    -L[node4449: ? | -H2O, +H ^L]- 5_Ureido_4_imidazole_carboxylate  // xanthine amidohydrolase
+    -[node4445: 3.5.1.- | -H2O, -H, +CO2, +NH3]- 5_amino_4_imidazole_carboxylate  // 4-ureido-5-imidazolecarboxylate amidohydrolase
+    -[node4439: ? | +CO2 ^R]- 4_aminoimidazole  // 4-aminoimidazolecarboxylate decarboxylase
+    -[node4436: 3.5.4.8 | -H2O, +NH3 {br=BR22745, ev=cof+eq, match=kegg}]-> 4_imidazolone  // aminoimidazolase
+    -B[node8924: 3.5.2.- | -H2O ^R]- N_formimino_glycine;  // 4-imidazolonase
+
+  GMP
+    -B[node6162: 2.7.4.8 | ATP>ADP ^R {br=BR47853, ev=cof+eq}]-> GDP  // guanylate kinase
+    -[node6166: 2.7.4.6 | ATP>ADP ^R {br=BS358258, ev=cof-eq}]-> GTP;  // nucleoside-diphosphate kinase
+
+  GDP
+    -L[node4313: 1.17.4.1 | reduced_glutaredoxin_like_protein>oxidized_glutaredoxin_like_protein, +H2O || node6169: -> 1.17.4.1 | -red_thioredoxin, +H2O, +ox_thioredoxin {br=BS287796, ev=cof+eq}]- dGDP  // ribonucleoside-diphosphate reductase; ribonucleoside-diphosphate reductase
+    -L[node6173: 2.7.4.6 | ATP>ADP ^L {br=BS358247, ev=cof+eq}]-> dGTP  // nucleoside-diphosphate kinase
+    -B[node3378: 3.6.1.9 | -H2O, +PPi ^R {br=BS141253, ev=cof+eq}]-> dGMP  // nucleotide diphosphatase
+    -B[node11288: 2.7.4.12/2.7.4.13 | ATP>ADP ^L]- dGDP;  // T2-induced deoxynucleotide kinase;(deoxy)nucleoside-phosphate kinase
+
+  Guo
+    -[node4464: 3.5.4.15 | -H2O, +NH3 ^R {br=BR22736, ev=cof+eq}]-> Xao;  // guanosine deaminase
+
+  2_deoxyguanosine
+    -R[node11291: 2.7.1.113/2.7.1.145 | ATP>ADP ^L {br=BR47726, ev=cof+eq, match=kegg}]-> dGMP;  // deoxyguanosine kinase;deoxynucleoside kinase
+
+  2_deoxy_Rib_1_P
+    -B[node4366: 5.4.2.7 {br=BS1184, ev=eq}]-> 2_deoxy_Rib_5_P;  // phosphopentomutase
+
+  adenosine
+    -B[node4355: 3.5.4.4 | -H, -H2O, +NH3 ^R {br=BR22741, ev=cof+eq}]-> INS;  // adenosine deaminase
+
+  IMP
+    -[node4571: 6.3.4.4 | GTP>GDP, -Asp, +Pi {br=BR141, ev=cof+eq}]-> N6_1_2_dicarboxyethyl_AMP  // Adenylosuccinate synthase
+    -[node4565: 4.3.2.2 | +fumarate ^R {br=BR3432, ev=cof+eq}]-> AMP  // adenylosuccinate lyase
+    -B[node4483: 3.5.4.6/3.5.4.17 | -H2O, +NH3 ^R {br=BR22743, ev=cof+eq}]-> IMP  // AMP deaminase;adenosine-phosphate deaminase
+    <-[node6146: 3.5.4.10 | +H2O ^L {br=BR19263, ev=cof-eq, match=kegg}]- Faicar  // IMP cyclohydrolase
+    <-B[node6142: 2.1.2.3 | -10_formyltetrahydrofolate, +6S_THFA {br=BR43942, ev=cof+eq, match=kegg} || node2625: 6.3.4.23 | ATP>ADP, -formate, +Pi {br=BR50732, ev=cof+eq, match=kegg}]- AICAR  // phosphoribosylaminoimidazolecarboxamide formyltransferase; formate-phosphoribosylaminoimidazolecarboxamide ligase
+    <-[node6139: 4.3.2.2 | +fumarate ^R {br=BR12741, ev=cof+eq, match=kegg}]- S_2_5_amino_1_5_phospho_D_ribosyl_imidazole_4_carboxamido_succinate  // adenylosuccinate lyase
+    <-R[node6133: 6.3.2.6 | ATP>ADP, -Asp, +Pi {br=BR122, ev=cof+eq}]- 5_amino_1_5_phospho_D_ribosyl_imidazole_4_carboxylate  // phosphoribosylaminoimidazolesuccinocarboxamide synthase
+    <-[node4461: 4.1.1.21 | -CO2 ^L {br=BR282, ev=cof-eq}]- 5_amino_1_5_phospho_D_ribosyl_imidazole  // phosphoribosylaminoimidazole carboxylase
+    -R[node6124: 6.3.4.18 | ATP>ADP, -H, -HCO3, +Pi {br=BR48708, ev=cof+eq}]-> 5_carboxyamino_1_5_phospho_D_ribosyl_imidazole  // 5-(carboxyamino)imidazole ribonucleotide synthase
+    -B[node6131: 5.4.99.18 {br=BR48707, ev=eq}]-> 5_amino_1_5_phospho_D_ribosyl_imidazole_4_carboxylate;  // 5-(carboxyamino)imidazole ribonucleotide mutase
+
+  Ap4A
+    -[node2442: 3.6.1.41 | -H2O ^R {br=BR26123, ev=cof+eq}]-> ADP;  // bis(5'-nucleosyl)-tetraphosphatase (symmetrical)
+
+  5_P_alpha_D_Rib_1_PP
+    -B[node6089: 2.4.2.14 | Gln>Glu, -H2O, +PPi {br=BR44270, ev=cof-eq}]-> RibN_5_P  // amidophosphoribosyltransferase
+    -[node6095: 6.3.4.13 | ATP>ADP, -Gly, +Pi {br=BR134, ev=cof+eq}]-> N1_5_phospho_D_ribosyl_glycinamide  // phosphoribosylamine-glycine ligase
+    -B[node6105: 6.3.1.21 | ATP>ADP, -formate, +Pi {br=BR53149, ev=cof+eq} || node6101: 2.1.2.2 | -10_formyltetrahydrofolate, +H, +6S_THFA {br=BR43941, ev=cof+eq}]-> N2_formyl_N1_5_phospho_D_ribosyl_glycinamide  // phosphoribosylglycinamide formyltransferase 2; phosphoribosylglycinamide formyltransferase 1
+    -L[node6111: 6.3.5.3 | ATP>ADP, Gln>Glu, -H2O, +Pi {br=BR150, ev=cof+eq, match=kegg}]-> 5_Phosphoribosyl_N_formylglycinamidine  // phosphoribosylformylglycinamidine synthase
+    -[node6119: 6.3.3.1 | ATP>ADP, +Pi {br=BR126, ev=cof+eq, match=kegg}]-> 5_amino_1_5_phospho_D_ribosyl_imidazole;  // phosphoribosylformylglycinamidine cyclo-ligase
+
+  alpha_D_Rib_1_P
+    -L[node4358: 5.4.2.7 {br=BR23, ev=eq}]-> D_Rib_5_P  // phosphopentomutase
+    <-[node3304: 3.6.1.13 | -H2O, +H, +AMP {br=BR22753, ev=cof+eq}]- ADP_Rib;  // ADP-ribose diphosphatase
+
+  alpha_D_Rib_1_5_PP
+    -R[node11311: 5.3.1.29 {br=BR50764, ev=eq}]-> Rul_1_5_PP  // ribose-1,5-bisphosphate isomerase
+    -[node11313: 4.1.1.39 | -H2O, -CO2, +2*H {br=BR297, ev=cof-eq}]-> 3_phospho_D_glycerate;  // ribulose-bisphosphate carboxylase
+
+  2_deoxy_Rib_5_P -[node4364: 4.1.2.4 {br=BR371, ev=eq, match=single}]-> (acetaldehyde + GAP);  // Deoxyribose-phosphate aldolase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { GMP Guo Xao xanthine XMP };
+  motif cycle { GMP IMP XMP };
+  motif substrate_cycle { AMP adenosine } forward { node6224 } backward { node6227 };
+  motif substrate_cycle { GMP Guo } forward { node4500 } backward { node6221 };
+  motif substrate_cycle { adenine adenosine } forward { node6209 } backward { node6231 };
+  motif shunt { Guo Xao } bypasses { Guo GMP IMP XMP Xao };
+  motif shunt { GMP IMP XMP } bypasses { GMP Guo Xao xanthine XMP };
+  motif carrier { ADP ATP } forward { node4382 node4386 node4398 } backward { node11288 node11291 node2625 node4553 node6095 node6105 node6111 node6119 node6124 node6133 node6162 node6166 node6173 node6211 node6221 node6227 };
+  motif carrier { NAD NADH } forward { node4451 node4458 node4472 node4488 node6149 } backward { node11608 node11609 };
+  motif transport { H@side1 H@side2 } via { node10621 };
+}

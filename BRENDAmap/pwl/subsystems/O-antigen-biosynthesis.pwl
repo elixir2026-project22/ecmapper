@@ -1,0 +1,25 @@
+pwl 2.0;
+subsystem O-antigen-biosynthesis 'O-antigen biosynthesis' {
+  // BRENDA subsystem: 5 reactions (5 with direction), 6 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound GDP brenda:53 kegg:C00035;
+  compound GDP_beta_L_fucose 'GDP-beta-L-fucose' brenda:651 kegg:C00325;
+  compound N_acetyl_alpha_D_galactosaminyl_diphospho_ditrans_octacis_undecaprenol 'N-acetyl-alpha-D-galactosaminyl-diphospho-ditrans,octacis-undecaprenol' brenda:15359 kegg:C20620;
+  compound N_acetyl_alpha_D_glucosaminyl_diphospho_ditrans_octacis_undecaprenol 'N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-undecaprenol' brenda:6385 kegg:C01289;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_N_acetyl_alpha_D_galactosamine 'UDP-N-acetyl-alpha-D-galactosamine' brenda:1010 kegg:C00203;
+  compound UDP_alpha_D_galactose 'UDP-alpha-D-galactose' brenda:891;
+  compound alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol 'alpha-D-GalNAc-(1->3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol' brenda:28970 kegg:C20621;
+  compound alpha_D_Gal_1_3_alpha_L_Fuc_1_2_beta_D_Gal_1_3_alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol 'alpha-D-Gal-(1->3)-(alpha-L-Fuc-(1->2))-beta-D-Gal-(1->3)-alpha-D-GalNAc-(1->3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol' brenda:89273 kegg:C20626;
+  compound alpha_L_Fuc_1_2_beta_D_Gal_1_3_alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol 'alpha-L-Fuc-(1->2)-beta-D-Gal-(1->3)-alpha-D-GalNAc-(1->3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol' brenda:28971 kegg:C20625;
+  compound beta_D_Gal_1_3_alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol 'beta-D-Gal-(1->3)-alpha-D-GalNAc-(1->3)-alpha-D-GalNAc-diphospho-ditrans,octacis-undecaprenol' brenda:28972 kegg:C20622;
+  port N_acetyl_alpha_D_glucosaminyl_diphospho_ditrans_octacis_undecaprenol side R to teichoic-acid-biosynthesis;
+
+  N_acetyl_alpha_D_glucosaminyl_diphospho_ditrans_octacis_undecaprenol
+    -[node11570: 5.1.3.26 {br=BR50723, ev=eq}]-> N_acetyl_alpha_D_galactosaminyl_diphospho_ditrans_octacis_undecaprenol  // N-acetyl-alpha-D-glucosaminyl-diphospho-ditrans,octacis-undecaprenol 4-epimerase
+    -[node11572: 2.4.1.306 | UDP_N_acetyl_alpha_D_galactosamine>UDP ^L {br=BR50655, ev=cof+eq}]-> alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol  // UDP-GalNAc:alpha-D-GalNAc-diphosphoundecaprenol alpha-1,3-N-acetylgalactosaminyltransferase
+    -[node11574: 2.4.1.122 | UDP_alpha_D_galactose>UDP ^L {br=BS422083, ev=cof+eq}]-> beta_D_Gal_1_3_alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol  // N-acetylgalactosaminide beta-1,3-galactosyltransferase
+    -[node11576: 2.4.1.308 | GDP_beta_L_fucose>GDP ^L {br=BR50657, ev=cof+eq}]-> alpha_L_Fuc_1_2_beta_D_Gal_1_3_alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol  // GDP-Fuc:beta-D-Gal-1,3-alpha-D-GalNAc-1,3-alpha-GalNAc-diphosphoundecaprenol alpha-1,2-fucosyltransferase
+    -[node11578: 2.4.1.309 | UDP_alpha_D_galactose>UDP ^L {br=BR50658, ev=cof+eq}]-> alpha_D_Gal_1_3_alpha_L_Fuc_1_2_beta_D_Gal_1_3_alpha_D_GalNAc_1_3_alpha_D_GalNAc_diphospho_ditrans_octacis_undecaprenol;  // UDP-Gal:alpha-L-Fuc-1,2-beta-Gal-1,3-alpha-GalNAc-1,3-alpha-GalNAc-diphosphoundecaprenol alpha-1,3-galactosyltransferase
+}

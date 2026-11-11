@@ -1,0 +1,29 @@
+pwl 2.0;
+subsystem UDP-GlcNAc-biosynthesis 'UDP-GlcNAc biosynthesis' {
+  // BRENDA subsystem: 4 reactions (4 with direction), 5 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound Fru_6_P 'Fru 6-P' brenda:87 kegg:C00085;
+  compound GlcNAc_1_P 'GlcNAc 1-P' brenda:1449 kegg:C04256;
+  compound GlcN_1_P 'GlcN 1-P' brenda:4092 kegg:C06156;
+  compound GlcN_6_P 'GlcN 6-P' brenda:12491 kegg:C00352;
+  compound Gln brenda:102 kegg:C00064;
+  compound Glu brenda:41 kegg:C00025;
+  compound PPi brenda:17 kegg:C00013;
+  compound UDP_GlcNAc 'UDP-GlcNAc' brenda:17973;
+  compound UTP brenda:65 kegg:C00075;
+  port Fru_6_P side R to glycolysis;
+  port GlcN_6_P side R to metabolism-of-amino-sugars-and-derivatives;
+  port UDP_GlcNAc side L to lipid-A-biosynthesis;
+  port UDP_GlcNAc side L to metabolism-of-amino-sugars-and-derivatives;
+  port UDP_GlcNAc side L to peptidoglycan-biosynthesis;
+  port UDP_GlcNAc side L to teichoic-acid-biosynthesis;
+
+  Fru_6_P
+    -[node9853: 2.6.1.16 | Gln>Glu ^R {br=BR47674, ev=cof+eq}]-> GlcN_6_P  // glutamine-fructose-6-phosphate transaminase (isomerizing)
+    <-[node9854: 5.4.2.10 {br=BS141667, ev=eq}]- GlcN_1_P  // phosphoglucosamine mutase
+    -[node6711: 2.3.1.157 | Ac_CoA>CoA ^R {br=BS189550, ev=cof+eq}]-> GlcNAc_1_P  // glucosamine-1-phosphate N-acetyltransferase
+    -[node6716: 2.7.7.23 | -UTP, +PPi ^R {br=BR47870, ev=cof+eq}]-> UDP_GlcNAc;  // UDP-N-acetylglucosamine diphosphorylase
+}

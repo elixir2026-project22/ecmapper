@@ -1,0 +1,23 @@
+pwl 2.0;
+subsystem IAA-biosynthesis 'IAA biosynthesis' {
+  // BRENDA subsystem: 3 reactions (3 with direction), 4 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 3_indoleacetamide '3-indoleacetamide' brenda:4257 kegg:C02693;
+  compound CO2 brenda:28 kegg:C00011;
+  compound H2O brenda:1 kegg:C00001;
+  compound NH3 brenda:27;
+  compound O2 brenda:9 brenda:1180;
+  compound Trp brenda:119 kegg:C00078;
+  compound indole_3_acetate 'indole-3-acetate' brenda:3639 kegg:C00954;
+  compound indole_3_acetonitrile 'indole-3-acetonitrile' brenda:3396 kegg:C02938;
+  port Trp side D to tryptophan-metabolism;
+  port indole_3_acetate side D to tryptophan-metabolism;
+
+  Trp
+    -[node7746: 1.13.12.3 | -O2, +H2O, +CO2 {br=BR40465, ev=cof+eq, match=kegg}]-> 3_indoleacetamide  // tryptophan 2-monooxygenase
+    -[node7758: 3.5.1.4 | -H2O, +NH3 ^L {br=BS140492, ev=cof+eq}]-> indole_3_acetate;  // amidase
+
+  indole_3_acetonitrile
+    -B[node7756: 4.2.1.84 | -H2O ^R {br=BS363352, ev=cof+eq, match=single}]-> 3_indoleacetamide;  // nitrile hydratase
+}

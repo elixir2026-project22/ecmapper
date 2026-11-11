@@ -1,0 +1,44 @@
+pwl 2.0;
+subsystem benzoxazinoid-glucosides-biosynthesis 'benzoxazinoid glucosides biosynthesis' {
+  // BRENDA subsystem: 10 reactions (7 with direction), 11 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 1S_2R_1_C_indol_3_yl_glycerol_3_phosphate '(1S,2R)-1-C-(indol-3-yl)glycerol 3-phosphate' brenda:17953 kegg:C03506;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2R_4_7_dihydroxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside '(2R)-4,7-dihydroxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl beta-D-glucopyranoside' brenda:28522 kegg:C18062;
+  compound 2R_4_hydroxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside '(2R)-4-hydroxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl beta-D-glucopyranoside' brenda:15205 kegg:C15772;
+  compound 2R_4_hydroxy_7_methoxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside '(2R)-4-hydroxy-7-methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl beta-D-glucopyranoside' brenda:28523 kegg:C04831;
+  compound 2_4_dihydroxy_2H_1_4_benzoxazin_3_4H_one '2,4-dihydroxy-2H-1,4-benzoxazin-3(4H)-one' brenda:8479 kegg:C15770;
+  compound 2_hydroxy_2H_1_4_benzoxazin_3_4H_one '2-hydroxy-2H-1,4-benzoxazin-3(4H)-one' brenda:9632 kegg:C15769;
+  compound 3_hydroxyindolin_2_one '3-hydroxyindolin-2-one' brenda:14951 kegg:C11130;
+  compound 4_7_dimethoxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside '4,7-dimethoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl beta-D-glucopyranoside' brenda:250312;
+  compound 4_methoxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside '4-methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-2-yl beta-D-glucopyranoside' brenda:250311;
+  compound CO2 brenda:28 kegg:C00011;
+  compound GAP brenda:147 kegg:C00118;
+  compound H2O brenda:1 kegg:C00001;
+  compound O2 brenda:9 brenda:1180;
+  compound S_adenosyl_L_homocysteine 'S-adenosyl-L-homocysteine' brenda:36 brenda:843 kegg:C00021;
+  compound S_adenosyl_L_methionine 'S-adenosyl-L-methionine' brenda:24 kegg:C00019;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc_L364 'UDP-Glc' brenda:364 kegg:C00029;
+  compound indole brenda:472 kegg:C00463;
+  compound indolin_2_one 'indolin-2-one' brenda:15212 kegg:C12312;
+  compound oxidized_NADPH_hemoprotein_reductase '[oxidized NADPH-hemoprotein reductase]' brenda:88270 brenda:222173 brenda:282801 kegg:C03161;
+  compound reduced_NADPH_hemoprotein_reductase '[reduced NADPH-hemoprotein reductase]' brenda:1123 brenda:88271 brenda:222268 brenda:283138 kegg:C03024;
+  compound succinate brenda:58 kegg:C00042;
+  port 1S_2R_1_C_indol_3_yl_glycerol_3_phosphate side R to tryptophan-metabolism;
+
+  1S_2R_1_C_indol_3_yl_glycerol_3_phosphate
+    -[node12474: 4.1.2.8 | +GAP ^L {br=BR48765, ev=cof+eq}]-> indole  // indole-3-glycerol-phosphate lyase
+    -[node945: 1.14.14.153 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR49969, ev=cof+eq}]-> indolin_2_one  // indole-2-monooxygenase
+    -[node937: 1.14.14.157 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR49970, ev=cof+eq}]-> 3_hydroxyindolin_2_one  // indolin-2-one monooxygenase
+    -[node929: 1.14.14.109 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BR49971, ev=cof+eq}]-> 2_hydroxy_2H_1_4_benzoxazin_3_4H_one  // 3-hydroxyindolin-2-one monooxygenase
+    -[node923: 1.14.14.110 | reduced_NADPH_hemoprotein_reductase>oxidized_NADPH_hemoprotein_reductase, -O2, +H2O {br=BS422405, ev=cof+eq}]-> 2_4_dihydroxy_2H_1_4_benzoxazin_3_4H_one  // 2-hydroxy-1,4-benzoxazin-3-one monooxygenase
+    -[node918: 2.4.1.202 | UDP_Glc_L364>UDP ^L {br=BR50178, ev=cof+eq}]-> 2R_4_hydroxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside  // 2,4-dihydroxy-7-methoxy-2H-1,4-benzoxazin-3(4H)-one 2-D-glucosyltransferase
+    -[node914: 2.1.1.- | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^L]- 4_methoxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside;  // DIBOA/DIMBOA-glucoside 4-O-methyltransferase
+
+  2R_4_hydroxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside
+    -L[node908: 1.14.11.59 | -O2, -2OG, +H2O, +CO2, +succinate]- 2R_4_7_dihydroxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside  // 2,4-dihydroxy-1,4-benzoxazin-3-one-glucoside dioxygenase
+    -L[node903: 2.1.1.241 | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R {br=BR49986, ev=cof+eq}]-> 2R_4_hydroxy_7_methoxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside  // 2,4,7-trihydroxy-1,4-benzoxazin-3-one-glucoside 7-O-methyltransferase
+    -[node899: 2.1.1.- | S_adenosyl_L_methionine>S_adenosyl_L_homocysteine ^R]- 4_7_dimethoxy_3_oxo_3_4_dihydro_2H_1_4_benzoxazin_2_yl_beta_D_glucopyranoside;  // DIBOA/DIMBOA-glucoside 4-O-methyltransferase
+}

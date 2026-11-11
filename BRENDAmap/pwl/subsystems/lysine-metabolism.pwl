@@ -1,0 +1,160 @@
+pwl 2.0;
+subsystem lysine-metabolism 'lysine metabolism' {
+  // BRENDA subsystem: 56 reactions (42 with direction), 45 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 1R_2S_1_hydroxybutane_1_2_4_tricarboxylate '(1R,2S)-1-hydroxybutane-1,2,4-tricarboxylate' brenda:5342 kegg:C05662;
+  compound 1_piperideine_2_carboxylate '1-piperideine-2-carboxylate' brenda:200957 kegg:C04092;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2S_4S_4_hydroxy_2_3_4_5_tetrahydrodipicolinate '(2S,4S)-4-hydroxy-2,3,4,5-tetrahydrodipicolinate' brenda:6392 kegg:C20258;
+  compound 2_3_dihydrodipicolinate '2,3-dihydrodipicolinate' brenda:10469 kegg:C03340;
+  compound 2_6_diaminopimelate '2,6-diaminopimelate' brenda:4263 kegg:C00666;
+  compound 2_Aminoadipate_6_semialdehyde '2-Aminoadipate 6-semialdehyde' brenda:4701 kegg:C04076;
+  compound 2_oxo_6_amino_hexanoate '2-oxo-6-amino-hexanoate' brenda:111939;
+  compound 2_oxoadipate '2-oxoadipate' brenda:1184 kegg:C00322;
+  compound 3S_3_6_diaminohexanoate '(3S)-3,6-diaminohexanoate' brenda:20573 kegg:C01142;
+  compound 3S_5S_3_5_diaminohexanoate '(3S,5S)-3,5-diaminohexanoate' brenda:44958 kegg:C01186;
+  compound 5_acetamidopentanoate '5-acetamidopentanoate' brenda:91861 kegg:C03087;
+  compound 5_aminopentanamide '5-aminopentanamide' brenda:12379 kegg:C00990;
+  compound 5_aminopentanoate '5-aminopentanoate' brenda:2715 kegg:C00431;
+  compound 5_oxopentanoate '5-oxopentanoate' brenda:12540 kegg:C03273;
+  compound 6_acetamido_2_oxohexanoate '6-acetamido-2-oxohexanoate' brenda:182075 kegg:C05548;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound AcAc brenda:419 kegg:C00164;
+  compound Ac_CoA 'Ac-CoA' brenda:29 kegg:C00024;
+  compound Asp_4_semialdehyde 'Asp 4-semialdehyde' brenda:573 kegg:C00441;
+  compound CO2 brenda:28 kegg:C00011;
+  compound CoA brenda:18 brenda:534 kegg:C00010;
+  compound D_Lys 'D-Lys' brenda:1531 kegg:C00739;
+  compound Glu brenda:41 kegg:C00025;
+  compound H 'H+' brenda:12 brenda:7924 brenda:7925 kegg:C00080;
+  compound H2O brenda:1 kegg:C00001;
+  compound H2O2 brenda:1126 kegg:C00027;
+  compound L_2_Amino_6_oxopimelate 'L-2-Amino-6-oxopimelate' brenda:8447 kegg:C03871;
+  compound L_2_acetamido_6_oxoheptanedioate 'L-2-acetamido-6-oxoheptanedioate' brenda:96656 kegg:C05539;
+  compound L_2_aminoadipate 'L-2-aminoadipate' brenda:1790 kegg:C00956;
+  compound L_3_aminobutanoyl_CoA 'L-3-aminobutanoyl-CoA' brenda:96664 kegg:C05231;
+  compound L_Lys_tRNALys 'L-Lys-tRNALys' brenda:9333 kegg:C01931;
+  compound L_saccharopine 'L-saccharopine' brenda:2857 kegg:C00449;
+  compound Lys brenda:134 kegg:C00047;
+  compound N6_Ac_Lys 'N6-Ac-Lys' brenda:15877;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound N_acetyl_l_l_dap 'N-acetyl-l,l-dap' brenda:46333 kegg:C04390;
+  compound N_succinyl_LL_2_6_diaminopimelate 'N-succinyl-LL-2,6-diaminopimelate' brenda:9341 kegg:C04421;
+  compound N_succinyl_L_2_amino_6_oxoheptanedioate 'N-succinyl-L-2-amino-6-oxoheptanedioate' brenda:179433 kegg:C04462;
+  compound O2 brenda:9 brenda:1180;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound Pipecolate brenda:5170 kegg:C00408;
+  compound R_2_hydroxybutane_1_2_4_tricarboxylate '(R)-2-hydroxybutane-1,2,4-tricarboxylate' brenda:18175 kegg:C01251;
+  compound S_2_3_4_5_tetrahydropyridine_2_6_dicarboxylate '(S)-2,3,4,5-tetrahydropyridine-2,6-dicarboxylate' brenda:8473 kegg:C03972;
+  compound S_2_3_4_5_tetrahydropyridine_2_carboxylate '(S)-2,3,4,5-tetrahydropyridine-2-carboxylate' brenda:76002 kegg:C00450;
+  compound S_5_amino_3_oxohexanoate '(S)-5-amino-3-oxohexanoate' brenda:202563 kegg:C03656;
+  compound Z_but_1_ene_1_2_4_tricarboxylate '(Z)-but-1-ene-1,2,4-tricarboxylate' brenda:4396 kegg:C04002;
+  compound acetate brenda:47 kegg:C00033;
+  compound amino_group_carrier_protein_C_terminal_L_glutamate '[amino group carrier protein]-C-terminal-L-glutamate' brenda:232238;
+  compound an_amino_group_carrier_protein_C_terminal_L_glutamate 'an [amino group carrier protein]-C-terminal-L-glutamate' brenda:237350;
+  compound an_amino_group_carrier_protein_C_terminal_N_1_4_dicarboxybutyl_L_glutamine 'an [amino group carrier protein]-C-terminal-N-(1,4-dicarboxybutyl)-L-glutamine' brenda:237351;
+  compound an_amino_group_carrier_protein_C_terminal_N_1_carboxy_5_oxopentyl_L_glutamine 'an [amino group carrier protein]-C-terminal-N-(1-carboxy-5-oxopentyl)-L-glutamine' brenda:237349;
+  compound an_amino_group_carrier_protein_C_terminal_N_1_carboxy_5_phosphooxy_5_oxopentyl_L_glutamine 'an [amino group carrier protein]-C-terminal-N-(1-carboxy-5-phosphooxy-5-oxopentyl)-L-glutamine' brenda:237361;
+  compound an_amino_group_carrier_protein_C_terminal_gamma_L_lysyl_L_glutamate 'an [amino group carrier protein]-C-terminal-gamma-(L-lysyl)-L-glutamate' brenda:237348;
+  compound cadaverine brenda:533 kegg:C01672;
+  compound glutarate brenda:545 kegg:C00489;
+  compound meso_diaminopimelate 'meso-diaminopimelate' brenda:1400 kegg:C00680;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound succinate brenda:58 kegg:C00042;
+  compound succinyl_CoA 'succinyl-CoA' brenda:224 kegg:C00091;
+  compound tRNALys brenda:1658 kegg:C01646;
+  port Asp_4_semialdehyde side L to threonine-metabolism;
+  port Lys side L to aerobactin-biosynthesis;
+
+  // ring: cycle of the drawing (7 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    2_oxo_6_amino_hexanoate
+      -[node4924: ~? {br=BR52892, ev=eq, match=similar}]-> 1_piperideine_2_carboxylate  // spontaneous reaction
+      -R[node1450: 1.5.1.1 | NADPH>NADP, -H || node4923: 1.5.1.21 | NADPH>NADP, -H]- Pipecolate  // 1-piperideine-2-carboxylate/1-pyrroline-2-carboxylate reductase [NAD(P)H]; 1-piperideine-2-carboxylate/1-pyrroline-2-carboxylate reductase (NADPH)
+      -[node4921: 1.5.3.7 | -O2, +H2O2 ^R {br=BR36911, ev=cof+eq}]-> S_2_3_4_5_tetrahydropyridine_2_carboxylate  // L-pipecolate oxidase
+      -R[node4867: 1.2.1.31 | NAD>NADH, -H2O]- L_2_aminoadipate  // L-aminoadipate-semialdehyde dehydrogenase
+      -R[node5040: 1.2.1.31 | NADPH>NADP, -H2O {br=BR29399, ev=conflict}]- 2_Aminoadipate_6_semialdehyde  // L-aminoadipate-semialdehyde dehydrogenase
+      -L[node4847: <- 2.6.1.36 | 2OG>Glu {br=BS354059, ev=cof+eq} || node4844: 1.4.1.18 | NAD>NADH, -H2O, +NH3]- Lys  // L-lysine 6-transaminase; lysine 6-dehydrogenase
+      -B[node4929: 1.4.3.14 | -H2O, -O2, +H, +NH3, +H2O2 {br=BR36876, ev=cof+eq, match=single}]-> 2_oxo_6_amino_hexanoate;  // L-lysine oxidase
+  }
+
+  // ring: cycle of the drawing (6 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    meso_diaminopimelate
+      -B[node5049: 1.4.1.16 | NADPH>NADP, -H2O, +H, +NH3 {br=BR36864, ev=conflict, match=kegg}]- L_2_Amino_6_oxopimelate  // diaminopimelate dehydrogenase
+      -L[node5045: ~?]- S_2_3_4_5_tetrahydropyridine_2_6_dicarboxylate  // spontaneous reaction
+      -L[node5228: 2.3.1.117 | succinyl_CoA>CoA, -H2O {br=BR43980, ev=cof+eq}]-> N_succinyl_L_2_amino_6_oxoheptanedioate  // 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-succinyltransferase
+      <-L[node5223: 2.6.1.17 | 2OG>Glu ^L {br=BR47417, ev=cof+eq, rev=eq, match=kegg}]-> N_succinyl_LL_2_6_diaminopimelate  // succinyldiaminopimelate transaminase
+      -[node5555: 3.5.1.18 | -H2O, +succinate ^R {br=BR26098, ev=cof+eq}]-> 2_6_diaminopimelate  // succinyl-diaminopimelate desuccinylase
+      -[node5563: 5.1.1.7 {br=BR175, ev=eq, match=kegg}]-> meso_diaminopimelate;  // diaminopimelate epimerase
+  }
+
+  // ring: cycle of the drawing (6 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    6_acetamido_2_oxohexanoate
+      <-[node4968: 2.6.1.36 | 2OG>Glu ^L {br=BS354063, ev=cof+eq, match=similar}]- N6_Ac_Lys  // L-lysine 6-transaminase
+      -[node4970: 2.3.1.32 | Ac_CoA>CoA ^L]- Lys  // lysine N-acetyltransferase
+      -B[node4948: 1.13.12.2 | -O2, +H2O, +CO2 {br=BR40522, ev=cof+eq}]-> 5_aminopentanamide  // lysine 2-monooxygenase
+      -[node4851: 3.5.1.30 | -H2O, +NH3, +H {br=BR19244, ev=cof+eq}]-> 5_aminopentanoate#2  // 5-aminopentanamidase
+      <-[node4964: 3.5.1.63 | -H2O, +acetate {br=BS189973, ev=cof+eq}]- 5_acetamidopentanoate  // 4-acetamidobutyrate deacetylase
+      -B[node4966: 1.1.1.- | NAD>NADH, -H2O, +CO2]- 6_acetamido_2_oxohexanoate;  // unknown
+  }
+
+  // ring: cycle of the drawing (4 metabolite nodes); see the motifs for biochemical cycles
+  ring cw {
+    N_acetyl_l_l_dap
+      -[node5705: 3.5.1.47 | -H2O, +acetate ^L {br=BR19248, ev=cof+eq}]-> 2_6_diaminopimelate  // N-acetyldiaminopimelate deacetylase
+      -B[node5559: 2.6.1.83 | 2OG>Glu, +H2O {br=BS424856, ev=cof+eq}]-> S_2_3_4_5_tetrahydropyridine_2_6_dicarboxylate  // LL-diaminopimelate aminotransferase
+      -[node5710: 2.3.1.89 | Ac_CoA>CoA]- L_2_acetamido_6_oxoheptanedioate  // tetrahydrodipicolinate N-acetyltransferase
+      -B[node7342: ? | Glu>2OG]- N_acetyl_l_l_dap;  // acetyl-diaminopimelate aminotransferase
+  }
+
+  star Lys arc 210 order cw {
+    -B[node10699: 6.1.1.6 | ATP>AMP, -tRNALys, +PPi {br=BR57, ev=cof+eq}]-> L_Lys_tRNALys;  // Lysine-tRNA ligase
+    <-[node4866: 5.1.1.5 {br=BR173, ev=eq, rev=eq}]-> D_Lys  // Lysine racemase
+      -B[node1453: 1.4.3.3 | -H2O, -O2, +NH3, +H2O2 {br=BS388458, ev=cof+eq, match=single}]-> 2_oxo_6_amino_hexanoate  // D-amino-acid oxidase
+      -B[node4927: ~? | -H2O2, +H2O, +CO2 {br=BR52891, ev=cof+eq}]-> 5_aminopentanoate;  // spontaneous reaction
+    -[node5044: <- 1.5.1.7 | NAD>NADH, -H2O, +2OG {br=BR37179, ev=cof+eq} || node4942: -> 1.5.1.8 | NADPH>NADP, -2OG, +H2O {br=BR36904, ev=cof-eq}]- L_saccharopine  // saccharopine dehydrogenase (NAD+, L-lysine-forming); saccharopine dehydrogenase (NADP+, L-lysine-forming)
+      -R[node4938: 1.5.1.9 | NAD>NADH, -H2O, +Glu {br=BS261177, ev=cof+eq} || node5042: 1.5.1.10 | NADP>NADPH, -H2O, +Glu {br=BS287686, ev=cof+eq}]-> 2_Aminoadipate_6_semialdehyde;  // saccharopine dehydrogenase (NAD+, L-glutamate-forming); saccharopine dehydrogenase (NADP+, L-glutamate-forming)
+    <-[node11383: 3.5.1.130 | -H2O, +amino_group_carrier_protein_C_terminal_L_glutamate {br=BR52699, ev=cof+eq, match=single}]- an_amino_group_carrier_protein_C_terminal_gamma_L_lysyl_L_glutamate  // [amino group carrier protein]-lysine hydrolase
+      <-R[node11381: 2.6.1.118 | Glu>2OG ^L {br=BR52999, ev=cof-eq, match=single}]- an_amino_group_carrier_protein_C_terminal_N_1_carboxy_5_oxopentyl_L_glutamine  // [amino-group carrier protein]-gamma-(L-lysyl)-L-glutamate aminotransferase
+      -[node11379: 1.2.1.103 | NADPH>NADP, -H, +Pi]- an_amino_group_carrier_protein_C_terminal_N_1_carboxy_5_phosphooxy_5_oxopentyl_L_glutamine  // [amino-group carrier protein]-6-phospho-L-2-aminoadipate reductase
+      <-[node11377: 2.7.2.17 | ATP>ADP ^L {br=BR53029, ev=cof+eq, match=similar}]- an_amino_group_carrier_protein_C_terminal_N_1_4_dicarboxybutyl_L_glutamine  // [amino-group carrier protein]-L-2-aminoadipate 6-kinase
+      <-[node11319: 6.3.2.43 | ATP>ADP, -an_amino_group_carrier_protein_C_terminal_L_glutamate, +Pi {br=BR50906, ev=cof+eq}]- L_2_aminoadipate#2  // [amino-group carrier protein]-L-2-aminoadipate ligase
+      -L[node4941: 2.6.1.39 | 2OG>Glu ^R {br=BR47689, ev=cof+eq}]-> 2_oxoadipate  // 2-aminoadipate transaminase
+      <-[node5762: 1.1.1.87/1.1.1.286 | NAD>NADH, +CO2, +H {br=BR48021, ev=cof+eq}]- 1R_2S_1_hydroxybutane_1_2_4_tricarboxylate  // homoisocitrate dehydrogenase;isocitrate-homoisocitrate dehydrogenase
+      -[node5770: -> 4.2.1.36 | +H2O {br=BR416, ev=cof+eq} || node11375: 4.2.1.114 | -H2O]- Z_but_1_ene_1_2_4_tricarboxylate  // homoaconitate hydratase; methanogen homoaconitase
+      <-B[node5766: 4.2.1.114 | +H2O ^R {br=BR49014, ev=cof+eq}]- R_2_hydroxybutane_1_2_4_tricarboxylate  // methanogen homoaconitase
+      <-[node5768: 2.3.3.14 | Ac_CoA>CoA ^R {br=BR44122, ev=cof+eq}]- 2OG;  // homocitrate synthase
+    -R[node3294: 5.4.3.2 {br=BR26, ev=eq}]-> 3S_3_6_diaminohexanoate  // lysine 2,3-aminomutase
+      -[node1959: 5.4.3.3 {br=BR27, ev=eq}]-> 3S_5S_3_5_diaminohexanoate  // lysine 5,6-aminomutase
+      -[node1957: 1.4.1.11 | NAD>NADH, -H2O, +NH3 {br=BR36859, ev=cof+eq, match=kegg}]-> S_5_amino_3_oxohexanoate;  // L-erythro-3,5-diaminohexanoate dehydrogenase
+    <-R[node5565: 4.1.1.20 | +CO2 ^L {br=BR281, ev=cof+eq}]- meso_diaminopimelate;  // Diaminopimelate decarboxylase
+    -R[node4947: 4.1.1.18 | +CO2 ^R {br=BR6435, ev=cof+eq}]-> cadaverine;  // Lysine decarboxylase
+  }
+
+  5_aminopentanoate#2
+    -R[node4962: 2.6.1.48 | 2OG>Glu ^R {br=BR47695, ev=cof+eq}]-> 5_oxopentanoate  // 5-aminovalerate transaminase
+    -[node4960: 1.2.1.20 | NAD>NADH, -H2O {br=BR29392, ev=cof+eq}]-> glutarate;  // glutarate-semialdehyde dehydrogenase
+
+  S_2_3_4_5_tetrahydropyridine_2_6_dicarboxylate
+    -B[node5232: 1.17.1.8 | NADP>NADPH ^L {br=BS258380-a, ev=cof-eq, match=kegg}]-> 2_3_dihydrodipicolinate  // 4-hydroxy-tetrahydrodipicolinate reductase
+    -[node5236: 4.3.3.7 | -pyruvate, +H2O ^R]- Asp_4_semialdehyde  // 4-hydroxy-tetrahydrodipicolinate synthase
+    -B[node2592: 4.3.3.7 | -pyruvate, +H2O ^L {br=BR3399, ev=cof+eq}]-> 2S_4S_4_hydroxy_2_3_4_5_tetrahydrodipicolinate  // 4-hydroxy-tetrahydrodipicolinate synthase
+    -[node2591: 1.17.1.8 | NADPH>NADP, +H2O {br=BR36807, ev=cof-eq}]-> S_2_3_4_5_tetrahydropyridine_2_6_dicarboxylate;  // 4-hydroxy-tetrahydrodipicolinate reductase
+
+  S_5_amino_3_oxohexanoate -[node1955: 2.3.1.247 | -Ac_CoA {br=BR51399, ev=cof+eq}]-> (L_3_aminobutanoyl_CoA + AcAc);  // (5S)-5-amino-3-oxohexanoate:acetyl-CoA ethylamine transferase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { 2_6_diaminopimelate S_2_3_4_5_tetrahydropyridine_2_6_dicarboxylate N_succinyl_L_2_amino_6_oxoheptanedioate N_succinyl_LL_2_6_diaminopimelate };
+  motif substrate_cycle { L_saccharopine Lys } forward { node5044 } backward { node4942 };
+  motif carrier { 2OG Glu } forward { node4847 node4941 node4962 node4968 node5223 node5559 } backward { node11381 node7342 };
+  motif carrier { NADP NADPH } forward { node5042 node5232 } backward { node11379 node1450 node2591 node4923 node4942 node5040 node5049 };
+}

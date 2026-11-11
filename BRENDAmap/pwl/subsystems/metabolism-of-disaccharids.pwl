@@ -1,0 +1,90 @@
+pwl 2.0;
+subsystem metabolism-of-disaccharids 'metabolism of disaccharids' {
+  // BRENDA subsystem: 22 reactions (18 with direction), 28 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 3_dehydro_D_glucose '3-dehydro-D-glucose' brenda:8584 kegg:C22635;
+  compound 3_oxosucrose '3-oxosucrose' brenda:45155 kegg:C05731;
+  compound ADP brenda:13 kegg:C00008;
+  compound ADP_Glc 'ADP-Glc' brenda:8036;
+  compound ATP brenda:4 kegg:C00002;
+  compound DHAP brenda:278 kegg:C00111;
+  compound D_Glc_6_P 'D-Glc 6-P' brenda:105 kegg:C00092;
+  compound D_Tagatose_1_6_bisphosphate 'D-Tagatose 1,6-bisphosphate' brenda:45996 kegg:C03785;
+  compound D_tagatose_6_P 'D-tagatose 6-P' brenda:3459 kegg:C01097;
+  compound Fru brenda:117;
+  compound Fru_6_P 'Fru 6-P' brenda:87 kegg:C00085;
+  compound GAP brenda:147 kegg:C00118;
+  compound Gal brenda:910 kegg:C01582;
+  compound Gal_6_P 'Gal 6-P' brenda:7176 kegg:C01113;
+  compound Glc_1_P 'Glc 1-P' brenda:5970;
+  compound H2O brenda:1 kegg:C00001;
+  compound Lac brenda:114 kegg:C00243;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound Pi brenda:16 kegg:C00009;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_Glc 'UDP-Glc' brenda:64 kegg:C00029;
+  compound alpha_D_Glc 'alpha-D-Glc' brenda:285 kegg:C00267;
+  compound alpha_D_Glc_1_P 'alpha-D-Glc 1-P' brenda:107 kegg:C00103;
+  compound alpha_D_Glc_6_P 'alpha-D-Glc 6-P' brenda:2944 kegg:C00668;
+  compound beta_D_Glc 'beta-D-Glc' brenda:96 kegg:C00221;
+  compound beta_D_Glc_6_P 'beta-D-Glc 6-P' brenda:5528 kegg:C01172;
+  compound lactose_6_P 'lactose 6-P' brenda:103901 kegg:C05396;
+  compound linear_maltodextrin 'linear maltodextrin' brenda:46790 kegg:C01935;
+  compound maltooligosyltrehalose brenda:4740 kegg:C06400;
+  compound maltose brenda:86 kegg:C00208;
+  compound melibiose brenda:606 kegg:C05402;
+  compound oxidized_electron_acceptor 'oxidized electron acceptor' brenda:374 brenda:12937;
+  compound reduced_electron_acceptor 'reduced electron acceptor' brenda:1661 kegg:C00030;
+  compound sucrose brenda:55 kegg:C00089;
+  compound sucrose_6_P 'sucrose 6-P' brenda:30426;
+  compound trehalose brenda:587 kegg:C01083;
+  compound trehalose_6_P 'trehalose 6-P' brenda:2038 kegg:C00689;
+  port ADP_Glc side L to glycogen-metabolism;
+  port D_Glc_6_P side D to glycolysis;
+  port Fru_6_P side D to glycolysis;
+  port GAP side D to glycolysis;
+  port Gal side D to degradation-of-hexoses;
+  port Glc_1_P side L to glycogen-metabolism;
+  port alpha_D_Glc_1_P side L to glycogen-metabolism;
+  port alpha_D_Glc_6_P side L to glycogen-metabolism;
+  port beta_D_Glc#2 side L to glycogen-metabolism;
+  port beta_D_Glc#2 side R to glycolysis;
+  port maltose side L to glycogen-metabolism;
+
+  Glc_1_P
+    -[node10274: 3.2.1.68]- linear_maltodextrin  // isoamylase
+    -L[node10270: 5.4.99.15 {br=BR38, ev=eq, match=single}]-> maltooligosyltrehalose  // (1->4)-alpha-D-Glucan 1-alpha-D-glucosylmutase
+    -L[node10269: 3.2.1.141 | +linear_maltodextrin ^L {br=BS393520, ev=eq, match=kegg}]-> trehalose  // 4-alpha-D-{(1->4)-alpha-D-glucano}trehalose trehalohydrolase
+    <-[node9326: 3.2.1.28 | +H2O ^R {br=BS370856, ev=cof-eq, match=kegg}]- beta_D_Glc#2;  // alpha,alpha-trehalase
+
+  maltose
+    -R[node2595: 5.4.99.16 {br=BR248, ev=eq, match=kegg}]-> trehalose;  // maltose alpha-D-glucosyltransferase
+
+  alpha_D_Glc_6_P
+    -[node9360: 2.4.1.15 | UDP_Glc>UDP ^L {br=BR44159, ev=cof+eq, match=kegg}]-> trehalose_6_P  // alpha,alpha-trehalose-phosphate synthase (UDP-forming)
+    -[node9362: 3.1.3.12 | -H2O, +Pi {br=BR15936, ev=cof+eq, match=kegg}]-> trehalose;  // trehalose-phosphatase
+
+  Fru
+    -R[node10431: 2.7.1.4 | ATP>ADP ^L {br=BR47777, ev=cof+eq}]-> Fru_6_P;  // fructokinase
+
+  sucrose
+    -R[node9339: 1.1.99.13 | oxidized_electron_acceptor>reduced_electron_acceptor ^L {br=BR36748, ev=cof+eq}]-> 3_oxosucrose  // glucoside 3-dehydrogenase (acceptor)
+    -[node9341: 3.2.1.- | -H2O, +Fru ^L]- 3_dehydro_D_glucose  // alpha-3-ketoglucosidase
+    -[node9335: 1.1.1.- | NADPH>NADP ^L]- alpha_D_Glc;  // 3-ketoglucose reductase
+
+  Gal_6_P
+    -R[node10111: 5.3.1.26 {br=BR233, ev=eq}]-> D_tagatose_6_P  // Galactose-6-phosphate isomerase
+    -[node10108: 2.7.1.144 | ATP>ADP ^R {br=BR47754, ev=cof+eq}]-> D_Tagatose_1_6_bisphosphate;  // tagatose-6-phosphate kinase
+
+  melibiose -[node9322: 3.2.1.22 | -H2O {br=BS115540, ev=cof+eq}]-> (Gal + beta_D_Glc#2);  // alpha-galactosidase
+  Lac -[node9320: 3.2.1.108 | -H2O {br=BR29501, ev=cof+eq}]-> (Gal + beta_D_Glc);  // lactase
+  lactose_6_P -[node10116: 3.2.1.85 | -H2O {br=BS392449, ev=cof+eq}]-> (beta_D_Glc + Gal_6_P);  // 6-phospho-beta-galactosidase
+  react [node2308: 3.2.1.48 | -H2O] {beta_D_Glc, sucrose, Fru};  // sucrose alpha-glucosidase
+  (ADP_Glc + beta_D_Glc#2) -[node8293: 2.4.1.245 | +ADP {br=BS379170, ev=cof+eq, match=single}]-> trehalose;  // alpha,alpha-trehalose synthase
+  sucrose -[node10285: 2.4.1.71 | -Pi {br=BR47498, ev=cof+eq}]-> (alpha_D_Glc_1_P + Fru);  // arylamine glucosyltransferase
+  trehalose_6_P -[node10397: 3.2.1.93 | -H2O, +beta_D_Glc_6_P {br=BR16035, ev=cof+eq, match=kegg}]-> _;  // alpha,alpha-phosphotrehalase
+  sucrose_6_P -[node9344: 3.2.1.26 | -H2O {br=BS361170, ev=cof+eq}]-> (Fru + D_Glc_6_P);  // beta-fructofuranosidase
+  D_Tagatose_1_6_bisphosphate -[node10104: 4.1.2.40 {br=BR372, ev=eq, match=kegg}]-> (GAP + DHAP);  // Tagatose-bisphosphate aldolase
+}

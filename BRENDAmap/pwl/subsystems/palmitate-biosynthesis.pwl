@@ -1,0 +1,81 @@
+pwl 2.0;
+subsystem palmitate-biosynthesis 'palmitate biosynthesis' {
+  // BRENDA subsystem: 29 reactions (13 with direction), 30 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2E_dec_2_enoyl_ACP '(2E)-dec-2-enoyl-ACP' brenda:191248;
+  compound 2E_dodec_2_enoyl_ACP '(2E)-dodec-2-enoyl-ACP' brenda:56509;
+  compound 2E_hex_2_enoyl_ACP '(2E)-hex-2-enoyl-ACP' brenda:191356;
+  compound 2E_hexadec_2_enoyl_ACP '(2E)-hexadec-2-enoyl-[ACP]' brenda:191361;
+  compound 2E_oct_2_enoyl_ACP '(2E)-oct-2-enoyl-ACP' brenda:191355;
+  compound 2E_tetradec_2_enoyl_ACP '(2E)-tetradec-2-enoyl-ACP' brenda:191247;
+  compound 3R_3_hydroxybutanoyl_ACP '(3R)-3-hydroxybutanoyl-ACP' brenda:44951 kegg:C04618;
+  compound 3R_3_hydroxydecanoyl_ACP '(3R)-3-hydroxydecanoyl-ACP' brenda:44952 kegg:C04619;
+  compound 3R_3_hydroxydodecanoyl_ACP '(3R)-3-hydroxydodecanoyl-ACP' brenda:95423 kegg:C05757;
+  compound 3R_3_hydroxyhexanoyl_ACP '(3R)-3-hydroxyhexanoyl-ACP' brenda:44954 kegg:C05747;
+  compound 3R_3_hydroxymyristoyl_ACP '(3R)-3-hydroxymyristoyl-ACP' brenda:2623;
+  compound 3R_3_hydroxyoctanoyl_ACP '(3R)-3-hydroxyoctanoyl-ACP' brenda:30515 kegg:C04620;
+  compound 3R_3_hydroxypalmitoyl_ACP '(3R)-3-hydroxypalmitoyl-ACP' brenda:90274 kegg:C04633;
+  compound 3_oxodecanoyl_ACP '3-oxodecanoyl-ACP' brenda:131209 kegg:C05753;
+  compound 3_oxododecanoyl_ACP '3-oxododecanoyl-ACP' brenda:156605 kegg:C05756;
+  compound 3_oxohexadecanoyl_ACP '3-oxohexadecanoyl-ACP' brenda:130899 kegg:C05762;
+  compound 3_oxohexanoyl_ACP '3-oxohexanoyl-ACP' brenda:130885 kegg:C05746;
+  compound 3_oxooctanoyl_ACP '3-oxooctanoyl-ACP' brenda:59550 kegg:C05750;
+  compound 3_oxotetradecanoyl_ACP '3-oxotetradecanoyl-ACP' brenda:50517 kegg:C05759;
+  compound ACP brenda:551 brenda:1134 kegg:C00229;
+  compound CO2 brenda:28 kegg:C00011;
+  compound Crotonyl_ACP 'Crotonyl-ACP' brenda:3854;
+  compound Decanoyl_ACP 'Decanoyl-ACP' brenda:2957 kegg:C05755;
+  compound Dodecanoyl_ACP 'Dodecanoyl-ACP' brenda:3855 kegg:C05223;
+  compound H2O brenda:1 kegg:C00001;
+  compound Holo_ACP 'Holo-ACP' brenda:2745 kegg:C00229;
+  compound Malonyl_ACP 'Malonyl-ACP' brenda:811;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound acetoacetyl_ACP 'acetoacetyl-ACP' brenda:7137 kegg:C05744;
+  compound butanoyl_ACP 'butanoyl-[ACP]' brenda:11554 kegg:C05745;
+  compound dodecanoate brenda:2737 kegg:C02679;
+  compound hexanoyl_ACP 'hexanoyl-ACP' brenda:4018 kegg:C05749;
+  compound myristoyl_ACP_L4069 'myristoyl-ACP' brenda:4069 kegg:C05761;
+  compound octanoyl_ACP 'octanoyl-ACP' brenda:2861 kegg:C05752;
+  compound palmitate brenda:517 kegg:C00249;
+  compound palmitoleoyl_ACP 'palmitoleoyl-ACP' brenda:1598 kegg:C05764;
+  port acetoacetyl_ACP side R to lipid-metabolism;
+
+  dodecanoate
+    <-B[node3054: 3.1.2.21 | -H2O, +Holo_ACP ^L {br=BR2506, ev=cof+eq}]- Dodecanoyl_ACP  // dodecanoyl-[acyl-carrier-protein] hydrolase
+    -[node3103: 2.3.1.41 | -Malonyl_ACP, +CO2, +Holo_ACP {br=BS320872, ev=cof+eq}]-> 3_oxotetradecanoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -B[node3104: 1.1.1.100 | NADPH>NADP]- 3R_3_hydroxymyristoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node3077: 4.2.1.59 | +H2O ^R]- 2E_tetradec_2_enoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node3115: 1.3.1.9 | NADH>NAD ^R]- myristoyl_ACP_L4069  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -[node3116: 2.3.1.41 | -Malonyl_ACP, +CO2, +Holo_ACP {br=BS320873, ev=cof+eq, match=kegg}]-> 3_oxohexadecanoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -B[node3095: 1.1.1.100 | NADPH>NADP]- 3R_3_hydroxypalmitoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node3061: 4.2.1.59 | +H2O ^R]- 2E_hexadec_2_enoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node3096: 1.3.1.9 | NADH>NAD ^R]- palmitoleoyl_ACP  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -[node3058: 3.1.2.14 | -H2O, +Holo_ACP ^R]- palmitate;  // oleoyl-[acyl-carrier-protein] hydrolase
+
+  acetoacetyl_ACP
+    -B[node3128: 1.1.1.100 | NADPH>NADP ^R {br=BS186945, ev=cof+eq, match=single}]-> 3R_3_hydroxybutanoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node3164: 4.2.1.59 | +H2O ^R]- Crotonyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node3161: 1.3.1.9 | NADH>NAD ^R]- butanoyl_ACP  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -[node3162: 2.3.1.41 | -Malonyl_ACP, +CO2, +ACP {br=BS320867, ev=cof+eq, match=single}]-> 3_oxohexanoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -B[node3156: 1.1.1.100 | NADPH>NADP]- 3R_3_hydroxyhexanoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node3165: 4.2.1.59 | +H2O ^R]- 2E_hex_2_enoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node3134: 1.3.1.9 | NADH>NAD ^R]- hexanoyl_ACP  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -[node3137: 2.3.1.41 | -Malonyl_ACP, +CO2, +Holo_ACP {br=BS320869, ev=cof+eq}]-> 3_oxooctanoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -B[node3123: 1.1.1.100 | NADPH>NADP]- 3R_3_hydroxyoctanoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node3135: 4.2.1.59 | +H2O ^R {br=BR437, ev=cof+eq, match=single}]-> 2E_oct_2_enoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node3152: 1.3.1.9 | NADH>NAD ^R {br=BS258652, ev=cof+eq, match=single}]-> octanoyl_ACP  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -[node3121: 2.3.1.41 | -Malonyl_ACP, +CO2, +Holo_ACP {br=BS320870, ev=cof+eq}]-> 3_oxodecanoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -B[node3106: 1.1.1.100 | NADPH>NADP]- 3R_3_hydroxydecanoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node3101: 4.2.1.59 | +H2O ^R {br=BS2050, ev=cof+eq, match=single}]-> 2E_dec_2_enoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node3097: 1.3.1.9 | NADH>NAD ^R {br=BS258648, ev=cof+eq, match=single}]-> Decanoyl_ACP  // enoyl-[acyl-carrier-protein] reductase (NADH)
+    -[node3091: 2.3.1.41 | -Malonyl_ACP, +Holo_ACP, +CO2]- 3_oxododecanoyl_ACP  // beta-ketoacyl-[acyl-carrier-protein] synthase I
+    -B[node3094: 1.1.1.100 | NADPH>NADP]- 3R_3_hydroxydodecanoyl_ACP  // 3-oxoacyl-[acyl-carrier-protein] reductase
+    -[node3083: 4.2.1.59 | +H2O ^R {br=BS2052, ev=cof+eq}]-> 2E_dodec_2_enoyl_ACP  // 3-hydroxyacyl-[acyl-carrier-protein] dehydratase
+    -[node3110: 1.3.1.9 | NADH>NAD ^R {br=BS258654, ev=cof+eq}]-> Dodecanoyl_ACP wrap serpentine period 4;  // enoyl-[acyl-carrier-protein] reductase (NADH)
+  // motifs (detected from the reactions above, see PWL.md)
+  motif repeat period=4 count=4 { node3128 node3164 node3161 node3162 node3156 node3165 node3134 node3137 node3123 node3135 node3152 node3121 node3106 node3101 node3097 node3091 };
+}

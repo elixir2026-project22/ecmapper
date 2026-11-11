@@ -1,0 +1,52 @@
+pwl 2.0;
+subsystem 6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis '6-hydroxymethyl-dihydropterin diphosphate biosynthesis' {
+  // BRENDA subsystem: 14 reactions (12 with direction), 11 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 2_5_diamino_6_hydroxy_4_5_phospho_D_ribosylamino_pyrimidine '2,5-diamino-6-hydroxy-4-(5-phospho-D-ribosylamino)pyrimidine' brenda:81591;
+  compound 4_beta_D_ribosyl_aniline_5_P '4-(beta-D-ribosyl)aniline 5\'-P' brenda:28785 kegg:C20559;
+  compound 6_hydroxymethyl_7_8_dihydropterin '6-hydroxymethyl-7,8-dihydropterin' brenda:11187 kegg:C01300;
+  compound 6_hydroxymethyl_7_8_dihydropterin_PP '6-hydroxymethyl-7,8-dihydropterin-PP' brenda:4667 kegg:C04807;
+  compound 7_8_dihydroneopterin_2_3_cyclic_P '7,8-dihydroneopterin 2\',3\'-cyclic P' brenda:15296 kegg:C20567;
+  compound 7_8_dihydroneopterin_2_P '7,8-dihydroneopterin 2\'-P' brenda:88309 kegg:C20566;
+  compound 7_8_dihydroneopterin_3_P '7,8-dihydroneopterin 3\'-P' brenda:88310 kegg:C05925;
+  compound 7_8_dihydroneopterin_3_triphosphate '7,8-dihydroneopterin 3\'-triphosphate' brenda:27690 kegg:C04895;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound GTP brenda:37 kegg:C00044;
+  compound H2O brenda:1 kegg:C00001;
+  compound NPR brenda:3544 kegg:C04874;
+  compound N_7_8_dihydropterin_6_yl_methyl_4_beta_D_ribofuranosyl_aniline_5_P 'N-[(7,8-dihydropterin-6-yl)methyl]-4-(beta-D-ribofuranosyl)aniline 5\'-P' brenda:88263 kegg:C20562;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound formate brenda:120 kegg:C00058;
+  compound glycolaldehyde brenda:604 kegg:C00266;
+  compound glycolaldehyde_P 'glycolaldehyde-P' brenda:44185 kegg:C21614;
+  compound glycolaldehyde_PPP 'glycolaldehyde-PPP' brenda:218005 kegg:C21615;
+  port 4_beta_D_ribosyl_aniline_5_P side L to tetrahydrofolate-metabolism;
+  port 6_hydroxymethyl_7_8_dihydropterin_PP side U to tetrahydrofolate-metabolism;
+  port 7_8_dihydroneopterin_3_triphosphate side U to tetrahydrofolate-metabolism;
+  port GTP side R to purine-metabolism;
+
+  // ring: cycle of the drawing (8 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    7_8_dihydroneopterin_3_triphosphate
+      -R[node11428: 3.6.1.67 | -H2O, +PPi ^R {br=BR51137, ev=cof+eq}]-> 7_8_dihydroneopterin_3_P  // dihydroneopterin triphosphate diphosphatase
+      <-R[node12242: 4.2.1.160 | +H2O ^R {br=BR51538, ev=cof+eq, match=single}]- 2_5_diamino_6_hydroxy_4_5_phospho_D_ribosylamino_pyrimidine  // 2,5-diamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one isomerase/dehydratase
+      <-L[node12235: 3.5.4.25 | -4*H2O, +PPi, +formate {br=BR26117, ev=cof+eq}]- GTP  // GTP cyclohydrolase II
+      -L[node2570: 3.5.4.39 | -H2O, +formate, +PPi {br=BR50468, ev=cof+eq}]-> 7_8_dihydroneopterin_2_3_cyclic_P  // GTP cyclohydrolase IV
+      -[node2568: 3.1.4.56 | -H2O ^R {br=BR50444, ev=cof+eq}]-> 7_8_dihydroneopterin_2_P  // 7,8-dihydroneopterin 2',3'-cyclic phosphate phosphodiesterase
+      -L[node2566: 3.6.1.- | -H2O, +Pi]- NPR  // hypothetical
+      -R[node2561: 4.1.2.25 | +glycolaldehyde ^L {br=BR357, ev=cof+eq}]-> 6_hydroxymethyl_7_8_dihydropterin  // Dihydroneopterin aldolase
+      <-B[node12246: 4.1.2.60 | +glycolaldehyde_PPP ^L {br=BR52078, ev=cof+eq}]- 7_8_dihydroneopterin_3_triphosphate;  // dihydroneopterin triphosphate aldolase
+    chord 7_8_dihydroneopterin_3_P -[node12248: 4.1.2.59 | +glycolaldehyde_P ^L {br=BR52079, ev=cof+eq}]-> 6_hydroxymethyl_7_8_dihydropterin;  // dihydroneopterin phosphate aldolase
+    chord 7_8_dihydroneopterin_2_3_cyclic_P -L[node2565: 3.1.4.56 | -H2O ^R {br=BR50443, ev=cof+eq}]-> 7_8_dihydroneopterin_3_P;  // 7,8-dihydroneopterin 2',3'-cyclic phosphate phosphodiesterase
+    chord 7_8_dihydroneopterin_3_P -[node2563: 3.6.1.- | -H2O, +Pi ^L]- NPR;  // hypothetical
+    chord GTP -L[node12245: 3.5.4.16 | -H2O, +formate ^R {br=BR22737, ev=cof+eq}]-> 7_8_dihydroneopterin_3_triphosphate;  // GTP cyclohydrolase I
+  }
+
+  6_hydroxymethyl_7_8_dihydropterin
+    -R[node2559: 2.7.6.3 | ATP>AMP ^L {br=BR47856, ev=cof+eq}]-> 6_hydroxymethyl_7_8_dihydropterin_PP;  // 2-amino-4-hydroxy-6-hydroxymethyldihydropteridine diphosphokinase
+
+  (6_hydroxymethyl_7_8_dihydropterin_PP + 4_beta_D_ribosyl_aniline_5_P) -[node11330: 2.5.1.105 | +PPi {br=BR50431, ev=cof+eq, match=kegg}]-> N_7_8_dihydropterin_6_yl_methyl_4_beta_D_ribofuranosyl_aniline_5_P;  // 7,8-dihydropterin-6-yl-methyl-4-(beta-D-ribofuranosyl)aminobenzene 5'-phosphate synthase
+}

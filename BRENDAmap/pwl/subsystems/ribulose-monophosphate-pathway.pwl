@@ -1,0 +1,15 @@
+pwl 2.0;
+subsystem ribulose-monophosphate-pathway 'ribulose monophosphate pathway' {
+  // BRENDA subsystem: 2 reactions (2 with direction), 3 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound CH2O brenda:130 kegg:C00067;
+  compound D_Rul_5_P 'D-Rul 5-P' brenda:443 kegg:C00199;
+  compound Fru_6_P 'Fru 6-P' brenda:87 kegg:C00085;
+  compound H6P brenda:18730 kegg:C06019;
+  port Fru_6_P side L to glycolysis;
+
+  D_Rul_5_P
+    -L[node8336: 4.1.2.43 | -CH2O ^L {br=BR48972, ev=cof-eq, match=kegg}]-> H6P  // 3-hexulose-6-phosphate synthase
+    -B[node8217: 5.3.1.27 {br=BR48975, ev=eq, match=kegg}]-> Fru_6_P;  // 6-phospho-3-hexuloisomerase
+}

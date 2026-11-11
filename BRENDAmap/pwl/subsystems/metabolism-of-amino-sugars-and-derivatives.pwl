@@ -1,0 +1,48 @@
+pwl 2.0;
+subsystem metabolism-of-amino-sugars-and-derivatives 'metabolism of amino sugars and derivatives' {
+  // BRENDA subsystem: 10 reactions (9 with direction), 10 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound ADP brenda:13 kegg:C00008;
+  compound ATP brenda:4 kegg:C00002;
+  compound CMP_Neu5NAc 'CMP-Neu5NAc' brenda:180 kegg:C00128;
+  compound CTP brenda:60 kegg:C00063;
+  compound Fru_6_P 'Fru 6-P' brenda:87 kegg:C00085;
+  compound GlcNAc_6_P 'GlcNAc 6-P' brenda:22028 kegg:C00357;
+  compound GlcN_6_P 'GlcN 6-P' brenda:12491 kegg:C00352;
+  compound H2O brenda:1 kegg:C00001;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NH3 brenda:27;
+  compound N_Ac_ManN 'N-Ac-ManN' brenda:97266;
+  compound N_acetyl_D_mannosamine_6_phosphate 'N-acetyl-D-mannosamine-6-phosphate' brenda:101778 kegg:C04257;
+  compound Neu5NAc brenda:730 kegg:C00270;
+  compound PEP brenda:51 kegg:C00074;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound UDP brenda:26 kegg:C00015;
+  compound UDP_GlcNAc 'UDP-GlcNAc' brenda:17973;
+  compound UDP_N_Ac_ManA 'UDP-N-Ac-ManA' brenda:42042 kegg:C06240;
+  compound acetate brenda:47 kegg:C00033;
+  compound pyruvate brenda:31 kegg:C00022;
+  port Fru_6_P side R to glycolysis;
+  port GlcN_6_P side L to UDP-GlcNAc-biosynthesis;
+  port UDP_GlcNAc side R to UDP-GlcNAc-biosynthesis;
+
+  N_Ac_ManN
+    -[node6902: 2.7.1.60 | ATP>ADP ^L {br=BS357665, ev=cof+eq}]-> N_acetyl_D_mannosamine_6_phosphate  // N-acylmannosamine kinase
+    <-[node9280: 5.1.3.9 {br=BS368626, ev=eq}]- GlcNAc_6_P  // N-Acylglucosamine-6-phosphate 2-epimerase
+    -[node9295: 3.5.1.25 | -H2O, +acetate {br=BR26100, ev=cof+eq}]-> GlcN_6_P  // N-acetylglucosamine-6-phosphate deacetylase
+    -R[node9282: 3.5.99.6 | -H2O, +NH3 ^R {br=BS363214, ev=cof+eq}]-> Fru_6_P;  // glucosamine-6-phosphate deaminase
+
+  N_Ac_ManN
+    -R[node6907: -> 2.5.1.56 | -H2O, -PEP, +Pi {br=BR47462, ev=cof+eq} || node6905: <- 4.1.3.3 | +pyruvate {br=BR3374, ev=cof+eq, match=single}]- Neu5NAc  // N-acetylneuraminate synthase; N-acetylneuraminate lyase
+    -L[node6914: 2.7.7.43 | -CTP, +PPi ^L {br=BS388407, ev=cof+eq, match=single}]-> CMP_Neu5NAc;  // N-acylneuraminate cytidylyltransferase
+
+  N_Ac_ManN
+    -B[node12151: 5.1.3.14 | -H2O, +UDP ^R]- UDP_GlcNAc  // UDP-N-acetylglucosamine 2-epimerase (non-hydrolysing)
+    -B[node6910: 5.1.3.14 {br=BR189, ev=eq}]-> N_Ac_ManN#2  // UDP-N-acetylglucosamine 2-epimerase (non-hydrolysing)
+    -[node2727: 1.1.1.336 | 2*NAD>2*NADH, -H2O {br=BR50229, ev=cof+eq}]-> UDP_N_Ac_ManA;  // UDP-N-acetyl-D-mannosamine dehydrogenase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif substrate_cycle { N_Ac_ManN Neu5NAc } forward { node6907 } backward { node6905 };
+}

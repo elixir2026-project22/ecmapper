@@ -1,0 +1,62 @@
+pwl 2.0;
+subsystem serine-metabolism 'serine metabolism' {
+  // BRENDA subsystem: 15 reactions (14 with direction), 12 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow down;
+  compound 2OG brenda:34 kegg:C00026;
+  compound 2_phospho_D_glycerate '2-phospho-D-glycerate' brenda:10090 kegg:C00631;
+  compound 3_phosphoglycerate '3-phosphoglycerate' brenda:194;
+  compound 3_phosphonooxypyruvate '3-phosphonooxypyruvate' brenda:6445 kegg:C03232;
+  compound ADP brenda:13 kegg:C00008;
+  compound AMP brenda:30 kegg:C00020;
+  compound ATP brenda:4 kegg:C00002;
+  compound Ala brenda:103 kegg:C00041;
+  compound D_Ser 'D-Ser' brenda:481 kegg:C00740;
+  compound D_glycerate 'D-glycerate' brenda:2454 kegg:C00258;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound HPR brenda:389 kegg:C00168;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound NH3 brenda:27;
+  compound O_phospho_L_seryl_tRNACys 'O-phospho-L-seryl-tRNACys' brenda:18298;
+  compound O_phospho_Ser 'O-phospho-Ser' brenda:1189 kegg:C01005;
+  compound PPi brenda:17 kegg:C00013;
+  compound Pi brenda:16 kegg:C00009;
+  compound Ser brenda:95 kegg:C00065;
+  compound pyruvate brenda:31 kegg:C00022;
+  compound tRNACys brenda:914 kegg:C01639;
+  port 2_phospho_D_glycerate side L to glycolysis;
+  port 3_phosphoglycerate side L to glycolysis;
+  port Ala side D to alanine-metabolism;
+  port O_phospho_Ser side R to cysteine-metabolism;
+  port Ser side D to selenocysteine-biosynthesis;
+  port Ser side R to cysteine-metabolism;
+  port Ser side R to dapdiamides-biosynthesis;
+  port Ser side R to glycine-metabolism;
+  port pyruvate side L to glycolysis;
+
+  // ring: cycle of the drawing (8 metabolite nodes); see the motifs for biochemical cycles
+  ring ccw {
+    HPR
+      -B[node8379: 1.1.1.81 | NADPH>NADP {br=BR29341, ev=cof-eq} || node8366: 1.1.1.29 | NADPH>NADP {br=BR29292, ev=cof-eq}]-> D_glycerate  // hydroxypyruvate reductase; glycerate dehydrogenase
+      -L[node8369: -> 2.7.1.31 | ATP>ADP {br=BS396474, ev=cof+eq} || node8368: <- 3.1.3.38 | -H2O, +Pi {br=BR10689, ev=cof+eq, match=kegg}]- 3_phosphoglycerate  // glycerate 3-kinase; 3-phosphoglycerate phosphatase
+      -L[node8603: 1.1.1.95 | NAD>NADH ^L {br=BS188712, ev=cof+eq, match=kegg}]-> 3_phosphonooxypyruvate  // phosphoglycerate dehydrogenase
+      -[node8604: 2.6.1.52 | Glu>2OG ^L {br=BR47699, ev=cof-eq, match=kegg}]-> O_phospho_Ser  // phosphoserine transaminase
+      -L[node8607: 3.1.3.3 | -H2O, +Pi ^R {br=BS364502, ev=cof+eq}]-> Ser  // phosphoserine phosphatase
+      <-R[node8600: 5.1.1.10 {br=BR48732, ev=eq, rev=eq} || node8598: 5.1.1.18 {br=BR48732, ev=eq, rev=eq}]-> D_Ser  // Amino-acid racemase; serine racemase
+      <-B[node8596: 4.3.1.18 | -NH3 ^L {br=BR22833, ev=cof-eq}]- pyruvate;  // D-Serine ammonia-lyase
+    (pyruvate + Ser) -[node8383: 2.6.1.51 {br=BR47698, ev=eq, match=kegg}]-> (HPR + Ala);  // serine-pyruvate transaminase
+    chord pyruvate -R[node8595: 4.3.1.17 | +NH3 || node8599: -> 4.3.1.19 | -NH3 {br=BR22832, ev=cof-eq}]- Ser;  // L-Serine ammonia-lyase; threonine ammonia-lyase
+  }
+
+  D_glycerate
+    -L[node2277: 2.7.1.165 | ATP>ADP ^L {br=BR48991, ev=cof+eq}]-> 2_phospho_D_glycerate;  // glycerate 2-kinase
+
+  (O_phospho_Ser + tRNACys) -[node10974: 6.1.1.27 | ATP>AMP, +PPi {br=BR48875, ev=cof+eq}]-> O_phospho_L_seryl_tRNACys;  // O-phospho-L-serine-tRNA ligase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif cycle { 3_phosphoglycerate 3_phosphonooxypyruvate O_phospho_Ser Ser HPR D_glycerate };
+  motif substrate_cycle { 3_phosphoglycerate D_glycerate } forward { node8368 } backward { node8369 };
+}

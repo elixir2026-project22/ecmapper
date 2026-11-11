@@ -1,0 +1,119 @@
+pwl 2.0;
+subsystem arachidonic-acid-metabolism 'arachidonic acid metabolism' {
+  // BRENDA subsystem: 36 reactions (26 with direction), 37 drawn main-metabolite nodes.
+  // flow, turn letters, ring, star and wrap describe the drawing; arrows and groups describe the reactions.
+  flow right;
+  compound 11_12_15H_ETA '11,12,15H-ETA' brenda:189742 kegg:C14782;
+  compound 11_12_DiHETE '11,12-DiHETE' brenda:153610 kegg:C14774;
+  compound 11_12_EET '11,12-EET' brenda:152392 kegg:C14770;
+  compound 11_14_15H_ETA '11,14,15H-ETA' brenda:189779 kegg:C14814;
+  compound 12_S_HPETE '12(S)-HPETE' brenda:44960 kegg:C05965;
+  compound 12_oxo_ETE '12-oxo-ETE' brenda:189741 kegg:C14807;
+  compound 13_14_dihydro_15_keto_PGD2 '13,14-dihydro-15-keto-PGD2' brenda:145213;
+  compound 15_S_HETE '15(S)-HETE' brenda:189780 kegg:C04742;
+  compound 15_keto_PGD2 '15-keto-PGD2' brenda:48444 kegg:C04758;
+  compound 15_keto_PGE2 '15-keto-PGE2' brenda:3433 kegg:C04707;
+  compound 15_keto_PGI2 '15-keto-PGI2' brenda:48445 kegg:C04835;
+  compound 15_oxo_ETE '15-oxo-ETE' brenda:189781 kegg:C04577;
+  compound 15_oxo_PGF2alpha '15-oxo-PGF2alpha' brenda:7973 kegg:C05960;
+  compound 5Z_8Z_10R_11S_12S_14Z_11_12_epoxy_10_hydroxyeicosa_5_8_14_trienoic_acid '(5Z,8Z,10R,11S,12S,14Z)-11,12-epoxy-10-hydroxyeicosa-5,8,14-trienoic acid' brenda:136839;
+  compound 5Z_8Z_11Z_13E_15S_15_hydroperoxyicosa_5_8_11_13_tetraenoate '(5Z,8Z,11Z,13E)-(15S)-15-hydroperoxyicosa-5,8,11,13-tetraenoate' brenda:44961 kegg:C05966;
+  compound 5Z_8Z_12E_14_15_epoxy_11_hydroxyicosa_5_8_12_trienoic_acid '(5Z,8Z,12E)-14,15-epoxy-11-hydroxyicosa-5,8,12-trienoic acid' brenda:189778 kegg:C14813;
+  compound 5Z_8Z_13E_15S_11_12_epoxy_15_hydroxyicosa_5_8_13_trienoic_acid '(5Z,8Z,13E)-(15S)-11,12-epoxy-15-hydroxyicosa-5,8,13-trienoic acid' brenda:189743 kegg:C14781;
+  compound 5_S_HPETE '5(S)-HPETE' brenda:33022 kegg:C05356;
+  compound 8_R_HETE '8-(R)-HETE' brenda:188910 kegg:C14824;
+  compound 8_R_HPETE '8(R)-HPETE' brenda:44962 kegg:C04822;
+  compound 9_alpha_11_beta_PGF2 '9-alpha,11-beta-PGF2' brenda:56539;
+  compound GSH brenda:44 kegg:C00051;
+  compound GSSG brenda:973 kegg:C00127;
+  compound Glu brenda:41 kegg:C00025;
+  compound H2O brenda:1 kegg:C00001;
+  compound LTA4 brenda:807 kegg:C00909;
+  compound LTE4 brenda:20769 kegg:C05952;
+  compound LTEC4 brenda:2274 kegg:C02166;
+  compound LTED4 brenda:6548 kegg:C05951;
+  compound NAD 'NAD+' brenda:7 kegg:C00003;
+  compound NADH brenda:8 kegg:C00004;
+  compound NADP 'NADP+' brenda:10 brenda:50;
+  compound NADPH brenda:5 brenda:40;
+  compound O2 brenda:9 brenda:1180;
+  compound PGD2 brenda:1985 kegg:C00696;
+  compound PGE2 brenda:913 kegg:C00584;
+  compound PGF2a brenda:2217 kegg:C00639;
+  compound PGH2 brenda:612 kegg:C00427;
+  compound PGI2 brenda:6018 kegg:C01312;
+  compound acceptor brenda:66 brenda:3161;
+  compound arachidonate brenda:619 kegg:C00219;
+  compound electron_transferring_flavoprotein 'electron-transferring flavoprotein' brenda:2297 kegg:C04253;
+  compound hepoxilin_A3 'hepoxilin A3' brenda:44220;
+  compound reduced_acceptor 'reduced acceptor' brenda:77 kegg:C00030;
+  compound reduced_electron_transferring_flavoprotein 'reduced electron-transferring flavoprotein' brenda:1892 brenda:3252 kegg:C04570;
+  compound thioredoxin brenda:121 kegg:C00342;
+  compound thioredoxin_disulfide 'thioredoxin disulfide' brenda:476 kegg:C00343;
+  compound thromboxane_A2 'thromboxane A2' brenda:30461 kegg:C02198;
+  compound trioxilin_A3 'trioxilin A3' brenda:95255;
+  compound trioxilin_B3 'trioxilin B3' brenda:188909 kegg:C14811;
+  port arachidonate side L to arachidonate-biosynthesis;
+
+  star arachidonate arc 270 order cw {
+    -L[node7165: 1.13.11.34 {br=BR49525, ev=eq}]-> 5_S_HPETE  // arachidonate 5-lipoxygenase
+      -[node7155: 1.13.11.34 | +H2O ^R {br=BR49526, ev=cof+eq}]-> LTA4  // arachidonate 5-lipoxygenase
+      -L[node7157: 4.4.1.20 | -GSH, +H2O ^R {br=BR48007, ev=cof-eq}]-> LTEC4  // leukotriene-C4 synthase
+      -[node7167: 3.4.19.14 | -H2O, +Glu ^R {br=BR49989, ev=cof+eq}]-> LTED4  // leukotriene-C4 hydrolase
+      -B[node7176: 3.4.13.19 | -H2O ^R]- LTE4;  // membrane dipeptidase
+    -L[node7163: 1.13.11.40 | -O2 ^R {br=BR40471, ev=cof+eq}]-> 8_R_HPETE  // arachidonate 8-lipoxygenase
+      -[node7164: 1.11.1.9 | -2*GSH, +H2O, +GSSG]- 8_R_HETE;  // glutathione peroxidase
+    -[node3785: 1.13.11.31 | -O2 ^L {br=BR37067, ev=cof+eq}]-> 12_S_HPETE  // arachidonate 12-lipoxygenase
+      -L[node7229: 4.2.1.152 {br=BR51056, ev=eq, match=similar}]-> 12_oxo_ETE;  // hydroperoxy icosatetraenoate dehydratase
+    -R[node7204: 1.13.11.33 | -O2 ^L {br=BR47601, ev=cof+eq}]-> 5Z_8Z_11Z_13E_15S_15_hydroperoxyicosa_5_8_11_13_tetraenoate;  // arachidonate 15-lipoxygenase
+    -R[node7220: 1.14.14.1 | -reduced_electron_transferring_flavoprotein, -O2, +electron_transferring_flavoprotein, +H2O]- 11_12_EET  // unspecific monooxygenase
+      -[node7237: 3.3.2.10 | -H2O ^R {br=BS403051, ev=cof+eq}]-> 11_12_DiHETE;  // soluble epoxide hydrolase
+    -B[node7191: 1.14.99.1 | reduced_acceptor>acceptor, -2*O2, +H2O ^R {br=BR40396, ev=cof+eq}]-> PGH2;  // prostaglandin-endoperoxide synthase
+  }
+
+  star PGH2 arc 210 order cw {
+    -L[node498: 1.11.1.20 | -thioredoxin, +thioredoxin_disulfide ^L {br=BR49412, ev=cof+eq, match=kegg}]-> PGF2a#2  // prostamide/prostaglandin F2alpha synthase
+      -[node497: 1.1.1.141 | NAD>NADH ^L {br=BS187205, ev=cof+eq}]-> 15_oxo_PGF2alpha;  // 15-hydroxyprostaglandin dehydrogenase (NAD+)
+    -R[node489: 5.3.99.5 {br=BR12, ev=eq, match=kegg}]-> thromboxane_A2;  // thromboxane-A synthase
+    -R[node7211: 5.3.99.4 {br=BR6442, ev=eq, match=kegg}]-> PGI2  // prostaglandin-I synthase
+      -[node503: 1.1.1.196/1.1.1.231 | NADP>NADPH ^L {br=BR33677, ev=cof+eq, match=kegg}]-> 15_keto_PGI2;  // 15-hydroxyprostaglandin-D dehydrogenase (NADP+);15-hydroxyprostaglandin-I dehydrogenase (NADP+)
+    -R[node7209: 5.3.99.2 {br=BR9, ev=eq, match=kegg}]-> PGD2;  // Prostaglandin-D synthase
+    -B[node7177: 5.3.99.3 {br=BR48832, ev=eq, match=kegg}]-> PGE2;  // prostaglandin-E synthase
+  }
+
+  5Z_8Z_11Z_13E_15S_15_hydroperoxyicosa_5_8_11_13_tetraenoate
+    -[node7194: 1.14.14.1 | -O2, -reduced_electron_transferring_flavoprotein, +H2O, +electron_transferring_flavoprotein]- 5Z_8Z_13E_15S_11_12_epoxy_15_hydroxyicosa_5_8_13_trienoic_acid  // unspecific monooxygenase
+    -R[node7202: 1.14.14.1 | -reduced_electron_transferring_flavoprotein, -O2, +electron_transferring_flavoprotein, +H2O]- 11_12_15H_ETA;  // unspecific monooxygenase
+
+  PGE2
+    -L[node7189: 1.1.1.189 | NADPH>NADP {br=BR36706, ev=cof-eq, match=kegg} || node7181: 1.1.1.184 | NADPH>NADP {br=BR36706, ev=cof-eq, match=kegg}]-> PGF2a  // prostaglandin-E2 9-reductase; carbonyl reductase (NADPH)
+    -L[node7190: 1.1.1.196 | NADP>NADPH]- 15_oxo_PGF2alpha#2;  // 15-hydroxyprostaglandin-D dehydrogenase (NADP+)
+
+  PGE2
+    -B[node486: 1.1.1.141 | NAD>NADH {br=BR29207, ev=cof+eq, match=single}]-> 15_keto_PGE2  // 15-hydroxyprostaglandin dehydrogenase (NAD+)
+    -L[node481: 1.3.1.48 | NADPH>NADP ^R {br=BS395315, ev=cof+eq}]-> 13_14_dihydro_15_keto_PGD2;  // 13,14-dehydro-15-oxoprostaglandin 13-reductase
+
+  PGD2
+    -R[node7210: 1.1.1.188 | NADPH>NADP ^R {br=BS371126, ev=cof+eq}]-> 9_alpha_11_beta_PGF2;  // prostaglandin-F synthase
+
+  PGD2
+    -B[node499: 1.1.1.196 | NADP>NADPH ^R {br=BR33662, ev=cof+eq, match=kegg}]-> 15_keto_PGD2;  // 15-hydroxyprostaglandin-D dehydrogenase (NADP+)
+
+  5Z_8Z_11Z_13E_15S_15_hydroperoxyicosa_5_8_11_13_tetraenoate
+    -R[node3800: 1.14.14.1 | -O2, -reduced_electron_transferring_flavoprotein, +H2O, +electron_transferring_flavoprotein]- 5Z_8Z_12E_14_15_epoxy_11_hydroxyicosa_5_8_12_trienoic_acid  // unspecific monooxygenase
+    -[node3804: 1.14.14.1 | -O2, -reduced_electron_transferring_flavoprotein, +H2O, +electron_transferring_flavoprotein]- 11_14_15H_ETA;  // unspecific monooxygenase
+
+  5Z_8Z_11Z_13E_15S_15_hydroperoxyicosa_5_8_11_13_tetraenoate
+    -B[node3801: 1.11.1.9 | -GSH, +GSSG, +H2O]- 15_S_HETE  // glutathione peroxidase
+    -L[node3788: 1.1.1.232 | NADP>NADPH ^R {br=BR29270, ev=cof+eq, match=kegg}]-> 15_oxo_ETE;  // 15-hydroxyicosatetraenoate dehydrogenase
+
+  hepoxilin_A3
+    -L[node7222: 3.3.2.7 | -H2O ^R {br=BR48210, ev=cof+eq, match=kegg}]-> trioxilin_A3;  // hepoxilin-epoxide hydrolase
+
+  5Z_8Z_10R_11S_12S_14Z_11_12_epoxy_10_hydroxyeicosa_5_8_14_trienoic_acid
+    -R[node7217: 3.3.2.10 | -H2O ^R {br=BS415478, ev=cof+eq, match=single}]-> trioxilin_B3;  // soluble epoxide hydrolase
+
+  react [node7228: 5.4.4.- | +H2O] {hepoxilin_A3, 12_S_HPETE, 5Z_8Z_10R_11S_12S_14Z_11_12_epoxy_10_hydroxyeicosa_5_8_14_trienoic_acid};  // hydroperoxide dehydratase
+  // motifs (detected from the reactions above, see PWL.md)
+  motif carrier { NADP NADPH } forward { node3788 node499 node503 node7190 } backward { node481 node7181 node7189 node7210 };
+}
