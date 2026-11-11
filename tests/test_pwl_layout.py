@@ -148,3 +148,59 @@ def test_untangle_does_not_add_crossings():
     assert before > 0
     after = crossing_nodes(dm, untangle(dm, tangled))[0]
     assert after <= before
+
+
+RING = """pwl 2.0;
+subsystem cyc 'cycle' {
+  flow right;
+  ring cw {
+    A -[r1: 1.1.1.1]-> B -R[r2: 1.1.1.2]-> C -[r3: 1.1.1.3]-> D -R[r4: 1.1.1.4]-> E -[r5: 1.1.1.5]-> F
+      -R[r6: 1.1.1.6]-> A;
+    chord (X + C) -[r7: 2.2.2.1]-> F;
+    chord (X + A) -[r8: 2.2.2.2]-> B2;
+    chord E -[r9: 2.2.2.3]-> M;
+    chord D -[r10: 2.2.2.4]-> M;
+  }
+}
+"""
+
+
+def test_side_metabolites_and_ring_on_a_circle():
+    from ecmapper.pwl.layout import place_side_metabolites, side_metabolites
+
+    doc = parse(RING)
+    dm = to_draftmap(doc)
+    side = side_metabolites(doc, dm)
+    assert side == {"X"}  # only in groups, linked to two reactions
+    dm.side = side
+    pos = hint_positions(doc, dm)
+    assert "X" not in pos
+    cycle = ["A", "B", "C", "D", "E", "F"]
+    cx = sum(pos[i][0] for i in cycle) / 6
+    cy = sum(pos[i][1] for i in cycle) / 6
+    radii = [math.dist(pos[i], (cx, cy)) for i in cycle]
+    assert max(radii) - min(radii) < 1  # on a circle
+    # M reacts with the neighbours D and E: outside the circle; X is placed near its enzymes afterwards
+    assert math.dist(pos["M"], (cx, cy)) > max(radii)
+    pos = place_side_metabolites(dm, pos, side)
+    assert math.dist(pos["X"], ((pos["r7"][0] + pos["r8"][0]) / 2, (pos["r7"][1] + pos["r8"][1]) / 2)) < 1.5 * STEP
+
+
+def test_shared_cofactors():
+    from ecmapper.pwl.layout import share_cofactors
+
+    doc = parse("""pwl 2.0;
+subsystem s 's' {
+  A -[r1: 1.1.1.1 | NAD>NADH || r2: 1.1.1.2 | NAD>NADH]-> B -[r3: 1.1.1.3 | ATP>ADP]-> C;
+}
+""")
+    dm = to_draftmap(doc)
+    pos = hint_positions(doc, dm)
+    place_cofactors(dm, pos)
+    before = sum(n.kind == "cofactor" for n in dm.nodes.values())
+    pos = share_cofactors(dm, pos)
+    labels = sorted(n.label for n in dm.nodes.values() if n.kind == "cofactor")
+    assert before == 6 and labels == ["ADP", "ATP", "NAD", "NADH"]  # the fan shares NAD and NADH
+    nad = next(i for i, n in dm.nodes.items() if n.label == "NAD")
+    assert {e.enzyme for e in dm.edges if e.met == nad} == {"r1", "r2"}
+    assert set(pos) >= {i for i in dm.nodes}

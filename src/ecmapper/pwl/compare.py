@@ -135,7 +135,7 @@ def side_by_side(left: DraftMap, right: DraftMap, captions=("", ""), gap: float 
         vx, vy, w, h = dm.view_box
         inner = re.sub(r"^<svg ", f'<svg x="{x:.1f}" y="40" ', text, count=1)
         parts.append(inner)
-        parts.append(f'<text x="{x + 10:.1f}" y="28" style="font: bold 22px Arial, sans-serif">'
+        parts.append(f'<text x="{x + 10:.1f}" y="28" style="font: bold 22px Arial, sans-serif; text-anchor: start">'
                      f'{html.escape(caption)}</text>')
         x += w + gap
         height = max(height, h + 40)

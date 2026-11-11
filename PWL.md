@@ -454,9 +454,19 @@ has the summary, the metrics and six examples:
      a fan lie side by side.
    - **Stars.** Spokes are spread over `arc` degrees in `order`, far enough apart
      for their number.
-   - **Rings.** A ring is walked like a chain unless the walk hits itself. Turn
-     letters know only four directions, so a ring drawn as a diamond collapses;
-     its metabolites then go on a circle in the ring's sense.
+   - **Rings.** A `ring` is the cycle of the drawing, so its metabolites go on a
+     circle in the ring's sense, one step apart, starting in the direction of the
+     first step. Other metabolites of the ring that react with two or more circle
+     metabolites go inside the circle at their centre if those are far apart (a
+     chord, e.g. glyoxylate in the citric acid cycle), and outside next to their
+     edge if they are neighbours (a triangle, e.g. (3S)-citryl-CoA).
+   - **Secondary metabolites.** A main metabolite that is drawn only as a partner
+     in groups `(A + B)` of two or more reactions, never as a node of its own,
+     is left out of the layout (e.g. acetyl-CoA in the citric acid cycle). As a
+     group member it would tie distant reactions together. Unless the drawing
+     falls apart without it, it is placed after the layout, next to its enzymes,
+     at the free point whose links cross the fewest links (11 metabolites in 10
+     subsystems).
    - **Wrap.** In a chain with `wrap serpentine`, a turn back moves to the next
      row.
    - **Taken places.** If a place is taken, the node goes to the free point of a
@@ -479,7 +489,12 @@ has the summary, the metrics and six examples:
    - it is scaled to the BRENDA spacing;
    - overlaps are pushed apart;
    - cofactors go next to their enzyme: on the side given by `^L`/`^R`, consumed
-     ones upstream, produced ones downstream.
+     ones upstream, produced ones downstream;
+   - if cofactors overlap other nodes, the drawing is spread by 10%, 20% or 30%
+     to make room (the first factor without overlaps is kept);
+   - the same cofactor of nearby reactions (nodes at most 200 units apart, e.g. in
+     a fan) becomes one node linked to all of them, if that adds no crossing and
+     no overlap. Of 6,415 cofactor nodes, 260 are saved.
 6. **Choice.** The hint-based layout with the fewest main crossings (then
    overlaps) is drawn. A baseline replaces it only if it has at most half as
    many main crossings and no overlapping nodes. Edges that still pass through
@@ -501,48 +516,67 @@ All 193 subsystems (medians; crossings are totals):
 
 | layout | Procrustes | directions | neighbours | orthogonal | main crossings | all crossings | chosen |
 |---|---|---|---|---|---|---|---|
-| hints | 0.236 | 0.741 | 0.633 | 0.619 | 543 | 2,386 | 73 |
-| hints+neato | 0.229 | 0.739 | 0.634 | 0.609 | 329 | 1,831 | 20 |
-| hints+spring | 0.336 | 0.611 | 0.667 | 0.471 | 241 | 1,240 | 70 |
-| hints+spring+neato | 0.336 | 0.611 | 0.667 | 0.447 | 173 | 1,076 | 11 |
-| dot | 0.613 | 0.500 | 0.485 | 0.643 | 517 | 4,767 | 0 |
-| neato | 0.518 | 0.474 | 0.667 | 0.170 | 120 | 553 | 9 |
-| fdp | 0.595 | 0.415 | 0.559 | 0.200 | 457 | 1,211 | 1 |
-| sfdp | 0.548 | 0.462 | 0.620 | 0.256 | 320 | 1,279 | 0 |
-| kamada_kawai | 0.533 | 0.462 | 0.643 | 0.185 | 311 | 1,147 | 6 |
-| spring | 0.528 | 0.472 | 0.667 | 0.191 | 134 | 1,192 | 3 |
-| circle (56 subsystems) | 0.490 | 0.395 | 0.517 | 0.231 | 344 | 1,646 | 0 |
-| **chosen** | **0.299** | **0.645** | **0.667** | **0.500** | **105** | **882** | |
+| hints | 0.232 | 0.727 | 0.644 | 0.593 | 460 | 1,563 | 84 |
+| hints+neato | 0.239 | 0.727 | 0.636 | 0.585 | 334 | 1,336 | 10 |
+| hints+spring | 0.322 | 0.605 | 0.667 | 0.462 | 211 | 903 | 59 |
+| hints+spring+neato | 0.322 | 0.609 | 0.667 | 0.452 | 172 | 857 | 18 |
+| dot | 0.613 | 0.500 | 0.485 | 0.643 | 518 | 3,555 | 1 |
+| neato | 0.518 | 0.478 | 0.667 | 0.169 | 117 | 344 | 14 |
+| fdp | 0.595 | 0.414 | 0.559 | 0.200 | 450 | 853 | 2 |
+| sfdp | 0.535 | 0.458 | 0.619 | 0.250 | 322 | 984 | 0 |
+| kamada_kawai | 0.533 | 0.462 | 0.641 | 0.185 | 313 | 857 | 4 |
+| spring | 0.528 | 0.474 | 0.667 | 0.195 | 138 | 823 | 0 |
+| circle (54 subsystems) | 0.499 | 0.402 | 0.493 | 0.229 | 390 | 1,428 | 1 |
+| **chosen** | **0.299** | **0.647** | **0.659** | **0.500** | **75** | **554** | |
 | original | 0 | 1 | 1 | 0.889 | 69 | 141 | |
 
 Findings:
 
 - **Similarity.** The hint layouts are much closer to the originals than any
-  general-purpose layout: median Procrustes 0.23–0.34, against 0.49–0.61. The
-  link directions agree for 74% of the links, against 40–50%.
-- **Crossings.** The hint layout alone has many crossings (543). The pinned
-  `neato` untangling removes 40% of them without changing the shape;
+  general-purpose layout: median Procrustes 0.23–0.32, against 0.50–0.61. The
+  link directions agree for 73% of the links, against 40–50%.
+- **Crossings.** The hint layout alone has many crossings (460). The pinned
+  `neato` untangling removes a quarter of them without changing the shape;
   `spring` removes more but loosens the shape.
-- **The chosen layouts** have 105 main crossings, as few as Graphviz `neato`
-  (120, the best general-purpose layout) and close to the originals (69). Their
+- **The chosen layouts** have 75 main crossings, fewer than Graphviz `neato`
+  (117, the best general-purpose layout) and close to the originals (69). Their
   shape is far more similar (0.30 against 0.52).
 - **Orthogonality.** The originals are orthogonal (89% of the links are
-  axis-aligned). The hint layouts reach 62%, the general-purpose layouts 17–26%
-  (`dot`, at 64%, has 517 crossings).
+  axis-aligned). The hint layouts reach 59%, the general-purpose layouts 17–25%
+  (`dot`, at 64%, has 518 crossings).
+
+Effect of the later steps (chosen layouts, totals over all subsystems):
+
+| step | main crossings | all crossings | overlapping nodes | cofactor nodes |
+|---|---|---|---|---|
+| first version | 114 | 895 | 87 | 6,415 |
+| + secondary metabolites placed afterwards | 113 | 907 | 85 | 6,415 |
+| + rings on circles | 88 | 875 | 64 | 6,415 |
+| + spreading for cofactors | 75 | 573 | 10 | 6,415 |
+| + shared cofactors | 75 | 554 | 12 | 6,155 |
+
+The median Procrustes disparity stays at 0.30. Cofactors cause none of the
+main crossings, because every layout places enzymes and main metabolites first.
+They cause most of the other crossings. In the citric acid cycle these steps
+bring the crossings from 4 main and 34 in all down to 3 and 16 (original: 2 and
+2). The Procrustes disparity there falls from 0.11 to 0.07.
 
 ### Limitations
 
 - **Lost geometry.** Turn letters know only four directions, and the steps of
   one subsystem all have the same length. Diagonal and long links of the original
-  are lost. Rings drawn as diamonds become circles (urea cycle); a branch that was
-  drawn far away may be drawn next to its neighbours.
+  are lost. Rings are drawn as circles, including rings drawn as rectangles or
+  diamonds (urea cycle); a branch that was drawn far away may be drawn next to
+  its neighbours.
 - **Spacing.** One step length is used for all subsystems; compactly drawn
   subsystems (glycolysis) come out larger than on the map.
 - **Large subsystems with many hubs** (purine, lysine, methionine metabolism)
   keep crossings. The best layouts there are the refined ones, with a Procrustes
   disparity of 0.4–0.5.
-- **Cofactors** are placed by rule. Their crossings (all crossings: 882 against
-  141) are mostly cofactor links in crowded places.
+- **Cofactors** are placed by rule and do not look for free directions. Their
+  crossings (all crossings: 554 against 141) are mostly cofactor links in
+  crowded places. Spreading is global: one crowded spot enlarges the whole
+  subsystem.
 
 ## Limitations
 
