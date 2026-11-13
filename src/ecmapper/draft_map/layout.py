@@ -102,22 +102,131 @@ TITLE_GAP = 22.0
 PADDING = 35.0
 
 
-def condense_subsystems(dm: DraftMap, gap_x=22.0, gap_y=28.0, compactness=0.5, rounds=2, keep_order=150.0) -> None:
+def shrink_uniform(dm: DraftMap, k: str, gap_x=22.0, gap_y=28.0, room=None, step=0.01) -> tuple[float, float]:
+    """Shrink the drawing of subsystem `k` by one factor per axis; returns the factors (x, y), 1 at most.
+
+    The nodes keep their arrangement: the positions of the enzyme and
+    main metabolite nodes are multiplied by the factors, and cofactor
+    nodes keep their offsets to their (first) enzyme node, so that they
+    do not come nearer to it. The factors (multiples of `step`, from 0.1)
+    are those with the smallest drawing at which each two nodes (not an
+    enzyme node and its cofactors) are still `gap_x` or `gap_y` apart,
+    with the room of :func:`condense_subsystems`; two nodes that are
+    closer than that already do not come closer along an axis along which
+    they are apart.
+    As the cofactors do not follow the scaling, factors with which more
+    links (main metabolites, or all) cross or pass through a node than
+    before are not taken.
+    """
+    from .relayout import _through
+
+    nodes = dm.members(k)
+    index = {n.id: i for i, n in enumerate(nodes)}
+    if len(nodes) < 2:
+        return 1.0, 1.0
+    edges = [e for e in dm.edges if e.enzyme in index and e.met in index]
+    anchor = np.arange(len(nodes))
+    for e in edges:
+        if e.kind == "cofactor" and anchor[index[e.met]] == index[e.met]:
+            anchor[index[e.met]] = index[e.enzyme]
+    room = lane_room(dm) if room is None else room
+    x, y = np.array([n.x for n in nodes], float), np.array([n.y for n in nodes], float)
+    nw, nh = np.array([n.w for n in nodes], float), np.array([n.h for n in nodes], float)
+    # room for the model reaction IDs below enzyme nodes of the map and for their reactions side by side
+    label = np.array([n.kind == "enzyme" and bool(n.reactions) and n.status != "added" for n in nodes])
+    lw = np.array([0.54 * 9 * len(", ".join(n.reactions[:3])) + 4 for n in nodes])
+    w = np.where(label, np.maximum(nw, lw), nw) + np.array([room.get(n.id, (0.0, 0.0))[0] for n in nodes])
+    h = np.where(label, nh + 24, nh) + np.array([room.get(n.id, (0.0, 0.0))[1] for n in nodes])
+    ax, ay = x[anchor], y[anchor]  # scaled
+    off_x, off_y = x - ax, y - ay  # kept
+    box_y = off_y + np.where(label, 12, 0)  # centre of the box with room
+    i, j = np.triu_indices(len(nodes), 1)
+    apart = anchor[i] != anchor[j]
+    i, j = i[apart], j[apart]
+    dx, dy = ax[i] - ax[j], ay[i] - ay[j]
+    ox, oy = off_x[i] - off_x[j], box_y[i] - box_y[j]
+    need_x, need_y = (w[i] + w[j]) / 2, (h[i] + h[j]) / 2
+    sep_x, sep_y = np.abs(dx + ox) - need_x, np.abs(dy + oy) - need_y
+    close = (sep_x < gap_x) & (sep_y < gap_y)  # closer than the gaps already
+    # they keep their distance along an axis along which they are apart (along any, if their boxes overlap)
+    overlapping = (sep_x < 0) & (sep_y < 0)
+    min_x = np.where(close, np.where((sep_x >= 0) | overlapping, sep_x, np.inf), gap_x)
+    min_y = np.where(close, np.where((sep_y >= 0) | overlapping, sep_y, np.inf), gap_y)
+    grid = np.append(np.arange(0.1, 1.0 - step / 2, step), 1.0)
+    short_x = np.abs(grid[:, None] * dx + ox) - need_x < min_x - 1e-9  # (factors, pairs)
+    short_y = np.abs(grid[:, None] * dy + oy) - need_y < min_y - 1e-9
+    valid = short_x.astype(np.float32) @ short_y.astype(np.float32).T == 0  # [factor of x, factor of y]
+    width = (grid[:, None] * ax + off_x + w / 2).max(1) - (grid[:, None] * ax + off_x - w / 2).min(1)
+    height = (grid[:, None] * ay + box_y + h / 2).max(1) - (grid[:, None] * ay + box_y - h / 2).min(1)
+    a = np.array([index[e.enzyme] for e in edges], int)
+    b = np.array([index[e.met] for e in edges], int)
+    main = np.array([e.kind == "main" for e in edges], bool)
+
+    def links(fx, fy):
+        """Crossings of the main-metabolite links, of all links, and links through nodes with these factors."""
+        p = np.stack([fx * ax + off_x, fy * ay + off_y], axis=1)
+        if not len(a):
+            return 0, 0, 0
+        boxes = np.concatenate([p - np.stack([nw, nh], 1) / 2, p + np.stack([nw, nh], 1) / 2], axis=1)
+        hit = _through(p[a][:, None], p[b][:, None], boxes[None])  # (links, nodes)
+        hit[np.arange(len(a)), a] = hit[np.arange(len(b)), b] = False
+        return count_crossings(p[a][main], p[b][main]), count_crossings(p[a], p[b]), int(hit.sum())
+
+    before = links(1.0, 1.0)
+    # for each factor of x the smallest factor of y, the smallest drawing first
+    best = [(u, int(np.argmax(valid[u]))) for u in range(len(grid)) if valid[u].any()]
+    fx = fy = 1.0
+    for u, v in sorted(best, key=lambda c: (width[c[0]] * height[c[1]], c)):
+        if all(m <= n for m, n in zip(links(grid[u], grid[v]), before)):
+            fx, fy = float(grid[u]), float(grid[v])
+            break
+    for n, nx, ny in zip(nodes, fx * ax + off_x, fy * ay + off_y):
+        n.x, n.y = float(nx), float(ny)
+    return fx, fy
+
+
+def condense_subsystems(dm: DraftMap, gap_x=22.0, gap_y=28.0, compactness=0.5, rounds=2, keep_order=150.0,
+                        keep_crossings: bool | set = False, uniform: bool | set = False) -> None:
     """Step 4: condense the drawing of each subsystem and fit its box (and title) around it.
 
     Nodes keep room for the reaction IDs below enzyme nodes of the map (SVG)
     and for the model reactions of an enzyme node side by side (Escher,
     :func:`.core.lane_room`). Each `rigid` group of a subsystem (e.g. a
     cycle on a circle) and the nodes inside its bounding box move as one
-    block and keep their arrangement.
+    block and keep their arrangement. With `keep_crossings` (True, or the
+    IDs of the subsystems it applies to), a subsystem
+    whose links (main metabolites, or all) would cross more often is
+    condensed again with all nodes in their order along both axes and, if
+    that adds crossings too, not condensed (only its box fitted). With
+    `uniform` (True, or the IDs of the subsystems), a subsystem is not
+    condensed but only shrunk by one factor per axis
+    (:func:`shrink_uniform`), so that its nodes keep their arrangement.
     """
     room = lane_room(dm)
+    links = defaultdict(list)
+    if keep_crossings:
+        for e in dm.edges:
+            a, b = dm.nodes[e.enzyme], dm.nodes[e.met]
+            if a.subsystem == b.subsystem:
+                links[a.subsystem].append((e.kind, a, b))
+
+    def crossings(k):
+        result = []
+        for kinds in ({"main"}, {"main", "cofactor"}):
+            seg = [((a.x, a.y), (b.x, b.y)) for kind, a, b in links[k] if kind in kinds]
+            result.append(count_crossings(np.array([p for p, _ in seg], float).reshape(-1, 2),
+                                          np.array([q for _, q in seg], float).reshape(-1, 2)) if seg else 0)
+        return result
+
     for s in dm.subsystems.values():
         members = dm.members(s.id)
         if not members:
             continue
+        shrinking = uniform is True or (bool(uniform) and s.id in uniform)
+        if shrinking:
+            shrink_uniform(dm, s.id, gap_x, gap_y, room)
         blocks = []  # [nodes] of each rigid group with the nodes inside it
-        for group in getattr(s, "rigid", []):
+        for group in [] if shrinking else getattr(s, "rigid", []):
             inside = [n for n in members if n.id in set(group)]
             if not inside:
                 continue
@@ -146,25 +255,34 @@ def condense_subsystems(dm: DraftMap, gap_x=22.0, gap_y=28.0, compactness=0.5, r
         we = np.where(label, np.maximum(w, lw), w) + extra_w
         he = np.where(label, h + 24, h) + extra_h
         ye = np.where(label, y + 12, y)
-        x, ye = compact_boxes(x, ye, we, he, gap_x, gap_y, compactness, rounds, keep_order=keep_order)
-        y = np.where(label, ye - 12, ye)
-        h = he
-        w = we
-        x0, x1 = (x - w / 2).min(), (x + w / 2).max()
-        y0, y1 = (ye - h / 2).min(), (ye + h / 2).max()
-        content_w = x1 - x0
-        box_w = max(content_w + 2 * PADDING, s.title_w + 2 * PADDING)
-        top = s.title_h / 2 + TITLE_GAP
-        box_h = (y1 - y0) + top + PADDING
-        # node positions relative to the box (top left at 0, 0), content centred horizontally
-        dx = (box_w - content_w) / 2 - x0
-        dy = top - y0
-        for n, nx, ny in zip(members, x, y):
-            n.x, n.y = nx + dx, ny + dy
-        for block, bx, by, ox, oy in zip(blocks, x[len(members):], y[len(members):], block_x, block_y):
-            for n in block:
-                n.x, n.y = n.x + bx - ox + dx, n.y + by - oy + dy
-        s.x, s.y, s.w, s.h = 0.0, 0.0, box_w, box_h
+        w, h = we, he
+        start = {n.id: (n.x, n.y) for n in dm.members(s.id)}
+        keeping = keep_crossings is True or (bool(keep_crossings) and s.id in keep_crossings)
+        before = crossings(s.id) if keeping and not shrinking else None
+        for keep in (None,) if shrinking else (keep_order, True, None) if keeping else (keep_order,):
+            for i, (nx, ny) in start.items():
+                dm.nodes[i].x, dm.nodes[i].y = nx, ny
+            # None: not condensed, the drawing only moved into its box
+            cx, cy = (x, ye) if keep is None else compact_boxes(x, ye, we, he, gap_x, gap_y, compactness, rounds,
+                                                                keep_order=keep)
+            cy, cye = np.where(label, cy - 12, cy), cy
+            x0, x1 = (cx - w / 2).min(), (cx + w / 2).max()
+            y0, y1 = (cye - h / 2).min(), (cye + h / 2).max()
+            content_w = x1 - x0
+            box_w = max(content_w + 2 * PADDING, s.title_w + 2 * PADDING)
+            top = s.title_h / 2 + TITLE_GAP
+            box_h = (y1 - y0) + top + PADDING
+            # node positions relative to the box (top left at 0, 0), content centred horizontally
+            dx = (box_w - content_w) / 2 - x0
+            dy = top - y0
+            for n, nx, ny in zip(members, cx, cy):
+                n.x, n.y = nx + dx, ny + dy
+            for block, bx, by, ox, oy in zip(blocks, cx[len(members):], cy[len(members):], block_x, block_y):
+                for n in block:
+                    n.x, n.y = n.x + bx - ox + dx, n.y + by - oy + dy
+            s.x, s.y, s.w, s.h = 0.0, 0.0, box_w, box_h
+            if before is None or all(a <= b for a, b in zip(crossings(s.id), before)):
+                break
 
 
 def to_relative(dm: DraftMap) -> None:

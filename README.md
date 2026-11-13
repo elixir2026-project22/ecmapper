@@ -325,6 +325,7 @@ and box positions for CNApy (with `--split`: for each map).
 
 ```bash
 python -m pip install -e "./ecmapper[draft-map]"   # numpy, scipy, numba, networkx, pygraphviz (includes Graphviz)
+python -m pip install -e "./ecmapper[autolayout]"  # optional: sbml-autolayout, a layout for single subsystems
 cd ecmapper
 python -m ecmapper.draft_map.prepare iML1515.xml BRENDAmap/BRENDA_map_reactions.json iML1515_prep.pkl --subsystems iML1515.json
 python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions.json BRENDAmap/BRENDA_map.svg OUT --hub-subsystems 6

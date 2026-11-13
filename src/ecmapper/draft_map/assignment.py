@@ -17,7 +17,7 @@ import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 
-from .core import Completion, DraftMap, ModelData
+from .core import LABEL_LENGTH, Completion, DraftMap, ModelData
 from .split import GROUP_NAMES
 
 SUBSYSTEMS = "Subsystems"
@@ -304,14 +304,19 @@ def drop_subsystems(dm: DraftMap, keys: set[str]) -> None:
 
 def apply_assignment(dm: DraftMap, md: ModelData, table: AssignmentTable,
                      origin_positions: dict[str, tuple[float, float, str]] | None = None,
-                     drop_unassigned: bool = True) -> dict:
+                     drop_unassigned: bool = True, label_length: int = LABEL_LENGTH,
+                     template: DraftMap | None = None) -> dict:
     """Apply the reaction sheet and leave out the subsystems without map; after step 3 (completion).
 
     Reactions added to a subsystem are drawn as in the completion (step 3),
-    with the metabolites drawn in the subsystem; reactions taken out of all
-    subsystems of an enzyme node remove the node. Subsystems left without
-    enzyme nodes are dropped. `drop_unassigned`: False keeps the subsystems
-    without map (the GUI shows them). Returns what was changed and warnings.
+    with the metabolites drawn in the subsystem (labels shortened to
+    `label_length`, the place of a template node recorded as in step 3 with
+    the BRENDA map `template`); their enzyme nodes are marked `assigned` (step 3b
+    draws them even where they cross other links). Reactions taken out of
+    all subsystems of an enzyme node remove the node. Subsystems left
+    without enzyme nodes are dropped. `drop_unassigned`: False keeps the
+    subsystems without map (the GUI shows them). Returns what was changed
+    and warnings.
     """
     warnings = []
     missing = sorted(k for k in dm.subsystems if k not in table.subsystems)
@@ -339,11 +344,16 @@ def apply_assignment(dm: DraftMap, md: ModelData, table: AssignmentTable,
                 add.append((rid, s))
         remove.extend((rid, s) for s in current.get(rid, []) if s not in wanted)
     # added first: a subsystem whose reactions are all replaced still has its nodes for placing the new ones
-    completion = Completion(dm, md, origin_positions=origin_positions, prefix="user_", anchor_aside=True)
+    completion = Completion(dm, md, origin_positions=origin_positions, prefix="user_", anchor_aside=True,
+                            label_length=label_length, template=template)
     for rid, s in add:
         mains = completion.main_mets(rid)
         anchors = completion.anchors()
         completion.add(rid, mains, {m: anchors[m] for m in mains if anchors.get(m)}, {}, target=s)
+    pairs = set(add)
+    for n in dm.nodes.values():
+        if n.kind == "enzyme" and any((rid, n.subsystem) in pairs for rid in n.reactions):
+            n.assigned = True
     for rid, s in remove:
         remove_reaction(dm, rid, s)
     empty = {k for k in dm.subsystems if not any(n.kind == "enzyme" for n in dm.members(k))}

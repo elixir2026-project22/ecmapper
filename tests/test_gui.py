@@ -13,7 +13,7 @@ pytest.importorskip("scipy")
 pytest.importorskip("numba")
 pytest.importorskip("openpyxl")
 
-from ecmapper.draft_map import run, split
+from ecmapper.draft_map import relayout, run, split
 from ecmapper.draft_map import project as project_module
 from ecmapper.draft_map.assignment import read_assignment
 from ecmapper.draft_map.project import Project, options_of, work_id
@@ -96,6 +96,33 @@ def test_session(session, tmp_path):
     data, box = s.subsystem_svg(other, k)
     assert data.startswith(b"<svg") and box[2] >= s.size(k)[0]
     assert set(s.views()) == set(s.maps)
+    # the layouts of step 3b of a subsystem with added reactions, to compare them
+    added = next(key for key, n in s.added_counts.items() if n)
+    layouts = s.layout_comparison(added)
+    names = [e["name"] for e in layouts]
+    assert names[:2] == ["current", relayout.CONSERVATIVE] and "place" in names
+    assert [e["name"] for e in layouts if e["used"]] == [relayout.CONSERVATIVE]  # the default
+    assert all(e["svg"].startswith(b"<svg") and "crossings" in e["caption"] for e in layouts)
+    # the layout of sbml-autolayout: chosen by hand only, also in a subsystem without added reactions
+    plain = next((key for key in sorted(s.dm.subsystems) if not s.added_counts.get(key)), None)
+    if relayout.available_methods([relayout.AUTOLAYOUT]) and plain is not None:
+        assert names[-1] == relayout.AUTOLAYOUT
+        assert [e["name"] for e in s.layout_comparison(plain)] == ["current", relayout.AUTOLAYOUT]
+        before = s.state()
+        s.use_layout(plain, relayout.AUTOLAYOUT)
+        assert s.dm.subsystems[plain].layout == relayout.AUTOLAYOUT and apart(s)
+        assert s.args.layout_of == f"{plain}={relayout.AUTOLAYOUT}"
+        s.restore(before)
+        assert s.layout_of == {} and s.dm.subsystems[plain].layout != relayout.AUTOLAYOUT
+    # switch to another layout (kept as --layout-of), undo and redo as the window does it
+    before = s.state()
+    s.use_layout(added, "place")
+    after = s.state()
+    assert s.dm.subsystems[added].layout == "place" and s.args.layout_of == f"{added}=place" and apart(s)
+    s.restore(before)
+    assert s.dm.subsystems[added].layout == relayout.CONSERVATIVE and s.layout_of == {} and s.args.layout_of == ""
+    s.restore(after)
+    assert s.dm.subsystems[added].layout == "place" and s.layout_of == {added: "place"}
     # undo, as the window does it
     state = s.state()
     s.remove(other, [k])
@@ -135,6 +162,8 @@ def test_session(session, tmp_path):
     again.load()
     assert any("gui_cache" in line for line in messages)
     assert again.maps == s.maps and again.maps_of(k) == [central, other] and again.arranged[central]
+    assert [e["name"] for e in again.layout_comparison(added)] == names
+    assert again.layout_of == {added: "place"} and again.dm.subsystems[added].layout == "place"
     assert {key: again.size(key) for key in again.dm.subsystems} == {key: s.size(key) for key in s.dm.subsystems}
     # a reaction taken out of its subsystems in the table: the drawings are made again
     from openpyxl import load_workbook
@@ -319,6 +348,47 @@ def test_window(session, monkeypatch, tmp_path):
     w.undo.redo()
     assert s.maps_of(k) == [central, other]
 
+    # the layouts of step 3b of a selected subsystem side by side, computed in the background
+    added = next(key for key, n in s.added_counts.items() if n)
+    w.tabs.setCurrentWidget(w.views[s.maps_of(added)[0]])
+    w.current_scene().select([added])
+    assert w.a_compare.isEnabled()
+    w.compare_layouts()
+    w.compare_worker.wait()
+    app.processEvents()
+    dialog = w.layouts_dialog
+    assert dialog.isVisible() and dialog.list.count() == len(s.layout_comparison(added))
+    assert dialog.list.currentItem().text().endswith("(used)") and "crossings" in dialog.caption.text()
+    dialog.list.setCurrentRow(0)
+    assert dialog.view.renderer.isValid() and dialog.caption.text().startswith("current")
+    dialog.grab()  # paints the drawing
+    # switch to place, back to automatic, undo
+    names = [e["name"] for e in dialog.entries()]
+    dialog.list.setCurrentRow(names.index("place"))
+    assert dialog.b_use.isEnabled() and not dialog.b_auto.isEnabled()
+    dialog.b_use.click()
+    assert s.dm.subsystems[added].layout == "place" and dialog.list.item(names.index("place")).text().endswith(
+        "(used)  (chosen)") and not dialog.b_use.isEnabled() and dialog.b_auto.isEnabled()
+    dialog.b_auto.click()
+    assert s.dm.subsystems[added].layout == relayout.CONSERVATIVE and s.layout_of == {}
+    w.undo.undo()
+    assert s.dm.subsystems[added].layout == "place"
+    w.undo.undo()
+    assert s.dm.subsystems[added].layout == relayout.CONSERVATIVE
+    dialog.close()
+
+    # merging the subsystems of a map with MergingEscher: on maps only; each subsystem an Escher map, smooth
+    from ecmapper.draft_map import merge_escher
+
+    assert w.a_merge.isEnabled()
+    w.tabs.setCurrentWidget(w.views[None])
+    assert not w.a_merge.isEnabled()
+    w.tabs.setCurrentWidget(w.views[central])
+    assert w.a_merge.isEnabled()
+    maps = merge_escher.subsystem_maps(s.map_draft(central), s.md, s.args.escher_scale)
+    assert maps and set(maps) <= set(s.views()[central][0].subsystems)
+    assert all(data[1]["reactions"] for data in maps.values())
+
     # drag a box onto another one
     name = next(m for m in s.maps if len(s.positions[m]) >= 2)
     w.tabs.setCurrentWidget(w.views[name])
@@ -445,6 +515,11 @@ def test_ai_dock(session, monkeypatch, tmp_path):
     assert [r.is_error for r in results] == [False, False], [r.text for r in results]
     assert results[1].text.startswith("Accepted")
     assert (dock.job["folder"] / "draft.escher.json").is_file() and (dock.job["folder"] / "transcript.jsonl").is_file()
+    # the job record for toolkits: the Escher IDs, the subsystems of the drawn nodes, the template
+    record = json.loads((dock.job["folder"] / "ecmapper_job.json").read_text(encoding="utf-8"))
+    assert record["kind"] == "chat" and record["ids"] == json.loads(json.dumps(dock.job["ids"]))
+    drawn = {o[1] for o in record["ids"].values() if o[0] in ("node", "reaction")}
+    assert drawn and drawn <= set(record["subsystems"]) and Path(record["template"]).is_dir()
     text = dock.transcript.toPlainText()
     assert "You: Lay out the map" in text and "AI: Running the toolkit." in text and "toolkit run" in text
 
@@ -508,6 +583,8 @@ def test_ai_dock(session, monkeypatch, tmp_path):
     w.prepare_agent_folder()
     folder = next((Path(s.args.out) / "ai" / split.slug(central)).glob("*-agent"))
     assert str(folder) in infos[-1] and (folder / "AGENTS.md").is_file() and (folder / "run_toolkit.py").is_file()
+    record = json.loads((folder / "ecmapper_job.json").read_text(encoding="utf-8"))
+    assert record["kind"] == "agent" and record["subsystems"] and "template" in record
     w.use_agent_result()
     assert "no final map" in infos[-1] and central not in s.layouts
     data = json.loads((folder / "draft.escher.json").read_text())

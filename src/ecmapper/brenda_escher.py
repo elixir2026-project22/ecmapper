@@ -64,6 +64,8 @@ class Rxn:
     mid: tuple[float, float] = (0.0, 0.0)
     axis: tuple[float, float] = (1.0, 0.0)
     markers: dict[int, tuple[float, float]] = field(default_factory=dict)
+    lane: float = 0.0  # drawn this far beside its place (several reactions at one enzyme node)
+    info: dict = field(default_factory=dict)  # further fields of its Escher reaction (genes, stoichiometry)
     straight: frozenset = frozenset()  # the nodes of the two metabolites that it joins in a straight line
     ring: dict = field(default_factory=dict)  # on a cycle: {node: the direction in which it leaves the node}
     ring_handle: float = 0.0  # on a cycle: the length of the handles of its arcs, as a part of their chords
@@ -166,13 +168,88 @@ def load(map_json, pwl_dir=None, scale: float = 2.0, circles: bool = True) -> tu
             sides.reverse()
         reactions.append(Rxn(r["node_id"], r["subsystem"], r["ec_label"], r.get("enzyme_name") or r["ec_label"],
                              x, y, {-1: sides[0], 1: sides[1]}, cof, reversible, oriented))
-    align(reactions)
-    data["circles"] = circle_rings(reactions, [c for cycles in rings.values() for c in cycles]) if circles else []
-    if data["circles"]:  # rows and columns that the warp has bent, around the circles
-        near = [r for r in reactions if any(math.dist((r.x, r.y), c["centre"]) < 3.5 * c["radius"]
-                                            for c in data["circles"])]
-        align(near, 60.0, 150.0, fixed={i for c in data["circles"] for i in c["nodes"]})
+    data["circles"] = straighten(reactions, [c for cycles in rings.values() for c in cycles] if circles else [])
     return reactions, data
+
+
+def straighten(reactions: list[Rxn], cycles: list[list[str]], least: int = 7) -> list[dict]:
+    """Rows and columns (:func:`align`) and the cycles on circles (:func:`circle_rings`, then the rows and
+    columns around them again); returns the circles."""
+    align(reactions)
+    circles = circle_rings(reactions, cycles, least=least) if cycles else []
+    if circles:  # rows and columns that the warp has bent, around the circles
+        near = [r for r in reactions if any(math.dist((r.x, r.y), c["centre"]) < 3.5 * c["radius"]
+                                            for c in circles)]
+        align(near, 60.0, 150.0, fixed={i for c in circles for i in c["nodes"]})
+    return circles
+
+
+def from_draft(dm, md, scale: float = 2.0, protons: bool = False, lane: float = 48.0) -> tuple[list[Rxn], dict]:
+    """The reactions of a draft map of a model (:mod:`ecmapper.draft_map`) for :func:`build`.
+
+    `dm` is best one subsystem (:func:`ecmapper.draft_map.relayout.subsystem_map`), `md` its model data. Each
+    model reaction of an enzyme node is a reaction, at the enzyme node, with the model's identifiers,
+    stoichiometry, reversibility and genes, so that Escher and MergingEscher match it to the model. Its model
+    metabolites drawn as main metabolite nodes are its main metabolites (one primary node per drawn node and
+    model metabolite, as in :func:`ecmapper.draft_map.escher.to_escher`), all others its cofactors; protons are
+    not drawn unless `protons` (they stay in the stoichiometry). Several model reactions of one enzyme node are
+    drawn side by side, `lane` apart. The cycles that the draft map keeps on circles (`rigid`) are its cycles
+    (:func:`straighten`).
+    """
+    from .draft_map.core import PROTONS
+    from .draft_map.escher import assign_drawn
+
+    edges = {}
+    for e in dm.edges:
+        edges.setdefault(e.enzyme, []).append(e)
+    slots = {}  # drawn node -> the model metabolites drawn there (later ones below the first)
+
+    def name(m):
+        return md.metabolites[m]["name"] or m
+
+    def main_met(node, m, coef):
+        ids = slots.setdefault(node.id, [])
+        if m not in ids:
+            ids.append(m)
+        k = ids.index(m)
+        return Met(node.id if k == 0 else f"{node.id}#{k}", m, name(m), node.x * scale, (node.y + 34 * k) * scale,
+                   coef)
+
+    reactions = []
+    for enzyme in dm.nodes.values():
+        if enzyme.kind != "enzyme" or not enzyme.reactions:
+            continue
+        k = len(enzyme.reactions)
+        for i, rid in enumerate(enzyme.reactions):
+            r = md.reactions[rid]
+            mets = [m for m in r["metabolites"] if protons or md.base[m] not in PROTONS]
+            drawn = assign_drawn(dm, md, edges, enzyme, mets)
+            main, cof = {-1: [], 1: []}, {-1: [], 1: []}
+            for m in mets:
+                c = r["metabolites"][m]
+                side, node = (1 if c > 0 else -1), drawn.get(m)
+                if node is not None and node.kind == "main":
+                    main[side].append(main_met(node, m, abs(c)))
+                else:
+                    at = node or enzyme
+                    cof[side].append(Met(f"{enzyme.id}~{rid}~{m}", m, name(m), at.x * scale, at.y * scale, abs(c)))
+            info = dict(gene_reaction_rule=r.get("gpr", "") or "",
+                        genes=[dict(bigg_id=g, name=n) for g, n in r.get("genes", [])],
+                        metabolites=[dict(bigg_id=m, coefficient=c) for m, c in r["metabolites"].items()])
+            reactions.append(Rxn(f"{enzyme.id}/{rid}", enzyme.subsystem, rid, r["name"] or rid, enzyme.x * scale,
+                                 enzyme.y * scale, main, cof, bool(r["reversible"]), True,
+                                 lane=(i - (k - 1) / 2) * lane, info=info))
+    position = {m.node: (m.x, m.y) for r in reactions for m in r.main[-1] + r.main[1]}
+    cycles = []
+    for s in dm.subsystems.values():
+        for group in getattr(s, "rigid", []):
+            ring = [i for i in group if i in position]
+            if len(ring) >= 3:
+                cx = sum(position[i][0] for i in ring) / len(ring)
+                cy = sum(position[i][1] for i in ring) / len(ring)
+                cycles.append(sorted(ring, key=lambda i: math.atan2(position[i][1] - cy, position[i][0] - cx)))
+    subsystems = [dict(id=k, label_text=s.label or k) for k, s in dm.subsystems.items()]
+    return reactions, dict(subsystems=subsystems, circles=straighten(reactions, cycles, least=3))
 
 
 def circle_rings(reactions: list[Rxn], rings: list[list[str]], upright: float = 0.5, uneven: float = 0.35,
@@ -528,8 +605,9 @@ def place_axes(reactions: list[Rxn], radius: float = 450.0, marker: float = 30.0
       moves only half as far, or stays at c, if it would come closer than `clearance` to a midmarker placed before
       or to a main metabolite (reactions that move least are placed first).
 
-    The reactions on `circles` (:func:`circle_rings`) are placed before, as arcs (:func:`round_rings`). The
-    multimarkers are on the axis, `marker` from the midmarker (less for short
+    The reactions on `circles` (:func:`circle_rings`) are placed before, as arcs (:func:`round_rings`). A
+    reaction with a `lane` is then moved that far beside its place (perpendicular to its axis, to the right or
+    downwards for a positive lane). The multimarkers are on the axis, `marker` from the midmarker (less for short
     reactions).
     """
     for r in reactions:
@@ -579,6 +657,11 @@ def place_axes(reactions: list[Rxn], radius: float = 450.0, marker: float = 30.0
                 if f == 0.0 or not taken.near(*r.mid, clearance, skip=r.id):
                     break
             rounded += f > 0 and math.hypot(*shift) >= 1.0
+        if r.lane:
+            nx, ny = -r.axis[1], r.axis[0]
+            if nx < -1e-9 or (abs(nx) <= 1e-9 and ny < 0):
+                nx, ny = -nx, -ny
+            r.mid = (r.mid[0] + nx * r.lane, r.mid[1] + ny * r.lane)
         if r.id not in on_ring:
             taken.add(*r.mid)
         r.markers = {s: (r.mid[0] + s * r.axis[0] * d, r.mid[1] + s * r.axis[1] * d) for s in (-1, 1)}
@@ -748,11 +831,12 @@ def place_cofactors(reactions: list[Rxn], curves: dict, along: float = 50.0, ste
 
 
 def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titles: bool = True,
-          labels: bool = True, **options) -> list:
+          labels: bool = True, description: str = "from the BRENDA map", **options) -> list:
     """The Escher map of `reactions` (those of `subsystems`, if given), see the module.
 
-    One Escher reaction per enzyme node (BiGG ID: its EC label) with a primary node for each drawn main
-    metabolite and a secondary node of its own for each cofactor. `options`: the arguments of :func:`place_axes`
+    One Escher reaction per reaction (BiGG ID: its label, e.g. the EC label of a BRENDA enzyme node; its
+    `info` added to the fields) with a primary node for each drawn main metabolite and a secondary node of its
+    own for each cofactor. `options`: the arguments of :func:`place_axes`
     (`radius`, `marker`, `clearance`, `straight`) and :func:`tangents` (`through`, `hub`, `turn`).
     """
     reactions = [r for r in reactions if subsystems is None or r.subsystem in subsystems]
@@ -814,7 +898,7 @@ def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titl
             name=r.name, bigg_id=r.label, reversibility=r.reversible, label_x=r.mid[0] + 20, label_y=r.mid[1] + 40,
             gene_reaction_rule="", genes=[],
             metabolites=[dict(bigg_id=t, coefficient=c) for t, c in coefficients.items() if c],
-            segments=segments)
+            segments=segments) | r.info
     text_labels = {}
     if titles:
         extent = {}  # subsystem -> left, right, top of its nodes
@@ -837,7 +921,7 @@ def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titl
     margin = 250
     body["canvas"] = dict(x=min(xs) - margin, y=min(ys) - margin, width=max(xs) - min(xs) + 2 * margin,
                           height=max(ys) - min(ys) + 2 * margin)
-    head = dict(map_name=map_name, map_id=re.sub(r"\W+", "_", map_name), map_description="from the BRENDA map",
+    head = dict(map_name=map_name, map_id=re.sub(r"\W+", "_", map_name), map_description=description,
                 homepage="https://escher.github.io", schema=SCHEMA)
     return [head, body]
 

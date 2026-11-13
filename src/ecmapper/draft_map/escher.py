@@ -34,7 +34,8 @@ class _Ids:
 
 
 def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, subsystem_labels: bool = True,
-              protons: bool = False, description: str = "", ids: dict | None = None, reuse: dict | None = None) -> list:
+              protons: bool = False, description: str = "", ids: dict | None = None, reuse: dict | None = None,
+              smooth: bool = False) -> list:
     """An Escher map of the model reactions of a draft map.
 
     Every model reaction of an enzyme node becomes an Escher reaction with its
@@ -60,7 +61,8 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
     get the same IDs (:mod:`.ai_layouts`).
 
     The reactions get straight axes and main lines and curved cofactor
-    branches (:func:`curve_reactions`): the reactions of an enzyme node side
+    branches (:func:`curve_reactions`; with `smooth`, curved main lines,
+    too, e.g. for :mod:`.merge_escher`): the reactions of an enzyme node side
     by side (`LANE` apart, as the layout leaves room for them), U-shaped
     reactions moved towards their metabolites where there is room, and the
     metabolites that are not drawn next to the reaction axis. Labels go
@@ -103,36 +105,6 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
                               node_is_primary=False)
         return node_id
 
-    def assign(enzyme, met_ids):
-        """Drawn metabolite nodes of the model metabolites of a reaction at an enzyme node (one to one).
-
-        A metabolite matches a drawn node that was added for it, a main
-        metabolite node anchored to it or a node with common keys (KEGG
-        compounds, names); the best matches (most common keys, same role) are
-        taken first, so that e.g. the two forms of a racemase get both nodes.
-        """
-        candidates = []
-        for met_id in met_ids:
-            base, keys, main = md.base[met_id], md.metabolites[met_id]["keys"], md.is_main(met_id)
-            for e in edges.get(enzyme.id, []):
-                node = dm.nodes[e.met]
-                common = len(keys & md.node_met_keys.get((enzyme.id, node.id), frozenset()))
-                if met_id in getattr(node, "model_met_ids", ()):
-                    score = 1000
-                elif main and e.kind == "main" and base in node.model_mets:
-                    score = 100 + common
-                elif common:
-                    score = common + (5 if (e.kind == "main") == main else 0)
-                else:
-                    continue
-                candidates.append((score, met_id, node))
-        result, used = {}, set()
-        for score, met_id, node in sorted(candidates, key=lambda c: -c[0]):
-            if met_id not in result and node.id not in used:
-                result[met_id] = node
-                used.add(node.id)
-        return result
-
     for enzyme in dm.nodes.values():
         if enzyme.kind != "enzyme" or not enzyme.reactions:
             continue
@@ -142,7 +114,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
             placed = {}  # metabolite -> Escher node
             missing = []
             mets = [m for m in r["metabolites"] if protons or md.base[m] not in PROTONS]
-            drawn = assign(enzyme, mets)
+            drawn = assign_drawn(dm, md, edges, enzyme, mets)
             for met_id in mets:
                 if met_id in drawn:
                     placed[met_id] = metabolite_node(drawn[met_id], met_id, drawn[met_id].kind == "main")
@@ -211,7 +183,7 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
                 text=s.label, x=(s.x + s.w / 2 - text_width(s.label, 18) / 2) * scale, y=s.y * scale)
     body = dict(reactions=reactions, nodes=nodes, text_labels=text_labels)
     moved = set()
-    curve_reactions(body, movable, lane=LANE * scale, moved=moved)
+    curve_reactions(body, movable, lane=LANE * scale, moved=moved, smooth=smooth)
     follow_routes(dm, body, drawn_edge, scale, skip=moved)
     place_node_labels(body)
     place_text_labels(body, references)
@@ -224,6 +196,39 @@ def to_escher(dm: DraftMap, md: ModelData, map_name: str, scale: float = 2.0, su
     head = dict(map_name=map_name, map_id=re.sub(r"\W+", "_", map_name), map_description=description,
                 homepage="https://escher.github.io", schema=SCHEMA)
     return [head, dict(body, canvas=canvas)]
+
+
+def assign_drawn(dm: DraftMap, md: ModelData, edges: dict, enzyme, met_ids) -> dict:
+    """Drawn metabolite nodes of the model metabolites of a reaction at an enzyme node (one to one).
+
+    `edges`: {enzyme node ID: its edges}.
+
+    A metabolite matches a drawn node that was added for it, a main
+    metabolite node anchored to it or a node with common keys (KEGG
+    compounds, names); the best matches (most common keys, same role) are
+    taken first, so that e.g. the two forms of a racemase get both nodes.
+    """
+    candidates = []
+    for met_id in met_ids:
+        base, keys, main = md.base[met_id], md.metabolites[met_id]["keys"], md.is_main(met_id)
+        for e in edges.get(enzyme.id, []):
+            node = dm.nodes[e.met]
+            common = len(keys & md.node_met_keys.get((enzyme.id, node.id), frozenset()))
+            if met_id in getattr(node, "model_met_ids", ()):
+                score = 1000
+            elif main and e.kind == "main" and base in node.model_mets:
+                score = 100 + common
+            elif common:
+                score = common + (5 if (e.kind == "main") == main else 0)
+            else:
+                continue
+            candidates.append((score, met_id, node))
+    result, used = {}, set()
+    for score, met_id, node in sorted(candidates, key=lambda c: -c[0]):
+        if met_id not in result and node.id not in used:
+            result[met_id] = node
+            used.add(node.id)
+    return result
 
 
 def stub_text(maps) -> str:
@@ -510,7 +515,7 @@ def _pull_reactions(body: dict, parts: dict, groups: list, lane: float, movable:
 
 def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: float = 0.3,
                     marker_distance: tuple[float, float] = (20.0, 80.0), max_lead: float = 100.0,
-                    pull: bool = True, moved: set | None = None) -> dict:
+                    pull: bool = True, moved: set | None = None, smooth: bool = False) -> dict:
     """Draw the reactions of an Escher map: straight axes and main lines, curved cofactor branches.
 
     Post-processing of an Escher map (its second part, `body`); the
@@ -533,6 +538,10 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
     - Segments to primary metabolites are straight. Those to secondary ones
       are cubic Bezier curves (b1, b2) that leave the multimarker along the
       axis and bend towards the metabolite.
+    - With `smooth`, segments to primary metabolites are such curves, too;
+      at a metabolite of two segments both curves have the same tangent
+      (from one multimarker towards the other), so that a pathway runs
+      through it without a kink.
     - Metabolite nodes in `movable` (secondary metabolites that are not
       drawn on the source map) are put next to the multimarker of their
       side, alternately left and right of the axis.
@@ -554,6 +563,7 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
         moved.update(pulled)
     segments = 0
     drawn = []  # (reaction IDs, x, y, axis, label sides in order of preference)
+    primary = {}  # with smooth: metabolite -> [(reaction, segment, multimarker, its direction outwards, lead)]
 
     def ids_of(rids):
         return [body["reactions"][rid]["bigg_id"] for rid in rids]
@@ -614,11 +624,13 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
                 nodes[m]["label_x"], nodes[m]["label_y"] = nodes[m]["x"] + 8, nodes[m]["y"] - 12
         for offset, rid, marker, (wx, wy), (px, py), free in markers_at:
             for sid, met in parts[rid][2][marker]:
-                if nodes[met].get("node_is_primary"):
-                    continue  # main metabolites: straight
                 vx, vy = nodes[met]["x"] - px, nodes[met]["y"] - py
                 length = math.hypot(vx, vy) or 1.0
                 lead = min(0.4 * length * max((vx * wx + vy * wy) / length, 0.25), max_lead)
+                if nodes[met].get("node_is_primary"):
+                    if smooth:  # curved below, when the tangents at the metabolites are known
+                        primary.setdefault(met, []).append((rid, sid, marker, (wx, wy), lead))
+                    continue  # main metabolites: straight
                 b_marker = dict(x=px + wx * lead, y=py + wy * lead)
                 b_met = dict(x=nodes[met]["x"] + (b_marker["x"] - nodes[met]["x"]) * 0.35,
                              y=nodes[met]["y"] + (b_marker["y"] - nodes[met]["y"]) * 0.35)
@@ -629,6 +641,22 @@ def curve_reactions(body: dict, movable=frozenset(), lane: float = 60.0, trunk: 
         drawn.append((rids, x0, y0, ux, uy, sides))
         for rid, (lx, ly) in zip(rids, _lane_labels(x0, y0, ux, uy, ids_of(rids), lane, sides[0])):
             body["reactions"][rid]["label_x"], body["reactions"][rid]["label_y"] = lx, ly
+    for met, ends in primary.items():
+        mx, my = nodes[met]["x"], nodes[met]["y"]
+        through = None  # the common tangent at a metabolite between two reactions (towards the first multimarker)
+        if len(ends) == 2:
+            a, b = (nodes[e[2]] for e in ends)
+            through = _unit(a["x"] - b["x"], a["y"] - b["y"])
+        for i, (rid, sid, marker, (wx, wy), lead) in enumerate(ends):
+            px, py = nodes[marker]["x"], nodes[marker]["y"]
+            length = math.hypot(px - mx, py - my)
+            tx, ty = ((through[0], through[1]) if i == 0 else (-through[0], -through[1])) if through else (
+                _unit(px - mx, py - my) or (0.0, 0.0))
+            b_marker = dict(x=px + wx * lead, y=py + wy * lead)
+            b_met = dict(x=mx + tx * 0.35 * length, y=my + ty * 0.35 * length)
+            s = body["reactions"][rid]["segments"][sid]
+            s["b1"], s["b2"] = (b_marker, b_met) if s["from_node_id"] == marker else (b_met, b_marker)
+            segments += 1
     # reaction labels: on the side of their lanes where they cover fewer lines, nodes and labels
     points = _map_points(body, node_labels=False)
     for rids, x0, y0, ux, uy, sides in drawn:

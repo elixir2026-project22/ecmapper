@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import importlib.metadata
 import json
 import math
 import os
@@ -31,7 +32,7 @@ from ..assignment import equation, origin, reaction_subsystems, read_assignment,
 from ..core import DraftMap, hub_table, place_free
 from ..layout import Ports, anneal_arrangement, arrangement_original, to_absolute, user_arrangement
 from ..project import PREP, TABLE, Project, bundled_template, digests, ecmapper_version
-from ..relayout import subsystem_map
+from ..relayout import AUTOLAYOUT, subsystem_map
 from ..render import svg_text
 from ..split import duplicate_subsystems, slug, split_map
 
@@ -45,7 +46,8 @@ TOLERANCE = 1e-3
 CACHE = "gui_cache.pkl"
 #: the options of :mod:`..run` the drawings of the subsystems depend on (steps 1-4)
 DRAWING_OPTIONS = ["keep_subsets", "keep_borrowed", "aside_coverage", "aside_min_matched", "min_anchored",
-                   "no_completion", "relayout", "circle", "relayout_margin", "compactness", "pack", "split"]
+                   "no_completion", "relayout", "circle", "relayout_margin", "relayout_min_gain", "no_untangle", "no_outside",
+                   "label_length", "layout_of", "compactness", "uniform_shrink", "pack", "split"]
 
 
 USAGE = "give MODEL [OUT_DIR] or PREP.pkl BRENDA_map_reactions.json BRENDA_map.svg OUT_DIR (or nothing: a dialog)"
@@ -221,6 +223,9 @@ class Session:
         self.project = project
         self.path: Path | None = args.assignment
         self.md = self.dm = self.table = None
+        self.step3: DraftMap | None = None  # the subsystems before step 3b, to compare its layouts
+        self.layout_of: dict[str, str] = {}  # layouts of subsystems chosen by hand (--layout-of)
+        self._cache: dict = {}  # what the cache of the drawings keeps besides them
         self.maps: list[str] = []
         self.positions: dict[str, dict[str, tuple[float, float]]] = {}
         self.arranged: dict[str, bool] = {}
@@ -249,7 +254,13 @@ class Session:
         files = digests([self.args.prep, self.args.brenda_json, self.args.brenda_svg,
                          *sorted(Path(__file__).parents[1].glob("*.py"))])
         options = {o: getattr(self.args, o) for o in DRAWING_OPTIONS}
-        return hashlib.sha256(repr((files, options, self.methods)).encode()).hexdigest()
+        key = (files, options, self.methods)
+        if AUTOLAYOUT in self.args.layout_of:  # drawn by a package of its own: its version
+            try:
+                key += (importlib.metadata.version("sbml-autolayout"),)
+            except importlib.metadata.PackageNotFoundError:
+                key += ("",)
+        return hashlib.sha256(repr(key).encode()).hexdigest()
 
     def prepare_model(self) -> Path:
         """Match the model (`args.model`) to the BRENDA map (:mod:`..prepare`): OUT/MODEL_prep.pkl (in a project:
@@ -338,34 +349,23 @@ class Session:
             except Exception as e:  # noqa: BLE001 (an old or damaged cache is made again)
                 self.log(f"cache {cache} not used: {e}")
                 cached = None
+        self.layout_of = run.parse_layout_of(getattr(self.args, "layout_of", ""))
         if cached is not None:
-            self.md, dm = cached["md"], cached["dm"]
+            self.md, dm, self.step3 = cached["md"], cached["dm"], cached.get("step3")
+            self._cache = dict(changed=cached["changed"], dropped=cached["dropped"])
             self.log(f"condensed subsystems from {cache}")
         else:
             stats = {}
             self.md, dm, _ = run.draft_until_assignment(self.args, self.log, stats, drop_unassigned=False)
+            self.step3 = copy.deepcopy(dm)
             run.relayout_and_condense(dm, self.md, self.args, self.methods, self.log, stats)
             applied = stats.get("assignment", {})
-            try:
-                cache.parent.mkdir(parents=True, exist_ok=True)
-                with open(cache, "wb") as f:
-                    pickle.dump(dict(key=key, md=self.md, dm=dm, changed=bool(applied.get("added") or
-                                                                             applied.get("removed")),
-                                     dropped=set(applied.get("empty_subsystems", []))), f)
-            except OSError as e:
-                self.log(f"cache {cache} not written: {e}")
+            self._cache = dict(changed=bool(applied.get("added") or applied.get("removed")),
+                               dropped=set(applied.get("empty_subsystems", [])))
+            self.dm = dm
+            self._write_cache()
         self.dm, self.table = dm, table
-        self.hubs = hub_table(dm)
-        self.reactions_of = defaultdict(set)
-        statuses = defaultdict(set)
-        for n in dm.nodes.values():
-            self.reactions_of[n.subsystem].update(n.reactions)
-            for r in n.reactions:
-                statuses[n.subsystem, r].add(n.status)
-        self.counts = {k: len(self.reactions_of[k]) for k in dm.subsystems}
-        # reactions added from the model (step 3), not on the BRENDA map
-        self.added_counts = {k: sum(origin(statuses[k, r]) == "model" for r in self.reactions_of[k])
-                             for k in dm.subsystems}
+        self._count()
         order, maps_of = run.map_assignment(dm, self.args, self.table, self.log)
         self.maps = list(dict.fromkeys(self.table.maps)) if self.table is not None else list(order)
         given = self.table.positions if self.table is not None else {}
@@ -399,6 +399,30 @@ class Session:
                 del self.layouts[name]
             elif info[2]:
                 self.log(f"the AI layout of map {name!r} is outdated: {'; '.join(info[2])}")
+
+    def _write_cache(self) -> None:
+        """Keep the drawings in OUT/:data:`CACHE` for the next start with the same inputs and options."""
+        cache = Path(self.args.out) / CACHE
+        try:
+            cache.parent.mkdir(parents=True, exist_ok=True)
+            with open(cache, "wb") as f:
+                pickle.dump(dict(key=self.cache_key(), md=self.md, dm=self.dm, step3=self.step3, **self._cache), f)
+        except OSError as e:
+            self.log(f"cache {cache} not written: {e}")
+
+    def _count(self) -> None:
+        """The model reactions of the subsystems, those added from the model and the hub metabolites."""
+        self.hubs = hub_table(self.dm)
+        self.reactions_of = defaultdict(set)
+        statuses = defaultdict(set)
+        for n in self.dm.nodes.values():
+            self.reactions_of[n.subsystem].update(n.reactions)
+            for r in n.reactions:
+                statuses[n.subsystem, r].add(n.status)
+        self.counts = {k: len(self.reactions_of[k]) for k in self.dm.subsystems}
+        # reactions added from the model (step 3), not on the BRENDA map
+        self.added_counts = {k: sum(origin(statuses[k, r]) == "model" for r in self.reactions_of[k])
+                             for k in self.dm.subsystems}
 
     def save(self, path=None) -> Path:
         """The assignment as XLSX table (:func:`..assignment.write_assignment`) with the arranged maps.
@@ -504,6 +528,71 @@ class Session:
                 status[r].add(n.status)
         return [(r, self.md.reactions[r]["name"], ", ".join(sorted(st)), equation(self.md, r, names=True), origin(st))
                 for r, st in sorted(status.items())]
+
+    def layout_comparison(self, k: str) -> list[dict]:
+        """The layouts of step 3b of subsystem `k`, to compare them by eye (:func:`..run.layout_comparison`).
+
+        One dict per layout: name, caption (crossings, area, reactions left
+        out), left_out (model reactions not drawn), used (the layout of the
+        drawing now), svg (bytes).
+        """
+        if self.step3 is None or k not in self.step3.subsystems:
+            raise RuntimeError(f"the drawing of {k} before step 3b is not known: start again without the cache")
+        layouts, chosen = run.layout_comparison(self.step3, self.md, self.args, k)
+        used = self.dm.subsystems[k].layout or "current"
+        return [dict(name=name, caption=run.layout_caption(name, r, chosen), left_out=r["left_out"], used=name == used,
+                     svg=svg_text(r["map"], md=self.md, margin=SVG_MARGIN).encode("utf-8")) for name, r in layouts]
+
+    def use_layout(self, k: str, name: str | None) -> None:
+        """Draw subsystem `k` with layout `name` (of :meth:`layout_comparison`, chosen by hand: kept as
+        --layout-of) or, with None, as step 3b chooses."""
+        layout_of = dict(self.layout_of)
+        if name is None:
+            layout_of.pop(k, None)
+        else:
+            layout_of[k] = name
+        self._set_layout_of(layout_of)
+
+    def _set_layout_of(self, layout_of: dict[str, str]) -> None:
+        changed = sorted(k for k in set(layout_of) | set(self.layout_of) if layout_of.get(k) != self.layout_of.get(k))
+        if not changed:
+            return
+        self.layout_of = dict(layout_of)
+        self.args.layout_of = run.format_layout_of(layout_of)
+        if self.project is not None:
+            self.project.meta.setdefault("options", {})["layout_of"] = self.args.layout_of
+        for k in changed:
+            self._redraw(k)
+        self._count()
+        self._write_cache()
+        self.modified = True
+        self._changed()
+
+    def _redraw(self, k: str) -> None:
+        """Steps 3b and 4 of subsystem `k` again (with --layout-of); boxes that now overlap others on a map move to
+        a free place nearby."""
+        if self.step3 is None or k not in self.step3.subsystems:
+            raise RuntimeError(f"the drawing of {k} before step 3b is not known: start again without the cache")
+        s = subsystem_map(self.step3, k)
+        run.relayout_and_condense(s, self.md, self.args, self.methods, lambda message: None, {})
+        dm, old = self.dm, {i for i, n in self.dm.nodes.items() if n.subsystem == k}
+        for i in old:
+            del dm.nodes[i]
+        dm.nodes.update(s.nodes)
+        dm.edges = [e for e in dm.edges if e.enzyme not in old and e.met not in old] + s.edges
+        dm.subsystems[k] = s.subsystems[k]
+        # the inter-pathway links of the nodes of k: as before step 3b, of the nodes drawn now
+        links = [l for l in dm.links if l.a in dm.nodes and l.b in dm.nodes]
+        have = {(l.a, l.b) for l in links}
+        links += [l for l in self.step3.links if (l.a in s.nodes or l.b in s.nodes) and l.a in dm.nodes
+                  and l.b in dm.nodes and (l.a, l.b) not in have]
+        dm.links = links
+        w, h = self.size(k)
+        for name in self.maps_of(k):
+            others = self.rects(name, exclude=[k])
+            x, y = self.positions[name][k]
+            if not boxes_free([(x, y, x + w, y + h)], others, self.gap):
+                self.positions[name][k] = free_position(others, w, h, self.gap, near=(x + w / 2, y + h / 2))
 
     def original_order(self, keys) -> dict[str, tuple[float, float]]:
         """Positions of subsystems in the order of the BRENDA map, compacted (:func:`..layout.arrangement_original`)."""
@@ -698,10 +787,11 @@ class Session:
 
     def state(self):
         return (list(self.maps), {m: dict(p) for m, p in self.positions.items()}, dict(self.arranged),
-                dict(self.layouts))
+                dict(self.layouts), dict(self.layout_of))
 
     def restore(self, state) -> None:
-        maps, positions, arranged, layouts = state
+        maps, positions, arranged, layouts, layout_of = state
+        self._set_layout_of(layout_of)  # the drawings first: the positions of the state fit them
         members = {m: set(p) for m, p in positions.items()}
         assignment_changed = maps != self.maps or members != {m: set(p) for m, p in self.positions.items()}
         layouts_changed = layouts != self.layouts

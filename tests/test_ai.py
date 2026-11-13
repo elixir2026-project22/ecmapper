@@ -399,6 +399,30 @@ def test_agent_folder(tmp_path):
     assert pi.splitlines()[1] == 'pi "Lay out this map."'
 
 
+def test_job_record(tmp_path):
+    from ecmapper.draft_map.core import DraftMap, Node
+
+    toolkit = fake_toolkit(tmp_path)
+    m = DraftMap()
+    m.nodes = {"node1": Node("node1", "main", "glycolysis", 0, 0, 60, 30, "pyr"),
+               "e1": Node("e1", "enzyme", "glycolysis", 0, 0, 60, 30, "PYK"),
+               "c1": Node("c1", "cofactor", "glycolysis", 0, 0, 40, 20, "ATP")}
+    ids = {"1": ["node", "node1", "pyr_c"], "2": ["reaction", "e1", "PYK"]}
+    base = tmp_path / "ai" / "central"
+    agent, chat = base / "20261104-120000-agent", base / "20261104-130000"
+    agent.mkdir(parents=True)
+    coding_agent.prepare(agent, toolkit, "Central", "", [], {}, ids, m=m, template=tmp_path / "BRENDAmap")
+    record = coding_agent.read_job(agent)
+    assert record["kind"] == "agent" and record["draft"] == "draft.escher.json" and record["ids"] == ids
+    assert record["subsystems"] == {"node1": "glycolysis", "e1": "glycolysis", "c1": "glycolysis"}
+    assert record["template"] == str(tmp_path / "BRENDAmap")
+    # a job of the chat has the same record, but is not a coding agent's job (Use coding agent result)
+    chat.mkdir()
+    coding_agent.write_job(chat, "Central", toolkit, ids, m, kind="chat", draft="draft_v2.escher.json")
+    assert coding_agent.read_job(chat)["draft"] == "draft_v2.escher.json" and "template" not in coding_agent.read_job(chat)
+    assert coding_agent.newest_job(base, "Central")[0] == agent
+
+
 class ScriptedChat(Chat):
     """Returns the given turns; records what it is sent."""
 

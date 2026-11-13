@@ -73,6 +73,12 @@ Other metabolites of the ring are placed by where their partners sit on the circ
 - **outside**, if they link neighbouring members (a triangle, e.g.
   (3S)-citryl-CoA).
 
+The draft map applies the same rule to the reactions it adds from a model
+(DRAFT_MAP.md 1.3): added reactions that touch at most two nodes of a BRENDA
+cycle are kept outside it. With the incremental placement
+(`draft_map.relayout.place_added`) a point inside the cycle costs as much as
+a crossing; without it they start outside (`draft_map.relayout.outside_cycle`).
+
 ## 6. Cofactors decide whether a drawing looks tidy
 
 Cofactors cause most of the remaining clutter: 554 crossings counting all links,

@@ -41,12 +41,19 @@ python -m ecmapper.draft_map.run iML1515_prep.pkl BRENDAmap/BRENDA_map_reactions
 | `--keep-borrowed` | | keep subsystems whose model reactions are all drawn in other subsystems that have model reactions of their own (rule B, step 1) |
 | `--aside-coverage F` | 0.9 | set aside subsystems of which ≥ F of the model reactions are in other subsystems (rules C, D); 1: only fully covered ones, > 1: off |
 | `--aside-min-matched F` | 0 (off) | set aside subsystems in which < F of the enzyme nodes have model reactions (rule E) |
-| `--relayout` | `spring,fdp,dot,neato` | layouts tried in step 3b (see 1.3); `none`: keep the positions of step 3 |
+| `--relayout` | `place_template` | step 3b (see 1.3): `place_template` adds only the added reactions that go where a node of the BRENDA map with their EC number or reaction ID was; `place_conservative` those that cross nothing and leaves out the others, no other layout; or the layouts tried, comma-separated from `place,spring,fdp,dot,neato`; `none`: keep the positions of step 3 |
+| `--layout-of ID=LAYOUT,...` | | step 3b: the layout of these subsystems, chosen by hand (names as in `--compare-layouts`, e.g. `citric-acid-cycle=place,lipid-metabolism=spring+untangle`), whatever `--relayout` chooses; set by *Compare layouts* in the GUI. Only here: `autolayout` (sbml-autolayout, see 1.3) |
+| `--compare-layouts IDS` | | write all layouts of step 3b of these comma-separated BRENDA subsystem IDs side by side (`OUT_DIR/layouts/index.html`, one SVG each, with crossings and the reactions left out) after step 3, and stop (in the GUI: *Compare layouts*) |
+| `--label-length N` | 12 | shorten metabolite labels longer than N characters: to the BiGG ID (nodes of one model metabolite), else cut with "…"; the full name stays the tooltip; 0: never |
 | `--relayout-margin` | 0.25 | step 3b: `dot` and `neato` (which change the BRENDA drawing) need at least this fraction fewer crossings |
+| `--relayout-min-gain` | 3 | step 3b: `dot` and `neato` also need at least this many fewer crossings (see 1.3) |
+| `--no-untangle` | | step 3b: do not also try each layout untangled locally (see 1.3) |
+| `--no-outside` | | step 3b: do not prefer places outside a cycle of the BRENDA drawing for added reactions at the cycle (see 1.3) |
 | `--circle IDS` | | step 3b: comma-separated BRENDA subsystem IDs whose cycle of main metabolites is drawn on a circle (see 1.3), e.g. `citric-acid-cycle` |
 | `--min-anchored` | 2 | drawn main metabolites a model reaction needs to be added (step 3) |
 | `--no-completion` | | skip step 3 |
 | `--compactness` | 0.5 | weight of compactness against keeping the drawing when condensing (step 4) |
+| `--uniform-shrink` | on | step 4: after `--relayout place_conservative` or `place_template`, do not condense a subsystem but only shrink its drawing by one factor per axis, so that its nodes keep their arrangement (see 1.4); `--no-uniform-shrink` condenses it |
 | `--hub-subsystems N` | 0 (off) | remove the inter-pathway links of metabolites drawn in at least N subsystems (step 5) |
 | `--iterations`, `--seed`, `--seeds` | 20000, 1, 1 | annealing of the arrangement (step 6); with `--seeds k` the best of k runs is kept |
 | `--gap` | 80 | space between subsystem boxes |
@@ -97,7 +104,7 @@ model in Escher, saves a screenshot and reports reactions and metabolites missin
 | 1 | Drop subsystems without model reactions; drop or set aside redundant ones | see 1.1 |
 | 2 | Remove enzyme nodes without model reactions | also the metabolite nodes that only they use; inter-pathway links through removed metabolite nodes are bridged |
 | 3 | Complete the network with model reactions that are not on the map | see 1.2 |
-| 3b | Lay out the subsystems with added reactions again | networkx and Graphviz layouts, the one with the fewest crossings is kept, see 1.3 |
+| 3b | Lay out the subsystems with added reactions again | default: the added reactions placed next to their metabolites only where they cross nothing, the others left out; or the added nodes placed again, networkx and Graphviz layouts, the one with the fewest crossings kept; see 1.3 |
 | 4 | Condense each subsystem | order-preserving LP compaction, see 1.4; box and title fitted around the drawing |
 | 5 | Disconnect hub metabolites | the inter-pathway links of metabolites drawn in ≥ N subsystems are removed; their nodes stay and are marked |
 | 6 | Arrange the subsystems with few crossings of inter-pathway links | simulated annealing over sequence pairs, see 1.5 |
@@ -186,22 +193,180 @@ reaction contains the metabolite with a common key (KEGG compound, normalised na
 ### 1.3 Layout of subsystems with added reactions (step 3b)
 
 The completion places added reactions between their drawn metabolites; where many reactions are added (e.g. the
-phospholipid turnover in lipid A biosynthesis), this gives long edges that cross the drawing. Step 3b lays out each
-subsystem with added reactions again with four layouts of its enzyme and main metabolite nodes (an enzyme node with
-its cofactors counts as one box, with room for its model reactions as in step 4; the cofactors keep their offsets):
+phospholipid turnover in lipid A biosynthesis), this gives long edges that cross the drawing.
+
+**Template-based placement (`place_template`, the default).** The BRENDA drawing stays as it is and only gets
+reactions that fit into it without a crossing (`relayout.place_conservative`). As with `place` (below), the added
+enzyme nodes are placed one at a time, the one with the most partners already placed first, each with its new
+metabolite nodes and its cofactors. A node only goes to a point of a 45-unit grid within 2 reaction steps (660 units)
+of its ideal point (as for `place`) where none of its links crosses a link drawn so far (main metabolites and
+cofactors) or passes through a node, no drawn link passes through it, and its box (with room for its model
+reactions) keeps 12 units from the others; points outside the drawing count, so the drawing may grow. The enzyme
+node takes the free point nearest to its ideal point (inside a cycle of the BRENDA drawing counts as 1.5 steps
+farther, see below), its new metabolites the nearest to theirs, its cofactors the nearest to where they were
+relative to it; if one of them does not fit, the next of 30 points of the enzyme node is tried. Reactions that fit
+nowhere are left out of the map (their enzyme nodes, cofactors, the metabolite nodes only they use and the
+inter-pathway links of these); `stats.json` lists them per subsystem (`relayout` → `left_out`). Reactions put into a
+subsystem by hand in the assignment table are drawn anyway, where step 3 put them. No other layout follows, and step
+4 condenses such a map without adding crossings (see 1.4). On iML1515 (GUI project, `--iterations 2000 --seed 2`):
+
+| | `place,spring,fdp,dot,neato` (before) | `place_conservative` |
+|---|---|---|
+| added model reactions drawn | 297 | 199 (98 left out) |
+| crossings of main-metabolite links in the 61 subsystems after step 3b | 278 | 12 (all of the BRENDA drawings) |
+| crossings after step 4, main metabolites / all links | 279 / 556 | 13 / 23 |
+| drawing area after step 4 (M units²) | 64.3 | 82.9 |
+| subsystems whose BRENDA part is drawn differently | 5 (`dot`, `neato`) | 0 |
+
+Without the limit of 2 steps, 80 reactions were left out, but some went far out with links across the whole
+subsystem (arachidonate biosynthesis). Cofactors placed one by one instead of moved with their enzyme node (mirrored
+at most) save 26 reactions. Step 3b takes about 8 s.
+
+**Template places only (`place_template`).** A model reaction whose EC number or reaction ID is on the BRENDA map,
+but whose node was not matched (another cofactor pair, or metabolites a bit different: score below 0.6, or more than
+0.1 below the best match; status `related`), loses that node in step 2 and comes back in step 3 as an added
+reaction. Step 3 now records the place of such a node that is not drawn any more, in the subsystem the reaction is
+added to (`Completion.template_spot`), and for its new metabolite nodes and cofactors the places of the node's
+metabolites (`Completion.template_met`: a common key; a cofactor without one takes a template cofactor of its side,
+consumed or produced, that no other metabolite of the reaction has, e.g. GTP the place of ATP). `--relayout
+place_template` (used alone) draws only the added reactions that can go exactly there: each new metabolite node has
+a free template place, too, and the links from there (to the metabolites drawn already and to the cofactors) cross
+no link and pass through no node (`relayout.place_template`); all other added reactions are left out (`stats.json`:
+`relayout` → `left_out`), reactions put into a subsystem by hand stay. As after `place_conservative`, condensing adds
+no crossings. On iML1515 this keeps 1 of the 297 added reactions (GLCS1, at the place of 2.4.1.21 in glycogen
+metabolism; 12 / 24 crossings after step 4, 56.2 M units²). Of the 282 added enzyme nodes, 146 have no node with
+their EC number or reaction ID on the map, 93 have one only in another subsystem (in 80 of them none of their
+metabolites is drawn there; 11 of these subsystems were dropped in step 1), 13 have one that is still drawn (it
+matched another model reaction), 22 have new metabolites that the template node does not have, and 7 more would
+cross the drawing from the template place (e.g. MLTG2 at the place of 3.2.1.3, whose metabolites are drawn far
+away). Drawing these reactions in their template subsystem with the template node's metabolites would be the next
+step.
+
+**Layouts that compete.** With layouts in `--relayout` instead, step 3b lays out each subsystem with added reactions
+again with five layouts of its enzyme and main metabolite nodes (an enzyme node with its cofactors counts as one box,
+with room for its model reactions as in step 4; the cofactors keep their offsets):
 
 | Layout | Package | Keeps the BRENDA drawing |
 |---|---|---|
+| `place`: the added nodes placed again one by one next to their metabolites, the nodes of the BRENDA map fixed (see below); the other layouts start from it | – (numpy) | yes |
 | `spring`: Fruchterman–Reingold spring layout of the added nodes, the nodes of the BRENDA map fixed | networkx | yes |
 | `fdp`: the same with Graphviz `fdp`, the BRENDA nodes pinned | pygraphviz | yes |
 | `dot`: Graphviz `dot`, layered (Sugiyama) along the reaction directions | pygraphviz | no |
-| `neato`: Graphviz `neato` (stress majorisation), all nodes free, starting from the current drawing | pygraphviz | partly |
+| `neato`: Graphviz `neato` (Kamada–Kawai), starting from the current drawing, the BRENDA nodes pinned softly (see below) | pygraphviz | mostly |
 
 Each layout (and the current drawing) is condensed as in step 4 and the one with the fewest crossings of
 main-metabolite links is kept (ties: crossings of all links, area). `dot` and `neato`, which change the BRENDA drawing,
-are only taken if they have at least 25% (`--relayout-margin`) fewer crossings than the best of the current drawing,
-`spring` and `fdp`. `--relayout` selects the layouts (`none`: skip the step); layouts whose package is missing are
-skipped.
+are only taken if they have at least 25% (`--relayout-margin`) and at least 3 (`--relayout-min-gain`) fewer crossings
+than the best of the current drawing, `place`, `spring` and `fdp`. The absolute minimum matters at small counts: with the
+relative margin alone, one crossing fewer (2 instead of 3) replaced the citric acid cycle of a GUI project of iML1515
+by a layered `dot` drawing without its ring, and 12 of the 22 subsystems redrawn in that project were redrawn for a
+gain of 1–2 crossings (with the minimum gain of 3: 10 redrawn, 239 → 253 crossings of main-metabolite links in the
+61 subsystems laid out again). `--relayout` selects the layouts (`none`: skip the step); layouts whose package is
+missing are skipped.
+
+**A layout chosen by hand only: `autolayout`.** The package
+[sbml-autolayout](https://github.com/elixir2026-project22/small-pathway-layout) lays out small pathways by the
+conventions of textbook maps: one straight main line (glycolysis if it is there, else the longest chain; long chains
+fold into columns), known cycles (citric acid, urea, methionine and Calvin cycle) on circles, the rest as branches.
+As `autolayout` it draws a single subsystem again, also one without added reactions: with `--layout-of
+ID=autolayout` or *Use this layout* in the GUI's *Compare layouts*. It does not compete in `--relayout`, since it
+discards the BRENDA drawing of the subsystem. Each enzyme node is passed as one reaction of the main metabolite
+nodes at its main edges, each main metabolite node as a metabolite of its own with its name on the BRENDA map and
+one of its model metabolites as ID (by these the package finds the known pathways and cycles; a cycle must be closed
+along the reaction directions of the model, so e.g. a citric acid cycle with a 2-oxoglutarate synthase running
+backwards is not drawn as a circle); only the node centres are taken back (3 × the coordinates of the package), the
+cofactors keep their offsets to their enzyme node, and step 4 condenses the subsystem as after every layout, keeping
+the circles of known cycles in shape (so the main line is no longer exactly straight). Subsystems with more than 150 enzyme nodes are not laid out (the run time grows fast: about 8 s at 70
+reactions). Install it with `python -m pip install -e "./ecmapper[autolayout]"`; without the package the layout is
+not offered, and a subsystem for which it was chosen keeps its drawing (the log says so).
+
+**Soft pinning (`neato`).** Between `fdp` with the BRENDA nodes pinned and a free `neato`, each node of the BRENDA map
+gets a pinned ghost node (a point) at its place, joined to it by an edge of 72 points and weight 5
+(`relayout.graphviz_spec(soft=5, drift=72)`): it may drift a little to make room but not wander across the
+subsystem. Graphviz's default mode for `neato` (stress majorisation) cannot be used with it: in 7 of 61 subsystems of
+iML1515 it moved the pinned ghosts to coordinates of 10¹⁸ (and with ghost edges below 0.1 inch it gives NaN), so
+`neato` runs in Kamada–Kawai mode (`mode=KK`; `sgd` ignores the edge weights); overlaps are left to step 4 (removing
+them would separate the nodes from their ghosts). Started from `place` in the 61 subsystems of iML1515:
+
+| `neato` | drift of the BRENDA nodes, median / 90% / max (units) | crossings of main-metabolite links, `neato` alone |
+|---|---|---|
+| free (before) | 377 / 1,113 / 3,398 | 311 |
+| ghost edge 7 points | 5 / 11 / 48 | 846 |
+| ghost edge 36 points | 53 / 121 / 537 | 685 |
+| ghost edge 72 points (default) | 118 / 257 / 952 | 546 |
+| ghost edge 144 points | 192 / 431 / 1,414 | 447 |
+| `place` (the start) | 0 | 349 |
+
+The softer the pins, the more crossings `neato` resolves, but even at 144 points it stays behind `place`: with the
+BRENDA nodes (nearly) fixed, the stress of `neato` pulls the added nodes to its edge length, not away from crossings
+(hard-pinned `neato` gave 754–838). In step 3b with all layouts (`--relayout place,spring,fdp,dot,neato`), the
+layouts kept have 246 crossings instead of 278, but `neato` is kept in 1 subsystem instead of 3, and `dot` in 4
+instead of 2. Taken as a layout that keeps the BRENDA drawing (no `--relayout-margin`, untangled with the BRENDA
+nodes pinned), it is kept in 8 subsystems, with 278 crossings in total.
+
+**Incremental placement (`place`).** The BRENDA drawing is taken as fixed, and the added reactions are fitted into it
+(`relayout.place_added`). The added enzyme nodes (with their cofactors) and the metabolite nodes not on the map are
+placed one at a time, the node with the most partners already placed first (nodes of the map count as placed). Its
+ideal point is the centroid of its placed partners or, with one partner, half a reaction step beyond it, away from
+that partner's other neighbours, so that a chain of added reactions continues the flow; without a placed partner it
+is where step 3 put it. Around the ideal point, rings of free points are tried (16 directions, 45 units apart, up to
+20 rings; the box keeps 12 units from the boxes placed so far), and the point with the smallest
+(crossings + links through nodes + inside the cycle) × 1.5 `STEP` + distance to the ideal point is taken, as for the
+secondary metabolites of the PWL layouts (`pwl.layout.place_side_metabolites`). The greedy order sees only the links
+to nodes placed before, so two rounds of refinement place each added node again with all its links, its current
+point among the candidates. The placed drawing competes as `place` and is the start of `spring`, `fdp` and `neato`;
+`current` is the drawing of step 3.
+
+For the GUI project of iML1515 (61 subsystems with added reactions; `--iterations 2000 --seed 2`), with and without
+`place`:
+
+| | without `place` | with `place` |
+|---|---|---|
+| subsystems redrawn by `dot` or `neato` | 10 | 5 |
+| subsystems kept as `place` | – | 22 |
+| crossings of main-metabolite links, best layout keeping the BRENDA drawing (sum) | 395 | 327 |
+| crossings of main-metabolite links, kept layouts (sum) | 247 | 278 |
+| after step 4: crossings of main-metabolite links / of all links | 248 / 543 | 279 / 556 |
+| after step 4: drawing area | 66.1 M units² | 64.3 M units² |
+
+`place` alone brings the crossings of the 59 subsystems it moves from 1,242 (step 3) to 349, fewer than `spring` (485)
+or `fdp` (562) alone; without the refinement it gave 575 (one round: 419, four: 374). The kept layouts have more
+crossings in sum because subsystems that `dot` or `neato` redrew before keep their BRENDA drawing now, e.g. alanine
+metabolism (`neato`, 3 crossings → `place`, 5) and lipid metabolism (`neato`, 61 → `place`, 90); arachidonate
+biosynthesis (`neato`, 21 → `place`, 13) and the citric acid cycle (`outside+untangle`, 2 → `place`, 0) gain on both
+counts. The placement takes about 7 s for all subsystems.
+
+**Local untangling.** Each layout (and the current drawing) is also tried untangled, as `<layout>+untangle`, and
+competes like the others (it counts as keeping or redrawing like the layout it starts from). As in the layouts from
+PWL (PWL.md, `pwl.layout.untangle`; LAYOUT_LEARNINGS.md 2), Graphviz `neato` moves only the nodes at the ends of
+crossing main-metabolite links, with the lengths of the links of the drawing, and keeps everything else pinned; a
+round (at most 3) is kept only if it removes crossings. In `current`, `spring` and `fdp` the nodes of the BRENDA map
+never move, so only added nodes are untangled. Boxes and cofactors are those of the other layouts.
+`--no-untangle` turns it off. For iML1515 (command of [Usage](#usage), after step 4) untangling lowers the crossings
+of main-metabolite links inside the subsystems from 255 to 239 and of all links from 503 to 480, at a smaller area
+(65.6 M instead of 67.3 M units²); fewer subsystems are redrawn by `dot` or `neato` (19 instead of 23 in a separate
+run of step 3b). It works where it runs: in the 23 subsystems in which it changed the current drawing, their
+crossings fell from 987 to 405 (`fdp`: 146 → 103 in 15; `dot`: 230 → 120 and `neato`: 245 → 168 in 8 each). With
+`--relayout-margin 0.5` (a redrawing layout only at half the crossings, as for the PWL layouts) and untangling, the
+crossings are about those without untangling at 0.25, with 16 instead of 23 subsystems redrawn and about 6% less
+area; without untangling, 0.5 gives a quarter more crossings.
+
+**Added reactions outside a cycle.** The completion places an added reaction between its drawn metabolites, so a
+reaction between two neighbours of a cycle, or at one of its members (citrate lyase, malate oxidase, the Fe³⁺-dicitrate
+reactions in the citric acid cycle), lands inside the ring and its edges cross it. Where the BRENDA drawing of a
+subsystem has a cycle of main metabolites (found as for `--circle`), `place` counts a point inside the cycle like a
+crossing for an added enzyme node joined to at most two nodes of the BRENDA map, and for a metabolite node whose
+placed partners are all outside it (so the metabolites of such a reaction follow it outside); chords may stay inside.
+Without `place` (e.g. `--relayout spring,fdp`), each added enzyme node joined to at most two
+nodes of the BRENDA map is moved outside the cycle before the layouts are tried: onto the ray from the centre of the
+cycle through the middle of its partners, 120 units beyond the polygon of the cycle, at a free place, with its
+cofactors and the metabolite nodes only it uses (`relayout.outside_cycle`; the rule of the PWL layouts for triangles,
+LAYOUT_LEARNINGS.md 5). Added nodes joined to more BRENDA nodes (chords such as the glyoxylate shunt) stay. The moved
+drawing competes as `outside` (keeping the BRENDA drawing), and `spring`, `fdp` and `neato` start from it; `current`
+is the drawing as it was. `--no-outside` turns the rule off in both forms. In the GUI project of iML1515, 7 subsystems have such
+reactions; the citric acid cycle keeps its ring with 2 crossings (`outside+untangle`; `fdp+untangle` without the
+rule: 3), purine metabolism goes from 8 to 7 and pyrimidine metabolism from 5 to 3 crossings, ketogluconate
+metabolism from 1 to 0; NAD and methionine metabolism and the pentose phosphate pathway are unchanged.
 
 pygraphviz 2.0 and later ships Graphviz in its wheels (Linux, macOS, Windows), so `pip install pygraphviz` needs no
 system Graphviz and no compiler. Three Graphviz details matter: `neato` and `fdp` read input positions in inches
@@ -248,7 +413,24 @@ for an enzyme node with k model reactions (k − 1) × 24 units across its react
 metabolites are above and below it, else higher), where the Escher map draws the reactions side by side (section 5).
 The drawn boxes keep their size. For iML1515 (before the room for model reactions was added), free
 compaction (no order band) gave −52% area but +20% crossings of main-metabolite links inside the subsystems; full order
-preservation −29% area, +3% crossings; the band of 150 −44% area, +8% crossings.
+preservation −29% area, +3% crossings; the band of 150 −44% area, +8% crossings. After the conservative placement of
+step 3b (`--relayout place_conservative`), a subsystem whose links would cross more often after condensing is
+condensed again with all nodes in their order along both axes and, if that also adds crossings, not condensed at all
+(`condense_subsystems(keep_crossings=True)`); on iML1515 condensing then added no crossing (57 before).
+
+**Uniform shrink (`--uniform-shrink`).** Condensing moves the nodes of the BRENDA drawing individually (citric acid
+cycle of iML1515: scale 0.94 in x and 0.65 in y, and moves of up to 99 and 68 units on top of that), while a
+subsystem that is not condensed (see above) stays as BRENDA drew it. With `--uniform-shrink`, the subsystems of
+`place_conservative` and `place_template` are not condensed but only shrunk by one factor per axis
+(`layout.shrink_uniform`): the positions of the enzyme and main metabolite nodes are multiplied by the factors,
+cofactor nodes keep their offsets to their enzyme node. The factors (steps of 0.01) are those with the smallest
+drawing at which each two nodes (not an enzyme node and its cofactors) still have the gaps of condensing (22 units
+in x or 28 in y, with the same room); two nodes that are closer already do not come closer along an axis along which
+they are apart; factors with which more links cross or pass through a node are not taken. As the closest two nodes of
+a drawing limit the factor, this saves little: on iML1515 (GUI project `iML1515_v4`, 100 subsystems) the boxes take
+123.8 M units² (not condensed: 132.5, condensed: 95.4), 32 subsystems are not shrunk at all (among them the citric
+acid cycle, where cofactors of the parallel malate dehydrogenases are next to the other enzyme node), the median
+factors are 0.94 (x) and 1.00 (y).
 
 ### 1.5 Arrangement of the subsystems (step 6)
 
@@ -542,6 +724,17 @@ and an overview:
     maps; the panel *Subsystem* lists the model reactions of the selected subsystem (read only; edit the sheet
     *Reactions* to change them), those added from the model in purple as in the table; the boxes give their
     number.
+  - *Compare layouts* (Arrange menu, context menu, Ctrl+Shift+K) draws the selected subsystems (up to 10) with each
+    layout of step 3b: the drawing of step 3, `place_conservative`, `place`, `spring`, `fdp`, `dot`, `neato`
+    (and untangled), the circular layout if the subsystem has a cycle, `autolayout` (1.3; if sbml-autolayout is
+    installed, also for subsystems without added reactions); each condensed as in step 4, with its
+    crossings, area and the reactions it leaves out, the one used now marked. Computed in the background from the
+    drawing before step 3b, which the GUI keeps in its cache (`run --compare-layouts` writes the same as SVGs).
+    *Use this layout* draws the subsystem with the layout shown (undoable; a box that now overlaps others moves to
+    a free place nearby), *Automatic* with the one step 3b chooses again. The choices are kept in the project as
+    `--layout-of` and used by *Build maps*: step 3b computes such a layout as the comparison does
+    (`relayout.layout_methods`: e.g. `spring+untangle` with `place` and `spring`, untangled), so the built map shows
+    the drawing that was chosen.
   - *Build maps* (Ctrl+B) saves the project and runs `run --assignment` with the same options (output folder,
     default `PROJECT_maps` next to the project file and kept in the project, iterations and seeds of the maps
     arranged by the pipeline in a dialog), shows the log and a summary and opens `overview.svg`.
@@ -592,6 +785,9 @@ reactions or metabolites missing in the model.
 
 A map of `--split` can be laid out by an AI in the GUI. The AI uses a layout *toolkit*, such as `escher_handlayout_kit`
 (shipped in `toolkits/escher_handlayout_kit`) or `escher_handlayout`, and the layout is used for that map from then on.
+`toolkits/pwl_handlayout_kit` builds on escher_handlayout_kit for smaller models: the AI gets the subsystems as PWL
+texts, the placement of the subsystems from a catalogue of overview maps, and a complete starting spec of the draft
+that it only changes (see its README.md).
 The AI lays out all the subsystems of the map together, so it can interconnect them, e.g. merge shared
 metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
 
@@ -608,7 +804,7 @@ metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
     installed, otherwise it is kept for the session only. Connections are saved without keys.
   - Web chats, see *With a web chat* below.
 - **Toolkits:** a folder added with *…*. `escher_handlayout` (v1.0 and v1.1, `python -m escher_handlayout`) and
-  `escher_handlayout_kit` (`run.py`: inspect, check-spec, build, validate; the final map is the best build's
+  `escher_handlayout_kit` (`run.py`: inspect, check-spec, build, validate, directions; the final map is the best build's
   `*_handlayout.json`) are recognised as they are. Other toolkits need a file `ecmapper_toolkit.json`:
 
   ```json
@@ -626,6 +822,15 @@ metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
 - **The work folder** is `OUT/ai/MAP/DATE-TIME` (`ai/` of the project, saved with it). It holds the map as the pipeline draws it with the current
   arrangement (`draft.escher.json`), whose subsystem titles serve as zone proposals, and the conversation
   (`transcript.jsonl`).
+- **The job record** `ecmapper_job.json` (also in the folders for coding agents) is for toolkits that need more than
+  the Escher map:
+  - `ids`: the draft objects of the Escher IDs, e.g. `["node", "node1213", "chor_c"]` for a metabolite node or
+    `["reaction", "node8437", "EDA"]` for a reaction. The nodes of the BRENDA map keep their node IDs, so these lead
+    to the BRENDA map and its PWL descriptions;
+  - `subsystems`: the subsystem of every draft node;
+  - `template`: the folder of the BRENDA map used;
+  - `draft`: the exported map (`draft_vN.escher.json` after *Update with AI*);
+  - `kind`: `chat` or `agent`.
 - **The AI's tools:**
   - it reads and writes files in the work folder (the toolkit's files are readable as `toolkit/…`);
   - it runs the toolkit (`run_toolkit`, which needs approval, see below);
@@ -736,8 +941,9 @@ Problems
   chorismate metabolism (where E4P and DHAP are drawn), not to the pentose phosphate pathway.
 - 58 periplasmic reactions are drawn like cytosolic ones (the BRENDA map has no compartments).
 - Subsystems with many added reactions stay busy where many reactions share a metabolite (palmitate and palmitoleate
-  in lipid A biosynthesis); `dot` and `neato` (23 subsystems) change the BRENDA drawing, and step 3b makes the
-  subsystem drawings 9% larger. Condensation adds 11% (main) / 28% (all) crossings inside subsystems.
+  in lipid A biosynthesis); `dot` and `neato` (23 subsystems; since the minimum gain of `--relayout-min-gain` only
+  where they save at least 3 crossings) change the BRENDA drawing, and step 3b makes the subsystem drawings 9%
+  larger. Condensation adds 11% (main) / 28% (all) crossings inside subsystems.
 - Generic map metabolites match many model variants (via generic KEGG compounds); the grouping of variants hides
   that, the label shows `(+k)`.
 - 79 inter-pathway links still pass through other boxes (straight lines).

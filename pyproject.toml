@@ -20,6 +20,8 @@ dev = ["pytest"]
 # draft maps from the BRENDA map (ecmapper.draft_map); networkx and pygraphviz (2.0 and later ship Graphviz) for the
 # layouts of step 3b
 draft-map = ["numpy", "scipy", "numba", "networkx", "pygraphviz>=2.0", "openpyxl"]
+# the layout "autolayout" of step 3b, chosen by hand for single subsystems (--layout-of, the GUI's Compare layouts)
+autolayout = ["sbml-autolayout @ git+https://github.com/elixir2026-project22/small-pathway-layout.git"]
 # PWL descriptions of the BRENDA map (python -m ecmapper.pwl generate); the parser itself needs nothing; the
 # layouts (python -m ecmapper.pwl layout) need draft-map as well (scipy, pygraphviz)
 pwl = ["numpy", "networkx"]

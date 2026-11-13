@@ -24,6 +24,8 @@ SHORT_NAMES = {
     "acp": "ACP", "thf": "THF", "mlthf": "5,10-methylene-THF", "10fthf": "10-formyl-THF", "5mthf": "5-methyl-THF",
 }
 PROTONS = {"h"}
+#: metabolite labels longer than this are shortened (:func:`short_label`); the maps are meant to show BiGG IDs
+LABEL_LENGTH = 12
 #: distance of the model reactions of an enzyme node drawn side by side in the Escher map (map units)
 LANE = 24.0
 
@@ -31,6 +33,40 @@ LANE = 24.0
 def text_width(text: str, font_size: float = 12.0) -> float:
     """Approximate width of a label in map units (Arial), as the BRENDA map sizes its nodes."""
     return 0.54 * font_size * len(text) + 10.0
+
+
+def short_label(label: str, bigg_id: str | None = None, length: int = LABEL_LENGTH) -> str:
+    """`label`, shortened if it is longer than `length` characters (0: never).
+
+    To the BiGG ID of the metabolite (without compartment) if given and
+    shorter, else to `length` characters ending in "…".
+    """
+    if length <= 0 or len(label) <= length:
+        return label
+    if bigg_id and len(bigg_id) < len(label):
+        return bigg_id
+    return label[:length - 1] + "…"
+
+
+def abbreviate_labels(dm: DraftMap, length: int = LABEL_LENGTH) -> int:
+    """Shorten the labels of the metabolite nodes (:func:`short_label`) and their boxes; returns how many.
+
+    A node of one model metabolite gets its BiGG ID. The full label stays
+    the title (tooltip) and, as `full_label`, the identity of the
+    metabolite (:func:`metabolite_key`).
+    """
+    count = 0
+    for n in dm.nodes.values():
+        if n.kind == "enzyme":
+            continue
+        label = short_label(n.label, next(iter(n.model_mets)) if len(n.model_mets) == 1 else None, length)
+        if label != n.label:
+            n.full_label = getattr(n, "full_label", n.label)
+            n.title = n.title or n.label
+            n.label = label
+            n.w = min(n.w, text_width(label))
+            count += 1
+    return count
 
 
 @dataclass
@@ -532,8 +568,12 @@ class Completion:
 
     def __init__(self, dm: DraftMap, md: ModelData, min_anchored: int = 2, cofactors: bool = True,
                  origin_positions: dict[str, tuple[float, float, str]] | None = None, prefix: str = "added_",
-                 anchor_aside: bool = False):
+                 anchor_aside: bool = False, label_length: int = LABEL_LENGTH, template: DraftMap | None = None):
         self.dm, self.md = dm, md
+        # the BRENDA map before step 1: added reactions at the place of one of its nodes (:meth:`template_spot`)
+        self.template = template
+        self.template_edges = template.edges_of() if template is not None else {}
+        self.label_length = label_length  # of new metabolite nodes (:func:`short_label`)
         self.min_anchored = min_anchored
         self.cofactors = cofactors
         self.prefix = prefix  # of the IDs of new nodes
@@ -640,6 +680,43 @@ class Completion:
     def match_candidates(self, rid) -> list[dict]:
         return self.md.matches.get(rid, {}).get("candidates", [])
 
+    def template_spot(self, rid, target) -> str | None:
+        """The node of the BRENDA map (:attr:`template`) with the reaction's ID or EC number in subsystem
+        `target` that is not drawn any more (its place is free), or None."""
+        if self.template is None:
+            return None
+        for c in self.match_candidates(rid):
+            t = c["node_id"]
+            if (set(c["via"]) & {"reaction-id", "ec"} and t not in self.dm.nodes and t in self.template.nodes
+                    and self.template.nodes[t].subsystem == target):
+                return t
+        return None
+
+    def template_met(self, t: str, mid: str, kind: str, coefficient: float, used: set,
+                     others: frozenset = frozenset()) -> tuple[str, float, float] | None:
+        """The metabolite node of template node `t` for model metabolite `mid`: (node, x, y) or None.
+
+        The one of `kind` (main, cofactor) with a common key; for a cofactor
+        without one, the next on its side (consumed if `coefficient` < 0, else
+        produced), then an undirected one, among those that do not have a key
+        of the reaction's other metabolites (`others`), e.g. ATP for GTP.
+        Nodes in `used` are not taken; the one found is added.
+        """
+        md = self.md
+        edges = [e for e in self.template_edges.get(t, []) if e.enzyme == t and e.kind == kind and e.met not in used]
+        keys = md.metabolites[mid]["keys"]
+        found = next((e for e in edges if md.node_met_keys.get((t, e.met), frozenset()) & keys), None)
+        if found is None and kind == "cofactor":
+            free = [e for e in edges if not md.node_met_keys.get((t, e.met), frozenset()) & others]
+            side = (True, False) if coefficient < 0 else (False, True)
+            found = next((e for e in free if (e.arrow_enzyme, e.arrow_met) == side), None) or next(
+                (e for e in free if not e.arrow_enzyme and not e.arrow_met), None)
+        if found is None:
+            return None
+        used.add(found.met)
+        n = self.template.nodes[found.met]
+        return found.met, n.x, n.y
+
     def add(self, rid, mains, anchored, votes, target: str | None = None) -> None:
         """Draw reaction `rid` in subsystem `target` (default: :meth:`target_subsystem`)."""
         dm, md = self.dm, self.md
@@ -697,6 +774,11 @@ class Completion:
             reaction["name"], "nodeEN", ec_label=";".join(reaction["ecs"][:3]), reactions=[rid], status="added",
         )
         enzyme.x, enzyme.y = place_free(position[0], position[1], enzyme.w, enzyme.h, boxes)
+        # the place of a template node that is not drawn: kept for the layout place_template (step 3b)
+        spot, used = self.template_spot(rid, target), set()
+        if spot is not None:
+            enzyme.template = (spot, self.template.nodes[spot].x, self.template.nodes[spot].y)
+        all_keys = {mid: md.metabolites[mid]["keys"] for mid in reaction["metabolites"]}
         dm.nodes[enzyme.id] = enzyme
         boxes.append(enzyme.box)
         enzyme.new_nodes = {"sub": [], "prod": []}
@@ -718,12 +800,17 @@ class Completion:
                     label = getattr(source, "base_label", source.label)
                     title, ligand, css = source.title, source.ligand_id, source.svg_class
                 else:
-                    label = title = md.metabolites[mid]["name"] or m
+                    title = md.metabolites[mid]["name"] or m
+                    label = short_label(title, m, self.label_length)
                     ligand, css = None, "nodeHM"
                 met = Node(self.new_id("m"), "main", target, 0, 0, text_width(label), 30.0, label, title, css,
                            ligand, status="linked" if source else "new", model_mets={m})
                 met.base_label = label
                 met.model_met_ids = {mid}
+                if spot is not None:
+                    met.template = self.template_met(spot, mid, "main", coefficient, used)
+                if hasattr(source, "full_label"):  # the same metabolite as its source (:func:`metabolite_key`)
+                    met.full_label = source.full_label
                 prefer = (source.x, source.y) if source else None
                 met.x, met.y = place_free(
                     enzyme.x + (140 if coefficient > 0 else -140), enzyme.y + (60 if coefficient > 0 else -60),
@@ -745,10 +832,13 @@ class Completion:
                 b = md.base[mid]
                 if self.is_main(mid) or b in PROTONS:
                     continue
-                label = SHORT_NAMES.get(b, md.metabolites[mid]["name"] or b)
+                label = SHORT_NAMES.get(b) or short_label(md.metabolites[mid]["name"] or b, b, self.label_length)
                 cof = Node(self.new_id("c"), "cofactor", target, 0, 0, text_width(label), 30.0, label,
                            md.metabolites[mid]["name"], "nodeCM", status="added")
                 cof.model_met_ids = {mid}
+                if spot is not None:
+                    others = frozenset().union(*(k for x, k in all_keys.items() if x != mid))
+                    cof.template = self.template_met(spot, mid, "cofactor", coefficient, used, others)
                 cof.x, cof.y = place_free(
                     enzyme.x + (70 if coefficient > 0 else -70), enzyme.y + 45, cof.w, cof.h, boxes, margin=6, step=30
                 )
@@ -798,8 +888,8 @@ class Completion:
 
 
 def metabolite_key(node: Node):
-    """Identity of a drawn metabolite across subsystems: BRENDA ligand ID, else the label."""
-    return node.ligand_id if node.ligand_id is not None else node.label
+    """Identity of a drawn metabolite across subsystems: BRENDA ligand ID, else the (full) label."""
+    return node.ligand_id if node.ligand_id is not None else getattr(node, "full_label", node.label)
 
 
 def hub_table(dm: DraftMap) -> list[dict]:

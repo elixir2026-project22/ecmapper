@@ -11,12 +11,24 @@ import time
 import traceback
 from pathlib import Path
 
-from qtpy.QtCore import QProcess, QProcessEnvironment, QRectF, QSettings, QThread, QTimer, QUrl, Qt, Signal
-from qtpy.QtGui import QAction, QActionGroup, QColor, QCursor, QDesktopServices, QKeySequence, QUndoCommand, QUndoStack
+from qtpy.QtCore import QByteArray, QProcess, QProcessEnvironment, QRectF, QSettings, QThread, QTimer, QUrl, Qt, Signal
+from qtpy.QtGui import (
+    QAction,
+    QActionGroup,
+    QColor,
+    QCursor,
+    QDesktopServices,
+    QKeySequence,
+    QPainter,
+    QUndoCommand,
+    QUndoStack,
+)
+from qtpy.QtSvg import QSvgRenderer
 from qtpy.QtWidgets import (
     QAbstractItemView,
     QApplication,
     QCheckBox,
+    QComboBox,
     QDialog,
     QDialogButtonBox,
     QDockWidget,
@@ -36,6 +48,7 @@ from qtpy.QtWidgets import (
     QProgressDialog,
     QPushButton,
     QSpinBox,
+    QSplitter,
     QStackedWidget,
     QTableWidget,
     QTableWidgetItem,
@@ -44,8 +57,10 @@ from qtpy.QtWidgets import (
     QWidget,
 )
 
+from .. import merge_escher
 from ..ai import coding_agent
 from ..assignment import ADDED_COLOUR, MIXED_COLOUR
+from ..escher import escher_counts
 from ..split import GROUP_NAMES, slug
 from .chat import AIDock
 from .escher_svg import ESCHER_URL, ESCHER_VERSION, EscherSvg, download_script, find_script, web_engine_available
@@ -136,6 +151,136 @@ class PackWorker(QThread):
                                             progress=self.progress.emit, stop=lambda: self.stopped)
         except Exception:  # noqa: BLE001 (shown to the user)
             self.error = traceback.format_exc()
+
+
+class CompareWorker(QThread):
+    """The layouts of step 3b of subsystems (:meth:`.session.Session.layout_comparison`) in the background."""
+
+    progress = Signal(int)
+
+    def __init__(self, session: Session, keys: list[str], parent=None):
+        super().__init__(parent)
+        self.session, self.keys = session, keys
+        self.result, self.error = {}, None
+
+    def run(self) -> None:
+        try:
+            for i, k in enumerate(self.keys):
+                self.result[k] = self.session.layout_comparison(k)
+                self.progress.emit(i + 1)
+        except Exception:  # noqa: BLE001 (shown to the user)
+            self.error = traceback.format_exc()
+
+
+class SvgView(QWidget):
+    """An SVG drawn as large as fits, keeping its proportions."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.renderer = None
+        self.setMinimumSize(300, 200)
+
+    def set_svg(self, data: bytes | None) -> None:
+        self.renderer = QSvgRenderer(QByteArray(data)) if data else None
+        self.update()
+
+    def paintEvent(self, event) -> None:  # noqa: N802 (Qt)
+        p = QPainter(self)
+        p.fillRect(self.rect(), QColor("white"))
+        if self.renderer is not None and self.renderer.isValid():
+            box = self.renderer.viewBoxF()
+            scale = min(self.width() / max(box.width(), 1.0), self.height() / max(box.height(), 1.0))
+            w, h = box.width() * scale, box.height() * scale
+            self.renderer.render(p, QRectF((self.width() - w) / 2, (self.height() - h) / 2, w, h))
+        p.end()
+
+
+class LayoutsDialog(QDialog):
+    """The layouts of step 3b of subsystems, one at a time, to compare them by eye and to switch to one.
+
+    `use(subsystem, layout or None)` switches (None: as step 3b chooses).
+    """
+
+    def __init__(self, parent, session: Session, layouts: dict[str, list[dict]], use=None):
+        super().__init__(parent)
+        self.setWindowTitle("Compare layouts")
+        self.session, self.layouts, self.use = session, layouts, use
+        self.subsystem = QComboBox()
+        for k in layouts:
+            self.subsystem.addItem(f"{session.dm.subsystems[k].label} ({k})", k)
+        self.subsystem.setVisible(len(layouts) > 1)
+        self.list = QListWidget()
+        self.view = SvgView()
+        self.caption = QLabel()
+        self.caption.setWordWrap(True)
+        self.caption.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
+        note = QLabel(f"Step 3b of the pipeline with <code>--relayout {html.escape(session.args.relayout)}</code>; "
+                      "each layout condensed as in step 4. <i>(used)</i>: the drawing now, <i>(chosen)</i>: chosen "
+                      "here (kept in the project as <code>--layout-of</code>). Use the arrow keys to go through the "
+                      "layouts.")
+        note.setWordWrap(True)
+        splitter = QSplitter()
+        splitter.addWidget(self.list)
+        splitter.addWidget(self.view)
+        splitter.setStretchFactor(1, 1)
+        splitter.setSizes([260, 900])
+        buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Close)
+        buttons.rejected.connect(self.reject)
+        self.b_use = buttons.addButton("&Use this layout", QDialogButtonBox.ButtonRole.ActionRole)
+        self.b_use.setToolTip("Draw the subsystem with this layout (undoable)")
+        self.b_auto = buttons.addButton("&Automatic", QDialogButtonBox.ButtonRole.ActionRole)
+        self.b_auto.setToolTip("Draw the subsystem with the layout step 3b chooses (--relayout)")
+        self.b_use.clicked.connect(lambda: self.switch(self.entries()[self.list.currentRow()]["name"]))
+        self.b_auto.clicked.connect(lambda: self.switch(None))
+        layout = QVBoxLayout(self)
+        for w in (note, self.subsystem):
+            layout.addWidget(w)
+        layout.addWidget(splitter, 1)
+        layout.addWidget(self.caption)
+        layout.addWidget(buttons)
+        self.subsystem.currentIndexChanged.connect(self.show_subsystem)
+        self.list.currentRowChanged.connect(self.show_layout)
+        self.resize(1300, 850)
+        self.show_subsystem()
+
+    def entries(self) -> list[dict]:
+        return self.layouts[self.subsystem.currentData()]
+
+    def show_subsystem(self, *_) -> None:
+        k = self.subsystem.currentData()
+        used = self.session.dm.subsystems[k].layout or "current"
+        chosen = self.session.layout_of.get(k)
+        self.list.blockSignals(True)
+        self.list.clear()
+        for e in self.entries():
+            e["used"] = e["name"] == used
+            self.list.addItem(e["name"] + ("  (used)" if e["used"] else "") + ("  (chosen)" if e["name"] == chosen
+                                                                                else ""))
+        self.list.blockSignals(False)
+        self.list.setCurrentRow(next((i for i, e in enumerate(self.entries()) if e["used"]), 0))
+        self.show_layout(self.list.currentRow())
+        self.b_auto.setEnabled(self.use is not None and chosen is not None)
+        self.list.setFocus()
+
+    def switch(self, name: str | None) -> None:
+        """Draw the subsystem shown with layout `name` (None: as step 3b chooses)."""
+        row = self.list.currentRow()
+        self.use(self.subsystem.currentData(), name)
+        self.show_subsystem()
+        self.list.setCurrentRow(row)
+
+    def show_layout(self, row: int) -> None:
+        if not 0 <= row < len(self.entries()):
+            self.view.set_svg(None)
+            self.caption.clear()
+            return
+        e = self.entries()[row]
+        self.view.set_svg(e["svg"])
+        self.b_use.setEnabled(self.use is not None and not e["used"])
+        text = html.escape(e["caption"])
+        if e["left_out"]:
+            text += f"<br>Left out: {html.escape(', '.join(e['left_out']))}"
+        self.caption.setText(text)
 
 
 def spin_box(value: int, maximum: int, step: int = 1) -> QSpinBox:
@@ -414,6 +559,7 @@ class MainWindow(QMainWindow):
         self.mode = AUTO
         self.found: list[str] = []
         self.process = self.build_progress = None
+        self.merge_process = self.merge_progress = None
         self._reordering = False
         self.tabs = QTabWidget()
         self.tabs.setMovable(True)
@@ -527,9 +673,16 @@ class MainWindow(QMainWindow):
                                       "Arrange the subsystems of this map as on the BRENDA map, compacted")
         self.a_pipeline = self.action("&Let the pipeline arrange this map", self.pipeline_arranges, None,
                                       "Do not save the arrangement of this map; the pipeline anneals it")
+        self.a_compare = self.action("Compare &layouts…", self.compare_layouts, "Ctrl+Shift+K",
+                                     "Draw the selected subsystems with each layout of step 3b (crossings, reactions "
+                                     "left out), to compare them")
         self.a_new_map = self.action("&New map…", self.new_map, "Ctrl+Shift+N")
         self.a_rename_map = self.action("&Rename map…", lambda: self.rename_map(self.tabs.currentIndex()), "F6")
         self.a_delete_map = self.action("&Delete map", self.delete_map)
+        self.a_merge = self.action("&Merge subsystems with MergingEscher…", self.merge_map, None,
+                                   "Export each subsystem of this map as an Escher map (smooth curves, or curved as "
+                                   "the Escher maps of the BRENDA map) and merge them into one Escher map with "
+                                   "MergingEscher")
         self.a_ai_layout = self.action("&Lay out with AI…", self.lay_out_with_ai, "Ctrl+Shift+L",
                                        "Chat with an AI that lays out this map with a toolkit")
         self.a_ai_view = self.action("&Show AI layout", self.toggle_ai_view, "F7",
@@ -571,11 +724,11 @@ class MainWindow(QMainWindow):
         for dock in [*self.docks, self.ai_dock]:
             m.addAction(dock.toggleViewAction())
         m = bar.addMenu("&Arrange")
-        for a in (self.a_pack, self.a_original, None, self.a_pipeline):
+        for a in (self.a_pack, self.a_original, None, self.a_pipeline, None, self.a_compare):
             m.addSeparator() if a is None else m.addAction(a)
         m = bar.addMenu("&Maps")
-        for a in (self.a_new_map, self.a_rename_map, self.a_delete_map):
-            m.addAction(a)
+        for a in (self.a_new_map, self.a_rename_map, self.a_delete_map, None, self.a_merge):
+            m.addSeparator() if a is None else m.addAction(a)
         m = bar.addMenu("A&I")
         for a in (self.a_ai_layout, self.a_ai_view, None, self.a_agent_prepare, self.a_agent_result, None,
                   self.a_import_layout, self.a_discard_layout, None, self.a_ai_folder):
@@ -755,7 +908,7 @@ class MainWindow(QMainWindow):
         loaded = scene is not None
         on_map = loaded and not scene.read_only
         selected = bool(loaded and scene.selected_keys())
-        for a in (self.a_copy, self.a_zoom_sel):
+        for a in (self.a_copy, self.a_zoom_sel, self.a_compare):
             a.setEnabled(selected)
         self.a_cut.setEnabled(selected)
         self.a_remove.setEnabled(selected and on_map)
@@ -770,6 +923,7 @@ class MainWindow(QMainWindow):
         for a in (self.a_rename_map, self.a_delete_map, self.a_ai_layout, self.a_import_layout, self.a_ai_folder,
                   self.a_agent_prepare, self.a_agent_result):
             a.setEnabled(a_map)
+        self.a_merge.setEnabled(a_map and self.merge_process is None)
         has_layout = a_map and scene.name in self.session.layouts
         self.a_ai_view.setEnabled(has_layout)
         self.a_ai_view.setChecked(has_layout and scene.ai_view)
@@ -929,6 +1083,8 @@ class MainWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.a_zoom_sel)
         menu.addAction(self.a_fit)
+        if scene.selected_keys():
+            menu.addAction(self.a_compare)
         if scene.name is not None:
             menu.addSeparator()
             menu.addAction(self.a_ai_layout)
@@ -991,6 +1147,52 @@ class MainWindow(QMainWindow):
         progress.show()
         worker.start()
         self.pack_worker = worker
+
+    def compare_layouts(self, limit: int = 10) -> None:
+        """The layouts of step 3b of the selected subsystems (at most `limit`), computed in the background."""
+        scene = self.current_scene()
+        keys = list(dict.fromkeys(scene.selected_keys())) if scene is not None else []
+        if not keys:
+            self.status("No subsystem selected")
+            return
+        if len(keys) > limit:
+            self.status(f"Layouts of the first {limit} of {len(keys)} selected subsystems")
+            keys = keys[:limit]
+        worker = CompareWorker(self.session, keys, self)
+        progress = QProgressDialog(f"Laying out {subsystems(len(keys))} …", "", 0, len(keys), self)
+        progress.setWindowTitle("Compare layouts")
+        progress.setCancelButton(None)
+        progress.setMinimumDuration(0)
+        progress.setWindowModality(Qt.WindowModality.WindowModal)
+        worker.progress.connect(progress.setValue)
+
+        def done():
+            progress.close()
+            if worker.error:
+                self.show_log(worker.error)
+                QMessageBox.critical(self, "Compare layouts", f"Laying out failed:\n\n{worker.error[-1500:]}")
+                return
+            self.layouts_dialog = LayoutsDialog(self, self.session, worker.result, use=self.use_layout)
+            self.layouts_dialog.show()
+
+        worker.finished.connect(done)
+        progress.show()
+        worker.start()
+        self.compare_worker = worker
+
+    def use_layout(self, k: str, name: str | None) -> None:
+        """Draw subsystem `k` with layout `name` of step 3b (None: as step 3b chooses), undoable."""
+        label = self.session.dm.subsystems[k].label
+        QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
+        try:
+            self.change(f"Layout {name or 'automatic'} of {label}", lambda: self.session.use_layout(k, name))
+        except Exception:  # noqa: BLE001 (shown to the user)
+            error = traceback.format_exc()
+            self.show_log(error)
+            QMessageBox.critical(self, "Compare layouts", f"Laying out failed:\n\n{error[-1500:]}")
+        finally:
+            QApplication.restoreOverrideCursor()
+        self.status(f"{label}: layout {self.session.dm.subsystems[k].layout or 'current'}")
 
     def original_order(self) -> None:
         name = self.current_map()
@@ -1459,9 +1661,10 @@ class MainWindow(QMainWindow):
             self.ai_dock.worker.stop()
             self.ai_dock.worker.wait(10000)
         if self.maybe_save():
-            if self.process is not None:
-                self.process.kill()
-                self.process.waitForFinished(3000)
+            for process in (self.process, self.merge_process):
+                if process is not None:
+                    process.kill()
+                    process.waitForFinished(3000)
             self.release_project()
             event.accept()
         else:
@@ -1503,12 +1706,16 @@ class MainWindow(QMainWindow):
         process.start(command[0], command[1:])
 
     def read_build_output(self) -> None:
-        text = bytes(self.process.readAllStandardOutput()).decode("utf-8", errors="replace")
+        self.read_output(self.process, self.build_progress)
+
+    def read_output(self, process: QProcess, progress: QProgressDialog | None) -> None:
+        """The new output of a process into the log; its last line on its progress dialog."""
+        text = bytes(process.readAllStandardOutput()).decode("utf-8", errors="replace")
         lines = [line for line in text.splitlines() if line.strip()]
         if lines:
             self.log_view.appendPlainText("\n".join(lines))
-            if self.build_progress is not None:
-                self.build_progress.setLabelText(lines[-1][:120])
+            if progress is not None:
+                progress.setLabelText(lines[-1][:120])
 
     def build_finished(self, code: int, status, out: Path) -> None:
         self.read_build_output()
@@ -1553,3 +1760,112 @@ class MainWindow(QMainWindow):
             QDesktopServices.openUrl(QUrl.fromLocalFile(str(out / "overview.svg")))
         elif box.clickedButton() is folder:
             QDesktopServices.openUrl(QUrl.fromLocalFile(str(out)))
+
+    # --- merging the subsystems of a map (..merge_escher) ----------------------------------------
+
+    def merge_map(self) -> None:
+        """Export the subsystems of the current map as Escher maps and merge them with MergingEscher."""
+        name = self.current_map()
+        if name is None or self.merge_process is not None:
+            return
+        title = "Merge subsystems"
+        script = merge_escher.find_tool(self.settings.value(merge_escher.SETTING, ""))
+        if script is None:
+            folder = QFileDialog.getExistingDirectory(self, "Folder of MergingEscher")
+            if not folder:
+                return
+            script = merge_escher.find_tool(folder)
+            if script is None:
+                QMessageBox.warning(self, title, f"{merge_escher.SCRIPT} is neither in {folder} nor in its src folder.")
+                return
+            self.settings.setValue(merge_escher.SETTING, str(script))
+        styles = list(merge_escher.STYLES)
+        texts = list(merge_escher.STYLES.values())
+        last = self.settings.value(merge_escher.STYLE_SETTING, styles[0])
+        text, ok = QInputDialog.getItem(self, title, "Draw the subsystems:", texts,
+                                        styles.index(last) if last in styles else 0, False)
+        if not ok:
+            return
+        style = styles[texts.index(text)]
+        self.settings.setValue(merge_escher.STYLE_SETTING, style)
+        out = Path(self.session.args.out)
+        path, _ = QFileDialog.getSaveFileName(self, f"Merged Escher map of {name}",
+                                              str(out / f"{slug(name)}_merged.json"), "Escher maps (*.json)")
+        if not path:
+            return
+        output = Path(path)
+        QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
+        try:
+            maps = merge_escher.subsystem_maps(self.session.map_draft(name), self.session.md,
+                                               self.session.args.escher_scale, style)
+        finally:
+            QApplication.restoreOverrideCursor()
+        if len(maps) < 2:
+            if not maps:
+                QMessageBox.warning(self, title, f"{name} has no subsystems with reactions.")
+                return
+            output.write_text(json.dumps(next(iter(maps.values()))), encoding="utf-8")
+            QMessageBox.information(self, title, f"{name} has one subsystem with reactions; its Escher map is in "
+                                                 f"{output} (nothing to merge).")
+            return
+        folder = out / "merge" / slug(name)
+        merge_escher.write_maps(maps, folder)
+        self.show_log(f"{len(maps)} subsystems of {name} exported as Escher maps ({style}) to {folder}")
+        command = merge_escher.merge_command(script, folder, output, name, getattr(self.session.args, "model", None))
+        self.show_log("$ " + " ".join(shlex.quote(c) for c in command))
+        process = QProcess(self)
+        process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)
+        env = QProcessEnvironment.systemEnvironment()
+        env.insert("PYTHONUNBUFFERED", "1")
+        process.setProcessEnvironment(env)
+        process.readyReadStandardOutput.connect(lambda: self.read_output(process, self.merge_progress))
+        process.finished.connect(lambda code, status: self.merge_finished(code, status, output))
+
+        def failed(error):  # no finished signal then
+            if error == QProcess.ProcessError.FailedToStart:
+                self.merge_finished(-1, QProcess.ExitStatus.NormalExit, output)
+
+        process.errorOccurred.connect(failed)
+        self.merge_progress = QProgressDialog(f"Merging the subsystems of {name} …", "Cancel", 0, 0, self)
+        self.merge_progress.setWindowTitle(title)
+        self.merge_progress.setMinimumWidth(700)
+        self.merge_progress.setMinimumDuration(0)
+        self.merge_progress.canceled.connect(process.kill)
+        self.merge_progress.show()
+        self.merge_process = process
+        self.update_actions()
+        process.start(command[0], command[1:])
+
+    def merge_finished(self, code: int, status, output: Path) -> None:
+        if self.merge_process is None:
+            return
+        self.read_output(self.merge_process, self.merge_progress)
+        self.merge_process = None
+        if self.merge_progress is not None:
+            self.merge_progress.canceled.disconnect()  # closing the dialog cancels it
+            self.merge_progress.close()
+            self.merge_progress = None
+        self.update_actions()
+        title = "Merge subsystems"
+        if status != QProcess.ExitStatus.NormalExit or code != 0:
+            crashed = status != QProcess.ExitStatus.NormalExit
+            self.show_log("cancelled" if crashed else f"MergingEscher stopped with exit code {code}")
+            if not crashed:
+                QMessageBox.warning(self, title, f"Merging the subsystems failed (exit code {code}); see the log.")
+            return
+        try:
+            counts = escher_counts(json.loads(output.read_text(encoding="utf-8")))
+        except (OSError, ValueError, KeyError, IndexError) as e:
+            QMessageBox.warning(self, title, f"The merged map {output} can not be read: {e}")
+            return
+        text = f"Merged map: {counts['reactions']} reactions, {counts['nodes']} nodes in {output}"
+        self.show_log(text)
+        self.status(text)
+        box = QMessageBox(self)
+        box.setWindowTitle(title)
+        box.setText(html.escape(text))
+        folder = box.addButton("Open folder", QMessageBox.ButtonRole.ActionRole)
+        box.addButton(QMessageBox.StandardButton.Close)
+        box.exec()
+        if box.clickedButton() is folder:
+            QDesktopServices.openUrl(QUrl.fromLocalFile(str(output.parent)))

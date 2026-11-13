@@ -601,6 +601,7 @@ class AIDock(QDockWidget):
             raise ValueError(f"The map {name!r} has no subsystems to lay out.")
         folder = Path(session.args.out) / "ai" / slug(name) / time.strftime("%Y%m%d-%H%M%S")
         _, ids = session.export_map(name, folder)
+        self.write_job_record(name, folder, toolkit, ids, "chat")
         subsystems, stubs, facts = self.map_facts(name)
         job = dict(map=name, folder=folder, toolkit=toolkit, ids=ids, drafts=1, key=object(), approve_all=False)
         job["job"] = LayoutJob(toolkit, folder, name, facts, subsystems, stubs, self.submit)
@@ -612,6 +613,13 @@ class AIDock(QDockWidget):
             raise
         self.note(f"New job: {name} with {toolkit.name}; work folder {folder}")
         return job
+
+    def write_job_record(self, name: str, folder, toolkit, ids: dict, kind: str, draft: str = DRAFT) -> None:
+        """The job record of the work folder (:func:`..ai.coding_agent.write_job`): the Escher IDs of the exported
+        map, the subsystems of its nodes and the template, for toolkits that need them."""
+        session = self.main.session
+        coding_agent.write_job(folder, name, toolkit, ids, session.map_draft(name),
+                               Path(session.args.brenda_json).parent, kind, draft)
 
     def map_facts(self, name: str) -> tuple[list[tuple[str, str, int]], dict[str, list[str]], str]:
         """The subsystems of map `name` (ID, name, reactions), its metabolites that continue on other maps and a
@@ -637,7 +645,8 @@ class AIDock(QDockWidget):
         folder = Path(session.args.out) / "ai" / slug(name) / (time.strftime("%Y%m%d-%H%M%S") + "-agent")
         _, ids = session.export_map(name, folder)
         subsystems, stubs, facts = self.map_facts(name)
-        return coding_agent.prepare(folder, toolkit, name, facts, subsystems, stubs, ids)
+        return coding_agent.prepare(folder, toolkit, name, facts, subsystems, stubs, ids, m=session.map_draft(name),
+                                    template=Path(session.args.brenda_json).parent)
 
     def new_chat(self) -> None:
         """A fresh conversation (connection as chosen now) for the current job."""
@@ -716,6 +725,7 @@ class AIDock(QDockWidget):
                 self.job["drafts"] += 1
                 file = f"draft_v{self.job['drafts']}.escher.json"
                 _, self.job["ids"] = session.export_map(name, self.job["folder"], file, reuse=self.job["ids"])
+                self.write_job_record(name, self.job["folder"], self.job["toolkit"], self.job["ids"], "chat", file)
                 message = (f"The map changed since you laid it out: {problems}. It is now in {file}: the objects that "
                            f"were in {DRAFT} have the same IDs there. Update your layout for it (keep what still fits) "
                            "and submit it again.")

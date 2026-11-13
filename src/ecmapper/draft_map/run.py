@@ -24,9 +24,11 @@ import numpy as np
 
 from .assignment import apply_assignment, read_assignment, write_assignment
 from .core import (
+    LABEL_LENGTH,
     Completion,
     DraftMap,
     ModelData,
+    abbreviate_labels,
     anchor_metabolites,
     disconnect_hubs,
     drop_empty_subsystems,
@@ -53,8 +55,9 @@ from .layout import (
     to_relative,
     user_arrangement,
 )
+from .relayout import AUTOLAYOUT, CONSERVATIVE, TEMPLATE, UNTANGLED
 from .relayout import METHODS as RELAYOUT_METHODS
-from .relayout import available_methods, relayout_subsystems
+from .relayout import available_methods, compare_layouts, layout_key, relayout_subsystems, subsystem_map
 from .render import write_cnapy_maps, write_reaction_positions, write_svg
 from .routes import route_edges
 from .split import (
@@ -302,18 +305,49 @@ def build_parser(positional: bool = True) -> argparse.ArgumentParser:
                         "reactions (rule E)")
     parser.add_argument("--min-anchored", type=int, default=2)
     parser.add_argument("--no-completion", action="store_true")
-    parser.add_argument("--relayout", default=",".join(m for m in RELAYOUT_METHODS if m != "current"),
-                        help="step 3b: layouts tried for subsystems with added reactions, comma-separated from "
-                        "spring, fdp, dot, neato (default: all); 'none': keep the positions of step 3")
+    parser.add_argument("--relayout", default=TEMPLATE,
+                        help=f"step 3b: how subsystems with added reactions are laid out again. {TEMPLATE} "
+                        "(default): only the added reactions that go where a node of the BRENDA map with their EC "
+                        "number or reaction ID was (e.g. with another cofactor pair), the others left out; no other "
+                        f"layout. {CONSERVATIVE}: the added reactions are placed next to their metabolites only where "
+                        "they cross nothing, the others are left out; no other layout. Or the layouts tried (the one "
+                        "with the fewest crossings is kept), comma-separated from place, spring, fdp, dot, neato "
+                        "(place: the added nodes placed again next to their metabolites, the start of the others); "
+                        "'none': keep the positions of step 3")
+    parser.add_argument("--layout-of", default="", metavar="ID=LAYOUT,...",
+                        help="step 3b: the layout of these BRENDA subsystems, chosen by hand (e.g. "
+                        "citric-acid-cycle=place,lipid-metabolism=spring+untangle; the names of --compare-layouts and "
+                        "the GUI's Compare layouts), whatever --relayout chooses. Only here: "
+                        f"{AUTOLAYOUT}, the layout of the package sbml-autolayout for small pathways, which redraws the "
+                        "subsystem (also one without added reactions)")
+    parser.add_argument("--compare-layouts", default="", metavar="IDS",
+                        help="write all layouts of step 3b of these comma-separated BRENDA subsystem IDs side by side "
+                        "(OUT_DIR/layouts/index.html, one SVG per layout, with their crossings) after step 3, and "
+                        "stop")
+    parser.add_argument("--label-length", type=int, default=LABEL_LENGTH,
+                        help="shorten metabolite labels longer than this (to the BiGG ID, else cut); 0: never")
     parser.add_argument("--circle", default="", metavar="IDS",
                         help="comma-separated BRENDA subsystem IDs whose cycle of main metabolites is drawn on a "
                         "circle in step 3b (e.g. citric-acid-cycle)")
     parser.add_argument("--relayout-margin", type=float, default=0.25,
                         help="step 3b: take dot or neato (which redraw the BRENDA part) only with at least this "
                         "fraction fewer crossings")
+    parser.add_argument("--relayout-min-gain", type=int, default=3,
+                        help="step 3b: dot and neato also need at least this many fewer crossings of "
+                        "main-metabolite links than the best layout that keeps the BRENDA drawing")
+    parser.add_argument("--no-outside", action="store_true",
+                        help="step 3b: do not keep added reactions that touch at most two nodes of a cycle of "
+                        "the BRENDA drawing outside the cycle (place; without place: do not start them outside)")
+    parser.add_argument("--no-untangle", action="store_true",
+                        help="step 3b: do not also try each layout with its crossings resolved locally (Graphviz "
+                        "neato, only the nodes at crossing links move)")
     parser.add_argument("--iterations", type=int, default=20000)
     parser.add_argument("--gap", type=float, default=80.0)
     parser.add_argument("--compactness", type=float, default=0.5)
+    parser.add_argument("--uniform-shrink", action=argparse.BooleanOptionalAction, default=True,
+                        help=f"step 4: after --relayout {CONSERVATIVE} or {TEMPLATE}, do not condense a subsystem but "
+                        "only shrink its drawing by one factor per axis, so that its nodes keep their arrangement "
+                        "(larger maps; default; --no-uniform-shrink: condense)")
     parser.add_argument("--seed", type=int, default=1)
     parser.add_argument("--seeds", type=int, default=1, help="anneal with this many seeds, keep the best")
     parser.add_argument("--hub-subsystems", type=int, default=0,
@@ -349,8 +383,20 @@ def build_parser(positional: bool = True) -> argparse.ArgumentParser:
 def check_args(parser, args) -> list[str]:
     """Exits with an error for options that do not go together; returns the layouts of step 3b."""
     methods = [] if args.relayout == "none" else [m for m in args.relayout.split(",") if m]
-    if set(methods) - set(RELAYOUT_METHODS) - {"current"}:
-        parser.error(f"--relayout: unknown layouts {sorted(set(methods) - set(RELAYOUT_METHODS))}")
+    if AUTOLAYOUT in methods:
+        parser.error(f"--relayout: {AUTOLAYOUT} is only chosen by hand, for single subsystems (--layout-of)")
+    if set(methods) - set(RELAYOUT_METHODS) - {"current", CONSERVATIVE, TEMPLATE}:
+        parser.error(f"--relayout: unknown layouts "
+                     f"{sorted(set(methods) - set(RELAYOUT_METHODS) - {'current', CONSERVATIVE, TEMPLATE})}")
+    for alone in (CONSERVATIVE, TEMPLATE):
+        if alone in methods and len(set(methods) - {"current"}) > 1:
+            parser.error(f"--relayout: {alone} is not combined with other layouts")
+    try:
+        unknown = sorted(m for m in parse_layout_of(getattr(args, "layout_of", "")).values() if not known_layout(m))
+    except ValueError as e:
+        parser.error(f"--layout-of: {e}")
+    if unknown:
+        parser.error(f"--layout-of: unknown layouts {unknown}")
     if not args.split and (args.central is not None or args.maps or args.write_assignment or args.assignment):
         parser.error("--central, --maps, --write-assignment and --assignment need --split")
     if args.assignment and (args.central is not None or args.maps):
@@ -393,6 +439,7 @@ def draft_until_assignment(args, log, stats: dict, out: Path | None = None, drop
     """
     md = ModelData(args.prep)
     dm = DraftMap.from_brenda(args.brenda_json, args.brenda_svg)
+    template = copy.deepcopy(dm)  # the whole BRENDA map, for added reactions at the place of one of its nodes
     stats["original"] = dm.summary()
     origin_positions = {n.id: (n.x, n.y, n.subsystem) for n in dm.nodes.values()}
 
@@ -403,6 +450,10 @@ def draft_until_assignment(args, log, stats: dict, out: Path | None = None, drop
                                                               args.aside_min_matched, not args.keep_borrowed)
     log(dm.log[-1])
     anchor_metabolites(dm, md)
+    label_length = getattr(args, "label_length", LABEL_LENGTH)
+    shortened = abbreviate_labels(dm, label_length)
+    if shortened:
+        log(f"labels of {shortened} metabolite nodes longer than {label_length} characters shortened")
     stats["step1_subsystems"] = dm.summary()
     if out is not None:
         write_svg(dm, str(out / "step1_subsystems.svg"), md=md)
@@ -417,7 +468,8 @@ def draft_until_assignment(args, log, stats: dict, out: Path | None = None, drop
     # step 3: model reactions that connect drawn metabolites
     added = []
     if not args.no_completion:
-        completion = Completion(dm, md, min_anchored=args.min_anchored, origin_positions=origin_positions)
+        completion = Completion(dm, md, min_anchored=args.min_anchored, origin_positions=origin_positions,
+                                label_length=label_length, template=template)
         added = completion.run()
         log(dm.log[-1])
     stats["step3_completed"] = dm.summary()
@@ -429,7 +481,8 @@ def draft_until_assignment(args, log, stats: dict, out: Path | None = None, drop
     if args.assignment:
         # the edited table: subsystems without map left out, reactions moved between subsystems
         table = read_assignment(args.assignment)
-        stats["assignment"] = apply_assignment(dm, md, table, origin_positions, drop_unassigned)
+        stats["assignment"] = apply_assignment(dm, md, table, origin_positions, drop_unassigned, label_length,
+                                               template)
         log(dm.log[-1])
         for w in stats["assignment"]["warnings"]:
             log(f"  warning: {w}")
@@ -446,6 +499,80 @@ def draft_until_assignment(args, log, stats: dict, out: Path | None = None, drop
     return md, dm, table
 
 
+def parse_layout_of(text: str) -> dict[str, str]:
+    """{subsystem: layout} of --layout-of ("ID=LAYOUT,...")."""
+    result = {}
+    for item in (t.strip() for t in (text or "").split(",")):
+        if item:
+            if "=" not in item:
+                raise ValueError(f"{item!r} is not ID=LAYOUT")
+            k, m = (x.strip() for x in item.split("=", 1))
+            result[k] = m
+    return result
+
+
+def format_layout_of(layouts: dict[str, str]) -> str:
+    """The text of --layout-of for {subsystem: layout}."""
+    return ",".join(f"{k}={m}" for k, m in sorted(layouts.items()))
+
+
+def known_layout(m: str) -> bool:
+    """Whether `m` names a layout of step 3b (as :func:`.relayout.compare_layouts` does)."""
+    base = m.removesuffix(UNTANGLED)
+    return base in ("current", CONSERVATIVE, TEMPLATE, "place", "outside", *RELAYOUT_METHODS, "circle", AUTOLAYOUT)
+
+
+def layout_comparison(dm, md, args, k: str) -> tuple[list[tuple[str, dict]], str | None]:
+    """The layouts of step 3b of subsystem `k` (before step 3b), sorted, and the one step 3b takes from the
+    competing ones (:func:`.relayout.compare_layouts`, with the options `args`)."""
+    results, chosen = compare_layouts(subsystem_map(dm, k), untangle=not getattr(args, "no_untangle", False),
+                                      outside=not getattr(args, "no_outside", False), margin=args.relayout_margin,
+                                      min_gain=getattr(args, "relayout_min_gain", 3),
+                                      uniform=getattr(args, "uniform_shrink", False), compactness=args.compactness)
+    return sorted(results.items(), key=lambda item: layout_key(item[0])), chosen
+
+
+def layout_caption(name: str, r: dict, chosen: str | None) -> str:
+    """One line on a layout of :func:`layout_comparison`."""
+    text = (f"{name}: {r['crossings_main']} crossings ({r['crossings_all']} with cofactors), "
+            f"{r['area'] / 1e6:.2f} M units²")
+    if r["left_out"]:
+        text += f", {len(r['left_out'])} reactions left out"
+    return text + (" — taken from the competing layouts" if name == chosen else "")
+
+
+def write_layout_comparison(dm, md, args, keys: list[str], folder: Path, log) -> Path:
+    """--compare-layouts: the layouts of step 3b of subsystems `keys`, one SVG each, side by side in
+    FOLDER/index.html."""
+    import html
+
+    folder.mkdir(parents=True, exist_ok=True)
+    sections = []
+    for k in keys:
+        if k not in dm.subsystems:
+            log(f"--compare-layouts: no subsystem {k!r} in the draft map")
+            continue
+        figures = []
+        layouts, chosen = layout_comparison(dm, md, args, k)
+        for name, r in layouts:
+            file = f"{slug(k)}_{name.replace('+', '_')}.svg"
+            write_svg(r["map"], str(folder / file), md=md, margin=20.0)
+            left_out = f"<br><small>left out: {html.escape(', '.join(r['left_out']))}</small>" if r["left_out"] else ""
+            figures.append(f'<figure><a href="{file}"><img src="{file}"></a>'
+                           f"<figcaption>{html.escape(layout_caption(name, r, chosen))}{left_out}</figcaption></figure>")
+        sections.append(f"<h2>{html.escape(dm.subsystems[k].label)} ({html.escape(k)})</h2>"
+                        f"<div class=\"row\">{''.join(figures)}</div>")
+        log(f"--compare-layouts: {k}: {len(layouts)} layouts")
+    index = folder / "index.html"
+    index.write_text(
+        "<!doctype html><meta charset=\"utf-8\"><title>Layouts of step 3b</title><style>"
+        "body{font-family:sans-serif;margin:16px}.row{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}"
+        "figure{margin:0;width:420px}img{width:100%;border:1px solid #ccc}figcaption{font-size:13px}</style>"
+        f"<h1>Layouts of step 3b</h1><p>Used now: --relayout {html.escape(args.relayout)}</p>{''.join(sections)}",
+        encoding="utf-8")
+    return index
+
+
 def relayout_and_condense(dm, md, args, methods, log, stats: dict, out: Path | None = None,
                           keep_uncondensed: bool = False):
     """Steps 3b and 4: lay out the subsystems with added reactions again, condense each subsystem.
@@ -454,14 +581,23 @@ def relayout_and_condense(dm, md, args, methods, log, stats: dict, out: Path | N
     that keeps the original order). Writes the SVG of step 3b to `out` if
     given. Returns a copy of the map before condensing if `keep_uncondensed`.
     """
-    if methods:
+    by_hand = parse_layout_of(getattr(args, "layout_of", ""))
+    if methods or by_hand:
         missing = set(methods) - set(available_methods(methods))
         if missing:
             log(f"step 3b: layouts {sorted(missing)} skipped (networkx or pygraphviz not installed)")
+        if AUTOLAYOUT in {m.removesuffix(UNTANGLED) for m in by_hand.values()} and not available_methods([AUTOLAYOUT]):
+            log(f"step 3b: layout {AUTOLAYOUT} (--layout-of) skipped (sbml_autolayout not installed)")
+        logged = len(dm.log)
         stats["relayout"] = relayout_subsystems(dm, methods, margin=args.relayout_margin,
                                                 circle=[k for k in args.circle.split(",") if k],
+                                                untangle=not getattr(args, "no_untangle", False),
+                                                min_gain=getattr(args, "relayout_min_gain", 3),
+                                                outside=not getattr(args, "no_outside", False),
+                                                by_hand=by_hand, uniform=getattr(args, "uniform_shrink", False),
                                                 compactness=args.compactness)
-        log(dm.log[-1])
+        for line in dm.log[logged:]:
+            log(line)
         if out is not None:
             write_svg(dm, str(out / "step3b_relayout.svg"), md=md)
 
@@ -471,7 +607,12 @@ def relayout_and_condense(dm, md, args, methods, log, stats: dict, out: Path | N
     # step 4: condense each subsystem
     before_condense = copy.deepcopy(dm) if keep_uncondensed else None
     stats["internal_before_condensing"] = internal_metrics(dm)
-    condense_subsystems(dm, compactness=args.compactness)
+    # after the conservative or template placement, condensing adds no crossings either
+    alone = {CONSERVATIVE, TEMPLATE}
+    keep = {k for k, s in dm.subsystems.items() if s.layout in alone or (not s.layout and alone & set(methods))}
+    # with --uniform-shrink, these subsystems are only shrunk by one factor per axis
+    condense_subsystems(dm, compactness=args.compactness, keep_crossings=keep,
+                        uniform=keep if getattr(args, "uniform_shrink", False) else False)
     dm.orig_centres = orig_centres
     stats["internal_after_condensing"] = internal_metrics(dm)
     log(f"step 4: subsystems condensed {stats['internal_before_condensing']} -> {stats['internal_after_condensing']}")
@@ -527,6 +668,11 @@ def build(args, methods: list[str]) -> None:
 
     stats = {}
     md, dm, table = draft_until_assignment(args, log, stats, out=args.out)
+    if args.compare_layouts:
+        keys = [k for k in args.compare_layouts.split(",") if k]
+        index = write_layout_comparison(dm, md, args, keys, args.out / "layouts", log)
+        log(f"layouts of {len(keys)} subsystems written to {index}")
+        return
     if args.write_assignment:
         order, assignment = map_assignment(dm, args, table, log)
         layouts = None

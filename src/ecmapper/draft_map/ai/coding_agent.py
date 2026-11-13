@@ -78,9 +78,31 @@ sys.exit(subprocess.call([python, "-m", PACKAGE, *sys.argv[1:]], env=env, cwd=fo
 '''
 
 
+def write_job(folder, map_name: str, toolkit: Toolkit, ids: dict, m=None, template=None, kind: str = "agent",
+              draft: str = DRAFT) -> Path:
+    """Write the job record `folder`/:data:`JOB`, for the toolkit (and, with `kind` "agent", for *Use coding agent
+    result*, :func:`newest_job`).
+
+    It has the map, the toolkit, the exported map `draft` and `ids`, the draft
+    objects of its Escher IDs (see :func:`..escher.to_escher`); with the map
+    draft `m`, the subsystem of each of its nodes ("subsystems"); with `template`, the folder of the BRENDA map the draft
+    was made from (e.g. for the PWL descriptions of its subsystems in
+    `template`/pwl).
+    """
+    job = dict(map=map_name, kind=kind, toolkit=str(toolkit.folder), toolkit_name=toolkit.name, draft=draft, ids=ids)
+    if m is not None:
+        job["subsystems"] = {i: n.subsystem for i, n in m.nodes.items()}
+    if template is not None:
+        job["template"] = str(template)
+    path = Path(folder) / JOB
+    path.write_text(json.dumps(job, indent=1), encoding="utf-8")
+    return path
+
+
 def prepare(folder, toolkit: Toolkit, map_name: str, facts: str, subsystems: list[tuple[str, str, int]],
-            stubs: dict[str, list[str]], ids: dict, python: str = sys.executable) -> Path:
-    """Write the task, the toolkit's runner and the job record into `folder` (with the exported map in it)."""
+            stubs: dict[str, list[str]], ids: dict, python: str = sys.executable, m=None, template=None) -> Path:
+    """Write the task, the toolkit's runner and the job record into `folder` (with the exported map in it); `m` and
+    `template`: see :func:`write_job`."""
     folder = Path(folder)
     folder.mkdir(parents=True, exist_ok=True)
     instructions = ", ".join(f"`{toolkit.folder / name}`" for name in toolkit.instructions
@@ -95,8 +117,7 @@ def prepare(folder, toolkit: Toolkit, map_name: str, facts: str, subsystems: lis
     (folder / CLAUDE).write_text(f"@{TASK}\n", encoding="utf-8")  # Claude Code reads CLAUDE.md, imports AGENTS.md
     (folder / RUNNER).write_text(RUNNER_TEXT.format(name=toolkit.name, runner=RUNNER, folder=str(toolkit.folder),
                                                     package=toolkit.package, python=python), encoding="utf-8")
-    job = dict(map=map_name, toolkit=str(toolkit.folder), toolkit_name=toolkit.name, ids=ids)
-    (folder / JOB).write_text(json.dumps(job, indent=1), encoding="utf-8")
+    write_job(folder, map_name, toolkit, ids, m, template)
     return folder
 
 
@@ -140,11 +161,11 @@ def find_job(path) -> tuple[Path, dict] | None:
 
 def newest_job(base, map_name: str) -> tuple[Path, dict, Path | None] | None:
     """The newest prepared job folder of map `map_name` below `base` (OUT/ai/MAP), its record and the newest final
-    map in it (None if it has none yet); None without job."""
+    map in it (None if it has none yet); None without job. Jobs of the chat (kind "chat") are not counted."""
     jobs = []
     for path in Path(base).glob(f"*/{JOB}"):
         job = read_job(path.parent)
-        if job is not None and job["map"] == map_name:
+        if job is not None and job["map"] == map_name and job.get("kind", "agent") == "agent":
             jobs.append((path.stat().st_mtime, path.parent, job))
     if not jobs:
         return None

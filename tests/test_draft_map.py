@@ -1,3 +1,4 @@
+import copy
 import json
 import math
 import pickle
@@ -151,10 +152,23 @@ def test_draft_map(sources, model, tmp_path):  # noqa: F811
     assert set(positions) == on_map | {"NOTHING"}
     assert stats["step3_completed"]["enzyme_nodes_added"] == 1
     # step 3b: the subsystem of the added reaction was laid out again (with what is installed)
-    assert len(stats["relayout"]) == 1 and stats["relayout"][0]["layout"] in relayout.METHODS
+    # (default: the conservative placement, NOTHING crosses nothing and stays)
+    assert len(stats["relayout"]) == 1 and stats["relayout"][0]["layout"] == relayout.CONSERVATIVE
+    assert stats["relayout"][0]["left_out"] == []
     assert (out / "step3b_relayout.svg").is_file()
     assert set(json.loads((out / "draft_map.maps").read_text())) == set(positions)
     assert (out / "draft_map.svg").stat().st_size > 0
+    # all layouts of step 3b of that subsystem side by side, then stop
+    k = stats["relayout"][0]["subsystem"]
+    compared = tmp_path / "compared"
+    run_draft_map(prep, compared, "--keep-subsets", "--keep-borrowed", "--aside-coverage", "2",
+                  "--compare-layouts", f"{k},no-such-subsystem")
+    index = (compared / "layouts" / "index.html").read_text(encoding="utf-8")
+    assert f"{k}_current.svg" in index and f"{k}_{relayout.CONSERVATIVE}.svg" in index
+    assert (compared / "layouts" / f"{k}_current.svg").is_file() and not (compared / "draft_map.svg").exists()
+    # place_conservative is used alone
+    with pytest.raises(SystemExit):
+        run_draft_map(prep, compared, "--relayout", f"{relayout.CONSERVATIVE},spring")
 
     # Escher map: all reactions on the map, segments between existing nodes
     header, body = json.loads((out / "draft_map.escher.json").read_text())
@@ -186,7 +200,9 @@ def test_draft_map_packed(sources, model, tmp_path):  # noqa: F811
     """--pack: no inter-pathway links, the boxes packed without overlaps."""
     data, prep = prepared(sources, model, tmp_path)
     out = tmp_path / "out"
-    run_draft_map(prep, out, "--pack")
+    # condensed subsystems: with --uniform-shrink (the default), glycolysis keeps the long column of the BRENDA map,
+    # and the annealing gives up area for the target aspect ratio, so packing takes more area than the original order
+    run_draft_map(prep, out, "--pack", "--no-uniform-shrink")
     stats = json.loads((out / "stats.json").read_text())
     assert stats["step3_completed"]["inter_pathway_links"] > 0
     assert stats["final"]["inter_pathway_links"] == 0
@@ -604,6 +620,22 @@ def test_relayout_graphviz():
         if prog == "dot":
             # layered along the reaction directions: substrate above enzyme above product
             assert s.nodes["m1"].y < s.nodes["e1"].y < s.nodes["m2"].y
+        if prog == "neato":
+            # pinned softly: the map nodes drift a little (back where Graphviz moved the whole drawing)
+            for i in pinned:
+                assert math.dist((s.nodes[i].x, s.nodes[i].y), (dm.nodes[i].x, dm.nodes[i].y)) < 150
+    # the ghost nodes of soft pinning: pinned at the map nodes, one heavy edge each, not in the result
+    s = relayout.subsystem_map(dm, "S")
+    spec, box, owner = relayout.graphviz_spec(s, **relayout.GRAPHVIZ["neato"])
+    ghosts = {name: attrs for name, attrs in spec["nodes"] if name.startswith(relayout.GHOST)}
+    assert set(ghosts) == {relayout.GHOST + i for i in pinned} and all(a["pos"].endswith("!") for a in ghosts.values())
+    assert sum(len(e) == 3 for e in spec["edges"]) == len(pinned)
+    positions = relayout.graphviz_positions(spec)
+    relayout.apply_graphviz(s, positions, box, owner)
+    assert set(s.nodes) == set(relayout.subsystem_map(dm, "S").nodes)
+    # hard pins and dot: no ghosts
+    for args in (dict(prog="fdp", K="2.0"), dict(prog="dot")):
+        assert not any(n.startswith(relayout.GHOST) for n, _ in relayout.graphviz_spec(s, **args)[0]["nodes"])
 
 
 def test_relayout_subsystems():
@@ -615,18 +647,589 @@ def test_relayout_subsystems():
     assert [r["subsystem"] for r in rows] == ["S"]  # T has no added reactions
     assert {i: (n.x, n.y) for i, n in dm.nodes.items() if n.subsystem == "T"} == {"t1": before["t1"], "t2": before["t2"]}
     row = rows[0]
-    assert set(row) >= {"current", "spring", "fdp", "dot", "neato", "layout"}
-    best_keeping = min(row[m]["crossings_main"] for m in relayout.KEEPING)
+    assert set(row) >= {"current", "place", "spring", "fdp", "dot", "neato", "layout"}
+    best_keeping = min(r["crossings_main"] for m, r in row.items() if m != "layout" and relayout._base(m) in relayout.KEEPING)
     chosen = row[row["layout"]]["crossings_main"]
-    if row["layout"] in relayout.REDRAWING:
-        assert chosen < 0.75 * best_keeping
+    if relayout._base(row["layout"]) in relayout.REDRAWING:
+        assert chosen < 0.75 * best_keeping and best_keeping - chosen >= 3
     else:
         assert chosen == best_keeping
     assert chosen <= row["current"]["crossings_main"]
+    assert "outside" not in row  # no cycle
+    # the minimum gain switches the redrawing layouts off
+    rows = relayout.relayout_subsystems(relayout_map(), min_gain=10**6)
+    assert relayout._base(rows[0]["layout"]) in relayout.KEEPING
     # no layouts: nothing changes
     dm = relayout_map()
-    rows = relayout.relayout_subsystems(dm, methods=[])
+    rows = relayout.relayout_subsystems(dm, methods=[], untangle=False)
     assert rows[0]["layout"] == "current" and {i: (n.x, n.y) for i, n in dm.nodes.items()} == before
+
+
+def ring_map():
+    """A 5-metabolite cycle of the BRENDA map with an added reaction inside it (2 members) and a chord (3)."""
+    dm = DraftMap()
+    dm.subsystems["R"] = Subsystem("R", "R", "pw1", "#fff", 0, 0, 1000, 1000)
+    r = 300.0
+    for i in range(5):
+        a = 2 * math.pi * i / 5
+        dm.nodes[f"m{i}"] = Node(f"m{i}", "main", "R", r * math.cos(a), r * math.sin(a), 60, 30, f"m{i}")
+        b = 2 * math.pi * (i + 0.5) / 5
+        dm.nodes[f"e{i}"] = Node(f"e{i}", "enzyme", "R", r * math.cos(b), r * math.sin(b), 60, 30, f"e{i}",
+                                 reactions=[f"E{i}"], status="on-map")
+        dm.edges += [Edge(f"e{i}", f"m{i}", "main", True, False), Edge(f"e{i}", f"m{(i + 1) % 5}", "main", False, True)]
+    dm.nodes["a1"] = Node("a1", "enzyme", "R", 0, 0, 60, 30, "A1", reactions=["A1"], status="added")
+    dm.nodes["n1"] = Node("n1", "main", "R", 0, 60, 60, 30, "n1", status="new")
+    dm.nodes["c1"] = Node("c1", "cofactor", "R", 40, 40, 40, 20, "ATP", status="added")
+    dm.nodes["a2"] = Node("a2", "enzyme", "R", 20, -40, 60, 30, "A2", reactions=["A2"], status="added")
+    dm.edges += [Edge("a1", "m0", "main", True, False), Edge("a1", "m1", "main", False, True),
+                 Edge("a1", "n1", "main", False, True), Edge("a1", "c1", "cofactor", True, False),
+                 Edge("a2", "m0", "main", True, False), Edge("a2", "m2", "main", False, True),
+                 Edge("a2", "m3", "main", False, True)]
+    return dm
+
+
+def _inside(poly, x, y):
+    inside = False
+    for (x1, y1), (x2, y2) in zip(poly, poly[1:] + poly[:1]):
+        if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
+            inside = not inside
+    return inside
+
+
+def test_outside_cycle():
+    pytest.importorskip("networkx")
+    dm = ring_map()
+    s = relayout.subsystem_map(dm, "R")
+    assert relayout.outside_cycle(s)
+    poly = [(s.nodes[f"m{i}"].x, s.nodes[f"m{i}"].y) for i in range(5)]
+    for i in range(5):  # the ring is unmoved
+        for j in (f"m{i}", f"e{i}"):
+            assert (s.nodes[j].x, s.nodes[j].y) == (dm.nodes[j].x, dm.nodes[j].y)
+    # the added reaction between m0 and m1 is outside, beyond the middle of its two members, with its own nodes
+    assert not _inside(poly, s.nodes["a1"].x, s.nodes["a1"].y)
+    mid = ((poly[0][0] + poly[1][0]) / 2, (poly[0][1] + poly[1][1]) / 2)
+    assert math.hypot(s.nodes["a1"].x, s.nodes["a1"].y) > math.hypot(*mid)
+    for j in ("n1", "c1"):
+        assert not _inside(poly, s.nodes[j].x, s.nodes[j].y)
+    # the chord (3 members) stays
+    assert (s.nodes["a2"].x, s.nodes["a2"].y) == (20, -40)
+    # without a cycle nothing happens
+    s = relayout.subsystem_map(relayout_map(), "S")
+    assert not relayout.outside_cycle(s)
+
+
+def test_relayout_subsystems_outside():
+    pytest.importorskip("networkx")
+    dm = ring_map()
+    rows = relayout.relayout_subsystems(dm, methods=["spring"], untangle=False)
+    row = rows[0]
+    assert "outside" in row and relayout._base(row["layout"]) in relayout.KEEPING
+    assert row["outside"]["crossings_main"] <= row["current"]["crossings_main"]
+    rows = relayout.relayout_subsystems(ring_map(), methods=["spring"], untangle=False, outside=False)
+    assert "outside" not in rows[0]
+
+
+MAP_NODES = ("m1", "m2", "m3", "m4", "e1", "e2")
+
+
+def crossed_map():
+    """relayout_map with the added reaction across both map reactions (a1 above them, its new metabolite below)."""
+    dm = relayout_map()
+    dm.nodes["a1"].x, dm.nodes["a1"].y, dm.nodes["c1"].x, dm.nodes["c1"].y = 300, -100, 340, -60
+    dm.nodes["n1"].x, dm.nodes["n1"].y = 300, 400
+    return dm
+
+
+def main_crossings(s):
+    from ecmapper.pwl.layout import crossing_nodes
+
+    return crossing_nodes(s, {i: (n.x, n.y) for i, n in s.nodes.items() if n.kind != "cofactor"})[0]
+
+
+def assert_no_overlaps(s):
+    boxes = [(i, n.box) for i, n in sorted(s.nodes.items())]
+    for k, (i, a) in enumerate(boxes):
+        for j, b in boxes[k + 1:]:
+            assert not (a[0] < b[2] and b[0] < a[2] and a[1] < b[3] and b[1] < a[3]), (i, j)
+
+
+def test_place_added_keeps_map_nodes():
+    from ecmapper.pwl.layout import STEP
+
+    dm = crossed_map()
+    s = relayout.subsystem_map(dm, "S")
+    assert main_crossings(s) > 0
+    assert relayout.place_added(s)
+    for i in MAP_NODES:
+        assert (s.nodes[i].x, s.nodes[i].y) == (dm.nodes[i].x, dm.nodes[i].y)
+    assert main_crossings(s) == 0
+    assert_no_overlaps(s)
+    assert all(math.isfinite(n.x) and math.isfinite(n.y) for n in s.nodes.values())
+    # next to its metabolites, the new metabolite next to it, the cofactor moves with its enzyme node
+    a1 = (s.nodes["a1"].x, s.nodes["a1"].y)
+    for j in ("m2", "m3", "n1"):
+        assert math.dist(a1, (s.nodes[j].x, s.nodes[j].y)) < STEP
+    assert s.nodes["c1"].x - a1[0] == pytest.approx(40) and s.nodes["c1"].y - a1[1] == pytest.approx(40)
+    # deterministic
+    again = relayout.subsystem_map(dm, "S")
+    relayout.place_added(again)
+    assert {i: (n.x, n.y) for i, n in again.nodes.items()} == {i: (n.x, n.y) for i, n in s.nodes.items()}
+
+
+def test_place_added_outside_cycle():
+    pytest.importorskip("networkx")
+    dm = ring_map()
+    s = relayout.subsystem_map(dm, "R")
+    assert relayout.place_added(s)
+    poly = [(s.nodes[f"m{i}"].x, s.nodes[f"m{i}"].y) for i in range(5)]
+    for i in range(5):  # the ring is unmoved
+        for j in (f"m{i}", f"e{i}"):
+            assert (s.nodes[j].x, s.nodes[j].y) == (dm.nodes[j].x, dm.nodes[j].y)
+    # the added reaction between neighbours m0 and m1 is outside with its own nodes; the chord a2 may stay inside
+    for j in ("a1", "n1", "c1"):
+        assert not _inside(poly, s.nodes[j].x, s.nodes[j].y)
+    assert main_crossings(s) == 0
+    assert_no_overlaps(s)
+    s = relayout.subsystem_map(dm, "R")
+    assert relayout.place_added(s, outside=False)  # without the rule of the cycle: the ring is still unmoved
+    for i in range(5):
+        for j in (f"m{i}", f"e{i}"):
+            assert (s.nodes[j].x, s.nodes[j].y) == (dm.nodes[j].x, dm.nodes[j].y)
+
+
+def test_place_added_chain_and_linked():
+    """A chain of added reactions from a map metabolite, and a linked metabolite of a map enzyme, all far away."""
+    from ecmapper.pwl.layout import STEP
+
+    dm = DraftMap()
+    dm.subsystems["C"] = Subsystem("C", "C", "pw1", "#fff", 0, 0, 1000, 600)
+    dm.nodes["m1"] = Node("m1", "main", "C", 0, 0, 60, 30, "m1")
+    dm.nodes["m2"] = Node("m2", "main", "C", 400, 0, 60, 30, "m2")
+    dm.nodes["e1"] = Node("e1", "enzyme", "C", 200, 0, 60, 30, "e1", reactions=["E1"], status="on-map")
+    for i in ("a1", "a2"):
+        dm.nodes[i] = Node(i, "enzyme", "C", 1000, 1000, 60, 30, i, reactions=[i.upper()], status="added")
+    for i in ("x", "y"):
+        dm.nodes[i] = Node(i, "main", "C", 1000, 1000, 60, 30, i, status="new")
+    dm.nodes["l1"] = Node("l1", "main", "C", -2000, 0, 60, 30, "l1", status="linked")
+    dm.edges = [Edge("e1", "m1", "main", True, False), Edge("e1", "m2", "main", False, True),
+                Edge("e1", "l1", "main", False, True),
+                Edge("a1", "m2", "main", True, False), Edge("a1", "x", "main", False, True),
+                Edge("a2", "x", "main", True, False), Edge("a2", "y", "main", False, True)]
+    s = relayout.subsystem_map(dm, "C")
+    assert relayout.place_added(s)
+    for i in ("m1", "m2", "e1"):
+        assert (s.nodes[i].x, s.nodes[i].y) == (dm.nodes[i].x, dm.nodes[i].y)
+
+    def near(i, j):
+        return math.dist((s.nodes[i].x, s.nodes[i].y), (s.nodes[j].x, s.nodes[j].y)) < STEP
+
+    assert near("a1", "m2") and near("x", "a1") and near("a2", "x") and near("y", "a2") and near("l1", "e1")
+    assert main_crossings(s) == 0
+    assert_no_overlaps(s)
+
+
+def test_place_added_only_added_nodes():
+    from ecmapper.pwl.layout import STEP
+
+    dm = DraftMap()
+    dm.subsystems["A"] = Subsystem("A", "A", "pw1", "#fff", 0, 0, 1000, 600)
+    dm.nodes["a1"] = Node("a1", "enzyme", "A", 100, 100, 60, 30, "A1", reactions=["A1"], status="added")
+    dm.nodes["c1"] = Node("c1", "cofactor", "A", 140, 140, 40, 20, "ATP", status="added")
+    for i in ("n1", "n2"):
+        dm.nodes[i] = Node(i, "main", "A", 100, 100, 60, 30, i, status="new")
+    dm.edges = [Edge("a1", "n1", "main", True, False), Edge("a1", "n2", "main", False, True),
+                Edge("a1", "c1", "cofactor", True, False)]
+    s = relayout.subsystem_map(dm, "A")
+    assert relayout.place_added(s)
+    assert (s.nodes["a1"].x, s.nodes["a1"].y) == (100, 100)  # no placed partner: it keeps its place
+    assert_no_overlaps(s)
+    for i in ("n1", "n2"):
+        assert math.dist((s.nodes[i].x, s.nodes[i].y), (100, 100)) < STEP
+    # nothing to place
+    assert not relayout.place_added(relayout.subsystem_map(relayout_map(), "T"))
+
+
+def test_relayout_subsystems_place():
+    assert "place" in relayout.METHODS and "place" in relayout.KEEPING
+    assert relayout.available_methods(["place"]) == ["place"]
+    dm = crossed_map()
+    before = {i: (n.x, n.y) for i, n in dm.nodes.items()}
+    rows = relayout.relayout_subsystems(dm, methods=["place"], untangle=False)
+    row = rows[0]
+    assert "place" in row and "outside" not in row and row["layout"] in relayout.KEEPING
+    assert row["place"]["crossings_main"] < row["current"]["crossings_main"]
+    assert row["layout"] == "place"
+    for i in MAP_NODES:
+        assert (dm.nodes[i].x, dm.nodes[i].y) == before[i]
+    assert "placed again next to their metabolites in 1" in dm.log[-1]
+    # without place, as before
+    rows = relayout.relayout_subsystems(crossed_map(), methods=[], untangle=False)
+    assert "place" not in rows[0] and rows[0]["layout"] == "current"
+    pytest.importorskip("networkx")
+    rows = relayout.relayout_subsystems(ring_map(), methods=["place", "spring"], untangle=False)
+    assert "place" in rows[0] and "outside" not in rows[0] and "spring" in rows[0]
+    rows = relayout.relayout_subsystems(ring_map(), methods=["place", "spring"], untangle=False, outside=False)
+    assert "place" in rows[0]
+    rows = relayout.relayout_subsystems(ring_map(), methods=["spring"], untangle=False)
+    assert "outside" in rows[0] and "place" not in rows[0]
+
+
+def walled_map():
+    """ring_map with a map metabolite z inside the ring and w outside, and an added reaction z -> w (a3, with a
+    cofactor and a new metabolite): it cannot be drawn without crossing the ring."""
+    dm = ring_map()
+    dm.nodes["z"] = Node("z", "main", "R", 0, 0, 60, 30, "z")
+    dm.nodes["w"] = Node("w", "main", "R", 800, 0, 60, 30, "w")
+    dm.nodes["a3"] = Node("a3", "enzyme", "R", 400, 0, 60, 30, "A3", reactions=["A3"], status="added")
+    dm.nodes["c3"] = Node("c3", "cofactor", "R", 440, 40, 40, 20, "ATP", status="added")
+    dm.nodes["n3"] = Node("n3", "main", "R", 400, 80, 60, 30, "n3", status="new")
+    dm.edges += [Edge("a3", "z", "main", True, False), Edge("a3", "w", "main", False, True),
+                 Edge("a3", "n3", "main", False, True), Edge("a3", "c3", "cofactor", True, False)]
+    dm.links.append(MetLink("n3", "w", "added"))
+    return dm
+
+
+def all_crossings(s):
+    return layout.internal_metrics(s)["crossings_all"]
+
+
+def test_place_conservative_adds_no_crossings():
+    dm = crossed_map()
+    s = relayout.subsystem_map(dm, "S")
+    assert main_crossings(s) > 0
+    assert relayout.place_conservative(s) == set()  # the added reaction fits between the two map reactions
+    for i in MAP_NODES:
+        assert (s.nodes[i].x, s.nodes[i].y) == (dm.nodes[i].x, dm.nodes[i].y)
+    assert all_crossings(s) == 0
+    assert_no_overlaps(s)
+    # deterministic
+    again = relayout.subsystem_map(dm, "S")
+    relayout.place_conservative(again)
+    assert {i: (n.x, n.y) for i, n in again.nodes.items()} == {i: (n.x, n.y) for i, n in s.nodes.items()}
+
+
+def test_place_conservative_leaves_out():
+    pytest.importorskip("networkx")
+    dm = walled_map()
+    s = relayout.subsystem_map(dm, "R")
+    s.links = list(dm.links)
+    before = all_crossings(s)
+    removed = relayout.place_conservative(s)
+    # a3 crosses the ring wherever it goes: left out with its cofactor and new metabolite; a1 and a2 fit
+    assert removed == {"a3", "c3", "n3"}
+    assert not removed & set(s.nodes) and not any(e.enzyme == "a3" for e in s.edges) and not s.links
+    assert {"a1", "a2", "n1", "c1", "z", "w"} <= set(s.nodes)
+    assert all_crossings(s) <= before and all_crossings(s) == 0
+    assert_no_overlaps(s)
+    for i in range(5):  # the ring is unmoved
+        for j in (f"m{i}", f"e{i}"):
+            assert (s.nodes[j].x, s.nodes[j].y) == (dm.nodes[j].x, dm.nodes[j].y)
+    # put into the subsystem by hand: drawn anyway
+    dm = walled_map()
+    dm.nodes["a3"].assigned = True
+    s = relayout.subsystem_map(dm, "R")
+    assert relayout.place_conservative(s) == set()
+    assert (s.nodes["a3"].x, s.nodes["a3"].y) == (400, 0)
+
+
+def test_relayout_subsystems_conservative():
+    pytest.importorskip("networkx")
+    assert relayout.CONSERVATIVE not in relayout.METHODS
+    dm = walled_map()
+    rows = relayout.relayout_subsystems(dm, methods=[relayout.CONSERVATIVE])
+    row = rows[0]
+    # no other layout, not even untangled; the left-out reaction is removed from the draft map
+    assert set(row) == {"subsystem", "layout", "current", relayout.CONSERVATIVE, "left_out"}
+    assert row["layout"] == relayout.CONSERVATIVE and row["left_out"] == ["A3"]
+    assert not {"a3", "c3", "n3"} & set(dm.nodes) and not dm.links
+    assert row[relayout.CONSERVATIVE]["crossings_all"] == 0
+    assert "1 model reactions left out" in dm.log[-1]
+    with pytest.raises(ValueError):
+        relayout.relayout_subsystems(walled_map(), methods=[relayout.CONSERVATIVE, "spring"])
+
+
+def test_relayout_by_hand():
+    pytest.importorskip("networkx")
+    s = relayout.subsystem_map(walled_map(), "R")
+    results, _ = relayout.compare_layouts(s, untangle=False)
+    for name in ("place", "spring", "circle", relayout.CONSERVATIVE):
+        dm = walled_map()
+        rows = relayout.relayout_subsystems(dm, [relayout.CONSERVATIVE], untangle=False, by_hand={"R": name})
+        assert [r["layout"] for r in rows] == [name] and rows[0]["by_hand"]
+        assert ("a3" in dm.nodes) == (name != relayout.CONSERVATIVE)  # left out only by the conservative placement
+        # the same drawing as in the comparison
+        c = relayout.subsystem_map(dm, "R")
+        layout.condense_subsystems(c, keep_crossings=name == relayout.CONSERVATIVE)
+        shown = results[name]["map"]
+        assert {i: (round(n.x, 3), round(n.y, 3)) for i, n in c.nodes.items()} == \
+            {i: (round(n.x, 3), round(n.y, 3)) for i, n in shown.nodes.items()}
+    assert relayout.layout_methods("spring+untangle") == (["place", "spring"], False, True)
+    # the other subsystems as step 3b chooses
+    dm = walled_map()
+    dm.subsystems["T"] = Subsystem("T", "T", "pw1", "#fff", 0, 0, 1000, 600)
+    rows = relayout.relayout_subsystems(dm, ["place"], untangle=False, by_hand={"R": relayout.CONSERVATIVE, "X": "place"})
+    assert [(r["subsystem"], r["layout"]) for r in rows] == [("R", relayout.CONSERVATIVE)]
+    # --layout-of
+    assert run.parse_layout_of(" a=place, b=spring+untangle ") == {"a": "place", "b": "spring+untangle"}
+    assert run.format_layout_of({"b": "spring", "a": "place"}) == "a=place,b=spring"
+    parser = run.build_parser()
+    for bad in ("a", "a=nonsense"):
+        args = parser.parse_args(["p", "j", "s", "o", "--layout-of", bad])
+        with pytest.raises(SystemExit):
+            run.check_args(parser, args)
+    run.check_args(parser, parser.parse_args(["p", "j", "s", "o", "--layout-of", "a=neato+untangle,b=circle"]))
+
+
+def template_map():
+    """The BRENDA map with t1 (m1 + ATP -> m2 + ADP) and a2's template t2 (m2 -> m3), and the draft map in which
+    t1 and t2 were pruned: a1 (m1 + GTP -> m2 + GDP) at t1's place, a2 with its new metabolite n3 at m3's place,
+    a3 without template node."""
+    from types import SimpleNamespace
+
+    template = DraftMap()
+    template.subsystems["S"] = Subsystem("S", "S", "pw1", "#fff", 0, 0, 1000, 600)
+    for i, x, y, kind in (("m1", 0, 0, "main"), ("m2", 400, 0, "main"), ("m3", 800, 0, "main"),
+                          ("atp", 160, 60, "cofactor"), ("adp", 240, 60, "cofactor"), ("t1", 200, 0, "enzyme"),
+                          ("t2", 600, 0, "enzyme")):
+        template.nodes[i] = Node(i, kind, "S", x, y, 60, 30, i)
+    template.edges = [Edge("t1", "m1", "main", True, False), Edge("t1", "m2", "main", False, True),
+                      Edge("t1", "atp", "cofactor", True, False), Edge("t1", "adp", "cofactor", False, True),
+                      Edge("t2", "m2", "main", True, False), Edge("t2", "m3", "main", False, True)]
+    keys = {"m1": {"K1"}, "m2": {"K2"}, "m3": {"K3"}, "atp": {"KATP"}, "adp": {"KADP"}}
+    md = SimpleNamespace(
+        metabolites={"m1_c": dict(keys={"K1"}), "gtp_c": dict(keys={"KGTP"}), "gdp_c": dict(keys={"KGDP"}),
+                     "m3_c": dict(keys={"K3"}), "pi_c": dict(keys={"KPI"})},
+        node_met_keys={(e.enzyme, e.met): keys[e.met] for e in template.edges},
+        matches={"A1": dict(candidates=[dict(node_id="t1", via=("ec",))]),
+                 "A2": dict(candidates=[dict(node_id="t2", via=("reaction-id",))])})
+    completion = core.Completion.__new__(core.Completion)
+    completion.md, completion.template, completion.template_edges = md, template, template.edges_of()
+    dm = DraftMap()
+    dm.subsystems["S"] = Subsystem("S", "S", "pw1", "#fff", 0, 0, 1000, 600)
+    for i in ("m1", "m2"):
+        dm.nodes[i] = copy.deepcopy(template.nodes[i])
+    dm.nodes["e1"] = Node("e1", "enzyme", "S", 200, 200, 60, 30, "e1", reactions=["E1"], status="on-map")
+    dm.nodes["a1"] = Node("a1", "enzyme", "S", 230, 90, 60, 30, "A1", reactions=["A1"], status="added")
+    dm.nodes["gtp"] = Node("gtp", "cofactor", "S", 200, 135, 40, 20, "GTP", status="added")
+    dm.nodes["gdp"] = Node("gdp", "cofactor", "S", 300, 135, 40, 20, "GDP", status="added")
+    dm.nodes["a2"] = Node("a2", "enzyme", "S", 500, 300, 60, 30, "A2", reactions=["A2"], status="added")
+    dm.nodes["n3"] = Node("n3", "main", "S", 700, 300, 60, 30, "n3", status="new")
+    dm.nodes["a3"] = Node("a3", "enzyme", "S", 0, 300, 60, 30, "A3", reactions=["A3"], status="added")
+    dm.nodes["n4"] = Node("n4", "main", "S", 0, 400, 60, 30, "n4", status="new")
+    dm.edges = [Edge("e1", "m1", "main", True, False), Edge("e1", "m2", "main", False, True),
+                Edge("a1", "m1", "main", True, False), Edge("a1", "m2", "main", False, True),
+                Edge("a1", "gtp", "cofactor", True, False), Edge("a1", "gdp", "cofactor", False, True),
+                Edge("a2", "m2", "main", True, False), Edge("a2", "n3", "main", False, True),
+                Edge("a3", "m1", "main", True, False), Edge("a3", "n4", "main", False, True)]
+    completion.dm = dm
+    return completion, dm
+
+
+def test_template_places():
+    completion, dm = template_map()
+    # step 3: the place of the pruned node with the reaction's EC number, those of its metabolites and cofactors
+    assert completion.template_spot("A1", "S") == "t1" and completion.template_spot("A1", "T") is None
+    assert completion.template_spot("A3", "S") is None
+    used = set()
+    assert completion.template_met("t1", "m1_c", "main", -1, used) == ("m1", 0, 0)
+    others = frozenset({"K1", "K2", "KGDP"})
+    assert completion.template_met("t1", "gtp_c", "cofactor", -1, used, others) == ("atp", 160, 60)  # its side
+    assert completion.template_met("t1", "gdp_c", "cofactor", 1, used, others) == ("adp", 240, 60)
+    assert completion.template_met("t1", "pi_c", "cofactor", 1, used, others) is None  # no template cofactor left
+    dm.nodes["a1"].template, dm.nodes["a2"].template = ("t1", 200, 0), ("t2", 600, 0)
+    dm.nodes["gtp"].template, dm.nodes["gdp"].template = ("atp", 160, 60), ("adp", 240, 60)
+    dm.nodes["n3"].template = ("m3", 800, 0)
+    s = relayout.subsystem_map(dm, "S")
+    removed = relayout.place_template(s)
+    # a1 and a2 at the template's places, a3 (no template node) left out with its new metabolite
+    assert removed == {"a3", "n4"}
+    assert {i: (s.nodes[i].x, s.nodes[i].y) for i in ("a1", "gtp", "gdp", "a2", "n3")} == {
+        "a1": (200, 0), "gtp": (160, 60), "gdp": (240, 60), "a2": (600, 0), "n3": (800, 0)}
+    assert (s.nodes["e1"].x, s.nodes["e1"].y) == (200, 200)  # the map is unchanged
+    # a template metabolite that is still drawn (no free place), or a new metabolite without one: left out
+    dm.nodes["n3"].template = ("m2", 400, 0)
+    assert "a2" in relayout.place_template(relayout.subsystem_map(dm, "S"))
+    del dm.nodes["n3"].template
+    assert "a2" in relayout.place_template(relayout.subsystem_map(dm, "S"))
+    # a place from which a link would pass through a node (m1 on the way to m2): left out
+    dm.nodes["a1"].template = ("t1", -200, 0)
+    assert "a1" in relayout.place_template(relayout.subsystem_map(dm, "S"))
+    dm.nodes["a1"].template = ("t1", 200, 0)
+    # step 3b
+    rows = relayout.relayout_subsystems(dm, [relayout.TEMPLATE])
+    assert rows[0]["layout"] == relayout.TEMPLATE and rows[0]["left_out"] == ["A2", "A3"]
+    assert set(dm.nodes) == {"m1", "m2", "e1", "a1", "gtp", "gdp"} and "without such a place" in dm.log[-1]
+    with pytest.raises(ValueError):
+        relayout.relayout_subsystems(dm, [relayout.TEMPLATE, "place"])
+    assert relayout.layout_methods(relayout.TEMPLATE) == ([relayout.TEMPLATE], False, False)
+
+
+def test_condense_keeps_crossings():
+    dm = crossed_map()
+    s = relayout.subsystem_map(dm, "S")
+    relayout.place_conservative(s)
+    for args in (dict(compactness=0.5), dict(compactness=5.0)):
+        c = relayout.subsystem_map(s, "S")
+        layout.condense_subsystems(c, keep_crossings=True, **args)
+        assert all_crossings(c) == 0
+
+
+def test_shrink_uniform():
+    dm = crossed_map()
+    s = relayout.subsystem_map(dm, "S")
+    relayout.place_conservative(s)
+    c = relayout.subsystem_map(s, "S")
+    fx, fy = layout.shrink_uniform(c, "S")
+    assert 0.1 <= fx < 1 and 0.1 <= fy < 1
+    # enzyme and main metabolite nodes are scaled, the cofactor keeps its offset to its enzyme node
+    for i, n in s.nodes.items():
+        if n.kind != "cofactor":
+            assert (c.nodes[i].x, c.nodes[i].y) == pytest.approx((fx * n.x, fy * n.y))
+    assert (c.nodes["c1"].x - c.nodes["a1"].x, c.nodes["c1"].y - c.nodes["a1"].y) == pytest.approx(
+        (s.nodes["c1"].x - s.nodes["a1"].x, s.nodes["c1"].y - s.nodes["a1"].y))
+    assert all_crossings(c) == 0
+    assert_no_overlaps(c)
+    # two nodes that are closer than the gaps already do not come closer: no shrink along x
+    tight = relayout.subsystem_map(s, "S")
+    tight.nodes["m2"].x = tight.nodes["e1"].x + 70
+    assert layout.shrink_uniform(tight, "S")[0] == 1.0
+    # step 4: the box is fitted around the shrunk drawing, smaller than without condensing
+    sizes = {}
+    for uniform in (True, False):
+        c = relayout.subsystem_map(s, "S")
+        layout.condense_subsystems(c, keep_order=None, uniform=uniform) if uniform else layout.fit_boxes_original(c)
+        sizes[uniform] = c.subsystems["S"].w * c.subsystems["S"].h
+        if uniform:
+            dx = c.nodes["m1"].x - fx * s.nodes["m1"].x
+            assert c.nodes["m4"].x == pytest.approx(fx * s.nodes["m4"].x + dx)
+    assert sizes[True] < sizes[False]
+    rows = relayout.relayout_subsystems(dm, [relayout.CONSERVATIVE], uniform=True)
+    assert rows[0]["layout"] == relayout.CONSERVATIVE
+
+
+def test_compare_layouts():
+    pytest.importorskip("networkx")
+    s = relayout.subsystem_map(walled_map(), "R")
+    results, chosen = relayout.compare_layouts(s, untangle=False)
+    assert {"current", "place", relayout.CONSERVATIVE, relayout.TEMPLATE, "spring", "circle"} <= set(results)
+    assert chosen in results and chosen != relayout.CONSERVATIVE and relayout._base(chosen) != "circle"
+    assert results[relayout.CONSERVATIVE]["left_out"] == ["A3"] and results["current"]["left_out"] == []
+    for r in results.values():
+        assert list(r["map"].subsystems) == ["R"] and r["map"].nodes
+    assert "a3" in results["place"]["map"].nodes and "a3" not in results[relayout.CONSERVATIVE]["map"].nodes
+    assert sorted(results, key=relayout.layout_key)[:4] == ["current", relayout.CONSERVATIVE, relayout.TEMPLATE,
+                                                            "place"]
+    # the input is unchanged; without added reactions only the current drawing (and the layout chosen by hand only)
+    assert "a3" in s.nodes
+    results, chosen = relayout.compare_layouts(relayout.subsystem_map(relayout_map(), "T"))
+    assert set(results) - {relayout.AUTOLAYOUT} == {"current"} and chosen is None
+
+
+def test_autolayout(monkeypatch):
+    pytest.importorskip("sbml_autolayout")
+    dm = ring_map()
+    drawings = []
+    for _ in range(2):
+        s = relayout.subsystem_map(dm, "R")
+        assert relayout.LAYOUTS[relayout.AUTOLAYOUT](s) is None
+        drawings.append({i: (n.x, n.y) for i, n in s.nodes.items()})
+    assert drawings[0] == drawings[1]  # reproducible
+    # all enzyme and main nodes drawn again, at places of their own; the cofactor moves with its enzyme node
+    main = [i for i, n in s.nodes.items() if n.kind != "cofactor"]
+    assert all(drawings[0][i] != (dm.nodes[i].x, dm.nodes[i].y) for i in main)
+    assert len({drawings[0][i] for i in main}) == len(main)
+    assert s.nodes["c1"].x - s.nodes["a1"].x == pytest.approx(40) and s.nodes["c1"].y - s.nodes["a1"].y == pytest.approx(40)
+    # a known cycle (found by the names of the BRENDA map, the titles) is drawn on a circle, which condensing keeps
+    tca = DraftMap()
+    tca.subsystems["C"] = Subsystem("C", "C", "pw1", "#fff", 0, 0, 1000, 1000)
+    names = ["oxaloacetate", "citrate", "isocitrate", "2-oxoglutarate", "succinyl-CoA", "succinate", "fumarate", "L-malate"]
+    for i, name in enumerate(names):
+        tca.nodes[f"m{i}"] = Node(f"m{i}", "main", "C", 100 * i, 0, 60, 30, f"m{i}", title=name)
+        tca.nodes[f"e{i}"] = Node(f"e{i}", "enzyme", "C", 100 * i + 50, 60, 60, 30, f"e{i}", reactions=[f"E{i}"],
+                                  status="on-map")
+        tca.edges += [Edge(f"e{i}", f"m{i}", "main", True, False), Edge(f"e{i}", f"m{(i + 1) % 8}", "main", False, True)]
+    tca.nodes["c1"] = Node("c1", "cofactor", "C", 60, 90, 40, 20, "NADH")
+    tca.edges.append(Edge("e2", "c1", "cofactor", False, True))
+    relayout.autolayout_layout(tca)
+    assert [sorted(group) for group in tca.subsystems["C"].rigid] == [sorted([*tca.nodes])]
+    layout.condense_subsystems(tca)
+    centre = [sum(getattr(tca.nodes[f"m{i}"], a) for i in range(8)) / 8 for a in "xy"]
+    radii = [math.dist((tca.nodes[f"m{i}"].x, tca.nodes[f"m{i}"].y), centre) for i in range(8)]
+    assert max(radii) - min(radii) < 1 and min(radii) > 100
+    # no main edges, too many reactions: no layout
+    lone = DraftMap()
+    lone.subsystems["L"] = Subsystem("L", "L", "pw1", "#fff", 0, 0, 100, 100)
+    lone.nodes["e1"] = Node("e1", "enzyme", "L", 0, 0, 60, 30, "e1", reactions=["E1"], status="on-map")
+    assert relayout.autolayout_layout(lone) is False
+    assert relayout.autolayout_layout(relayout.subsystem_map(dm, "R"), max_reactions=3) is False
+    # chosen by hand only, also in a subsystem without added reactions
+    assert relayout.AUTOLAYOUT not in relayout.METHODS
+    assert relayout.layout_methods("autolayout+untangle") == ([relayout.AUTOLAYOUT], False, True)
+    dm = relayout_map()
+    rows = relayout.relayout_subsystems(dm, [relayout.CONSERVATIVE], by_hand={"T": relayout.AUTOLAYOUT})
+    row = next(r for r in rows if r["subsystem"] == "T")
+    assert row["layout"] == relayout.AUTOLAYOUT and row["by_hand"] and dm.subsystems["T"].layout == relayout.AUTOLAYOUT
+    for k in ("S", "T"):
+        results, chosen = relayout.compare_layouts(relayout.subsystem_map(relayout_map(), k))
+        assert relayout.AUTOLAYOUT in results and chosen != relayout.AUTOLAYOUT
+    assert sorted(results, key=relayout.layout_key)[-1] == relayout.AUTOLAYOUT
+    # --layout-of takes it, --relayout does not
+    parser = run.build_parser()
+    run.check_args(parser, parser.parse_args(["p", "j", "s", "o", "--layout-of", "a=autolayout,b=autolayout+untangle"]))
+    with pytest.raises(SystemExit):
+        run.check_args(parser, parser.parse_args(["p", "j", "s", "o", "--relayout", "place,autolayout"]))
+    # without the package: not among the layouts, the drawing stays
+    monkeypatch.setattr(relayout, "available_methods",
+                        lambda methods=relayout.METHODS, old=relayout.available_methods:
+                        [m for m in old(methods) if m != relayout.AUTOLAYOUT])
+    dm = relayout_map()
+    before = {i: (n.x, n.y) for i, n in dm.nodes.items()}
+    rows = relayout.relayout_subsystems(dm, [], by_hand={"T": relayout.AUTOLAYOUT})
+    assert {r["subsystem"]: r["layout"] for r in rows} == {"S": "current", "T": "current"}
+    assert {i: (n.x, n.y) for i, n in dm.nodes.items()} == before
+    assert relayout.AUTOLAYOUT not in relayout.compare_layouts(relayout.subsystem_map(relayout_map(), "T"))[0]
+
+
+def test_short_labels():
+    assert core.short_label("D-glyceraldehyde 3-phosphate", "g3p") == "g3p"
+    assert core.short_label("acetyl-CoA", "accoa") == "acetyl-CoA"  # short enough
+    assert core.short_label("D-glyceraldehyde 3-phosphate") == "D-glycerald…"
+    assert core.short_label("D-glyceraldehyde 3-phosphate", length=0) == "D-glyceraldehyde 3-phosphate"
+    dm = DraftMap()
+    dm.subsystems["A"] = Subsystem("A", "A", "pw1", "#fff", 0, 0, 1000, 600)
+    dm.nodes["m1"] = Node("m1", "main", "A", 0, 0, 200, 30, "D-glyceraldehyde 3-phosphate", model_mets={"g3p"})
+    dm.nodes["m2"] = Node("m2", "main", "A", 0, 0, 200, 30, "2-dehydro-3-deoxy-D-gluconate", ligand_id=None)
+    dm.nodes["e1"] = Node("e1", "enzyme", "A", 0, 0, 200, 30, "a very long enzyme name")
+    assert core.abbreviate_labels(dm) == 2
+    assert dm.nodes["m1"].label == "g3p" and dm.nodes["m1"].title == "D-glyceraldehyde 3-phosphate"
+    assert dm.nodes["m1"].w == core.text_width("g3p")
+    assert dm.nodes["m2"].label == "2-dehydro-3…"
+    # the identity of the metabolite is still the full name
+    assert core.metabolite_key(dm.nodes["m2"]) == "2-dehydro-3-deoxy-D-gluconate"
+    assert dm.nodes["e1"].label == "a very long enzyme name"
+
+
+def test_untangle_layout_moves_only_added_nodes():
+    pytest.importorskip("pygraphviz")
+    from ecmapper.pwl.layout import crossing_nodes
+
+    dm = relayout_map()
+    # the added reaction across both map reactions: a1 above them, n1 below
+    dm.nodes["a1"].x, dm.nodes["a1"].y, dm.nodes["c1"].x, dm.nodes["c1"].y = 300, -100, 340, -60
+    dm.nodes["n1"].x, dm.nodes["n1"].y = 300, 400
+    s = relayout.subsystem_map(dm, "S")
+
+    def crossings(s):
+        return crossing_nodes(s, {i: (n.x, n.y) for i, n in s.nodes.items() if n.kind != "cofactor"})[0]
+
+    before = crossings(s)
+    assert before >= 2
+    assert relayout.untangle_layout(s)
+    assert crossings(s) < before
+    for i in ("m1", "m2", "m3", "m4", "e1", "e2"):
+        assert (s.nodes[i].x, s.nodes[i].y) == (dm.nodes[i].x, dm.nodes[i].y)
+    # the cofactor moves with its enzyme node
+    assert s.nodes["c1"].x - s.nodes["a1"].x == pytest.approx(40) and s.nodes["c1"].y - s.nodes["a1"].y == pytest.approx(40)
 
 
 def escher_reaction(nodes, rid, mid, sub, prod, metabolites):
@@ -684,6 +1287,39 @@ def test_curve_reactions():
                                   segments={"s": dict(from_node_id="A", to_node_id="x", b1=None, b2=None)})
     assert escher.curve_reactions(body)["drawn_reactions"] == 2
     assert body["reactions"]["3"]["segments"]["s"]["b1"] is None
+
+
+def test_curve_reactions_smooth():
+    """With smooth, main lines are curves, too; through a metabolite between two reactions without a kink."""
+    def met(i, x, y):
+        return dict(node_type="metabolite", x=x, y=y, bigg_id=i, label_x=x, label_y=y, node_is_primary=True)
+
+    def chain():  # A -R1-> B -R2-> C with a corner at B
+        nodes = {"A": met("a", 0, 0), "B": met("b", 300, 0), "C": met("c", 300, 300),
+                 "m1": dict(node_type="midmarker", x=150, y=0), "m2": dict(node_type="midmarker", x=300, y=150)}
+        for i, (x, y) in (("s1", (150, 0)), ("p1", (150, 0)), ("s2", (300, 150)), ("p2", (300, 150))):
+            nodes[i] = dict(node_type="multimarker", x=x, y=y)
+        return dict(nodes=nodes, text_labels={}, reactions={
+            "1": escher_reaction(nodes, "R1", "m1", "s1", "p1", {"A": -1, "B": 1}),
+            "2": escher_reaction(nodes, "R2", "m2", "s2", "p2", {"B": -1, "C": 1})})
+
+    body = chain()
+    assert escher.curve_reactions(body, pull=False)["curved_segments"] == 0
+    assert all(s["b1"] is None for r in body["reactions"].values() for s in r["segments"].values())
+    body = chain()
+    assert escher.curve_reactions(body, pull=False, smooth=True)["curved_segments"] == 4
+    nodes, segments = body["nodes"], {**body["reactions"]["1"]["segments"], **body["reactions"]["2"]["segments"]}
+    assert all(segments[s]["b1"] and segments[s]["b2"] for s in ("R1A", "R1B", "R2B", "R2C"))
+    assert segments["R1a"]["b1"] is None  # the axis stays straight
+    # at B (end of R1B, start of R2B) the control points are on one line through B, on either side
+    bx, by = nodes["B"]["x"], nodes["B"]["y"]
+    u = (segments["R1B"]["b2"]["x"] - bx, segments["R1B"]["b2"]["y"] - by)
+    v = (segments["R2B"]["b1"]["x"] - bx, segments["R2B"]["b1"]["y"] - by)
+    assert u[0] * v[1] - u[1] * v[0] == pytest.approx(0.0, abs=1e-6) and u[0] * v[0] + u[1] * v[1] < 0
+    # A has one segment: its control point points towards the multimarker
+    a, s1 = nodes["A"], nodes["s1"]
+    b = segments["R1A"]["b1"]
+    assert (b["x"] - a["x"]) * (s1["x"] - a["x"]) + (b["y"] - a["y"]) * (s1["y"] - a["y"]) > 0
 
 
 def test_pull_reactions():

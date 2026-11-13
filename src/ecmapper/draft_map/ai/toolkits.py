@@ -42,7 +42,7 @@ ESCHER_HANDLAYOUT = dict(
 #: escher_handlayout_kit (run.py with inspect, check-spec, build, validate; JSON layout specs)
 ESCHER_HANDLAYOUT_KIT = dict(
     name="escher_handlayout_kit", package="run", instructions=["PROMPT.md"],
-    commands=["inspect", "check-spec", "build", "validate"], result="**/*_handlayout.json",
+    commands=["inspect", "check-spec", "build", "validate", "directions"], result="**/*_handlayout.json",
     # the parts for an agent on its own: title and intro, parameters, setup, deliverables, final message
     omit=["# AUTONOMOUS TASK", "## 0.", "### Step A", "## 6.", "## 7."],
     notes=f"In PROMPT.md: KIT_DIR = {TOOLKIT} (read-only: write specs into the work folder, e.g. "
@@ -50,6 +50,7 @@ ESCHER_HANDLAYOUT_KIT = dict(
           "OUT_DIR = . (the work folder), MAP_NAME = draft. The commands written `python run.py ...` there are run "
           "with the tool run_toolkit (its arguments after run.py, e.g. [\"inspect\", \"--input\", "
           f"\"{DRAFT}\", \"--out\", \"analysis\"]). Only JSON specs: never a Python spec or --unsafe-python-spec. "
+          "After inspect read analysis/arrangement.md completely (where the subsystems usually sit; PROMPT.md Step C). "
           "Before writing the spec read toolkit/escher_handlayout/agent/prompts/format_reference.md and "
           "toolkit/docs/GUIDE.md: the spec places metabolite nodes (not reactions) by the numeric node ids of "
           "analysis/analysis.md (strings of digits such as \"66\", never BiGG ids such as \"pyr_c\"); reactions "

@@ -782,12 +782,15 @@ def scale_to_brenda(dm: DraftMap, pos: dict) -> dict:
     return {i: (x * f, y * f) for i, (x, y) in pos.items()}
 
 
-def remove_overlaps(dm: DraftMap, pos: dict, rounds: int = 60, cofactors: bool = False) -> dict:
+def remove_overlaps(dm: DraftMap, pos: dict, rounds: int = 60, cofactors: bool = False, sizes=None,
+                    pinned=frozenset()) -> dict:
     """Push overlapping boxes apart along the smaller overlap; small moves keep the shape.
 
     Without `cofactors`, only enzyme and main nodes; with it, all nodes, and a
-    cofactor that overlaps a main or enzyme node moves alone.
+    cofactor that overlaps a main or enzyme node moves alone. `sizes`: {node:
+    (w, h)} instead of the node sizes; nodes in `pinned` do not move.
     """
+    sizes = sizes or {}
     ids = [i for i in pos if cofactors or dm.nodes[i].kind != "cofactor"]
     pos = dict(pos)
     for _ in range(rounds):
@@ -795,15 +798,21 @@ def remove_overlaps(dm: DraftMap, pos: dict, rounds: int = 60, cofactors: bool =
         for a_i in range(len(ids)):
             for b_i in range(a_i + 1, len(ids)):
                 a, b = ids[a_i], ids[b_i]
+                if a in pinned and b in pinned:
+                    continue
                 na, nb = dm.nodes[a], dm.nodes[b]
+                (wa_, ha), (wb_, hb) = sizes.get(a, (na.w, na.h)), sizes.get(b, (nb.w, nb.h))
                 dx, dy = pos[b][0] - pos[a][0], pos[b][1] - pos[a][1]
                 gap = GAP / 2 if na.kind != "cofactor" and nb.kind != "cofactor" else 4.0
-                ox = (na.w + nb.w) / 2 + gap - abs(dx)
-                oy = (na.h + nb.h) / 2 + gap - abs(dy)
+                ox = (wa_ + wb_) / 2 + gap - abs(dx)
+                oy = (ha + hb) / 2 + gap - abs(dy)
                 if ox > 0 and oy > 0:
                     moved = True
-                    wa = 0.0 if (na.kind != "cofactor" and nb.kind == "cofactor") else (
-                        1.0 if (na.kind == "cofactor" and nb.kind != "cofactor") else 0.5)
+                    if a in pinned or b in pinned:
+                        wa = 0.0 if a in pinned else 1.0
+                    else:
+                        wa = 0.0 if (na.kind != "cofactor" and nb.kind == "cofactor") else (
+                            1.0 if (na.kind == "cofactor" and nb.kind != "cofactor") else 0.5)
                     wb = 1.0 - wa
                     if ox < oy:
                         sx = (1 if dx >= 0 else -1) * ox
@@ -891,31 +900,34 @@ def crossing_nodes(dm: DraftMap, pos: dict) -> tuple[int, set[str]]:
     return count, nodes
 
 
-def untangle(dm: DraftMap, pos: dict, rounds: int = 3) -> dict:
+def untangle(dm: DraftMap, pos: dict, rounds: int = 3, sizes=None, pinned=frozenset()) -> dict:
     """Graphviz ``neato`` with all nodes pinned except those at the ends of crossing links.
 
     The free nodes move to positions that fit the lengths of their links
     (taken from the current drawing), so crossings are resolved locally and
     the rest of the drawing keeps its shape. A round is kept only if it
-    reduces the crossings.
+    reduces the crossings. `sizes`: {node: (w, h)} instead of the node sizes
+    (e.g. with room for cofactors); nodes in `pinned` never move.
     """
     import pygraphviz as pgv
 
+    sizes = sizes or {}
     pos = dict(pos)
     ids = [i for i in _main_graph(dm).nodes if i in pos]
-    edges = [list(e) for e in _main_graph(dm).edges()]
+    edges = [list(e) for e in _main_graph(dm).edges() if e[0] in pos and e[1] in pos]
     lengths = sorted(math.dist(pos[a], pos[b]) for a, b in edges) or [STEP / 2]
     typical = lengths[len(lengths) // 2]
     for _ in range(rounds):
         count, free = crossing_nodes(dm, pos)
-        if not count:
+        free -= set(pinned)
+        if not count or not free:
             break
         g = pgv.AGraph(directed=False, strict=False)
         g.graph_attr.update(inputscale="72", overlap="true", mode="major", start="1")
         g.node_attr.update(shape="box", fixedsize="true", label="")
         for i in ids:
-            n = dm.nodes[i]
-            g.add_node(i, width=f"{n.w / 72:.3f}", height=f"{n.h / 72:.3f}",
+            w, h = sizes.get(i, (dm.nodes[i].w, dm.nodes[i].h))
+            g.add_node(i, width=f"{w / 72:.3f}", height=f"{h / 72:.3f}",
                        pos=f"{pos[i][0]:.1f},{-pos[i][1]:.1f}" + ("" if i in free else "!"))
         for a, b in edges:
             g.add_edge(a, b, len=f"{typical / 72:.3f}")
@@ -927,7 +939,7 @@ def untangle(dm: DraftMap, pos: dict, rounds: int = 3) -> dict:
         if anchor is not None:
             dx, dy = pos[anchor][0] - new[anchor][0], pos[anchor][1] - new[anchor][1]
             new = {i: (x + dx, y + dy) for i, (x, y) in new.items()}
-        new = remove_overlaps(dm, {**pos, **new})
+        new = remove_overlaps(dm, {**pos, **new}, sizes=sizes, pinned=pinned)
         if crossing_nodes(dm, new)[0] >= count:
             break
         pos = new
