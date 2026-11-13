@@ -115,6 +115,7 @@ SCHEMA = {
         'reaction': {'type': 'object', 'additionalProperties': False, 'required': ['id'],
                      'properties': {
                          'id': {'type': 'string', 'pattern': r'^\d{1,9}$'},
+                         'name': {'type': 'string', 'pattern': _BIGG},
                          'remove': {'type': 'boolean'},
                          'zone': {'type': 'string', 'pattern': _ZONE},
                          'side': {'enum': ['L', 'R', 'U', 'D', 'out', 'in']},
@@ -128,6 +129,8 @@ SCHEMA = {
                                  'zone': {'type': 'string', 'pattern': _ZONE},
                                  'origin': _POINT,
                                  'nodes': {'type': 'object', 'maxProperties': 2000, 'propertyNames': {'pattern': _REF}, 'additionalProperties': _POINT},
+                                 'node_names': {'type': 'object', 'maxProperties': 2000, 'propertyNames': {'pattern': _REF},
+                                                'additionalProperties': {'type': 'string', 'pattern': _BIGG}},
                                  'remove_nodes': {'type': 'array', 'maxItems': 2000, 'items': {'$ref': '#/$defs/nodeRef'}},
                                  'rings': {'type': 'array', 'maxItems': 20, 'items': {'$ref': '#/$defs/ring'}},
                                  'reactions': {'type': 'array', 'maxItems': 3000, 'items': {'$ref': '#/$defs/reaction'}}}},
@@ -230,6 +233,34 @@ def write_schema_file(path):
     write_json(path, SCHEMA)
 
 
+def format_spec(spec):
+    """The spec as JSON text that is short and easy to edit by hand: one zone, merge, ring, reaction or title per line."""
+    j = lambda v: json.dumps(v, ensure_ascii=False)
+    def items(values, indent):
+        return '[' + ''.join(f"\n{indent}{j(v)}{',' if i < len(values) - 1 else ''}" for i, v in enumerate(values)) + (f'\n{indent[:-1]}]' if values else ']')
+    def wrapped(d, indent, per_line=6):
+        pairs = [f'{j(k)}: {j(v)}' for k, v in d.items()]
+        if len(pairs) <= per_line: return '{' + ', '.join(pairs) + '}'
+        rows = [', '.join(pairs[i:i + per_line]) for i in range(0, len(pairs), per_line)]
+        return '{\n' + ',\n'.join(indent + r for r in rows) + '}'
+    def block(b):
+        parts = [', '.join(f'{j(k)}: {j(b[k])}' for k in ('block', 'zone', 'origin') if k in b)]
+        for k in ('nodes', 'node_names'):
+            if k in b: parts.append(f'"{k}": ' + wrapped(b[k], '    ', 6 if k == 'nodes' else 5))
+        for k in ('rings', 'reactions'):
+            if k in b: parts.append(f'"{k}": ' + items(b[k], '    '))
+        parts += [f'{j(k)}: {j(v)}' for k, v in b.items() if k not in ('block', 'zone', 'origin', 'nodes', 'node_names', 'rings', 'reactions')]
+        return '{' + ',\n   '.join(parts) + '}'
+    out = []
+    for k, v in spec.items():
+        if k in ('zones', 'splits', 'merges', 'small_titles') and v: s = items(v, '  ')
+        elif k == 'layouts' and v: s = '[\n  ' + ',\n  '.join(block(b) for b in v) + '\n ]'
+        elif k in ('titles', 'plan') and v: s = '{' + ''.join(f"\n  {j(n)}: {j(x)}{',' if i < len(v) - 1 else ''}" for i, (n, x) in enumerate(v.items())) + '\n }'
+        else: s = j(v)
+        out.append(f' {j(k)}: {s}')
+    return '{\n' + ',\n'.join(out) + '\n}\n'
+
+
 # ------------------------------------------------------------------------------------------------ patching
 def merge_fragment(spec, frag):
     """Return a NEW spec = `spec` updated by the partial spec `frag` (both must already satisfy the schema).
@@ -272,7 +303,9 @@ def merge_fragment(spec, frag):
                 if k in fb: b[k] = copy.deepcopy(fb[k])
             nodes = b.setdefault('nodes', {})
             for k, v in fb.get('nodes', {}).items(): nodes[k] = copy.deepcopy(v)
-            for k in fb.get('remove_nodes', []): nodes.pop(k, None)
+            if 'node_names' in fb: b.setdefault('node_names', {}).update(fb['node_names'])
+            for k in fb.get('remove_nodes', []):
+                nodes.pop(k, None); b.get('node_names', {}).pop(k, None)
             if 'rings' in fb:
                 rings = b.setdefault('rings', []); ri = {r['name']: i for i, r in enumerate(rings)}
                 for r in fb['rings']:
@@ -374,6 +407,9 @@ def compile_spec(spec, L, partial=False):
                 i = ref(k, f"ring '{rg['name']}'")
                 if i is not None and prim_node(i, f"ring '{rg['name']}'"):
                     put(i, c[0] + rg['radius'] * np.cos(np.radians(ang)), c[1] + rg['radius'] * np.sin(np.radians(ang)), f"ring '{rg['name']}' node {k}")
+        for k, nm in b.get('node_names', {}).items():          # what the writer believes the ids are
+            i = alias.get(k) if k.startswith('@') else k
+            if i in N and N[i].get('bigg_id') != nm: P.append(f"block '{bn}' node_names: node {k} is {N[i].get('bigg_id')}, not {nm}")
     if len(placed) > LIMITS['max_nodes']: P.append('too many placed nodes')
 
     # ---- expression evaluation
@@ -413,6 +449,7 @@ def compile_spec(spec, L, partial=False):
             rid = r['id']; what = f"reaction {rid} (block '{bn}')"
             if rid not in R: P.append(f'{what}: reaction does not exist'); continue
             if rid in done: P.append(f"{what}: already placed in block '{done[rid]}'"); continue
+            if r.get('name', R[rid]['bigg_id']) != R[rid]['bigg_id']: P.append(f"{what}: reaction {rid} is {R[rid]['bigg_id']}, not {r['name']}"); continue
             zone = r.get('zone', b.get('zone'))
             if zone not in zones: P.append(f"{what}: zone {zone!r} not declared"); continue
             missing = [n for n in nprim(rid) if n not in L.pos]

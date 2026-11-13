@@ -17,6 +17,22 @@ Worst crossing pairs: ATPS4rppxNTP1 (4); PFLxPOR5 (2); CITLxPPCK (2); PPCKxPPS (
 
 Labels on lines: reaction PPS, metabolite pi, metabolite f6p, exit → Amino acids, exit → Amino acids
 
+Detached pieces that draw a metabolite of the main map again (merge it, or keep the copy on purpose): PGM, GLYCK2 (shares 2pg_c, 3pg_c); FE3DCITR5 (shares cit_c)
+
+## Score and targets
+
+- score 106 = 26 crossings + 3*5 labels on lines + 20*2 detached pieces + 25 placement penalty  (lower is better)
+- ok    validation errors: 0 (target: 0)
+- MISS  crossings: 26 (target: at most 9)
+- ok    labels on lines: 5 (target: at most 6)
+- ok    labels on nodes: 0 (target: 0)
+- ok    label overlaps: 0 (target: at most 2)
+- ok    close nodes: 0 (target: 0)
+- MISS  violated hard/strong directions: 5 (target: 0)
+- look  detached pieces: 2 (target: 0)
+
+Fix first: crossings (26): ATPS4rpp x NTP1 (4); PFL x POR5 (2); CITL x PPCK (2); PPCK x PPS (2); PPC x PPS (2); CITL x PPC (2); CITL x OAADC (2); L_LACD2 x L_LACD3 (2). Remedy: for the worst pairs: move one node, flip a `side`, change a lane `shift`, or split a node instead of drawing a long line; if many pairs involve two subsystems, move or mirror one block (`origin`).
+
 ## Placement of the subsystems (layout_directions catalogue)
 
 - violated directions (hard/strong/medium): **5** of 20 checked | placement penalty: **25**

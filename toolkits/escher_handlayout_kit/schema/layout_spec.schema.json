@@ -481,6 +481,10 @@
      "type": "string",
      "pattern": "^\\d{1,9}$"
     },
+    "name": {
+     "type": "string",
+     "pattern": "^[A-Za-z0-9_.\\-()]{1,60}$"
+    },
     "remove": {
      "type": "boolean"
     },
@@ -603,6 +607,17 @@
        "minimum": -20000,
        "maximum": 20000
       }
+     }
+    },
+    "node_names": {
+     "type": "object",
+     "maxProperties": 2000,
+     "propertyNames": {
+      "pattern": "^(\\d{1,9}|@[A-Za-z][A-Za-z0-9_]{0,30})$"
+     },
+     "additionalProperties": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.\\-()]{1,60}$"
      }
     },
     "remove_nodes": {

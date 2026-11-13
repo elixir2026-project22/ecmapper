@@ -1,5 +1,5 @@
 """Phase-0 analysis of a draft Escher map: everything an automated run needs to plan the layout."""
-import json, math
+import json, math, re
 from collections import defaultdict, Counter
 import numpy as np
 from ._io import read_json
@@ -7,10 +7,20 @@ from ._io import read_json
 HUB_BASE = {'glc__D', 'g6p', 'f6p', 'fdp', 'g3p', 'dhap', 'pep', 'pyr', 'accoa', 'acald', 'oaa', 'akg', 'succ', 'mal__L',
             'cit', 'icit', 'r5p', 'ru5p__D', 'xu5p__D', 's7p', 'e4p', '6pgc', 'ac', 'actp', 'lac__D', 'lac__L', 'etoh', 'fum'}
 
+#: never merged, and no reason to connect two pieces of a map
+COFACTORS = {'atp', 'adp', 'amp', 'gtp', 'gdp', 'nad', 'nadh', 'nadp', 'nadph', 'fad', 'fadh2', 'coa', 'h2o', 'h', 'pi', 'ppi', 'co2', 'o2',
+             'nh4', 'q8', 'q8h2', 'mqn8', 'mql8', '2dmmq8', '2dmmql8', 'fldox', 'fldrd', 'hco3', 'h2o2', 'h2'}
+
 def base(b):
     for suf in ('_c', '_e', '_p'):
         if b.endswith(suf): return b[:-2]
     return b
+
+def zone_name(title):
+    """A title label of the map as a zone name of a spec (the characters the schema allows)."""
+    s = re.sub(r"[^A-Za-z0-9 .,()/+:'_\-]", ' ', title).strip()
+    s = re.sub(r'\s+', ' ', s)[:80] or 'Module'
+    return s[0].upper() + s[1:] if s[0].isalpha() else 'M ' + s
 
 def analyse(path):
     d = read_json(path); meta, m = d
@@ -42,13 +52,13 @@ def analyse(path):
     comps = defaultdict(list)
     for rid in R: comps[f('r' + rid)].append(rid)
     comp_list = sorted(comps.values(), key=lambda c: -len(c))
-    def nearest_title(rids):
-        votes = Counter()
-        for rid in rids:
-            mx, my = N[rx[rid]['mid']]['x'], N[rx[rid]['mid']]['y']
-            if titles:
-                votes[min(titles, key=lambda t: math.hypot(titles[t]['x'] - mx, titles[t]['y'] - my))] += 1
-        return votes.most_common(1)[0][0] if votes else None
+    def nearest_title(bbox):
+        """A draft map writes the title of a subsystem above its box: the title nearest to the top of the component's
+        bounding box among the titles above its centre (among all titles if none is above)."""
+        if not titles: return None
+        top = ((bbox[0] + bbox[2]) / 2, bbox[1]); cy = (bbox[1] + bbox[3]) / 2
+        above = [t for t in titles if titles[t]['y'] <= cy] or list(titles)
+        return min(above, key=lambda t: math.hypot(titles[t]['x'] - top[0], titles[t]['y'] - top[1]))
     out = dict(file=path, map_name=meta.get('map_name'), n_reactions=len(R), n_nodes=len(N), n_text_labels=len(TL), canvas=m['canvas'],
                title_labels=[dict(id=t, text=v['text'], x=round(v['x']), y=round(v['y'])) for t, v in titles.items()],
                exit_labels=[dict(id=t, text=v['text'], x=round(v['x']), y=round(v['y'])) for t, v in exits.items()])
@@ -57,7 +67,7 @@ def analyse(path):
     rid_comp = {}
     for ci, rids in enumerate(comp_list):
         xs = [N[n]['x'] for rid in rids for n in rx[rid]['nodes']]; ys = [N[n]['y'] for rid in rids for n in rx[rid]['nodes']]
-        t = nearest_title(rids)
+        t = nearest_title((min(xs), min(ys), max(xs), max(ys)))
         out['components'].append(dict(index=ci, n_reactions=len(rids), suggested_subsystem=titles[t]['text'] if t else None,
                                       reactions=[R[r]['bigg_id'] for r in sorted(rids, key=int)],
                                       bbox=[round(min(xs)), round(min(ys)), round(max(xs)), round(max(ys))],

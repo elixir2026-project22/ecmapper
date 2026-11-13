@@ -8,10 +8,13 @@ iML1515 central-metabolism draft map (`specs/iml1515_central_carbon.layout.json`
 ```
 python run.py inspect --input MAP.json --out analysis/        # facts about the draft map + arrangement.md (where the subsystems go)
 python run.py directions --input MAP.json [--check SPEC.json]  # the same arrangement brief alone / the directions a spec violates
-(write specs/<map>.layout.json by hand-choosing coordinates)    # the creative step (a person, or an LLM: see AGENT.md)
-python run.py check-spec --input MAP.json --spec specs/<map>.layout.json   # fast check, no build
+python run.py start   --input MAP.json --out specs/<map>.layout.json       # a complete spec of the draft as it is (section 3a)
+python run.py patch   --input MAP.json --spec specs/<map>.layout.json --json '{...}'   # change a part of the spec (section 3a)
+(or write specs/<map>.layout.json by hand-choosing coordinates)  # the creative step (a person, or an LLM: see AGENT.md)
+python run.py check-spec --input MAP.json --spec specs/<map>.layout.json   # fast check, no build (--partial: unfinished spec)
 python run.py build   --input MAP.json --spec specs/<map>.layout.json --out out/ --curv 0.6
-                       -> out/<name>.json, out/<name>_overview.png, out/qa_report.md, out/qa_report.json
+                       -> out/<name>.json, out/<name>_overview.png, out/qa_report.md, out/qa_report.json;
+                          prints score, targets and what to do next (section 8)
 python run.py validate --input MAP.json --output out/<name>.json
 ```
 
@@ -44,6 +47,26 @@ Sections: `zones` (subsystems: name, colour, title, existing label), `plan` (reg
 arguments of the engine's `Layout.reaction(...)`. `specs/iml1515_central_carbon.layout.json` is a complete worked example,
 `specs/layout_template.json` an empty skeleton. Expressions (`{"node":..}`, `{"mean":[..]}`, `{"lerp":[P1,P2,t]}`,
 `{"perp":[a,b],"offset":n}`) replace the small arithmetic a Python spec used to contain; regular polygons come from `rings`.
+
+## 3a. Start spec and patches (changing a layout instead of writing one)
+
+Writing a complete spec from an empty page is the hardest way to use the kit, in particular for a language model that
+is not among the strongest. Two commands make the same work a series of small changes:
+
+- `start` writes a complete, valid spec of the draft map as it is: one zone and one block per subsystem (the title
+  above each box of the draft; a component without title is "Module n"), the primary nodes at their draft positions
+  relative to the block's `origin`, every reaction with the `side` and `shift` (or `axis`/`mid`) the draft draws, no
+  merges. Moving a subsystem is then one change of an `origin`. `node_names` (per block) and `name` (per reaction) say
+  what the ids are; they are optional, and `check-spec` reports an id whose name does not fit the map.
+- `patch` merges a spec fragment into the spec file, with the rules of the chat agent (blocks by `block`, nodes by id,
+  reactions by `id`; a reaction entry replaces the old one completely). A fragment that violates the schema or makes a
+  new problem (unknown id, wrong name, a merge of different metabolites ...) is rejected and the file stays as it was.
+  A fragment with `merges` also removes the coordinates of the merged `dups`. The file is rewritten in a compact form
+  (one reaction per line) that is easy to read and to edit by hand.
+
+`patch` and `check-spec` also print warnings for specs that are formally right but break a rule (`escher_handlayout/lint.py`):
+a merged cofactor, a hub merge that pulls in a reaction with 6 or more primary metabolites (biomass: it keeps its own
+copies), a reaction whose metabolites are more than 3000 units apart, primary nodes closer than 70 units.
 
 Legacy: `specs/legacy_python/` holds the old Python-code specs (they execute code; `--unsafe-python-spec` is needed).
 
@@ -141,6 +164,23 @@ used      : componentwise (1-t)*gentle + t*strong ; lanes k=(0.32+0.10t)*length 
 | primary_nodes_closer_than_70 | nodes nearly on top of each other | fix coordinates |
 | bbox_area | size of the final rectangle | compact the main component; the packing already removes the pieces' share |
 | placement penalty | subsystems (or hub metabolites) not where the placement catalogue puts them (section 5a) | move the block (`origin`) - only if that does not cost crossings; medium directions may stay violated |
+| detached pieces | pieces beside the main component that draw a primary metabolite of it again (cofactors do not count) | merge the metabolite (`merges`), or keep the copy on purpose |
+
+`build` turns these numbers into a decision (`escher_handlayout/score.py`), on the screen and in `qa_report.md`:
+
+- the **score** `1000 x validation errors + crossings + 3 x labels on lines + 6 x labels on nodes + 4 x label overlaps
+  + 10 x close nodes + 20 x detached pieces + placement penalty`;
+- the **targets**, each `ok` or `MISS`: validation errors 0, crossings at most 0.1 x reactions, labels on lines at most
+  max(6, 7 % of the reactions), labels on nodes 0, label overlaps at most 2, close nodes 0, no violated hard or strong
+  direction; detached pieces are shown as `look`, because a copy can be deliberate;
+- the history of the job: every build is recorded in `builds.json` / `builds.md` beside the `--out` folder (`--history
+  FILE`, `--no-history`), a rebuild into the same folder replaces its entry;
+- one last line that says what to do: `NOT FINISHED ... Fix first: <the missed target that costs most, its offenders,
+  the remedy>`, `NO IMPROVEMENT` after two changed versions of the spec that did not beat the best score, `STOP` after
+  `--max-builds` (8) changed versions, `TARGETS MET`.
+
+The chat agent (`agent.py`) uses the same score; its own crossing target is 0.35 x reactions. The bundled example
+misses the crossing target of 0.1 (26 crossings for 91 reactions) and 5 strong directions: it predates both.
 
 Reference values of the bundled example (91 reactions): crossings 26, labels_on_lines 5, labels_on_nodes 0,
 label overlaps 0, close nodes 0, 7444 x 8284 units.

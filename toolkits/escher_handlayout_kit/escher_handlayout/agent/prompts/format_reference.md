@@ -21,6 +21,7 @@ BLOCK = one piece of the drawing, normally one per subsystem:
 ```
 {"block": "Glycolysis", "zone": "Glycolysis", "origin": [3000, 500],
  "nodes": {"480": [0, 0], "482": [0, 300]},                      // primary metabolite node id -> position RELATIVE to origin
+ "node_names": {"480": "glc__D_c", "482": "g6p_c"},              // optional: which metabolite each id is (checked against the map)
  "rings": [{"name": "TCA ring", "center": [0, 0], "radius": 1050, "nodes": {"135": -90, "136": -50}}],   // angles in degrees, 0 = east, clockwise (y points down)
  "reactions": [ REACTION, ... ]}
 ```
@@ -30,6 +31,7 @@ REACTION (only `id` is required; defaults in brackets):
 | key | meaning |
 |---|---|
 | `id` | reaction id (string, as in the table you are given) |
+| `name` | optional: the reaction's BiGG id, for the reader (checked against the map: a wrong id is reported) |
 | `zone` | subsystem (default: the block's zone) |
 | `side` | where cofactor dots hang: `"L" "R" "U" "D"` = left/right/up/down on screen [R]; `"out" "in"` = radially outside/inside of a ring reaction |
 | `dist` | distance of cofactor dots from the reaction line, 20-800 [150]; use 110 when space is tight, 190 for crowded lanes |
@@ -52,5 +54,7 @@ Coordinates must stay within +-20000. Never invent ids: only ids that appear in 
 
 ### Corrections / patches
 Replies are *merged* into the current spec: blocks by `block`, reactions by `id`, nodes by id (a node listed again is moved),
-zones by `name`, merges by `keep`. So a correction only needs the entries that change.
+zones by `name`, merges by `keep`. So a correction only needs the entries that change. A reaction, zone, merge or
+ring entry that is sent replaces the old one completely (a reaction entry with only `side` loses its former `shift`):
+repeat the keys you keep.
 `"remove_nodes": ["id"]` (inside a block) deletes node coordinates, `{"id": "492", "remove": true}` deletes a reaction entry.

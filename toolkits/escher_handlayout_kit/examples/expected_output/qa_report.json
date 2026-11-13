@@ -47,6 +47,26 @@
   7200,
   7913
  ],
+ "detached": [
+  {
+   "reactions": [
+    "PGM",
+    "GLYCK2"
+   ],
+   "shares": [
+    "2pg_c",
+    "3pg_c"
+   ]
+  },
+  {
+   "reactions": [
+    "FE3DCITR5"
+   ],
+   "shares": [
+    "cit_c"
+   ]
+  }
+ ],
  "placement": {
   "violations": [
    "Lactate fermentation should be below Gluconeogenesis (strong; agreement, 7 sources (R 0.87) for their pathways)",
@@ -54,6 +74,13 @@
    "Gluconeogenesis should be right of Glycolysis (strong; rule GPR002: Place the reverse-direction pathway beside glycolysis; shared reaction)",
    "Pentose phosphate pathway should be above right of Glycolysis (strong; rule GPR003: Glucose-6-phosphate feeds the oxidative PPP and non-oxidative PPP retu)",
    "6pgc_c should be right of g6p_c (strong; textbook convention)"
+  ],
+  "violated_strengths": [
+   "strong",
+   "strong",
+   "strong",
+   "strong",
+   "strong"
   ],
   "penalty": 25,
   "checked": 20,

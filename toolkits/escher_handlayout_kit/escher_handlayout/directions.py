@@ -375,19 +375,19 @@ def violated(d, a, b, tolerance=50.0):
 def check(arr, centres, positions):
     """The violated hard, strong and medium directions of a layout, and their penalty.
     Returns dict(violations=[str], penalty=int, checked=int, directions=int)."""
-    problems, penalty, checked = [], 0, 0
+    problems, strengths, penalty, checked = [], [], 0, 0
     for d in arr.subsystem_directions:
         if d.strength in PENALTY and d.anchor in centres and d.target in centres:
             checked += 1
             if violated(d, centres[d.anchor], centres[d.target]):
-                problems.append(f'{d.target} should be {d.where()} ({d.strength}; {d.evidence})'); penalty += PENALTY[d.strength]
+                problems.append(f'{d.target} should be {d.where()} ({d.strength}; {d.evidence})'); penalty += PENALTY[d.strength]; strengths.append(d.strength)
     for d in arr.metabolite_directions:
         a = positions.get(d.anchor, []); b = positions.get(d.target, [])
         if a and b:
             checked += 1
             if all(violated(d, p, q) for p in a for q in b):
-                problems.append(f'{d.target} should be {d.where()} ({d.strength}; textbook convention)'); penalty += PENALTY[d.strength]
-    return dict(violations=problems, penalty=penalty, checked=checked,
+                problems.append(f'{d.target} should be {d.where()} ({d.strength}; textbook convention)'); penalty += PENALTY[d.strength]; strengths.append(d.strength)
+    return dict(violations=problems, violated_strengths=strengths, penalty=penalty, checked=checked,
                 directions=len([d for d in arr.subsystem_directions if d.strength in PENALTY]) + len(arr.metabolite_directions))
 
 def check_layout(L, taxa='all', catalogue=None):

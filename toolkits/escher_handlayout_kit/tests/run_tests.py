@@ -189,6 +189,81 @@ class TestDirections(unittest.TestCase):
         self.assertIsNone(D.Catalogue.load(os.path.join(tempfile.gettempdir(), 'no_such_catalogue.json')))
 
 
+class TestStartPatchScore(unittest.TestCase):
+    """What helps a weaker model: a start spec to change, patches instead of whole files, score and next step from the build."""
+    def test_start_spec_is_complete_and_builds(self):
+        from escher_handlayout.start import start_spec
+        s = start_spec(INP)
+        self.assertEqual(declspec.validate_schema(s), [])
+        self.assertEqual(declspec.parse_json_strict(declspec.format_spec(s)), s)                 # the compact text is the same spec
+        self.assertLess(len(declspec.format_spec(s).splitlines()), 250)
+        self.assertEqual({b['block'] for b in s['layouts']}, {z['name'] for z in s['zones']}); self.assertEqual(len(s['zones']), 10)
+        self.assertIn('Acetate fermentation', s['titles']); self.assertIn('Pentose phosphate pathway', s['titles'])   # the title above each box
+        self.assertEqual(sum(len(b['reactions']) for b in s['layouts']), 91); self.assertEqual(s['merges'], [])
+        with tempfile.TemporaryDirectory() as d:
+            rep = pipeline.build(INP, s, d, png=False, name='o')
+            self.assertEqual(rep['validation_errors'], []); self.assertLess(rep['metrics']['line_crossings'], 60)
+
+    def test_names_catch_mixed_up_ids(self):
+        s = copy.deepcopy(SPEC); s['layouts'][0]['reactions'][0]['name'] = 'NOT_THIS'; s['layouts'][0]['node_names'] = {'480': 'pyr_c'}
+        self.assertEqual(declspec.validate_schema(s), [])
+        P, _ = declspec.compile_spec(s, Layout(INP), partial=True)
+        self.assertTrue(any('not NOT_THIS' in p for p in P)); self.assertTrue(any('node 480 is glc__D_c, not pyr_c' in p for p in P))
+
+    def test_score_targets_and_next_step(self):
+        from escher_handlayout import score as S
+        with tempfile.TemporaryDirectory() as d:
+            rep = pipeline.build(INP, SPEC, os.path.join(d, 'build_1'), png=False, name='o')
+            m = rep['metrics']
+            self.assertEqual(S.score(rep), m['line_crossings'] + 3 * m['labels_on_lines'] + 20 * len(rep['detached']) + rep['placement']['penalty'])
+            t = {x['name']: x for x in S.targets(rep)}
+            self.assertFalse(t['crossings']['ok']); self.assertEqual(t['crossings']['limit'], 9); self.assertTrue(t['labels on lines']['ok'])
+            self.assertEqual(t['violated hard/strong directions']['value'], 5); self.assertFalse(S.targets_met(rep))
+            self.assertIn('## Score and targets', pipeline.report_md(rep)); self.assertIn('Fix first: crossings (26)', pipeline.report_md(rep))
+            spec = os.path.join(d, 's.json'); h = os.path.join(d, 'builds.json')
+            def build(n, text):
+                with open(spec, 'w') as f: f.write(text)
+                return S.record(h, rep, os.path.join(d, f'build_{n}'), spec)
+            hist = build(1, 'a'); self.assertEqual(S.verdict(hist, rep)[0], 'go_on'); self.assertIn('Fix first: crossings', S.verdict(hist, rep)[1])
+            hist = build(1, 'a'); self.assertEqual(len(hist), 1)                                 # a rebuild replaces its entry
+            hist = build(2, 'b'); self.assertEqual(S.verdict(hist, rep)[0], 'go_on')
+            hist = build(3, 'c'); self.assertEqual(S.verdict(hist, rep)[0], 'stalled')           # two versions without improvement
+            self.assertEqual(S.verdict(hist, rep, max_specs=1)[0], 'limit')
+            hist[-1].update(targets_met=True); self.assertEqual(S.verdict(hist, rep)[0], 'finished'); self.assertIn('build_3', S.verdict(hist, rep)[1])
+            with open(os.path.join(d, 'builds.md')) as f: self.assertIn('| build_3 | 0.6 |', f.read())
+
+    def test_lint_names_long_lines_and_close_nodes(self):
+        from escher_handlayout.lint import lint
+        L = Layout(INP); declspec.compile_spec(SPEC, L); self.assertEqual(lint(SPEC, L), [])
+        s = copy.deepcopy(SPEC); g = next(b for b in s['layouts'] if b['block'] == 'Glycolysis')
+        a, b = [k for k in g['nodes'] if k != '480'][-2:]
+        g['nodes']['480'] = [0, -6000]; g['nodes'][a] = [g['nodes'][b][0] + 10, g['nodes'][b][1]]
+        L = Layout(INP); declspec.compile_spec(s, L, partial=True); W = lint(s, L)
+        self.assertTrue(any('long line' in w and 'HEX1' in w for w in W), msg=str(W)); self.assertTrue(any('closer than 70' in w for w in W))
+
+    def test_command_line_start_patch_build(self):
+        import subprocess
+        def run(*a):
+            p = subprocess.run([sys.executable, os.path.join(ROOT, 'run.py'), *a], capture_output=True, text=True, encoding='utf-8')
+            return p.returncode, p.stdout + p.stderr
+        with tempfile.TemporaryDirectory() as d:
+            spec = os.path.join(d, 'specs', 'm.layout.json')
+            code, out = run('start', '--input', INP, '--out', spec); self.assertEqual(code, 0, msg=out); self.assertIn('10 blocks', out)
+            before = open(spec).read()
+            code, out = run('patch', '--input', INP, '--spec', spec, '--json', '{"layouts": [{"block": "Glycolysis", "nodes": {"999999": [0, 0]}}]}')
+            self.assertEqual(code, 2); self.assertIn('does not exist', out); self.assertEqual(open(spec).read(), before)      # rejected, file unchanged
+            code, out = run('patch', '--input', INP, '--spec', spec, '--json',
+                            '{"merges": [{"keep": "604", "dups": ["119"]}], "layouts": [{"block": "Glycolysis", "origin": [3000, 100]}]}')
+            self.assertEqual(code, 0, msg=out); self.assertIn('91 of 91 reactions placed', out); self.assertIn('merged nodes 119 were removed', out)
+            new = declspec.load_spec_file(spec)
+            self.assertEqual(next(b for b in new['layouts'] if b['block'] == 'Glycolysis')['origin'], [3000, 100])
+            self.assertFalse(any('119' in b['nodes'] for b in new['layouts']))
+            code, out = run('check-spec', '--input', INP, '--spec', spec, '--partial'); self.assertEqual(code, 0, msg=out)
+            code, out = run('build', '--input', INP, '--spec', spec, '--out', os.path.join(d, 'build_1'), '--no-png')
+            self.assertEqual(code, 0, msg=out); self.assertIn('score ', out); self.assertIn('MISS  crossings', out); self.assertIn('NOT FINISHED', out)
+            self.assertTrue(os.path.exists(os.path.join(d, 'builds.md')))
+
+
 class TestAgent(unittest.TestCase):
     def test_full_scripted_run_reproduces_expected(self):
         with tempfile.TemporaryDirectory() as d:

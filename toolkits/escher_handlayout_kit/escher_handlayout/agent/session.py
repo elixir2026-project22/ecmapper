@@ -7,7 +7,8 @@ model is sanitised. Nothing from a model reply is executed, imported or used as 
 import os, json, hashlib, re, copy, shutil, time
 from ..engine import Layout
 from ..declspec import SpecError, compile_spec, merge_fragment, validate_schema
-from ..inspect_map import analyse
+from ..inspect_map import analyse, zone_name
+from ..score import score
 from ..directions import Catalogue, Arrangement, subsystems_of_analysis
 from .. import pipeline
 from .jsonio import extract_json_object
@@ -36,20 +37,10 @@ def safe(s, n=40):
 def system_prompt():
     return fill(read_prompt('system.md'), FORMAT_REFERENCE=read_prompt('format_reference.md'), RECIPES=read_prompt('recipes.md'))
 
-def score(rep):
-    m = rep['metrics']
-    return (1000 * len(rep['validation_errors']) + m['line_crossings'] + 3 * m['labels_on_lines'] + 6 * m['labels_on_nodes']
-            + 4 * m['label_label_overlaps'] + 10 * m['primary_nodes_closer_than_70'] + (rep.get('placement') or {}).get('penalty', 0))
-
 def targets_met(rep):
     m = rep['metrics']; n = rep['n_reactions']
     return (not rep['validation_errors'] and m['labels_on_nodes'] == 0 and m['label_label_overlaps'] <= 2
             and m['primary_nodes_closer_than_70'] == 0 and m['labels_on_lines'] <= max(6, 0.07 * n) and m['line_crossings'] <= 0.35 * n)
-
-def zone_name(title):
-    s = re.sub(r"[^A-Za-z0-9 .,()/+:'_\-]", ' ', title).strip()
-    s = re.sub(r'\s+', ' ', s)[:80] or 'Module'
-    return s[0].upper() + s[1:] if s[0].isalpha() else 'M ' + s
 
 
 class Session:

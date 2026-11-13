@@ -5,8 +5,9 @@ from .engine import Layout, place_labels
 from . import pack as packmod
 from . import render as rendermod
 from . import qa
-from .inspect_map import analyse, to_markdown
+from .inspect_map import analyse, to_markdown, base, COFACTORS
 from . import directions as dirmod
+from . import score as scoremod
 
 
 from .declspec import SpecError, load_spec_file, compile_spec, validate_schema
@@ -58,6 +59,19 @@ def content_bbox(L):
     return packmod.bbox_of(p, b)
 
 
+def detached_pieces(L):
+    """The pieces beside the main component that draw a primary metabolite of it again: candidates for a merge
+    (or deliberate copies). [dict(reactions=[BiGG ids], shares=[BiGG ids of the metabolites])]"""
+    comps = packmod.components(L)
+    prim = lambda nodes: {L.N[n]['bigg_id'] for n in nodes if L.N[n]['node_type'] == 'metabolite' and L.N[n]['node_is_primary']}
+    main = prim(comps[0][1]) if comps else set()
+    out = []
+    for rids, nodes in comps[1:]:
+        shares = sorted(m for m in prim(nodes) & main if base(m) not in COFACTORS)
+        if shares: out.append(dict(reactions=[L.R[r]['bigg_id'] for r in sorted(rids, key=int)], shares=shares))
+    return out
+
+
 def build(input_path, spec_path, out_dir, curv=0.6, do_pack=True, png=True, png_scale=None, name=None, allow_python=False, taxa='all'):
     os.makedirs(out_dir, exist_ok=True)
     name = name or os.path.splitext(os.path.basename(input_path))[0] + '_handlayout'
@@ -74,6 +88,7 @@ def build(input_path, spec_path, out_dir, curv=0.6, do_pack=True, png=True, png_
         rep['packing'] = [dict(piece=t, dx=dx, dy=dy) for t, dx, dy in info]
         rep['main_component_bbox'] = [round(v) for v in mbb]
     bb = content_bbox(L)
+    rep['detached'] = detached_pieces(L)
     rep['placement'] = dirmod.check_layout(L, taxa)       # None without the placement catalogue / without matching subsystems
     L.canvas_bbox = (bb[0] - 150, bb[1] - 150, bb[2] + 150, bb[3] + 150)
     out_json = os.path.join(out_dir, name + '.json')
@@ -115,6 +130,12 @@ def report_md(rep):
     if m['labels_on_lines_list']: L += ['Labels on lines: ' + ', '.join(m['labels_on_lines_list']), '']
     if m['labels_on_nodes_list']: L += ['Labels on nodes: ' + ', '.join(m['labels_on_nodes_list']), '']
     if m['label_label_overlaps_list']: L += ['Overlapping labels: ' + '; '.join(f'{a} / {b}' for a, b in m['label_label_overlaps_list'][:15]), '']
+    if rep.get('detached'):
+        L += ['Detached pieces that draw a metabolite of the main map again (merge it, or keep the copy on purpose): '
+              + '; '.join(f"{', '.join(d['reactions'][:6])} (shares {', '.join(d['shares'])})" for d in rep['detached']), '']
+    L += ['## Score and targets', '', '- ' + scoremod.score_line(rep)] + ['- ' + t.strip() for t in scoremod.target_lines(rep)]
+    fix = scoremod.first_fix(rep)
+    L += ['', f'Fix first: {fix}' if fix else 'All targets are met.', '']
     pl = rep.get('placement')
     if pl:
         L += ['## Placement of the subsystems (layout_directions catalogue)', '',

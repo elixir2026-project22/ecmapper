@@ -5,6 +5,10 @@ You are an expert in metabolic pathway visualisation and the Escher JSON format.
 Where something is ambiguous, apply the decision rules in section 5, write the decision into `DECISIONS.md`
 and continue. Do not stop before the deliverables in section 6 exist.
 
+You do not write the layout from an empty page. The kit writes a complete, valid layout spec of the draft as it is
+(`start`), you change it in small steps (`patch`), and every `build` prints the score, the targets it misses and what
+to do next. Follow that last line of the build.
+
 ## 0. Task parameters (filled in by whoever runs this prompt)
 
 ```text
@@ -12,6 +16,7 @@ KIT_DIR    = ./escher_handlayout_kit          # the unpacked kit (contains run.p
 INPUT_MAP  = <path of the draft Escher map to improve, e.g. ./my_draft_map.json>
 OUT_DIR    = ./handlayout_result              # all deliverables go here
 MAP_NAME   = <short name used for file names, e.g. my_draft_map>
+SPEC       = OUT_DIR/specs/MAP_NAME.layout.json    # the layout spec you work on
 ```
 
 If a parameter was not given, use the defaults shown (INPUT_MAP: the only `*.json` you were given;
@@ -19,35 +24,31 @@ if you were given none, use `KIT_DIR/examples/central_metabolism_escher.json`).
 
 ## 1. What the task is
 
-Input: a *draft* Escher map (auto-generated, with a poor layout, subsystems scattered or overlapping).
-Output: a new Escher JSON of the **same reactions** (same ids, stoichiometry, reversibility) in which
+Input: a *draft* Escher map. Each subsystem is drawn in its own box, in a usable way, but the subsystems are not
+connected and not arranged. Output: a new Escher JSON of the **same reactions** (same ids, stoichiometry,
+reversibility) in which
 
-1. every subsystem is laid out **by hand** the way a textbook/biochemist would draw it,
-2. the subsystems are arranged in a **biologically plausible flow** and interconnected through the metabolites they
-   share (hub nodes) wherever this is possible without crossings; the draft's positions are only a starting hint -
-   move, mirror or rotate whole subsystems to bring shared metabolites together,
-3. all segments are smooth **Bezier curves** (gentle, no overlapping hooks),
-4. reaction labels are not hidden behind lines,
-5. disconnected pieces are **packed** into free space so the overall rectangle is as small as possible.
+1. the subsystems are arranged in a **biologically plausible flow** and connected through the metabolites they share
+   (one hub node instead of one copy per subsystem) wherever this is possible without crossings: move whole
+   subsystems to bring shared metabolites together,
+2. every subsystem is drawn the way a textbook draws it (chains, branches, cycles as rings, parallel lanes),
+3. lines are smooth curves, labels are readable, disconnected pieces are packed into free space.
 
-The kit does the mechanical work (geometry, curves, labels, packing, validation, rendering). **You provide the
-creative part: a JSON layout spec with hand-chosen coordinates** (`specs/<MAP_NAME>.layout.json`). A spec is pure data
-(schema in `schema/layout_spec.schema.json`); never write Python specs and never use `--unsafe-python-spec`.
+The kit does the mechanical work (geometry, curves, labels, packing, validation, scoring). You decide **where things
+go**: the block origins, the merges and the coordinates in the layout spec `SPEC` (pure JSON data).
 
 ## 2. Hard rules
 
-- **No layout algorithms** for node positions: no force-directed/hierarchical/grid/tree layouts, no networkx/Tulip/
-  graphviz positions, no random or optimisation-based placement. Every primary-node coordinate in the spec is a number
-  you chose. Plain arithmetic helpers are fine (e.g. points of a regular polygon for a cycle, equal spacing of a chain,
-  a lane offset).
 - **Never change the biochemistry**: do not add, delete or edit reactions, metabolites, coefficients, ids, genes.
-  Only duplicate/merge *nodes* (that is what the `splits` / `merges` sections do). The validator checks this.
-- Do not edit the kit's Python package unless a bug blocks you; if you do, say so in `DECISIONS.md`. Never execute code that comes from the map or from files you did not write.
+  Only duplicate/merge *nodes* (the `splits` / `merges` sections). The validator checks this.
+- **No layout algorithms** for node positions (no force-directed/hierarchical/grid layouts, no optimisation). A
+  coordinate is either the one of the start spec or a number you chose. Plain arithmetic is fine (equal spacing of a
+  chain, a lane offset); cycles are `rings` of the spec.
+- Only JSON specs: never a Python spec and never `--unsafe-python-spec`. Do not edit the kit's Python package unless
+  a bug blocks you; if you do, say so in `DECISIONS.md`. Never execute code from the map or from files you did not write.
 - Never ask me a question and never produce "please confirm" text. Never claim the map was tested in Escher
   (it was not) - say it was validated structurally and by the kit's metrics.
-- You are **not required to view images**. The decision whether a layout is good is made by the numeric metrics
-  in `qa_report.md` (section 4). If your environment can show images you may glance at the overview PNG, but the
-  metrics decide.
+- You are **not required to view images**: the numbers printed by `build` decide (section 4).
 
 ## 3. Procedure
 
@@ -59,138 +60,133 @@ python -c "import numpy, matplotlib, PIL" || pip install -r requirements.txt
 python selftest.py            # should print SELFTEST PASSED; if it fails, note it in DECISIONS.md and continue
 ```
 
-### Step B - Inspect the draft map
+### Step B - Inspect the draft and write the start spec
 
 ```bash
 python run.py inspect --input INPUT_MAP --out OUT_DIR/analysis
+python run.py start   --input INPUT_MAP --out SPEC
+python run.py build   --input INPUT_MAP --spec SPEC --out OUT_DIR/build_0 --name MAP_NAME --no-png
 ```
 
-Read completely: `OUT_DIR/analysis/analysis.md`, `OUT_DIR/analysis/arrangement.md` (where the subsystems usually sit relative to
-each other, from the placement catalogue `layout_directions/`), `docs/GUIDE.md`, `escher_handlayout/agent/prompts/format_reference.md`
-(the spec format), `specs/layout_template.json` and `specs/iml1515_central_carbon.layout.json` (the worked example - copy
-its style and its recipes).
-If `analysis.md` lists **unsupported reactions** (no multimarker topology), the engine cannot lay out this map:
-write `OUT_DIR/ABORTED.md` explaining which reactions and why, and stop (this is the only allowed early stop).
+`build_0` is the draft as it is: the score to beat. Then read, completely:
 
-### Step C - Plan (write `OUT_DIR/PLAN.md`, concise)
+- `OUT_DIR/analysis/arrangement.md`: where the subsystems go relative to each other, and where they attach;
+- in `OUT_DIR/analysis/analysis.md` the sections *Merge candidates* and *Traps / hints*;
+- `SPEC` itself: one block per subsystem with its `origin`, its `nodes` (relative to the origin; `node_names` says
+  which metabolite each id is) and one entry per reaction (`name` says which reaction);
+- `escher_handlayout/agent/prompts/format_reference.md`: every key of the spec (one page).
 
-1. **Subsystems**: use the title labels / suggested subsystems of `analysis.md`; one zone per subsystem. If the map has
-   no title labels, name each component after its dominant reactions/pathway (use your biochemical knowledge).
-2. **Connectivity plan** (decide this before the arrangement):
-   - a table: shared metabolite (from `merge_candidates`) -> merge / copy + one-line reason (section 5 rule M);
-   - duplicate reactions across subsystems (`duplicate_reaction_bigg_ids`, `parallel_reaction_families` with members in
-     different components; maps such as BRENDA draw the same reaction in several subsystems): merge their metabolites
-     into the host pathway, where the copy becomes a lane or a stacked row and keeps its zone colour. Example: PFL
-     (ethanol fermentation) and the two PDH reactions (oxidative decarboxylation of pyruvate, acetyl CoA biosynthesis) on
-     one stacked pyruvate -> acetyl-CoA lane; the gluconeogenic PEP / pyruvate merged into the glycolytic ones;
-   - small components of one subsystem: join them with each other first, then attach the block to its hub.
-3. **Global arrangement**: start from `arrangement.md`: follow its `hard` and `strong` directions, its `medium` ones unless
-   they cost crossings (`weak` ones are hints); draw the cycles as given there; its attachments are merge candidates. Where it
-   is silent apply the defaults of section 5. Place the subsystems so that the merge partners of item 2 are neighbours. Draw it
-   as a small ASCII sketch with approximate coordinates.
-4. **Hub merges**: the exact list of `merges` entries (from `merge_candidates`, section 5 rule M).
-5. **Per subsystem**: node coordinates (primary nodes only) and, per reaction, the `side`, `shift`, `axis`/`mid` or
-   `arc` you intend, following the recipes in `docs/GUIDE.md` section 4.
+`docs/GUIDE.md` has the drawing recipes (section 4) and the remedies per metric (section 8): look things up there
+when you need them. If `inspect` lists **unsupported reactions**, `start` fails: write `OUT_DIR/ABORTED.md`
+explaining which reactions and why, and stop (this is the only allowed early stop).
 
-### Step D - Write the spec
+### Step C - Plan (write `OUT_DIR/PLAN.md`: tables and lists, at most 40 lines)
 
-Create `KIT_DIR/specs/MAP_NAME.layout.json` from the template: `zones` for every subsystem -> `defaults.bend` ->
-`splits` and `merges` -> one `layouts` block per subsystem with `nodes` (primary nodes only) and a `reactions` entry for
-**every** reaction (each exactly once) -> `titles` for every zone that keeps at least one reaction in the main connected
-component. Use ids exactly as in `analysis.md` (strings); after a merge do not use the deleted ids any more; nodes created by
-`splits` are referred to by their `@alias`. Check quickly with
-`python run.py check-spec --input INPUT_MAP --spec specs/MAP_NAME.layout.json`.
+1. **Arrangement**: a small sketch with the new origin of every block. Follow the `hard` and `strong` directions of
+   `arrangement.md`, the `medium` ones unless they cost crossings (`weak` ones are hints); where it is silent use
+   the defaults of section 5. Blocks that share a metabolite become neighbours. Keep about 600 units between blocks.
+2. **Merges**: a table `metabolite | keep id | dup ids | merge or copy, and why` from the *Merge candidates*
+   (rule M in section 5).
 
-### Step E - Build and iterate (autonomous loop, at most 8 builds)
+### Step D - Change the spec, one small patch at a time
 
 ```bash
-python run.py build --input INPUT_MAP --spec specs/MAP_NAME.layout.json --out OUT_DIR/build_N --curv 0.6 --name MAP_NAME
+python run.py patch --input INPUT_MAP --spec SPEC --json '{"layouts": [{"block": "Glycolysis", "origin": [3000, 200]}]}'
+python run.py patch --input INPUT_MAP --spec SPEC --json '{"merges": [{"keep": "604", "dups": ["119", "342"]}], "layouts": [{"block": "Glycolysis", "nodes": {"604": [0, 2700]}}]}'
+python run.py patch --input INPUT_MAP --spec SPEC --json '{"layouts": [{"block": "Glycolysis", "reactions": [{"id": "514", "name": "PFK", "side": "L", "dist": 110}]}]}'
 ```
 
-- `SPEC ERROR` -> the message lists every unplaced reaction/primary node; fix them all in one edit.
-- Otherwise read `OUT_DIR/build_N/qa_report.md`. Compute the score
+(The ids in these examples are those of the bundled example map; yours are in `SPEC`.)
+A patch is a part of a spec; it is merged into `SPEC`: blocks by `block`, nodes by id, reactions by `id`. Only what
+you send changes, with one exception: **a reaction entry replaces the old entry of that reaction completely**, so
+repeat the keys you want to keep. A wrong patch is rejected with the reasons and leaves `SPEC` unchanged; the answer
+also carries warnings (long lines, cofactor merges, nodes on top of each other): act on them before you build.
+(`--fragment FILE` instead of `--json` for a long patch; you may also edit `SPEC` directly and run
+`python run.py check-spec --input INPUT_MAP --spec SPEC`.)
 
-  `score = 1000*validation_errors + crossings + 3*labels_on_lines + 6*labels_on_nodes + 4*label_overlaps + 10*close_nodes
-           + 20*extra_components + placement_penalty`
+Work in this order, and build after each of the three:
 
-  where `extra_components` counts the packed pieces (`Packing` section of `qa_report.md`) that share a non-cofactor
-  metabolite with the main component and are not justified as a deliberate copy in `DECISIONS.md`, and `placement_penalty`
-  is the number in the `Placement` section of `qa_report.md` (violated directions of the placement catalogue, 5 per
-  hard/strong and 2 per medium direction; `python run.py directions --input INPUT_MAP --check SPEC` gives it without a build).
+1. **Arrangement**: the `origin` of every block as planned (this moves whole subsystems).
+2. **Merges**: one hub at a time. `patch` removes the coordinates of the `dups`; the kept node stays where it is, so
+   give it a position between the blocks it now joins if needed.
+3. **Details**: the offenders the build names (single nodes, `side`, `shift`, `dist` of a reaction), a cycle as a
+   `rings` entry, parallel reactions as lanes. If a subsystem is drawn badly in the draft, redraw it: send its block
+   with new coordinates for all its nodes (recipes: `docs/GUIDE.md` section 4,
+   `specs/iml1515_central_carbon.layout.json` is a worked example of another map).
 
-  and keep a table `build_N -> score` in `DECISIONS.md`. Edit the spec to reduce the *named* offenders
-  (`worst_crossing_pairs`, `labels_on_lines_list`, ... - remedies in `docs/GUIDE.md` section 8) and rebuild.
-  Keep the best build. **Stop** when all targets hold, or after 8 builds (then take the best), or when two
-  consecutive builds do not improve the score. If the score stalls with crossings > 0, try one alternative
-  arrangement (swap or mirror neighbouring subsystems) before splitting nodes.
+### Step E - Build and iterate
 
-  Targets: `validation_errors = 0`; `labels_on_nodes = 0`; `label_label_overlaps <= 2`; `primary_nodes_closer_than_70 = 0`;
-  `labels_on_lines <= max(6, 7% of reactions)`; `crossings <= 0.1 x number of reactions`; `extra_components = 0`; no violated
-  `hard` or `strong` placement direction (a `medium` one may stay violated when fixing it costs crossings - note it in `DECISIONS.md`).
-  (Reference for the bundled example with 91 reactions: crossings 26, labels_on_lines 5, all others 0.)
-- After the layout has converged, try `--curv 0.3` and `--curv 0.45` with the final spec (cheap) and keep the curvature
-  with the lowest score; ties go to **0.6**.
-- After the first successful build look at the `Packing` section of the report: pieces without an explicit
-  `L.small_titles` entry got a generated title. Replace the generated titles by short meaningful ones
-  (a `small_titles` entry: `{"reaction": <bigg_id of one of its reactions>, "zone": ..., "text": ..., "reuse_label": null}`) and rebuild once.
+```bash
+python run.py build --input INPUT_MAP --spec SPEC --out OUT_DIR/build_N --name MAP_NAME --no-png
+```
+
+`SPEC ERROR` means the spec is incomplete or wrong: the message lists everything, fix it all with one patch.
+Otherwise the build prints the score, each target as `ok` / `MISS` / `look`, the builds so far, and **one last line
+that says what to do**:
+
+- `NOT FINISHED ... Fix first: ...` - change the spec for the named offenders as the remedy says, then build into
+  the next folder (`build_N+1`). One kind of change per build, so that you see what it did.
+- `NO IMPROVEMENT ...` - go back to the spec of the best build and try one other arrangement, or finish.
+- `TARGETS MET ...` or `STOP ...` - go to step F.
+
+Do not compute the score yourself and do not stop on your own judgement: the line decides. A `look` at *detached
+pieces* means a piece beside the main map draws a metabolite of the main map again: merge it, or keep the copy on
+purpose and write one line into `DECISIONS.md`. The table of all builds is `OUT_DIR/builds.md`. If a change made
+the score worse, undo it with a patch before you go on.
 
 ### Step F - Finalise
 
-Copy the best build's files to `OUT_DIR/` (see section 6), run
+Build the best spec once more with the image and with the curvatures 0.6, 0.45 and 0.3
+(`--curv C --out OUT_DIR/final_C`, without `--no-png`); the lowest score wins, ties go to 0.6. Give the packed pieces
+short titles if the report shows generated ones (`small_titles`, see the format reference). Copy the winner's files
+to `OUT_DIR/` (section 6) and run
 
 ```bash
 python run.py validate --input INPUT_MAP --output OUT_DIR/MAP_NAME.json
 ```
 
-and make sure it prints `errors: 0`.
+It must print `errors: 0`.
 
 ## 4. How decisions are made without looking
 
-The metrics in `qa_report.md` are the only judge: crossings between reactions, labels lying on lines, labels on
-other nodes, overlapping labels, nodes too close, bounding-box area. Every edit must have a reason taken from the
-named offenders or from the connectivity plan. Do not rearrange a subsystem only because you "feel" it could be
-nicer - but moving subsystems to realise the connectivity plan or to remove named offenders is expected.
+The metrics are the only judge: crossings between reactions, labels on lines, labels on nodes, overlapping labels,
+nodes too close, detached pieces, violated placement directions. Every change must have a reason: the plan, a
+warning of `patch`, or an offender named by the build. Do not rearrange something only because you "feel" it could
+be nicer.
 
-## 5. Decision rules for ambiguity
+## 5. Decision rules
 
-- **Subsystem split**: title labels first; else connected components (`analysis.md`); a component that is much
-  smaller than 5 reactions and clearly belongs to a neighbouring pathway (shares metabolite names) joins that zone.
-- **Global arrangement**: the directions of `analysis/arrangement.md` come first (hard/strong; medium unless they cost
-  crossings); the defaults below apply where the catalogue is silent. Central carbon metabolism default: glycolysis as the central vertical column;
-  pyruvate -> acetyl-CoA directly below it; TCA cycle (ring, clockwise, citrate on top) below that so that glycolysis
-  is above TCA; pentose phosphate pathway on one side of upper glycolysis (branching at G6P, returning F6P and G3P
-  through the transketolase/transaldolase boxes) with the Entner-Doudoroff pathway branching at 6-phosphogluconate;
-  the PEP/pyruvate/oxaloacetate/malate block on the side between glycolysis and TCA; fermentations beside
-  pyruvate/acetyl-CoA/acetaldehyde; respiratory chain / ATP hub separate (they get packed). Details that worked:
-  lactate, acetate and ethanol as rows leaving pyruvate / acetyl-CoA to one side; the anaplerotic reactions on the
-  other side, PPC/PPCK curving around to the oxaloacetate of the TCA ring.
-  **Other maps**: the largest linear pathway becomes the central vertical column; cycles become rings placed after
-  the pathway that feeds them; branch pathways hang to the side of the metabolite they start from; modules connect
-  where they share a metabolite (connectivity plan); only modules that share no non-cofactor metabolite are left
-  unconnected and packed. Keep the main component roughly as wide as tall (aspect
-  between 0.7 and 1.4); keep >= 300 units between nodes and >= 600 between subsystems.
-- **Rule M (which metabolites to merge)**: from `merge_candidates` take (a) every entry flagged `default hub` that
-  appears in >= 2 different subsystems, plus (b) every further non-cofactor metabolite that appears in >= 2
-  subsystems, unless the length limit or the planarity check below rules it out. Never merge cofactors (ATP/ADP/AMP/NAD(H)/NADP(H)/CoA/FAD(H2)/
-  H2O/Pi/PPi/CO2/O2/NH4/quinones/flavodoxin...). If merging a candidate would force a line longer than ~2500 units
-  or more than 3 new crossings **after rearranging the subsystems** (never judge this against the draft's
-  positions), do not merge it - keep the copy and rely on the exit label. Keep copies for biomass-like reactions
-  with very many substrates. Use a `splits` entry when one
-  metabolite is needed at two places of the same subsystem.
-- **Planarity check**: if merges would close a cycle with chords (typical: PEP and pyruvate on the glycolysis column,
-  oxaloacetate and malate on the TCA ring, PPC from PEP to oxaloacetate and ME from malate to pyruvate), write down
-  the cyclic order of the nodes along the boundary. If two chords interleave, a crossing is unavoidable: keep exactly
-  one copy (e.g. an anaplerotic malate next to pyruvate) and write the decision into `DECISIONS.md`.
-- **Hub sides**: a reaction of a column puts its cofactors on the side opposite to where merged links enter the
-  column; a reverse lane at a hub (PPS next to PYK) goes on the side away from the merged links that leave the hub.
-- **Parallel reactions** (`duplicate_reaction_bigg_ids`, `parallel_reaction_families`): lanes 110-150 apart; variants
-  with different cofactor pairs stacked on one lane (recipe in the guide).
+- **Rule M (what to merge)**: merge every *Merge candidate* that is no cofactor and is drawn in two or more
+  subsystems, the entries marked `default hub` first. Do **not** merge
+  - cofactors (ATP/ADP/AMP/NAD(H)/NADP(H)/CoA/FAD(H2)/H2O/Pi/PPi/CO2/O2/NH4/quinones/flavodoxin ...), ever;
+  - the node of a reaction with very many metabolites (biomass): it keeps its own copies, otherwise its lines cross
+    the whole map;
+  - a candidate whose merge needs a line longer than about 2500 units or more than 3 new crossings *after* the
+    subsystems were rearranged: keep the copy, its exit label tells the reader where it continues.
+- **Planarity**: if two merges would make lines cross whatever the arrangement (typical: PEP and pyruvate on the
+  glycolysis column, oxaloacetate and malate on the TCA ring, PPC from PEP to oxaloacetate and the malic enzyme from
+  malate to pyruvate), keep exactly one copy (e.g. a second malate next to pyruvate) and note it in `DECISIONS.md`.
+- **Two places in one subsystem**: a `splits` entry gives a reaction its own copy of a metabolite.
+- **Arrangement defaults** (where `arrangement.md` is silent). Central carbon metabolism: glycolysis as the central
+  vertical column; pyruvate -> acetyl-CoA directly below it; the TCA cycle below that (ring, clockwise); the pentose
+  phosphate pathway beside upper glycolysis with the Entner-Doudoroff pathway branching at 6-phosphogluconate; the
+  PEP/pyruvate/oxaloacetate/malate reactions beside the column between glycolysis and TCA; fermentations beside
+  pyruvate/acetyl-CoA; respiratory chain and ATP reactions separate (they get packed). Other maps: the largest linear
+  pathway is the central column; cycles are rings after the pathway that feeds them; branch pathways hang beside the
+  metabolite they start from; only modules that share no metabolite stay unconnected.
+- **Distances**: about 300 units between neighbouring nodes, 600 between subsystems, lanes of parallel reactions
+  110-150 apart; the main component roughly as wide as tall.
+- **Sides**: cofactors of a column's reactions on the side away from the lines that enter the column.
 - **Reaction direction**: never flip stoichiometry; reversible reactions show arrowheads on both ends.
-- **Curvature**: 0.6 unless step E finds a better one.
-- **Large maps (> 200 reactions)**: `build` stops with a SPEC ERROR until every reaction and primary node is placed, so
-  first place everything coarsely (subsystem by subsystem, using the recipes), get a first complete build, then refine
-  using the metrics. Use `--no-png` while iterating to save time.
-- **Anything else**: choose the simplest option that keeps the validation errors at 0 and write one line in `DECISIONS.md`.
+- **Large maps (> 200 reactions)**: do the arrangement and the merges first for all blocks, the details only for
+  the offenders the build names.
+- **Anything else**: choose the simplest option that keeps the validation errors at 0 and write one line in
+  `DECISIONS.md`.
+
+Targets (the build checks them): validation errors 0; crossings at most 0.1 x reactions; labels on lines at most
+max(6, 7 % of reactions); labels on nodes 0; overlapping labels at most 2; primary nodes closer than 70 units: 0; no
+violated `hard` or `strong` direction. Score = 1000 x validation errors + crossings + 3 x labels on lines + 6 x labels
+on nodes + 4 x label overlaps + 10 x close nodes + 20 x detached pieces + placement penalty.
 
 ## 6. Deliverables (all in OUT_DIR)
 
@@ -198,16 +194,16 @@ nicer - but moving subsystems to realise the connectivity plan or to remove name
 |---|---|
 | `MAP_NAME.json` | the final Escher map |
 | `MAP_NAME_overview.png` | overview render of it (made by the kit; you need not inspect it) |
-| `qa_report.md`, `qa_report.json` | metrics and validation of the final build |
-| `MAP_NAME.layout.json` | the JSON spec that produced it (hand-chosen coordinates; put reasoning in its `notes`) |
-| `PLAN.md`, `DECISIONS.md` | your plan, the score table, every assumption and decision |
+| `qa_report.md`, `qa_report.json` | metrics, score and targets of the final build |
+| `MAP_NAME.layout.json` | the JSON spec that produced it (a copy of `SPEC`; put reasoning in its `notes`) |
+| `builds.md` | the table of all builds and their scores (written by `build`) |
+| `PLAN.md`, `DECISIONS.md` | your plan; every assumption and decision, one line each |
 | `analysis/` | output of the inspect step |
 
 ## 7. Final message (the only text you return, <= 25 lines, no questions)
 
 State: map name and reaction count; subsystems found; which metabolites were merged and which candidates were
-deliberately not merged; number of connected components before -> after; node count before -> after (nodes increase because of duplicates); chosen curvature;
-bounding-box area before -> after packing and final size; the final metrics against the targets (including the placement
-penalty and the directions deliberately left violated); the known weak
-spots (name the reactions from the metrics); that validation errors = 0 and that the map was **not** loaded in Escher;
-and the paths of the deliverables.
+deliberately not merged; number of connected components before -> after; chosen curvature; the score of `build_0`
+and of the final build; the final metrics against the targets (including the directions deliberately left violated);
+the known weak spots (name the reactions from the metrics); that validation errors = 0 and that the map was **not**
+loaded in Escher; and the paths of the deliverables.
