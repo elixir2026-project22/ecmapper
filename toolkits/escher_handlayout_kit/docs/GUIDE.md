@@ -6,7 +6,8 @@ iML1515 central-metabolism draft map (`specs/iml1515_central_carbon.layout.json`
 ## 1. Pipeline
 
 ```
-python run.py inspect --input MAP.json --out analysis/        # facts about the draft map
+python run.py inspect --input MAP.json --out analysis/        # facts about the draft map + arrangement.md (where the subsystems go)
+python run.py directions --input MAP.json [--check SPEC.json]  # the same arrangement brief alone / the directions a spec violates
 (write specs/<map>.layout.json by hand-choosing coordinates)    # the creative step (a person, or an LLM: see AGENT.md)
 python run.py check-spec --input MAP.json --spec specs/<map>.layout.json   # fast check, no build
 python run.py build   --input MAP.json --spec specs/<map>.layout.json --out out/ --curv 0.6
@@ -84,6 +85,29 @@ with few crossings. Rearrange the subsystems (move, mirror, rotate) so that the 
    below that; PPP (and ED branching at 6PG) to one side of upper glycolysis; the PEP/pyruvate/OAA node on the side
    between glycolysis and TCA; fermentations beside pyruvate/acetyl-CoA; respiratory chain separate.
 
+## 5a. Where the subsystems go: the placement catalogue (`layout_directions/`)
+
+`layout_directions/placement_directions_v2.json` records where metabolic subsystems sit relative to each other on published
+overview maps (KEGG 01100, Human-GEM, Escher example maps, CBMViz) and in textbook conventions (details: `layout_directions/README_v2.md`).
+`escher_handlayout/directions.py` applies it to a map:
+
+1. The subsystems (title labels / zones) are matched to the catalogue's entities: BRENDA map names through
+   `brenda_aliases.json`, otherwise entity names and aliases, otherwise word overlap. The map's primary metabolites are matched
+   to the catalogue's hub metabolites by BiGG id.
+2. `inspect` writes `arrangement.md` (the chat agent shows the same text in its plan turn): for each pair of subsystems the
+   direction with the best evidence - stated rules (`direction_rules`) and the consensus of the measured maps (pairs where the
+   maps conflict or only one map was measured give no direction) - plus the cycle layouts (TCA clockwise, oxaloacetate at the
+   top ...), the attachments (which metabolite joins two subsystems: merge candidates) and textbook directions between hub
+   metabolites (glucose above G6P ...). Directions are screen directions: "X is below Y" means X gets the larger y.
+   Strength `hard`/`strong`: follow it; `medium`: follow it unless it costs crossings; `weak`: a hint.
+3. `build` measures the finished layout against the directions (zone centres and node positions after packing) and reports the
+   violated hard/strong/medium ones in `qa_report.md` with a **placement penalty** (5 per hard/strong, 2 per medium
+   direction). The chat agent adds the penalty to its score; `directions --check SPEC` gives the same numbers from a spec
+   without a build. `--taxa bacteria|plants|animals|fungi|...` drops rules scoped to other organism groups.
+
+The catalogue is evidence from a few maps, not a standard: when a direction costs crossings or long lines, the crossings
+count more. A map whose subsystems match no entity (no title labels, unusual names) simply gets no arrangement section.
+
 ## 6. Curvature (`--curv`, 0..1)
 
 For a segment between a metabolite M and a multimarker K (axis `u`, normal `n`, `d=(M-K).n`, `D=(M-K).u`, `s=sign(D)`):
@@ -116,6 +140,7 @@ used      : componentwise (1-t)*gentle + t*strong ; lanes k=(0.32+0.10t)*length 
 | label_label_overlaps | two label boxes overlap | spread the two reactions apart (>= 150 units) or change cofactor `side` |
 | primary_nodes_closer_than_70 | nodes nearly on top of each other | fix coordinates |
 | bbox_area | size of the final rectangle | compact the main component; the packing already removes the pieces' share |
+| placement penalty | subsystems (or hub metabolites) not where the placement catalogue puts them (section 5a) | move the block (`origin`) - only if that does not cost crossings; medium directions may stay violated |
 
 Reference values of the bundled example (91 reactions): crossings 26, labels_on_lines 5, labels_on_nodes 0,
 label overlaps 0, close nodes 0, 7444 x 8284 units.

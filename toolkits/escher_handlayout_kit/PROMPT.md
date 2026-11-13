@@ -65,7 +65,8 @@ python selftest.py            # should print SELFTEST PASSED; if it fails, note 
 python run.py inspect --input INPUT_MAP --out OUT_DIR/analysis
 ```
 
-Read completely: `OUT_DIR/analysis/analysis.md`, `docs/GUIDE.md`, `escher_handlayout/agent/prompts/format_reference.md`
+Read completely: `OUT_DIR/analysis/analysis.md`, `OUT_DIR/analysis/arrangement.md` (where the subsystems usually sit relative to
+each other, from the placement catalogue `layout_directions/`), `docs/GUIDE.md`, `escher_handlayout/agent/prompts/format_reference.md`
 (the spec format), `specs/layout_template.json` and `specs/iml1515_central_carbon.layout.json` (the worked example - copy
 its style and its recipes).
 If `analysis.md` lists **unsupported reactions** (no multimarker topology), the engine cannot lay out this map:
@@ -83,8 +84,10 @@ write `OUT_DIR/ABORTED.md` explaining which reactions and why, and stop (this is
      (ethanol fermentation) and the two PDH reactions (oxidative decarboxylation of pyruvate, acetyl CoA biosynthesis) on
      one stacked pyruvate -> acetyl-CoA lane; the gluconeogenic PEP / pyruvate merged into the glycolytic ones;
    - small components of one subsystem: join them with each other first, then attach the block to its hub.
-3. **Global arrangement**: apply section 5 rules so that the merge partners of item 2 are neighbours. Draw it as a small
-   ASCII sketch with approximate coordinates.
+3. **Global arrangement**: start from `arrangement.md`: follow its `hard` and `strong` directions, its `medium` ones unless
+   they cost crossings (`weak` ones are hints); draw the cycles as given there; its attachments are merge candidates. Where it
+   is silent apply the defaults of section 5. Place the subsystems so that the merge partners of item 2 are neighbours. Draw it
+   as a small ASCII sketch with approximate coordinates.
 4. **Hub merges**: the exact list of `merges` entries (from `merge_candidates`, section 5 rule M).
 5. **Per subsystem**: node coordinates (primary nodes only) and, per reaction, the `side`, `shift`, `axis`/`mid` or
    `arc` you intend, following the recipes in `docs/GUIDE.md` section 4.
@@ -108,10 +111,12 @@ python run.py build --input INPUT_MAP --spec specs/MAP_NAME.layout.json --out OU
 - Otherwise read `OUT_DIR/build_N/qa_report.md`. Compute the score
 
   `score = 1000*validation_errors + crossings + 3*labels_on_lines + 6*labels_on_nodes + 4*label_overlaps + 10*close_nodes
-           + 20*extra_components`
+           + 20*extra_components + placement_penalty`
 
   where `extra_components` counts the packed pieces (`Packing` section of `qa_report.md`) that share a non-cofactor
-  metabolite with the main component and are not justified as a deliberate copy in `DECISIONS.md`.
+  metabolite with the main component and are not justified as a deliberate copy in `DECISIONS.md`, and `placement_penalty`
+  is the number in the `Placement` section of `qa_report.md` (violated directions of the placement catalogue, 5 per
+  hard/strong and 2 per medium direction; `python run.py directions --input INPUT_MAP --check SPEC` gives it without a build).
 
   and keep a table `build_N -> score` in `DECISIONS.md`. Edit the spec to reduce the *named* offenders
   (`worst_crossing_pairs`, `labels_on_lines_list`, ... - remedies in `docs/GUIDE.md` section 8) and rebuild.
@@ -120,7 +125,8 @@ python run.py build --input INPUT_MAP --spec specs/MAP_NAME.layout.json --out OU
   arrangement (swap or mirror neighbouring subsystems) before splitting nodes.
 
   Targets: `validation_errors = 0`; `labels_on_nodes = 0`; `label_label_overlaps <= 2`; `primary_nodes_closer_than_70 = 0`;
-  `labels_on_lines <= max(6, 7% of reactions)`; `crossings <= 0.1 x number of reactions`; `extra_components = 0`.
+  `labels_on_lines <= max(6, 7% of reactions)`; `crossings <= 0.1 x number of reactions`; `extra_components = 0`; no violated
+  `hard` or `strong` placement direction (a `medium` one may stay violated when fixing it costs crossings - note it in `DECISIONS.md`).
   (Reference for the bundled example with 91 reactions: crossings 26, labels_on_lines 5, all others 0.)
 - After the layout has converged, try `--curv 0.3` and `--curv 0.45` with the final spec (cheap) and keep the curvature
   with the lowest score; ties go to **0.6**.
@@ -149,7 +155,8 @@ nicer - but moving subsystems to realise the connectivity plan or to remove name
 
 - **Subsystem split**: title labels first; else connected components (`analysis.md`); a component that is much
   smaller than 5 reactions and clearly belongs to a neighbouring pathway (shares metabolite names) joins that zone.
-- **Global arrangement** (central carbon metabolism, the default): glycolysis as the central vertical column;
+- **Global arrangement**: the directions of `analysis/arrangement.md` come first (hard/strong; medium unless they cost
+  crossings); the defaults below apply where the catalogue is silent. Central carbon metabolism default: glycolysis as the central vertical column;
   pyruvate -> acetyl-CoA directly below it; TCA cycle (ring, clockwise, citrate on top) below that so that glycolysis
   is above TCA; pentose phosphate pathway on one side of upper glycolysis (branching at G6P, returning F6P and G3P
   through the transketolase/transaldolase boxes) with the Entner-Doudoroff pathway branching at 6-phosphogluconate;
@@ -200,6 +207,7 @@ nicer - but moving subsystems to realise the connectivity plan or to remove name
 
 State: map name and reaction count; subsystems found; which metabolites were merged and which candidates were
 deliberately not merged; number of connected components before -> after; node count before -> after (nodes increase because of duplicates); chosen curvature;
-bounding-box area before -> after packing and final size; the final metrics against the targets; the known weak
+bounding-box area before -> after packing and final size; the final metrics against the targets (including the placement
+penalty and the directions deliberately left violated); the known weak
 spots (name the reactions from the metrics); that validation errors = 0 and that the map was **not** loaded in Escher;
 and the paths of the deliverables.

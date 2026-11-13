@@ -1,6 +1,6 @@
 {
  "input": "examples/central_metabolism_escher.json",
- "spec": "specs/spec_iml1515_central_carbon.py",
+ "spec": "specs/iml1515_central_carbon.layout.json",
  "curvature": 0.6,
  "packed": true,
  "area_before_packing_Munits2": 79.7,
@@ -47,7 +47,51 @@
   7200,
   7913
  ],
- "output_json": "examples/expected_output/central_metabolism_escher_final_packed.json",
+ "placement": {
+  "violations": [
+   "Lactate fermentation should be below Gluconeogenesis (strong; agreement, 7 sources (R 0.87) for their pathways)",
+   "Entner-Doudoroff pathway should be right of Glycolysis (strong; rule GPR004: ED is an alternative glucose-catabolic route that enters at hexose-pho)",
+   "Gluconeogenesis should be right of Glycolysis (strong; rule GPR002: Place the reverse-direction pathway beside glycolysis; shared reaction)",
+   "Pentose phosphate pathway should be above right of Glycolysis (strong; rule GPR003: Glucose-6-phosphate feeds the oxidative PPP and non-oxidative PPP retu)",
+   "6pgc_c should be right of g6p_c (strong; textbook convention)"
+  ],
+  "penalty": 25,
+  "checked": 20,
+  "directions": 20,
+  "subsystems": {
+   "Glycolysis": [
+    "glycolysis"
+   ],
+   "Pentose phosphate pathway": [
+    "pentose_phosphate_pathway"
+   ],
+   "Entner-Doudoroff pathway": [
+    "entner_doudoroff_pathway"
+   ],
+   "Lactate fermentation": [
+    "lactate_fermentation"
+   ],
+   "Oxidative decarboxylation of pyruvate": [
+    "pyruvate_dehydrogenase"
+   ],
+   "Ethanol fermentation": [
+    "ethanol_fermentation"
+   ],
+   "Acetate fermentation": [
+    "acetate_formation"
+   ],
+   "Citric acid cycle": [
+    "tca_cycle"
+   ],
+   "Gluconeogenesis": [
+    "gluconeogenesis"
+   ],
+   "Oxidative phosphorylation": [
+    "oxidative_phosphorylation"
+   ]
+  }
+ },
+ "output_json": "examples/expected_output\\central_metabolism_escher_final_packed.json",
  "removed_text_labels": [],
  "area_after_packing_Munits2": 61.73,
  "canvas": {
@@ -163,6 +207,5 @@
   "width": 7444,
   "height": 8284,
   "bbox_area_Munits2": 61.67
- },
- "output_png": "examples/expected_output/central_metabolism_escher_final_packed_overview.png"
+ }
 }

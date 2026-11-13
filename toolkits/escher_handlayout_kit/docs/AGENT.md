@@ -48,10 +48,10 @@ Useful options: `--json-mode` (ask the endpoint for JSON-only output), `--temper
 
 | turn | harness sends | model returns (one JSON object) |
 |---|---|---|
-| 1 plan | overview of the map, proposed subsystems, hub-merge candidates | `zones`, `plan` (region + reaction list per zone), `merges`, `splits` |
+| 1 plan | overview of the map, proposed subsystems, hub-merge candidates, the usual arrangement of the subsystems (placement catalogue `layout_directions/`: directions, cycles, attachments) | `zones`, `plan` (region + reaction list per zone), `merges`, `splits` |
 | 2..n layout | one zone (or a chunk of 40 reactions): nodes to place, already placed hubs, free space, reaction table | one `layouts` block (+ the zone `titles`) |
 | complete | only if something is still unplaced: the list of problems | the missing entries |
-| refine (<=4) | quality report with named offenders (crossings, labels on lines ...) and their current entries | a *small correction*, or `{"notes": "no change"}` |
+| refine (<=4) | quality report with named offenders (crossings, labels on lines, violated placement directions ...) and their current entries | a *small correction*, or `{"notes": "no change"}` |
 | finalize | - (no model) | the program tries curvature 0.3 / 0.45 / 0.6, keeps the best, writes the files |
 
 Every turn is a fresh, short chat (system prompt about 2,100 tokens + 1,000-1,400 tokens of data). Measured on the bundled
@@ -59,7 +59,9 @@ Every turn is a fresh, short chat (system prompt about 2,100 tokens + 1,000-1,40
 append the error message to that turn's chat.
 
 Outputs in `--out`: `<map>_handlayout.json` (the Escher map), `..._overview.png`, `qa_report.md/json`, `<map>_handlayout.layout.json`
-(the final spec - reusable with `python run.py build ...`), `run_summary.json`, `transcript/` (every prompt and reply), `state.json`.
+(the final spec - reusable with `python run.py build ...`), `run_summary.json`, `transcript/` (every prompt and reply), `state.json`,
+`arrangement.md` (the placement brief shown in the plan turn). The refinement score is the metrics score plus the placement
+penalty of the build (docs/GUIDE.md section 5a); `--taxa bacteria` etc. restricts the catalogue to one organism group.
 
 ## 3. Security model
 

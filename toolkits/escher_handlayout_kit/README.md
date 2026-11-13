@@ -8,7 +8,8 @@ panel) but runs on its own: it does not need ecmapper, only numpy, matplotlib an
 
 What the procedure produces (worked example: iML1515 central metabolism, 91 reactions, 10 subsystems):
 1. each subsystem laid out by hand with textbook shapes (chains, branches, hourglasses, cycles as rings, lanes),
-2. subsystems arranged in a biologically plausible flow (glycolysis above TCA, side modules), connected only through a short list of hub metabolites,
+2. subsystems arranged in a biologically plausible flow (glycolysis above TCA, side modules) following `layout_directions/`, a catalogue
+   of where subsystems sit on published maps, and connected only through a short list of hub metabolites,
 3. gentle Bezier curves instead of straight lines (curvature adjustable, 0.6 recommended),
 4. labels placed so that lines do not hide them,
 5. disconnected pieces packed into free space (rectangle area -24 % in the example).
@@ -26,7 +27,7 @@ What the procedure produces (worked example: iML1515 central metabolism, 91 reac
 ```
 README.md                  this file
 agent.py                   chat-based agent: model-agnostic, JSON in/out only (docs/AGENT.md)
-run.py                     CLI: inspect | check-spec | build | validate
+run.py                     CLI: inspect | check-spec | build | validate | directions
 PROMPT.md                  prompt for a coding agent with a code sandbox (writes the JSON spec, runs run.py, iterates on the metrics)
 selftest.py                quick regression test      tests/run_tests.py   full test suite (27 tests, ~100 s, offline)
 requirements.txt           numpy, matplotlib, Pillow
@@ -37,6 +38,7 @@ escher_handlayout/
   pack.py                  components + packing of disconnected pieces (occupancy grid, FFT search)
   render.py                matplotlib preview + Escher JSON export
   inspect_map.py           analysis of the draft map (subsystems, components, merge candidates, traps)
+  directions.py            the placement catalogue: matches the subsystems, lists directions/cycles/attachments, checks a layout
   qa.py                    structural validation + layout-quality metrics
   pipeline.py              build(): spec -> JSON + PNG + QA report
   agent/                   chat harness: llm.py (OpenAI-compatible, Anthropic, manual, scripted), session.py, jsonio.py, prompts/*.md
@@ -44,7 +46,9 @@ specs/
   iml1515_central_carbon.layout.json   worked example (complete JSON spec of the bundled map)
   layout_template.json                 empty skeleton
   legacy_python/                       old Python-code specs (execute code; disabled unless --unsafe-python-spec)
-docs/GUIDE.md              spec format, layout recipes, curvature, how to read the QA metrics
+layout_directions/         placement catalogue (placement_directions_v2.json + README_v2.md): where metabolic subsystems sit
+                           relative to each other on published maps (KEGG, Human-GEM, Escher, textbook conventions)
+docs/GUIDE.md              spec format, layout recipes, curvature, the placement catalogue, how to read the QA metrics
 docs/AGENT.md              the chat agent: modes, conversation, security model, troubleshooting
 examples/                  the draft map + expected output (regression reference)
 ```
@@ -54,12 +58,15 @@ examples/                  the draft map + expected output (regression reference
 ```bash
 pip install -r requirements.txt
 python selftest.py                                                         # SELFTEST PASSED
+python run.py directions --input examples/central_metabolism_escher.json                                 # where the subsystems usually go
 python run.py build --input examples/central_metabolism_escher.json \
                     --spec specs/iml1515_central_carbon.layout.json --out /tmp/result --curv 0.6
 python agent.py --input examples/central_metabolism_escher.json --out /tmp/run1 --provider manual    # chat-based, copy/paste
 ```
 Outputs: `<name>.json` (load it in https://escher.github.io or with the Escher Python package), `<name>_overview.png`,
-`qa_report.md/json`. Options of `build`: `--curv 0..1` (0 gentle, 1 strong), `--no-pack`, `--no-png`, `--png-scale`.
+`qa_report.md/json`. Options of `build`: `--curv 0..1` (0 gentle, 1 strong), `--no-pack`, `--no-png`, `--png-scale`,
+`--taxa` (organism group for the placement check). `inspect` also writes `arrangement.md`: the usual arrangement of the map's
+subsystems from the placement catalogue; `build` reports the directions a layout violates (placement penalty).
 
 ## Reference results (bundled example, curvature 0.6)
 
@@ -68,6 +75,7 @@ Outputs: `<name>.json` (load it in https://escher.github.io or with the Escher P
 | reactions / nodes | 91 / 495 -> 510 (duplicated nodes only; no reaction changed) |
 | bounding box before / after packing | 81.2 M -> 61.7 M units^2 (about -24 %) |
 | QA metrics | crossings 26, labels on lines 5, labels on nodes 0, label overlaps 0, validation errors 0 |
+| placement (catalogue) | 5 of 20 directions violated, penalty 25: the example draws PPP, ED and gluconeogenesis west of glycolysis, the catalogue puts them east |
 | determinism | byte-identical JSON across runs |
 | chat agent, scripted model | reproduces the expected output exactly in 11 turns |
 
@@ -80,3 +88,6 @@ Outputs: `<name>.json` (load it in https://escher.github.io or with the Escher P
 - The chat agent has been tested offline (scripted model, fake HTTP server, fuzzing) but **not with real language models yet**;
   prompts may need tuning per model (docs/AGENT.md section 6).
 - Curvature 0.75 and higher produced overlapping curves at shared nodes in the example; 0.6 was preferred.
+- The placement catalogue is evidence, not truth: measured from a handful of maps plus textbook conventions, with many pairs
+  single-source or conflicting (those give no direction). Subsystems are matched by their title labels (BRENDA names via
+  `brenda_aliases.json`, else entity names / word overlap); unmatched ones get no directions.

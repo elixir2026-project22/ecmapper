@@ -3,7 +3,7 @@
 import ast, copy, io, json, os, sys, tempfile, threading, unittest
 from http.server import BaseHTTPRequestHandler, HTTPServer
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE); sys.path.insert(0, ROOT)
-from escher_handlayout import declspec, pipeline
+from escher_handlayout import declspec, pipeline, directions as D
 from escher_handlayout.engine import Layout
 from escher_handlayout.agent import llm as B
 from escher_handlayout.agent.jsonio import extract_json_object
@@ -133,12 +133,71 @@ class TestSpecFormat(unittest.TestCase):
         self.assertLessEqual(len(s), 60)
 
 
+class TestDirections(unittest.TestCase):
+    """The placement catalogue (layout_directions/): matching of the subsystems, directions, the check of a layout."""
+    @classmethod
+    def setUpClass(cls):
+        cls.cat = D.Catalogue.load(); cls.L = Layout(INP); declspec.compile_spec(SPEC, cls.L)
+        cls.arr = D.Arrangement(D.subsystems_of_layout(cls.L), cls.cat)
+
+    def test_subsystems_match_catalogue_entities(self):
+        e = self.arr.entities
+        self.assertEqual(e['Citric acid cycle'], ['tca_cycle']); self.assertEqual(e['Oxidative decarboxylation of pyruvate'], ['pyruvate_dehydrogenase'])
+        self.assertEqual(e['Entner-Doudoroff pathway'], ['entner_doudoroff_pathway']); self.assertEqual(self.arr.how['Entner-Doudoroff pathway'], 'name')      # not in brenda_aliases.json: its entity name
+        self.assertEqual(self.cat.match('beta-oxidation'), (['fatty_acid_degradation'], 'words'))
+        self.assertTrue(all(e[k] for k in self.arr.keys), msg=str(e))
+        self.assertEqual(self.cat.match('Krebs cycle')[0], ['tca_cycle'])
+        self.assertNotEqual(self.cat.match('fatty acid degradation')[0], ['fatty_acid_biosynthesis'])      # roles are not mixed up
+        self.assertEqual(self.cat.match('something nobody has heard of'), ([], None))
+
+    def test_directions_from_rules_and_consensus(self):
+        strong = {(d.target, d.direction, d.anchor) for d in self.arr.subsystem_directions if d.strength == 'strong'}
+        self.assertIn(('Oxidative decarboxylation of pyruvate', 'below', 'Glycolysis'), strong)      # 7 sources agree (pathway level)
+        self.assertIn(('Pentose phosphate pathway', 'above_right', 'Glycolysis'), strong)           # rule GPR003
+        self.assertFalse(any('single_source' in d.evidence for d in self.arr.subsystem_directions))  # one map is no convention
+        self.assertIn(('g6p_c', 'below', 'glc__D_c'), {(d.target, d.direction, d.anchor) for d in self.arr.metabolite_directions})
+        text = self.arr.text()
+        self.assertIn('oaa_c -> cit_c -> icit_c -> akg_c', text); self.assertIn('clockwise', text)
+        self.assertIn('Oxidative decarboxylation of pyruvate feeds Citric acid cycle at accoa_c', text)
+        self.assertLessEqual(len(self.arr.text(max_chars=1500)), 1500)
+        self.assertEqual(json.loads(json.dumps(self.arr.to_dict()))['subsystems']['Glycolysis']['entities'], ['glycolysis'])
+
+    def test_check_names_violated_directions(self):
+        ok = {'Glycolysis': (0, 0), 'Oxidative decarboxylation of pyruvate': (0, 1500)}        # below (y down): as the maps say
+        self.assertEqual(D.check(self.arr, ok, {})['violations'], [])
+        res = D.check(self.arr, {'Glycolysis': (0, 0), 'Oxidative decarboxylation of pyruvate': (0, -1500)}, {'glc__D_c': [(0, 0)], 'g6p_c': [(0, -300)]})
+        self.assertEqual(res['penalty'], 10); self.assertEqual(len(res['violations']), 2)
+        self.assertIn('Oxidative decarboxylation of pyruvate should be below Glycolysis', res['violations'][0])
+        self.assertIn('g6p_c should be below glc__D_c', res['violations'][1])
+        # the worked example: the catalogue puts the PPP east of glycolysis, the example drew it west
+        L = Layout(INP); declspec.compile_spec(SPEC, L); L.curv = 0.6; L.finish()
+        built = D.check(self.arr, *D.layout_geometry(L))
+        self.assertEqual(built['checked'], 20); self.assertTrue(any('Pentose phosphate pathway should be above right of Glycolysis' in v for v in built['violations']))
+        self.assertEqual(built['violations'], D.check(self.arr, *D.spec_geometry(SPEC, L))['violations'])     # the same straight from the spec
+
+    def test_inspect_and_build_report_the_placement(self):
+        with tempfile.TemporaryDirectory() as d:
+            a = pipeline.inspect(INP, d)
+            self.assertTrue(os.path.exists(os.path.join(d, 'arrangement.md')))
+            self.assertEqual(a['layout_directions']['subsystems']['citric acid cycle']['entities'], ['tca_cycle'])
+            with open(os.path.join(d, 'analysis.md')) as f: self.assertIn('## Arrangement of the subsystems', f.read())
+            rep = pipeline.build(INP, SPEC, d, png=False, name='o')
+            self.assertEqual(rep['placement']['penalty'], 25); self.assertIn('placement penalty', pipeline.report_md(rep))
+            self.assertEqual(rep['placement']['subsystems']['Citric acid cycle'], ['tca_cycle'])
+
+    def test_missing_catalogue_is_none(self):
+        self.assertIsNone(D.Catalogue.load(os.path.join(tempfile.gettempdir(), 'no_such_catalogue.json')))
+
+
 class TestAgent(unittest.TestCase):
     def test_full_scripted_run_reproduces_expected(self):
         with tempfile.TemporaryDirectory() as d:
-            s = session(d, B.Scripted(scripted_replies())).run()
+            llm = B.Scripted(scripted_replies()); s = session(d, llm).run()
             self.assertEqual(s['validation_errors'], []); self.assertTrue(s['targets_met'])
             self.assertEqual(sig(_load_path(s['outputs']['map'])[1]), sig(EXP))
+            plan_prompt = llm.seen[0][1]['content']                       # the plan turn shows the usual arrangement of the subsystems
+            self.assertIn('DATA: ARRANGEMENT', plan_prompt); self.assertIn('below Glycolysis', plan_prompt)
+            self.assertTrue(os.path.exists(os.path.join(d, 'arrangement.md'))); self.assertEqual(s['placement']['penalty'], 25)
 
     def test_invalid_reply_is_fed_back_and_retried(self):
         reps = scripted_replies(); bad_plan = copy.deepcopy(reps[0]); bad_plan['evil'] = "__import__('os').system('id')"

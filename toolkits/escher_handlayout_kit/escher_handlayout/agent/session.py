@@ -8,6 +8,7 @@ import os, json, hashlib, re, copy, shutil, time
 from ..engine import Layout
 from ..declspec import SpecError, compile_spec, merge_fragment, validate_schema
 from ..inspect_map import analyse
+from ..directions import Catalogue, Arrangement, subsystems_of_analysis
 from .. import pipeline
 from .jsonio import extract_json_object
 from .llm import LLMError
@@ -38,7 +39,7 @@ def system_prompt():
 def score(rep):
     m = rep['metrics']
     return (1000 * len(rep['validation_errors']) + m['line_crossings'] + 3 * m['labels_on_lines'] + 6 * m['labels_on_nodes']
-            + 4 * m['label_label_overlaps'] + 10 * m['primary_nodes_closer_than_70'])
+            + 4 * m['label_label_overlaps'] + 10 * m['primary_nodes_closer_than_70'] + (rep.get('placement') or {}).get('penalty', 0))
 
 def targets_met(rep):
     m = rep['metrics']; n = rep['n_reactions']
@@ -53,9 +54,9 @@ def zone_name(title):
 
 class Session:
     def __init__(self, input_path, out_dir, llm, curv=0.6, curv_candidates=(0.3, 0.45, 0.6), max_refine=4, max_retries=3,
-                 max_turns=80, chunk=40, resume=False, log=print, seed_spec=None):
+                 max_turns=80, chunk=40, resume=False, log=print, seed_spec=None, taxa='all'):
         self.input = os.path.abspath(input_path); self.out = os.path.abspath(out_dir); os.makedirs(self.out, exist_ok=True)
-        self.llm = llm; self.curv = curv; self.cands = tuple(curv_candidates); self.max_refine = max_refine
+        self.llm = llm; self.curv = curv; self.cands = tuple(curv_candidates); self.max_refine = max_refine; self.taxa = taxa
         self.max_retries = max_retries; self.max_turns = max_turns; self.chunk = chunk; self.log = log
         self.system = system_prompt()
         self.name = os.path.splitext(os.path.basename(self.input))[0] + '_handlayout'
@@ -167,6 +168,16 @@ class Session:
                    reactions_by_zone={zone_name(t): zones[t] for t in order})
         return out
 
+    def arrangement_text(self, analysis):
+        '''The placement brief for the proposed zones (layout_directions catalogue), also written to <out>/arrangement.md.'''
+        cat = Catalogue.load()
+        if cat is None: return '(no placement catalogue available: layout_directions/ is missing)'
+        subs = subsystems_of_analysis(analysis, key=zone_name)
+        for v in subs.values(): v['metabolites'] = [safe(m, 24) for m in v['metabolites']]
+        arr = Arrangement(subs, cat, self.taxa)
+        write_text(os.path.join(self.out, 'arrangement.md'), arr.text())
+        return arr.text(max_chars=6000, intro=False)
+
     # ------------------------------------------------------------------ steps
     def step_plan(self):
         analysis = analyse(self.input)
@@ -182,7 +193,8 @@ class Session:
         rows = ['| metabolite | node ids | reactions (first) | hub |', '|---|---|---|---|']
         for c in analysis['merge_candidates'][:60]:
             rows.append(f"| {safe(c['bigg_id'], 20)} | {', '.join(c['nodes'])} | {safe(', '.join(c['reactions'][:6]), 60)} | {'hub' if c['in_default_hub_list'] else ''} |")
-        user = fill(read_prompt('plan.md'), OVERVIEW='\n'.join(overview), PROPOSAL=json.dumps(prop, indent=1)[:12000], MERGE_TABLE='\n'.join(rows))
+        user = fill(read_prompt('plan.md'), OVERVIEW='\n'.join(overview), PROPOSAL=json.dumps(prop, indent=1)[:12000], MERGE_TABLE='\n'.join(rows),
+                    DIRECTIONS=self.arrangement_text(analysis))
         allr = {r['id'] for r in analysis['reactions']}
         def validate(frag):
             new = merge_fragment(self.spec, frag)
@@ -265,7 +277,7 @@ class Session:
 
     def build(self, spec, curv, tag, png=False, name=None):
         d = os.path.join(self.out, 'iterations', tag)
-        return pipeline.build(self.input, spec, d, curv=curv, do_pack=True, png=png, name=name or 'iter')
+        return pipeline.build(self.input, spec, d, curv=curv, do_pack=True, png=png, name=name or 'iter', taxa=self.taxa)
 
     def offenders(self, rep):
         m = rep['metrics']; names = []
@@ -302,7 +314,7 @@ class Session:
             names = self.offenders(rep)
             if not names: break
             body = pipeline.report_md(rep)
-            user = fill(read_prompt('refine.md'), ROUND=st['refine_i'] + 1, MAX_ROUND=self.max_refine, REPORT=body[:3500],
+            user = fill(read_prompt('refine.md'), ROUND=st['refine_i'] + 1, MAX_ROUND=self.max_refine, REPORT=body[:4500],
                         ENTRIES=json.dumps(self.entries(names, st['best']['spec']), indent=1)[:9000])
             def validate(frag):
                 new = merge_fragment(st['best']['spec'], frag)
@@ -327,10 +339,11 @@ class Session:
             key = (sc, abs(c - self.curv))
             if best is None or key < best[0]: best = (key, c)
         c = best[1]
-        rep = pipeline.build(self.input, st['spec'], self.out, curv=c, do_pack=True, png=True, name=self.name)
+        rep = pipeline.build(self.input, st['spec'], self.out, curv=c, do_pack=True, png=True, name=self.name, taxa=self.taxa)
         write_json(os.path.join(self.out, self.name + '.layout.json'), st['spec'])
         summary = dict(model=self.llm.name, turns=st['turns'], curvature=c, scores=st['scores'], notes=st['notes'],
                        validation_errors=rep['validation_errors'], metrics={k: v for k, v in rep['metrics'].items() if not k.endswith('list')},
+                       placement=rep.get('placement'),
                        area_before=rep['area_before_packing_Munits2'], area_after=rep['area_after_packing_Munits2'], canvas=rep['canvas'],
                        targets_met=targets_met(rep), outputs=dict(map=rep['output_json'], png=rep.get('output_png'), spec=os.path.join(self.out, self.name + '.layout.json')))
         write_json(os.path.join(self.out, 'run_summary.json'), summary)

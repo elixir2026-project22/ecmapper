@@ -1,0 +1,447 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://example.org/mll/global-placement-directions-2.0.0.schema.json",
+ "title": "MLL Global Placement Directions v2",
+ "type": "object",
+ "required": [
+  "language",
+  "version",
+  "coordinate_frame",
+  "sources",
+  "entities",
+  "relations",
+  "direction_rules",
+  "observations",
+  "consensus"
+ ],
+ "properties": {
+  "language": {
+   "const": "MLL Global Placement Directions"
+  },
+  "version": {
+   "type": "string",
+   "pattern": "^2\\."
+  },
+  "sources": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "title",
+     "kind"
+    ],
+    "properties": {
+     "kind": {
+      "enum": [
+       "map_measured",
+       "literature_convention",
+       "knowledge"
+      ]
+     }
+    }
+   }
+  },
+  "entities": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "type",
+     "name",
+     "part_of",
+     "xrefs"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "type": {
+      "enum": [
+       "category",
+       "region",
+       "pathway",
+       "module",
+       "metabolite_hub"
+      ]
+     },
+     "name": {
+      "type": "string"
+     },
+     "part_of": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9][a-z0-9_]*$"
+      }
+     },
+     "xrefs": {
+      "type": "object"
+     },
+     "process_role": {
+      "enum": [
+       "central",
+       "biosynthesis",
+       "degradation",
+       "energy",
+       "transport",
+       "interconversion",
+       null
+      ]
+     },
+     "aliases": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "relations": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "source",
+     "anchor",
+     "target",
+     "relationship",
+     "directed",
+     "via",
+     "scope"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^REL[0-9]{4}$"
+     },
+     "source": {
+      "type": "string"
+     },
+     "anchor": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "target": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "relationship": {
+      "enum": [
+       "FEEDS",
+       "SHARES_HUB",
+       "ALTERNATIVE_ROUTE",
+       "REVERSE_OF",
+       "SAME_FAMILY",
+       "COFACTOR_SUPPLY",
+       "ENERGY_COUPLING",
+       "TRANSPORT",
+       "SAME_COMPARTMENT",
+       "REGULATES"
+      ]
+     },
+     "directed": {
+      "type": "boolean"
+     },
+     "via": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[a-z0-9][a-z0-9_]*$"
+      }
+     },
+     "scope": {
+      "type": "object",
+      "properties": {
+       "taxa": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "taxa_text": {
+        "type": "string"
+       },
+       "compartments": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      },
+      "additionalProperties": false
+     },
+     "note": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "direction_rules": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "source",
+     "anchor",
+     "target",
+     "direction",
+     "strength",
+     "scope"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^(DIR[0-9]{4}|GPR[0-9]{3}[a-z]?)$"
+     },
+     "legacy_id": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     },
+     "anchor": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "target": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "direction": {
+      "enum": [
+       "above",
+       "above_right",
+       "right",
+       "below_right",
+       "below",
+       "below_left",
+       "left",
+       "above_left",
+       "adjacent",
+       "adjacent_left",
+       "adjacent_right",
+       "center",
+       "across_compartment_boundary",
+       "adjacent_across_boundary",
+       "toward_center",
+       "outward",
+       "downstream_along_flow",
+       "fan_out_from_anchor",
+       "parallel_neighbourhood",
+       "cycle_periphery",
+       "same_compartment_region",
+       "supporting_link_not_forced_adjacent",
+       "regulatory_overlay",
+       "global_support_link",
+       "outward_or_lower"
+      ]
+     },
+     "relationship": {
+      "enum": [
+       "FEEDS",
+       "SHARES_HUB",
+       "ALTERNATIVE_ROUTE",
+       "REVERSE_OF",
+       "SAME_FAMILY",
+       "COFACTOR_SUPPLY",
+       "ENERGY_COUPLING",
+       "TRANSPORT",
+       "SAME_COMPARTMENT",
+       "REGULATES"
+      ]
+     },
+     "flow": {
+      "enum": [
+       "anchor_to_target",
+       "target_to_anchor",
+       null
+      ]
+     },
+     "strength": {
+      "enum": [
+       "hard",
+       "strong",
+       "medium",
+       "weak"
+      ]
+     },
+     "scope": {
+      "type": "object",
+      "properties": {
+       "taxa": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "taxa_text": {
+        "type": "string"
+       },
+       "compartments": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      },
+      "additionalProperties": false
+     },
+     "note": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "observations": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "source",
+     "canvas",
+     "anchor",
+     "target",
+     "direction",
+     "bearing_deg",
+     "dx",
+     "dy",
+     "distance",
+     "confidence"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^OBS[0-9]{5}$"
+     },
+     "source": {
+      "type": "string"
+     },
+     "canvas": {
+      "type": "string"
+     },
+     "anchor": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "target": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "direction": {
+      "enum": [
+       "above",
+       "above_right",
+       "right",
+       "below_right",
+       "below",
+       "below_left",
+       "left",
+       "above_left"
+      ]
+     },
+     "bearing_deg": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 360
+     },
+     "dx": {
+      "type": "number"
+     },
+     "dy": {
+      "type": "number"
+     },
+     "distance": {
+      "type": "number",
+      "minimum": 0
+     },
+     "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "evidence": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  "consensus": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "level",
+     "anchor",
+     "target",
+     "direction",
+     "agreement_R",
+     "n_sources",
+     "status",
+     "suggested_strength",
+     "per_source"
+    ],
+    "properties": {
+     "level": {
+      "enum": [
+       "exact",
+       "pathway"
+      ]
+     },
+     "anchor": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "target": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]*$"
+     },
+     "direction": {
+      "enum": [
+       "above",
+       "above_right",
+       "right",
+       "below_right",
+       "below",
+       "below_left",
+       "left",
+       "above_left",
+       "undetermined"
+      ]
+     },
+     "status": {
+      "enum": [
+       "single_source",
+       "agreement",
+       "partial",
+       "conflict"
+      ]
+     },
+     "suggested_strength": {
+      "enum": [
+       "strong",
+       "medium",
+       "weak",
+       "none"
+      ]
+     },
+     "agreement_R": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0001
+     }
+    }
+   }
+  }
+ },
+ "additionalProperties": true
+}

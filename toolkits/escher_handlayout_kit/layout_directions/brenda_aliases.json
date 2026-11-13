@@ -1,0 +1,1306 @@
+{
+ "description": "BRENDA subsystems -> entities of placement_directions_v2.json (tools/make_aliases.py)",
+ "subsystems": {
+  "14-dihydroxy-6-naphthoate-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "3-chlorocatechol-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "3-phenylpropionate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "4-hydroxymandelate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "4-hydroxyphenylacetate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "5R-carbapenem-carboxylate-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "6-hydroxymethyl-dihydropterin-diphosphate-biosynthesis": {
+   "entities": [
+    "cofactor_vitamin_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "acetate-fermentation": {
+   "entities": [
+    "acetate_formation"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "acetoin-degradation": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "acetyl-CoA-biosynthesis": {
+   "entities": [
+    "acetyl_coa_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "aclacinomycin-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "adipate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "aerobactin-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "aerobic-toluene-degradation": {
+   "entities": [
+    "toluene_degradation"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "aflatoxin-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "alanine-metabolism": {
+   "entities": [
+    "alanine_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "alginate-biosynthesis": {
+   "entities": [
+    "glycan_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "allantoin-degradation": {
+   "entities": [
+    "purine_degradation"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "aminopropanol-phosphate-biosynthesis": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "anapleurotic-synthesis-of-oxalacetate": {
+   "entities": [
+    "anaplerotic_reactions"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "androgen-and-estrogen-metabolism": {
+   "entities": [
+    "androgen_estrogen_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "arachidonate-biosynthesis": {
+   "entities": [
+    "unsaturated_fatty_acid_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "arachidonic-acid-metabolism": {
+   "entities": [
+    "arachidonic_acid_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "arginine-metabolism": {
+   "entities": [
+    "arginine_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "ascorbate-metabolism": {
+   "entities": [
+    "ascorbate_aldarate_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "aspartate-and-asparagine-metabolism": {
+   "entities": [
+    "aspartate_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "bacilysin-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "benzoxazinoid-glucosides-biosynthesis": {
+   "entities": [
+    "benzoxazinoid_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "benzoyl-CoA-degradation": {
+   "entities": [
+    "benzoate_degradation"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "bile-acid-biosynthesis-neutral-pathway": {
+   "entities": [
+    "primary_bile_acid_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "biotin-biosynthesis": {
+   "entities": [
+    "biotin_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "butanoate-fermentation": {
+   "entities": [
+    "butanoate_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "C30-carotenoid-biosynthesis": {
+   "entities": [
+    "carotenoid_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "C4-and-CAM-carbon-fixation": {
+   "entities": [
+    "c4_carbon_concentration"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "camphor-biosynthesis": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "camphor-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "cardiolipin-biosynthesis": {
+   "entities": [
+    "cardiolipin_pg_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "carnitine-metabolism": {
+   "entities": [
+    "carnitine_shuttle"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "carotenoid-biosynthesis": {
+   "entities": [
+    "carotenoid_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "catecholamine-biosynthesis": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "CDP-diacylglycerol-biosynthesis": {
+   "entities": [
+    "phosphatidic_acid_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "cellulose-degradation": {
+   "entities": [
+    "glycan_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "ceramide-biosynthesis": {
+   "entities": [
+    "ceramide_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "chlorophyll-metabolism": {
+   "entities": [
+    "chlorophyll_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "cholesterol-biosynthesis": {
+   "entities": [
+    "cholesterol_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "chorismate-metabolism": {
+   "entities": [
+    "shikimate_pathway"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "cis-vaccenate-biosynthesis": {
+   "entities": [
+    "unsaturated_fatty_acid_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "citric-acid-cycle": {
+   "entities": [
+    "tca_cycle"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "CMP-KDO-biosynthesis": {
+   "entities": [
+    "lipopolysaccharide_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "CO2-fixation-in-Crenarchaeota": {
+   "entities": [
+    "energy_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "coenzyme-A-metabolism": {
+   "entities": [
+    "coa_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "coenzyme-M-biosynthesis": {
+   "entities": [
+    "coa_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "creatinine-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "curcuminoid-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "cyanate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "cyclohexanol-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "cysteine-metabolism": {
+   "entities": [
+    "cysteine_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "D-cycloserine-biosynthesis": {
+   "entities": [
+    "amino_acid_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "d-mannose-degradation": {
+   "entities": [
+    "carbohydrate_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "d-xylose-degradation": {
+   "entities": [
+    "carbohydrate_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "dapdiamides-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "daunorubicin-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "degradation-of-aromatic-nitrogen-containing-compounds": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "degradation-of-hexoses": {
+   "entities": [
+    "glycolysis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "degradation-of-pentoses": {
+   "entities": [
+    "pentose_phosphate_pathway"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "degradation-of-sugar-acids": {
+   "entities": [
+    "carbohydrate_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "degradation-of-sugar-alcohols": {
+   "entities": [
+    "glycolysis"
+   ],
+   "how": "hubs",
+   "reviewed": false
+  },
+  "denitrification": {
+   "entities": [
+    "denitrification"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "diterpene-phytoalexins-precursors-biosynthesis": {
+   "entities": [
+    "terpenoid_polyketide_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "dolichol-and-dolichyl-phosphate-biosynthesis": {
+   "entities": [
+    "lipid_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "dolichyl-diphosphooligosaccharide-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "dTDPLrhamnose-biosynthesis": {
+   "entities": [
+    "nucleotide_sugar_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "elloramycin-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "enterobactin-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "Entner-Doudoroff-pathway": {
+   "entities": [
+    "entner_doudoroff_pathway"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "ethanol-fermentation": {
+   "entities": [
+    "ethanol_fermentation"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "ethylmalonyl-CoA-pathway": {
+   "entities": [
+    "acetyl_coa_metabolism"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "factor-420-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "flavin-biosynthesis": {
+   "entities": [
+    "cofactor_vitamin_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "flavonoid-biosynthesis": {
+   "entities": [
+    "flavonoid_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "folate-polyglutamylation": {
+   "entities": [
+    "one_carbon_pool_by_folate"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "formaldehyde-oxidation": {
+   "entities": [
+    "methylotrophy"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "fumitremorgin-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "gallate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "ginsenoside-metabolism": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "gluconeogenesis": {
+   "entities": [
+    "gluconeogenesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "glutamate-and-glutamine-metabolism": {
+   "entities": [
+    "glutamate_glutamine_interconversion"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "glutathione-mediated-detoxification": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "glutathione-metabolism": {
+   "entities": [
+    "glutathione_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "glycine-betaine-biosynthesis": {
+   "entities": [
+    "glycine_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "glycine-metabolism": {
+   "entities": [
+    "glycine_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "glycogen-biosynthesis": {
+   "entities": [
+    "glycogen_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "glycogen-metabolism": {
+   "entities": [
+    "glycogen_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "glycolate-and-glyoxylate-degradation": {
+   "entities": [
+    "glyoxylate_dicarboxylate_metabolism"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "glycolysis": {
+   "entities": [
+    "glycolysis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "grixazone-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "heme-metabolism": {
+   "entities": [
+    "heme_degradation"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "histidine-metabolism": {
+   "entities": [
+    "histidine_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "hydrogen-production": {
+   "entities": [
+    "hydrogen_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "IAA-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "isoleucine-metabolism": {
+   "entities": [
+    "isoleucine_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "isoprenoid-biosynthesis": {
+   "entities": [
+    "terpenoid_backbone_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "kanamycin-biosynthesis": {
+   "entities": [
+    "specialised_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "kanosamine-biosynthesis-II": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "ketogluconate-metabolism": {
+   "entities": [
+    "gluconate_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "L-lactaldehyde-degradation": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "lactate-fermentation": {
+   "entities": [
+    "lactate_fermentation"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "leucine-metabolism": {
+   "entities": [
+    "leucine_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "lipid-A-biosynthesis": {
+   "entities": [
+    "lipopolysaccharide_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "lipid-metabolism": {
+   "entities": [
+    "lipid_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "lipoate-biosynthesis": {
+   "entities": [
+    "lipoic_acid_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "lysine-metabolism": {
+   "entities": [
+    "lysine_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "macrolide-antibiotic-biosynthesis": {
+   "entities": [
+    "macrolide_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "mannosylglycerate-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "metabolism-of-amino-sugars-and-derivatives": {
+   "entities": [
+    "udp_glcnac_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "metabolism-of-disaccharids": {
+   "entities": [
+    "disaccharide_degradation"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "methane-metabolism": {
+   "entities": [
+    "methane_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "methanofuran-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "methanogenesis-from-CO2": {
+   "entities": [
+    "methanogenesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "methionine-metabolism": {
+   "entities": [
+    "methionine_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "methylaspartate-cycle": {
+   "entities": [
+    "glutamate_metabolism"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "methylglyoxal-degradation": {
+   "entities": [
+    "methylglyoxal_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "mevalonate-metabolism": {
+   "entities": [
+    "mevalonate_pathway"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "molybdenum-cofactor-biosynthesis": {
+   "entities": [
+    "molybdopterin_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "Monoterpenoid-biosynthesis": {
+   "entities": [
+    "monoterpenoid_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "morphine-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "myo-inositol-biosynthesis": {
+   "entities": [
+    "glycolysis"
+   ],
+   "how": "hubs",
+   "reviewed": false
+  },
+  "NAD-metabolism": {
+   "entities": [
+    "nad_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "nitrate-assimilation": {
+   "entities": [
+    "nitrate_assimilation"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "O-antigen-biosynthesis": {
+   "entities": [
+    "lipopolysaccharide_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "octane-oxidation": {
+   "entities": [
+    "alkane_oxidation"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "ornithine-metabolism": {
+   "entities": [
+    "arginine_proline_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "oxalate-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "oxidative-decarboxylation-of-pyruvate": {
+   "entities": [
+    "pyruvate_dehydrogenase"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "oxidative-phosphorylation": {
+   "entities": [
+    "oxidative_phosphorylation"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "palmitate-biosynthesis": {
+   "entities": [
+    "fatty_acid_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "pantothenate-biosynthesis": {
+   "entities": [
+    "pantothenate_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "pentose-phosphate-pathway": {
+   "entities": [
+    "pentose_phosphate_pathway"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "peptidoglycan-biosynthesis": {
+   "entities": [
+    "peptidoglycan_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "phenol-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "phenylacetate-degradation-aerobic": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "phenylalanine-metabolism": {
+   "entities": [
+    "phenylalanine_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "phenylmercury-acetate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "phenylpropanoid-biosynthesis": {
+   "entities": [
+    "phenylpropanoid_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "phosphatidylethanolamine-bioynthesis": {
+   "entities": [
+    "pc_pe_metabolism"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "photosynthesis": {
+   "entities": [
+    "photosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "polyamine-pathway": {
+   "entities": [
+    "polyamine_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "ppGpp-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "proline-metabolism": {
+   "entities": [
+    "proline_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "propanol-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "propionate-fermentation": {
+   "entities": [
+    "methylcitrate_cycle"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "purine-metabolism": {
+   "entities": [
+    "purine_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "pyrimidine-metabolism": {
+   "entities": [
+    "pyrimidine_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "quinate-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "reductive-acetyl-coenzyme-A-pathway": {
+   "entities": [
+    "wood_ljungdahl_pathway"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "resorcinol-degradation": {
+   "entities": [
+    "xenobiotic_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "ribulose-monophosphate-pathway": {
+   "entities": [
+    "methylotrophy"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "S-reticuline-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "secologanin-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "selenocysteine-biosynthesis": {
+   "entities": [
+    "amino_acid_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "serine-metabolism": {
+   "entities": [
+    "serine_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "serotonin-metabolism": {
+   "entities": [
+    "serotonin_melatonin_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "sesquiterpene-lactone-biosynthesis": {
+   "entities": [
+    "terpenoid_polyketide_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "sphingosine-metabolism": {
+   "entities": [
+    "lipid_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "starch-degradation": {
+   "entities": [
+    "starch_sucrose_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "suberin-monomers-biosynthesis": {
+   "entities": [
+    "lipid_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "sulfate-reduction": {
+   "entities": [
+    "sulfate_assimilation"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "sulfated-glycosaminoglycan-metabolism": {
+   "entities": [
+    "gag_degradation"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "sulfolipid-biosynthesis": {
+   "entities": [
+    "galactolipid_sulfolipid_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "sulfopterin-metabolism": {
+   "entities": [
+    "cofactor_vitamin_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "sulfoquinovose-degradation": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "taurine-degradation": {
+   "entities": [
+    "taurine_hypotaurine_metabolism"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "taxol-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "teichoic-acid-biosynthesis": {
+   "entities": [
+    "glycan_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "tetrahydrofolate-metabolism": {
+   "entities": [
+    "cofactor_vitamin_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "threonine-metabolism": {
+   "entities": [
+    "threonine_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "thyroid-hormone-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "toluene-degradation": {
+   "entities": [
+    "toluene_degradation"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "tropane-alkaloid-biosynthesis": {
+   "entities": [
+    "tropane_piperidine_pyridine_alkaloid_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "tryptophan-metabolism": {
+   "entities": [
+    "tryptophan_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "tyrosine-metabolism": {
+   "entities": [
+    "tyrosine_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "ubiquinone-biosynthesis": {
+   "entities": [
+    "ubiquinone_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "UDP-GlcNAc-biosynthesis": {
+   "entities": [
+    "udp_glcnac_biosynthesis"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "urea-cycle": {
+   "entities": [
+    "urea_cycle"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "valine-metabolism": {
+   "entities": [
+    "valine_biosynthesis"
+   ],
+   "how": "name",
+   "reviewed": false
+  },
+  "violacein-biosynthesis": {
+   "entities": [],
+   "how": "",
+   "reviewed": false
+  },
+  "vitamin-B1-metabolism": {
+   "entities": [
+    "thiamine_metabolism"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "vitamin-B12-metabolism": {
+   "entities": [
+    "vitamin_b12_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "vitamin-B6-metabolism": {
+   "entities": [
+    "vitamin_b6_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "vitamin-D3-metabolism": {
+   "entities": [
+    "vitamin_d_metabolism"
+   ],
+   "how": "known",
+   "reviewed": false
+  },
+  "vitamin-E-metabolism": {
+   "entities": [
+    "vitamin_e_metabolism"
+   ],
+   "how": "exact",
+   "reviewed": false
+  },
+  "vitamin-K-epoxide-cycle": {
+   "entities": [
+    "cofactor_vitamin_metabolism"
+   ],
+   "how": "keyword",
+   "reviewed": false
+  },
+  "vitamin-K-metabolism": {
+   "entities": [
+    "menaquinone_biosynthesis"
+   ],
+   "how": "known",
+   "reviewed": false
+  }
+ }
+}

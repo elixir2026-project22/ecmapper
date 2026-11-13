@@ -11,6 +11,10 @@ which metabolites need a second node. Return ONE JSON fragment with these keys:
   with the zone that forms the central spine).
 - `merges`: hub merges (rules in the recipes): merge the metabolites the subsystems share and place the zones so that
   merge partners are neighbours. Use only ids from the MERGE CANDIDATES table.
+- Arrangement: the DATA section ARRANGEMENT says where the subsystems usually sit relative to each other on published maps.
+  Follow `hard` and `strong` directions; follow `medium` ones unless they cost crossings; `weak` ones are hints. Draw the
+  cycles as given there; the attachments name the metabolites at which subsystems join (merge candidates). Where the data
+  gives no direction, use the defaults of the recipes.
 - `splits`: only if a metabolite is needed twice inside a zone.
 - `notes`: your arrangement in two or three sentences.
 
@@ -26,3 +30,6 @@ Do not output `layouts` or `titles` yet; they come in the next turns.
 
 ### DATA: merge candidates (same metabolite drawn as several primary nodes; `hub` = in the default hub list)
 {{MERGE_TABLE}}
+
+### DATA: ARRANGEMENT of the subsystems (placement catalogue; "X is below Y" = X gets the larger y)
+{{DIRECTIONS}}

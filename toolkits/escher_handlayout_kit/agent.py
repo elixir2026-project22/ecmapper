@@ -37,6 +37,7 @@ ap.add_argument('--curv', type=float, default=0.6); ap.add_argument('--curv-cand
 ap.add_argument('--max-refine', type=int, default=4); ap.add_argument('--max-retries', type=int, default=3)
 ap.add_argument('--max-turns', type=int, default=80); ap.add_argument('--chunk', type=int, default=40, help='max reactions per layout turn')
 ap.add_argument('--resume', action='store_true')
+ap.add_argument('--taxa', default='all', help='organism group for the placement catalogue (all, bacteria, plants, animals, fungi, ...)')
 ap.add_argument('--seed-spec', help='JSON spec (fragment) to start from, e.g. your own zones/plan/merges - or a complete spec; the model only fills in what is missing')
 a = ap.parse_args()
 
@@ -54,7 +55,7 @@ else:
         llm = backends.Anthropic(a.model, key, a.base_url or 'https://api.anthropic.com', a.temperature, a.max_tokens)
 cands = tuple(float(x) for x in a.curv_candidates.split(',') if x.strip())
 sess = Session(a.input, a.out, llm, curv=a.curv, curv_candidates=cands, max_refine=a.max_refine, max_retries=a.max_retries,
-               max_turns=a.max_turns, chunk=a.chunk, resume=a.resume,
+               max_turns=a.max_turns, chunk=a.chunk, resume=a.resume, taxa=a.taxa,
                seed_spec=read_json(a.seed_spec) if a.seed_spec else None)
 try:
     s = sess.run()

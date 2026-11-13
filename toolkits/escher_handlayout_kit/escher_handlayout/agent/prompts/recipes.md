@@ -35,6 +35,8 @@ Rearrange whole subsystems so that shared metabolites are neighbours; the draft 
 - The same reaction drawn in several subsystems: merge its metabolites into the host pathway (the copy becomes a lane).
 - Planarity: if two merged links would close a cycle whose chords interleave (PEP->OAA and malate->pyruvate around the TCA
   ring), keep one copy (e.g. an anaplerotic malate next to pyruvate) instead of accepting a crossing.
+- The PLAN turn shows the usual arrangement of the map's subsystems (DATA section ARRANGEMENT, from a catalogue of published
+  maps): hard/strong directions are followed, medium ones unless they cost crossings. The defaults below apply where it is silent.
 - Central carbon metabolism default: glycolysis as the central vertical column; pyruvate -> acetyl-CoA below it; TCA ring below that
   (so glycolysis is above TCA); pentose phosphate pathway on one side of upper glycolysis, with the Entner-Doudoroff pathway
   branching at 6-phosphogluconate; the PEP/pyruvate/oxaloacetate block on the side between glycolysis and TCA; fermentations beside

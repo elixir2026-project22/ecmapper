@@ -60,7 +60,9 @@ def analyse(path):
         t = nearest_title(rids)
         out['components'].append(dict(index=ci, n_reactions=len(rids), suggested_subsystem=titles[t]['text'] if t else None,
                                       reactions=[R[r]['bigg_id'] for r in sorted(rids, key=int)],
-                                      bbox=[round(min(xs)), round(min(ys)), round(max(xs)), round(max(ys))]))
+                                      bbox=[round(min(xs)), round(min(ys)), round(max(xs)), round(max(ys))],
+                                      primary_metabolites=sorted({N[n]['bigg_id'] for rid in rids for n in rx[rid]['nodes']
+                                                                  if N[n]['node_type'] == 'metabolite' and N[n]['node_is_primary']})))
         for r in rids: rid_comp[r] = ci
     # reactions
     def lab(n): return N[n]['bigg_id'] + (f'[{n}]' if N[n]['node_is_primary'] else '')  # primary: with its node id
@@ -123,4 +125,18 @@ def to_markdown(a):
         L.append(f"| {c['bigg_id']} | {c['nodes']} | {c['components']} | {'yes' if c['in_default_hub_list'] else ''} | {', '.join(c['reactions'][:10])} |")
     L += ['', '## Exit labels -> nearest primary node', '']
     L += [f"- `{e['label']}` -> node {e['node']}" for e in a['exit_label_assignment']]
+    ld = a.get('layout_directions')
+    if ld:
+        L += ['', '## Arrangement of the subsystems (placement catalogue; complete brief: `arrangement.md`)', '',
+              'Where the subsystems usually sit relative to each other on published maps ("above" = smaller y). Follow hard/strong directions, '
+              'medium ones unless they cost crossings; the build report names the violated ones (placement penalty).', '']
+        L += [f"- {k}: {', '.join(v['entities']) or '(no catalogue entity)'}" for k, v in ld['subsystems'].items()]
+        strong = [d for d in ld['subsystem_directions'] if d['strength'] in ('hard', 'strong', 'medium')]
+        if strong:
+            L += ['', '| subsystem | is | strength |', '|---|---|---|']
+            for d in strong:
+                w = d['direction'].replace('_', ' ')
+                L.append(f"| {d['target']} | {w + ' ' + d['anchor'] if w in ('above', 'below') else w + ' of ' + d['anchor']} | {d['strength']} |")
+        if ld['cycles']: L += [''] + ld['cycles']
+        if ld['attachments']: L += ['', 'Attachments (merge candidates):'] + ld['attachments']
     return '\n'.join(L) + '\n'

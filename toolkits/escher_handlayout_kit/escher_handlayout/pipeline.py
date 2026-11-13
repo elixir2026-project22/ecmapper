@@ -6,6 +6,7 @@ from . import pack as packmod
 from . import render as rendermod
 from . import qa
 from .inspect_map import analyse, to_markdown
+from . import directions as dirmod
 
 
 from .declspec import SpecError, load_spec_file, compile_spec, validate_schema
@@ -57,7 +58,7 @@ def content_bbox(L):
     return packmod.bbox_of(p, b)
 
 
-def build(input_path, spec_path, out_dir, curv=0.6, do_pack=True, png=True, png_scale=None, name=None, allow_python=False):
+def build(input_path, spec_path, out_dir, curv=0.6, do_pack=True, png=True, png_scale=None, name=None, allow_python=False, taxa='all'):
     os.makedirs(out_dir, exist_ok=True)
     name = name or os.path.splitext(os.path.basename(input_path))[0] + '_handlayout'
     L = Layout(input_path)
@@ -73,6 +74,7 @@ def build(input_path, spec_path, out_dir, curv=0.6, do_pack=True, png=True, png_
         rep['packing'] = [dict(piece=t, dx=dx, dy=dy) for t, dx, dy in info]
         rep['main_component_bbox'] = [round(v) for v in mbb]
     bb = content_bbox(L)
+    rep['placement'] = dirmod.check_layout(L, taxa)       # None without the placement catalogue / without matching subsystems
     L.canvas_bbox = (bb[0] - 150, bb[1] - 150, bb[2] + 150, bb[3] + 150)
     out_json = os.path.join(out_dir, name + '.json')
     rendermod.export_json(L, out_json)
@@ -113,14 +115,24 @@ def report_md(rep):
     if m['labels_on_lines_list']: L += ['Labels on lines: ' + ', '.join(m['labels_on_lines_list']), '']
     if m['labels_on_nodes_list']: L += ['Labels on nodes: ' + ', '.join(m['labels_on_nodes_list']), '']
     if m['label_label_overlaps_list']: L += ['Overlapping labels: ' + '; '.join(f'{a} / {b}' for a, b in m['label_label_overlaps_list'][:15]), '']
+    pl = rep.get('placement')
+    if pl:
+        L += ['## Placement of the subsystems (layout_directions catalogue)', '',
+              f"- violated directions (hard/strong/medium): **{len(pl['violations'])}** of {pl['checked']} checked | placement penalty: **{pl['penalty']}**"]
+        L += [f'  - {v}' for v in pl['violations'][:25]] + ['']
     if rep.get('removed_text_labels'): L += ['## Removed unused title labels of the input map', ''] + [f'- {x}' for x in rep['removed_text_labels']] + ['']
     if rep.get('packing'): L += ['## Packing', ''] + [f"- {p['piece']}: moved by ({p['dx']}, {p['dy']})" for p in rep['packing']]
     return '\n'.join(L) + '\n'
 
 
-def inspect(input_path, out_dir):
+def inspect(input_path, out_dir, taxa='all'):
     os.makedirs(out_dir, exist_ok=True)
     a = analyse(input_path)
+    cat = dirmod.Catalogue.load()
+    if cat is not None:
+        arr = dirmod.Arrangement(dirmod.subsystems_of_analysis(a), cat, taxa)
+        a['layout_directions'] = arr.to_dict()
+        write_text(os.path.join(out_dir, 'arrangement.md'), arr.text())
     write_json(os.path.join(out_dir, 'analysis.json'), a)
     write_text(os.path.join(out_dir, 'analysis.md'), to_markdown(a))
     return a
