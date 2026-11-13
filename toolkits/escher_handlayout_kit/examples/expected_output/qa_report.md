@@ -28,6 +28,7 @@ Detached pieces that draw a metabolite of the main map again (merge it, or keep 
 - ok    labels on nodes: 0 (target: 0)
 - ok    label overlaps: 0 (target: at most 2)
 - ok    close nodes: 0 (target: 0)
+- ok    unconnected subsystems: 0 (target: 0)
 - MISS  violated hard/strong directions: 5 (target: 0)
 - look  detached pieces: 2 (target: 0)
 

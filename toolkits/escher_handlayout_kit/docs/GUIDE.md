@@ -61,7 +61,10 @@ is not among the strongest. Two commands make the same work a series of small ch
 - `patch` merges a spec fragment into the spec file, with the rules of the chat agent (blocks by `block`, nodes by id,
   reactions by `id`; a reaction entry replaces the old one completely). A fragment that violates the schema or makes a
   new problem (unknown id, wrong name, a merge of different metabolites ...) is rejected and the file stays as it was.
-  A fragment with `merges` also removes the coordinates of the merged `dups`. The file is rewritten in a compact form
+  A fragment with `merges` also removes the coordinates of the merged `dups`; a merge is undone with
+  `{"keep": "604", "remove": true}` or by sending it with fewer `dups`, and the nodes that are copies again get
+  coordinates beside the kept node. A node put on a ring loses its coordinates in `nodes`; the title of a subsystem
+  moves with the `origin` of its block. The file is rewritten in a compact form
   (one reaction per line) that is easy to read and to edit by hand.
 
 `patch` and `check-spec` also print warnings for specs that are formally right but break a rule (`escher_handlayout/lint.py`):
@@ -164,20 +167,26 @@ used      : componentwise (1-t)*gentle + t*strong ; lanes k=(0.32+0.10t)*length 
 | primary_nodes_closer_than_70 | nodes nearly on top of each other | fix coordinates |
 | bbox_area | size of the final rectangle | compact the main component; the packing already removes the pieces' share |
 | placement penalty | subsystems (or hub metabolites) not where the placement catalogue puts them (section 5a) | move the block (`origin`) - only if that does not cost crossings; medium directions may stay violated |
+| unconnected subsystems | subsystems without a reaction in the main component that draw a metabolite (no cofactor) another piece draws too | move the block next to its partner and merge the metabolite; the build names the merge |
 | detached pieces | pieces beside the main component that draw a primary metabolite of it again (cofactors do not count) | merge the metabolite (`merges`), or keep the copy on purpose |
 
 `build` turns these numbers into a decision (`escher_handlayout/score.py`), on the screen and in `qa_report.md`:
 
 - the **score** `1000 x validation errors + crossings + 3 x labels on lines + 6 x labels on nodes + 4 x label overlaps
-  + 10 x close nodes + 20 x detached pieces + placement penalty`;
+  + 10 x close nodes + 40 x unconnected subsystems + 20 x detached pieces + placement penalty`;
 - the **targets**, each `ok` or `MISS`: validation errors 0, crossings at most 0.1 x reactions, labels on lines at most
-  max(6, 7 % of the reactions), labels on nodes 0, label overlaps at most 2, close nodes 0, no violated hard or strong
-  direction; detached pieces are shown as `look`, because a copy can be deliberate;
+  max(6, 7 % of the reactions), labels on nodes 0, label overlaps at most 2, close nodes 0, unconnected subsystems 0,
+  no violated hard or strong direction; detached pieces are shown as `look`, because a copy can be deliberate;
 - the history of the job: every build is recorded in `builds.json` / `builds.md` beside the `--out` folder (`--history
   FILE`, `--no-history`), a rebuild into the same folder replaces its entry;
-- one last line that says what to do: `NOT FINISHED ... Fix first: <the missed target that costs most, its offenders,
-  the remedy>`, `NO IMPROVEMENT` after two changed versions of the spec that did not beat the best score, `STOP` after
-  `--max-builds` (8) changed versions, `TARGETS MET`.
+- one last line that says what to do: `NOT FINISHED ... Fix first: <the unconnected subsystems with the merge that
+  connects each, else the missed target that costs most, its offenders, the remedy>`, `NO IMPROVEMENT` after two changed versions of the spec that did not beat the best score, `STOP` after
+  `--max-builds` (16) changed versions, `TARGETS MET`.
+
+Packing and unconnected subsystems: the packer moves the small disconnected pieces into free space, but the largest
+piece of a subsystem that is not connected yet (and shares a metabolite other than a cofactor with another piece) is a
+block of its own and stays where the spec puts it, with the subsystem's title, unless it overlaps something there. So
+the arrangement of a start spec survives the build, and the placement check judges the positions the spec gives.
 
 The chat agent (`agent.py`) uses the same score; its own crossing target is 0.35 x reactions. The bundled example
 misses the crossing target of 0.1 (26 crossings for 91 reactions) and 5 strong directions: it predates both.

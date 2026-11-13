@@ -72,6 +72,36 @@ def detached_pieces(L):
     return out
 
 
+def unconnected_subsystems(L, merges=()):
+    """The subsystems (zones) without a reaction in the main component although they draw a primary metabolite (no
+    cofactor) that another piece draws too: they still have to be connected by a merge.
+    [dict(zone, shares=[dict(metabolite, node, keep, dups, zone)])]: merging `node` into `keep` (a node of the main
+    component if it has the metabolite, else of another subsystem `zone`) connects it; `dups` is what the merge entry
+    of `keep` must list then (its former dups and `node`)."""
+    comps = packmod.components(L)
+    if not comps: return []
+    def carbon(nodes): return {L.N[n]['bigg_id']: n for n in sorted(nodes, key=int) if L.N[n]['node_type'] == 'metabolite'
+                               and L.N[n]['node_is_primary'] and base(L.N[n]['bigg_id']) not in COFACTORS}
+    zone_of = lambda c: L.rxn_zone[sorted(c[0], key=int)[0]]
+    main = carbon(comps[0][1]); zones_main = {L.rxn_zone[r] for r in comps[0][0]}
+    old = {m['keep']: list(m.get('dups', [])) for m in merges}
+    user = {}                                          # node -> subsystem of a reaction that uses it
+    for rid in sorted(L.info, key=int):
+        for _, n in L.info[rid]['subs'] + L.info[rid]['prods']: user.setdefault(n, L.rxn_zone.get(rid))
+    out = {}
+    for c in comps[1:]:
+        z = zone_of(c)
+        if z in zones_main: continue
+        mine = carbon(c[1]); sh = []
+        for other, oz in [(main, zone_of(comps[0]))] + [(carbon(o[1]), zone_of(o)) for o in comps[1:] if o is not c and zone_of(o) != z]:
+            for m in mine:
+                if m in other and m not in [s['metabolite'] for s in sh]:
+                    k = other[m]; sh.append(dict(metabolite=m, node=mine[m], keep=k, dups=old.get(k, []) + [mine[m]], zone=user.get(k) or oz, main=other is main))
+        if sh: out.setdefault(z, []).extend(s for s in sh if s['metabolite'] not in [x['metabolite'] for x in out.get(z, [])])
+    # first the subsystems that can join the main component directly
+    return sorted([dict(zone=z, shares=sorted(sh, key=lambda s: not s['main'])) for z, sh in out.items()], key=lambda u: not u['shares'][0]['main'])
+
+
 def build(input_path, spec_path, out_dir, curv=0.6, do_pack=True, png=True, png_scale=None, name=None, allow_python=False, taxa='all'):
     os.makedirs(out_dir, exist_ok=True)
     name = name or os.path.splitext(os.path.basename(input_path))[0] + '_handlayout'
@@ -89,6 +119,9 @@ def build(input_path, spec_path, out_dir, curv=0.6, do_pack=True, png=True, png_
         rep['main_component_bbox'] = [round(v) for v in mbb]
     bb = content_bbox(L)
     rep['detached'] = detached_pieces(L)
+    try: merges = (spec_path if isinstance(spec_path, dict) else load_spec_file(spec_path)).get('merges', []) if not str(spec_path).endswith('.py') else []
+    except Exception: merges = []
+    rep['unconnected'] = unconnected_subsystems(L, merges)
     rep['placement'] = dirmod.check_layout(L, taxa)       # None without the placement catalogue / without matching subsystems
     L.canvas_bbox = (bb[0] - 150, bb[1] - 150, bb[2] + 150, bb[3] + 150)
     out_json = os.path.join(out_dir, name + '.json')
@@ -130,6 +163,8 @@ def report_md(rep):
     if m['labels_on_lines_list']: L += ['Labels on lines: ' + ', '.join(m['labels_on_lines_list']), '']
     if m['labels_on_nodes_list']: L += ['Labels on nodes: ' + ', '.join(m['labels_on_nodes_list']), '']
     if m['label_label_overlaps_list']: L += ['Overlapping labels: ' + '; '.join(f'{a} / {b}' for a, b in m['label_label_overlaps_list'][:15]), '']
+    if rep.get('unconnected'):
+        L += ['Subsystems not connected to the rest yet (merge one shared metabolite each): ' + scoremod.offenders(rep, 'unconnected subsystems'), '']
     if rep.get('detached'):
         L += ['Detached pieces that draw a metabolite of the main map again (merge it, or keep the copy on purpose): '
               + '; '.join(f"{', '.join(d['reactions'][:6])} (shares {', '.join(d['shares'])})" for d in rep['detached']), '']

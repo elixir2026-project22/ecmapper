@@ -81,8 +81,9 @@ SCHEMA = {
                   'properties': {'alias': {'type': 'string', 'pattern': _ALIAS},
                                  'node': {'type': 'string', 'pattern': r'^\d{1,9}$'},
                                  'reaction': {'type': 'string', 'pattern': r'^\d{1,9}$'}}},
-        'merge': {'type': 'object', 'additionalProperties': False, 'required': ['keep', 'dups'],
-                  'properties': {'keep': {'$ref': '#/$defs/nodeRef'}, 'dups': _REFS(30)}},
+        'merge': {'type': 'object', 'additionalProperties': False, 'required': ['keep'],
+                  'properties': {'keep': {'$ref': '#/$defs/nodeRef'}, 'remove': {'type': 'boolean'},
+                                 'dups': {'type': 'array', 'maxItems': 30, 'items': {'$ref': '#/$defs/nodeRef'}}}},
         'smallTitle': {'type': 'object', 'additionalProperties': False, 'required': ['reaction', 'zone', 'text'],
                        'properties': {'reaction': {'type': 'string', 'pattern': _BIGG}, 'zone': {'type': 'string', 'pattern': _ZONE},
                                       'text': {'type': 'string', 'maxLength': 100, 'pattern': _TEXT},
@@ -267,7 +268,9 @@ def merge_fragment(spec, frag):
 
     zones / splits / merges / small_titles / layouts / rings / reactions are merged by key (name, alias, keep, reaction,
     block, ring name, reaction id); dictionaries (plan, titles, nodes, defaults) are updated key by key;
-    {"id": "..", "remove": true} deletes a reaction entry, "remove_nodes" deletes node coordinates."""
+    {"id": "..", "remove": true} deletes a reaction entry, "remove_nodes" deletes node coordinates,
+    {"keep": "..", "remove": true} deletes a merge. A node that the fragment puts on a ring loses its coordinates in
+    `nodes`; the title of a subsystem moves with the origin of its (only) block unless the fragment sets the title."""
     out = copy.deepcopy(spec)
     out.setdefault('spec_version', 1)
     for k in ('notes',):
@@ -283,8 +286,13 @@ def merge_fragment(spec, frag):
     if 'merges' in frag:
         cur = out.setdefault('merges', []); idx = {e['keep']: i for i, e in enumerate(cur)}
         for e in frag['merges']:
-            if e['keep'] in idx: cur[idx[e['keep']]] = copy.deepcopy(e)
-            else: idx[e['keep']] = len(cur); cur.append(copy.deepcopy(e))
+            if e.get('remove') or not e.get('dups'):
+                if e['keep'] in idx: cur[idx[e['keep']]] = None
+                continue
+            e = {k: copy.deepcopy(v) for k, v in e.items() if k != 'remove'}
+            if e['keep'] in idx and cur[idx[e['keep']]] is not None: cur[idx[e['keep']]] = e
+            else: idx[e['keep']] = len(cur); cur.append(e)
+        out['merges'] = [e for e in cur if e is not None]
     for sect in ('plan', 'titles'):
         if sect in frag:
             cur = out.setdefault(sect, {})
@@ -299,6 +307,10 @@ def merge_fragment(spec, frag):
                 nb['reactions'] = [r for r in nb.get('reactions', []) if not r.get('remove')]
                 idx[fb['block']] = len(blocks); blocks.append(nb); continue
             b = blocks[idx[fb['block']]]
+            if 'origin' in fb and 'origin' in b and b.get('zone') in out.get('titles', {}) and b.get('zone') not in frag.get('titles', {}) \
+                    and sum(1 for x in blocks if x.get('zone') == b.get('zone')) == 1:
+                t = out['titles'][b['zone']]
+                out['titles'][b['zone']] = [t[0] + fb['origin'][0] - b['origin'][0], t[1] + fb['origin'][1] - b['origin'][1]]
             for k in ('zone', 'origin'):
                 if k in fb: b[k] = copy.deepcopy(fb[k])
             nodes = b.setdefault('nodes', {})
@@ -311,6 +323,9 @@ def merge_fragment(spec, frag):
                 for r in fb['rings']:
                     if r['name'] in ri: rings[ri[r['name']]] = copy.deepcopy(r)
                     else: ri[r['name']] = len(rings); rings.append(copy.deepcopy(r))
+                    for x in blocks:                       # a ring node has its position from the ring
+                        for k in r['nodes']:
+                            if k not in fb.get('nodes', {}): x.get('nodes', {}).pop(k, None)
             if 'reactions' in fb:
                 rx = b.setdefault('reactions', []); xi = {r['id']: i for i, r in enumerate(rx)}
                 for r in fb['reactions']:
@@ -369,7 +384,7 @@ def compile_spec(spec, L, partial=False):
         alias[s['alias']] = L.split(s['node'], s['reaction'])
     seen_merge = set()
     for m in spec.get('merges', []):
-        keep = ref(m['keep'], 'merge keep'); dups = [ref(d, f"merge into {m['keep']}") for d in m['dups']]
+        keep = ref(m['keep'], 'merge keep'); dups = [ref(d, f"merge into {m['keep']}") for d in m.get('dups', [])]
         if keep is None or any(d is None for d in dups): continue
         ids = [keep] + dups
         if len(set(ids)) != len(ids) or seen_merge & set(ids): P.append(f"merge {m['keep']}: ids repeated or already used in another merge"); continue

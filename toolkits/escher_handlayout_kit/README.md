@@ -30,7 +30,7 @@ agent.py                   chat-based agent: model-agnostic, JSON in/out only (d
 run.py                     CLI: inspect | start | patch | check-spec | build | validate | directions
 PROMPT.md                  prompt for a coding agent with a code sandbox (changes the start spec with patches, follows the build's verdict)
 ecmapper_toolkit.json      how ecmapper's AI chat runs the kit (allowed commands, notes)
-selftest.py                quick regression test      tests/run_tests.py   full test suite (37 tests, ~100 s, offline)
+selftest.py                quick regression test      tests/run_tests.py   full test suite (38 tests, ~100 s, offline)
 requirements.txt           numpy, matplotlib, Pillow
 schema/layout_spec.schema.json    JSON Schema of the layout spec
 escher_handlayout/

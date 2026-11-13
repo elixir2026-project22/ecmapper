@@ -8,7 +8,7 @@ from ._io import read_json, write_json, write_text
 
 #: weight of each term of the score, in the order they are printed
 WEIGHTS = (('validation errors', 1000), ('crossings', 1), ('labels on lines', 3), ('labels on nodes', 6), ('label overlaps', 4),
-           ('close nodes', 10), ('detached pieces', 20), ('placement penalty', 1))
+           ('close nodes', 10), ('unconnected subsystems', 40), ('detached pieces', 20), ('placement penalty', 1))
 #: what to change in the spec for a missed target (docs/GUIDE.md section 8)
 REMEDY = {
     'validation errors': 'read the ERROR lines of qa_report.md: usually a missing placement or a wrong merge',
@@ -18,6 +18,9 @@ REMEDY = {
     'labels on nodes': 'move the node or give its neighbours more room',
     'label overlaps': 'spread the two reactions apart (150 units or more) or change a cofactor `side`',
     'close nodes': 'two primary nodes are nearly on top of each other: correct their coordinates (merge them if they are one metabolite)',
+    'unconnected subsystems': 'connect ONE subsystem per build, the first one named: move its block (`origin`) next to the subsystem it shares the '
+                              'metabolite with, on the side analysis/arrangement.md says, and patch the named merge (the list of dups is complete: '
+                              'send it as it is). Then build. Do not tidy the inside of a block before all subsystems are connected',
     'detached pieces': 'merge the shared metabolite into the main map (`merges`), or keep the copy on purpose and say why in DECISIONS.md',
     'placement penalty': 'move the block (`origin`) where the direction says; a medium direction may stay violated if following it costs crossings',
 }
@@ -28,7 +31,8 @@ def terms(rep):
     m = rep['metrics']
     values = {'validation errors': len(rep['validation_errors']), 'crossings': m['line_crossings'], 'labels on lines': m['labels_on_lines'],
               'labels on nodes': m['labels_on_nodes'], 'label overlaps': m['label_label_overlaps'],
-              'close nodes': m['primary_nodes_closer_than_70'], 'detached pieces': len(rep.get('detached') or []),
+              'close nodes': m['primary_nodes_closer_than_70'], 'unconnected subsystems': len(rep.get('unconnected') or []),
+              'detached pieces': len(rep.get('detached') or []),
               'placement penalty': (rep.get('placement') or {}).get('penalty', 0)}
     return [(name, values[name], w) for name, w in WEIGHTS]
 
@@ -49,7 +53,7 @@ def targets(rep):
     rows = [('validation errors', len(rep['validation_errors']), 0), ('crossings', m['line_crossings'], int(0.1 * n)),
             ('labels on lines', m['labels_on_lines'], int(max(6, 0.07 * n))), ('labels on nodes', m['labels_on_nodes'], 0),
             ('label overlaps', m['label_label_overlaps'], 2), ('close nodes', m['primary_nodes_closer_than_70'], 0),
-            ('violated hard/strong directions', strong, 0)]
+            ('unconnected subsystems', len(rep.get('unconnected') or []), 0), ('violated hard/strong directions', strong, 0)]
     out = [dict(name=k, value=v, limit=lim, ok=v <= lim) for k, v, lim in rows]
     out.append(dict(name='detached pieces', value=len(rep.get('detached') or []), limit=0, ok=None if rep.get('detached') else True))
     return out
@@ -66,6 +70,12 @@ def offenders(rep, name):
     if name == 'labels on lines': return ', '.join(m['labels_on_lines_list'][:10])
     if name == 'labels on nodes': return ', '.join(m['labels_on_nodes_list'][:10])
     if name == 'label overlaps': return '; '.join(f'{a} / {b}' for a, b in m['label_label_overlaps_list'][:6])
+    if name == 'unconnected subsystems':
+        def one(u):
+            s = u['shares'][0]; more = ', '.join(x['metabolite'] for x in u['shares'][1:4])
+            return (f"{u['zone']} (shares {s['metabolite']} with {s['zone']}: " + '{"keep": "%s", "dups": [%s]}' % (s['keep'], ', '.join('"%s"' % d for d in s['dups']))
+                    + (f'; also shares {more}' if more else '') + ')')
+        return '; '.join(one(u) for u in rep['unconnected'][:4]) + (f" ... and {len(rep['unconnected']) - 4} more" if len(rep['unconnected']) > 4 else '')
     if name == 'detached pieces': return '; '.join(f"{', '.join(d['reactions'][:4])} (shares {', '.join(d['shares'][:4])})" for d in rep['detached'][:6])
     if name in ('violated hard/strong directions', 'placement penalty'): return '; '.join((rep.get('placement') or {}).get('violations', [])[:5])
     if name == 'validation errors': return '; '.join(rep['validation_errors'][:3])
@@ -85,7 +95,7 @@ def first_fix(rep):
     weight = dict(WEIGHTS); weight['violated hard/strong directions'] = 5
     missed = [t for t in targets(rep) if t['ok'] is not True]
     if not missed: return None
-    t = max(missed, key=lambda t: (t['ok'] is False, t['value'] * weight[t['name']]))
+    t = max(missed, key=lambda t: (t['ok'] is False, t['name'] == 'unconnected subsystems', t['value'] * weight[t['name']]))     # connect first, tidy afterwards
     key = 'placement penalty' if t['name'].startswith('violated') else t['name']
     who = offenders(rep, t['name'])
     return f"{t['name']} ({t['value']})" + (f': {who}' if who else '') + f'. Remedy: {REMEDY[key]}.'
@@ -109,12 +119,12 @@ def record(history_path, rep, out_dir, spec_path):
     write_json(history_path, hist)
     names = [name for name, _ in WEIGHTS]
     rows = ['| build | curvature | ' + ' | '.join(names) + ' | score | targets |', '|---|---|' + '---|' * (len(names) + 2)]
-    rows += [f"| {h['out']} | {h['curvature']} | " + ' | '.join(str(h['terms'][n]) for n in names) + f" | {h['score']} | {'met' if h['targets_met'] else 'missed'} |" for h in hist]
+    rows += [f"| {h['out']} | {h['curvature']} | " + ' | '.join(str(h['terms'].get(n, 0)) for n in names) + f" | {h['score']} | {'met' if h['targets_met'] else 'missed'} |" for h in hist]
     write_text(os.path.splitext(history_path)[0] + '.md', '# Builds\n\n' + '\n'.join(rows) + '\n')
     return hist
 
 
-def verdict(hist, rep, max_specs=8):
+def verdict(hist, rep, max_specs=16):
     """What to do after the newest build of `hist`: (state, text). States: finished, limit, stalled, go_on."""
     met = [h for h in hist if h['targets_met']]
     best = min(met or hist, key=lambda h: (h['score'], hist.index(h)))
@@ -131,4 +141,4 @@ def verdict(hist, rep, max_specs=8):
     if stalled:
         return 'stalled', (f'NO IMPROVEMENT in the last two versions of the spec (best: {where}). Go back to the spec of the best build. If you have not '
                            'tried another arrangement yet (swap or mirror two neighbouring subsystems), try one; otherwise validate the best map and hand it in.')
-    return 'go_on', f'NOT FINISHED ({len(versions) - 1} of {max_specs} changes used; best so far: {where}). Fix first: {fix}'
+    return 'go_on', f'NOT FINISHED, do not hand in yet ({len(versions) - 1} of {max_specs} changes used; best so far: {where}). Fix first: {fix}'

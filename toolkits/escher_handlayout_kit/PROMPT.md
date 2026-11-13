@@ -68,7 +68,8 @@ python run.py start   --input INPUT_MAP --out SPEC
 python run.py build   --input INPUT_MAP --spec SPEC --out OUT_DIR/build_0 --name MAP_NAME --no-png
 ```
 
-`build_0` is the draft as it is: the score to beat. Then read, completely:
+`build_0` is the draft as it is: every subsystem is a separate piece, nothing is connected yet. Its last line
+already names the subsystems to connect and the merge for each. Then read, completely:
 
 - `OUT_DIR/analysis/arrangement.md`: where the subsystems go relative to each other, and where they attach;
 - in `OUT_DIR/analysis/analysis.md` the sections *Merge candidates* and *Traps / hints*;
@@ -104,12 +105,20 @@ also carries warnings (long lines, cofactor merges, nodes on top of each other):
 (`--fragment FILE` instead of `--json` for a long patch; you may also edit `SPEC` directly and run
 `python run.py check-spec --input INPUT_MAP --spec SPEC`.)
 
-Work in this order, and build after each of the three:
+Work in this order:
 
-1. **Arrangement**: the `origin` of every block as planned (this moves whole subsystems).
-2. **Merges**: one hub at a time. `patch` removes the coordinates of the `dups`; the kept node stays where it is, so
-   give it a position between the blocks it now joins if needed.
-3. **Details**: the offenders the build names (single nodes, `side`, `shift`, `dist` of a reaction), a cycle as a
+1. **Arrangement**: the `origin` of every block as planned (this moves whole subsystems; the title of the subsystem
+   moves with it). Build once. A block that is not connected yet stays where its `origin` puts it.
+2. **Connect the subsystems, one per build.** The build's last line names the subsystems that are still separate and,
+   for each, a merge that connects it (`{"keep": ..., "dups": [...]}`, complete: send it as it is). For the first one
+   named: move its block so that its copy of the metabolite lies next to the kept node (the line must stay short: the
+   patch warns about a long line), patch the merge, build. `patch` removes the coordinates of the `dups`; the kept
+   node stays where it is, so give it a position between the two blocks if needed. Repeat until the build reports
+   `unconnected subsystems: 0`. **A map whose subsystems are not connected is not a result**, whatever its crossings.
+   To undo a merge send `{"merges": [{"keep": "604", "remove": true}]}`, or the entry with fewer `dups`: the nodes
+   that are copies again get coordinates beside the kept node, and the answer names them.
+3. **Details**, only when everything is connected: the offenders the build names (single nodes, `side`, `shift`,
+   `dist` of a reaction), a cycle as a
    `rings` entry, parallel reactions as lanes. If a subsystem is drawn badly in the draft, redraw it: send its block
    with new coordinates for all its nodes (recipes: `docs/GUIDE.md` section 4,
    `specs/iml1515_central_carbon.layout.json` is a worked example of another map).
@@ -129,7 +138,8 @@ that says what to do**:
 - `NO IMPROVEMENT ...` - go back to the spec of the best build and try one other arrangement, or finish.
 - `TARGETS MET ...` or `STOP ...` - go to step F.
 
-Do not compute the score yourself and do not stop on your own judgement: the line decides. A `look` at *detached
+Do not compute the score yourself and do not stop on your own judgement: the line decides. `NOT FINISHED` means
+exactly that: go on, do not finalise and do not hand in. Build with the default packing (no `--no-pack`). A `look` at *detached
 pieces* means a piece beside the main map draws a metabolite of the main map again: merge it, or keep the copy on
 purpose and write one line into `DECISIONS.md`. The table of all builds is `OUT_DIR/builds.md`. If a change made
 the score worse, undo it with a patch before you go on.
@@ -186,7 +196,7 @@ be nicer.
 Targets (the build checks them): validation errors 0; crossings at most 0.1 x reactions; labels on lines at most
 max(6, 7 % of reactions); labels on nodes 0; overlapping labels at most 2; primary nodes closer than 70 units: 0; no
 violated `hard` or `strong` direction. Score = 1000 x validation errors + crossings + 3 x labels on lines + 6 x labels
-on nodes + 4 x label overlaps + 10 x close nodes + 20 x detached pieces + placement penalty.
+on nodes + 4 x label overlaps + 10 x close nodes + 40 x unconnected subsystems + 20 x detached pieces + placement penalty.
 
 ## 6. Deliverables (all in OUT_DIR)
 

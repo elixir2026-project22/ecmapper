@@ -25,7 +25,7 @@ b.add_argument('--name'); b.add_argument('--png-scale', type=float); b.add_argum
 b.add_argument('--unsafe-python-spec', action='store_true', help='allow a .py spec (executes code!)')
 b.add_argument('--history', help='history file of the builds (default: builds.json beside the --out folder)')
 b.add_argument('--no-history', action='store_true', help='neither record this build nor say what to do next')
-b.add_argument('--max-builds', type=int, default=8, help='changed versions of the spec after which the build says STOP')
+b.add_argument('--max-builds', type=int, default=16, help='changed versions of the spec after which the build says STOP')
 k = sub.add_parser('check-spec'); k.add_argument('--input', required=True); k.add_argument('--spec', required=True)
 k.add_argument('--partial', action='store_true', help='an unfinished spec: report what is wrong and what is still missing')
 s = sub.add_parser('start', help='write a complete spec of the draft map as it is'); s.add_argument('--input', required=True); s.add_argument('--out', required=True)
@@ -119,10 +119,25 @@ elif args.cmd == 'patch':
         if errs: raise SpecError('the fragment violates the schema:\n  ' + '\n  '.join(errs[:40]))
         old = load_spec_file(args.spec) if os.path.exists(args.spec) else {'spec_version': 1}
         new = merge_fragment(old, frag)
-        gone = {d for m in frag.get('merges', []) for d in m['dups']}      # a merged node has no coordinates of its own any more
+        gone = {d for m in frag.get('merges', []) for d in m.get('dups', []) if not m.get('remove')}      # a merged node has no coordinates of its own any more
         dropped = [d for b in new.get('layouts', []) for d in gone if b.get('nodes', {}).pop(d, None) is not None]
         for b in new.get('layouts', []): [b.get('node_names', {}).pop(d, None) for d in gone]
         P0, _ = compile_spec(old, Layout(args.input), partial=True)
+        # a node that is no dup any more is a copy again: it gets coordinates beside the node that stood for it
+        dups = lambda spec: {d: m['keep'] for m in spec.get('merges', []) for d in m.get('dups', [])}
+        back = {d: k for d, k in dups(old).items() if d not in dups(new) and d != k
+                and not any(d in b.get('nodes', {}) or any(d in r['nodes'] for r in b.get('rings', [])) for b in new.get('layouts', []))}
+        restored = []
+        if back:
+            L1 = Layout(args.input); compile_spec(new, L1, partial=True); raw = Layout(args.input)
+            for i, (d, k) in enumerate(sorted(back.items(), key=lambda kv: int(kv[0]) if kv[0].isdigit() else 0)):
+                users = {rid for rid, I in raw.info.items() if d in [n for _, n in I['subs'] + I['prods']]}
+                b = next((b for b in new.get('layouts', []) if users & {r['id'] for r in b.get('reactions', [])}), None)
+                if b is None or d not in raw.N: continue
+                kp = L1.pos.get(k) or L1.pos.get(dups(new).get(k)) or (raw.N[d]['x'], raw.N[d]['y'])
+                o = b.get('origin', [0, 0]); xy = [round(kp[0] + 160 - o[0]), round(kp[1] + 160 * (i + 1) - o[1])]
+                b.setdefault('nodes', {})[d] = xy; b.setdefault('node_names', {})[d] = raw.N[d]['bigg_id']
+                restored.append(f"{d} ({raw.N[d]['bigg_id']}) at {xy} in block '{b['block']}'")
         L = Layout(args.input); P, W = compile_spec(new, L, partial=True)
         fresh = [x for x in P if x not in P0]
         if fresh: raise SpecError('the fragment makes these problems:\n  ' + '\n  '.join(fresh[:60]))
@@ -132,6 +147,7 @@ elif args.cmd == 'patch':
     W += lint(new, L); todo = [r for r in L.R if r not in L.spec_done]
     print(f"patched {args.spec}: {len(L.spec_done)} of {len(L.R)} reactions placed" + (f' ({len(todo)} still to place)' if todo else ' (complete: build it)'))
     if dropped: print(f"  the coordinates of the merged nodes {', '.join(dropped)} were removed (the kept node stands for them)")
+    if restored: print('  no longer merged, so copies again, placed beside the node that stood for them (move them where they belong): ' + '; '.join(restored))
     [print('  problem:', x) for x in P]; [print('  warning:', w) for w in W]
 else:
     e, w = validate_files(args.input, args.output)

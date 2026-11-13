@@ -1,6 +1,7 @@
 """Pack disconnected sub-graphs into free space so the overall rectangle is minimal."""
 import numpy as np, math
 from .engine import bez, short
+from .inspect_map import base, COFACTORS
 
 CELL = 40
 def tb(x, y, anc, text, size, f=0.6):
@@ -84,19 +85,46 @@ def translate(L, rids, nodes, dx, dy):
             tl = L.m['text_labels'][tid]; x, y, a = tl['_lab']; tl['_lab'] = (x + dx, y + dy, a)
 
 def pack(L, margin_cells=3):
+    """Moves the small disconnected pieces into free space around the main component. The largest piece of a subsystem
+    that has no reaction in the main component is a subsystem block of its own: it stays where the spec puts it (with
+    the subsystem's title) unless it overlaps something there, so that the arrangement of the blocks survives while
+    the subsystems are not connected yet."""
     comps = components(L); main_r, main_n = comps[0]; small = comps[1:]
     L.extra_titles = []
-    # a zone without any reaction in the main component hands its title over to a small piece
     zones_main = {L.rxn_zone[r] for r in main_r}
-    for z in [z for z in L.titles if z not in zones_main]: L.titles.pop(z)
-    tboxes = [tb(x, y, 'start', L.zone_style[z]['title'], 48, 0.62) for z, (x, y) in L.titles.items()]
+    def zone_of(rids): return L.rxn_zone[sorted(rids, key=int)[0]]
+    def title_box(z): return [tb(L.titles[z][0], L.titles[z][1], 'start', L.zone_style[z]['title'], 48, 0.62)] if z in L.titles else []
+    def carbon(nodes): return {L.N[n]['bigg_id'] for n in nodes if L.N[n]['node_type'] == 'metabolite' and L.N[n]['node_is_primary']
+                               and base(L.N[n]['bigg_id']) not in COFACTORS}
+    cands = {}                                         # zone outside the main component -> its largest piece
+    for c in small:
+        z = zone_of(c[0])
+        if z not in zones_main and all(L.rxn_zone[r] == z for r in c[0]) and carbon(c[1]) & set().union(*[carbon(o[1]) for o in comps if o is not c]):
+            cands.setdefault(z, c)                     # (a piece that shares only cofactors with the rest is packed)
+    tboxes = [b for z in L.titles if z in zones_main for b in title_box(z)]
     mp, mb = elements(L, main_r, main_n, tboxes)
     mbb = bbox_of(mp, mb)
+    cel = {z: elements(L, c[0], c[1], title_box(z)) for z, c in cands.items()}
+    cbb = {z: bbox_of(*e) for z, e in cel.items()}
     pad = 3200
-    gx0, gy0 = mbb[0] - pad, mbb[1] - pad
-    W = int((mbb[2] - mbb[0] + 2 * pad) // CELL) + 2; H = int((mbb[3] - mbb[1] + 2 * pad) // CELL) + 2
+    far = lambda bb: bb[0] < mbb[0] - 4 * pad or bb[1] < mbb[1] - 4 * pad or bb[2] > mbb[2] + 4 * pad or bb[3] > mbb[3] + 4 * pad
+    for z in [z for z in cands if far(cbb[z])]: cands.pop(z)            # far away from everything: pack it
+    gbb = [min([mbb[i]] + [cbb[z][i] for z in cands]) for i in (0, 1)] + [max([mbb[i]] + [cbb[z][i] for z in cands]) for i in (2, 3)]
+    gx0, gy0 = gbb[0] - pad, gbb[1] - pad
+    W = int((gbb[2] - gbb[0] + 2 * pad) // CELL) + 2; H = int((gbb[3] - gbb[1] + 2 * pad) // CELL) + 2
     occ = raster(mp, mb, gx0, gy0, H, W, dil=margin_cells)
     cur = list(mbb)
+    fixed = []
+    for z, c in list(cands.items()):
+        own = raster(*cel[z], gx0, gy0, H, W, dil=0)
+        if (own & occ).any(): continue                 # it overlaps what is already there: pack it like a small piece
+        occ |= raster(*cel[z], gx0, gy0, H, W, dil=margin_cells); fixed.append(c)
+        cur = [min(cur[0], cbb[z][0]), min(cur[1], cbb[z][1]), max(cur[2], cbb[z][2]), max(cur[3], cbb[z][3])]
+        zones_main.add(z)
+    small = [c for c in small if not any(c is f for f in fixed)]
+    L.fixed_pieces = fixed
+    # a zone without a reaction in the main component or in a block that stays hands its title over to a small piece
+    for z in [z for z in L.titles if z not in zones_main]: L.titles.pop(z)
     info = []
     # prepare small comps with their titles
     items = []

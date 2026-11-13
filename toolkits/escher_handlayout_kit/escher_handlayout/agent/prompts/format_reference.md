@@ -57,4 +57,5 @@ Replies are *merged* into the current spec: blocks by `block`, reactions by `id`
 zones by `name`, merges by `keep`. So a correction only needs the entries that change. A reaction, zone, merge or
 ring entry that is sent replaces the old one completely (a reaction entry with only `side` loses its former `shift`):
 repeat the keys you keep.
-`"remove_nodes": ["id"]` (inside a block) deletes node coordinates, `{"id": "492", "remove": true}` deletes a reaction entry.
+`"remove_nodes": ["id"]` (inside a block) deletes node coordinates, `{"id": "492", "remove": true}` deletes a reaction entry,
+`{"keep": "604", "remove": true}` (in `merges`) deletes a merge. A node put on a ring loses its coordinates in `nodes`.

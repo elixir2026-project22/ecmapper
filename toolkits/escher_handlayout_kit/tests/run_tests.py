@@ -263,6 +263,44 @@ class TestStartPatchScore(unittest.TestCase):
             self.assertEqual(code, 0, msg=out); self.assertIn('score ', out); self.assertIn('MISS  crossings', out); self.assertIn('NOT FINISHED', out)
             self.assertTrue(os.path.exists(os.path.join(d, 'builds.md')))
 
+    def test_connecting_the_subsystems(self):
+        """Unconnected subsystems stay where the spec puts them, the build names the merge that connects each, a merge can be undone."""
+        import subprocess, re
+        from escher_handlayout import score as S
+        def run(*a):
+            p = subprocess.run([sys.executable, os.path.join(ROOT, 'run.py'), *a], capture_output=True, text=True, encoding='utf-8')
+            return p.returncode, p.stdout + p.stderr
+        def glc(rep):                                   # position of glycolysis' glucose in the built map
+            with open(rep['output_json']) as f: return [(n['x'], n['y']) for n in json.load(f)[1]['nodes'].values() if n.get('bigg_id') == 'glc__D_c']
+        with tempfile.TemporaryDirectory() as d:
+            spec = os.path.join(d, 's.json'); run('start', '--input', INP, '--out', spec)
+            s0 = declspec.load_spec_file(spec)
+            rep0 = pipeline.build(INP, spec, os.path.join(d, 'build_0'), png=False)
+            n0 = len(rep0['unconnected']); self.assertGreater(n0, 4)
+            t = {x['name']: x for x in S.targets(rep0)}; self.assertFalse(t['unconnected subsystems']['ok'])
+            self.assertTrue(S.first_fix(rep0).startswith('unconnected subsystems'))
+            self.assertEqual(S.score(rep0), sum(v * w for _, v, w in S.terms(rep0))); self.assertIn(('unconnected subsystems', n0, 40), S.terms(rep0))
+            # a moved block is found where the spec puts it (the packer leaves it there), and its title moves with it
+            code, out = run('patch', '--input', INP, '--spec', spec, '--json', '{"layouts": [{"block": "Glycolysis", "origin": [-9000, -9000]}]}')
+            self.assertEqual(code, 0, msg=out); s1 = declspec.load_spec_file(spec)
+            o0 = next(b for b in s0['layouts'] if b['block'] == 'Glycolysis')['origin']
+            self.assertEqual([a - b for a, b in zip(s1['titles']['Glycolysis'], s0['titles']['Glycolysis'])], [-9000 - o0[0], -9000 - o0[1]])
+            rep1 = pipeline.build(INP, spec, os.path.join(d, 'build_1'), png=False)
+            shift = lambda p, q: (round(q[0] - p[0]), round(q[1] - p[1]))
+            self.assertIn((-9000 - o0[0], -9000 - o0[1]), [shift(p, q) for p in glc(rep0) for q in glc(rep1)])
+            run('patch', '--input', INP, '--spec', spec, '--json', json.dumps({'layouts': [{'block': 'Glycolysis', 'origin': o0}]}))
+            # the merge the build names connects the first subsystem
+            m = re.search(r'\{"keep".*?\}', S.offenders(rep0, 'unconnected subsystems')); merge = json.loads(m.group(0))
+            code, out = run('patch', '--input', INP, '--spec', spec, '--json', json.dumps({'merges': [merge]})); self.assertEqual(code, 0, msg=out)
+            rep2 = pipeline.build(INP, spec, os.path.join(d, 'build_2'), png=False)
+            self.assertEqual(len(rep2['unconnected']), n0 - 1)
+            # and it can be undone: the dup is a copy again, with coordinates
+            code, out = run('patch', '--input', INP, '--spec', spec, '--json', json.dumps({'merges': [{'keep': merge['keep'], 'remove': True}]}))
+            self.assertEqual(code, 0, msg=out); self.assertIn('copies again', out)
+            s3 = declspec.load_spec_file(spec); self.assertEqual(s3.get('merges', []), [])
+            self.assertTrue(any(merge['dups'][0] in b['nodes'] for b in s3['layouts']))
+            self.assertEqual(len(pipeline.build(INP, spec, os.path.join(d, 'build_3'), png=False)['unconnected']), n0)
+
 
 class TestAgent(unittest.TestCase):
     def test_full_scripted_run_reproduces_expected(self):
