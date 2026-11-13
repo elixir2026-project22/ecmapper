@@ -19,7 +19,7 @@ What the procedure produces (worked example: iML1515 central metabolism, 91 reac
 | you want | do this |
 |---|---|
 | let an **AI model** do the layout in a chat, safely | `python agent.py --input map.json --out run1 --provider manual` (copy/paste into any chat, no API) or `--provider openai/anthropic` - see **docs/AGENT.md** |
-| write the layout yourself | `python run.py inspect ...`, `python run.py start` (the draft as a spec) or a copy of `specs/layout_template.json`, change it (by hand or with `python run.py patch`), `python run.py check-spec`, `python run.py build` - see **docs/GUIDE.md** |
+| write the layout yourself | `python run.py inspect ...`, `python run.py start` (the draft's subsystems, arranged and connected, as a spec) or a copy of `specs/layout_template.json`, change it (by hand or with `python run.py patch`), `python run.py check-spec`, `python run.py build` - see **docs/GUIDE.md** |
 | let a **coding agent** (with a Python sandbox) do everything | give it the kit and `PROMPT.md` |
 
 ## Contents
@@ -30,7 +30,7 @@ agent.py                   chat-based agent: model-agnostic, JSON in/out only (d
 run.py                     CLI: inspect | start | patch | check-spec | build | validate | directions
 PROMPT.md                  prompt for a coding agent with a code sandbox (changes the start spec with patches, follows the build's verdict)
 ecmapper_toolkit.json      how ecmapper's AI chat runs the kit (allowed commands, notes)
-selftest.py                quick regression test      tests/run_tests.py   full test suite (38 tests, ~100 s, offline)
+selftest.py                quick regression test      tests/run_tests.py   full test suite (39 tests, ~100 s, offline)
 requirements.txt           numpy, matplotlib, Pillow
 schema/layout_spec.schema.json    JSON Schema of the layout spec
 escher_handlayout/
@@ -41,7 +41,8 @@ escher_handlayout/
   inspect_map.py           analysis of the draft map (subsystems, components, merge candidates, traps)
   directions.py            the placement catalogue: matches the subsystems, lists directions/cycles/attachments, checks a layout
   qa.py                    structural validation + layout-quality metrics
-  start.py                 the start spec: the draft as it is, one block per subsystem (run.py start)
+  start.py                 the draft as it is as a spec, one block per subsystem (run.py start --as-is)
+  connect.py               the start spec: these blocks arranged by the placement catalogue and connected by merges (run.py start)
   score.py                 score, targets, history of the builds, what to do next (printed by run.py build)
   lint.py                  warnings for rule breaks: cofactor merges, biomass pulled onto a hub, long lines, close nodes
   pipeline.py              build(): spec -> JSON + PNG + QA report

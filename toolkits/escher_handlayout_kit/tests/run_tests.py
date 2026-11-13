@@ -248,7 +248,7 @@ class TestStartPatchScore(unittest.TestCase):
             return p.returncode, p.stdout + p.stderr
         with tempfile.TemporaryDirectory() as d:
             spec = os.path.join(d, 'specs', 'm.layout.json')
-            code, out = run('start', '--input', INP, '--out', spec); self.assertEqual(code, 0, msg=out); self.assertIn('10 blocks', out)
+            code, out = run('start', '--as-is', '--input', INP, '--out', spec); self.assertEqual(code, 0, msg=out); self.assertIn('10 blocks', out)
             before = open(spec).read()
             code, out = run('patch', '--input', INP, '--spec', spec, '--json', '{"layouts": [{"block": "Glycolysis", "nodes": {"999999": [0, 0]}}]}')
             self.assertEqual(code, 2); self.assertIn('does not exist', out); self.assertEqual(open(spec).read(), before)      # rejected, file unchanged
@@ -263,6 +263,22 @@ class TestStartPatchScore(unittest.TestCase):
             self.assertEqual(code, 0, msg=out); self.assertIn('score ', out); self.assertIn('MISS  crossings', out); self.assertIn('NOT FINISHED', out)
             self.assertTrue(os.path.exists(os.path.join(d, 'builds.md')))
 
+    def test_connected_start(self):
+        """`start` arranges the subsystems and connects them: a valid, connected map that beats the draft as it is."""
+        from escher_handlayout.connect import connected_start
+        from escher_handlayout.start import start_spec
+        from escher_handlayout import score as S
+        spec, notes = connected_start(INP)
+        self.assertEqual(declspec.validate_schema(spec), []); self.assertEqual(connected_start(INP)[0], spec)          # deterministic
+        self.assertGreaterEqual(len(spec['merges']), 8); self.assertTrue(any('through' in n for n in notes))
+        merged = {d for m in spec['merges'] for d in m['dups']}
+        self.assertFalse(any(d in b['nodes'] for b in spec['layouts'] for d in merged))
+        with tempfile.TemporaryDirectory() as d:
+            rep = pipeline.build(INP, spec, os.path.join(d, 'a'), png=False); asis = pipeline.build(INP, start_spec(INP), os.path.join(d, 'b'), png=False)
+            self.assertEqual(rep['validation_errors'], []); self.assertEqual(rep['unconnected'], []); self.assertGreater(len(asis['unconnected']), 4)
+            self.assertEqual(rep['placement']['violated_strengths'].count('strong') + rep['placement']['violated_strengths'].count('hard'), 0)
+            self.assertLess(S.score(rep), S.score(asis) / 2); self.assertLess(rep['metrics']['line_crossings'], 80)
+
     def test_connecting_the_subsystems(self):
         """Unconnected subsystems stay where the spec puts them, the build names the merge that connects each, a merge can be undone."""
         import subprocess, re
@@ -273,7 +289,7 @@ class TestStartPatchScore(unittest.TestCase):
         def glc(rep):                                   # position of glycolysis' glucose in the built map
             with open(rep['output_json']) as f: return [(n['x'], n['y']) for n in json.load(f)[1]['nodes'].values() if n.get('bigg_id') == 'glc__D_c']
         with tempfile.TemporaryDirectory() as d:
-            spec = os.path.join(d, 's.json'); run('start', '--input', INP, '--out', spec)
+            spec = os.path.join(d, 's.json'); run('start', '--as-is', '--input', INP, '--out', spec)
             s0 = declspec.load_spec_file(spec)
             rep0 = pipeline.build(INP, spec, os.path.join(d, 'build_0'), png=False)
             n0 = len(rep0['unconnected']); self.assertGreater(n0, 4)

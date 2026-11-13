@@ -8,7 +8,7 @@ iML1515 central-metabolism draft map (`specs/iml1515_central_carbon.layout.json`
 ```
 python run.py inspect --input MAP.json --out analysis/        # facts about the draft map + arrangement.md (where the subsystems go)
 python run.py directions --input MAP.json [--check SPEC.json]  # the same arrangement brief alone / the directions a spec violates
-python run.py start   --input MAP.json --out specs/<map>.layout.json       # a complete spec of the draft as it is (section 3a)
+python run.py start   --input MAP.json --out specs/<map>.layout.json       # a complete spec: the draft's subsystems, arranged and connected (section 3a)
 python run.py patch   --input MAP.json --spec specs/<map>.layout.json --json '{...}'   # change a part of the spec (section 3a)
 (or write specs/<map>.layout.json by hand-choosing coordinates)  # the creative step (a person, or an LLM: see AGENT.md)
 python run.py check-spec --input MAP.json --spec specs/<map>.layout.json   # fast check, no build (--partial: unfinished spec)
@@ -53,10 +53,21 @@ arguments of the engine's `Layout.reaction(...)`. `specs/iml1515_central_carbon.
 Writing a complete spec from an empty page is the hardest way to use the kit, in particular for a language model that
 is not among the strongest. Two commands make the same work a series of small changes:
 
-- `start` writes a complete, valid spec of the draft map as it is: one zone and one block per subsystem (the title
+- `start` writes a complete, valid spec of the draft map: one zone and one block per subsystem (the title
   above each box of the draft; a component without title is "Module n"), the primary nodes at their draft positions
-  relative to the block's `origin`, every reaction with the `side` and `shift` (or `axis`/`mid`) the draft draws, no
-  merges. Moving a subsystem is then one change of an `origin`. `node_names` (per block) and `name` (per reaction) say
+  relative to the block's `origin`, every reaction with the `side` and `shift` (or `axis`/`mid`) the draft draws.
+  Moving a subsystem is then one change of an `origin`. With `--as-is` that is all: the draft as it is, no merges.
+  Without it `start` also does a first arrangement (`escher_handlayout/connect.py`): the first block (glycolysis if
+  the map has it, else the block that shares most) stays; the others are attached one after the other, the one that
+  shares most metabolites with the placed blocks first. A block is moved as a whole. For every metabolite it shares,
+  its node is merged into the node of the placed blocks and the block is put where that costs least: near the kept
+  node, not on top of what is placed (raster of 50 units, 250 units margin), where the placement catalogue wants the
+  subsystem (500 units per penalty point), with few crossings in a straight-line sketch (400 units each). Further
+  copies of a metabolite are merged when the two nodes ended up at most 1500 units apart and the sketch gets no new
+  crossing; the others stay copies and are listed in the answer of `start`. Blocks that share only cofactors are left
+  to the packer. The result is a connected map without violated directions on the maps tried (central metabolism of
+  iML1515: 56 crossings, score 156 instead of 509 for the draft as it is; E. coli core: score 100 instead of 525); it
+  is a first arrangement, blocks are neither mirrored nor redrawn. `node_names` (per block) and `name` (per reaction) say
   what the ids are; they are optional, and `check-spec` reports an id whose name does not fit the map.
 - `patch` merges a spec fragment into the spec file, with the rules of the chat agent (blocks by `block`, nodes by id,
   reactions by `id`; a reaction entry replaces the old one completely). A fragment that violates the schema or makes a

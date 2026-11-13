@@ -2,7 +2,8 @@
 """Command line interface.
 
   python run.py inspect  --input MAP.json --out DIR
-  python run.py start    --input MAP.json --out SPEC.json                # a complete spec of the draft as it is, to be changed
+  python run.py start    --input MAP.json --out SPEC.json [--as-is]      # a complete spec to be changed: the subsystems of the draft,
+                                                                         # arranged and connected (--as-is: the draft as it is)
   python run.py patch    --input MAP.json --spec SPEC.json --json '{...}' | --fragment FRAGMENT.json   # change a part of a spec
   python run.py build    --input MAP.json --spec SPEC.json --out DIR [--curv 0.6] [--no-pack] [--no-png] [--name NAME]
                                                                          # prints score, targets and what to do next
@@ -28,7 +29,9 @@ b.add_argument('--no-history', action='store_true', help='neither record this bu
 b.add_argument('--max-builds', type=int, default=16, help='changed versions of the spec after which the build says STOP')
 k = sub.add_parser('check-spec'); k.add_argument('--input', required=True); k.add_argument('--spec', required=True)
 k.add_argument('--partial', action='store_true', help='an unfinished spec: report what is wrong and what is still missing')
-s = sub.add_parser('start', help='write a complete spec of the draft map as it is'); s.add_argument('--input', required=True); s.add_argument('--out', required=True)
+s = sub.add_parser('start', help='write a complete spec of the draft map: its subsystems arranged and connected'); s.add_argument('--input', required=True); s.add_argument('--out', required=True)
+s.add_argument('--as-is', action='store_true', help='the draft as it is: every subsystem a separate block, no merges')
+s.add_argument('--taxa', default='all', help='organism group for the arrangement (all, bacteria, plants, animals, fungi, ...)')
 p = sub.add_parser('patch', help='merge a spec fragment into a spec file (blocks by name, reactions and nodes by id)')
 p.add_argument('--input', required=True); p.add_argument('--spec', required=True, help='the spec file to change (created if missing)')
 p.add_argument('--json', help='the fragment as JSON text'); p.add_argument('--fragment', help='a file with the fragment')
@@ -101,12 +104,17 @@ elif args.cmd == 'start':
     from escher_handlayout.start import start_spec
     from escher_handlayout.declspec import format_spec
     from escher_handlayout._io import write_text
-    try: spec = start_spec(args.input)
+    try:
+        if args.as_is: spec, notes = start_spec(args.input), None
+        else:
+            from escher_handlayout.connect import connected_start
+            spec, notes = connected_start(args.input, args.taxa)
     except SpecError as e:
         print('SPEC ERROR:', e); sys.exit(2)
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True); write_text(args.out, format_spec(spec))
-    print(f"start spec written to {args.out}: the draft as it is, {len(spec['layouts'])} blocks ("
-          + ', '.join(f"{b['block']}: {len(b['reactions'])}" for b in spec['layouts']) + ' reactions); no merges yet')
+    print(f"start spec written to {args.out}: {'the draft as it is' if notes is None else 'the subsystems of the draft, arranged and connected'}, {len(spec['layouts'])} blocks ("
+          + ', '.join(f"{b['block']}: {len(b['reactions'])}" for b in spec['layouts']) + ' reactions)' + ('; no merges yet' if notes is None else f"; {len(spec['merges'])} merges"))
+    for i, n in enumerate(notes or []): print(('' if i == 0 else '  ') + n)
 elif args.cmd == 'patch':
     from escher_handlayout.engine import Layout
     from escher_handlayout.declspec import load_spec_file, compile_spec, parse_json_strict, validate_schema, merge_fragment, format_spec

@@ -68,8 +68,10 @@ python run.py start   --input INPUT_MAP --out SPEC
 python run.py build   --input INPUT_MAP --spec SPEC --out OUT_DIR/build_0 --name MAP_NAME --no-png
 ```
 
-`build_0` is the draft as it is: every subsystem is a separate piece, nothing is connected yet. Its last line
-already names the subsystems to connect and the merge for each. Then read, completely:
+`start` does the first arrangement for you: it keeps the drawing of every subsystem of the draft, puts the subsystems
+where the placement catalogue wants them and connects them through shared metabolites (`merges`). Its answer lists
+what it merged and which metabolites are still drawn more than once. `build_0` is this first arrangement: a connected
+map, the score to beat. Your work is to improve it. Then read, completely:
 
 - `OUT_DIR/analysis/arrangement.md`: where the subsystems go relative to each other, and where they attach;
 - in `OUT_DIR/analysis/analysis.md` the sections *Merge candidates* and *Traps / hints*;
@@ -83,11 +85,12 @@ explaining which reactions and why, and stop (this is the only allowed early sto
 
 ### Step C - Plan (write `OUT_DIR/PLAN.md`: tables and lists, at most 40 lines)
 
-1. **Arrangement**: a small sketch with the new origin of every block. Follow the `hard` and `strong` directions of
-   `arrangement.md`, the `medium` ones unless they cost crossings (`weak` ones are hints); where it is silent use
-   the defaults of section 5. Blocks that share a metabolite become neighbours. Keep about 600 units between blocks.
-2. **Merges**: a table `metabolite | keep id | dup ids | merge or copy, and why` from the *Merge candidates*
-   (rule M in section 5).
+1. **Arrangement**: the origin of every block as `start` chose it, and the blocks you want to move, with the reason
+   (a long line the patch or the build names, a violated direction, crossings between two subsystems). Follow the
+   `hard` and `strong` directions of `arrangement.md`, the `medium` ones unless they cost crossings (`weak` ones are
+   hints). Keep about 600 units between blocks.
+2. **Merges**: a table `metabolite | keep id | dup ids | merge or copy, and why` for the metabolites that `start`
+   reports as still drawn more than once (rule M in section 5).
 
 ### Step D - Change the spec, one small patch at a time
 
@@ -107,9 +110,10 @@ also carries warnings (long lines, cofactor merges, nodes on top of each other):
 
 Work in this order:
 
-1. **Arrangement**: the `origin` of every block as planned (this moves whole subsystems; the title of the subsystem
-   moves with it). Build once. A block that is not connected yet stays where its `origin` puts it.
-2. **Connect the subsystems, one per build.** The build's last line names the subsystems that are still separate and,
+1. **Arrangement**: move a block only for a reason of your plan (its `origin` moves the whole subsystem; the title
+   moves with it), one or two blocks per build. A block that is not connected stays where its `origin` puts it.
+2. **Connect what is still separate, one subsystem per build.** `start` normally leaves nothing separate; if the
+   build reports unconnected subsystems, its last line names them and,
    for each, a merge that connects it (`{"keep": ..., "dups": [...]}`, complete: send it as it is). For the first one
    named: move its block so that its copy of the metabolite lies next to the kept node (the line must stay short: the
    patch warns about a long line), patch the merge, build. `patch` removes the coordinates of the `dups`; the kept
