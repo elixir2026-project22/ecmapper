@@ -1,4 +1,4 @@
-"""Command line: ``python -m ecmapper.pwl {generate,check,parse,motifs} ...``."""
+"""Command line: ``python -m ecmapper.pwl {generate,check,parse,motifs,layout,escher} ...``."""
 
 from __future__ import annotations
 
@@ -68,7 +68,26 @@ def main(argv=None) -> int:
     lay.add_argument("--methods", help="comma separated layouts (default: all), see ecmapper.pwl.layout")
     lay.add_argument("--subsystem", action="append", help="only these subsystems (repeatable)")
     lay.add_argument("--no-routes", action="store_true", help="do not route edges around nodes")
+    esc = sub.add_parser("escher", help="Escher maps of PWL subsystems, laid out from the descriptions")
+    esc.add_argument("pwl_dir", type=Path, help="directory with subsystems/*.pwl and node_index.json")
+    esc.add_argument("outdir", type=Path)
+    esc.add_argument("--subsystem", action="append", help="only these subsystems (repeatable)")
+    esc.add_argument("--methods", help="comma separated layouts to try (default: all), see ecmapper.pwl.layout")
+    esc.add_argument("--png", action="store_true", help="also write previews (needs matplotlib)")
+    esc.add_argument("--scale", type=float, default=2.0, help="Escher units per layout unit (default: 2)")
+    esc.add_argument("--no-circles", action="store_true", help="do not draw the reactions of rings as arcs")
     args = parser.parse_args(argv)
+
+    if args.command == "escher":
+        from ..brenda_escher import pwl_directory
+
+        report = pwl_directory(args.pwl_dir, args.outdir, args.subsystem, args.png, args.scale,
+                               args.methods.split(",") if args.methods else None, not args.no_circles)
+        failed = [k for k, v in report.items() if "error" in v]
+        totals = {k: sum(v["escher"][k] for v in report.values() if "escher" in v)
+                  for k in ("reactions", "curved_segments", "kinks", "main_crossings", "crossings", "close_nodes")}
+        print(json.dumps(dict(maps=len(report) - len(failed), failed=failed, escher=totals), indent=1))
+        return 1 if failed else 0
 
     if args.command == "layout":
         from .compare import layout_directory
