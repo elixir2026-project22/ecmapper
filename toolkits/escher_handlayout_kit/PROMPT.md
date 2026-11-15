@@ -139,7 +139,8 @@ that says what to do**:
 
 - `NOT FINISHED ... Fix first: ...` - change the spec for the named offenders as the remedy says, then build into
   the next folder (`build_N+1`). One kind of change per build, so that you see what it did.
-- `NO IMPROVEMENT ...` - go back to the spec of the best build and try one other arrangement, or finish.
+- `NO IMPROVEMENT ...` (three changes since the best build were worse) - go back to the spec of the best build and
+  try one other arrangement, or finish.
 - `TARGETS MET ...` or `STOP ...` - go to step F.
 
 Do not compute the score yourself and do not stop on your own judgement: the line decides. `NOT FINISHED` means

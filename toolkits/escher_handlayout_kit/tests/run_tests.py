@@ -227,7 +227,11 @@ class TestStartPatchScore(unittest.TestCase):
             hist = build(1, 'a'); self.assertEqual(S.verdict(hist, rep)[0], 'go_on'); self.assertIn('Fix first: crossings', S.verdict(hist, rep)[1])
             hist = build(1, 'a'); self.assertEqual(len(hist), 1)                                 # a rebuild replaces its entry
             hist = build(2, 'b'); self.assertEqual(S.verdict(hist, rep)[0], 'go_on')
-            hist = build(3, 'c'); self.assertEqual(S.verdict(hist, rep)[0], 'stalled')           # two versions without improvement
+            hist = build(3, 'c'); self.assertEqual(S.verdict(hist, rep)[0], 'go_on')             # the same score again (a way back) is no failure
+            seq = lambda *scores: [dict(h, out=f'b{i}', spec=str(i), score=s) for i, s in enumerate(scores) for h in hist[:1]]
+            self.assertEqual(S.verdict(seq(50, 60, 50, 55), rep)[0], 'go_on')                    # two worse versions, a tie between them
+            self.assertEqual(S.verdict(seq(50, 60, 50, 55, 70), rep)[0], 'stalled')              # three
+            self.assertEqual(S.verdict(seq(50, 60, 55, 40, 45, 41), rep)[0], 'go_on')            # an improvement starts the count again
             self.assertEqual(S.verdict(hist, rep, max_specs=1)[0], 'limit')
             hist[-1].update(targets_met=True); self.assertEqual(S.verdict(hist, rep)[0], 'finished'); self.assertIn('build_3', S.verdict(hist, rep)[1])
             with open(os.path.join(d, 'builds.md')) as f: self.assertIn('| build_3 | 0.6 |', f.read())

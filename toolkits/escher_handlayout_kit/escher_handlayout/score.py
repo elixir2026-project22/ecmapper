@@ -124,6 +124,9 @@ def record(history_path, rep, out_dir, spec_path):
     return hist
 
 
+STALL = 3            # so many changed versions worse than the best one, without an improvement between them: stop trying
+
+
 def verdict(hist, rep, max_specs=16):
     """What to do after the newest build of `hist`: (state, text). States: finished, limit, stalled, go_on."""
     met = [h for h in hist if h['targets_met']]
@@ -136,9 +139,13 @@ def verdict(hist, rep, max_specs=16):
         return 'finished', f'TARGETS MET by {where}. Finish: try the other curvatures once (--curv 0.3 and 0.45), then validate the best map and hand it in.'
     if len(versions) > max_specs:
         return 'limit', f'STOP: {len(versions) - 1} changed versions of the spec were built. Validate the best map and hand it in: {where}.'
-    stalled = len(versions) >= 3 and all(v['score'] >= min(x['score'] for x in versions[:versions.index(v)]) for v in versions[-2:])
+    worse, low = 0, versions[0]['score']             # versions that made the map worse since the last improvement;
+    for v in versions[1:]:                           # one that ties with the best (a way back to it) counts as neither
+        if v['score'] < low: worse, low = 0, v['score']
+        elif v['score'] > low: worse += 1
+    stalled = worse >= STALL
     fix = first_fix(rep)
     if stalled:
-        return 'stalled', (f'NO IMPROVEMENT in the last two versions of the spec (best: {where}). Go back to the spec of the best build. If you have not '
+        return 'stalled', (f'NO IMPROVEMENT: {worse} changed versions of the spec since the best build were worse (best: {where}). Go back to the spec of the best build. If you have not '
                            'tried another arrangement yet (swap or mirror two neighbouring subsystems), try one; otherwise validate the best map and hand it in.')
     return 'go_on', f'NOT FINISHED, do not hand in yet ({len(versions) - 1} of {max_specs} changes used; best so far: {where}). Fix first: {fix}'
