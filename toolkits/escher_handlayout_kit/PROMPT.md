@@ -68,10 +68,13 @@ python run.py start   --input INPUT_MAP --out SPEC
 python run.py build   --input INPUT_MAP --spec SPEC --out OUT_DIR/build_0 --name MAP_NAME --no-png
 ```
 
-`start` does the first arrangement for you: it keeps the drawing of every subsystem of the draft, puts the subsystems
-where the placement catalogue wants them and connects them through shared metabolites (`merges`). Its answer lists
-what it merged and which metabolites are still drawn more than once. `build_0` is this first arrangement: a connected
-map, the score to beat. Your work is to improve it. Then read, completely:
+`start` does a first arrangement for you: it takes the drawing of every subsystem of the draft (a cycle is redrawn as
+a ring, a wobbling chain as a straight column), puts the subsystems where the placement catalogue wants them and
+connects them through shared metabolites (`merges`). Its answer lists what it redrew, what it merged and which
+metabolites are still drawn more than once. `build_0` is this first arrangement: a connected map, the score to beat.
+It is a floor, not a design: the subsystems still have the shapes of the draft, the map is larger than it has to be
+and some lines are long. A good map needs subsystems that are **redrawn** (Step D 1); moving blocks alone does not
+get there. Then read, completely:
 
 - `OUT_DIR/analysis/arrangement.md`: where the subsystems go relative to each other, and where they attach;
 - in `OUT_DIR/analysis/analysis.md` the sections *Merge candidates* and *Traps / hints*;
@@ -85,10 +88,13 @@ explaining which reactions and why, and stop (this is the only allowed early sto
 
 ### Step C - Plan (write `OUT_DIR/PLAN.md`: tables and lists, at most 40 lines)
 
-1. **Arrangement**: the origin of every block as `start` chose it, and the blocks you want to move, with the reason
-   (a long line the patch or the build names, a violated direction, crossings between two subsystems). Follow the
-   `hard` and `strong` directions of `arrangement.md`, the `medium` ones unless they cost crossings (`weak` ones are
-   hints). Keep about 600 units between blocks.
+1. **Design**: the map you want, in a few lines: the backbone (the longest pathway) as one straight column with 350 to
+   450 units between consecutive metabolites; a metabolite that many subsystems use (pyruvate, acetyl-CoA) drawn once,
+   with its reactions around it; cycles as rings; side pathways as short rows or columns next to the metabolite they
+   start from. Then a table `block | keep, move or redraw | where | why`: which blocks stay as `start` drew them, which
+   you move (new `origin`), which you redraw (new coordinates for their nodes). Follow the `hard` and `strong`
+   directions of `arrangement.md`, the `medium` ones unless they cost crossings (`weak` ones are hints). Keep about
+   300 units free between neighbouring blocks.
 2. **Merges**: a table `metabolite | keep id | dup ids | merge or copy, and why` for the metabolites that `start`
    reports as still drawn more than once (rule M in section 5).
 
@@ -110,8 +116,13 @@ also carries warnings (long lines, cofactor merges, nodes on top of each other):
 
 Work in this order:
 
-1. **Arrangement**: move a block only for a reason of your plan (its `origin` moves the whole subsystem; the title
-   moves with it), one or two blocks per build. A block that is not connected stays where its `origin` puts it.
+1. **Redraw and arrange, one block per build.** Redraw a subsystem whose drawing is sprawling, irregular or far
+   from the metabolites it shares: send its block with new coordinates for all its nodes (and `side` / `shift` of its
+   reactions where they change), so that it has the shape of your design and its shared metabolites lie on the nodes
+   they are merged into. Recipes: `docs/GUIDE.md` section 4; `specs/iml1515_central_carbon.layout.json` is a worked
+   example of another map. Move a block with its `origin` (the title moves with it). The build's `long lines` and
+   `area excess` say where this is needed. If you cannot work out the coordinates of a whole block, do not redraw it:
+   move blocks and nodes instead. A block that is not connected stays where its `origin` puts it.
 2. **Connect what is still separate, one subsystem per build.** `start` normally leaves nothing separate; if the
    build reports unconnected subsystems, its last line names them and,
    for each, a merge that connects it (`{"keep": ..., "dups": [...]}`, complete: send it as it is). For the first one
@@ -123,9 +134,7 @@ Work in this order:
    that are copies again get coordinates beside the kept node, and the answer names them.
 3. **Details**, only when everything is connected: the offenders the build names (single nodes, `side`, `shift`,
    `dist` of a reaction), a cycle as a
-   `rings` entry, parallel reactions as lanes. If a subsystem is drawn badly in the draft, redraw it: send its block
-   with new coordinates for all its nodes (recipes: `docs/GUIDE.md` section 4,
-   `specs/iml1515_central_carbon.layout.json` is a worked example of another map).
+   `rings` entry, parallel reactions as lanes.
 
 ### Step E - Build and iterate
 
@@ -199,9 +208,12 @@ be nicer.
   `DECISIONS.md`.
 
 Targets (the build checks them): validation errors 0; crossings at most 0.1 x reactions; labels on lines at most
-max(6, 7 % of reactions); labels on nodes 0; overlapping labels at most 2; primary nodes closer than 70 units: 0; no
-violated `hard` or `strong` direction. Score = 1000 x validation errors + crossings + 3 x labels on lines + 6 x labels
-on nodes + 4 x label overlaps + 10 x close nodes + 40 x unconnected subsystems + 20 x detached pieces + placement penalty.
+max(6, 7 % of reactions); labels on nodes 0; overlapping labels at most 2; primary nodes closer than 70 units: 0;
+long lines (a primary metabolite more than 800 units from the middle of its reaction) at most max(4, 10 % of
+reactions); area excess at most 40 (the map's area is at most 0.70 million square units per reaction); no violated
+`hard` or `strong` direction. Score = 1000 x validation errors + crossings + 3 x labels on lines + 6 x labels on nodes
++ 4 x label overlaps + 10 x close nodes + 3 x long lines + area excess (1 point per 0.01 million square units per
+reaction above 0.30) + 40 x unconnected subsystems + 20 x detached pieces + placement penalty.
 
 ## 6. Deliverables (all in OUT_DIR)
 

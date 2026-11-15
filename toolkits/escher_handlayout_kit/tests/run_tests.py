@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Test suite: python tests/run_tests.py   (about 1-2 minutes; no network access needed)"""
-import ast, copy, io, json, os, sys, tempfile, threading, unittest
+import ast, copy, io, json, math, os, sys, tempfile, threading, unittest
 from http.server import BaseHTTPRequestHandler, HTTPServer
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE); sys.path.insert(0, ROOT)
 from escher_handlayout import declspec, pipeline, directions as D
@@ -54,7 +54,7 @@ class TestSpecFormat(unittest.TestCase):
                {'layouts': [{'block': 'b', 'reactions': [{'id': '5', 'side': 'diagonal'}]}]},
                {'layouts': [{'block': 'b', 'reactions': [{'id': '5', 'dist': 10 ** 9}]}]},
                {'layouts': [{'block': 'b', 'nodes': {'12': [1e9, 0]}}]},
-               {'layouts': [{'block': 'b', 'reactions': [{'id': "5; import os"}]}]},
+               {'layouts': [{'block': 'b', 'reactions': [{'id': "5; import math, os"}]}]},
                {'layouts': [{'block': 'b', 'reactions': [{'id': '5', 'mid': {'lerp': [[0, 0], [1, 1], 'x']}}]}]},
                {'merges': [{'keep': "__import__('os')", 'dups': ['1']}]}, {'titles': {'A': [0]}}, {'notes': 'x' * 5000}]
         for b in bad: self.assertTrue(declspec.validate_schema(b), msg=str(b)[:80])
@@ -215,8 +215,12 @@ class TestStartPatchScore(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             rep = pipeline.build(INP, SPEC, os.path.join(d, 'build_1'), png=False, name='o')
             m = rep['metrics']
-            self.assertEqual(S.score(rep), m['line_crossings'] + 3 * m['labels_on_lines'] + 20 * len(rep['detached']) + rep['placement']['penalty'])
+            self.assertEqual(S.score(rep), m['line_crossings'] + 3 * m['labels_on_lines'] + 3 * m['long_lines'] + S.area_excess(rep)
+                             + 20 * len(rep['detached']) + rep['placement']['penalty'])
+            self.assertEqual(S.area_excess(rep, 0.25), 0); self.assertEqual(S.area_excess(rep, 0.5), 20)       # 1 point per 0.01 above 0.30
+            self.assertEqual(m['long_lines'], len(m['long_lines_list'])); self.assertTrue(all(length > 800 for _, length in m['long_lines_list']))
             t = {x['name']: x for x in S.targets(rep)}
+            self.assertIn('long lines', t); self.assertIn('area excess', t)
             self.assertFalse(t['crossings']['ok']); self.assertEqual(t['crossings']['limit'], 9); self.assertTrue(t['labels on lines']['ok'])
             self.assertEqual(t['violated hard/strong directions']['value'], 5); self.assertFalse(S.targets_met(rep))
             self.assertIn('## Score and targets', pipeline.report_md(rep)); self.assertIn('Fix first: crossings (26)', pipeline.report_md(rep))
@@ -282,6 +286,25 @@ class TestStartPatchScore(unittest.TestCase):
             self.assertEqual(rep['validation_errors'], []); self.assertEqual(rep['unconnected'], []); self.assertGreater(len(asis['unconnected']), 4)
             self.assertEqual(rep['placement']['violated_strengths'].count('strong') + rep['placement']['violated_strengths'].count('hard'), 0)
             self.assertLess(S.score(rep), S.score(asis) / 2); self.assertLess(rep['metrics']['line_crossings'], 80)
+
+    def test_redraw_ring_and_column(self):
+        """`start` redraws a cycle as a ring and a wobbling chain as a straight line; `--as-is` and tidy=False do not."""
+        from escher_handlayout.redraw import redraw
+        from escher_handlayout.start import start_spec
+        from escher_handlayout.engine import Layout
+        spec = start_spec(INP); before = json.dumps(spec, sort_keys=True)
+        notes, ring = redraw(spec, Layout(INP))
+        self.assertEqual(declspec.validate_schema(spec), []); self.assertNotEqual(json.dumps(spec, sort_keys=True), before)
+        self.assertTrue(any('ring' in n for n in notes)); self.assertTrue(any('straight' in n for n in notes)); self.assertGreaterEqual(len(ring), 6)
+        b = next(b for b in spec['layouts'] if ring <= set(b['nodes']))
+        arcs = [r for r in b['reactions'] if 'arc' in r]; self.assertGreaterEqual(len(arcs), len(ring))
+        c = arcs[0]['arc']['center']; radii = [math.hypot(b['nodes'][n][0] - c[0], b['nodes'][n][1] - c[1]) for n in ring]
+        self.assertLess(max(radii) - min(radii), 3)                                                  # all on one circle
+        self.assertTrue(all(set(r['arc_nodes']) <= ring and r['arc']['center'] == c for r in arcs))
+        col = next(b for b in spec['layouts'] if any(f"'{b['block']}'" in n and 'column' in n for n in notes))
+        xs = sorted(x for x, _ in col['nodes'].values()); self.assertGreaterEqual(xs.count(xs[len(xs) // 2]), 6)   # the chain shares one x
+        with tempfile.TemporaryDirectory() as d:
+            rep = pipeline.build(INP, spec, os.path.join(d, 'a'), png=False, do_pack=False); self.assertEqual(rep['validation_errors'], [])
 
     def test_connecting_the_subsystems(self):
         """Unconnected subsystems stay where the spec puts them, the build names the merge that connects each, a merge can be undone."""

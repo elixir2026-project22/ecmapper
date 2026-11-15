@@ -87,6 +87,10 @@ def _box(x, y, anc, text, size, f):
     x0 = x if anc == 'start' else x - w if anc == 'end' else x - w / 2
     return (x0, y - h * 0.85, x0 + w, y + h * 0.28)
 
+#: a reaction whose line from its middle to a primary metabolite is longer than this is a long line (map units)
+LONG_LINE = 800
+
+
 def metrics(L):
     """Numeric layout-quality metrics of a finished Layout (after place_labels / pack)."""
     N, R = L.N, L.R
@@ -141,7 +145,14 @@ def metrics(L):
     xs = [b[0] for _, b, _ in allb] + [b[2] for _, b, _ in allb] + [v['x'] for v in N.values()]
     ys = [b[1] for _, b, _ in allb] + [b[3] for _, b, _ in allb] + [v['y'] for v in N.values()]
     W, H = max(xs) - min(xs), max(ys) - min(ys)
-    return dict(line_crossings=ncross, worst_crossing_pairs=[[list(k), v] for k, v in worst],
+    # --- long lines: reactions with a primary metabolite far from the middle of the reaction
+    reach = []
+    for rid, I in L.info.items():
+        c = N[I['mid']]; d = [math.hypot(N[n]['x'] - c['x'], N[n]['y'] - c['y']) for _, n in I['subs'] + I['prods'] if N[n]['node_is_primary']]
+        if d and max(d) > LONG_LINE: reach.append((round(max(d)), R[rid]['bigg_id']))
+    reach.sort(reverse=True)
+    return dict(long_lines=len(reach), long_lines_list=[[b, a] for a, b in reach[:12]],
+                line_crossings=ncross, worst_crossing_pairs=[[list(k), v] for k, v in worst],
                 labels_on_lines=len(on_line), labels_on_lines_list=on_line[:25],
                 labels_on_nodes=len(hit_node), labels_on_nodes_list=hit_node[:25],
                 label_label_overlaps=len(lab_over), label_label_overlaps_list=[list(p) for p in lab_over[:25]],

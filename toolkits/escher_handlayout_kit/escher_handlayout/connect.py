@@ -23,6 +23,7 @@ from .engine import Layout
 from .inspect_map import base, COFACTORS
 from .start import start_spec
 from . import directions as D
+from .redraw import redraw
 
 CELL = 50                 # raster of the occupancy grid (map units)
 MARGIN = 5                # free cells kept around everything that is placed
@@ -33,6 +34,9 @@ COFACTOR_REACH = 220      # room of the cofactors around the middle of a reactio
 W_DIRECTION = 500         # cost of one penalty point of a violated direction, in map units of line length
 W_CROSSING = 400          # cost of one crossing of the sketch
 W_COMPACT = 0.15          # cost of the distance to the centre of what is placed
+LOOK = 60                 # so many of the nearest free positions of a block are drawn (as a sketch) and compared
+NEAR_LOOK = 1500          # a block that is attached may be joined through more metabolites up to this distance, if the sketch gets better
+W_MERGE = 300             # what one copy less is worth, in map units of line length
 NEAR = 1500               # further copies are merged up to this distance
 MANY = 6                  # a reaction with this many primary metabolites keeps its own copies (lint.MANY)
 
@@ -60,12 +64,14 @@ class _Sketch:
         self.pos = {}                                   # primary node -> global position
         self.prim = {}                                  # reaction -> its primary nodes
         self.entry = {}                                 # reaction -> its entry in the spec
+        self.sides = {}                                 # reaction -> (primary substrates, primary products)
         for b in spec['layouts']:
             o = b['origin']
             for n, (x, y) in b['nodes'].items(): self.pos[n] = (o[0] + x, o[1] + y); self.block_of['n' + n] = b['block']
             for r in b['reactions']:
                 I = L.info[r['id']]
                 self.prim[r['id']] = list(dict.fromkeys(n for _, n in I['subs'] + I['prods'] if N[n]['node_is_primary']))
+                self.sides[r['id']] = ([n for _, n in I['subs'] if N[n]['node_is_primary']], [n for _, n in I['prods'] if N[n]['node_is_primary']])
                 self.block_of[r['id']] = b['block']; self.entry[r['id']] = r
         self.users = {}                                 # primary node -> reactions
         for rid, ns in self.prim.items():
@@ -90,19 +96,43 @@ class _Sketch:
         s = r.get('shift', (0, 0))
         return (sum(p[0] for p in pts) / len(pts) + s[0], sum(p[1] for p in pts) / len(pts) + s[1])
 
-    def segments(self, rids, skip=None):
-        """The straight lines node - middle of the reactions `rids` (without those that end at node `skip`)."""
+    def segments(self, rids, skip=()):
+        """The straight lines node - middle of the reactions `rids` (without those that end at a node of `skip`)."""
         out = []
         for rid in rids:
             c = self.middle(rid)
             for n in self.prim[rid]:
                 n = self.rep(n)
-                if n != skip: out.append((self.pos[n][0], self.pos[n][1], c[0], c[1]))
+                if n not in skip: out.append((self.pos[n][0], self.pos[n][1], c[0], c[1]))
         return out
 
-    def points(self, block, skip=None):
+    def moved_segments(self, rids, s, to):
+        """The lines of the reactions `rids` of a block that is moved by s, with the nodes of `to` (node -> position)
+        drawn at their new positions (the nodes they are merged into)."""
+        out = []
+        for rid in rids:
+            r = self.entry[rid]; ns = [self.rep(n) for n in self.prim[rid]]
+            pts = [to[n] if n in to else (self.pos[n][0] + s[0], self.pos[n][1] + s[1]) for n in ns]
+            if 'mid' in r:
+                o = self.blocks[self.block_of[rid]]['origin']; c = (o[0] + r['mid'][0] + s[0], o[1] + r['mid'][1] + s[1])
+                if all(n in to for n in ns):                # it hangs on merged nodes only: it goes with them
+                    c = (c[0] + sum(to[n][0] - self.pos[n][0] - s[0] for n in ns) / len(ns), c[1] + sum(to[n][1] - self.pos[n][1] - s[1] for n in ns) / len(ns))
+            else:
+                sh = r.get('shift', (0, 0)); c = (sum(q[0] for q in pts) / len(pts) + sh[0], sum(q[1] for q in pts) / len(pts) + sh[1])
+            out += [(q[0], q[1], c[0], c[1]) for q in pts]
+        return out
+
+    def axis(self, rid):
+        """Unit vector from the primary substrates to the primary products of a reaction (None if there is none)."""
+        a, b = ([self.pos[self.rep(n)] for n in side] for side in self.sides[rid])
+        if not a or not b: return None
+        dx = sum(q[0] for q in b) / len(b) - sum(q[0] for q in a) / len(a); dy = sum(q[1] for q in b) / len(b) - sum(q[1] for q in a) / len(a)
+        n = math.hypot(dx, dy)
+        return (dx / n, dy / n) if n > 1 else None
+
+    def points(self, block, skip=()):
         """What a block occupies: its nodes, samples of its lines, the room of its cofactors (global coordinates)."""
-        b = self.blocks[block]; pts = [self.pos[n] for n in b['nodes'] if n != skip]
+        b = self.blocks[block]; pts = [self.pos[n] for n in b['nodes'] if n not in skip]
         for r in b['reactions']:
             c = self.middle(r['id'])
             pts += [(c[0] + dx, c[1] + dy) for dx in (-COFACTOR_REACH, 0, COFACTOR_REACH) for dy in (-COFACTOR_REACH, 0, COFACTOR_REACH)]
@@ -123,9 +153,15 @@ class _Sketch:
             r = self.entry[rid]
             if 'mid' in r and all(self.rep(n) == d for n in self.prim[rid]) and self.block_of[rid] == b['block']:
                 r['mid'] = [round(r['mid'][0] + shift[0]), round(r['mid'][1] + shift[1])]
+        lanes = {rid: (self.entry[rid]['shift'], self.axis(rid)) for rid in self.users.get(d, []) if 'shift' in self.entry[rid] and 'mid' not in self.entry[rid]}
         self.keep[d] = k
         b['nodes'].pop(d, None); b.get('node_names', {}).pop(d, None); self.pos.pop(d, None)
         self.users.setdefault(k, []).extend(self.users.pop(d, []))
+        for rid, (sh, u) in lanes.items():                # a lane stays a lane: its offset across the line as it runs now
+            v = self.axis(rid)
+            if u is None or v is None: continue
+            off = sh[0] * -u[1] + sh[1] * u[0]
+            self.entry[rid]['shift'] = [round(-v[1] * off), round(v[0] * off)]
 
 
 class _Grid:
@@ -147,11 +183,18 @@ class _Grid:
         return ~self.g[c[..., 1], c[..., 0]].any(axis=1)
 
 
-def connected_start(input_path, taxa='all'):
+def connected_start(input_path, taxa='all', tidy=True):
     """(spec, report): the start spec of `input_path` with the subsystems arranged and connected; `report` is a list of
     lines saying what was merged, where the blocks went and which copies remain."""
     spec = start_spec(input_path); L = Layout(input_path)
+    shapes, ring = redraw(spec, L) if tidy else ([], set())
     S = _Sketch(spec, L); report = []
+
+    def join(k, d):
+        """Merge d into k; a node of a ring is the one that stays (its place on the circle), whatever the order."""
+        if d in ring and k not in ring: k, d = d, k
+        S.merge(k, d)
+        return k, d
     blocks = list(S.blocks)
     if len(blocks) < 2: return spec, ['only one subsystem: nothing to connect']
 
@@ -215,13 +258,15 @@ def connected_start(input_path, taxa='all'):
         rids = [r['id'] for r in S.blocks[block]['reactions']]
         placed_rids = [r['id'] for p in placed for r in S.blocks[p]['reactions']]
         placed_segs = S.segments(placed_rids)
-        pc = np.mean([centre(p) for p in placed], axis=0)
+        pc = np.mean([q for q in map(centre, placed) if q is not None], axis=0)
         best = None
+        partners = {}                                    # node of the block -> the nodes of the placed blocks it could be drawn as
+        for _, d2, k2 in cands[block]: partners.setdefault(d2, set()).add(S.rep(k2))
+        pts = S.points(block, skip=set(partners))        # the nodes that may be merged need no room of their own
+        base = S.segments(rids); self0 = _crossings(base, base)
         for m, d, k in sorted(set((m, d, S.rep(k)) for m, d, k in cands[block])):
-            pts = S.points(block, skip=d); c = centre(block, skip=d)
+            c = centre(block, skip=d)
             if c is None or len(pts) == 0: continue
-            own = np.array(S.segments(rids, skip=d), float).reshape(-1, 4)
-            mids = [S.middle(r) for r in S.users[d] if S.block_of[r] == block]           # the lines that will end at k
             for reach in (REACH, REACH_FAR):
                 # shift of the block such that d comes to lie at k + offset
                 off = lattice(reach); shifts = off + (np.array(S.pos[k]) - np.array(S.pos[d]))
@@ -229,21 +274,42 @@ def connected_start(input_path, taxa='all'):
                 if ok.any(): break
             if not ok.any(): continue
             off, shifts = off[ok], shifts[ok]
-            cost = np.hypot(off[:, 0], off[:, 1]) + W_DIRECTION * direction_cost(block, c, shifts, placed) \
+            where = W_DIRECTION * direction_cost(block, c, shifts, placed) \
                 + W_COMPACT * np.hypot(c[0] + shifts[:, 0] - pc[0], c[1] + shifts[:, 1] - pc[1])
-            for i in np.argsort(cost, kind='stable')[:40]:                               # the sketch's crossings for the best ones
-                s = shifts[i]
-                new = [(S.pos[k][0], S.pos[k][1], x + s[0], y + s[1]) for x, y in mids]
-                moved = own + np.array([s[0], s[1], s[0], s[1]]) if len(own) else own
-                total = cost[i] + W_CROSSING * (_crossings(new, placed_segs) + _crossings(new, moved) + _crossings(moved, placed_segs))
-                if best is None or total < best[0] - 1e-9: best = (total, m, d, k, (float(s[0]), float(s[1])))
+            for i in np.argsort(np.hypot(off[:, 0], off[:, 1]) + where, kind='stable')[:LOOK]:
+                # the map with the block here: d is drawn as k, and so is every other shared node that comes to lie near its partner
+                sx, sy = float(shifts[i][0]), float(shifts[i][1]); to = {d: S.pos[k]}; more = []; taken = {k}; first = []
+
+                def sketch(to):
+                    segs = S.moved_segments(rids, (sx, sy), to)
+                    length = sum(math.hypot(x2 - x1, y2 - y1) for x1, y1, x2, y2 in segs)
+                    if len(to) == 1: first.append(length)                                   # the lines with the one merge alone
+                    grown = math.hypot(off[i][0], off[i][1]) + length - first[0]             # the offset, and what further merges add
+                    return grown + W_CROSSING * (_crossings(segs, placed_segs) + (_crossings(segs, segs) - self0) / 2) - W_MERGE * (len(to) - 1)
+
+                cost = sketch(to); options = []
+                for d2 in set(partners) - {d}:
+                    q = (S.pos[d2][0] + sx, S.pos[d2][1] + sy)
+                    options += [(math.hypot(q[0] - S.pos[k2][0], q[1] - S.pos[k2][1]), int(d2), int(k2), d2, k2) for k2 in partners[d2]
+                                if not set(S.users[d2]) & set(S.users[k2])]
+                for dist, _, _, d2, k2 in sorted(options):
+                    if dist > NEAR_LOOK: break
+                    if d2 in to or k2 in taken: continue
+                    c2 = sketch({**to, d2: S.pos[k2]})
+                    if c2 < cost: cost = c2; to[d2] = S.pos[k2]; taken.add(k2); more.append((S.name(d2), d2, k2, dist))
+                rest = np.array([(S.pos[n][0] + sx, S.pos[n][1] + sy) for n in partners if n not in to], float).reshape(-1, 2)
+                if len(rest) and not grid.free(rest, np.zeros((1, 2)))[0]: continue          # a copy that stays would lie on something
+                total = cost + where[i]
+                if best is None or total < best[0] - 1e-9: best = (total, m, d, k, (sx, sy), more)
         if best is None:                                                                # no room anywhere: it stays a separate block
             report.append(f"'{block}' found no free place next to the others: it stays a separate block")
             placed.append(block); grid.add(S.points(block)); continue
-        _, m, d, k, s = best
-        S.move(block, round(s[0]), round(s[1])); S.merge(k, d)
-        placed.append(block); grid.add(S.points(block))
+        _, m, d, k, s, more = best
+        S.move(block, round(s[0]), round(s[1])); k, d = join(k, d)
         report.append(f"'{block}' through {m} (node {d} merged into {k}, in '{S.block_of['n' + k]}')")
+        for m2, d2, k2, dist in more:
+            k2, d2 = join(S.rep(k2), d2); report.append(f'  and through {m2} (node {d2} into {k2}, {dist:.0f} units apart)')
+        placed.append(block); grid.add(S.points(block))
 
     # ---- 3. further copies that ended up near each other
     all_rids = list(S.entry)
@@ -270,7 +336,7 @@ def connected_start(input_path, taxa='all'):
             c = S.middle(r)
             new += [(S.pos[k][0], S.pos[k][1], c[0], c[1])] + [(S.pos[S.rep(n)][0], S.pos[S.rep(n)][1], c[0], c[1]) for n in S.prim[r] if S.rep(n) != d]
         if _crossings(new, S.segments(others)) > before: continue
-        S.merge(k, d); report.append(f'also merged: {m} (node {d} into {k}, {dist:.0f} units apart)')
+        k, d = join(k, d); report.append(f'also merged: {m} (node {d} into {k}, {dist:.0f} units apart)')
 
     # ---- the spec
     members = {}
@@ -286,6 +352,7 @@ def connected_start(input_path, taxa='all'):
     left = {m: ns for m, ns in copies.items() if len(ns) > 1}
     if left: report.append('still drawn more than once (copies; merge them with a patch where the line stays short): '
                            + '; '.join(f"{m}: {', '.join(sorted(ns, key=int))}" for m, ns in sorted(left.items())))
+    if shapes: report[:0] = ['redrawn before connecting:'] + ['  ' + s for s in shapes]
     spec['notes'] = ('Starting spec written by `run.py start`: the subsystems of the draft, arranged by the placement catalogue and '
                      'connected through shared metabolites (a first arrangement: improve it in small steps).')
     return spec, report

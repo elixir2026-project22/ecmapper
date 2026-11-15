@@ -57,17 +57,25 @@ is not among the strongest. Two commands make the same work a series of small ch
   above each box of the draft; a component without title is "Module n"), the primary nodes at their draft positions
   relative to the block's `origin`, every reaction with the `side` and `shift` (or `axis`/`mid`) the draft draws.
   Moving a subsystem is then one change of an `origin`. With `--as-is` that is all: the draft as it is, no merges.
-  Without it `start` also does a first arrangement (`escher_handlayout/connect.py`): the first block (glycolysis if
+  Without it `start` first redraws two shapes (`escher_handlayout/redraw.py`): in a block with a cycle of at least 6
+  primary metabolites the longest cycle becomes a circle (the nodes at equal angles, in their order, 300 to 600 units
+  apart; the reactions along it become arcs, parallel ones in lanes 150 units apart; the rest of the block keeps its
+  place relative to the cycle), and in the other blocks a chain of at least 4 metabolites that runs down or across
+  the block and leaves its line by at most 8 % of its length is put on one straight line. Then it does a first
+  arrangement (`escher_handlayout/connect.py`): the first block (glycolysis if
   the map has it, else the block that shares most) stays; the others are attached one after the other, the one that
   shares most metabolites with the placed blocks first. A block is moved as a whole. For every metabolite it shares,
   its node is merged into the node of the placed blocks and the block is put where that costs least: near the kept
   node, not on top of what is placed (raster of 50 units, 250 units margin), where the placement catalogue wants the
   subsystem (500 units per penalty point), with few crossings in a straight-line sketch (400 units each). Further
   copies of a metabolite are merged when the two nodes ended up at most 1500 units apart and the sketch gets no new
-  crossing; the others stay copies and are listed in the answer of `start`. Blocks that share only cofactors are left
-  to the packer. The result is a connected map without violated directions on the maps tried (central metabolism of
-  iML1515: 56 crossings, score 156 instead of 509 for the draft as it is; E. coli core: score 100 instead of 525); it
-  is a first arrangement, blocks are neither mirrored nor redrawn. `node_names` (per block) and `name` (per reaction) say
+  crossing; when a block is attached, further metabolites it shares are merged at once (up to 1500 units) if the
+  sketch of the block gets shorter or loses crossings by it. A node of a ring is the one that is kept in a merge.
+  The others stay copies and are listed in the answer of `start`. Blocks that share only cofactors are left
+  to the packer. The result is a connected map (central metabolism of iML1515: 50 crossings, no violated direction,
+  score 182 instead of 550 for the draft as it is; E. coli core: score 157 instead of 542, one violated direction and
+  one detached piece); it is a first arrangement: blocks are not mirrored, and apart from the ring and the straight
+  chain their drawing is the draft's. `node_names` (per block) and `name` (per reaction) say
   what the ids are; they are optional, and `check-spec` reports an id whose name does not fit the map.
 - `patch` merges a spec fragment into the spec file, with the rules of the chat agent (blocks by `block`, nodes by id,
   reactions by `id`; a reaction entry replaces the old one completely). A fragment that violates the schema or makes a
@@ -184,9 +192,12 @@ used      : componentwise (1-t)*gentle + t*strong ; lanes k=(0.32+0.10t)*length 
 `build` turns these numbers into a decision (`escher_handlayout/score.py`), on the screen and in `qa_report.md`:
 
 - the **score** `1000 x validation errors + crossings + 3 x labels on lines + 6 x labels on nodes + 4 x label overlaps
-  + 10 x close nodes + 40 x unconnected subsystems + 20 x detached pieces + placement penalty`;
+  + 10 x close nodes + 3 x long lines + area excess + 40 x unconnected subsystems + 20 x detached pieces + placement
+  penalty`; a long line is a reaction with a primary metabolite more than 800 units from its middle, the area excess
+  is 1 point per 0.01 million square units of map area per reaction above 0.30;
 - the **targets**, each `ok` or `MISS`: validation errors 0, crossings at most 0.1 x reactions, labels on lines at most
-  max(6, 7 % of the reactions), labels on nodes 0, label overlaps at most 2, close nodes 0, unconnected subsystems 0,
+  max(6, 7 % of the reactions), labels on nodes 0, label overlaps at most 2, close nodes 0, long lines at most max(4, 10 % of the reactions),
+  area excess at most 40 (0.70 million square units per reaction), unconnected subsystems 0,
   no violated hard or strong direction; detached pieces are shown as `look`, because a copy can be deliberate;
 - the history of the job: every build is recorded in `builds.json` / `builds.md` beside the `--out` folder (`--history
   FILE`, `--no-history`), a rebuild into the same folder replaces its entry;
