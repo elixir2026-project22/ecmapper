@@ -626,7 +626,22 @@ def test_webchat_protocol():
     assert webchat.reply_of(page, 2) == ("Done so far", False)
     assert webchat.reply_of(page + " @@END 2@@\nCopy", 2) == ("Done so far", True)
     assert webchat.reply_of("Hi @@END 1@@ pasted.txt\nHello\n@@END 2@@", 2) == ("pasted.txt\nHello", True)
-    assert webchat.reply_of("Hello\n@@END 12@@", 1) == ("Hello\n@@END 12@@", False)
+    # models miscount: an end line with another number (or none) ends the reply as well
+    assert webchat.reply_of("Hello\n@@END 12@@", 1) == ("Hello", True)
+    assert webchat.reply_of(page + "\n@@ END@@\nCopy", 2) == ("Done so far", True)
+    assert webchat.reply_of(page + "\n@@END N@@", 2) == ("Done so far", True)
+    # a chat that shows the message as an attachment and the start of the reply (here its end line) as a summary
+    attached = "Reply 3 @@END 3@@\njust now\necmapper message 4 === Results\nPASTED\nClaude responded: @@END 4@@\n"
+    assert webchat.reply_of(attached + '{"tool": "list_files", "input": {}}\n@@END 4@@\nCopy', 4) == \
+        ('=== Results\nPASTED\nClaude responded: @@END 4@@\n{"tool": "list_files", "input": {}}', True)
+    # a page without the message (not sent, another conversation): no reply, not the calls of the whole page again
+    assert webchat.reply_of(page + " @@END 1@@", 3) == ("", False)
+    assert webchat.reply_of("Only the reply", 3) == ("Only the reply", False)
+    # the arguments beside "tool", as "arguments", or with "tool" repeated in the input
+    _, three = webchat.parse('{"tool": "read_file", "path": "a.txt"}\n{"tool": "read_file", "arguments": {"path": "b"}}\n'
+                             '{"tool": "run_toolkit", "input": {"tool": "run_toolkit", "args": ["x"]}}', 2)
+    assert [(c.input, c.error) for c in three] == [({"path": "a.txt"}, None), ({"path": "b"}, None),
+                                                   ({"args": ["x"]}, None)]
     # chats whose terms forbid automated use
     assert "Anthropic" in webchat.blocked("https://claude.ai/new") and webchat.blocked("chatgpt.com")
     assert webchat.blocked("https://x.gemini.google.com/app") and webchat.blocked("https://notclaude.ai") is None
@@ -682,7 +697,7 @@ def test_webchat(tmp_path):
 def test_webchat_unfinished(tmp_path):
     """A reply without calls and end line (a full chat answers with nothing) gets one reminder, not the end."""
     job = LayoutJob(fake_toolkit(tmp_path), tmp_path / "work", "Central", "", [], {}, lambda path: "accepted")
-    transport = FakeTransport(["Reasoning Process", '{"tool": "list_files", "input": {"path": "."}}\n@@END N@@',
+    transport = FakeTransport(["Reasoning Process", '{"tool": "list_files", "input": {"path": "."}}\n@@END 7@@',
                                "Thinking", "Still thinking"])
     chat = WebChat(Connection("w", kind=WEBCHAT, transport="clipboard"), job.system_prompt(), job.tools(), transport)
     assert Agent(chat, job.tools()).run("Lay out this map.") == "done"

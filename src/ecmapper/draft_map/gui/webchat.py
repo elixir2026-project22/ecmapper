@@ -302,8 +302,8 @@ class BrowserWindow(QWidget, Transport):
             self.say(f"Message {n}: clicked the send button; if the message is still in the input field, send it "
                      "yourself.")
         elif not complete and reply and now - cur["changed"] > 60:
-            self.say(f"The reply to message {n} has not ended with {end_line(n)} yet: if it is complete, click "
-                     "“Use the reply as it is”.")
+            self.say(f"The reply to message {n} has not ended with an end line ({end_line(n)}) yet: if it is "
+                     "complete, click “Use the reply as it is”.")
 
     @guarded
     def take(self) -> None:
@@ -312,6 +312,9 @@ class BrowserWindow(QWidget, Transport):
             reply, _ = reply_of(cur["text"], cur["number"])
             if reply:
                 self.finish(reply=reply)
+            else:
+                self.say(f"This page has no reply to message {cur['number']} (the message is not on it): open the "
+                         "conversation of this job, or send the message if it is still in the input field.")
 
     def cancel(self) -> None:
         self.current = None

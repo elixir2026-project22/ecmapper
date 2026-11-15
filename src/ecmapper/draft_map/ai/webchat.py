@@ -6,7 +6,8 @@ calls as JSON blocks in its reply (:func:`parse`) and gets their results in
 ecmapper's next message. The messages are numbered: message N ends with the
 line :func:`tail` and the model ends its reply with the line :func:`end_line`,
 so a transport that reads the page knows where the reply is and when it is
-complete (:func:`reply_of`). A transport carries the messages:
+complete (:func:`reply_of`; models miscount, so an end line with any number
+ends a reply). A transport carries the messages:
 ``exchange(message, number, images, stop)`` returns the reply, with its end
 line if it is complete (None: stopped; a reply without calls and end line gets :data:`UNFINISHED` once),
 and has `images` (True: it can send images);
@@ -88,18 +89,34 @@ def blocked(url: str) -> str | None:
     return None
 
 
+#: an end line as models write it: with any number (they miscount), with N or without a number
+END = re.compile(r"@@[ \t]*END[ \t]*(?:\d+|N)?[ \t]*@@")
+_MESSAGE = re.compile(r"ecmapper message \d")
+
+
 def reply_of(page: str, number: int) -> tuple[str, bool]:
     """The reply to message `number` in the text of a chat (the page, or what the user copied) and whether it is
-    complete (ends with :func:`end_line`). It starts after the message's :func:`tail` (or after the end of the reply
-    before, if the chat shows the message as an attachment)."""
+    complete (has an end line, :data:`END`; the reply ends at the last one: a chat may show the end line a second
+    time above the reply, as its summary). It starts after the message's :func:`tail`; if the chat shows the message
+    as an attachment, after the message's first line or after the end of the reply before. A page that shows other
+    messages of ecmapper but not this one has no reply to it (taking the page as the reply would run all its calls
+    again); a text without any message is a reply the user copied."""
     start = page.rfind(tail(number))
     if start >= 0:
         start += len(tail(number))
     else:
-        start = page.rfind(end_line(number - 1))
-        start = start + len(end_line(number - 1)) if start >= 0 else 0
-    end = page.find(end_line(number), start)
-    return (page[start:end] if end >= 0 else page[start:]).strip(), end >= 0
+        heads = list(re.finditer(rf"ecmapper message {number}(?!\d)", page))
+        before = page.rfind(end_line(number - 1))
+        if heads:
+            start = heads[-1].end()
+        elif before >= 0:
+            start = before + len(end_line(number - 1))
+        elif _MESSAGE.search(page):
+            return "", False
+        else:
+            start = 0
+    ends = list(END.finditer(page, start))
+    return (page[start:ends[-1].start()] if ends else page[start:]).strip(), bool(ends)
 
 
 _FENCE = re.compile(r"^[ \t]*```[\w-]*[ \t]*$", re.MULTILINE)
@@ -115,6 +132,20 @@ CUT_OFF = ("your reply was cut off in this call (the chat's limit of the length 
 UNFINISHED = ("Your last reply had no tool calls and did not end with its end line. If you are not done, go on with "
               "your next calls (keep replies short; read only what you need). If you are done, give your final answer "
               "and end it with the end line.")
+
+
+def call_input(value: dict):
+    """The input of a call as models write it: "input", or "arguments" / "parameters", or the entries of the call
+    itself beside "tool"; without a "tool" entry of its own (some repeat it there)."""
+    if "input" in value:
+        data = value["input"]
+    else:
+        data = next((value[k] for k in ("arguments", "parameters") if isinstance(value.get(k), dict)), None)
+        if data is None:
+            data = {k: v for k, v in value.items() if k != "tool"}
+    if isinstance(data, dict) and "tool" in data:
+        data = {k: v for k, v in data.items() if k != "tool"}
+    return data
 
 
 def parse(reply: str, number: int, complete: bool = True) -> tuple[str, list[ToolCall]]:
@@ -142,7 +173,7 @@ def parse(reply: str, number: int, complete: bool = True) -> tuple[str, list[Too
                     except json.JSONDecodeError:
                         pass
         if isinstance(value, dict) and "tool" in value:
-            name, data = value.get("tool"), value.get("input", {})
+            name, data = value.get("tool"), call_input(value)
             error = None if isinstance(data, dict) else "'input' must be a JSON object"
             error = error if isinstance(name, str) else "'tool' must be the name of a tool"
             calls.append(ToolCall(f"{number}.{len(calls) + 1}", name if isinstance(name, str) else "?",
@@ -213,8 +244,8 @@ class WebChat(Chat):
         reply = self.transport.exchange(message, n, images, stop)
         if reply is None:
             return Turn("", [], "cancelled")
-        complete = end_line(n) in reply
-        reply = reply.replace(end_line(n), "").strip()
+        complete = END.search(reply) is not None
+        reply = END.sub("", reply).strip()
         self.history.append((message, reply))
         text, calls = parse(reply, n, complete)
         self.names = {c.id: c.name for c in calls}
