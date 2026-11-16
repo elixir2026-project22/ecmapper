@@ -312,6 +312,15 @@ class TestStartPatchScore(unittest.TestCase):
         b, x, y = found; b['nodes'][x] = [b['nodes'][x][0] + 30, b['nodes'][x][1]]
         self.assertTrue(T.align(INP, s2, [b['block']])); self.assertEqual(b['nodes'][x][0], b['nodes'][y][0])
 
+    def test_skeleton(self):
+        """`start --skeleton`: everything that has to be placed, and no layout."""
+        from escher_handlayout.start import skeleton_spec, start_spec
+        sk, full = skeleton_spec(INP), start_spec(INP)
+        self.assertEqual(declspec.validate_schema(sk), []); self.assertEqual([b['block'] for b in sk['layouts']], [b['block'] for b in full['layouts']])
+        self.assertTrue(all(b['nodes'] == {} and b['origin'] == [0, 0] and all(set(r) == {'id', 'name'} for r in b['reactions']) for b in sk['layouts']))
+        self.assertEqual([b['node_names'] for b in sk['layouts']], [b['node_names'] for b in full['layouts']]); self.assertEqual(sk['titles'], {}); self.assertEqual(sk['merges'], [])
+        P, _ = declspec.compile_spec(sk, Layout(INP), partial=True); self.assertEqual(P, [])           # nothing wrong, only nothing placed
+
     def test_shapes_and_view(self):
         """The helpers for a spec script, and the pictures with marks."""
         from escher_handlayout import shapes as S, view as V

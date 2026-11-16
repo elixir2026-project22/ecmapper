@@ -41,8 +41,10 @@ folder `python run.py`).
 ```text
 RUN inspect --input MAP --out analysis          facts about the draft (analysis.md) and where a catalogue of placement
                                                 rules puts the subsystems (arrangement.md)
-RUN start --input MAP --out reference.json      a complete, valid spec of the draft: a reference for the format, the
-                                                ids, the merges and the reaction entries. Not your layout.
+RUN start --input MAP --out skeleton.json --skeleton   what you have to place: the blocks with their reactions and
+                                                node names, without coordinates, sides, merges or titles
+RUN start --input MAP --out reference.json      what the kit makes on its own: a valid spec with the draft's shapes.
+                                                For build_0 and to look up the format. Your script must not load it.
 RUN script make_spec.py                         runs your script with the kit importable
 RUN check-spec --input MAP --spec SPEC          fast check without a build
 RUN build --input MAP --spec SPEC --out build_N --max-builds 100     the map, an overview picture, score and targets
@@ -62,9 +64,11 @@ ring, lanes, an hourglass reaction). `specs/iml1515_central_carbon.layout.json` 
 
 ### A. Understand the draft
 
-Run `inspect` and `start`. Read `analysis/analysis.md` (subsystems, reactions with their ids, *Merge candidates*,
-*Traps / hints*) and skim `reference.json`. Build `build_0` from `reference.json` and look at its overview: this is
-what the kit makes without you. It is connected and valid, and its shapes are those of the draft.
+Run `inspect` and both `start` commands. Read `analysis/analysis.md` (subsystems, reactions with their ids, *Merge
+candidates*, *Traps / hints*) and `skeleton.json`. Build `build_0` from `reference.json` and look at its overview and
+at a `view` of pyruvate: this is what the kit makes without you. It is connected and valid, its shapes are those of
+the draft, and it is the map you have to beat clearly, by eye and by score. Shifting its blocks around does not do
+that: its weakness is the shapes.
 
 ### B. Design (`PLAN.md`, at most 60 lines)
 
@@ -86,18 +90,21 @@ what the kit makes without you. It is connected and valid, and its shapes are th
 
 ### C. Write the layout as a script (`make_spec.py`)
 
-The script builds the whole spec and writes it (`shapes.save`): zones, merges, splits, one block per subsystem with
-the coordinates of its primary metabolites and one entry per reaction, the titles. Take ids, zone names, merges and
-reaction entries from `reference.json` where they fit (`shapes.load`), look ids up by name with `shapes.Draft`, and
-compute every coordinate from your sketch with `column`, `row`, `line`, `ring`, `fan`, `lanes`, `mirror`, `rotate`,
-`move`. Keep the numbers of the design (origins, spacings, radii) as named constants at the top: you will change them.
+The script loads `skeleton.json` (`shapes.load`), fills it and writes the spec (`shapes.save`): merges, splits, for
+every block its origin, the coordinates of **all** its primary metabolites and the keys of every reaction, and the
+titles. **Every coordinate comes from your sketch**, computed with `column`, `row`, `line`, `ring`, `fan`, `lanes`,
+`mirror`, `rotate`, `move`; look ids up by name with `shapes.Draft`. The script must not load `reference.json` or the
+draft's coordinates: a script that shifts the kit's blocks reproduces the draft's shapes, which is what you are here
+to replace. Keep the numbers of the design (origins, spacings, radii) as named constants at the top: you will change
+them. Write the script block by block and run `check-spec --partial` in between: it says what is still to place.
 
 Run it, then `check-spec`, then `build`. A `SPEC ERROR` lists everything that is wrong; fix the script, not the JSON.
 
 ### D. Look, then change the script (repeat)
 
-After **every** build look at the overview, and at a `view` of every hub and of every place the build names. Judge in
-this order:
+After **every** build look at the overview, and run `view --around` for every hub (at least pep, pyruvate,
+acetyl-CoA, oxaloacetate where the map has them) and every place the build names, and look at those pictures. A build
+you have not looked at tells you nothing. Judge in this order:
 
 1. Does the map read like your design? Is each pathway one recognisable shape, in the place you meant?
 2. Is there room at the hubs, or do reactions and labels pile up?
@@ -108,7 +115,9 @@ Change the design numbers or the shape of a block in the script and build again.
 (more room, a block on the other side, a copy for a side pathway) to nudging single nodes. You may try variants: a
 script argument that selects one, a build of each, and you keep the one that looks better.
 
-The build's score and its last line are advice on the drawing, not the judge of the map: a map with a lower score
+A good map takes many rounds: expect 10 to 25 builds, and do not finish with a map that is not clearly better than
+`build_0`. The build's score and its last line are advice on the drawing, not the judge of the map: do not reject the
+better-looking map because a placement direction is reported as violated (note it in `DECISIONS.md`), and remember that a map with a lower score
 whose pathways sit where no biochemist would look for them is the worse map. Never meet a target with a trick (a copy
 made only to satisfy a direction, a pathway moved away from where it belongs).
 

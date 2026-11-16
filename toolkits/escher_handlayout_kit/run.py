@@ -2,6 +2,7 @@
 """Command line interface.
 
   python run.py inspect  --input MAP.json --out DIR
+  python run.py start    --input MAP.json --out SPEC.json --skeleton     # what has to be placed, without any layout (PROMPT_AGENT.md)
   python run.py start    --input MAP.json --out SPEC.json [--as-is]      # a complete spec to be changed: the subsystems of the draft,
                                                                          # arranged and connected (--as-is: the draft as it is)
   python run.py patch    --input MAP.json --spec SPEC.json --json '{...}' | --fragment FRAGMENT.json   # change a part of a spec
@@ -38,6 +39,7 @@ k = sub.add_parser('check-spec'); k.add_argument('--input', required=True); k.ad
 k.add_argument('--partial', action='store_true', help='an unfinished spec: report what is wrong and what is still missing')
 s = sub.add_parser('start', help='write a complete spec of the draft map: its subsystems arranged and connected'); s.add_argument('--input', required=True); s.add_argument('--out', required=True)
 s.add_argument('--as-is', action='store_true', help='the draft as it is: every subsystem a separate block, no merges')
+s.add_argument('--skeleton', action='store_true', help='no layout at all: the blocks with their reactions and node names, for a layout written from scratch')
 s.add_argument('--taxa', default='all', help='organism group for the arrangement (all, bacteria, plants, animals, fungi, ...)')
 p = sub.add_parser('patch', help='merge a spec fragment into a spec file (blocks by name, reactions and nodes by id)')
 p.add_argument('--input', required=True); p.add_argument('--spec', required=True, help='the spec file to change (created if missing)')
@@ -124,6 +126,12 @@ elif args.cmd == 'start':
     from escher_handlayout.declspec import format_spec
     from escher_handlayout._io import write_text
     try:
+        if args.skeleton:
+            from escher_handlayout.start import skeleton_spec
+            spec = skeleton_spec(args.input); os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True); write_text(args.out, format_spec(spec))
+            print(f"skeleton written to {args.out}: {len(spec['layouts'])} blocks, {sum(len(b['reactions']) for b in spec['layouts'])} reactions and "
+                  f"{sum(len(b['node_names']) for b in spec['layouts'])} primary metabolite nodes to place (no coordinates, no merges, no titles)")
+            sys.exit(0)
         if args.as_is: spec, notes = start_spec(args.input), None
         else:
             from escher_handlayout.connect import connected_start

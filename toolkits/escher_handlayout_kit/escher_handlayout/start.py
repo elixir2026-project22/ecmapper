@@ -58,6 +58,20 @@ def reaction_entry(L, rid, origin):
     return entry
 
 
+def skeleton_spec(input_path):
+    """The spec of the draft without any layout: zones, one block per subsystem with its reactions (`id`, `name`) and
+    `node_names` (which metabolite each primary node id is), but no coordinates, no sides, no merges and no titles.
+    For someone who designs the layout from scratch: every position is theirs to decide."""
+    spec = start_spec(input_path)
+    spec['notes'] = ('Skeleton written by `run.py start --skeleton`: what has to be placed. Give every id of node_names a position in '
+                     'nodes (or on a ring), every reaction its keys, every zone a title position; add merges and splits.')
+    for b in spec['layouts']:
+        b['origin'] = [0, 0]; b['nodes'] = {}
+        b['reactions'] = [{'id': r['id'], 'name': r['name']} for r in b['reactions']]
+    spec['titles'] = {}
+    return spec
+
+
 def start_spec(input_path):
     """The spec of the draft map `input_path` as it is drawn (a dict; write it with declspec.format_spec)."""
     a = analyse(input_path)
