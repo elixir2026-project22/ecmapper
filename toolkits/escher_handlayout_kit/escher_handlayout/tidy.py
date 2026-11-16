@@ -6,10 +6,12 @@ LAYOUT_LEARNINGS.md 6 and 8):
 - **rows and columns** (:func:`align`): primary metabolites that one reaction joins and that are almost above or beside
   each other are put exactly into one column or row, along chains of such reactions;
 - **cofactors** (:func:`place_cofactors`): `side` and `dist` of a reaction are chosen so that its cofactors and their
-  branches lie where the fewest nodes and lines of the map are.
+  branches lie where the fewest nodes and lines of the map are;
+- **untangling** and **copies** (:func:`tidy`): local changes with the rest of the map pinned (LAYOUT_LEARNINGS.md 2
+  and 4): a loose end is turned around its reaction, a reaction with a long line to a hub gets its own copy of it.
 
-Both write plain values into the spec (node coordinates, `side`, `dist`), which stay editable; nothing moves a block or
-changes a merge. A change is kept only where it is an improvement by the step's own measure.
+All write plain values into the spec (node coordinates, `side`, `dist`, `splits`), which stay editable; nothing moves a
+block or changes a merge. :func:`tidy` keeps a change only if the metrics of the drawing get better.
 """
 import copy, math
 import numpy as np
@@ -219,44 +221,113 @@ def place_cofactors(input_path, spec, blocks=None, rounds=2):
 
 
 # ------------------------------------------------------------------------------- only what the metrics confirm
+WEIGHT = {'crossings': 1, 'labels on lines': 3, 'labels on nodes': 6, 'label overlaps': 4, 'close nodes': 10, 'long lines': 3,
+          'unconnected subsystems': 40, 'detached pieces': 20, 'placement penalty': 1}
+TURNS = (30, -30, 60, -60, 90, -90, 180)   # untangle: a loose end is tried at these angles around the rest of its reaction
+COPY_COST = 3                              # copies: a copy of a metabolite must save more than so many points
+COPY_REACH, COPY_AT = 500.0, 400.0         # ... is tried for a line longer than this, and put so far from the reaction's other end
+
+
 def measure(input_path, spec, curv=0.6, taxa='all'):
-    """(value, parts) of the drawing of `spec`: the terms of the score that tidying can change, measured as `build` does."""
+    """(value, parts, the reactions named) of the drawing of `spec`: the terms of the score that tidying can change,
+    measured as `build` does."""
     from .engine import place_labels
-    from . import pack, qa, directions
+    from . import pack, qa, directions, pipeline
     L = Layout(input_path); compile_spec(spec, L, partial=False); L.curv = curv
     L.finish(); place_labels(L); pack.pack(L)
     m = qa.metrics(L); pl = directions.check_layout(L, taxa) or {}
     parts = {'crossings': m['line_crossings'], 'labels on lines': m['labels_on_lines'], 'labels on nodes': m['labels_on_nodes'],
-             'label overlaps': m['label_label_overlaps'], 'close nodes': m['primary_nodes_closer_than_70'], 'placement penalty': pl.get('penalty', 0)}
-    weight = {'crossings': 1, 'labels on lines': 3, 'labels on nodes': 6, 'label overlaps': 4, 'close nodes': 10, 'placement penalty': 1}
+             'label overlaps': m['label_label_overlaps'], 'close nodes': m['primary_nodes_closer_than_70'], 'long lines': m.get('long_lines', 0),
+             'unconnected subsystems': len(pipeline.unconnected_subsystems(L, spec.get('merges', []))),
+             'detached pieces': len(pipeline.detached_pieces(L)), 'placement penalty': pl.get('penalty', 0)}
     named = {x for pair, _ in m['worst_crossing_pairs'] for x in pair} | {x.split(' ', 1)[1] for x in m['labels_on_lines_list'] if x.startswith('reaction ')}
-    return sum(weight[k] * v for k, v in parts.items()), parts, named
+    return sum(WEIGHT[k] * v for k, v in parts.items()), parts, named
 
 
-def tidy(input_path, spec, blocks=None, do_align=True, do_cofactors=True, seconds=60.0, taxa='all'):
-    """A tidied copy of `spec` and the notes of what changed. Every step is a proposal (:func:`align`,
-    :func:`place_cofactors`) that is taken block by block, and kept only if the metrics of the drawing get better; then
-    the cofactors of the reactions that the metrics still name are tried on their other side and at other distances.
-    `seconds`: when to stop trying."""
+def _primary(L, rid):
+    I = L.info[rid]; prim = lambda xs: [n for _, n in xs if L.N[n]['node_is_primary']]
+    return prim(I['subs']), prim(I['prods'])
+
+
+def tidy(input_path, spec, blocks=None, do_align=True, do_untangle=True, do_cofactors=True, do_copies=False, seconds=90.0, taxa='all'):
+    """A tidied copy of `spec` and the notes of what changed. Every change is a proposal that is kept only if the
+    metrics of the drawing get better (:func:`measure`):
+
+    - rows and columns (:func:`align`), block by block;
+    - untangling: a metabolite that only one reaction uses (a loose end) is turned around the rest of its reaction, for
+      the reactions that the metrics name, and a lane of parallel reactions is put on the other side of its line;
+      everything else stays pinned;
+    - cofactors (:func:`place_cofactors`), block by block, then the other side and other distances for the reactions
+      that the metrics still name;
+    - copies (only with `do_copies`): a named reaction with a long line to a metabolite that three or more reactions
+      use gets its own copy of it beside its other metabolites (a `splits` entry), if that saves more than COPY_COST points.
+
+    `seconds`: when to stop trying (shared between the steps)."""
     import time
-    end = time.time() + seconds
     spec = copy.deepcopy(spec); names = [b['block'] for b in _blocks(spec, blocks)]
     value, first, named = measure(input_path, spec, taxa=taxa); notes = []
     block = lambda s, name: next(b for b in s['layouts'] if b['block'] == name)
-    def accept(trial):
+    steps = [do_align, do_untangle, do_cofactors, do_copies]; start = time.time(); end = start
+    def next_step(i):                        # each step gets its share of the time that is left
+        nonlocal end
+        left = start + seconds - time.time(); end = time.time() + max(0.0, left) / max(1, sum(steps[i:]))
+    def accept(trial, margin=0):
         nonlocal spec, value, named
-        v, _, who = measure(input_path, trial, taxa=taxa)
-        if v < value: spec, value, named = trial, v, who; return True
+        try: v, _, who = measure(input_path, trial, taxa=taxa)
+        except Exception: return False       # a proposal that does not compile is no improvement
+        if v + margin < value: spec, value, named = trial, v, who; return True
         return False
     if do_align:
-        proposal = copy.deepcopy(spec); align(input_path, proposal, blocks); kept = []
+        next_step(0); proposal = copy.deepcopy(spec); align(input_path, proposal, blocks); kept = []
         for name in names:
             if block(proposal, name).get('nodes') == block(spec, name).get('nodes') or time.time() > end: continue
             trial = copy.deepcopy(spec); block(trial, name)['nodes'] = block(proposal, name)['nodes']
             if accept(trial): kept.append(name)
         if kept: notes.append('rows and columns: nodes aligned in ' + ', '.join(kept))
+    if do_untangle:
+        next_step(1); moved = set(); tried = set(); improved = True
+        while improved and time.time() < end:
+            improved = False; L, _ = _compiled(input_path, spec)
+            uses = {}
+            for rid in L.info:
+                for n in set(sum(_primary(L, rid), [])): uses.setdefault(n, []).append(rid)
+            ident = lambda k: L.spec_alias.get(k, k) if k.startswith('@') else k
+            for name in names:
+                b = block(spec, name); entry = {r['id']: r for r in b.get('reactions', [])}
+                for k in list(b.get('nodes', {})):
+                    n = ident(k); rs = uses.get(n, [])
+                    if len(rs) != 1 or rs[0] not in entry or L.R[rs[0]]['bigg_id'] not in named or {'arc', 'mid', 'axis'} & set(entry[rs[0]]): continue
+                    s_, p_ = _primary(L, rs[0]); rest = p_ if n in s_ else s_
+                    if not rest or n in rest: continue
+                    a = np.mean([L.pos[x] for x in rest], 0); v = np.array(L.pos[n]) - a
+                    for turn in TURNS:
+                        if (k, turn, tuple(b['nodes'][k])) in tried or time.time() > end: continue
+                        tried.add((k, turn, tuple(b['nodes'][k])))
+                        c, s2 = math.cos(math.radians(turn)), math.sin(math.radians(turn))
+                        d = np.array([c * v[0] - s2 * v[1], s2 * v[0] + c * v[1]]) - v
+                        trial = copy.deepcopy(spec); xy = block(trial, name)['nodes'][k]
+                        block(trial, name)['nodes'][k] = [round(xy[0] + d[0]), round(xy[1] + d[1])]
+                        if accept(trial): moved.add(L.N[n]['bigg_id']); improved = True; break
+                    if improved: break
+                if improved: break                       # the positions changed: look at the map again
+                # a lane of parallel reactions: on the other side of the line, if no other lane is there
+                size = lambda sh: sh['offset'] if isinstance(sh, dict) else None
+                for i, r in enumerate(b.get('reactions', [])):
+                    sh = r.get('shift')
+                    if sh is None or r['id'] not in L.info or L.R[r['id']]['bigg_id'] not in named or 'arc' in r: continue
+                    mirror = dict(sh, offset=-sh['offset']) if isinstance(sh, dict) else [-sh[0], -sh[1]]
+                    ends = frozenset(map(frozenset, _primary(L, r['id'])))
+                    lanes = [q.get('shift', [0, 0]) for q in b['reactions'] if q is not r and q['id'] in L.info and frozenset(map(frozenset, _primary(L, q['id']))) == ends]
+                    near = lambda q: (isinstance(q, dict) and isinstance(mirror, dict) and abs(q['offset'] - mirror['offset']) < 100) or                                      (isinstance(q, list) and isinstance(mirror, list) and math.dist(q, mirror) < 100)
+                    key = (r['id'], 'lane', str(mirror))
+                    if key in tried or any(near(q) for q in lanes) or time.time() > end: continue
+                    tried.add(key); tried.add((r['id'], 'lane', str(sh)))
+                    trial = copy.deepcopy(spec); block(trial, name)['reactions'][i]['shift'] = mirror
+                    if accept(trial): moved.add(L.R[r['id']]['bigg_id'] + ' (lane)'); improved = True; break
+                if improved: break
+        if moved: notes.append(f'untangled: {len(moved)} loose ends turned around their reaction or lanes put on the other side of their line (' + ', '.join(sorted(moved)[:40]) + ')')
     if do_cofactors:
-        changed = set()
+        next_step(2); changed = set()
         proposal = copy.deepcopy(spec); place_cofactors(input_path, proposal, blocks)
         for name in names:
             if block(proposal, name).get('reactions') == block(spec, name).get('reactions') or time.time() > end: continue
@@ -281,6 +352,37 @@ def tidy(input_path, spec, blocks=None, do_align=True, do_cofactors=True, second
                             changed.add(bigg); improved = True; kw['side'], kw['dist'] = side, dist
                             r = block(spec, name)['reactions'][i]; side0, dist0 = side, dist; break
         if changed: notes.append(f'cofactors: side or distance changed for {len(changed)} reactions (' + ', '.join(sorted(changed)[:40]) + ')')
+    if do_copies:
+        next_step(3); copies = []; tried = set(); improved = True; raw = Layout(input_path)
+        while improved and time.time() < end:
+            improved = False; L, _ = _compiled(input_path, spec)
+            uses = {}
+            for rid in L.info:
+                for n in set(sum(_primary(L, rid), [])): uses.setdefault(n, []).append(rid)
+            now = {d: m['keep'] for m in spec.get('merges', []) for d in m.get('dups', [])}
+            split = {(x['reaction'], x['node']) for x in spec.get('splits', [])}
+            for name in names:
+                b = block(spec, name)
+                for r in b.get('reactions', []):
+                    rid = r['id']
+                    if rid not in L.spec_done or L.R[rid]['bigg_id'] not in named or {'arc', 'mid', 'axis'} & set(r): continue
+                    s_, p_ = _primary(L, rid); mid = np.array(L.pos[L.info[rid]['mid']])
+                    for n in s_ + p_:
+                        rest = p_ if n in s_ else s_
+                        if len(uses.get(n, [])) < 3 or not rest or n in rest or np.linalg.norm(np.array(L.pos[n]) - mid) < COPY_REACH: continue
+                        own = next((x for _, x in raw.info[rid]['subs'] + raw.info[rid]['prods'] if now.get(x, x) == n), None)
+                        if own is None or (rid, own) in split or (rid, n) in tried or time.time() > end: continue
+                        tried.add((rid, n))
+                        a = np.mean([L.pos[x] for x in rest], 0); v = np.array(L.pos[n]) - a; at = a + v / np.linalg.norm(v) * COPY_AT
+                        alias = ('@c_' + ''.join(ch if ch.isalnum() else '_' for ch in L.N[n]['bigg_id']))[:24] + '_' + rid
+                        trial = copy.deepcopy(spec); o = b.get('origin', [0, 0])
+                        trial.setdefault('splits', []).append({'alias': alias, 'node': own, 'reaction': rid})
+                        tb = block(trial, name); tb['nodes'][alias] = [round(at[0] - o[0]), round(at[1] - o[1])]
+                        if 'node_names' in tb: tb['node_names'][alias] = L.N[n]['bigg_id']
+                        if accept(trial, COPY_COST): copies.append(f"{L.N[n]['bigg_id']} for {L.R[rid]['bigg_id']}"); improved = True; break
+                    if improved: break
+                if improved: break
+        if copies: notes.append(f'copies: {len(copies)} reactions got their own copy of a metabolite, beside their other metabolites (' + ', '.join(copies) + '); note them in DECISIONS.md, or undo one by deleting its `splits` entry and the @alias coordinates')
     _, last, _ = measure(input_path, spec, taxa=taxa) if notes else (0, first, 0)
     diff = [f'{k} {first[k]} -> {last[k]}' for k in first if first[k] != last[k]]
     notes.append('measured: ' + ', '.join(diff) if diff else 'nothing to tidy: no change made the drawing better by the metrics')

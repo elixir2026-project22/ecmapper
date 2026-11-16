@@ -20,7 +20,7 @@ def area_excess(rep, per_reaction=None):
 #: what to change in the spec for a missed target (docs/GUIDE.md section 8)
 REMEDY = {
     'validation errors': 'read the ERROR lines of qa_report.md: usually a missing placement or a wrong merge',
-    'crossings': 'if you have not since your last change of the arrangement, run `tidy` (it puts the cofactors where they cross least); then, for the worst pairs: move one node, flip a `side`, change a lane `shift`, or split a node instead of drawing a long line; '
+    'crossings': 'if you have not since your last change of the arrangement, run `tidy` (it puts cofactors, loose ends and lanes where they cross least; `tidy --copies` also proposes copies of hub metabolites for long lines); then, for the worst pairs: move one node, flip a `side`, change a lane `shift`, or split a node instead of drawing a long line; '
                  'if many pairs involve two subsystems, move or mirror one block (`origin`)',
     'labels on lines': 'run `tidy` if you have not since your last change of the arrangement; then widen `dist` / `step` / the lane spacing of the named reactions',
     'labels on nodes': 'move the node or give its neighbours more room',

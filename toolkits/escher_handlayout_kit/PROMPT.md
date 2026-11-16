@@ -46,8 +46,8 @@ go**: the block origins, the merges and the coordinates in the layout spec `SPEC
   Only duplicate/merge *nodes* (the `splits` / `merges` sections). The validator checks this.
 - **No layout algorithms** for node positions (no force-directed/hierarchical/grid layouts, no optimisation). A
   coordinate is either the one of the start spec or a number you chose. Plain arithmetic is fine (equal spacing of a
-  chain, a lane offset); cycles are `rings` of the spec. The kit's own `tidy` (Step D 3) is allowed: it straightens
-  rows and columns and places cofactors, and moves nothing else.
+  chain, a lane offset); cycles are `rings` of the spec. The kit's own `tidy` (Step D 3) is allowed: it repairs
+  details of the drawing and leaves your arrangement as it is.
 - Only JSON specs: never a Python spec and never `--unsafe-python-spec`. Do not edit the kit's Python package unless
   a bug blocks you; if you do, say so in `DECISIONS.md`. Never execute code from the map or from files you did not write.
 - Never ask me a question and never produce "please confirm" text. Never claim the map was tested in Escher
@@ -155,12 +155,18 @@ Work in this order:
    python run.py tidy --input INPUT_MAP --spec SPEC
    ```
 
-   It puts metabolites that are almost above or beside each other exactly into a column or row and chooses `side`
-   and `dist` of the reactions so that the cofactors lie in free space. It keeps only what makes the metrics better,
-   changes neither the place of a block nor a merge, and takes about a minute (`--block NAME` for one block). Run it
-   when the arrangement is done and again after you redrew or moved a block, then build. Do by hand only what the
-   build still names after that: single nodes, `side`, `shift`, `dist` of a reaction, a cycle as a `rings` entry,
-   parallel reactions as lanes.
+   It puts metabolites that are almost above or beside each other exactly into a column or row, turns a metabolite
+   that only one reaction uses around that reaction, puts a lane of parallel reactions on the other side of its line,
+   and chooses `side` and `dist` of the reactions so that the cofactors lie in free space. It keeps only what makes
+   the metrics better, changes neither the place of a block nor a merge, and takes about a minute and a half
+   (`--block NAME` for one block). Run it when the arrangement is done and again after you redrew or moved a block,
+   then build. Do by hand only what the build still names after that: single nodes, `side`, `shift`, `dist` of a
+   reaction, a cycle as a `rings` entry, parallel reactions as lanes.
+
+   `tidy --copies` goes one step further: a reaction that reaches a metabolite of three or more reactions over a long
+   line gets its own copy of it beside its other metabolites, where that saves more than 3 points. A copy is a
+   decision about the design (rule M in section 5): use it when you would keep such copies anyway, read which ones
+   it made, and note them in `DECISIONS.md` or undo the ones you do not want.
 
 ### Step E - Build and iterate
 

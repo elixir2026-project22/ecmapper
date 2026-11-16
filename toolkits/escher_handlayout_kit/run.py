@@ -5,7 +5,8 @@
   python run.py start    --input MAP.json --out SPEC.json [--as-is]      # a complete spec to be changed: the subsystems of the draft,
                                                                          # arranged and connected (--as-is: the draft as it is)
   python run.py patch    --input MAP.json --spec SPEC.json --json '{...}' | --fragment FRAGMENT.json   # change a part of a spec
-  python run.py tidy     --input MAP.json --spec SPEC.json [--block NAME ...] [--only align|cofactors]   # rows and columns, cofactors in
+  python run.py tidy     --input MAP.json --spec SPEC.json [--block NAME ...] [--only align|untangle|cofactors] [--copies]
+                                                                         # rows and columns, loose ends and lanes untangled, cofactors in
                                                                          # free space: only what makes the metrics better
   python run.py build    --input MAP.json --spec SPEC.json --out DIR [--curv 0.6] [--no-pack] [--no-png] [--name NAME]
                                                                          # prints score, targets and what to do next
@@ -39,8 +40,9 @@ p.add_argument('--input', required=True); p.add_argument('--spec', required=True
 p.add_argument('--json', help='the fragment as JSON text'); p.add_argument('--fragment', help='a file with the fragment')
 t = sub.add_parser('tidy', help='tidy the drawing of a complete spec (rows and columns, side and distance of the cofactors); the design stays')
 t.add_argument('--input', required=True); t.add_argument('--spec', required=True, help='the spec file to tidy (changed in place)')
-t.add_argument('--block', action='append', help='only this block (may be given several times)'); t.add_argument('--only', choices=['align', 'cofactors'])
-t.add_argument('--seconds', type=float, default=60.0, help='stop trying after this time'); t.add_argument('--taxa', default='all')
+t.add_argument('--block', action='append', help='only this block (may be given several times)'); t.add_argument('--only', choices=['align', 'untangle', 'cofactors'])
+t.add_argument('--copies', action='store_true', help='also give a reaction with a long line to a hub metabolite its own copy of it, where that saves crossings')
+t.add_argument('--seconds', type=float, default=90.0, help='stop trying after this time'); t.add_argument('--taxa', default='all')
 c = sub.add_parser('validate'); c.add_argument('--input', required=True); c.add_argument('--output', required=True)
 d = sub.add_parser('directions', help='where the subsystems usually sit (layout_directions catalogue), or --check SPEC')
 d.add_argument('--input', required=True); d.add_argument('--taxa', default='all', help='all, bacteria, plants, animals, fungi, archaea, ...')
@@ -169,7 +171,8 @@ elif args.cmd == 'tidy':
     from escher_handlayout._io import write_text
     try:
         old = load_spec_file(args.spec)
-        new, notes = tidy(args.input, old, args.block, do_align=args.only != 'cofactors', do_cofactors=args.only != 'align', seconds=args.seconds, taxa=args.taxa)
+        new, notes = tidy(args.input, old, args.block, do_align=args.only in (None, 'align'), do_untangle=args.only in (None, 'untangle'), do_cofactors=args.only in (None, 'cofactors'),
+                           do_copies=args.copies, seconds=args.seconds, taxa=args.taxa)
     except (SpecError, ValueError) as e:
         print('SPEC ERROR (the spec file is unchanged):', e); sys.exit(2)
     if new != old: write_text(args.spec, format_spec(new))

@@ -10,7 +10,7 @@ python run.py inspect --input MAP.json --out analysis/        # facts about the 
 python run.py directions --input MAP.json [--check SPEC.json]  # the same arrangement brief alone / the directions a spec violates
 python run.py start   --input MAP.json --out specs/<map>.layout.json       # a complete spec: the draft's subsystems, arranged and connected (section 3a)
 python run.py patch   --input MAP.json --spec specs/<map>.layout.json --json '{...}'   # change a part of the spec (section 3a)
-python run.py tidy    --input MAP.json --spec specs/<map>.layout.json   # rows and columns, cofactors in free space (section 8)
+python run.py tidy    --input MAP.json --spec specs/<map>.layout.json   # rows and columns, loose ends and lanes untangled, cofactors in free space (section 8)
 (or write specs/<map>.layout.json by hand-choosing coordinates)  # the creative step (a person, or an LLM: see AGENT.md)
 python run.py check-spec --input MAP.json --spec specs/<map>.layout.json   # fast check, no build (--partial: unfinished spec)
 python run.py build   --input MAP.json --spec specs/<map>.layout.json --out out/ --curv 0.6
@@ -195,9 +195,15 @@ proposes rows and columns (primary metabolites that one reaction joins and that 
 or the level, along chains of such reactions) and a `side` and `dist` for every reaction (where its cofactors and their
 branches cross the fewest lines and have the fewest nodes around them), takes the proposals block by block and keeps a
 block's only if crossings, labels on lines, labels on nodes, label overlaps, close nodes and the placement penalty
-together get better, measured as `build` measures them; then it tries the other side and other distances for the
-reactions that the metrics still name. It writes plain values into the spec. `--block NAME` (several times) limits it
-to blocks, `--only align` / `--only cofactors` to one step, `--seconds N` (60) the time it tries.
+together get better (with long lines, unconnected subsystems and detached pieces, so that no step trades one for the
+other), measured as `build` measures them; then it tries the other side and other distances for the reactions that
+the metrics still name. Between the two it untangles locally, with the rest of the map pinned: for the reactions that
+the metrics name, a metabolite that only this reaction uses is turned around the rest of the reaction (30, 60, 90 and
+180 degrees), and a lane (`shift`) is put on the other side of its line unless another lane is there. With `--copies`
+a named reaction whose line to a metabolite of three or more reactions is longer than 500 units gets its own copy of
+it (`splits`), 400 units from its other metabolites, if that saves more than 3 points. It writes plain values into the
+spec. `--block NAME` (several times) limits it to blocks, `--only align` / `untangle` / `cofactors` to one step,
+`--seconds N` (90) the time it tries.
 
 `build` turns these numbers into a decision (`escher_handlayout/score.py`), on the screen and in `qa_report.md`:
 

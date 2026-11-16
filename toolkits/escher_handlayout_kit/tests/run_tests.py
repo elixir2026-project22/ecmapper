@@ -300,6 +300,9 @@ class TestStartPatchScore(unittest.TestCase):
         self.assertEqual(v1 < v0, new != spec)
         self.assertEqual([b.get('origin') for b in new['layouts']], [b.get('origin') for b in spec['layouts']]); self.assertEqual(new.get('merges'), spec.get('merges'))
         with self.assertRaises(ValueError): T.tidy(INP, spec, ['no such block'])
+        cp, _ = T.tidy(INP, new, do_align=False, do_untangle=False, do_cofactors=False, do_copies=True, seconds=10)   # copies only if they pay
+        self.assertEqual(declspec.validate_schema(cp), []); self.assertEqual(cp.get('merges'), spec.get('merges'))
+        self.assertLessEqual(T.measure(INP, cp)[0] + T.COPY_COST * (len(cp.get('splits', [])) - len(new.get('splits', []))), v1)
         s2 = copy.deepcopy(spec); L = Layout(INP); declspec.compile_spec(s2, L, partial=True); found = None
         for b in s2['layouts']:
             for r in b['reactions']:

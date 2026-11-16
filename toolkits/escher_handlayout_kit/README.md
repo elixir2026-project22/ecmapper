@@ -42,7 +42,7 @@ escher_handlayout/
   directions.py            the placement catalogue: matches the subsystems, lists directions/cycles/attachments, checks a layout
   qa.py                    structural validation + layout-quality metrics
   start.py                 the draft as it is as a spec, one block per subsystem (run.py start --as-is)
-  tidy.py                  run.py tidy: rows and columns, side and distance of the cofactors, kept only if the metrics get better
+  tidy.py                  run.py tidy: rows and columns, loose ends and lanes, cofactors, copies of hubs; kept only if the metrics get better
   redraw.py                regular shapes for the blocks of the start spec: a cycle as a ring, a chain as a straight column
   connect.py               the start spec: these blocks arranged by the placement catalogue and connected by merges (run.py start)
   score.py                 score, targets, history of the builds, what to do next (printed by run.py build)
