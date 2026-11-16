@@ -5,6 +5,8 @@
   python run.py start    --input MAP.json --out SPEC.json [--as-is]      # a complete spec to be changed: the subsystems of the draft,
                                                                          # arranged and connected (--as-is: the draft as it is)
   python run.py patch    --input MAP.json --spec SPEC.json --json '{...}' | --fragment FRAGMENT.json   # change a part of a spec
+  python run.py tidy     --input MAP.json --spec SPEC.json [--block NAME ...] [--only align|cofactors]   # rows and columns, cofactors in
+                                                                         # free space: only what makes the metrics better
   python run.py build    --input MAP.json --spec SPEC.json --out DIR [--curv 0.6] [--no-pack] [--no-png] [--name NAME]
                                                                          # prints score, targets and what to do next
   python run.py check-spec --input MAP.json --spec SPEC.json [--partial]
@@ -35,6 +37,10 @@ s.add_argument('--taxa', default='all', help='organism group for the arrangement
 p = sub.add_parser('patch', help='merge a spec fragment into a spec file (blocks by name, reactions and nodes by id)')
 p.add_argument('--input', required=True); p.add_argument('--spec', required=True, help='the spec file to change (created if missing)')
 p.add_argument('--json', help='the fragment as JSON text'); p.add_argument('--fragment', help='a file with the fragment')
+t = sub.add_parser('tidy', help='tidy the drawing of a complete spec (rows and columns, side and distance of the cofactors); the design stays')
+t.add_argument('--input', required=True); t.add_argument('--spec', required=True, help='the spec file to tidy (changed in place)')
+t.add_argument('--block', action='append', help='only this block (may be given several times)'); t.add_argument('--only', choices=['align', 'cofactors'])
+t.add_argument('--seconds', type=float, default=60.0, help='stop trying after this time'); t.add_argument('--taxa', default='all')
 c = sub.add_parser('validate'); c.add_argument('--input', required=True); c.add_argument('--output', required=True)
 d = sub.add_parser('directions', help='where the subsystems usually sit (layout_directions catalogue), or --check SPEC')
 d.add_argument('--input', required=True); d.add_argument('--taxa', default='all', help='all, bacteria, plants, animals, fungi, archaea, ...')
@@ -157,6 +163,18 @@ elif args.cmd == 'patch':
     if dropped: print(f"  the coordinates of the merged nodes {', '.join(dropped)} were removed (the kept node stands for them)")
     if restored: print('  no longer merged, so copies again, placed beside the node that stood for them (move them where they belong): ' + '; '.join(restored))
     [print('  problem:', x) for x in P]; [print('  warning:', w) for w in W]
+elif args.cmd == 'tidy':
+    from escher_handlayout.tidy import tidy
+    from escher_handlayout.declspec import load_spec_file, format_spec
+    from escher_handlayout._io import write_text
+    try:
+        old = load_spec_file(args.spec)
+        new, notes = tidy(args.input, old, args.block, do_align=args.only != 'cofactors', do_cofactors=args.only != 'align', seconds=args.seconds, taxa=args.taxa)
+    except (SpecError, ValueError) as e:
+        print('SPEC ERROR (the spec file is unchanged):', e); sys.exit(2)
+    if new != old: write_text(args.spec, format_spec(new))
+    print(f'tidied {args.spec} (build it):' if new != old else f'{args.spec} is unchanged:')
+    for n in notes: print('  ' + n)
 else:
     e, w = validate_files(args.input, args.output)
     print('errors:', len(e), 'warnings:', len(w)); [print(' ', x) for x in e[:50]]; sys.exit(1 if e else 0)

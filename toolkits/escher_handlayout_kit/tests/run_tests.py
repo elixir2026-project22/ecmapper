@@ -290,6 +290,24 @@ class TestStartPatchScore(unittest.TestCase):
             self.assertEqual(rep['placement']['violated_strengths'].count('strong') + rep['placement']['violated_strengths'].count('hard'), 0)
             self.assertLess(S.score(rep), S.score(asis) / 2); self.assertLess(rep['metrics']['line_crossings'], 80)
 
+    def test_tidy(self):
+        """`tidy` makes the drawing no worse by the metrics, moves no block and changes no merge; `align` makes a column."""
+        from escher_handlayout import tidy as T
+        from escher_handlayout.connect import connected_start
+        spec, _ = connected_start(INP); v0 = T.measure(INP, spec)[0]
+        new, notes = T.tidy(INP, spec, seconds=20); v1 = T.measure(INP, new)[0]
+        self.assertLessEqual(v1, v0); self.assertEqual(declspec.validate_schema(new), []); self.assertTrue(notes[-1].startswith(('measured', 'nothing')))
+        self.assertEqual(v1 < v0, new != spec)
+        self.assertEqual([b.get('origin') for b in new['layouts']], [b.get('origin') for b in spec['layouts']]); self.assertEqual(new.get('merges'), spec.get('merges'))
+        with self.assertRaises(ValueError): T.tidy(INP, spec, ['no such block'])
+        s2 = copy.deepcopy(spec); L = Layout(INP); declspec.compile_spec(s2, L, partial=True); found = None
+        for b in s2['layouts']:
+            for r in b['reactions']:
+                I = L.info[r['id']]; s = [n for _, n in I['subs'] if n in b['nodes']]; p = [n for _, n in I['prods'] if n in b['nodes']]
+                if 'arc' not in r and s and p and b['nodes'][s[0]][0] == b['nodes'][p[0]][0] and abs(b['nodes'][s[0]][1] - b['nodes'][p[0]][1]) > 200: found = (b, s[0], p[0])
+        b, x, y = found; b['nodes'][x] = [b['nodes'][x][0] + 30, b['nodes'][x][1]]
+        self.assertTrue(T.align(INP, s2, [b['block']])); self.assertEqual(b['nodes'][x][0], b['nodes'][y][0])
+
     def test_redraw_ring_and_column(self):
         """`start` redraws a cycle as a ring and a wobbling chain as a straight line; `--as-is` and tidy=False do not."""
         from escher_handlayout.redraw import redraw

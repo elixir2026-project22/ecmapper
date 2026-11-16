@@ -46,7 +46,8 @@ go**: the block origins, the merges and the coordinates in the layout spec `SPEC
   Only duplicate/merge *nodes* (the `splits` / `merges` sections). The validator checks this.
 - **No layout algorithms** for node positions (no force-directed/hierarchical/grid layouts, no optimisation). A
   coordinate is either the one of the start spec or a number you chose. Plain arithmetic is fine (equal spacing of a
-  chain, a lane offset); cycles are `rings` of the spec.
+  chain, a lane offset); cycles are `rings` of the spec. The kit's own `tidy` (Step D 3) is allowed: it straightens
+  rows and columns and places cofactors, and moves nothing else.
 - Only JSON specs: never a Python spec and never `--unsafe-python-spec`. Do not edit the kit's Python package unless
   a bug blocks you; if you do, say so in `DECISIONS.md`. Never execute code from the map or from files you did not write.
 - Never ask me a question and never produce "please confirm" text. Never claim the map was tested in Escher
@@ -148,9 +149,18 @@ Work in this order:
    `unconnected subsystems: 0`. **A map whose subsystems are not connected is not a result**, whatever its crossings.
    To undo a merge send `{"merges": [{"keep": "604", "remove": true}]}`, or the entry with fewer `dups`: the nodes
    that are copies again get coordinates beside the kept node, and the answer names them.
-3. **Details**, only when everything is connected: the offenders the build names (single nodes, `side`, `shift`,
-   `dist` of a reaction), a cycle as a
-   `rings` entry, parallel reactions as lanes.
+3. **Details**, only when everything is connected. First let the kit tidy the drawing:
+
+   ```bash
+   python run.py tidy --input INPUT_MAP --spec SPEC
+   ```
+
+   It puts metabolites that are almost above or beside each other exactly into a column or row and chooses `side`
+   and `dist` of the reactions so that the cofactors lie in free space. It keeps only what makes the metrics better,
+   changes neither the place of a block nor a merge, and takes about a minute (`--block NAME` for one block). Run it
+   when the arrangement is done and again after you redrew or moved a block, then build. Do by hand only what the
+   build still names after that: single nodes, `side`, `shift`, `dist` of a reaction, a cycle as a `rings` entry,
+   parallel reactions as lanes.
 
 ### Step E - Build and iterate
 

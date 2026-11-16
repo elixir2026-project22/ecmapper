@@ -42,7 +42,7 @@ ESCHER_HANDLAYOUT = dict(
 #: escher_handlayout_kit (run.py with inspect, check-spec, build, validate; JSON layout specs)
 ESCHER_HANDLAYOUT_KIT = dict(
     name="escher_handlayout_kit", package="run", instructions=["PROMPT.md"],
-    commands=["inspect", "check-spec", "build", "validate", "directions"], result="**/*_handlayout.json",
+    commands=["inspect", "start", "patch", "tidy", "check-spec", "build", "validate", "directions"], result="**/*_handlayout.json",
     # the parts for an agent on its own: title and intro, parameters, setup, deliverables, final message
     omit=["# AUTONOMOUS TASK", "## 0.", "### Step A", "## 6.", "## 7."],
     notes=f"In PROMPT.md: KIT_DIR = {TOOLKIT} (read-only: write specs into the work folder, e.g. "
