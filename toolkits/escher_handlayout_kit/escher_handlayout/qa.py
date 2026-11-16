@@ -89,6 +89,8 @@ def _box(x, y, anc, text, size, f):
 
 #: a reaction whose line from its middle to a primary metabolite is longer than this is a long line (map units)
 LONG_LINE = 800
+#: a reaction with at least CROWD_MIN other reactions whose middles are within CROWD_RADIUS of its own is crowded
+CROWD_RADIUS, CROWD_MIN = 250, 4
 
 
 def metrics(L):
@@ -151,7 +153,13 @@ def metrics(L):
         c = N[I['mid']]; d = [math.hypot(N[n]['x'] - c['x'], N[n]['y'] - c['y']) for _, n in I['subs'] + I['prods'] if N[n]['node_is_primary']]
         if d and max(d) > LONG_LINE: reach.append((round(max(d)), R[rid]['bigg_id']))
     reach.sort(reverse=True)
-    return dict(long_lines=len(reach), long_lines_list=[[b, a] for a, b in reach[:12]],
+    # --- crowded reactions: many reaction middles in one spot (a hub without room)
+    rids = [rid for rid, I in L.info.items() if I['mid'] in N]; crowd = []
+    if rids:
+        mp = np.array([[N[L.info[r]['mid']]['x'], N[L.info[r]['mid']]['y']] for r in rids], float)
+        for i, r in enumerate(rids):
+            if (np.hypot(mp[:, 0] - mp[i, 0], mp[:, 1] - mp[i, 1]) < CROWD_RADIUS).sum() - 1 >= CROWD_MIN: crowd.append(R[r]['bigg_id'])
+    return dict(crowded=len(crowd), crowded_list=sorted(crowd)[:25], long_lines=len(reach), long_lines_list=[[b, a] for a, b in reach[:12]],
                 line_crossings=ncross, worst_crossing_pairs=[[list(k), v] for k, v in worst],
                 labels_on_lines=len(on_line), labels_on_lines_list=on_line[:25],
                 labels_on_nodes=len(hit_node), labels_on_nodes_list=hit_node[:25],

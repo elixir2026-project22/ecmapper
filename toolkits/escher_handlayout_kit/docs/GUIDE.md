@@ -208,12 +208,13 @@ spec. `--block NAME` (several times) limits it to blocks, `--only align` / `unta
 `build` turns these numbers into a decision (`escher_handlayout/score.py`), on the screen and in `qa_report.md`:
 
 - the **score** `1000 x validation errors + crossings + 3 x labels on lines + 6 x labels on nodes + 4 x label overlaps
-  + 10 x close nodes + 3 x long lines + area excess + 40 x unconnected subsystems + 20 x detached pieces + placement
+  + 10 x close nodes + 3 x long lines + 3 x crowded reactions + area excess + 40 x unconnected subsystems + 20 x detached pieces + placement
   penalty`; a long line is a reaction with a primary metabolite more than 800 units from its middle, the area excess
-  is 1 point per 0.01 million square units of map area per reaction above 0.30;
+  is 1 point per 0.01 million square units of map area per reaction above 0.40; a crowded reaction (3 points each) has
+  4 or more other reaction middles within 250 units of its own: a hub without room;
 - the **targets**, each `ok` or `MISS`: validation errors 0, crossings at most 0.1 x reactions, labels on lines at most
   max(6, 7 % of the reactions), labels on nodes 0, label overlaps at most 2, close nodes 0, long lines at most max(4, 10 % of the reactions),
-  area excess at most 40 (0.70 million square units per reaction), unconnected subsystems 0,
+  area excess at most 40 (0.80 million square units per reaction), crowded reactions at most max(2, 3 % of the reactions), unconnected subsystems 0,
   no violated hard or strong direction; detached pieces are shown as `look`, because a copy can be deliberate;
 - the history of the job: every build is recorded in `builds.json` / `builds.md` beside the `--out` folder (`--history
   FILE`, `--no-history`), a rebuild into the same folder replaces its entry;

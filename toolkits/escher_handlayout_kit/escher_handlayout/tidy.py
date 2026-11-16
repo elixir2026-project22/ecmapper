@@ -221,7 +221,7 @@ def place_cofactors(input_path, spec, blocks=None, rounds=2):
 
 
 # ------------------------------------------------------------------------------- only what the metrics confirm
-WEIGHT = {'crossings': 1, 'labels on lines': 3, 'labels on nodes': 6, 'label overlaps': 4, 'close nodes': 10, 'long lines': 3,
+WEIGHT = {'crossings': 1, 'labels on lines': 3, 'labels on nodes': 6, 'label overlaps': 4, 'close nodes': 10, 'long lines': 3, 'crowded reactions': 3,
           'unconnected subsystems': 40, 'detached pieces': 20, 'placement penalty': 1}
 TURNS = (30, -30, 60, -60, 90, -90, 180)   # untangle: a loose end is tried at these angles around the rest of its reaction
 COPY_COST = 3                              # copies: a copy of a metabolite must save more than so many points
@@ -237,7 +237,7 @@ def measure(input_path, spec, curv=0.6, taxa='all'):
     L.finish(); place_labels(L); pack.pack(L)
     m = qa.metrics(L); pl = directions.check_layout(L, taxa) or {}
     parts = {'crossings': m['line_crossings'], 'labels on lines': m['labels_on_lines'], 'labels on nodes': m['labels_on_nodes'],
-             'label overlaps': m['label_label_overlaps'], 'close nodes': m['primary_nodes_closer_than_70'], 'long lines': m.get('long_lines', 0),
+             'label overlaps': m['label_label_overlaps'], 'close nodes': m['primary_nodes_closer_than_70'], 'long lines': m.get('long_lines', 0), 'crowded reactions': m.get('crowded', 0),
              'unconnected subsystems': len(pipeline.unconnected_subsystems(L, spec.get('merges', []))),
              'detached pieces': len(pipeline.detached_pieces(L)), 'placement penalty': pl.get('penalty', 0)}
     named = {x for pair, _ in m['worst_crossing_pairs'] for x in pair} | {x.split(' ', 1)[1] for x in m['labels_on_lines_list'] if x.startswith('reaction ')}

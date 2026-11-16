@@ -8,10 +8,10 @@ from ._io import read_json, write_json, write_text
 
 #: weight of each term of the score, in the order they are printed
 WEIGHTS = (('validation errors', 1000), ('crossings', 1), ('labels on lines', 3), ('labels on nodes', 6), ('label overlaps', 4),
-           ('close nodes', 10), ('long lines', 3), ('area excess', 1), ('unconnected subsystems', 40), ('detached pieces', 20),
+           ('close nodes', 10), ('long lines', 3), ('crowded reactions', 3), ('area excess', 1), ('unconnected subsystems', 40), ('detached pieces', 20),
            ('placement penalty', 1))
 #: area excess: AREA_POINTS points per million square units per reaction above AREA_FREE; the target allows AREA_LIMIT
-AREA_FREE, AREA_LIMIT, AREA_POINTS = 0.30, 0.70, 100
+AREA_FREE, AREA_LIMIT, AREA_POINTS = 0.40, 0.80, 100
 
 
 def area_excess(rep, per_reaction=None):
@@ -28,8 +28,12 @@ REMEDY = {
     'close nodes': 'two primary nodes are nearly on top of each other: correct their coordinates (merge them if they are one metabolite)',
     'long lines': 'the named reactions join metabolites that are far apart (the number is the length in map units): move the two blocks or '
                   'nodes together, redraw the subsystem around the shared metabolite, or keep a copy of the far metabolite (undo its merge)',
-    'area excess': 'the map is spread out: put consecutive metabolites 350-450 units apart, leave about 300 units between neighbouring '
-                   'subsystems, and redraw a sprawling subsystem as a straight column, a row or a ring (new `nodes` coordinates for the block)',
+    'area excess': 'the map is spread out: leave about 300 units between neighbouring subsystems and redraw a sprawling subsystem as a '
+                   'straight column, a row or a ring (new `nodes` coordinates for the block); do not squeeze the reactions around a hub for it',
+    'crowded reactions': 'too many reactions meet in one spot (each named reaction has 4 or more other reaction middles within 250 units): '
+                         'give the hub room. Move the two metabolites that the parallel lanes run between further apart (about 150 units per '
+                         'lane, 800 or more for pep and pyruvate) and move everything behind them along; spread the reactions around the hub '
+                         'over more directions; or give a side pathway its own copy of the hub metabolite beside it',
     'unconnected subsystems': 'connect ONE subsystem per build, the first one named: move its block (`origin`) next to the subsystem it shares the '
                               'metabolite with, on the side analysis/arrangement.md says, and patch the named merge (the list of dups is complete: '
                               'send it as it is). Then build. Do not tidy the inside of a block before all subsystems are connected',
@@ -44,7 +48,7 @@ def terms(rep):
     m = rep['metrics']
     values = {'validation errors': len(rep['validation_errors']), 'crossings': m['line_crossings'], 'labels on lines': m['labels_on_lines'],
               'labels on nodes': m['labels_on_nodes'], 'label overlaps': m['label_label_overlaps'],
-              'close nodes': m['primary_nodes_closer_than_70'], 'long lines': m.get('long_lines', 0), 'area excess': area_excess(rep), 'unconnected subsystems': len(rep.get('unconnected') or []),
+              'close nodes': m['primary_nodes_closer_than_70'], 'long lines': m.get('long_lines', 0), 'crowded reactions': m.get('crowded', 0), 'area excess': area_excess(rep), 'unconnected subsystems': len(rep.get('unconnected') or []),
               'detached pieces': len(rep.get('detached') or []),
               'placement penalty': (rep.get('placement') or {}).get('penalty', 0)}
     return [(name, values[name], w) for name, w in WEIGHTS]
@@ -66,7 +70,7 @@ def targets(rep):
     rows = [('validation errors', len(rep['validation_errors']), 0), ('crossings', m['line_crossings'], int(0.1 * n)),
             ('labels on lines', m['labels_on_lines'], int(max(6, 0.07 * n))), ('labels on nodes', m['labels_on_nodes'], 0),
             ('label overlaps', m['label_label_overlaps'], 2), ('close nodes', m['primary_nodes_closer_than_70'], 0),
-            ('long lines', m.get('long_lines', 0), int(max(4, 0.1 * n))), ('area excess', area_excess(rep), area_excess(rep, AREA_LIMIT)),
+            ('long lines', m.get('long_lines', 0), int(max(4, 0.1 * n))), ('crowded reactions', m.get('crowded', 0), int(max(2, 0.03 * n))), ('area excess', area_excess(rep), area_excess(rep, AREA_LIMIT)),
             ('unconnected subsystems', len(rep.get('unconnected') or []), 0), ('violated hard/strong directions', strong, 0)]
     out = [dict(name=k, value=v, limit=lim, ok=v <= lim) for k, v, lim in rows]
     out.append(dict(name='detached pieces', value=len(rep.get('detached') or []), limit=0, ok=None if rep.get('detached') else True))
@@ -84,6 +88,7 @@ def offenders(rep, name):
     if name == 'labels on lines': return ', '.join(m['labels_on_lines_list'][:10])
     if name == 'labels on nodes': return ', '.join(m['labels_on_nodes_list'][:10])
     if name == 'long lines': return ', '.join(f'{b} ({a})' for b, a in m.get('long_lines_list', [])[:8])
+    if name == 'crowded reactions': return ', '.join(m.get('crowded_list', [])[:14])
     if name == 'area excess':
         return (f"{m['width']} x {m['height']} map units for {rep['n_reactions']} reactions = {m['bbox_area_Munits2'] / max(rep['n_reactions'], 1):.2f} "
                 f"million square units per reaction (free: {AREA_FREE}, target: at most {AREA_LIMIT})")

@@ -108,7 +108,11 @@ explaining which reactions and why, and stop (this is the only allowed early sto
 3. **Geometry**: a table `block | keep, move or redraw | where | why`: which blocks stay as `start` drew them, which
    you move (new `origin`), which you redraw (new coordinates for their nodes). The backbone is one straight column
    with 350 to 450 units between consecutive metabolites; cycles are rings; side pathways are short rows or columns
-   next to the metabolite they start from. Keep about 300 units free between neighbouring blocks.
+   next to the metabolite they start from. Keep about 300 units free between neighbouring blocks. **Give hubs room**:
+   where many reactions meet (pep, pyruvate, acetyl-CoA, oxaloacetate) the drawing needs more space, not less. Two
+   metabolites that several parallel reactions join are about 150 units per reaction apart (pep and pyruvate: 800 or
+   more), the next metabolites of the backbone move along, and the pathways around a hub leave it in different
+   directions. A small map is no aim: the build counts `crowded reactions`.
 4. **Merges**: a table `metabolite | keep id | dup ids | merge or copy, and why` for the metabolites that `start`
    reports as still drawn more than once (rule M in section 5).
 
@@ -241,7 +245,10 @@ only eyes on the drawing: do not tidy what they do not report.
   pathway is the central column; cycles are rings after the pathway that feeds them; branch pathways hang beside the
   metabolite they start from; only modules that share no metabolite stay unconnected.
 - **Distances**: about 300 units between neighbouring nodes, 600 between subsystems, lanes of parallel reactions
-  110-150 apart; the main component roughly as wide as tall.
+  110-150 apart; more around hubs (Step C 3); the main component roughly as wide as tall.
+- **Hubs and copies**: a hub is drawn once for the pathways of the main flow. A side pathway that would be the
+  seventh or later reaction at a hub may keep its own copy of the metabolite beside it, if the hub gets too crowded
+  otherwise; note it in `DECISIONS.md`.
 - **Sides**: cofactors of a column's reactions on the side away from the lines that enter the column.
 - **Reaction direction**: never flip stoichiometry; reversible reactions show arrowheads on both ends.
 - **Large maps (> 200 reactions)**: do the arrangement and the merges first for all blocks, the details only for
@@ -252,10 +259,10 @@ only eyes on the drawing: do not tidy what they do not report.
 Targets (the build checks them): validation errors 0; crossings at most 0.1 x reactions; labels on lines at most
 max(6, 7 % of reactions); labels on nodes 0; overlapping labels at most 2; primary nodes closer than 70 units: 0;
 long lines (a primary metabolite more than 800 units from the middle of its reaction) at most max(4, 10 % of
-reactions); area excess at most 40 (the map's area is at most 0.70 million square units per reaction); no violated
+reactions); crowded reactions (4 or more other reaction middles within 250 units) at most max(2, 3 % of reactions); area excess at most 40 (the map's area is at most 0.80 million square units per reaction); no violated
 `hard` or `strong` direction. Score = 1000 x validation errors + crossings + 3 x labels on lines + 6 x labels on nodes
 + 4 x label overlaps + 10 x close nodes + 3 x long lines + area excess (1 point per 0.01 million square units per
-reaction above 0.30) + 40 x unconnected subsystems + 20 x detached pieces + placement penalty.
+reaction above 0.40) + 3 x crowded reactions + 40 x unconnected subsystems + 20 x detached pieces + placement penalty.
 
 ## 6. Deliverables (all in OUT_DIR)
 

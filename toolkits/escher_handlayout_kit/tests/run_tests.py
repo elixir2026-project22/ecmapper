@@ -215,9 +215,10 @@ class TestStartPatchScore(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             rep = pipeline.build(INP, SPEC, os.path.join(d, 'build_1'), png=False, name='o')
             m = rep['metrics']
-            self.assertEqual(S.score(rep), m['line_crossings'] + 3 * m['labels_on_lines'] + 3 * m['long_lines'] + S.area_excess(rep)
+            self.assertEqual(S.score(rep), m['line_crossings'] + 3 * m['labels_on_lines'] + 3 * m['long_lines'] + 3 * m['crowded'] + S.area_excess(rep)
                              + 20 * len(rep['detached']) + rep['placement']['penalty'])
-            self.assertEqual(S.area_excess(rep, 0.25), 0); self.assertEqual(S.area_excess(rep, 0.5), 20)       # 1 point per 0.01 above 0.30
+            self.assertEqual(S.area_excess(rep, 0.25), 0); self.assertEqual(S.area_excess(rep, 0.6), 20)       # 1 point per 0.01 above 0.40
+            self.assertEqual(m['crowded'], len(m['crowded_list'])); self.assertIn('crowded reactions', {x['name'] for x in S.targets(rep)})
             self.assertEqual(m['long_lines'], len(m['long_lines_list'])); self.assertTrue(all(length > 800 for _, length in m['long_lines_list']))
             t = {x['name']: x for x in S.targets(rep)}
             self.assertIn('long lines', t); self.assertIn('area excess', t)
