@@ -12,7 +12,10 @@ toolkit folder on PYTHONPATH), `commands` are the allowed first arguments
 (empty: any), `instructions` are put into the AI's system prompt without
 the sections whose headings start with an entry of `omit` (optional; parts
 for an agent on its own, e.g. setup), `result` finds the final map in the
-work folder. escher_handlayout and
+work folder. `agent_instructions` and `agent_notes` (optional) replace
+`instructions` and `notes` for a coding agent's work folder
+(:mod:`.coding_agent`): an agent that runs code can work differently from a
+chat. escher_handlayout and
 escher_handlayout_kit are recognised without a manifest
 (:data:`ESCHER_HANDLAYOUT`, :data:`ESCHER_HANDLAYOUT_KIT`).
 """
@@ -91,6 +94,8 @@ class Toolkit:
     result: str = "**/*_final.json"
     notes: str = ""
     omit: list[str] = field(default_factory=list)
+    agent_instructions: list[str] = field(default_factory=list)  # for coding agents (default: `instructions`)
+    agent_notes: str = ""  # for coding agents (default: `notes`)
 
     @classmethod
     def detect(cls, folder) -> Toolkit:

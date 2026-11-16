@@ -27,7 +27,8 @@ What the procedure produces (worked example: iML1515 central metabolism, 91 reac
 ```
 README.md                  this file
 agent.py                   chat-based agent: model-agnostic, JSON in/out only (docs/AGENT.md)
-run.py                     CLI: inspect | start | patch | tidy | check-spec | build | validate | directions
+run.py                     CLI: inspect | start | patch | tidy | view | script | check-spec | build | validate | directions
+PROMPT_AGENT.md            procedure for a coding agent that runs code and looks at images (designs the layout, writes it with a script)
 PROMPT.md                  prompt for a coding agent with a code sandbox (changes the start spec with patches, follows the build's verdict)
 ecmapper_toolkit.json      how ecmapper's AI chat runs the kit (allowed commands, notes)
 selftest.py                quick regression test      tests/run_tests.py   full test suite (40 tests, ~100 s, offline)
@@ -42,6 +43,8 @@ escher_handlayout/
   directions.py            the placement catalogue: matches the subsystems, lists directions/cycles/attachments, checks a layout
   qa.py                    structural validation + layout-quality metrics
   start.py                 the draft as it is as a spec, one block per subsystem (run.py start --as-is)
+  shapes.py                helpers for a script that writes a spec: ids by name, column, row, ring, fan, lanes, mirror, rotate
+  view.py                  run.py view: pictures of the overview or around a metabolite / reaction, with the defects marked
   tidy.py                  run.py tidy: rows and columns, loose ends and lanes, cofactors, copies of hubs; kept only if the metrics get better
   redraw.py                regular shapes for the blocks of the start spec: a cycle as a ring, a chain as a straight column
   connect.py               the start spec: these blocks arranged by the placement catalogue and connected by merges (run.py start)

@@ -43,8 +43,7 @@ stoichiometry and reversibility.
 - Run it only with `{python} {runner} ARGS`, which runs `python -m {package} ARGS` in this folder with the toolkit \
 on the path and UTF-8 output. Where the instructions write `python -m {package} ...` (or a short alias of it), use \
 this command.{commands}
-- Notes of ecmapper for this toolkit (written for ecmapper's own chat: "run_toolkit" there is `{runner}` here, and \
-`toolkit/...` is the toolkit's folder): {notes}
+- {notes_for}: {notes}
 
 ## The map
 
@@ -105,14 +104,18 @@ def prepare(folder, toolkit: Toolkit, map_name: str, facts: str, subsystems: lis
     `template`: see :func:`write_job`."""
     folder = Path(folder)
     folder.mkdir(parents=True, exist_ok=True)
-    instructions = ", ".join(f"`{toolkit.folder / name}`" for name in toolkit.instructions
+    instructions = ", ".join(f"`{toolkit.folder / name}`" for name in toolkit.agent_instructions or toolkit.instructions
                              if (toolkit.folder / name).is_file()) or "its README"
+    notes_for = "Notes of the toolkit for coding agents" if toolkit.agent_notes else (
+        "Notes of ecmapper for this toolkit (written for ecmapper's own chat: \"run_toolkit\" there is "
+        f"`{RUNNER}` here, and `toolkit/...` is the toolkit's folder)")
     commands = f" Its commands: {', '.join(toolkit.commands)}." if toolkit.commands else ""
     subsystem_text, stub_text = map_facts(subsystems, stubs)
     (folder / TASK).write_text(TASK_TEXT.format(
         map=map_name, facts=facts, draft=DRAFT, toolkit=toolkit.name, toolkit_dir=toolkit.folder,
         instructions=instructions, python=f'"{python}"',
-        runner=RUNNER, package=toolkit.package, commands=commands, notes=toolkit.notes or "(none)",
+        runner=RUNNER, package=toolkit.package, commands=commands,
+        notes_for=notes_for, notes=toolkit.agent_notes or toolkit.notes or "(none)",
         subsystems=subsystem_text, stubs=stub_text, job=JOB, claude=CLAUDE), encoding="utf-8")
     (folder / CLAUDE).write_text(f"@{TASK}\n", encoding="utf-8")  # Claude Code reads CLAUDE.md, imports AGENTS.md
     (folder / RUNNER).write_text(RUNNER_TEXT.format(name=toolkit.name, runner=RUNNER, folder=str(toolkit.folder),

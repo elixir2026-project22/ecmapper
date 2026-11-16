@@ -10,6 +10,8 @@ python run.py inspect --input MAP.json --out analysis/        # facts about the 
 python run.py directions --input MAP.json [--check SPEC.json]  # the same arrangement brief alone / the directions a spec violates
 python run.py start   --input MAP.json --out specs/<map>.layout.json       # a complete spec: the draft's subsystems, arranged and connected (section 3a)
 python run.py patch   --input MAP.json --spec specs/<map>.layout.json --json '{...}'   # change a part of the spec (section 3a)
+python run.py view    --input MAP.json --spec specs/<map>.layout.json --out views/ [--around pyr_c PYK]   # pictures with the defects marked
+python run.py script  make_spec.py                                       # a script of yours that writes the spec (escher_handlayout/shapes.py)
 python run.py tidy    --input MAP.json --spec specs/<map>.layout.json   # rows and columns, loose ends and lanes untangled, cofactors in free space (section 8)
 (or write specs/<map>.layout.json by hand-choosing coordinates)  # the creative step (a person, or an LLM: see AGENT.md)
 python run.py check-spec --input MAP.json --spec specs/<map>.layout.json   # fast check, no build (--partial: unfinished spec)

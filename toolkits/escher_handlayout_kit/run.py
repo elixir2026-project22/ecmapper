@@ -8,6 +8,10 @@
   python run.py tidy     --input MAP.json --spec SPEC.json [--block NAME ...] [--only align|untangle|cofactors] [--copies]
                                                                          # rows and columns, loose ends and lanes untangled, cofactors in
                                                                          # free space: only what makes the metrics better
+  python run.py view     --input MAP.json --spec SPEC.json --out DIR [--around pyr_c PYK ...] [--radius 900] [--no-marks]
+                                                                         # pictures to look at: the overview, or the surroundings of
+                                                                         # metabolites / reactions, with the defects marked
+  python run.py script   FILE.py [ARGS]                                  # run your own script with the kit importable (escher_handlayout.shapes)
   python run.py build    --input MAP.json --spec SPEC.json --out DIR [--curv 0.6] [--no-pack] [--no-png] [--name NAME]
                                                                          # prints score, targets and what to do next
   python run.py check-spec --input MAP.json --spec SPEC.json [--partial]
@@ -43,6 +47,13 @@ t.add_argument('--input', required=True); t.add_argument('--spec', required=True
 t.add_argument('--block', action='append', help='only this block (may be given several times)'); t.add_argument('--only', choices=['align', 'untangle', 'cofactors'])
 t.add_argument('--copies', action='store_true', help='also give a reaction with a long line to a hub metabolite its own copy of it, where that saves crossings')
 t.add_argument('--seconds', type=float, default=90.0, help='stop trying after this time'); t.add_argument('--taxa', default='all')
+v = sub.add_parser('view', help='render the layout of a spec to look at: the overview or the surroundings of names, defects marked')
+v.add_argument('--input', required=True); v.add_argument('--spec', required=True); v.add_argument('--out', required=True, help='folder for the pictures')
+v.add_argument('--around', nargs='*', default=[], help='BiGG ids of metabolites (pyr_c) or reactions (PYK), or node ids: one picture each')
+v.add_argument('--radius', type=float, default=900.0, help='half the width of a picture around a name, in map units')
+v.add_argument('--no-marks', action='store_true'); v.add_argument('--curv', type=float, default=0.6); v.add_argument('--name', default='view')
+x = sub.add_parser('script', help='run a Python script of yours with the kit on the path (for a script that writes the spec)')
+x.add_argument('file'); x.add_argument('args', nargs=argparse.REMAINDER)
 c = sub.add_parser('validate'); c.add_argument('--input', required=True); c.add_argument('--output', required=True)
 d = sub.add_parser('directions', help='where the subsystems usually sit (layout_directions catalogue), or --check SPEC')
 d.add_argument('--input', required=True); d.add_argument('--taxa', default='all', help='all, bacteria, plants, animals, fungi, archaea, ...')
@@ -165,6 +176,18 @@ elif args.cmd == 'patch':
     if dropped: print(f"  the coordinates of the merged nodes {', '.join(dropped)} were removed (the kept node stands for them)")
     if restored: print('  no longer merged, so copies again, placed beside the node that stood for them (move them where they belong): ' + '; '.join(restored))
     [print('  problem:', x) for x in P]; [print('  warning:', w) for w in W]
+elif args.cmd == 'view':
+    from escher_handlayout import view as V
+    try: shown = V.view(args.input, args.spec, args.out, args.around, args.radius, not args.no_marks, args.curv, args.name)
+    except (SpecError, ValueError) as e:
+        print('SPEC ERROR:', e); sys.exit(2)
+    for path, what, found in shown:
+        print(f'{path}: {what}')
+        if not args.no_marks: [print('  ' + line) for line in V.describe(found)]
+elif args.cmd == 'script':
+    import runpy
+    sys.argv = [args.file] + args.args
+    runpy.run_path(args.file, run_name='__main__')
 elif args.cmd == 'tidy':
     from escher_handlayout.tidy import tidy
     from escher_handlayout.declspec import load_spec_file, format_spec

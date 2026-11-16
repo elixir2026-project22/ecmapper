@@ -312,6 +312,37 @@ class TestStartPatchScore(unittest.TestCase):
         b, x, y = found; b['nodes'][x] = [b['nodes'][x][0] + 30, b['nodes'][x][1]]
         self.assertTrue(T.align(INP, s2, [b['block']])); self.assertEqual(b['nodes'][x][0], b['nodes'][y][0])
 
+    def test_shapes_and_view(self):
+        """The helpers for a spec script, and the pictures with marks."""
+        from escher_handlayout import shapes as S, view as V
+        from escher_handlayout.connect import connected_start
+        self.assertEqual(S.column(['a', 'b', 'c'], 10, 20, 400), {'a': [10, 20], 'b': [10, 420], 'c': [10, 820]})
+        self.assertEqual(S.row(['a', 'b'], step=-300), {'a': [0, 0], 'b': [-300, 0]}); self.assertEqual(S.line(['a', 'b', 'c'], (0, 0), (200, 100))['b'], [100, 50])
+        self.assertEqual(S.mirror({'a': [100, 5]}, 'x', 30), {'a': [-40, 5]}); self.assertEqual(S.rotate({'a': [100, 0]}, 90), {'a': [0, 100]})
+        self.assertEqual(S.fan(['a', 'b', 'c'], (0, 0), 100, 0, 180), {'a': [100, 0], 'b': [0, 100], 'c': [-100, 0]}); self.assertEqual(S.hub_gap(6), 900)
+        rg = S.ring('r', ['a', 'b', 'c', 'd']); self.assertEqual(rg['nodes'], {'a': -90, 'b': 0, 'c': 90, 'd': 180}); self.assertEqual(rg['radius'], S.ring_radius(4))
+        ln = S.lanes(['1', '2', '3'], 'a', 'b', 100, dist=90); self.assertEqual([e.get('shift', {}).get('offset', 0) for e in ln], [-100, 0, 100]); self.assertEqual(ln[0]['dist'], 90)
+        d = S.Draft(INP); rid = d.reaction('PGI'); prim = d.primary('PGI'); self.assertEqual(d.node('PGI', 'g6p_c'), prim['g6p_c'])
+        self.assertIn(prim['g6p_c'], d.nodes_of('g6p_c')); self.assertEqual(len(d.chain('PGI', 'PFK')), 3); self.assertEqual(rid, d.reactions('PGI')[0])
+        with self.assertRaises(KeyError): d.reaction('NOPE')
+        spec, _ = connected_start(INP)
+        with tempfile.TemporaryDirectory() as t:
+            p = os.path.join(t, 's.json'); S.save(spec, p); again = S.load(p); self.assertEqual(again['layouts'], spec['layouts'])
+            b = S.block(again, again['layouts'][0]['block']); n = len(b['reactions']); S.set_reactions(b, [dict(b['reactions'][0], dist=99)])
+            self.assertEqual(len(b['reactions']), n); self.assertEqual(b['reactions'][0]['dist'], 99); self.assertEqual(S.block(again, 'New block')['zone'], 'New block')
+            with self.assertRaises(ValueError): S.save(dict(spec, nonsense=1), p)
+            shown = V.view(INP, spec, t, ['pyr_c', 'PGI']); self.assertEqual(len(shown), 2); self.assertTrue(all(os.path.getsize(x[0]) > 5000 for x in shown))
+            whole = V.view(INP, spec, t)[0]; m = pipeline.build(INP, spec, os.path.join(t, 'b'), png=False)['metrics']
+            self.assertEqual(len(whole[2]['crossings']), m['line_crossings']); self.assertEqual(len(whole[2]['crowded']), m['crowded'])
+            self.assertEqual(len(V.describe(whole[2])), 3)
+            with self.assertRaises(ValueError): V.view(INP, spec, t, ['nothing of that name'])
+            script = os.path.join(t, 'make.py')
+            with open(script, 'w') as f: f.write("import sys\nfrom escher_handlayout import shapes as S\nS.save(S.load(sys.argv[1]), sys.argv[2])\nprint('made')\n")
+            import subprocess
+            r = subprocess.run([sys.executable, os.path.join(ROOT, 'run.py'), 'script', script, p, os.path.join(t, 'out.json')], capture_output=True, text=True, encoding='utf-8')
+            self.assertEqual(r.returncode, 0, msg=r.stderr); self.assertIn('made', r.stdout)
+            self.assertTrue(os.path.exists(os.path.join(t, 'out.json')))
+
     def test_redraw_ring_and_column(self):
         """`start` redraws a cycle as a ring and a wobbling chain as a straight line; `--as-is` and tidy=False do not."""
         from escher_handlayout.redraw import redraw
