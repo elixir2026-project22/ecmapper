@@ -5,9 +5,12 @@ You are an expert in metabolic pathway visualisation and the Escher JSON format.
 Where something is ambiguous, apply the decision rules in section 5, write the decision into `DECISIONS.md`
 and continue. Do not stop before the deliverables in section 6 exist.
 
-You do not write the layout from an empty page. The kit writes a complete, valid layout spec of the draft as it is
-(`start`), you change it in small steps (`patch`), and every `build` prints the score, the targets it misses and what
-to do next. Follow that last line of the build.
+**The design of the map is yours.** You know how this metabolism is drawn in textbooks and in published maps, and
+that knowledge decides where the subsystems go and how they connect (Step C). You do not write the layout from an
+empty page, though: the kit writes a complete, valid layout spec of the draft as it is (`start`), you change it in
+small steps (`patch`), and every `build` reports the defects of the drawing that are left (crossings, labels on lines,
+long lines ...) and what to repair next. The score measures defects of the drawing, not whether the map makes
+biochemical sense: use it to repair your design, never to choose it.
 
 ## 0. Task parameters (filled in by whoever runs this prompt)
 
@@ -48,7 +51,9 @@ go**: the block origins, the merges and the coordinates in the layout spec `SPEC
   a bug blocks you; if you do, say so in `DECISIONS.md`. Never execute code from the map or from files you did not write.
 - Never ask me a question and never produce "please confirm" text. Never claim the map was tested in Escher
   (it was not) - say it was validated structurally and by the kit's metrics.
-- You are **not required to view images**: the numbers printed by `build` decide (section 4).
+- You can do the task **without viewing images**: the numbers printed by `build` show the defects of the drawing
+  (section 4). If you can view images, look at the overview of a build (build without `--no-png`) when the
+  arrangement is done and once more before you finalise, and check that the map reads like your design.
 
 ## 3. Procedure
 
@@ -71,12 +76,11 @@ python run.py build   --input INPUT_MAP --spec SPEC --out OUT_DIR/build_0 --name
 `start` does a first arrangement for you: it takes the drawing of every subsystem of the draft (a cycle is redrawn as
 a ring, a wobbling chain as a straight column), puts the subsystems where the placement catalogue wants them and
 connects them through shared metabolites (`merges`). Its answer lists what it redrew, what it merged and which
-metabolites are still drawn more than once. `build_0` is this first arrangement: a connected map, the score to beat.
+metabolites are still drawn more than once. `build_0` is this first arrangement: a connected map to start from.
 It is a floor, not a design: the subsystems still have the shapes of the draft, the map is larger than it has to be
 and some lines are long. A good map needs subsystems that are **redrawn** (Step D 1); moving blocks alone does not
-get there. Then read, completely:
+get there. Then read, completely (`arrangement.md` comes later, in Step C 2):
 
-- `OUT_DIR/analysis/arrangement.md`: where the subsystems go relative to each other, and where they attach;
 - in `OUT_DIR/analysis/analysis.md` the sections *Merge candidates* and *Traps / hints*;
 - `SPEC` itself: one block per subsystem with its `origin`, its `nodes` (relative to the origin; `node_names` says
   which metabolite each id is) and one entry per reaction (`name` says which reaction);
@@ -86,17 +90,29 @@ get there. Then read, completely:
 when you need them. If `inspect` lists **unsupported reactions**, `start` fails: write `OUT_DIR/ABORTED.md`
 explaining which reactions and why, and stop (this is the only allowed early stop).
 
-### Step C - Plan (write `OUT_DIR/PLAN.md`: tables and lists, at most 40 lines)
+### Step C - Design (write `OUT_DIR/PLAN.md`: tables and lists, at most 50 lines)
 
-1. **Design**: the map you want, in a few lines: the backbone (the longest pathway) as one straight column with 350 to
-   450 units between consecutive metabolites; a metabolite that many subsystems use (pyruvate, acetyl-CoA) drawn once,
-   with its reactions around it; cycles as rings; side pathways as short rows or columns next to the metabolite they
-   start from. Then a table `block | keep, move or redraw | where | why`: which blocks stay as `start` drew them, which
-   you move (new `origin`), which you redraw (new coordinates for their nodes). Follow the `hard` and `strong`
-   directions of `arrangement.md`, the `medium` ones unless they cost crossings (`weak` ones are hints). Keep about
-   300 units free between neighbouring blocks.
-2. **Merges**: a table `metabolite | keep id | dup ids | merge or copy, and why` for the metabolites that `start`
+1. **Your design, from what you know.** Do this before you read `arrangement.md`. The subsystems and their reactions
+   are in `analysis.md` and `SPEC`. Write down how a biochemist would draw this map: which pathway is the backbone and
+   in which direction the flux runs through it; which pathway feeds which, and through which metabolite; which
+   metabolites are the hubs (drawn once, with their reactions around them); for every side pathway where it belongs and
+   why (what it starts from, ends in, bypasses or reverses); which reactions run in parallel; which subsystems have
+   nothing to do with the rest and stay apart. Use the picture you know from textbooks and from published maps of this
+   metabolism (section 5 has the usual picture of central carbon metabolism).
+2. **Cross-check with the catalogue.** Now read `OUT_DIR/analysis/arrangement.md` completely: where a catalogue of
+   placement rules puts the subsystems relative to each other, and where they attach. Take over what you had not
+   thought of. Where a direction contradicts your design, decide: follow it, or keep your design and write one line
+   with the biochemical reason into `DECISIONS.md` (the build will report the direction as violated; that is accepted,
+   see Step E). Overrule a `hard` or `strong` direction only if you are sure; `medium` and `weak` ones are hints.
+3. **Geometry**: a table `block | keep, move or redraw | where | why`: which blocks stay as `start` drew them, which
+   you move (new `origin`), which you redraw (new coordinates for their nodes). The backbone is one straight column
+   with 350 to 450 units between consecutive metabolites; cycles are rings; side pathways are short rows or columns
+   next to the metabolite they start from. Keep about 300 units free between neighbouring blocks.
+4. **Merges**: a table `metabolite | keep id | dup ids | merge or copy, and why` for the metabolites that `start`
    reports as still drawn more than once (rule M in section 5).
+
+If you cannot design the map from your own knowledge, take the arrangement of `arrangement.md` and of section 5 as
+your design and follow the last line of every build.
 
 ### Step D - Change the spec, one small patch at a time
 
@@ -152,15 +168,21 @@ that says what to do**:
   try one other arrangement, or finish.
 - `TARGETS MET ...` or `STOP ...` - go to step F.
 
-Do not compute the score yourself and do not stop on your own judgement: the line decides. `NOT FINISHED` means
-exactly that: go on, do not finalise and do not hand in. Build with the default packing (no `--no-pack`). A `look` at *detached
+Do not compute the score yourself. The last line is advice on the drawing: `NOT FINISHED` names a defect that is
+still there, and normally you repair it and build again; do not stop while the build names defects that you can repair
+within your design. You may leave a target missed when its remedy would spoil the design: a direction you overruled
+in Step C, a crossing that only a detour would remove. Write one line into `DECISIONS.md` and go on with the next
+`MISS`. **Never meet a target with a trick**: no copy of a metabolite (`splits`, an undone merge) whose only purpose
+is to satisfy a direction, and no pathway moved away from where it belongs to save a point of the score. The map you
+hand in is the one you judge the best map of this metabolism; if it is not the build the last line names, say why in
+`DECISIONS.md`. Build with the default packing (no `--no-pack`). A `look` at *detached
 pieces* means a piece beside the main map draws a metabolite of the main map again: merge it, or keep the copy on
 purpose and write one line into `DECISIONS.md`. The table of all builds is `OUT_DIR/builds.md`. If a change made
 the score worse, undo it with a patch before you go on.
 
 ### Step F - Finalise
 
-Build the best spec once more with the image and with the curvatures 0.6, 0.45 and 0.3
+Build the spec of the map you judge best once more with the image and with the curvatures 0.6, 0.45 and 0.3
 (`--curv C --out OUT_DIR/final_C`, without `--no-png`); the lowest score wins, ties go to 0.6. Give the packed pieces
 short titles if the report shows generated ones (`small_titles`, see the format reference). Copy the winner's files
 to `OUT_DIR/` (section 6) and run
@@ -171,12 +193,16 @@ python run.py validate --input INPUT_MAP --output OUT_DIR/MAP_NAME.json
 
 It must print `errors: 0`.
 
-## 4. How decisions are made without looking
+## 4. Design and metrics
 
-The metrics are the only judge: crossings between reactions, labels on lines, labels on nodes, overlapping labels,
-nodes too close, detached pieces, violated placement directions. Every change must have a reason: the plan, a
-warning of `patch`, or an offender named by the build. Do not rearrange something only because you "feel" it could
-be nicer.
+Two things decide, each in its own field. **Where the subsystems go and how they connect** is decided by your design
+(Step C), that is by biochemistry: what feeds what, what a reader expects next to what. **How well it is drawn** is
+measured by the metrics: crossings between reactions, labels on lines, labels on nodes, overlapping labels, nodes too
+close, long lines, the area, detached pieces. The metrics cannot see whether a map makes sense: a map with a low
+score whose pathways sit where no biochemist would look for them is a bad map, and a design is not given up for a few
+points. So a change of the arrangement needs a biochemical reason (your plan), and a change of the drawing (a node, a
+`side`, a lane) needs a warning of `patch` or an offender named by the build. Without images the numbers are your
+only eyes on the drawing: do not tidy what they do not report.
 
 ## 5. Decision rules
 
@@ -191,7 +217,7 @@ be nicer.
   glycolysis column, oxaloacetate and malate on the TCA ring, PPC from PEP to oxaloacetate and the malic enzyme from
   malate to pyruvate), keep exactly one copy (e.g. a second malate next to pyruvate) and note it in `DECISIONS.md`.
 - **Two places in one subsystem**: a `splits` entry gives a reaction its own copy of a metabolite.
-- **Arrangement defaults** (where `arrangement.md` is silent). Central carbon metabolism: glycolysis as the central
+- **The usual picture** (your own knowledge of the organism and of the map comes first). Central carbon metabolism: glycolysis as the central
   vertical column; pyruvate -> acetyl-CoA directly below it; the TCA cycle below that (ring, clockwise); the pentose
   phosphate pathway beside upper glycolysis with the Entner-Doudoroff pathway branching at 6-phosphogluconate; the
   PEP/pyruvate/oxaloacetate/malate reactions beside the column between glycolysis and TCA; fermentations beside

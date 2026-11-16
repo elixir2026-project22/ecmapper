@@ -34,7 +34,8 @@ REMEDY = {
                               'metabolite with, on the side analysis/arrangement.md says, and patch the named merge (the list of dups is complete: '
                               'send it as it is). Then build. Do not tidy the inside of a block before all subsystems are connected',
     'detached pieces': 'merge the shared metabolite into the main map (`merges`), or keep the copy on purpose and say why in DECISIONS.md',
-    'placement penalty': 'move the block (`origin`) where the direction says; a medium direction may stay violated if following it costs crossings',
+    'placement penalty': 'move the block (`origin`) where the direction says, unless your design overrules the direction for a biochemical reason '
+                         '(one line in DECISIONS.md) or following it costs crossings; never make a copy of a metabolite only to satisfy a direction',
 }
 
 
@@ -132,7 +133,8 @@ def record(history_path, rep, out_dir, spec_path):
     out = os.path.relpath(out_dir, os.path.dirname(os.path.abspath(history_path))).replace(os.sep, '/')
     hist = [h for h in hist if h['out'] != out]
     hist.append(dict(out=out, spec=spec_sha(spec_path), curvature=rep['curvature'], score=score(rep), targets_met=targets_met(rep),
-                     terms={name: v for name, v, _ in terms(rep)}, map=os.path.basename(rep['output_json'])))
+                     terms={name: v for name, v, _ in terms(rep)}, missed=[t['name'] for t in targets(rep) if t['ok'] is False],
+                     map=os.path.basename(rep['output_json'])))
     write_json(history_path, hist)
     names = [name for name, _ in WEIGHTS]
     rows = ['| build | curvature | ' + ' | '.join(names) + ' | score | targets |', '|---|---|' + '---|' * (len(names) + 2)]
@@ -145,7 +147,8 @@ STALL = 3            # so many changed versions worse than the best one, without
 
 
 def verdict(hist, rep, max_specs=16):
-    """What to do after the newest build of `hist`: (state, text). States: finished, limit, stalled, go_on."""
+    """What to do after the newest build of `hist`: (state, text). States: finished, limit, stalled, go_on. The text is
+    advice on the drawing: whoever designs the map may leave a target missed for a reason and chooses the map to hand in."""
     met = [h for h in hist if h['targets_met']]
     best = min(met or hist, key=lambda h: (h['score'], hist.index(h)))
     where =f"{best['out']}/{best['map']} (score {best['score']}, curvature {best['curvature']})"
@@ -153,9 +156,14 @@ def verdict(hist, rep, max_specs=16):
     for h in hist:
         if h['spec'] not in [v['spec'] for v in versions]: versions.append(h)
     if best['targets_met']:
-        return 'finished', f'TARGETS MET by {where}. Finish: try the other curvatures once (--curv 0.3 and 0.45), then validate the best map and hand it in.'
+        low = min(hist, key=lambda h: (h['score'], hist.index(h)))
+        other = '' if low['score'] >= best['score'] else (
+            f" {low['out']} has a lower score ({low['score']}) but misses: {', '.join(low.get('missed') or ['a target'])}. If that is the better map (the "
+            'target was met only by a copy of a metabolite or a detour), hand that one in and say why in DECISIONS.md.')
+        return 'finished', f'TARGETS MET by {where}. Finish: try the other curvatures once (--curv 0.3 and 0.45), then validate the best map and hand it in.' + other
     if len(versions) > max_specs:
-        return 'limit', f'STOP: {len(versions) - 1} changed versions of the spec were built. Validate the best map and hand it in: {where}.'
+        return 'limit', (f'STOP: {len(versions) - 1} changed versions of the spec were built. Validate the map you judge best and hand it in '
+                         f'(lowest score: {where}).')
     worse, low = 0, versions[0]['score']             # versions that made the map worse since the last improvement;
     for v in versions[1:]:                           # one that ties with the best (a way back to it) counts as neither
         if v['score'] < low: worse, low = 0, v['score']
@@ -164,5 +172,7 @@ def verdict(hist, rep, max_specs=16):
     fix = first_fix(rep)
     if stalled:
         return 'stalled', (f'NO IMPROVEMENT: {worse} changed versions of the spec since the best build were worse (best: {where}). Go back to the spec of the best build. If you have not '
-                           'tried another arrangement yet (swap or mirror two neighbouring subsystems), try one; otherwise validate the best map and hand it in.')
-    return 'go_on', f'NOT FINISHED, do not hand in yet ({len(versions) - 1} of {max_specs} changes used; best so far: {where}). Fix first: {fix}'
+                           'tried another arrangement yet (swap or mirror two neighbouring subsystems), try one; otherwise validate the map you judge best and hand it in.')
+    return 'go_on', (f'NOT FINISHED ({len(versions) - 1} of {max_specs} changes used; best so far: {where}). Fix first: {fix} If the remedy would spoil '
+                     'your design (a direction you overrule for a biochemical reason), leave this target missed, write one line into DECISIONS.md and go '
+                     'on with the next MISS; when only such targets are left, finalise the map you judge best.')

@@ -201,7 +201,9 @@ used      : componentwise (1-t)*gentle + t*strong ; lanes k=(0.32+0.10t)*length 
   no violated hard or strong direction; detached pieces are shown as `look`, because a copy can be deliberate;
 - the history of the job: every build is recorded in `builds.json` / `builds.md` beside the `--out` folder (`--history
   FILE`, `--no-history`), a rebuild into the same folder replaces its entry;
-- one last line that says what to do: `NOT FINISHED ... Fix first: <the unconnected subsystems with the merge that
+- one last line that says what to do (advice on the drawing: the design of the map decides the arrangement, a target
+  may stay missed for a reason noted in `DECISIONS.md`, and a build that meets the targets with a higher score than
+  another build names that build too): `NOT FINISHED ... Fix first: <the unconnected subsystems with the merge that
   connects each, else the missed target that costs most, its offenders, the remedy>`, `NO IMPROVEMENT` after three changed versions of the spec that were worse than the best one with no improvement between them (a version that ties with the best, such as the way back to it, is not counted), `STOP` after
   `--max-builds` (16) changed versions, `TARGETS MET`.
 

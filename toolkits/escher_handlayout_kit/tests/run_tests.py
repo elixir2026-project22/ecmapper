@@ -238,6 +238,9 @@ class TestStartPatchScore(unittest.TestCase):
             self.assertEqual(S.verdict(seq(50, 60, 55, 40, 45, 41), rep)[0], 'go_on')            # an improvement starts the count again
             self.assertEqual(S.verdict(hist, rep, max_specs=1)[0], 'limit')
             hist[-1].update(targets_met=True); self.assertEqual(S.verdict(hist, rep)[0], 'finished'); self.assertIn('build_3', S.verdict(hist, rep)[1])
+            self.assertIn('crossings', hist[0]['missed']); self.assertNotIn('lower score', S.verdict(hist, rep)[1])
+            lower = [dict(h) for h in hist]; lower[0].update(score=hist[-1]['score'] - 1, targets_met=False)       # a build that misses a target scores lower
+            self.assertIn(f"{lower[0]['out']} has a lower score", S.verdict(lower, rep)[1]); self.assertIn('misses: crossings', S.verdict(lower, rep)[1])
             with open(os.path.join(d, 'builds.md')) as f: self.assertIn('| build_3 | 0.6 |', f.read())
 
     def test_lint_names_long_lines_and_close_nodes(self):
