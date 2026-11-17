@@ -291,6 +291,23 @@ def fake_toolkit(tmp_path):
     return Toolkit.detect(folder)
 
 
+
+def test_escher_rules_kit_manifest():
+    """The rule-set toolkit is found by its manifest; its instructions are its own and the engine's."""
+    from pathlib import Path
+
+    folder = Path(__file__).parent.parent / "toolkits" / "escher_rules_kit"
+    toolkit = Toolkit.detect(folder)
+    assert toolkit.name == "escher_rules_kit" and toolkit.package == "run"
+    assert {"inspect", "build", "brief", "check", "rules", "doc"} <= set(toolkit.commands)
+    text = toolkit.instructions_text()
+    assert "=== PROMPT.md" in text and "RULES NOT MET" in text
+    assert "escher_handlayout_kit/PROMPT.md" in text and "## 3. Procedure" in text and "## 0." not in text
+    for name in toolkit.instructions + toolkit.agent_instructions:
+        assert (folder / name).is_file()
+    assert toolkit.command(["brief", "--input", "draft.escher.json"])[1:4] == ["-m", "run", "brief"]
+
+
 def test_workspace(tmp_path):
     toolkit = fake_toolkit(tmp_path)
     w = Workspace(tmp_path / "work", toolkit.folder, max_output=500)

@@ -1,0 +1,99 @@
+# What the kit can find out about a map for the rules of metabolic_map_rules.yaml.
+#
+# `settings` say which metabolites and reactions are what. `checks` binds a rule (by its id) to a probe and gives
+# the probe's parameters. A rule without a binding is not lost: it is listed in every brief and report as a rule to
+# judge by eye. `python run.py probes` lists all probes with their parameters and defaults.
+#
+# Per binding, besides the probe's parameters:
+#   report_as: should     report a broken rule with this strength instead of the rule's own (for heuristic probes)
+#   scope: draft          the layout cannot change this (it is decided where the draft is made): reported apart,
+#                         never counted against a layout
+#   scope: outside        the rule is about something else than the layout of one map (viewer, data overlay, other
+#                         maps): named at the end of briefs and reports, nothing else. Needs no probe.
+#   enabled: false        keep the binding but do not use it
+#   comment: ...          for the reader
+
+settings:
+  # a metabolite id without this ending is its base id: pyr_c -> pyr
+  compartment_suffix: '_[a-z][a-z0-9]?$'
+  # base ids of the currency metabolites (E10): never merged, redrawn at every reaction
+  currency: [atp, adp, amp, gtp, gdp, nad, nadh, nadp, nadph, fad, fadh2, coa, h2o, h, pi, ppi, co2, o2, nh4, hco3,
+             h2o2, h2, q8, q8h2, mqn8, mql8, 2dmmq8, 2dmmql8, fldox, fldrd]
+  # base ids that must not carry the backbone if another pair can (M02)
+  carriers: [coa, nad, nadh, nadp, nadph, atp, adp, amp, gtp, gdp, fad, fadh2, q8, q8h2, mqn8, mql8]
+  # pairs drawn on the same side of the backbone (M06)
+  cofactor_pairs: [[atp, adp], [nad, nadh], [nadp, nadph], [fad, fadh2], [gtp, gdp], [q8, q8h2], [mqn8, mql8]]
+  # exchange, sink and demand reactions by id; one-sided reactions count as well (A05)
+  exchange_prefixes: [EX_, DM_, SK_, sink_]
+  biomass_pattern: '(?i)biomass'
+  # text labels that start like this are no unit titles
+  exit_label_prefix: '→'
+  # radius of a primary / secondary metabolite circle in map units (E30, E31)
+  primary_radius: 20
+  secondary_radius: 12
+
+checks:
+  # ---- motif: one reaction
+  M01: {probe: one_primary_pair, scope: draft}
+  M02: {probe: primary_not_carrier, scope: draft}
+  M04: {probe: currency_candidates, min_degree: 8}
+  M05: {probe: side_branches, max_length: 500, min_backbone_angle: 90}
+  M06: {probe: cofactor_pairs_same_side}
+  M07: {probe: antiparallel_one_axis, max_offset: 350}
+  # ---- motif: the shape of a unit (cycles are searched inside a unit only, which is M11)
+  M12: {probe: cycles_as_rings, min_length: 3, max_length: 12, max_shared: 2, min_roundness: 0.5}
+  M15: {probe: cycles_sharing_metabolites}
+  M17: {probe: branch_points, min_branches: 3}
+  M18: {probe: homologous_units}
+  M23: {probe: axis_aligned, tolerance_deg: 10, min_fraction: 0.5}
+  # ---- arrangement
+  A02: {probe: unit_size, min_reactions: 6, max_reactions: 60, max_map: 200, scope: draft}
+  A04: {probe: interface_metabolites}
+  A05:
+    probe: boundary_reactions
+    edge_fraction: 0.25
+    report_as: should
+    comment: where the edge of the map begins is a guess, so a broken A05 is reported as should
+  A12: {probe: flow_direction, direction: down, min_fraction: 0.6}
+  A15:
+    probe: relative_position
+    comment: unit names are matched as regular expressions, ignoring case; add the relations of your template here
+    relations:
+      - {unit: 'glycolysis', is: above, other: 'citric acid cycle|citrate cycle|TCA|tricarboxylic'}
+      - {unit: 'pentose phosphate', is: near, metabolite: g6p, max_distance: 1500}
+      - {unit: 'oxidative decarboxylation of pyruvate', is: above, other: 'citric acid cycle|citrate cycle|TCA'}
+  A17: {probe: linked_units_adjacent, min_shared: 2, max_gap: 1500}
+  A20: {probe: compartments}
+  A22: {probe: transport_reactions}
+  A30: {probe: positions_stable, tolerance: 1.0}
+  # ---- encoding
+  E10: {probe: currency_not_shared, max_reactions: 1}
+  E11: {probe: drawn_once, max_nodes: 1, per_unit: false}
+  E30: {probe: no_node_overlap, clearance: 0}
+  E31: {probe: edges_avoid_nodes, clearance: 0}
+  E33:
+    probe: label_legible
+    target_width_mm: 180
+    min_pt: 5
+    label_units: 20
+    report_as: may
+    comment: the output size is yours to set; reported as information, not as a defect of the layout
+  # ---- not decided by the layout of one map: delete a line to get the rule back into the lists to judge by eye
+  M03: {scope: draft, comment: which node is primary comes with the draft}
+  M11: {scope: outside, comment: the kit itself searches cycles inside units only}
+  A01: {scope: outside, comment: the units are the subsystems of the draft}
+  A18: {scope: outside}
+  A31: {scope: outside}
+  A32: {scope: outside}
+  A33: {scope: outside, comment: expand / collapse is a feature of the viewer}
+  E01: {scope: outside, comment: Escher draws every reaction as a hyperedge}
+  E02: {scope: outside}
+  E03: {scope: outside}
+  E04: {scope: outside}
+  E05: {scope: outside, comment: Escher draws the arrowheads from the reversibility}
+  E12: {scope: outside, comment: Escher has no clone marker}
+  E13: {scope: outside, comment: Escher draws side participants smaller}
+  E20: {scope: outside}
+  E21: {scope: outside}
+  E22: {scope: outside}
+  E32: {scope: outside, comment: Escher places labels beside the node}

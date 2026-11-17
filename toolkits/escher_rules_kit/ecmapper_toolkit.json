@@ -1,0 +1,37 @@
+{
+ "name": "escher_rules_kit",
+ "package": "run",
+ "instructions": [
+  "PROMPT.md",
+  "../escher_handlayout_kit/PROMPT.md"
+ ],
+ "commands": [
+  "inspect",
+  "start",
+  "patch",
+  "tidy",
+  "view",
+  "check-spec",
+  "build",
+  "validate",
+  "directions",
+  "brief",
+  "check",
+  "rules",
+  "doc"
+ ],
+ "result": "**/*_handlayout.json",
+ "omit": [
+  "# AUTONOMOUS TASK",
+  "## 0.",
+  "### Step A",
+  "## 6.",
+  "## 7."
+ ],
+ "notes": "Two instruction files: PROMPT.md of this kit (what the rule set adds) and PROMPT.md of escher_handlayout_kit (the engine's procedure, which you follow). In the engine's PROMPT.md: KIT_DIR = the engine (not readable as toolkit/...: read its documents with the command doc, e.g. [\"doc\", \"format_reference\"]), INPUT_MAP = draft.escher.json, OUT_DIR = . (the work folder), SPEC = specs/draft.layout.json. The commands written `python run.py ...` there are run with the tool run_toolkit (its arguments after run.py, e.g. [\"start\", \"--input\", \"draft.escher.json\", \"--out\", \"specs/draft.layout.json\"]); leave out --name, so that the map of a build is build_N/draft.escher_handlayout.json (the `output:` line): submit the best build's map. Begin with inspect (it also writes analysis/rules_brief.md: read it), start and build_0. Change the spec with patch: its --json argument is one string, so nothing needs quoting. After every build do what its last lines say: while the engine's line says NOT FINISHED or the last line says RULES NOT MET, go on and do not submit. A reply without a tool call ends the job, so never end a reply with a next step you only announce: make its calls in the same reply. If a build reports unconnected subsystems, connect them first, one per build, with the merge the engine names. Do not use --no-pack. The spec's node and reaction ids are strings of digits such as \"66\" (never BiGG ids such as \"pyr_c\"); the rule reports name both (`pyr_c (node 27)`, `PYK (reaction 140)`). Everything you read stays in the chat, which has a limit: read analysis/rules_brief.md, analysis/arrangement.md, the two named sections of analysis/analysis.md, the spec and [\"doc\", \"format_reference\"]; look things up with [\"doc\", \"guide\"]; do not read draft.escher.json, rules_brief.json or rules_report.json. Keep PLAN.md and DECISIONS.md short (tables and lists, no prose). The toolkit folder and its rules are read-only. The map's subsystems (the title labels) are the units of the rules and the zones and blocks of the start spec.",
+ "agent_instructions": [
+  "PROMPT_AGENT.md",
+  "../escher_handlayout_kit/PROMPT_AGENT.md"
+ ],
+ "agent_notes": "Follow PROMPT_AGENT.md of this kit; it builds on PROMPT_AGENT.md of escher_handlayout_kit (the engine, the second instruction file; `doc prompt_agent` prints it too). RUN in both files is the run command given above: this kit runs the engine's commands. MAP is draft.escher.json; write the spec to specs/draft.layout.json and your script to make_spec.py in this folder. Besides the commands listed, `script FILE.py` runs a script of yours with the engine importable (escher_handlayout.shapes). Leave out --name in builds, so that the map of a build is build_N/draft.escher_handlayout.json; the final map is the *_handlayout.json of your chosen build: tell the user its path. The kit folders and the rule files are read-only."
+}

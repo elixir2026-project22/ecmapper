@@ -788,6 +788,10 @@ A map of `--split` can be laid out by an AI in the GUI. The AI uses a layout *to
 `toolkits/pwl_handlayout_kit` builds on escher_handlayout_kit for smaller models: the AI gets the subsystems as PWL
 texts, the placement of the subsystems from a catalogue of overview maps, and a complete starting spec of the draft
 that it only changes (see its README.md).
+`toolkits/escher_rules_kit` also builds on escher_handlayout_kit: it judges the layout by a rule set, a YAML file of
+typed layout rules that is meant to be edited (`rules/metabolic_map_rules.yaml`). The AI gets the rules that apply to
+the map with the places where (`rules_brief.md`), and every build ends with the rules the map breaks (see its
+README.md and docs/RULES.md).
 The AI lays out all the subsystems of the map together, so it can interconnect them, e.g. merge shared
 metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
 

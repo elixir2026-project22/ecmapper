@@ -1,0 +1,927 @@
+schema:
+  type:
+  - motif
+  - arrangement
+  - encoding
+  strength:
+  - must
+  - should
+  - may
+  - open
+  basis:
+  - stated
+  - inferred
+  - review
+  checked:
+    ok: confirmed against source text
+    fix: confirmed, wording corrected
+    '-': source not opened
+rules:
+- id: M01
+  type: motif
+  group: 'Reaction: what one reaction looks like'
+  when: Every reaction
+  do: Draw exactly one substrate-product pair as the primary connection; attach all other participants as side participants.
+  strength: must
+  basis: stated
+  sources:
+  - 17
+  checked: ok
+- id: M02
+  type: motif
+  group: 'Reaction: what one reaction looks like'
+  when: Choosing the primary connection
+  do: 'Prefer the pair that conserves the carbon / heavy-atom skeleton. Exclude pairs that run through a carrier
+    (CoA, NAD(P)H, ATP ...) whenever a carrier-free pair exists. PDH: pyruvate to acetyl-CoA, not CoA to acetyl-CoA
+    or NAD+ to NADH.'
+  strength: should
+  basis: stated
+  sources:
+  - 17
+  checked: ok
+  note: The original list stated the outcome (PDH) but not the selection rule.
+- id: M03
+  type: motif
+  group: 'Reaction: what one reaction looks like'
+  when: Deciding primary vs. side
+  do: Assign the role per reaction in its pathway, never per metabolite. ATP is a side participant in a kinase and
+    primary in purine synthesis; glutamate is primary in its own synthesis and side in a transamination.
+  strength: must
+  basis: stated
+  sources:
+  - 7
+  checked: ok
+  note: BioCyc primary/secondary annotation is per pathway. Removing a compound globally makes pathways that end
+    or start at it meaningless.
+- id: M04
+  type: motif
+  group: 'Reaction: what one reaction looks like'
+  when: No role annotation available
+  do: Use a degree threshold only as a fallback and keep the resulting list editable. Degree alone misclassifies
+    central hubs (pyruvate, glutamate, acetyl-CoA).
+  strength: should
+  basis: review
+  sources:
+  - 13
+  - 17
+  - 24
+  checked: ok
+  note: MetDraw, LMME and CBMViz (SMALL_THRSH) are degree-based. MetaCarto reports that connectivity cloning recovers
+    curated pairs only by keeping 1.75-2.86 candidates per reaction (38-61% precision).
+- id: M05
+  type: motif
+  group: 'Reaction: what one reaction looks like'
+  when: Side participants
+  do: Attach as short curved branches at the reaction; keep the backbone straight and visually continuous.
+  strength: should
+  basis: stated
+  sources:
+  - 17
+  checked: ok
+- id: M06
+  type: motif
+  group: 'Reaction: what one reaction looks like'
+  when: Paired cofactors (ATP/ADP, NAD+/NADH)
+  do: Place both members of the pair on the same side of the backbone.
+  strength: should
+  basis: stated
+  sources:
+  - 17
+  checked: ok
+  note: Source says 'where possible'.
+- id: M07
+  type: motif
+  group: 'Reaction: what one reaction looks like'
+  when: Two antiparallel reactions between the same metabolites (PFK / FBPase)
+  do: Draw both along one axis, not as a two-node cycle.
+  strength: should
+  basis: stated
+  sources:
+  - 17
+  checked: ok
+- id: M10
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Unit topology is known
+  do: 'Linear: straight chain. Cyclic: ring. Branched: tree. Compose hierarchically: contract cycles to super-nodes,
+    lay out the rest in layers, then expand the cycles.'
+  strength: should
+  basis: stated
+  sources:
+  - 4
+  - 5
+  - 6
+  - 17
+  checked: ok
+  note: Confirmed for [5] and [17]; [4] and [6] not opened. This is where [5], uncited in the original, belongs.
+- id: M11
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Detecting cycles
+  do: Search inside a unit, never network-wide. Network-wide detection returns cycles that span several pathways.
+  strength: must
+  basis: review
+  sources:
+  - 7
+  checked: ok
+  note: Bourqui et al. show this failure on the mouse network (their Fig. 1).
+- id: M12
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: A unit contains a cycle, even a small one
+  do: Draw it as a ring.
+  strength: should
+  basis: stated
+  sources:
+  - 4
+  checked: '-'
+- id: M13
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Placing a ring
+  do: Rotate it so the principal input faces the pathway that feeds it.
+  strength: should
+  basis: stated
+  sources:
+  - 17
+  checked: ok
+- id: M14
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Ring perimeter
+  do: Entries and exits sit on the perimeter; CO2 and redox cofactors point outward.
+  strength: should
+  basis: inferred
+  sources: []
+  checked: '-'
+- id: M15
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Two cycles share a metabolite or reaction (urea cycle / TCA; CBB / photorespiration)
+  do: Draw two adjacent rings joined at the shared element instead of one merged cycle.
+  strength: should
+  basis: stated
+  sources:
+  - 4
+  checked: ok
+  note: Confirmed via the description of [4] in [7]. Examples are mine.
+- id: M16
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Iterative module (beta-oxidation, fatty-acid synthesis / elongation)
+  do: Spiral, or stacked repeats of one turn.
+  strength: may
+  basis: inferred
+  sources: []
+  checked: '-'
+  note: In most GEMs every chain length is its own reaction set, so there is no graph cycle to find. Recognise the
+    module by its repeating reaction classes and stack the turns; a true spiral needs pooled metabolites.
+- id: M17
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Common trunk ending at a branch-point metabolite
+  do: Straight trunk, then a fan. Shikimate to chorismate, then Phe / Tyr / Trp. Asp to Lys / Thr / Met, with Ile
+    continuing from Thr.
+  strength: should
+  basis: inferred
+  sources:
+  - 11
+  checked: fix
+  note: 'Branch points made explicit (chorismate; Ile via Thr). Escher''s builder works the same way: chain plus
+    perpendicular branches.'
+- id: M18
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Homologous sequences (shared enzymes, or one pathway present in two compartments)
+  do: Parallel limbs. Val and Ile run in parallel; Leu branches off 2-oxoisovalerate. Peroxisomal and cytosolic
+    terpenoid branches run in parallel.
+  strength: should
+  basis: inferred
+  sources:
+  - 17
+  checked: fix
+  note: Original listed Val/Ile/Leu as three siblings; Leu is a branch off the Val limb. Terpenoid example confirmed
+    in [17].
+- id: M19
+  type: motif
+  group: 'Shape: what one unit looks like'
+  when: Bypass of trunk steps (ED vs. EMP, glyoxylate shunt, gluconeogenic steps)
+  do: Draw beside the trunk. Gluconeogenic steps are counter-direction arrows next to the glycolytic step they bypass.
+  strength: should
+  basis: inferred
+  sources: []
+  checked: '-'
+- id: M20
+  type: motif
+  group: Orientation and geometry
+  when: Orienting a unit
+  do: Follow the net / biosynthetic direction (sign of the pFBA flux), not the stored reaction direction and not
+    the reversibility flags.
+  strength: should
+  basis: stated
+  sources:
+  - 7
+  - 17
+  checked: ok
+  note: '[7]: valine biosynthesis input could not be identified from reversibility alone.'
+- id: M21
+  type: motif
+  group: Orientation and geometry
+  when: Flux is zero or unavailable
+  do: Fall back to the template direction, then to the surrounding topology.
+  strength: should
+  basis: review
+  sources:
+  - 17
+  checked: ok
+  note: Topology fallback is MetaCarto's; template-first is my addition.
+- id: M22
+  type: motif
+  group: Orientation and geometry
+  when: Flux-guided orientation is used
+  do: Fix medium and objective, store them with the map, and freeze the result. Orientation is condition-dependent
+    and otherwise violates A30.
+  strength: must
+  basis: review
+  sources: []
+  checked: '-'
+- id: M23
+  type: motif
+  group: Orientation and geometry
+  when: Routing inside a unit
+  do: Long straight axis-aligned runs; minimise crossings and bends; short edges; wide angles.
+  strength: should
+  basis: stated
+  sources:
+  - 7
+  - 17
+  - 19
+  - 32
+  checked: ok
+  note: Confirmed in [7] and [17]. Force-directed layouts reach 0-2% axis-aligned edges against 62% for MetaCarto,
+    so they cannot satisfy this rule.
+- id: A01
+  type: arrangement
+  group: 'Decomposition: what counts as a unit'
+  when: Genome-scale model
+  do: 'Decompose into units before layout, in this order: template match, model subsystems, KEGG pathway annotation,
+    modularity clustering on the currency-free graph.'
+  strength: must
+  basis: stated
+  sources:
+  - 17
+  checked: ok
+  note: Steps 2-4 are MetaCarto's. Template match first (EC number plus main substrates) is the project's own step.
+    Unit boundaries differ between models.
+- id: A02
+  type: arrangement
+  group: 'Decomposition: what counts as a unit'
+  when: Unit size
+  do: 6-60 reactions per unit; merge units of the same functional class up to 120. Hard ceiling of about 200 reactions
+    per Escher map.
+  strength: should
+  basis: stated
+  sources:
+  - 12
+  - 17
+  checked: ok
+  note: The 200 limit is a viewer-performance limit, not a readability finding.
+- id: A03
+  type: arrangement
+  group: 'Decomposition: what counts as a unit'
+  when: Units share nodes and nodes are not duplicated
+  do: 'Choose a priority set that is drawn intact (default: glycolysis plus TCA; the user may name focus pathways).
+    Other units give up the shared nodes.'
+  strength: should
+  basis: stated
+  sources:
+  - 7
+  checked: ok
+  note: 'E. coli: 658 of 1,140 nodes (compounds plus reactions) lie in several pathways.'
+- id: A04
+  type: arrangement
+  group: 'Decomposition: what counts as a unit'
+  when: A metabolite is shared between units
+  do: Either duplicate it at the unit boundary (BioCyc) or keep one instance (MetaViz). Decide once, globally. See
+    Conflicts, C1.
+  strength: open
+  basis: stated
+  sources:
+  - 1
+  - 7
+  checked: ok
+- id: A05
+  type: arrangement
+  group: 'Decomposition: what counts as a unit'
+  when: Exchange, sink, demand and biomass reactions
+  do: Keep them out of pathway units. Exchanges go to the cell boundary. Biomass is one sink glyph whose precursors
+    are cloned; its edges are never routed across the map.
+  strength: must
+  basis: review
+  sources: []
+  checked: '-'
+  note: Missing from the original. CBMViz already aliases the objective's reagents (split_biomass) and can place
+    transport radially.
+- id: A10
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Arranging units
+  do: Specify adjacency explicitly (template or adjacency list). Local motif rules do not add up to a Roche-like
+    global picture.
+  strength: must
+  basis: stated
+  sources:
+  - 7
+  checked: ok
+- id: A11
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Function-class template
+  do: Biosynthesis on the left, energy / central metabolism in the middle, degradation on the right. Reactions without
+    a pathway go in a grid at the far right.
+  strength: should
+  basis: stated
+  sources:
+  - 1
+  - 2
+  - 3
+  checked: '-'
+- id: A12
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Default flow
+  do: Pathways flow top to bottom.
+  strength: should
+  basis: stated
+  sources:
+  - 2
+  checked: '-'
+  note: Overridden by M20 where net flux runs the other way.
+- id: A13
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Sibling pathways (same ontology class)
+  do: Keep them adjacent inside one shaded block.
+  strength: should
+  basis: stated
+  sources:
+  - 1
+  - 2
+  checked: '-'
+- id: A14
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Bow-tie
+  do: Inputs on one side, compact core in the middle, biosynthetic fans on the other side.
+  strength: should
+  basis: inferred
+  sources:
+  - 21
+  checked: '-'
+  note: Compatible with A11 read right to left. KEGG and Roche do not assign sides by function, so the side must
+    be fixed in the template.
+- id: A15
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Canonical neighbours
+  do: 'Glycolysis above TCA. PPP at G6P. Amino-acid families at their precursor: 2-OG (Glu, Gln, Pro, Arg); OAA
+    (Asp, Asn, Lys, Thr, Met, Ile); 3PG (Ser, Gly, Cys); pyruvate (Ala, Val, Leu); PEP + E4P (Phe, Tyr, Trp); R5P
+    / PRPP (His). Nucleotides at PRPP. Cofactors and secondary metabolism at the periphery.'
+  strength: should
+  basis: inferred
+  sources: []
+  checked: fix
+  note: His family (PRPP) was missing. Fungal Lys comes from 2-OG (aminoadipate route), so the Lys anchor is organism-dependent.
+- id: A16
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Edges between units
+  do: Treat units as rectangular blocks and route connecting edges along the gaps.
+  strength: may
+  basis: stated
+  sources:
+  - 16
+  checked: '-'
+- id: A17
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Choosing which units sit next to each other
+  do: Lay out the overview graph (unit = node, interface metabolite = edge). Units linked by many interface metabolites
+    are neighbours.
+  strength: should
+  basis: review
+  sources:
+  - 24
+  checked: ok
+  note: Missing from the original; gives A10 something computable for units that the template does not cover.
+- id: A18
+  type: arrangement
+  group: 'Global template: where units go'
+  when: Secondary metabolism
+  do: Give it a separate overview map instead of crowding the global map.
+  strength: may
+  basis: stated
+  sources:
+  - 8
+  - 9
+  checked: ok
+- id: A20
+  type: arrangement
+  group: Compartments
+  when: Cell regions
+  do: 'Regions follow cell architecture: extracellular space, plasma membrane, cytosol; add outer membrane and periplasm
+    for Gram-negatives.'
+  strength: should
+  basis: stated
+  sources:
+  - 2
+  checked: '-'
+- id: A21
+  type: arrangement
+  group: Compartments
+  when: Organelles
+  do: Draw as nested enclosures inside the cytosol region.
+  strength: should
+  basis: stated
+  sources:
+  - 20
+  checked: '-'
+- id: A22
+  type: arrangement
+  group: Compartments
+  when: Transport reactions
+  do: Place subsystems inside their compartment; transport reactions straddle the boundary they cross. Transporters
+    sit in the membrane.
+  strength: should
+  basis: stated
+  sources:
+  - 2
+  - 13
+  checked: ok
+  note: Confirmed for [13].
+- id: A23
+  type: arrangement
+  group: Compartments
+  when: Uptake and secretion
+  do: Place on the outer edge, next to the pathway they feed or drain.
+  strength: should
+  basis: inferred
+  sources: []
+  checked: '-'
+- id: A24
+  type: arrangement
+  group: Compartments
+  when: Respiratory chain and ATP synthase
+  do: 'Draw as a band inside the energy-transducing membrane: plasma membrane (bacteria), inner mitochondrial membrane,
+    thylakoid membrane.'
+  strength: should
+  basis: inferred
+  sources: []
+  checked: fix
+  note: Original said 'the membrane'; organelle membranes added.
+- id: A25
+  type: arrangement
+  group: Compartments
+  when: Shuttles across a membrane (malate-aspartate, carnitine, photorespiration)
+  do: Draw as one unit that straddles the boundary, not as separate transport reactions.
+  strength: should
+  basis: review
+  sources: []
+  checked: '-'
+  note: Missing from the original. Photorespiration spans chloroplast, peroxisome and mitochondrion.
+- id: A30
+  type: arrangement
+  group: Stability, hierarchy, expand / collapse
+  when: Any re-layout (new model version, new condition, expand / collapse)
+  do: Do not move objects that already have a position.
+  strength: must
+  basis: stated
+  sources:
+  - 14
+  - 16
+  checked: '-'
+- id: A31
+  type: arrangement
+  group: Stability, hierarchy, expand / collapse
+  when: Organism- or model-specific map
+  do: Derive it as a subset of the reference layout. Absent reactions are hidden or greyed; positions do not change.
+  strength: should
+  basis: stated
+  sources:
+  - 3
+  - 9
+  - 10
+  - 14
+  - 18
+  checked: ok
+  note: Confirmed for [10] (933 genomes) and [18].
+- id: A32
+  type: arrangement
+  group: Stability, hierarchy, expand / collapse
+  when: Model too large for one map
+  do: Many small maps (per compartment, subsystem or custom) linked by placemarks, not one giant map.
+  strength: should
+  basis: stated
+  sources:
+  - 8
+  - 12
+  - 15
+  checked: ok
+  note: '[15] dates from 2021: about 170 hand-arranged maps; the Human-GEM cytosol map needed 5 parts.'
+- id: A33
+  type: arrangement
+  group: Stability, hierarchy, expand / collapse
+  when: Collapsing a unit
+  do: Replace it by one node that keeps its interface metabolites as ports at fixed positions, so that expanding
+    does not move neighbours.
+  strength: must
+  basis: review
+  sources:
+  - 24
+  checked: '-'
+  note: Missing from the original and central to the planned expand / collapse feature. E04 is the visual counterpart
+    at global scale.
+- id: A40
+  type: arrangement
+  group: Organism and condition
+  when: Autotroph
+  do: The fixation cycle becomes the centre; hexose-phosphate pathways are drawn in the biosynthetic direction.
+  strength: should
+  basis: inferred
+  sources: []
+  checked: fix
+  note: Original said CBB; true only for CBB autotrophs (plants, cyanobacteria, Knallgas bacteria). See A41 for
+    the others.
+- id: A41
+  type: arrangement
+  group: Organism and condition
+  when: Organism-specific core variant
+  do: Give each its own motif; it may replace EMP as the trunk. ED, phosphoketolase, glyoxylate cycle, rTCA, Wood-Ljungdahl,
+    methanogenesis; also 3-hydroxypropionate bicycle, 3HP/4HB and DC/4HB cycles, RuMP and serine cycles (methylotrophs).
+  strength: should
+  basis: inferred
+  sources: []
+  checked: fix
+  note: Last five added in review.
+- id: A42
+  type: arrangement
+  group: Organism and condition
+  when: Lineage-specific periphery
+  do: 'Attach as peripheral units: mycolic acid / arabinogalactan envelope (Mycobacteriales, i.e. Mycobacterium,
+    Corynebacterium, Rhodococcus, Nocardia); TAG storage (Rhodococcus, Streptomyces, Mycobacterium); fermentation
+    branches (yeast ethanol, E. coli mixed-acid); urea cycle, bile acids, cholesterol (mammals); photorespiration
+    (plants).'
+  strength: may
+  basis: inferred
+  sources: []
+  checked: fix
+  note: Original attributed mycolic acids to Actinobacteria as a whole; Streptomyces and Bifidobacterium have none.
+- id: E01
+  type: encoding
+  group: Glyphs and zoom
+  when: Drawing a reaction
+  do: 'Hyperedge: reactants converge on the reaction marker, then branch to the products.'
+  strength: should
+  basis: stated
+  sources:
+  - 13
+  - 17
+  checked: ok
+  note: 'Confirmed for [17] (Escher: metabolite, multimarker, midmarker, multimarker, metabolite).'
+- id: E02
+  type: encoding
+  group: Glyphs and zoom
+  when: Zoom tiers
+  do: 'Global: line and filled circle. Overview: arrow and open circle. Detail: box on arrow and open circle.'
+  strength: should
+  basis: stated
+  sources:
+  - 9
+  checked: ok
+- id: E03
+  type: encoding
+  group: Glyphs and zoom
+  when: Labels while zooming
+  do: Reveal names progressively (semantic zoom).
+  strength: should
+  basis: stated
+  sources:
+  - 3
+  checked: '-'
+- id: E04
+  type: encoding
+  group: Glyphs and zoom
+  when: Global scale
+  do: Contract each unbranched segment to a single line.
+  strength: should
+  basis: stated
+  sources:
+  - 8
+  checked: fix
+  note: 'KEGG: 1,534 net-elements and 934 compounds. One drawn line can stand for several net-elements, so 1,534
+    is not a line count.'
+- id: E05
+  type: encoding
+  group: Glyphs and zoom
+  when: Reversibility
+  do: Arrowheads at both ends for reversible reactions, at the product end only for irreversible ones.
+  strength: should
+  basis: review
+  sources: []
+  checked: '-'
+  note: Missing from the original. Needed because M20 orients reversible reactions by flux.
+- id: E06
+  type: encoding
+  group: Glyphs and zoom
+  when: Compartment membership
+  do: Show it by enclosure (A20-A22); the ID suffix (_c, _m, _e) alone is a fallback.
+  strength: should
+  basis: stated
+  sources:
+  - 11
+  - 12
+  checked: '-'
+  note: Escher had drawn membranes as future work in 2015.
+- id: E10
+  type: encoding
+  group: Duplication
+  when: Currency metabolite
+  do: Redraw it at every reaction; never draw it as a shared hub.
+  strength: must
+  basis: stated
+  sources:
+  - 13
+  checked: ok
+  note: MetDraw calls these 'minor' metabolites; see Vocabulary.
+- id: E11
+  type: encoding
+  group: Duplication
+  when: Non-currency metabolite
+  do: Draw once per compartment.
+  strength: should
+  basis: stated
+  sources:
+  - 13
+  checked: ok
+- id: E12
+  type: encoding
+  group: Duplication
+  when: A non-currency hub is cloned to untangle a unit
+  do: Mark every clone and link clones with a dashed line.
+  strength: should
+  basis: stated
+  sources:
+  - 13
+  checked: ok
+- id: E13
+  type: encoding
+  group: Duplication
+  when: Side participants
+  do: Draw smaller than backbone metabolites and make them hideable.
+  strength: may
+  basis: stated
+  sources:
+  - 11
+  checked: '-'
+- id: E14
+  type: encoding
+  group: Duplication
+  when: Any duplication
+  do: Each clone hides true connectivity, so duplication must always be visible to the reader.
+  strength: must
+  basis: stated
+  sources:
+  - 7
+  checked: ok
+- id: E20
+  type: encoding
+  group: Colour and data
+  when: Structural colour
+  do: 'Colour encodes functional category. KEGG uses eleven; five of them: blue carbohydrate, purple energy, teal
+    lipid, red nucleotide, orange amino acid.'
+  strength: should
+  basis: stated
+  sources:
+  - 9
+  checked: ok
+  note: Eleven categories confirmed; the individual colour values not re-checked.
+- id: E21
+  type: encoding
+  group: Colour and data
+  when: Data overlay (flux, expression, abundance)
+  do: 'Encode by colour and width / size on top of the fixed layout. Structural colour gives way: switch it off
+    when data is shown.'
+  strength: should
+  basis: stated
+  sources:
+  - 9
+  - 11
+  - 22
+  checked: ok
+  note: KEGG's 'no colour' mode confirmed in [9].
+- id: E22
+  type: encoding
+  group: Colour and data
+  when: Gene-reaction rules
+  do: Map AND / OR rules onto the reaction to show complexes and isozymes.
+  strength: may
+  basis: stated
+  sources:
+  - 11
+  checked: '-'
+- id: E30
+  type: encoding
+  group: Hygiene
+  when: Node overlap
+  do: Nodes overlap only for containment.
+  strength: must
+  basis: stated
+  sources:
+  - 19
+  checked: '-'
+  note: SBGN PD rule; source identity corrected, content not re-checked.
+- id: E31
+  type: encoding
+  group: Hygiene
+  when: Edge crosses a node
+  do: Avoid; where unavoidable the edge is drawn on top.
+  strength: should
+  basis: stated
+  sources:
+  - 19
+  checked: '-'
+- id: E32
+  type: encoding
+  group: Hygiene
+  when: Node labels
+  do: At least part of the label lies inside its node.
+  strength: may
+  basis: stated
+  sources:
+  - 19
+  checked: '-'
+  note: Holds for SBGN glyphs. Escher-style maps place labels beside the node, so do not adopt this unchanged.
+- id: E33
+  type: encoding
+  group: Hygiene
+  when: Label size
+  do: Check legibility at the target output size before accepting a map.
+  strength: should
+  basis: review
+  sources:
+  - 17
+  checked: ok
+  note: 'MetaCarto: whole-model maps scaled to a page give a median label of 1.9 pt.'
+premises:
+- id: P1
+  text: Geometric metrics (crossings, bends, spacing) cannot tell whether a reaction sits on the right backbone.
+    Evaluate backbone choice and geometry separately.
+  sources:
+  - 17
+  checked: ok
+  note: bioRxiv preprint, single author, not peer reviewed.
+- id: P2
+  text: The reference maps (KEGG, Roche, WikiPathways, BRENDA) are drawn by hand, so most rules are tacit.
+  sources:
+  - 7
+  - 16
+  checked: ok
+  note: Confirmed for Roche and KEGG in [7]; the WikiPathways and BRENDA part rests on [16], not opened. Michal's
+    own account of the Roche map [23] is the place to replace 'inferred' with 'stated'.
+- id: P3
+  text: 'Without node duplication only some pathways can be drawn compactly (E. coli: 658 of 1,140 nodes are shared).'
+  sources:
+  - 7
+  checked: ok
+- id: P4
+  text: Genome-scale maps have no shared reference coordinate system; layouts vary by drawer.
+  sources:
+  - 14
+  checked: '-'
+- id: P5
+  text: 'Metabolism has a bow-tie structure: giant strong component plus IN and OUT sets once currency metabolites
+    are removed; nested inside modules.'
+  sources:
+  - 21
+  checked: '-'
+  note: '''and compartments'' in the original could not be confirmed; Zhao et al. describe modules.'
+- id: P6
+  text: Generic node-edge tools handle metabolic hypergraphs poorly.
+  sources:
+  - 14
+  checked: '-'
+- id: P7
+  text: Unit boundaries depend on the model's subsystem annotation.
+  sources:
+  - 17
+  checked: ok
+conflicts:
+- id: C1
+  conflict: Duplicate shared metabolites (BioCyc [1]) or not (MetaViz [7])
+  rules: A04, E10-E14
+  suggested_resolution: Duplicate currency always; duplicate other metabolites only at unit boundaries, marked as
+    clones.
+- id: C2
+  conflict: Fixed downward flow (A12), flux-guided orientation (M20), stable positions (A30)
+  rules: A12, M20, A30
+  suggested_resolution: Template direction first; flux only for units the template does not cover; then freeze (M22).
+- id: C3
+  conflict: Currency by degree (MetDraw, LMME, CBMViz) or by role (BioCyc, MetaCarto)
+  rules: M03, M04
+  suggested_resolution: Role where annotated or computable; degree as editable fallback.
+- id: C4
+  conflict: Sides assigned by function (BioCyc) or not (KEGG, Roche)
+  rules: A11, A14
+  suggested_resolution: Yours to fix in the template; the sources do not agree.
+- id: C5
+  conflict: Unit size 60 / 120 (MetaCarto) or 200 (Escher)
+  rules: A02
+  suggested_resolution: 'Different quantities: readability target vs. performance ceiling. Keep both.'
+vocabulary:
+- term: primary connection
+  meaning: the one substrate-product pair that carries the backbone
+  synonyms: BioCyc 'primary compounds'; Escher 'primary nodes'; MetaCarto 'primary connection'; KGML substrate /
+    product
+- term: side participant
+  meaning: any other reactant or product of that reaction
+  synonyms: BioCyc 'secondary'; Escher 'secondary metabolite'; MetaCarto 'side participant'
+- term: currency metabolite
+  meaning: a metabolite that is a side participant in most of its reactions
+  synonyms: '''ubiquitous'', ''cofactor'', ''hub''; MetaCarto ''carrier''; CBMViz ''small species''; MetDraw ''minor
+    metabolite'''
+- term: clone
+  meaning: a repeated drawing of one metabolite
+  synonyms: CBMViz / CellDesigner 'alias'; 'duplicate'; SBGN 'clone marker'
+- term: unit
+  meaning: a set of reactions laid out together by one motif
+  synonyms: '''pathway''; model ''subsystem''; KEGG ''module''; MetaCarto ''cluster''; MetaViz / Tulip ''metanode'';
+    Metabopolis ''block'''
+- term: interface metabolite (port)
+  meaning: a metabolite through which a unit connects to another unit
+  synonyms: LMME 'interface metabolite'; CBMViz 'boundary species'
+- term: template
+  meaning: a hand-made reference layout onto which a model is projected
+  synonyms: KEGG 'reference map'; ReconMap 'generic map'
+references:
+  1: Paley SM, Karp PD (2006). The Pathway Tools cellular overview diagram and Omics Viewer. Nucleic Acids Res 34:3771-3778.
+    https://pmc.ncbi.nlm.nih.gov/articles/PMC1557788
+  2: Paley S, Billington R, Herson J, Krummenacker M, Karp PD (2021). Pathway Tools visualization of organism-scale
+    metabolic networks. Metabolites 11(2):64. https://pmc.ncbi.nlm.nih.gov/articles/PMC7911265
+  3: Latendresse M, Karp PD (2011). Web-based metabolic network visualization with a zooming user interface. BMC
+    Bioinformatics 12:176. https://link.springer.com/doi/10.1186/1471-2105-12-176
+  4: Wegner K, Kummer U (2005). A new dynamical layout algorithm for complex biochemical reaction networks. BMC
+    Bioinformatics 6:212. https://link.springer.com/doi/10.1186/1471-2105-6-212
+  5: Becker MY, Rojas I (2001). A graph layout algorithm for drawing metabolic pathways. Bioinformatics 17:461-467.
+    doi:10.1093/bioinformatics/17.5.461
+  6: Karp PD, Paley SM (1994). Automated drawing of metabolic pathways. 3rd Int. Conf. Bioinformatics and Genome
+    Research. https://sri.com/?p=7318
+  7: Bourqui R, Cottret L, Lacroix V, Auber D, Mary P, Sagot M-F, Jourdan F (2007). Metabolic network visualization
+    eliminating node redundance and preserving metabolic pathways. BMC Syst Biol 1:29. https://link.springer.com/article/10.1186/1752-0509-1-29
+  8: Okuda S, et al. (2008). KEGG Atlas mapping for global analysis of metabolic pathways. Nucleic Acids Res 36:W423-W426.
+    https://pmc.ncbi.nlm.nih.gov/articles/PMC2447737
+  9: 'KEGG documentation: https://www.genome.jp/kegg/document/help_pathway.html ; https://www.genome.jp/kegg/document/help_global.html
+    ; https://www.genome.jp/kegg/kegg1c.html ; https://www.genome.jp/kegg/pathway.html'
+  10: 'Yamada T, Letunic I, Okuda S, Kanehisa M, Bork P (2011). iPath2.0: interactive pathway explorer. Nucleic
+    Acids Res 39:W412-W415. https://pmc.ncbi.nlm.nih.gov/articles/PMC3125749'
+  11: King ZA, Draeger A, Ebrahim A, Sonnenschein N, Lewis NE, Palsson BO (2015). Escher. PLoS Comput Biol 11:e1004321.
+    doi:10.1371/journal.pcbi.1004321
+  12: 'Escher documentation, tips and tricks. https://escher.readthedocs.io/en/1.7.0/tips-and-tricks.html (compartment
+    suffixes: cite BiGG documentation instead of the RCSB PDB news page)'
+  13: Jensen PA, Papin JA (2014). MetDraw. Bioinformatics 30:1327-1328. https://pmc.ncbi.nlm.nih.gov/articles/PMC3998126
+  14: Noronha A, et al. (2017). ReconMap. Bioinformatics 33:605-607. https://academic.oup.com/bioinformatics/article/33/4/605/2608649
+    ; Heirendt L, et al. (2019). COBRA Toolbox v3.0. https://arxiv.org/pdf/1710.04038
+  15: 'Metabolic Atlas, ''Network layout engine'', discussion #539 (2021). https://github.com/orgs/MetabolicAtlas/discussions/539'
+  16: Wu H-Y, Noellenburg M, Sousa FL, Viola I (2019). Metabopolis. BMC Bioinformatics 20:187. https://pmc.ncbi.nlm.nih.gov/articles/PMC6466808
+  17: 'Wu T (2026). MetaCarto: biologically faithful automatic layout for genome-scale metabolic maps. bioRxiv preprint.
+    https://www.biorxiv.org/content/10.64898/2026.09.19.752882.full.pdf'
+  18: 'BioEMMA: automated generation of model-specific Escher-compatible maps from KEGG pathways (2026). Biology
+    15(17):1493. doi:10.3390/biology15171493'
+  19: Schreiber F, Czauderna T (2022). Design considerations for representing systems biology information with the
+    Systems Biology Graphical Notation. J Integr Bioinform. doi:10.1515/jib-2022-0024. https://pmc.ncbi.nlm.nih.gov/articles/PMC9377698
+    [corrected]
+  20: ChloroKB. https://pmc.ncbi.nlm.nih.gov/articles/PMC5462031
+  21: Ma H-W, Zeng A-P (2003). The connectivity structure, giant strong component and centrality of metabolic networks.
+    Bioinformatics 19:1423-1430. Csete M, Doyle J (2004). Bow ties, metabolism and disease. Trends Biotechnol 22:446-450.
+    Zhao J, et al. (2006). Hierarchical modularity of nested bow-ties in metabolic networks. https://arxiv.org/pdf/q-bio/0605003v1
+    [primary references substituted; verify page numbers]
+  22: SRI, Pathway Tools cellular overview and Omics Viewer. https://sri.com/?p=12582
+  23: Michal G (1998). On representation of metabolic pathways. BioSystems 47:1-7. doi:10.1016/S0303-2647(98)00019-7
+    [added; not read in this review]
+  24: 'Aichem M, et al. (2021). Visual exploration of large metabolic models (LMME). Bioinformatics 37(23):4460-4468.
+    Docs: https://www.cls.uni-konstanz.de/software/lmme/learn/model-decomposition/ [added]'
+  25: Czauderna T, Wybrow M, Marriott K, et al. (2013). Conversion of KEGG metabolic pathways to SBGN maps including
+    automatic layout. BMC Bioinformatics 14:250. doi:10.1186/1471-2105-14-250 [added]
+  26: 'Siebenhaller M, et al. (2020). Human-like layout algorithms for signalling hypergraphs: outlining requirements.
+    Brief Bioinform 21(1):62. https://academic.oup.com/bib/article/21/1/62/5115270 [added; verify title]'
+  27: Schreiber F, et al. (2009). A generic algorithm for layout of biological networks. BMC Bioinformatics 10:375
+    [added]
+  28: Lambert A, et al. (2011). Pathway preserving representation of metabolic networks. Comput Graph Forum 30(3):1021-1030
+    [added]
+  29: 'Kelley JJ, et al. (2017). MOST-visualization: automated textbook-style maps of genome-scale metabolic networks.
+    Bioinformatics 33(16):2596-2597 [added]'
+  30: 'Saraiya P, North C, Duca K (2005). Visualizing biological pathways: requirements analysis, systems evaluation
+    and research agenda. Information Visualization 4:1-15 [added]'
+  31: 'BiGGr: model-specific Escher maps generated from templates or rule sets. https://biggr.org/about [added;
+    not examined]'
+  32: Purchase H (1997). Which aesthetic has the greatest effect on human understanding? Graph Drawing, LNCS 1353:248-261
+    [added]
