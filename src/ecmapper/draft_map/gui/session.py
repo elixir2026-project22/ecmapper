@@ -773,29 +773,35 @@ class Session:
             self._layout_info[key] = (layout, boxes, problems)
         return self._layout_info[key]
 
-    def draft_info(self, name: str | None):
-        """The pre-arranged layout of map `name` (:func:`..ai_layouts.draft_layout`: the map as the pipeline draws it
-        with the current arrangement, what an AI job gets), the boxes of its subsystems ({subsystem: (x, y, w, h)})
-        and no problems, as :meth:`layout_info`; None without such a map. Its SVG is exported by `export_svg` (None
-        if that is not set or fails); kept while the map and its arrangement stay the same."""
+    def _draft_key(self, name: str):
+        return self.version, tuple(sorted(self.positions[name].items())), self.args.escher_scale
+
+    def make_draft(self, name: str, export=None):
+        """Make the pre-arranged layout of map `name` (:func:`..ai_layouts.draft_layout`: the map as the pipeline
+        draws it with the current arrangement, what an AI job gets) with its SVG by `export(escher map) -> SVG or
+        None` (called once; it may take long), and keep it for :meth:`draft_info`. Returns that info (None without
+        such a map)."""
         if name is None or name not in self.views():
             return None
-        key = (self.version, tuple(sorted(self.positions[name].items())), self.args.escher_scale)
+        key = self._draft_key(name)
+        m = self.map_draft(name)
+        layout = draft_layout(m, self.md, name, scale=self.args.escher_scale)
+        _, ids = self.views()[name]
+        back = {v: k for k, v in ids.items()}
+        boxes = {back[c]: (s.x, s.y, s.w, s.h) for c, s in m.subsystems.items() if c in back}
+        if export is not None:
+            layout.svg = export(layout.escher)
+        self._drafts[name] = (key, layout, boxes)
+        return self.draft_info(name)
+
+    def draft_info(self, name: str | None):
+        """The pre-arranged layout of map `name` made by :meth:`make_draft`, the boxes of its subsystems ({subsystem:
+        (x, y, w, h)}) and no problems, as :meth:`layout_info`; None if there is none or the map or its arrangement
+        changed since. Exports nothing (cheap: called whenever the window is updated)."""
         cached = self._drafts.get(name)
-        if cached is None or cached[0] != key:
-            m = self.map_draft(name)
-            layout = draft_layout(m, self.md, name, scale=self.args.escher_scale)
-            _, ids = self.views()[name]
-            back = {v: k for k, v in ids.items()}
-            boxes = {back[c]: (s.x, s.y, s.w, s.h) for c, s in m.subsystems.items() if c in back}
-            cached = self._drafts[name] = (key, layout, boxes)
-        layout = cached[1]
-        if layout.svg is None and self.export_svg is not None:
-            svg = self.export_svg(layout.escher)
-            if svg is not None:  # a new layout object, so that the views draw it again
-                layout = MapLayout(**{**vars(layout), "svg": svg})
-                cached = self._drafts[name] = (key, layout, cached[2])
-        return layout, cached[2], []
+        if cached is None or name not in self.positions or cached[0] != self._draft_key(name):
+            return None
+        return cached[1], cached[2], []
 
     def outdated(self, name: str | None) -> bool:
         info = self.layout_info(name)

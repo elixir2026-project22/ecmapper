@@ -802,10 +802,11 @@ metabolites into one node (`ai_layouts.py`, `ai/`, `gui/chat.py`).
   map in Escher format as the pipeline pre-arranges it before an AI layout: the map with the current arrangement of
   its subsystems, i.e. the `draft.escher.json` an AI job gets, drawn by Escher (as the AI layouts are, see *Checking a
   submission*) with the outlines of the subsystems. It is read only; Shift+F7 again shows the boxes, F7 the AI layout
-  (if any). It is exported again when the map or its arrangement changes. In Python,
+  (if any). Escher draws it once per Shift+F7 (a few seconds for a large map; the status bar says so); after a change
+  of the map or its arrangement, the map is shown as boxes again until the next Shift+F7. In Python,
   `ai_layouts.draft_layout(m, md, name)` gives this pre-arranged layout of a map (absolute positions, e.g.
-  `Session.map_draft(name)`) as a `MapLayout` (`save` writes `final.escher.json`), `Session.draft_info(name)` with
-  its SVG and the boxes of its subsystems.
+  `Session.map_draft(name)`) as a `MapLayout` (`save` writes `final.escher.json`); `Session.make_draft(name,
+  export)` makes it with its SVG and the boxes of its subsystems, `Session.draft_info(name)` returns them.
 - **Connections:**
   - the Anthropic API (`anthropic` SDK). The default model is `claude-opus-5-5`, with adaptive thinking, a
     selectable effort (default high) and prompt caching. A request the model declines is passed to another model

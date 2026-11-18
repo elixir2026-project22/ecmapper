@@ -454,7 +454,8 @@ def test_window(session, monkeypatch, tmp_path):
 
 def test_draft_view(session, monkeypatch, tmp_path):
     """The pre-arranged layout of a map in Escher format (Shift+F7): the map as the pipeline draws it with the current
-    arrangement, read only, exported again after a move, also over an AI layout."""
+    arrangement, read only, exported by Escher once per toggle (not while the window is updated, not twice at a time),
+    shown as boxes after a change, also over an AI layout."""
     monkeypatch.setenv("QT_QPA_PLATFORM", "offscreen")
     pytest.importorskip("qtpy")
     from qtpy.QtCore import QSettings
@@ -467,7 +468,8 @@ def test_draft_view(session, monkeypatch, tmp_path):
     s = session
     central = s.maps[0]
     # without the GUI: the same Escher map as the export for an AI job, the boxes where the session has them
-    layout, boxes, problems = s.draft_info(central)
+    assert s.draft_info(central) is None
+    layout, boxes, problems = s.make_draft(central)
     path, _ = s.export_map(central, tmp_path / "job")
     assert path.name == DRAFT and layout.escher == json.loads(path.read_text()) and problems == []
     assert layout.source == {"kind": "draft"} and layout.svg is None and set(layout.subsystems) == set(
@@ -475,11 +477,24 @@ def test_draft_view(session, monkeypatch, tmp_path):
     assert {k: b[:2] for k, b in boxes.items()} == pytest.approx(s.positions[central])
     assert s.draft_info(central)[0] is layout  # kept while nothing changes
     assert MapLayout.load(layout.save(tmp_path / "draft")).escher == layout.escher
+    k = next(iter(s.positions[central]))
+    x, y = s.positions[central][k]
+    s.move(central, {k: (x + 10000, y)})
+    assert s.draft_info(central) is None  # another arrangement: made again
 
     w = MainWindow(s, QSettings(str(tmp_path / "settings.ini"), QSettings.Format.IniFormat))
     svg = '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10"/></svg>'
     exported = []
-    monkeypatch.setattr(w, "export_svg", lambda escher_map: exported.append(escher_map) or svg)
+
+    def export(escher_map):  # as Escher's export: waits in an event loop, in which the window is updated
+        exported.append(escher_map)
+        w.toggle_draft_view()  # ignored while Escher draws
+        w.update_actions()
+        w.update_status()
+        app.processEvents()
+        return svg
+
+    monkeypatch.setattr(w, "export_svg", export)
     s.export_svg = w.export_svg
     w.build_tabs()
     w.resize(1200, 800)
@@ -488,27 +503,46 @@ def test_draft_view(session, monkeypatch, tmp_path):
     scene = w.views[central].map_scene()
     assert w.a_draft_view.isEnabled() and not w.a_draft_view.isChecked() and scene.escher_item is None
     w.toggle_draft_view()
-    app.processEvents()
-    assert scene.draft_view and scene.read_only and w.a_draft_view.isChecked()
-    assert scene.escher_item is not None and scene.escher_item.layout.svg == svg and len(exported) == 1
+    for _ in range(5):
+        app.processEvents()
+        w.update_actions()
+        w.update_status()
+    assert len(exported) == 1 and scene.draft_view and scene.read_only and w.a_draft_view.isChecked()
+    assert scene.escher_item is not None and scene.escher_item.layout.svg == svg
+    assert scene.boxes[k].pos().x() == pytest.approx(x + 10000)
     assert all(item.outline is not None for item in scene.boxes.values())
     assert "pre-arranged" in w.status_label.text() and not w.grab().isNull()
-    # another arrangement: exported again
+    # boxes and back: not drawn again while the arrangement is the same
     w.toggle_draft_view()
     assert not scene.draft_view and scene.escher_item is None and not scene.read_only
-    k = next(iter(s.positions[central]))
-    x, y = s.positions[central][k]
-    s.move(central, {k: (x + 10000, y)})
     w.toggle_draft_view()
-    assert len(exported) == 2 and scene.boxes[k].pos().x() == pytest.approx(x + 10000)
+    assert len(exported) == 1 and scene.escher_item is not None
+    # a change of the map: shown as boxes, drawn again with Shift+F7
+    w.toggle_draft_view()
+    s.move(central, {k: (x, y)})
+    w.refresh()
+    assert not scene.draft_view and scene.escher_item is None and not w.a_draft_view.isChecked()
+    w.toggle_draft_view()
+    assert len(exported) == 2 and scene.boxes[k].pos().x() == pytest.approx(x)
+    # without Escher: the drawing is a note, not tried again until Shift+F7
+    w.toggle_draft_view()
+    s.move(central, {k: (x + 5000, y)})
+    w.refresh()
+    monkeypatch.setattr(w, "export_svg", lambda escher_map: exported.append(escher_map) and None)
+    w.toggle_draft_view()
+    for _ in range(3):
+        app.processEvents()
+        w.update_status()
+    assert len(exported) == 3 and scene.escher_item is not None and scene.escher_item.layout.svg is None
+    w.toggle_draft_view()
     # over an AI layout: Shift+F7 shows the pre-arranged map, F7 the AI layout again
-    final, ids = s.export_map(central, tmp_path / "job2")[0], None
-    ai, problems = s.new_layout(central, json.loads(final.read_text()), ids, svg)
+    final = s.export_map(central, tmp_path / "job2")[0]
+    ai, problems = s.new_layout(central, json.loads(final.read_text()), None, svg)
     assert problems == []
     w.apply_ai_layout(central, ai)
     assert not scene.draft_view and scene.escher_item.layout is ai and not w.a_draft_view.isChecked()
     w.toggle_draft_view()
-    assert scene.draft_view and scene.escher_item.layout is not ai and w.a_ai_view.isChecked() is False
+    assert scene.draft_view and scene.escher_item.layout is not ai and not w.a_ai_view.isChecked()
     w.toggle_ai_view()
     assert not scene.draft_view and scene.escher_item.layout is ai
     w.undo.setClean()

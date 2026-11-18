@@ -549,6 +549,7 @@ class MainWindow(QMainWindow):
         session.log = self.log_message.emit
         session.export_svg = self.export_svg
         self._exporter = None  # EscherSvg, False: not available
+        self._drafting = False  # Escher draws a pre-arranged layout (toggle_draft_view)
         self.undo = QUndoStack(self)
         self.undo.cleanChanged.connect(lambda clean: self.setWindowModified(self.modified()))
         self.dirty = False  # changes of the project outside the undo stack (new project, build folder)
@@ -869,7 +870,10 @@ class MainWindow(QMainWindow):
                 self.tabs.tabBar().moveTab(j, i)
         self._reordering = False
         for view in self.views.values():
-            view.map_scene().sync()
+            scene = view.map_scene()
+            if scene.draft_view and scene.draft_info() is None:  # changed: shown as boxes (Shift+F7 draws it anew)
+                scene.draft_view = False
+            scene.sync()
         if self.found:
             self.find(self.find_edit.text())
         self.refresh_tab_titles()
@@ -932,7 +936,7 @@ class MainWindow(QMainWindow):
         self.a_ai_view.setEnabled(has_layout)
         self.a_ai_view.setChecked(has_layout and scene.ai_view and not scene.draft_view)
         self.a_draft_view.setEnabled(a_map)
-        self.a_draft_view.setChecked(a_map and scene.draft_view)
+        self.a_draft_view.setChecked(a_map and scene.draft_info() is not None)
         self.a_discard_layout.setEnabled(has_layout)
         self.a_pipeline.setEnabled(on_map and bool(self.session.arranged.get(scene.name)))
         self.a_rematch.setEnabled(loaded and bool(getattr(self.session.args, "model", None)))
@@ -1234,23 +1238,36 @@ class MainWindow(QMainWindow):
             self.update_status()
 
     def toggle_draft_view(self) -> None:
-        """Show the current map in Escher format as the pipeline pre-arranges it (exported by Escher), or not."""
+        """Show the current map in Escher format as the pipeline pre-arranges it, or not. Escher draws it once (it
+        waits for Escher in an event loop: a second call meanwhile is ignored); it is drawn again after changes."""
         scene = self.current_scene()
-        if scene is None or scene.name is None:
+        if scene is None or scene.name is None or self._drafting:
             return
         scene.clearSelection()
-        if not scene.draft_view:
-            QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
-            try:
-                scene.set_draft_view(True)
-            finally:
-                QApplication.restoreOverrideCursor()
-            if scene.draft_info() is not None and scene.draft_info()[0].svg is None:
-                self.show_log("Escher could not export the pre-arranged layout as SVG (no QtWebEngine or "
-                              "escher.min.js, see the log)")
-        else:
+        if scene.draft_info() is not None:
             scene.set_draft_view(False)
-        self.current_view().zoom_to_fit()
+        else:
+            name = scene.name
+            if self.session.draft_info(name) is None:
+                self._drafting = True
+                self.statusBar().showMessage(f"Escher draws the pre-arranged layout of {name}…")
+                QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
+                try:
+                    info = self.session.make_draft(name, self.export_svg)
+                finally:
+                    QApplication.restoreOverrideCursor()
+                    self._drafting = False
+                if info is not None and info[0].svg is None:
+                    self.show_log(f"Escher could not draw the pre-arranged layout of {name} (see the log above; "
+                                  "QtWebEngine and escher.min.js are needed)")
+            scene = self.views[name].map_scene() if name in self.views else None
+            if scene is None:
+                return
+            scene.set_draft_view(True)
+            if self.current_scene() is scene:
+                self.statusBar().showMessage(f"Pre-arranged layout of {name} in Escher format; Shift+F7: boxes", 8000)
+        if self.current_scene() is scene:
+            self.current_view().zoom_to_fit()
         self.update_actions()
         self.update_status()
 
