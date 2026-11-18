@@ -66,7 +66,7 @@ from .chat import AIDock
 from .escher_svg import ESCHER_URL, ESCHER_VERSION, EscherSvg, download_script, find_script, web_engine_available
 from .items import AUTO, BOXES, DETAIL_SCALE, DRAWINGS, MapScene, MapView
 from ..project import EXT, Project, options_of
-from .session import NOT_DRAWN, Session, template
+from .session import ESCHER, NOT_DRAWN, SVG, Session, template
 
 TITLE = "ecmapper draft map assignment"
 #: QSettings of the GUI (organisation, application)
@@ -549,7 +549,6 @@ class MainWindow(QMainWindow):
         session.log = self.log_message.emit
         session.export_svg = self.export_svg
         self._exporter = None  # EscherSvg, False: not available
-        self._drafting = False  # Escher draws a pre-arranged layout (toggle_draft_view)
         self.undo = QUndoStack(self)
         self.undo.cleanChanged.connect(lambda clean: self.setWindowModified(self.modified()))
         self.dirty = False  # changes of the project outside the undo stack (new project, build folder)
@@ -689,10 +688,11 @@ class MainWindow(QMainWindow):
         self.a_ai_view = self.action("&Show AI layout", self.toggle_ai_view, "F7",
                                      "Show this map as laid out by AI, or as boxes (to change its subsystems)")
         self.a_ai_view.setCheckable(True)
-        self.a_draft_view = self.action("Show &pre-arranged layout in Escher", self.toggle_draft_view, "Shift+F7",
-                                        "Show this map in Escher format as the pipeline pre-arranges it (the current "
-                                        "arrangement of its subsystems, what the AI gets to lay out), or as boxes")
-        self.a_draft_view.setCheckable(True)
+        self.a_escher = self.action("Draw as &Escher", self.toggle_escher, "Shift+F7",
+                                    "Draw the subsystems of this map as Escher maps (in the style of the Escher maps of "
+                                    "the BRENDA map; still movable, with their links) or as the SVG of the BRENDA map. "
+                                    "Only the drawing changes; the map's Escher export for AI jobs follows it")
+        self.a_escher.setCheckable(True)
         self.a_discard_layout = self.action("&Discard AI layout", self.discard_layout, None,
                                             "Draw this map automatically again")
         self.a_import_layout = self.action("&Import Escher layout…", self.import_layout, None,
@@ -732,17 +732,18 @@ class MainWindow(QMainWindow):
         for a in (self.a_pack, self.a_original, None, self.a_pipeline, None, self.a_compare):
             m.addSeparator() if a is None else m.addAction(a)
         m = bar.addMenu("&Maps")
-        for a in (self.a_new_map, self.a_rename_map, self.a_delete_map, None, self.a_merge):
+        for a in (self.a_new_map, self.a_rename_map, self.a_delete_map, None, self.a_escher, None, self.a_merge):
             m.addSeparator() if a is None else m.addAction(a)
         m = bar.addMenu("A&I")
-        for a in (self.a_ai_layout, self.a_ai_view, self.a_draft_view, None, self.a_agent_prepare, self.a_agent_result, None,
+        for a in (self.a_ai_layout, self.a_ai_view, None, self.a_agent_prepare, self.a_agent_result, None,
                   self.a_import_layout, self.a_discard_layout, None, self.a_ai_folder):
             m.addSeparator() if a is None else m.addAction(a)
         tools = self.addToolBar("Tools")
         tools.setObjectName("Tools")
         for a in (self.a_save, self.a_undo, self.a_redo, None, self.a_cut, self.a_copy, self.a_paste, None, self.a_fit,
-                  *self.mode_actions.values(), None, self.a_pack, None, self.a_ai_layout, self.a_ai_view, self.a_draft_view,
-                  None, self.a_build):
+                  *self.mode_actions.values(), self.a_escher, None, self.a_pack, None, self.a_ai_layout,
+                  self.a_ai_view, None,
+                  self.a_build):
             tools.addSeparator() if a is None else tools.addAction(a)
 
     # --- loading -------------------------------------------------------------------------------
@@ -870,10 +871,7 @@ class MainWindow(QMainWindow):
                 self.tabs.tabBar().moveTab(j, i)
         self._reordering = False
         for view in self.views.values():
-            scene = view.map_scene()
-            if scene.draft_view and scene.draft_info() is None:  # changed: shown as boxes (Shift+F7 draws it anew)
-                scene.draft_view = False
-            scene.sync()
+            view.map_scene().sync()
         if self.found:
             self.find(self.find_edit.text())
         self.refresh_tab_titles()
@@ -896,8 +894,11 @@ class MainWindow(QMainWindow):
                        else "laid out by AI (Build uses this layout)")
             else:
                 arranged = self.session.arranged.get(scene.name)
-                text = f"{'✎ ' if arranged else ''}{scene.name} ({n})"
+                escher = self.session.style(scene.name) == ESCHER
+                text = f"{'✎ ' if arranged else ''}{'ℯ ' if escher else ''}{scene.name} ({n})"
                 tip = "arranged here (the pipeline keeps it)" if arranged else "arranged by the pipeline when building"
+                if escher:
+                    tip += "; drawn as Escher maps"
             self.tabs.setTabText(i, text + (f" [{found} found]" if found else ""))
             self.tabs.setTabToolTip(i, tip)
 
@@ -934,9 +935,9 @@ class MainWindow(QMainWindow):
         self.a_merge.setEnabled(a_map and self.merge_process is None)
         has_layout = a_map and scene.name in self.session.layouts
         self.a_ai_view.setEnabled(has_layout)
-        self.a_ai_view.setChecked(has_layout and scene.ai_view and not scene.draft_view)
-        self.a_draft_view.setEnabled(a_map)
-        self.a_draft_view.setChecked(a_map and scene.draft_info() is not None)
+        self.a_ai_view.setChecked(has_layout and scene.ai_view)
+        self.a_escher.setEnabled(a_map)
+        self.a_escher.setChecked(a_map and self.session.style(scene.name) == ESCHER)
         self.a_discard_layout.setEnabled(has_layout)
         self.a_pipeline.setEnabled(on_map and bool(self.session.arranged.get(scene.name)))
         self.a_rematch.setEnabled(loaded and bool(getattr(self.session.args, "model", None)))
@@ -953,9 +954,6 @@ class MainWindow(QMainWindow):
         drawn = "drawings" if scene.mode == DRAWINGS or (scene.mode == AUTO and scale >= DETAIL_SCALE) else "boxes"
         if scene.name is None:
             text = f"{subsystems(len(scene.positions()))} on no map"
-        elif scene.draft_info() is not None:
-            text = f"{scene.name}: {subsystems(len(scene.positions()))}, pre-arranged layout in Escher; Shift+F7: boxes"
-            drawn = "Escher"
         elif scene.ai_info() is not None:
             outdated = " (outdated)" if scene.ai_info()[2] else ""
             text = f"{scene.name}: {subsystems(len(scene.positions()))}, AI layout{outdated}; F7: boxes"
@@ -965,6 +963,8 @@ class MainWindow(QMainWindow):
             if scene.name in self.session.layouts:
                 how += "; has an AI layout (F7)"
             text = f"{scene.name}: {subsystems(len(scene.positions()))}, {how}"
+            if self.session.style(scene.name) == ESCHER:
+                text += "; drawn as Escher maps (Shift+F7: SVG)"
         self.status_label.setText(f"{text}  |  zoom {scale:.2f} ({drawn})")
 
     def show_log(self, text: str) -> None:
@@ -1096,6 +1096,8 @@ class MainWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.a_zoom_sel)
         menu.addAction(self.a_fit)
+        if scene.name is not None:
+            menu.addAction(self.a_escher)
         if scene.selected_keys():
             menu.addAction(self.a_compare)
         if scene.name is not None:
@@ -1103,7 +1105,6 @@ class MainWindow(QMainWindow):
             menu.addAction(self.a_ai_layout)
             if scene.name in self.session.layouts:
                 menu.addAction(self.a_ai_view)
-            menu.addAction(self.a_draft_view)
         menu.exec(global_pos)
 
     def zoom_to_selection(self) -> None:
@@ -1228,48 +1229,29 @@ class MainWindow(QMainWindow):
         self.ai_dock.update_state()
         self.ai_dock.input.setFocus()
 
+    def toggle_escher(self) -> None:
+        """Draw the subsystems of the current map as Escher maps or as SVG (undoable; nothing else changes)."""
+        name = self.current_map()
+        if name is None:
+            return
+        style = SVG if self.session.style(name) == ESCHER else ESCHER
+        QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
+        try:
+            self.change(f"Draw {name} as {'Escher maps' if style == ESCHER else 'SVG'}",
+                        lambda: self.session.set_style(name, style))
+        finally:
+            QApplication.restoreOverrideCursor()
+        self.update_actions()
+        self.update_status()
+
     def toggle_ai_view(self) -> None:
         scene = self.current_scene()
         if scene is not None and scene.name in self.session.layouts:
             scene.clearSelection()
-            scene.set_ai_view(not scene.ai_view or scene.draft_view)
+            scene.set_ai_view(not scene.ai_view)
             self.current_view().zoom_to_fit()
             self.update_actions()
             self.update_status()
-
-    def toggle_draft_view(self) -> None:
-        """Show the current map in Escher format as the pipeline pre-arranges it, or not. Escher draws it once (it
-        waits for Escher in an event loop: a second call meanwhile is ignored); it is drawn again after changes."""
-        scene = self.current_scene()
-        if scene is None or scene.name is None or self._drafting:
-            return
-        scene.clearSelection()
-        if scene.draft_info() is not None:
-            scene.set_draft_view(False)
-        else:
-            name = scene.name
-            if self.session.draft_info(name) is None:
-                self._drafting = True
-                self.statusBar().showMessage(f"Escher draws the pre-arranged layout of {name}…")
-                QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
-                try:
-                    info = self.session.make_draft(name, self.export_svg)
-                finally:
-                    QApplication.restoreOverrideCursor()
-                    self._drafting = False
-                if info is not None and info[0].svg is None:
-                    self.show_log(f"Escher could not draw the pre-arranged layout of {name} (see the log above; "
-                                  "QtWebEngine and escher.min.js are needed)")
-            scene = self.views[name].map_scene() if name in self.views else None
-            if scene is None:
-                return
-            scene.set_draft_view(True)
-            if self.current_scene() is scene:
-                self.statusBar().showMessage(f"Pre-arranged layout of {name} in Escher format; Shift+F7: boxes", 8000)
-        if self.current_scene() is scene:
-            self.current_view().zoom_to_fit()
-        self.update_actions()
-        self.update_status()
 
     def apply_ai_layout(self, name: str, layout, key=None, text: str = "AI layout") -> None:
         """Lay out map `name` so (undoable; the layouts of one AI job, `key`, are one step) and show it."""
@@ -1278,7 +1260,7 @@ class MainWindow(QMainWindow):
         self.undo.push(LayoutChange(self, before, self.session.state(), f"{text} of {name}", key))
         self.refresh()
         scene = self.views[name].map_scene()
-        if not scene.ai_view or scene.draft_view:
+        if not scene.ai_view:
             scene.set_ai_view(True)
         self.views[name].zoom_to_fit()
         self.update_actions()
@@ -1829,7 +1811,8 @@ class MainWindow(QMainWindow):
             self.settings.setValue(merge_escher.SETTING, str(script))
         styles = list(merge_escher.STYLES)
         texts = list(merge_escher.STYLES.values())
-        last = self.settings.value(merge_escher.STYLE_SETTING, styles[0])
+        last = "brenda" if self.session.style(name) == ESCHER else self.settings.value(merge_escher.STYLE_SETTING,
+                                                                                         styles[0])
         text, ok = QInputDialog.getItem(self, title, "Draw the subsystems:", texts,
                                         styles.index(last) if last in styles else 0, False)
         if not ok:

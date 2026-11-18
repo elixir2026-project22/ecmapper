@@ -111,26 +111,27 @@ def load_layouts(table, base, log=print) -> dict[str, MapLayout]:
 
 
 def export_draft(m: DraftMap, md: ModelData, name: str, scale: float = 2.0, reuse: dict | None = None,
-                 description: str = "Draft map from the BRENDA map, made with ecmapper.draft_map") -> tuple[list, dict]:
+                 description: str = "Draft map from the BRENDA map, made with ecmapper.draft_map",
+                 style: str = "draft") -> tuple[list, dict]:
     """The Escher map of map `m` (absolute positions) as the pipeline draws it, with the names of the subsystems, and
-    the draft objects of its Escher IDs (`reuse`: those of an earlier export, whose objects keep their IDs)."""
-    ids = {}
-    data = to_escher(m, md, name, scale=scale, subsystem_labels=True, description=description, ids=ids, reuse=reuse)
-    return data, ids
+    the draft objects of its Escher IDs (`reuse`: those of an earlier export, whose objects keep their IDs).
 
-
-def draft_layout(m: DraftMap, md: ModelData, name: str, scale: float = 2.0, svg: str | None = None) -> MapLayout:
-    """The pre-arranged layout of map `m` (absolute positions) as Escher map: the map as the pipeline draws it with the
-    current arrangement of its subsystems, before any AI layout (what an AI job gets as :data:`DRAFT`).
-
-    A :class:`MapLayout` with the positions of the nodes as they are, so it can
-    be shown, saved (:meth:`MapLayout.save`) or compared like an AI layout;
-    `source` is ``{"kind": "draft"}``. `svg`: its SVG export, if made.
+    `style` (:data:`.escher_style.STYLES`): "draft" keeps the nodes where the
+    draft map has them (:func:`.escher.to_escher`), "brenda" draws each
+    subsystem as the Escher maps of the BRENDA map
+    (:func:`.escher_style.to_brenda_escher`).
     """
-    escher, ids = export_draft(m, md, name, scale=scale)
-    return MapLayout(map=name, scale=scale, reactions=map_reactions(m), subsystems=sorted(m.subsystems),
-                     positions={i: (n.x, n.y) for i, n in m.nodes.items()}, escher=escher, svg=svg, ids=ids,
-                     stubs=map_stubs(m), source=dict(kind="draft"))
+    ids = {}
+    if style == "brenda":
+        from .escher_style import to_brenda_escher
+
+        data = to_brenda_escher(m, md, name, scale=scale, description=description, ids=ids, reuse=reuse)
+    elif style == "draft":
+        data = to_escher(m, md, name, scale=scale, subsystem_labels=True, description=description, ids=ids,
+                         reuse=reuse)
+    else:
+        raise ValueError(f"unknown style {style!r}")
+    return data, ids
 
 
 def _keepers(run_log: dict | None) -> dict[str, str]:

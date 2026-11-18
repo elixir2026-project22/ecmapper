@@ -177,6 +177,44 @@ def test_build_map(tmp_path):
     assert "BRENDA_map" in report and (tmp_path / "BRENDA_map.escher.json").exists()
 
 
+
+def test_svg_and_ids(tmp_path):
+    """svg_text draws an Escher map in Escher's look; build records the objects of the Escher IDs with `new_id`."""
+    import xml.etree.ElementTree as ET
+
+    from ecmapper.brenda_escher import svg_text
+    from ecmapper.draft_map.escher import _Ids
+
+    path = tmp_path / "map.json"
+    path.write_text(json.dumps(export()), encoding="utf-8")
+    reactions, data = load(path)
+    for r in reactions:  # as from_draft sets them
+        r.key = ("enz_" + r.id, r.label)
+        for side in (-1, 1):
+            for m in r.main[side] + r.cof[side]:
+                m.key = ("node", m.node, m.token)
+    record = {}
+    result = build(reactions, data, "test", new_id=_Ids(record=record))
+    body = result[1]
+    for i, r in body["reactions"].items():
+        assert record[i][0] == "reaction"
+    mids = [i for i, n in body["nodes"].items() if n["node_type"] == "midmarker"]
+    assert sorted(record[i][0] for i in mids) == ["mid"] * len(mids)
+    assert all(record[i][0] == "node" for i, n in body["nodes"].items()
+               if n["node_type"] == "metabolite" and n["node_is_primary"])
+    assert [record[i] for i in body["text_labels"]] == [["title", "s"]]
+    assert len({tuple(key) for key in record.values()}) == len(record)  # each object once
+    svg, (x, y, w, h) = svg_text(result)
+    root = ET.fromstring(svg)
+    ns = "{http://www.w3.org/2000/svg}"
+    segments = sum(len(r["segments"]) for r in body["reactions"].values())
+    metabolites = sum(n["node_type"] == "metabolite" for n in body["nodes"].values())
+    assert len(root.findall(f".//{ns}path")) == segments
+    assert len(root.findall(f".//{ns}g[@class='met']/{ns}circle")) == metabolites
+    assert root.findall(f".//{ns}polygon")  # arrowheads
+    for n in body["nodes"].values():
+        assert x <= n["x"] <= x + w and y <= n["y"] <= y + h
+
 PWL = """pwl 2.0;
 subsystem demo 'demo' {
   flow down;
