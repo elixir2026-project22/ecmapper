@@ -1,5 +1,6 @@
 """Drawing the maps: a box per subsystem with two zoom levels, the links between the boxes, the view; maps with an
-AI layout as their Escher drawing with the outlines of the subsystems."""
+AI layout, or pre-arranged ones shown in Escher format, as their Escher drawing with the outlines of the
+subsystems."""
 
 from __future__ import annotations
 
@@ -149,7 +150,8 @@ class SubsystemItem(QGraphicsObject):
 
 
 class EscherItem(QGraphicsObject):
-    """The AI layout of a map: the SVG export of its Escher map in map units (or a note if there is none)."""
+    """The AI layout or the pre-arranged layout of a map: the SVG export of its Escher map in map units (or a note
+    if there is none)."""
 
     def __init__(self, layout):
         super().__init__()
@@ -181,7 +183,7 @@ class EscherItem(QGraphicsObject):
         painter.setFont(font)
         painter.setPen(TEXT)
         painter.drawText(QRectF(-250, -30, 500, 60), Qt.AlignmentFlag.AlignCenter,
-                         "AI layout without SVG export\n(Escher could not be run: no QtWebEngine or escher.min.js)")
+                         "Escher map without SVG export\n(Escher could not be run: no QtWebEngine or escher.min.js)")
         painter.restore()
 
 
@@ -190,6 +192,8 @@ class MapScene(QGraphicsScene):
 
     A map with an AI layout is shown as that (`ai_view`, :class:`EscherItem`)
     with the outlines of its subsystems, which can be selected, not moved.
+    With `draft_view`, any map is shown so as its pre-arranged layout (the map
+    as the pipeline draws it with the current arrangement, before AI layout).
     """
 
     def __init__(self, session: Session, name: str | None, parent=None):
@@ -200,22 +204,33 @@ class MapScene(QGraphicsScene):
         self.mode = AUTO
         self.version = None
         self.ai_view = True
+        self.draft_view = False
         self.escher_item = None
         self.shown = None  # the layout shown (by the items)
         self.setBackgroundBrush(QColor(250, 250, 250))
 
     def ai_info(self):
         """(layout, outlines of the subsystems, problems) if the map is shown as its AI layout, else None."""
-        return self.session.layout_info(self.name) if self.ai_view and self.name is not None else None
+        if self.draft_view or not self.ai_view or self.name is None:
+            return None
+        return self.session.layout_info(self.name)
+
+    def draft_info(self):
+        """(layout, outlines, []) if the map is shown as its pre-arranged layout in Escher format, else None."""
+        return self.session.draft_info(self.name) if self.draft_view and self.name is not None else None
+
+    def escher_info(self):
+        """(layout, outlines, problems) of the Escher map shown (pre-arranged or AI layout), None for boxes."""
+        return self.draft_info() or self.ai_info()
 
     @property
     def read_only(self) -> bool:
-        return self.name is None or self.ai_info() is not None
+        return self.name is None or self.escher_info() is not None
 
     def positions(self) -> dict[str, tuple[float, float]]:
         if self.name is None:
             return self.session.unassigned_positions()
-        info = self.ai_info()
+        info = self.escher_info()
         if info is not None:
             return {k: (x, y) for k, (x, y, _, _) in info[1].items() if k in self.session.positions[self.name]}
         return self.session.positions[self.name]
@@ -223,7 +238,7 @@ class MapScene(QGraphicsScene):
     def sync(self) -> None:
         """Items and positions as in the session; the drawings again if the assignment changed."""
         positions = self.positions()
-        info = self.ai_info()
+        info = self.escher_info()
         layout = info[0] if info is not None else None
         redraw = self.version != self.session.version or self.shown is not layout
         if layout is None and self.escher_item is not None:
@@ -254,13 +269,18 @@ class MapScene(QGraphicsScene):
 
     def set_ai_view(self, on: bool) -> None:
         self.ai_view = on
+        self.draft_view = False
+        self.sync()
+
+    def set_draft_view(self, on: bool) -> None:
+        self.draft_view = on and self.name is not None
         self.sync()
 
     def make_links(self) -> None:
         for line, *_ in self.link_items:
             self.removeItem(line)
         self.link_items = []
-        if self.name is None or self.ai_info() is not None:
+        if self.name is None or self.escher_info() is not None:
             return
         pen = QPen(QColor(120, 120, 120, 170), 2.5, Qt.PenStyle.DashLine)
         pen.setCosmetic(True)

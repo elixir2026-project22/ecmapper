@@ -119,6 +119,20 @@ def export_draft(m: DraftMap, md: ModelData, name: str, scale: float = 2.0, reus
     return data, ids
 
 
+def draft_layout(m: DraftMap, md: ModelData, name: str, scale: float = 2.0, svg: str | None = None) -> MapLayout:
+    """The pre-arranged layout of map `m` (absolute positions) as Escher map: the map as the pipeline draws it with the
+    current arrangement of its subsystems, before any AI layout (what an AI job gets as :data:`DRAFT`).
+
+    A :class:`MapLayout` with the positions of the nodes as they are, so it can
+    be shown, saved (:meth:`MapLayout.save`) or compared like an AI layout;
+    `source` is ``{"kind": "draft"}``. `svg`: its SVG export, if made.
+    """
+    escher, ids = export_draft(m, md, name, scale=scale)
+    return MapLayout(map=name, scale=scale, reactions=map_reactions(m), subsystems=sorted(m.subsystems),
+                     positions={i: (n.x, n.y) for i, n in m.nodes.items()}, escher=escher, svg=svg, ids=ids,
+                     stubs=map_stubs(m), source=dict(kind="draft"))
+
+
 def _keepers(run_log: dict | None) -> dict[str, str]:
     """{Escher node removed by a merge of the toolkit: the node it ended up in} (run_log.json of escher_handlayout:
     "merges", [BiGG ID, keeper, removed])."""

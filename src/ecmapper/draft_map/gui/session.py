@@ -25,7 +25,7 @@ from pathlib import Path
 import numpy as np
 
 from .. import run
-from ..ai_layouts import DRAFT, MapLayout, export_draft, load_layouts, make_layout, match_ids, refresh_exit_labels
+from ..ai_layouts import DRAFT, MapLayout, draft_layout, export_draft, load_layouts, make_layout, match_ids, refresh_exit_labels
 from ..ai_layouts import apply as apply_layout
 from ..ai_layouts import check as check_layout
 from ..assignment import equation, origin, reaction_subsystems, read_assignment, write_assignment
@@ -238,6 +238,7 @@ class Session:
         self._svgs: dict = {}
         self.layouts: dict[str, MapLayout] = {}
         self._layout_info: dict = {}
+        self._drafts: dict = {}  # {map: (key, the pre-arranged layout, boxes)}, see draft_info
         self.export_svg = None
 
     @property
@@ -771,6 +772,30 @@ class Session:
             boxes = {back[c]: (s.x, s.y, s.w, s.h) for c, s in m.subsystems.items() if c in back}
             self._layout_info[key] = (layout, boxes, problems)
         return self._layout_info[key]
+
+    def draft_info(self, name: str | None):
+        """The pre-arranged layout of map `name` (:func:`..ai_layouts.draft_layout`: the map as the pipeline draws it
+        with the current arrangement, what an AI job gets), the boxes of its subsystems ({subsystem: (x, y, w, h)})
+        and no problems, as :meth:`layout_info`; None without such a map. Its SVG is exported by `export_svg` (None
+        if that is not set or fails); kept while the map and its arrangement stay the same."""
+        if name is None or name not in self.views():
+            return None
+        key = (self.version, tuple(sorted(self.positions[name].items())), self.args.escher_scale)
+        cached = self._drafts.get(name)
+        if cached is None or cached[0] != key:
+            m = self.map_draft(name)
+            layout = draft_layout(m, self.md, name, scale=self.args.escher_scale)
+            _, ids = self.views()[name]
+            back = {v: k for k, v in ids.items()}
+            boxes = {back[c]: (s.x, s.y, s.w, s.h) for c, s in m.subsystems.items() if c in back}
+            cached = self._drafts[name] = (key, layout, boxes)
+        layout = cached[1]
+        if layout.svg is None and self.export_svg is not None:
+            svg = self.export_svg(layout.escher)
+            if svg is not None:  # a new layout object, so that the views draw it again
+                layout = MapLayout(**{**vars(layout), "svg": svg})
+                cached = self._drafts[name] = (key, layout, cached[2])
+        return layout, cached[2], []
 
     def outdated(self, name: str | None) -> bool:
         info = self.layout_info(name)
