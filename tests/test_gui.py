@@ -2,6 +2,7 @@
 
 import gzip
 import json
+import math
 import pickle
 import random
 import zipfile
@@ -448,6 +449,107 @@ def test_window(session, monkeypatch, tmp_path):
     monkeypatch.setattr(QMessageBox, "warning", lambda *args, **kwargs: None)
     assert not w.open_project(tmp_path / "b.ecmap")
     assert [Path(p).name for p in w.recent_projects()] == ["a.ecmap"]
+    w.undo.setClean()
+    w.close()
+
+
+def test_escher_switch(session, monkeypatch, tmp_path):
+    """Shift+F7 draws the subsystems of a map as Escher maps in the style of the BRENDA map's (or as SVG): movable,
+    with the links between them, undoable, and nothing but the drawing (and the style of the export) changes."""
+    monkeypatch.setenv("QT_QPA_PLATFORM", "offscreen")
+    pytest.importorskip("qtpy")
+    from qtpy.QtCore import QSettings
+    from qtpy.QtWidgets import QApplication
+
+    from ecmapper.draft_map.ai_layouts import make_layout
+    from ecmapper.draft_map.ai_layouts import check as check_layout
+    from ecmapper.draft_map.gui.session import ESCHER, SVG
+    from ecmapper.draft_map.gui.window import MainWindow
+    from test_ai import shifted
+
+    app = QApplication.instance() or QApplication(["ecmapper-test"])
+    s = session
+    central = s.maps[0]
+    # the session: an Escher drawing of each subsystem with reactions, in the coordinates of its box
+    k = next(k for k in s.positions[central] if s.subsystem_escher(central, k) is not None)
+    svg, view_box, at = s.subsystem_escher(central, k)
+    assert svg.startswith(b"<svg") and b"<path" in svg and b"<circle" in svg and view_box[2] > 0 and at
+    box = s.rect(central, k)
+    width, height = box[2] - box[0], box[3] - box[1]
+    for px, py in at.values():  # the metabolites stay in (or near) the box
+        assert -0.5 * width < px < 1.5 * width and -0.5 * height < py < 1.5 * height
+    # the links: also with --pack, which drops them from the map
+    assert s.args.pack and s.views()[central][0].links == []
+    links = s.links(central)
+    assert links and all(a in s.positions[central] and b in s.positions[central] for a, _, b, _ in links)
+    # the export for AI jobs follows the style; a layout of it fits the map
+    path, ids = s.export_map(central, tmp_path / "svg")
+    draft_style = json.loads(path.read_text())
+    before = s.state()
+
+    w = MainWindow(s, QSettings(str(tmp_path / "settings.ini"), QSettings.Format.IniFormat))
+    exported = []
+    monkeypatch.setattr(w, "export_svg", lambda escher_map: exported.append(escher_map))
+    s.export_svg = w.export_svg
+    w.build_tabs()
+    w.resize(1200, 800)
+    w.show()
+    w.tabs.setCurrentWidget(w.views[central])
+    scene, view = w.views[central].map_scene(), w.views[central]
+    assert w.a_escher.isEnabled() and not w.a_escher.isChecked()
+    steps = w.undo.count()
+    w.toggle_escher()
+    app.processEvents()
+    assert s.style(central) == ESCHER and w.a_escher.isChecked() and w.undo.count() == steps + 1
+    assert "ℯ " in w.tabs.tabText(0)
+    assert "Escher" in w.status_label.text() and not scene.read_only and exported == []
+    item = scene.boxes[k]
+    assert item.drawing()[2]
+    assert item.view_box.getRect() == pytest.approx(view_box)
+    # the state is the same but for the style
+    after = s.state()
+    assert after[:5] == before[:5] and after[5] == {central: ESCHER}
+    # zoomed in: the Escher drawings are painted
+    from ecmapper.draft_map.gui.items import DRAWINGS
+    scene.set_mode(DRAWINGS)
+    assert not w.grab().isNull() and item.escher
+    # links between the metabolite circles of the Escher maps; they follow a moved box
+    assert len(scene.link_items) == len(links)
+    for line, a, pa, b, pb in scene.link_items:
+        for key, point in ((a, pa), (b, pb)):
+            drawing = s.subsystem_escher(central, key)
+            if drawing is not None and drawing[2]:
+                assert min(math.dist((point.x(), point.y()), q) for q in drawing[2].values()) < 1e-6
+    x0, y0 = s.positions[central][k]
+    w.change("move", lambda: s.move(central, {k: (x0 + 5000, y0)}))
+    assert scene.boxes[k].pos().x() == pytest.approx(x0 + 5000)
+    for line, a, pa, b, pb in scene.link_items:
+        if a == k:
+            assert line.line().p1().x() == pytest.approx(x0 + 5000 + pa.x())
+    w.undo.undo()  # the move
+    # the export for AI jobs in the BRENDA style; a layout made of it fits and places every draft node
+    path, ids = s.export_map(central, tmp_path / "escher")
+    brenda_style = json.loads(path.read_text())
+    assert brenda_style != draft_style
+    assert {r["bigg_id"] for r in brenda_style[1]["reactions"].values()} == {
+        r["bigg_id"] for r in draft_style[1]["reactions"].values()}
+    kinds = {key[0] for key in ids.values()}
+    assert {"reaction", "mid", "node", "title"} <= kinds
+    m = s.map_draft(central)
+    layout = make_layout(m, s.md, central, shifted(brenda_style, 400, 200), ids, s.args.escher_scale)
+    assert check_layout(layout, m, s.md) == []
+    placed = {i for i, n in m.nodes.items() if n.kind == "enzyme" and n.reactions}
+    assert placed <= set(layout.positions)
+    # undo, redo, and back: everything as before
+    w.undo.undo()
+    assert s.state() == before and s.style(central) == SVG and not w.a_escher.isChecked()
+    w.undo.redo()
+    assert s.style(central) == ESCHER
+    w.toggle_escher()
+    assert s.state() == before and s.style(central) == SVG and not scene.boxes[k].drawing()[2]
+    # kept in the project
+    if s.project is not None:
+        assert s.project.meta.get("map_styles") == {}
     w.undo.setClean()
     w.close()
 

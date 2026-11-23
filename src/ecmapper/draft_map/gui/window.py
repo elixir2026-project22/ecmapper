@@ -66,7 +66,7 @@ from .chat import AIDock
 from .escher_svg import ESCHER_URL, ESCHER_VERSION, EscherSvg, download_script, find_script, web_engine_available
 from .items import AUTO, BOXES, DETAIL_SCALE, DRAWINGS, MapScene, MapView
 from ..project import EXT, Project, options_of
-from .session import NOT_DRAWN, Session, template
+from .session import ESCHER, NOT_DRAWN, SVG, Session, template
 
 TITLE = "ecmapper draft map assignment"
 #: QSettings of the GUI (organisation, application)
@@ -688,6 +688,11 @@ class MainWindow(QMainWindow):
         self.a_ai_view = self.action("&Show AI layout", self.toggle_ai_view, "F7",
                                      "Show this map as laid out by AI, or as boxes (to change its subsystems)")
         self.a_ai_view.setCheckable(True)
+        self.a_escher = self.action("Draw as &Escher", self.toggle_escher, "Shift+F7",
+                                    "Draw the subsystems of this map as Escher maps (in the style of the Escher maps of "
+                                    "the BRENDA map; still movable, with their links) or as the SVG of the BRENDA map. "
+                                    "Only the drawing changes; the map's Escher export for AI jobs follows it")
+        self.a_escher.setCheckable(True)
         self.a_discard_layout = self.action("&Discard AI layout", self.discard_layout, None,
                                             "Draw this map automatically again")
         self.a_import_layout = self.action("&Import Escher layout…", self.import_layout, None,
@@ -727,7 +732,7 @@ class MainWindow(QMainWindow):
         for a in (self.a_pack, self.a_original, None, self.a_pipeline, None, self.a_compare):
             m.addSeparator() if a is None else m.addAction(a)
         m = bar.addMenu("&Maps")
-        for a in (self.a_new_map, self.a_rename_map, self.a_delete_map, None, self.a_merge):
+        for a in (self.a_new_map, self.a_rename_map, self.a_delete_map, None, self.a_escher, None, self.a_merge):
             m.addSeparator() if a is None else m.addAction(a)
         m = bar.addMenu("A&I")
         for a in (self.a_ai_layout, self.a_ai_view, None, self.a_agent_prepare, self.a_agent_result, None,
@@ -736,7 +741,8 @@ class MainWindow(QMainWindow):
         tools = self.addToolBar("Tools")
         tools.setObjectName("Tools")
         for a in (self.a_save, self.a_undo, self.a_redo, None, self.a_cut, self.a_copy, self.a_paste, None, self.a_fit,
-                  *self.mode_actions.values(), None, self.a_pack, None, self.a_ai_layout, self.a_ai_view, None,
+                  *self.mode_actions.values(), self.a_escher, None, self.a_pack, None, self.a_ai_layout,
+                  self.a_ai_view, None,
                   self.a_build):
             tools.addSeparator() if a is None else tools.addAction(a)
 
@@ -888,8 +894,11 @@ class MainWindow(QMainWindow):
                        else "laid out by AI (Build uses this layout)")
             else:
                 arranged = self.session.arranged.get(scene.name)
-                text = f"{'✎ ' if arranged else ''}{scene.name} ({n})"
+                escher = self.session.style(scene.name) == ESCHER
+                text = f"{'✎ ' if arranged else ''}{'ℯ ' if escher else ''}{scene.name} ({n})"
                 tip = "arranged here (the pipeline keeps it)" if arranged else "arranged by the pipeline when building"
+                if escher:
+                    tip += "; drawn as Escher maps"
             self.tabs.setTabText(i, text + (f" [{found} found]" if found else ""))
             self.tabs.setTabToolTip(i, tip)
 
@@ -927,6 +936,8 @@ class MainWindow(QMainWindow):
         has_layout = a_map and scene.name in self.session.layouts
         self.a_ai_view.setEnabled(has_layout)
         self.a_ai_view.setChecked(has_layout and scene.ai_view)
+        self.a_escher.setEnabled(a_map)
+        self.a_escher.setChecked(a_map and self.session.style(scene.name) == ESCHER)
         self.a_discard_layout.setEnabled(has_layout)
         self.a_pipeline.setEnabled(on_map and bool(self.session.arranged.get(scene.name)))
         self.a_rematch.setEnabled(loaded and bool(getattr(self.session.args, "model", None)))
@@ -952,6 +963,8 @@ class MainWindow(QMainWindow):
             if scene.name in self.session.layouts:
                 how += "; has an AI layout (F7)"
             text = f"{scene.name}: {subsystems(len(scene.positions()))}, {how}"
+            if self.session.style(scene.name) == ESCHER:
+                text += "; drawn as Escher maps (Shift+F7: SVG)"
         self.status_label.setText(f"{text}  |  zoom {scale:.2f} ({drawn})")
 
     def show_log(self, text: str) -> None:
@@ -1083,6 +1096,8 @@ class MainWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.a_zoom_sel)
         menu.addAction(self.a_fit)
+        if scene.name is not None:
+            menu.addAction(self.a_escher)
         if scene.selected_keys():
             menu.addAction(self.a_compare)
         if scene.name is not None:
@@ -1213,6 +1228,21 @@ class MainWindow(QMainWindow):
         self.ai_dock.raise_()
         self.ai_dock.update_state()
         self.ai_dock.input.setFocus()
+
+    def toggle_escher(self) -> None:
+        """Draw the subsystems of the current map as Escher maps or as SVG (undoable; nothing else changes)."""
+        name = self.current_map()
+        if name is None:
+            return
+        style = SVG if self.session.style(name) == ESCHER else ESCHER
+        QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)
+        try:
+            self.change(f"Draw {name} as {'Escher maps' if style == ESCHER else 'SVG'}",
+                        lambda: self.session.set_style(name, style))
+        finally:
+            QApplication.restoreOverrideCursor()
+        self.update_actions()
+        self.update_status()
 
     def toggle_ai_view(self) -> None:
         scene = self.current_scene()
@@ -1781,7 +1811,8 @@ class MainWindow(QMainWindow):
             self.settings.setValue(merge_escher.SETTING, str(script))
         styles = list(merge_escher.STYLES)
         texts = list(merge_escher.STYLES.values())
-        last = self.settings.value(merge_escher.STYLE_SETTING, styles[0])
+        last = "brenda" if self.session.style(name) == ESCHER else self.settings.value(merge_escher.STYLE_SETTING,
+                                                                                         styles[0])
         text, ok = QInputDialog.getItem(self, title, "Draw the subsystems:", texts,
                                         styles.index(last) if last in styles else 0, False)
         if not ok:

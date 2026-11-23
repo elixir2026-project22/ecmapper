@@ -24,6 +24,7 @@ Command line: ``python -m ecmapper.brenda_escher BRENDA_map_reactions.json OUT -
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import math
 import re
@@ -44,6 +45,7 @@ class Met:
     x: float
     y: float
     coef: float = 1.0
+    key: tuple | None = None  # the draft object of its Escher node (see build: `new_id`)
 
 
 @dataclass
@@ -69,6 +71,7 @@ class Rxn:
     straight: frozenset = frozenset()  # the nodes of the two metabolites that it joins in a straight line
     ring: dict = field(default_factory=dict)  # on a cycle: {node: the direction in which it leaves the node}
     ring_handle: float = 0.0  # on a cycle: the length of the handles of its arcs, as a part of their chords
+    key: tuple | None = None  # (enzyme node, model reaction) of a draft map (see build: `new_id`)
 
 
 def _unit(x: float, y: float) -> tuple[float, float] | None:
@@ -213,7 +216,7 @@ def from_draft(dm, md, scale: float = 2.0, protons: bool = False, lane: float = 
             ids.append(m)
         k = ids.index(m)
         return Met(node.id if k == 0 else f"{node.id}#{k}", m, name(m), node.x * scale, (node.y + 34 * k) * scale,
-                   coef)
+                   coef, key=("node", node.id, m))
 
     reactions = []
     for enzyme in dm.nodes.values():
@@ -232,13 +235,15 @@ def from_draft(dm, md, scale: float = 2.0, protons: bool = False, lane: float = 
                     main[side].append(main_met(node, m, abs(c)))
                 else:
                     at = node or enzyme
-                    cof[side].append(Met(f"{enzyme.id}~{rid}~{m}", m, name(m), at.x * scale, at.y * scale, abs(c)))
+                    key = ("node", node.id, m) if node is not None else ("free", enzyme.id, rid, m)
+                    cof[side].append(Met(f"{enzyme.id}~{rid}~{m}", m, name(m), at.x * scale, at.y * scale, abs(c),
+                                         key=key))
             info = dict(gene_reaction_rule=r.get("gpr", "") or "",
                         genes=[dict(bigg_id=g, name=n) for g, n in r.get("genes", [])],
                         metabolites=[dict(bigg_id=m, coefficient=c) for m, c in r["metabolites"].items()])
             reactions.append(Rxn(f"{enzyme.id}/{rid}", enzyme.subsystem, rid, r["name"] or rid, enzyme.x * scale,
                                  enzyme.y * scale, main, cof, bool(r["reversible"]), True,
-                                 lane=(i - (k - 1) / 2) * lane, info=info))
+                                 lane=(i - (k - 1) / 2) * lane, info=info, key=(enzyme.id, rid)))
     position = {m.node: (m.x, m.y) for r in reactions for m in r.main[-1] + r.main[1]}
     cycles = []
     for s in dm.subsystems.values():
@@ -831,13 +836,22 @@ def place_cofactors(reactions: list[Rxn], curves: dict, along: float = 50.0, ste
 
 
 def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titles: bool = True,
-          labels: bool = True, description: str = "from the BRENDA map", **options) -> list:
+          labels: bool = True, description: str = "from the BRENDA map", new_id=None, **options) -> list:
     """The Escher map of `reactions` (those of `subsystems`, if given), see the module.
 
     One Escher reaction per reaction (BiGG ID: its label, e.g. the EC label of a BRENDA enzyme node; its
     `info` added to the fields) with a primary node for each drawn main metabolite and a secondary node of its
     own for each cofactor. `options`: the arguments of :func:`place_axes`
     (`radius`, `marker`, `clearance`, `straight`) and :func:`tangents` (`through`, `hub`, `turn`).
+
+    `new_id(key=None) -> ID` gives the Escher IDs (default: 1, 2, ...), e.g. an
+    :class:`ecmapper.draft_map.escher._Ids` that records the draft objects of
+    the IDs as :func:`ecmapper.draft_map.escher.to_escher` does: ("reaction" |
+    "mid", enzyme node, reaction) of reactions of :func:`from_draft`
+    (`Rxn.key`), ("node", drawn node, BiGG ID) and ("free", enzyme node,
+    reaction, BiGG ID) of their metabolites (`Met.key`; a key only once per
+    map), ("title", subsystem) of the titles. Several maps made with one
+    `new_id` have distinct IDs (one map of several subsystems).
     """
     reactions = [r for r in reactions if subsystems is None or r.subsystem in subsystems]
     axes = {k: options[k] for k in ("radius", "marker", "clearance", "straight") if k in options}
@@ -854,10 +868,15 @@ def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titl
                 curves[r.id, m.node] = _polyline((m.x, m.y), r.markers[side], c)
     cofactors = place_cofactors(reactions, curves)
 
-    count = 0
+    counter, count, given = new_id, 0, set()
 
-    def new_id() -> str:
+    def new_id(key: tuple | None = None) -> str:
         nonlocal count
+        if counter is not None:
+            if key is not None and key in given:  # e.g. one cofactor node drawn at several reactions
+                key = None
+            given.add(key)
+            return counter(key)
         count += 1
         return str(count)
 
@@ -866,7 +885,7 @@ def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titl
 
     nodes, out, drawn = {}, {}, {}
     for r in reactions:
-        mid = new_id()
+        mid = new_id(("mid", *r.key) if r.key else None)
         nodes[mid] = dict(node_type="midmarker", x=r.mid[0], y=r.mid[1])
         segments, coefficients = {}, {}
         for side in (-1, 1):
@@ -877,13 +896,13 @@ def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titl
             ends = []
             for m in r.main[side]:
                 if m.node not in drawn:
-                    drawn[m.node] = new_id()
+                    drawn[m.node] = new_id(m.key)
                     nodes[drawn[m.node]] = dict(node_type="metabolite", x=m.x, y=m.y, bigg_id=m.token, name=m.name,
                                                 label_x=m.x + 20, label_y=m.y - 20, node_is_primary=True)
                 ends.append((m, drawn[m.node], controls[r.id, m.node]))
             for index, m in enumerate(r.cof[side]):
                 (x, y), (b_marker, b_met) = cofactors[r.id, side, index]
-                node = new_id()
+                node = new_id(m.key)
                 nodes[node] = dict(node_type="metabolite", x=x, y=y, bigg_id=m.token, name=m.name,
                                    label_x=x + 10, label_y=y - 10, node_is_primary=False)
                 ends.append((m, node, (b_met, b_marker)))
@@ -894,7 +913,7 @@ def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titl
                 else:
                     segments[new_id()] = dict(from_node_id=marker, to_node_id=node, b1=b_marker, b2=b_met)
                 coefficients[m.token] = coefficients.get(m.token, 0.0) + side * m.coef
-        out[new_id()] = dict(
+        out[new_id(("reaction", *r.key) if r.key else None)] = dict(
             name=r.name, bigg_id=r.label, reversibility=r.reversible, label_x=r.mid[0] + 20, label_y=r.mid[1] + 40,
             gene_reaction_rule="", genes=[],
             metabolites=[dict(bigg_id=t, coefficient=c) for t, c in coefficients.items() if c],
@@ -911,7 +930,8 @@ def build(reactions: list[Rxn], data: dict, map_name: str, subsystems=None, titl
             if s["id"] in extent:
                 text = s.get("label_text") or s["id"]
                 x0, x1, y0 = extent[s["id"]]
-                text_labels[new_id()] = dict(text=text, x=(x0 + x1) / 2 - 14.0 * len(text), y=y0 - 170)
+                text_labels[new_id(("title", s["id"]))] = dict(text=text, x=(x0 + x1) / 2 - 14.0 * len(text),
+                                                                y=y0 - 170)
     body = dict(reactions=out, nodes=nodes, text_labels=text_labels)
     if labels:
         place_labels(body)
@@ -1069,6 +1089,119 @@ def render(data: list, path, width: float = 1800.0) -> None:
         ax.text(t["x"], t["y"], t["text"], fontsize=50 * pt, style="italic", weight="bold", va="baseline")
     fig.savefig(path)
     plt.close(fig)
+
+
+#: Escher's look (its default styles): line, metabolite fill and stroke, label colours
+ESCHER_LOOK = dict(line="#334E75", fill="#E0865B", stroke="#A24510", reaction_label="#191978", text="#000000")
+
+
+def _segment_ends(nodes: dict, s: dict) -> tuple[dict, dict, tuple[float, float], tuple[float, float]]:
+    a, b = nodes[s["from_node_id"]], nodes[s["to_node_id"]]
+    c1 = (s["b1"]["x"], s["b1"]["y"]) if s.get("b1") else (a["x"], a["y"])
+    c2 = (s["b2"]["x"], s["b2"]["y"]) if s.get("b2") else (b["x"], b["y"])
+    return a, b, c1, c2
+
+
+def _arrowhead(tip: tuple[float, float], before: tuple[float, float], radius: float) -> str | None:
+    """The points of an arrowhead that ends at the circle (`radius`) around `tip`, coming from `before`."""
+    d = _unit(tip[0] - before[0], tip[1] - before[1])
+    if d is None:
+        return None
+    ex, ey = tip[0] - d[0] * (radius + 2), tip[1] - d[1] * (radius + 2)
+    bx, by = ex - d[0] * 26, ey - d[1] * 26
+    px, py = -d[1] * 13, d[0] * 13
+    return f"{ex:.1f},{ey:.1f} {bx + px:.1f},{by + py:.1f} {bx - px:.1f},{by - py:.1f}"
+
+
+def svg_text(data: list, margin: float = 40.0) -> tuple[str, tuple[float, float, float, float]]:
+    """An SVG of an Escher map ([head, body]) in Escher's look and its view box (x, y, width, height; map units).
+
+    Drawn in Python (no browser, unlike Escher's own export): the segments
+    with their Bezier handles, arrowheads at the products (and at the
+    substrates of reversible reactions), metabolites as circles (primary ones
+    larger), the BiGG IDs as labels, text labels at Escher's 50 px. The view
+    box is the extent of the drawing (nodes and labels) plus `margin`, not
+    the canvas.
+    """
+    from .draft_map.escher import ESCHER_FONTS
+
+    body = data[1]
+    nodes = body["nodes"]
+    look = ESCHER_LOOK
+    xs, ys = [], []
+
+    def extent(x0, y0, x1, y1):
+        xs.extend((x0, x1))
+        ys.extend((y0, y1))
+
+    def label_extent(kind, text, x, y):
+        size, per_char = ESCHER_FONTS[kind]
+        extent(x, y - 0.8 * size, x + per_char * len(text), y + 0.25 * size)
+
+    def radius(n):
+        return 20.0 if n.get("node_is_primary") else 12.0
+
+    lines, arrows, labels = [], [], []
+    for r in body["reactions"].values():
+        coefficients = {m["bigg_id"]: m["coefficient"] for m in r.get("metabolites", [])}
+        for seg in r["segments"].values():
+            a, b, c1, c2 = _segment_ends(nodes, seg)
+            if seg.get("b1") or seg.get("b2"):
+                d = f"M{a['x']:.1f},{a['y']:.1f} C{c1[0]:.1f},{c1[1]:.1f} {c2[0]:.1f},{c2[1]:.1f} {b['x']:.1f},{b['y']:.1f}"
+            else:
+                d = f"M{a['x']:.1f},{a['y']:.1f} L{b['x']:.1f},{b['y']:.1f}"
+            lines.append(f'<path d="{d}"/>')
+            for end, other, control in ((b, a, c2), (a, b, c1)):
+                if end["node_type"] != "metabolite":
+                    continue
+                c = coefficients.get(end["bigg_id"], 0)
+                if c > 0 or (c < 0 and r.get("reversibility")):
+                    head = _arrowhead((end["x"], end["y"]), control if control != (end["x"], end["y"])
+                                      else (other["x"], other["y"]), radius(end))
+                    if head:
+                        arrows.append(f'<polygon points="{head}"/>')
+        text = html.escape(str(r.get("bigg_id", "")))
+        labels.append(f'<text class="r" x="{r["label_x"]:.1f}" y="{r["label_y"]:.1f}">{text}</text>')
+        label_extent("reaction", text, r["label_x"], r["label_y"])
+    circles, markers = [], []
+    for n in nodes.values():
+        x, y = n["x"], n["y"]
+        if n["node_type"] == "metabolite":
+            rr = radius(n)
+            circles.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{rr:.0f}"/>')
+            text = html.escape(str(n.get("bigg_id", "")))
+            labels.append(f'<text class="m" x="{n["label_x"]:.1f}" y="{n["label_y"]:.1f}">{text}</text>')
+            label_extent("metabolite", text, n["label_x"], n["label_y"])
+            extent(x - rr, y - rr, x + rr, y + rr)
+        elif n["node_type"] == "midmarker":
+            markers.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5"/>')
+            extent(x - 5, y - 5, x + 5, y + 5)
+        else:
+            extent(x, y, x, y)
+    for t in body.get("text_labels", {}).values():
+        text = html.escape(t["text"])
+        labels.append(f'<text class="t" x="{t["x"]:.1f}" y="{t["y"]:.1f}">{text}</text>')
+        label_extent("text", t["text"], t["x"], t["y"])
+    if not xs:
+        c = body.get("canvas") or dict(x=0, y=0, width=1, height=1)
+        extent(c["x"], c["y"], c["x"] + c["width"], c["y"] + c["height"])
+    x0, y0 = min(xs) - margin, min(ys) - margin
+    w, h = max(xs) - x0 + margin, max(ys) - y0 + margin
+    style = (f'path{{fill:none;stroke:{look["line"]};stroke-width:10;stroke-linecap:round}}'
+             f'polygon{{fill:{look["line"]};stroke:none}}'
+             f'g.met circle{{fill:{look["fill"]};stroke:{look["stroke"]};stroke-width:2}}'
+             f'g.mid circle{{fill:white;stroke:{look["line"]};stroke-width:1}}'
+             'text{font-family:Arial,Helvetica,sans-serif;font-style:italic;font-weight:bold}'
+             f'text.r{{font-size:30px;fill:{look["reaction_label"]}}}text.m{{font-size:20px;fill:{look["text"]}}}'
+             f'text.t{{font-size:50px;fill:{look["text"]}}}')
+    svg = "".join([
+        f'<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="{x0:.1f} {y0:.1f} {w:.1f} {h:.1f}" '
+        f'width="{w:.0f}" height="{h:.0f}"><style>{style}</style>',
+        f'<g class="lines">{"".join(lines)}</g><g class="arrows">{"".join(arrows)}</g>',
+        f'<g class="mid">{"".join(markers)}</g><g class="met">{"".join(circles)}</g>',
+        f'<g class="labels">{"".join(labels)}</g></svg>',
+    ])
+    return svg, (x0, y0, w, h)
 
 
 def main(argv=None) -> int:

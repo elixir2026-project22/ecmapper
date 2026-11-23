@@ -35,9 +35,15 @@ from ..project import PREP, TABLE, Project, bundled_template, digests, ecmapper_
 from ..relayout import AUTOLAYOUT, subsystem_map
 from ..render import svg_text
 from ..split import duplicate_subsystems, slug, split_map
+from ..escher import _Ids
+from ..escher_style import subsystem_escher
 
 #: the tab of the subsystems on no map
 NOT_DRAWN = "Not drawn"
+#: how the subsystems of a map are drawn: as the SVG of the BRENDA map, or as Escher maps (:mod:`ecmapper.brenda_escher`)
+SVG, ESCHER = "svg", "escher"
+#: the style of the exported Escher map (for AI jobs) of a map drawn so (:data:`..escher_style.STYLES`)
+EXPORT_STYLE = {SVG: "draft", ESCHER: "brenda"}
 #: margin of the SVG of a subsystem around its box and title (map units)
 SVG_MARGIN = 6.0
 #: boxes closer than the gap by at most this much (map units, rounding) count as free
@@ -215,6 +221,9 @@ class Session:
     fits the map; `export_svg(escher map) -> SVG or None`: set by the GUI,
     to export layouts whose "→ map" labels changed when saving. `project`:
     the project (:mod:`..project`) whose work folder is OUT_DIR, if any.
+    `styles[map]`: :data:`ESCHER` if its subsystems are drawn as Escher maps
+    (otherwise :data:`SVG`); only how they are drawn and exported, so
+    switching keeps everything else (kept in the project, "map_styles").
     """
 
     def __init__(self, args, methods: list[str], log=print, mapper=None, project: Project | None = None):
@@ -238,6 +247,9 @@ class Session:
         self._svgs: dict = {}
         self.layouts: dict[str, MapLayout] = {}
         self._layout_info: dict = {}
+        self.styles: dict[str, str] = {}
+        self._eschers: dict = {}  # {(map, subsystem): its Escher drawing}, see subsystem_escher
+        self._display_links: dict = {}  # {map: its links to show}, see views
         self.export_svg = None
 
     @property
@@ -388,6 +400,8 @@ class Session:
                 self.positions[name] = self.original_order(keys)
                 self.arranged[name] = False
         self.layouts = load_layouts(table, Path(self.args.assignment).parent, self.log) if table is not None else {}
+        styles = self.project.meta.get("map_styles", {}) if self.project is not None else {}
+        self.styles = {m: v for m, v in styles.items() if m in self.maps and v == ESCHER}
         self.modified = False
         self._changed()
         self.log(f"{len(dm.subsystems)} subsystems, {len(self.maps)} maps, {len(self.unassigned())} subsystems "
@@ -645,24 +659,43 @@ class Session:
             dm.links = [l for l in self.dm.links if l.a in dm.nodes and l.b in dm.nodes]
             dm.orig_centres = dict(self.dm.orig_centres)
             assignment, copies = duplicate_subsystems(dm, {k: maps_of[k] for k in assigned})
-            views = {}
+            views, self._display_links = {}, {}
             for name, sub in split_map(dm, [m for m in self.maps if self.positions[m]], assignment):
+                links = list(sub.links)
                 run.map_links(sub, self.args, self.hubs)
+                # with --pack the map has no links; they are shown all the same (not used by packing or the build)
+                self._display_links[name] = links if self.args.pack else list(sub.links)
                 views[name] = (sub, {k: copies.get((k, name), k) for k in self.positions[name]})
             self._views = views
         return self._views
 
     def links(self, name: str) -> list[tuple[str, tuple[float, float], str, tuple[float, float]]]:
-        """The inter-pathway links of a map: (subsystem, end relative to its box, other subsystem, other end)."""
+        """The inter-pathway links of a map: (subsystem, end relative to its box, other subsystem, other end).
+
+        Those of the map, and with --pack (which drops them) those it would
+        have without. On a map drawn as Escher maps, the ends are where the
+        Escher maps of the subsystems draw the linked metabolites.
+        """
         if name not in self.views():
             return []
         sub, ids = self.views()[name]
         back = {v: k for k, v in ids.items()}
+        escher = self.styles.get(name) == ESCHER
+
+        def end(node):
+            k = back[node.subsystem]
+            if escher:
+                drawing = self.subsystem_escher(name, k)
+                if drawing is not None and node.id in drawing[2]:
+                    return k, drawing[2][node.id]
+            return k, (node.x, node.y)
+
         result = []
-        for l in sub.links:
-            a, b = sub.nodes[l.a], sub.nodes[l.b]
-            if a.subsystem != b.subsystem:
-                result.append((back[a.subsystem], (a.x, a.y), back[b.subsystem], (b.x, b.y)))
+        for l in self._display_links.get(name, []):
+            a, b = sub.nodes.get(l.a), sub.nodes.get(l.b)
+            if a is not None and b is not None and a.subsystem != b.subsystem and a.subsystem in back \
+                    and b.subsystem in back:
+                result.append((*end(a), *end(b)))
         return result
 
     def subsystem_svg(self, name: str | None, k: str) -> tuple[bytes, tuple[float, float, float, float]]:
@@ -682,6 +715,60 @@ class Session:
             text = svg_text(one, md=self.md, margin=SVG_MARGIN)
             self._svgs[key] = (text.encode("utf-8"), one.view_box)
         return self._svgs[key]
+
+    def subsystem_escher(self, name: str | None, k: str):
+        """Subsystem `k` as drawn on map `name` as an Escher map in the style of the BRENDA map
+        (:func:`..escher_style.subsystem_escher`): (SVG in Escher's look, its view box, {drawn metabolite node:
+        (x, y)}), all in the coordinates of the box (map units); None if it has no model reactions (it is drawn as
+        SVG then)."""
+        from ...brenda_escher import svg_text as escher_svg_text
+
+        key = (name, k)
+        if key not in self._eschers:
+            views = self.views()
+            if name in views and k in views[name][1]:
+                sub, ids = views[name]
+                one = subsystem_map(sub, ids[k])
+            else:
+                one = subsystem_map(self.dm, k)
+            scale = self.args.escher_scale
+            record = {}
+            label = self.dm.subsystems[k].label if k in self.dm.subsystems else k
+            data = subsystem_escher(one, self.md, label or k, scale, _Ids(record=record))
+            if data is None:
+                self._eschers[key] = None
+            else:
+                text, (x, y, w, h) = escher_svg_text(data)
+                points = defaultdict(list)
+                for i, obj in record.items():
+                    if obj[0] == "node" and i in data[1]["nodes"]:
+                        n = data[1]["nodes"][i]
+                        points[obj[1]].append((n["x"] / scale, n["y"] / scale))
+                at = {node: (sum(p[0] for p in ps) / len(ps), sum(p[1] for p in ps) / len(ps))
+                      for node, ps in points.items()}
+                self._eschers[key] = (text.encode("utf-8"), (x / scale, y / scale, w / scale, h / scale), at)
+        return self._eschers[key]
+
+    def set_style(self, name: str, style: str) -> None:
+        """Draw the subsystems of map `name` as :data:`SVG` or :data:`ESCHER` (also the style of its Escher export)."""
+        if style not in (SVG, ESCHER):
+            raise ValueError(f"unknown style {style!r}")
+        if self.styles.get(name, SVG) == style:
+            return
+        if style == SVG:
+            self.styles.pop(name, None)
+        else:
+            self.styles[name] = style
+        self._store_styles()
+        self.modified = True
+        self.version += 1
+
+    def style(self, name: str | None) -> str:
+        return self.styles.get(name, SVG)
+
+    def _store_styles(self) -> None:
+        if self.project is not None:
+            self.project.meta["map_styles"] = {m: v for m, v in self.styles.items() if m in self.maps}
 
     def pack(self, name: str, iterations: int, seed: int = 1, seeds: int = 1, progress=None,
              stop=None) -> dict[str, tuple[float, float]]:
@@ -726,7 +813,8 @@ class Session:
     def export_map(self, name: str, folder, file: str = DRAFT, reuse: dict | None = None) -> tuple[Path, dict]:
         """Write map `name` as Escher map to `folder`/`file` for an AI job; the draft objects of its Escher IDs
         (`reuse`: those of an earlier export, kept)."""
-        data, ids = export_draft(self.map_draft(name), self.md, name, scale=self.args.escher_scale, reuse=reuse)
+        data, ids = export_draft(self.map_draft(name), self.md, name, scale=self.args.escher_scale, reuse=reuse,
+                                 style=EXPORT_STYLE[self.style(name)])
         path = Path(folder) / file
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(data), encoding="utf-8")
@@ -739,7 +827,7 @@ class Session:
         m = self.map_draft(name)
         scale = self.args.escher_scale
         if ids is None:
-            draft, draft_ids = export_draft(m, self.md, name, scale=scale)
+            draft, draft_ids = export_draft(m, self.md, name, scale=scale, style=EXPORT_STYLE[self.style(name)])
             ids = match_ids(draft, draft_ids, final)
         layout = make_layout(m, self.md, name, final, ids, scale, svg, run_log, source)
         return layout, check_layout(layout, m, self.md)
@@ -782,15 +870,20 @@ class Session:
         """The assignment changed: the maps are drawn anew."""
         self._views = None
         self._svgs = {}
+        self._eschers = {}
         self._layout_info = {}
         self.version += 1
 
     def state(self):
         return (list(self.maps), {m: dict(p) for m, p in self.positions.items()}, dict(self.arranged),
-                dict(self.layouts), dict(self.layout_of))
+                dict(self.layouts), dict(self.layout_of), dict(self.styles))
 
     def restore(self, state) -> None:
-        maps, positions, arranged, layouts, layout_of = state
+        maps, positions, arranged, layouts, layout_of, styles = state
+        if styles != self.styles:
+            self.styles = dict(styles)
+            self._store_styles()
+            self.version += 1
         self._set_layout_of(layout_of)  # the drawings first: the positions of the state fit them
         members = {m: set(p) for m, p in positions.items()}
         assignment_changed = maps != self.maps or members != {m: set(p) for m, p in self.positions.items()}
@@ -853,6 +946,9 @@ class Session:
         self.arranged[new] = self.arranged.pop(old, False)
         if old in self.layouts:
             self.layouts[new] = self.layouts.pop(old)
+        if old in self.styles:
+            self.styles[new] = self.styles.pop(old)
+            self._store_styles()
         self.modified = True
         self._changed()
 
@@ -861,6 +957,8 @@ class Session:
         del self.positions[name]
         self.arranged.pop(name, None)
         self.layouts.pop(name, None)
+        if self.styles.pop(name, None) is not None:
+            self._store_styles()
         self.modified = True
         self._changed()
 

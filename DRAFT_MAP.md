@@ -720,6 +720,20 @@ and an overview:
     dialog, from the current places, with progress and stop); *Original order* places the boxes as on the BRENDA
     map. A map that was moved or packed counts as arranged (✎ on the tab) and is saved in the sheet
     *Arrangement*; *Let the pipeline arrange this map* undoes that.
+  - *Maps ▸ Draw as Escher* (Shift+F7, also in the tool bar and the context menu; ℯ on the tab) draws the subsystems
+    of the current map, zoomed in, as Escher maps in the style of the Escher maps of the BRENDA map
+    (`ecmapper.brenda_escher`: rows and columns, rounded corners, cofactors on branches), drawn in Python in Escher's
+    look; Shift+F7 again draws them as the SVG of the BRENDA map. They stay boxes that can be moved, and the links
+    between them run between the metabolite circles. Only the drawing changes (it is made from the SVG drawing each
+    time): the assignment, the arrangement, the AI layouts and the layouts of step 3b stay as they are, so switching
+    back and forth loses nothing, and it can be undone. The style is kept in the project (`map_styles`). The Escher
+    map that AI jobs and coding agents get (`draft.escher.json`) follows it: a map drawn as Escher maps is exported in
+    the BRENDA style (`ai_layouts.export_draft(style="brenda")`, `escher_style.to_brenda_escher`), with the same
+    record of its Escher IDs, so its layouts are mapped back as before. *Merge subsystems with MergingEscher*
+    proposes that style, too. The Escher drawing of a subsystem may stick out of its box a little; the boxes keep
+    the size of the SVG drawing.
+  - The inter-pathway links between the subsystems of a map are drawn as dashed lines, with `--pack` too (which
+    drops them from the map: they are shown only, not used by *Pack map* or the build).
   - *Find* highlights the subsystems whose name or ID contains the text or with a reaction of that ID, on all
     maps; the panel *Subsystem* lists the model reactions of the selected subsystem (read only; edit the sheet
     *Reactions* to change them), those added from the model in purple as in the table; the boxes give their

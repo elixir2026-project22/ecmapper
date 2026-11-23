@@ -1,5 +1,7 @@
 """Drawing the maps: a box per subsystem with two zoom levels, the links between the boxes, the view; maps with an
-AI layout as their Escher drawing with the outlines of the subsystems."""
+AI layout as their Escher drawing with the outlines of the subsystems. Zoomed in, a subsystem is drawn as the SVG of
+the BRENDA map or, on a map drawn as Escher maps (:data:`.session.ESCHER`), as an Escher map in the style of the
+BRENDA map's Escher maps (:mod:`ecmapper.brenda_escher`)."""
 
 from __future__ import annotations
 
@@ -18,7 +20,7 @@ from qtpy.QtWidgets import (
     QStyleOptionGraphicsItem,
 )
 
-from .session import Session, boxes_free, constrained_delta
+from .session import ESCHER, Session, boxes_free, constrained_delta
 
 #: zoom (screen pixels per map unit) from which the subsystems are drawn as SVG in the mode AUTO
 DETAIL_SCALE = 0.3
@@ -50,6 +52,7 @@ class SubsystemItem(QGraphicsObject):
         self.setFlag(QGraphicsItem.GraphicsItemFlag.ItemIsSelectable)
         self.found = False
         self.renderer = None
+        self.escher = False
         self.outline = outline
         self.refresh()
 
@@ -64,7 +67,7 @@ class SubsystemItem(QGraphicsObject):
             self.w, self.h = self.outline[2], self.outline[3]
             self.view_box = self.box()
         else:
-            self.view_box = QRectF(*session.subsystem_svg(self.map_scene.name, self.key)[1])
+            self.view_box = QRectF(*self.drawing()[1])
         others = [m for m in session.maps_of(self.key) if m != self.map_scene.name]
         count, added = session.counts.get(self.key, 0), session.added_counts.get(self.key, 0)
         self.lines = [(self.label, True, 15), (f"{count} reactions", False, 12)]
@@ -76,6 +79,16 @@ class SubsystemItem(QGraphicsObject):
                         + (f", {added} added from the model" if added else "")
                         + (f"\nalso on: {', '.join(others)}" if others else ""))
         self.update()
+
+    def drawing(self) -> tuple[bytes, tuple[float, float, float, float], bool]:
+        """The drawing of the subsystem when zoomed in: (SVG, view box, whether it is an Escher map)."""
+        session, name = self.map_scene.session, self.map_scene.name
+        if name is not None and session.style(name) == ESCHER:
+            escher = session.subsystem_escher(name, self.key)
+            if escher is not None:
+                return escher[0], escher[1], True
+        data, view_box = session.subsystem_svg(name, self.key)
+        return data, view_box, False
 
     def box(self) -> QRectF:
         return QRectF(0, 0, self.w, self.h)
@@ -101,8 +114,16 @@ class SubsystemItem(QGraphicsObject):
             return
         if self.detailed(scale):
             if self.renderer is None:
-                data, _ = self.map_scene.session.subsystem_svg(self.map_scene.name, self.key)
+                data, _, self.escher = self.drawing()
                 self.renderer = QSvgRenderer(QByteArray(data))
+            if self.escher:  # the box, faintly, under the Escher map (which has no box)
+                fill = QColor(self.fill)
+                fill.setAlphaF(0.18)
+                pen = QPen(self.fill.darker(150), 1)
+                pen.setCosmetic(True)
+                painter.setPen(pen)
+                painter.setBrush(fill)
+                painter.drawRoundedRect(box, 18, 18)
             self.renderer.render(painter, self.view_box)
         else:
             fill = QColor(self.fill)
@@ -262,7 +283,10 @@ class MapScene(QGraphicsScene):
         self.link_items = []
         if self.name is None or self.ai_info() is not None:
             return
-        pen = QPen(QColor(120, 120, 120, 170), 2.5, Qt.PenStyle.DashLine)
+        if self.session.style(self.name) == ESCHER:  # between the metabolite circles of the Escher maps
+            pen = QPen(QColor(51, 78, 117, 150), 3.5, Qt.PenStyle.DashLine)
+        else:
+            pen = QPen(QColor(120, 120, 120, 170), 2.5, Qt.PenStyle.DashLine)
         pen.setCosmetic(True)
         for a, pa, b, pb in self.session.links(self.name):
             line = QGraphicsLineItem()

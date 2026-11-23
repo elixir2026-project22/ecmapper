@@ -111,11 +111,26 @@ def load_layouts(table, base, log=print) -> dict[str, MapLayout]:
 
 
 def export_draft(m: DraftMap, md: ModelData, name: str, scale: float = 2.0, reuse: dict | None = None,
-                 description: str = "Draft map from the BRENDA map, made with ecmapper.draft_map") -> tuple[list, dict]:
+                 description: str = "Draft map from the BRENDA map, made with ecmapper.draft_map",
+                 style: str = "draft") -> tuple[list, dict]:
     """The Escher map of map `m` (absolute positions) as the pipeline draws it, with the names of the subsystems, and
-    the draft objects of its Escher IDs (`reuse`: those of an earlier export, whose objects keep their IDs)."""
+    the draft objects of its Escher IDs (`reuse`: those of an earlier export, whose objects keep their IDs).
+
+    `style` (:data:`.escher_style.STYLES`): "draft" keeps the nodes where the
+    draft map has them (:func:`.escher.to_escher`), "brenda" draws each
+    subsystem as the Escher maps of the BRENDA map
+    (:func:`.escher_style.to_brenda_escher`).
+    """
     ids = {}
-    data = to_escher(m, md, name, scale=scale, subsystem_labels=True, description=description, ids=ids, reuse=reuse)
+    if style == "brenda":
+        from .escher_style import to_brenda_escher
+
+        data = to_brenda_escher(m, md, name, scale=scale, description=description, ids=ids, reuse=reuse)
+    elif style == "draft":
+        data = to_escher(m, md, name, scale=scale, subsystem_labels=True, description=description, ids=ids,
+                         reuse=reuse)
+    else:
+        raise ValueError(f"unknown style {style!r}")
     return data, ids
 
 
