@@ -1,0 +1,583 @@
+consumed,produced,pair,n_reactions,n_variants_with_H2O_H+
+,,"(∅, ∅)",233,8
+NAD+,NADH,"(NAD+, NADH)",119,5
+NADPH,NADP+,"(NADPH, NADP+)",111,5
+ATP,ADP,"(ATP, ADP)",99,2
+,CO2,"(∅, CO2)",79,5
+S-adenosyl-L-methionine,S-adenosyl-L-homocysteine,"(S-adenosyl-L-methionine, S-adenosyl-L-homocysteine)",78,2
+[reduced NADPH-hemoprotein reductase] + O2,[oxidized NADPH-hemoprotein reductase],"(([reduced NADPH-hemoprotein reductase], O2), [oxidized NADPH-hemoprotein reductase])",71,1
+,Pi,"(∅, Pi)",61,3
+NADH,NAD+,"(NADH, NAD+)",59,5
+,PPi,"(∅, PPi)",55,6
+,NH3,"(∅, NH3)",53,6
+NADP+,NADPH,"(NADP+, NADPH)",51,5
+UDP-Glc,UDP,"(UDP-Glc, UDP)",33,2
+NADPH + O2,NADP+,"((NADPH, O2), NADP+)",32,2
+O2,,"(O2, ∅)",32,5
+ATP + CoA,AMP + PPi,"((ATP, CoA), (AMP, PPi))",31,2
+2OG,Glu,"(2OG, Glu)",27,2
+,CoA,"(∅, CoA)",24,3
+NAD(P)H,NAD(P)+,"(NAD(P)H, NAD(P)+)",21,3
+ATP,ADP + Pi,"(ATP, (ADP, Pi))",20,4
+Glu,2OG,"(Glu, 2OG)",20,1
+O2,H2O2,"(O2, H2O2)",20,3
+Ac-CoA,CoA,"(Ac-CoA, CoA)",19,3
+NADH + O2,NAD+,"((NADH, O2), NAD+)",18,4
+ATP,AMP + PPi,"(ATP, (AMP, PPi))",17,3
+oxidized electron acceptor,reduced electron acceptor,"(oxidized electron acceptor, reduced electron acceptor)",17,3
+2OG + O2,CO2 + succinate,"((2OG, O2), (CO2, succinate))",16,2
+NAD(P)+,NAD(P)H,"(NAD(P)+, NAD(P)H)",15,3
+O2,H2O2 + NH3,"(O2, (H2O2, NH3))",15,2
+,acetate,"(∅, acetate)",14,2
+O2 + reduced ferredoxin [Fe-S] cluster,oxidized ferredoxin [Fe-S] cluster,"((O2, reduced ferredoxin [Fe-S] cluster), oxidized ferredoxin [Fe-S] cluster)",13,2
+acceptor,reduced acceptor,"(acceptor, reduced acceptor)",13,2
+isopentenyl-PP,PPi,"(isopentenyl-PP, PPi)",13,1
+,pyruvate,"(∅, pyruvate)",13,3
+ATP,PPi,"(ATP, PPi)",12,1
+CTP,PPi,"(CTP, PPi)",12,2
+Pi,,"(Pi, ∅)",12,2
+,formate,"(∅, formate)",12,3
+ADP,ATP,"(ADP, ATP)",10,2
+O2,CO2,"(O2, CO2)",10,3
+FAD,FADH2,"(FAD, FADH2)",9,2
+Fd_red,Fd_ox,"(Fd_red, Fd_ox)",9,3
+NAD+,CO2 + NADH,"(NAD+, (CO2, NADH))",9,3
+,CO2 + NH3,"(∅, (CO2, NH3))",9,3
+NAD(P)H + O2,NAD(P)+,"((NAD(P)H, O2), NAD(P)+)",8,2
+malonyl-CoA,CO2 + CoA,"(malonyl-CoA, (CO2, CoA))",8,2
+pyruvate,Ala,"(pyruvate, Ala)",8,1
+S-adenosylmethioninamine,S-methyl-5'-thioadenosine,"(S-adenosylmethioninamine, S-methyl-5'-thioadenosine)",8,1
+ADP + Pi,ATP + CoA,"((ADP, Pi), (ATP, CoA))",7,1
+ATP + Glu,ADP + Pi,"((ATP, Glu), (ADP, Pi))",7,2
+ATP + HCO3,ADP + Pi,"((ATP, HCO3), (ADP, Pi))",7,4
+O2 + reduced adrenodoxin,oxidized adrenodoxin,"((O2, reduced adrenodoxin), oxidized adrenodoxin)",7,2
+O2 + reduced NADPH-hemoprotein reductase,oxidized NADPH-hemoprotein reductase,"((O2, reduced NADPH-hemoprotein reductase), oxidized NADPH-hemoprotein reductase)",7,1
+5-P-alpha-D-Rib 1-PP,PPi,"(5-P-alpha-D-Rib 1-PP, PPi)",7,1
+NADP+,CO2 + NADPH,"(NADP+, (CO2, NADPH))",7,1
+,D-glucose,"(∅, D-glucose)",7,2
+,UREA,"(∅, UREA)",7,2
+,UDP,"(∅, UDP)",7,3
+CoA + Fd_ox,CO2 + Fd_red,"((CoA, Fd_ox), (CO2, Fd_red))",6,2
+CoA + NAD+,CO2 + NADH,"((CoA, NAD+), (CO2, NADH))",6,1
+O2 + reduced electron acceptor,oxidized electron acceptor,"((O2, reduced electron acceptor), oxidized electron acceptor)",6,2
+3'-phosphoadenylyl sulfate,"adenosine 3',5'-bisphosphate","(3'-phosphoadenylyl sulfate, adenosine 3',5'-bisphosphate)",6,1
+Ac-CoA,acetate,"(Ac-CoA, acetate)",6,1
+CoA,Ac-CoA,"(CoA, Ac-CoA)",6,1
+ferricytochrome c,ferrocytochrome c,"(ferricytochrome c, ferrocytochrome c)",6,4
+Malonyl-ACP,CO2 + Holo-ACP,"(Malonyl-ACP, (CO2, Holo-ACP))",6,1
+NADPH,NADP+ + Pi,"(NADPH, (NADP+, Pi))",6,2
+NADPH,CoA + NADP+,"(NADPH, (CoA, NADP+))",6,2
+NH3,,"(NH3, ∅)",6,2
+red. thioredoxin,ox. thioredoxin,"(red. thioredoxin, ox. thioredoxin)",6,1
+,D-ribose,"(∅, D-ribose)",6,1
+,CMP,"(∅, CMP)",6,2
+ATP + Gln,ADP + Glu + Pi,"((ATP, Gln), (ADP, Glu, Pi))",5,3
+CoA + NAD+,NADH,"((CoA, NAD+), NADH)",5,2
+O2 + reduced electron-transferring flavoprotein,electron-transferring flavoprotein,"((O2, reduced electron-transferring flavoprotein), electron-transferring flavoprotein)",5,1
+a quinone,a quinol,"(a quinone, a quinol)",5,1
+ATP,AMP,"(ATP, AMP)",5,2
+CO2,,"(CO2, ∅)",5,3
+dimethylallyl diphosphate,PPi,"(dimethylallyl diphosphate, PPi)",5,2
+GDP-alpha-D-mannose,GDP,"(GDP-alpha-D-mannose, GDP)",5,1
+NAD+,NADH + NH3,"(NAD+, (NADH, NH3))",5,2
+PEP,Pi,"(PEP, Pi)",5,2
+Pi,CoA,"(Pi, CoA)",5,1
+,Glu,"(∅, Glu)",5,1
+,Gly,"(∅, Gly)",5,2
+2OG + O2,CO2 + formaldehyde + succinate,"((2OG, O2), (CO2, formaldehyde, succinate))",4,1
+ATP + Gln,AMP + Glu + PPi,"((ATP, Gln), (AMP, Glu, PPi))",4,2
+NADP+ + NADPH,,"((NADP+, NADPH), ∅)",4,3
+O2 + reduced acceptor,acceptor,"((O2, reduced acceptor), acceptor)",4,1
+acyl-CoA,CoA,"(acyl-CoA, CoA)",4,1
+ADP,AMP,"(ADP, AMP)",4,2
+ADP-L-glycero-D-manno-heptose,ADP,"(ADP-L-glycero-D-manno-heptose, ADP)",4,2
+dolichyl beta-D-mannosyl phosphate,dolichyl phosphate,"(dolichyl beta-D-mannosyl phosphate, dolichyl phosphate)",4,1
+electron-transfer flavoprotein,reduced electron-transfer flavoprotein,"(electron-transfer flavoprotein, reduced electron-transfer flavoprotein)",4,2
+Fd_ox,Fd_red,"(Fd_ox, Fd_red)",4,4
+GTP,PPi,"(GTP, PPi)",4,2
+NAD(P)+,CO2 + NAD(P)H,"(NAD(P)+, (CO2, NAD(P)H))",4,1
+reduced electron acceptor,oxidized electron acceptor,"(reduced electron acceptor, oxidized electron acceptor)",4,3
+reduced glutaredoxin-like protein,oxidized glutaredoxin-like protein,"(reduced glutaredoxin-like protein, oxidized glutaredoxin-like protein)",4,1
+Ser,CMP,"(Ser, CMP)",4,2
+succinyl-CoA,succinate,"(succinyl-CoA, succinate)",4,1
+UDP-alpha-D-galactose,UDP,"(UDP-alpha-D-galactose, UDP)",4,1
+UDP-alpha-D-kanosamine,UDP,"(UDP-alpha-D-kanosamine, UDP)",4,1
+UDP-N-acetyl-alpha-D-galactosamine,UDP,"(UDP-N-acetyl-alpha-D-galactosamine, UDP)",4,1
+UTP,PPi,"(UTP, PPi)",4,1
+,carboxylate,"(∅, carboxylate)",4,1
+,dTDP,"(∅, dTDP)",4,1
+,FUM,"(∅, FUM)",4,1
+,GMP,"(∅, GMP)",4,2
+2OG + Glu,,"((2OG, Glu), ∅)",3,1
+[reduced NADPH-hemoprotein reductase] + O2,[oxidized NADPH-hemoprotein reductase] + formate,"(([reduced NADPH-hemoprotein reductase], O2), ([oxidized NADPH-hemoprotein reductase], formate))",3,1
+ATP + formate,ADP + Pi,"((ATP, formate), (ADP, Pi))",3,1
+O2 + reduced adrenal ferredoxin,oxidized adrenal ferredoxin,"((O2, reduced adrenal ferredoxin), oxidized adrenal ferredoxin)",3,1
+acetate,Ac-CoA,"(acetate, Ac-CoA)",3,1
+CO2,Pi,"(CO2, Pi)",3,2
+dolichyl beta-D-glucosyl phosphate,dolichyl phosphate,"(dolichyl beta-D-glucosyl phosphate, dolichyl phosphate)",3,1
+electron-transferring flavoprotein,reduced electron-transferring flavoprotein,"(electron-transferring flavoprotein, reduced electron-transferring flavoprotein)",3,1
+ferrocytochrome c,ferricytochrome c,"(ferrocytochrome c, ferricytochrome c)",3,2
+formaldehyde,,"(formaldehyde, ∅)",3,2
+formate,CO2,"(formate, CO2)",3,1
+Glu,,"(Glu, ∅)",3,2
+glycyl-tRNA,tRNA,"(glycyl-tRNA, tRNA)",3,1
+GTP,GDP,"(GTP, GDP)",3,2
+NAD+,,"(NAD+, ∅)",3,1
+NADPH,CO2 + CoA + NADP+,"(NADPH, (CO2, CoA, NADP+))",3,1
+Pi,alpha-D-Rib 1-P,"(Pi, alpha-D-Rib 1-P)",3,1
+PPi,,"(PPi, ∅)",3,2
+pyruvate,,"(pyruvate, ∅)",3,2
+reduced acceptor,acceptor,"(reduced acceptor, acceptor)",3,2
+reduced electron-transfer flavoprotein,electron-transfer flavoprotein,"(reduced electron-transfer flavoprotein, electron-transfer flavoprotein)",3,1
+UDP-alpha-D-glucuronate,UDP,"(UDP-alpha-D-glucuronate, UDP)",3,1
+UDP-alpha-N-acetyl-D-glucosamine,UDP,"(UDP-alpha-N-acetyl-D-glucosamine, UDP)",3,2
+,formate + PPi,"(∅, (formate, PPi))",3,1
+,a carboxylate,"(∅, a carboxylate)",3,1
+,adenine,"(∅, adenine)",3,1
+,Holo-ACP,"(∅, Holo-ACP)",3,1
+,succinate,"(∅, succinate)",3,1
+,NH3 + pyruvate,"(∅, (NH3, pyruvate))",3,2
+,GSH,"(∅, GSH)",3,2
+(6S)-THFA,,"((6S)-THFA, ∅)",2,1
+[reduced NADPH-hemoprotein reductase] + O2,[oxidized NADPH-hemoprotein reductase] + CO2 + methanol,"(([reduced NADPH-hemoprotein reductase], O2), ([oxidized NADPH-hemoprotein reductase], CO2, methanol))",2,1
+a reduced electron acceptor + O2,an oxidized electron acceptor,"((a reduced electron acceptor, O2), an oxidized electron acceptor)",2,1
+Ala + ATP,ADP + Pi,"((Ala, ATP), (ADP, Pi))",2,1
+Asp 4-semialdehyde + NADPH,NADP+,"((Asp 4-semialdehyde, NADPH), NADP+)",2,2
+ATP + beta-Ala,AMP + PPi,"((ATP, beta-Ala), (AMP, PPi))",2,1
+ATP + CO2,ADP + Pi,"((ATP, CO2), (ADP, Pi))",2,2
+ATP + CoA,ADP + Pi,"((ATP, CoA), (ADP, Pi))",2,1
+ATP + Gly,ADP + Pi,"((ATP, Gly), (ADP, Pi))",2,2
+ATP + NH3,AMP + PPi,"((ATP, NH3), (AMP, PPi))",2,1
+ATP + NH3,ADP + Pi,"((ATP, NH3), (ADP, Pi))",2,2
+ATP + Pi,AMP + PPi,"((ATP, Pi), (AMP, PPi))",2,2
+CO2 + Fd_red,CoA + Fd_ox,"((CO2, Fd_red), (CoA, Fd_ox))",2,1
+CoA + GTP,GDP + Pi,"((CoA, GTP), (GDP, Pi))",2,1
+CoA + NADP+,CO2 + NADPH,"((CoA, NADP+), (CO2, NADPH))",2,1
+FADH2 + O2,FAD,"((FADH2, O2), FAD)",2,2
+ferrocytochrome b5 + O2,ferricytochrome b5,"((ferrocytochrome b5, O2), ferricytochrome b5)",2,2
+FMNH2 + O2,FMN,"((FMNH2, O2), FMN)",2,1
+formaldehyde + reduced electron-transferring flavoprotein,electron-transferring flavoprotein,"((formaldehyde, reduced electron-transferring flavoprotein), electron-transferring flavoprotein)",2,1
+Glu + GTP,GDP + Pi,"((Glu, GTP), (GDP, Pi))",2,1
+H2O2 + iodide,,"((H2O2, iodide), ∅)",2,1
+NADH + O2,formaldehyde + NAD+,"((NADH, O2), (formaldehyde, NAD+))",2,1
+NADPH + O2,formaldehyde + NADP+,"((NADPH, O2), (formaldehyde, NADP+))",2,1
+O2 + reduced putidaredoxin,oxidized putidaredoxin,"((O2, reduced putidaredoxin), oxidized putidaredoxin)",2,1
+Pi + thioredoxin,NH3 + thioredoxin disulfide,"((Pi, thioredoxin), (NH3, thioredoxin disulfide))",2,1
+10-formyltetrahydrofolate,(6S)-THFA,"(10-formyltetrahydrofolate, (6S)-THFA)",2,2
+1L-myo-inositol 1-phosphate,CMP,"(1L-myo-inositol 1-phosphate, CMP)",2,1
+2OG,,"(2OG, ∅)",2,1
+4-coumaroyl-CoA,CO2 + CoA,"(4-coumaroyl-CoA, (CO2, CoA))",2,2
+"5,10-methylenetetrahydrofolate",(6S)-THFA,"(5,10-methylenetetrahydrofolate, (6S)-THFA)",2,1
+a protein with a disulfide bond,a protein with reduced L-cysteine residues,"(a protein with a disulfide bond, a protein with reduced L-cysteine residues)",2,2
+a quinone,reduced quinone,"(a quinone, reduced quinone)",2,1
+Ac-CoA,,"(Ac-CoA, ∅)",2,1
+Ala,pyruvate,"(Ala, pyruvate)",2,1
+ATP,AMP + Pi,"(ATP, (AMP, Pi))",2,1
+ATP,ADP + CO2,"(ATP, (ADP, CO2))",2,1
+ATP,ADP + CO2 + Pi,"(ATP, (ADP, CO2, Pi))",2,1
+benzoyl-CoA,CoA,"(benzoyl-CoA, CoA)",2,1
+CDP-glycerol,CMP,"(CDP-glycerol, CMP)",2,1
+CoA,formate,"(CoA, formate)",2,1
+CoA,propanoyl-CoA,"(CoA, propanoyl-CoA)",2,1
+CoA,succinyl-CoA,"(CoA, succinyl-CoA)",2,1
+CoA,,"(CoA, ∅)",2,1
+CTP,CDP,"(CTP, CDP)",2,1
+Cys,,"(Cys, ∅)",2,1
+diacylglycerol,CMP,"(diacylglycerol, CMP)",2,1
+"ditrans,octacis-undecaprenyl-P",UMP,"(ditrans,octacis-undecaprenyl-P, UMP)",2,1
+dTTP,PPi,"(dTTP, PPi)",2,1
+feruloyl-CoA,CO2 + CoA,"(feruloyl-CoA, (CO2, CoA))",2,1
+GAP,,"(GAP, ∅)",2,1
+Gln,2-oxoglutaramate,"(Gln, 2-oxoglutaramate)",2,1
+Gln,Glu,"(Gln, Glu)",2,1
+Gly,CoA,"(Gly, CoA)",2,1
+GSH,GSSG,"(GSH, GSSG)",2,1
+GSH,,"(GSH, ∅)",2,2
+H2,,"(H2, ∅)",2,1
+H2O2,[thyroglobulin]-aminoacrylate,"(H2O2, [thyroglobulin]-aminoacrylate)",2,1
+H2O2,CO2,"(H2O2, CO2)",2,1
+H2S,acetate,"(H2S, acetate)",2,1
+Holo-ACP,CoA,"(Holo-ACP, CoA)",2,1
+hv,,"(hv, ∅)",2,1
+L-ascorbate,L-dehydroascorbate,"(L-ascorbate, L-dehydroascorbate)",2,1
+menaquinone,menaquinol,"(menaquinone, menaquinol)",2,1
+myristoyl-ACP,ACP,"(myristoyl-ACP, ACP)",2,1
+NAD+,2OG + NADH,"(NAD+, (2OG, NADH))",2,1
+NADH,CoA + NAD+,"(NADH, (CoA, NAD+))",2,1
+NADPH,NADP+ + NH3,"(NADPH, (NADP+, NH3))",2,2
+O2,CO2 + NH3,"(O2, (CO2, NH3))",2,2
+oxidized azurin,reduced azurin,"(oxidized azurin, reduced azurin)",2,2
+oxidized electron-transferring flavoprotein,reduced electron-transferring flavoprotein,"(oxidized electron-transferring flavoprotein, reduced electron-transferring flavoprotein)",2,2
+phenylpyruvate,Phe,"(phenylpyruvate, Phe)",2,1
+Pi,adenine,"(Pi, adenine)",2,1
+Pi,GDP,"(Pi, GDP)",2,1
+plastoquinone,plastoquinol,"(plastoquinone, plastoquinol)",2,1
+S-adenosyl-L-methionine,5'-deoxyadenosine + CO2 + Met,"(S-adenosyl-L-methionine, (5'-deoxyadenosine, CO2, Met))",2,1
+S-adenosyl-L-methionine,CO2 + S-adenosyl-L-homocysteine,"(S-adenosyl-L-methionine, (CO2, S-adenosyl-L-homocysteine))",2,1
+succinyl-CoA,CoA,"(succinyl-CoA, CoA)",2,2
+sulfite,,"(sulfite, ∅)",2,2
+taurine,CoA,"(taurine, CoA)",2,1
+thioredoxin,thioredoxin disulfide,"(thioredoxin, thioredoxin disulfide)",2,1
+UDP-N-acetyl-alpha-D-glucosamine,UDP,"(UDP-N-acetyl-alpha-D-glucosamine, UDP)",2,1
+UQ,UQH2,"(UQ, UQH2)",2,1
+,2OBUT + NH3,"(∅, (2OBUT, NH3))",2,1
+,AMP,"(∅, AMP)",2,1
+,H2S + NH3,"(∅, (H2S, NH3))",2,1
+,Ala,"(∅, Ala)",2,1
+,an alcohol,"(∅, an alcohol)",2,1
+,fatty acid,"(∅, fatty acid)",2,1
+,sulfate,"(∅, sulfate)",2,1
+,CO2 + Holo-ACP,"(∅, (CO2, Holo-ACP))",2,1
+,acetaldehyde,"(∅, acetaldehyde)",2,1
+,ADP,"(∅, ADP)",2,1
+,GAP,"(∅, GAP)",2,1
+,CO2 + PPi,"(∅, (CO2, PPi))",2,2
+,adenosine,"(∅, adenosine)",2,2
+,Cl-,"(∅, Cl-)",2,2
+,PPPi,"(∅, PPPi)",2,2
+,UMP,"(∅, UMP)",2,2
+(3R)-3-hydroxymyristoyl-ACP + Holo-ACP,,"(((3R)-3-hydroxymyristoyl-ACP, Holo-ACP), ∅)",1,1
+2OG + CO2 + succinate,O2,"((2OG, CO2, succinate), O2)",1,1
+2OG + NADPH,NADP+,"((2OG, NADPH), NADP+)",1,1
+2OG + O2,CO2 + NH3 + succinate,"((2OG, O2), (CO2, NH3, succinate))",1,1
+2OG + O2,CO2 + succinate + sulfite,"((2OG, O2), (CO2, succinate, sulfite))",1,1
+2OG + O2 + reduced acceptor,acceptor + CO2 + succinate,"((2OG, O2, reduced acceptor), (acceptor, CO2, succinate))",1,1
+(3R)-3-hydroxymyristoyl-ACP,Holo-ACP,"((3R)-3-hydroxymyristoyl-ACP, Holo-ACP)",1,1
+5'-deoxyadenosine + Met + S-adenosyl-L-methionine,,"((5'-deoxyadenosine, Met, S-adenosyl-L-methionine), ∅)",1,1
+"5,10-methylenetetrahydrofolate + FADH2",FAD,"((5,10-methylenetetrahydrofolate, FADH2), FAD)",1,1
+"5,10-methylenetetrahydrofolate + NADH",(6S)-THFA + NAD+,"((5,10-methylenetetrahydrofolate, NADH), ((6S)-THFA, NAD+))",1,1
+"5,6,7,8-tetrahydrofolate + electron-transfer flavoprotein","5,10-methylenetetrahydrofolate + reduced electron-transfer flavoprotein","((5,6,7,8-tetrahydrofolate, electron-transfer flavoprotein), (5,10-methylenetetrahydrofolate, reduced electron-transfer flavoprotein))",1,1
+"5,6,7,8-tetrahydropteroyl-tri-L-glutamate + 5-Me-tetrahydropteroyl-(L-Glu)3",,"((5,6,7,8-tetrahydropteroyl-tri-L-glutamate, 5-Me-tetrahydropteroyl-(L-Glu)3), ∅)",1,1
+5-P-alpha-D-Rib 1-PP + ATP,ADP + Pi + PPi,"((5-P-alpha-D-Rib 1-PP, ATP), (ADP, Pi, PPi))",1,1
+[methyl-Co(III) corrinoid Fe-S protein] + CoA,[Co(I) corrinoid Fe-S protein],"(([methyl-Co(III) corrinoid Fe-S protein], CoA), [Co(I) corrinoid Fe-S protein])",1,1
+[oxidized NADPH-hemoprotein reductase] + [reduced NADPH-hemoprotein reductase] + O2,,"(([oxidized NADPH-hemoprotein reductase], [reduced NADPH-hemoprotein reductase], O2), ∅)",1,1
+"a 5,6,7,8-tetrahydropteridine + O2","a 4a-hydroxy-5,6,7,8-tetrahydropteridine","((a 5,6,7,8-tetrahydropteridine, O2), a 4a-hydroxy-5,6,7,8-tetrahydropteridine)",1,1
+a reduced acceptor + O2,an acceptor,"((a reduced acceptor, O2), an acceptor)",1,1
+Ac-CoA + CoA,,"((Ac-CoA, CoA), ∅)",1,1
+acetate + NADP+ + NADPH,,"((acetate, NADP+, NADPH), ∅)",1,1
+acetate + NADPH,NADP+,"((acetate, NADPH), NADP+)",1,1
+ADP + CO2 + NH3 + Pi,ATP,"((ADP, CO2, NH3, Pi), ATP)",1,1
+ADP + Pi,H+[side 1],"((ADP, Pi), H+[side 1])",1,1
+(ADP-D-ribosyl)n,(ADP-D-ribosyl)n+1,"((ADP-D-ribosyl)n, (ADP-D-ribosyl)n+1)",1,1
+AH2 + O2,A,"((AH2, O2), A)",1,1
+AH2 + O2,oxidized acceptor,"((AH2, O2), oxidized acceptor)",1,1
+AMP + GSSG,GSH,"((AMP, GSSG), GSH)",1,1
+AMP + PPi,ATP + CoA,"((AMP, PPi), (ATP, CoA))",1,1
+an [amino group carrier protein]-C-terminal-L-glutamate + ATP,ADP + Pi,"((an [amino group carrier protein]-C-terminal-L-glutamate, ATP), (ADP, Pi))",1,1
+Asp + ATP,ADP + Pi,"((Asp, ATP), (ADP, Pi))",1,1
+Asp + ATP,AMP + PPi,"((Asp, ATP), (AMP, PPi))",1,1
+Asp + GTP,GDP + Pi,"((Asp, GTP), (GDP, Pi))",1,1
+ATP + beta-Ala,ADP + Pi,"((ATP, beta-Ala), (ADP, Pi))",1,1
+ATP + CO2,AMP + Pi,"((ATP, CO2), (AMP, Pi))",1,1
+ATP + Co2+,ADP + Pi,"((ATP, Co2+), (ADP, Pi))",1,1
+ATP + Fd_red,ADP + Fd_ox + H2 + Pi,"((ATP, Fd_red), (ADP, Fd_ox, H2, Pi))",1,1
+ATP + Fd_red,ADP + Fd_ox + Pi,"((ATP, Fd_red), (ADP, Fd_ox, Pi))",1,1
+ATP + Gln,ADP + Glu,"((ATP, Gln), (ADP, Glu))",1,1
+ATP + Glu-tRNAGln,ADP + Gln-tRNAGln + Pi,"((ATP, Glu-tRNAGln), (ADP, Gln-tRNAGln, Pi))",1,1
+ATP + HCO3,ADP,"((ATP, HCO3), ADP)",1,1
+ATP + Holo-ACP,AMP + PPi,"((ATP, Holo-ACP), (AMP, PPi))",1,1
+ATP + meso-diaminopimelate,ADP + Pi,"((ATP, meso-diaminopimelate), (ADP, Pi))",1,1
+ATP + MG2+,ADP + Pi,"((ATP, MG2+), (ADP, Pi))",1,1
+ATP + N2-citryl-N6-acetyl-N6-hydroxy-L-lysine,ADP + Pi,"((ATP, N2-citryl-N6-acetyl-N6-hydroxy-L-lysine), (ADP, Pi))",1,1
+ATP + reduced electron-transferring flavoprotein,ADP + electron-transferring flavoprotein + Pi,"((ATP, reduced electron-transferring flavoprotein), (ADP, electron-transferring flavoprotein, Pi))",1,1
+ATP + Ser,AMP + PPi,"((ATP, Ser), (AMP, PPi))",1,1
+ATP + tRNAAsx,AMP + PPi,"((ATP, tRNAAsx), (AMP, PPi))",1,1
+ATP + tRNAGlu,AMP + PPi,"((ATP, tRNAGlu), (AMP, PPi))",1,1
+ATP + tRNALeu,AMP + PPi,"((ATP, tRNALeu), (AMP, PPi))",1,1
+ATP + tRNALys,AMP + PPi,"((ATP, tRNALys), (AMP, PPi))",1,1
+ATP + tRNAPhe,AMP + PPi,"((ATP, tRNAPhe), (AMP, PPi))",1,1
+ATP + tRNAThr,AMP + PPi,"((ATP, tRNAThr), (AMP, PPi))",1,1
+CO2 + CoA + NAD+,NADH,"((CO2, CoA, NAD+), NADH)",1,1
+CO2 + NADPH,NADP+,"((CO2, NADPH), NADP+)",1,1
+CO2 + reduced ferredoxin [Fe-S] cluster,formate + oxidized ferredoxin [Fe-S] cluster,"((CO2, reduced ferredoxin [Fe-S] cluster), (formate, oxidized ferredoxin [Fe-S] cluster))",1,1
+CO2 + succinate,2OG + O2,"((CO2, succinate), (2OG, O2))",1,1
+CoA + NAD+,HCO3 + NADH,"((CoA, NAD+), (HCO3, NADH))",1,1
+CoA + NAD+,Ac-CoA + NADH,"((CoA, NAD+), (Ac-CoA, NADH))",1,1
+CoA + Pi,,"((CoA, Pi), ∅)",1,1
+CTP + Cys,CMP + PPi,"((CTP, Cys), (CMP, PPi))",1,1
+F420 (ox) + reduced ferredoxin [Fe-S] cluster,oxidized ferredoxin [Fe-S] cluster + reduced coenzyme F420,"((F420 (ox), reduced ferredoxin [Fe-S] cluster), (oxidized ferredoxin [Fe-S] cluster, reduced coenzyme F420))",1,1
+Fd_red + O2,Fd_ox,"((Fd_red, O2), Fd_ox)",1,1
+Glu + reduced acceptor,oxidized electron acceptor,"((Glu, reduced acceptor), oxidized electron acceptor)",1,1
+H+[side 1] + NADH,NAD+,"((H+[side 1], NADH), NAD+)",1,1
+H+[side 1] + O2,,"((H+[side 1], O2), ∅)",1,1
+L-ascorbate + O2,L-dehydroascorbate,"((L-ascorbate, O2), L-dehydroascorbate)",1,1
+malonyl-CoA + NADPH,CO2 + CoA + NADP+,"((malonyl-CoA, NADPH), (CO2, CoA, NADP+))",1,1
+malonyl-CoA + polyketide-[acp],CO2 + CoA,"((malonyl-CoA, polyketide-[acp]), (CO2, CoA))",1,1
+N-acetyl-L-cysteine + O2,CO2,"((N-acetyl-L-cysteine, O2), CO2)",1,1
+NAD+ + Pi,NADH,"((NAD+, Pi), NADH)",1,1
+NADH + NH3,NAD+,"((NADH, NH3), NAD+)",1,1
+NADH + O2,CO2 + NAD+,"((NADH, O2), (CO2, NAD+))",1,1
+NADP+ + NADPH + O2,,"((NADP+, NADPH, O2), ∅)",1,1
+NADP+ + O2,NADPH,"((NADP+, O2), NADPH)",1,1
+NADP+ + Pi,NADPH,"((NADP+, Pi), NADPH)",1,1
+NADPH + O2,,"((NADPH, O2), ∅)",1,1
+O2 + reduced [NADPH-hemoprotein reductase],CO2 + oxidized [NADPH-hemoprotein reductase],"((O2, reduced [NADPH-hemoprotein reductase]), (CO2, oxidized [NADPH-hemoprotein reductase]))",1,1
+O2 + reduced adrenodoxin,4-methylpentanal + oxidized adrenodoxin,"((O2, reduced adrenodoxin), (4-methylpentanal, oxidized adrenodoxin))",1,1
+O2 + reduced electron acceptor,CO + Fe2+ + oxidized electron acceptor,"((O2, reduced electron acceptor), (CO, Fe2+, oxidized electron acceptor))",1,1
+O2 + reduced NADPH-hemoprotein reductase,,"((O2, reduced NADPH-hemoprotein reductase), ∅)",1,1
+O2 + tetrahydrobiopterin,4a-hydroxy-tetrahydrobiopterin,"((O2, tetrahydrobiopterin), 4a-hydroxy-tetrahydrobiopterin)",1,1
+O2 + tetrahydrobiopterin,4a-hydroxytetrahydrobiopterin,"((O2, tetrahydrobiopterin), 4a-hydroxytetrahydrobiopterin)",1,1
+O2 + tetrahydrobiopterin,,"((O2, tetrahydrobiopterin), ∅)",1,1
+oxidized electron acceptor + reduced electron acceptor,,"((oxidized electron acceptor, reduced electron acceptor), ∅)",1,1
+reduced acceptor + S-adenosyl-L-methionine,5'-deoxyadenosine + acceptor + Met + NH3,"((reduced acceptor, S-adenosyl-L-methionine), (5'-deoxyadenosine, acceptor, Met, NH3))",1,1
+reduced electron acceptor + S-adenosyl-L-methionine,4-methylphenol + 5'-deoxyadenosine + Met + oxidized electron acceptor,"((reduced electron acceptor, S-adenosyl-L-methionine), (4-methylphenol, 5'-deoxyadenosine, Met, oxidized electron acceptor))",1,1
+reduced electron acceptor + S-adenosyl-L-methionine,5'-deoxyadenosine + acetate + Met + oxidized electron acceptor,"((reduced electron acceptor, S-adenosyl-L-methionine), (5'-deoxyadenosine, acetate, Met, oxidized electron acceptor))",1,1
+S + S-adenosyl-L-methionine,5'-deoxyadenosine + Met,"((S, S-adenosyl-L-methionine), (5'-deoxyadenosine, Met))",1,1
+S + S-adenosyl-L-methionine,5'-deoxyadenosyl radical + Met,"((S, S-adenosyl-L-methionine), (5'-deoxyadenosyl radical, Met))",1,1
+"1,2,3,5-tetrahydroxybenzene","1,2,3,5-tetrahydroxybenzene","(1,2,3,5-tetrahydroxybenzene, 1,2,3,5-tetrahydroxybenzene)",1,1
+1-deoxy-Xyl 5-P,Pi,"(1-deoxy-Xyl 5-P, Pi)",1,1
+2OG,CO2 + O2 + succinate,"(2OG, (CO2, O2, succinate))",1,1
+2OG,CO2,"(2OG, CO2)",1,1
+2OG,D-Glu,"(2OG, D-Glu)",1,1
+3'-phosphoadenylylsulfate,"adenosine 3',5'-bisphosphate","(3'-phosphoadenylylsulfate, adenosine 3',5'-bisphosphate)",1,1
+4-Methylthio-2-oxobutanoate,D-Met,"(4-Methylthio-2-oxobutanoate, D-Met)",1,1
+"5,10-methylenetetrahydrofolate",DHF,"(5,10-methylenetetrahydrofolate, DHF)",1,1
+5-methyl-THF,THF,"(5-methyl-THF, THF)",1,1
+5-P-alpha-D-Rib 1-PP,CO2 + PPi,"(5-P-alpha-D-Rib 1-PP, (CO2, PPi))",1,1
+[(1->4)-beta-D-mannuronosyl]n,GDP,"([(1->4)-beta-D-mannuronosyl]n, GDP)",1,1
+[ADP-thiazole synthase]-L-cysteine,[ADP-thiazole synthase]-dehydroalanine + nicotinamide,"([ADP-thiazole synthase]-L-cysteine, ([ADP-thiazole synthase]-dehydroalanine, nicotinamide))",1,1
+[Co(I) corrinoid Fe-S protein],[methyl-Co(III) corrinoid Fe-S protein],"([Co(I) corrinoid Fe-S protein], [methyl-Co(III) corrinoid Fe-S protein])",1,1
+[corrinoid adenosyltransferase],,"([corrinoid adenosyltransferase], ∅)",1,1
+[cysteine desulfurase]-Cys-SSH,AMP + cysteine desulfurase,"([cysteine desulfurase]-Cys-SSH, (AMP, cysteine desulfurase))",1,1
+[enzyme]-cysteine,[enzyme]-S-sulfanylcysteine,"([enzyme]-cysteine, [enzyme]-S-sulfanylcysteine)",1,1
+[ThiI]-cysteine,Ala,"([ThiI]-cysteine, Ala)",1,1
+a 2-oxo carboxylate,an amino acid,"(a 2-oxo carboxylate, an amino acid)",1,1
+a 2-oxo carboxylate,an L-amino acid,"(a 2-oxo carboxylate, an L-amino acid)",1,1
+a quinone,a quinol + NH3,"(a quinone, (a quinol, NH3))",1,1
+a reduced flavoprotein,an oxidized flavoprotein,"(a reduced flavoprotein, an oxidized flavoprotein)",1,1
+Ac-CoA,CO2 + CoA,"(Ac-CoA, (CO2, CoA))",1,1
+Ac-CoA,malonyl-CoA,"(Ac-CoA, malonyl-CoA)",1,1
+AcAc,acetoacetyl-CoA,"(AcAc, acetoacetyl-CoA)",1,1
+acceptor,NH3 + reduced acceptor,"(acceptor, (NH3, reduced acceptor))",1,1
+acetaldehyde,,"(acetaldehyde, ∅)",1,1
+acetate,,"(acetate, ∅)",1,1
+ACP,,"(ACP, ∅)",1,1
+ADP,Pi,"(ADP, Pi)",1,1
+ADP,PPi,"(ADP, PPi)",1,1
+ADP-Rib,,"(ADP-Rib, ∅)",1,1
+alpha-D-Rib 1-P,Pi,"(alpha-D-Rib 1-P, Pi)",1,1
+an [oxidized hydrogenase],a [reduced hydrogenase],"(an [oxidized hydrogenase], a [reduced hydrogenase])",1,1
+an all-trans-polyprenyl PP,CO2 + PPi,"(an all-trans-polyprenyl PP, (CO2, PPi))",1,1
+Arg,L-ornithine,"(Arg, L-ornithine)",1,1
+Asp,Pi,"(Asp, Pi)",1,1
+Asp,,"(Asp, ∅)",1,1
+Asp 4-semialdehyde,"2,3-dioxopropyl phosphate","(Asp 4-semialdehyde, 2,3-dioxopropyl phosphate)",1,1
+ATP,Pi + PPi,"(ATP, (Pi, PPi))",1,1
+ATP,[corrinoid adenosyltransferase] + PPPi,"(ATP, ([corrinoid adenosyltransferase], PPPi))",1,1
+ATP,,"(ATP, ∅)",1,1
+CDP,CTP,"(CDP, CTP)",1,1
+CDP-diacylglycerol,CMP,"(CDP-diacylglycerol, CMP)",1,1
+chlorophyllide,,"(chlorophyllide, ∅)",1,1
+CMP-alpha-Kdo,CMP,"(CMP-alpha-Kdo, CMP)",1,1
+CN-,NCS-,"(CN-, NCS-)",1,1
+Co2+,,"(Co2+, ∅)",1,1
+CoA,CO2 + malonyl-CoA,"(CoA, (CO2, malonyl-CoA))",1,1
+CoA,CO2,"(CoA, CO2)",1,1
+CoA,D-Ala,"(CoA, D-Ala)",1,1
+CoA,glycerolipid,"(CoA, glycerolipid)",1,1
+CoA,L-quinate,"(CoA, L-quinate)",1,1
+CoA,shikimate,"(CoA, shikimate)",1,1
+CoA-[4'-phosphopantetheine],"adenosine 3',5'-bisphosphate","(CoA-[4'-phosphopantetheine], adenosine 3',5'-bisphosphate)",1,1
+CP,Pi,"(CP, Pi)",1,1
+Cys,Ala,"(Cys, Ala)",1,1
+Cys,succinate,"(Cys, succinate)",1,1
+Deamido-NMN,nicotinate,"(Deamido-NMN, nicotinate)",1,1
+demethylated methyl acceptor,methylated methyl acceptor,"(demethylated methyl acceptor, methylated methyl acceptor)",1,1
+DHAP,Pi,"(DHAP, Pi)",1,1
+dimethylallyl-PP,PPi,"(dimethylallyl-PP, PPi)",1,1
+DNA,DNA containing 5-methylcytosine,"(DNA, DNA containing 5-methylcytosine)",1,1
+Dodecanoyl-ACP,Holo-ACP,"(Dodecanoyl-ACP, Holo-ACP)",1,1
+dTDP-2-deoxy-beta-L-fucose,dTDP,"(dTDP-2-deoxy-beta-L-fucose, dTDP)",1,1
+dTDP-beta-L-rhamnose,dTDP,"(dTDP-beta-L-rhamnose, dTDP)",1,1
+dTDP-beta-L-rhodosamine,dTDP,"(dTDP-beta-L-rhodosamine, dTDP)",1,1
+dTDP-L-daunosamine,dTDP,"(dTDP-L-daunosamine, dTDP)",1,1
+dTDP-L-rhamnose,dTDP,"(dTDP-L-rhamnose, dTDP)",1,1
+dTDP-L-rhodinose,dTDP,"(dTDP-L-rhodinose, dTDP)",1,1
+E4P,,"(E4P, ∅)",1,1
+electron acceptor,reduced electron acceptor,"(electron acceptor, reduced electron acceptor)",1,1
+electron-transfer flavoprotein,formaldehyde + reduced electron-transfer flavoprotein,"(electron-transfer flavoprotein, (formaldehyde, reduced electron-transfer flavoprotein))",1,1
+F420 (ox),CO2,"(F420 (ox), CO2)",1,1
+Fd_ox,CO2 + Fd_red,"(Fd_ox, (CO2, Fd_red))",1,1
+FDP,,"(FDP, ∅)",1,1
+Fe2+,,"(Fe2+, ∅)",1,1
+ferricytochrome b1,CO2 + ferrocytochrome b1,"(ferricytochrome b1, (CO2, ferrocytochrome b1))",1,1
+ferricytochrome c,ferrocytochrome c + NH3,"(ferricytochrome c, (ferrocytochrome c, NH3))",1,1
+FMN,FMNH2 + O2,"(FMN, (FMNH2, O2))",1,1
+FUM,,"(FUM, ∅)",1,1
+GAP,CO2,"(GAP, CO2)",1,1
+GAP,E4P,"(GAP, E4P)",1,1
+GDP,Pi,"(GDP, Pi)",1,1
+GDP-beta-L-fucose,GDP,"(GDP-beta-L-fucose, GDP)",1,1
+geranylgeranyl diphosphate,PPi,"(geranylgeranyl diphosphate, PPi)",1,1
+Gln,Glu + PPi,"(Gln, (Glu, PPi))",1,1
+Gln,5-amino-1-(5-phospho-beta-D-ribosyl)imidazole-4-carboxamide + Glu,"(Gln, (5-amino-1-(5-phospho-beta-D-ribosyl)imidazole-4-carboxamide, Glu))",1,1
+Gln,Glu + Pi,"(Gln, (Glu, Pi))",1,1
+Gln,Glu + pyruvate,"(Gln, (Glu, pyruvate))",1,1
+GLX,,"(GLX, ∅)",1,1
+Gly,(6S)-THFA,"(Gly, (6S)-THFA)",1,1
+glycerolipid,CoA,"(glycerolipid, CoA)",1,1
+GSH,HX,"(GSH, HX)",1,1
+GTP,CO2 + GDP,"(GTP, (CO2, GDP))",1,1
+H+[side 1],H+[side 2] + Pi,"(H+[side 1], (H+[side 2], Pi))",1,1
+H+[side 1],H+[side 2],"(H+[side 1], H+[side 2])",1,1
+H2O2,L-ascorbate,"(H2O2, L-ascorbate)",1,1
+H2O2,,"(H2O2, ∅)",1,1
+H2S,Pi,"(H2S, Pi)",1,1
+HCO3,CO2,"(HCO3, CO2)",1,1
+Ile,ADP + Pi,"(Ile, (ADP, Pi))",1,1
+L-Amino acid,,"(L-Amino acid, ∅)",1,1
+L-carnitine,gamma-butyrobetaine,"(L-carnitine, gamma-butyrobetaine)",1,1
+L-cysteinyl-[PqsC protein],CoA,"(L-cysteinyl-[PqsC protein], CoA)",1,1
+L-cysteinyl-[PqsD protein],CoA,"(L-cysteinyl-[PqsD protein], CoA)",1,1
+L-ornithine,,"(L-ornithine, ∅)",1,1
+L-quinate,CoA,"(L-quinate, CoA)",1,1
+L-selenocysteine,Met,"(L-selenocysteine, Met)",1,1
+Leu,ADP + Pi,"(Leu, (ADP, Pi))",1,1
+Malonyl-ACP,ACP + CO2,"(Malonyl-ACP, (ACP, CO2))",1,1
+malonyl-CoA,CO2 + L-cysteinyl-[PqsD protein],"(malonyl-CoA, (CO2, L-cysteinyl-[PqsD protein]))",1,1
+malonyl-CoA,CoA,"(malonyl-CoA, CoA)",1,1
+maltodextrin,maltooligosaccharides,"(maltodextrin, maltooligosaccharides)",1,1
+maltotriose,maltose,"(maltotriose, maltose)",1,1
+methanol,,"(methanol, ∅)",1,1
+methyl-CoM,methane,"(methyl-CoM, methane)",1,1
+molybdate,AMP,"(molybdate, AMP)",1,1
+myo-Ins,CMP,"(myo-Ins, CMP)",1,1
+N1-(5-phospho-D-ribosyl)glycinamide,N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide,"(N1-(5-phospho-D-ribosyl)glycinamide, N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide)",1,1
+NAD(P)+,NAD(P)H + NH4+,"(NAD(P)+, (NAD(P)H, NH4+))",1,1
+NAD(P)+,NAD(P)H + O2,"(NAD(P)+, (NAD(P)H, O2))",1,1
+NAD(P)H,NAD(P)+ + NH3,"(NAD(P)H, (NAD(P)+, NH3))",1,1
+NAD(P)H,NAD(P)+ + PPi,"(NAD(P)H, (NAD(P)+, PPi))",1,1
+NAD+,CO2,"(NAD+, CO2)",1,1
+NAD+,Glu + NADH,"(NAD+, (Glu, NADH))",1,1
+NAD+,NADH + NH4+,"(NAD+, (NADH, NH4+))",1,1
+NADP+,Glu + NADPH,"(NADP+, (Glu, NADPH))",1,1
+NADPH,NAD(P)+,"(NADPH, NAD(P)+)",1,1
+NADPH,NADP+ + O2,"(NADPH, (NADP+, O2))",1,1
+NADPH,NADP+ + tRNAGlu,"(NADPH, (NADP+, tRNAGlu))",1,1
+NADPH,NADH,"(NADPH, NADH)",1,1
+NDP-Glc,NDP,"(NDP-Glc, NDP)",1,1
+NH3,Glu,"(NH3, Glu)",1,1
+O2,3-APA + H2O2,"(O2, (3-APA, H2O2))",1,1
+O2,[oxidized NADPH-hemoprotein reductase] + [reduced NADPH-hemoprotein reductase],"(O2, ([oxidized NADPH-hemoprotein reductase], [reduced NADPH-hemoprotein reductase]))",1,1
+O2,formaldehyde + H2O2,"(O2, (formaldehyde, H2O2))",1,1
+O2,dialuric acid + E4P,"(O2, (dialuric acid, E4P))",1,1
+O2,E4P + unknown substance,"(O2, (E4P, unknown substance))",1,1
+O2,formate,"(O2, formate)",1,1
+OAA,2OG,"(OAA, 2OG)",1,1
+oxidized electron acceptor,CO2 + reduced electron acceptor,"(oxidized electron acceptor, (CO2, reduced electron acceptor))",1,1
+oxidized electron acceptor,reduced acceptor,"(oxidized electron acceptor, reduced acceptor)",1,1
+oxidized electron donor,reduced electron acceptor,"(oxidized electron donor, reduced electron acceptor)",1,1
+oxidized electron-transferring flavoprotein,CO2 + reduced electron-transferring flavoprotein,"(oxidized electron-transferring flavoprotein, (CO2, reduced electron-transferring flavoprotein))",1,1
+oxidized ferredoxin [Fe-S] cluster,O2 + reduced ferredoxin [Fe-S] cluster,"(oxidized ferredoxin [Fe-S] cluster, (O2, reduced ferredoxin [Fe-S] cluster))",1,1
+palmitoleoyl-ACP,Holo-ACP,"(palmitoleoyl-ACP, Holo-ACP)",1,1
+PEP,pyruvate,"(PEP, pyruvate)",1,1
+peptidoglycan,"ditrans,octacis-undecaprenyl-P","(peptidoglycan, ditrans,octacis-undecaprenyl-P)",1,1
+peptidyl-4-carboxyglutamate,CO2 + O2 + peptidyl-glutamate,"(peptidyl-4-carboxyglutamate, (CO2, O2, peptidyl-glutamate))",1,1
+Phe,phenylpyruvate,"(Phe, phenylpyruvate)",1,1
+phytyl-PP,PPi,"(phytyl-PP, PPi)",1,1
+Pi,acetyl phosphate,"(Pi, acetyl phosphate)",1,1
+Pi,CO2,"(Pi, CO2)",1,1
+Pi,Gua,"(Pi, Gua)",1,1
+Pi,hypoxanthine,"(Pi, hypoxanthine)",1,1
+Pi,uracil,"(Pi, uracil)",1,1
+PPi,AMP + ATP,"(PPi, (AMP, ATP))",1,1
+PPi,phytyl-PP,"(PPi, phytyl-PP)",1,1
+PPi,5-P-alpha-D-Rib 1-PP,"(PPi, 5-P-alpha-D-Rib 1-PP)",1,1
+PPi,Pi,"(PPi, Pi)",1,1
+PPPi,,"(PPPi, ∅)",1,1
+propanoyl-CoA,propanoate,"(propanoyl-CoA, propanoate)",1,1
+protein,AMP,"(protein, AMP)",1,1
+protein,,"(protein, ∅)",1,1
+Protein Npi-phosphohistidine,protein histidine,"(Protein Npi-phosphohistidine, protein histidine)",1,1
+pyrroloquinoline quinone,PQQH,"(pyrroloquinoline quinone, PQQH)",1,1
+pyruvate,CO2,"(pyruvate, CO2)",1,1
+red. thioredoxin,"adenosine 3',5'-bisphosphate + ox. thioredoxin","(red. thioredoxin, (adenosine 3',5'-bisphosphate, ox. thioredoxin))",1,1
+reduced acceptor,oxidized acceptor,"(reduced acceptor, oxidized acceptor)",1,1
+reduced coenzyme F420,F420 (ox),"(reduced coenzyme F420, F420 (ox))",1,1
+reduced electron acceptor,AMP + oxidized electron acceptor,"(reduced electron acceptor, (AMP, oxidized electron acceptor))",1,1
+reduced electron-transferring flavoprotein,electron-transferring flavoprotein,"(reduced electron-transferring flavoprotein, electron-transferring flavoprotein)",1,1
+reduced electron-transferring flavoprotein,oxidized electron transfer flavoprotein,"(reduced electron-transferring flavoprotein, oxidized electron transfer flavoprotein)",1,1
+reduced ferredoxin [Fe-S] cluster,H2 + oxidized ferredoxin [Fe-S] cluster,"(reduced ferredoxin [Fe-S] cluster, (H2, oxidized ferredoxin [Fe-S] cluster))",1,1
+reduced ferredoxin [Fe-S] cluster,[Thil]-L-cysteine + AMP + oxidized ferredoxin [Fe-S] cluster,"(reduced ferredoxin [Fe-S] cluster, ([Thil]-L-cysteine, AMP, oxidized ferredoxin [Fe-S] cluster))",1,1
+RX,HX,"(RX, HX)",1,1
+S-adenosyl-L-methionine,acetate + S-adenosyl-L-homocysteine,"(S-adenosyl-L-methionine, (acetate, S-adenosyl-L-homocysteine))",1,1
+S-adenosyl-L-methionine,HCO3 + Met,"(S-adenosyl-L-methionine, (HCO3, Met))",1,1
+S-adenosyl-L-methionine,5'-deoxyadenosine + CO + formate + Met,"(S-adenosyl-L-methionine, (5'-deoxyadenosine, CO, formate, Met))",1,1
+S-adenosyl-L-methionine,5'-deoxyadenosine + Met,"(S-adenosyl-L-methionine, (5'-deoxyadenosine, Met))",1,1
+S-adenosyl-L-methionine,5'-deoxyadenosine + Met + NH3,"(S-adenosyl-L-methionine, (5'-deoxyadenosine, Met, NH3))",1,1
+S-adenosyl-L-methionine,S-adenosyl-4-methylthio-2-oxobutanoate,"(S-adenosyl-L-methionine, S-adenosyl-4-methylthio-2-oxobutanoate)",1,1
+Ser,CO2 + CoA,"(Ser, (CO2, CoA))",1,1
+Ser,Gly,"(Ser, Gly)",1,1
+Ser,,"(Ser, ∅)",1,1
+Ser,HPR,"(Ser, HPR)",1,1
+shikimate,CoA,"(shikimate, CoA)",1,1
+succinyl-CoA,CO2 + CoA,"(succinyl-CoA, (CO2, CoA))",1,1
+sulfite,H2S,"(sulfite, H2S)",1,1
+sulfite,Pi,"(sulfite, Pi)",1,1
+tropic acid,,"(tropic acid, ∅)",1,1
+tryptamine,,"(tryptamine, ∅)",1,1
+UDP-alpha-D-xylose,UDP,"(UDP-alpha-D-xylose, UDP)",1,1
+UDP-alpha-N-acetyl-D-glucosamine,UMP,"(UDP-alpha-N-acetyl-D-glucosamine, UMP)",1,1
+UDP-beta-L-rhamnose,UDP,"(UDP-beta-L-rhamnose, UDP)",1,1
+UDP-Gal,UDP,"(UDP-Gal, UDP)",1,1
+UDP-glucuronate,UDP,"(UDP-glucuronate, UDP)",1,1
+,ethylamine,"(∅, ethylamine)",1,1
+,Bn,"(∅, Bn)",1,1
+,Fe2+,"(∅, Fe2+)",1,1
+,acetaldehyde + PPPi,"(∅, (acetaldehyde, PPPi))",1,1
+,AMP + CO2,"(∅, (AMP, CO2))",1,1
+,bisulfite + NH3,"(∅, (bisulfite, NH3))",1,1
+,"D-Ala + ditrans,octacis-undecaprenyl-PP","(∅, (D-Ala, ditrans,octacis-undecaprenyl-PP))",1,1
+,D-Rib 5-P,"(∅, D-Rib 5-P)",1,1
+,formate + NH3,"(∅, (formate, NH3))",1,1
+,sulfite,"(∅, sulfite)",1,1
+,NH3 + phenol,"(∅, (NH3, phenol))",1,1
+,NH3 + PPi,"(∅, (NH3, PPi))",1,1
+,1-amino-2-propanol,"(∅, 1-amino-2-propanol)",1,1
+,4'-phosphopantetheine,"(∅, 4'-phosphopantetheine)",1,1
+,[amino group carrier protein]-C-terminal-L-glutamate,"(∅, [amino group carrier protein]-C-terminal-L-glutamate)",1,1
+,a phosphatidate,"(∅, a phosphatidate)",1,1
+,ACP,"(∅, ACP)",1,1
+,beta-D-GalNAc,"(∅, beta-D-GalNAc)",1,1
+,beta-D-Glc 6-P,"(∅, beta-D-Glc 6-P)",1,1
+,beta-D-glucose,"(∅, beta-D-glucose)",1,1
+,beta-D-N-acetylgalactosamine-6-O-sulfate,"(∅, beta-D-N-acetylgalactosamine-6-O-sulfate)",1,1
+,choline,"(∅, choline)",1,1
+,formamide,"(∅, formamide)",1,1
+,Fru,"(∅, Fru)",1,1
+,linear malto-oligosaccharide [(Glc)n-2],"(∅, linear malto-oligosaccharide [(Glc)n-2])",1,1
+,2OG + Glu,"(∅, (2OG, Glu))",1,1
+,[acyl-carrier protein] + CO2,"(∅, ([acyl-carrier protein], CO2))",1,1
+,[acyl-carrier protein] + CO2 + CoA,"(∅, ([acyl-carrier protein], CO2, CoA))",1,1
+,ADP + ATP,"(∅, (ADP, ATP))",1,1
+,ADP + Pi,"(∅, (ADP, Pi))",1,1
+,alpha-D-Rib 1-P + Pi,"(∅, (alpha-D-Rib 1-P, Pi))",1,1
+,ATP,"(∅, ATP)",1,1
+,CO2 + CoA + malonyl-CoA,"(∅, (CO2, CoA, malonyl-CoA))",1,1
+,CO2 + L-cysteinyl-[PqsC protein],"(∅, (CO2, L-cysteinyl-[PqsC protein]))",1,1
+,CoA + NAD+ + NADH,"(∅, (CoA, NAD+, NADH))",1,1
+,"ditrans,octacis-undecaprenyl-PP","(∅, ditrans,octacis-undecaprenyl-PP)",1,1
+,GDP,"(∅, GDP)",1,1
+,polyketide-[acp],"(∅, polyketide-[acp])",1,1
+,L-Amino acid,"(∅, L-Amino acid)",1,1
+,NAD+ + NADH,"(∅, (NAD+, NADH))",1,1
+,hypoxanthine,"(∅, hypoxanthine)",1,1
+,NADP+ + NADPH,"(∅, (NADP+, NADPH))",1,1
+,2-oxoisovalerate,"(∅, 2-oxoisovalerate)",1,1
+,5-oxo-L-proline,"(∅, 5-oxo-L-proline)",1,1
+,[dermatan sulfate]n-1,"(∅, [dermatan sulfate]n-1)",1,1
+,Ac-CoA,"(∅, Ac-CoA)",1,1
+,BtrI acyl-carrier protein,"(∅, BtrI acyl-carrier protein)",1,1
+,DHPTD,"(∅, DHPTD)",1,1
+,ethanolamine,"(∅, ethanolamine)",1,1
+,glycolaldehyde,"(∅, glycolaldehyde)",1,1
+,glycolaldehyde-P,"(∅, glycolaldehyde-P)",1,1
+,glycolaldehyde-PPP,"(∅, glycolaldehyde-PPP)",1,1
+,linear maltodextrin,"(∅, linear maltodextrin)",1,1
+,methanofuran,"(∅, methanofuran)",1,1
+,molybdopterin-synthase sulfur-carrier protein,"(∅, molybdopterin-synthase sulfur-carrier protein)",1,1
+,NADH,"(∅, NADH)",1,1
+,NH4+,"(∅, NH4+)",1,1
+,O2,"(∅, O2)",1,1
+,Phosphorylethanolamine,"(∅, Phosphorylethanolamine)",1,1
+,S-methyl-5'-thioadenosine,"(∅, S-methyl-5'-thioadenosine)",1,1
