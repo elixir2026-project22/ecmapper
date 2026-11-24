@@ -177,6 +177,17 @@ Script: `scripts/merge_roche_cofactors.py`. Inputs are
 
 - **Same filtering as the BRENDA table.** H₂O, H⁺, O2, CO2, NH3, NH4+ and H2O2
   are removed from the Roche rows too, and reverse pairs are merged.
+- **BRENDA synonyms unified first.** Before matching, cofactor labels that name
+  the same compound under different ligand IDs or spellings are mapped to one
+  label (`BRENDA_SYNONYMS`). Examples: the acceptor/AH2 family, ferredoxin vs.
+  ferredoxin [Fe-S] cluster, the ETF spellings, adrenodoxin vs. adrenal
+  ferredoxin, UDP-Gal vs. UDP-alpha-D-galactose, and the DMAPP label that sits on
+  the diphosphate ID. BRENDA rows that become identical are merged, which takes
+  the 447 rows down to 422. The original rows are listed in `merged_brenda_rows`.
+  Specific compounds are not merged into generic classes, so UQ/UQH2 stays
+  separate from "a quinone"/"a quinol". This step changes only this merged table:
+  `cofactor_combinations.csv` and `cofactor_combinations_without_H2O_H+.csv` keep
+  the original labels.
 - **Roche count.** `n_grid_squares_roche` is the number of grid squares listed
   in `example_grid_squares`. When several Roche rows fall on the same
   combination, their counts are summed. `n_total` is the number of BRENDA

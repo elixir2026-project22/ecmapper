@@ -16,6 +16,10 @@ Rules (agreed with the user):
   Roche one or are contained in it (in either direction) are listed in near_matches.
 * As on the BRENDA side, H2O, H+, O2, CO2, NH3, NH4+ and H2O2 are removed.
 
+Synonymous BRENDA cofactor labels are first unified with BRENDA_SYNONYMS, and BRENDA
+rows that become identical are merged (column merged_brenda_rows lists the original
+rows; renamed rows without a partner are listed too).
+
 Roche compound names are translated to the BRENDA cofactor labels with ROCHE_NAMES;
 a Roche name may stand for several BRENDA labels (synonyms with different BRENDA
 ligand IDs, e.g. reduced ferredoxin). Names not listed are used as written.
@@ -100,11 +104,75 @@ def shared(rs, bs):
     return sum(any(b in labels(r) for b in bs) for r in rs)
 
 
-brenda = list(csv.DictReader(open(BASE / "cofactor_combinations_without_H2O_H+.csv")))
-for b in brenda:
-    b["A"] = tuple(filter(None, b["side_a"].split(" + ")))
-    b["B"] = tuple(filter(None, b["side_b"].split(" + ")))
-    b["roche"] = []
+# Synonymous BRENDA cofactor labels (different ligand IDs or spellings for the same
+# compound) -> one label. Applied to the BRENDA combinations before matching, so rows
+# that differ only in these labels are merged. Specific compounds are not merged into
+# generic classes (UQ/UQH2 stay separate from "a quinone"/"a quinol").
+BRENDA_SYNONYMS = {
+    "reduced NADPH-hemoprotein reductase": "[reduced NADPH-hemoprotein reductase]",
+    "reduced [NADPH-hemoprotein reductase]": "[reduced NADPH-hemoprotein reductase]",
+    "oxidized NADPH-hemoprotein reductase": "[oxidized NADPH-hemoprotein reductase]",
+    "oxidized [NADPH-hemoprotein reductase]": "[oxidized NADPH-hemoprotein reductase]",
+    "acceptor": "oxidized electron acceptor", "an acceptor": "oxidized electron acceptor",
+    "oxidized acceptor": "oxidized electron acceptor", "electron acceptor": "oxidized electron acceptor",
+    "an oxidized electron acceptor": "oxidized electron acceptor", "A": "oxidized electron acceptor",
+    "reduced acceptor": "reduced electron acceptor", "a reduced acceptor": "reduced electron acceptor",
+    "a reduced electron acceptor": "reduced electron acceptor", "AH2": "reduced electron acceptor",
+    "reduced ferredoxin [Fe-S] cluster": "Fd_red", "oxidized ferredoxin [Fe-S] cluster": "Fd_ox",
+    "thioredoxin": "red. thioredoxin", "thioredoxin disulfide": "ox. thioredoxin",
+    "electron-transfer flavoprotein": "electron-transferring flavoprotein",
+    "oxidized electron-transferring flavoprotein": "electron-transferring flavoprotein",
+    "oxidized electron transfer flavoprotein": "electron-transferring flavoprotein",
+    "reduced electron-transfer flavoprotein": "reduced electron-transferring flavoprotein",
+    "3'-phosphoadenylylsulfate": "3'-phosphoadenylyl sulfate",
+    "reduced adrenal ferredoxin": "reduced adrenodoxin", "oxidized adrenal ferredoxin": "oxidized adrenodoxin",
+    "reduced quinone": "a quinol",
+    "UDP-Gal": "UDP-alpha-D-galactose", "UDP-glucuronate": "UDP-alpha-D-glucuronate",
+    "UDP-N-acetyl-alpha-D-glucosamine": "UDP-alpha-N-acetyl-D-glucosamine",
+    "a carboxylate": "carboxylate",
+    "4a-hydroxy-tetrahydrobiopterin": "4a-hydroxytetrahydrobiopterin",
+    # label on ligand ID 17 (diphosphate) that names DMAPP
+    "dimethylallyl-PP": "dimethylallyl diphosphate",
+}
+
+
+def relabel(side):
+    return tuple(sorted({BRENDA_SYNONYMS.get(x, x) for x in side}, key=str.lower))
+
+
+def merge_brenda_synonyms(raw):
+    groups = {}
+    for b in raw:
+        A = relabel(filter(None, b["side_a"].split(" + ")))
+        B = relabel(filter(None, b["side_b"].split(" + ")))
+        g = groups.setdefault(tuple(sorted((A, B))), dict(A=A, B=B, fwd=0, rev=0, src=[], ec=set(),
+                                                           subs=set(), var=0))
+        same = (A, B) == (g["A"], g["B"])
+        g["fwd"] += int(b["n_a_to_b"] if same else b["n_b_to_a"])
+        g["rev"] += int(b["n_b_to_a"] if same else b["n_a_to_b"])
+        g["src"].append(b)
+        g["ec"] |= set(filter(None, b["ec_numbers"].split("; ")))
+        g["subs"] |= set(filter(None, b["subsystems"].split("; ")))
+        g["var"] += int(b["n_variants_with_H2O_H+"])
+    out = []
+    for g in groups.values():
+        A, B, fwd, rev = g["A"], g["B"], g["fwd"], g["rev"]
+        if rev > fwd:
+            A, B, fwd, rev = B, A, rev, fwd
+        out.append(dict(
+            A=A, B=B, side_a=" + ".join(A), side_b=" + ".join(B), pair=f"({fmt(A)}, {fmt(B)})",
+            n_reactions=str(fwd + rev), n_a_to_b=str(fwd), n_b_to_a=str(rev),
+            n_subsystems=str(len(g["subs"])), ec_numbers="; ".join(sorted(g["ec"])),
+            subsystems="; ".join(sorted(g["subs"])), **{"n_variants_with_H2O_H+": str(g["var"])},
+            merged_brenda_rows="; ".join(f"{x['pair']} [{x['n_reactions']}]" for x in g["src"])
+            if len(g["src"]) > 1 or g["src"][0]["pair"] != f"({fmt(A)}, {fmt(B)})" else "",
+            roche=[]))
+    out.sort(key=lambda x: (-int(x["n_reactions"]), x["pair"].lower()))
+    return out
+
+
+brenda_raw = list(csv.DictReader(open(BASE / "cofactor_combinations_without_H2O_H+.csv")))
+brenda = merge_brenda_synonyms(brenda_raw)
 roche = list(csv.DictReader(open(BASE / "roche_cofactor_combinations.csv")))
 
 roche_only = {}  # unordered key -> entry
@@ -174,7 +242,8 @@ for b in brenda:
         n_reactions_brenda=int(b["n_reactions"]), n_a_to_b=b["n_a_to_b"], n_b_to_a=b["n_b_to_a"],
         n_grid_squares_roche=rc.get("n_grid_squares_roche", 0), **{k: v for k, v in rc.items() if k != "n_grid_squares_roche"},
         near_matches="", n_subsystems_brenda=b["n_subsystems"], ec_numbers=b["ec_numbers"],
-        subsystems=b["subsystems"], n_variants_with_H2O_H=b["n_variants_with_H2O_H+"]))
+        subsystems=b["subsystems"], n_variants_with_H2O_H=b["n_variants_with_H2O_H+"],
+        merged_brenda_rows=b["merged_brenda_rows"]))
 for e in roche_only.values():
     rc = roche_cols(e["roche"])
     rows.append(dict(
@@ -188,7 +257,7 @@ rows.sort(key=lambda x: (-x["n_total"], -x["n_grid_squares_roche"], x["pair"].lo
 cols = ["pair", "side_a", "side_b", "source", "n_reactions_brenda", "n_grid_squares_roche", "n_total",
         "n_a_to_b", "n_b_to_a", "roche_as_drawn", "roche_rows", "roche_group", "roche_grid_squares",
         "roche_example_reactions", "roche_drawn_reversible", "roche_uncertain", "roche_note",
-        "also_exact_matches_brenda", "near_matches", "n_subsystems_brenda", "ec_numbers", "subsystems", "n_variants_with_H2O_H"]
+        "also_exact_matches_brenda", "near_matches", "merged_brenda_rows", "n_subsystems_brenda", "ec_numbers", "subsystems", "n_variants_with_H2O_H"]
 out = BASE / "cofactor_combinations_without_H2O_H+_with_roche.csv"
 with open(out, "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=cols)
@@ -196,7 +265,10 @@ with open(out, "w", newline="") as f:
     w.writerows({c: x.get(c, "") for c in cols} for x in rows)
 
 from collections import Counter
-print(Counter(x["source"] for x in rows))
+print(Counter(x["source"] for x in rows), "BRENDA rows", len(brenda_raw), "->", len(brenda))
+for b in brenda:
+    if b["merged_brenda_rows"].count("; ") >= 1 or (b["merged_brenda_rows"] and False):
+        print("MERGED", b["pair"], b["n_reactions"], "<=", b["merged_brenda_rows"])
 n_var = sum(len(variants(r["consumed"], r["released"])) for r in roche)
 print("Roche rows", len(roche), "variants", n_var)
 for x in rows:
