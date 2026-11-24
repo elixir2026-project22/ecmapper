@@ -47,16 +47,24 @@ def fmt(names):
     return names[0] if len(names) == 1 else "(" + ", ".join(names) + ")"
 
 
+# Small inorganic molecules left out of the combinations (matched on the canonical label;
+# O2 has two ligand IDs and H2O2 two, NH4+ is the ammonium form of NH3).
+EXCLUDED = {"O2", "CO2", "NH3", "NH4+", "H2O2"}
+
+
 def side(ms):
-    return tuple(sorted({canon[key(m)] for m in ms}, key=str.lower))
+    return tuple(sorted({canon[key(m)] for m in ms} - EXCLUDED, key=str.lower))
 
 
 combos = collections.defaultdict(list)
-no_cof = 0
+no_cof = only_excluded = 0
 for r in d["reactions"]:
     C, P = side(r["cofactors"]["consumed"]), side(r["cofactors"]["produced"])
     if not C and not P:
-        no_cof += 1
+        if any(r["cofactors"][k] for k in ("consumed", "produced")):
+            only_excluded += 1
+        else:
+            no_cof += 1
         continue
     combos[(C, P)].append(r)
 
@@ -171,7 +179,9 @@ L.append("Primary metabolites are the main nodes (`nodeHM`/`nodeSM`). Secondary 
          "ligand ID and shown under their most frequent label. H₂O and H⁺ are kept. A combination and its "
          "reverse, e.g. (NAD+, NADH) and (NADH, NAD+), are one entry, shown as `(A, B)` in the more frequent "
          "direction; `A→B` and `B→A` count the reactions drawn each way. ∅ means that side is empty.\n")
-L.append(f"- Reactions: {len(d['reactions'])}, of which {len(d['reactions']) - no_cof} have at least one cofactor and {no_cof} have none.")
+L.append(f"- Excluded from the combinations: {', '.join(sorted(EXCLUDED))}.")
+L.append(f"- Reactions: {len(d['reactions'])}. {len(d['reactions']) - no_cof - only_excluded} have at least one remaining cofactor, "
+         f"{only_excluded} have only excluded cofactors and {no_cof} have none.")
 L.append(f"- Distinct combinations: **{len(rows)}** after merging reverse pairs ({n_directed} counting each direction separately), "
          f"or {len(core_rows)} once H₂O and H⁺ are also removed "
          "(see `cofactor_combinations_without_H2O_H+.csv`).")
