@@ -19,7 +19,7 @@ there are none, those linking one of the ChEBI IDs (bigg_via = "ChEBI").
 A row is "confirmed" when the Roche and BRENDA KEGG IDs overlap, "different KEGG ID"
 when both resolve but do not overlap, and "unresolved" when a side has no KEGG ID.
 
-Usage: python scripts/verify_roche_brenda_ids.py [cache_dir]
+Usage: python scripts/verify_roche_brenda_ids.py [cache_dir] [--linked-only]
 Downloads (once, into cache_dir): rest.kegg.jp/list/compound, rest.kegg.jp/conv/chebi/compound,
 bigg.ucsd.edu/static/namespace/bigg_models_metabolites.txt. These are not committed.
 """
@@ -32,7 +32,9 @@ import urllib.request
 from pathlib import Path
 
 BASE = Path("BRENDAmap/cofactor_analysis")
-CACHE = Path(sys.argv[1] if len(sys.argv) > 1 else Path.home() / ".cache/ecmapper/compound_ids")
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
+CACHE = Path(args[0] if args else Path.home() / ".cache/ecmapper/compound_ids")
+SUFFIX = "_linked" if "--linked-only" in sys.argv else ""
 URLS = {
     "kegg_compound.txt": "https://rest.kegg.jp/list/compound",
     "kegg_chebi.txt": "https://rest.kegg.jp/conv/chebi/compound",
@@ -185,7 +187,7 @@ for m in d["metabolite_nodes"]:
     if m["node_class"] != "nodeCM":
         bnames[m.get("brenda_ligand_id")] |= {m["display_name"], (m["brenda_name"] or "").strip()} - {""}
 
-rows = list(csv.DictReader(open(BASE / "roche_brenda_merged.csv")))
+rows = list(csv.DictReader(open(BASE / f"roche_brenda_merged{SUFFIX}.csv")))
 brenda_kegg = {}
 out = []
 for r in rows:
@@ -232,7 +234,7 @@ cols = ["compound", "source", "n_boxes_roche", "n_subsystems_brenda", "n_total",
         "kegg", "kegg_name", "chebi", "bigg", "bigg_via", "roche_kegg", "roche_kegg_method", "brenda_ligand_ids",
         "brenda_labels", "brenda_names", "brenda_kegg", "brenda_kegg_name", "brenda_kegg_method",
         "has_cross_subsystem_link", "grid_squares", "as_structure", "as_name_only", "brenda_subsystems"]
-with open(BASE / "roche_brenda_merged_ids.csv", "w", newline="") as f:
+with open(BASE / f"roche_brenda_merged{SUFFIX}_ids.csv", "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=cols)
     w.writeheader()
     w.writerows({c: r.get(c, "") for c in cols} for r in out)

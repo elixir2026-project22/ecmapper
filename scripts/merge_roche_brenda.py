@@ -13,10 +13,15 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-base = Path(sys.argv[1] if len(sys.argv) > 1 else "BRENDAmap/cofactor_analysis")
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
+LINKED_ONLY = "--linked-only" in sys.argv  # keep only BRENDA compounds with a cross-subsystem link
+base = Path(args[0] if args else "BRENDAmap/cofactor_analysis")
 roche = list(csv.DictReader(open(base / "roche_boxed_compounds.csv")))
 roche = [r for r in roche if r["compound"].strip()]
 brenda = {int(r["brenda_ligand_id"]): r for r in csv.DictReader(open(base / "primary_metabolites_in_multiple_subsystems.csv"))}
+brenda_all = dict(brenda)
+if LINKED_ONLY:
+    brenda = {i: r for i, r in brenda.items() if r["has_cross_subsystem_link"] == "True"}
 
 # BRENDA reference names per ligand ID (from the map)
 d = json.loads((base.parent / "BRENDA_map_reactions.json").read_text())
@@ -57,7 +62,13 @@ ROCHE_TO_BRENDA = {
 names_roche = {r["compound"] for r in roche}
 assert set(ROCHE_TO_BRENDA) <= names_roche, set(ROCHE_TO_BRENDA) - names_roche
 used = [i for ids in ROCHE_TO_BRENDA.values() for i in ids]
-assert len(used) == len(set(used)) and set(used) <= set(brenda), (set(used) - set(brenda))
+assert len(used) == len(set(used)) and set(used) <= set(brenda_all), (set(used) - set(brenda_all))
+dropped = {k: [i for i in v if i not in brenda] for k, v in ROCHE_TO_BRENDA.items()}
+ROCHE_TO_BRENDA = {k: [i for i in v if i in brenda] for k, v in ROCHE_TO_BRENDA.items()}
+used = [i for ids in ROCHE_TO_BRENDA.values() for i in ids]
+if LINKED_ONLY:
+    print("BRENDA IDs without cross-subsystem link dropped from Roche matches:",
+          {k: [f"{i} {brenda_all[i]['metabolite']}" for i in v] for k, v in dropped.items() if v})
 
 
 def brenda_part(ids):
@@ -93,7 +104,8 @@ rows.sort(key=lambda x: (-x["n_total"], -x["n_boxes_roche"], x["compound"].lower
 cols = ["compound", "source", "n_boxes_roche", "n_subsystems_brenda", "n_total", "brenda_ligand_ids",
         "brenda_labels", "brenda_names", "has_cross_subsystem_link", "grid_squares", "as_structure",
         "as_name_only", "brenda_subsystems"]
-with open(base / "roche_brenda_merged.csv", "w", newline="") as f:
+OUT = "roche_brenda_merged_linked.csv" if LINKED_ONLY else "roche_brenda_merged.csv"
+with open(base / OUT, "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=cols)
     w.writeheader()
     w.writerows({c: x[c] for c in cols} for x in rows)
