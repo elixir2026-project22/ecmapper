@@ -6,10 +6,12 @@ Primary metabolites are the main nodes (`nodeHM`/`nodeSM`). Secondary metabolite
 
 - Excluded from the combinations: CO2, H2O2, NH3, NH4+, O2.
 - Reactions: 2848. 2494 have at least one remaining cofactor, 100 have only excluded cofactors and 254 have none.
-- Distinct combinations: **580** after merging reverse pairs (656 counting each direction separately), or 447 once H₂O and H⁺ are also removed (see `cofactor_combinations_without_H2O_H+.csv`).
-- Distinct cofactor compounds: 392.
+- Distinct combinations: **554** after merging reverse pairs (627 counting each direction separately), or 422 once H₂O and H⁺ are also removed (see `cofactor_combinations_without_H2O_H+.csv`).
+- Distinct cofactor compounds: 340 after unifying synonymous labels (372 distinct labels before, from 392 ligand IDs or separately kept labels).
 
 Labels merged because they share a ligand ID: 2OG ← 2-oxoglutarate; 5-P-alpha-D-Rib 1-PP ← 5-phospho-alpha-D-ribose 1-diphosphate; [acyl-carrier protein] ← ACP; Ac-CoA ← acetyl-CoA; adenosine 3',5'-bisphosphate ← 3',5'-ADP; AH2 ← reduced acceptor; Cl- ← Cl; Cys ← L-cysteine; dimethylallyl diphosphate ← dimethylallyl PPi, dimethylallyl-PP; F420 (ox) ← oxidized coenzyme F420; Fd_ox ← oxidized ferredoxin; Fd_red ← reduced ferredoxin; formaldehyde ← CH2O; FUM ← fumarate; GAP ← D-glyceraldehyde 3-phosphate; Gln ← L-Gln, L-glutamine; Glu ← GLU, L-glutamate; Gly ← glycine; GSH ← glutathione; HCO3 ← HCO3-, bicarbonate; hypoxanthine ← Hyp; L-ornithine ← Orn; Met ← L-methionine; oxidized ferredoxin [Fe-S] cluster ← oxidized ferredoxin [FE-S] cluster; PEP ← phosphoenolpyruvate; Pi ← phosphate; reduced coenzyme F420 ← F420 (red); reduced ferredoxin [Fe-S] cluster ← reduced ferredoxin [FE-S] cluster; S-adenosylmethioninamine ← dcSAM; succinate ← Suc; UDP-alpha-N-acetyl-D-glucosamine ← UDP-GlcNAc; UDP-Glc ← UDP-alpha-D-glucose; UDP-Glc ← UDP-glucose; UDP-N-acetyl-alpha-D-galactosamine ← UDP-GalNAc; UQ ← ubiquinone; UQH2 ← ubiquinol; UREA ← urea
+
+Synonymous labels unified (scripts/brenda_synonyms.py): 3'-phosphoadenylyl sulfate ← 3'-phosphoadenylylsulfate; 4a-hydroxytetrahydrobiopterin ← 4a-hydroxy-tetrahydrobiopterin; [oxidized NADPH-hemoprotein reductase] ← oxidized [NADPH-hemoprotein reductase]; [oxidized NADPH-hemoprotein reductase] ← oxidized NADPH-hemoprotein reductase; [reduced NADPH-hemoprotein reductase] ← reduced [NADPH-hemoprotein reductase]; [reduced NADPH-hemoprotein reductase] ← reduced NADPH-hemoprotein reductase; a quinol ← reduced quinone; carboxylate ← a carboxylate; dimethylallyl diphosphate ← dimethylallyl-PP; electron-transferring flavoprotein ← electron-transfer flavoprotein; electron-transferring flavoprotein ← oxidized electron transfer flavoprotein; electron-transferring flavoprotein ← oxidized electron-transferring flavoprotein; Fd_ox ← oxidized ferredoxin [Fe-S] cluster; Fd_red ← reduced ferredoxin [Fe-S] cluster; ox. thioredoxin ← thioredoxin disulfide; oxidized adrenodoxin ← oxidized adrenal ferredoxin; oxidized electron acceptor ← A; oxidized electron acceptor ← acceptor; oxidized electron acceptor ← an acceptor; oxidized electron acceptor ← an oxidized electron acceptor; oxidized electron acceptor ← electron acceptor; oxidized electron acceptor ← oxidized acceptor; red. thioredoxin ← thioredoxin; reduced adrenodoxin ← reduced adrenal ferredoxin; reduced electron acceptor ← a reduced acceptor; reduced electron acceptor ← a reduced electron acceptor; reduced electron acceptor ← AH2; reduced electron acceptor ← reduced acceptor; reduced electron-transferring flavoprotein ← reduced electron-transfer flavoprotein; UDP-alpha-D-galactose ← UDP-Gal; UDP-alpha-D-glucuronate ← UDP-glucuronate; UDP-alpha-N-acetyl-D-glucosamine ← UDP-N-acetyl-alpha-D-glucosamine
 
 Labels kept separate because their ligand ID belongs to another compound: NAD(P)H (ID 5), NADH (ID 12), dimethylallyl-PP (ID 17), PPi (ID 157), malonyl-CoA (ID 811), reduced acceptor (ID 3252).
 
@@ -20,8 +22,8 @@ Labels kept separate because their ligand ID belongs to another compound: NAD(P)
 | 1 | (H2O, ∅) | 272 | 160 | 112 | 97 |
 | 2 | (NAD+, NADH) | 116 | 70 | 46 | 62 |
 | 3 | (NADPH, NADP+) | 106 | 77 | 29 | 49 |
-| 4 | (ATP, ADP) | 78 | 69 | 9 | 43 |
-| 5 | ([reduced NADPH-hemoprotein reductase], ([oxidized NADPH-hemoprotein reductase], H2O)) | 71 | 71 | 0 | 18 |
+| 4 | ([reduced NADPH-hemoprotein reductase], ([oxidized NADPH-hemoprotein reductase], H2O)) | 79 | 79 | 0 | 20 |
+| 5 | (ATP, ADP) | 78 | 69 | 9 | 43 |
 | 6 | (S-adenosyl-L-methionine, S-adenosyl-L-homocysteine) | 69 | 69 | 0 | 26 |
 | 7 | (H2O, Pi) | 50 | 49 | 1 | 37 |
 | 8 | ((H+, NADPH), NADP+) | 48 | 32 | 16 | 25 |
@@ -30,573 +32,547 @@ Labels kept separate because their ligand ID belongs to another compound: NAD(P)
 | 11 | (H2O, H+) | 38 | 27 | 11 | 24 |
 | 12 | (∅, PPi) | 36 | 35 | 1 | 16 |
 | 13 | ((H2O, NAD+), NADH) | 34 | 25 | 9 | 20 |
-| 14 | (ATP, (ADP, H+)) | 33 | 32 | 1 | 16 |
-| 15 | ((H2O, NAD+), (H+, NADH)) | 32 | 23 | 9 | 21 |
-| 16 | (NAD(P)H, NAD(P)+) | 32 | 18 | 14 | 25 |
-| 17 | (UDP-Glc, UDP) | 32 | 32 | 0 | 12 |
-| 18 | ((ATP, CoA), (AMP, PPi)) | 29 | 28 | 1 | 22 |
-| 19 | ((H+, NADPH), (H2O, NADP+)) | 28 | 20 | 8 | 18 |
-| 20 | (NAD+, (H+, NADH)) | 28 | 15 | 13 | 19 |
-| 21 | (Ac-CoA, CoA) | 23 | 17 | 6 | 16 |
-| 22 | (NADPH, (H2O, NADP+)) | 20 | 16 | 4 | 13 |
-| 23 | (Pi, ∅) | 20 | 11 | 9 | 12 |
-| 24 | (oxidized electron acceptor, reduced electron acceptor) | 19 | 16 | 3 | 13 |
-| 25 | (ATP, (AMP, PPi)) | 17 | 17 | 0 | 15 |
-| 26 | (H2O, PPi) | 17 | 17 | 0 | 10 |
-| 27 | (ATP, (ADP, Pi)) | 15 | 15 | 0 | 9 |
-| 28 | (H2O, CoA) | 14 | 13 | 1 | 11 |
-| 29 | (H2O, formate) | 14 | 11 | 3 | 10 |
-| 30 | (acceptor, reduced acceptor) | 13 | 11 | 2 | 9 |
-| 31 | (isopentenyl-PP, PPi) | 13 | 13 | 0 | 3 |
-| 32 | (∅, pyruvate) | 13 | 11 | 2 | 12 |
-| 33 | ((CoA, NAD+), NADH) | 12 | 10 | 2 | 10 |
-| 34 | (ATP, PPi) | 12 | 12 | 0 | 9 |
-| 35 | (∅, CoA) | 12 | 10 | 2 | 10 |
-| 36 | ((H+, H2O), ∅) | 11 | 8 | 3 | 10 |
-| 37 | ((H+, reduced ferredoxin [Fe-S] cluster), (H2O, oxidized ferredoxin [Fe-S] cluster)) | 11 | 11 | 0 | 4 |
-| 38 | (CTP, PPi) | 11 | 11 | 0 | 8 |
-| 39 | (H2O, acetate) | 11 | 11 | 0 | 7 |
-| 40 | (NAD(P)H, (H2O, NAD(P)+)) | 11 | 7 | 4 | 4 |
-| 41 | (S-adenosyl-L-methionine, (H+, S-adenosyl-L-homocysteine)) | 11 | 11 | 0 | 5 |
-| 42 | (2OG, succinate) | 10 | 10 | 0 | 5 |
-| 43 | (pyruvate, Ala) | 10 | 8 | 2 | 9 |
-| 44 | ((ADP, Pi), (ATP, CoA)) | 9 | 7 | 2 | 7 |
-| 45 | (2OG, (H2O, succinate)) | 9 | 8 | 1 | 3 |
-| 46 | (Ac-CoA, acetate) | 9 | 6 | 3 | 6 |
-| 47 | (5-P-alpha-D-Rib 1-PP, PPi) | 8 | 7 | 1 | 4 |
-| 48 | (FAD, FADH2) | 8 | 8 | 0 | 5 |
-| 49 | (reduced acceptor, (acceptor, H2O)) | 8 | 5 | 3 | 6 |
-| 50 | (S-adenosylmethioninamine, S-methyl-5'-thioadenosine) | 8 | 8 | 0 | 1 |
-| 51 | ((CoA, Fd_ox), Fd_red) | 7 | 5 | 2 | 6 |
-| 52 | (H2O, Glu) | 7 | 5 | 2 | 5 |
-| 53 | (malonyl-CoA, CoA) | 7 | 7 | 0 | 3 |
-| 54 | (reduced electron acceptor, (H2O, oxidized electron acceptor)) | 7 | 6 | 1 | 5 |
-| 55 | (reduced NADPH-hemoprotein reductase, (H2O, oxidized NADPH-hemoprotein reductase)) | 7 | 7 | 0 | 1 |
-| 56 | ((ATP, Glu), (ADP, Pi)) | 6 | 6 | 0 | 4 |
-| 57 | (3'-phosphoadenylyl sulfate, adenosine 3',5'-bisphosphate) | 6 | 6 | 0 | 1 |
-| 58 | (ATP, (ADP, H+, Pi)) | 6 | 6 | 0 | 6 |
-| 59 | (electron-transfer flavoprotein, reduced electron-transfer flavoprotein) | 6 | 3 | 3 | 5 |
+| 14 | (oxidized electron acceptor, reduced electron acceptor) | 34 | 28 | 6 | 23 |
+| 15 | (ATP, (ADP, H+)) | 33 | 32 | 1 | 16 |
+| 16 | ((H2O, NAD+), (H+, NADH)) | 32 | 23 | 9 | 21 |
+| 17 | (NAD(P)H, NAD(P)+) | 32 | 18 | 14 | 25 |
+| 18 | (UDP-Glc, UDP) | 32 | 32 | 0 | 12 |
+| 19 | ((ATP, CoA), (AMP, PPi)) | 29 | 28 | 1 | 22 |
+| 20 | ((H+, NADPH), (H2O, NADP+)) | 28 | 20 | 8 | 18 |
+| 21 | (NAD+, (H+, NADH)) | 28 | 15 | 13 | 19 |
+| 22 | (Ac-CoA, CoA) | 23 | 17 | 6 | 16 |
+| 23 | (reduced electron acceptor, (H2O, oxidized electron acceptor)) | 21 | 16 | 5 | 14 |
+| 24 | (NADPH, (H2O, NADP+)) | 20 | 16 | 4 | 13 |
+| 25 | (Pi, ∅) | 20 | 11 | 9 | 12 |
+| 26 | (ATP, (AMP, PPi)) | 17 | 17 | 0 | 15 |
+| 27 | (H2O, PPi) | 17 | 17 | 0 | 10 |
+| 28 | ((Fd_red, H+), (Fd_ox, H2O)) | 16 | 15 | 1 | 8 |
+| 29 | (ATP, (ADP, Pi)) | 15 | 15 | 0 | 9 |
+| 30 | (H2O, CoA) | 14 | 13 | 1 | 11 |
+| 31 | (H2O, formate) | 14 | 11 | 3 | 10 |
+| 32 | (electron-transferring flavoprotein, reduced electron-transferring flavoprotein) | 13 | 8 | 5 | 10 |
+| 33 | (isopentenyl-PP, PPi) | 13 | 13 | 0 | 3 |
+| 34 | (∅, pyruvate) | 13 | 11 | 2 | 12 |
+| 35 | ((CoA, NAD+), NADH) | 12 | 10 | 2 | 10 |
+| 36 | (ATP, PPi) | 12 | 12 | 0 | 9 |
+| 37 | (∅, CoA) | 12 | 10 | 2 | 10 |
+| 38 | ((H+, H2O), ∅) | 11 | 8 | 3 | 10 |
+| 39 | (CTP, PPi) | 11 | 11 | 0 | 8 |
+| 40 | (H2O, acetate) | 11 | 11 | 0 | 7 |
+| 41 | (NAD(P)H, (H2O, NAD(P)+)) | 11 | 7 | 4 | 4 |
+| 42 | (S-adenosyl-L-methionine, (H+, S-adenosyl-L-homocysteine)) | 11 | 11 | 0 | 5 |
+| 43 | (2OG, succinate) | 10 | 10 | 0 | 5 |
+| 44 | (pyruvate, Ala) | 10 | 8 | 2 | 9 |
+| 45 | ((ADP, Pi), (ATP, CoA)) | 9 | 7 | 2 | 7 |
+| 46 | (2OG, (H2O, succinate)) | 9 | 8 | 1 | 3 |
+| 47 | (Ac-CoA, acetate) | 9 | 6 | 3 | 6 |
+| 48 | (5-P-alpha-D-Rib 1-PP, PPi) | 8 | 7 | 1 | 4 |
+| 49 | (FAD, FADH2) | 8 | 8 | 0 | 5 |
+| 50 | (Fd_red, (Fd_ox, H2O)) | 8 | 6 | 2 | 6 |
+| 51 | (S-adenosylmethioninamine, S-methyl-5'-thioadenosine) | 8 | 8 | 0 | 1 |
+| 52 | ((CoA, Fd_ox), Fd_red) | 7 | 5 | 2 | 6 |
+| 53 | (3'-phosphoadenylyl sulfate, adenosine 3',5'-bisphosphate) | 7 | 7 | 0 | 2 |
+| 54 | (a quinone, a quinol) | 7 | 7 | 0 | 5 |
+| 55 | (H2O, carboxylate) | 7 | 7 | 0 | 2 |
+| 56 | (H2O, Glu) | 7 | 5 | 2 | 5 |
+| 57 | (malonyl-CoA, CoA) | 7 | 7 | 0 | 3 |
+| 58 | ((ATP, Glu), (ADP, Pi)) | 6 | 6 | 0 | 4 |
+| 59 | (ATP, (ADP, H+, Pi)) | 6 | 6 | 0 | 6 |
 | 60 | (H2O, D-glucose) | 6 | 6 | 0 | 1 |
 | 61 | (H2O, D-ribose) | 6 | 6 | 0 | 2 |
 | 62 | (H2O, UREA) | 6 | 6 | 0 | 3 |
 | 63 | (Malonyl-ACP, Holo-ACP) | 6 | 6 | 0 | 2 |
 | 64 | (NADPH, (CoA, NADP+)) | 6 | 4 | 2 | 5 |
 | 65 | (red. thioredoxin, (H2O, ox. thioredoxin)) | 6 | 6 | 0 | 2 |
-| 66 | ((Fd_red, H+), (Fd_ox, H2O)) | 5 | 4 | 1 | 4 |
-| 67 | ((H+, reduced adrenodoxin), (H2O, oxidized adrenodoxin)) | 5 | 5 | 0 | 1 |
-| 68 | (a quinone, a quinol) | 5 | 5 | 0 | 4 |
-| 69 | (Fd_red, (Fd_ox, H2O)) | 5 | 4 | 1 | 5 |
-| 70 | (GDP-alpha-D-mannose, GDP) | 5 | 5 | 0 | 1 |
-| 71 | (H2O, pyruvate) | 5 | 3 | 2 | 4 |
-| 72 | (Pi, CoA) | 5 | 5 | 0 | 5 |
-| 73 | (reduced electron-transferring flavoprotein, (electron-transferring flavoprotein, H2O)) | 5 | 5 | 0 | 1 |
-| 74 | (∅, (H2O, Pi)) | 5 | 4 | 1 | 5 |
-| 75 | (∅, CMP) | 5 | 5 | 0 | 4 |
-| 76 | (∅, FUM) | 5 | 4 | 1 | 4 |
-| 77 | ((2OG, Glu), ∅) | 4 | 3 | 1 | 4 |
-| 78 | ((ATP, H2O), (ADP, Pi)) | 4 | 3 | 1 | 4 |
-| 79 | ((ferricytochrome c, H2O), (ferrocytochrome c, H+)) | 4 | 2 | 2 | 3 |
-| 80 | ((H+, NAD(P)H), NAD(P)+) | 4 | 2 | 2 | 4 |
-| 81 | ((H+, NADPH), (NADP+, Pi)) | 4 | 4 | 0 | 3 |
-| 82 | (2OG, (formaldehyde, succinate)) | 4 | 4 | 0 | 1 |
-| 83 | (acyl-CoA, CoA) | 4 | 4 | 0 | 3 |
-| 84 | (ATP, AMP) | 4 | 4 | 0 | 3 |
+| 66 | ((H+, reduced adrenodoxin), (H2O, oxidized adrenodoxin)) | 5 | 5 | 0 | 1 |
+| 67 | (GDP-alpha-D-mannose, GDP) | 5 | 5 | 0 | 1 |
+| 68 | (H2O, pyruvate) | 5 | 3 | 2 | 4 |
+| 69 | (Pi, CoA) | 5 | 5 | 0 | 5 |
+| 70 | (reduced adrenodoxin, (H2O, oxidized adrenodoxin)) | 5 | 5 | 0 | 2 |
+| 71 | (reduced electron-transferring flavoprotein, (electron-transferring flavoprotein, H2O)) | 5 | 5 | 0 | 1 |
+| 72 | (UDP-alpha-D-galactose, UDP) | 5 | 5 | 0 | 3 |
+| 73 | (∅, (H2O, Pi)) | 5 | 4 | 1 | 5 |
+| 74 | (∅, CMP) | 5 | 5 | 0 | 4 |
+| 75 | (∅, FUM) | 5 | 4 | 1 | 4 |
+| 76 | ((2OG, Glu), ∅) | 4 | 3 | 1 | 4 |
+| 77 | ((ATP, H2O), (ADP, Pi)) | 4 | 3 | 1 | 4 |
+| 78 | ((ferricytochrome c, H2O), (ferrocytochrome c, H+)) | 4 | 2 | 2 | 3 |
+| 79 | ((H+, NAD(P)H), NAD(P)+) | 4 | 2 | 2 | 4 |
+| 80 | ((H+, NADPH), (NADP+, Pi)) | 4 | 4 | 0 | 3 |
+| 81 | (2OG, (formaldehyde, succinate)) | 4 | 4 | 0 | 1 |
+| 82 | (acyl-CoA, CoA) | 4 | 4 | 0 | 3 |
+| 83 | (ATP, AMP) | 4 | 4 | 0 | 3 |
+| 84 | (dimethylallyl diphosphate, PPi) | 4 | 4 | 0 | 2 |
 | 85 | (dolichyl beta-D-mannosyl phosphate, dolichyl phosphate) | 4 | 4 | 0 | 1 |
-| 86 | (electron-transferring flavoprotein, reduced electron-transferring flavoprotein) | 4 | 3 | 1 | 3 |
-| 87 | (GAP, ∅) | 4 | 2 | 2 | 3 |
-| 88 | (H2O, carboxylate) | 4 | 4 | 0 | 2 |
-| 89 | (H2O, Gly) | 4 | 4 | 0 | 3 |
-| 90 | (Pi, alpha-D-Rib 1-P) | 4 | 3 | 1 | 2 |
-| 91 | (reduced glutaredoxin-like protein, (H2O, oxidized glutaredoxin-like protein)) | 4 | 4 | 0 | 2 |
-| 92 | (S-adenosyl-L-methionine, (5'-deoxyadenosine, Met)) | 4 | 4 | 0 | 3 |
-| 93 | (succinyl-CoA, succinate) | 4 | 4 | 0 | 4 |
-| 94 | (UDP-alpha-D-galactose, UDP) | 4 | 4 | 0 | 2 |
-| 95 | (UDP-alpha-D-kanosamine, UDP) | 4 | 4 | 0 | 1 |
-| 96 | (UDP-N-acetyl-alpha-D-galactosamine, UDP) | 4 | 4 | 0 | 2 |
-| 97 | (UTP, PPi) | 4 | 4 | 0 | 3 |
-| 98 | (∅, dTDP) | 4 | 4 | 0 | 1 |
-| 99 | (∅, UDP) | 4 | 4 | 0 | 4 |
-| 100 | ((ATP, CoA), (AMP, H+, PPi)) | 3 | 3 | 0 | 3 |
-| 101 | ((ATP, formate), (ADP, Pi)) | 3 | 3 | 0 | 2 |
-| 102 | ((ATP, Gln, H2O), (ADP, Glu, H+, Pi)) | 3 | 3 | 0 | 1 |
-| 103 | ((ATP, Gln, H2O), (AMP, Glu, PPi)) | 3 | 3 | 0 | 3 |
-| 104 | ((ATP, H2O), (AMP, Pi)) | 3 | 3 | 0 | 3 |
-| 105 | ((ATP, HCO3), (ADP, Pi)) | 3 | 3 | 0 | 3 |
-| 106 | ((H+, NADPH), (CoA, H2O, NADP+)) | 3 | 3 | 0 | 1 |
-| 107 | ((H2O, NAD(P)H), NAD(P)+) | 3 | 2 | 1 | 3 |
-| 108 | ((H2O, PEP), Pi) | 3 | 3 | 0 | 3 |
-| 109 | ((H2O, PPi), ∅) | 3 | 2 | 1 | 2 |
-| 110 | (2OG, ∅) | 3 | 3 | 0 | 3 |
-| 111 | ([reduced NADPH-hemoprotein reductase], ([oxidized NADPH-hemoprotein reductase], formate, H2O)) | 3 | 3 | 0 | 2 |
-| 112 | (Ac-CoA, ∅) | 3 | 2 | 1 | 3 |
-| 113 | (ADP, AMP) | 3 | 3 | 0 | 2 |
-| 114 | (CTP, CDP) | 3 | 2 | 1 | 3 |
-| 115 | (dimethylallyl diphosphate, PPi) | 3 | 3 | 0 | 2 |
-| 116 | (dolichyl beta-D-glucosyl phosphate, dolichyl phosphate) | 3 | 3 | 0 | 1 |
-| 117 | (Fd_red, Fd_ox) | 3 | 2 | 1 | 3 |
-| 118 | (FMNH2, (FMN, H2O)) | 3 | 2 | 1 | 2 |
-| 119 | (glycyl-tRNA, tRNA) | 3 | 3 | 0 | 1 |
-| 120 | (GTP, GDP) | 3 | 3 | 0 | 3 |
-| 121 | (GTP, PPi) | 3 | 3 | 0 | 3 |
-| 122 | (H+, PPi) | 3 | 3 | 0 | 2 |
-| 123 | (H2O, (formate, PPi)) | 3 | 3 | 0 | 2 |
-| 124 | (H2O, a carboxylate) | 3 | 3 | 0 | 1 |
-| 125 | (H2O, adenine) | 3 | 3 | 0 | 2 |
-| 126 | (H2O, GSH) | 3 | 2 | 1 | 3 |
-| 127 | (H2O, Holo-ACP) | 3 | 3 | 0 | 2 |
-| 128 | (H2O, succinate) | 3 | 3 | 0 | 3 |
-| 129 | (NAD+, H+) | 3 | 3 | 0 | 2 |
-| 130 | (NADPH, (NADP+, Pi)) | 3 | 2 | 1 | 3 |
-| 131 | (phenylpyruvate, Phe) | 3 | 2 | 1 | 3 |
-| 132 | (Pi, GDP) | 3 | 2 | 1 | 2 |
-| 133 | (reduced adrenal ferredoxin, (H2O, oxidized adrenal ferredoxin)) | 3 | 3 | 0 | 1 |
-| 134 | (reduced ferredoxin [Fe-S] cluster, (H2O, oxidized ferredoxin [Fe-S] cluster)) | 3 | 2 | 1 | 2 |
-| 135 | (Ser, CMP) | 3 | 3 | 0 | 2 |
-| 136 | (UDP-alpha-D-glucuronate, UDP) | 3 | 3 | 0 | 1 |
-| 137 | (∅, acetate) | 3 | 3 | 0 | 3 |
-| 138 | (∅, GMP) | 3 | 3 | 0 | 2 |
-| 139 | ((5,10-methylenetetrahydrofolate, H2O), (6S)-THFA) | 2 | 2 | 0 | 2 |
-| 140 | ((6S)-THFA, ∅) | 2 | 2 | 0 | 2 |
-| 141 | (([oxidized NADPH-hemoprotein reductase], [reduced NADPH-hemoprotein reductase]), H2O) | 2 | 1 | 1 | 2 |
-| 142 | ((Ac-CoA, H2O), CoA) | 2 | 2 | 0 | 2 |
-| 143 | ((Ala, ATP), (ADP, Pi)) | 2 | 2 | 0 | 2 |
-| 144 | ((ATP, beta-Ala), (AMP, PPi)) | 2 | 2 | 0 | 1 |
-| 145 | ((ATP, H+, HCO3), (ADP, Pi)) | 2 | 2 | 0 | 2 |
-| 146 | ((CoA, GTP), (GDP, Pi)) | 2 | 2 | 0 | 2 |
-| 147 | ((CoA, NAD+), (H+, NADH)) | 2 | 2 | 0 | 2 |
-| 148 | ((dimethylallyl diphosphate, H2O), PPi) | 2 | 2 | 0 | 1 |
-| 149 | ((ferricytochrome c, H2O), ferrocytochrome c) | 2 | 1 | 1 | 2 |
-| 150 | ((feruloyl-CoA, H2O), CoA) | 2 | 2 | 0 | 1 |
-| 151 | ((formaldehyde, reduced electron-transferring flavoprotein), (electron-transferring flavoprotein, H2O)) | 2 | 2 | 0 | 1 |
-| 152 | ((Glu, GTP), (GDP, Pi)) | 2 | 2 | 0 | 1 |
-| 153 | ((H+, NAD+), NADH) | 2 | 1 | 1 | 2 |
-| 154 | ((H+, NADP+), (H2O, NADPH)) | 2 | 1 | 1 | 2 |
-| 155 | ((H+, NADP+, NADPH), ∅) | 2 | 2 | 0 | 2 |
-| 156 | ((H+, NADPH), (CoA, NADP+)) | 2 | 2 | 0 | 2 |
-| 157 | ((H2O, malonyl-CoA), CoA) | 2 | 2 | 0 | 2 |
-| 158 | ((H2O, NAD+), (2OG, NADH)) | 2 | 2 | 0 | 2 |
-| 159 | ((H2O, NADP+, NADPH), ∅) | 2 | 2 | 0 | 2 |
-| 160 | ((NADP+, NADPH), ∅) | 2 | 1 | 1 | 1 |
-| 161 | ((Pi, thioredoxin), (H2O, thioredoxin disulfide)) | 2 | 2 | 0 | 2 |
-| 162 | (1L-myo-inositol 1-phosphate, CMP) | 2 | 2 | 0 | 2 |
-| 163 | ([reduced NADPH-hemoprotein reductase], ([oxidized NADPH-hemoprotein reductase], H2O, methanol)) | 2 | 2 | 0 | 1 |
-| 164 | (a quinone, reduced quinone) | 2 | 2 | 0 | 1 |
-| 165 | (a reduced electron acceptor, (an oxidized electron acceptor, H2O)) | 2 | 2 | 0 | 2 |
-| 166 | (ACP, H2O) | 2 | 1 | 1 | 1 |
-| 167 | (ADP-L-glycero-D-manno-heptose, (ADP, H+)) | 2 | 2 | 0 | 1 |
-| 168 | (ADP-L-glycero-D-manno-heptose, ADP) | 2 | 2 | 0 | 1 |
-| 169 | (benzoyl-CoA, CoA) | 2 | 2 | 0 | 1 |
-| 170 | (CDP-glycerol, CMP) | 2 | 2 | 0 | 1 |
-| 171 | (CoA, formate) | 2 | 2 | 0 | 2 |
-| 172 | (CoA, glycerolipid) | 2 | 1 | 1 | 1 |
-| 173 | (CoA, L-quinate) | 2 | 1 | 1 | 1 |
-| 174 | (CoA, propanoyl-CoA) | 2 | 2 | 0 | 1 |
-| 175 | (CoA, shikimate) | 2 | 1 | 1 | 1 |
-| 176 | (CoA, succinyl-CoA) | 2 | 2 | 0 | 2 |
-| 177 | (Cys, (H+, H2O)) | 2 | 2 | 0 | 2 |
-| 178 | (diacylglycerol, CMP) | 2 | 2 | 0 | 1 |
-| 179 | (ditrans,octacis-undecaprenyl-P, UMP) | 2 | 2 | 0 | 2 |
-| 180 | (dTTP, PPi) | 2 | 2 | 0 | 2 |
-| 181 | (Fe2+, H+) | 2 | 1 | 1 | 1 |
-| 182 | (ferricytochrome c, (ferrocytochrome c, H+)) | 2 | 2 | 0 | 2 |
-| 183 | (ferricytochrome c, ferrocytochrome c) | 2 | 2 | 0 | 1 |
-| 184 | (formaldehyde, H2O) | 2 | 1 | 1 | 2 |
-| 185 | (formaldehyde, ∅) | 2 | 2 | 0 | 2 |
-| 186 | (Gln, 2-oxoglutaramate) | 2 | 2 | 0 | 1 |
-| 187 | (Gln, Glu) | 2 | 2 | 0 | 2 |
-| 188 | (Glu, ∅) | 2 | 1 | 1 | 2 |
-| 189 | (Gly, (CoA, H+)) | 2 | 2 | 0 | 1 |
-| 190 | (GSH, (GSSG, H2O)) | 2 | 2 | 0 | 1 |
-| 191 | (GSH, ∅) | 2 | 1 | 1 | 2 |
-| 192 | (H2, ∅) | 2 | 2 | 0 | 2 |
-| 193 | (H2O, (AMP, H+)) | 2 | 2 | 0 | 2 |
-| 194 | (H2O, (H+, Pi)) | 2 | 2 | 0 | 2 |
-| 195 | (H2O, 2OBUT) | 2 | 2 | 0 | 2 |
-| 196 | (H2O, Ala) | 2 | 2 | 0 | 1 |
-| 197 | (H2O, an alcohol) | 2 | 2 | 0 | 2 |
-| 198 | (H2O, fatty acid) | 2 | 2 | 0 | 2 |
-| 199 | (H2O, H2S) | 2 | 2 | 0 | 1 |
-| 200 | (H2O, sulfate) | 2 | 2 | 0 | 1 |
-| 201 | (H2O, UDP) | 2 | 2 | 0 | 2 |
-| 202 | (H2S, acetate) | 2 | 2 | 0 | 1 |
-| 203 | (Holo-ACP, CoA) | 2 | 2 | 0 | 1 |
-| 204 | (hv, ∅) | 2 | 2 | 0 | 1 |
-| 205 | (iodide, H2O) | 2 | 2 | 0 | 1 |
-| 206 | (L-ascorbate, (H2O, L-dehydroascorbate)) | 2 | 2 | 0 | 1 |
-| 207 | (menaquinone, menaquinol) | 2 | 2 | 0 | 2 |
-| 208 | (myristoyl-ACP, ACP) | 2 | 2 | 0 | 1 |
-| 209 | (NADH, (formaldehyde, H2O, NAD+)) | 2 | 2 | 0 | 1 |
-| 210 | (NADPH, (formaldehyde, H2O, NADP+)) | 2 | 2 | 0 | 1 |
-| 211 | (oxidized electron-transferring flavoprotein, reduced electron-transferring flavoprotein) | 2 | 2 | 0 | 2 |
-| 212 | (PEP, Pi) | 2 | 2 | 0 | 2 |
-| 213 | (Pi, adenine) | 2 | 2 | 0 | 2 |
-| 214 | (plastoquinone, plastoquinol) | 2 | 2 | 0 | 1 |
-| 215 | (reduced adrenodoxin, (H2O, oxidized adrenodoxin)) | 2 | 2 | 0 | 2 |
-| 216 | (reduced putidaredoxin, (H2O, oxidized putidaredoxin)) | 2 | 2 | 0 | 1 |
-| 217 | (taurine, (CoA, H+)) | 2 | 2 | 0 | 1 |
-| 218 | (thioredoxin, thioredoxin disulfide) | 2 | 2 | 0 | 2 |
-| 219 | (UDP-alpha-N-acetyl-D-glucosamine, (H+, UDP)) | 2 | 2 | 0 | 1 |
-| 220 | (UDP-N-acetyl-alpha-D-glucosamine, UDP) | 2 | 2 | 0 | 1 |
-| 221 | (UQ, UQH2) | 2 | 2 | 0 | 2 |
-| 222 | (∅, ([thyroglobulin]-aminoacrylate, H2O)) | 2 | 2 | 0 | 1 |
-| 223 | (∅, acetaldehyde) | 2 | 2 | 0 | 2 |
-| 224 | (∅, ADP) | 2 | 2 | 0 | 2 |
-| 225 | (∅, formate) | 2 | 2 | 0 | 2 |
-| 226 | (∅, Holo-ACP) | 2 | 2 | 0 | 2 |
-| 227 | (((3R)-3-hydroxymyristoyl-ACP, Holo-ACP), ∅) | 1 | 1 | 0 | 1 |
-| 228 | ((2OG, NADPH), (H2O, NADP+)) | 1 | 1 | 0 | 1 |
-| 229 | ((2OG, reduced acceptor), (acceptor, H2O, succinate)) | 1 | 1 | 0 | 1 |
-| 230 | ((2OG, succinate), ∅) | 1 | 1 | 0 | 1 |
-| 231 | ((3R)-3-hydroxymyristoyl-ACP, Holo-ACP) | 1 | 1 | 0 | 1 |
-| 232 | ((4-coumaroyl-CoA, H2O), CoA) | 1 | 1 | 0 | 1 |
-| 233 | ((5'-deoxyadenosine, Met, S-adenosyl-L-methionine), ∅) | 1 | 1 | 0 | 1 |
-| 234 | ((5,10-methylenetetrahydrofolate, FADH2), FAD) | 1 | 1 | 0 | 1 |
-| 235 | ((5,10-methylenetetrahydrofolate, NADH), ((6S)-THFA, NAD+)) | 1 | 1 | 0 | 1 |
-| 236 | ((5,6,7,8-tetrahydrofolate, electron-transfer flavoprotein), (5,10-methylenetetrahydrofolate, reduced electron-transfer flavoprotein)) | 1 | 1 | 0 | 1 |
-| 237 | ((5,6,7,8-tetrahydropteroyl-tri-L-glutamate, 5-Me-tetrahydropteroyl-(L-Glu)3), ∅) | 1 | 1 | 0 | 1 |
-| 238 | ((5-P-alpha-D-Rib 1-PP, ATP, H2O), (ADP, Pi, PPi)) | 1 | 1 | 0 | 1 |
-| 239 | ((5-P-alpha-D-Rib 1-PP, H+), PPi) | 1 | 1 | 0 | 1 |
-| 240 | (([methyl-Co(III) corrinoid Fe-S protein], CoA), [Co(I) corrinoid Fe-S protein]) | 1 | 1 | 0 | 1 |
-| 241 | ((a protein with a disulfide bond, H2O), a protein with reduced L-cysteine residues) | 1 | 1 | 0 | 1 |
-| 242 | ((a quinone, H2O), a quinol) | 1 | 1 | 0 | 1 |
-| 243 | ((Ac-CoA, CoA), ∅) | 1 | 1 | 0 | 1 |
-| 244 | ((Ac-CoA, H2O), (CoA, H+)) | 1 | 1 | 0 | 1 |
-| 245 | ((acetaldehyde, H2O), H+) | 1 | 1 | 0 | 1 |
-| 246 | ((acetate, H2O), ∅) | 1 | 1 | 0 | 1 |
-| 247 | ((acetate, NADP+, NADPH), ∅) | 1 | 1 | 0 | 1 |
-| 248 | ((acetate, NADPH), NADP+) | 1 | 1 | 0 | 1 |
-| 249 | ((ADP, Pi), (H+[side 1], H2O)) | 1 | 1 | 0 | 1 |
-| 250 | ((ADP-D-ribosyl)n, (ADP-D-ribosyl)n+1) | 1 | 1 | 0 | 1 |
-| 251 | ((AMP, GSSG), GSH) | 1 | 1 | 0 | 1 |
-| 252 | ((an [amino group carrier protein]-C-terminal-L-glutamate, ATP), (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 253 | ((Asp 4-semialdehyde, NADPH), (H2O, NADP+)) | 1 | 1 | 0 | 1 |
-| 254 | ((Asp 4-semialdehyde, NADPH), NADP+) | 1 | 1 | 0 | 1 |
-| 255 | ((Asp, ATP), (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 256 | ((Asp, ATP), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 257 | ((Asp, GTP), (GDP, Pi)) | 1 | 1 | 0 | 1 |
-| 258 | ((ATP, beta-Ala), (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 259 | ((ATP, Co2+, H2O), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
-| 260 | ((ATP, Fd_red, H+, H2O), (ADP, Fd_ox, H2, Pi)) | 1 | 1 | 0 | 1 |
-| 261 | ((ATP, Fd_red, H2O), (ADP, Fd_ox, Pi)) | 1 | 1 | 0 | 1 |
-| 262 | ((ATP, Gln), (ADP, Glu, Pi)) | 1 | 1 | 0 | 1 |
-| 263 | ((ATP, Gln, H2O), (ADP, Glu, H+)) | 1 | 1 | 0 | 1 |
-| 264 | ((ATP, Gln, H2O), (ADP, Glu, Pi)) | 1 | 1 | 0 | 1 |
-| 265 | ((ATP, Gln, H2O), (AMP, Glu, H+, PPi)) | 1 | 1 | 0 | 1 |
-| 266 | ((ATP, Glu), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
-| 267 | ((ATP, Glu-tRNAGln), (ADP, Gln-tRNAGln, Pi)) | 1 | 1 | 0 | 1 |
-| 268 | ((ATP, Gly), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
-| 269 | ((ATP, Gly), (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 270 | ((ATP, H+), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 271 | ((ATP, H+, reduced electron-transferring flavoprotein), (ADP, electron-transferring flavoprotein, Pi)) | 1 | 1 | 0 | 1 |
-| 272 | ((ATP, H+, tRNAGlu), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 273 | ((ATP, H2O), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
-| 274 | ((ATP, H2O), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 275 | ((ATP, H2O), (Pi, PPi)) | 1 | 1 | 0 | 1 |
-| 276 | ((ATP, H2O, HCO3), (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 277 | ((ATP, H2O, MG2+), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
-| 278 | ((ATP, H2O, N2-citryl-N6-acetyl-N6-hydroxy-L-lysine), (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 279 | ((ATP, HCO3), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
-| 280 | ((ATP, HCO3), (ADP, H2O)) | 1 | 1 | 0 | 1 |
-| 281 | ((ATP, Holo-ACP), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 282 | ((ATP, meso-diaminopimelate), (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 283 | ((ATP, Pi), (AMP, H+, PPi)) | 1 | 1 | 0 | 1 |
-| 284 | ((ATP, Pi), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 285 | ((ATP, Ser), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 286 | ((ATP, tRNAAsx), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 287 | ((ATP, tRNALeu), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 288 | ((ATP, tRNALys), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 289 | ((ATP, tRNAPhe), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 290 | ((ATP, tRNAThr), (AMP, PPi)) | 1 | 1 | 0 | 1 |
-| 291 | ((chlorophyllide, H2O), ∅) | 1 | 1 | 0 | 1 |
-| 292 | ((Co2+, H+), ∅) | 1 | 1 | 0 | 1 |
-| 293 | ((CoA, Fd_ox), (Fd_red, H+)) | 1 | 1 | 0 | 1 |
-| 294 | ((CoA, H2O), malonyl-CoA) | 1 | 1 | 0 | 1 |
-| 295 | ((CoA, H2O, NAD+), (HCO3, NADH)) | 1 | 1 | 0 | 1 |
-| 296 | ((CoA, NAD+), (Ac-CoA, NADH)) | 1 | 1 | 0 | 1 |
-| 297 | ((CoA, Pi), ∅) | 1 | 1 | 0 | 1 |
-| 298 | ((CTP, Cys), (CMP, H+, PPi)) | 1 | 1 | 0 | 1 |
-| 299 | ((Cys, H+), (Ala, H2O)) | 1 | 1 | 0 | 1 |
-| 300 | ((electron acceptor, H2O), reduced electron acceptor) | 1 | 1 | 0 | 1 |
-| 301 | ((electron-transfer flavoprotein, H2O), (formaldehyde, reduced electron-transfer flavoprotein)) | 1 | 1 | 0 | 1 |
-| 302 | ((F420 (ox), H+, reduced ferredoxin [Fe-S] cluster), (oxidized ferredoxin [Fe-S] cluster, reduced coenzyme F420)) | 1 | 1 | 0 | 1 |
-| 303 | ((FAD, H+), FADH2) | 1 | 1 | 0 | 1 |
-| 304 | ((ferricytochrome b1, H2O), ferrocytochrome b1) | 1 | 1 | 0 | 1 |
-| 305 | ((ferrocytochrome b5, H+), (ferricytochrome b5, H2O)) | 1 | 1 | 0 | 1 |
-| 306 | ((GAP, H+), ∅) | 1 | 1 | 0 | 1 |
-| 307 | ((Gln, H2O), (Glu, PPi)) | 1 | 1 | 0 | 1 |
-| 308 | ((Glu, reduced acceptor), (H2O, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
-| 309 | ((Gly, H2O), (6S)-THFA) | 1 | 1 | 0 | 1 |
-| 310 | ((GTP, H+), PPi) | 1 | 1 | 0 | 1 |
-| 311 | ((H+, H2O), ethylamine) | 1 | 1 | 0 | 1 |
-| 312 | ((H+, H2O), PPi) | 1 | 1 | 0 | 1 |
-| 313 | ((H+, H2O, NADH), NAD+) | 1 | 1 | 0 | 1 |
-| 314 | ((H+, H2O, NADP+), NADPH) | 1 | 1 | 0 | 1 |
-| 315 | ((H+, HCO3), ∅) | 1 | 1 | 0 | 1 |
-| 316 | ((H+, L-ascorbate), (H2O, L-dehydroascorbate)) | 1 | 1 | 0 | 1 |
-| 317 | ((H+, malonyl-CoA, NADPH), (CoA, H2O, NADP+)) | 1 | 1 | 0 | 1 |
-| 318 | ((H+, NAD(P)H), (H2O, NAD(P)+)) | 1 | 1 | 0 | 1 |
-| 319 | ((H+, NADPH), NAD(P)+) | 1 | 1 | 0 | 1 |
-| 320 | ((H+, oxidized electron-transferring flavoprotein), reduced electron-transferring flavoprotein) | 1 | 1 | 0 | 1 |
-| 321 | ((H+, PPPi), H2O) | 1 | 1 | 0 | 1 |
-| 322 | ((H+, reduced electron acceptor), oxidized electron acceptor) | 1 | 1 | 0 | 1 |
-| 323 | ((H+, reduced ferredoxin [Fe-S] cluster), (formate, oxidized ferredoxin [Fe-S] cluster)) | 1 | 1 | 0 | 1 |
-| 324 | ((H+, reduced ferredoxin [Fe-S] cluster), (H2, oxidized ferredoxin [Fe-S] cluster)) | 1 | 1 | 0 | 1 |
-| 325 | ((H+, S, S-adenosyl-L-methionine), (5'-deoxyadenosine, Met)) | 1 | 1 | 0 | 1 |
-| 326 | ((H+, Ser), CoA) | 1 | 1 | 0 | 1 |
-| 327 | ((H+, succinyl-CoA), CoA) | 1 | 1 | 0 | 1 |
-| 328 | ((H+, sulfite), ∅) | 1 | 1 | 0 | 1 |
-| 329 | ((H+[side 1], H2O), (H+[side 2], Pi)) | 1 | 1 | 0 | 1 |
-| 330 | ((H+[side 1], NADH), NAD+) | 1 | 1 | 0 | 1 |
-| 331 | ((H2O, methanol), ∅) | 1 | 1 | 0 | 1 |
-| 332 | ((H2O, NAD+), (Glu, NADH)) | 1 | 1 | 0 | 1 |
-| 333 | ((H2O, NAD+), H+) | 1 | 1 | 0 | 1 |
-| 334 | ((H2O, NADP+), (Glu, NADPH)) | 1 | 1 | 0 | 1 |
-| 335 | ((H2O, oxidized azurin), (H+, reduced azurin)) | 1 | 1 | 0 | 1 |
-| 336 | ((H2O, oxidized electron acceptor), (H+, reduced electron acceptor)) | 1 | 1 | 0 | 1 |
-| 337 | ((H2O, oxidized electron acceptor, reduced electron acceptor), H+) | 1 | 1 | 0 | 1 |
-| 338 | ((H2O, oxidized electron donor), reduced electron acceptor) | 1 | 1 | 0 | 1 |
-| 339 | ((H2O, peptidyl-4-carboxyglutamate), peptidyl-glutamate) | 1 | 1 | 0 | 1 |
-| 340 | ((H2O, S-adenosyl-L-methionine), (acetate, H+, S-adenosyl-L-homocysteine)) | 1 | 1 | 0 | 1 |
-| 341 | ((H2O, S-adenosyl-L-methionine), (HCO3, Met)) | 1 | 1 | 0 | 1 |
-| 342 | ((H2O, succinyl-CoA), CoA) | 1 | 1 | 0 | 1 |
-| 343 | ((malonyl-CoA, polyketide-[acp]), CoA) | 1 | 1 | 0 | 1 |
-| 344 | ((NAD+, Pi), NADH) | 1 | 1 | 0 | 1 |
-| 345 | ((reduced acceptor, S-adenosyl-L-methionine), (5'-deoxyadenosine, acceptor, Met)) | 1 | 1 | 0 | 1 |
-| 346 | ((reduced electron acceptor, S-adenosyl-L-methionine), (4-methylphenol, 5'-deoxyadenosine, Met, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
-| 347 | ((reduced electron acceptor, S-adenosyl-L-methionine), (5'-deoxyadenosine, acetate, H+, Met, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
-| 348 | ((S, S-adenosyl-L-methionine), (5'-deoxyadenosyl radical, Met)) | 1 | 1 | 0 | 1 |
-| 349 | (1,2,3,5-tetrahydroxybenzene, 1,2,3,5-tetrahydroxybenzene) | 1 | 1 | 0 | 1 |
-| 350 | (1-deoxy-Xyl 5-P, (H+, H2O, Pi)) | 1 | 1 | 0 | 1 |
-| 351 | (10-formyltetrahydrofolate, ((6S)-THFA, H+)) | 1 | 1 | 0 | 1 |
-| 352 | (10-formyltetrahydrofolate, (6S)-THFA) | 1 | 1 | 0 | 1 |
-| 353 | (2OG, (Glu, H2O)) | 1 | 1 | 0 | 1 |
-| 354 | (2OG, (succinate, sulfite)) | 1 | 1 | 0 | 1 |
-| 355 | (2OG, D-Glu) | 1 | 1 | 0 | 1 |
-| 356 | (3'-phosphoadenylylsulfate, adenosine 3',5'-bisphosphate) | 1 | 1 | 0 | 1 |
-| 357 | (4-coumaroyl-CoA, CoA) | 1 | 1 | 0 | 1 |
-| 358 | (4-Methylthio-2-oxobutanoate, D-Met) | 1 | 1 | 0 | 1 |
-| 359 | (5,10-methylenetetrahydrofolate, DHF) | 1 | 1 | 0 | 1 |
-| 360 | (5-methyl-THF, THF) | 1 | 1 | 0 | 1 |
-| 361 | ([(1->4)-beta-D-mannuronosyl]n, GDP) | 1 | 1 | 0 | 1 |
-| 362 | ([ADP-thiazole synthase]-L-cysteine, ([ADP-thiazole synthase]-dehydroalanine, H2O, nicotinamide)) | 1 | 1 | 0 | 1 |
-| 363 | ([Co(I) corrinoid Fe-S protein], [methyl-Co(III) corrinoid Fe-S protein]) | 1 | 1 | 0 | 1 |
-| 364 | ([corrinoid adenosyltransferase], ∅) | 1 | 1 | 0 | 1 |
-| 365 | ([cysteine desulfurase]-Cys-SSH, (AMP, cysteine desulfurase)) | 1 | 1 | 0 | 1 |
-| 366 | ([enzyme]-cysteine, [enzyme]-S-sulfanylcysteine) | 1 | 1 | 0 | 1 |
-| 367 | ([ThiI]-cysteine, Ala) | 1 | 1 | 0 | 1 |
-| 368 | (a 2-oxo carboxylate, an amino acid) | 1 | 1 | 0 | 1 |
-| 369 | (a 2-oxo carboxylate, an L-amino acid) | 1 | 1 | 0 | 1 |
-| 370 | (a 5,6,7,8-tetrahydropteridine, a 4a-hydroxy-5,6,7,8-tetrahydropteridine) | 1 | 1 | 0 | 1 |
-| 371 | (a protein with a disulfide bond, a protein with reduced L-cysteine residues) | 1 | 1 | 0 | 1 |
-| 372 | (a reduced acceptor, (an acceptor, H2O)) | 1 | 1 | 0 | 1 |
-| 373 | (a reduced flavoprotein, an oxidized flavoprotein) | 1 | 1 | 0 | 1 |
-| 374 | (Ac-CoA, malonyl-CoA) | 1 | 1 | 0 | 1 |
-| 375 | (AcAc, acetoacetyl-CoA) | 1 | 1 | 0 | 1 |
-| 376 | (ADP, (AMP, H+)) | 1 | 1 | 0 | 1 |
-| 377 | (ADP, Pi) | 1 | 1 | 0 | 1 |
-| 378 | (ADP, PPi) | 1 | 1 | 0 | 1 |
-| 379 | (ADP-Rib, H2O) | 1 | 1 | 0 | 1 |
-| 380 | (AH2, (A, H2O)) | 1 | 1 | 0 | 1 |
-| 381 | (AH2, (H2O, oxidized acceptor)) | 1 | 1 | 0 | 1 |
-| 382 | (an [oxidized hydrogenase], a [reduced hydrogenase]) | 1 | 1 | 0 | 1 |
-| 383 | (an all-trans-polyprenyl PP, PPi) | 1 | 1 | 0 | 1 |
-| 384 | (Arg, L-ornithine) | 1 | 1 | 0 | 1 |
-| 385 | (Asp, (H+, Pi)) | 1 | 1 | 0 | 1 |
-| 386 | (Asp, ∅) | 1 | 1 | 0 | 1 |
-| 387 | (Asp 4-semialdehyde, 2,3-dioxopropyl phosphate) | 1 | 1 | 0 | 1 |
-| 388 | (ATP, ([corrinoid adenosyltransferase], PPPi)) | 1 | 1 | 0 | 1 |
-| 389 | (ATP, (ADP, H2O, Pi)) | 1 | 1 | 0 | 1 |
-| 390 | (ATP, (AMP, H+)) | 1 | 1 | 0 | 1 |
-| 391 | (ATP, ∅) | 1 | 1 | 0 | 1 |
-| 392 | (CDP-diacylglycerol, CMP) | 1 | 1 | 0 | 1 |
-| 393 | (CMP-alpha-Kdo, CMP) | 1 | 1 | 0 | 1 |
-| 394 | (CN-, NCS-) | 1 | 1 | 0 | 1 |
-| 395 | (CoA, D-Ala) | 1 | 1 | 0 | 1 |
-| 396 | (CoA-[4'-phosphopantetheine], adenosine 3',5'-bisphosphate) | 1 | 1 | 0 | 1 |
-| 397 | (CP, Pi) | 1 | 1 | 0 | 1 |
-| 398 | (CTP, (H+, PPi)) | 1 | 1 | 0 | 1 |
-| 399 | (Cys, succinate) | 1 | 1 | 0 | 1 |
-| 400 | (Deamido-NMN, (H+, nicotinate)) | 1 | 1 | 0 | 1 |
-| 401 | (demethylated methyl acceptor, methylated methyl acceptor) | 1 | 1 | 0 | 1 |
-| 402 | (DHAP, (H2O, Pi)) | 1 | 1 | 0 | 1 |
-| 403 | (dimethylallyl-PP, PPi) | 1 | 1 | 0 | 1 |
-| 404 | (DNA, DNA containing 5-methylcytosine) | 1 | 1 | 0 | 1 |
-| 405 | (Dodecanoyl-ACP, Holo-ACP) | 1 | 1 | 0 | 1 |
-| 406 | (dTDP-2-deoxy-beta-L-fucose, dTDP) | 1 | 1 | 0 | 1 |
-| 407 | (dTDP-beta-L-rhamnose, dTDP) | 1 | 1 | 0 | 1 |
-| 408 | (dTDP-beta-L-rhodosamine, dTDP) | 1 | 1 | 0 | 1 |
-| 409 | (dTDP-L-daunosamine, dTDP) | 1 | 1 | 0 | 1 |
-| 410 | (dTDP-L-rhamnose, dTDP) | 1 | 1 | 0 | 1 |
-| 411 | (dTDP-L-rhodinose, (dTDP, H+)) | 1 | 1 | 0 | 1 |
-| 412 | (E4P, ∅) | 1 | 1 | 0 | 1 |
-| 413 | (electron-transfer flavoprotein, (H+, reduced electron-transfer flavoprotein)) | 1 | 1 | 0 | 1 |
-| 414 | (F420 (ox), ∅) | 1 | 1 | 0 | 1 |
-| 415 | (FADH2, (FAD, H+, H2O)) | 1 | 1 | 0 | 1 |
-| 416 | (FADH2, (FAD, H2O)) | 1 | 1 | 0 | 1 |
-| 417 | (Fd_ox, (Fd_red, H+)) | 1 | 1 | 0 | 1 |
-| 418 | (Fd_ox, (Fd_red, H2O)) | 1 | 1 | 0 | 1 |
-| 419 | (FDP, ∅) | 1 | 1 | 0 | 1 |
-| 420 | (ferrocytochrome b5, (ferricytochrome b5, H2O)) | 1 | 1 | 0 | 1 |
-| 421 | (GAP, E4P) | 1 | 1 | 0 | 1 |
-| 422 | (GDP-beta-L-fucose, GDP) | 1 | 1 | 0 | 1 |
-| 423 | (geranylgeranyl diphosphate, PPi) | 1 | 1 | 0 | 1 |
-| 424 | (Gln, (5-amino-1-(5-phospho-beta-D-ribosyl)imidazole-4-carboxamide, Glu)) | 1 | 1 | 0 | 1 |
-| 425 | (Gln, (Glu, H2O, Pi)) | 1 | 1 | 0 | 1 |
-| 426 | (Gln, (Glu, pyruvate)) | 1 | 1 | 0 | 1 |
-| 427 | (GLX, ∅) | 1 | 1 | 0 | 1 |
-| 428 | (GSH, HX) | 1 | 1 | 0 | 1 |
-| 429 | (GTP, (GDP, H+)) | 1 | 1 | 0 | 1 |
-| 430 | (H+, Bn) | 1 | 1 | 0 | 1 |
-| 431 | (H+[side 1], H+[side 2]) | 1 | 1 | 0 | 1 |
-| 432 | (H+[side 1], H2O) | 1 | 1 | 0 | 1 |
-| 433 | (H2O, (acetaldehyde, H+, PPPi)) | 1 | 1 | 0 | 1 |
-| 434 | (H2O, (adenosine, H+)) | 1 | 1 | 0 | 1 |
-| 435 | (H2O, (Cl-, H+)) | 1 | 1 | 0 | 1 |
-| 436 | (H2O, (CoA, H+)) | 1 | 1 | 0 | 1 |
-| 437 | (H2O, (D-Ala, ditrans,octacis-undecaprenyl-PP)) | 1 | 1 | 0 | 1 |
-| 438 | (H2O, (D-Rib 5-P, H+)) | 1 | 1 | 0 | 1 |
-| 439 | (H2O, (formate, H+)) | 1 | 1 | 0 | 1 |
-| 440 | (H2O, (H+, PPi)) | 1 | 1 | 0 | 1 |
-| 441 | (H2O, (H+, pyruvate)) | 1 | 1 | 0 | 1 |
-| 442 | (H2O, (H+, sulfite)) | 1 | 1 | 0 | 1 |
-| 443 | (H2O, 1-amino-2-propanol) | 1 | 1 | 0 | 1 |
-| 444 | (H2O, 3-APA) | 1 | 1 | 0 | 1 |
-| 445 | (H2O, 4'-phosphopantetheine) | 1 | 1 | 0 | 1 |
-| 446 | (H2O, [amino group carrier protein]-C-terminal-L-glutamate) | 1 | 1 | 0 | 1 |
-| 447 | (H2O, a phosphatidate) | 1 | 1 | 0 | 1 |
-| 448 | (H2O, adenosine) | 1 | 1 | 0 | 1 |
-| 449 | (H2O, AMP) | 1 | 1 | 0 | 1 |
-| 450 | (H2O, beta-D-GalNAc) | 1 | 1 | 0 | 1 |
-| 451 | (H2O, beta-D-Glc 6-P) | 1 | 1 | 0 | 1 |
-| 452 | (H2O, beta-D-glucose) | 1 | 1 | 0 | 1 |
-| 453 | (H2O, beta-D-N-acetylgalactosamine-6-O-sulfate) | 1 | 1 | 0 | 1 |
-| 454 | (H2O, bisulfite) | 1 | 1 | 0 | 1 |
-| 455 | (H2O, choline) | 1 | 1 | 0 | 1 |
-| 456 | (H2O, formamide) | 1 | 1 | 0 | 1 |
-| 457 | (H2O, Fru) | 1 | 1 | 0 | 1 |
-| 458 | (H2O, GMP) | 1 | 1 | 0 | 1 |
-| 459 | (H2O, linear malto-oligosaccharide [(Glc)n-2]) | 1 | 1 | 0 | 1 |
-| 460 | (H2O, phenol) | 1 | 1 | 0 | 1 |
-| 461 | (H2O, PPPi) | 1 | 1 | 0 | 1 |
-| 462 | (H2O, UMP) | 1 | 1 | 0 | 1 |
-| 463 | (H2S, Pi) | 1 | 1 | 0 | 1 |
-| 464 | (Ile, (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 465 | (L-Amino acid, ∅) | 1 | 1 | 0 | 1 |
-| 466 | (L-carnitine, gamma-butyrobetaine) | 1 | 1 | 0 | 1 |
-| 467 | (L-cysteinyl-[PqsC protein], CoA) | 1 | 1 | 0 | 1 |
-| 468 | (L-cysteinyl-[PqsD protein], CoA) | 1 | 1 | 0 | 1 |
-| 469 | (L-ornithine, H2O) | 1 | 1 | 0 | 1 |
-| 470 | (L-selenocysteine, Met) | 1 | 1 | 0 | 1 |
-| 471 | (Leu, (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 472 | (Malonyl-ACP, ACP) | 1 | 1 | 0 | 1 |
-| 473 | (malonyl-CoA, L-cysteinyl-[PqsD protein]) | 1 | 1 | 0 | 1 |
-| 474 | (maltodextrin, maltooligosaccharides) | 1 | 1 | 0 | 1 |
-| 475 | (maltotriose, maltose) | 1 | 1 | 0 | 1 |
-| 476 | (methyl-CoM, methane) | 1 | 1 | 0 | 1 |
-| 477 | (molybdate, AMP) | 1 | 1 | 0 | 1 |
-| 478 | (myo-Ins, (CMP, H+)) | 1 | 1 | 0 | 1 |
-| 479 | (N-acetyl-L-cysteine, H2O) | 1 | 1 | 0 | 1 |
-| 480 | (N1-(5-phospho-D-ribosyl)glycinamide, (H+, N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide)) | 1 | 1 | 0 | 1 |
-| 481 | (NAD(P)H, (NAD(P)+, PPi)) | 1 | 1 | 0 | 1 |
-| 482 | (NADPH, (H+, NADP+)) | 1 | 1 | 0 | 1 |
-| 483 | (NADPH, (NADP+, tRNAGlu)) | 1 | 1 | 0 | 1 |
-| 484 | (NADPH, H2O) | 1 | 1 | 0 | 1 |
-| 485 | (NADPH, NADH) | 1 | 1 | 0 | 1 |
-| 486 | (NDP-Glc, NDP) | 1 | 1 | 0 | 1 |
-| 487 | (OAA, 2OG) | 1 | 1 | 0 | 1 |
-| 488 | (oxidized azurin, (H+, reduced azurin)) | 1 | 1 | 0 | 1 |
-| 489 | (oxidized electron acceptor, reduced acceptor) | 1 | 1 | 0 | 1 |
-| 490 | (palmitoleoyl-ACP, Holo-ACP) | 1 | 1 | 0 | 1 |
-| 491 | (PEP, pyruvate) | 1 | 1 | 0 | 1 |
-| 492 | (peptidoglycan, ditrans,octacis-undecaprenyl-P) | 1 | 1 | 0 | 1 |
-| 493 | (phytyl-PP, PPi) | 1 | 1 | 0 | 1 |
-| 494 | (Pi, (acetyl phosphate, H+)) | 1 | 1 | 0 | 1 |
-| 495 | (Pi, Gua) | 1 | 1 | 0 | 1 |
-| 496 | (Pi, hypoxanthine) | 1 | 1 | 0 | 1 |
-| 497 | (Pi, uracil) | 1 | 1 | 0 | 1 |
-| 498 | (PPi, (AMP, ATP)) | 1 | 1 | 0 | 1 |
-| 499 | (PPi, (H+, phytyl-PP)) | 1 | 1 | 0 | 1 |
-| 500 | (PPi, Pi) | 1 | 1 | 0 | 1 |
-| 501 | (propanoyl-CoA, propanoate) | 1 | 1 | 0 | 1 |
-| 502 | (protein, AMP) | 1 | 1 | 0 | 1 |
-| 503 | (protein, ∅) | 1 | 1 | 0 | 1 |
-| 504 | (Protein Npi-phosphohistidine, protein histidine) | 1 | 1 | 0 | 1 |
-| 505 | (pyrroloquinoline quinone, PQQH) | 1 | 1 | 0 | 1 |
-| 506 | (red. thioredoxin, (adenosine 3',5'-bisphosphate, ox. thioredoxin)) | 1 | 1 | 0 | 1 |
-| 507 | (reduced [NADPH-hemoprotein reductase], (H2O, oxidized [NADPH-hemoprotein reductase])) | 1 | 1 | 0 | 1 |
-| 508 | (reduced acceptor, oxidized acceptor) | 1 | 1 | 0 | 1 |
-| 509 | (reduced adrenodoxin, (4-methylpentanal, H2O, oxidized adrenodoxin)) | 1 | 1 | 0 | 1 |
-| 510 | (reduced coenzyme F420, F420 (ox)) | 1 | 1 | 0 | 1 |
-| 511 | (reduced electron acceptor, (AMP, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
-| 512 | (reduced electron acceptor, (CO, Fe2+, H2O, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
-| 513 | (reduced electron-transferring flavoprotein, oxidized electron transfer flavoprotein) | 1 | 1 | 0 | 1 |
-| 514 | (reduced ferredoxin [Fe-S] cluster, ([Thil]-L-cysteine, AMP, oxidized ferredoxin [Fe-S] cluster)) | 1 | 1 | 0 | 1 |
-| 515 | (reduced NADPH-hemoprotein reductase, H2O) | 1 | 1 | 0 | 1 |
-| 516 | (RX, HX) | 1 | 1 | 0 | 1 |
-| 517 | (S-adenosyl-L-methionine, (5'-deoxyadenosine, CO, formate, Met)) | 1 | 1 | 0 | 1 |
-| 518 | (S-adenosyl-L-methionine, S-adenosyl-4-methylthio-2-oxobutanoate) | 1 | 1 | 0 | 1 |
-| 519 | (Ser, (CMP, H+)) | 1 | 1 | 0 | 1 |
-| 520 | (Ser, (Gly, H2O)) | 1 | 1 | 0 | 1 |
-| 521 | (Ser, H2O) | 1 | 1 | 0 | 1 |
-| 522 | (Ser, HPR) | 1 | 1 | 0 | 1 |
-| 523 | (succinyl-CoA, (CoA, H+)) | 1 | 1 | 0 | 1 |
-| 524 | (sulfite, H2O) | 1 | 1 | 0 | 1 |
-| 525 | (sulfite, H2S) | 1 | 1 | 0 | 1 |
-| 526 | (sulfite, Pi) | 1 | 1 | 0 | 1 |
-| 527 | (tetrahydrobiopterin, 4a-hydroxy-tetrahydrobiopterin) | 1 | 1 | 0 | 1 |
-| 528 | (tetrahydrobiopterin, 4a-hydroxytetrahydrobiopterin) | 1 | 1 | 0 | 1 |
-| 529 | (tetrahydrobiopterin, ∅) | 1 | 1 | 0 | 1 |
-| 530 | (tropic acid, H2O) | 1 | 1 | 0 | 1 |
-| 531 | (tryptamine, H2O) | 1 | 1 | 0 | 1 |
-| 532 | (UDP-alpha-D-xylose, UDP) | 1 | 1 | 0 | 1 |
-| 533 | (UDP-alpha-N-acetyl-D-glucosamine, UDP) | 1 | 1 | 0 | 1 |
-| 534 | (UDP-alpha-N-acetyl-D-glucosamine, UMP) | 1 | 1 | 0 | 1 |
-| 535 | (UDP-beta-L-rhamnose, UDP) | 1 | 1 | 0 | 1 |
-| 536 | (UDP-Gal, UDP) | 1 | 1 | 0 | 1 |
-| 537 | (UDP-Glc, (H+, UDP)) | 1 | 1 | 0 | 1 |
-| 538 | (UDP-glucuronate, UDP) | 1 | 1 | 0 | 1 |
-| 539 | (∅, ([acyl-carrier protein], CoA, H2O)) | 1 | 1 | 0 | 1 |
-| 540 | (∅, (ADP, ATP)) | 1 | 1 | 0 | 1 |
-| 541 | (∅, (ADP, Pi)) | 1 | 1 | 0 | 1 |
-| 542 | (∅, (alpha-D-Rib 1-P, Pi)) | 1 | 1 | 0 | 1 |
-| 543 | (∅, (ATP, H2O)) | 1 | 1 | 0 | 1 |
-| 544 | (∅, (CMP, H+)) | 1 | 1 | 0 | 1 |
-| 545 | (∅, (CoA, H+, NAD+, NADH)) | 1 | 1 | 0 | 1 |
-| 546 | (∅, (CoA, H2O, malonyl-CoA)) | 1 | 1 | 0 | 1 |
-| 547 | (∅, (D-glucose, H2O)) | 1 | 1 | 0 | 1 |
-| 548 | (∅, (dialuric acid, E4P)) | 1 | 1 | 0 | 1 |
-| 549 | (∅, (ditrans,octacis-undecaprenyl-PP, H+)) | 1 | 1 | 0 | 1 |
-| 550 | (∅, (E4P, unknown substance)) | 1 | 1 | 0 | 1 |
-| 551 | (∅, (GDP, H+)) | 1 | 1 | 0 | 1 |
-| 552 | (∅, (H+, H2O, polyketide-[acp])) | 1 | 1 | 0 | 1 |
-| 553 | (∅, (H+, L-Amino acid)) | 1 | 1 | 0 | 1 |
-| 554 | (∅, (H+, NAD+, NADH)) | 1 | 1 | 0 | 1 |
-| 555 | (∅, (H+, pyruvate)) | 1 | 1 | 0 | 1 |
-| 556 | (∅, (H+, UDP)) | 1 | 1 | 0 | 1 |
-| 557 | (∅, (H2O, hypoxanthine)) | 1 | 1 | 0 | 1 |
-| 558 | (∅, (H2O, L-ascorbate)) | 1 | 1 | 0 | 1 |
-| 559 | (∅, 2-oxoisovalerate) | 1 | 1 | 0 | 1 |
-| 560 | (∅, 5-oxo-L-proline) | 1 | 1 | 0 | 1 |
-| 561 | (∅, [acyl-carrier protein]) | 1 | 1 | 0 | 1 |
-| 562 | (∅, [dermatan sulfate]n-1) | 1 | 1 | 0 | 1 |
-| 563 | (∅, BtrI acyl-carrier protein) | 1 | 1 | 0 | 1 |
-| 564 | (∅, Cl-) | 1 | 1 | 0 | 1 |
-| 565 | (∅, DHPTD) | 1 | 1 | 0 | 1 |
-| 566 | (∅, ethanolamine) | 1 | 1 | 0 | 1 |
-| 567 | (∅, Gly) | 1 | 1 | 0 | 1 |
-| 568 | (∅, glycolaldehyde) | 1 | 1 | 0 | 1 |
-| 569 | (∅, glycolaldehyde-P) | 1 | 1 | 0 | 1 |
-| 570 | (∅, glycolaldehyde-PPP) | 1 | 1 | 0 | 1 |
-| 571 | (∅, L-cysteinyl-[PqsC protein]) | 1 | 1 | 0 | 1 |
-| 572 | (∅, linear maltodextrin) | 1 | 1 | 0 | 1 |
-| 573 | (∅, methanofuran) | 1 | 1 | 0 | 1 |
-| 574 | (∅, molybdopterin-synthase sulfur-carrier protein) | 1 | 1 | 0 | 1 |
-| 575 | (∅, NADH) | 1 | 1 | 0 | 1 |
-| 576 | (∅, Phosphorylethanolamine) | 1 | 1 | 0 | 1 |
-| 577 | (∅, PPPi) | 1 | 1 | 0 | 1 |
-| 578 | (∅, S-methyl-5'-thioadenosine) | 1 | 1 | 0 | 1 |
-| 579 | (∅, UMP) | 1 | 1 | 0 | 1 |
-| 580 | (∅, UREA) | 1 | 1 | 0 | 1 |
+| 86 | (GAP, ∅) | 4 | 2 | 2 | 3 |
+| 87 | (H2O, Gly) | 4 | 4 | 0 | 3 |
+| 88 | (Pi, alpha-D-Rib 1-P) | 4 | 3 | 1 | 2 |
+| 89 | (reduced glutaredoxin-like protein, (H2O, oxidized glutaredoxin-like protein)) | 4 | 4 | 0 | 2 |
+| 90 | (S-adenosyl-L-methionine, (5'-deoxyadenosine, Met)) | 4 | 4 | 0 | 3 |
+| 91 | (succinyl-CoA, succinate) | 4 | 4 | 0 | 4 |
+| 92 | (UDP-alpha-D-glucuronate, UDP) | 4 | 4 | 0 | 2 |
+| 93 | (UDP-alpha-D-kanosamine, UDP) | 4 | 4 | 0 | 1 |
+| 94 | (UDP-N-acetyl-alpha-D-galactosamine, UDP) | 4 | 4 | 0 | 2 |
+| 95 | (UTP, PPi) | 4 | 4 | 0 | 3 |
+| 96 | (∅, dTDP) | 4 | 4 | 0 | 1 |
+| 97 | (∅, UDP) | 4 | 4 | 0 | 4 |
+| 98 | ((ATP, CoA), (AMP, H+, PPi)) | 3 | 3 | 0 | 3 |
+| 99 | ((ATP, formate), (ADP, Pi)) | 3 | 3 | 0 | 2 |
+| 100 | ((ATP, Gln, H2O), (ADP, Glu, H+, Pi)) | 3 | 3 | 0 | 1 |
+| 101 | ((ATP, Gln, H2O), (AMP, Glu, PPi)) | 3 | 3 | 0 | 3 |
+| 102 | ((ATP, H2O), (AMP, Pi)) | 3 | 3 | 0 | 3 |
+| 103 | ((ATP, HCO3), (ADP, Pi)) | 3 | 3 | 0 | 3 |
+| 104 | ((formaldehyde, reduced electron-transferring flavoprotein), (electron-transferring flavoprotein, H2O)) | 3 | 2 | 1 | 2 |
+| 105 | ((H+, NADPH), (CoA, H2O, NADP+)) | 3 | 3 | 0 | 1 |
+| 106 | ((H2O, NAD(P)H), NAD(P)+) | 3 | 2 | 1 | 3 |
+| 107 | ((H2O, PEP), Pi) | 3 | 3 | 0 | 3 |
+| 108 | ((H2O, PPi), ∅) | 3 | 2 | 1 | 2 |
+| 109 | (2OG, ∅) | 3 | 3 | 0 | 3 |
+| 110 | ([reduced NADPH-hemoprotein reductase], ([oxidized NADPH-hemoprotein reductase], formate, H2O)) | 3 | 3 | 0 | 2 |
+| 111 | (Ac-CoA, ∅) | 3 | 2 | 1 | 3 |
+| 112 | (ADP, AMP) | 3 | 3 | 0 | 2 |
+| 113 | (CTP, CDP) | 3 | 2 | 1 | 3 |
+| 114 | (dolichyl beta-D-glucosyl phosphate, dolichyl phosphate) | 3 | 3 | 0 | 1 |
+| 115 | (Fd_red, Fd_ox) | 3 | 2 | 1 | 3 |
+| 116 | (FMNH2, (FMN, H2O)) | 3 | 2 | 1 | 2 |
+| 117 | (glycyl-tRNA, tRNA) | 3 | 3 | 0 | 1 |
+| 118 | (GTP, GDP) | 3 | 3 | 0 | 3 |
+| 119 | (GTP, PPi) | 3 | 3 | 0 | 3 |
+| 120 | (H+, PPi) | 3 | 3 | 0 | 2 |
+| 121 | (H2O, (formate, PPi)) | 3 | 3 | 0 | 2 |
+| 122 | (H2O, adenine) | 3 | 3 | 0 | 2 |
+| 123 | (H2O, GSH) | 3 | 2 | 1 | 3 |
+| 124 | (H2O, Holo-ACP) | 3 | 3 | 0 | 2 |
+| 125 | (H2O, succinate) | 3 | 3 | 0 | 3 |
+| 126 | (NAD+, H+) | 3 | 3 | 0 | 2 |
+| 127 | (NADPH, (NADP+, Pi)) | 3 | 2 | 1 | 3 |
+| 128 | (phenylpyruvate, Phe) | 3 | 2 | 1 | 3 |
+| 129 | (Pi, GDP) | 3 | 2 | 1 | 2 |
+| 130 | (Ser, CMP) | 3 | 3 | 0 | 2 |
+| 131 | (UDP-alpha-N-acetyl-D-glucosamine, UDP) | 3 | 3 | 0 | 2 |
+| 132 | (∅, acetate) | 3 | 3 | 0 | 3 |
+| 133 | (∅, GMP) | 3 | 3 | 0 | 2 |
+| 134 | ((5,10-methylenetetrahydrofolate, H2O), (6S)-THFA) | 2 | 2 | 0 | 2 |
+| 135 | ((6S)-THFA, ∅) | 2 | 2 | 0 | 2 |
+| 136 | (([oxidized NADPH-hemoprotein reductase], [reduced NADPH-hemoprotein reductase]), H2O) | 2 | 1 | 1 | 2 |
+| 137 | ((Ac-CoA, H2O), CoA) | 2 | 2 | 0 | 2 |
+| 138 | ((Ala, ATP), (ADP, Pi)) | 2 | 2 | 0 | 2 |
+| 139 | ((ATP, beta-Ala), (AMP, PPi)) | 2 | 2 | 0 | 1 |
+| 140 | ((ATP, H+, HCO3), (ADP, Pi)) | 2 | 2 | 0 | 2 |
+| 141 | ((CoA, GTP), (GDP, Pi)) | 2 | 2 | 0 | 2 |
+| 142 | ((CoA, NAD+), (H+, NADH)) | 2 | 2 | 0 | 2 |
+| 143 | ((dimethylallyl diphosphate, H2O), PPi) | 2 | 2 | 0 | 1 |
+| 144 | ((ferricytochrome c, H2O), ferrocytochrome c) | 2 | 1 | 1 | 2 |
+| 145 | ((feruloyl-CoA, H2O), CoA) | 2 | 2 | 0 | 1 |
+| 146 | ((Glu, GTP), (GDP, Pi)) | 2 | 2 | 0 | 1 |
+| 147 | ((H+, NAD+), NADH) | 2 | 1 | 1 | 2 |
+| 148 | ((H+, NADP+), (H2O, NADPH)) | 2 | 1 | 1 | 2 |
+| 149 | ((H+, NADP+, NADPH), ∅) | 2 | 2 | 0 | 2 |
+| 150 | ((H+, NADPH), (CoA, NADP+)) | 2 | 2 | 0 | 2 |
+| 151 | ((H2O, malonyl-CoA), CoA) | 2 | 2 | 0 | 2 |
+| 152 | ((H2O, NAD+), (2OG, NADH)) | 2 | 2 | 0 | 2 |
+| 153 | ((H2O, NADP+, NADPH), ∅) | 2 | 2 | 0 | 2 |
+| 154 | ((NADP+, NADPH), ∅) | 2 | 1 | 1 | 1 |
+| 155 | ((Pi, red. thioredoxin), (H2O, ox. thioredoxin)) | 2 | 2 | 0 | 2 |
+| 156 | (1L-myo-inositol 1-phosphate, CMP) | 2 | 2 | 0 | 2 |
+| 157 | ([reduced NADPH-hemoprotein reductase], ([oxidized NADPH-hemoprotein reductase], H2O, methanol)) | 2 | 2 | 0 | 1 |
+| 158 | (ACP, H2O) | 2 | 1 | 1 | 1 |
+| 159 | (ADP-L-glycero-D-manno-heptose, (ADP, H+)) | 2 | 2 | 0 | 1 |
+| 160 | (ADP-L-glycero-D-manno-heptose, ADP) | 2 | 2 | 0 | 1 |
+| 161 | (benzoyl-CoA, CoA) | 2 | 2 | 0 | 1 |
+| 162 | (CDP-glycerol, CMP) | 2 | 2 | 0 | 1 |
+| 163 | (CoA, formate) | 2 | 2 | 0 | 2 |
+| 164 | (CoA, glycerolipid) | 2 | 1 | 1 | 1 |
+| 165 | (CoA, L-quinate) | 2 | 1 | 1 | 1 |
+| 166 | (CoA, propanoyl-CoA) | 2 | 2 | 0 | 1 |
+| 167 | (CoA, shikimate) | 2 | 1 | 1 | 1 |
+| 168 | (CoA, succinyl-CoA) | 2 | 2 | 0 | 2 |
+| 169 | (Cys, (H+, H2O)) | 2 | 2 | 0 | 2 |
+| 170 | (diacylglycerol, CMP) | 2 | 2 | 0 | 1 |
+| 171 | (ditrans,octacis-undecaprenyl-P, UMP) | 2 | 2 | 0 | 2 |
+| 172 | (dTTP, PPi) | 2 | 2 | 0 | 2 |
+| 173 | (Fe2+, H+) | 2 | 1 | 1 | 1 |
+| 174 | (ferricytochrome c, (ferrocytochrome c, H+)) | 2 | 2 | 0 | 2 |
+| 175 | (ferricytochrome c, ferrocytochrome c) | 2 | 2 | 0 | 1 |
+| 176 | (formaldehyde, H2O) | 2 | 1 | 1 | 2 |
+| 177 | (formaldehyde, ∅) | 2 | 2 | 0 | 2 |
+| 178 | (Gln, 2-oxoglutaramate) | 2 | 2 | 0 | 1 |
+| 179 | (Gln, Glu) | 2 | 2 | 0 | 2 |
+| 180 | (Glu, ∅) | 2 | 1 | 1 | 2 |
+| 181 | (Gly, (CoA, H+)) | 2 | 2 | 0 | 1 |
+| 182 | (GSH, (GSSG, H2O)) | 2 | 2 | 0 | 1 |
+| 183 | (GSH, ∅) | 2 | 1 | 1 | 2 |
+| 184 | (H2, ∅) | 2 | 2 | 0 | 2 |
+| 185 | (H2O, (AMP, H+)) | 2 | 2 | 0 | 2 |
+| 186 | (H2O, (H+, Pi)) | 2 | 2 | 0 | 2 |
+| 187 | (H2O, 2OBUT) | 2 | 2 | 0 | 2 |
+| 188 | (H2O, Ala) | 2 | 2 | 0 | 1 |
+| 189 | (H2O, an alcohol) | 2 | 2 | 0 | 2 |
+| 190 | (H2O, fatty acid) | 2 | 2 | 0 | 2 |
+| 191 | (H2O, H2S) | 2 | 2 | 0 | 1 |
+| 192 | (H2O, sulfate) | 2 | 2 | 0 | 1 |
+| 193 | (H2O, UDP) | 2 | 2 | 0 | 2 |
+| 194 | (H2S, acetate) | 2 | 2 | 0 | 1 |
+| 195 | (Holo-ACP, CoA) | 2 | 2 | 0 | 1 |
+| 196 | (hv, ∅) | 2 | 2 | 0 | 1 |
+| 197 | (iodide, H2O) | 2 | 2 | 0 | 1 |
+| 198 | (L-ascorbate, (H2O, L-dehydroascorbate)) | 2 | 2 | 0 | 1 |
+| 199 | (menaquinone, menaquinol) | 2 | 2 | 0 | 2 |
+| 200 | (myristoyl-ACP, ACP) | 2 | 2 | 0 | 1 |
+| 201 | (NADH, (formaldehyde, H2O, NAD+)) | 2 | 2 | 0 | 1 |
+| 202 | (NADPH, (formaldehyde, H2O, NADP+)) | 2 | 2 | 0 | 1 |
+| 203 | (PEP, Pi) | 2 | 2 | 0 | 2 |
+| 204 | (Pi, adenine) | 2 | 2 | 0 | 2 |
+| 205 | (plastoquinone, plastoquinol) | 2 | 2 | 0 | 1 |
+| 206 | (red. thioredoxin, ox. thioredoxin) | 2 | 2 | 0 | 2 |
+| 207 | (reduced putidaredoxin, (H2O, oxidized putidaredoxin)) | 2 | 2 | 0 | 1 |
+| 208 | (taurine, (CoA, H+)) | 2 | 2 | 0 | 1 |
+| 209 | (tetrahydrobiopterin, 4a-hydroxytetrahydrobiopterin) | 2 | 2 | 0 | 2 |
+| 210 | (UDP-alpha-N-acetyl-D-glucosamine, (H+, UDP)) | 2 | 2 | 0 | 1 |
+| 211 | (UQ, UQH2) | 2 | 2 | 0 | 2 |
+| 212 | (∅, ([thyroglobulin]-aminoacrylate, H2O)) | 2 | 2 | 0 | 1 |
+| 213 | (∅, acetaldehyde) | 2 | 2 | 0 | 2 |
+| 214 | (∅, ADP) | 2 | 2 | 0 | 2 |
+| 215 | (∅, formate) | 2 | 2 | 0 | 2 |
+| 216 | (∅, Holo-ACP) | 2 | 2 | 0 | 2 |
+| 217 | (((3R)-3-hydroxymyristoyl-ACP, Holo-ACP), ∅) | 1 | 1 | 0 | 1 |
+| 218 | ((2OG, NADPH), (H2O, NADP+)) | 1 | 1 | 0 | 1 |
+| 219 | ((2OG, reduced electron acceptor), (H2O, oxidized electron acceptor, succinate)) | 1 | 1 | 0 | 1 |
+| 220 | ((2OG, succinate), ∅) | 1 | 1 | 0 | 1 |
+| 221 | ((3R)-3-hydroxymyristoyl-ACP, Holo-ACP) | 1 | 1 | 0 | 1 |
+| 222 | ((4-coumaroyl-CoA, H2O), CoA) | 1 | 1 | 0 | 1 |
+| 223 | ((5'-deoxyadenosine, Met, S-adenosyl-L-methionine), ∅) | 1 | 1 | 0 | 1 |
+| 224 | ((5,10-methylenetetrahydrofolate, FADH2), FAD) | 1 | 1 | 0 | 1 |
+| 225 | ((5,10-methylenetetrahydrofolate, NADH), ((6S)-THFA, NAD+)) | 1 | 1 | 0 | 1 |
+| 226 | ((5,6,7,8-tetrahydrofolate, electron-transferring flavoprotein), (5,10-methylenetetrahydrofolate, reduced electron-transferring flavoprotein)) | 1 | 1 | 0 | 1 |
+| 227 | ((5,6,7,8-tetrahydropteroyl-tri-L-glutamate, 5-Me-tetrahydropteroyl-(L-Glu)3), ∅) | 1 | 1 | 0 | 1 |
+| 228 | ((5-P-alpha-D-Rib 1-PP, ATP, H2O), (ADP, Pi, PPi)) | 1 | 1 | 0 | 1 |
+| 229 | ((5-P-alpha-D-Rib 1-PP, H+), PPi) | 1 | 1 | 0 | 1 |
+| 230 | (([methyl-Co(III) corrinoid Fe-S protein], CoA), [Co(I) corrinoid Fe-S protein]) | 1 | 1 | 0 | 1 |
+| 231 | ((a protein with a disulfide bond, H2O), a protein with reduced L-cysteine residues) | 1 | 1 | 0 | 1 |
+| 232 | ((a quinone, H2O), a quinol) | 1 | 1 | 0 | 1 |
+| 233 | ((Ac-CoA, CoA), ∅) | 1 | 1 | 0 | 1 |
+| 234 | ((Ac-CoA, H2O), (CoA, H+)) | 1 | 1 | 0 | 1 |
+| 235 | ((acetaldehyde, H2O), H+) | 1 | 1 | 0 | 1 |
+| 236 | ((acetate, H2O), ∅) | 1 | 1 | 0 | 1 |
+| 237 | ((acetate, NADP+, NADPH), ∅) | 1 | 1 | 0 | 1 |
+| 238 | ((acetate, NADPH), NADP+) | 1 | 1 | 0 | 1 |
+| 239 | ((ADP, Pi), (H+[side 1], H2O)) | 1 | 1 | 0 | 1 |
+| 240 | ((ADP-D-ribosyl)n, (ADP-D-ribosyl)n+1) | 1 | 1 | 0 | 1 |
+| 241 | ((AMP, GSSG), GSH) | 1 | 1 | 0 | 1 |
+| 242 | ((an [amino group carrier protein]-C-terminal-L-glutamate, ATP), (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 243 | ((Asp 4-semialdehyde, NADPH), (H2O, NADP+)) | 1 | 1 | 0 | 1 |
+| 244 | ((Asp 4-semialdehyde, NADPH), NADP+) | 1 | 1 | 0 | 1 |
+| 245 | ((Asp, ATP), (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 246 | ((Asp, ATP), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 247 | ((Asp, GTP), (GDP, Pi)) | 1 | 1 | 0 | 1 |
+| 248 | ((ATP, beta-Ala), (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 249 | ((ATP, Co2+, H2O), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
+| 250 | ((ATP, Fd_red, H+, H2O), (ADP, Fd_ox, H2, Pi)) | 1 | 1 | 0 | 1 |
+| 251 | ((ATP, Fd_red, H2O), (ADP, Fd_ox, Pi)) | 1 | 1 | 0 | 1 |
+| 252 | ((ATP, Gln), (ADP, Glu, Pi)) | 1 | 1 | 0 | 1 |
+| 253 | ((ATP, Gln, H2O), (ADP, Glu, H+)) | 1 | 1 | 0 | 1 |
+| 254 | ((ATP, Gln, H2O), (ADP, Glu, Pi)) | 1 | 1 | 0 | 1 |
+| 255 | ((ATP, Gln, H2O), (AMP, Glu, H+, PPi)) | 1 | 1 | 0 | 1 |
+| 256 | ((ATP, Glu), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
+| 257 | ((ATP, Glu-tRNAGln), (ADP, Gln-tRNAGln, Pi)) | 1 | 1 | 0 | 1 |
+| 258 | ((ATP, Gly), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
+| 259 | ((ATP, Gly), (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 260 | ((ATP, H+), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 261 | ((ATP, H+, reduced electron-transferring flavoprotein), (ADP, electron-transferring flavoprotein, Pi)) | 1 | 1 | 0 | 1 |
+| 262 | ((ATP, H+, tRNAGlu), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 263 | ((ATP, H2O), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
+| 264 | ((ATP, H2O), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 265 | ((ATP, H2O), (Pi, PPi)) | 1 | 1 | 0 | 1 |
+| 266 | ((ATP, H2O, HCO3), (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 267 | ((ATP, H2O, MG2+), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
+| 268 | ((ATP, H2O, N2-citryl-N6-acetyl-N6-hydroxy-L-lysine), (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 269 | ((ATP, HCO3), (ADP, H+, Pi)) | 1 | 1 | 0 | 1 |
+| 270 | ((ATP, HCO3), (ADP, H2O)) | 1 | 1 | 0 | 1 |
+| 271 | ((ATP, Holo-ACP), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 272 | ((ATP, meso-diaminopimelate), (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 273 | ((ATP, Pi), (AMP, H+, PPi)) | 1 | 1 | 0 | 1 |
+| 274 | ((ATP, Pi), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 275 | ((ATP, Ser), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 276 | ((ATP, tRNAAsx), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 277 | ((ATP, tRNALeu), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 278 | ((ATP, tRNALys), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 279 | ((ATP, tRNAPhe), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 280 | ((ATP, tRNAThr), (AMP, PPi)) | 1 | 1 | 0 | 1 |
+| 281 | ((chlorophyllide, H2O), ∅) | 1 | 1 | 0 | 1 |
+| 282 | ((Co2+, H+), ∅) | 1 | 1 | 0 | 1 |
+| 283 | ((CoA, Fd_ox), (Fd_red, H+)) | 1 | 1 | 0 | 1 |
+| 284 | ((CoA, H2O), malonyl-CoA) | 1 | 1 | 0 | 1 |
+| 285 | ((CoA, H2O, NAD+), (HCO3, NADH)) | 1 | 1 | 0 | 1 |
+| 286 | ((CoA, NAD+), (Ac-CoA, NADH)) | 1 | 1 | 0 | 1 |
+| 287 | ((CoA, Pi), ∅) | 1 | 1 | 0 | 1 |
+| 288 | ((CTP, Cys), (CMP, H+, PPi)) | 1 | 1 | 0 | 1 |
+| 289 | ((Cys, H+), (Ala, H2O)) | 1 | 1 | 0 | 1 |
+| 290 | ((electron-transferring flavoprotein, H+), reduced electron-transferring flavoprotein) | 1 | 1 | 0 | 1 |
+| 291 | ((F420 (ox), Fd_red, H+), (Fd_ox, reduced coenzyme F420)) | 1 | 1 | 0 | 1 |
+| 292 | ((FAD, H+), FADH2) | 1 | 1 | 0 | 1 |
+| 293 | ((Fd_red, H+), (Fd_ox, formate)) | 1 | 1 | 0 | 1 |
+| 294 | ((Fd_red, H+), (Fd_ox, H2)) | 1 | 1 | 0 | 1 |
+| 295 | ((ferricytochrome b1, H2O), ferrocytochrome b1) | 1 | 1 | 0 | 1 |
+| 296 | ((ferrocytochrome b5, H+), (ferricytochrome b5, H2O)) | 1 | 1 | 0 | 1 |
+| 297 | ((GAP, H+), ∅) | 1 | 1 | 0 | 1 |
+| 298 | ((Gln, H2O), (Glu, PPi)) | 1 | 1 | 0 | 1 |
+| 299 | ((Glu, reduced electron acceptor), (H2O, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
+| 300 | ((Gly, H2O), (6S)-THFA) | 1 | 1 | 0 | 1 |
+| 301 | ((GTP, H+), PPi) | 1 | 1 | 0 | 1 |
+| 302 | ((H+, H2O), ethylamine) | 1 | 1 | 0 | 1 |
+| 303 | ((H+, H2O), PPi) | 1 | 1 | 0 | 1 |
+| 304 | ((H+, H2O, NADH), NAD+) | 1 | 1 | 0 | 1 |
+| 305 | ((H+, H2O, NADP+), NADPH) | 1 | 1 | 0 | 1 |
+| 306 | ((H+, HCO3), ∅) | 1 | 1 | 0 | 1 |
+| 307 | ((H+, L-ascorbate), (H2O, L-dehydroascorbate)) | 1 | 1 | 0 | 1 |
+| 308 | ((H+, malonyl-CoA, NADPH), (CoA, H2O, NADP+)) | 1 | 1 | 0 | 1 |
+| 309 | ((H+, NAD(P)H), (H2O, NAD(P)+)) | 1 | 1 | 0 | 1 |
+| 310 | ((H+, NADPH), NAD(P)+) | 1 | 1 | 0 | 1 |
+| 311 | ((H+, PPPi), H2O) | 1 | 1 | 0 | 1 |
+| 312 | ((H+, reduced electron acceptor), oxidized electron acceptor) | 1 | 1 | 0 | 1 |
+| 313 | ((H+, S, S-adenosyl-L-methionine), (5'-deoxyadenosine, Met)) | 1 | 1 | 0 | 1 |
+| 314 | ((H+, Ser), CoA) | 1 | 1 | 0 | 1 |
+| 315 | ((H+, succinyl-CoA), CoA) | 1 | 1 | 0 | 1 |
+| 316 | ((H+, sulfite), ∅) | 1 | 1 | 0 | 1 |
+| 317 | ((H+[side 1], H2O), (H+[side 2], Pi)) | 1 | 1 | 0 | 1 |
+| 318 | ((H+[side 1], NADH), NAD+) | 1 | 1 | 0 | 1 |
+| 319 | ((H2O, methanol), ∅) | 1 | 1 | 0 | 1 |
+| 320 | ((H2O, NAD+), (Glu, NADH)) | 1 | 1 | 0 | 1 |
+| 321 | ((H2O, NAD+), H+) | 1 | 1 | 0 | 1 |
+| 322 | ((H2O, NADP+), (Glu, NADPH)) | 1 | 1 | 0 | 1 |
+| 323 | ((H2O, oxidized azurin), (H+, reduced azurin)) | 1 | 1 | 0 | 1 |
+| 324 | ((H2O, oxidized electron acceptor), (H+, reduced electron acceptor)) | 1 | 1 | 0 | 1 |
+| 325 | ((H2O, oxidized electron acceptor, reduced electron acceptor), H+) | 1 | 1 | 0 | 1 |
+| 326 | ((H2O, oxidized electron donor), reduced electron acceptor) | 1 | 1 | 0 | 1 |
+| 327 | ((H2O, peptidyl-4-carboxyglutamate), peptidyl-glutamate) | 1 | 1 | 0 | 1 |
+| 328 | ((H2O, S-adenosyl-L-methionine), (acetate, H+, S-adenosyl-L-homocysteine)) | 1 | 1 | 0 | 1 |
+| 329 | ((H2O, S-adenosyl-L-methionine), (HCO3, Met)) | 1 | 1 | 0 | 1 |
+| 330 | ((H2O, succinyl-CoA), CoA) | 1 | 1 | 0 | 1 |
+| 331 | ((malonyl-CoA, polyketide-[acp]), CoA) | 1 | 1 | 0 | 1 |
+| 332 | ((NAD+, Pi), NADH) | 1 | 1 | 0 | 1 |
+| 333 | ((reduced electron acceptor, S-adenosyl-L-methionine), (4-methylphenol, 5'-deoxyadenosine, Met, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
+| 334 | ((reduced electron acceptor, S-adenosyl-L-methionine), (5'-deoxyadenosine, acetate, H+, Met, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
+| 335 | ((reduced electron acceptor, S-adenosyl-L-methionine), (5'-deoxyadenosine, Met, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
+| 336 | ((S, S-adenosyl-L-methionine), (5'-deoxyadenosyl radical, Met)) | 1 | 1 | 0 | 1 |
+| 337 | (1,2,3,5-tetrahydroxybenzene, 1,2,3,5-tetrahydroxybenzene) | 1 | 1 | 0 | 1 |
+| 338 | (1-deoxy-Xyl 5-P, (H+, H2O, Pi)) | 1 | 1 | 0 | 1 |
+| 339 | (10-formyltetrahydrofolate, ((6S)-THFA, H+)) | 1 | 1 | 0 | 1 |
+| 340 | (10-formyltetrahydrofolate, (6S)-THFA) | 1 | 1 | 0 | 1 |
+| 341 | (2OG, (Glu, H2O)) | 1 | 1 | 0 | 1 |
+| 342 | (2OG, (succinate, sulfite)) | 1 | 1 | 0 | 1 |
+| 343 | (2OG, D-Glu) | 1 | 1 | 0 | 1 |
+| 344 | (4-coumaroyl-CoA, CoA) | 1 | 1 | 0 | 1 |
+| 345 | (4-Methylthio-2-oxobutanoate, D-Met) | 1 | 1 | 0 | 1 |
+| 346 | (5,10-methylenetetrahydrofolate, DHF) | 1 | 1 | 0 | 1 |
+| 347 | (5-methyl-THF, THF) | 1 | 1 | 0 | 1 |
+| 348 | ([(1->4)-beta-D-mannuronosyl]n, GDP) | 1 | 1 | 0 | 1 |
+| 349 | ([ADP-thiazole synthase]-L-cysteine, ([ADP-thiazole synthase]-dehydroalanine, H2O, nicotinamide)) | 1 | 1 | 0 | 1 |
+| 350 | ([Co(I) corrinoid Fe-S protein], [methyl-Co(III) corrinoid Fe-S protein]) | 1 | 1 | 0 | 1 |
+| 351 | ([corrinoid adenosyltransferase], ∅) | 1 | 1 | 0 | 1 |
+| 352 | ([cysteine desulfurase]-Cys-SSH, (AMP, cysteine desulfurase)) | 1 | 1 | 0 | 1 |
+| 353 | ([enzyme]-cysteine, [enzyme]-S-sulfanylcysteine) | 1 | 1 | 0 | 1 |
+| 354 | ([reduced NADPH-hemoprotein reductase], H2O) | 1 | 1 | 0 | 1 |
+| 355 | ([ThiI]-cysteine, Ala) | 1 | 1 | 0 | 1 |
+| 356 | (a 2-oxo carboxylate, an amino acid) | 1 | 1 | 0 | 1 |
+| 357 | (a 2-oxo carboxylate, an L-amino acid) | 1 | 1 | 0 | 1 |
+| 358 | (a 5,6,7,8-tetrahydropteridine, a 4a-hydroxy-5,6,7,8-tetrahydropteridine) | 1 | 1 | 0 | 1 |
+| 359 | (a protein with a disulfide bond, a protein with reduced L-cysteine residues) | 1 | 1 | 0 | 1 |
+| 360 | (a reduced flavoprotein, an oxidized flavoprotein) | 1 | 1 | 0 | 1 |
+| 361 | (Ac-CoA, malonyl-CoA) | 1 | 1 | 0 | 1 |
+| 362 | (AcAc, acetoacetyl-CoA) | 1 | 1 | 0 | 1 |
+| 363 | (ADP, (AMP, H+)) | 1 | 1 | 0 | 1 |
+| 364 | (ADP, Pi) | 1 | 1 | 0 | 1 |
+| 365 | (ADP, PPi) | 1 | 1 | 0 | 1 |
+| 366 | (ADP-Rib, H2O) | 1 | 1 | 0 | 1 |
+| 367 | (an [oxidized hydrogenase], a [reduced hydrogenase]) | 1 | 1 | 0 | 1 |
+| 368 | (an all-trans-polyprenyl PP, PPi) | 1 | 1 | 0 | 1 |
+| 369 | (Arg, L-ornithine) | 1 | 1 | 0 | 1 |
+| 370 | (Asp, (H+, Pi)) | 1 | 1 | 0 | 1 |
+| 371 | (Asp, ∅) | 1 | 1 | 0 | 1 |
+| 372 | (Asp 4-semialdehyde, 2,3-dioxopropyl phosphate) | 1 | 1 | 0 | 1 |
+| 373 | (ATP, ([corrinoid adenosyltransferase], PPPi)) | 1 | 1 | 0 | 1 |
+| 374 | (ATP, (ADP, H2O, Pi)) | 1 | 1 | 0 | 1 |
+| 375 | (ATP, (AMP, H+)) | 1 | 1 | 0 | 1 |
+| 376 | (ATP, ∅) | 1 | 1 | 0 | 1 |
+| 377 | (CDP-diacylglycerol, CMP) | 1 | 1 | 0 | 1 |
+| 378 | (CMP-alpha-Kdo, CMP) | 1 | 1 | 0 | 1 |
+| 379 | (CN-, NCS-) | 1 | 1 | 0 | 1 |
+| 380 | (CoA, D-Ala) | 1 | 1 | 0 | 1 |
+| 381 | (CoA-[4'-phosphopantetheine], adenosine 3',5'-bisphosphate) | 1 | 1 | 0 | 1 |
+| 382 | (CP, Pi) | 1 | 1 | 0 | 1 |
+| 383 | (CTP, (H+, PPi)) | 1 | 1 | 0 | 1 |
+| 384 | (Cys, succinate) | 1 | 1 | 0 | 1 |
+| 385 | (Deamido-NMN, (H+, nicotinate)) | 1 | 1 | 0 | 1 |
+| 386 | (demethylated methyl acceptor, methylated methyl acceptor) | 1 | 1 | 0 | 1 |
+| 387 | (DHAP, (H2O, Pi)) | 1 | 1 | 0 | 1 |
+| 388 | (DNA, DNA containing 5-methylcytosine) | 1 | 1 | 0 | 1 |
+| 389 | (Dodecanoyl-ACP, Holo-ACP) | 1 | 1 | 0 | 1 |
+| 390 | (dTDP-2-deoxy-beta-L-fucose, dTDP) | 1 | 1 | 0 | 1 |
+| 391 | (dTDP-beta-L-rhamnose, dTDP) | 1 | 1 | 0 | 1 |
+| 392 | (dTDP-beta-L-rhodosamine, dTDP) | 1 | 1 | 0 | 1 |
+| 393 | (dTDP-L-daunosamine, dTDP) | 1 | 1 | 0 | 1 |
+| 394 | (dTDP-L-rhamnose, dTDP) | 1 | 1 | 0 | 1 |
+| 395 | (dTDP-L-rhodinose, (dTDP, H+)) | 1 | 1 | 0 | 1 |
+| 396 | (E4P, ∅) | 1 | 1 | 0 | 1 |
+| 397 | (electron-transferring flavoprotein, (H+, reduced electron-transferring flavoprotein)) | 1 | 1 | 0 | 1 |
+| 398 | (F420 (ox), ∅) | 1 | 1 | 0 | 1 |
+| 399 | (FADH2, (FAD, H+, H2O)) | 1 | 1 | 0 | 1 |
+| 400 | (FADH2, (FAD, H2O)) | 1 | 1 | 0 | 1 |
+| 401 | (Fd_ox, (Fd_red, H+)) | 1 | 1 | 0 | 1 |
+| 402 | (Fd_ox, (Fd_red, H2O)) | 1 | 1 | 0 | 1 |
+| 403 | (Fd_red, ([Thil]-L-cysteine, AMP, Fd_ox)) | 1 | 1 | 0 | 1 |
+| 404 | (FDP, ∅) | 1 | 1 | 0 | 1 |
+| 405 | (ferrocytochrome b5, (ferricytochrome b5, H2O)) | 1 | 1 | 0 | 1 |
+| 406 | (GAP, E4P) | 1 | 1 | 0 | 1 |
+| 407 | (GDP-beta-L-fucose, GDP) | 1 | 1 | 0 | 1 |
+| 408 | (geranylgeranyl diphosphate, PPi) | 1 | 1 | 0 | 1 |
+| 409 | (Gln, (5-amino-1-(5-phospho-beta-D-ribosyl)imidazole-4-carboxamide, Glu)) | 1 | 1 | 0 | 1 |
+| 410 | (Gln, (Glu, H2O, Pi)) | 1 | 1 | 0 | 1 |
+| 411 | (Gln, (Glu, pyruvate)) | 1 | 1 | 0 | 1 |
+| 412 | (GLX, ∅) | 1 | 1 | 0 | 1 |
+| 413 | (GSH, HX) | 1 | 1 | 0 | 1 |
+| 414 | (GTP, (GDP, H+)) | 1 | 1 | 0 | 1 |
+| 415 | (H+, Bn) | 1 | 1 | 0 | 1 |
+| 416 | (H+[side 1], H+[side 2]) | 1 | 1 | 0 | 1 |
+| 417 | (H+[side 1], H2O) | 1 | 1 | 0 | 1 |
+| 418 | (H2O, (acetaldehyde, H+, PPPi)) | 1 | 1 | 0 | 1 |
+| 419 | (H2O, (adenosine, H+)) | 1 | 1 | 0 | 1 |
+| 420 | (H2O, (Cl-, H+)) | 1 | 1 | 0 | 1 |
+| 421 | (H2O, (CoA, H+)) | 1 | 1 | 0 | 1 |
+| 422 | (H2O, (D-Ala, ditrans,octacis-undecaprenyl-PP)) | 1 | 1 | 0 | 1 |
+| 423 | (H2O, (D-Rib 5-P, H+)) | 1 | 1 | 0 | 1 |
+| 424 | (H2O, (formate, H+)) | 1 | 1 | 0 | 1 |
+| 425 | (H2O, (H+, PPi)) | 1 | 1 | 0 | 1 |
+| 426 | (H2O, (H+, pyruvate)) | 1 | 1 | 0 | 1 |
+| 427 | (H2O, (H+, sulfite)) | 1 | 1 | 0 | 1 |
+| 428 | (H2O, 1-amino-2-propanol) | 1 | 1 | 0 | 1 |
+| 429 | (H2O, 3-APA) | 1 | 1 | 0 | 1 |
+| 430 | (H2O, 4'-phosphopantetheine) | 1 | 1 | 0 | 1 |
+| 431 | (H2O, [amino group carrier protein]-C-terminal-L-glutamate) | 1 | 1 | 0 | 1 |
+| 432 | (H2O, a phosphatidate) | 1 | 1 | 0 | 1 |
+| 433 | (H2O, adenosine) | 1 | 1 | 0 | 1 |
+| 434 | (H2O, AMP) | 1 | 1 | 0 | 1 |
+| 435 | (H2O, beta-D-GalNAc) | 1 | 1 | 0 | 1 |
+| 436 | (H2O, beta-D-Glc 6-P) | 1 | 1 | 0 | 1 |
+| 437 | (H2O, beta-D-glucose) | 1 | 1 | 0 | 1 |
+| 438 | (H2O, beta-D-N-acetylgalactosamine-6-O-sulfate) | 1 | 1 | 0 | 1 |
+| 439 | (H2O, bisulfite) | 1 | 1 | 0 | 1 |
+| 440 | (H2O, choline) | 1 | 1 | 0 | 1 |
+| 441 | (H2O, formamide) | 1 | 1 | 0 | 1 |
+| 442 | (H2O, Fru) | 1 | 1 | 0 | 1 |
+| 443 | (H2O, GMP) | 1 | 1 | 0 | 1 |
+| 444 | (H2O, linear malto-oligosaccharide [(Glc)n-2]) | 1 | 1 | 0 | 1 |
+| 445 | (H2O, phenol) | 1 | 1 | 0 | 1 |
+| 446 | (H2O, PPPi) | 1 | 1 | 0 | 1 |
+| 447 | (H2O, UMP) | 1 | 1 | 0 | 1 |
+| 448 | (H2S, Pi) | 1 | 1 | 0 | 1 |
+| 449 | (Ile, (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 450 | (L-Amino acid, ∅) | 1 | 1 | 0 | 1 |
+| 451 | (L-carnitine, gamma-butyrobetaine) | 1 | 1 | 0 | 1 |
+| 452 | (L-cysteinyl-[PqsC protein], CoA) | 1 | 1 | 0 | 1 |
+| 453 | (L-cysteinyl-[PqsD protein], CoA) | 1 | 1 | 0 | 1 |
+| 454 | (L-ornithine, H2O) | 1 | 1 | 0 | 1 |
+| 455 | (L-selenocysteine, Met) | 1 | 1 | 0 | 1 |
+| 456 | (Leu, (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 457 | (Malonyl-ACP, ACP) | 1 | 1 | 0 | 1 |
+| 458 | (malonyl-CoA, L-cysteinyl-[PqsD protein]) | 1 | 1 | 0 | 1 |
+| 459 | (maltodextrin, maltooligosaccharides) | 1 | 1 | 0 | 1 |
+| 460 | (maltotriose, maltose) | 1 | 1 | 0 | 1 |
+| 461 | (methyl-CoM, methane) | 1 | 1 | 0 | 1 |
+| 462 | (molybdate, AMP) | 1 | 1 | 0 | 1 |
+| 463 | (myo-Ins, (CMP, H+)) | 1 | 1 | 0 | 1 |
+| 464 | (N-acetyl-L-cysteine, H2O) | 1 | 1 | 0 | 1 |
+| 465 | (N1-(5-phospho-D-ribosyl)glycinamide, (H+, N2-formyl-N1-(5-phospho-D-ribosyl)glycinamide)) | 1 | 1 | 0 | 1 |
+| 466 | (NAD(P)H, (NAD(P)+, PPi)) | 1 | 1 | 0 | 1 |
+| 467 | (NADPH, (H+, NADP+)) | 1 | 1 | 0 | 1 |
+| 468 | (NADPH, (NADP+, tRNAGlu)) | 1 | 1 | 0 | 1 |
+| 469 | (NADPH, H2O) | 1 | 1 | 0 | 1 |
+| 470 | (NADPH, NADH) | 1 | 1 | 0 | 1 |
+| 471 | (NDP-Glc, NDP) | 1 | 1 | 0 | 1 |
+| 472 | (OAA, 2OG) | 1 | 1 | 0 | 1 |
+| 473 | (oxidized azurin, (H+, reduced azurin)) | 1 | 1 | 0 | 1 |
+| 474 | (palmitoleoyl-ACP, Holo-ACP) | 1 | 1 | 0 | 1 |
+| 475 | (PEP, pyruvate) | 1 | 1 | 0 | 1 |
+| 476 | (peptidoglycan, ditrans,octacis-undecaprenyl-P) | 1 | 1 | 0 | 1 |
+| 477 | (phytyl-PP, PPi) | 1 | 1 | 0 | 1 |
+| 478 | (Pi, (acetyl phosphate, H+)) | 1 | 1 | 0 | 1 |
+| 479 | (Pi, Gua) | 1 | 1 | 0 | 1 |
+| 480 | (Pi, hypoxanthine) | 1 | 1 | 0 | 1 |
+| 481 | (Pi, uracil) | 1 | 1 | 0 | 1 |
+| 482 | (PPi, (AMP, ATP)) | 1 | 1 | 0 | 1 |
+| 483 | (PPi, (H+, phytyl-PP)) | 1 | 1 | 0 | 1 |
+| 484 | (PPi, Pi) | 1 | 1 | 0 | 1 |
+| 485 | (propanoyl-CoA, propanoate) | 1 | 1 | 0 | 1 |
+| 486 | (protein, AMP) | 1 | 1 | 0 | 1 |
+| 487 | (protein, ∅) | 1 | 1 | 0 | 1 |
+| 488 | (Protein Npi-phosphohistidine, protein histidine) | 1 | 1 | 0 | 1 |
+| 489 | (pyrroloquinoline quinone, PQQH) | 1 | 1 | 0 | 1 |
+| 490 | (red. thioredoxin, (adenosine 3',5'-bisphosphate, ox. thioredoxin)) | 1 | 1 | 0 | 1 |
+| 491 | (reduced adrenodoxin, (4-methylpentanal, H2O, oxidized adrenodoxin)) | 1 | 1 | 0 | 1 |
+| 492 | (reduced coenzyme F420, F420 (ox)) | 1 | 1 | 0 | 1 |
+| 493 | (reduced electron acceptor, (AMP, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
+| 494 | (reduced electron acceptor, (CO, Fe2+, H2O, oxidized electron acceptor)) | 1 | 1 | 0 | 1 |
+| 495 | (RX, HX) | 1 | 1 | 0 | 1 |
+| 496 | (S-adenosyl-L-methionine, (5'-deoxyadenosine, CO, formate, Met)) | 1 | 1 | 0 | 1 |
+| 497 | (S-adenosyl-L-methionine, S-adenosyl-4-methylthio-2-oxobutanoate) | 1 | 1 | 0 | 1 |
+| 498 | (Ser, (CMP, H+)) | 1 | 1 | 0 | 1 |
+| 499 | (Ser, (Gly, H2O)) | 1 | 1 | 0 | 1 |
+| 500 | (Ser, H2O) | 1 | 1 | 0 | 1 |
+| 501 | (Ser, HPR) | 1 | 1 | 0 | 1 |
+| 502 | (succinyl-CoA, (CoA, H+)) | 1 | 1 | 0 | 1 |
+| 503 | (sulfite, H2O) | 1 | 1 | 0 | 1 |
+| 504 | (sulfite, H2S) | 1 | 1 | 0 | 1 |
+| 505 | (sulfite, Pi) | 1 | 1 | 0 | 1 |
+| 506 | (tetrahydrobiopterin, ∅) | 1 | 1 | 0 | 1 |
+| 507 | (tropic acid, H2O) | 1 | 1 | 0 | 1 |
+| 508 | (tryptamine, H2O) | 1 | 1 | 0 | 1 |
+| 509 | (UDP-alpha-D-xylose, UDP) | 1 | 1 | 0 | 1 |
+| 510 | (UDP-alpha-N-acetyl-D-glucosamine, UMP) | 1 | 1 | 0 | 1 |
+| 511 | (UDP-beta-L-rhamnose, UDP) | 1 | 1 | 0 | 1 |
+| 512 | (UDP-Glc, (H+, UDP)) | 1 | 1 | 0 | 1 |
+| 513 | (∅, ([acyl-carrier protein], CoA, H2O)) | 1 | 1 | 0 | 1 |
+| 514 | (∅, (ADP, ATP)) | 1 | 1 | 0 | 1 |
+| 515 | (∅, (ADP, Pi)) | 1 | 1 | 0 | 1 |
+| 516 | (∅, (alpha-D-Rib 1-P, Pi)) | 1 | 1 | 0 | 1 |
+| 517 | (∅, (ATP, H2O)) | 1 | 1 | 0 | 1 |
+| 518 | (∅, (CMP, H+)) | 1 | 1 | 0 | 1 |
+| 519 | (∅, (CoA, H+, NAD+, NADH)) | 1 | 1 | 0 | 1 |
+| 520 | (∅, (CoA, H2O, malonyl-CoA)) | 1 | 1 | 0 | 1 |
+| 521 | (∅, (D-glucose, H2O)) | 1 | 1 | 0 | 1 |
+| 522 | (∅, (dialuric acid, E4P)) | 1 | 1 | 0 | 1 |
+| 523 | (∅, (ditrans,octacis-undecaprenyl-PP, H+)) | 1 | 1 | 0 | 1 |
+| 524 | (∅, (E4P, unknown substance)) | 1 | 1 | 0 | 1 |
+| 525 | (∅, (GDP, H+)) | 1 | 1 | 0 | 1 |
+| 526 | (∅, (H+, H2O, polyketide-[acp])) | 1 | 1 | 0 | 1 |
+| 527 | (∅, (H+, L-Amino acid)) | 1 | 1 | 0 | 1 |
+| 528 | (∅, (H+, NAD+, NADH)) | 1 | 1 | 0 | 1 |
+| 529 | (∅, (H+, pyruvate)) | 1 | 1 | 0 | 1 |
+| 530 | (∅, (H+, UDP)) | 1 | 1 | 0 | 1 |
+| 531 | (∅, (H2O, hypoxanthine)) | 1 | 1 | 0 | 1 |
+| 532 | (∅, (H2O, L-ascorbate)) | 1 | 1 | 0 | 1 |
+| 533 | (∅, 2-oxoisovalerate) | 1 | 1 | 0 | 1 |
+| 534 | (∅, 5-oxo-L-proline) | 1 | 1 | 0 | 1 |
+| 535 | (∅, [acyl-carrier protein]) | 1 | 1 | 0 | 1 |
+| 536 | (∅, [dermatan sulfate]n-1) | 1 | 1 | 0 | 1 |
+| 537 | (∅, BtrI acyl-carrier protein) | 1 | 1 | 0 | 1 |
+| 538 | (∅, Cl-) | 1 | 1 | 0 | 1 |
+| 539 | (∅, DHPTD) | 1 | 1 | 0 | 1 |
+| 540 | (∅, ethanolamine) | 1 | 1 | 0 | 1 |
+| 541 | (∅, Gly) | 1 | 1 | 0 | 1 |
+| 542 | (∅, glycolaldehyde) | 1 | 1 | 0 | 1 |
+| 543 | (∅, glycolaldehyde-P) | 1 | 1 | 0 | 1 |
+| 544 | (∅, glycolaldehyde-PPP) | 1 | 1 | 0 | 1 |
+| 545 | (∅, L-cysteinyl-[PqsC protein]) | 1 | 1 | 0 | 1 |
+| 546 | (∅, linear maltodextrin) | 1 | 1 | 0 | 1 |
+| 547 | (∅, methanofuran) | 1 | 1 | 0 | 1 |
+| 548 | (∅, molybdopterin-synthase sulfur-carrier protein) | 1 | 1 | 0 | 1 |
+| 549 | (∅, NADH) | 1 | 1 | 0 | 1 |
+| 550 | (∅, Phosphorylethanolamine) | 1 | 1 | 0 | 1 |
+| 551 | (∅, PPPi) | 1 | 1 | 0 | 1 |
+| 552 | (∅, S-methyl-5'-thioadenosine) | 1 | 1 | 0 | 1 |
+| 553 | (∅, UMP) | 1 | 1 | 0 | 1 |
+| 554 | (∅, UREA) | 1 | 1 | 0 | 1 |
 
 ## 2. Metabolites connected across subsystems
 
@@ -714,7 +690,7 @@ Labels kept separate because their ligand ID belongs to another compound: NAD(P)
 | homoserine | 345 | 1 | methionine metabolism; threonine metabolism |
 | indole-3-acetate | 3639 | 1 | IAA biosynthesis; tryptophan metabolism |
 | isopentenyl-PP | 113 | 1 | isoprenoid biosynthesis; mevalonate metabolism |
-| L-2,4-Diaminobutanoate / L-2,4-diaminobutanoate | 2561 | 1 | polyamine pathway; threonine metabolism |
+| L-2,4-diaminobutanoate / L-2,4-Diaminobutanoate | 2561 | 1 | polyamine pathway; threonine metabolism |
 | L-argininosuccinate | 10688 | 1 | arginine metabolism; urea cycle |
 | L-arogenate | 883 | 1 | phenylalanine metabolism; tyrosine metabolism |
 | L-citrulline | 938 | 1 | arginine metabolism; urea cycle |

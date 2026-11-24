@@ -16,9 +16,9 @@ Rules (agreed with the user):
   Roche one or are contained in it (in either direction) are listed in near_matches.
 * As on the BRENDA side, H2O, H+, O2, CO2, NH3, NH4+ and H2O2 are removed.
 
-Synonymous BRENDA cofactor labels are first unified with BRENDA_SYNONYMS, and BRENDA
-rows that become identical are merged (column merged_brenda_rows lists the original
-rows; renamed rows without a partner are listed too).
+Synonymous BRENDA cofactor labels are unified with BRENDA_SYNONYMS (brenda_synonyms.py)
+already in brenda_map_cofactors.py; this script applies the mapping again as a no-op
+safeguard (merged_brenda_rows would list any rows merged here).
 
 Roche compound names are translated to the BRENDA cofactor labels with ROCHE_NAMES;
 a Roche name may stand for several BRENDA labels (synonyms with different BRENDA
@@ -104,36 +104,9 @@ def shared(rs, bs):
     return sum(any(b in labels(r) for b in bs) for r in rs)
 
 
-# Synonymous BRENDA cofactor labels (different ligand IDs or spellings for the same
-# compound) -> one label. Applied to the BRENDA combinations before matching, so rows
-# that differ only in these labels are merged. Specific compounds are not merged into
-# generic classes (UQ/UQH2 stay separate from "a quinone"/"a quinol").
-BRENDA_SYNONYMS = {
-    "reduced NADPH-hemoprotein reductase": "[reduced NADPH-hemoprotein reductase]",
-    "reduced [NADPH-hemoprotein reductase]": "[reduced NADPH-hemoprotein reductase]",
-    "oxidized NADPH-hemoprotein reductase": "[oxidized NADPH-hemoprotein reductase]",
-    "oxidized [NADPH-hemoprotein reductase]": "[oxidized NADPH-hemoprotein reductase]",
-    "acceptor": "oxidized electron acceptor", "an acceptor": "oxidized electron acceptor",
-    "oxidized acceptor": "oxidized electron acceptor", "electron acceptor": "oxidized electron acceptor",
-    "an oxidized electron acceptor": "oxidized electron acceptor", "A": "oxidized electron acceptor",
-    "reduced acceptor": "reduced electron acceptor", "a reduced acceptor": "reduced electron acceptor",
-    "a reduced electron acceptor": "reduced electron acceptor", "AH2": "reduced electron acceptor",
-    "reduced ferredoxin [Fe-S] cluster": "Fd_red", "oxidized ferredoxin [Fe-S] cluster": "Fd_ox",
-    "thioredoxin": "red. thioredoxin", "thioredoxin disulfide": "ox. thioredoxin",
-    "electron-transfer flavoprotein": "electron-transferring flavoprotein",
-    "oxidized electron-transferring flavoprotein": "electron-transferring flavoprotein",
-    "oxidized electron transfer flavoprotein": "electron-transferring flavoprotein",
-    "reduced electron-transfer flavoprotein": "reduced electron-transferring flavoprotein",
-    "3'-phosphoadenylylsulfate": "3'-phosphoadenylyl sulfate",
-    "reduced adrenal ferredoxin": "reduced adrenodoxin", "oxidized adrenal ferredoxin": "oxidized adrenodoxin",
-    "reduced quinone": "a quinol",
-    "UDP-Gal": "UDP-alpha-D-galactose", "UDP-glucuronate": "UDP-alpha-D-glucuronate",
-    "UDP-N-acetyl-alpha-D-glucosamine": "UDP-alpha-N-acetyl-D-glucosamine",
-    "a carboxylate": "carboxylate",
-    "4a-hydroxy-tetrahydrobiopterin": "4a-hydroxytetrahydrobiopterin",
-    # label on ligand ID 17 (diphosphate) that names DMAPP
-    "dimethylallyl-PP": "dimethylallyl diphosphate",
-}
+# Synonymous BRENDA cofactor labels -> one label (see brenda_synonyms.py). The BRENDA
+# table is already built with them; applying them again here is a no-op safeguard.
+from brenda_synonyms import BRENDA_SYNONYMS  # noqa: E402
 
 
 def relabel(side):

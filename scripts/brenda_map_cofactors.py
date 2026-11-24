@@ -52,8 +52,13 @@ def fmt(names):
 EXCLUDED = {"O2", "CO2", "NH3", "NH4+", "H2O2"}
 
 
+# Synonymous labels (different ligand IDs or spellings of one compound) -> one label.
+from brenda_synonyms import BRENDA_SYNONYMS  # noqa: E402
+
+
 def side(ms):
-    return tuple(sorted({canon[key(m)] for m in ms} - EXCLUDED, key=str.lower))
+    names = {BRENDA_SYNONYMS.get(canon[key(m)], canon[key(m)]) for m in ms}
+    return tuple(sorted(names - EXCLUDED, key=str.lower))
 
 
 combos = collections.defaultdict(list)
@@ -185,10 +190,12 @@ L.append(f"- Reactions: {len(d['reactions'])}. {len(d['reactions']) - no_cof - o
 L.append(f"- Distinct combinations: **{len(rows)}** after merging reverse pairs ({n_directed} counting each direction separately), "
          f"or {len(core_rows)} once H₂O and H⁺ are also removed "
          "(see `cofactor_combinations_without_H2O_H+.csv`).")
-L.append(f"- Distinct cofactor compounds: {len(canon)}.\n")
+L.append(f"- Distinct cofactor compounds: {len({BRENDA_SYNONYMS.get(n, n) for n in canon.values()})} after unifying synonymous labels ({len(set(canon.values()))} distinct labels before, from {len(canon)} ligand IDs or separately kept labels).\n")
 if aliases:
     L.append("Labels merged because they share a ligand ID: " + "; ".join(
         f"{canon[l]} ← {', '.join(a for a in v if a != canon[l])}" for l, v in sorted(aliases.items(), key=lambda t: canon[t[0]].lower())) + "\n")
+    L.append("Synonymous labels unified (scripts/brenda_synonyms.py): " + "; ".join(
+        f"{v} ← {k}" for k, v in sorted(BRENDA_SYNONYMS.items(), key=lambda t: (t[1].lower(), t[0].lower()))) + "\n")
     L.append("Labels kept separate because their ligand ID belongs to another compound: "
              + ", ".join(f"{n} (ID {i})" for i, n in sorted(MISLINKED)) + ".\n")
 L.append("## 1. Cofactor combinations (all, including H₂O and H⁺)\n")

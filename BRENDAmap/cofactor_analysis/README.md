@@ -62,19 +62,31 @@ Script: `scripts/brenda_map_cofactors.py`.
 For each reaction (enzyme node) the script builds a pair
 `(consumed cofactors, produced cofactors)`. Then:
 
-1. **Excluded compounds.** O2, CO2, NH3, NH4+ (ammonium, under its own ligand
+1. **Synonymous labels unified.** Cofactor labels that name the same compound
+   under different ligand IDs or spellings are mapped to one label, using the
+   `BRENDA_SYNONYMS` table in `scripts/brenda_synonyms.py`. Examples:
+   - the acceptor/AH2 family
+   - ferredoxin vs. ferredoxin [Fe-S] cluster
+   - the electron-transfer flavoprotein (ETF) spellings
+   - adrenodoxin vs. adrenal ferredoxin
+   - UDP-Gal vs. UDP-alpha-D-galactose
+   - the DMAPP label that sits on the diphosphate ID
+
+   Specific compounds are not merged into generic classes, so UQ/UQH2 stays
+   separate from "a quinone"/"a quinol". The report lists every unified label.
+2. **Excluded compounds.** O2, CO2, NH3, NH4+ (ammonium, under its own ligand
    ID) and H2O2 are removed from both sides. The list is the `EXCLUDED` set in
    the script. H₂O and H⁺ are kept in `cofactor_combinations.csv`.
-2. **Reverse pairs merged.** A combination and its reverse, e.g. (NAD+, NADH)
+3. **Reverse pairs merged.** A combination and its reverse, e.g. (NAD+, NADH)
    and (NADH, NAD+), are one entry, written as `(A, B)` in the direction drawn
    more often. `n_a_to_b` and `n_b_to_a` count the reactions drawn each way.
-3. **Reactions without cofactors.** Reactions with no cofactor at all, and
+4. **Reactions without cofactors.** Reactions with no cofactor at all, and
    reactions whose only cofactors are excluded compounds, are not listed. The
    report gives their numbers.
-4. **H₂O and H⁺ removed.** `cofactor_combinations_without_H2O_H+.csv` also
+5. **H₂O and H⁺ removed.** `cofactor_combinations_without_H2O_H+.csv` also
    drops H₂O and H⁺, then merges reverse pairs again. Combinations that become
    identical are combined; `n_variants_with_H2O_H+` says how many combinations
-   from step 2 went into each row. Reactions left with no cofactor at all
+   from step 3 went into each row. Reactions left with no cofactor at all
    appear as `(∅, ∅)`.
 
 `∅` means that side is empty. Each CSV row also lists the EC numbers and the
@@ -177,17 +189,10 @@ Script: `scripts/merge_roche_cofactors.py`. Inputs are
 
 - **Same filtering as the BRENDA table.** H₂O, H⁺, O2, CO2, NH3, NH4+ and H2O2
   are removed from the Roche rows too, and reverse pairs are merged.
-- **BRENDA synonyms unified first.** Before matching, cofactor labels that name
-  the same compound under different ligand IDs or spellings are mapped to one
-  label (`BRENDA_SYNONYMS`). Examples: the acceptor/AH2 family, ferredoxin vs.
-  ferredoxin [Fe-S] cluster, the ETF spellings, adrenodoxin vs. adrenal
-  ferredoxin, UDP-Gal vs. UDP-alpha-D-galactose, and the DMAPP label that sits on
-  the diphosphate ID. BRENDA rows that become identical are merged, which takes
-  the 447 rows down to 422. The original rows are listed in `merged_brenda_rows`.
-  Specific compounds are not merged into generic classes, so UQ/UQH2 stays
-  separate from "a quinone"/"a quinol". This step changes only this merged table:
-  `cofactor_combinations.csv` and `cofactor_combinations_without_H2O_H+.csv` keep
-  the original labels.
+- **BRENDA synonyms.** The BRENDA table already has synonymous cofactor labels
+  unified (section 1), so the BRENDA rows are used as they are. The script
+  applies the same mapping again as a safeguard. Any rows it merged would be
+  listed in `merged_brenda_rows`, which is empty with the current data.
 - **Roche count.** `n_grid_squares_roche` is the number of grid squares listed
   in `example_grid_squares`. When several Roche rows fall on the same
   combination, their counts are summed. `n_total` is the number of BRENDA
